@@ -1,0 +1,911 @@
+/home/ys/桌面/data-PSDroid-ICSE/22Termux_Tasker/Termux_Tasker-0.4.apk
+Entry Points[com.termux.tasker.ResultsService, com.termux.tasker.EditConfigurationActivity, com.termux.tasker.FireReceiver]
+FllowDroidcallgraph size:265
+Soot started on Wed Jul 13 10:08:27 CST 2022
+StaticCheck:<a.b.f.h.i: boolean a(java.lang.Object,java.lang.Object)>$yysi0 < 19
+StaticCheck:<a.b.f.i.b0.b: boolean a(android.view.accessibility.AccessibilityManager,a.b.f.i.b0.b$a)>$yysi0 < 19
+StaticCheck:<a.b.f.i.b0.b: boolean b(android.view.accessibility.AccessibilityManager,a.b.f.i.b0.b$a)>$yysi0 < 19
+StaticCheck:<a.b.f.i.v: boolean a(android.view.ViewParent,android.view.View,float,float)>$yysi0 < 21
+StaticCheck:<a.b.f.i.v: boolean a(android.view.ViewParent,android.view.View,float,float,boolean)>$yysi0 < 21
+StaticCheck:<a.b.f.i.v: boolean b(android.view.ViewParent,android.view.View,android.view.View,int,int)>$yysi1 < 21
+StaticCheck:<a.b.f.i.s: boolean a(android.view.View,android.view.KeyEvent)>$yysi0 < 28
+StaticCheck:<a.b.f.i.s: boolean b(android.view.View,android.view.KeyEvent)>$yysi0 < 28
+StaticCheck:<a.b.f.i.s: boolean h(android.view.View)>$yysi0 < 16
+StaticCheck:<a.b.f.i.s: boolean t(android.view.View)>$yysi0 < 15
+StaticCheck:<a.b.f.i.s: boolean u(android.view.View)>$yysi0 < 16
+StaticCheck:<a.b.f.i.s: boolean v(android.view.View)>$yysi0 < 16
+StaticCheck:<a.b.f.i.s: boolean w(android.view.View)>$yysi0 < 19
+StaticCheck:<a.b.f.i.s: boolean x(android.view.View)>$yysi0 < 19
+StaticCheck:<a.b.f.i.s: boolean y(android.view.View)>$yysi0 < 21
+StaticCheck:<a.b.f.i.s: boolean z(android.view.View)>$yysi0 < 17
+StaticCheck:<a.b.f.i.u: boolean a(android.view.ViewGroup)>$yysi0 < 21
+StaticCheck:<a.b.f.i.t: boolean d(android.view.ViewConfiguration,android.content.Context)>$yysi0 < 28
+StaticCheck:<a.b.c.m.c: boolean w>$yysi0 < 21
+StaticCheck:<a.b.c.q.a: boolean a>$yysi0 < 21
+StaticCheck:<a.b.f.i.e: boolean a(a.b.f.i.e$a,android.view.View,android.view.Window$Callback,android.view.KeyEvent)>$yysi0 < 28
+StaticCheck:<a.b.e.r: boolean a>$yysi0 < 19
+StaticCheck:<a.b.f.a.a: boolean a(android.content.Context,android.content.Intent[],android.os.Bundle)>$yysi0 < 16
+Soot finished on Wed Jul 13 10:08:35 CST 2022
+Soot has run for 0 min. 8 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 21
+Declared Target Sdk version is: 28
+Declared Max Sdk version is: -1
+Collected 925 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.graphics.drawable.DrawableWrapper: android.graphics.drawable.Drawable getDrawable()> is checking!!!
+The life time of api is [23,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 21 22 
+Error road: <a.b.c.m.b: void setColorFilter(android.graphics.ColorFilter)>[]--><android.graphics.drawable.DrawableWrapper: android.graphics.drawable.Drawable getDrawable()>
+#1.the call statck between class <a.b.c.m.b: void setColorFilter(android.graphics.ColorFilter)> to <android.graphics.drawable.DrawableWrapper: android.graphics.drawable.Drawable getDrawable()>has compatibility isssues！
+-----------------------------------------
+###Multi invoking in one method, need manual check!!!--><a.b.c.m.c: void b(int)>[[-$yysi0 < 21], [-$i1 != 21]]--><a.b.c.m.c: android.graphics.drawable.GradientDrawable l()>[[-$yysi0 < 21]]
+###Multi invoking in one method, need manual check!!!--><a.b.c.m.c: void b(int)>[[-$yysi0 < 21]][[-$i1 != 21]]--><a.b.c.m.c: android.graphics.drawable.GradientDrawable l()>[[-$yysi0 < 21]]
+-$yysi0 < 21
+-$i1 != 21
+-$yysi0 < 21
+Good road: <a.b.c.m.a: void setCornerRadiusResource(int)>[]--><a.b.c.m.a: void setCornerRadius(int)>[]--><a.b.c.m.c: void b(int)>[[-$yysi0 < 21], [-$i1 != 21]]--><a.b.c.m.c: android.graphics.drawable.GradientDrawable l()>[[-$yysi0 < 21]]--><android.graphics.drawable.DrawableWrapper: android.graphics.drawable.Drawable getDrawable()>
+One road protect good!
+crashApis:1
+containsStatic:true
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.view.MenuItem: android.view.MenuItem setAlphabeticShortcut(char,int)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+$i2 < 26
+!!!this api will crash on sdk 21 22 23 24 25 
+Error road: <a.b.g.e.g$b: void a(android.view.MenuItem)>[]--><a.b.f.i.h: void a(android.view.MenuItem,char,int)>[[], [-$i2 < 26]]--><android.view.MenuItem: android.view.MenuItem setAlphabeticShortcut(char,int)>
+#1.the call statck between class <a.b.g.e.g$b: void a(android.view.MenuItem)> to <android.view.MenuItem: android.view.MenuItem setAlphabeticShortcut(char,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:2
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.graphics.Typeface.Builder: android.graphics.Typeface.Builder setItalic(boolean)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+try
+Good road with try: <a.b.f.b.f: android.graphics.Typeface a(android.content.Context,android.os.CancellationSignal,a.b.f.f.b$f[],int)>[[try]]--><android.graphics.Typeface.Builder: android.graphics.Typeface.Builder setItalic(boolean)>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.view.View: void setScrollIndicators(int,int)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i2 < 23
+Good road: <a.b.f.i.s: void a(android.view.View,int,int)>[[-$i2 < 23]]--><android.view.View: void setScrollIndicators(int,int)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.graphics.Paint: java.lang.String getFontVariationSettings()> is checking!!!
+The life time of api is [26,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+###Multi invoking in one method, need manual check!!!<a.b.f.g.b$a: java.lang.String toString()>[[$i0 < 21], [$i0 < 17], [-$i0 < 26], [$i0 < 24]]
+###Multi invoking in one method, need manual check!!!<a.b.f.g.b$a: java.lang.String toString()>[[$i0 < 21]][[$i0 < 17]][[-$i0 < 26]][[$i0 < 24]]
+$i0 < 21
+$i0 < 17
+-$i0 < 26
+$i0 < 24
+Good road: <a.b.f.g.b$a: java.lang.String toString()>[[$i0 < 21], [$i0 < 17], [-$i0 < 26], [$i0 < 24]]--><android.graphics.Paint: java.lang.String getFontVariationSettings()>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 5 Potential Issue API: SDKCheck of <android.text.PrecomputedText.Params.Builder: android.text.PrecomputedText.Params build()> is checking!!!
+The life time of api is [28,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i2 < 28
+Good road: <a.b.f.g.b$a: void <init>(android.text.TextPaint,android.text.TextDirectionHeuristic,int,int)>[[-$i2 < 28]]--><android.text.PrecomputedText.Params.Builder: android.text.PrecomputedText.Params build()>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 6 Potential Issue API: SDKCheck of <android.text.PrecomputedText.Params: int getHyphenationFrequency()> is checking!!!
+The life time of api is [28,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 21 22 23 24 25 26 27 
+Error road: <a.b.f.g.b$a: void <init>(android.text.PrecomputedText$Params)>[]--><android.text.PrecomputedText.Params: int getHyphenationFrequency()>
+#1.the call statck between class <a.b.f.g.b$a: void <init>(android.text.PrecomputedText$Params)> to <android.text.PrecomputedText.Params: int getHyphenationFrequency()>has compatibility isssues！
+-----------------------------------------
+crashApis:3
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 7 Potential Issue API: SDKCheck of <android.text.PrecomputedText.Params.Builder: android.text.PrecomputedText.Params.Builder setTextDirection(android.text.TextDirectionHeuristic)> is checking!!!
+The life time of api is [28,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i2 < 28
+Good road: <a.b.f.g.b$a: void <init>(android.text.TextPaint,android.text.TextDirectionHeuristic,int,int)>[[-$i2 < 28]]--><android.text.PrecomputedText.Params.Builder: android.text.PrecomputedText.Params.Builder setTextDirection(android.text.TextDirectionHeuristic)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 8 Potential Issue API: SDKCheck of <android.view.ViewConfiguration: float getScaledHorizontalScrollFactor()> is checking!!!
+The life time of api is [26,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i0 < 26
+Good road: <a.b.f.i.t: float b(android.view.ViewConfiguration,android.content.Context)>[[-$i0 < 26]]--><android.view.ViewConfiguration: float getScaledHorizontalScrollFactor()>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 9 Potential Issue API: SDKCheck of <android.graphics.Typeface.Builder: android.graphics.Typeface build()> is checking!!!
+The life time of api is [26,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+try
+Good road with try: <a.b.f.b.f: android.graphics.Typeface a(android.content.Context,android.os.CancellationSignal,a.b.f.f.b$f[],int)>[[try]]--><android.graphics.Typeface.Builder: android.graphics.Typeface build()>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 10 Potential Issue API: SDKCheck of <android.view.MenuItem: android.view.MenuItem setTooltipText(java.lang.CharSequence)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i0 < 26
+Good road: <a.b.g.e.g$b: void a(android.view.MenuItem)>[]--><a.b.f.i.h: void b(android.view.MenuItem,java.lang.CharSequence)>[[-$i0 < 26]]--><android.view.MenuItem: android.view.MenuItem setTooltipText(java.lang.CharSequence)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 11 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)> is checking!!!
+The life time of api is [22,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.termux.tasker.EditConfigurationActivity dummyMainMethod_com_termux_tasker_EditConfigurationActivity(android.content.Intent)>[]--><com.termux.tasker.EditConfigurationActivity: void finish()>[]--><com.termux.tasker.e: android.os.Bundle a(android.content.Context,java.lang.String,java.lang.String,boolean)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:4
+crashApisInMain:1
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 12 Potential Issue API: SDKCheck of <android.text.PrecomputedText.Params.Builder: void <init>(android.text.TextPaint)> is checking!!!
+The life time of api is [28,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i2 < 28
+Good road: <a.b.f.g.b$a: void <init>(android.text.TextPaint,android.text.TextDirectionHeuristic,int,int)>[[-$i2 < 28]]--><android.text.PrecomputedText.Params.Builder: void <init>(android.text.TextPaint)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 13 Potential Issue API: SDKCheck of <android.text.PrecomputedText.Params.Builder: android.text.PrecomputedText.Params.Builder setBreakStrategy(int)> is checking!!!
+The life time of api is [28,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i2 < 28
+Good road: <a.b.f.g.b$a: void <init>(android.text.TextPaint,android.text.TextDirectionHeuristic,int,int)>[[-$i2 < 28]]--><android.text.PrecomputedText.Params.Builder: android.text.PrecomputedText.Params.Builder setBreakStrategy(int)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 14 Potential Issue API: SDKCheck of <android.graphics.Typeface.Builder: android.graphics.Typeface.Builder setWeight(int)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+try
+Good road with try: <a.b.f.b.f: android.graphics.Typeface a(android.content.Context,android.os.CancellationSignal,a.b.f.f.b$f[],int)>[[try]]--><android.graphics.Typeface.Builder: android.graphics.Typeface.Builder setWeight(int)>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 15 Potential Issue API: SDKCheck of <android.os.BaseBundle: boolean getBoolean(java.lang.String)> is checking!!!
+The life time of api is [22,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.termux.tasker.EditConfigurationActivity dummyMainMethod_com_termux_tasker_EditConfigurationActivity(android.content.Intent)>[]--><com.termux.tasker.EditConfigurationActivity: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+!!!this api will crash on sdk 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.termux.tasker.FireReceiver dummyMainMethod_com_termux_tasker_FireReceiver(android.content.Intent)>[]--><com.termux.tasker.FireReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: boolean getBoolean(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:5
+crashApisInMain:2
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 16 Potential Issue API: SDKCheck of <android.view.MenuItem: android.view.MenuItem setIconTintList(android.content.res.ColorStateList)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+$i0 < 26
+!!!this api will crash on sdk 21 22 23 24 25 
+Error road: <a.b.g.e.g$b: void a(android.view.MenuItem)>[]--><a.b.f.i.h: void a(android.view.MenuItem,android.content.res.ColorStateList)>[[], [-$i0 < 26]]--><android.view.MenuItem: android.view.MenuItem setIconTintList(android.content.res.ColorStateList)>
+#1.the call statck between class <a.b.g.e.g$b: void a(android.view.MenuItem)> to <android.view.MenuItem: android.view.MenuItem setIconTintList(android.content.res.ColorStateList)>has compatibility isssues！
+-----------------------------------------
+crashApis:6
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 17 Potential Issue API: SDKCheck of <android.view.Window.Callback: void onPointerCaptureChanged(boolean)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 21 22 23 24 25 
+Error road: <a.b.g.e.i: void onPointerCaptureChanged(boolean)>[]--><android.view.Window.Callback: void onPointerCaptureChanged(boolean)>
+#1.the call statck between class <a.b.g.e.i: void onPointerCaptureChanged(boolean)> to <android.view.Window.Callback: void onPointerCaptureChanged(boolean)>has compatibility isssues！
+-----------------------------------------
+crashApis:7
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 18 Potential Issue API: SDKCheck of <android.view.MenuItem: android.view.MenuItem setContentDescription(java.lang.CharSequence)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i0 < 26
+Good road: <a.b.g.e.g$b: void a(android.view.MenuItem)>[]--><a.b.f.i.h: void a(android.view.MenuItem,java.lang.CharSequence)>[[-$i0 < 26]]--><android.view.MenuItem: android.view.MenuItem setContentDescription(java.lang.CharSequence)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 19 Potential Issue API: SDKCheck of <android.view.ViewConfiguration: boolean shouldShowMenuShortcutsWhenKeyboardPresent()> is checking!!!
+The life time of api is [28,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i0 < 28
+Good road: <a.b.f.i.t: boolean d(android.view.ViewConfiguration,android.content.Context)>[[-$i0 < 28]]--><android.view.ViewConfiguration: boolean shouldShowMenuShortcutsWhenKeyboardPresent()>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 20 Potential Issue API: SDKCheck of <android.animation.AnimatorSet: void <init>()> is checking!!!
+The life time of api is [24,31]
+4call roads:
+0 Mainhead roads:
+4 Packageshead roads:
+!!!this api will crash on sdk 21 22 23 
+Error road: <a.b.d.a.e: android.animation.Animator a(android.content.Context,android.content.res.Resources,android.content.res.Resources$Theme,org.xmlpull.v1.XmlPullParser,android.util.AttributeSet,android.animation.AnimatorSet,int,float)>[]--><android.animation.AnimatorSet: void <init>()>
+#1.the call statck between class <a.b.d.a.e: android.animation.Animator a(android.content.Context,android.content.res.Resources,android.content.res.Resources$Theme,org.xmlpull.v1.XmlPullParser,android.util.AttributeSet,android.animation.AnimatorSet,int,float)> to <android.animation.AnimatorSet: void <init>()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 21 22 23 
+Error road: <a.b.d.a.c$b: void a()>[]--><android.animation.AnimatorSet: void <init>()>
+#2.the call statck between class <a.b.d.a.c$b: void a()> to <android.animation.AnimatorSet: void <init>()>has compatibility isssues！
+-----------------------------------------
+-$i0 < 21
+!!!this api will crash on sdk 21 22 23 
+Error road: <a.b.c.n.a: android.animation.Animator a(a.b.c.n.d,float,float,float)>[[-$i0 < 21]]--><android.animation.AnimatorSet: void <init>()>
+#3.the call statck between class <a.b.c.n.a: android.animation.Animator a(a.b.c.n.d,float,float,float)> to <android.animation.AnimatorSet: void <init>()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 21 22 23 
+Error road: <a.b.e.c: android.animation.Animator a(android.view.ViewGroup,a.b.e.s,a.b.e.s)>[]--><a.b.e.r: android.animation.Animator a(android.animation.Animator,android.animation.Animator)>[]--><android.animation.AnimatorSet: void <init>()>
+!!!this api will crash on sdk 21 22 23 
+Error road: <a.b.e.c: android.animation.Animator a(android.view.ViewGroup,a.b.e.s,a.b.e.s)>[]--><android.animation.AnimatorSet: void <init>()>
+#4.the call statck between class <a.b.e.c: android.animation.Animator a(android.view.ViewGroup,a.b.e.s,a.b.e.s)> to <android.animation.AnimatorSet: void <init>()>has compatibility isssues！
+-----------------------------------------
+crashApis:8
+containsStatic:false
+containsTry:false
+5call by main package
+-----------------------------------------
+#################################################
+N 21 Potential Issue API: SDKCheck of <android.os.LocaleList: boolean equals(java.lang.Object)> is checking!!!
+The life time of api is [24,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+###Multi invoking in one method, need manual check!!!<a.b.f.g.b$a: boolean equals(java.lang.Object)>[[$i0 < 23], [-$i0 < 24], [$i0 < 21], [$i0 < 18]]
+###Multi invoking in one method, need manual check!!!<a.b.f.g.b$a: boolean equals(java.lang.Object)>[[$i0 < 23]][[-$i0 < 24]][[$i0 < 21]][[$i0 < 18]]
+$i0 < 23
+-$i0 < 24
+$i0 < 21
+$i0 < 18
+Good road: <a.b.f.g.b$a: boolean equals(java.lang.Object)>[[$i0 < 23], [-$i0 < 24], [$i0 < 21], [$i0 < 18]]--><android.os.LocaleList: boolean equals(java.lang.Object)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 22 Potential Issue API: SDKCheck of <android.text.PrecomputedText: void setSpan(java.lang.Object,int,int,int)> is checking!!!
+The life time of api is [28,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i3 < 28
+Good road: <a.b.f.g.b: void setSpan(java.lang.Object,int,int,int)>[[-$i3 < 28]]--><android.text.PrecomputedText: void setSpan(java.lang.Object,int,int,int)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 23 Potential Issue API: SDKCheck of <android.graphics.Typeface.Builder: void <init>(java.io.FileDescriptor)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+try
+Good road with try: <a.b.f.b.f: android.graphics.Typeface a(android.content.Context,android.os.CancellationSignal,a.b.f.f.b$f[],int)>[[try]]--><android.graphics.Typeface.Builder: void <init>(java.io.FileDescriptor)>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 24 Potential Issue API: SDKCheck of <android.content.Context: android.content.res.ColorStateList getColorStateList(int)> is checking!!!
+The life time of api is [23,31]
+4call roads:
+0 Mainhead roads:
+4 Packageshead roads:
+$i1 < 23
+-$i1 < 23
+Good road: <a.b.c.m.a: void setStrokeColorResource(int)>[]--><a.b.g.b.a.a: android.content.res.ColorStateList b(android.content.Context,int)>[[$i1 < 23]]--><a.b.f.a.a: android.content.res.ColorStateList b(android.content.Context,int)>[[-$i1 < 23]]--><android.content.Context: android.content.res.ColorStateList getColorStateList(int)>
+One road protect good!
+$i1 < 23
+-$i1 < 23
+Good road: <a.b.c.m.a: void setRippleColorResource(int)>[]--><a.b.g.b.a.a: android.content.res.ColorStateList b(android.content.Context,int)>[[$i1 < 23]]--><a.b.f.a.a: android.content.res.ColorStateList b(android.content.Context,int)>[[-$i1 < 23]]--><android.content.Context: android.content.res.ColorStateList getColorStateList(int)>
+One road protect good!
+$i1 < 23
+-$i1 < 23
+Good road: <a.b.c.m.a: void <init>(android.content.Context,android.util.AttributeSet)>[]--><a.b.c.m.a: void <init>(android.content.Context,android.util.AttributeSet,int)>[]--><a.b.c.m.c: void a(android.content.res.TypedArray)>[]--><a.b.c.p.a: android.content.res.ColorStateList a(android.content.Context,android.content.res.TypedArray,int)>[]--><a.b.g.b.a.a: android.content.res.ColorStateList b(android.content.Context,int)>[[$i1 < 23]]--><a.b.f.a.a: android.content.res.ColorStateList b(android.content.Context,int)>[[-$i1 < 23]]--><android.content.Context: android.content.res.ColorStateList getColorStateList(int)>
+One road protect good!
+$i1 < 23
+-$i1 < 23
+Good road: <a.b.c.m.a: void setIconTintResource(int)>[]--><a.b.g.b.a.a: android.content.res.ColorStateList b(android.content.Context,int)>[[$i1 < 23]]--><a.b.f.a.a: android.content.res.ColorStateList b(android.content.Context,int)>[[-$i1 < 23]]--><android.content.Context: android.content.res.ColorStateList getColorStateList(int)>
+One road protect good!
+containsStatic:false
+containsTry:false
+5call by main package
+-----------------------------------------
+#################################################
+N 25 Potential Issue API: SDKCheck of <android.text.PrecomputedText.Params: android.text.TextDirectionHeuristic getTextDirection()> is checking!!!
+The life time of api is [28,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 21 22 23 24 25 26 27 
+Error road: <a.b.f.g.b$a: void <init>(android.text.PrecomputedText$Params)>[]--><android.text.PrecomputedText.Params: android.text.TextDirectionHeuristic getTextDirection()>
+#1.the call statck between class <a.b.f.g.b$a: void <init>(android.text.PrecomputedText$Params)> to <android.text.PrecomputedText.Params: android.text.TextDirectionHeuristic getTextDirection()>has compatibility isssues！
+-----------------------------------------
+crashApis:9
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 26 Potential Issue API: SDKCheck of <android.graphics.fonts.FontVariationAxis: android.graphics.fonts.FontVariationAxis[] fromFontVariationSettings(java.lang.String)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 21 22 23 24 25 
+Error road: <a.b.f.b.f: android.graphics.Typeface a(android.content.Context,a.b.f.a.d.c$b,android.content.res.Resources,int)>[]--><android.graphics.fonts.FontVariationAxis: android.graphics.fonts.FontVariationAxis[] fromFontVariationSettings(java.lang.String)>
+#1.the call statck between class <a.b.f.b.f: android.graphics.Typeface a(android.content.Context,a.b.f.a.d.c$b,android.content.res.Resources,int)> to <android.graphics.fonts.FontVariationAxis: android.graphics.fonts.FontVariationAxis[] fromFontVariationSettings(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:10
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 27 Potential Issue API: SDKCheck of <android.view.Window.Callback: void onProvideKeyboardShortcuts(java.util.List,android.view.Menu,int)> is checking!!!
+The life time of api is [24,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 21 22 23 
+Error road: <a.b.g.e.i: void onProvideKeyboardShortcuts(java.util.List,android.view.Menu,int)>[]--><android.view.Window.Callback: void onProvideKeyboardShortcuts(java.util.List,android.view.Menu,int)>
+#1.the call statck between class <a.b.g.e.i: void onProvideKeyboardShortcuts(java.util.List,android.view.Menu,int)> to <android.view.Window.Callback: void onProvideKeyboardShortcuts(java.util.List,android.view.Menu,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:11
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 28 Potential Issue API: SDKCheck of <android.view.View: void setImportantForAutofill(int)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i1 < 26
+Good road: <a.b.f.i.s: void g(android.view.View,int)>[[-$i1 < 26]]--><android.view.View: void setImportantForAutofill(int)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 29 Potential Issue API: SDKCheck of <android.graphics.Paint: android.os.LocaleList getTextLocales()> is checking!!!
+The life time of api is [24,31]
+3call roads:
+0 Mainhead roads:
+3 Packageshead roads:
+###Multi invoking in one method, need manual check!!!<a.b.f.g.b$a: boolean equals(java.lang.Object)>[[$i0 < 23], [-$i0 < 24], [$i0 < 21], [$i0 < 18]]
+###Multi invoking in one method, need manual check!!!<a.b.f.g.b$a: boolean equals(java.lang.Object)>[[$i0 < 23]][[-$i0 < 24]][[$i0 < 21]][[$i0 < 18]]
+$i0 < 23
+-$i0 < 24
+$i0 < 21
+$i0 < 18
+Good road: <a.b.f.g.b$a: boolean equals(java.lang.Object)>[[$i0 < 23], [-$i0 < 24], [$i0 < 21], [$i0 < 18]]--><android.graphics.Paint: android.os.LocaleList getTextLocales()>
+One road protect good!
+-$i0 < 24
+Good road: <a.b.f.g.b$a: int hashCode()>[[-$i0 < 24]]--><android.graphics.Paint: android.os.LocaleList getTextLocales()>
+One road protect good!
+###Multi invoking in one method, need manual check!!!<a.b.f.g.b$a: java.lang.String toString()>[[-$i0 < 24], [$i0 < 21]]
+###Multi invoking in one method, need manual check!!!<a.b.f.g.b$a: java.lang.String toString()>[[-$i0 < 24]][[$i0 < 21]]
+-$i0 < 24
+$i0 < 21
+Good road: <a.b.f.g.b$a: java.lang.String toString()>[[-$i0 < 24], [$i0 < 21]]--><android.graphics.Paint: android.os.LocaleList getTextLocales()>
+One road protect good!
+containsStatic:false
+containsTry:false
+4call by main package
+-----------------------------------------
+#################################################
+N 30 Potential Issue API: SDKCheck of <android.graphics.drawable.Drawable: int getLayoutDirection()> is checking!!!
+The life time of api is [23,31]
+6call roads:
+0 Mainhead roads:
+6 Packageshead roads:
+###Multi invoking in one method, need manual check!!!--><a.b.g.c.a.b: void a(android.graphics.drawable.Drawable)>[[-$i0 < 23], [try]]
+###Multi invoking in one method, need manual check!!!--><a.b.g.c.a.b: void a(android.graphics.drawable.Drawable)>[[-$i0 < 23]][[try]]
+-$i0 < 23
+try
+Good road with try: <a.b.g.c.a.a: void a(android.content.Context,android.content.res.Resources,org.xmlpull.v1.XmlPullParser,android.util.AttributeSet,android.content.res.Resources$Theme)>[]--><a.b.g.c.a.a: boolean setVisible(boolean,boolean)>[]--><a.b.g.c.a.a: void jumpToCurrentState()>[]--><a.b.g.c.a.b: boolean a(int)>[]--><a.b.g.c.a.b: void a(android.graphics.drawable.Drawable)>[[-$i0 < 23], [try]]--><android.graphics.drawable.Drawable: int getLayoutDirection()>
+One road protect good!
+###Multi invoking in one method, need manual check!!!--><a.b.g.c.a.b: void a(android.graphics.drawable.Drawable)>[[-$i0 < 23], [try]]
+###Multi invoking in one method, need manual check!!!--><a.b.g.c.a.b: void a(android.graphics.drawable.Drawable)>[[-$i0 < 23]][[try]]
+-$i0 < 23
+try
+Good road with try: <a.b.g.c.a.a: void a(android.content.Context,android.content.res.Resources,org.xmlpull.v1.XmlPullParser,android.util.AttributeSet,android.content.res.Resources$Theme)>[]--><a.b.g.c.a.a: void c()>[]--><a.b.g.c.a.a: boolean onStateChange(int[])>[]--><a.b.g.c.a.a: boolean b(int)>[]--><a.b.g.c.a.b: boolean a(int)>[]--><a.b.g.c.a.b: void a(android.graphics.drawable.Drawable)>[[-$i0 < 23], [try]]--><android.graphics.drawable.Drawable: int getLayoutDirection()>
+One road protect good!
+###Multi invoking in one method, need manual check!!!--><a.b.g.c.a.b: void a(android.graphics.drawable.Drawable)>[[-$i0 < 23], [try]]
+###Multi invoking in one method, need manual check!!!--><a.b.g.c.a.b: void a(android.graphics.drawable.Drawable)>[[-$i0 < 23]][[try]]
+-$i0 < 23
+try
+Good road with try: <a.b.g.c.a.b: void a(a.b.g.c.a.b$c)>[]--><a.b.g.c.a.b: void a(android.graphics.drawable.Drawable)>[[-$i0 < 23], [try]]--><android.graphics.drawable.Drawable: int getLayoutDirection()>
+One road protect good!
+###Multi invoking in one method, need manual check!!!--><a.b.g.c.a.b: void a(android.graphics.drawable.Drawable)>[[-$i0 < 23], [try]]
+###Multi invoking in one method, need manual check!!!--><a.b.g.c.a.b: void a(android.graphics.drawable.Drawable)>[[-$i0 < 23]][[try]]
+-$i0 < 23
+try
+Good road with try: <a.b.g.c.a.d: void <init>(a.b.g.c.a.d$a,android.content.res.Resources)>[]--><a.b.g.c.a.d: boolean onStateChange(int[])>[]--><a.b.g.c.a.b: boolean a(int)>[]--><a.b.g.c.a.b: void a(android.graphics.drawable.Drawable)>[[-$i0 < 23], [try]]--><android.graphics.drawable.Drawable: int getLayoutDirection()>
+One road protect good!
+!!!this api will crash on sdk 21 22 
+Error road: <a.b.g.c.a.b: boolean getPadding(android.graphics.Rect)>[]--><a.b.g.c.a.b: boolean c()>[]--><android.graphics.drawable.Drawable: int getLayoutDirection()>
+#4.the call statck between class <a.b.g.c.a.b: boolean getPadding(android.graphics.Rect)> to <android.graphics.drawable.Drawable: int getLayoutDirection()>has compatibility isssues！
+-----------------------------------------
+###Multi invoking in one method, need manual check!!!--><a.b.g.c.a.b: void a(android.graphics.drawable.Drawable)>[[-$i0 < 23], [try]]
+###Multi invoking in one method, need manual check!!!--><a.b.g.c.a.b: void a(android.graphics.drawable.Drawable)>[[-$i0 < 23]][[try]]
+-$i0 < 23
+try
+Good road with try: <a.b.g.c.a.a: void <init>(a.b.g.c.a.a$c,android.content.res.Resources)>[]--><a.b.g.c.a.a: void jumpToCurrentState()>[]--><a.b.g.c.a.b: boolean a(int)>[]--><a.b.g.c.a.b: void a(android.graphics.drawable.Drawable)>[[-$i0 < 23], [try]]--><android.graphics.drawable.Drawable: int getLayoutDirection()>
+One road protect good!
+###Multi invoking in one method, need manual check!!!--><a.b.g.c.a.b: void a(android.graphics.drawable.Drawable)>[[-$i0 < 23], [try]]
+###Multi invoking in one method, need manual check!!!--><a.b.g.c.a.b: void a(android.graphics.drawable.Drawable)>[[-$i0 < 23]][[try]]
+-$i0 < 23
+try
+Good road with try: <a.b.g.c.a.a: void <init>(a.b.g.c.a.a$c,android.content.res.Resources)>[]--><a.b.g.c.a.a: boolean onStateChange(int[])>[]--><a.b.g.c.a.a: boolean b(int)>[]--><a.b.g.c.a.b: boolean a(int)>[]--><a.b.g.c.a.b: void a(android.graphics.drawable.Drawable)>[[-$i0 < 23], [try]]--><android.graphics.drawable.Drawable: int getLayoutDirection()>
+One road protect good!
+###Multi invoking in one method, need manual check!!!--><a.b.g.c.a.b: void a(android.graphics.drawable.Drawable)>[[-$i0 < 23], [try]]
+###Multi invoking in one method, need manual check!!!--><a.b.g.c.a.b: void a(android.graphics.drawable.Drawable)>[[-$i0 < 23]][[try]]
+-$i0 < 23
+try
+Good road with try: <a.b.g.c.a.d: void applyTheme(android.content.res.Resources$Theme)>[]--><a.b.g.c.a.d: boolean onStateChange(int[])>[]--><a.b.g.c.a.b: boolean a(int)>[]--><a.b.g.c.a.b: void a(android.graphics.drawable.Drawable)>[[-$i0 < 23], [try]]--><android.graphics.drawable.Drawable: int getLayoutDirection()>
+One road protect good!
+crashApis:12
+containsStatic:false
+containsTry:true
+7call by main package
+-----------------------------------------
+#################################################
+N 31 Potential Issue API: SDKCheck of <android.text.PrecomputedText.Params: boolean equals(java.lang.Object)> is checking!!!
+The life time of api is [28,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 21 22 23 24 25 26 27 
+Error road: <a.b.f.g.b$a: boolean equals(java.lang.Object)>[]--><android.text.PrecomputedText.Params: boolean equals(java.lang.Object)>
+#1.the call statck between class <a.b.f.g.b$a: boolean equals(java.lang.Object)> to <android.text.PrecomputedText.Params: boolean equals(java.lang.Object)>has compatibility isssues！
+-----------------------------------------
+crashApis:13
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 32 Potential Issue API: SDKCheck of <android.view.Window.Callback: boolean onSearchRequested(android.view.SearchEvent)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 21 22 
+Error road: <a.b.g.e.i: boolean onSearchRequested(android.view.SearchEvent)>[]--><android.view.Window.Callback: boolean onSearchRequested(android.view.SearchEvent)>
+#1.the call statck between class <a.b.g.e.i: boolean onSearchRequested(android.view.SearchEvent)> to <android.view.Window.Callback: boolean onSearchRequested(android.view.SearchEvent)>has compatibility isssues！
+-----------------------------------------
+crashApis:14
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 33 Potential Issue API: SDKCheck of <android.view.MenuItem: android.view.MenuItem setIconTintMode(android.graphics.PorterDuff.Mode)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+$i0 < 26
+!!!this api will crash on sdk 21 22 23 24 25 
+Error road: <a.b.f.i.h: void a(android.view.MenuItem,android.graphics.PorterDuff$Mode)>[[], [-$i0 < 26]]--><android.view.MenuItem: android.view.MenuItem setIconTintMode(android.graphics.PorterDuff.Mode)>
+#1.the call statck between class <a.b.f.i.h: void a(android.view.MenuItem,android.graphics.PorterDuff$Mode)> to <android.view.MenuItem: android.view.MenuItem setIconTintMode(android.graphics.PorterDuff.Mode)>has compatibility isssues！
+-----------------------------------------
+crashApis:15
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 34 Potential Issue API: SDKCheck of <android.view.ViewConfiguration: int getScaledHoverSlop()> is checking!!!
+The life time of api is [28,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i0 < 28
+Good road: <a.b.f.i.t: int a(android.view.ViewConfiguration)>[[-$i0 < 28]]--><android.view.ViewConfiguration: int getScaledHoverSlop()>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 35 Potential Issue API: SDKCheck of <android.text.PrecomputedText.Params: android.text.TextPaint getTextPaint()> is checking!!!
+The life time of api is [28,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 21 22 23 24 25 26 27 
+Error road: <a.b.f.g.b$a: void <init>(android.text.PrecomputedText$Params)>[]--><android.text.PrecomputedText.Params: android.text.TextPaint getTextPaint()>
+#1.the call statck between class <a.b.f.g.b$a: void <init>(android.text.PrecomputedText$Params)> to <android.text.PrecomputedText.Params: android.text.TextPaint getTextPaint()>has compatibility isssues！
+-----------------------------------------
+crashApis:16
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 36 Potential Issue API: SDKCheck of <android.content.Context: int getColor(int)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i1 < 23
+Good road: <a.b.f.a.a: int a(android.content.Context,int)>[[-$i1 < 23]]--><android.content.Context: int getColor(int)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 37 Potential Issue API: SDKCheck of <android.view.MenuItem: android.view.MenuItem setNumericShortcut(char,int)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+$i2 < 26
+!!!this api will crash on sdk 21 22 23 24 25 
+Error road: <a.b.g.e.g$b: void a(android.view.MenuItem)>[]--><a.b.f.i.h: void b(android.view.MenuItem,char,int)>[[], [-$i2 < 26]]--><android.view.MenuItem: android.view.MenuItem setNumericShortcut(char,int)>
+#1.the call statck between class <a.b.g.e.g$b: void a(android.view.MenuItem)> to <android.view.MenuItem: android.view.MenuItem setNumericShortcut(char,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:17
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 38 Potential Issue API: SDKCheck of <android.view.Window.Callback: android.view.ActionMode onWindowStartingActionMode(android.view.ActionMode.Callback,int)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 21 22 
+Error road: <a.b.g.e.i: android.view.ActionMode onWindowStartingActionMode(android.view.ActionMode$Callback,int)>[]--><android.view.Window.Callback: android.view.ActionMode onWindowStartingActionMode(android.view.ActionMode.Callback,int)>
+#1.the call statck between class <a.b.g.e.i: android.view.ActionMode onWindowStartingActionMode(android.view.ActionMode$Callback,int)> to <android.view.Window.Callback: android.view.ActionMode onWindowStartingActionMode(android.view.ActionMode.Callback,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:18
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 39 Potential Issue API: SDKCheck of <android.view.View: int getImportantForAutofill()> is checking!!!
+The life time of api is [26,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i0 < 26
+Good road: <a.b.f.i.s: int j(android.view.View)>[[-$i0 < 26]]--><android.view.View: int getImportantForAutofill()>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 40 Potential Issue API: SDKCheck of <android.view.accessibility.AccessibilityNodeInfo: void setHintText(java.lang.CharSequence)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i0 < 26
+Good road: <a.b.f.i.b0.c: void c(java.lang.CharSequence)>[[-$i0 < 26]]--><android.view.accessibility.AccessibilityNodeInfo: void setHintText(java.lang.CharSequence)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 41 Potential Issue API: SDKCheck of <android.graphics.drawable.Drawable: void getHotspotBounds(android.graphics.Rect)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 21 22 
+Error road: <a.b.g.c.a.b: void getHotspotBounds(android.graphics.Rect)>[]--><android.graphics.drawable.Drawable: void getHotspotBounds(android.graphics.Rect)>
+#1.the call statck between class <a.b.g.c.a.b: void getHotspotBounds(android.graphics.Rect)> to <android.graphics.drawable.Drawable: void getHotspotBounds(android.graphics.Rect)>has compatibility isssues！
+-----------------------------------------
+crashApis:19
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 42 Potential Issue API: SDKCheck of <android.content.Context: android.content.ComponentName startForegroundService(android.content.Intent)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.termux.tasker.FireReceiver dummyMainMethod_com_termux_tasker_FireReceiver(android.content.Intent)>[]--><com.termux.tasker.FireReceiver: void onReceive(android.content.Context,android.content.Intent)>[[-$i0 < 26]]--><android.content.Context: android.content.ComponentName startForegroundService(android.content.Intent)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 43 Potential Issue API: SDKCheck of <android.graphics.drawable.Drawable: boolean setLayoutDirection(int)> is checking!!!
+The life time of api is [23,31]
+7call roads:
+0 Mainhead roads:
+7 Packageshead roads:
+###Multi invoking in one method, need manual check!!!--><a.b.g.c.a.b: void a(android.graphics.drawable.Drawable)>[[-$i0 < 23], [try]]
+###Multi invoking in one method, need manual check!!!--><a.b.g.c.a.b: void a(android.graphics.drawable.Drawable)>[[-$i0 < 23]][[try]]
+-$i0 < 23
+try
+Good road with try: <a.b.g.c.a.a: void a(android.content.Context,android.content.res.Resources,org.xmlpull.v1.XmlPullParser,android.util.AttributeSet,android.content.res.Resources$Theme)>[]--><a.b.g.c.a.a: boolean setVisible(boolean,boolean)>[]--><a.b.g.c.a.a: void jumpToCurrentState()>[]--><a.b.g.c.a.b: boolean a(int)>[]--><a.b.g.c.a.b: void a(android.graphics.drawable.Drawable)>[[-$i0 < 23], [try]]--><android.graphics.drawable.Drawable: boolean setLayoutDirection(int)>
+One road protect good!
+###Multi invoking in one method, need manual check!!!--><a.b.g.c.a.b: void a(android.graphics.drawable.Drawable)>[[-$i0 < 23], [try]]
+###Multi invoking in one method, need manual check!!!--><a.b.g.c.a.b: void a(android.graphics.drawable.Drawable)>[[-$i0 < 23]][[try]]
+-$i0 < 23
+try
+Good road with try: <a.b.g.c.a.a: void a(android.content.Context,android.content.res.Resources,org.xmlpull.v1.XmlPullParser,android.util.AttributeSet,android.content.res.Resources$Theme)>[]--><a.b.g.c.a.a: void c()>[]--><a.b.g.c.a.a: boolean onStateChange(int[])>[]--><a.b.g.c.a.a: boolean b(int)>[]--><a.b.g.c.a.b: boolean a(int)>[]--><a.b.g.c.a.b: void a(android.graphics.drawable.Drawable)>[[-$i0 < 23], [try]]--><android.graphics.drawable.Drawable: boolean setLayoutDirection(int)>
+One road protect good!
+-$i0 < 23
+Good road: <a.b.g.c.a.b$c: android.graphics.drawable.Drawable b(android.graphics.drawable.Drawable)>[[-$i0 < 23]]--><android.graphics.drawable.Drawable: boolean setLayoutDirection(int)>
+One road protect good!
+-$i4 < 23
+Good road: <a.b.g.c.a.b$c: boolean b(int,int)>[[-$i4 < 23]]--><android.graphics.drawable.Drawable: boolean setLayoutDirection(int)>
+One road protect good!
+###Multi invoking in one method, need manual check!!!--><a.b.g.c.a.b: void a(android.graphics.drawable.Drawable)>[[-$i0 < 23], [try]]
+###Multi invoking in one method, need manual check!!!--><a.b.g.c.a.b: void a(android.graphics.drawable.Drawable)>[[-$i0 < 23]][[try]]
+-$i0 < 23
+try
+Good road with try: <a.b.g.c.a.b: void a(a.b.g.c.a.b$c)>[]--><a.b.g.c.a.b: void a(android.graphics.drawable.Drawable)>[[-$i0 < 23], [try]]--><android.graphics.drawable.Drawable: boolean setLayoutDirection(int)>
+One road protect good!
+###Multi invoking in one method, need manual check!!!--><a.b.g.c.a.b: void a(android.graphics.drawable.Drawable)>[[-$i0 < 23], [try]]
+###Multi invoking in one method, need manual check!!!--><a.b.g.c.a.b: void a(android.graphics.drawable.Drawable)>[[-$i0 < 23]][[try]]
+-$i0 < 23
+try
+Good road with try: <a.b.g.c.a.d: void <init>(a.b.g.c.a.d$a,android.content.res.Resources)>[]--><a.b.g.c.a.d: boolean onStateChange(int[])>[]--><a.b.g.c.a.b: boolean a(int)>[]--><a.b.g.c.a.b: void a(android.graphics.drawable.Drawable)>[[-$i0 < 23], [try]]--><android.graphics.drawable.Drawable: boolean setLayoutDirection(int)>
+One road protect good!
+###Multi invoking in one method, need manual check!!!--><a.b.g.c.a.b: void a(android.graphics.drawable.Drawable)>[[-$i0 < 23], [try]]
+###Multi invoking in one method, need manual check!!!--><a.b.g.c.a.b: void a(android.graphics.drawable.Drawable)>[[-$i0 < 23]][[try]]
+-$i0 < 23
+try
+Good road with try: <a.b.g.c.a.a: void <init>(a.b.g.c.a.a$c,android.content.res.Resources)>[]--><a.b.g.c.a.a: void jumpToCurrentState()>[]--><a.b.g.c.a.b: boolean a(int)>[]--><a.b.g.c.a.b: void a(android.graphics.drawable.Drawable)>[[-$i0 < 23], [try]]--><android.graphics.drawable.Drawable: boolean setLayoutDirection(int)>
+One road protect good!
+###Multi invoking in one method, need manual check!!!--><a.b.g.c.a.b: void a(android.graphics.drawable.Drawable)>[[-$i0 < 23], [try]]
+###Multi invoking in one method, need manual check!!!--><a.b.g.c.a.b: void a(android.graphics.drawable.Drawable)>[[-$i0 < 23]][[try]]
+-$i0 < 23
+try
+Good road with try: <a.b.g.c.a.a: void <init>(a.b.g.c.a.a$c,android.content.res.Resources)>[]--><a.b.g.c.a.a: boolean onStateChange(int[])>[]--><a.b.g.c.a.a: boolean b(int)>[]--><a.b.g.c.a.b: boolean a(int)>[]--><a.b.g.c.a.b: void a(android.graphics.drawable.Drawable)>[[-$i0 < 23], [try]]--><android.graphics.drawable.Drawable: boolean setLayoutDirection(int)>
+One road protect good!
+###Multi invoking in one method, need manual check!!!--><a.b.g.c.a.b: void a(android.graphics.drawable.Drawable)>[[-$i0 < 23], [try]]
+###Multi invoking in one method, need manual check!!!--><a.b.g.c.a.b: void a(android.graphics.drawable.Drawable)>[[-$i0 < 23]][[try]]
+-$i0 < 23
+try
+Good road with try: <a.b.g.c.a.d: void applyTheme(android.content.res.Resources$Theme)>[]--><a.b.g.c.a.d: boolean onStateChange(int[])>[]--><a.b.g.c.a.b: boolean a(int)>[]--><a.b.g.c.a.b: void a(android.graphics.drawable.Drawable)>[[-$i0 < 23], [try]]--><android.graphics.drawable.Drawable: boolean setLayoutDirection(int)>
+One road protect good!
+containsStatic:false
+containsTry:true
+8call by main package
+-----------------------------------------
+#################################################
+N 44 Potential Issue API: SDKCheck of <android.text.PrecomputedText: java.lang.Object[] getSpans(int,int,java.lang.Class)> is checking!!!
+The life time of api is [28,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i2 < 28
+Good road: <a.b.f.g.b: java.lang.Object[] getSpans(int,int,java.lang.Class)>[[-$i2 < 28]]--><android.text.PrecomputedText: java.lang.Object[] getSpans(int,int,java.lang.Class)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 45 Potential Issue API: SDKCheck of <android.text.PrecomputedText.Params: int getBreakStrategy()> is checking!!!
+The life time of api is [28,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 21 22 23 24 25 26 27 
+Error road: <a.b.f.g.b$a: void <init>(android.text.PrecomputedText$Params)>[]--><android.text.PrecomputedText.Params: int getBreakStrategy()>
+#1.the call statck between class <a.b.f.g.b$a: void <init>(android.text.PrecomputedText$Params)> to <android.text.PrecomputedText.Params: int getBreakStrategy()>has compatibility isssues！
+-----------------------------------------
+crashApis:20
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 46 Potential Issue API: SDKCheck of <android.text.PrecomputedText.Params.Builder: android.text.PrecomputedText.Params.Builder setHyphenationFrequency(int)> is checking!!!
+The life time of api is [28,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i2 < 28
+Good road: <a.b.f.g.b$a: void <init>(android.text.TextPaint,android.text.TextDirectionHeuristic,int,int)>[[-$i2 < 28]]--><android.text.PrecomputedText.Params.Builder: android.text.PrecomputedText.Params.Builder setHyphenationFrequency(int)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 47 Potential Issue API: SDKCheck of <android.view.ViewConfiguration: float getScaledVerticalScrollFactor()> is checking!!!
+The life time of api is [26,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i0 < 26
+Good road: <a.b.f.i.t: float c(android.view.ViewConfiguration,android.content.Context)>[[-$i0 < 26]]--><android.view.ViewConfiguration: float getScaledVerticalScrollFactor()>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 48 Potential Issue API: SDKCheck of <android.text.PrecomputedText: void removeSpan(java.lang.Object)> is checking!!!
+The life time of api is [28,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i0 < 28
+Good road: <a.b.f.g.b: void removeSpan(java.lang.Object)>[[-$i0 < 28]]--><android.text.PrecomputedText: void removeSpan(java.lang.Object)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 49 Potential Issue API: SDKCheck of <android.graphics.Bitmap: android.graphics.Bitmap createBitmap(android.graphics.Picture)> is checking!!!
+The life time of api is [28,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+$yysi0 < 19
+Good road: <a.b.e.i0: android.animation.Animator a(android.view.ViewGroup,a.b.e.s,a.b.e.s)>[]--><a.b.e.i0: android.animation.Animator b(android.view.ViewGroup,a.b.e.s,int,a.b.e.s,int)>[]--><a.b.e.r: android.view.View a(android.view.ViewGroup,android.view.View,android.view.View)>[]--><a.b.e.r: android.graphics.Bitmap a(android.view.View,android.graphics.Matrix,android.graphics.RectF,android.view.ViewGroup)>[[$yysi0 < 19]]--><android.graphics.Bitmap: android.graphics.Bitmap createBitmap(android.graphics.Picture)>
+One road protect good!
+containsStatic:true
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 50 Potential Issue API: SDKCheck of <android.view.accessibility.AccessibilityNodeInfo: void setShowingHintText(boolean)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i0 < 26
+Good road: <a.b.f.i.b0.c: void e(boolean)>[[-$i0 < 26]]--><android.view.accessibility.AccessibilityNodeInfo: void setShowingHintText(boolean)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+crashApis numbers:20
+crashApis numbers in main road:2
+On Android Version 16 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 17 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 18 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 19 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 20 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 21 this app may have error api use(at least): 20 and error api roads: 25
+On Android Version 22 this app may have error api use(at least): 18 and error api roads: 22
+On Android Version 23 this app may have error api use(at least): 13 and error api roads: 17
+On Android Version 24 this app may have error api use(at least): 11 and error api roads: 11
+On Android Version 25 this app may have error api use(at least): 11 and error api roads: 11
+On Android Version 26 this app may have error api use(at least): 5 and error api roads: 5
+On Android Version 27 this app may have error api use(at least): 5 and error api roads: 5
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 31 this app may have error api use(at least): 0 and error api roads: 0

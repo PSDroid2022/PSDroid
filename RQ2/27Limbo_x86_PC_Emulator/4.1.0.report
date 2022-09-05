@@ -1,0 +1,201 @@
+/home/ys/桌面/data-PSDroid-ICSE/27Limbo_x86_PC_Emulator/Limbo_x86_PC_Emulator-4.1.0.apk
+Entry Points[com.max2idea.android.limbo.main.LimboVNCActivity, com.limbo.emu.main.LimboEmuActivity, com.max2idea.android.limbo.main.LimboApplication, com.max2idea.android.limbo.main.LimboSettingsManager, com.max2idea.android.limbo.utils.LinksManager, com.max2idea.android.limbo.main.LimboSDLActivity, com.max2idea.android.limbo.main.LimboService, com.max2idea.android.limbo.main.LimboFileManager]
+FllowDroidcallgraph size:5960
+Soot started on Wed Jul 13 10:14:59 CST 2022
+StaticCheck:<org.libsdl.app.SDLActivity: boolean isTextInputEvent(android.view.KeyEvent)>$yysi0 < 11
+Soot finished on Wed Jul 13 10:15:09 CST 2022
+Soot has run for 0 min. 10 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 21
+Declared Target Sdk version is: 26
+Declared Max Sdk version is: -1
+Collected 612 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager: android.net.wifi.WifiManager.WifiLock createWifiLock(int,java.lang.String)> is checking!!!
+The life time of api is [3,30]
+73call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.limbo.emu.main.LimboEmuActivity dummyMainMethod_com_limbo_emu_main_LimboEmuActivity(android.content.Intent)>[]--><com.max2idea.android.limbo.main.LimboActivity$63: void onClick(android.view.View)>[]--><java.lang.Thread: void run()>[]--><com.max2idea.android.limbo.main.LimboService$1: void run()>[]--><com.max2idea.android.limbo.main.LimboService: void access$000(com.max2idea.android.limbo.main.LimboService)>[]--><com.max2idea.android.limbo.main.LimboService: void setupLocks()>[]--><android.net.wifi.WifiManager: android.net.wifi.WifiManager.WifiLock createWifiLock(int,java.lang.String)>
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.max2idea.android.limbo.main.LimboFileManager dummyMainMethod_com_max2idea_android_limbo_main_LimboFileManager(android.content.Intent)>[]--><com.max2idea.android.limbo.utils.FileManager: void onCreate(android.os.Bundle)>[]--><android.os.Handler: boolean postDelayed(java.lang.Runnable,long)>[]--><com.max2idea.android.limbo.main.LimboSDLActivity$16$1: void run()>[]--><com.max2idea.android.limbo.main.LimboSDLActivity$VMListener: java.lang.Object doInBackground(java.lang.Object[])>[]--><com.max2idea.android.limbo.main.LimboSDLActivity$VMListener: java.lang.Void doInBackground(java.lang.Void[])>[]--><com.max2idea.android.limbo.main.LimboSDLActivity: void startTimeListener()>[[try]]--><com.max2idea.android.limbo.main.LimboSDLActivity: void checkStatus()>[]--><com.max2idea.android.limbo.utils.Machine: com.max2idea.android.limbo.main.LimboActivity$VMStatus checkSaveVMStatus(android.app.Activity)>[]--><com.max2idea.android.limbo.main.LimboActivity: void saveStateVMDB()>[]--><com.max2idea.android.limbo.utils.MachineOpenHelper: void update(com.max2idea.android.limbo.utils.Machine,java.lang.String,java.lang.String)>[]--><java.lang.Thread: void run()>[]--><com.max2idea.android.limbo.main.LimboService$1: void run()>[]--><com.max2idea.android.limbo.main.LimboService: void access$000(com.max2idea.android.limbo.main.LimboService)>[]--><com.max2idea.android.limbo.main.LimboService: void setupLocks()>[]--><android.net.wifi.WifiManager: android.net.wifi.WifiManager.WifiLock createWifiLock(int,java.lang.String)>
+One road protect good!
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.max2idea.android.limbo.main.LimboService dummyMainMethod_com_max2idea_android_limbo_main_LimboService(android.content.Intent)>[]--><com.max2idea.android.limbo.main.LimboService: int onStartCommand(android.content.Intent,int,int)>[]--><com.max2idea.android.limbo.utils.FileUtils: void startLogging()>[]--><java.lang.Thread: void run()>[]--><com.max2idea.android.limbo.main.LimboService$1: void run()>[]--><com.max2idea.android.limbo.main.LimboService: void access$000(com.max2idea.android.limbo.main.LimboService)>[]--><com.max2idea.android.limbo.main.LimboService: void setupLocks()>[]--><android.net.wifi.WifiManager: android.net.wifi.WifiManager.WifiLock createWifiLock(int,java.lang.String)>
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.max2idea.android.limbo.main.LimboSDLActivity dummyMainMethod_com_max2idea_android_limbo_main_LimboSDLActivity(android.content.Intent)>[]--><com.max2idea.android.limbo.main.LimboSDLActivity$2: void onClick(android.content.DialogInterface,int)>[]--><com.max2idea.android.limbo.main.LimboSDLActivity: void access$000(com.max2idea.android.limbo.main.LimboSDLActivity,boolean)>[]--><com.max2idea.android.limbo.main.LimboSDLActivity: void setUIModeMobile(boolean)>[[try]]--><com.max2idea.android.limbo.main.LimboSDLActivity: void onNormalScreen()>[]--><java.lang.Thread: void run()>[]--><com.max2idea.android.limbo.main.LimboService$1: void run()>[]--><com.max2idea.android.limbo.main.LimboService: void access$000(com.max2idea.android.limbo.main.LimboService)>[]--><com.max2idea.android.limbo.main.LimboService: void setupLocks()>[]--><android.net.wifi.WifiManager: android.net.wifi.WifiManager.WifiLock createWifiLock(int,java.lang.String)>
+One road protect good!
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.max2idea.android.limbo.main.LimboVNCActivity dummyMainMethod_com_max2idea_android_limbo_main_LimboVNCActivity(android.content.Intent)>[]--><com.max2idea.android.limbo.utils.Machine$9: void onClick(android.content.DialogInterface,int)>[]--><java.lang.Thread: void run()>[]--><com.max2idea.android.limbo.main.LimboService$1: void run()>[]--><com.max2idea.android.limbo.main.LimboService: void access$000(com.max2idea.android.limbo.main.LimboService)>[]--><com.max2idea.android.limbo.main.LimboService: void setupLocks()>[]--><android.net.wifi.WifiManager: android.net.wifi.WifiManager.WifiLock createWifiLock(int,java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.wifi.WifiManager: android.net.wifi.WifiManager.WifiLock createWifiLock(int,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+72 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <com.max2idea.android.limbo.main.LimboActivity$14: void onCheckedChanged(android.widget.CompoundButton,boolean)>[]--><com.max2idea.android.limbo.utils.MachineOpenHelper: void update(com.max2idea.android.limbo.utils.Machine,java.lang.String,java.lang.String)>[]--><java.lang.Thread: void run()>[]--><com.max2idea.android.limbo.main.LimboService$1: void run()>[]--><com.max2idea.android.limbo.main.LimboService: void access$000(com.max2idea.android.limbo.main.LimboService)>[]--><com.max2idea.android.limbo.main.LimboService: void setupLocks()>[]--><android.net.wifi.WifiManager: android.net.wifi.WifiManager.WifiLock createWifiLock(int,java.lang.String)>
+#1.the call statck between class <com.max2idea.android.limbo.main.LimboActivity$14: void onCheckedChanged(android.widget.CompoundButton,boolean)> to <android.net.wifi.WifiManager: android.net.wifi.WifiManager.WifiLock createWifiLock(int,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <com.max2idea.android.limbo.main.LimboActivity$19: void onItemSelected(android.widget.AdapterView,android.view.View,int,long)>[]--><com.max2idea.android.limbo.utils.MachineOpenHelper: void update(com.max2idea.android.limbo.utils.Machine,java.lang.String,java.lang.String)>[]--><java.lang.Thread: void run()>[]--><com.max2idea.android.limbo.main.LimboService$1: void run()>[]--><com.max2idea.android.limbo.main.LimboService: void access$000(com.max2idea.android.limbo.main.LimboService)>[]--><com.max2idea.android.limbo.main.LimboService: void setupLocks()>[]--><android.net.wifi.WifiManager: android.net.wifi.WifiManager.WifiLock createWifiLock(int,java.lang.String)>
+#2.the call statck between class <com.max2idea.android.limbo.main.LimboActivity$19: void onItemSelected(android.widget.AdapterView,android.view.View,int,long)> to <android.net.wifi.WifiManager: android.net.wifi.WifiManager.WifiLock createWifiLock(int,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+try
+Good road with try: <com.max2idea.android.limbo.main.LimboSDLActivity$LimboSDLSurface: void onConfigurationChanged(android.content.res.Configuration)>[]--><com.max2idea.android.limbo.main.LimboSDLActivity: void resize(android.content.res.Configuration)>[]--><android.os.Handler: boolean postDelayed(java.lang.Runnable,long)>[]--><com.max2idea.android.limbo.main.LimboSDLActivity$16$1: void run()>[]--><com.max2idea.android.limbo.main.LimboSDLActivity$VMListener: java.lang.Object doInBackground(java.lang.Object[])>[]--><com.max2idea.android.limbo.main.LimboSDLActivity$VMListener: java.lang.Void doInBackground(java.lang.Void[])>[]--><com.max2idea.android.limbo.main.LimboSDLActivity: void startTimeListener()>[[try]]--><com.max2idea.android.limbo.main.LimboSDLActivity: void checkStatus()>[]--><com.max2idea.android.limbo.utils.Machine: com.max2idea.android.limbo.main.LimboActivity$VMStatus checkSaveVMStatus(android.app.Activity)>[]--><com.max2idea.android.limbo.main.LimboActivity: void saveStateVMDB()>[]--><com.max2idea.android.limbo.utils.MachineOpenHelper: void update(com.max2idea.android.limbo.utils.Machine,java.lang.String,java.lang.String)>[]--><java.lang.Thread: void run()>[]--><com.max2idea.android.limbo.main.LimboService$1: void run()>[]--><com.max2idea.android.limbo.main.LimboService: void access$000(com.max2idea.android.limbo.main.LimboService)>[]--><com.max2idea.android.limbo.main.LimboService: void setupLocks()>[]--><android.net.wifi.WifiManager: android.net.wifi.WifiManager.WifiLock createWifiLock(int,java.lang.String)>
+One road protect good!
+!!!this api will crash on sdk 31 
+Error road: <com.max2idea.android.limbo.main.LimboActivity$12: void onCheckedChanged(android.widget.CompoundButton,boolean)>[]--><com.max2idea.android.limbo.utils.MachineOpenHelper: void update(com.max2idea.android.limbo.utils.Machine,java.lang.String,java.lang.String)>[]--><java.lang.Thread: void run()>[]--><com.max2idea.android.limbo.main.LimboService$1: void run()>[]--><com.max2idea.android.limbo.main.LimboService: void access$000(com.max2idea.android.limbo.main.LimboService)>[]--><com.max2idea.android.limbo.main.LimboService: void setupLocks()>[]--><android.net.wifi.WifiManager: android.net.wifi.WifiManager.WifiLock createWifiLock(int,java.lang.String)>
+#4.the call statck between class <com.max2idea.android.limbo.main.LimboActivity$12: void onCheckedChanged(android.widget.CompoundButton,boolean)> to <android.net.wifi.WifiManager: android.net.wifi.WifiManager.WifiLock createWifiLock(int,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <com.max2idea.android.limbo.main.LimboActivity$54: void onCheckedChanged(android.widget.CompoundButton,boolean)>[]--><com.max2idea.android.limbo.utils.MachineOpenHelper: void update(com.max2idea.android.limbo.utils.Machine,java.lang.String,java.lang.String)>[]--><java.lang.Thread: void run()>[]--><com.max2idea.android.limbo.main.LimboService$1: void run()>[]--><com.max2idea.android.limbo.main.LimboService: void access$000(com.max2idea.android.limbo.main.LimboService)>[]--><com.max2idea.android.limbo.main.LimboService: void setupLocks()>[]--><android.net.wifi.WifiManager: android.net.wifi.WifiManager.WifiLock createWifiLock(int,java.lang.String)>
+#5.the call statck between class <com.max2idea.android.limbo.main.LimboActivity$54: void onCheckedChanged(android.widget.CompoundButton,boolean)> to <android.net.wifi.WifiManager: android.net.wifi.WifiManager.WifiLock createWifiLock(int,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <com.max2idea.android.limbo.main.LimboActivity$15: void onCheckedChanged(android.widget.CompoundButton,boolean)>[]--><com.max2idea.android.limbo.utils.MachineOpenHelper: void update(com.max2idea.android.limbo.utils.Machine,java.lang.String,java.lang.String)>[]--><java.lang.Thread: void run()>[]--><com.max2idea.android.limbo.main.LimboService$1: void run()>[]--><com.max2idea.android.limbo.main.LimboService: void access$000(com.max2idea.android.limbo.main.LimboService)>[]--><com.max2idea.android.limbo.main.LimboService: void setupLocks()>[]--><android.net.wifi.WifiManager: android.net.wifi.WifiManager.WifiLock createWifiLock(int,java.lang.String)>
+#6.the call statck between class <com.max2idea.android.limbo.main.LimboActivity$15: void onCheckedChanged(android.widget.CompoundButton,boolean)> to <android.net.wifi.WifiManager: android.net.wifi.WifiManager.WifiLock createWifiLock(int,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <com.max2idea.android.limbo.main.LimboActivity$13: void onCheckedChanged(android.widget.CompoundButton,boolean)>[]--><com.max2idea.android.limbo.utils.MachineOpenHelper: void update(com.max2idea.android.limbo.utils.Machine,java.lang.String,java.lang.String)>[]--><java.lang.Thread: void run()>[]--><com.max2idea.android.limbo.main.LimboService$1: void run()>[]--><com.max2idea.android.limbo.main.LimboService: void access$000(com.max2idea.android.limbo.main.LimboService)>[]--><com.max2idea.android.limbo.main.LimboService: void setupLocks()>[]--><android.net.wifi.WifiManager: android.net.wifi.WifiManager.WifiLock createWifiLock(int,java.lang.String)>
+#7.the call statck between class <com.max2idea.android.limbo.main.LimboActivity$13: void onCheckedChanged(android.widget.CompoundButton,boolean)> to <android.net.wifi.WifiManager: android.net.wifi.WifiManager.WifiLock createWifiLock(int,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <com.max2idea.android.limbo.main.LimboActivity$32: void onCheckedChanged(android.widget.CompoundButton,boolean)>[]--><com.max2idea.android.limbo.utils.MachineOpenHelper: void update(com.max2idea.android.limbo.utils.Machine,java.lang.String,java.lang.String)>[]--><java.lang.Thread: void run()>[]--><com.max2idea.android.limbo.main.LimboService$1: void run()>[]--><com.max2idea.android.limbo.main.LimboService: void access$000(com.max2idea.android.limbo.main.LimboService)>[]--><com.max2idea.android.limbo.main.LimboService: void setupLocks()>[]--><android.net.wifi.WifiManager: android.net.wifi.WifiManager.WifiLock createWifiLock(int,java.lang.String)>
+#8.the call statck between class <com.max2idea.android.limbo.main.LimboActivity$32: void onCheckedChanged(android.widget.CompoundButton,boolean)> to <android.net.wifi.WifiManager: android.net.wifi.WifiManager.WifiLock createWifiLock(int,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <com.max2idea.android.limbo.main.LimboActivity$34: void onCheckedChanged(android.widget.CompoundButton,boolean)>[]--><com.max2idea.android.limbo.utils.MachineOpenHelper: void update(com.max2idea.android.limbo.utils.Machine,java.lang.String,java.lang.String)>[]--><java.lang.Thread: void run()>[]--><com.max2idea.android.limbo.main.LimboService$1: void run()>[]--><com.max2idea.android.limbo.main.LimboService: void access$000(com.max2idea.android.limbo.main.LimboService)>[]--><com.max2idea.android.limbo.main.LimboService: void setupLocks()>[]--><android.net.wifi.WifiManager: android.net.wifi.WifiManager.WifiLock createWifiLock(int,java.lang.String)>
+#9.the call statck between class <com.max2idea.android.limbo.main.LimboActivity$34: void onCheckedChanged(android.widget.CompoundButton,boolean)> to <android.net.wifi.WifiManager: android.net.wifi.WifiManager.WifiLock createWifiLock(int,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <com.max2idea.android.limbo.main.LimboActivity$33: void onCheckedChanged(android.widget.CompoundButton,boolean)>[]--><com.max2idea.android.limbo.utils.MachineOpenHelper: void update(com.max2idea.android.limbo.utils.Machine,java.lang.String,java.lang.String)>[]--><java.lang.Thread: void run()>[]--><com.max2idea.android.limbo.main.LimboService$1: void run()>[]--><com.max2idea.android.limbo.main.LimboService: void access$000(com.max2idea.android.limbo.main.LimboService)>[]--><com.max2idea.android.limbo.main.LimboService: void setupLocks()>[]--><android.net.wifi.WifiManager: android.net.wifi.WifiManager.WifiLock createWifiLock(int,java.lang.String)>
+#10.the call statck between class <com.max2idea.android.limbo.main.LimboActivity$33: void onCheckedChanged(android.widget.CompoundButton,boolean)> to <android.net.wifi.WifiManager: android.net.wifi.WifiManager.WifiLock createWifiLock(int,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:1
+crashApisInMain:1
+containsStatic:false
+containsTry:true
+11call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager.WifiLock: void setReferenceCounted(boolean)> is checking!!!
+The life time of api is [1,30]
+73call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.limbo.emu.main.LimboEmuActivity dummyMainMethod_com_limbo_emu_main_LimboEmuActivity(android.content.Intent)>[]--><com.max2idea.android.limbo.main.LimboActivity$63: void onClick(android.view.View)>[]--><java.lang.Thread: void run()>[]--><com.max2idea.android.limbo.main.LimboService$1: void run()>[]--><com.max2idea.android.limbo.main.LimboService: void access$000(com.max2idea.android.limbo.main.LimboService)>[]--><com.max2idea.android.limbo.main.LimboService: void setupLocks()>[]--><android.net.wifi.WifiManager.WifiLock: void setReferenceCounted(boolean)>
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.max2idea.android.limbo.main.LimboFileManager dummyMainMethod_com_max2idea_android_limbo_main_LimboFileManager(android.content.Intent)>[]--><com.max2idea.android.limbo.utils.FileManager: void onCreate(android.os.Bundle)>[]--><android.os.Handler: boolean postDelayed(java.lang.Runnable,long)>[]--><com.max2idea.android.limbo.main.LimboSDLActivity$16$1: void run()>[]--><com.max2idea.android.limbo.main.LimboSDLActivity$VMListener: java.lang.Object doInBackground(java.lang.Object[])>[]--><com.max2idea.android.limbo.main.LimboSDLActivity$VMListener: java.lang.Void doInBackground(java.lang.Void[])>[]--><com.max2idea.android.limbo.main.LimboSDLActivity: void startTimeListener()>[[try]]--><com.max2idea.android.limbo.main.LimboSDLActivity: void checkStatus()>[]--><com.max2idea.android.limbo.utils.Machine: com.max2idea.android.limbo.main.LimboActivity$VMStatus checkSaveVMStatus(android.app.Activity)>[]--><com.max2idea.android.limbo.main.LimboActivity: void saveStateVMDB()>[]--><com.max2idea.android.limbo.utils.MachineOpenHelper: void update(com.max2idea.android.limbo.utils.Machine,java.lang.String,java.lang.String)>[]--><java.lang.Thread: void run()>[]--><com.max2idea.android.limbo.main.LimboService$1: void run()>[]--><com.max2idea.android.limbo.main.LimboService: void access$000(com.max2idea.android.limbo.main.LimboService)>[]--><com.max2idea.android.limbo.main.LimboService: void setupLocks()>[]--><android.net.wifi.WifiManager.WifiLock: void setReferenceCounted(boolean)>
+One road protect good!
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.max2idea.android.limbo.main.LimboService dummyMainMethod_com_max2idea_android_limbo_main_LimboService(android.content.Intent)>[]--><com.max2idea.android.limbo.main.LimboService: int onStartCommand(android.content.Intent,int,int)>[]--><com.max2idea.android.limbo.utils.FileUtils: void startLogging()>[]--><java.lang.Thread: void run()>[]--><com.max2idea.android.limbo.main.LimboService$1: void run()>[]--><com.max2idea.android.limbo.main.LimboService: void access$000(com.max2idea.android.limbo.main.LimboService)>[]--><com.max2idea.android.limbo.main.LimboService: void setupLocks()>[]--><android.net.wifi.WifiManager.WifiLock: void setReferenceCounted(boolean)>
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.max2idea.android.limbo.main.LimboSDLActivity dummyMainMethod_com_max2idea_android_limbo_main_LimboSDLActivity(android.content.Intent)>[]--><com.max2idea.android.limbo.main.LimboSDLActivity$2: void onClick(android.content.DialogInterface,int)>[]--><com.max2idea.android.limbo.main.LimboSDLActivity: void access$000(com.max2idea.android.limbo.main.LimboSDLActivity,boolean)>[]--><com.max2idea.android.limbo.main.LimboSDLActivity: void setUIModeMobile(boolean)>[[try]]--><com.max2idea.android.limbo.main.LimboSDLActivity: void onNormalScreen()>[]--><java.lang.Thread: void run()>[]--><com.max2idea.android.limbo.main.LimboService$1: void run()>[]--><com.max2idea.android.limbo.main.LimboService: void access$000(com.max2idea.android.limbo.main.LimboService)>[]--><com.max2idea.android.limbo.main.LimboService: void setupLocks()>[]--><android.net.wifi.WifiManager.WifiLock: void setReferenceCounted(boolean)>
+One road protect good!
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.max2idea.android.limbo.main.LimboVNCActivity dummyMainMethod_com_max2idea_android_limbo_main_LimboVNCActivity(android.content.Intent)>[]--><com.max2idea.android.limbo.utils.Machine$9: void onClick(android.content.DialogInterface,int)>[]--><java.lang.Thread: void run()>[]--><com.max2idea.android.limbo.main.LimboService$1: void run()>[]--><com.max2idea.android.limbo.main.LimboService: void access$000(com.max2idea.android.limbo.main.LimboService)>[]--><com.max2idea.android.limbo.main.LimboService: void setupLocks()>[]--><android.net.wifi.WifiManager.WifiLock: void setReferenceCounted(boolean)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.wifi.WifiManager.WifiLock: void setReferenceCounted(boolean)>has compatibility isssues！
+-----------------------------------------
+72 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <com.max2idea.android.limbo.main.LimboActivity$14: void onCheckedChanged(android.widget.CompoundButton,boolean)>[]--><com.max2idea.android.limbo.utils.MachineOpenHelper: void update(com.max2idea.android.limbo.utils.Machine,java.lang.String,java.lang.String)>[]--><java.lang.Thread: void run()>[]--><com.max2idea.android.limbo.main.LimboService$1: void run()>[]--><com.max2idea.android.limbo.main.LimboService: void access$000(com.max2idea.android.limbo.main.LimboService)>[]--><com.max2idea.android.limbo.main.LimboService: void setupLocks()>[]--><android.net.wifi.WifiManager.WifiLock: void setReferenceCounted(boolean)>
+#1.the call statck between class <com.max2idea.android.limbo.main.LimboActivity$14: void onCheckedChanged(android.widget.CompoundButton,boolean)> to <android.net.wifi.WifiManager.WifiLock: void setReferenceCounted(boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <com.max2idea.android.limbo.main.LimboActivity$19: void onItemSelected(android.widget.AdapterView,android.view.View,int,long)>[]--><com.max2idea.android.limbo.utils.MachineOpenHelper: void update(com.max2idea.android.limbo.utils.Machine,java.lang.String,java.lang.String)>[]--><java.lang.Thread: void run()>[]--><com.max2idea.android.limbo.main.LimboService$1: void run()>[]--><com.max2idea.android.limbo.main.LimboService: void access$000(com.max2idea.android.limbo.main.LimboService)>[]--><com.max2idea.android.limbo.main.LimboService: void setupLocks()>[]--><android.net.wifi.WifiManager.WifiLock: void setReferenceCounted(boolean)>
+#2.the call statck between class <com.max2idea.android.limbo.main.LimboActivity$19: void onItemSelected(android.widget.AdapterView,android.view.View,int,long)> to <android.net.wifi.WifiManager.WifiLock: void setReferenceCounted(boolean)>has compatibility isssues！
+-----------------------------------------
+try
+Good road with try: <com.max2idea.android.limbo.main.LimboSDLActivity$LimboSDLSurface: void onConfigurationChanged(android.content.res.Configuration)>[]--><com.max2idea.android.limbo.main.LimboSDLActivity: void resize(android.content.res.Configuration)>[]--><android.os.Handler: boolean postDelayed(java.lang.Runnable,long)>[]--><com.max2idea.android.limbo.main.LimboSDLActivity$16$1: void run()>[]--><com.max2idea.android.limbo.main.LimboSDLActivity$VMListener: java.lang.Object doInBackground(java.lang.Object[])>[]--><com.max2idea.android.limbo.main.LimboSDLActivity$VMListener: java.lang.Void doInBackground(java.lang.Void[])>[]--><com.max2idea.android.limbo.main.LimboSDLActivity: void startTimeListener()>[[try]]--><com.max2idea.android.limbo.main.LimboSDLActivity: void checkStatus()>[]--><com.max2idea.android.limbo.utils.Machine: com.max2idea.android.limbo.main.LimboActivity$VMStatus checkSaveVMStatus(android.app.Activity)>[]--><com.max2idea.android.limbo.main.LimboActivity: void saveStateVMDB()>[]--><com.max2idea.android.limbo.utils.MachineOpenHelper: void update(com.max2idea.android.limbo.utils.Machine,java.lang.String,java.lang.String)>[]--><java.lang.Thread: void run()>[]--><com.max2idea.android.limbo.main.LimboService$1: void run()>[]--><com.max2idea.android.limbo.main.LimboService: void access$000(com.max2idea.android.limbo.main.LimboService)>[]--><com.max2idea.android.limbo.main.LimboService: void setupLocks()>[]--><android.net.wifi.WifiManager.WifiLock: void setReferenceCounted(boolean)>
+One road protect good!
+!!!this api will crash on sdk 31 
+Error road: <com.max2idea.android.limbo.main.LimboActivity$12: void onCheckedChanged(android.widget.CompoundButton,boolean)>[]--><com.max2idea.android.limbo.utils.MachineOpenHelper: void update(com.max2idea.android.limbo.utils.Machine,java.lang.String,java.lang.String)>[]--><java.lang.Thread: void run()>[]--><com.max2idea.android.limbo.main.LimboService$1: void run()>[]--><com.max2idea.android.limbo.main.LimboService: void access$000(com.max2idea.android.limbo.main.LimboService)>[]--><com.max2idea.android.limbo.main.LimboService: void setupLocks()>[]--><android.net.wifi.WifiManager.WifiLock: void setReferenceCounted(boolean)>
+#4.the call statck between class <com.max2idea.android.limbo.main.LimboActivity$12: void onCheckedChanged(android.widget.CompoundButton,boolean)> to <android.net.wifi.WifiManager.WifiLock: void setReferenceCounted(boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <com.max2idea.android.limbo.main.LimboActivity$54: void onCheckedChanged(android.widget.CompoundButton,boolean)>[]--><com.max2idea.android.limbo.utils.MachineOpenHelper: void update(com.max2idea.android.limbo.utils.Machine,java.lang.String,java.lang.String)>[]--><java.lang.Thread: void run()>[]--><com.max2idea.android.limbo.main.LimboService$1: void run()>[]--><com.max2idea.android.limbo.main.LimboService: void access$000(com.max2idea.android.limbo.main.LimboService)>[]--><com.max2idea.android.limbo.main.LimboService: void setupLocks()>[]--><android.net.wifi.WifiManager.WifiLock: void setReferenceCounted(boolean)>
+#5.the call statck between class <com.max2idea.android.limbo.main.LimboActivity$54: void onCheckedChanged(android.widget.CompoundButton,boolean)> to <android.net.wifi.WifiManager.WifiLock: void setReferenceCounted(boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <com.max2idea.android.limbo.main.LimboActivity$15: void onCheckedChanged(android.widget.CompoundButton,boolean)>[]--><com.max2idea.android.limbo.utils.MachineOpenHelper: void update(com.max2idea.android.limbo.utils.Machine,java.lang.String,java.lang.String)>[]--><java.lang.Thread: void run()>[]--><com.max2idea.android.limbo.main.LimboService$1: void run()>[]--><com.max2idea.android.limbo.main.LimboService: void access$000(com.max2idea.android.limbo.main.LimboService)>[]--><com.max2idea.android.limbo.main.LimboService: void setupLocks()>[]--><android.net.wifi.WifiManager.WifiLock: void setReferenceCounted(boolean)>
+#6.the call statck between class <com.max2idea.android.limbo.main.LimboActivity$15: void onCheckedChanged(android.widget.CompoundButton,boolean)> to <android.net.wifi.WifiManager.WifiLock: void setReferenceCounted(boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <com.max2idea.android.limbo.main.LimboActivity$13: void onCheckedChanged(android.widget.CompoundButton,boolean)>[]--><com.max2idea.android.limbo.utils.MachineOpenHelper: void update(com.max2idea.android.limbo.utils.Machine,java.lang.String,java.lang.String)>[]--><java.lang.Thread: void run()>[]--><com.max2idea.android.limbo.main.LimboService$1: void run()>[]--><com.max2idea.android.limbo.main.LimboService: void access$000(com.max2idea.android.limbo.main.LimboService)>[]--><com.max2idea.android.limbo.main.LimboService: void setupLocks()>[]--><android.net.wifi.WifiManager.WifiLock: void setReferenceCounted(boolean)>
+#7.the call statck between class <com.max2idea.android.limbo.main.LimboActivity$13: void onCheckedChanged(android.widget.CompoundButton,boolean)> to <android.net.wifi.WifiManager.WifiLock: void setReferenceCounted(boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <com.max2idea.android.limbo.main.LimboActivity$32: void onCheckedChanged(android.widget.CompoundButton,boolean)>[]--><com.max2idea.android.limbo.utils.MachineOpenHelper: void update(com.max2idea.android.limbo.utils.Machine,java.lang.String,java.lang.String)>[]--><java.lang.Thread: void run()>[]--><com.max2idea.android.limbo.main.LimboService$1: void run()>[]--><com.max2idea.android.limbo.main.LimboService: void access$000(com.max2idea.android.limbo.main.LimboService)>[]--><com.max2idea.android.limbo.main.LimboService: void setupLocks()>[]--><android.net.wifi.WifiManager.WifiLock: void setReferenceCounted(boolean)>
+#8.the call statck between class <com.max2idea.android.limbo.main.LimboActivity$32: void onCheckedChanged(android.widget.CompoundButton,boolean)> to <android.net.wifi.WifiManager.WifiLock: void setReferenceCounted(boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <com.max2idea.android.limbo.main.LimboActivity$34: void onCheckedChanged(android.widget.CompoundButton,boolean)>[]--><com.max2idea.android.limbo.utils.MachineOpenHelper: void update(com.max2idea.android.limbo.utils.Machine,java.lang.String,java.lang.String)>[]--><java.lang.Thread: void run()>[]--><com.max2idea.android.limbo.main.LimboService$1: void run()>[]--><com.max2idea.android.limbo.main.LimboService: void access$000(com.max2idea.android.limbo.main.LimboService)>[]--><com.max2idea.android.limbo.main.LimboService: void setupLocks()>[]--><android.net.wifi.WifiManager.WifiLock: void setReferenceCounted(boolean)>
+#9.the call statck between class <com.max2idea.android.limbo.main.LimboActivity$34: void onCheckedChanged(android.widget.CompoundButton,boolean)> to <android.net.wifi.WifiManager.WifiLock: void setReferenceCounted(boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <com.max2idea.android.limbo.main.LimboActivity$33: void onCheckedChanged(android.widget.CompoundButton,boolean)>[]--><com.max2idea.android.limbo.utils.MachineOpenHelper: void update(com.max2idea.android.limbo.utils.Machine,java.lang.String,java.lang.String)>[]--><java.lang.Thread: void run()>[]--><com.max2idea.android.limbo.main.LimboService$1: void run()>[]--><com.max2idea.android.limbo.main.LimboService: void access$000(com.max2idea.android.limbo.main.LimboService)>[]--><com.max2idea.android.limbo.main.LimboService: void setupLocks()>[]--><android.net.wifi.WifiManager.WifiLock: void setReferenceCounted(boolean)>
+#10.the call statck between class <com.max2idea.android.limbo.main.LimboActivity$33: void onCheckedChanged(android.widget.CompoundButton,boolean)> to <android.net.wifi.WifiManager.WifiLock: void setReferenceCounted(boolean)>has compatibility isssues！
+-----------------------------------------
+crashApis:2
+crashApisInMain:2
+containsStatic:false
+containsTry:true
+11call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.view.inputmethod.InputMethodManager: void toggleSoftInput(int,int)> is checking!!!
+The life time of api is [28,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 21 22 23 24 25 26 27 
+Error road: <android.androidVNC.VncCanvasActivity$4: void onClick(android.view.View)>[]--><android.view.inputmethod.InputMethodManager: void toggleSoftInput(int,int)>
+#1.the call statck between class <android.androidVNC.VncCanvasActivity$4: void onClick(android.view.View)> to <android.view.inputmethod.InputMethodManager: void toggleSoftInput(int,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 21 22 23 24 25 26 27 
+Error road: <android.androidVNC.VncCanvasActivity$5: void onClick(android.view.View)>[]--><android.view.inputmethod.InputMethodManager: void toggleSoftInput(int,int)>
+#2.the call statck between class <android.androidVNC.VncCanvasActivity$5: void onClick(android.view.View)> to <android.view.inputmethod.InputMethodManager: void toggleSoftInput(int,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:3
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager.WifiLock: void release()> is checking!!!
+The life time of api is [1,30]
+73call roads:
+1 Mainhead roads:
+72 Packageshead roads:
+containsStatic:false
+containsTry:true
+73call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager.WifiLock: boolean isHeld()> is checking!!!
+The life time of api is [1,30]
+73call roads:
+1 Mainhead roads:
+72 Packageshead roads:
+containsStatic:false
+containsTry:true
+73call by main package
+-----------------------------------------
+crashApis numbers:3
+crashApis numbers in main road:2
+On Android Version 16 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 17 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 18 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 19 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 20 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 21 this app may have error api use(at least): 1 and error api roads: 2
+On Android Version 22 this app may have error api use(at least): 1 and error api roads: 2
+On Android Version 23 this app may have error api use(at least): 1 and error api roads: 2
+On Android Version 24 this app may have error api use(at least): 1 and error api roads: 2
+On Android Version 25 this app may have error api use(at least): 1 and error api roads: 2
+On Android Version 26 this app may have error api use(at least): 1 and error api roads: 2
+On Android Version 27 this app may have error api use(at least): 1 and error api roads: 2
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 31 this app may have error api use(at least): 2 and error api roads: 24

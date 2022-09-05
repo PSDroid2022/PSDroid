@@ -1,0 +1,42 @@
+../APICompatibility_Forward.apk
+Entry Points[lu.uni.snt.apicompatibility_forward.MainActivity]
+Soot started on Thu Jul 07 13:35:10 CST 2022
+Soot finished on Thu Jul 07 13:35:12 CST 2022
+Soot has run for 0 min. 1 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 10
+Declared Target Sdk version is: 19
+Declared Max Sdk version is: -1
+Collected 7 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.content.res.AssetManager.AssetInputStream: int getAssetInt()> is checking!!!
+The life time of api is [1,19]
+1call roads:
+!!!this api will crash on sdk 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: lu.uni.snt.apicompatibility_forward.MainActivity dummyMainMethod_lu_uni_snt_apicompatibility__forward_MainActivity(android.content.Intent)>[]--><lu.uni.snt.apicompatibility_forward.MainActivity: void onCreate(android.os.Bundle)>[]--><lu.uni.snt.apicompatibility_forward.MainActivity: void checkGetAssetInt()>[]--><android.content.res.AssetManager.AssetInputStream: int getAssetInt()>
+#0.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.content.res.AssetManager.AssetInputStream: int getAssetInt()>has compatibility isssues！
+-----------------------------------------
+crashApis:1
+crashApisInMain:1
+0call by main package
+-----------------------------------------
+crashApis numbers:1
+crashApis numbers in main road:1
+On Android Version 16 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 17 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 18 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 19 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 20 this app may have error api use(at least): 1 and error api roads: 1
+On Android Version 21 this app may have error api use(at least): 1 and error api roads: 1
+On Android Version 22 this app may have error api use(at least): 1 and error api roads: 1
+On Android Version 23 this app may have error api use(at least): 1 and error api roads: 1
+On Android Version 24 this app may have error api use(at least): 1 and error api roads: 1
+On Android Version 25 this app may have error api use(at least): 1 and error api roads: 1
+On Android Version 26 this app may have error api use(at least): 1 and error api roads: 1
+On Android Version 27 this app may have error api use(at least): 1 and error api roads: 1
+On Android Version 28 this app may have error api use(at least): 1 and error api roads: 1
+On Android Version 29 this app may have error api use(at least): 1 and error api roads: 1
+On Android Version 30 this app may have error api use(at least): 1 and error api roads: 1
+On Android Version 31 this app may have error api use(at least): 1 and error api roads: 1

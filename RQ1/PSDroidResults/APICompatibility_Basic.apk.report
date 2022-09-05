@@ -1,0 +1,42 @@
+../APICompatibility_Basic.apk
+Entry Points[lu.uni.snt.apicompatibility_basic.MainActivity]
+Soot started on Thu Jul 07 13:35:03 CST 2022
+Soot finished on Thu Jul 07 13:35:07 CST 2022
+Soot has run for 0 min. 4 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 10
+Declared Target Sdk version is: 25
+Declared Max Sdk version is: -1
+Collected 5 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.os.storage.StorageManager: boolean isEncrypted(java.io.File)> is checking!!!
+The life time of api is [24,31]
+1call roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: lu.uni.snt.apicompatibility_basic.MainActivity dummyMainMethod_lu_uni_snt_apicompatibility__basic_MainActivity(android.content.Intent)>[]--><lu.uni.snt.apicompatibility_basic.MainActivity: void onCreate(android.os.Bundle)>[]--><lu.uni.snt.apicompatibility_basic.MainActivity: void checkStorageEncryption()>[]--><android.os.storage.StorageManager: boolean isEncrypted(java.io.File)>
+#0.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.storage.StorageManager: boolean isEncrypted(java.io.File)>has compatibility isssues！
+-----------------------------------------
+crashApis:1
+crashApisInMain:1
+0call by main package
+-----------------------------------------
+crashApis numbers:1
+crashApis numbers in main road:1
+On Android Version 16 this app may have error api use(at least): 1 and error api roads: 1
+On Android Version 17 this app may have error api use(at least): 1 and error api roads: 1
+On Android Version 18 this app may have error api use(at least): 1 and error api roads: 1
+On Android Version 19 this app may have error api use(at least): 1 and error api roads: 1
+On Android Version 20 this app may have error api use(at least): 1 and error api roads: 1
+On Android Version 21 this app may have error api use(at least): 1 and error api roads: 1
+On Android Version 22 this app may have error api use(at least): 1 and error api roads: 1
+On Android Version 23 this app may have error api use(at least): 1 and error api roads: 1
+On Android Version 24 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 25 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 31 this app may have error api use(at least): 0 and error api roads: 0
