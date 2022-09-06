@@ -1,0 +1,280 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/Xia_Express.apk
+Entry Points[fr.ac_versailles.dane.xiaexpress.CreateDetailActivity, fr.ac_versailles.dane.xiaexpress.MainActivity, fr.ac_versailles.dane.xiaexpress.importActivity, fr.ac_versailles.dane.xiaexpress.Metas, fr.ac_versailles.dane.xiaexpress.DetailInfos, fr.ac_versailles.dane.xiaexpress.PlayXia, fr.ac_versailles.dane.xiaexpress.Constants]
+FllowDroidcallgraph size:3393
+Soot started on Mon Jul 11 15:37:32 CST 2022
+Soot finished on Mon Jul 11 15:37:39 CST 2022
+Soot has run for 0 min. 6 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 16
+Declared Target Sdk version is: 26
+Declared Max Sdk version is: -1
+Collected 393 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.graphics.drawable.DrawableWrapper: android.graphics.drawable.Drawable getDrawable()> is checking!!!
+The life time of api is [23,31]
+5call roads:
+0 Mainhead roads:
+5 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <co.ceryle.segmentedbutton.SegmentedButton: void <init>(android.content.Context,android.util.AttributeSet,int)>[]--><co.ceryle.segmentedbutton.SegmentedButton: void init(android.content.Context,android.util.AttributeSet)>[]--><co.ceryle.segmentedbutton.SegmentedButton: void scaleDrawable(double)>[]--><android.graphics.drawable.DrawableWrapper: android.graphics.drawable.Drawable getDrawable()>
+#1.the call statck between class <co.ceryle.segmentedbutton.SegmentedButton: void <init>(android.content.Context,android.util.AttributeSet,int)> to <android.graphics.drawable.DrawableWrapper: android.graphics.drawable.Drawable getDrawable()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <co.ceryle.segmentedbutton.SegmentedButton: void <init>(android.content.Context,android.util.AttributeSet)>[]--><co.ceryle.segmentedbutton.SegmentedButton: void init(android.content.Context,android.util.AttributeSet)>[]--><co.ceryle.segmentedbutton.SegmentedButton: void scaleDrawable(double)>[]--><android.graphics.drawable.DrawableWrapper: android.graphics.drawable.Drawable getDrawable()>
+#2.the call statck between class <co.ceryle.segmentedbutton.SegmentedButton: void <init>(android.content.Context,android.util.AttributeSet)> to <android.graphics.drawable.DrawableWrapper: android.graphics.drawable.Drawable getDrawable()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <co.ceryle.segmentedbutton.SegmentedButton: void <init>(android.content.Context,android.util.AttributeSet,int,int)>[]--><co.ceryle.segmentedbutton.SegmentedButton: void init(android.content.Context,android.util.AttributeSet)>[]--><co.ceryle.segmentedbutton.SegmentedButton: void scaleDrawable(double)>[]--><android.graphics.drawable.DrawableWrapper: android.graphics.drawable.Drawable getDrawable()>
+#3.the call statck between class <co.ceryle.segmentedbutton.SegmentedButton: void <init>(android.content.Context,android.util.AttributeSet,int,int)> to <android.graphics.drawable.DrawableWrapper: android.graphics.drawable.Drawable getDrawable()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <co.ceryle.segmentedbutton.SegmentedButton: void <init>(android.content.Context)>[]--><co.ceryle.segmentedbutton.SegmentedButton: void init(android.content.Context,android.util.AttributeSet)>[]--><co.ceryle.segmentedbutton.SegmentedButton: void scaleDrawable(double)>[]--><android.graphics.drawable.DrawableWrapper: android.graphics.drawable.Drawable getDrawable()>
+#4.the call statck between class <co.ceryle.segmentedbutton.SegmentedButton: void <init>(android.content.Context)> to <android.graphics.drawable.DrawableWrapper: android.graphics.drawable.Drawable getDrawable()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <co.ceryle.segmentedbutton.SegmentedButton: void onLayout(boolean,int,int,int,int)>[]--><co.ceryle.segmentedbutton.SegmentedButton: void scaleDrawable(double)>[]--><android.graphics.drawable.DrawableWrapper: android.graphics.drawable.Drawable getDrawable()>
+#5.the call statck between class <co.ceryle.segmentedbutton.SegmentedButton: void onLayout(boolean,int,int,int,int)> to <android.graphics.drawable.DrawableWrapper: android.graphics.drawable.Drawable getDrawable()>has compatibility isssues！
+-----------------------------------------
+crashApis:1
+containsStatic:false
+containsTry:false
+6call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.text.Html: android.text.Spanned fromHtml(java.lang.String,int)> is checking!!!
+The life time of api is [24,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 24
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: fr.ac_versailles.dane.xiaexpress.PlayXia dummyMainMethod_fr_ac__versailles_dane_xiaexpress_PlayXia(android.content.Intent)>[]--><fr.ac_versailles.dane.xiaexpress.PlayXia$2: void onClick(android.view.View)>[]--><fr.ac_versailles.dane.xiaexpress.PlayXia: void access$100(fr.ac_versailles.dane.xiaexpress.PlayXia)>[]--><fr.ac_versailles.dane.xiaexpress.PlayXia: void showMetas()>[]--><fr.ac_versailles.dane.xiaexpress.PlayXia: void setText(java.lang.String)>[]--><fr.ac_versailles.dane.xiaexpress.Util: android.text.Spanned fromHtml(java.lang.String)>[[-$i0 < 24]]--><android.text.Html: android.text.Spanned fromHtml(java.lang.String,int)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.os.BaseBundle: int getInt(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: fr.ac_versailles.dane.xiaexpress.Metas dummyMainMethod_fr_ac__versailles_dane_xiaexpress_Metas(android.content.Intent)>[]--><co.ceryle.segmentedbutton.SegmentedButtonGroup: void onRestoreInstanceState(android.os.Parcelable)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:2
+crashApisInMain:1
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: fr.ac_versailles.dane.xiaexpress.PlayXia dummyMainMethod_fr_ac__versailles_dane_xiaexpress_PlayXia(android.content.Intent)>[]--><fr.ac_versailles.dane.xiaexpress.PlayXia: boolean onTouchEvent(android.view.MotionEvent)>[]--><android.os.Handler: boolean postDelayed(java.lang.Runnable,long)>[]--><fr.ac_versailles.dane.xiaexpress.PlayXia$4: void run()>[]--><fr.ac_versailles.dane.xiaexpress.PlayXia: void access$000(fr.ac_versailles.dane.xiaexpress.PlayXia,java.lang.Integer)>[]--><fr.ac_versailles.dane.xiaexpress.PlayXia: void showDetail(java.lang.Integer)>[]--><fr.ac_versailles.dane.xiaexpress.TextConverter: java.lang.Object doInBackground(java.lang.Object[])>[]--><fr.ac_versailles.dane.xiaexpress.TextConverter: java.lang.String doInBackground(java.lang.Void[])>[]--><fr.ac_versailles.dane.xiaexpress.Util: boolean isOnline(android.content.Context)>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:3
+crashApisInMain:2
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.graphics.Outline: void setRoundRect(int,int,int,int,float)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <co.ceryle.segmentedbutton.RoundedCornerLayout$ButtonOutlineProvider: void getOutline(android.view.View,android.graphics.Outline)>[]--><android.graphics.Outline: void setRoundRect(int,int,int,int,float)>
+#1.the call statck between class <co.ceryle.segmentedbutton.RoundedCornerLayout$ButtonOutlineProvider: void getOutline(android.view.View,android.graphics.Outline)> to <android.graphics.Outline: void setRoundRect(int,int,int,int,float)>has compatibility isssues！
+-----------------------------------------
+crashApis:4
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 5 Potential Issue API: SDKCheck of <android.view.View: void setOutlineProvider(android.view.ViewOutlineProvider)> is checking!!!
+The life time of api is [21,31]
+3call roads:
+0 Mainhead roads:
+3 Packageshead roads:
+-$i0 < 21
+Good road: <co.ceryle.segmentedbutton.RoundedCornerLayout: void <init>(android.content.Context,android.util.AttributeSet,int)>[]--><co.ceryle.segmentedbutton.RoundedCornerLayout: void init(android.content.Context,android.util.AttributeSet,int)>[[-$i0 < 21]]--><android.view.View: void setOutlineProvider(android.view.ViewOutlineProvider)>
+One road protect good!
+-$i0 < 21
+Good road: <co.ceryle.segmentedbutton.RoundedCornerLayout: void <init>(android.content.Context)>[]--><co.ceryle.segmentedbutton.RoundedCornerLayout: void init(android.content.Context,android.util.AttributeSet,int)>[[-$i0 < 21]]--><android.view.View: void setOutlineProvider(android.view.ViewOutlineProvider)>
+One road protect good!
+-$i0 < 21
+Good road: <co.ceryle.segmentedbutton.RoundedCornerLayout: void <init>(android.content.Context,android.util.AttributeSet)>[]--><co.ceryle.segmentedbutton.RoundedCornerLayout: void init(android.content.Context,android.util.AttributeSet,int)>[[-$i0 < 21]]--><android.view.View: void setOutlineProvider(android.view.ViewOutlineProvider)>
+One road protect good!
+containsStatic:false
+containsTry:false
+4call by main package
+-----------------------------------------
+#################################################
+N 6 Potential Issue API: SDKCheck of <android.graphics.drawable.RippleDrawable: void <init>(android.content.res.ColorStateList,android.graphics.drawable.Drawable,android.graphics.drawable.Drawable)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+-$i1 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: fr.ac_versailles.dane.xiaexpress.Metas dummyMainMethod_fr_ac__versailles_dane_xiaexpress_Metas(android.content.Intent)>[]--><co.ceryle.segmentedbutton.SegmentedButtonGroup: void setEnabled(boolean)>[]--><co.ceryle.segmentedbutton.SegmentedButtonGroup: void setRippleState(boolean)>[]--><co.ceryle.segmentedbutton.SegmentedButtonGroup: void setRipple(android.view.View,boolean)>[]--><co.ceryle.segmentedbutton.Util: void setRipple(android.view.View,int)>[[-$i1 < 21]]--><co.ceryle.segmentedbutton.Util: android.graphics.drawable.Drawable getPressedColorRippleDrawable(int)>[]--><android.graphics.drawable.RippleDrawable: void <init>(android.content.res.ColorStateList,android.graphics.drawable.Drawable,android.graphics.drawable.Drawable)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 7 Potential Issue API: SDKCheck of <android.view.View: void setElevation(float)> is checking!!!
+The life time of api is [21,31]
+3call roads:
+1 Mainhead roads:
+-$i0 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: fr.ac_versailles.dane.xiaexpress.Metas dummyMainMethod_fr_ac__versailles_dane_xiaexpress_Metas(android.content.Intent)>[]--><co.ceryle.segmentedbutton.SegmentedButtonGroup: void <init>(android.content.Context)>[]--><co.ceryle.segmentedbutton.SegmentedButtonGroup: void init(android.util.AttributeSet)>[]--><co.ceryle.segmentedbutton.SegmentedButtonGroup: void setShadowAttrs()>[[-$i0 < 21]]--><android.view.View: void setElevation(float)>
+One road protect good!
+2 Packageshead roads:
+-$i0 < 21
+Good road: <co.ceryle.segmentedbutton.SegmentedButtonGroup: void <init>(android.content.Context,android.util.AttributeSet,int)>[]--><co.ceryle.segmentedbutton.SegmentedButtonGroup: void init(android.util.AttributeSet)>[]--><co.ceryle.segmentedbutton.SegmentedButtonGroup: void setShadowAttrs()>[[-$i0 < 21]]--><android.view.View: void setElevation(float)>
+One road protect good!
+-$i0 < 21
+Good road: <co.ceryle.segmentedbutton.SegmentedButtonGroup: void <init>(android.content.Context,android.util.AttributeSet)>[]--><co.ceryle.segmentedbutton.SegmentedButtonGroup: void init(android.util.AttributeSet)>[]--><co.ceryle.segmentedbutton.SegmentedButtonGroup: void setShadowAttrs()>[[-$i0 < 21]]--><android.view.View: void setElevation(float)>
+One road protect good!
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 8 Potential Issue API: SDKCheck of <android.widget.Button: void <init>(android.content.Context,android.util.AttributeSet,int,int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <co.ceryle.segmentedbutton.SegmentedButton: void <init>(android.content.Context,android.util.AttributeSet,int,int)>[]--><android.widget.Button: void <init>(android.content.Context,android.util.AttributeSet,int,int)>
+#1.the call statck between class <co.ceryle.segmentedbutton.SegmentedButton: void <init>(android.content.Context,android.util.AttributeSet,int,int)> to <android.widget.Button: void <init>(android.content.Context,android.util.AttributeSet,int,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:5
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 9 Potential Issue API: SDKCheck of <android.view.ViewAnimationUtils: android.animation.Animator createCircularReveal(android.view.View,int,int,float,float)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+-i3 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: fr.ac_versailles.dane.xiaexpress.PlayXia dummyMainMethod_fr_ac__versailles_dane_xiaexpress_PlayXia(android.content.Intent)>[]--><fr.ac_versailles.dane.xiaexpress.PlayXia: boolean onTouchEvent(android.view.MotionEvent)>[]--><android.os.Handler: boolean postDelayed(java.lang.Runnable,long)>[]--><fr.ac_versailles.dane.xiaexpress.PlayXia$4: void run()>[]--><fr.ac_versailles.dane.xiaexpress.PlayXia: void access$000(fr.ac_versailles.dane.xiaexpress.PlayXia,java.lang.Integer)>[]--><fr.ac_versailles.dane.xiaexpress.PlayXia: void showDetail(java.lang.Integer)>[[-i3 < 21]]--><android.view.ViewAnimationUtils: android.animation.Animator createCircularReveal(android.view.View,int,int,float,float)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 10 Potential Issue API: SDKCheck of <android.animation.AnimatorSet: void <init>()> is checking!!!
+The life time of api is [24,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 
+Error road: <com.skyfishjy.library.RippleBackground: void <init>(android.content.Context,android.util.AttributeSet,int)>[]--><com.skyfishjy.library.RippleBackground: void init(android.content.Context,android.util.AttributeSet)>[]--><android.animation.AnimatorSet: void <init>()>
+#1.the call statck between class <com.skyfishjy.library.RippleBackground: void <init>(android.content.Context,android.util.AttributeSet,int)> to <android.animation.AnimatorSet: void <init>()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 
+Error road: <com.skyfishjy.library.RippleBackground: void <init>(android.content.Context,android.util.AttributeSet)>[]--><com.skyfishjy.library.RippleBackground: void init(android.content.Context,android.util.AttributeSet)>[]--><android.animation.AnimatorSet: void <init>()>
+#2.the call statck between class <com.skyfishjy.library.RippleBackground: void <init>(android.content.Context,android.util.AttributeSet)> to <android.animation.AnimatorSet: void <init>()>has compatibility isssues！
+-----------------------------------------
+crashApis:6
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 11 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putInt(java.lang.String,int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: fr.ac_versailles.dane.xiaexpress.Metas dummyMainMethod_fr_ac__versailles_dane_xiaexpress_Metas(android.content.Intent)>[]--><co.ceryle.segmentedbutton.SegmentedButtonGroup: android.os.Parcelable onSaveInstanceState()>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:7
+crashApisInMain:3
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 12 Potential Issue API: SDKCheck of <android.view.View: void setZ(float)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: fr.ac_versailles.dane.xiaexpress.CreateDetailActivity dummyMainMethod_fr_ac__versailles_dane_xiaexpress_CreateDetailActivity(android.content.Intent)>[]--><fr.ac_versailles.dane.xiaexpress.CreateDetailActivity: void onItemClick(android.widget.AdapterView,android.view.View,int,long)>[]--><fr.ac_versailles.dane.xiaexpress.CreateDetailActivity: void addDetail(int)>[]--><fr.ac_versailles.dane.xiaexpress.CreateDetailActivity: void changeDetailColor(java.lang.Integer)>[[-$i0 < 21]]--><android.view.View: void setZ(float)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 13 Potential Issue API: SDKCheck of <android.net.NetworkInfo: boolean isConnectedOrConnecting()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: fr.ac_versailles.dane.xiaexpress.PlayXia dummyMainMethod_fr_ac__versailles_dane_xiaexpress_PlayXia(android.content.Intent)>[]--><fr.ac_versailles.dane.xiaexpress.PlayXia: boolean onTouchEvent(android.view.MotionEvent)>[]--><android.os.Handler: boolean postDelayed(java.lang.Runnable,long)>[]--><fr.ac_versailles.dane.xiaexpress.PlayXia$4: void run()>[]--><fr.ac_versailles.dane.xiaexpress.PlayXia: void access$000(fr.ac_versailles.dane.xiaexpress.PlayXia,java.lang.Integer)>[]--><fr.ac_versailles.dane.xiaexpress.PlayXia: void showDetail(java.lang.Integer)>[]--><fr.ac_versailles.dane.xiaexpress.TextConverter: java.lang.Object doInBackground(java.lang.Object[])>[]--><fr.ac_versailles.dane.xiaexpress.TextConverter: java.lang.String doInBackground(java.lang.Void[])>[]--><fr.ac_versailles.dane.xiaexpress.Util: boolean isOnline(android.content.Context)>[]--><android.net.NetworkInfo: boolean isConnectedOrConnecting()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.NetworkInfo: boolean isConnectedOrConnecting()>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:8
+crashApisInMain:4
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 14 Potential Issue API: SDKCheck of <android.widget.LinearLayout: void <init>(android.content.Context,android.util.AttributeSet,int,int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <co.ceryle.segmentedbutton.SegmentedButtonGroup: void <init>(android.content.Context,android.util.AttributeSet,int,int)>[]--><android.widget.LinearLayout: void <init>(android.content.Context,android.util.AttributeSet,int,int)>
+#1.the call statck between class <co.ceryle.segmentedbutton.SegmentedButtonGroup: void <init>(android.content.Context,android.util.AttributeSet,int,int)> to <android.widget.LinearLayout: void <init>(android.content.Context,android.util.AttributeSet,int,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:9
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+crashApis numbers:9
+crashApis numbers in main road:4
+On Android Version 16 this app may have error api use(at least): 7 and error api roads: 12
+On Android Version 17 this app may have error api use(at least): 7 and error api roads: 12
+On Android Version 18 this app may have error api use(at least): 7 and error api roads: 12
+On Android Version 19 this app may have error api use(at least): 7 and error api roads: 12
+On Android Version 20 this app may have error api use(at least): 7 and error api roads: 12
+On Android Version 21 this app may have error api use(at least): 2 and error api roads: 7
+On Android Version 22 this app may have error api use(at least): 2 and error api roads: 7
+On Android Version 23 this app may have error api use(at least): 1 and error api roads: 2
+On Android Version 24 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 25 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 31 this app may have error api use(at least): 2 and error api roads: 2

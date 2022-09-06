@@ -1,0 +1,151 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/Finance_Manager.apk
+Entry Points[org.secuso.privacyfriendlyfinance.activities.RepeatingTransactionsActivity, org.secuso.privacyfriendlyfinance.activities.CategoryActivity, net.danlew.android.joda.TimeZoneChangedReceiver, org.secuso.privacyfriendlyfinance.activities.TransactionsActivity, org.secuso.privacyfriendlyfinance.activities.AccountActivity, org.secuso.privacyfriendlyfinance.activities.AboutActivity, org.secuso.privacyfriendlyfinance.activities.StartupActivity, org.secuso.privacyfriendlyfinance.activities.CategoriesActivity, org.secuso.privacyfriendlyfinance.activities.AccountsActivity, org.secuso.privacyfriendlyfinance.activities.HelpActivity, org.secuso.privacyfriendlyfinance.activities.SplashActivity, org.secuso.privacyfriendlyfinance.activities.TutorialActivity, org.secuso.privacyfriendlyfinance.activities.PFFinanceApplication]
+FllowDroidcallgraph size:2757
+Soot started on Mon Jul 11 04:02:24 CST 2022
+leftOp<android.databinding.ViewDataBinding: int SDK_INT>
+Soot finished on Mon Jul 11 04:02:42 CST 2022
+Soot has run for 0 min. 17 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 21
+Declared Target Sdk version is: 27
+Declared Max Sdk version is: -1
+Collected 735 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.widget.TimePicker: int getMinute()> is checking!!!
+The life time of api is [23,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+-$i1 < 23
+Good road: <android.databinding.adapters.TimePickerBindingAdapter: void setMinute(android.widget.TimePicker,int)>[[-$i1 < 23]]--><android.widget.TimePicker: int getMinute()>
+One road protect good!
+-i0 < 23
+Good road: <android.databinding.adapters.TimePickerBindingAdapter: int getMinute(android.widget.TimePicker)>[[-i0 < 23]]--><android.widget.TimePicker: int getMinute()>
+One road protect good!
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.widget.TimePicker: int getHour()> is checking!!!
+The life time of api is [23,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+-i0 < 23
+Good road: <android.databinding.adapters.TimePickerBindingAdapter: int getHour(android.widget.TimePicker)>[[-i0 < 23]]--><android.widget.TimePicker: int getHour()>
+One road protect good!
+-$i1 < 23
+Good road: <android.databinding.adapters.TimePickerBindingAdapter: void setHour(android.widget.TimePicker,int)>[[-$i1 < 23]]--><android.widget.TimePicker: int getHour()>
+One road protect good!
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putBooleanArray(java.lang.String,boolean[])> is checking!!!
+The life time of api is [22,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)> is checking!!!
+The life time of api is [22,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.content.Context: int getColor(int)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i1 < 23
+Good road: <android.databinding.ViewDataBinding: int getColorFromResource(android.view.View,int)>[[-$i1 < 23]]--><android.content.Context: int getColor(int)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 5 Potential Issue API: SDKCheck of <android.widget.TimePicker: void setHour(int)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i1 < 23
+Good road: <android.databinding.adapters.TimePickerBindingAdapter: void setHour(android.widget.TimePicker,int)>[[-$i1 < 23]]--><android.widget.TimePicker: void setHour(int)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 6 Potential Issue API: SDKCheck of <android.content.Context: android.content.res.ColorStateList getColorStateList(int)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i1 < 23
+Good road: <android.databinding.ViewDataBinding: android.content.res.ColorStateList getColorStateListFromResource(android.view.View,int)>[[-$i1 < 23]]--><android.content.Context: android.content.res.ColorStateList getColorStateList(int)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 7 Potential Issue API: SDKCheck of <android.text.InputFilter.AllCaps: void <init>()> is checking!!!
+The life time of api is [27,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 21 22 23 24 25 26 
+Error road: <com.flask.colorpicker.ColorPickerPreference: void onClick()>[]--><com.flask.colorpicker.builder.ColorPickerDialogBuilder: android.support.v7.app.AlertDialog build()>[]--><android.text.InputFilter.AllCaps: void <init>()>
+#1.the call statck between class <com.flask.colorpicker.ColorPickerPreference: void onClick()> to <android.text.InputFilter.AllCaps: void <init>()>has compatibility isssues！
+-----------------------------------------
+crashApis:1
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 8 Potential Issue API: SDKCheck of <android.widget.TimePicker: void setMinute(int)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i1 < 23
+Good road: <android.databinding.adapters.TimePickerBindingAdapter: void setMinute(android.widget.TimePicker,int)>[[-$i1 < 23]]--><android.widget.TimePicker: void setMinute(int)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+crashApis numbers:1
+crashApis numbers in main road:0
+On Android Version 16 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 17 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 18 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 19 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 20 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 21 this app may have error api use(at least): 1 and error api roads: 1
+On Android Version 22 this app may have error api use(at least): 1 and error api roads: 1
+On Android Version 23 this app may have error api use(at least): 1 and error api roads: 1
+On Android Version 24 this app may have error api use(at least): 1 and error api roads: 1
+On Android Version 25 this app may have error api use(at least): 1 and error api roads: 1
+On Android Version 26 this app may have error api use(at least): 1 and error api roads: 1
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 31 this app may have error api use(at least): 0 and error api roads: 0

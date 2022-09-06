@@ -1,0 +1,343 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/Calculator_Notification.apk
+Entry Points[com.tananaev.calculator.MainApplication$DismissReceiver, com.tananaev.calculator.MainApplication$BackgroundService, com.tananaev.calculator.MainActivity, com.tananaev.calculator.MainTileService, com.tananaev.calculator.MainApplication$ButtonReceiver, com.tananaev.calculator.MainApplication]
+FllowDroidcallgraph size:167
+Soot started on Mon Jul 11 01:55:30 CST 2022
+Soot finished on Mon Jul 11 01:55:35 CST 2022
+Soot has run for 0 min. 5 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 16
+Declared Target Sdk version is: 28
+Declared Max Sdk version is: -1
+Collected 156 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)> is checking!!!
+The life time of api is [21,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.util.SizeF: float getWidth()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <androidx.versionedparcelable.VersionedParcel: void writeSizeF(android.util.SizeF,int)>[]--><android.util.SizeF: float getWidth()>
+#1.the call statck between class <androidx.versionedparcelable.VersionedParcel: void writeSizeF(android.util.SizeF,int)> to <android.util.SizeF: float getWidth()>has compatibility isssues！
+-----------------------------------------
+crashApis:1
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putLong(java.lang.String,long)> is checking!!!
+The life time of api is [21,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.service.quicksettings.Tile: int getState()> is checking!!!
+The life time of api is [24,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.tananaev.calculator.MainTileService dummyMainMethod_com_tananaev_calculator_MainTileService(android.content.Intent)>[]--><com.tananaev.calculator.MainTileService: void onClick()>[]--><android.service.quicksettings.Tile: int getState()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.service.quicksettings.Tile: int getState()>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:2
+crashApisInMain:1
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putBooleanArray(java.lang.String,boolean[])> is checking!!!
+The life time of api is [22,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 5 Potential Issue API: SDKCheck of <android.util.SizeF: void <init>(float,float)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <androidx.versionedparcelable.VersionedParcel: android.util.SizeF readSizeF(android.util.SizeF,int)>[]--><android.util.SizeF: void <init>(float,float)>
+#1.the call statck between class <androidx.versionedparcelable.VersionedParcel: android.util.SizeF readSizeF(android.util.SizeF,int)> to <android.util.SizeF: void <init>(float,float)>has compatibility isssues！
+-----------------------------------------
+crashApis:3
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 6 Potential Issue API: SDKCheck of <android.service.quicksettings.Tile: void updateTile()> is checking!!!
+The life time of api is [24,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 24
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.tananaev.calculator.MainActivity dummyMainMethod_com_tananaev_calculator_MainActivity(android.content.Intent)>[]--><com.tananaev.calculator.MainActivity: void onSharedPreferenceChanged(android.content.SharedPreferences,java.lang.String)>[]--><com.tananaev.calculator.MainApplication: void showNotification()>[]--><com.tananaev.calculator.MainApplication: void setShowing(boolean)>[]--><com.tananaev.calculator.MainApplication: void setTile(android.service.quicksettings.Tile)>[[-$i0 < 24]]--><android.service.quicksettings.Tile: void updateTile()>
+One road protect good!
+-$i0 < 24
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.tananaev.calculator.MainApplication$ButtonReceiver dummyMainMethod_com_tananaev_calculator_MainApplication$ButtonReceiver(android.content.Intent)>[]--><com.tananaev.calculator.MainApplication$ButtonReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><com.tananaev.calculator.MainApplication: void handleClick(int)>[]--><com.tananaev.calculator.MainApplication: void hideNotification()>[]--><com.tananaev.calculator.MainApplication: void setShowing(boolean)>[]--><com.tananaev.calculator.MainApplication: void setTile(android.service.quicksettings.Tile)>[[-$i0 < 24]]--><android.service.quicksettings.Tile: void updateTile()>
+One road protect good!
+-$i0 < 24
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.tananaev.calculator.MainTileService dummyMainMethod_com_tananaev_calculator_MainTileService(android.content.Intent)>[]--><com.tananaev.calculator.MainTileService: void onClick()>[]--><com.tananaev.calculator.MainApplication: void hideNotification()>[]--><com.tananaev.calculator.MainApplication: void setShowing(boolean)>[]--><com.tananaev.calculator.MainApplication: void setTile(android.service.quicksettings.Tile)>[[-$i0 < 24]]--><android.service.quicksettings.Tile: void updateTile()>
+One road protect good!
+-$i0 < 24
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.tananaev.calculator.MainApplication$DismissReceiver dummyMainMethod_com_tananaev_calculator_MainApplication$DismissReceiver(android.content.Intent)>[]--><com.tananaev.calculator.MainApplication$DismissReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><com.tananaev.calculator.MainApplication: void hideNotification()>[]--><com.tananaev.calculator.MainApplication: void setShowing(boolean)>[]--><com.tananaev.calculator.MainApplication: void setTile(android.service.quicksettings.Tile)>[[-$i0 < 24]]--><android.service.quicksettings.Tile: void updateTile()>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 7 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putStringArray(java.lang.String,java.lang.String[])> is checking!!!
+The life time of api is [21,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 8 Potential Issue API: SDKCheck of <android.service.quicksettings.TileService: android.service.quicksettings.Tile getQsTile()> is checking!!!
+The life time of api is [24,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.tananaev.calculator.MainTileService dummyMainMethod_com_tananaev_calculator_MainTileService(android.content.Intent)>[]--><com.tananaev.calculator.MainTileService: void onClick()>[]--><android.service.quicksettings.TileService: android.service.quicksettings.Tile getQsTile()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.service.quicksettings.TileService: android.service.quicksettings.Tile getQsTile()>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:4
+crashApisInMain:2
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 9 Potential Issue API: SDKCheck of <android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+1 Mainhead roads:
+-i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><com.tananaev.calculator.MainApplication: void onCreate()>[[-i0 < 26]]--><android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 10 Potential Issue API: SDKCheck of <android.service.quicksettings.Tile: void setState(int)> is checking!!!
+The life time of api is [24,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 24
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.tananaev.calculator.MainActivity dummyMainMethod_com_tananaev_calculator_MainActivity(android.content.Intent)>[]--><com.tananaev.calculator.MainActivity: void onSharedPreferenceChanged(android.content.SharedPreferences,java.lang.String)>[]--><com.tananaev.calculator.MainApplication: void showNotification()>[]--><com.tananaev.calculator.MainApplication: void setShowing(boolean)>[]--><com.tananaev.calculator.MainApplication: void setTile(android.service.quicksettings.Tile)>[[-$i0 < 24]]--><android.service.quicksettings.Tile: void setState(int)>
+One road protect good!
+-$i0 < 24
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.tananaev.calculator.MainApplication$ButtonReceiver dummyMainMethod_com_tananaev_calculator_MainApplication$ButtonReceiver(android.content.Intent)>[]--><com.tananaev.calculator.MainApplication$ButtonReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><com.tananaev.calculator.MainApplication: void handleClick(int)>[]--><com.tananaev.calculator.MainApplication: void hideNotification()>[]--><com.tananaev.calculator.MainApplication: void setShowing(boolean)>[]--><com.tananaev.calculator.MainApplication: void setTile(android.service.quicksettings.Tile)>[[-$i0 < 24]]--><android.service.quicksettings.Tile: void setState(int)>
+One road protect good!
+-$i0 < 24
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.tananaev.calculator.MainTileService dummyMainMethod_com_tananaev_calculator_MainTileService(android.content.Intent)>[]--><com.tananaev.calculator.MainTileService: void onClick()>[]--><com.tananaev.calculator.MainApplication: void hideNotification()>[]--><com.tananaev.calculator.MainApplication: void setShowing(boolean)>[]--><com.tananaev.calculator.MainApplication: void setTile(android.service.quicksettings.Tile)>[[-$i0 < 24]]--><android.service.quicksettings.Tile: void setState(int)>
+One road protect good!
+-$i0 < 24
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.tananaev.calculator.MainApplication$DismissReceiver dummyMainMethod_com_tananaev_calculator_MainApplication$DismissReceiver(android.content.Intent)>[]--><com.tananaev.calculator.MainApplication$DismissReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><com.tananaev.calculator.MainApplication: void hideNotification()>[]--><com.tananaev.calculator.MainApplication: void setShowing(boolean)>[]--><com.tananaev.calculator.MainApplication: void setTile(android.service.quicksettings.Tile)>[[-$i0 < 24]]--><android.service.quicksettings.Tile: void setState(int)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 11 Potential Issue API: SDKCheck of <android.util.Size: void <init>(int,int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <androidx.versionedparcelable.VersionedParcel: android.util.Size readSize(android.util.Size,int)>[]--><android.util.Size: void <init>(int,int)>
+#1.the call statck between class <androidx.versionedparcelable.VersionedParcel: android.util.Size readSize(android.util.Size,int)> to <android.util.Size: void <init>(int,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:5
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 12 Potential Issue API: SDKCheck of <android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+1 Mainhead roads:
+-i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><com.tananaev.calculator.MainApplication: void onCreate()>[[-i0 < 26]]--><android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 13 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)> is checking!!!
+The life time of api is [22,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 14 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putLongArray(java.lang.String,long[])> is checking!!!
+The life time of api is [21,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 15 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putDouble(java.lang.String,double)> is checking!!!
+The life time of api is [21,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 16 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.util.Set keySet()> is checking!!!
+The life time of api is [21,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:true
+1call by main package
+-----------------------------------------
+#################################################
+N 17 Potential Issue API: SDKCheck of <android.util.Size: int getHeight()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <androidx.versionedparcelable.VersionedParcel: void writeSize(android.util.Size,int)>[]--><android.util.Size: int getHeight()>
+#1.the call statck between class <androidx.versionedparcelable.VersionedParcel: void writeSize(android.util.Size,int)> to <android.util.Size: int getHeight()>has compatibility isssues！
+-----------------------------------------
+crashApis:6
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 18 Potential Issue API: SDKCheck of <android.util.Size: int getWidth()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <androidx.versionedparcelable.VersionedParcel: void writeSize(android.util.Size,int)>[]--><android.util.Size: int getWidth()>
+#1.the call statck between class <androidx.versionedparcelable.VersionedParcel: void writeSize(android.util.Size,int)> to <android.util.Size: int getWidth()>has compatibility isssues！
+-----------------------------------------
+crashApis:7
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 19 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putInt(java.lang.String,int)> is checking!!!
+The life time of api is [21,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 20 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putIntArray(java.lang.String,int[])> is checking!!!
+The life time of api is [21,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 21 Potential Issue API: SDKCheck of <android.util.SizeF: float getHeight()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <androidx.versionedparcelable.VersionedParcel: void writeSizeF(android.util.SizeF,int)>[]--><android.util.SizeF: float getHeight()>
+#1.the call statck between class <androidx.versionedparcelable.VersionedParcel: void writeSizeF(android.util.SizeF,int)> to <android.util.SizeF: float getHeight()>has compatibility isssues！
+-----------------------------------------
+crashApis:8
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 22 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.lang.Object get(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:true
+1call by main package
+-----------------------------------------
+#################################################
+N 23 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putDoubleArray(java.lang.String,double[])> is checking!!!
+The life time of api is [21,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+crashApis numbers:8
+crashApis numbers in main road:2
+On Android Version 16 this app may have error api use(at least): 8 and error api roads: 8
+On Android Version 17 this app may have error api use(at least): 8 and error api roads: 8
+On Android Version 18 this app may have error api use(at least): 8 and error api roads: 8
+On Android Version 19 this app may have error api use(at least): 8 and error api roads: 8
+On Android Version 20 this app may have error api use(at least): 8 and error api roads: 8
+On Android Version 21 this app may have error api use(at least): 2 and error api roads: 2
+On Android Version 22 this app may have error api use(at least): 2 and error api roads: 2
+On Android Version 23 this app may have error api use(at least): 2 and error api roads: 2
+On Android Version 24 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 25 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 31 this app may have error api use(at least): 0 and error api roads: 0

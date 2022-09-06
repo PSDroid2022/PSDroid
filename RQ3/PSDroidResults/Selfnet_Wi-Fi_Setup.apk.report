@@ -1,0 +1,247 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/Selfnet_Wi-Fi_Setup.apk
+Entry Points[tf.nox.wifisetup.WifiSetup]
+FllowDroidcallgraph size:164
+Soot started on Mon Jul 11 12:01:41 CST 2022
+Soot finished on Mon Jul 11 12:01:43 CST 2022
+Soot has run for 0 min. 2 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 23
+Declared Target Sdk version is: 26
+Declared Max Sdk version is: -1
+Collected 49 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.net.wifi.WifiEnterpriseConfig: void setCaCertificate(java.security.cert.X509Certificate)> is checking!!!
+The life time of api is [18,30]
+1call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: tf.nox.wifisetup.WifiSetup dummyMainMethod_tf_nox_wifisetup_WifiSetup(android.content.Intent)>[]--><tf.nox.wifisetup.WifiSetup$2: void onClick(android.view.View)>[]--><tf.nox.wifisetup.WifiSetup$2$1: void run()>[]--><tf.nox.wifisetup.WifiSetup: void access$400(tf.nox.wifisetup.WifiSetup)>[]--><tf.nox.wifisetup.WifiSetup: void saveWifiConfig()>[]--><tf.nox.wifisetup.WifiSetup: void applyAndroid43EnterpriseSettings(android.net.wifi.WifiConfiguration,java.util.HashMap)>[[try]]--><android.net.wifi.WifiEnterpriseConfig: void setCaCertificate(java.security.cert.X509Certificate)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:true
+1call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.net.wifi.WifiEnterpriseConfig: void setPassword(java.lang.String)> is checking!!!
+The life time of api is [18,30]
+1call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: tf.nox.wifisetup.WifiSetup dummyMainMethod_tf_nox_wifisetup_WifiSetup(android.content.Intent)>[]--><tf.nox.wifisetup.WifiSetup$2: void onClick(android.view.View)>[]--><tf.nox.wifisetup.WifiSetup$2$1: void run()>[]--><tf.nox.wifisetup.WifiSetup: void access$400(tf.nox.wifisetup.WifiSetup)>[]--><tf.nox.wifisetup.WifiSetup: void saveWifiConfig()>[]--><tf.nox.wifisetup.WifiSetup: void applyAndroid43EnterpriseSettings(android.net.wifi.WifiConfiguration,java.util.HashMap)>[[try]]--><android.net.wifi.WifiEnterpriseConfig: void setPassword(java.lang.String)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:true
+1call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager: int addNetwork(android.net.wifi.WifiConfiguration)> is checking!!!
+The life time of api is [1,30]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: tf.nox.wifisetup.WifiSetup dummyMainMethod_tf_nox_wifisetup_WifiSetup(android.content.Intent)>[]--><tf.nox.wifisetup.WifiSetup$2: void onClick(android.view.View)>[]--><tf.nox.wifisetup.WifiSetup$2$1: void run()>[]--><tf.nox.wifisetup.WifiSetup: void access$400(tf.nox.wifisetup.WifiSetup)>[]--><tf.nox.wifisetup.WifiSetup: void saveWifiConfig()>[]--><android.net.wifi.WifiManager: int addNetwork(android.net.wifi.WifiConfiguration)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.wifi.WifiManager: int addNetwork(android.net.wifi.WifiConfiguration)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:1
+crashApisInMain:1
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.net.wifi.WifiEnterpriseConfig: void setPhase2Method(int)> is checking!!!
+The life time of api is [18,30]
+1call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: tf.nox.wifisetup.WifiSetup dummyMainMethod_tf_nox_wifisetup_WifiSetup(android.content.Intent)>[]--><tf.nox.wifisetup.WifiSetup$2: void onClick(android.view.View)>[]--><tf.nox.wifisetup.WifiSetup$2$1: void run()>[]--><tf.nox.wifisetup.WifiSetup: void access$400(tf.nox.wifisetup.WifiSetup)>[]--><tf.nox.wifisetup.WifiSetup: void saveWifiConfig()>[]--><tf.nox.wifisetup.WifiSetup: void applyAndroid43EnterpriseSettings(android.net.wifi.WifiConfiguration,java.util.HashMap)>[[try]]--><android.net.wifi.WifiEnterpriseConfig: void setPhase2Method(int)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:true
+1call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.net.wifi.WifiEnterpriseConfig: void setAltSubjectMatch(java.lang.String)> is checking!!!
+The life time of api is [23,30]
+1call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: tf.nox.wifisetup.WifiSetup dummyMainMethod_tf_nox_wifisetup_WifiSetup(android.content.Intent)>[]--><tf.nox.wifisetup.WifiSetup$2: void onClick(android.view.View)>[]--><tf.nox.wifisetup.WifiSetup$2$1: void run()>[]--><tf.nox.wifisetup.WifiSetup: void access$400(tf.nox.wifisetup.WifiSetup)>[]--><tf.nox.wifisetup.WifiSetup: void saveWifiConfig()>[]--><tf.nox.wifisetup.WifiSetup: void applyAndroid43EnterpriseSettings(android.net.wifi.WifiConfiguration,java.util.HashMap)>[[try]]--><android.net.wifi.WifiEnterpriseConfig: void setAltSubjectMatch(java.lang.String)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:true
+1call by main package
+-----------------------------------------
+#################################################
+N 5 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager: int updateNetwork(android.net.wifi.WifiConfiguration)> is checking!!!
+The life time of api is [1,30]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: tf.nox.wifisetup.WifiSetup dummyMainMethod_tf_nox_wifisetup_WifiSetup(android.content.Intent)>[]--><tf.nox.wifisetup.WifiSetup$2: void onClick(android.view.View)>[]--><tf.nox.wifisetup.WifiSetup$2$1: void run()>[]--><tf.nox.wifisetup.WifiSetup: void access$400(tf.nox.wifisetup.WifiSetup)>[]--><tf.nox.wifisetup.WifiSetup: void saveWifiConfig()>[]--><android.net.wifi.WifiManager: int updateNetwork(android.net.wifi.WifiConfiguration)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.wifi.WifiManager: int updateNetwork(android.net.wifi.WifiConfiguration)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:2
+crashApisInMain:2
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 6 Potential Issue API: SDKCheck of <android.net.wifi.WifiEnterpriseConfig: void <init>()> is checking!!!
+The life time of api is [18,30]
+1call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: tf.nox.wifisetup.WifiSetup dummyMainMethod_tf_nox_wifisetup_WifiSetup(android.content.Intent)>[]--><tf.nox.wifisetup.WifiSetup$2: void onClick(android.view.View)>[]--><tf.nox.wifisetup.WifiSetup$2$1: void run()>[]--><tf.nox.wifisetup.WifiSetup: void access$400(tf.nox.wifisetup.WifiSetup)>[]--><tf.nox.wifisetup.WifiSetup: void saveWifiConfig()>[]--><tf.nox.wifisetup.WifiSetup: void applyAndroid43EnterpriseSettings(android.net.wifi.WifiConfiguration,java.util.HashMap)>[[try]]--><android.net.wifi.WifiEnterpriseConfig: void <init>()>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:true
+1call by main package
+-----------------------------------------
+#################################################
+N 7 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager: boolean enableNetwork(int,boolean)> is checking!!!
+The life time of api is [1,30]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: tf.nox.wifisetup.WifiSetup dummyMainMethod_tf_nox_wifisetup_WifiSetup(android.content.Intent)>[]--><tf.nox.wifisetup.WifiSetup$2: void onClick(android.view.View)>[]--><tf.nox.wifisetup.WifiSetup$2$1: void run()>[]--><tf.nox.wifisetup.WifiSetup: void access$400(tf.nox.wifisetup.WifiSetup)>[]--><tf.nox.wifisetup.WifiSetup: void saveWifiConfig()>[]--><android.net.wifi.WifiManager: boolean enableNetwork(int,boolean)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.wifi.WifiManager: boolean enableNetwork(int,boolean)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:3
+crashApisInMain:3
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 8 Potential Issue API: SDKCheck of <android.net.wifi.WifiEnterpriseConfig: void setEapMethod(int)> is checking!!!
+The life time of api is [18,30]
+1call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: tf.nox.wifisetup.WifiSetup dummyMainMethod_tf_nox_wifisetup_WifiSetup(android.content.Intent)>[]--><tf.nox.wifisetup.WifiSetup$2: void onClick(android.view.View)>[]--><tf.nox.wifisetup.WifiSetup$2$1: void run()>[]--><tf.nox.wifisetup.WifiSetup: void access$400(tf.nox.wifisetup.WifiSetup)>[]--><tf.nox.wifisetup.WifiSetup: void saveWifiConfig()>[]--><tf.nox.wifisetup.WifiSetup: void applyAndroid43EnterpriseSettings(android.net.wifi.WifiConfiguration,java.util.HashMap)>[[try]]--><android.net.wifi.WifiEnterpriseConfig: void setEapMethod(int)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:true
+1call by main package
+-----------------------------------------
+#################################################
+N 9 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager: java.util.List getConfiguredNetworks()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: tf.nox.wifisetup.WifiSetup dummyMainMethod_tf_nox_wifisetup_WifiSetup(android.content.Intent)>[]--><tf.nox.wifisetup.WifiSetup$2: void onClick(android.view.View)>[]--><tf.nox.wifisetup.WifiSetup$2$1: void run()>[]--><tf.nox.wifisetup.WifiSetup: void access$400(tf.nox.wifisetup.WifiSetup)>[]--><tf.nox.wifisetup.WifiSetup: void saveWifiConfig()>[]--><android.net.wifi.WifiManager: java.util.List getConfiguredNetworks()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.wifi.WifiManager: java.util.List getConfiguredNetworks()>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:4
+crashApisInMain:4
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 10 Potential Issue API: SDKCheck of <android.net.wifi.WifiEnterpriseConfig: void setIdentity(java.lang.String)> is checking!!!
+The life time of api is [18,30]
+1call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: tf.nox.wifisetup.WifiSetup dummyMainMethod_tf_nox_wifisetup_WifiSetup(android.content.Intent)>[]--><tf.nox.wifisetup.WifiSetup$2: void onClick(android.view.View)>[]--><tf.nox.wifisetup.WifiSetup$2$1: void run()>[]--><tf.nox.wifisetup.WifiSetup: void access$400(tf.nox.wifisetup.WifiSetup)>[]--><tf.nox.wifisetup.WifiSetup: void saveWifiConfig()>[]--><tf.nox.wifisetup.WifiSetup: void applyAndroid43EnterpriseSettings(android.net.wifi.WifiConfiguration,java.util.HashMap)>[[try]]--><android.net.wifi.WifiEnterpriseConfig: void setIdentity(java.lang.String)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:true
+1call by main package
+-----------------------------------------
+#################################################
+N 11 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager: boolean setWifiEnabled(boolean)> is checking!!!
+The life time of api is [1,30]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: tf.nox.wifisetup.WifiSetup dummyMainMethod_tf_nox_wifisetup_WifiSetup(android.content.Intent)>[]--><tf.nox.wifisetup.WifiSetup$2: void onClick(android.view.View)>[]--><tf.nox.wifisetup.WifiSetup$2$1: void run()>[]--><tf.nox.wifisetup.WifiSetup: void access$400(tf.nox.wifisetup.WifiSetup)>[]--><tf.nox.wifisetup.WifiSetup: void saveWifiConfig()>[]--><android.net.wifi.WifiManager: boolean setWifiEnabled(boolean)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.wifi.WifiManager: boolean setWifiEnabled(boolean)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:5
+crashApisInMain:5
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 12 Potential Issue API: SDKCheck of <android.net.wifi.WifiConfiguration: void <init>()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: tf.nox.wifisetup.WifiSetup dummyMainMethod_tf_nox_wifisetup_WifiSetup(android.content.Intent)>[]--><tf.nox.wifisetup.WifiSetup$2: void onClick(android.view.View)>[]--><tf.nox.wifisetup.WifiSetup$2$1: void run()>[]--><tf.nox.wifisetup.WifiSetup: void access$400(tf.nox.wifisetup.WifiSetup)>[]--><tf.nox.wifisetup.WifiSetup: void saveWifiConfig()>[]--><android.net.wifi.WifiConfiguration: void <init>()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.wifi.WifiConfiguration: void <init>()>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:6
+crashApisInMain:6
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 13 Potential Issue API: SDKCheck of <android.net.wifi.WifiEnterpriseConfig: void setAnonymousIdentity(java.lang.String)> is checking!!!
+The life time of api is [18,30]
+1call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: tf.nox.wifisetup.WifiSetup dummyMainMethod_tf_nox_wifisetup_WifiSetup(android.content.Intent)>[]--><tf.nox.wifisetup.WifiSetup$2: void onClick(android.view.View)>[]--><tf.nox.wifisetup.WifiSetup$2$1: void run()>[]--><tf.nox.wifisetup.WifiSetup: void access$400(tf.nox.wifisetup.WifiSetup)>[]--><tf.nox.wifisetup.WifiSetup: void saveWifiConfig()>[]--><tf.nox.wifisetup.WifiSetup: void applyAndroid43EnterpriseSettings(android.net.wifi.WifiConfiguration,java.util.HashMap)>[[try]]--><android.net.wifi.WifiEnterpriseConfig: void setAnonymousIdentity(java.lang.String)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:true
+1call by main package
+-----------------------------------------
+#################################################
+N 14 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager: boolean saveConfiguration()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: tf.nox.wifisetup.WifiSetup dummyMainMethod_tf_nox_wifisetup_WifiSetup(android.content.Intent)>[]--><tf.nox.wifisetup.WifiSetup$2: void onClick(android.view.View)>[]--><tf.nox.wifisetup.WifiSetup$2$1: void run()>[]--><tf.nox.wifisetup.WifiSetup: void access$400(tf.nox.wifisetup.WifiSetup)>[]--><tf.nox.wifisetup.WifiSetup: void saveWifiConfig()>[]--><android.net.wifi.WifiManager: boolean saveConfiguration()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.wifi.WifiManager: boolean saveConfiguration()>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:7
+crashApisInMain:7
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+crashApis numbers:7
+crashApis numbers in main road:7
+On Android Version 16 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 17 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 18 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 19 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 20 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 21 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 22 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 23 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 24 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 25 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 31 this app may have error api use(at least): 7 and error api roads: 7

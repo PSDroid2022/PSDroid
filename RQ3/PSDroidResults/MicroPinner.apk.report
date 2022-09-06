@@ -1,0 +1,82 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/MicroPinner.apk
+Entry Points[de.dotwee.micropinner.ui.EditActivity, de.dotwee.micropinner.ui.MainActivity, de.dotwee.micropinner.tools.OnBootReceiver, de.dotwee.micropinner.tools.OnDeleteReceiver]
+FllowDroidcallgraph size:285
+Soot started on Mon Jul 11 07:02:52 CST 2022
+Soot finished on Mon Jul 11 07:02:55 CST 2022
+Soot has run for 0 min. 2 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 16
+Declared Target Sdk version is: 22
+Declared Max Sdk version is: -1
+Collected 69 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.app.Notification.Builder: android.app.Notification.Builder setVisibility(int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.dotwee.micropinner.ui.MainActivity dummyMainMethod_de_dotwee_micropinner_ui_MainActivity(android.content.Intent)>[]--><de.dotwee.micropinner.ui.MainActivity: void onCreate(android.os.Bundle)>[]--><de.dotwee.micropinner.tools.a: void a()>[[try]]--><de.dotwee.micropinner.ui.MainActivity: android.app.Notification a(android.content.Context,int,int,int,java.lang.String,java.lang.String,boolean)>[[-$i3 < 21]]--><android.app.Notification.Builder: android.app.Notification.Builder setVisibility(int)>
+One road protect good!
+###Multi invoking in one method, need manual check!!!--><de.dotwee.micropinner.tools.OnBootReceiver: void onReceive(android.content.Context,android.content.Intent)>[[-$i0 < 21], [$i0 < 17]]
+###Multi invoking in one method, need manual check!!!--><de.dotwee.micropinner.tools.OnBootReceiver: void onReceive(android.content.Context,android.content.Intent)>[[-$i0 < 21]][[$i0 < 17]]
+-$i0 < 21
+$i0 < 17
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.dotwee.micropinner.tools.OnBootReceiver dummyMainMethod_de_dotwee_micropinner_tools_OnBootReceiver(android.content.Intent)>[]--><de.dotwee.micropinner.tools.OnBootReceiver: void onReceive(android.content.Context,android.content.Intent)>[[-$i0 < 21], [$i0 < 17]]--><android.app.Notification.Builder: android.app.Notification.Builder setVisibility(int)>
+One road protect good!
+-$i3 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.dotwee.micropinner.ui.EditActivity dummyMainMethod_de_dotwee_micropinner_ui_EditActivity(android.content.Intent)>[]--><de.dotwee.micropinner.ui.EditActivity: void onClick(android.view.View)>[]--><de.dotwee.micropinner.ui.EditActivity: void k()>[]--><de.dotwee.micropinner.ui.MainActivity: android.app.Notification a(android.content.Context,int,int,int,java.lang.String,java.lang.String,boolean)>[[-$i3 < 21]]--><android.app.Notification.Builder: android.app.Notification.Builder setVisibility(int)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:true
+1call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.app.Notification.Builder: android.app.Notification.Builder setColor(int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+###Multi invoking in one method, need manual check!!!--><de.dotwee.micropinner.tools.OnBootReceiver: void onReceive(android.content.Context,android.content.Intent)>[[-$i0 < 21], [$i0 < 17]]
+###Multi invoking in one method, need manual check!!!--><de.dotwee.micropinner.tools.OnBootReceiver: void onReceive(android.content.Context,android.content.Intent)>[[-$i0 < 21]][[$i0 < 17]]
+-$i0 < 21
+$i0 < 17
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.dotwee.micropinner.tools.OnBootReceiver dummyMainMethod_de_dotwee_micropinner_tools_OnBootReceiver(android.content.Intent)>[]--><de.dotwee.micropinner.tools.OnBootReceiver: void onReceive(android.content.Context,android.content.Intent)>[[-$i0 < 21], [$i0 < 17]]--><android.app.Notification.Builder: android.app.Notification.Builder setColor(int)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.app.Notification.Builder: android.app.Notification.Builder setShowWhen(boolean)> is checking!!!
+The life time of api is [17,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 17
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.dotwee.micropinner.tools.OnBootReceiver dummyMainMethod_de_dotwee_micropinner_tools_OnBootReceiver(android.content.Intent)>[]--><de.dotwee.micropinner.tools.OnBootReceiver: void onReceive(android.content.Context,android.content.Intent)>[[-$i0 < 17]]--><android.app.Notification.Builder: android.app.Notification.Builder setShowWhen(boolean)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+crashApis numbers:0
+crashApis numbers in main road:0
+On Android Version 16 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 17 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 18 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 19 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 20 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 21 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 22 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 23 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 24 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 25 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 31 this app may have error api use(at least): 0 and error api roads: 0

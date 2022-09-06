@@ -1,0 +1,419 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/Scrum_Chatter.apk
+Entry Points[ca.rmen.android.scrumchatter.meeting.detail.MeetingActivity, ca.rmen.android.scrumchatter.chart.ChartsActivity, ca.rmen.android.scrumchatter.about.AboutActivity, ca.rmen.android.scrumchatter.chart.MeetingChartActivity, ca.rmen.android.scrumchatter.settings.SettingsActivity, ca.rmen.android.scrumchatter.main.MainActivity, ca.rmen.android.scrumchatter.provider.ScrumChatterProvider]
+FllowDroidcallgraph size:1304
+Soot started on Mon Jul 11 11:56:45 CST 2022
+leftOp<android.databinding.ViewDataBinding: int SDK_INT>
+StaticCheck:<permissions.dispatcher.PermissionUtils: boolean hasSelfPermission(android.content.Context,java.lang.String)>$yysi0 < 23
+StaticCheck:$ys0 < 
+StaticCheck:<permissions.dispatcher.PermissionUtils: boolean permissionExists(java.lang.String)>< 
+Soot finished on Mon Jul 11 11:57:03 CST 2022
+Soot has run for 0 min. 18 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 19
+Declared Target Sdk version is: 25
+Declared Max Sdk version is: -1
+Collected 645 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.widget.TimePicker: int getMinute()> is checking!!!
+The life time of api is [23,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+-$i1 < 23
+Good road: <android.databinding.adapters.TimePickerBindingAdapter: void setMinute(android.widget.TimePicker,int)>[[-$i1 < 23]]--><android.widget.TimePicker: int getMinute()>
+One road protect good!
+-$i0 < 23
+Good road: <android.databinding.adapters.TimePickerBindingAdapter: int getMinute(android.widget.TimePicker)>[[-$i0 < 23]]--><android.widget.TimePicker: int getMinute()>
+One road protect good!
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.widget.TimePicker: int getHour()> is checking!!!
+The life time of api is [23,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+-$i0 < 23
+Good road: <android.databinding.adapters.TimePickerBindingAdapter: int getHour(android.widget.TimePicker)>[[-$i0 < 23]]--><android.widget.TimePicker: int getHour()>
+One road protect good!
+-$i1 < 23
+Good road: <android.databinding.adapters.TimePickerBindingAdapter: void setHour(android.widget.TimePicker,int)>[[-$i1 < 23]]--><android.widget.TimePicker: int getHour()>
+One road protect good!
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.os.BaseBundle: int getInt(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+3call roads:
+0 Mainhead roads:
+3 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <ca.rmen.android.scrumchatter.dialog.ConfirmDialogFragment: android.app.Dialog onCreateDialog(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#1.the call statck between class <ca.rmen.android.scrumchatter.dialog.ConfirmDialogFragment: android.app.Dialog onCreateDialog(android.os.Bundle)> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <ca.rmen.android.scrumchatter.dialog.InputDialogFragment: android.app.Dialog onCreateDialog(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#2.the call statck between class <ca.rmen.android.scrumchatter.dialog.InputDialogFragment: android.app.Dialog onCreateDialog(android.os.Bundle)> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <ca.rmen.android.scrumchatter.dialog.ChoiceDialogFragment: android.app.Dialog onCreateDialog(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#3.the call statck between class <ca.rmen.android.scrumchatter.dialog.ChoiceDialogFragment: android.app.Dialog onCreateDialog(android.os.Bundle)> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:1
+containsStatic:false
+containsTry:false
+4call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.content.Context: android.graphics.drawable.Drawable getDrawable(int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i1 < 21
+Good road: <ca.rmen.android.scrumchatter.databinding.MeetingMemberListItemBinding: void executeBindings()>[]--><android.databinding.ViewDataBinding: android.graphics.drawable.Drawable getDrawableFromResource(int)>[[-$i1 < 21]]--><android.content.Context: android.graphics.drawable.Drawable getDrawable(int)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.text.InputFilter.LengthFilter: int getMax()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i2 < 21
+Good road: <android.databinding.adapters.TextViewBindingAdapter: void setMaxLength(android.widget.TextView,int)>[[-$i2 < 21]]--><android.text.InputFilter.LengthFilter: int getMax()>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 5 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)> is checking!!!
+The life time of api is [21,31]
+12call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: ca.rmen.android.scrumchatter.main.MainActivity dummyMainMethod_ca_rmen_android_scrumchatter_main_MainActivity(android.content.Intent)>[]--><ca.rmen.android.scrumchatter.main.MainActivity: void onResumeFragments()>[]--><ca.rmen.android.scrumchatter.main.MainActivity: void importDB(android.net.Uri)>[]--><ca.rmen.android.scrumchatter.dialog.DialogFragmentFactory: void showConfirmDialog(android.support.v4.app.FragmentActivity,java.lang.String,java.lang.String,int,android.os.Bundle)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+11 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <ca.rmen.android.scrumchatter.dialog.InputDialogFragment: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#1.the call statck between class <ca.rmen.android.scrumchatter.dialog.InputDialogFragment: void onSaveInstanceState(android.os.Bundle)> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <ca.rmen.android.scrumchatter.meeting.detail.MeetingFragment: boolean onOptionsItemSelected(android.view.MenuItem)>[]--><ca.rmen.android.scrumchatter.meeting.Meetings: void confirmDelete(ca.rmen.android.scrumchatter.meeting.detail.Meeting)>[]--><ca.rmen.android.scrumchatter.dialog.DialogFragmentFactory: void showConfirmDialog(android.support.v4.app.FragmentActivity,java.lang.String,java.lang.String,int,android.os.Bundle)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#2.the call statck between class <ca.rmen.android.scrumchatter.meeting.detail.MeetingFragment: boolean onOptionsItemSelected(android.view.MenuItem)> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <ca.rmen.android.scrumchatter.member.list.MembersListFragment$4: void onNewMember(android.view.View)>[]--><ca.rmen.android.scrumchatter.member.list.Members: void promptCreateMember(int)>[]--><ca.rmen.android.scrumchatter.dialog.DialogFragmentFactory: void showInputDialog(android.support.v4.app.FragmentActivity,java.lang.String,java.lang.String,java.lang.String,java.lang.Class,int,android.os.Bundle)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#3.the call statck between class <ca.rmen.android.scrumchatter.member.list.MembersListFragment$4: void onNewMember(android.view.View)> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <ca.rmen.android.scrumchatter.main.MainActivity$3: void onPreExecute()>[]--><ca.rmen.android.scrumchatter.dialog.DialogFragmentFactory: void showProgressDialog(android.support.v4.app.FragmentActivity,java.lang.String,java.lang.String)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#4.the call statck between class <ca.rmen.android.scrumchatter.main.MainActivity$3: void onPreExecute()> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <ca.rmen.android.scrumchatter.member.list.Members: void confirmDeleteMember(ca.rmen.android.scrumchatter.member.list.Members$Member)>[]--><ca.rmen.android.scrumchatter.dialog.DialogFragmentFactory: void showConfirmDialog(android.support.v4.app.FragmentActivity,java.lang.String,java.lang.String,int,android.os.Bundle)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#5.the call statck between class <ca.rmen.android.scrumchatter.member.list.Members: void confirmDeleteMember(ca.rmen.android.scrumchatter.member.list.Members$Member)> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <ca.rmen.android.scrumchatter.meeting.detail.MeetingFragment$MeetingStopListener: void onMeetingStopped(android.view.View)>[]--><ca.rmen.android.scrumchatter.dialog.DialogFragmentFactory: void showConfirmDialog(android.support.v4.app.FragmentActivity,java.lang.String,java.lang.String,int,android.os.Bundle)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#6.the call statck between class <ca.rmen.android.scrumchatter.meeting.detail.MeetingFragment$MeetingStopListener: void onMeetingStopped(android.view.View)> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <ca.rmen.android.scrumchatter.member.list.Members: void promptRenameMember(long,ca.rmen.android.scrumchatter.member.list.Members$Member)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+!!!this api will crash on sdk 19 20 
+Error road: <ca.rmen.android.scrumchatter.member.list.Members: void promptRenameMember(long,ca.rmen.android.scrumchatter.member.list.Members$Member)>[]--><ca.rmen.android.scrumchatter.dialog.DialogFragmentFactory: void showInputDialog(android.support.v4.app.FragmentActivity,java.lang.String,java.lang.String,java.lang.String,java.lang.Class,int,android.os.Bundle)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#7.the call statck between class <ca.rmen.android.scrumchatter.member.list.Members: void promptRenameMember(long,ca.rmen.android.scrumchatter.member.list.Members$Member)> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <ca.rmen.android.scrumchatter.meeting.list.MeetingsListFragment$2: void onMeetingDelete(ca.rmen.android.scrumchatter.meeting.detail.Meeting)>[]--><ca.rmen.android.scrumchatter.meeting.Meetings: void confirmDelete(ca.rmen.android.scrumchatter.meeting.detail.Meeting)>[]--><ca.rmen.android.scrumchatter.dialog.DialogFragmentFactory: void showConfirmDialog(android.support.v4.app.FragmentActivity,java.lang.String,java.lang.String,int,android.os.Bundle)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#8.the call statck between class <ca.rmen.android.scrumchatter.meeting.list.MeetingsListFragment$2: void onMeetingDelete(ca.rmen.android.scrumchatter.meeting.detail.Meeting)> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <ca.rmen.android.scrumchatter.meeting.list.MeetingsListFragment$4$1: void onMeetingCreated(ca.rmen.android.scrumchatter.meeting.detail.Meeting)>[]--><ca.rmen.android.scrumchatter.dialog.DialogFragmentFactory: void showInfoDialog(android.support.v4.app.FragmentActivity,int,int)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#9.the call statck between class <ca.rmen.android.scrumchatter.meeting.list.MeetingsListFragment$4$1: void onMeetingCreated(ca.rmen.android.scrumchatter.meeting.detail.Meeting)> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <ca.rmen.android.scrumchatter.main.MainActivity$1: void onPreExecute()>[]--><ca.rmen.android.scrumchatter.dialog.DialogFragmentFactory: void showProgressDialog(android.support.v4.app.FragmentActivity,java.lang.String,java.lang.String)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#10.the call statck between class <ca.rmen.android.scrumchatter.main.MainActivity$1: void onPreExecute()> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:2
+crashApisInMain:1
+containsStatic:false
+containsTry:false
+11call by main package
+-----------------------------------------
+#################################################
+N 6 Potential Issue API: SDKCheck of <android.os.BaseBundle: long getLong(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+5call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: ca.rmen.android.scrumchatter.meeting.detail.MeetingActivity dummyMainMethod_ca_rmen_android_scrumchatter_meeting_detail_MeetingActivity(android.content.Intent)>[]--><ca.rmen.android.scrumchatter.meeting.detail.MeetingActivity: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: long getLong(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: long getLong(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+4 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <ca.rmen.android.scrumchatter.main.MainActivity: void onInputEntered(int,java.lang.String,android.os.Bundle)>[]--><android.os.BaseBundle: long getLong(java.lang.String)>
+#1.the call statck between class <ca.rmen.android.scrumchatter.main.MainActivity: void onInputEntered(int,java.lang.String,android.os.Bundle)> to <android.os.BaseBundle: long getLong(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <ca.rmen.android.scrumchatter.main.MainActivity: void onOkClicked(int,android.os.Bundle)>[]--><android.os.BaseBundle: long getLong(java.lang.String)>
+#2.the call statck between class <ca.rmen.android.scrumchatter.main.MainActivity: void onOkClicked(int,android.os.Bundle)> to <android.os.BaseBundle: long getLong(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <ca.rmen.android.scrumchatter.member.list.Members$MemberNameValidator: java.lang.String getError(android.content.Context,java.lang.CharSequence,android.os.Bundle)>[]--><android.os.BaseBundle: long getLong(java.lang.String)>
+#3.the call statck between class <ca.rmen.android.scrumchatter.member.list.Members$MemberNameValidator: java.lang.String getError(android.content.Context,java.lang.CharSequence,android.os.Bundle)> to <android.os.BaseBundle: long getLong(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <ca.rmen.android.scrumchatter.meeting.detail.MeetingFragment: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)>[]--><android.os.BaseBundle: long getLong(java.lang.String)>
+#4.the call statck between class <ca.rmen.android.scrumchatter.meeting.detail.MeetingFragment: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)> to <android.os.BaseBundle: long getLong(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:3
+crashApisInMain:2
+containsStatic:false
+containsTry:false
+5call by main package
+-----------------------------------------
+#################################################
+N 7 Potential Issue API: SDKCheck of <android.content.Context: int getColor(int)> is checking!!!
+The life time of api is [23,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+-$i1 < 23
+Good road: <android.databinding.DynamicUtil: int getColorFromResource(android.view.View,int)>[[-$i1 < 23]]--><android.content.Context: int getColor(int)>
+One road protect good!
+-$i1 < 23
+Good road: <android.databinding.ViewDataBinding: int getColorFromResource(int)>[[-$i1 < 23]]--><android.content.Context: int getColor(int)>
+One road protect good!
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 8 Potential Issue API: SDKCheck of <android.widget.TimePicker: void setHour(int)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i1 < 23
+Good road: <android.databinding.adapters.TimePickerBindingAdapter: void setHour(android.widget.TimePicker,int)>[[-$i1 < 23]]--><android.widget.TimePicker: void setHour(int)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 9 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putLong(java.lang.String,long)> is checking!!!
+The life time of api is [21,31]
+8call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: ca.rmen.android.scrumchatter.meeting.detail.MeetingActivity dummyMainMethod_ca_rmen_android_scrumchatter_meeting_detail_MeetingActivity(android.content.Intent)>[]--><ca.rmen.android.scrumchatter.meeting.detail.MeetingActivity: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putLong(java.lang.String,long)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: void putLong(java.lang.String,long)>has compatibility isssues！
+-----------------------------------------
+7 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <ca.rmen.android.scrumchatter.meeting.detail.MeetingFragment: boolean onOptionsItemSelected(android.view.MenuItem)>[]--><ca.rmen.android.scrumchatter.meeting.Meetings: void confirmDelete(ca.rmen.android.scrumchatter.meeting.detail.Meeting)>[]--><android.os.BaseBundle: void putLong(java.lang.String,long)>
+#1.the call statck between class <ca.rmen.android.scrumchatter.meeting.detail.MeetingFragment: boolean onOptionsItemSelected(android.view.MenuItem)> to <android.os.BaseBundle: void putLong(java.lang.String,long)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <ca.rmen.android.scrumchatter.meeting.list.MeetingsListFragment$2: void onMeetingOpen(ca.rmen.android.scrumchatter.meeting.detail.Meeting)>[]--><ca.rmen.android.scrumchatter.meeting.detail.MeetingFragment: void startMeeting(android.support.v4.app.FragmentManager,ca.rmen.android.scrumchatter.meeting.detail.Meeting)>[]--><android.os.BaseBundle: void putLong(java.lang.String,long)>
+#2.the call statck between class <ca.rmen.android.scrumchatter.meeting.list.MeetingsListFragment$2: void onMeetingOpen(ca.rmen.android.scrumchatter.meeting.detail.Meeting)> to <android.os.BaseBundle: void putLong(java.lang.String,long)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <ca.rmen.android.scrumchatter.member.list.MembersListFragment$4: void onNewMember(android.view.View)>[]--><ca.rmen.android.scrumchatter.member.list.Members: void promptCreateMember(int)>[]--><android.os.BaseBundle: void putLong(java.lang.String,long)>
+#3.the call statck between class <ca.rmen.android.scrumchatter.member.list.MembersListFragment$4: void onNewMember(android.view.View)> to <android.os.BaseBundle: void putLong(java.lang.String,long)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <ca.rmen.android.scrumchatter.member.list.Members: void confirmDeleteMember(ca.rmen.android.scrumchatter.member.list.Members$Member)>[]--><android.os.BaseBundle: void putLong(java.lang.String,long)>
+#4.the call statck between class <ca.rmen.android.scrumchatter.member.list.Members: void confirmDeleteMember(ca.rmen.android.scrumchatter.member.list.Members$Member)> to <android.os.BaseBundle: void putLong(java.lang.String,long)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <ca.rmen.android.scrumchatter.member.list.Members: void promptRenameMember(long,ca.rmen.android.scrumchatter.member.list.Members$Member)>[]--><android.os.BaseBundle: void putLong(java.lang.String,long)>
+#5.the call statck between class <ca.rmen.android.scrumchatter.member.list.Members: void promptRenameMember(long,ca.rmen.android.scrumchatter.member.list.Members$Member)> to <android.os.BaseBundle: void putLong(java.lang.String,long)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <ca.rmen.android.scrumchatter.meeting.list.MeetingsListFragment$2: void onMeetingDelete(ca.rmen.android.scrumchatter.meeting.detail.Meeting)>[]--><ca.rmen.android.scrumchatter.meeting.Meetings: void confirmDelete(ca.rmen.android.scrumchatter.meeting.detail.Meeting)>[]--><android.os.BaseBundle: void putLong(java.lang.String,long)>
+#6.the call statck between class <ca.rmen.android.scrumchatter.meeting.list.MeetingsListFragment$2: void onMeetingDelete(ca.rmen.android.scrumchatter.meeting.detail.Meeting)> to <android.os.BaseBundle: void putLong(java.lang.String,long)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <ca.rmen.android.scrumchatter.meeting.detail.MeetingPagerAdapter: android.support.v4.app.Fragment getItem(int)>[]--><android.os.BaseBundle: void putLong(java.lang.String,long)>
+#7.the call statck between class <ca.rmen.android.scrumchatter.meeting.detail.MeetingPagerAdapter: android.support.v4.app.Fragment getItem(int)> to <android.os.BaseBundle: void putLong(java.lang.String,long)>has compatibility isssues！
+-----------------------------------------
+crashApis:4
+crashApisInMain:3
+containsStatic:false
+containsTry:false
+8call by main package
+-----------------------------------------
+#################################################
+N 10 Potential Issue API: SDKCheck of <android.os.BaseBundle: boolean getBoolean(java.lang.String)> is checking!!!
+The life time of api is [22,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 21 
+Error road: <ca.rmen.android.scrumchatter.main.MainActivity$4: void onReceive(android.content.Context,android.content.Intent)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+#1.the call statck between class <ca.rmen.android.scrumchatter.main.MainActivity$4: void onReceive(android.content.Context,android.content.Intent)> to <android.os.BaseBundle: boolean getBoolean(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:5
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 11 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.lang.String getString(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+7call roads:
+0 Mainhead roads:
+7 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <ca.rmen.android.scrumchatter.dialog.InfoDialogFragment: android.app.Dialog onCreateDialog(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#1.the call statck between class <ca.rmen.android.scrumchatter.dialog.InfoDialogFragment: android.app.Dialog onCreateDialog(android.os.Bundle)> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <ca.rmen.android.scrumchatter.dialog.ProgressDialogFragment: android.app.Dialog onCreateDialog(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#2.the call statck between class <ca.rmen.android.scrumchatter.dialog.ProgressDialogFragment: android.app.Dialog onCreateDialog(android.os.Bundle)> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <ca.rmen.android.scrumchatter.dialog.ConfirmDialogFragment: android.app.Dialog onCreateDialog(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#3.the call statck between class <ca.rmen.android.scrumchatter.dialog.ConfirmDialogFragment: android.app.Dialog onCreateDialog(android.os.Bundle)> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <ca.rmen.android.scrumchatter.team.Teams$TeamNameValidator: java.lang.String getError(android.content.Context,java.lang.CharSequence,android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#4.the call statck between class <ca.rmen.android.scrumchatter.team.Teams$TeamNameValidator: java.lang.String getError(android.content.Context,java.lang.CharSequence,android.os.Bundle)> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <ca.rmen.android.scrumchatter.dialog.InputDialogFragment: android.app.Dialog onCreateDialog(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#5.the call statck between class <ca.rmen.android.scrumchatter.dialog.InputDialogFragment: android.app.Dialog onCreateDialog(android.os.Bundle)> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <ca.rmen.android.scrumchatter.dialog.ChoiceDialogFragment: android.app.Dialog onCreateDialog(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#6.the call statck between class <ca.rmen.android.scrumchatter.dialog.ChoiceDialogFragment: android.app.Dialog onCreateDialog(android.os.Bundle)> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <ca.rmen.android.scrumchatter.member.list.Members$MemberNameValidator: java.lang.String getError(android.content.Context,java.lang.CharSequence,android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#7.the call statck between class <ca.rmen.android.scrumchatter.member.list.Members$MemberNameValidator: java.lang.String getError(android.content.Context,java.lang.CharSequence,android.os.Bundle)> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:6
+containsStatic:false
+containsTry:false
+8call by main package
+-----------------------------------------
+#################################################
+N 12 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putInt(java.lang.String,int)> is checking!!!
+The life time of api is [21,31]
+8call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: ca.rmen.android.scrumchatter.main.MainActivity dummyMainMethod_ca_rmen_android_scrumchatter_main_MainActivity(android.content.Intent)>[]--><ca.rmen.android.scrumchatter.main.MainActivity: void onResumeFragments()>[]--><ca.rmen.android.scrumchatter.main.MainActivity: void importDB(android.net.Uri)>[]--><ca.rmen.android.scrumchatter.dialog.DialogFragmentFactory: void showConfirmDialog(android.support.v4.app.FragmentActivity,java.lang.String,java.lang.String,int,android.os.Bundle)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+7 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <ca.rmen.android.scrumchatter.meeting.detail.MeetingFragment: boolean onOptionsItemSelected(android.view.MenuItem)>[]--><ca.rmen.android.scrumchatter.meeting.Meetings: void confirmDelete(ca.rmen.android.scrumchatter.meeting.detail.Meeting)>[]--><ca.rmen.android.scrumchatter.dialog.DialogFragmentFactory: void showConfirmDialog(android.support.v4.app.FragmentActivity,java.lang.String,java.lang.String,int,android.os.Bundle)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#1.the call statck between class <ca.rmen.android.scrumchatter.meeting.detail.MeetingFragment: boolean onOptionsItemSelected(android.view.MenuItem)> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <ca.rmen.android.scrumchatter.member.list.MembersListFragment$4: void onNewMember(android.view.View)>[]--><ca.rmen.android.scrumchatter.member.list.Members: void promptCreateMember(int)>[]--><ca.rmen.android.scrumchatter.dialog.DialogFragmentFactory: void showInputDialog(android.support.v4.app.FragmentActivity,java.lang.String,java.lang.String,java.lang.String,java.lang.Class,int,android.os.Bundle)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#2.the call statck between class <ca.rmen.android.scrumchatter.member.list.MembersListFragment$4: void onNewMember(android.view.View)> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <ca.rmen.android.scrumchatter.member.list.Members: void confirmDeleteMember(ca.rmen.android.scrumchatter.member.list.Members$Member)>[]--><ca.rmen.android.scrumchatter.dialog.DialogFragmentFactory: void showConfirmDialog(android.support.v4.app.FragmentActivity,java.lang.String,java.lang.String,int,android.os.Bundle)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#3.the call statck between class <ca.rmen.android.scrumchatter.member.list.Members: void confirmDeleteMember(ca.rmen.android.scrumchatter.member.list.Members$Member)> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <ca.rmen.android.scrumchatter.meeting.detail.MeetingFragment$MeetingStopListener: void onMeetingStopped(android.view.View)>[]--><ca.rmen.android.scrumchatter.dialog.DialogFragmentFactory: void showConfirmDialog(android.support.v4.app.FragmentActivity,java.lang.String,java.lang.String,int,android.os.Bundle)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#4.the call statck between class <ca.rmen.android.scrumchatter.meeting.detail.MeetingFragment$MeetingStopListener: void onMeetingStopped(android.view.View)> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <ca.rmen.android.scrumchatter.member.list.Members: void promptRenameMember(long,ca.rmen.android.scrumchatter.member.list.Members$Member)>[]--><ca.rmen.android.scrumchatter.dialog.DialogFragmentFactory: void showInputDialog(android.support.v4.app.FragmentActivity,java.lang.String,java.lang.String,java.lang.String,java.lang.Class,int,android.os.Bundle)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#5.the call statck between class <ca.rmen.android.scrumchatter.member.list.Members: void promptRenameMember(long,ca.rmen.android.scrumchatter.member.list.Members$Member)> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <ca.rmen.android.scrumchatter.meeting.list.MeetingsListFragment$2: void onMeetingDelete(ca.rmen.android.scrumchatter.meeting.detail.Meeting)>[]--><ca.rmen.android.scrumchatter.meeting.Meetings: void confirmDelete(ca.rmen.android.scrumchatter.meeting.detail.Meeting)>[]--><ca.rmen.android.scrumchatter.dialog.DialogFragmentFactory: void showConfirmDialog(android.support.v4.app.FragmentActivity,java.lang.String,java.lang.String,int,android.os.Bundle)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#6.the call statck between class <ca.rmen.android.scrumchatter.meeting.list.MeetingsListFragment$2: void onMeetingDelete(ca.rmen.android.scrumchatter.meeting.detail.Meeting)> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <ca.rmen.android.scrumchatter.main.MainActivity$5: boolean onNavigationItemSelected(android.view.MenuItem)>[]--><ca.rmen.android.scrumchatter.team.Teams: void promptCreateTeam()>[]--><ca.rmen.android.scrumchatter.dialog.DialogFragmentFactory: void showInputDialog(android.support.v4.app.FragmentActivity,java.lang.String,java.lang.String,java.lang.String,java.lang.Class,int,android.os.Bundle)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#7.the call statck between class <ca.rmen.android.scrumchatter.main.MainActivity$5: boolean onNavigationItemSelected(android.view.MenuItem)> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:7
+crashApisInMain:4
+containsStatic:false
+containsTry:false
+8call by main package
+-----------------------------------------
+#################################################
+N 13 Potential Issue API: SDKCheck of <android.content.Context: android.content.res.ColorStateList getColorStateList(int)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i1 < 23
+Good road: <android.databinding.ViewDataBinding: android.content.res.ColorStateList getColorStateListFromResource(int)>[[-$i1 < 23]]--><android.content.Context: android.content.res.ColorStateList getColorStateList(int)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 14 Potential Issue API: SDKCheck of <android.widget.TimePicker: void setMinute(int)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i1 < 23
+Good road: <android.databinding.adapters.TimePickerBindingAdapter: void setMinute(android.widget.TimePicker,int)>[[-$i1 < 23]]--><android.widget.TimePicker: void setMinute(int)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 15 Potential Issue API: SDKCheck of <android.app.Activity: void onRequestPermissionsResult(int,java.lang.String[],int[])> is checking!!!
+The life time of api is [23,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 21 22 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: ca.rmen.android.scrumchatter.main.MainActivity dummyMainMethod_ca_rmen_android_scrumchatter_main_MainActivity(android.content.Intent)>[]--><ca.rmen.android.scrumchatter.main.MainActivity: void onRequestPermissionsResult(int,java.lang.String[],int[])>[[]]--><android.app.Activity: void onRequestPermissionsResult(int,java.lang.String[],int[])>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.app.Activity: void onRequestPermissionsResult(int,java.lang.String[],int[])>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:8
+crashApisInMain:5
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+crashApis numbers:8
+crashApis numbers in main road:5
+On Android Version 16 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 17 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 18 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 19 this app may have error api use(at least): 8 and error api roads: 45
+On Android Version 20 this app may have error api use(at least): 8 and error api roads: 45
+On Android Version 21 this app may have error api use(at least): 2 and error api roads: 2
+On Android Version 22 this app may have error api use(at least): 1 and error api roads: 1
+On Android Version 23 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 24 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 25 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 31 this app may have error api use(at least): 0 and error api roads: 0

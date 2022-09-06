@@ -1,0 +1,89 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/UART_Smartwatch.apk
+Entry Points[click.dummer.UartSmartwatch.UartService, click.dummer.UartSmartwatch.PreferencesActivity, click.dummer.UartSmartwatch.MainActivity, click.dummer.UartSmartwatch.DeviceListActivity, click.dummer.UartSmartwatch.NotificationService, click.dummer.UartSmartwatch.MainActivity$NotificationReceiver]
+FllowDroidcallgraph size:539
+Soot started on Mon Jul 11 14:38:22 CST 2022
+Soot finished on Mon Jul 11 14:38:27 CST 2022
+Soot has run for 0 min. 4 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 19
+Declared Target Sdk version is: 22
+Declared Max Sdk version is: -1
+Collected 160 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: click.dummer.UartSmartwatch.DeviceListActivity dummyMainMethod_click_dummer_UartSmartwatch_DeviceListActivity(android.content.Intent)>[]--><click.dummer.UartSmartwatch.DeviceListActivity$4: void onItemClick(android.widget.AdapterView,android.view.View,int,long)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:1
+crashApisInMain:1
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.app.ActivityManager.TaskDescription: void <init>(java.lang.String,android.graphics.Bitmap,int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: click.dummer.UartSmartwatch.MainActivity dummyMainMethod_click_dummer_UartSmartwatch_MainActivity(android.content.Intent)>[]--><click.dummer.UartSmartwatch.MainActivity: void onResume()>[[-$i0 < 21]]--><android.app.ActivityManager.TaskDescription: void <init>(java.lang.String,android.graphics.Bitmap,int)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.lang.String getString(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: click.dummer.UartSmartwatch.NotificationService dummyMainMethod_click_dummer_UartSmartwatch_NotificationService(android.content.Intent)>[]--><click.dummer.UartSmartwatch.NotificationService: void onNotificationRemoved(android.service.notification.StatusBarNotification)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:2
+crashApisInMain:2
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.app.Activity: void setTaskDescription(android.app.ActivityManager.TaskDescription)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: click.dummer.UartSmartwatch.MainActivity dummyMainMethod_click_dummer_UartSmartwatch_MainActivity(android.content.Intent)>[]--><click.dummer.UartSmartwatch.MainActivity: void onResume()>[[-$i0 < 21]]--><android.app.Activity: void setTaskDescription(android.app.ActivityManager.TaskDescription)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+crashApis numbers:2
+crashApis numbers in main road:2
+On Android Version 16 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 17 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 18 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 19 this app may have error api use(at least): 2 and error api roads: 2
+On Android Version 20 this app may have error api use(at least): 2 and error api roads: 2
+On Android Version 21 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 22 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 23 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 24 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 25 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 31 this app may have error api use(at least): 0 and error api roads: 0

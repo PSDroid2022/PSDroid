@@ -1,0 +1,460 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/Starke_Verben.apk
+Entry Points[org.sw24softwares.starkeverben.TestActivity, org.sw24softwares.starkeverben.MainActivity, org.sw24softwares.starkeverben.SettingsActivity, org.sw24softwares.starkeverben.AboutActivity, org.sw24softwares.starkeverben.FormOrderActivity, org.sw24softwares.starkeverben.ResultActivity]
+FllowDroidcallgraph size:1003
+Soot started on Mon Jul 11 12:33:24 CST 2022
+Soot finished on Mon Jul 11 12:33:38 CST 2022
+Soot has run for 0 min. 13 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 17
+Declared Target Sdk version is: 28
+Declared Max Sdk version is: -1
+Collected 604 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.os.BaseBundle: int getInt(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.sw24softwares.starkeverben.ResultActivity dummyMainMethod_org_sw24softwares_starkeverben_ResultActivity(android.content.Intent)>[]--><org.sw24softwares.starkeverben.'-$$Lambda$ResultActivity$GY4as_Lu2uaAj6jVa24QfePv2HM': void onClick(android.view.View)>[]--><org.sw24softwares.starkeverben.ResultActivity: void lambda$onCreate$3(org.sw24softwares.starkeverben.ResultActivity,android.view.View)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+!!!this api will crash on sdk 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.sw24softwares.starkeverben.TestActivity dummyMainMethod_org_sw24softwares_starkeverben_TestActivity(android.content.Intent)>[]--><org.sw24softwares.starkeverben.TestActivity: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:1
+crashApisInMain:1
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putLongArray(java.lang.String,long[])> is checking!!!
+The life time of api is [21,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.util.Size: int getWidth()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 17 18 19 20 
+Error road: <androidx.versionedparcelable.VersionedParcel: void writeSize(android.util.Size,int)>[]--><android.util.Size: int getWidth()>
+#1.the call statck between class <androidx.versionedparcelable.VersionedParcel: void writeSize(android.util.Size,int)> to <android.util.Size: int getWidth()>has compatibility isssues！
+-----------------------------------------
+crashApis:2
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.view.View: void setOutlineProvider(android.view.ViewOutlineProvider)> is checking!!!
+The life time of api is [21,31]
+2call roads:
+1 Mainhead roads:
+-i0 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.sw24softwares.starkeverben.MainActivity dummyMainMethod_org_sw24softwares_starkeverben_MainActivity(android.content.Intent)>[]--><com.ashokvarma.bottomnavigation.BottomNavigationBar: void <init>(android.content.Context)>[]--><com.ashokvarma.bottomnavigation.BottomNavigationBar: void <init>(android.content.Context,android.util.AttributeSet)>[]--><com.ashokvarma.bottomnavigation.BottomNavigationBar: void <init>(android.content.Context,android.util.AttributeSet,int)>[]--><com.ashokvarma.bottomnavigation.BottomNavigationBar: void init()>[[-i0 < 21]]--><android.view.View: void setOutlineProvider(android.view.ViewOutlineProvider)>
+One road protect good!
+1 Packageshead roads:
+-i0 < 21
+Good road: <com.ashokvarma.bottomnavigation.BottomNavigationBar: void <init>(android.content.Context,android.util.AttributeSet,int,int)>[]--><com.ashokvarma.bottomnavigation.BottomNavigationBar: void init()>[[-i0 < 21]]--><android.view.View: void setOutlineProvider(android.view.ViewOutlineProvider)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.text.StaticLayout: void <init>(java.lang.CharSequence,int,int,android.text.TextPaint,int,android.text.Layout.Alignment,float,float,boolean)> is checking!!!
+The life time of api is [1,30]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <com.github.mikephil.charting.renderer.PieChartRenderer: void drawExtras(android.graphics.Canvas)>[]--><com.github.mikephil.charting.renderer.PieChartRenderer: void drawCenterText(android.graphics.Canvas)>[]--><android.text.StaticLayout: void <init>(java.lang.CharSequence,int,int,android.text.TextPaint,int,android.text.Layout.Alignment,float,float,boolean)>
+#1.the call statck between class <com.github.mikephil.charting.renderer.PieChartRenderer: void drawExtras(android.graphics.Canvas)> to <android.text.StaticLayout: void <init>(java.lang.CharSequence,int,int,android.text.TextPaint,int,android.text.Layout.Alignment,float,float,boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <com.github.mikephil.charting.utils.Utils: void drawMultilineText(android.graphics.Canvas,java.lang.String,float,float,android.text.TextPaint,com.github.mikephil.charting.utils.FSize,com.github.mikephil.charting.utils.MPPointF,float)>[]--><android.text.StaticLayout: void <init>(java.lang.CharSequence,int,int,android.text.TextPaint,int,android.text.Layout.Alignment,float,float,boolean)>
+#2.the call statck between class <com.github.mikephil.charting.utils.Utils: void drawMultilineText(android.graphics.Canvas,java.lang.String,float,float,android.text.TextPaint,com.github.mikephil.charting.utils.FSize,com.github.mikephil.charting.utils.MPPointF,float)> to <android.text.StaticLayout: void <init>(java.lang.CharSequence,int,int,android.text.TextPaint,int,android.text.Layout.Alignment,float,float,boolean)>has compatibility isssues！
+-----------------------------------------
+crashApis:3
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 5 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)> is checking!!!
+The life time of api is [21,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 6 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putBooleanArray(java.lang.String,boolean[])> is checking!!!
+The life time of api is [22,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 7 Potential Issue API: SDKCheck of <android.util.Size: void <init>(int,int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 17 18 19 20 
+Error road: <androidx.versionedparcelable.VersionedParcel: android.util.Size readSize(android.util.Size,int)>[]--><android.util.Size: void <init>(int,int)>
+#1.the call statck between class <androidx.versionedparcelable.VersionedParcel: android.util.Size readSize(android.util.Size,int)> to <android.util.Size: void <init>(int,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:4
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 8 Potential Issue API: SDKCheck of <android.content.res.Resources: android.graphics.drawable.Drawable getDrawable(int,android.content.res.Resources.Theme)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i1 < 21
+Good road: <com.github.mikephil.charting.components.MarkerImage: void <init>(android.content.Context,int)>[[-$i1 < 21]]--><android.content.res.Resources: android.graphics.drawable.Drawable getDrawable(int,android.content.res.Resources.Theme)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 9 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)> is checking!!!
+The life time of api is [22,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 10 Potential Issue API: SDKCheck of <android.widget.FrameLayout: void <init>(android.content.Context,android.util.AttributeSet,int,int)> is checking!!!
+The life time of api is [21,31]
+3call roads:
+0 Mainhead roads:
+3 Packageshead roads:
+!!!this api will crash on sdk 17 18 19 20 
+Error road: <com.ashokvarma.bottomnavigation.ShiftingBottomNavigationTab: void <init>(android.content.Context,android.util.AttributeSet,int,int)>[]--><com.ashokvarma.bottomnavigation.BottomNavigationTab: void <init>(android.content.Context,android.util.AttributeSet,int,int)>[]--><android.widget.FrameLayout: void <init>(android.content.Context,android.util.AttributeSet,int,int)>
+!!!this api will crash on sdk 17 18 19 20 
+Error road: <com.ashokvarma.bottomnavigation.ShiftingBottomNavigationTab: void <init>(android.content.Context,android.util.AttributeSet,int,int)>[[]]--><android.widget.FrameLayout: void <init>(android.content.Context,android.util.AttributeSet,int,int)>
+#1.the call statck between class <com.ashokvarma.bottomnavigation.ShiftingBottomNavigationTab: void <init>(android.content.Context,android.util.AttributeSet,int,int)> to <android.widget.FrameLayout: void <init>(android.content.Context,android.util.AttributeSet,int,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 17 18 19 20 
+Error road: <com.ashokvarma.bottomnavigation.BottomNavigationBar: void <init>(android.content.Context,android.util.AttributeSet,int,int)>[]--><android.widget.FrameLayout: void <init>(android.content.Context,android.util.AttributeSet,int,int)>
+#2.the call statck between class <com.ashokvarma.bottomnavigation.BottomNavigationBar: void <init>(android.content.Context,android.util.AttributeSet,int,int)> to <android.widget.FrameLayout: void <init>(android.content.Context,android.util.AttributeSet,int,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 17 18 19 20 
+Error road: <com.ashokvarma.bottomnavigation.FixedBottomNavigationTab: void <init>(android.content.Context,android.util.AttributeSet,int,int)>[]--><com.ashokvarma.bottomnavigation.BottomNavigationTab: void <init>(android.content.Context,android.util.AttributeSet,int,int)>[]--><android.widget.FrameLayout: void <init>(android.content.Context,android.util.AttributeSet,int,int)>
+!!!this api will crash on sdk 17 18 19 20 
+Error road: <com.ashokvarma.bottomnavigation.FixedBottomNavigationTab: void <init>(android.content.Context,android.util.AttributeSet,int,int)>[[]]--><android.widget.FrameLayout: void <init>(android.content.Context,android.util.AttributeSet,int,int)>
+#3.the call statck between class <com.ashokvarma.bottomnavigation.FixedBottomNavigationTab: void <init>(android.content.Context,android.util.AttributeSet,int,int)> to <android.widget.FrameLayout: void <init>(android.content.Context,android.util.AttributeSet,int,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:5
+containsStatic:false
+containsTry:false
+4call by main package
+-----------------------------------------
+#################################################
+N 11 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putDouble(java.lang.String,double)> is checking!!!
+The life time of api is [21,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 12 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putIntArray(java.lang.String,int[])> is checking!!!
+The life time of api is [21,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 13 Potential Issue API: SDKCheck of <android.util.SizeF: float getHeight()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 17 18 19 20 
+Error road: <androidx.versionedparcelable.VersionedParcel: void writeSizeF(android.util.SizeF,int)>[]--><android.util.SizeF: float getHeight()>
+#1.the call statck between class <androidx.versionedparcelable.VersionedParcel: void writeSizeF(android.util.SizeF,int)> to <android.util.SizeF: float getHeight()>has compatibility isssues！
+-----------------------------------------
+crashApis:6
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 14 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.lang.Object get(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:true
+1call by main package
+-----------------------------------------
+#################################################
+N 15 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putDoubleArray(java.lang.String,double[])> is checking!!!
+The life time of api is [21,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 16 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putLong(java.lang.String,long)> is checking!!!
+The life time of api is [21,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 17 Potential Issue API: SDKCheck of <android.os.BaseBundle: boolean getBoolean(java.lang.String)> is checking!!!
+The life time of api is [22,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 17 18 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.sw24softwares.starkeverben.ResultActivity dummyMainMethod_org_sw24softwares_starkeverben_ResultActivity(android.content.Intent)>[]--><org.sw24softwares.starkeverben.'-$$Lambda$ResultActivity$GY4as_Lu2uaAj6jVa24QfePv2HM': void onClick(android.view.View)>[]--><org.sw24softwares.starkeverben.ResultActivity: void lambda$onCreate$3(org.sw24softwares.starkeverben.ResultActivity,android.view.View)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+!!!this api will crash on sdk 17 18 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.sw24softwares.starkeverben.TestActivity dummyMainMethod_org_sw24softwares_starkeverben_TestActivity(android.content.Intent)>[]--><org.sw24softwares.starkeverben.'-$$Lambda$TestActivity$bV4VwCWq07zGsmaNx5W_yfPNhzY': void onClick(android.view.View)>[]--><org.sw24softwares.starkeverben.TestActivity: void lambda$onCreate$1(org.sw24softwares.starkeverben.TestActivity,long,java.util.Vector,android.widget.CheckBox,int,int[],android.view.View)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: boolean getBoolean(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:7
+crashApisInMain:2
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 18 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putStringArray(java.lang.String,java.lang.String[])> is checking!!!
+The life time of api is [21,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 19 Potential Issue API: SDKCheck of <android.view.ViewAnimationUtils: android.animation.Animator createCircularReveal(android.view.View,int,int,float,float)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i5 < 21
+Good road: <android.arch.lifecycle.ComputableLiveData: void invalidate()>[]--><android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)>[]--><com.ashokvarma.bottomnavigation.BottomNavigationBar$2: void run()>[]--><com.ashokvarma.bottomnavigation.BottomNavigationHelper: void setBackgroundWithRipple(android.view.View,android.view.View,android.view.View,int,int)>[[-$i5 < 21]]--><android.view.ViewAnimationUtils: android.animation.Animator createCircularReveal(android.view.View,int,int,float,float)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 20 Potential Issue API: SDKCheck of <android.widget.HorizontalScrollView: android.os.Parcelable onSaveInstanceState()> is checking!!!
+The life time of api is [19,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 17 18 
+Error road: <com.woxthebox.draglistview.BoardView: android.os.Parcelable onSaveInstanceState()>[]--><android.widget.HorizontalScrollView: android.os.Parcelable onSaveInstanceState()>
+#1.the call statck between class <com.woxthebox.draglistview.BoardView: android.os.Parcelable onSaveInstanceState()> to <android.widget.HorizontalScrollView: android.os.Parcelable onSaveInstanceState()>has compatibility isssues！
+-----------------------------------------
+crashApis:8
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 21 Potential Issue API: SDKCheck of <android.animation.AnimatorSet: void <init>()> is checking!!!
+The life time of api is [24,31]
+5call roads:
+0 Mainhead roads:
+5 Packageshead roads:
+!!!this api will crash on sdk 17 18 19 20 21 22 23 
+Error road: <pl.bclogic.pulsator4droid.library.PulsatorLayout: void setCount(int)>[]--><pl.bclogic.pulsator4droid.library.PulsatorLayout: void reset()>[]--><pl.bclogic.pulsator4droid.library.PulsatorLayout: void build()>[]--><android.animation.AnimatorSet: void <init>()>
+#1.the call statck between class <pl.bclogic.pulsator4droid.library.PulsatorLayout: void setCount(int)> to <android.animation.AnimatorSet: void <init>()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 17 18 19 20 21 22 23 
+Error road: <pl.bclogic.pulsator4droid.library.PulsatorLayout: void <init>(android.content.Context,android.util.AttributeSet)>[]--><pl.bclogic.pulsator4droid.library.PulsatorLayout: void <init>(android.content.Context,android.util.AttributeSet,int)>[]--><pl.bclogic.pulsator4droid.library.PulsatorLayout: void build()>[]--><android.animation.AnimatorSet: void <init>()>
+#2.the call statck between class <pl.bclogic.pulsator4droid.library.PulsatorLayout: void <init>(android.content.Context,android.util.AttributeSet)> to <android.animation.AnimatorSet: void <init>()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 17 18 19 20 21 22 23 
+Error road: <pl.bclogic.pulsator4droid.library.PulsatorLayout: void setInterpolator(int)>[]--><pl.bclogic.pulsator4droid.library.PulsatorLayout: void reset()>[]--><pl.bclogic.pulsator4droid.library.PulsatorLayout: void build()>[]--><android.animation.AnimatorSet: void <init>()>
+#3.the call statck between class <pl.bclogic.pulsator4droid.library.PulsatorLayout: void setInterpolator(int)> to <android.animation.AnimatorSet: void <init>()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 17 18 19 20 21 22 23 
+Error road: <pl.bclogic.pulsator4droid.library.PulsatorLayout: void <init>(android.content.Context)>[]--><pl.bclogic.pulsator4droid.library.PulsatorLayout: void <init>(android.content.Context,android.util.AttributeSet,int)>[]--><pl.bclogic.pulsator4droid.library.PulsatorLayout: void build()>[]--><android.animation.AnimatorSet: void <init>()>
+#4.the call statck between class <pl.bclogic.pulsator4droid.library.PulsatorLayout: void <init>(android.content.Context)> to <android.animation.AnimatorSet: void <init>()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 17 18 19 20 21 22 23 
+Error road: <pl.bclogic.pulsator4droid.library.PulsatorLayout: void setDuration(int)>[]--><pl.bclogic.pulsator4droid.library.PulsatorLayout: void reset()>[]--><pl.bclogic.pulsator4droid.library.PulsatorLayout: void build()>[]--><android.animation.AnimatorSet: void <init>()>
+#5.the call statck between class <pl.bclogic.pulsator4droid.library.PulsatorLayout: void setDuration(int)> to <android.animation.AnimatorSet: void <init>()>has compatibility isssues！
+-----------------------------------------
+crashApis:9
+containsStatic:false
+containsTry:false
+6call by main package
+-----------------------------------------
+#################################################
+N 22 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putInt(java.lang.String,int)> is checking!!!
+The life time of api is [21,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 23 Potential Issue API: SDKCheck of <android.widget.HorizontalScrollView: void onRestoreInstanceState(android.os.Parcelable)> is checking!!!
+The life time of api is [19,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 17 18 
+Error road: <com.woxthebox.draglistview.BoardView: void onRestoreInstanceState(android.os.Parcelable)>[]--><android.widget.HorizontalScrollView: void onRestoreInstanceState(android.os.Parcelable)>
+#1.the call statck between class <com.woxthebox.draglistview.BoardView: void onRestoreInstanceState(android.os.Parcelable)> to <android.widget.HorizontalScrollView: void onRestoreInstanceState(android.os.Parcelable)>has compatibility isssues！
+-----------------------------------------
+crashApis:10
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 24 Potential Issue API: SDKCheck of <android.os.BaseBundle: int[] getIntArray(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.sw24softwares.starkeverben.ResultActivity dummyMainMethod_org_sw24softwares_starkeverben_ResultActivity(android.content.Intent)>[]--><org.sw24softwares.starkeverben.ResultActivity: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: int[] getIntArray(java.lang.String)>
+!!!this api will crash on sdk 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.sw24softwares.starkeverben.TestActivity dummyMainMethod_org_sw24softwares_starkeverben_TestActivity(android.content.Intent)>[]--><org.sw24softwares.starkeverben.TestActivity: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: int[] getIntArray(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: int[] getIntArray(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:11
+crashApisInMain:3
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 25 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.lang.String[] getStringArray(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.sw24softwares.starkeverben.ResultActivity dummyMainMethod_org_sw24softwares_starkeverben_ResultActivity(android.content.Intent)>[]--><org.sw24softwares.starkeverben.ResultActivity: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String[] getStringArray(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: java.lang.String[] getStringArray(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:12
+crashApisInMain:4
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 26 Potential Issue API: SDKCheck of <android.util.SizeF: float getWidth()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 17 18 19 20 
+Error road: <androidx.versionedparcelable.VersionedParcel: void writeSizeF(android.util.SizeF,int)>[]--><android.util.SizeF: float getWidth()>
+#1.the call statck between class <androidx.versionedparcelable.VersionedParcel: void writeSizeF(android.util.SizeF,int)> to <android.util.SizeF: float getWidth()>has compatibility isssues！
+-----------------------------------------
+crashApis:13
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 27 Potential Issue API: SDKCheck of <android.util.SizeF: void <init>(float,float)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 17 18 19 20 
+Error road: <androidx.versionedparcelable.VersionedParcel: android.util.SizeF readSizeF(android.util.SizeF,int)>[]--><android.util.SizeF: void <init>(float,float)>
+#1.the call statck between class <androidx.versionedparcelable.VersionedParcel: android.util.SizeF readSizeF(android.util.SizeF,int)> to <android.util.SizeF: void <init>(float,float)>has compatibility isssues！
+-----------------------------------------
+crashApis:14
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 28 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.util.Set keySet()> is checking!!!
+The life time of api is [21,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:true
+1call by main package
+-----------------------------------------
+#################################################
+N 29 Potential Issue API: SDKCheck of <android.util.Size: int getHeight()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 17 18 19 20 
+Error road: <androidx.versionedparcelable.VersionedParcel: void writeSize(android.util.Size,int)>[]--><android.util.Size: int getHeight()>
+#1.the call statck between class <androidx.versionedparcelable.VersionedParcel: void writeSize(android.util.Size,int)> to <android.util.Size: int getHeight()>has compatibility isssues！
+-----------------------------------------
+crashApis:15
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+crashApis numbers:15
+crashApis numbers in main road:4
+On Android Version 16 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 17 this app may have error api use(at least): 14 and error api roads: 25
+On Android Version 18 this app may have error api use(at least): 14 and error api roads: 25
+On Android Version 19 this app may have error api use(at least): 12 and error api roads: 23
+On Android Version 20 this app may have error api use(at least): 12 and error api roads: 23
+On Android Version 21 this app may have error api use(at least): 2 and error api roads: 7
+On Android Version 22 this app may have error api use(at least): 1 and error api roads: 5
+On Android Version 23 this app may have error api use(at least): 1 and error api roads: 5
+On Android Version 24 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 25 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 31 this app may have error api use(at least): 1 and error api roads: 2

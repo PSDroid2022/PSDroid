@@ -1,0 +1,725 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/OpenRedmine.apk
+Entry Points[jp.redmine.redmineclient.activity.WebViewActivity, jp.redmine.redmineclient.activity.IssueFilterActivity, jp.redmine.redmineclient.activity.ConnectionListActivity, jp.redmine.redmineclient.activity.AttachmentActivity, jp.redmine.redmineclient.activity.ConnectionEditActivity, jp.redmine.redmineclient.activity.WikiViewActivity, jp.redmine.redmineclient.activity.ConnectionNaviActivity, jp.redmine.redmineclient.provider.Attachment, jp.redmine.redmineclient.activity.CommonPreferenceActivity, jp.redmine.redmineclient.activity.AboutActivity, jp.redmine.redmineclient.activity.SplashActivity, jp.redmine.redmineclient.activity.ConnectionActivity, jp.redmine.redmineclient.activity.FilterViewActivity, jp.redmine.redmineclient.activity.KanbanActivity, jp.redmine.redmineclient.activity.IssueActivity, jp.redmine.redmineclient.activity.TimeEntryActivity, jp.redmine.redmineclient.activity.ProjectActivity]
+FllowDroidcallgraph size:6165
+Soot started on Mon Jul 11 10:06:11 CST 2022
+Soot finished on Mon Jul 11 10:06:32 CST 2022
+Soot has run for 0 min. 21 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 9
+Declared Target Sdk version is: 28
+Declared Max Sdk version is: -1
+Collected 606 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.webkit.CookieManager: void removeAllCookies(android.webkit.ValueCallback)> is checking!!!
+The life time of api is [21,31]
+3call roads:
+1 Mainhead roads:
+-$i0 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: jp.redmine.redmineclient.activity.WebViewActivity dummyMainMethod_jp_redmine_redmineclient_activity_WebViewActivity(android.content.Intent)>[]--><jp.redmine.redmineclient.activity.WebViewActivity: void onDestroy()>[]--><jp.redmine.redmineclient.form.RedmineWebviewForm: void cleanup()>[]--><jp.redmine.redmineclient.form.helper.RedmineWebViewClient: void resetCookie()>[[-$i0 < 21]]--><android.webkit.CookieManager: void removeAllCookies(android.webkit.ValueCallback)>
+One road protect good!
+-$i0 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: jp.redmine.redmineclient.activity.ConnectionNaviActivity dummyMainMethod_jp_redmine_redmineclient_activity_ConnectionNaviActivity(android.content.Intent)>[]--><jp.redmine.redmineclient.activity.ConnectionNaviActivity: void onDestroy()>[]--><jp.redmine.redmineclient.form.RedmineNavigationForm: void cleanup()>[]--><jp.redmine.redmineclient.external.lib.MyWebViewClient: void resetCookie()>[[-$i0 < 21]]--><android.webkit.CookieManager: void removeAllCookies(android.webkit.ValueCallback)>
+One road protect good!
+2 Packageshead roads:
+-$i0 < 21
+Good road: <jp.redmine.redmineclient.form.RedmineNavigationForm$LocalWebViewClient: void onReceivedError(android.webkit.WebView,int,java.lang.String,java.lang.String)>[]--><jp.redmine.redmineclient.form.RedmineNavigationForm: void stopActivity()>[]--><jp.redmine.redmineclient.form.RedmineNavigationForm: void cleanup()>[]--><jp.redmine.redmineclient.external.lib.MyWebViewClient: void resetCookie()>[[-$i0 < 21]]--><android.webkit.CookieManager: void removeAllCookies(android.webkit.ValueCallback)>
+One road protect good!
+-$i0 < 21
+Good road: <jp.redmine.redmineclient.form.RedmineNavigationForm$LocalWebViewClient: void onPageStarted(android.webkit.WebView,java.lang.String,android.graphics.Bitmap)>[]--><jp.redmine.redmineclient.form.RedmineNavigationForm: void stopActivity()>[]--><jp.redmine.redmineclient.form.RedmineNavigationForm: void cleanup()>[]--><jp.redmine.redmineclient.external.lib.MyWebViewClient: void resetCookie()>[[-$i0 < 21]]--><android.webkit.CookieManager: void removeAllCookies(android.webkit.ValueCallback)>
+One road protect good!
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.os.BaseBundle: int getInt(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+33call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: jp.redmine.redmineclient.activity.FilterViewActivity dummyMainMethod_jp_redmine_redmineclient_activity_FilterViewActivity(android.content.Intent)>[]--><jp.redmine.redmineclient.activity.FilterViewActivity: void onStart()>[]--><jp.redmine.redmineclient.param.ConnectionArgument: int getConnectionId()>[]--><jp.redmine.redmineclient.param.Core: java.lang.Integer getArg(java.lang.String,java.lang.Integer)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: jp.redmine.redmineclient.activity.ConnectionEditActivity dummyMainMethod_jp_redmine_redmineclient_activity_ConnectionEditActivity(android.content.Intent)>[]--><dummyMainClass: jp.redmine.redmineclient.fragment.ConnectionEdit dummyMainMethod_jp_redmine_redmineclient_fragment_ConnectionEdit(android.content.Intent,android.app.Activity)>[]--><jp.redmine.redmineclient.fragment.ConnectionEdit: void onStart()>[]--><jp.redmine.redmineclient.param.ConnectionArgument: int getConnectionId()>[]--><jp.redmine.redmineclient.param.Core: java.lang.Integer getArg(java.lang.String,java.lang.Integer)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: jp.redmine.redmineclient.activity.TimeEntryActivity dummyMainMethod_jp_redmine_redmineclient_activity_TimeEntryActivity(android.content.Intent)>[]--><dummyMainClass: jp.redmine.redmineclient.fragment.TimeEntryEdit dummyMainMethod_jp_redmine_redmineclient_fragment_TimeEntryEdit(android.content.Intent,android.app.Activity)>[]--><jp.redmine.redmineclient.fragment.TimeEntryEdit: boolean onOptionsItemSelected(android.view.MenuItem)>[]--><jp.redmine.redmineclient.param.IssueArgument: int getIssueId()>[]--><jp.redmine.redmineclient.param.Core: java.lang.Integer getArg(java.lang.String,java.lang.Integer)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: jp.redmine.redmineclient.activity.WebViewActivity dummyMainMethod_jp_redmine_redmineclient_activity_WebViewActivity(android.content.Intent)>[]--><jp.redmine.redmineclient.activity.WebViewActivity: void onStart()>[]--><jp.redmine.redmineclient.param.ConnectionArgument: int getConnectionId()>[]--><jp.redmine.redmineclient.param.Core: java.lang.Integer getArg(java.lang.String,java.lang.Integer)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: jp.redmine.redmineclient.activity.WikiViewActivity dummyMainMethod_jp_redmine_redmineclient_activity_WikiViewActivity(android.content.Intent)>[]--><dummyMainClass: jp.redmine.redmineclient.fragment.WikiDetail dummyMainMethod_jp_redmine_redmineclient_fragment_WikiDetail(android.content.Intent,android.app.Activity)>[]--><jp.redmine.redmineclient.fragment.WikiDetail: void onActivityCreated(android.os.Bundle)>[]--><jp.redmine.redmineclient.fragment.WikiDetail: void loadWebView(boolean)>[[try]]--><jp.redmine.redmineclient.fragment.WikiDetail: void onRefresh()>[]--><jp.redmine.redmineclient.param.ConnectionArgument: int getConnectionId()>[]--><jp.redmine.redmineclient.param.Core: java.lang.Integer getArg(java.lang.String,java.lang.Integer)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+One road protect good!
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: jp.redmine.redmineclient.activity.KanbanActivity dummyMainMethod_jp_redmine_redmineclient_activity_KanbanActivity(android.content.Intent)>[]--><dummyMainClass: jp.redmine.redmineclient.fragment.IssueList dummyMainMethod_jp_redmine_redmineclient_fragment_IssueList(android.content.Intent,android.app.Activity)>[]--><jp.redmine.redmineclient.fragment.IssueList$2: void onScroll(android.widget.AbsListView,int,int,int)>[]--><jp.redmine.redmineclient.fragment.IssueList: void onRefresh(boolean)>[]--><jp.redmine.redmineclient.param.ConnectionArgument: int getConnectionId()>[]--><jp.redmine.redmineclient.param.Core: java.lang.Integer getArg(java.lang.String,java.lang.Integer)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: jp.redmine.redmineclient.activity.IssueFilterActivity dummyMainMethod_jp_redmine_redmineclient_activity_IssueFilterActivity(android.content.Intent)>[]--><dummyMainClass: jp.redmine.redmineclient.fragment.IssueList dummyMainMethod_jp_redmine_redmineclient_fragment_IssueList(android.content.Intent,android.app.Activity)>[]--><jp.redmine.redmineclient.fragment.IssueList$2: void onScroll(android.widget.AbsListView,int,int,int)>[]--><jp.redmine.redmineclient.fragment.IssueList: void onRefresh(boolean)>[]--><jp.redmine.redmineclient.param.ConnectionArgument: int getConnectionId()>[]--><jp.redmine.redmineclient.param.Core: java.lang.Integer getArg(java.lang.String,java.lang.Integer)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: jp.redmine.redmineclient.activity.IssueActivity dummyMainMethod_jp_redmine_redmineclient_activity_IssueActivity(android.content.Intent)>[]--><jp.redmine.redmineclient.activity.IssueActivity: boolean onOptionsItemSelected(android.view.MenuItem)>[[try]]--><jp.redmine.redmineclient.param.IssueArgument: int getIssueId()>[]--><jp.redmine.redmineclient.param.Core: java.lang.Integer getArg(java.lang.String,java.lang.Integer)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+One road protect good!
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: jp.redmine.redmineclient.activity.AttachmentActivity dummyMainMethod_jp_redmine_redmineclient_activity_AttachmentActivity(android.content.Intent)>[]--><dummyMainClass: jp.redmine.redmineclient.fragment.FileDownload dummyMainMethod_jp_redmine_redmineclient_fragment_FileDownload(android.content.Intent,android.app.Activity)>[]--><jp.redmine.redmineclient.fragment.'-$$Lambda$FileDownload$QWkzSSUUcB58QtFkNNXI7Ps03jg': void onClick(android.view.View)>[]--><jp.redmine.redmineclient.fragment.FileDownload: void lambda$onActivityCreated$0$FileDownload(android.view.View)>[[try]]--><jp.redmine.redmineclient.param.ConnectionArgument: int getConnectionId()>[]--><jp.redmine.redmineclient.param.Core: java.lang.Integer getArg(java.lang.String,java.lang.Integer)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+One road protect good!
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+32 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <jp.redmine.redmineclient.fragment.IssueView: void onRefresh()>[]--><jp.redmine.redmineclient.fragment.IssueView: void onFetchRemote()>[]--><jp.redmine.redmineclient.param.IssueArgument: int getIssueId()>[]--><jp.redmine.redmineclient.param.Core: java.lang.Integer getArg(java.lang.String,java.lang.Integer)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#1.the call statck between class <jp.redmine.redmineclient.fragment.IssueView: void onRefresh()> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <jp.redmine.redmineclient.param.ResourceArgument: void importArgument(jp.redmine.redmineclient.param.ResourceArgument)>[]--><jp.redmine.redmineclient.param.ResourceArgument: java.lang.Integer getResource()>[]--><jp.redmine.redmineclient.param.Core: java.lang.Integer getArg(java.lang.String,java.lang.Integer)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#2.the call statck between class <jp.redmine.redmineclient.param.ResourceArgument: void importArgument(jp.redmine.redmineclient.param.ResourceArgument)> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <jp.redmine.redmineclient.fragment.ProjectList: boolean onOptionsItemSelected(android.view.MenuItem)>[]--><jp.redmine.redmineclient.param.ConnectionArgument: int getConnectionId()>[]--><jp.redmine.redmineclient.param.Core: java.lang.Integer getArg(java.lang.String,java.lang.Integer)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <jp.redmine.redmineclient.fragment.ProjectList: boolean onOptionsItemSelected(android.view.MenuItem)>[]--><jp.redmine.redmineclient.fragment.ProjectList: void onRefresh()>[]--><jp.redmine.redmineclient.param.ConnectionArgument: int getConnectionId()>[]--><jp.redmine.redmineclient.param.Core: java.lang.Integer getArg(java.lang.String,java.lang.Integer)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <jp.redmine.redmineclient.fragment.ProjectList: boolean onOptionsItemSelected(android.view.MenuItem)>[]--><jp.redmine.redmineclient.param.ConnectionArgument: void importArgument(jp.redmine.redmineclient.param.ConnectionArgument)>[]--><jp.redmine.redmineclient.param.ConnectionArgument: int getConnectionId()>[]--><jp.redmine.redmineclient.param.Core: java.lang.Integer getArg(java.lang.String,java.lang.Integer)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#3.the call statck between class <jp.redmine.redmineclient.fragment.ProjectList: boolean onOptionsItemSelected(android.view.MenuItem)> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <jp.redmine.redmineclient.fragment.TimeEntryList: void onActivityCreated(android.os.Bundle)>[]--><jp.redmine.redmineclient.fragment.TimeEntryList: void onRefresh(boolean)>[]--><jp.redmine.redmineclient.param.ConnectionArgument: int getConnectionId()>[]--><jp.redmine.redmineclient.param.Core: java.lang.Integer getArg(java.lang.String,java.lang.Integer)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#4.the call statck between class <jp.redmine.redmineclient.fragment.TimeEntryList: void onActivityCreated(android.os.Bundle)> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <jp.redmine.redmineclient.fragment.IssueList$3: boolean onQueryTextSubmit(java.lang.String)>[]--><jp.redmine.redmineclient.param.ConnectionArgument: int getConnectionId()>[]--><jp.redmine.redmineclient.param.Core: java.lang.Integer getArg(java.lang.String,java.lang.Integer)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#5.the call statck between class <jp.redmine.redmineclient.fragment.IssueList$3: boolean onQueryTextSubmit(java.lang.String)> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+try
+Good road with try: <jp.redmine.redmineclient.fragment.IssueView: void onActivityCreated(android.os.Bundle)>[]--><jp.redmine.redmineclient.fragment.IssueView: void onRefresh(boolean)>[[try]]--><jp.redmine.redmineclient.param.IssueArgument: int getIssueId()>[]--><jp.redmine.redmineclient.param.Core: java.lang.Integer getArg(java.lang.String,java.lang.Integer)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+One road protect good!
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <jp.redmine.redmineclient.fragment.ProjectDetail: boolean onOptionsItemSelected(android.view.MenuItem)>[]--><jp.redmine.redmineclient.param.ConnectionArgument: void importArgument(jp.redmine.redmineclient.param.ConnectionArgument)>[]--><jp.redmine.redmineclient.param.ConnectionArgument: int getConnectionId()>[]--><jp.redmine.redmineclient.param.Core: java.lang.Integer getArg(java.lang.String,java.lang.Integer)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#7.the call statck between class <jp.redmine.redmineclient.fragment.ProjectDetail: boolean onOptionsItemSelected(android.view.MenuItem)> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <jp.redmine.redmineclient.fragment.IssueView$SelectDataTask: void onPostExecute(java.lang.Void)>[]--><jp.redmine.redmineclient.param.ConnectionArgument: int getConnectionId()>[]--><jp.redmine.redmineclient.param.Core: java.lang.Integer getArg(java.lang.String,java.lang.Integer)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <jp.redmine.redmineclient.fragment.IssueView$SelectDataTask: void onPostExecute(java.lang.Void)>[]--><jp.redmine.redmineclient.param.IssueArgument: int getIssueId()>[]--><jp.redmine.redmineclient.param.Core: java.lang.Integer getArg(java.lang.String,java.lang.Integer)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+try
+Good road with try: <jp.redmine.redmineclient.fragment.IssueView$SelectDataTask: void onPostExecute(java.lang.Void)>[]--><jp.redmine.redmineclient.fragment.IssueView: void onRefresh(boolean)>[[try]]--><jp.redmine.redmineclient.param.IssueArgument: int getIssueId()>[]--><jp.redmine.redmineclient.param.Core: java.lang.Integer getArg(java.lang.String,java.lang.Integer)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+One road protect good!
+#8.the call statck between class <jp.redmine.redmineclient.fragment.IssueView$SelectDataTask: void onPostExecute(java.lang.Void)> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <jp.redmine.redmineclient.fragment.ProjectFavoriteList: void onActivityCreated(android.os.Bundle)>[]--><jp.redmine.redmineclient.param.ConnectionArgument: int getConnectionId()>[]--><jp.redmine.redmineclient.param.Core: java.lang.Integer getArg(java.lang.String,java.lang.Integer)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#9.the call statck between class <jp.redmine.redmineclient.fragment.ProjectFavoriteList: void onActivityCreated(android.os.Bundle)> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <jp.redmine.redmineclient.fragment.WikiList: void onActivityCreated(android.os.Bundle)>[]--><jp.redmine.redmineclient.fragment.WikiList: void onRefresh()>[]--><jp.redmine.redmineclient.param.ConnectionArgument: int getConnectionId()>[]--><jp.redmine.redmineclient.param.Core: java.lang.Integer getArg(java.lang.String,java.lang.Integer)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <jp.redmine.redmineclient.fragment.WikiList: void onActivityCreated(android.os.Bundle)>[]--><jp.redmine.redmineclient.param.ConnectionArgument: int getConnectionId()>[]--><jp.redmine.redmineclient.param.Core: java.lang.Integer getArg(java.lang.String,java.lang.Integer)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#10.the call statck between class <jp.redmine.redmineclient.fragment.WikiList: void onActivityCreated(android.os.Bundle)> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:1
+crashApisInMain:1
+containsStatic:false
+containsTry:true
+11call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.os.BaseBundle: boolean containsKey(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+34call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: jp.redmine.redmineclient.activity.WebViewActivity dummyMainMethod_jp_redmine_redmineclient_activity_WebViewActivity(android.content.Intent)>[]--><jp.redmine.redmineclient.activity.WebViewActivity: void onStart()>[]--><jp.redmine.redmineclient.param.WebArgument: java.lang.String getUrl()>[]--><jp.redmine.redmineclient.param.Core: java.lang.String getArg(java.lang.String,java.lang.String)>[]--><android.os.BaseBundle: boolean containsKey(java.lang.String)>
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: jp.redmine.redmineclient.activity.KanbanActivity dummyMainMethod_jp_redmine_redmineclient_activity_KanbanActivity(android.content.Intent)>[]--><jp.redmine.redmineclient.activity.KanbanActivity: void onCreate(android.os.Bundle)>[]--><jp.redmine.redmineclient.activity.KanbanActivity: void renewFragments(android.os.Bundle)>[[try]]--><jp.redmine.redmineclient.param.ConnectionArgument: int getConnectionId()>[]--><jp.redmine.redmineclient.param.Core: java.lang.Integer getArg(java.lang.String,java.lang.Integer)>[]--><android.os.BaseBundle: boolean containsKey(java.lang.String)>
+One road protect good!
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: jp.redmine.redmineclient.activity.IssueFilterActivity dummyMainMethod_jp_redmine_redmineclient_activity_IssueFilterActivity(android.content.Intent)>[]--><dummyMainClass: jp.redmine.redmineclient.fragment.IssueList dummyMainMethod_jp_redmine_redmineclient_fragment_IssueList(android.content.Intent,android.app.Activity)>[]--><jp.redmine.redmineclient.fragment.IssueList$2: void onScroll(android.widget.AbsListView,int,int,int)>[]--><jp.redmine.redmineclient.fragment.IssueList: void onRefresh(boolean)>[]--><jp.redmine.redmineclient.param.ConnectionArgument: int getConnectionId()>[]--><jp.redmine.redmineclient.param.Core: java.lang.Integer getArg(java.lang.String,java.lang.Integer)>[]--><android.os.BaseBundle: boolean containsKey(java.lang.String)>
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: jp.redmine.redmineclient.activity.IssueActivity dummyMainMethod_jp_redmine_redmineclient_activity_IssueActivity(android.content.Intent)>[]--><jp.redmine.redmineclient.activity.IssueActivity: boolean onOptionsItemSelected(android.view.MenuItem)>[[try]]--><jp.redmine.redmineclient.param.IssueArgument: int getIssueId()>[]--><jp.redmine.redmineclient.param.Core: java.lang.Integer getArg(java.lang.String,java.lang.Integer)>[]--><android.os.BaseBundle: boolean containsKey(java.lang.String)>
+One road protect good!
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: jp.redmine.redmineclient.activity.FilterViewActivity dummyMainMethod_jp_redmine_redmineclient_activity_FilterViewActivity(android.content.Intent)>[]--><jp.redmine.redmineclient.activity.FilterViewActivity: void onStart()>[]--><jp.redmine.redmineclient.param.ConnectionArgument: int getConnectionId()>[]--><jp.redmine.redmineclient.param.Core: java.lang.Integer getArg(java.lang.String,java.lang.Integer)>[]--><android.os.BaseBundle: boolean containsKey(java.lang.String)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: jp.redmine.redmineclient.activity.ConnectionEditActivity dummyMainMethod_jp_redmine_redmineclient_activity_ConnectionEditActivity(android.content.Intent)>[]--><dummyMainClass: jp.redmine.redmineclient.fragment.ConnectionEdit dummyMainMethod_jp_redmine_redmineclient_fragment_ConnectionEdit(android.content.Intent,android.app.Activity)>[]--><jp.redmine.redmineclient.fragment.ConnectionEdit: void onActivityResult(int,int,android.content.Intent)>[]--><jp.redmine.redmineclient.param.ConnectionNaviArgument: java.lang.String getAuthID()>[]--><jp.redmine.redmineclient.param.Core: java.lang.String getArg(java.lang.String,java.lang.String)>[]--><android.os.BaseBundle: boolean containsKey(java.lang.String)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: jp.redmine.redmineclient.activity.TimeEntryActivity dummyMainMethod_jp_redmine_redmineclient_activity_TimeEntryActivity(android.content.Intent)>[]--><jp.redmine.redmineclient.activity.TimeEntryActivity: void onCreate(android.os.Bundle)>[]--><jp.redmine.redmineclient.param.TimeEntryArgument: void importArgument(jp.redmine.redmineclient.param.TimeEntryArgument)>[]--><jp.redmine.redmineclient.param.TimeEntryArgument: int getTimeEntryId()>[]--><jp.redmine.redmineclient.param.Core: java.lang.Integer getArg(java.lang.String,java.lang.Integer)>[]--><android.os.BaseBundle: boolean containsKey(java.lang.String)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: jp.redmine.redmineclient.activity.WikiViewActivity dummyMainMethod_jp_redmine_redmineclient_activity_WikiViewActivity(android.content.Intent)>[]--><jp.redmine.redmineclient.activity.WikiViewActivity: void onCreate(android.os.Bundle)>[]--><jp.redmine.redmineclient.param.WikiArgument: void importArgument(jp.redmine.redmineclient.param.WikiArgument)>[]--><jp.redmine.redmineclient.param.WikiArgument: java.lang.String getWikiTitle()>[]--><jp.redmine.redmineclient.param.Core: java.lang.String getArg(java.lang.String,java.lang.String)>[]--><android.os.BaseBundle: boolean containsKey(java.lang.String)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: jp.redmine.redmineclient.activity.ConnectionNaviActivity dummyMainMethod_jp_redmine_redmineclient_activity_ConnectionNaviActivity(android.content.Intent)>[]--><jp.redmine.redmineclient.activity.ConnectionNaviActivity: void onStart()>[]--><jp.redmine.redmineclient.param.ConnectionNaviResultArgument: boolean isUnsafeSSL()>[]--><jp.redmine.redmineclient.param.Core: java.lang.Boolean getArg(java.lang.String,java.lang.Boolean)>[]--><android.os.BaseBundle: boolean containsKey(java.lang.String)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: jp.redmine.redmineclient.activity.AttachmentActivity dummyMainMethod_jp_redmine_redmineclient_activity_AttachmentActivity(android.content.Intent)>[]--><jp.redmine.redmineclient.activity.AttachmentActivity: void onCreate(android.os.Bundle)>[]--><jp.redmine.redmineclient.param.AttachmentArgument: void importArgument(jp.redmine.redmineclient.param.AttachmentArgument)>[]--><jp.redmine.redmineclient.param.IssueArgument: void importArgument(jp.redmine.redmineclient.param.IssueArgument)>[]--><jp.redmine.redmineclient.param.ProjectArgument: void importArgument(jp.redmine.redmineclient.param.ProjectArgument)>[]--><jp.redmine.redmineclient.param.ProjectArgument: long getProjectId()>[]--><jp.redmine.redmineclient.param.Core: java.lang.Long getArg(java.lang.String,java.lang.Long)>[]--><android.os.BaseBundle: boolean containsKey(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: boolean containsKey(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+33 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <jp.redmine.redmineclient.fragment.IssueView: void onRefresh()>[]--><jp.redmine.redmineclient.fragment.IssueView: void onFetchRemote()>[]--><jp.redmine.redmineclient.param.IssueArgument: int getIssueId()>[]--><jp.redmine.redmineclient.param.Core: java.lang.Integer getArg(java.lang.String,java.lang.Integer)>[]--><android.os.BaseBundle: boolean containsKey(java.lang.String)>
+#1.the call statck between class <jp.redmine.redmineclient.fragment.IssueView: void onRefresh()> to <android.os.BaseBundle: boolean containsKey(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <jp.redmine.redmineclient.param.ResourceArgument: void importArgument(jp.redmine.redmineclient.param.ResourceArgument)>[]--><jp.redmine.redmineclient.param.ResourceArgument: java.lang.Integer getResource()>[]--><jp.redmine.redmineclient.param.Core: java.lang.Integer getArg(java.lang.String,java.lang.Integer)>[]--><android.os.BaseBundle: boolean containsKey(java.lang.String)>
+#2.the call statck between class <jp.redmine.redmineclient.param.ResourceArgument: void importArgument(jp.redmine.redmineclient.param.ResourceArgument)> to <android.os.BaseBundle: boolean containsKey(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <jp.redmine.redmineclient.fragment.ProjectList: boolean onOptionsItemSelected(android.view.MenuItem)>[]--><jp.redmine.redmineclient.fragment.ProjectList: void onRefresh()>[]--><jp.redmine.redmineclient.param.ConnectionArgument: int getConnectionId()>[]--><jp.redmine.redmineclient.param.Core: java.lang.Integer getArg(java.lang.String,java.lang.Integer)>[]--><android.os.BaseBundle: boolean containsKey(java.lang.String)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <jp.redmine.redmineclient.fragment.ProjectList: boolean onOptionsItemSelected(android.view.MenuItem)>[]--><jp.redmine.redmineclient.param.ConnectionArgument: int getConnectionId()>[]--><jp.redmine.redmineclient.param.Core: java.lang.Integer getArg(java.lang.String,java.lang.Integer)>[]--><android.os.BaseBundle: boolean containsKey(java.lang.String)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <jp.redmine.redmineclient.fragment.ProjectList: boolean onOptionsItemSelected(android.view.MenuItem)>[]--><jp.redmine.redmineclient.param.ConnectionArgument: void importArgument(jp.redmine.redmineclient.param.ConnectionArgument)>[]--><jp.redmine.redmineclient.param.ConnectionArgument: int getConnectionId()>[]--><jp.redmine.redmineclient.param.Core: java.lang.Integer getArg(java.lang.String,java.lang.Integer)>[]--><android.os.BaseBundle: boolean containsKey(java.lang.String)>
+#3.the call statck between class <jp.redmine.redmineclient.fragment.ProjectList: boolean onOptionsItemSelected(android.view.MenuItem)> to <android.os.BaseBundle: boolean containsKey(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <jp.redmine.redmineclient.fragment.TimeEntryList: void onActivityCreated(android.os.Bundle)>[]--><jp.redmine.redmineclient.fragment.TimeEntryList: void onRefresh(boolean)>[]--><jp.redmine.redmineclient.param.ConnectionArgument: int getConnectionId()>[]--><jp.redmine.redmineclient.param.Core: java.lang.Integer getArg(java.lang.String,java.lang.Integer)>[]--><android.os.BaseBundle: boolean containsKey(java.lang.String)>
+#4.the call statck between class <jp.redmine.redmineclient.fragment.TimeEntryList: void onActivityCreated(android.os.Bundle)> to <android.os.BaseBundle: boolean containsKey(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <jp.redmine.redmineclient.fragment.IssueList$3: boolean onQueryTextSubmit(java.lang.String)>[]--><jp.redmine.redmineclient.param.ConnectionArgument: int getConnectionId()>[]--><jp.redmine.redmineclient.param.Core: java.lang.Integer getArg(java.lang.String,java.lang.Integer)>[]--><android.os.BaseBundle: boolean containsKey(java.lang.String)>
+#5.the call statck between class <jp.redmine.redmineclient.fragment.IssueList$3: boolean onQueryTextSubmit(java.lang.String)> to <android.os.BaseBundle: boolean containsKey(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <jp.redmine.redmineclient.fragment.ProjectDetail: boolean onOptionsItemSelected(android.view.MenuItem)>[]--><jp.redmine.redmineclient.param.ConnectionArgument: void importArgument(jp.redmine.redmineclient.param.ConnectionArgument)>[]--><jp.redmine.redmineclient.param.ConnectionArgument: int getConnectionId()>[]--><jp.redmine.redmineclient.param.Core: java.lang.Integer getArg(java.lang.String,java.lang.Integer)>[]--><android.os.BaseBundle: boolean containsKey(java.lang.String)>
+try
+Good road with try: <jp.redmine.redmineclient.fragment.ProjectDetail: boolean onOptionsItemSelected(android.view.MenuItem)>[[try]]--><jp.redmine.redmineclient.param.ProjectArgument: long getProjectId()>[]--><jp.redmine.redmineclient.param.Core: java.lang.Long getArg(java.lang.String,java.lang.Long)>[]--><android.os.BaseBundle: boolean containsKey(java.lang.String)>
+One road protect good!
+#6.the call statck between class <jp.redmine.redmineclient.fragment.ProjectDetail: boolean onOptionsItemSelected(android.view.MenuItem)> to <android.os.BaseBundle: boolean containsKey(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+try
+Good road with try: <jp.redmine.redmineclient.fragment.IssueView: void onActivityCreated(android.os.Bundle)>[]--><jp.redmine.redmineclient.fragment.IssueView: void onRefresh(boolean)>[[try]]--><jp.redmine.redmineclient.param.IssueArgument: int getIssueId()>[]--><jp.redmine.redmineclient.param.Core: java.lang.Integer getArg(java.lang.String,java.lang.Integer)>[]--><android.os.BaseBundle: boolean containsKey(java.lang.String)>
+One road protect good!
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <jp.redmine.redmineclient.fragment.IssueView$SelectDataTask: void onPostExecute(java.lang.Void)>[]--><jp.redmine.redmineclient.param.IssueArgument: int getIssueId()>[]--><jp.redmine.redmineclient.param.Core: java.lang.Integer getArg(java.lang.String,java.lang.Integer)>[]--><android.os.BaseBundle: boolean containsKey(java.lang.String)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <jp.redmine.redmineclient.fragment.IssueView$SelectDataTask: void onPostExecute(java.lang.Void)>[]--><jp.redmine.redmineclient.param.ConnectionArgument: int getConnectionId()>[]--><jp.redmine.redmineclient.param.Core: java.lang.Integer getArg(java.lang.String,java.lang.Integer)>[]--><android.os.BaseBundle: boolean containsKey(java.lang.String)>
+try
+Good road with try: <jp.redmine.redmineclient.fragment.IssueView$SelectDataTask: void onPostExecute(java.lang.Void)>[]--><jp.redmine.redmineclient.fragment.IssueView: void onRefresh(boolean)>[[try]]--><jp.redmine.redmineclient.param.IssueArgument: int getIssueId()>[]--><jp.redmine.redmineclient.param.Core: java.lang.Integer getArg(java.lang.String,java.lang.Integer)>[]--><android.os.BaseBundle: boolean containsKey(java.lang.String)>
+One road protect good!
+#8.the call statck between class <jp.redmine.redmineclient.fragment.IssueView$SelectDataTask: void onPostExecute(java.lang.Void)> to <android.os.BaseBundle: boolean containsKey(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <jp.redmine.redmineclient.fragment.ProjectFavoriteList: void onActivityCreated(android.os.Bundle)>[]--><jp.redmine.redmineclient.param.ConnectionArgument: int getConnectionId()>[]--><jp.redmine.redmineclient.param.Core: java.lang.Integer getArg(java.lang.String,java.lang.Integer)>[]--><android.os.BaseBundle: boolean containsKey(java.lang.String)>
+#9.the call statck between class <jp.redmine.redmineclient.fragment.ProjectFavoriteList: void onActivityCreated(android.os.Bundle)> to <android.os.BaseBundle: boolean containsKey(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <jp.redmine.redmineclient.fragment.WikiList: void onActivityCreated(android.os.Bundle)>[]--><jp.redmine.redmineclient.param.ProjectArgument: long getProjectId()>[]--><jp.redmine.redmineclient.param.Core: java.lang.Long getArg(java.lang.String,java.lang.Long)>[]--><android.os.BaseBundle: boolean containsKey(java.lang.String)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <jp.redmine.redmineclient.fragment.WikiList: void onActivityCreated(android.os.Bundle)>[]--><jp.redmine.redmineclient.fragment.WikiList: void onRefresh()>[]--><jp.redmine.redmineclient.param.ConnectionArgument: int getConnectionId()>[]--><jp.redmine.redmineclient.param.Core: java.lang.Integer getArg(java.lang.String,java.lang.Integer)>[]--><android.os.BaseBundle: boolean containsKey(java.lang.String)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <jp.redmine.redmineclient.fragment.WikiList: void onActivityCreated(android.os.Bundle)>[]--><jp.redmine.redmineclient.param.ConnectionArgument: int getConnectionId()>[]--><jp.redmine.redmineclient.param.Core: java.lang.Integer getArg(java.lang.String,java.lang.Integer)>[]--><android.os.BaseBundle: boolean containsKey(java.lang.String)>
+#10.the call statck between class <jp.redmine.redmineclient.fragment.WikiList: void onActivityCreated(android.os.Bundle)> to <android.os.BaseBundle: boolean containsKey(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:2
+crashApisInMain:2
+containsStatic:false
+containsTry:true
+11call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.widget.AbsListView: void setOverScrollMode(int)> is checking!!!
+The life time of api is [9,28]
+4call roads:
+0 Mainhead roads:
+4 Packageshead roads:
+!!!this api will crash on sdk 29 30 31 
+Error road: <se.emilsjolander.stickylistheaders.StickyListHeadersListView: void setOverScrollMode(int)>[]--><android.widget.AbsListView: void setOverScrollMode(int)>
+#1.the call statck between class <se.emilsjolander.stickylistheaders.StickyListHeadersListView: void setOverScrollMode(int)> to <android.widget.AbsListView: void setOverScrollMode(int)>has compatibility isssues！
+-----------------------------------------
+###Multi invoking in one method, need manual check!!!--><se.emilsjolander.stickylistheaders.StickyListHeadersListView: void <init>(android.content.Context,android.util.AttributeSet,int)>[[try], [-$i0 < 9]]
+###Multi invoking in one method, need manual check!!!--><se.emilsjolander.stickylistheaders.StickyListHeadersListView: void <init>(android.content.Context,android.util.AttributeSet,int)>[[try]][[-$i0 < 9]]
+try
+Good road with try: <se.emilsjolander.stickylistheaders.ExpandableStickyListHeadersListView: void <init>(android.content.Context,android.util.AttributeSet)>[]--><se.emilsjolander.stickylistheaders.StickyListHeadersListView: void <init>(android.content.Context,android.util.AttributeSet)>[]--><se.emilsjolander.stickylistheaders.StickyListHeadersListView: void <init>(android.content.Context,android.util.AttributeSet,int)>[[try], [-$i0 < 9]]--><android.widget.AbsListView: void setOverScrollMode(int)>
+One road protect good!
+###Multi invoking in one method, need manual check!!!--><se.emilsjolander.stickylistheaders.StickyListHeadersListView: void <init>(android.content.Context,android.util.AttributeSet,int)>[[try], [-$i0 < 9]]
+###Multi invoking in one method, need manual check!!!--><se.emilsjolander.stickylistheaders.StickyListHeadersListView: void <init>(android.content.Context,android.util.AttributeSet,int)>[[try]][[-$i0 < 9]]
+try
+Good road with try: <se.emilsjolander.stickylistheaders.ExpandableStickyListHeadersListView: void <init>(android.content.Context,android.util.AttributeSet,int)>[]--><se.emilsjolander.stickylistheaders.StickyListHeadersListView: void <init>(android.content.Context,android.util.AttributeSet,int)>[[try], [-$i0 < 9]]--><android.widget.AbsListView: void setOverScrollMode(int)>
+One road protect good!
+###Multi invoking in one method, need manual check!!!--><se.emilsjolander.stickylistheaders.StickyListHeadersListView: void <init>(android.content.Context,android.util.AttributeSet,int)>[[try], [-$i0 < 9]]
+###Multi invoking in one method, need manual check!!!--><se.emilsjolander.stickylistheaders.StickyListHeadersListView: void <init>(android.content.Context,android.util.AttributeSet,int)>[[try]][[-$i0 < 9]]
+try
+Good road with try: <se.emilsjolander.stickylistheaders.ExpandableStickyListHeadersListView: void <init>(android.content.Context)>[]--><se.emilsjolander.stickylistheaders.StickyListHeadersListView: void <init>(android.content.Context)>[]--><se.emilsjolander.stickylistheaders.StickyListHeadersListView: void <init>(android.content.Context,android.util.AttributeSet)>[]--><se.emilsjolander.stickylistheaders.StickyListHeadersListView: void <init>(android.content.Context,android.util.AttributeSet,int)>[[try], [-$i0 < 9]]--><android.widget.AbsListView: void setOverScrollMode(int)>
+One road protect good!
+crashApis:3
+containsStatic:false
+containsTry:true
+5call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)> is checking!!!
+The life time of api is [21,31]
+12call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: jp.redmine.redmineclient.activity.ConnectionEditActivity dummyMainMethod_jp_redmine_redmineclient_activity_ConnectionEditActivity(android.content.Intent)>[]--><dummyMainClass: jp.redmine.redmineclient.fragment.ConnectionEdit dummyMainMethod_jp_redmine_redmineclient_fragment_ConnectionEdit(android.content.Intent,android.app.Activity)>[]--><jp.redmine.redmineclient.fragment.ConnectionEdit$2: void onClick(android.view.View)>[]--><jp.redmine.redmineclient.param.ConnectionNaviArgument: void setAuthID(java.lang.String)>[]--><jp.redmine.redmineclient.param.Core: void setArg(java.lang.String,java.lang.String)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: jp.redmine.redmineclient.activity.WikiViewActivity dummyMainMethod_jp_redmine_redmineclient_activity_WikiViewActivity(android.content.Intent)>[]--><dummyMainClass: jp.redmine.redmineclient.fragment.WikiDetail dummyMainMethod_jp_redmine_redmineclient_fragment_WikiDetail(android.content.Intent,android.app.Activity)>[]--><jp.redmine.redmineclient.fragment.WikiDetail: boolean onOptionsItemSelected(android.view.MenuItem)>[]--><jp.redmine.redmineclient.param.WebArgument: void setUrl(java.lang.String)>[]--><jp.redmine.redmineclient.param.Core: void setArg(java.lang.String,java.lang.String)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: jp.redmine.redmineclient.activity.KanbanActivity dummyMainMethod_jp_redmine_redmineclient_activity_KanbanActivity(android.content.Intent)>[]--><dummyMainClass: jp.redmine.redmineclient.fragment.IssueList dummyMainMethod_jp_redmine_redmineclient_fragment_IssueList(android.content.Intent,android.app.Activity)>[]--><jp.redmine.redmineclient.fragment.IssueList: boolean onOptionsItemSelected(android.view.MenuItem)>[]--><jp.redmine.redmineclient.param.WebArgument: void setUrl(java.lang.String)>[]--><jp.redmine.redmineclient.param.Core: void setArg(java.lang.String,java.lang.String)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: jp.redmine.redmineclient.activity.ConnectionNaviActivity dummyMainMethod_jp_redmine_redmineclient_activity_ConnectionNaviActivity(android.content.Intent)>[]--><jp.redmine.redmineclient.activity.ConnectionNaviActivity$1: void onClick(android.view.View)>[]--><jp.redmine.redmineclient.param.ConnectionNaviArgument: void setAuthID(java.lang.String)>[]--><jp.redmine.redmineclient.param.Core: void setArg(java.lang.String,java.lang.String)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: jp.redmine.redmineclient.activity.IssueFilterActivity dummyMainMethod_jp_redmine_redmineclient_activity_IssueFilterActivity(android.content.Intent)>[]--><dummyMainClass: jp.redmine.redmineclient.fragment.IssueList dummyMainMethod_jp_redmine_redmineclient_fragment_IssueList(android.content.Intent,android.app.Activity)>[]--><jp.redmine.redmineclient.fragment.IssueList: boolean onOptionsItemSelected(android.view.MenuItem)>[]--><jp.redmine.redmineclient.param.WebArgument: void setUrl(java.lang.String)>[]--><jp.redmine.redmineclient.param.Core: void setArg(java.lang.String,java.lang.String)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+11 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <jp.redmine.redmineclient.activity.handler.IssueViewHandler$7: void generateIntent(android.content.Intent)>[]--><jp.redmine.redmineclient.param.WebArgument: void setUrl(java.lang.String)>[]--><jp.redmine.redmineclient.param.Core: void setArg(java.lang.String,java.lang.String)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#1.the call statck between class <jp.redmine.redmineclient.activity.handler.IssueViewHandler$7: void generateIntent(android.content.Intent)> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <jp.redmine.redmineclient.fragment.ProjectList: boolean onOptionsItemSelected(android.view.MenuItem)>[]--><jp.redmine.redmineclient.param.WebArgument: void setUrl(java.lang.String)>[]--><jp.redmine.redmineclient.param.Core: void setArg(java.lang.String,java.lang.String)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#2.the call statck between class <jp.redmine.redmineclient.fragment.ProjectList: boolean onOptionsItemSelected(android.view.MenuItem)> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <jp.redmine.redmineclient.fragment.IssueView: boolean onOptionsItemSelected(android.view.MenuItem)>[]--><jp.redmine.redmineclient.param.WebArgument: void setUrl(java.lang.String)>[]--><jp.redmine.redmineclient.param.Core: void setArg(java.lang.String,java.lang.String)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#3.the call statck between class <jp.redmine.redmineclient.fragment.IssueView: boolean onOptionsItemSelected(android.view.MenuItem)> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <jp.redmine.redmineclient.param.WebArgument: void importArgument(jp.redmine.redmineclient.param.WebArgument)>[]--><jp.redmine.redmineclient.param.WebArgument: void setUrl(java.lang.String)>[]--><jp.redmine.redmineclient.param.Core: void setArg(java.lang.String,java.lang.String)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#4.the call statck between class <jp.redmine.redmineclient.param.WebArgument: void importArgument(jp.redmine.redmineclient.param.WebArgument)> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <jp.redmine.redmineclient.fragment.ProjectDetail: boolean onOptionsItemSelected(android.view.MenuItem)>[]--><jp.redmine.redmineclient.param.WebArgument: void setUrl(java.lang.String)>[]--><jp.redmine.redmineclient.param.Core: void setArg(java.lang.String,java.lang.String)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#5.the call statck between class <jp.redmine.redmineclient.fragment.ProjectDetail: boolean onOptionsItemSelected(android.view.MenuItem)> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <jp.redmine.redmineclient.form.helper.TextViewHelper$1: void onClick(android.view.View,android.text.style.URLSpan)>[]--><jp.redmine.redmineclient.form.helper.RedmineConvertToHtmlHelper: boolean kickAction(jp.redmine.redmineclient.activity.handler.WebviewActionInterface,java.lang.String)>[]--><jp.redmine.redmineclient.activity.WikiViewActivity$2: void wiki(int,long,java.lang.String)>[]--><jp.redmine.redmineclient.param.WikiArgument: void setWikiTitle(java.lang.String)>[]--><jp.redmine.redmineclient.param.Core: void setArg(java.lang.String,java.lang.String)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#6.the call statck between class <jp.redmine.redmineclient.form.helper.TextViewHelper$1: void onClick(android.view.View,android.text.style.URLSpan)> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <jp.redmine.redmineclient.fragment.NewsList: boolean onOptionsItemSelected(android.view.MenuItem)>[]--><jp.redmine.redmineclient.param.WebArgument: void setUrl(java.lang.String)>[]--><jp.redmine.redmineclient.param.Core: void setArg(java.lang.String,java.lang.String)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#7.the call statck between class <jp.redmine.redmineclient.fragment.NewsList: boolean onOptionsItemSelected(android.view.MenuItem)> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <jp.redmine.redmineclient.activity.handler.IssueViewHandler$8: void generateIntent(android.content.Intent)>[]--><jp.redmine.redmineclient.param.WikiArgument: void setWikiTitle(java.lang.String)>[]--><jp.redmine.redmineclient.param.Core: void setArg(java.lang.String,java.lang.String)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#8.the call statck between class <jp.redmine.redmineclient.activity.handler.IssueViewHandler$8: void generateIntent(android.content.Intent)> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <jp.redmine.redmineclient.form.helper.WebViewHelper$1: boolean shouldOverrideUrlLoading(android.webkit.WebView,java.lang.String)>[]--><jp.redmine.redmineclient.form.helper.RedmineConvertToHtmlHelper: boolean kickAction(jp.redmine.redmineclient.activity.handler.WebviewActionInterface,java.lang.String)>[]--><jp.redmine.redmineclient.activity.WikiViewActivity$2: void wiki(int,long,java.lang.String)>[]--><jp.redmine.redmineclient.param.WikiArgument: void setWikiTitle(java.lang.String)>[]--><jp.redmine.redmineclient.param.Core: void setArg(java.lang.String,java.lang.String)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#9.the call statck between class <jp.redmine.redmineclient.form.helper.WebViewHelper$1: boolean shouldOverrideUrlLoading(android.webkit.WebView,java.lang.String)> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <jp.redmine.redmineclient.fragment.WikiList: void onListItemClick(android.widget.ListView,android.view.View,int,long)>[]--><jp.redmine.redmineclient.activity.WikiViewActivity$2: void wiki(int,long,java.lang.String)>[]--><jp.redmine.redmineclient.param.WikiArgument: void setWikiTitle(java.lang.String)>[]--><jp.redmine.redmineclient.param.Core: void setArg(java.lang.String,java.lang.String)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#10.the call statck between class <jp.redmine.redmineclient.fragment.WikiList: void onListItemClick(android.widget.ListView,android.view.View,int,long)> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:4
+crashApisInMain:3
+containsStatic:false
+containsTry:false
+11call by main package
+-----------------------------------------
+#################################################
+N 5 Potential Issue API: SDKCheck of <android.os.BaseBundle: long getLong(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+14call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: jp.redmine.redmineclient.activity.FilterViewActivity dummyMainMethod_jp_redmine_redmineclient_activity_FilterViewActivity(android.content.Intent)>[]--><jp.redmine.redmineclient.activity.FilterViewActivity: void onStart()>[]--><jp.redmine.redmineclient.param.ProjectArgument: long getProjectId()>[]--><jp.redmine.redmineclient.param.Core: java.lang.Long getArg(java.lang.String,java.lang.Long)>[]--><android.os.BaseBundle: long getLong(java.lang.String)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: jp.redmine.redmineclient.activity.TimeEntryActivity dummyMainMethod_jp_redmine_redmineclient_activity_TimeEntryActivity(android.content.Intent)>[]--><jp.redmine.redmineclient.activity.TimeEntryActivity: void onCreate(android.os.Bundle)>[]--><jp.redmine.redmineclient.param.TimeEntryArgument: void importArgument(jp.redmine.redmineclient.param.TimeEntryArgument)>[]--><jp.redmine.redmineclient.param.IssueArgument: void importArgument(jp.redmine.redmineclient.param.IssueArgument)>[]--><jp.redmine.redmineclient.param.ProjectArgument: void importArgument(jp.redmine.redmineclient.param.ProjectArgument)>[]--><jp.redmine.redmineclient.param.ProjectArgument: long getProjectId()>[]--><jp.redmine.redmineclient.param.Core: java.lang.Long getArg(java.lang.String,java.lang.Long)>[]--><android.os.BaseBundle: long getLong(java.lang.String)>
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: jp.redmine.redmineclient.activity.WikiViewActivity dummyMainMethod_jp_redmine_redmineclient_activity_WikiViewActivity(android.content.Intent)>[]--><dummyMainClass: jp.redmine.redmineclient.fragment.WikiDetail dummyMainMethod_jp_redmine_redmineclient_fragment_WikiDetail(android.content.Intent,android.app.Activity)>[]--><jp.redmine.redmineclient.fragment.WikiDetail: boolean onOptionsItemSelected(android.view.MenuItem)>[[try]]--><jp.redmine.redmineclient.param.ProjectArgument: long getProjectId()>[]--><jp.redmine.redmineclient.param.Core: java.lang.Long getArg(java.lang.String,java.lang.Long)>[]--><android.os.BaseBundle: long getLong(java.lang.String)>
+One road protect good!
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: jp.redmine.redmineclient.activity.IssueActivity dummyMainMethod_jp_redmine_redmineclient_activity_IssueActivity(android.content.Intent)>[]--><jp.redmine.redmineclient.activity.IssueActivity: boolean onOptionsItemSelected(android.view.MenuItem)>[]--><jp.redmine.redmineclient.param.ProjectArgument: long getProjectId()>[]--><jp.redmine.redmineclient.param.Core: java.lang.Long getArg(java.lang.String,java.lang.Long)>[]--><android.os.BaseBundle: long getLong(java.lang.String)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: jp.redmine.redmineclient.activity.KanbanActivity dummyMainMethod_jp_redmine_redmineclient_activity_KanbanActivity(android.content.Intent)>[]--><dummyMainClass: jp.redmine.redmineclient.fragment.IssueList dummyMainMethod_jp_redmine_redmineclient_fragment_IssueList(android.content.Intent,android.app.Activity)>[]--><jp.redmine.redmineclient.fragment.IssueList: void onListItemClick(android.widget.ListView,android.view.View,int,long)>[]--><jp.redmine.redmineclient.fragment.IssueList: void intentFilterAction()>[]--><jp.redmine.redmineclient.param.ProjectArgument: long getProjectId()>[]--><jp.redmine.redmineclient.param.Core: java.lang.Long getArg(java.lang.String,java.lang.Long)>[]--><android.os.BaseBundle: long getLong(java.lang.String)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: jp.redmine.redmineclient.activity.AttachmentActivity dummyMainMethod_jp_redmine_redmineclient_activity_AttachmentActivity(android.content.Intent)>[]--><jp.redmine.redmineclient.activity.AttachmentActivity: void onCreate(android.os.Bundle)>[]--><jp.redmine.redmineclient.param.AttachmentArgument: void importArgument(jp.redmine.redmineclient.param.AttachmentArgument)>[]--><jp.redmine.redmineclient.param.IssueArgument: void importArgument(jp.redmine.redmineclient.param.IssueArgument)>[]--><jp.redmine.redmineclient.param.ProjectArgument: void importArgument(jp.redmine.redmineclient.param.ProjectArgument)>[]--><jp.redmine.redmineclient.param.ProjectArgument: long getProjectId()>[]--><jp.redmine.redmineclient.param.Core: java.lang.Long getArg(java.lang.String,java.lang.Long)>[]--><android.os.BaseBundle: long getLong(java.lang.String)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: jp.redmine.redmineclient.activity.IssueFilterActivity dummyMainMethod_jp_redmine_redmineclient_activity_IssueFilterActivity(android.content.Intent)>[]--><dummyMainClass: jp.redmine.redmineclient.fragment.IssueList dummyMainMethod_jp_redmine_redmineclient_fragment_IssueList(android.content.Intent,android.app.Activity)>[]--><jp.redmine.redmineclient.fragment.IssueList: void onListItemClick(android.widget.ListView,android.view.View,int,long)>[]--><jp.redmine.redmineclient.fragment.IssueList: void intentFilterAction()>[]--><jp.redmine.redmineclient.param.ProjectArgument: long getProjectId()>[]--><jp.redmine.redmineclient.param.Core: java.lang.Long getArg(java.lang.String,java.lang.Long)>[]--><android.os.BaseBundle: long getLong(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: long getLong(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+13 Packageshead roads:
+try
+Good road with try: <jp.redmine.redmineclient.fragment.IssueList: void onRefresh()>[]--><jp.redmine.redmineclient.fragment.IssueList: void onRefresh(boolean)>[[try]]--><jp.redmine.redmineclient.param.ProjectArgument: long getProjectId()>[]--><jp.redmine.redmineclient.param.Core: java.lang.Long getArg(java.lang.String,java.lang.Long)>[]--><android.os.BaseBundle: long getLong(java.lang.String)>
+One road protect good!
+try
+Good road with try: <jp.redmine.redmineclient.fragment.ProjectDetail: void onActivityCreated(android.os.Bundle)>[[try]]--><jp.redmine.redmineclient.param.ProjectArgument: long getProjectId()>[]--><jp.redmine.redmineclient.param.Core: java.lang.Long getArg(java.lang.String,java.lang.Long)>[]--><android.os.BaseBundle: long getLong(java.lang.String)>
+One road protect good!
+try
+Good road with try: <jp.redmine.redmineclient.activity.ProjectActivity: java.util.List getTabs()>[[try]]--><jp.redmine.redmineclient.param.ProjectArgument: long getProjectId()>[]--><jp.redmine.redmineclient.param.Core: java.lang.Long getArg(java.lang.String,java.lang.Long)>[]--><android.os.BaseBundle: long getLong(java.lang.String)>
+One road protect good!
+try
+Good road with try: <jp.redmine.redmineclient.activity.ProjectActivity: java.util.List getTabs()>[[try]]--><jp.redmine.redmineclient.param.ProjectArgument: void importArgument(jp.redmine.redmineclient.param.ProjectArgument)>[]--><jp.redmine.redmineclient.param.ProjectArgument: long getProjectId()>[]--><jp.redmine.redmineclient.param.Core: java.lang.Long getArg(java.lang.String,java.lang.Long)>[]--><android.os.BaseBundle: long getLong(java.lang.String)>
+One road protect good!
+try
+Good road with try: <jp.redmine.redmineclient.fragment.ProjectDetail: boolean onOptionsItemSelected(android.view.MenuItem)>[[try]]--><jp.redmine.redmineclient.param.ProjectArgument: long getProjectId()>[]--><jp.redmine.redmineclient.param.Core: java.lang.Long getArg(java.lang.String,java.lang.Long)>[]--><android.os.BaseBundle: long getLong(java.lang.String)>
+One road protect good!
+try
+Good road with try: <jp.redmine.redmineclient.fragment.IssueEdit: boolean onOptionsItemSelected(android.view.MenuItem)>[[try]]--><jp.redmine.redmineclient.param.ProjectArgument: long getProjectId()>[]--><jp.redmine.redmineclient.param.Core: java.lang.Long getArg(java.lang.String,java.lang.Long)>[]--><android.os.BaseBundle: long getLong(java.lang.String)>
+One road protect good!
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <jp.redmine.redmineclient.fragment.WikiList: void onActivityCreated(android.os.Bundle)>[]--><jp.redmine.redmineclient.param.ProjectArgument: long getProjectId()>[]--><jp.redmine.redmineclient.param.Core: java.lang.Long getArg(java.lang.String,java.lang.Long)>[]--><android.os.BaseBundle: long getLong(java.lang.String)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <jp.redmine.redmineclient.fragment.WikiList: void onActivityCreated(android.os.Bundle)>[]--><jp.redmine.redmineclient.fragment.WikiList: void onRefresh()>[]--><jp.redmine.redmineclient.param.ProjectArgument: long getProjectId()>[]--><jp.redmine.redmineclient.param.Core: java.lang.Long getArg(java.lang.String,java.lang.Long)>[]--><android.os.BaseBundle: long getLong(java.lang.String)>
+#6.the call statck between class <jp.redmine.redmineclient.fragment.WikiList: void onActivityCreated(android.os.Bundle)> to <android.os.BaseBundle: long getLong(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <jp.redmine.redmineclient.activity.IssueActivity: java.util.List getTabs()>[]--><jp.redmine.redmineclient.param.IssueArgument: void importArgument(jp.redmine.redmineclient.param.IssueArgument)>[]--><jp.redmine.redmineclient.param.ProjectArgument: void importArgument(jp.redmine.redmineclient.param.ProjectArgument)>[]--><jp.redmine.redmineclient.param.ProjectArgument: long getProjectId()>[]--><jp.redmine.redmineclient.param.Core: java.lang.Long getArg(java.lang.String,java.lang.Long)>[]--><android.os.BaseBundle: long getLong(java.lang.String)>
+try
+Good road with try: <jp.redmine.redmineclient.activity.IssueActivity: java.util.List getTabs()>[[try]]--><jp.redmine.redmineclient.param.ProjectArgument: long getProjectId()>[]--><jp.redmine.redmineclient.param.Core: java.lang.Long getArg(java.lang.String,java.lang.Long)>[]--><android.os.BaseBundle: long getLong(java.lang.String)>
+One road protect good!
+#7.the call statck between class <jp.redmine.redmineclient.activity.IssueActivity: java.util.List getTabs()> to <android.os.BaseBundle: long getLong(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+try
+Good road with try: <jp.redmine.redmineclient.fragment.IssueEdit: void onStart()>[[try]]--><jp.redmine.redmineclient.fragment.IssueEdit: void onRefresh(boolean)>[]--><jp.redmine.redmineclient.param.ProjectArgument: long getProjectId()>[]--><jp.redmine.redmineclient.param.Core: java.lang.Long getArg(java.lang.String,java.lang.Long)>[]--><android.os.BaseBundle: long getLong(java.lang.String)>
+One road protect good!
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <jp.redmine.redmineclient.fragment.VersionList: void onActivityCreated(android.os.Bundle)>[]--><jp.redmine.redmineclient.param.ProjectArgument: long getProjectId()>[]--><jp.redmine.redmineclient.param.Core: java.lang.Long getArg(java.lang.String,java.lang.Long)>[]--><android.os.BaseBundle: long getLong(java.lang.String)>
+#9.the call statck between class <jp.redmine.redmineclient.fragment.VersionList: void onActivityCreated(android.os.Bundle)> to <android.os.BaseBundle: long getLong(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+try
+Good road with try: <jp.redmine.redmineclient.fragment.NewsList: boolean onOptionsItemSelected(android.view.MenuItem)>[[try]]--><jp.redmine.redmineclient.param.ProjectArgument: long getProjectId()>[]--><jp.redmine.redmineclient.param.Core: java.lang.Long getArg(java.lang.String,java.lang.Long)>[]--><android.os.BaseBundle: long getLong(java.lang.String)>
+One road protect good!
+try
+Good road with try: <jp.redmine.redmineclient.fragment.NewsList: boolean onOptionsItemSelected(android.view.MenuItem)>[]--><jp.redmine.redmineclient.fragment.NewsList: void onRefresh()>[[try]]--><jp.redmine.redmineclient.param.ProjectArgument: long getProjectId()>[]--><jp.redmine.redmineclient.param.Core: java.lang.Long getArg(java.lang.String,java.lang.Long)>[]--><android.os.BaseBundle: long getLong(java.lang.String)>
+One road protect good!
+crashApis:5
+crashApisInMain:4
+containsStatic:false
+containsTry:true
+11call by main package
+-----------------------------------------
+#################################################
+N 6 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)> is checking!!!
+The life time of api is [22,31]
+4call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: jp.redmine.redmineclient.activity.WikiViewActivity dummyMainMethod_jp_redmine_redmineclient_activity_WikiViewActivity(android.content.Intent)>[]--><jp.redmine.redmineclient.activity.WikiViewActivity: void onCreate(android.os.Bundle)>[]--><jp.redmine.redmineclient.param.WikiArgument: void importArgument(jp.redmine.redmineclient.param.WikiArgument)>[]--><jp.redmine.redmineclient.param.IssueArgument: void importArgument(jp.redmine.redmineclient.param.IssueArgument)>[]--><jp.redmine.redmineclient.param.IssueArgument: void setIsEdit(boolean)>[]--><jp.redmine.redmineclient.param.Core: void setArg(java.lang.String,java.lang.Boolean)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+!!!this api will crash on sdk 16 17 18 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: jp.redmine.redmineclient.activity.ConnectionNaviActivity dummyMainMethod_jp_redmine_redmineclient_activity_ConnectionNaviActivity(android.content.Intent)>[]--><jp.redmine.redmineclient.activity.ConnectionNaviActivity$1: void onClick(android.view.View)>[]--><jp.redmine.redmineclient.param.ConnectionNaviResultArgument: void setUnsafeSSL(boolean)>[]--><jp.redmine.redmineclient.param.Core: void setArg(java.lang.String,java.lang.Boolean)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+!!!this api will crash on sdk 16 17 18 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: jp.redmine.redmineclient.activity.ConnectionEditActivity dummyMainMethod_jp_redmine_redmineclient_activity_ConnectionEditActivity(android.content.Intent)>[]--><dummyMainClass: jp.redmine.redmineclient.fragment.ConnectionEdit dummyMainMethod_jp_redmine_redmineclient_fragment_ConnectionEdit(android.content.Intent,android.app.Activity)>[]--><jp.redmine.redmineclient.fragment.ConnectionEdit$2: void onClick(android.view.View)>[]--><jp.redmine.redmineclient.param.ConnectionNaviResultArgument: void setUnsafeSSL(boolean)>[]--><jp.redmine.redmineclient.param.Core: void setArg(java.lang.String,java.lang.Boolean)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+!!!this api will crash on sdk 16 17 18 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: jp.redmine.redmineclient.activity.TimeEntryActivity dummyMainMethod_jp_redmine_redmineclient_activity_TimeEntryActivity(android.content.Intent)>[]--><jp.redmine.redmineclient.activity.TimeEntryActivity: void onCreate(android.os.Bundle)>[]--><jp.redmine.redmineclient.param.TimeEntryArgument: void importArgument(jp.redmine.redmineclient.param.TimeEntryArgument)>[]--><jp.redmine.redmineclient.param.IssueArgument: void importArgument(jp.redmine.redmineclient.param.IssueArgument)>[]--><jp.redmine.redmineclient.param.IssueArgument: void setIsEdit(boolean)>[]--><jp.redmine.redmineclient.param.Core: void setArg(java.lang.String,java.lang.Boolean)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+!!!this api will crash on sdk 16 17 18 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: jp.redmine.redmineclient.activity.AttachmentActivity dummyMainMethod_jp_redmine_redmineclient_activity_AttachmentActivity(android.content.Intent)>[]--><jp.redmine.redmineclient.activity.AttachmentActivity: void onCreate(android.os.Bundle)>[]--><jp.redmine.redmineclient.param.AttachmentArgument: void importArgument(jp.redmine.redmineclient.param.AttachmentArgument)>[]--><jp.redmine.redmineclient.param.IssueArgument: void importArgument(jp.redmine.redmineclient.param.IssueArgument)>[]--><jp.redmine.redmineclient.param.IssueArgument: void setIsEdit(boolean)>[]--><jp.redmine.redmineclient.param.Core: void setArg(java.lang.String,java.lang.Boolean)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+3 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 
+Error road: <jp.redmine.redmineclient.activity.IssueActivity: java.util.List getTabs()>[]--><jp.redmine.redmineclient.param.IssueArgument: void importArgument(jp.redmine.redmineclient.param.IssueArgument)>[]--><jp.redmine.redmineclient.param.IssueArgument: void setIsEdit(boolean)>[]--><jp.redmine.redmineclient.param.Core: void setArg(java.lang.String,java.lang.Boolean)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+#1.the call statck between class <jp.redmine.redmineclient.activity.IssueActivity: java.util.List getTabs()> to <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 
+Error road: <jp.redmine.redmineclient.activity.handler.IssueViewHandler$5: void generateIntent(android.content.Intent)>[]--><jp.redmine.redmineclient.param.IssueArgument: void setIsEdit(boolean)>[]--><jp.redmine.redmineclient.param.Core: void setArg(java.lang.String,java.lang.Boolean)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+#2.the call statck between class <jp.redmine.redmineclient.activity.handler.IssueViewHandler$5: void generateIntent(android.content.Intent)> to <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 
+Error road: <jp.redmine.redmineclient.param.ConnectionNaviResultArgument: void importArgument(jp.redmine.redmineclient.param.ConnectionNaviResultArgument)>[]--><jp.redmine.redmineclient.param.ConnectionNaviResultArgument: void setUnsafeSSL(boolean)>[]--><jp.redmine.redmineclient.param.Core: void setArg(java.lang.String,java.lang.Boolean)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+#3.the call statck between class <jp.redmine.redmineclient.param.ConnectionNaviResultArgument: void importArgument(jp.redmine.redmineclient.param.ConnectionNaviResultArgument)> to <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+crashApis:6
+crashApisInMain:5
+containsStatic:false
+containsTry:false
+4call by main package
+-----------------------------------------
+#################################################
+N 7 Potential Issue API: SDKCheck of <android.view.View: int generateViewId()> is checking!!!
+The life time of api is [17,31]
+1call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: jp.redmine.redmineclient.activity.KanbanActivity dummyMainMethod_jp_redmine_redmineclient_activity_KanbanActivity(android.content.Intent)>[]--><jp.redmine.redmineclient.activity.KanbanActivity: void onCreate(android.os.Bundle)>[]--><jp.redmine.redmineclient.activity.KanbanActivity: void renewFragments(android.os.Bundle)>[[try]]--><jp.redmine.redmineclient.form.helper.ViewIdGenerator: int getViewId(android.view.View)>[[-$i0 < 17]]--><jp.redmine.redmineclient.form.helper.ViewIdGenerator: int getAndroidViewId()>[]--><android.view.View: int generateViewId()>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:true
+1call by main package
+-----------------------------------------
+#################################################
+N 8 Potential Issue API: SDKCheck of <android.widget.AbsListView: void setSelectionFromTop(int,int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <se.emilsjolander.stickylistheaders.StickyListHeadersListView: void setSelection(int)>[]--><se.emilsjolander.stickylistheaders.StickyListHeadersListView: void setSelectionFromTop(int,int)>[]--><android.widget.AbsListView: void setSelectionFromTop(int,int)>
+#1.the call statck between class <se.emilsjolander.stickylistheaders.StickyListHeadersListView: void setSelection(int)> to <android.widget.AbsListView: void setSelectionFromTop(int,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:7
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 9 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putLong(java.lang.String,long)> is checking!!!
+The life time of api is [21,31]
+12call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: jp.redmine.redmineclient.activity.TimeEntryActivity dummyMainMethod_jp_redmine_redmineclient_activity_TimeEntryActivity(android.content.Intent)>[]--><jp.redmine.redmineclient.activity.TimeEntryActivity: void onCreate(android.os.Bundle)>[]--><jp.redmine.redmineclient.param.TimeEntryArgument: void importArgument(jp.redmine.redmineclient.param.TimeEntryArgument)>[]--><jp.redmine.redmineclient.param.IssueArgument: void importArgument(jp.redmine.redmineclient.param.IssueArgument)>[]--><jp.redmine.redmineclient.param.ProjectArgument: void importArgument(jp.redmine.redmineclient.param.ProjectArgument)>[]--><jp.redmine.redmineclient.param.ProjectArgument: void setProjectId(long)>[]--><jp.redmine.redmineclient.param.Core: void setArg(java.lang.String,java.lang.Long)>[]--><android.os.BaseBundle: void putLong(java.lang.String,long)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: jp.redmine.redmineclient.activity.WikiViewActivity dummyMainMethod_jp_redmine_redmineclient_activity_WikiViewActivity(android.content.Intent)>[]--><jp.redmine.redmineclient.activity.WikiViewActivity: void onCreate(android.os.Bundle)>[]--><jp.redmine.redmineclient.param.WikiArgument: void importArgument(jp.redmine.redmineclient.param.WikiArgument)>[]--><jp.redmine.redmineclient.param.IssueArgument: void importArgument(jp.redmine.redmineclient.param.IssueArgument)>[]--><jp.redmine.redmineclient.param.ProjectArgument: void importArgument(jp.redmine.redmineclient.param.ProjectArgument)>[]--><jp.redmine.redmineclient.param.ProjectArgument: void setProjectId(long)>[]--><jp.redmine.redmineclient.param.Core: void setArg(java.lang.String,java.lang.Long)>[]--><android.os.BaseBundle: void putLong(java.lang.String,long)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: jp.redmine.redmineclient.activity.IssueActivity dummyMainMethod_jp_redmine_redmineclient_activity_IssueActivity(android.content.Intent)>[]--><jp.redmine.redmineclient.activity.IssueActivity: boolean onOptionsItemSelected(android.view.MenuItem)>[]--><jp.redmine.redmineclient.activity.handler.IssueViewHandler: void onIssueList(int,long)>[]--><jp.redmine.redmineclient.activity.handler.Core: void kickActivity(java.lang.Class,jp.redmine.redmineclient.activity.handler.Core$IntentFactory)>[]--><jp.redmine.redmineclient.activity.handler.IssueViewHandler$2: void generateIntent(android.content.Intent)>[]--><jp.redmine.redmineclient.param.ProjectArgument: void setProjectId(long)>[]--><jp.redmine.redmineclient.param.Core: void setArg(java.lang.String,java.lang.Long)>[]--><android.os.BaseBundle: void putLong(java.lang.String,long)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: jp.redmine.redmineclient.activity.KanbanActivity dummyMainMethod_jp_redmine_redmineclient_activity_KanbanActivity(android.content.Intent)>[]--><dummyMainClass: jp.redmine.redmineclient.fragment.IssueList dummyMainMethod_jp_redmine_redmineclient_fragment_IssueList(android.content.Intent,android.app.Activity)>[]--><jp.redmine.redmineclient.fragment.IssueList: void onListItemClick(android.widget.ListView,android.view.View,int,long)>[]--><jp.redmine.redmineclient.fragment.IssueList: void intentFilterAction()>[]--><jp.redmine.redmineclient.param.ProjectArgument: void setProjectId(long)>[]--><jp.redmine.redmineclient.param.Core: void setArg(java.lang.String,java.lang.Long)>[]--><android.os.BaseBundle: void putLong(java.lang.String,long)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: jp.redmine.redmineclient.activity.AttachmentActivity dummyMainMethod_jp_redmine_redmineclient_activity_AttachmentActivity(android.content.Intent)>[]--><jp.redmine.redmineclient.activity.AttachmentActivity: void onCreate(android.os.Bundle)>[]--><jp.redmine.redmineclient.param.AttachmentArgument: void importArgument(jp.redmine.redmineclient.param.AttachmentArgument)>[]--><jp.redmine.redmineclient.param.IssueArgument: void importArgument(jp.redmine.redmineclient.param.IssueArgument)>[]--><jp.redmine.redmineclient.param.ProjectArgument: void importArgument(jp.redmine.redmineclient.param.ProjectArgument)>[]--><jp.redmine.redmineclient.param.ProjectArgument: void setProjectId(long)>[]--><jp.redmine.redmineclient.param.Core: void setArg(java.lang.String,java.lang.Long)>[]--><android.os.BaseBundle: void putLong(java.lang.String,long)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: jp.redmine.redmineclient.activity.IssueFilterActivity dummyMainMethod_jp_redmine_redmineclient_activity_IssueFilterActivity(android.content.Intent)>[]--><dummyMainClass: jp.redmine.redmineclient.fragment.IssueList dummyMainMethod_jp_redmine_redmineclient_fragment_IssueList(android.content.Intent,android.app.Activity)>[]--><jp.redmine.redmineclient.fragment.IssueList: void onListItemClick(android.widget.ListView,android.view.View,int,long)>[]--><jp.redmine.redmineclient.fragment.IssueList: void intentFilterAction()>[]--><jp.redmine.redmineclient.param.ProjectArgument: void setProjectId(long)>[]--><jp.redmine.redmineclient.param.Core: void setArg(java.lang.String,java.lang.Long)>[]--><android.os.BaseBundle: void putLong(java.lang.String,long)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: void putLong(java.lang.String,long)>has compatibility isssues！
+-----------------------------------------
+11 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <jp.redmine.redmineclient.activity.IssueActivity: java.util.List getTabs()>[]--><jp.redmine.redmineclient.param.IssueArgument: void importArgument(jp.redmine.redmineclient.param.IssueArgument)>[]--><jp.redmine.redmineclient.param.ProjectArgument: void importArgument(jp.redmine.redmineclient.param.ProjectArgument)>[]--><jp.redmine.redmineclient.param.ProjectArgument: void setProjectId(long)>[]--><jp.redmine.redmineclient.param.Core: void setArg(java.lang.String,java.lang.Long)>[]--><android.os.BaseBundle: void putLong(java.lang.String,long)>
+#1.the call statck between class <jp.redmine.redmineclient.activity.IssueActivity: java.util.List getTabs()> to <android.os.BaseBundle: void putLong(java.lang.String,long)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <jp.redmine.redmineclient.fragment.IssueView: void lambda$onCreateView$0$IssueView(android.widget.AdapterView,android.view.View,int,long)>[]--><jp.redmine.redmineclient.activity.handler.IssueViewHandler: void onIssueList(int,long)>[]--><jp.redmine.redmineclient.activity.handler.Core: void kickActivity(java.lang.Class,jp.redmine.redmineclient.activity.handler.Core$IntentFactory)>[]--><jp.redmine.redmineclient.activity.handler.IssueViewHandler$2: void generateIntent(android.content.Intent)>[]--><jp.redmine.redmineclient.param.ProjectArgument: void setProjectId(long)>[]--><jp.redmine.redmineclient.param.Core: void setArg(java.lang.String,java.lang.Long)>[]--><android.os.BaseBundle: void putLong(java.lang.String,long)>
+#2.the call statck between class <jp.redmine.redmineclient.fragment.IssueView: void lambda$onCreateView$0$IssueView(android.widget.AdapterView,android.view.View,int,long)> to <android.os.BaseBundle: void putLong(java.lang.String,long)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <jp.redmine.redmineclient.activity.handler.IssueViewHandler$6: void generateIntent(android.content.Intent)>[]--><jp.redmine.redmineclient.param.ProjectArgument: void setProjectId(long)>[]--><jp.redmine.redmineclient.param.Core: void setArg(java.lang.String,java.lang.Long)>[]--><android.os.BaseBundle: void putLong(java.lang.String,long)>
+#3.the call statck between class <jp.redmine.redmineclient.activity.handler.IssueViewHandler$6: void generateIntent(android.content.Intent)> to <android.os.BaseBundle: void putLong(java.lang.String,long)>has compatibility isssues！
+-----------------------------------------
+try
+Good road with try: <jp.redmine.redmineclient.activity.ProjectActivity: java.util.List getTabs()>[[try]]--><jp.redmine.redmineclient.param.ProjectArgument: void importArgument(jp.redmine.redmineclient.param.ProjectArgument)>[]--><jp.redmine.redmineclient.param.ProjectArgument: void setProjectId(long)>[]--><jp.redmine.redmineclient.param.Core: void setArg(java.lang.String,java.lang.Long)>[]--><android.os.BaseBundle: void putLong(java.lang.String,long)>
+One road protect good!
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <jp.redmine.redmineclient.activity.handler.IssueViewHandler$3: void generateIntent(android.content.Intent)>[]--><jp.redmine.redmineclient.param.ProjectArgument: void setProjectId(long)>[]--><jp.redmine.redmineclient.param.Core: void setArg(java.lang.String,java.lang.Long)>[]--><android.os.BaseBundle: void putLong(java.lang.String,long)>
+#5.the call statck between class <jp.redmine.redmineclient.activity.handler.IssueViewHandler$3: void generateIntent(android.content.Intent)> to <android.os.BaseBundle: void putLong(java.lang.String,long)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <jp.redmine.redmineclient.fragment.ProjectList: void onListItemClick(android.widget.ListView,android.view.View,int,long)>[]--><jp.redmine.redmineclient.activity.handler.IssueViewHandler: void onIssueList(int,long)>[]--><jp.redmine.redmineclient.activity.handler.Core: void kickActivity(java.lang.Class,jp.redmine.redmineclient.activity.handler.Core$IntentFactory)>[]--><jp.redmine.redmineclient.activity.handler.IssueViewHandler$2: void generateIntent(android.content.Intent)>[]--><jp.redmine.redmineclient.param.ProjectArgument: void setProjectId(long)>[]--><jp.redmine.redmineclient.param.Core: void setArg(java.lang.String,java.lang.Long)>[]--><android.os.BaseBundle: void putLong(java.lang.String,long)>
+#6.the call statck between class <jp.redmine.redmineclient.fragment.ProjectList: void onListItemClick(android.widget.ListView,android.view.View,int,long)> to <android.os.BaseBundle: void putLong(java.lang.String,long)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <jp.redmine.redmineclient.form.helper.TextViewHelper$1: void onClick(android.view.View,android.text.style.URLSpan)>[]--><jp.redmine.redmineclient.form.helper.RedmineConvertToHtmlHelper: boolean kickAction(jp.redmine.redmineclient.activity.handler.WebviewActionInterface,java.lang.String)>[]--><jp.redmine.redmineclient.activity.WikiViewActivity$2: void wiki(int,long,java.lang.String)>[]--><jp.redmine.redmineclient.param.ProjectArgument: void setProjectId(long)>[]--><jp.redmine.redmineclient.param.Core: void setArg(java.lang.String,java.lang.Long)>[]--><android.os.BaseBundle: void putLong(java.lang.String,long)>
+#7.the call statck between class <jp.redmine.redmineclient.form.helper.TextViewHelper$1: void onClick(android.view.View,android.text.style.URLSpan)> to <android.os.BaseBundle: void putLong(java.lang.String,long)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <jp.redmine.redmineclient.activity.handler.IssueViewHandler$8: void generateIntent(android.content.Intent)>[]--><jp.redmine.redmineclient.param.ProjectArgument: void setProjectId(long)>[]--><jp.redmine.redmineclient.param.Core: void setArg(java.lang.String,java.lang.Long)>[]--><android.os.BaseBundle: void putLong(java.lang.String,long)>
+#8.the call statck between class <jp.redmine.redmineclient.activity.handler.IssueViewHandler$8: void generateIntent(android.content.Intent)> to <android.os.BaseBundle: void putLong(java.lang.String,long)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <jp.redmine.redmineclient.form.helper.WebViewHelper$1: boolean shouldOverrideUrlLoading(android.webkit.WebView,java.lang.String)>[]--><jp.redmine.redmineclient.form.helper.RedmineConvertToHtmlHelper: boolean kickAction(jp.redmine.redmineclient.activity.handler.WebviewActionInterface,java.lang.String)>[]--><jp.redmine.redmineclient.activity.WikiViewActivity$2: void wiki(int,long,java.lang.String)>[]--><jp.redmine.redmineclient.param.ProjectArgument: void setProjectId(long)>[]--><jp.redmine.redmineclient.param.Core: void setArg(java.lang.String,java.lang.Long)>[]--><android.os.BaseBundle: void putLong(java.lang.String,long)>
+#9.the call statck between class <jp.redmine.redmineclient.form.helper.WebViewHelper$1: boolean shouldOverrideUrlLoading(android.webkit.WebView,java.lang.String)> to <android.os.BaseBundle: void putLong(java.lang.String,long)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <jp.redmine.redmineclient.fragment.WikiList: void onListItemClick(android.widget.ListView,android.view.View,int,long)>[]--><jp.redmine.redmineclient.activity.WikiViewActivity$2: void wiki(int,long,java.lang.String)>[]--><jp.redmine.redmineclient.param.ProjectArgument: void setProjectId(long)>[]--><jp.redmine.redmineclient.param.Core: void setArg(java.lang.String,java.lang.Long)>[]--><android.os.BaseBundle: void putLong(java.lang.String,long)>
+#10.the call statck between class <jp.redmine.redmineclient.fragment.WikiList: void onListItemClick(android.widget.ListView,android.view.View,int,long)> to <android.os.BaseBundle: void putLong(java.lang.String,long)>has compatibility isssues！
+-----------------------------------------
+crashApis:8
+crashApisInMain:6
+containsStatic:false
+containsTry:true
+11call by main package
+-----------------------------------------
+#################################################
+N 10 Potential Issue API: SDKCheck of <android.os.BaseBundle: boolean getBoolean(java.lang.String)> is checking!!!
+The life time of api is [22,31]
+3call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: jp.redmine.redmineclient.activity.WikiViewActivity dummyMainMethod_jp_redmine_redmineclient_activity_WikiViewActivity(android.content.Intent)>[]--><jp.redmine.redmineclient.activity.WikiViewActivity: void onCreate(android.os.Bundle)>[]--><jp.redmine.redmineclient.param.WikiArgument: void importArgument(jp.redmine.redmineclient.param.WikiArgument)>[]--><jp.redmine.redmineclient.param.IssueArgument: void importArgument(jp.redmine.redmineclient.param.IssueArgument)>[]--><jp.redmine.redmineclient.param.IssueArgument: boolean isEdit()>[]--><jp.redmine.redmineclient.param.Core: java.lang.Boolean getArg(java.lang.String,java.lang.Boolean)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+!!!this api will crash on sdk 16 17 18 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: jp.redmine.redmineclient.activity.ConnectionNaviActivity dummyMainMethod_jp_redmine_redmineclient_activity_ConnectionNaviActivity(android.content.Intent)>[]--><jp.redmine.redmineclient.activity.ConnectionNaviActivity: void onStart()>[]--><jp.redmine.redmineclient.param.ConnectionNaviResultArgument: boolean isUnsafeSSL()>[]--><jp.redmine.redmineclient.param.Core: java.lang.Boolean getArg(java.lang.String,java.lang.Boolean)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+!!!this api will crash on sdk 16 17 18 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: jp.redmine.redmineclient.activity.ConnectionEditActivity dummyMainMethod_jp_redmine_redmineclient_activity_ConnectionEditActivity(android.content.Intent)>[]--><dummyMainClass: jp.redmine.redmineclient.fragment.ConnectionEdit dummyMainMethod_jp_redmine_redmineclient_fragment_ConnectionEdit(android.content.Intent,android.app.Activity)>[]--><jp.redmine.redmineclient.fragment.ConnectionEdit: void onActivityResult(int,int,android.content.Intent)>[]--><jp.redmine.redmineclient.param.ConnectionNaviResultArgument: boolean isUnsafeSSL()>[]--><jp.redmine.redmineclient.param.Core: java.lang.Boolean getArg(java.lang.String,java.lang.Boolean)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+!!!this api will crash on sdk 16 17 18 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: jp.redmine.redmineclient.activity.TimeEntryActivity dummyMainMethod_jp_redmine_redmineclient_activity_TimeEntryActivity(android.content.Intent)>[]--><jp.redmine.redmineclient.activity.TimeEntryActivity: void onCreate(android.os.Bundle)>[]--><jp.redmine.redmineclient.param.TimeEntryArgument: void importArgument(jp.redmine.redmineclient.param.TimeEntryArgument)>[]--><jp.redmine.redmineclient.param.IssueArgument: void importArgument(jp.redmine.redmineclient.param.IssueArgument)>[]--><jp.redmine.redmineclient.param.IssueArgument: boolean isEdit()>[]--><jp.redmine.redmineclient.param.Core: java.lang.Boolean getArg(java.lang.String,java.lang.Boolean)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+!!!this api will crash on sdk 16 17 18 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: jp.redmine.redmineclient.activity.AttachmentActivity dummyMainMethod_jp_redmine_redmineclient_activity_AttachmentActivity(android.content.Intent)>[]--><jp.redmine.redmineclient.activity.AttachmentActivity: void onCreate(android.os.Bundle)>[]--><jp.redmine.redmineclient.param.AttachmentArgument: void importArgument(jp.redmine.redmineclient.param.AttachmentArgument)>[]--><jp.redmine.redmineclient.param.IssueArgument: void importArgument(jp.redmine.redmineclient.param.IssueArgument)>[]--><jp.redmine.redmineclient.param.IssueArgument: boolean isEdit()>[]--><jp.redmine.redmineclient.param.Core: java.lang.Boolean getArg(java.lang.String,java.lang.Boolean)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: boolean getBoolean(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+2 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 
+Error road: <jp.redmine.redmineclient.activity.IssueActivity: java.util.List getTabs()>[]--><jp.redmine.redmineclient.param.IssueArgument: void importArgument(jp.redmine.redmineclient.param.IssueArgument)>[]--><jp.redmine.redmineclient.param.IssueArgument: boolean isEdit()>[]--><jp.redmine.redmineclient.param.Core: java.lang.Boolean getArg(java.lang.String,java.lang.Boolean)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+#1.the call statck between class <jp.redmine.redmineclient.activity.IssueActivity: java.util.List getTabs()> to <android.os.BaseBundle: boolean getBoolean(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 
+Error road: <jp.redmine.redmineclient.param.ConnectionNaviResultArgument: void importArgument(jp.redmine.redmineclient.param.ConnectionNaviResultArgument)>[]--><jp.redmine.redmineclient.param.ConnectionNaviResultArgument: boolean isUnsafeSSL()>[]--><jp.redmine.redmineclient.param.Core: java.lang.Boolean getArg(java.lang.String,java.lang.Boolean)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+#2.the call statck between class <jp.redmine.redmineclient.param.ConnectionNaviResultArgument: void importArgument(jp.redmine.redmineclient.param.ConnectionNaviResultArgument)> to <android.os.BaseBundle: boolean getBoolean(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:9
+crashApisInMain:7
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 11 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.lang.String getString(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+3call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: jp.redmine.redmineclient.activity.WebViewActivity dummyMainMethod_jp_redmine_redmineclient_activity_WebViewActivity(android.content.Intent)>[]--><jp.redmine.redmineclient.activity.WebViewActivity: void onStart()>[]--><jp.redmine.redmineclient.param.WebArgument: java.lang.String getUrl()>[]--><jp.redmine.redmineclient.param.Core: java.lang.String getArg(java.lang.String,java.lang.String)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: jp.redmine.redmineclient.activity.WikiViewActivity dummyMainMethod_jp_redmine_redmineclient_activity_WikiViewActivity(android.content.Intent)>[]--><dummyMainClass: jp.redmine.redmineclient.fragment.WikiDetail dummyMainMethod_jp_redmine_redmineclient_fragment_WikiDetail(android.content.Intent,android.app.Activity)>[]--><jp.redmine.redmineclient.fragment.WikiDetail: void onActivityCreated(android.os.Bundle)>[]--><jp.redmine.redmineclient.fragment.WikiDetail: void loadWebView(boolean)>[[try]]--><jp.redmine.redmineclient.param.WikiArgument: java.lang.String getWikiTitle()>[]--><jp.redmine.redmineclient.param.Core: java.lang.String getArg(java.lang.String,java.lang.String)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+One road protect good!
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: jp.redmine.redmineclient.activity.ConnectionNaviActivity dummyMainMethod_jp_redmine_redmineclient_activity_ConnectionNaviActivity(android.content.Intent)>[]--><jp.redmine.redmineclient.activity.ConnectionNaviActivity: void onStart()>[]--><jp.redmine.redmineclient.param.ConnectionNaviResultArgument: java.lang.String getToken()>[]--><jp.redmine.redmineclient.param.Core: java.lang.String getArg(java.lang.String,java.lang.String)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: jp.redmine.redmineclient.activity.ConnectionEditActivity dummyMainMethod_jp_redmine_redmineclient_activity_ConnectionEditActivity(android.content.Intent)>[]--><dummyMainClass: jp.redmine.redmineclient.fragment.ConnectionEdit dummyMainMethod_jp_redmine_redmineclient_fragment_ConnectionEdit(android.content.Intent,android.app.Activity)>[]--><jp.redmine.redmineclient.fragment.ConnectionEdit: void onActivityResult(int,int,android.content.Intent)>[]--><jp.redmine.redmineclient.param.ConnectionNaviArgument: java.lang.String getAuthPassword()>[]--><jp.redmine.redmineclient.param.Core: java.lang.String getArg(java.lang.String,java.lang.String)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+2 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <jp.redmine.redmineclient.param.WebArgument: void importArgument(jp.redmine.redmineclient.param.WebArgument)>[]--><jp.redmine.redmineclient.param.WebArgument: java.lang.String getUrl()>[]--><jp.redmine.redmineclient.param.Core: java.lang.String getArg(java.lang.String,java.lang.String)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#1.the call statck between class <jp.redmine.redmineclient.param.WebArgument: void importArgument(jp.redmine.redmineclient.param.WebArgument)> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <jp.redmine.redmineclient.param.ConnectionNaviResultArgument: void importArgument(jp.redmine.redmineclient.param.ConnectionNaviResultArgument)>[]--><jp.redmine.redmineclient.param.ConnectionNaviArgument: void importArgument(jp.redmine.redmineclient.param.ConnectionNaviArgument)>[]--><jp.redmine.redmineclient.param.ConnectionNaviArgument: java.lang.String getAuthPassword()>[]--><jp.redmine.redmineclient.param.Core: java.lang.String getArg(java.lang.String,java.lang.String)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <jp.redmine.redmineclient.param.ConnectionNaviResultArgument: void importArgument(jp.redmine.redmineclient.param.ConnectionNaviResultArgument)>[]--><jp.redmine.redmineclient.param.ConnectionNaviResultArgument: java.lang.String getToken()>[]--><jp.redmine.redmineclient.param.Core: java.lang.String getArg(java.lang.String,java.lang.String)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#2.the call statck between class <jp.redmine.redmineclient.param.ConnectionNaviResultArgument: void importArgument(jp.redmine.redmineclient.param.ConnectionNaviResultArgument)> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:10
+crashApisInMain:8
+containsStatic:false
+containsTry:true
+3call by main package
+-----------------------------------------
+#################################################
+N 12 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putInt(java.lang.String,int)> is checking!!!
+The life time of api is [21,31]
+28call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: jp.redmine.redmineclient.activity.ConnectionEditActivity dummyMainMethod_jp_redmine_redmineclient_activity_ConnectionEditActivity(android.content.Intent)>[]--><jp.redmine.redmineclient.activity.ConnectionEditActivity: void onCreate(android.os.Bundle)>[]--><jp.redmine.redmineclient.param.ConnectionArgument: void importArgument(jp.redmine.redmineclient.param.ConnectionArgument)>[]--><jp.redmine.redmineclient.param.ConnectionArgument: void setConnectionId(int)>[]--><jp.redmine.redmineclient.param.Core: void setArg(java.lang.String,java.lang.Integer)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: jp.redmine.redmineclient.activity.TimeEntryActivity dummyMainMethod_jp_redmine_redmineclient_activity_TimeEntryActivity(android.content.Intent)>[]--><jp.redmine.redmineclient.activity.TimeEntryActivity: void onCreate(android.os.Bundle)>[]--><jp.redmine.redmineclient.param.TimeEntryArgument: void importArgument(jp.redmine.redmineclient.param.TimeEntryArgument)>[]--><jp.redmine.redmineclient.param.TimeEntryArgument: void setTimeEntryId(int)>[]--><jp.redmine.redmineclient.param.Core: void setArg(java.lang.String,java.lang.Integer)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: jp.redmine.redmineclient.activity.WikiViewActivity dummyMainMethod_jp_redmine_redmineclient_activity_WikiViewActivity(android.content.Intent)>[]--><dummyMainClass: jp.redmine.redmineclient.fragment.WikiDetail dummyMainMethod_jp_redmine_redmineclient_fragment_WikiDetail(android.content.Intent,android.app.Activity)>[]--><jp.redmine.redmineclient.fragment.WikiDetail: boolean onOptionsItemSelected(android.view.MenuItem)>[]--><jp.redmine.redmineclient.param.ConnectionArgument: void importArgument(jp.redmine.redmineclient.param.ConnectionArgument)>[]--><jp.redmine.redmineclient.param.ConnectionArgument: void setConnectionId(int)>[]--><jp.redmine.redmineclient.param.Core: void setArg(java.lang.String,java.lang.Integer)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: jp.redmine.redmineclient.activity.IssueActivity dummyMainMethod_jp_redmine_redmineclient_activity_IssueActivity(android.content.Intent)>[]--><jp.redmine.redmineclient.activity.IssueActivity: boolean onOptionsItemSelected(android.view.MenuItem)>[]--><jp.redmine.redmineclient.activity.handler.IssueViewHandler: void onIssueList(int,long)>[]--><jp.redmine.redmineclient.activity.handler.Core: void kickActivity(java.lang.Class,jp.redmine.redmineclient.activity.handler.Core$IntentFactory)>[]--><jp.redmine.redmineclient.activity.handler.IssueViewHandler$2: void generateIntent(android.content.Intent)>[]--><jp.redmine.redmineclient.param.ConnectionArgument: void setConnectionId(int)>[]--><jp.redmine.redmineclient.param.Core: void setArg(java.lang.String,java.lang.Integer)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: jp.redmine.redmineclient.activity.KanbanActivity dummyMainMethod_jp_redmine_redmineclient_activity_KanbanActivity(android.content.Intent)>[]--><dummyMainClass: jp.redmine.redmineclient.fragment.IssueList dummyMainMethod_jp_redmine_redmineclient_fragment_IssueList(android.content.Intent,android.app.Activity)>[]--><jp.redmine.redmineclient.fragment.IssueList: void onListItemClick(android.widget.ListView,android.view.View,int,long)>[]--><jp.redmine.redmineclient.fragment.IssueList: void intentFilterAction()>[]--><jp.redmine.redmineclient.param.ConnectionArgument: void setConnectionId(int)>[]--><jp.redmine.redmineclient.param.Core: void setArg(java.lang.String,java.lang.Integer)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: jp.redmine.redmineclient.activity.AttachmentActivity dummyMainMethod_jp_redmine_redmineclient_activity_AttachmentActivity(android.content.Intent)>[]--><jp.redmine.redmineclient.activity.AttachmentActivity: void onCreate(android.os.Bundle)>[]--><jp.redmine.redmineclient.param.AttachmentArgument: void importArgument(jp.redmine.redmineclient.param.AttachmentArgument)>[]--><jp.redmine.redmineclient.param.IssueArgument: void importArgument(jp.redmine.redmineclient.param.IssueArgument)>[]--><jp.redmine.redmineclient.param.IssueArgument: void setIssueId(int)>[]--><jp.redmine.redmineclient.param.Core: void setArg(java.lang.String,java.lang.Integer)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: jp.redmine.redmineclient.activity.IssueFilterActivity dummyMainMethod_jp_redmine_redmineclient_activity_IssueFilterActivity(android.content.Intent)>[]--><dummyMainClass: jp.redmine.redmineclient.fragment.IssueList dummyMainMethod_jp_redmine_redmineclient_fragment_IssueList(android.content.Intent,android.app.Activity)>[]--><jp.redmine.redmineclient.fragment.IssueList: void onListItemClick(android.widget.ListView,android.view.View,int,long)>[]--><jp.redmine.redmineclient.fragment.IssueList: void intentFilterAction()>[]--><jp.redmine.redmineclient.param.ConnectionArgument: void setConnectionId(int)>[]--><jp.redmine.redmineclient.param.Core: void setArg(java.lang.String,java.lang.Integer)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+27 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <jp.redmine.redmineclient.activity.handler.IssueViewHandler$4: void generateIntent(android.content.Intent)>[]--><jp.redmine.redmineclient.param.IssueArgument: void setIssueId(int)>[]--><jp.redmine.redmineclient.param.Core: void setArg(java.lang.String,java.lang.Integer)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <jp.redmine.redmineclient.activity.handler.IssueViewHandler$4: void generateIntent(android.content.Intent)>[]--><jp.redmine.redmineclient.param.ConnectionArgument: void setConnectionId(int)>[]--><jp.redmine.redmineclient.param.Core: void setArg(java.lang.String,java.lang.Integer)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#1.the call statck between class <jp.redmine.redmineclient.activity.handler.IssueViewHandler$4: void generateIntent(android.content.Intent)> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <jp.redmine.redmineclient.param.ResourceArgument: void importArgument(jp.redmine.redmineclient.param.ResourceArgument)>[]--><jp.redmine.redmineclient.param.ResourceArgument: void setResource(java.lang.Integer)>[]--><jp.redmine.redmineclient.param.Core: void setArg(java.lang.String,java.lang.Integer)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#2.the call statck between class <jp.redmine.redmineclient.param.ResourceArgument: void importArgument(jp.redmine.redmineclient.param.ResourceArgument)> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <jp.redmine.redmineclient.fragment.ProjectList: boolean onOptionsItemSelected(android.view.MenuItem)>[]--><jp.redmine.redmineclient.param.ConnectionArgument: void importArgument(jp.redmine.redmineclient.param.ConnectionArgument)>[]--><jp.redmine.redmineclient.param.ConnectionArgument: void setConnectionId(int)>[]--><jp.redmine.redmineclient.param.Core: void setArg(java.lang.String,java.lang.Integer)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#3.the call statck between class <jp.redmine.redmineclient.fragment.ProjectList: boolean onOptionsItemSelected(android.view.MenuItem)> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <jp.redmine.redmineclient.fragment.ProjectDetail: boolean onOptionsItemSelected(android.view.MenuItem)>[]--><jp.redmine.redmineclient.param.ConnectionArgument: void importArgument(jp.redmine.redmineclient.param.ConnectionArgument)>[]--><jp.redmine.redmineclient.param.ConnectionArgument: void setConnectionId(int)>[]--><jp.redmine.redmineclient.param.Core: void setArg(java.lang.String,java.lang.Integer)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#4.the call statck between class <jp.redmine.redmineclient.fragment.ProjectDetail: boolean onOptionsItemSelected(android.view.MenuItem)> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <jp.redmine.redmineclient.form.helper.TextViewHelper$1: void onClick(android.view.View,android.text.style.URLSpan)>[]--><jp.redmine.redmineclient.form.helper.RedmineConvertToHtmlHelper: boolean kickAction(jp.redmine.redmineclient.activity.handler.WebviewActionInterface,java.lang.String)>[]--><jp.redmine.redmineclient.activity.WikiViewActivity$2: void wiki(int,long,java.lang.String)>[]--><jp.redmine.redmineclient.param.ConnectionArgument: void setConnectionId(int)>[]--><jp.redmine.redmineclient.param.Core: void setArg(java.lang.String,java.lang.Integer)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#5.the call statck between class <jp.redmine.redmineclient.form.helper.TextViewHelper$1: void onClick(android.view.View,android.text.style.URLSpan)> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <jp.redmine.redmineclient.activity.IssueActivity: java.util.List getTabs()>[]--><jp.redmine.redmineclient.param.IssueArgument: void importArgument(jp.redmine.redmineclient.param.IssueArgument)>[]--><jp.redmine.redmineclient.param.IssueArgument: void setIssueId(int)>[]--><jp.redmine.redmineclient.param.Core: void setArg(java.lang.String,java.lang.Integer)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#6.the call statck between class <jp.redmine.redmineclient.activity.IssueActivity: java.util.List getTabs()> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <jp.redmine.redmineclient.activity.handler.TimeEntryHandler$1: void generateIntent(android.content.Intent)>[]--><jp.redmine.redmineclient.param.TimeEntryArgument: void setTimeEntryId(int)>[]--><jp.redmine.redmineclient.param.Core: void setArg(java.lang.String,java.lang.Integer)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <jp.redmine.redmineclient.activity.handler.TimeEntryHandler$1: void generateIntent(android.content.Intent)>[]--><jp.redmine.redmineclient.param.IssueArgument: void setIssueId(int)>[]--><jp.redmine.redmineclient.param.Core: void setArg(java.lang.String,java.lang.Integer)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <jp.redmine.redmineclient.activity.handler.TimeEntryHandler$1: void generateIntent(android.content.Intent)>[]--><jp.redmine.redmineclient.param.ConnectionArgument: void setConnectionId(int)>[]--><jp.redmine.redmineclient.param.Core: void setArg(java.lang.String,java.lang.Integer)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#7.the call statck between class <jp.redmine.redmineclient.activity.handler.TimeEntryHandler$1: void generateIntent(android.content.Intent)> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <jp.redmine.redmineclient.activity.AboutActivity: java.util.List getTabs()>[]--><jp.redmine.redmineclient.param.ResourceArgument: void setResource(java.lang.Integer)>[]--><jp.redmine.redmineclient.param.Core: void setArg(java.lang.String,java.lang.Integer)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#8.the call statck between class <jp.redmine.redmineclient.activity.AboutActivity: java.util.List getTabs()> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <jp.redmine.redmineclient.fragment.IssueView: boolean onOptionsItemSelected(android.view.MenuItem)>[]--><jp.redmine.redmineclient.param.ConnectionArgument: void importArgument(jp.redmine.redmineclient.param.ConnectionArgument)>[]--><jp.redmine.redmineclient.param.ConnectionArgument: void setConnectionId(int)>[]--><jp.redmine.redmineclient.param.Core: void setArg(java.lang.String,java.lang.Integer)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#9.the call statck between class <jp.redmine.redmineclient.fragment.IssueView: boolean onOptionsItemSelected(android.view.MenuItem)> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <jp.redmine.redmineclient.fragment.NewsList: boolean onOptionsItemSelected(android.view.MenuItem)>[]--><jp.redmine.redmineclient.param.ConnectionArgument: void importArgument(jp.redmine.redmineclient.param.ConnectionArgument)>[]--><jp.redmine.redmineclient.param.ConnectionArgument: void setConnectionId(int)>[]--><jp.redmine.redmineclient.param.Core: void setArg(java.lang.String,java.lang.Integer)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#10.the call statck between class <jp.redmine.redmineclient.fragment.NewsList: boolean onOptionsItemSelected(android.view.MenuItem)> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:11
+crashApisInMain:9
+containsStatic:false
+containsTry:true
+11call by main package
+-----------------------------------------
+#################################################
+N 13 Potential Issue API: SDKCheck of <android.os.BaseBundle: int getInt(java.lang.String,int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: jp.redmine.redmineclient.activity.KanbanActivity dummyMainMethod_jp_redmine_redmineclient_activity_KanbanActivity(android.content.Intent)>[]--><jp.redmine.redmineclient.activity.KanbanActivity: void onCreate(android.os.Bundle)>[]--><jp.redmine.redmineclient.activity.KanbanActivity: void renewFragments(android.os.Bundle)>[[try]]--><android.os.BaseBundle: int getInt(java.lang.String,int)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:true
+1call by main package
+-----------------------------------------
+#################################################
+N 14 Potential Issue API: SDKCheck of <android.widget.AbsListView: void setScrollBarStyle(int)> is checking!!!
+The life time of api is [19,31]
+4call roads:
+0 Mainhead roads:
+4 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 
+Error road: <se.emilsjolander.stickylistheaders.StickyListHeadersListView: void setScrollBarStyle(int)>[]--><android.widget.AbsListView: void setScrollBarStyle(int)>
+#1.the call statck between class <se.emilsjolander.stickylistheaders.StickyListHeadersListView: void setScrollBarStyle(int)> to <android.widget.AbsListView: void setScrollBarStyle(int)>has compatibility isssues！
+-----------------------------------------
+###Multi invoking in one method, need manual check!!!--><se.emilsjolander.stickylistheaders.StickyListHeadersListView: void <init>(android.content.Context,android.util.AttributeSet,int)>[[$i0 < 11], [try], [$i0 < 9]]
+###Multi invoking in one method, need manual check!!!--><se.emilsjolander.stickylistheaders.StickyListHeadersListView: void <init>(android.content.Context,android.util.AttributeSet,int)>[[$i0 < 11]][[try]][[$i0 < 9]]
+$i0 < 11
+try
+Good road with try: <se.emilsjolander.stickylistheaders.ExpandableStickyListHeadersListView: void <init>(android.content.Context,android.util.AttributeSet)>[]--><se.emilsjolander.stickylistheaders.StickyListHeadersListView: void <init>(android.content.Context,android.util.AttributeSet)>[]--><se.emilsjolander.stickylistheaders.StickyListHeadersListView: void <init>(android.content.Context,android.util.AttributeSet,int)>[[$i0 < 11], [try], [$i0 < 9]]--><android.widget.AbsListView: void setScrollBarStyle(int)>
+One road protect good!
+###Multi invoking in one method, need manual check!!!--><se.emilsjolander.stickylistheaders.StickyListHeadersListView: void <init>(android.content.Context,android.util.AttributeSet,int)>[[$i0 < 11], [try], [$i0 < 9]]
+###Multi invoking in one method, need manual check!!!--><se.emilsjolander.stickylistheaders.StickyListHeadersListView: void <init>(android.content.Context,android.util.AttributeSet,int)>[[$i0 < 11]][[try]][[$i0 < 9]]
+$i0 < 11
+try
+Good road with try: <se.emilsjolander.stickylistheaders.ExpandableStickyListHeadersListView: void <init>(android.content.Context,android.util.AttributeSet,int)>[]--><se.emilsjolander.stickylistheaders.StickyListHeadersListView: void <init>(android.content.Context,android.util.AttributeSet,int)>[[$i0 < 11], [try], [$i0 < 9]]--><android.widget.AbsListView: void setScrollBarStyle(int)>
+One road protect good!
+###Multi invoking in one method, need manual check!!!--><se.emilsjolander.stickylistheaders.StickyListHeadersListView: void <init>(android.content.Context,android.util.AttributeSet,int)>[[$i0 < 11], [try], [$i0 < 9]]
+###Multi invoking in one method, need manual check!!!--><se.emilsjolander.stickylistheaders.StickyListHeadersListView: void <init>(android.content.Context,android.util.AttributeSet,int)>[[$i0 < 11]][[try]][[$i0 < 9]]
+$i0 < 11
+try
+Good road with try: <se.emilsjolander.stickylistheaders.ExpandableStickyListHeadersListView: void <init>(android.content.Context)>[]--><se.emilsjolander.stickylistheaders.StickyListHeadersListView: void <init>(android.content.Context)>[]--><se.emilsjolander.stickylistheaders.StickyListHeadersListView: void <init>(android.content.Context,android.util.AttributeSet)>[]--><se.emilsjolander.stickylistheaders.StickyListHeadersListView: void <init>(android.content.Context,android.util.AttributeSet,int)>[[$i0 < 11], [try], [$i0 < 9]]--><android.widget.AbsListView: void setScrollBarStyle(int)>
+One road protect good!
+crashApis:12
+containsStatic:false
+containsTry:true
+5call by main package
+-----------------------------------------
+#################################################
+N 15 Potential Issue API: SDKCheck of <android.widget.AbsListView: boolean showContextMenu()> is checking!!!
+The life time of api is [24,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 
+Error road: <se.emilsjolander.stickylistheaders.StickyListHeadersListView: boolean showContextMenu()>[]--><android.widget.AbsListView: boolean showContextMenu()>
+#1.the call statck between class <se.emilsjolander.stickylistheaders.StickyListHeadersListView: boolean showContextMenu()> to <android.widget.AbsListView: boolean showContextMenu()>has compatibility isssues！
+-----------------------------------------
+crashApis:13
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+crashApis numbers:13
+crashApis numbers in main road:9
+On Android Version 16 this app may have error api use(at least): 12 and error api roads: 125
+On Android Version 17 this app may have error api use(at least): 12 and error api roads: 125
+On Android Version 18 this app may have error api use(at least): 12 and error api roads: 125
+On Android Version 19 this app may have error api use(at least): 11 and error api roads: 124
+On Android Version 20 this app may have error api use(at least): 11 and error api roads: 124
+On Android Version 21 this app may have error api use(at least): 3 and error api roads: 16
+On Android Version 22 this app may have error api use(at least): 1 and error api roads: 1
+On Android Version 23 this app may have error api use(at least): 1 and error api roads: 1
+On Android Version 24 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 25 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 1 and error api roads: 1
+On Android Version 30 this app may have error api use(at least): 1 and error api roads: 1
+On Android Version 31 this app may have error api use(at least): 1 and error api roads: 1

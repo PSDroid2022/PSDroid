@@ -1,0 +1,170 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/RacketGhost.apk
+Entry Points[com.markusborg.ui.GhostingActivity, com.markusborg.ui.MainActivity, com.markusborg.ui.ResultsActivity]
+FllowDroidcallgraph size:514
+Soot started on Mon Jul 11 11:27:02 CST 2022
+Soot finished on Mon Jul 11 11:27:07 CST 2022
+Soot has run for 0 min. 4 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 19
+Declared Target Sdk version is: 22
+Declared Max Sdk version is: -1
+Collected 98 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.os.BaseBundle: boolean getBoolean(java.lang.String)> is checking!!!
+The life time of api is [22,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.markusborg.ui.GhostingActivity dummyMainMethod_com_markusborg_ui_GhostingActivity(android.content.Intent)>[]--><com.markusborg.ui.GhostingActivity: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: boolean getBoolean(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:1
+crashApisInMain:1
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.media.SoundPool.Builder: android.media.SoundPool.Builder setAudioAttributes(android.media.AudioAttributes)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.markusborg.ui.GhostingActivity dummyMainMethod_com_markusborg_ui_GhostingActivity(android.content.Intent)>[]--><com.markusborg.ui.GhostingActivity: void onCreate(android.os.Bundle)>[[-$i0 < 21]]--><com.markusborg.ui.GhostingActivity: void createNewSoundPool()>[]--><android.media.SoundPool.Builder: android.media.SoundPool.Builder setAudioAttributes(android.media.AudioAttributes)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.media.AudioAttributes.Builder: android.media.AudioAttributes.Builder setContentType(int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.markusborg.ui.GhostingActivity dummyMainMethod_com_markusborg_ui_GhostingActivity(android.content.Intent)>[]--><com.markusborg.ui.GhostingActivity: void onCreate(android.os.Bundle)>[[-$i0 < 21]]--><com.markusborg.ui.GhostingActivity: void createNewSoundPool()>[]--><android.media.AudioAttributes.Builder: android.media.AudioAttributes.Builder setContentType(int)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.media.AudioAttributes.Builder: android.media.AudioAttributes.Builder setUsage(int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.markusborg.ui.GhostingActivity dummyMainMethod_com_markusborg_ui_GhostingActivity(android.content.Intent)>[]--><com.markusborg.ui.GhostingActivity: void onCreate(android.os.Bundle)>[[-$i0 < 21]]--><com.markusborg.ui.GhostingActivity: void createNewSoundPool()>[]--><android.media.AudioAttributes.Builder: android.media.AudioAttributes.Builder setUsage(int)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.media.AudioAttributes.Builder: android.media.AudioAttributes build()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.markusborg.ui.GhostingActivity dummyMainMethod_com_markusborg_ui_GhostingActivity(android.content.Intent)>[]--><com.markusborg.ui.GhostingActivity: void onCreate(android.os.Bundle)>[[-$i0 < 21]]--><com.markusborg.ui.GhostingActivity: void createNewSoundPool()>[]--><android.media.AudioAttributes.Builder: android.media.AudioAttributes build()>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 5 Potential Issue API: SDKCheck of <android.content.res.Resources: android.graphics.drawable.Drawable getDrawable(int,android.content.res.Resources.Theme)> is checking!!!
+The life time of api is [21,31]
+2call roads:
+1 Mainhead roads:
+-$i1 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.markusborg.ui.GhostingActivity dummyMainMethod_com_markusborg_ui_GhostingActivity(android.content.Intent)>[]--><com.markusborg.ui.GhostingActivity: void onCreate(android.os.Bundle)>[]--><com.markusborg.ui.GhostingActivity: void setBallIcon(int)>[[-$i1 < 21]]--><com.markusborg.ui.GhostingActivity: android.graphics.drawable.Drawable getBallIconNew(int)>[]--><android.content.res.Resources: android.graphics.drawable.Drawable getDrawable(int,android.content.res.Resources.Theme)>
+One road protect good!
+1 Packageshead roads:
+-$i0 < 21
+Good road: <com.markusborg.ui.SessionAdapter: android.view.View getView(int,android.view.View,android.view.ViewGroup)>[[-$i0 < 21]]--><com.markusborg.ui.SessionAdapter: android.graphics.drawable.Drawable getBallIconNew(int)>[]--><android.content.res.Resources: android.graphics.drawable.Drawable getDrawable(int,android.content.res.Resources.Theme)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 6 Potential Issue API: SDKCheck of <android.os.BaseBundle: int getInt(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.markusborg.ui.GhostingActivity dummyMainMethod_com_markusborg_ui_GhostingActivity(android.content.Intent)>[]--><com.markusborg.ui.GhostingActivity: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:2
+crashApisInMain:2
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 7 Potential Issue API: SDKCheck of <android.media.AudioAttributes.Builder: void <init>()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.markusborg.ui.GhostingActivity dummyMainMethod_com_markusborg_ui_GhostingActivity(android.content.Intent)>[]--><com.markusborg.ui.GhostingActivity: void onCreate(android.os.Bundle)>[[-$i0 < 21]]--><com.markusborg.ui.GhostingActivity: void createNewSoundPool()>[]--><android.media.AudioAttributes.Builder: void <init>()>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 8 Potential Issue API: SDKCheck of <android.media.SoundPool.Builder: void <init>()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.markusborg.ui.GhostingActivity dummyMainMethod_com_markusborg_ui_GhostingActivity(android.content.Intent)>[]--><com.markusborg.ui.GhostingActivity: void onCreate(android.os.Bundle)>[[-$i0 < 21]]--><com.markusborg.ui.GhostingActivity: void createNewSoundPool()>[]--><android.media.SoundPool.Builder: void <init>()>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 9 Potential Issue API: SDKCheck of <android.media.SoundPool.Builder: android.media.SoundPool build()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.markusborg.ui.GhostingActivity dummyMainMethod_com_markusborg_ui_GhostingActivity(android.content.Intent)>[]--><com.markusborg.ui.GhostingActivity: void onCreate(android.os.Bundle)>[[-$i0 < 21]]--><com.markusborg.ui.GhostingActivity: void createNewSoundPool()>[]--><android.media.SoundPool.Builder: android.media.SoundPool build()>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+crashApis numbers:2
+crashApis numbers in main road:2
+On Android Version 16 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 17 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 18 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 19 this app may have error api use(at least): 2 and error api roads: 2
+On Android Version 20 this app may have error api use(at least): 2 and error api roads: 2
+On Android Version 21 this app may have error api use(at least): 1 and error api roads: 1
+On Android Version 22 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 23 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 24 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 25 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 31 this app may have error api use(at least): 0 and error api roads: 0

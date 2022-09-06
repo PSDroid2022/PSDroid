@@ -1,0 +1,803 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/Travel_Mate.apk
+Entry Points[io.github.project_travel_mate.notifications.NotificationsActivity, widget.CheckListWidgetProvider, io.github.project_travel_mate.utilities.QuotesActivity, io.github.project_travel_mate.destinations.funfacts.FunFactsActivity, io.github.project_travel_mate.destinations.description.TweetsDescriptionActivity, io.github.project_travel_mate.utilities.TimezoneListViewActivity, com.journeyapps.barcodescanner.CaptureActivity, io.github.project_travel_mate.travel.HotelsActivity, io.github.project_travel_mate.utilities.UpcomingWeekendsActivity, io.github.project_travel_mate.DeleteProfilePictureActivity, io.github.project_travel_mate.utilities.WorldClockActivity, com.evernote.android.job.v14.PlatformAlarmServiceExact, io.github.project_travel_mate.utilities.CurrencyListViewActivity, com.evernote.android.job.v21.PlatformJobService, io.github.project_travel_mate.destinations.description.WeatherActivity, widget.ClockWidget, com.theartofdev.edmodo.cropper.CropImageActivity, io.github.project_travel_mate.friend.FriendsProfileActivity, io.github.project_travel_mate.mytrips.TripImageActivity, io.github.project_travel_mate.login.LoginActivity, io.github.project_travel_mate.destinations.description.FinalCityInfoActivity, com.evernote.android.job.v14.PlatformAlarmReceiver, io.github.project_travel_mate.utilities.CurrencyActivity, io.github.project_travel_mate.utilities.CompassActivity, com.evernote.android.job.JobRescheduleService, io.github.project_travel_mate.destinations.description.CityMapActivity, io.github.project_travel_mate.utilities.ShareContactActivity, widget.CheckListWidgetService, io.github.project_travel_mate.utilities.WeatherForecastActivity, com.evernote.android.job.JobBootReceiver, io.github.project_travel_mate.destinations.description.RestaurantsActivity, io.github.project_travel_mate.destinations.description.RestaurantDetailsActivity, io.github.project_travel_mate.travel.ListViewRealTimeActivity, io.github.project_travel_mate.FullScreenImage, com.evernote.android.job.v14.PlatformAlarmService, io.github.project_travel_mate.destinations.description.CityHistoryActivity, utils.GPSTracker, io.github.project_travel_mate.destinations.description.PlacesOnMapActivity, io.github.project_travel_mate.ProfileActivity, io.github.project_travel_mate.travel.MapViewRealTimeActivity, io.github.project_travel_mate.travel.ShoppingCurrentCityActivity, widget.ClockWidgetConfigureActivity, io.github.project_travel_mate.destinations.description.TweetsActivity, io.github.project_travel_mate.SplashActivity, io.github.project_travel_mate.mytrips.AddNewTripActivity, io.github.project_travel_mate.mytrips.MyTripInfoActivity, io.github.project_travel_mate.VerifyEmailActivity, io.github.project_travel_mate.MainActivity, io.github.project_travel_mate.utilities.ChecklistActivity]
+FllowDroidcallgraph size:8341
+Soot started on Mon Jul 11 13:43:43 CST 2022
+Soot finished on Mon Jul 11 13:43:51 CST 2022
+Soot has run for 0 min. 8 sec.
+Found 2 additional DEX files. Now visiting them one by one.
+Soot started on Mon Jul 11 13:43:51 CST 2022
+Soot finished on Mon Jul 11 13:43:53 CST 2022
+Soot has run for 0 min. 1 sec.
+Soot started on Mon Jul 11 13:43:53 CST 2022
+StaticCheck:<com.evernote.android.job.JobConfig: boolean isAllowSmallerIntervalsForMarshmallow()>$yysi0 >= 24
+StaticCheck:<com.theartofdev.edmodo.cropper.CropImage: boolean isExplicitCameraPermissionRequired(android.content.Context)>$yysi0 < 23
+StaticCheck:<com.theartofdev.edmodo.cropper.CropImage: boolean isReadExternalStoragePermissionsRequired(android.content.Context,android.net.Uri)>$yysi0 < 23
+StaticCheck:<com.evernote.android.job.util.Device: boolean isIdle(android.content.Context)>$yysi0 < 23
+Soot finished on Mon Jul 11 13:46:06 CST 2022
+Soot has run for 2 min. 13 sec.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 21
+Declared Target Sdk version is: 28
+Declared Max Sdk version is: -1
+Collected 503 Android APIs in the primary DEX file
+Collected 1650 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.content.res.Resources: int getColor(int,android.content.res.Resources.Theme)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i1 < 23
+Good road: <ir.mirrajabi.searchdialog.adapters.SearchDialogAdapter: void initializeViews(ir.mirrajabi.searchdialog.core.Searchable,ir.mirrajabi.searchdialog.adapters.SearchDialogAdapter$ViewHolder,int)>[]--><ir.mirrajabi.searchdialog.adapters.SearchDialogAdapter: int getColor(int)>[[-$i1 < 23]]--><android.content.res.Resources: int getColor(int,android.content.res.Resources.Theme)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.app.Activity: void requestPermissions(java.lang.String[],int)> is checking!!!
+The life time of api is [23,31]
+2call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 21 22 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: io.github.project_travel_mate.login.LoginActivity dummyMainMethod_io_github_project__travel__mate_login_LoginActivity(android.content.Intent)>[]--><io.github.project_travel_mate.login.LoginActivity: void onCreate(android.os.Bundle)>[]--><io.github.project_travel_mate.login.LoginActivity: void getRunTimePermissions()>[]--><android.app.Activity: void requestPermissions(java.lang.String[],int)>
+-$yysi0 < 23
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.theartofdev.edmodo.cropper.CropImageActivity dummyMainMethod_com_theartofdev_edmodo_cropper_CropImageActivity(android.content.Intent)>[]--><com.theartofdev.edmodo.cropper.CropImageActivity: void onCreate(android.os.Bundle)>[[-$yysi0 < 23]]--><android.app.Activity: void requestPermissions(java.lang.String[],int)>
+One road protect good!
+!!!this api will crash on sdk 21 22 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: io.github.project_travel_mate.MainActivity dummyMainMethod_io_github_project__travel__mate_MainActivity(android.content.Intent)>[]--><io.github.project_travel_mate.MainActivity: void onCreate(android.os.Bundle)>[]--><io.github.project_travel_mate.MainActivity: void getRuntimePermissions()>[]--><android.app.Activity: void requestPermissions(java.lang.String[],int)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.app.Activity: void requestPermissions(java.lang.String[],int)>has compatibility isssues！
+-----------------------------------------
+1 Packageshead roads:
+-$yysi0 < 23
+Good road: <com.theartofdev.edmodo.cropper.CropImageActivity: void onActivityResult(int,int,android.content.Intent)>[[-$yysi0 < 23]]--><android.app.Activity: void requestPermissions(java.lang.String[],int)>
+One road protect good!
+crashApis:1
+crashApisInMain:1
+containsStatic:true
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.app.job.JobInfo.Builder: android.app.job.JobInfo.Builder setTransientExtras(android.os.Bundle)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 21 22 23 24 25 
+Error road: <com.evernote.android.job.v26.JobProxy26: android.app.job.JobInfo$Builder setTransientBundle(com.evernote.android.job.JobRequest,android.app.job.JobInfo$Builder)>[]--><android.app.job.JobInfo.Builder: android.app.job.JobInfo.Builder setTransientExtras(android.os.Bundle)>
+#1.the call statck between class <com.evernote.android.job.v26.JobProxy26: android.app.job.JobInfo$Builder setTransientBundle(com.evernote.android.job.JobRequest,android.app.job.JobInfo$Builder)> to <android.app.job.JobInfo.Builder: android.app.job.JobInfo.Builder setTransientExtras(android.os.Bundle)>has compatibility isssues！
+-----------------------------------------
+crashApis:2
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.app.job.JobInfo.Builder: android.app.job.JobInfo.Builder setPeriodic(long,long)> is checking!!!
+The life time of api is [24,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 21 22 23 
+Error road: <com.evernote.android.job.v24.JobProxy24: android.app.job.JobInfo$Builder createBuilderPeriodic(android.app.job.JobInfo$Builder,long,long)>[]--><android.app.job.JobInfo.Builder: android.app.job.JobInfo.Builder setPeriodic(long,long)>
+#1.the call statck between class <com.evernote.android.job.v24.JobProxy24: android.app.job.JobInfo$Builder createBuilderPeriodic(android.app.job.JobInfo$Builder,long,long)> to <android.app.job.JobInfo.Builder: android.app.job.JobInfo.Builder setPeriodic(long,long)>has compatibility isssues！
+-----------------------------------------
+crashApis:3
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.content.Context: int checkSelfPermission(java.lang.String)> is checking!!!
+The life time of api is [23,31]
+4call roads:
+1 Mainhead roads:
+-$i0 < 23
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.theartofdev.edmodo.cropper.CropImageActivity dummyMainMethod_com_theartofdev_edmodo_cropper_CropImageActivity(android.content.Intent)>[]--><com.theartofdev.edmodo.cropper.CropImageActivity: void onCreate(android.os.Bundle)>[]--><com.theartofdev.edmodo.cropper.CropImage: boolean isExplicitCameraPermissionRequired(android.content.Context)>[[-$i0 < 23]]--><android.content.Context: int checkSelfPermission(java.lang.String)>
+One road protect good!
+3 Packageshead roads:
+-$i0 < 23
+Good road: <com.theartofdev.edmodo.cropper.CropImageActivity: void onRequestPermissionsResult(int,java.lang.String[],int[])>[]--><com.theartofdev.edmodo.cropper.CropImage: void startPickImageActivity(android.app.Activity)>[]--><com.theartofdev.edmodo.cropper.CropImage: android.content.Intent getPickImageChooserIntent(android.content.Context)>[]--><com.theartofdev.edmodo.cropper.CropImage: android.content.Intent getPickImageChooserIntent(android.content.Context,java.lang.CharSequence,boolean,boolean)>[]--><com.theartofdev.edmodo.cropper.CropImage: boolean isExplicitCameraPermissionRequired(android.content.Context)>[[-$i0 < 23]]--><android.content.Context: int checkSelfPermission(java.lang.String)>
+One road protect good!
+-$i0 < 23
+Good road: <com.theartofdev.edmodo.cropper.CropImageActivity: void onActivityResult(int,int,android.content.Intent)>[]--><com.theartofdev.edmodo.cropper.CropImage: boolean isReadExternalStoragePermissionsRequired(android.content.Context,android.net.Uri)>[[-$i0 < 23]]--><android.content.Context: int checkSelfPermission(java.lang.String)>
+One road protect good!
+-$i0 < 23
+Good road: <com.theartofdev.edmodo.cropper.CropImage: void startPickImageActivity(android.content.Context,android.support.v4.app.Fragment)>[]--><com.theartofdev.edmodo.cropper.CropImage: android.content.Intent getPickImageChooserIntent(android.content.Context)>[]--><com.theartofdev.edmodo.cropper.CropImage: android.content.Intent getPickImageChooserIntent(android.content.Context,java.lang.CharSequence,boolean,boolean)>[]--><com.theartofdev.edmodo.cropper.CropImage: boolean isExplicitCameraPermissionRequired(android.content.Context)>[[-$i0 < 23]]--><android.content.Context: int checkSelfPermission(java.lang.String)>
+One road protect good!
+containsStatic:true
+containsTry:false
+4call by main package
+-----------------------------------------
+#################################################
+N 5 Potential Issue API: SDKCheck of <android.media.MediaPlayer: void setVolume(float,float)> is checking!!!
+The life time of api is [1,17]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+try
+Good road with try: <com.journeyapps.barcodescanner.BarcodeView$1: boolean handleMessage(android.os.Message)>[]--><com.journeyapps.barcodescanner.CaptureManager$1: void barcodeResult(com.journeyapps.barcodescanner.BarcodeResult)>[]--><com.google.zxing.client.android.BeepManager: void playBeepSoundAndVibrate()>[[try]]--><com.google.zxing.client.android.BeepManager: android.media.MediaPlayer playBeepSound()>[[try]]--><android.media.MediaPlayer: void setVolume(float,float)>
+One road protect good!
+try
+Good road with try: <com.journeyapps.barcodescanner.BarcodeView$1: boolean handleMessage(android.os.Message)>[]--><com.journeyapps.barcodescanner.DecoratedBarcodeView$WrappedCallback: void barcodeResult(com.journeyapps.barcodescanner.BarcodeResult)>[]--><com.journeyapps.barcodescanner.CaptureManager$1: void barcodeResult(com.journeyapps.barcodescanner.BarcodeResult)>[]--><com.google.zxing.client.android.BeepManager: void playBeepSoundAndVibrate()>[[try]]--><com.google.zxing.client.android.BeepManager: android.media.MediaPlayer playBeepSound()>[[try]]--><android.media.MediaPlayer: void setVolume(float,float)>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 6 Potential Issue API: SDKCheck of <android.net.ConnectivityManager: android.net.NetworkInfo getNetworkInfo(int)> is checking!!!
+The life time of api is [1,30]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <org.osmdroid.tileprovider.modules.NetworkAvailabliltyCheck: boolean getWiFiNetworkAvailable()>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getNetworkInfo(int)>
+#1.the call statck between class <org.osmdroid.tileprovider.modules.NetworkAvailabliltyCheck: boolean getWiFiNetworkAvailable()> to <android.net.ConnectivityManager: android.net.NetworkInfo getNetworkInfo(int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <org.osmdroid.tileprovider.modules.NetworkAvailabliltyCheck: boolean getCellularDataNetworkAvailable()>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getNetworkInfo(int)>
+#2.the call statck between class <org.osmdroid.tileprovider.modules.NetworkAvailabliltyCheck: boolean getCellularDataNetworkAvailable()> to <android.net.ConnectivityManager: android.net.NetworkInfo getNetworkInfo(int)>has compatibility isssues！
+-----------------------------------------
+crashApis:4
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 7 Potential Issue API: SDKCheck of <android.os.PowerManager: boolean isDeviceIdleMode()> is checking!!!
+The life time of api is [23,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+try
+Good road with try: <com.evernote.android.job.DailyJob: com.evernote.android.job.Job$Result onRunJob(com.evernote.android.job.Job$Params)>[[try]]--><com.evernote.android.job.Job: boolean meetsRequirements()>[]--><com.evernote.android.job.Job: boolean isRequirementDeviceIdleMet()>[]--><com.evernote.android.job.util.Device: boolean isIdle(android.content.Context)>[[-$i0 < 23]]--><android.os.PowerManager: boolean isDeviceIdleMode()>
+One road protect good!
+try
+Good road with try: <com.evernote.android.job.Job: com.evernote.android.job.Job$Result runJob()>[[try]]--><com.evernote.android.job.Job: boolean meetsRequirements()>[]--><com.evernote.android.job.Job: boolean isRequirementDeviceIdleMet()>[]--><com.evernote.android.job.util.Device: boolean isIdle(android.content.Context)>[[-$i0 < 23]]--><android.os.PowerManager: boolean isDeviceIdleMode()>
+One road protect good!
+containsStatic:false
+containsTry:true
+3call by main package
+-----------------------------------------
+#################################################
+N 8 Potential Issue API: SDKCheck of <android.content.Context: android.content.res.ColorStateList getColorStateList(int)> is checking!!!
+The life time of api is [23,31]
+4call roads:
+0 Mainhead roads:
+4 Packageshead roads:
+$i1 > 22
+Good road: <com.afollestad.materialdialogs.MaterialDialog$Builder: com.afollestad.materialdialogs.MaterialDialog$Builder neutralColorRes(int)>[]--><com.afollestad.materialdialogs.util.DialogUtils: android.content.res.ColorStateList getActionTextColorStateList(android.content.Context,int)>[[$i1 > 22]]--><android.content.Context: android.content.res.ColorStateList getColorStateList(int)>
+One road protect good!
+$i1 > 22
+Good road: <com.afollestad.materialdialogs.MaterialDialog$Builder: com.afollestad.materialdialogs.MaterialDialog$Builder negativeColorRes(int)>[]--><com.afollestad.materialdialogs.util.DialogUtils: android.content.res.ColorStateList getActionTextColorStateList(android.content.Context,int)>[[$i1 > 22]]--><android.content.Context: android.content.res.ColorStateList getColorStateList(int)>
+One road protect good!
+$i1 > 22
+Good road: <com.afollestad.materialdialogs.MaterialDialog$Builder: com.afollestad.materialdialogs.MaterialDialog$Builder linkColorRes(int)>[]--><com.afollestad.materialdialogs.util.DialogUtils: android.content.res.ColorStateList getActionTextColorStateList(android.content.Context,int)>[[$i1 > 22]]--><android.content.Context: android.content.res.ColorStateList getColorStateList(int)>
+One road protect good!
+$i1 > 22
+Good road: <com.afollestad.materialdialogs.MaterialDialog$Builder: com.afollestad.materialdialogs.MaterialDialog$Builder positiveColorRes(int)>[]--><com.afollestad.materialdialogs.util.DialogUtils: android.content.res.ColorStateList getActionTextColorStateList(android.content.Context,int)>[[$i1 > 22]]--><android.content.Context: android.content.res.ColorStateList getColorStateList(int)>
+One road protect good!
+containsStatic:false
+containsTry:false
+5call by main package
+-----------------------------------------
+#################################################
+N 9 Potential Issue API: SDKCheck of <android.app.AlarmManager: void setExactAndAllowWhileIdle(int,long,android.app.PendingIntent)> is checking!!!
+The life time of api is [23,31]
+5773call roads:
+1 Mainhead roads:
+5772 Packageshead roads:
+Roads number exceed, exit!5772
+#################################################
+N 10 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putBooleanArray(java.lang.String,boolean[])> is checking!!!
+The life time of api is [22,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 11 Potential Issue API: SDKCheck of <android.animation.Animator.AnimatorListener: void onAnimationEnd(android.animation.Animator,boolean)> is checking!!!
+The life time of api is [26,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+-$i0 < 26
+Good road: <com.airbnb.lottie.utils.LottieValueAnimator: void doFrame(long)>[]--><com.airbnb.lottie.utils.BaseLottieAnimator: void notifyEnd(boolean)>[[-$i0 < 26]]--><android.animation.Animator.AnimatorListener: void onAnimationEnd(android.animation.Animator,boolean)>
+One road protect good!
+-$i0 < 26
+Good road: <com.airbnb.lottie.LottieDrawable: void stop()>[]--><com.airbnb.lottie.LottieDrawable: void endAnimation()>[]--><com.airbnb.lottie.utils.LottieValueAnimator: void endAnimation()>[]--><com.airbnb.lottie.utils.BaseLottieAnimator: void notifyEnd(boolean)>[[-$i0 < 26]]--><android.animation.Animator.AnimatorListener: void onAnimationEnd(android.animation.Animator,boolean)>
+One road protect good!
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 12 Potential Issue API: SDKCheck of <android.app.job.JobInfo.Builder: android.app.job.JobInfo.Builder setRequiresBatteryNotLow(boolean)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 21 22 23 24 25 
+Error road: <com.evernote.android.job.v26.JobProxy26: android.app.job.JobInfo$Builder createBaseBuilder(com.evernote.android.job.JobRequest,boolean)>[]--><android.app.job.JobInfo.Builder: android.app.job.JobInfo.Builder setRequiresBatteryNotLow(boolean)>
+#1.the call statck between class <com.evernote.android.job.v26.JobProxy26: android.app.job.JobInfo$Builder createBaseBuilder(com.evernote.android.job.JobRequest,boolean)> to <android.app.job.JobInfo.Builder: android.app.job.JobInfo.Builder setRequiresBatteryNotLow(boolean)>has compatibility isssues！
+-----------------------------------------
+crashApis:5
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 13 Potential Issue API: SDKCheck of <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()> is checking!!!
+The life time of api is [1,30]
+7call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: io.github.project_travel_mate.destinations.description.CityMapActivity dummyMainMethod_io_github_project__travel__mate_destinations_description_CityMapActivity(android.content.Intent)>[]--><io.github.project_travel_mate.destinations.description.CityMapActivity: void onCreate(android.os.Bundle)>[]--><utils.Utils: boolean isNetworkConnected(android.content.Context)>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>has compatibility isssues！
+-----------------------------------------
+6 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <io.github.project_travel_mate.utilities.CurrencyActivity$Connection: boolean isOnline()>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>
+#1.the call statck between class <io.github.project_travel_mate.utilities.CurrencyActivity$Connection: boolean isOnline()> to <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <com.evernote.android.job.util.Device: com.evernote.android.job.JobRequest$NetworkType getNetworkType(android.content.Context)>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>
+#2.the call statck between class <com.evernote.android.job.util.Device: com.evernote.android.job.JobRequest$NetworkType getNetworkType(android.content.Context)> to <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <org.osmdroid.tileprovider.modules.MapTileDownloader$TileLoader: android.graphics.drawable.Drawable loadTile(long)>[]--><org.osmdroid.tileprovider.modules.NetworkAvailabliltyCheck: boolean getNetworkAvailable()>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>
+#3.the call statck between class <org.osmdroid.tileprovider.modules.MapTileDownloader$TileLoader: android.graphics.drawable.Drawable loadTile(long)> to <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <com.squareup.picasso.Dispatcher$DispatcherHandler: void handleMessage(android.os.Message)>[]--><com.squareup.picasso.Dispatcher: void performRetry(com.squareup.picasso.BitmapHunter)>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>
+#4.the call statck between class <com.squareup.picasso.Dispatcher$DispatcherHandler: void handleMessage(android.os.Message)> to <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <org.osmdroid.tileprovider.MapTileProviderBasic: boolean isDowngradedMode()>[]--><org.osmdroid.tileprovider.modules.NetworkAvailabliltyCheck: boolean getNetworkAvailable()>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>
+#5.the call statck between class <org.osmdroid.tileprovider.MapTileProviderBasic: boolean isDowngradedMode()> to <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <com.squareup.picasso.Dispatcher$NetworkBroadcastReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>
+#6.the call statck between class <com.squareup.picasso.Dispatcher$NetworkBroadcastReceiver: void onReceive(android.content.Context,android.content.Intent)> to <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>has compatibility isssues！
+-----------------------------------------
+crashApis:6
+crashApisInMain:2
+containsStatic:false
+containsTry:false
+7call by main package
+-----------------------------------------
+#################################################
+N 14 Potential Issue API: SDKCheck of <android.text.StaticLayout: void <init>(java.lang.CharSequence,int,int,android.text.TextPaint,int,android.text.Layout.Alignment,float,float,boolean)> is checking!!!
+The life time of api is [1,30]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <com.github.mikephil.charting.renderer.PieChartRenderer: void drawExtras(android.graphics.Canvas)>[]--><com.github.mikephil.charting.renderer.PieChartRenderer: void drawCenterText(android.graphics.Canvas)>[]--><android.text.StaticLayout: void <init>(java.lang.CharSequence,int,int,android.text.TextPaint,int,android.text.Layout.Alignment,float,float,boolean)>
+#1.the call statck between class <com.github.mikephil.charting.renderer.PieChartRenderer: void drawExtras(android.graphics.Canvas)> to <android.text.StaticLayout: void <init>(java.lang.CharSequence,int,int,android.text.TextPaint,int,android.text.Layout.Alignment,float,float,boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <com.github.mikephil.charting.utils.Utils: void drawMultilineText(android.graphics.Canvas,java.lang.String,float,float,android.text.TextPaint,com.github.mikephil.charting.utils.FSize,com.github.mikephil.charting.utils.MPPointF,float)>[]--><android.text.StaticLayout: void <init>(java.lang.CharSequence,int,int,android.text.TextPaint,int,android.text.Layout.Alignment,float,float,boolean)>
+#2.the call statck between class <com.github.mikephil.charting.utils.Utils: void drawMultilineText(android.graphics.Canvas,java.lang.String,float,float,android.text.TextPaint,com.github.mikephil.charting.utils.FSize,com.github.mikephil.charting.utils.MPPointF,float)> to <android.text.StaticLayout: void <init>(java.lang.CharSequence,int,int,android.text.TextPaint,int,android.text.Layout.Alignment,float,float,boolean)>has compatibility isssues！
+-----------------------------------------
+crashApis:7
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 15 Potential Issue API: SDKCheck of <android.graphics.ColorFilter: void <init>()> is checking!!!
+The life time of api is [26,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 21 22 23 24 25 
+Error road: <com.airbnb.lottie.LottieProperty: void <clinit>()>[]--><android.graphics.ColorFilter: void <init>()>
+#1.the call statck between class <com.airbnb.lottie.LottieProperty: void <clinit>()> to <android.graphics.ColorFilter: void <init>()>has compatibility isssues！
+-----------------------------------------
+crashApis:8
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 16 Potential Issue API: SDKCheck of <android.app.job.JobParameters: android.os.Bundle getTransientExtras()> is checking!!!
+The life time of api is [26,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i0 < 26
+Good road: <com.evernote.android.job.v21.PlatformJobService: android.os.Bundle access$000(com.evernote.android.job.v21.PlatformJobService,android.app.job.JobParameters)>[]--><com.evernote.android.job.v21.PlatformJobService: android.os.Bundle getTransientBundle(android.app.job.JobParameters)>[[-$i0 < 26]]--><android.app.job.JobParameters: android.os.Bundle getTransientExtras()>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 17 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)> is checking!!!
+The life time of api is [22,31]
+3call roads:
+0 Mainhead roads:
+3 Packageshead roads:
+!!!this api will crash on sdk 21 
+Error road: <utils.TouchImageView: android.os.Parcelable onSaveInstanceState()>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+#1.the call statck between class <utils.TouchImageView: android.os.Parcelable onSaveInstanceState()> to <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 21 
+Error road: <com.theartofdev.edmodo.cropper.CropImageView: android.os.Parcelable onSaveInstanceState()>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+#2.the call statck between class <com.theartofdev.edmodo.cropper.CropImageView: android.os.Parcelable onSaveInstanceState()> to <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 21 
+Error road: <com.journeyapps.barcodescanner.CameraPreview: android.os.Parcelable onSaveInstanceState()>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+#3.the call statck between class <com.journeyapps.barcodescanner.CameraPreview: android.os.Parcelable onSaveInstanceState()> to <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+crashApis:9
+containsStatic:false
+containsTry:false
+4call by main package
+-----------------------------------------
+#################################################
+N 18 Potential Issue API: SDKCheck of <android.net.NetworkInfo: int getSubtype()> is checking!!!
+The life time of api is [3,30]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <com.squareup.picasso.Dispatcher$DispatcherHandler: void handleMessage(android.os.Message)>[]--><com.squareup.picasso.Dispatcher: void performNetworkStateChange(android.net.NetworkInfo)>[]--><com.squareup.picasso.PicassoExecutorService: void adjustThreadCount(android.net.NetworkInfo)>[]--><android.net.NetworkInfo: int getSubtype()>
+#1.the call statck between class <com.squareup.picasso.Dispatcher$DispatcherHandler: void handleMessage(android.os.Message)> to <android.net.NetworkInfo: int getSubtype()>has compatibility isssues！
+-----------------------------------------
+crashApis:10
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 19 Potential Issue API: SDKCheck of <android.os.BaseBundle: boolean getBoolean(java.lang.String)> is checking!!!
+The life time of api is [22,31]
+3call roads:
+0 Mainhead roads:
+3 Packageshead roads:
+!!!this api will crash on sdk 21 
+Error road: <utils.TouchImageView: void onRestoreInstanceState(android.os.Parcelable)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+#1.the call statck between class <utils.TouchImageView: void onRestoreInstanceState(android.os.Parcelable)> to <android.os.BaseBundle: boolean getBoolean(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 21 
+Error road: <com.journeyapps.barcodescanner.CameraPreview: void onRestoreInstanceState(android.os.Parcelable)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+#2.the call statck between class <com.journeyapps.barcodescanner.CameraPreview: void onRestoreInstanceState(android.os.Parcelable)> to <android.os.BaseBundle: boolean getBoolean(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 21 
+Error road: <com.theartofdev.edmodo.cropper.CropImageView: void onRestoreInstanceState(android.os.Parcelable)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+#3.the call statck between class <com.theartofdev.edmodo.cropper.CropImageView: void onRestoreInstanceState(android.os.Parcelable)> to <android.os.BaseBundle: boolean getBoolean(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:11
+containsStatic:false
+containsTry:false
+4call by main package
+-----------------------------------------
+#################################################
+N 20 Potential Issue API: SDKCheck of <android.app.job.JobScheduler: android.app.job.JobInfo getPendingJob(int)> is checking!!!
+The life time of api is [24,31]
+5773call roads:
+1 Mainhead roads:
+5772 Packageshead roads:
+Roads number exceed, exit!5772
+#################################################
+N 21 Potential Issue API: SDKCheck of <android.provider.MediaStore.Video.Thumbnails: android.graphics.Bitmap getThumbnail(android.content.ContentResolver,long,int,android.graphics.BitmapFactory.Options)> is checking!!!
+The life time of api is [5,29]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 30 31 
+Error road: <com.squareup.picasso.MediaStoreRequestHandler: com.squareup.picasso.RequestHandler$Result load(com.squareup.picasso.Request,int)>[]--><android.provider.MediaStore.Video.Thumbnails: android.graphics.Bitmap getThumbnail(android.content.ContentResolver,long,int,android.graphics.BitmapFactory.Options)>
+#1.the call statck between class <com.squareup.picasso.MediaStoreRequestHandler: com.squareup.picasso.RequestHandler$Result load(com.squareup.picasso.Request,int)> to <android.provider.MediaStore.Video.Thumbnails: android.graphics.Bitmap getThumbnail(android.content.ContentResolver,long,int,android.graphics.BitmapFactory.Options)>has compatibility isssues！
+-----------------------------------------
+crashApis:12
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 22 Potential Issue API: SDKCheck of <android.animation.AnimatorSet: void <init>()> is checking!!!
+The life time of api is [24,31]
+7call roads:
+1 Mainhead roads:
+###Multi invoking in one method, need manual check!!!--><com.afollestad.materialdialogs.DialogInit: void init(com.afollestad.materialdialogs.MaterialDialog)>[[i1 < 14], [i1 < 17]]--><com.afollestad.materialdialogs.DialogInit: void setupProgressDialog(com.afollestad.materialdialogs.MaterialDialog)>[[-i0 < 14]]--><me.zhanghai.android.materialprogressbar.IndeterminateHorizontalProgressDrawable: void <init>(android.content.Context)>[]--><me.zhanghai.android.materialprogressbar.Animators: android.animation.Animator createIndeterminateHorizontalRect1(java.lang.Object)>[]
+###Multi invoking in one method, need manual check!!!--><com.afollestad.materialdialogs.DialogInit: void init(com.afollestad.materialdialogs.MaterialDialog)>[[i1 < 14]][[i1 < 17]]--><com.afollestad.materialdialogs.DialogInit: void setupProgressDialog(com.afollestad.materialdialogs.MaterialDialog)>[[-i0 < 14]]--><me.zhanghai.android.materialprogressbar.IndeterminateHorizontalProgressDrawable: void <init>(android.content.Context)>[]--><me.zhanghai.android.materialprogressbar.Animators: android.animation.Animator createIndeterminateHorizontalRect1(java.lang.Object)>[]
+i1 < 14
+i1 < 17
+-i0 < 14
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: io.github.project_travel_mate.travel.MapViewRealTimeActivity dummyMainMethod_io_github_project__travel__mate_travel_MapViewRealTimeActivity(android.content.Intent)>[]--><io.github.project_travel_mate.travel.MapViewRealTimeActivity: void onCreate(android.os.Bundle)>[]--><io.github.project_travel_mate.travel.MapViewRealTimeActivity: void showDialogToSelectitems()>[]--><com.afollestad.materialdialogs.MaterialDialog$Builder: com.afollestad.materialdialogs.MaterialDialog show()>[]--><com.afollestad.materialdialogs.MaterialDialog$Builder: com.afollestad.materialdialogs.MaterialDialog build()>[]--><com.afollestad.materialdialogs.MaterialDialog: void <init>(com.afollestad.materialdialogs.MaterialDialog$Builder)>[]--><com.afollestad.materialdialogs.DialogInit: void init(com.afollestad.materialdialogs.MaterialDialog)>[[i1 < 14], [i1 < 17]]--><com.afollestad.materialdialogs.DialogInit: void setupProgressDialog(com.afollestad.materialdialogs.MaterialDialog)>[[-i0 < 14]]--><me.zhanghai.android.materialprogressbar.IndeterminateHorizontalProgressDrawable: void <init>(android.content.Context)>[]--><me.zhanghai.android.materialprogressbar.Animators: android.animation.Animator createIndeterminateHorizontalRect1(java.lang.Object)>[]--><android.animation.AnimatorSet: void <init>()>
+One road protect good!
+6 Packageshead roads:
+!!!this api will crash on sdk 21 22 23 
+Error road: <me.zhanghai.android.materialprogressbar.MaterialProgressBar: void <init>(android.content.Context,android.util.AttributeSet,int,int)>[]--><me.zhanghai.android.materialprogressbar.MaterialProgressBar: void init(android.util.AttributeSet,int,int)>[]--><me.zhanghai.android.materialprogressbar.IndeterminateCircularProgressDrawable: void <init>(android.content.Context)>[]--><me.zhanghai.android.materialprogressbar.Animators: android.animation.Animator createIndeterminate(java.lang.Object)>[]--><android.animation.AnimatorSet: void <init>()>
+#1.the call statck between class <me.zhanghai.android.materialprogressbar.MaterialProgressBar: void <init>(android.content.Context,android.util.AttributeSet,int,int)> to <android.animation.AnimatorSet: void <init>()>has compatibility isssues！
+-----------------------------------------
+###Multi invoking in one method, need manual check!!!--><com.afollestad.materialdialogs.DialogInit: void init(com.afollestad.materialdialogs.MaterialDialog)>[[i1 < 14], [i1 < 17]]--><com.afollestad.materialdialogs.DialogInit: void setupProgressDialog(com.afollestad.materialdialogs.MaterialDialog)>[[-i0 < 14]]--><me.zhanghai.android.materialprogressbar.IndeterminateHorizontalProgressDrawable: void <init>(android.content.Context)>[]--><me.zhanghai.android.materialprogressbar.Animators: android.animation.Animator createIndeterminateHorizontalRect1(java.lang.Object)>[]
+###Multi invoking in one method, need manual check!!!--><com.afollestad.materialdialogs.DialogInit: void init(com.afollestad.materialdialogs.MaterialDialog)>[[i1 < 14]][[i1 < 17]]--><com.afollestad.materialdialogs.DialogInit: void setupProgressDialog(com.afollestad.materialdialogs.MaterialDialog)>[[-i0 < 14]]--><me.zhanghai.android.materialprogressbar.IndeterminateHorizontalProgressDrawable: void <init>(android.content.Context)>[]--><me.zhanghai.android.materialprogressbar.Animators: android.animation.Animator createIndeterminateHorizontalRect1(java.lang.Object)>[]
+i1 < 14
+i1 < 17
+-i0 < 14
+Good road: <io.github.project_travel_mate.travel.MapViewRealTimeActivity: boolean onOptionsItemSelected(android.view.MenuItem)>[]--><io.github.project_travel_mate.travel.MapViewRealTimeActivity: void showDialogToSelectitems()>[]--><com.afollestad.materialdialogs.MaterialDialog$Builder: com.afollestad.materialdialogs.MaterialDialog show()>[]--><com.afollestad.materialdialogs.MaterialDialog$Builder: com.afollestad.materialdialogs.MaterialDialog build()>[]--><com.afollestad.materialdialogs.MaterialDialog: void <init>(com.afollestad.materialdialogs.MaterialDialog$Builder)>[]--><com.afollestad.materialdialogs.DialogInit: void init(com.afollestad.materialdialogs.MaterialDialog)>[[i1 < 14], [i1 < 17]]--><com.afollestad.materialdialogs.DialogInit: void setupProgressDialog(com.afollestad.materialdialogs.MaterialDialog)>[[-i0 < 14]]--><me.zhanghai.android.materialprogressbar.IndeterminateHorizontalProgressDrawable: void <init>(android.content.Context)>[]--><me.zhanghai.android.materialprogressbar.Animators: android.animation.Animator createIndeterminateHorizontalRect1(java.lang.Object)>[]--><android.animation.AnimatorSet: void <init>()>
+One road protect good!
+!!!this api will crash on sdk 21 22 23 
+Error road: <com.eftimoff.androipathview.PathView$AnimatorSetBuilder: void <init>(com.eftimoff.androipathview.PathView)>[]--><android.animation.AnimatorSet: void <init>()>
+#3.the call statck between class <com.eftimoff.androipathview.PathView$AnimatorSetBuilder: void <init>(com.eftimoff.androipathview.PathView)> to <android.animation.AnimatorSet: void <init>()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 21 22 23 
+Error road: <me.zhanghai.android.materialprogressbar.MaterialProgressBar: void <init>(android.content.Context,android.util.AttributeSet,int)>[]--><me.zhanghai.android.materialprogressbar.MaterialProgressBar: void init(android.util.AttributeSet,int,int)>[]--><me.zhanghai.android.materialprogressbar.IndeterminateCircularProgressDrawable: void <init>(android.content.Context)>[]--><me.zhanghai.android.materialprogressbar.Animators: android.animation.Animator createIndeterminate(java.lang.Object)>[]--><android.animation.AnimatorSet: void <init>()>
+#4.the call statck between class <me.zhanghai.android.materialprogressbar.MaterialProgressBar: void <init>(android.content.Context,android.util.AttributeSet,int)> to <android.animation.AnimatorSet: void <init>()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 21 22 23 
+Error road: <me.zhanghai.android.materialprogressbar.MaterialProgressBar: void <init>(android.content.Context,android.util.AttributeSet)>[]--><me.zhanghai.android.materialprogressbar.MaterialProgressBar: void init(android.util.AttributeSet,int,int)>[]--><me.zhanghai.android.materialprogressbar.IndeterminateCircularProgressDrawable: void <init>(android.content.Context)>[]--><me.zhanghai.android.materialprogressbar.Animators: android.animation.Animator createIndeterminate(java.lang.Object)>[]--><android.animation.AnimatorSet: void <init>()>
+#5.the call statck between class <me.zhanghai.android.materialprogressbar.MaterialProgressBar: void <init>(android.content.Context,android.util.AttributeSet)> to <android.animation.AnimatorSet: void <init>()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 21 22 23 
+Error road: <me.zhanghai.android.materialprogressbar.MaterialProgressBar: void <init>(android.content.Context)>[]--><me.zhanghai.android.materialprogressbar.MaterialProgressBar: void init(android.util.AttributeSet,int,int)>[]--><me.zhanghai.android.materialprogressbar.IndeterminateCircularProgressDrawable: void <init>(android.content.Context)>[]--><me.zhanghai.android.materialprogressbar.Animators: android.animation.Animator createIndeterminate(java.lang.Object)>[]--><android.animation.AnimatorSet: void <init>()>
+#6.the call statck between class <me.zhanghai.android.materialprogressbar.MaterialProgressBar: void <init>(android.content.Context)> to <android.animation.AnimatorSet: void <init>()>has compatibility isssues！
+-----------------------------------------
+crashApis:13
+containsStatic:false
+containsTry:false
+7call by main package
+-----------------------------------------
+#################################################
+N 23 Potential Issue API: SDKCheck of <android.net.NetworkInfo: boolean isConnectedOrConnecting()> is checking!!!
+The life time of api is [1,30]
+3call roads:
+0 Mainhead roads:
+3 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <io.github.project_travel_mate.utilities.CurrencyActivity$Connection: boolean isOnline()>[]--><android.net.NetworkInfo: boolean isConnectedOrConnecting()>
+#1.the call statck between class <io.github.project_travel_mate.utilities.CurrencyActivity$Connection: boolean isOnline()> to <android.net.NetworkInfo: boolean isConnectedOrConnecting()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <com.evernote.android.job.util.Device: com.evernote.android.job.JobRequest$NetworkType getNetworkType(android.content.Context)>[]--><android.net.NetworkInfo: boolean isConnectedOrConnecting()>
+#2.the call statck between class <com.evernote.android.job.util.Device: com.evernote.android.job.JobRequest$NetworkType getNetworkType(android.content.Context)> to <android.net.NetworkInfo: boolean isConnectedOrConnecting()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <com.squareup.picasso.Dispatcher$DispatcherHandler: void handleMessage(android.os.Message)>[]--><com.squareup.picasso.Dispatcher: void performNetworkStateChange(android.net.NetworkInfo)>[]--><com.squareup.picasso.PicassoExecutorService: void adjustThreadCount(android.net.NetworkInfo)>[]--><android.net.NetworkInfo: boolean isConnectedOrConnecting()>
+#3.the call statck between class <com.squareup.picasso.Dispatcher$DispatcherHandler: void handleMessage(android.os.Message)> to <android.net.NetworkInfo: boolean isConnectedOrConnecting()>has compatibility isssues！
+-----------------------------------------
+crashApis:14
+containsStatic:false
+containsTry:false
+4call by main package
+-----------------------------------------
+#################################################
+N 24 Potential Issue API: SDKCheck of <android.net.NetworkInfo: boolean isRoaming()> is checking!!!
+The life time of api is [3,30]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <com.evernote.android.job.util.Device: com.evernote.android.job.JobRequest$NetworkType getNetworkType(android.content.Context)>[]--><android.net.NetworkInfo: boolean isRoaming()>
+#1.the call statck between class <com.evernote.android.job.util.Device: com.evernote.android.job.JobRequest$NetworkType getNetworkType(android.content.Context)> to <android.net.NetworkInfo: boolean isRoaming()>has compatibility isssues！
+-----------------------------------------
+crashApis:15
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 25 Potential Issue API: SDKCheck of <android.app.job.JobInfo.Builder: android.app.job.JobInfo.Builder setRequiresStorageNotLow(boolean)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 21 22 23 24 25 
+Error road: <com.evernote.android.job.v26.JobProxy26: android.app.job.JobInfo$Builder createBaseBuilder(com.evernote.android.job.JobRequest,boolean)>[]--><android.app.job.JobInfo.Builder: android.app.job.JobInfo.Builder setRequiresStorageNotLow(boolean)>
+#1.the call statck between class <com.evernote.android.job.v26.JobProxy26: android.app.job.JobInfo$Builder createBaseBuilder(com.evernote.android.job.JobRequest,boolean)> to <android.app.job.JobInfo.Builder: android.app.job.JobInfo.Builder setRequiresStorageNotLow(boolean)>has compatibility isssues！
+-----------------------------------------
+crashApis:16
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 26 Potential Issue API: SDKCheck of <android.net.NetworkInfo: int getType()> is checking!!!
+The life time of api is [1,30]
+3call roads:
+0 Mainhead roads:
+3 Packageshead roads:
+-$i0 <= 13
+!!!this api will crash on sdk 31 
+Error road: <org.osmdroid.tileprovider.modules.MapTileDownloader$TileLoader: android.graphics.drawable.Drawable loadTile(long)>[]--><org.osmdroid.tileprovider.modules.NetworkAvailabliltyCheck: boolean getNetworkAvailable()>[[-$i0 <= 13]]--><android.net.NetworkInfo: int getType()>
+#1.the call statck between class <org.osmdroid.tileprovider.modules.MapTileDownloader$TileLoader: android.graphics.drawable.Drawable loadTile(long)> to <android.net.NetworkInfo: int getType()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <com.squareup.picasso.Dispatcher$DispatcherHandler: void handleMessage(android.os.Message)>[]--><com.squareup.picasso.Dispatcher: void performNetworkStateChange(android.net.NetworkInfo)>[]--><com.squareup.picasso.PicassoExecutorService: void adjustThreadCount(android.net.NetworkInfo)>[]--><android.net.NetworkInfo: int getType()>
+#2.the call statck between class <com.squareup.picasso.Dispatcher$DispatcherHandler: void handleMessage(android.os.Message)> to <android.net.NetworkInfo: int getType()>has compatibility isssues！
+-----------------------------------------
+-$i0 <= 13
+!!!this api will crash on sdk 31 
+Error road: <org.osmdroid.tileprovider.MapTileProviderBasic: boolean isDowngradedMode()>[]--><org.osmdroid.tileprovider.modules.NetworkAvailabliltyCheck: boolean getNetworkAvailable()>[[-$i0 <= 13]]--><android.net.NetworkInfo: int getType()>
+#3.the call statck between class <org.osmdroid.tileprovider.MapTileProviderBasic: boolean isDowngradedMode()> to <android.net.NetworkInfo: int getType()>has compatibility isssues！
+-----------------------------------------
+crashApis:17
+containsStatic:false
+containsTry:false
+4call by main package
+-----------------------------------------
+#################################################
+N 27 Potential Issue API: SDKCheck of <android.net.NetworkInfo: boolean isConnected()> is checking!!!
+The life time of api is [1,30]
+7call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: io.github.project_travel_mate.destinations.description.CityMapActivity dummyMainMethod_io_github_project__travel__mate_destinations_description_CityMapActivity(android.content.Intent)>[]--><io.github.project_travel_mate.destinations.description.CityMapActivity: void onCreate(android.os.Bundle)>[]--><utils.Utils: boolean isNetworkConnected(android.content.Context)>[]--><android.net.NetworkInfo: boolean isConnected()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.NetworkInfo: boolean isConnected()>has compatibility isssues！
+-----------------------------------------
+6 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <org.osmdroid.tileprovider.modules.NetworkAvailabliltyCheck: boolean getWiFiNetworkAvailable()>[]--><android.net.NetworkInfo: boolean isConnected()>
+#1.the call statck between class <org.osmdroid.tileprovider.modules.NetworkAvailabliltyCheck: boolean getWiFiNetworkAvailable()> to <android.net.NetworkInfo: boolean isConnected()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <com.squareup.picasso.NetworkRequestHandler: boolean shouldRetry(boolean,android.net.NetworkInfo)>[]--><android.net.NetworkInfo: boolean isConnected()>
+#2.the call statck between class <com.squareup.picasso.NetworkRequestHandler: boolean shouldRetry(boolean,android.net.NetworkInfo)> to <android.net.NetworkInfo: boolean isConnected()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <org.osmdroid.tileprovider.modules.MapTileDownloader$TileLoader: android.graphics.drawable.Drawable loadTile(long)>[]--><org.osmdroid.tileprovider.modules.NetworkAvailabliltyCheck: boolean getNetworkAvailable()>[]--><android.net.NetworkInfo: boolean isConnected()>
+#3.the call statck between class <org.osmdroid.tileprovider.modules.MapTileDownloader$TileLoader: android.graphics.drawable.Drawable loadTile(long)> to <android.net.NetworkInfo: boolean isConnected()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <org.osmdroid.tileprovider.modules.NetworkAvailabliltyCheck: boolean getCellularDataNetworkAvailable()>[]--><android.net.NetworkInfo: boolean isConnected()>
+#4.the call statck between class <org.osmdroid.tileprovider.modules.NetworkAvailabliltyCheck: boolean getCellularDataNetworkAvailable()> to <android.net.NetworkInfo: boolean isConnected()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <com.squareup.picasso.Dispatcher$DispatcherHandler: void handleMessage(android.os.Message)>[]--><com.squareup.picasso.Dispatcher: void performRetry(com.squareup.picasso.BitmapHunter)>[]--><android.net.NetworkInfo: boolean isConnected()>
+!!!this api will crash on sdk 31 
+Error road: <com.squareup.picasso.Dispatcher$DispatcherHandler: void handleMessage(android.os.Message)>[]--><com.squareup.picasso.Dispatcher: void performNetworkStateChange(android.net.NetworkInfo)>[]--><android.net.NetworkInfo: boolean isConnected()>
+#5.the call statck between class <com.squareup.picasso.Dispatcher$DispatcherHandler: void handleMessage(android.os.Message)> to <android.net.NetworkInfo: boolean isConnected()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <org.osmdroid.tileprovider.MapTileProviderBasic: boolean isDowngradedMode()>[]--><org.osmdroid.tileprovider.modules.NetworkAvailabliltyCheck: boolean getNetworkAvailable()>[]--><android.net.NetworkInfo: boolean isConnected()>
+#6.the call statck between class <org.osmdroid.tileprovider.MapTileProviderBasic: boolean isDowngradedMode()> to <android.net.NetworkInfo: boolean isConnected()>has compatibility isssues！
+-----------------------------------------
+crashApis:18
+crashApisInMain:3
+containsStatic:false
+containsTry:false
+7call by main package
+-----------------------------------------
+#################################################
+N 28 Potential Issue API: SDKCheck of <android.provider.MediaStore.Images.Thumbnails: android.graphics.Bitmap getThumbnail(android.content.ContentResolver,long,int,android.graphics.BitmapFactory.Options)> is checking!!!
+The life time of api is [5,29]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 30 31 
+Error road: <com.squareup.picasso.MediaStoreRequestHandler: com.squareup.picasso.RequestHandler$Result load(com.squareup.picasso.Request,int)>[]--><android.provider.MediaStore.Images.Thumbnails: android.graphics.Bitmap getThumbnail(android.content.ContentResolver,long,int,android.graphics.BitmapFactory.Options)>
+#1.the call statck between class <com.squareup.picasso.MediaStoreRequestHandler: com.squareup.picasso.RequestHandler$Result load(com.squareup.picasso.Request,int)> to <android.provider.MediaStore.Images.Thumbnails: android.graphics.Bitmap getThumbnail(android.content.ContentResolver,long,int,android.graphics.BitmapFactory.Options)>has compatibility isssues！
+-----------------------------------------
+crashApis:19
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 29 Potential Issue API: SDKCheck of <android.animation.Animator.AnimatorListener: void onAnimationStart(android.animation.Animator,boolean)> is checking!!!
+The life time of api is [26,31]
+61call roads:
+1 Mainhead roads:
+-$i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: io.github.project_travel_mate.friend.FriendsProfileActivity dummyMainMethod_io_github_project__travel__mate_friend_FriendsProfileActivity(android.content.Intent)>[]--><io.github.project_travel_mate.friend.FriendsProfileActivity: void onCreate(android.os.Bundle)>[]--><io.github.project_travel_mate.friend.FriendsProfileActivity: void getFriendDetails(java.lang.String)>[]--><com.airbnb.lottie.LottieAnimationView: void playAnimation()>[]--><com.airbnb.lottie.LottieDrawable: void playAnimation()>[]--><com.airbnb.lottie.utils.LottieValueAnimator: void playAnimation()>[]--><com.airbnb.lottie.utils.BaseLottieAnimator: void notifyStart(boolean)>[[-$i0 < 26]]--><android.animation.Animator.AnimatorListener: void onAnimationStart(android.animation.Animator,boolean)>
+One road protect good!
+-$i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: io.github.project_travel_mate.destinations.funfacts.FunFactsActivity dummyMainMethod_io_github_project__travel__mate_destinations_funfacts_FunFactsActivity(android.content.Intent)>[]--><io.github.project_travel_mate.destinations.funfacts.FunFactsActivity: void onCreate(android.os.Bundle)>[]--><io.github.project_travel_mate.destinations.funfacts.FunFactsActivity: void initPresenter()>[]--><io.github.project_travel_mate.destinations.funfacts.FunFactsPresenter: void initPresenter(java.lang.String,java.lang.String)>[]--><io.github.project_travel_mate.destinations.funfacts.FunFactsActivity: void showProgressDialog()>[]--><com.airbnb.lottie.LottieAnimationView: void playAnimation()>[]--><com.airbnb.lottie.LottieDrawable: void playAnimation()>[]--><com.airbnb.lottie.utils.LottieValueAnimator: void playAnimation()>[]--><com.airbnb.lottie.utils.BaseLottieAnimator: void notifyStart(boolean)>[[-$i0 < 26]]--><android.animation.Animator.AnimatorListener: void onAnimationStart(android.animation.Animator,boolean)>
+One road protect good!
+-$i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: io.github.project_travel_mate.mytrips.MyTripInfoActivity dummyMainMethod_io_github_project__travel__mate_mytrips_MyTripInfoActivity(android.content.Intent)>[]--><io.github.project_travel_mate.mytrips.MyTripInfoActivity: void onCreate(android.os.Bundle)>[]--><io.github.project_travel_mate.mytrips.MyTripInfoActivity: void getSingleTrip()>[]--><com.airbnb.lottie.LottieAnimationView: void playAnimation()>[]--><com.airbnb.lottie.LottieDrawable: void playAnimation()>[]--><com.airbnb.lottie.utils.LottieValueAnimator: void playAnimation()>[]--><com.airbnb.lottie.utils.BaseLottieAnimator: void notifyStart(boolean)>[[-$i0 < 26]]--><android.animation.Animator.AnimatorListener: void onAnimationStart(android.animation.Animator,boolean)>
+One road protect good!
+-$i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: io.github.project_travel_mate.destinations.description.CityHistoryActivity dummyMainMethod_io_github_project__travel__mate_destinations_description_CityHistoryActivity(android.content.Intent)>[]--><io.github.project_travel_mate.destinations.description.CityHistoryActivity: void onCreate(android.os.Bundle)>[]--><io.github.project_travel_mate.destinations.description.CityHistoryActivity: void fetchHistory()>[]--><com.airbnb.lottie.LottieAnimationView: void playAnimation()>[]--><com.airbnb.lottie.LottieDrawable: void playAnimation()>[]--><com.airbnb.lottie.utils.LottieValueAnimator: void playAnimation()>[]--><com.airbnb.lottie.utils.BaseLottieAnimator: void notifyStart(boolean)>[[-$i0 < 26]]--><android.animation.Animator.AnimatorListener: void onAnimationStart(android.animation.Animator,boolean)>
+One road protect good!
+60 Packageshead roads:
+-$i0 < 26
+Good road: <io.github.project_travel_mate.travel.swipefragmentrealtime.modefragments.ShoppingModeFragment: void access$200(io.github.project_travel_mate.travel.swipefragmentrealtime.modefragments.ShoppingModeFragment)>[]--><io.github.project_travel_mate.travel.swipefragmentrealtime.modefragments.ShoppingModeFragment: void noResult()>[]--><com.airbnb.lottie.LottieAnimationView: void playAnimation()>[]--><com.airbnb.lottie.LottieDrawable: void playAnimation()>[]--><com.airbnb.lottie.utils.LottieValueAnimator: void playAnimation()>[]--><com.airbnb.lottie.utils.BaseLottieAnimator: void notifyStart(boolean)>[[-$i0 < 26]]--><android.animation.Animator.AnimatorListener: void onAnimationStart(android.animation.Animator,boolean)>
+One road protect good!
+-$i0 < 26
+Good road: <io.github.project_travel_mate.travel.swipefragmentrealtime.modefragments.AtmModeFragment: void access$200(io.github.project_travel_mate.travel.swipefragmentrealtime.modefragments.AtmModeFragment)>[]--><io.github.project_travel_mate.travel.swipefragmentrealtime.modefragments.AtmModeFragment: void noResult()>[]--><com.airbnb.lottie.LottieAnimationView: void playAnimation()>[]--><com.airbnb.lottie.LottieDrawable: void playAnimation()>[]--><com.airbnb.lottie.utils.LottieValueAnimator: void playAnimation()>[]--><com.airbnb.lottie.utils.BaseLottieAnimator: void notifyStart(boolean)>[[-$i0 < 26]]--><android.animation.Animator.AnimatorListener: void onAnimationStart(android.animation.Animator,boolean)>
+One road protect good!
+-$i0 < 26
+Good road: <io.github.project_travel_mate.destinations.description.FinalCityInfoPresenter$1: void onFailure(okhttp3.Call,java.io.IOException)>[]--><io.github.project_travel_mate.destinations.description.FinalCityInfoActivity: void networkError()>[]--><com.airbnb.lottie.LottieAnimationView: void playAnimation()>[]--><com.airbnb.lottie.LottieDrawable: void playAnimation()>[]--><com.airbnb.lottie.utils.LottieValueAnimator: void playAnimation()>[]--><com.airbnb.lottie.utils.BaseLottieAnimator: void notifyStart(boolean)>[[-$i0 < 26]]--><android.animation.Animator.AnimatorListener: void onAnimationStart(android.animation.Animator,boolean)>
+One road protect good!
+-$i0 < 26
+Good road: <io.github.project_travel_mate.travel.swipefragmentrealtime.modefragments.MonumentsModeFragment: void access$200(io.github.project_travel_mate.travel.swipefragmentrealtime.modefragments.MonumentsModeFragment)>[]--><io.github.project_travel_mate.travel.swipefragmentrealtime.modefragments.MonumentsModeFragment: void noResult()>[]--><com.airbnb.lottie.LottieAnimationView: void playAnimation()>[]--><com.airbnb.lottie.LottieDrawable: void playAnimation()>[]--><com.airbnb.lottie.utils.LottieValueAnimator: void playAnimation()>[]--><com.airbnb.lottie.utils.BaseLottieAnimator: void notifyStart(boolean)>[[-$i0 < 26]]--><android.animation.Animator.AnimatorListener: void onAnimationStart(android.animation.Animator,boolean)>
+One road protect good!
+-$i0 < 26
+Good road: <io.github.project_travel_mate.SettingsFragment: void access$300(io.github.project_travel_mate.SettingsFragment)>[]--><io.github.project_travel_mate.SettingsFragment: void networkError()>[]--><com.airbnb.lottie.LottieAnimationView: void playAnimation()>[]--><com.airbnb.lottie.LottieDrawable: void playAnimation()>[]--><com.airbnb.lottie.utils.LottieValueAnimator: void playAnimation()>[]--><com.airbnb.lottie.utils.BaseLottieAnimator: void notifyStart(boolean)>[[-$i0 < 26]]--><android.animation.Animator.AnimatorListener: void onAnimationStart(android.animation.Animator,boolean)>
+One road protect good!
+-$i0 < 26
+Good road: <io.github.project_travel_mate.destinations.description.RestaurantsActivity: void access$200(io.github.project_travel_mate.destinations.description.RestaurantsActivity)>[]--><io.github.project_travel_mate.destinations.description.RestaurantsActivity: void networkError()>[]--><com.airbnb.lottie.LottieAnimationView: void playAnimation()>[]--><com.airbnb.lottie.LottieDrawable: void playAnimation()>[]--><com.airbnb.lottie.utils.LottieValueAnimator: void playAnimation()>[]--><com.airbnb.lottie.utils.BaseLottieAnimator: void notifyStart(boolean)>[[-$i0 < 26]]--><android.animation.Animator.AnimatorListener: void onAnimationStart(android.animation.Animator,boolean)>
+One road protect good!
+-$i0 < 26
+Good road: <io.github.project_travel_mate.destinations.description.WeatherActivity: void access$500(io.github.project_travel_mate.destinations.description.WeatherActivity)>[]--><io.github.project_travel_mate.destinations.description.WeatherActivity: void networkError()>[]--><com.airbnb.lottie.LottieAnimationView: void playAnimation()>[]--><com.airbnb.lottie.LottieDrawable: void playAnimation()>[]--><com.airbnb.lottie.utils.LottieValueAnimator: void playAnimation()>[]--><com.airbnb.lottie.utils.BaseLottieAnimator: void notifyStart(boolean)>[[-$i0 < 26]]--><android.animation.Animator.AnimatorListener: void onAnimationStart(android.animation.Animator,boolean)>
+One road protect good!
+-$i0 < 26
+Good road: <io.github.project_travel_mate.utilities.DailyQuotesFragment: void access$100(io.github.project_travel_mate.utilities.DailyQuotesFragment)>[]--><io.github.project_travel_mate.utilities.DailyQuotesFragment: void networkError()>[]--><com.airbnb.lottie.LottieAnimationView: void playAnimation()>[]--><com.airbnb.lottie.LottieDrawable: void playAnimation()>[]--><com.airbnb.lottie.utils.LottieValueAnimator: void playAnimation()>[]--><com.airbnb.lottie.utils.BaseLottieAnimator: void notifyStart(boolean)>[[-$i0 < 26]]--><android.animation.Animator.AnimatorListener: void onAnimationStart(android.animation.Animator,boolean)>
+One road protect good!
+-$i0 < 26
+Good road: <io.github.project_travel_mate.destinations.description.FinalCityInfoPresenter$2: void onFailure(okhttp3.Call,java.io.IOException)>[]--><io.github.project_travel_mate.destinations.description.FinalCityInfoActivity: void networkError()>[]--><com.airbnb.lottie.LottieAnimationView: void playAnimation()>[]--><com.airbnb.lottie.LottieDrawable: void playAnimation()>[]--><com.airbnb.lottie.utils.LottieValueAnimator: void playAnimation()>[]--><com.airbnb.lottie.utils.BaseLottieAnimator: void notifyStart(boolean)>[[-$i0 < 26]]--><android.animation.Animator.AnimatorListener: void onAnimationStart(android.animation.Animator,boolean)>
+One road protect good!
+-$i0 < 26
+Good road: <io.github.project_travel_mate.travel.ShoppingCurrentCityActivity: void access$100(io.github.project_travel_mate.travel.ShoppingCurrentCityActivity)>[]--><io.github.project_travel_mate.travel.ShoppingCurrentCityActivity: void networkError()>[]--><com.airbnb.lottie.LottieAnimationView: void playAnimation()>[]--><com.airbnb.lottie.LottieDrawable: void playAnimation()>[]--><com.airbnb.lottie.utils.LottieValueAnimator: void playAnimation()>[]--><com.airbnb.lottie.utils.BaseLottieAnimator: void notifyStart(boolean)>[[-$i0 < 26]]--><android.animation.Animator.AnimatorListener: void onAnimationStart(android.animation.Animator,boolean)>
+One road protect good!
+-$i0 < 26
+Good road: <com.airbnb.lottie.LottieDrawable: void start()>[]--><com.airbnb.lottie.LottieDrawable: void playAnimation()>[]--><com.airbnb.lottie.utils.LottieValueAnimator: void playAnimation()>[]--><com.airbnb.lottie.utils.BaseLottieAnimator: void notifyStart(boolean)>[[-$i0 < 26]]--><android.animation.Animator.AnimatorListener: void onAnimationStart(android.animation.Animator,boolean)>
+One road protect good!
+-$i0 < 26
+Good road: <io.github.project_travel_mate.travel.ShoppingCurrentCityActivity: void access$300(io.github.project_travel_mate.travel.ShoppingCurrentCityActivity)>[]--><io.github.project_travel_mate.travel.ShoppingCurrentCityActivity: void noResults()>[]--><com.airbnb.lottie.LottieAnimationView: void playAnimation()>[]--><com.airbnb.lottie.LottieDrawable: void playAnimation()>[]--><com.airbnb.lottie.utils.LottieValueAnimator: void playAnimation()>[]--><com.airbnb.lottie.utils.BaseLottieAnimator: void notifyStart(boolean)>[[-$i0 < 26]]--><android.animation.Animator.AnimatorListener: void onAnimationStart(android.animation.Animator,boolean)>
+One road protect good!
+-$i0 < 26
+Good road: <com.airbnb.lottie.LottieDrawable$2: void run(com.airbnb.lottie.LottieComposition)>[]--><com.airbnb.lottie.LottieDrawable: void playAnimation()>[]--><com.airbnb.lottie.utils.LottieValueAnimator: void playAnimation()>[]--><com.airbnb.lottie.utils.BaseLottieAnimator: void notifyStart(boolean)>[[-$i0 < 26]]--><android.animation.Animator.AnimatorListener: void onAnimationStart(android.animation.Animator,boolean)>
+One road protect good!
+-$i0 < 26
+Good road: <io.github.project_travel_mate.destinations.description.FinalCityInfoPresenter$1: void onResponse(okhttp3.Call,okhttp3.Response)>[]--><io.github.project_travel_mate.destinations.description.FinalCityInfoActivity: void networkError()>[]--><com.airbnb.lottie.LottieAnimationView: void playAnimation()>[]--><com.airbnb.lottie.LottieDrawable: void playAnimation()>[]--><com.airbnb.lottie.utils.LottieValueAnimator: void playAnimation()>[]--><com.airbnb.lottie.utils.BaseLottieAnimator: void notifyStart(boolean)>[[-$i0 < 26]]--><android.animation.Animator.AnimatorListener: void onAnimationStart(android.animation.Animator,boolean)>
+One road protect good!
+-$i0 < 26
+Good road: <io.github.project_travel_mate.destinations.description.RestaurantsActivity: void access$300(io.github.project_travel_mate.destinations.description.RestaurantsActivity)>[]--><io.github.project_travel_mate.destinations.description.RestaurantsActivity: void notFoundError()>[]--><com.airbnb.lottie.LottieAnimationView: void playAnimation()>[]--><com.airbnb.lottie.LottieDrawable: void playAnimation()>[]--><com.airbnb.lottie.utils.LottieValueAnimator: void playAnimation()>[]--><com.airbnb.lottie.utils.BaseLottieAnimator: void notifyStart(boolean)>[[-$i0 < 26]]--><android.animation.Animator.AnimatorListener: void onAnimationStart(android.animation.Animator,boolean)>
+One road protect good!
+-$i0 < 26
+Good road: <io.github.project_travel_mate.destinations.CityFragment: void access$1500(io.github.project_travel_mate.destinations.CityFragment)>[]--><io.github.project_travel_mate.destinations.CityFragment: void networkError()>[]--><com.airbnb.lottie.LottieAnimationView: void playAnimation()>[]--><com.airbnb.lottie.LottieDrawable: void playAnimation()>[]--><com.airbnb.lottie.utils.LottieValueAnimator: void playAnimation()>[]--><com.airbnb.lottie.utils.BaseLottieAnimator: void notifyStart(boolean)>[[-$i0 < 26]]--><android.animation.Animator.AnimatorListener: void onAnimationStart(android.animation.Animator,boolean)>
+One road protect good!
+-$i0 < 26
+Good road: <io.github.project_travel_mate.destinations.description.CityHistoryActivity: void access$100(io.github.project_travel_mate.destinations.description.CityHistoryActivity)>[]--><io.github.project_travel_mate.destinations.description.CityHistoryActivity: void networkError()>[]--><com.airbnb.lottie.LottieAnimationView: void playAnimation()>[]--><com.airbnb.lottie.LottieDrawable: void playAnimation()>[]--><com.airbnb.lottie.utils.LottieValueAnimator: void playAnimation()>[]--><com.airbnb.lottie.utils.BaseLottieAnimator: void notifyStart(boolean)>[[-$i0 < 26]]--><android.animation.Animator.AnimatorListener: void onAnimationStart(android.animation.Animator,boolean)>
+One road protect good!
+-$i0 < 26
+Good road: <io.github.project_travel_mate.travel.swipefragmentrealtime.modefragments.EatModeFragment: void access$200(io.github.project_travel_mate.travel.swipefragmentrealtime.modefragments.EatModeFragment)>[]--><io.github.project_travel_mate.travel.swipefragmentrealtime.modefragments.EatModeFragment: void noResult()>[]--><com.airbnb.lottie.LottieAnimationView: void playAnimation()>[]--><com.airbnb.lottie.LottieDrawable: void playAnimation()>[]--><com.airbnb.lottie.utils.LottieValueAnimator: void playAnimation()>[]--><com.airbnb.lottie.utils.BaseLottieAnimator: void notifyStart(boolean)>[[-$i0 < 26]]--><android.animation.Animator.AnimatorListener: void onAnimationStart(android.animation.Animator,boolean)>
+One road protect good!
+-$i0 < 26
+Good road: <io.github.project_travel_mate.notifications.NotificationsActivity: void access$100(io.github.project_travel_mate.notifications.NotificationsActivity)>[]--><io.github.project_travel_mate.notifications.NotificationsActivity: void emptyList()>[]--><com.airbnb.lottie.LottieAnimationView: void playAnimation()>[]--><com.airbnb.lottie.LottieDrawable: void playAnimation()>[]--><com.airbnb.lottie.utils.LottieValueAnimator: void playAnimation()>[]--><com.airbnb.lottie.utils.BaseLottieAnimator: void notifyStart(boolean)>[[-$i0 < 26]]--><android.animation.Animator.AnimatorListener: void onAnimationStart(android.animation.Animator,boolean)>
+One road protect good!
+-$i0 < 26
+Good road: <io.github.project_travel_mate.friend.FriendsProfileActivity: void access$700(io.github.project_travel_mate.friend.FriendsProfileActivity)>[]--><io.github.project_travel_mate.friend.FriendsProfileActivity: void networkError()>[]--><com.airbnb.lottie.LottieAnimationView: void playAnimation()>[]--><com.airbnb.lottie.LottieDrawable: void playAnimation()>[]--><com.airbnb.lottie.utils.LottieValueAnimator: void playAnimation()>[]--><com.airbnb.lottie.utils.BaseLottieAnimator: void notifyStart(boolean)>[[-$i0 < 26]]--><android.animation.Animator.AnimatorListener: void onAnimationStart(android.animation.Animator,boolean)>
+One road protect good!
+-$i0 < 26
+Good road: <io.github.project_travel_mate.travel.HotelsActivity: void access$100(io.github.project_travel_mate.travel.HotelsActivity)>[]--><io.github.project_travel_mate.travel.HotelsActivity: void networkError()>[]--><com.airbnb.lottie.LottieAnimationView: void playAnimation()>[]--><com.airbnb.lottie.LottieDrawable: void playAnimation()>[]--><com.airbnb.lottie.utils.LottieValueAnimator: void playAnimation()>[]--><com.airbnb.lottie.utils.BaseLottieAnimator: void notifyStart(boolean)>[[-$i0 < 26]]--><android.animation.Animator.AnimatorListener: void onAnimationStart(android.animation.Animator,boolean)>
+One road protect good!
+-$i0 < 26
+Good road: <io.github.project_travel_mate.mytrips.MyTripsFragment: void access$300(io.github.project_travel_mate.mytrips.MyTripsFragment)>[]--><io.github.project_travel_mate.mytrips.MyTripsFragment: void networkError()>[]--><com.airbnb.lottie.LottieAnimationView: void playAnimation()>[]--><com.airbnb.lottie.LottieDrawable: void playAnimation()>[]--><com.airbnb.lottie.utils.LottieValueAnimator: void playAnimation()>[]--><com.airbnb.lottie.utils.BaseLottieAnimator: void notifyStart(boolean)>[[-$i0 < 26]]--><android.animation.Animator.AnimatorListener: void onAnimationStart(android.animation.Animator,boolean)>
+One road protect good!
+-$i0 < 26
+Good road: <io.github.project_travel_mate.travel.swipefragmentrealtime.modefragments.AtmModeFragment: void access$300(io.github.project_travel_mate.travel.swipefragmentrealtime.modefragments.AtmModeFragment)>[]--><io.github.project_travel_mate.travel.swipefragmentrealtime.modefragments.AtmModeFragment: void networkError()>[]--><com.airbnb.lottie.LottieAnimationView: void playAnimation()>[]--><com.airbnb.lottie.LottieDrawable: void playAnimation()>[]--><com.airbnb.lottie.utils.LottieValueAnimator: void playAnimation()>[]--><com.airbnb.lottie.utils.BaseLottieAnimator: void notifyStart(boolean)>[[-$i0 < 26]]--><android.animation.Animator.AnimatorListener: void onAnimationStart(android.animation.Animator,boolean)>
+One road protect good!
+-$i0 < 26
+Good road: <io.github.project_travel_mate.travel.swipefragmentrealtime.modefragments.PetrolModeFragment: void access$200(io.github.project_travel_mate.travel.swipefragmentrealtime.modefragments.PetrolModeFragment)>[]--><io.github.project_travel_mate.travel.swipefragmentrealtime.modefragments.PetrolModeFragment: void noResult()>[]--><com.airbnb.lottie.LottieAnimationView: void playAnimation()>[]--><com.airbnb.lottie.LottieDrawable: void playAnimation()>[]--><com.airbnb.lottie.utils.LottieValueAnimator: void playAnimation()>[]--><com.airbnb.lottie.utils.BaseLottieAnimator: void notifyStart(boolean)>[[-$i0 < 26]]--><android.animation.Animator.AnimatorListener: void onAnimationStart(android.animation.Animator,boolean)>
+One road protect good!
+-$i0 < 26
+Good road: <io.github.project_travel_mate.travel.MapViewRealTimeActivity: void access$300(io.github.project_travel_mate.travel.MapViewRealTimeActivity)>[]--><io.github.project_travel_mate.travel.MapViewRealTimeActivity: void networkError()>[]--><com.airbnb.lottie.LottieAnimationView: void playAnimation()>[]--><com.airbnb.lottie.LottieDrawable: void playAnimation()>[]--><com.airbnb.lottie.utils.LottieValueAnimator: void playAnimation()>[]--><com.airbnb.lottie.utils.BaseLottieAnimator: void notifyStart(boolean)>[[-$i0 < 26]]--><android.animation.Animator.AnimatorListener: void onAnimationStart(android.animation.Animator,boolean)>
+One road protect good!
+-$i0 < 26
+Good road: <io.github.project_travel_mate.ProfileActivity: void access$100(io.github.project_travel_mate.ProfileActivity)>[]--><io.github.project_travel_mate.ProfileActivity: void networkError()>[]--><com.airbnb.lottie.LottieAnimationView: void playAnimation()>[]--><com.airbnb.lottie.LottieDrawable: void playAnimation()>[]--><com.airbnb.lottie.utils.LottieValueAnimator: void playAnimation()>[]--><com.airbnb.lottie.utils.BaseLottieAnimator: void notifyStart(boolean)>[[-$i0 < 26]]--><android.animation.Animator.AnimatorListener: void onAnimationStart(android.animation.Animator,boolean)>
+One road protect good!
+-$i0 < 26
+Good road: <io.github.project_travel_mate.travel.swipefragmentrealtime.modefragments.MonumentsModeFragment: void access$300(io.github.project_travel_mate.travel.swipefragmentrealtime.modefragments.MonumentsModeFragment)>[]--><io.github.project_travel_mate.travel.swipefragmentrealtime.modefragments.MonumentsModeFragment: void networkError()>[]--><com.airbnb.lottie.LottieAnimationView: void playAnimation()>[]--><com.airbnb.lottie.LottieDrawable: void playAnimation()>[]--><com.airbnb.lottie.utils.LottieValueAnimator: void playAnimation()>[]--><com.airbnb.lottie.utils.BaseLottieAnimator: void notifyStart(boolean)>[[-$i0 < 26]]--><android.animation.Animator.AnimatorListener: void onAnimationStart(android.animation.Animator,boolean)>
+One road protect good!
+-$i0 < 26
+Good road: <io.github.project_travel_mate.utilities.CurrencyActivity: void access$300(io.github.project_travel_mate.utilities.CurrencyActivity)>[]--><io.github.project_travel_mate.utilities.CurrencyActivity: void emptyListAnimation()>[]--><com.airbnb.lottie.LottieAnimationView: void playAnimation()>[]--><com.airbnb.lottie.LottieDrawable: void playAnimation()>[]--><com.airbnb.lottie.utils.LottieValueAnimator: void playAnimation()>[]--><com.airbnb.lottie.utils.BaseLottieAnimator: void notifyStart(boolean)>[[-$i0 < 26]]--><android.animation.Animator.AnimatorListener: void onAnimationStart(android.animation.Animator,boolean)>
+One road protect good!
+-$i0 < 26
+Good road: <io.github.project_travel_mate.travel.swipefragmentrealtime.modefragments.BusStopModeFragment: void access$300(io.github.project_travel_mate.travel.swipefragmentrealtime.modefragments.BusStopModeFragment)>[]--><io.github.project_travel_mate.travel.swipefragmentrealtime.modefragments.BusStopModeFragment: void networkError()>[]--><com.airbnb.lottie.LottieAnimationView: void playAnimation()>[]--><com.airbnb.lottie.LottieDrawable: void playAnimation()>[]--><com.airbnb.lottie.utils.LottieValueAnimator: void playAnimation()>[]--><com.airbnb.lottie.utils.BaseLottieAnimator: void notifyStart(boolean)>[[-$i0 < 26]]--><android.animation.Animator.AnimatorListener: void onAnimationStart(android.animation.Animator,boolean)>
+One road protect good!
+-$i0 < 26
+Good road: <io.github.project_travel_mate.notifications.NotificationsActivity: void onRefresh()>[]--><com.airbnb.lottie.LottieAnimationView: void playAnimation()>[]--><com.airbnb.lottie.LottieDrawable: void playAnimation()>[]--><com.airbnb.lottie.utils.LottieValueAnimator: void playAnimation()>[]--><com.airbnb.lottie.utils.BaseLottieAnimator: void notifyStart(boolean)>[[-$i0 < 26]]--><android.animation.Animator.AnimatorListener: void onAnimationStart(android.animation.Animator,boolean)>
+One road protect good!
+-$i0 < 26
+Good road: <io.github.project_travel_mate.mytrips.MyTripsFragment: void access$100(io.github.project_travel_mate.mytrips.MyTripsFragment)>[]--><io.github.project_travel_mate.mytrips.MyTripsFragment: void noResults()>[]--><com.airbnb.lottie.LottieAnimationView: void playAnimation()>[]--><com.airbnb.lottie.LottieDrawable: void playAnimation()>[]--><com.airbnb.lottie.utils.LottieValueAnimator: void playAnimation()>[]--><com.airbnb.lottie.utils.BaseLottieAnimator: void notifyStart(boolean)>[[-$i0 < 26]]--><android.animation.Animator.AnimatorListener: void onAnimationStart(android.animation.Animator,boolean)>
+One road protect good!
+-$i0 < 26
+Good road: <io.github.project_travel_mate.travel.HotelsActivity: void access$200(io.github.project_travel_mate.travel.HotelsActivity)>[]--><io.github.project_travel_mate.travel.HotelsActivity: void noResults()>[]--><com.airbnb.lottie.LottieAnimationView: void playAnimation()>[]--><com.airbnb.lottie.LottieDrawable: void playAnimation()>[]--><com.airbnb.lottie.utils.LottieValueAnimator: void playAnimation()>[]--><com.airbnb.lottie.utils.BaseLottieAnimator: void notifyStart(boolean)>[[-$i0 < 26]]--><android.animation.Animator.AnimatorListener: void onAnimationStart(android.animation.Animator,boolean)>
+One road protect good!
+-$i0 < 26
+Good road: <io.github.project_travel_mate.friend.MyFriendsFragment: void access$100(io.github.project_travel_mate.friend.MyFriendsFragment)>[]--><io.github.project_travel_mate.friend.MyFriendsFragment: void noResults()>[]--><com.airbnb.lottie.LottieAnimationView: void playAnimation()>[]--><com.airbnb.lottie.LottieDrawable: void playAnimation()>[]--><com.airbnb.lottie.utils.LottieValueAnimator: void playAnimation()>[]--><com.airbnb.lottie.utils.BaseLottieAnimator: void notifyStart(boolean)>[[-$i0 < 26]]--><android.animation.Animator.AnimatorListener: void onAnimationStart(android.animation.Animator,boolean)>
+One road protect good!
+-$i0 < 26
+Good road: <io.github.project_travel_mate.travel.swipefragmentrealtime.modefragments.EatModeFragment: void access$300(io.github.project_travel_mate.travel.swipefragmentrealtime.modefragments.EatModeFragment)>[]--><io.github.project_travel_mate.travel.swipefragmentrealtime.modefragments.EatModeFragment: void networkError()>[]--><com.airbnb.lottie.LottieAnimationView: void playAnimation()>[]--><com.airbnb.lottie.LottieDrawable: void playAnimation()>[]--><com.airbnb.lottie.utils.LottieValueAnimator: void playAnimation()>[]--><com.airbnb.lottie.utils.BaseLottieAnimator: void notifyStart(boolean)>[[-$i0 < 26]]--><android.animation.Animator.AnimatorListener: void onAnimationStart(android.animation.Animator,boolean)>
+One road protect good!
+-$i0 < 26
+Good road: <io.github.project_travel_mate.destinations.description.WeatherActivity: void access$400(io.github.project_travel_mate.destinations.description.WeatherActivity)>[]--><io.github.project_travel_mate.destinations.description.WeatherActivity: void emptyListAnimation()>[]--><com.airbnb.lottie.LottieAnimationView: void playAnimation()>[]--><com.airbnb.lottie.LottieDrawable: void playAnimation()>[]--><com.airbnb.lottie.utils.LottieValueAnimator: void playAnimation()>[]--><com.airbnb.lottie.utils.BaseLottieAnimator: void notifyStart(boolean)>[[-$i0 < 26]]--><android.animation.Animator.AnimatorListener: void onAnimationStart(android.animation.Animator,boolean)>
+One road protect good!
+-$i0 < 26
+Good road: <io.github.project_travel_mate.favourite.FavouriteCitiesFragment: void onViewCreated(android.view.View,android.os.Bundle)>[]--><io.github.project_travel_mate.favourite.FavouriteCitiesFragment: void noResults()>[]--><com.airbnb.lottie.LottieAnimationView: void playAnimation()>[]--><com.airbnb.lottie.LottieDrawable: void playAnimation()>[]--><com.airbnb.lottie.utils.LottieValueAnimator: void playAnimation()>[]--><com.airbnb.lottie.utils.BaseLottieAnimator: void notifyStart(boolean)>[[-$i0 < 26]]--><android.animation.Animator.AnimatorListener: void onAnimationStart(android.animation.Animator,boolean)>
+One road protect good!
+-$i0 < 26
+Good road: <io.github.project_travel_mate.mytrips.AddNewTripActivity: void access$100(io.github.project_travel_mate.mytrips.AddNewTripActivity)>[]--><io.github.project_travel_mate.mytrips.AddNewTripActivity: void networkError()>[]--><com.airbnb.lottie.LottieAnimationView: void playAnimation()>[]--><com.airbnb.lottie.LottieDrawable: void playAnimation()>[]--><com.airbnb.lottie.utils.LottieValueAnimator: void playAnimation()>[]--><com.airbnb.lottie.utils.BaseLottieAnimator: void notifyStart(boolean)>[[-$i0 < 26]]--><android.animation.Animator.AnimatorListener: void onAnimationStart(android.animation.Animator,boolean)>
+One road protect good!
+-$i0 < 26
+Good road: <io.github.project_travel_mate.travel.swipefragmentrealtime.modefragments.HangoutSpotFragment: void access$200(io.github.project_travel_mate.travel.swipefragmentrealtime.modefragments.HangoutSpotFragment)>[]--><io.github.project_travel_mate.travel.swipefragmentrealtime.modefragments.HangoutSpotFragment: void noResult()>[]--><com.airbnb.lottie.LottieAnimationView: void playAnimation()>[]--><com.airbnb.lottie.LottieDrawable: void playAnimation()>[]--><com.airbnb.lottie.utils.LottieValueAnimator: void playAnimation()>[]--><com.airbnb.lottie.utils.BaseLottieAnimator: void notifyStart(boolean)>[[-$i0 < 26]]--><android.animation.Animator.AnimatorListener: void onAnimationStart(android.animation.Animator,boolean)>
+One road protect good!
+-$i0 < 26
+Good road: <io.github.project_travel_mate.friend.MyFriendsFragment: void access$500(io.github.project_travel_mate.friend.MyFriendsFragment)>[]--><io.github.project_travel_mate.friend.MyFriendsFragment: void networkError()>[]--><com.airbnb.lottie.LottieAnimationView: void playAnimation()>[]--><com.airbnb.lottie.LottieDrawable: void playAnimation()>[]--><com.airbnb.lottie.utils.LottieValueAnimator: void playAnimation()>[]--><com.airbnb.lottie.utils.BaseLottieAnimator: void notifyStart(boolean)>[[-$i0 < 26]]--><android.animation.Animator.AnimatorListener: void onAnimationStart(android.animation.Animator,boolean)>
+One road protect good!
+-$i0 < 26
+Good road: <io.github.project_travel_mate.mytrips.MyTripInfoActivity: void access$300(io.github.project_travel_mate.mytrips.MyTripInfoActivity)>[]--><io.github.project_travel_mate.mytrips.MyTripInfoActivity: void networkError()>[]--><com.airbnb.lottie.LottieAnimationView: void playAnimation()>[]--><com.airbnb.lottie.LottieDrawable: void playAnimation()>[]--><com.airbnb.lottie.utils.LottieValueAnimator: void playAnimation()>[]--><com.airbnb.lottie.utils.BaseLottieAnimator: void notifyStart(boolean)>[[-$i0 < 26]]--><android.animation.Animator.AnimatorListener: void onAnimationStart(android.animation.Animator,boolean)>
+One road protect good!
+-$i0 < 26
+Good road: <io.github.project_travel_mate.notifications.NotificationsActivity: void access$500(io.github.project_travel_mate.notifications.NotificationsActivity)>[]--><io.github.project_travel_mate.notifications.NotificationsActivity: void networkError()>[]--><com.airbnb.lottie.LottieAnimationView: void playAnimation()>[]--><com.airbnb.lottie.LottieDrawable: void playAnimation()>[]--><com.airbnb.lottie.utils.LottieValueAnimator: void playAnimation()>[]--><com.airbnb.lottie.utils.BaseLottieAnimator: void notifyStart(boolean)>[[-$i0 < 26]]--><android.animation.Animator.AnimatorListener: void onAnimationStart(android.animation.Animator,boolean)>
+One road protect good!
+-$i0 < 26
+Good road: <io.github.project_travel_mate.utilities.WeatherForecastActivity: void access$100(io.github.project_travel_mate.utilities.WeatherForecastActivity)>[]--><io.github.project_travel_mate.utilities.WeatherForecastActivity: void networkError()>[]--><com.airbnb.lottie.LottieAnimationView: void playAnimation()>[]--><com.airbnb.lottie.LottieDrawable: void playAnimation()>[]--><com.airbnb.lottie.utils.LottieValueAnimator: void playAnimation()>[]--><com.airbnb.lottie.utils.BaseLottieAnimator: void notifyStart(boolean)>[[-$i0 < 26]]--><android.animation.Animator.AnimatorListener: void onAnimationStart(android.animation.Animator,boolean)>
+One road protect good!
+-$i0 < 26
+Good road: <io.github.project_travel_mate.utilities.CurrencyActivity: void access$400(io.github.project_travel_mate.utilities.CurrencyActivity)>[]--><io.github.project_travel_mate.utilities.CurrencyActivity: void networkError()>[]--><com.airbnb.lottie.LottieAnimationView: void playAnimation()>[]--><com.airbnb.lottie.LottieDrawable: void playAnimation()>[]--><com.airbnb.lottie.utils.LottieValueAnimator: void playAnimation()>[]--><com.airbnb.lottie.utils.BaseLottieAnimator: void notifyStart(boolean)>[[-$i0 < 26]]--><android.animation.Animator.AnimatorListener: void onAnimationStart(android.animation.Animator,boolean)>
+One road protect good!
+-$i0 < 26
+Good road: <io.github.project_travel_mate.utilities.BugReportFragment: void access$000(io.github.project_travel_mate.utilities.BugReportFragment)>[]--><io.github.project_travel_mate.utilities.BugReportFragment: void noResult()>[]--><com.airbnb.lottie.LottieAnimationView: void playAnimation()>[]--><com.airbnb.lottie.LottieDrawable: void playAnimation()>[]--><com.airbnb.lottie.utils.LottieValueAnimator: void playAnimation()>[]--><com.airbnb.lottie.utils.BaseLottieAnimator: void notifyStart(boolean)>[[-$i0 < 26]]--><android.animation.Animator.AnimatorListener: void onAnimationStart(android.animation.Animator,boolean)>
+One road protect good!
+-$i0 < 26
+Good road: <io.github.project_travel_mate.travel.swipefragmentrealtime.modefragments.HangoutSpotFragment: void access$300(io.github.project_travel_mate.travel.swipefragmentrealtime.modefragments.HangoutSpotFragment)>[]--><io.github.project_travel_mate.travel.swipefragmentrealtime.modefragments.HangoutSpotFragment: void networkError()>[]--><com.airbnb.lottie.LottieAnimationView: void playAnimation()>[]--><com.airbnb.lottie.LottieDrawable: void playAnimation()>[]--><com.airbnb.lottie.utils.LottieValueAnimator: void playAnimation()>[]--><com.airbnb.lottie.utils.BaseLottieAnimator: void notifyStart(boolean)>[[-$i0 < 26]]--><android.animation.Animator.AnimatorListener: void onAnimationStart(android.animation.Animator,boolean)>
+One road protect good!
+-$i0 < 26
+Good road: <io.github.project_travel_mate.destinations.description.TweetsDescriptionActivity: void access$100(io.github.project_travel_mate.destinations.description.TweetsDescriptionActivity)>[]--><io.github.project_travel_mate.destinations.description.TweetsDescriptionActivity: void networkError()>[]--><com.airbnb.lottie.LottieAnimationView: void playAnimation()>[]--><com.airbnb.lottie.LottieDrawable: void playAnimation()>[]--><com.airbnb.lottie.utils.LottieValueAnimator: void playAnimation()>[]--><com.airbnb.lottie.utils.BaseLottieAnimator: void notifyStart(boolean)>[[-$i0 < 26]]--><android.animation.Animator.AnimatorListener: void onAnimationStart(android.animation.Animator,boolean)>
+One road protect good!
+-$i0 < 26
+Good road: <io.github.project_travel_mate.travel.swipefragmentrealtime.modefragments.PetrolModeFragment: void access$300(io.github.project_travel_mate.travel.swipefragmentrealtime.modefragments.PetrolModeFragment)>[]--><io.github.project_travel_mate.travel.swipefragmentrealtime.modefragments.PetrolModeFragment: void networkError()>[]--><com.airbnb.lottie.LottieAnimationView: void playAnimation()>[]--><com.airbnb.lottie.LottieDrawable: void playAnimation()>[]--><com.airbnb.lottie.utils.LottieValueAnimator: void playAnimation()>[]--><com.airbnb.lottie.utils.BaseLottieAnimator: void notifyStart(boolean)>[[-$i0 < 26]]--><android.animation.Animator.AnimatorListener: void onAnimationStart(android.animation.Animator,boolean)>
+One road protect good!
+-$i0 < 26
+Good road: <io.github.project_travel_mate.travel.swipefragmentrealtime.modefragments.BusStopModeFragment: void access$200(io.github.project_travel_mate.travel.swipefragmentrealtime.modefragments.BusStopModeFragment)>[]--><io.github.project_travel_mate.travel.swipefragmentrealtime.modefragments.BusStopModeFragment: void noResult()>[]--><com.airbnb.lottie.LottieAnimationView: void playAnimation()>[]--><com.airbnb.lottie.LottieDrawable: void playAnimation()>[]--><com.airbnb.lottie.utils.LottieValueAnimator: void playAnimation()>[]--><com.airbnb.lottie.utils.BaseLottieAnimator: void notifyStart(boolean)>[[-$i0 < 26]]--><android.animation.Animator.AnimatorListener: void onAnimationStart(android.animation.Animator,boolean)>
+One road protect good!
+-$i0 < 26
+Good road: <io.github.project_travel_mate.utilities.UpcomingWeekendsActivity: void access$400(io.github.project_travel_mate.utilities.UpcomingWeekendsActivity)>[]--><io.github.project_travel_mate.utilities.UpcomingWeekendsActivity: void networkError()>[]--><com.airbnb.lottie.LottieAnimationView: void playAnimation()>[]--><com.airbnb.lottie.LottieDrawable: void playAnimation()>[]--><com.airbnb.lottie.utils.LottieValueAnimator: void playAnimation()>[]--><com.airbnb.lottie.utils.BaseLottieAnimator: void notifyStart(boolean)>[[-$i0 < 26]]--><android.animation.Animator.AnimatorListener: void onAnimationStart(android.animation.Animator,boolean)>
+One road protect good!
+-$i0 < 26
+Good road: <com.airbnb.lottie.LottieAnimationView: void onAttachedToWindow()>[]--><com.airbnb.lottie.LottieAnimationView: void playAnimation()>[]--><com.airbnb.lottie.LottieDrawable: void playAnimation()>[]--><com.airbnb.lottie.utils.LottieValueAnimator: void playAnimation()>[]--><com.airbnb.lottie.utils.BaseLottieAnimator: void notifyStart(boolean)>[[-$i0 < 26]]--><android.animation.Animator.AnimatorListener: void onAnimationStart(android.animation.Animator,boolean)>
+One road protect good!
+-$i0 < 26
+Good road: <io.github.project_travel_mate.utilities.BugReportFragment: void access$400(io.github.project_travel_mate.utilities.BugReportFragment)>[]--><io.github.project_travel_mate.utilities.BugReportFragment: void networkError()>[]--><com.airbnb.lottie.LottieAnimationView: void playAnimation()>[]--><com.airbnb.lottie.LottieDrawable: void playAnimation()>[]--><com.airbnb.lottie.utils.LottieValueAnimator: void playAnimation()>[]--><com.airbnb.lottie.utils.BaseLottieAnimator: void notifyStart(boolean)>[[-$i0 < 26]]--><android.animation.Animator.AnimatorListener: void onAnimationStart(android.animation.Animator,boolean)>
+One road protect good!
+-$i0 < 26
+Good road: <io.github.project_travel_mate.destinations.description.FinalCityInfoPresenter$2: void onResponse(okhttp3.Call,okhttp3.Response)>[]--><io.github.project_travel_mate.destinations.description.FinalCityInfoActivity: void networkError()>[]--><com.airbnb.lottie.LottieAnimationView: void playAnimation()>[]--><com.airbnb.lottie.LottieDrawable: void playAnimation()>[]--><com.airbnb.lottie.utils.LottieValueAnimator: void playAnimation()>[]--><com.airbnb.lottie.utils.BaseLottieAnimator: void notifyStart(boolean)>[[-$i0 < 26]]--><android.animation.Animator.AnimatorListener: void onAnimationStart(android.animation.Animator,boolean)>
+One road protect good!
+-$i0 < 26
+Good road: <io.github.project_travel_mate.travel.swipefragmentrealtime.modefragments.HospitalModeFragment: void access$300(io.github.project_travel_mate.travel.swipefragmentrealtime.modefragments.HospitalModeFragment)>[]--><io.github.project_travel_mate.travel.swipefragmentrealtime.modefragments.HospitalModeFragment: void networkError()>[]--><com.airbnb.lottie.LottieAnimationView: void playAnimation()>[]--><com.airbnb.lottie.LottieDrawable: void playAnimation()>[]--><com.airbnb.lottie.utils.LottieValueAnimator: void playAnimation()>[]--><com.airbnb.lottie.utils.BaseLottieAnimator: void notifyStart(boolean)>[[-$i0 < 26]]--><android.animation.Animator.AnimatorListener: void onAnimationStart(android.animation.Animator,boolean)>
+One road protect good!
+-$i0 < 26
+Good road: <io.github.project_travel_mate.utilities.DailyQuotesFragment: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)>[]--><io.github.project_travel_mate.utilities.DailyQuotesFragment: void getQuote()>[]--><com.airbnb.lottie.LottieAnimationView: void playAnimation()>[]--><com.airbnb.lottie.LottieDrawable: void playAnimation()>[]--><com.airbnb.lottie.utils.LottieValueAnimator: void playAnimation()>[]--><com.airbnb.lottie.utils.BaseLottieAnimator: void notifyStart(boolean)>[[-$i0 < 26]]--><android.animation.Animator.AnimatorListener: void onAnimationStart(android.animation.Animator,boolean)>
+One road protect good!
+-$i0 < 26
+Good road: <io.github.project_travel_mate.travel.ShoppingCurrentCityActivity_ViewBinding$1: void doClick(android.view.View)>[]--><io.github.project_travel_mate.travel.ShoppingCurrentCityActivity: void onClick()>[]--><io.github.project_travel_mate.travel.ShoppingCurrentCityActivity: void networkError()>[]--><com.airbnb.lottie.LottieAnimationView: void playAnimation()>[]--><com.airbnb.lottie.LottieDrawable: void playAnimation()>[]--><com.airbnb.lottie.utils.LottieValueAnimator: void playAnimation()>[]--><com.airbnb.lottie.utils.BaseLottieAnimator: void notifyStart(boolean)>[[-$i0 < 26]]--><android.animation.Animator.AnimatorListener: void onAnimationStart(android.animation.Animator,boolean)>
+One road protect good!
+-$i0 < 26
+Good road: <io.github.project_travel_mate.travel.swipefragmentrealtime.modefragments.HospitalModeFragment: void access$200(io.github.project_travel_mate.travel.swipefragmentrealtime.modefragments.HospitalModeFragment)>[]--><io.github.project_travel_mate.travel.swipefragmentrealtime.modefragments.HospitalModeFragment: void noResult()>[]--><com.airbnb.lottie.LottieAnimationView: void playAnimation()>[]--><com.airbnb.lottie.LottieDrawable: void playAnimation()>[]--><com.airbnb.lottie.utils.LottieValueAnimator: void playAnimation()>[]--><com.airbnb.lottie.utils.BaseLottieAnimator: void notifyStart(boolean)>[[-$i0 < 26]]--><android.animation.Animator.AnimatorListener: void onAnimationStart(android.animation.Animator,boolean)>
+One road protect good!
+-$i0 < 26
+Good road: <com.airbnb.lottie.LottieAnimationView: void onRestoreInstanceState(android.os.Parcelable)>[]--><com.airbnb.lottie.LottieAnimationView: void playAnimation()>[]--><com.airbnb.lottie.LottieDrawable: void playAnimation()>[]--><com.airbnb.lottie.utils.LottieValueAnimator: void playAnimation()>[]--><com.airbnb.lottie.utils.BaseLottieAnimator: void notifyStart(boolean)>[[-$i0 < 26]]--><android.animation.Animator.AnimatorListener: void onAnimationStart(android.animation.Animator,boolean)>
+One road protect good!
+-$i0 < 26
+Good road: <io.github.project_travel_mate.utilities.UpcomingWeekendsActivity: void access$100(io.github.project_travel_mate.utilities.UpcomingWeekendsActivity)>[]--><io.github.project_travel_mate.utilities.UpcomingWeekendsActivity: void noResults()>[]--><com.airbnb.lottie.LottieAnimationView: void playAnimation()>[]--><com.airbnb.lottie.LottieDrawable: void playAnimation()>[]--><com.airbnb.lottie.utils.LottieValueAnimator: void playAnimation()>[]--><com.airbnb.lottie.utils.BaseLottieAnimator: void notifyStart(boolean)>[[-$i0 < 26]]--><android.animation.Animator.AnimatorListener: void onAnimationStart(android.animation.Animator,boolean)>
+One road protect good!
+-$i0 < 26
+Good road: <io.github.project_travel_mate.travel.swipefragmentrealtime.modefragments.ShoppingModeFragment: void access$300(io.github.project_travel_mate.travel.swipefragmentrealtime.modefragments.ShoppingModeFragment)>[]--><io.github.project_travel_mate.travel.swipefragmentrealtime.modefragments.ShoppingModeFragment: void networkError()>[]--><com.airbnb.lottie.LottieAnimationView: void playAnimation()>[]--><com.airbnb.lottie.LottieDrawable: void playAnimation()>[]--><com.airbnb.lottie.utils.LottieValueAnimator: void playAnimation()>[]--><com.airbnb.lottie.utils.BaseLottieAnimator: void notifyStart(boolean)>[[-$i0 < 26]]--><android.animation.Animator.AnimatorListener: void onAnimationStart(android.animation.Animator,boolean)>
+One road protect good!
+-$i0 < 26
+Good road: <io.github.project_travel_mate.destinations.description.TweetsActivity: void access$300(io.github.project_travel_mate.destinations.description.TweetsActivity)>[]--><io.github.project_travel_mate.destinations.description.TweetsActivity: void networkError()>[]--><com.airbnb.lottie.LottieAnimationView: void playAnimation()>[]--><com.airbnb.lottie.LottieDrawable: void playAnimation()>[]--><com.airbnb.lottie.utils.LottieValueAnimator: void playAnimation()>[]--><com.airbnb.lottie.utils.BaseLottieAnimator: void notifyStart(boolean)>[[-$i0 < 26]]--><android.animation.Animator.AnimatorListener: void onAnimationStart(android.animation.Animator,boolean)>
+One road protect good!
+containsStatic:false
+containsTry:false
+61call by main package
+-----------------------------------------
+crashApis numbers:19
+crashApis numbers in main road:3
+On Android Version 16 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 17 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 18 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 19 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 20 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 21 this app may have error api use(at least): 9 and error api roads: 18
+On Android Version 22 this app may have error api use(at least): 7 and error api roads: 12
+On Android Version 23 this app may have error api use(at least): 6 and error api roads: 10
+On Android Version 24 this app may have error api use(at least): 4 and error api roads: 4
+On Android Version 25 this app may have error api use(at least): 4 and error api roads: 4
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 2 and error api roads: 2
+On Android Version 31 this app may have error api use(at least): 10 and error api roads: 29

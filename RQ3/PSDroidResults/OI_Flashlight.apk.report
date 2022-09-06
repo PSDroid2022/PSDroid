@@ -1,0 +1,84 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/OI_Flashlight.apk
+Entry Points[org.openintents.flashlight.WidgetService, org.openintents.distribution.NewVersionActivity, org.openintents.flashlight.Widget, org.openintents.distribution.EulaActivity, org.openintents.flashlight.FlashlightPrefs, org.openintents.flashlight.Flashlight]
+FllowDroidcallgraph size:573
+Soot started on Mon Jul 11 09:15:44 CST 2022
+Soot finished on Mon Jul 11 09:15:47 CST 2022
+Soot has run for 0 min. 2 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 5
+Declared Target Sdk version is: 25
+Declared Max Sdk version is: -1
+Collected 179 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.os.ServiceManager: android.os.IBinder getService(java.lang.String)> is checking!!!
+The life time of api is [4,26]
+1call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.openintents.flashlight.Flashlight dummyMainMethod_org_openintents_flashlight_Flashlight(android.content.Intent)>[]--><org.openintents.flashlight.Flashlight: void onResume()>[]--><org.openintents.flashlight.Flashlight: void wakeLock()>[]--><org.openintents.flashlight.BrightnessOld: void setBrightness(float)>[]--><org.openintents.flashlight.BrightnessOld: void setBrightnessOld(int)>[[try]]--><android.os.ServiceManager: android.os.IBinder getService(java.lang.String)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:true
+1call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.os.BaseBundle: boolean getBoolean(java.lang.String)> is checking!!!
+The life time of api is [22,31]
+3call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.openintents.flashlight.Flashlight dummyMainMethod_org_openintents_flashlight_Flashlight(android.content.Intent)>[]--><org.openintents.flashlight.Flashlight: android.app.Dialog onCreateDialog(int)>[]--><org.openintents.distribution.AboutDialog: void <init>(android.content.Context)>[]--><org.openintents.distribution.DownloadAppDialog: void <init>(android.content.Context,int,int,int,int)>[]--><org.openintents.distribution.DownloadAppDialog: void set(int,int,int,int)>[]--><org.openintents.distribution.DownloadAppDialog: void set(java.lang.String,java.lang.String,java.lang.String,java.lang.String)>[]--><org.openintents.distribution.MarketUtils: boolean hideMarketLink(android.content.Context)>[[try]]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+One road protect good!
+2 Packageshead roads:
+try
+Good road with try: <org.openintents.distribution.DownloadOIAppDialog: void <init>(android.content.Context,int)>[]--><org.openintents.distribution.DownloadAppDialog: void set(int,int,int,int)>[]--><org.openintents.distribution.DownloadAppDialog: void set(java.lang.String,java.lang.String,java.lang.String,java.lang.String)>[]--><org.openintents.distribution.MarketUtils: boolean hideMarketLink(android.content.Context)>[[try]]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+One road protect good!
+try
+Good road with try: <org.openintents.distribution.InfoActivity: android.app.Dialog onCreateDialog(int)>[]--><org.openintents.distribution.InfoActivity: android.app.AlertDialog buildGetFromMarketDialog(int)>[]--><org.openintents.distribution.DownloadAppDialog: void <init>(android.content.Context,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>[]--><org.openintents.distribution.DownloadAppDialog: void set(java.lang.String,java.lang.String,java.lang.String,java.lang.String)>[]--><org.openintents.distribution.MarketUtils: boolean hideMarketLink(android.content.Context)>[[try]]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+One road protect good!
+try
+Good road with try: <org.openintents.distribution.InfoActivity: android.app.Dialog onCreateDialog(int)>[]--><org.openintents.distribution.DistributionLibraryListActivity: android.app.Dialog onCreateDialog(int)>[]--><org.openintents.distribution.DistributionLibrary: android.app.Dialog onCreateDialog(int)>[]--><org.openintents.distribution.UpdateDialog: void <init>(android.content.Context)>[]--><org.openintents.distribution.DownloadAppDialog: void <init>(android.content.Context,int,int,int,int)>[]--><org.openintents.distribution.DownloadAppDialog: void set(int,int,int,int)>[]--><org.openintents.distribution.DownloadAppDialog: void set(java.lang.String,java.lang.String,java.lang.String,java.lang.String)>[]--><org.openintents.distribution.MarketUtils: boolean hideMarketLink(android.content.Context)>[[try]]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+One road protect good!
+containsStatic:false
+containsTry:true
+3call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.lang.String getString(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.openintents.distribution.EulaActivity dummyMainMethod_org_openintents_distribution_EulaActivity(android.content.Intent)>[]--><org.openintents.distribution.EulaActivity: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.openintents.distribution.NewVersionActivity dummyMainMethod_org_openintents_distribution_NewVersionActivity(android.content.Intent)>[]--><org.openintents.distribution.NewVersionActivity: void onCreate(android.os.Bundle)>[]--><org.openintents.distribution.EulaActivity: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:1
+crashApisInMain:1
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+crashApis numbers:1
+crashApis numbers in main road:1
+On Android Version 16 this app may have error api use(at least): 1 and error api roads: 2
+On Android Version 17 this app may have error api use(at least): 1 and error api roads: 2
+On Android Version 18 this app may have error api use(at least): 1 and error api roads: 2
+On Android Version 19 this app may have error api use(at least): 1 and error api roads: 2
+On Android Version 20 this app may have error api use(at least): 1 and error api roads: 2
+On Android Version 21 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 22 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 23 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 24 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 25 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 31 this app may have error api use(at least): 0 and error api roads: 0

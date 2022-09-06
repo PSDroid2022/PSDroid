@@ -1,0 +1,122 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/WREK_Online.apk
+Entry Points[com.selbie.wrek.AboutActivity, com.selbie.wrek.MediaPlayerService, com.selbie.wrek.SettingsActivity, com.selbie.wrek.NotificationReceiver, com.selbie.wrek.MainActivity]
+FllowDroidcallgraph size:1042
+Soot started on Mon Jul 11 15:35:54 CST 2022
+Soot finished on Mon Jul 11 15:35:57 CST 2022
+Soot has run for 0 min. 2 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 19
+Declared Target Sdk version is: 19
+Declared Max Sdk version is: -1
+Collected 196 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.net.NetworkInfo: int getType()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <com.selbie.wrek.ScheduleListFragment: void onListItemClick(android.widget.ListView,android.view.View,int,long)>[]--><com.selbie.wrek.ScheduleListFragment: int getTargetBitrate()>[]--><android.net.NetworkInfo: int getType()>
+#1.the call statck between class <com.selbie.wrek.ScheduleListFragment: void onListItemClick(android.widget.ListView,android.view.View,int,long)> to <android.net.NetworkInfo: int getType()>has compatibility isssues！
+-----------------------------------------
+crashApis:1
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <com.selbie.wrek.ScheduleListFragment: void onListItemClick(android.widget.ListView,android.view.View,int,long)>[]--><com.selbie.wrek.ScheduleListFragment: int getTargetBitrate()>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>
+#1.the call statck between class <com.selbie.wrek.ScheduleListFragment: void onListItemClick(android.widget.ListView,android.view.View,int,long)> to <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>has compatibility isssues！
+-----------------------------------------
+crashApis:2
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.net.NetworkInfo: boolean isConnected()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <com.selbie.wrek.ScheduleListFragment: void onListItemClick(android.widget.ListView,android.view.View,int,long)>[]--><com.selbie.wrek.ScheduleListFragment: int getTargetBitrate()>[]--><android.net.NetworkInfo: boolean isConnected()>
+#1.the call statck between class <com.selbie.wrek.ScheduleListFragment: void onListItemClick(android.widget.ListView,android.view.View,int,long)> to <android.net.NetworkInfo: boolean isConnected()>has compatibility isssues！
+-----------------------------------------
+crashApis:3
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.net.ConnectivityManager: boolean isActiveNetworkMetered()> is checking!!!
+The life time of api is [16,30]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i0 < 16
+!!!this api will crash on sdk 31 
+Error road: <com.selbie.wrek.ScheduleListFragment: void onListItemClick(android.widget.ListView,android.view.View,int,long)>[]--><com.selbie.wrek.ScheduleListFragment: int getTargetBitrate()>[[-$i0 < 16]]--><android.net.ConnectivityManager: boolean isActiveNetworkMetered()>
+#1.the call statck between class <com.selbie.wrek.ScheduleListFragment: void onListItemClick(android.widget.ListView,android.view.View,int,long)> to <android.net.ConnectivityManager: boolean isActiveNetworkMetered()>has compatibility isssues！
+-----------------------------------------
+crashApis:4
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.net.NetworkInfo: boolean isRoaming()> is checking!!!
+The life time of api is [3,30]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <com.selbie.wrek.ScheduleListFragment: void onListItemClick(android.widget.ListView,android.view.View,int,long)>[]--><com.selbie.wrek.ScheduleListFragment: int getTargetBitrate()>[]--><android.net.NetworkInfo: boolean isRoaming()>
+#1.the call statck between class <com.selbie.wrek.ScheduleListFragment: void onListItemClick(android.widget.ListView,android.view.View,int,long)> to <android.net.NetworkInfo: boolean isRoaming()>has compatibility isssues！
+-----------------------------------------
+crashApis:5
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 5 Potential Issue API: SDKCheck of <android.net.NetworkInfo: java.lang.String getTypeName()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <com.selbie.wrek.ScheduleListFragment: void onListItemClick(android.widget.ListView,android.view.View,int,long)>[]--><com.selbie.wrek.ScheduleListFragment: int getTargetBitrate()>[]--><android.net.NetworkInfo: java.lang.String getTypeName()>
+#1.the call statck between class <com.selbie.wrek.ScheduleListFragment: void onListItemClick(android.widget.ListView,android.view.View,int,long)> to <android.net.NetworkInfo: java.lang.String getTypeName()>has compatibility isssues！
+-----------------------------------------
+crashApis:6
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+crashApis numbers:6
+crashApis numbers in main road:0
+On Android Version 16 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 17 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 18 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 19 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 20 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 21 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 22 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 23 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 24 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 25 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 31 this app may have error api use(at least): 6 and error api roads: 6

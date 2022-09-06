@@ -1,0 +1,69 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/MoTAC.apk
+Entry Points[de.karbach.tac.TAC, de.karbach.tac.Preferences, de.karbach.tac.ui.ImageViewActivity, de.karbach.tac.ui.ExportedImagesActivity, de.karbach.tac.ui.MoveListActivity]
+FllowDroidcallgraph size:1237
+Soot started on Mon Jul 11 07:34:29 CST 2022
+Soot finished on Mon Jul 11 07:34:35 CST 2022
+Soot has run for 0 min. 5 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 19
+Declared Target Sdk version is: 23
+Declared Max Sdk version is: -1
+Collected 257 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.lang.String getString(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <de.karbach.tac.ui.fragments.ImageViewFragment: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#1.the call statck between class <de.karbach.tac.ui.fragments.ImageViewFragment: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <de.karbach.tac.ui.fragments.CardHolder: void onActivityCreated(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#2.the call statck between class <de.karbach.tac.ui.fragments.CardHolder: void onActivityCreated(android.os.Bundle)> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:1
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)> is checking!!!
+The life time of api is [21,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <de.karbach.tac.ui.ImageViewActivity: android.support.v4.app.Fragment createFragment()>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#1.the call statck between class <de.karbach.tac.ui.ImageViewActivity: android.support.v4.app.Fragment createFragment()> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <de.karbach.tac.ui.fragments.CardHolder: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#2.the call statck between class <de.karbach.tac.ui.fragments.CardHolder: void onSaveInstanceState(android.os.Bundle)> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:2
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+crashApis numbers:2
+crashApis numbers in main road:0
+On Android Version 16 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 17 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 18 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 19 this app may have error api use(at least): 2 and error api roads: 4
+On Android Version 20 this app may have error api use(at least): 2 and error api roads: 4
+On Android Version 21 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 22 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 23 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 24 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 25 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 31 this app may have error api use(at least): 0 and error api roads: 0

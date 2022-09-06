@@ -1,0 +1,512 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/Kimai.apk
+Entry Points[net.gsantner.webappwithlogin.activity.MainActivity, net.gsantner.webappwithlogin.App, net.gsantner.webappwithlogin.activity.AboutActivity, net.gsantner.webappwithlogin.activity.SettingsActivity]
+FllowDroidcallgraph size:595
+Soot started on Mon Jul 11 06:06:25 CST 2022
+Soot finished on Mon Jul 11 06:06:34 CST 2022
+Soot has run for 0 min. 9 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 14
+Declared Target Sdk version is: 27
+Declared Max Sdk version is: -1
+Collected 270 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <org.apache.http.params.HttpConnectionParams: void setSoTimeout(org.apache.http.params.HttpParams,int)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.apache.http.params.HttpConnectionParamBean: void setSoTimeout(int)>[]--><org.apache.http.params.HttpConnectionParams: void setSoTimeout(org.apache.http.params.HttpParams,int)>
+#1.the call statck between class <org.apache.http.params.HttpConnectionParamBean: void setSoTimeout(int)> to <org.apache.http.params.HttpConnectionParams: void setSoTimeout(org.apache.http.params.HttpParams,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:1
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.text.Html: android.text.Spanned fromHtml(java.lang.String,int)> is checking!!!
+The life time of api is [24,31]
+1call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: net.gsantner.webappwithlogin.activity.AboutActivity dummyMainMethod_net_gsantner_webappwithlogin_activity_AboutActivity(android.content.Intent)>[]--><net.gsantner.webappwithlogin.activity.AboutActivity: void onCreate(android.os.Bundle)>[[try]]--><net.gsantner.opoc.util.ContextUtils: void setHtmlToTextView(android.widget.TextView,java.lang.String)>[]--><net.gsantner.opoc.util.ContextUtils: android.text.Spanned htmlToSpanned(java.lang.String)>[[-i0 < 24]]--><android.text.Html: android.text.Spanned fromHtml(java.lang.String,int)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:true
+1call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <org.apache.http.params.HttpParams: org.apache.http.params.HttpParams copy()> is checking!!!
+The life time of api is [23,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.apache.http.params.DefaultedHttpParams: org.apache.http.params.HttpParams copy()>[]--><org.apache.http.params.HttpParams: org.apache.http.params.HttpParams copy()>
+#1.the call statck between class <org.apache.http.params.DefaultedHttpParams: org.apache.http.params.HttpParams copy()> to <org.apache.http.params.HttpParams: org.apache.http.params.HttpParams copy()>has compatibility isssues！
+-----------------------------------------
+crashApis:2
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <org.apache.http.params.HttpConnectionParams: void setConnectionTimeout(org.apache.http.params.HttpParams,int)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.apache.http.params.HttpConnectionParamBean: void setConnectionTimeout(int)>[]--><org.apache.http.params.HttpConnectionParams: void setConnectionTimeout(org.apache.http.params.HttpParams,int)>
+#1.the call statck between class <org.apache.http.params.HttpConnectionParamBean: void setConnectionTimeout(int)> to <org.apache.http.params.HttpConnectionParams: void setConnectionTimeout(org.apache.http.params.HttpParams,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:3
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <org.apache.http.params.HttpParams: boolean getBooleanParameter(java.lang.String,boolean)> is checking!!!
+The life time of api is [23,31]
+12call roads:
+0 Mainhead roads:
+12 Packageshead roads:
+try
+Good road with try: <net.gsantner.opoc.preference.GsPreferenceFragmentCompat: void onSharedPreferenceChanged(android.content.SharedPreferences,java.lang.String)>[]--><net.gsantner.opoc.preference.GsPreferenceFragmentCompat: void onPreferenceChanged(android.content.SharedPreferences,java.lang.String)>[]--><org.apache.http.impl.bootstrap.Worker: void run()>[[try]]--><org.apache.http.protocol.HttpService: void handleRequest(org.apache.http.HttpServerConnection,org.apache.http.protocol.HttpContext)>[[try]]--><org.apache.http.protocol.RequestExpectContinue: void process(org.apache.http.HttpRequest,org.apache.http.protocol.HttpContext)>[]--><org.apache.http.params.HttpParams: boolean getBooleanParameter(java.lang.String,boolean)>
+One road protect good!
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.apache.http.params.HttpProtocolParams: boolean useExpectContinue(org.apache.http.params.HttpParams)>[]--><org.apache.http.params.HttpParams: boolean getBooleanParameter(java.lang.String,boolean)>
+#2.the call statck between class <org.apache.http.params.HttpProtocolParams: boolean useExpectContinue(org.apache.http.params.HttpParams)> to <org.apache.http.params.HttpParams: boolean getBooleanParameter(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.apache.http.protocol.HttpRequestExecutor: void preProcess(org.apache.http.HttpRequest,org.apache.http.protocol.HttpProcessor,org.apache.http.protocol.HttpContext)>[]--><org.apache.http.protocol.RequestExpectContinue: void process(org.apache.http.HttpRequest,org.apache.http.protocol.HttpContext)>[]--><org.apache.http.params.HttpParams: boolean getBooleanParameter(java.lang.String,boolean)>
+#3.the call statck between class <org.apache.http.protocol.HttpRequestExecutor: void preProcess(org.apache.http.HttpRequest,org.apache.http.protocol.HttpProcessor,org.apache.http.protocol.HttpContext)> to <org.apache.http.params.HttpParams: boolean getBooleanParameter(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.apache.http.impl.DefaultHttpServerConnection: void bind(java.net.Socket,org.apache.http.params.HttpParams)>[]--><org.apache.http.params.HttpParams: boolean getBooleanParameter(java.lang.String,boolean)>
+#4.the call statck between class <org.apache.http.impl.DefaultHttpServerConnection: void bind(java.net.Socket,org.apache.http.params.HttpParams)> to <org.apache.http.params.HttpParams: boolean getBooleanParameter(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.apache.http.params.HttpConnectionParams: boolean getSoReuseaddr(org.apache.http.params.HttpParams)>[]--><org.apache.http.params.HttpParams: boolean getBooleanParameter(java.lang.String,boolean)>
+#5.the call statck between class <org.apache.http.params.HttpConnectionParams: boolean getSoReuseaddr(org.apache.http.params.HttpParams)> to <org.apache.http.params.HttpParams: boolean getBooleanParameter(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.apache.http.params.HttpConnectionParams: boolean isStaleCheckingEnabled(org.apache.http.params.HttpParams)>[]--><org.apache.http.params.HttpParams: boolean getBooleanParameter(java.lang.String,boolean)>
+#6.the call statck between class <org.apache.http.params.HttpConnectionParams: boolean isStaleCheckingEnabled(org.apache.http.params.HttpParams)> to <org.apache.http.params.HttpParams: boolean getBooleanParameter(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+try
+Good road with try: <android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)>[]--><org.apache.http.impl.bootstrap.Worker: void run()>[[try]]--><org.apache.http.protocol.HttpService: void handleRequest(org.apache.http.HttpServerConnection,org.apache.http.protocol.HttpContext)>[[try]]--><org.apache.http.protocol.RequestExpectContinue: void process(org.apache.http.HttpRequest,org.apache.http.protocol.HttpContext)>[]--><org.apache.http.params.HttpParams: boolean getBooleanParameter(java.lang.String,boolean)>
+One road protect good!
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.apache.http.params.HttpConnectionParams: boolean getSoKeepalive(org.apache.http.params.HttpParams)>[]--><org.apache.http.params.HttpParams: boolean getBooleanParameter(java.lang.String,boolean)>
+#8.the call statck between class <org.apache.http.params.HttpConnectionParams: boolean getSoKeepalive(org.apache.http.params.HttpParams)> to <org.apache.http.params.HttpParams: boolean getBooleanParameter(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.apache.http.impl.pool.BasicConnPool: void <init>(org.apache.http.params.HttpParams)>[]--><org.apache.http.impl.pool.BasicConnFactory: void <init>(org.apache.http.params.HttpParams)>[]--><org.apache.http.impl.pool.BasicConnFactory: void <init>(javax.net.ssl.SSLSocketFactory,org.apache.http.params.HttpParams)>[]--><org.apache.http.params.HttpParamConfig: org.apache.http.config.SocketConfig getSocketConfig(org.apache.http.params.HttpParams)>[]--><org.apache.http.params.HttpParams: boolean getBooleanParameter(java.lang.String,boolean)>
+#9.the call statck between class <org.apache.http.impl.pool.BasicConnPool: void <init>(org.apache.http.params.HttpParams)> to <org.apache.http.params.HttpParams: boolean getBooleanParameter(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+try
+Good road with try: <net.gsantner.webappwithlogin.activity.SettingsActivity$SettingsFragmentProfile: void onPreferenceChanged(android.content.SharedPreferences,java.lang.String)>[]--><net.gsantner.opoc.preference.GsPreferenceFragmentCompat: void onPreferenceChanged(android.content.SharedPreferences,java.lang.String)>[]--><org.apache.http.impl.bootstrap.Worker: void run()>[[try]]--><org.apache.http.protocol.HttpService: void handleRequest(org.apache.http.HttpServerConnection,org.apache.http.protocol.HttpContext)>[[try]]--><org.apache.http.protocol.RequestExpectContinue: void process(org.apache.http.HttpRequest,org.apache.http.protocol.HttpContext)>[]--><org.apache.http.params.HttpParams: boolean getBooleanParameter(java.lang.String,boolean)>
+One road protect good!
+crashApis:4
+containsStatic:false
+containsTry:true
+11call by main package
+-----------------------------------------
+#################################################
+N 5 Potential Issue API: SDKCheck of <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+try
+Good road with try: <net.gsantner.opoc.util.ContextUtils: boolean isConnectedToInternet()>[[try]]--><android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 6 Potential Issue API: SDKCheck of <org.apache.http.params.HttpConnectionParams: void setLinger(org.apache.http.params.HttpParams,int)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.apache.http.params.HttpConnectionParamBean: void setLinger(int)>[]--><org.apache.http.params.HttpConnectionParams: void setLinger(org.apache.http.params.HttpParams,int)>
+#1.the call statck between class <org.apache.http.params.HttpConnectionParamBean: void setLinger(int)> to <org.apache.http.params.HttpConnectionParams: void setLinger(org.apache.http.params.HttpParams,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:5
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 7 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putInt(java.lang.String,int)> is checking!!!
+The life time of api is [21,31]
+2call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: net.gsantner.webappwithlogin.activity.SettingsActivity dummyMainMethod_net_gsantner_webappwithlogin_activity_SettingsActivity(android.content.Intent)>[]--><net.gsantner.webappwithlogin.activity.SettingsActivity: void onCreate(android.os.Bundle)>[]--><net.gsantner.webappwithlogin.activity.SettingsActivity: void showFragment(java.lang.String,boolean)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <net.gsantner.webappwithlogin.activity.SettingsActivity$SettingsFragmentMaster: java.lang.Boolean onPreferenceClicked(android.support.v7.preference.Preference)>[]--><net.gsantner.webappwithlogin.activity.SettingsActivity: void showFragment(java.lang.String,boolean)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#1.the call statck between class <net.gsantner.webappwithlogin.activity.SettingsActivity$SettingsFragmentMaster: java.lang.Boolean onPreferenceClicked(android.support.v7.preference.Preference)> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:6
+crashApisInMain:1
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 8 Potential Issue API: SDKCheck of <org.apache.http.params.HttpParams: org.apache.http.params.HttpParams setIntParameter(java.lang.String,int)> is checking!!!
+The life time of api is [23,31]
+4call roads:
+0 Mainhead roads:
+4 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.apache.http.params.HttpConnectionParamBean: void setLinger(int)>[]--><org.apache.http.params.HttpConnectionParams: void setLinger(org.apache.http.params.HttpParams,int)>[]--><org.apache.http.params.HttpParams: org.apache.http.params.HttpParams setIntParameter(java.lang.String,int)>
+#1.the call statck between class <org.apache.http.params.HttpConnectionParamBean: void setLinger(int)> to <org.apache.http.params.HttpParams: org.apache.http.params.HttpParams setIntParameter(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.apache.http.params.HttpConnectionParamBean: void setSoTimeout(int)>[]--><org.apache.http.params.HttpConnectionParams: void setSoTimeout(org.apache.http.params.HttpParams,int)>[]--><org.apache.http.params.HttpParams: org.apache.http.params.HttpParams setIntParameter(java.lang.String,int)>
+#2.the call statck between class <org.apache.http.params.HttpConnectionParamBean: void setSoTimeout(int)> to <org.apache.http.params.HttpParams: org.apache.http.params.HttpParams setIntParameter(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.apache.http.params.HttpConnectionParamBean: void setConnectionTimeout(int)>[]--><org.apache.http.params.HttpConnectionParams: void setConnectionTimeout(org.apache.http.params.HttpParams,int)>[]--><org.apache.http.params.HttpParams: org.apache.http.params.HttpParams setIntParameter(java.lang.String,int)>
+#3.the call statck between class <org.apache.http.params.HttpConnectionParamBean: void setConnectionTimeout(int)> to <org.apache.http.params.HttpParams: org.apache.http.params.HttpParams setIntParameter(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.apache.http.params.HttpConnectionParamBean: void setSocketBufferSize(int)>[]--><org.apache.http.params.HttpConnectionParams: void setSocketBufferSize(org.apache.http.params.HttpParams,int)>[]--><org.apache.http.params.HttpParams: org.apache.http.params.HttpParams setIntParameter(java.lang.String,int)>
+#4.the call statck between class <org.apache.http.params.HttpConnectionParamBean: void setSocketBufferSize(int)> to <org.apache.http.params.HttpParams: org.apache.http.params.HttpParams setIntParameter(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:7
+containsStatic:false
+containsTry:false
+5call by main package
+-----------------------------------------
+#################################################
+N 9 Potential Issue API: SDKCheck of <org.apache.http.params.HttpConnectionParams: void setStaleCheckingEnabled(org.apache.http.params.HttpParams,boolean)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.apache.http.params.HttpConnectionParamBean: void setStaleCheckingEnabled(boolean)>[]--><org.apache.http.params.HttpConnectionParams: void setStaleCheckingEnabled(org.apache.http.params.HttpParams,boolean)>
+#1.the call statck between class <org.apache.http.params.HttpConnectionParamBean: void setStaleCheckingEnabled(boolean)> to <org.apache.http.params.HttpConnectionParams: void setStaleCheckingEnabled(org.apache.http.params.HttpParams,boolean)>has compatibility isssues！
+-----------------------------------------
+crashApis:8
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 10 Potential Issue API: SDKCheck of <android.os.BaseBundle: int getInt(java.lang.String,int)> is checking!!!
+The life time of api is [21,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <net.gsantner.webappwithlogin.activity.SettingsActivity$SettingsFragmentProfile: java.lang.String getSharedPreferencesName()>[]--><android.os.BaseBundle: int getInt(java.lang.String,int)>
+#1.the call statck between class <net.gsantner.webappwithlogin.activity.SettingsActivity$SettingsFragmentProfile: java.lang.String getSharedPreferencesName()> to <android.os.BaseBundle: int getInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <net.gsantner.webappwithlogin.activity.SettingsActivity$SettingsFragmentProfile: void afterOnCreate(android.os.Bundle,android.content.Context)>[]--><android.os.BaseBundle: int getInt(java.lang.String,int)>
+#2.the call statck between class <net.gsantner.webappwithlogin.activity.SettingsActivity$SettingsFragmentProfile: void afterOnCreate(android.os.Bundle,android.content.Context)> to <android.os.BaseBundle: int getInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:9
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 11 Potential Issue API: SDKCheck of <org.apache.http.params.HttpConnectionParams: void setTcpNoDelay(org.apache.http.params.HttpParams,boolean)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.apache.http.params.HttpConnectionParamBean: void setTcpNoDelay(boolean)>[]--><org.apache.http.params.HttpConnectionParams: void setTcpNoDelay(org.apache.http.params.HttpParams,boolean)>
+#1.the call statck between class <org.apache.http.params.HttpConnectionParamBean: void setTcpNoDelay(boolean)> to <org.apache.http.params.HttpConnectionParams: void setTcpNoDelay(org.apache.http.params.HttpParams,boolean)>has compatibility isssues！
+-----------------------------------------
+crashApis:10
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 12 Potential Issue API: SDKCheck of <android.net.NetworkInfo: boolean isConnectedOrConnecting()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+try
+Good road with try: <net.gsantner.opoc.util.ContextUtils: boolean isConnectedToInternet()>[[try]]--><android.net.NetworkInfo: boolean isConnectedOrConnecting()>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 13 Potential Issue API: SDKCheck of <org.apache.http.params.HttpConnectionParams: void setSocketBufferSize(org.apache.http.params.HttpParams,int)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.apache.http.params.HttpConnectionParamBean: void setSocketBufferSize(int)>[]--><org.apache.http.params.HttpConnectionParams: void setSocketBufferSize(org.apache.http.params.HttpParams,int)>
+#1.the call statck between class <org.apache.http.params.HttpConnectionParamBean: void setSocketBufferSize(int)> to <org.apache.http.params.HttpConnectionParams: void setSocketBufferSize(org.apache.http.params.HttpParams,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:11
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 14 Potential Issue API: SDKCheck of <android.view.Window: void setStatusBarColor(int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i1 < 21
+Good road: <net.gsantner.opoc.util.ActivityUtils: void setStatusbarColor(int,boolean[])>[[-$i1 < 21]]--><android.view.Window: void setStatusBarColor(int)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 15 Potential Issue API: SDKCheck of <org.apache.http.params.HttpParams: boolean removeParameter(java.lang.String)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.apache.http.params.DefaultedHttpParams: boolean removeParameter(java.lang.String)>[]--><org.apache.http.params.HttpParams: boolean removeParameter(java.lang.String)>
+#1.the call statck between class <org.apache.http.params.DefaultedHttpParams: boolean removeParameter(java.lang.String)> to <org.apache.http.params.HttpParams: boolean removeParameter(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:12
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 16 Potential Issue API: SDKCheck of <org.apache.http.params.HttpParams: org.apache.http.params.HttpParams setBooleanParameter(java.lang.String,boolean)> is checking!!!
+The life time of api is [23,31]
+5call roads:
+0 Mainhead roads:
+5 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.apache.http.params.HttpProtocolParamBean: void setUseExpectContinue(boolean)>[]--><org.apache.http.params.HttpProtocolParams: void setUseExpectContinue(org.apache.http.params.HttpParams,boolean)>[]--><org.apache.http.params.HttpParams: org.apache.http.params.HttpParams setBooleanParameter(java.lang.String,boolean)>
+#1.the call statck between class <org.apache.http.params.HttpProtocolParamBean: void setUseExpectContinue(boolean)> to <org.apache.http.params.HttpParams: org.apache.http.params.HttpParams setBooleanParameter(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.apache.http.params.HttpConnectionParamBean: void setTcpNoDelay(boolean)>[]--><org.apache.http.params.HttpConnectionParams: void setTcpNoDelay(org.apache.http.params.HttpParams,boolean)>[]--><org.apache.http.params.HttpParams: org.apache.http.params.HttpParams setBooleanParameter(java.lang.String,boolean)>
+#2.the call statck between class <org.apache.http.params.HttpConnectionParamBean: void setTcpNoDelay(boolean)> to <org.apache.http.params.HttpParams: org.apache.http.params.HttpParams setBooleanParameter(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.apache.http.params.HttpConnectionParamBean: void setStaleCheckingEnabled(boolean)>[]--><org.apache.http.params.HttpConnectionParams: void setStaleCheckingEnabled(org.apache.http.params.HttpParams,boolean)>[]--><org.apache.http.params.HttpParams: org.apache.http.params.HttpParams setBooleanParameter(java.lang.String,boolean)>
+#3.the call statck between class <org.apache.http.params.HttpConnectionParamBean: void setStaleCheckingEnabled(boolean)> to <org.apache.http.params.HttpParams: org.apache.http.params.HttpParams setBooleanParameter(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.apache.http.params.HttpConnectionParams: void setSoReuseaddr(org.apache.http.params.HttpParams,boolean)>[]--><org.apache.http.params.HttpParams: org.apache.http.params.HttpParams setBooleanParameter(java.lang.String,boolean)>
+#4.the call statck between class <org.apache.http.params.HttpConnectionParams: void setSoReuseaddr(org.apache.http.params.HttpParams,boolean)> to <org.apache.http.params.HttpParams: org.apache.http.params.HttpParams setBooleanParameter(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.apache.http.params.HttpConnectionParams: void setSoKeepalive(org.apache.http.params.HttpParams,boolean)>[]--><org.apache.http.params.HttpParams: org.apache.http.params.HttpParams setBooleanParameter(java.lang.String,boolean)>
+#5.the call statck between class <org.apache.http.params.HttpConnectionParams: void setSoKeepalive(org.apache.http.params.HttpParams,boolean)> to <org.apache.http.params.HttpParams: org.apache.http.params.HttpParams setBooleanParameter(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+crashApis:13
+containsStatic:false
+containsTry:false
+6call by main package
+-----------------------------------------
+#################################################
+N 17 Potential Issue API: SDKCheck of <org.apache.http.params.HttpParams: org.apache.http.params.HttpParams setParameter(java.lang.String,java.lang.Object)> is checking!!!
+The life time of api is [23,31]
+19call roads:
+0 Mainhead roads:
+19 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.apache.http.params.HttpProtocolParams: void setMalformedInputAction(org.apache.http.params.HttpParams,java.nio.charset.CodingErrorAction)>[]--><org.apache.http.params.DefaultedHttpParams: org.apache.http.params.HttpParams setParameter(java.lang.String,java.lang.Object)>[]--><org.apache.http.params.HttpParams: org.apache.http.params.HttpParams setParameter(java.lang.String,java.lang.Object)>
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.apache.http.params.HttpProtocolParams: void setMalformedInputAction(org.apache.http.params.HttpParams,java.nio.charset.CodingErrorAction)>[]--><org.apache.http.params.HttpParams: org.apache.http.params.HttpParams setParameter(java.lang.String,java.lang.Object)>
+#1.the call statck between class <org.apache.http.params.HttpProtocolParams: void setMalformedInputAction(org.apache.http.params.HttpParams,java.nio.charset.CodingErrorAction)> to <org.apache.http.params.HttpParams: org.apache.http.params.HttpParams setParameter(java.lang.String,java.lang.Object)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.apache.http.params.HttpConnectionParamBean: void setLinger(int)>[]--><org.apache.http.params.HttpConnectionParams: void setLinger(org.apache.http.params.HttpParams,int)>[]--><org.apache.http.params.AbstractHttpParams: org.apache.http.params.HttpParams setIntParameter(java.lang.String,int)>[]--><org.apache.http.params.HttpParams: org.apache.http.params.HttpParams setParameter(java.lang.String,java.lang.Object)>
+#2.the call statck between class <org.apache.http.params.HttpConnectionParamBean: void setLinger(int)> to <org.apache.http.params.HttpParams: org.apache.http.params.HttpParams setParameter(java.lang.String,java.lang.Object)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.apache.http.params.HttpProtocolParamBean: void setUseExpectContinue(boolean)>[]--><org.apache.http.params.HttpProtocolParams: void setUseExpectContinue(org.apache.http.params.HttpParams,boolean)>[]--><org.apache.http.params.AbstractHttpParams: org.apache.http.params.HttpParams setBooleanParameter(java.lang.String,boolean)>[]--><org.apache.http.params.HttpParams: org.apache.http.params.HttpParams setParameter(java.lang.String,java.lang.Object)>
+#3.the call statck between class <org.apache.http.params.HttpProtocolParamBean: void setUseExpectContinue(boolean)> to <org.apache.http.params.HttpParams: org.apache.http.params.HttpParams setParameter(java.lang.String,java.lang.Object)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.apache.http.params.HttpConnectionParamBean: void setTcpNoDelay(boolean)>[]--><org.apache.http.params.HttpConnectionParams: void setTcpNoDelay(org.apache.http.params.HttpParams,boolean)>[]--><org.apache.http.params.AbstractHttpParams: org.apache.http.params.HttpParams setBooleanParameter(java.lang.String,boolean)>[]--><org.apache.http.params.HttpParams: org.apache.http.params.HttpParams setParameter(java.lang.String,java.lang.Object)>
+#4.the call statck between class <org.apache.http.params.HttpConnectionParamBean: void setTcpNoDelay(boolean)> to <org.apache.http.params.HttpParams: org.apache.http.params.HttpParams setParameter(java.lang.String,java.lang.Object)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.apache.http.params.HttpConnectionParamBean: void setStaleCheckingEnabled(boolean)>[]--><org.apache.http.params.HttpConnectionParams: void setStaleCheckingEnabled(org.apache.http.params.HttpParams,boolean)>[]--><org.apache.http.params.AbstractHttpParams: org.apache.http.params.HttpParams setBooleanParameter(java.lang.String,boolean)>[]--><org.apache.http.params.HttpParams: org.apache.http.params.HttpParams setParameter(java.lang.String,java.lang.Object)>
+#5.the call statck between class <org.apache.http.params.HttpConnectionParamBean: void setStaleCheckingEnabled(boolean)> to <org.apache.http.params.HttpParams: org.apache.http.params.HttpParams setParameter(java.lang.String,java.lang.Object)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.apache.http.params.HttpConnectionParams: void setSoReuseaddr(org.apache.http.params.HttpParams,boolean)>[]--><org.apache.http.params.AbstractHttpParams: org.apache.http.params.HttpParams setBooleanParameter(java.lang.String,boolean)>[]--><org.apache.http.params.HttpParams: org.apache.http.params.HttpParams setParameter(java.lang.String,java.lang.Object)>
+#6.the call statck between class <org.apache.http.params.HttpConnectionParams: void setSoReuseaddr(org.apache.http.params.HttpParams,boolean)> to <org.apache.http.params.HttpParams: org.apache.http.params.HttpParams setParameter(java.lang.String,java.lang.Object)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.apache.http.params.HttpConnectionParamBean: void setSoTimeout(int)>[]--><org.apache.http.params.HttpConnectionParams: void setSoTimeout(org.apache.http.params.HttpParams,int)>[]--><org.apache.http.params.AbstractHttpParams: org.apache.http.params.HttpParams setIntParameter(java.lang.String,int)>[]--><org.apache.http.params.HttpParams: org.apache.http.params.HttpParams setParameter(java.lang.String,java.lang.Object)>
+#7.the call statck between class <org.apache.http.params.HttpConnectionParamBean: void setSoTimeout(int)> to <org.apache.http.params.HttpParams: org.apache.http.params.HttpParams setParameter(java.lang.String,java.lang.Object)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.apache.http.params.AbstractHttpParams: org.apache.http.params.HttpParams setLongParameter(java.lang.String,long)>[]--><org.apache.http.params.HttpParams: org.apache.http.params.HttpParams setParameter(java.lang.String,java.lang.Object)>
+#8.the call statck between class <org.apache.http.params.AbstractHttpParams: org.apache.http.params.HttpParams setLongParameter(java.lang.String,long)> to <org.apache.http.params.HttpParams: org.apache.http.params.HttpParams setParameter(java.lang.String,java.lang.Object)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.apache.http.params.HttpConnectionParamBean: void setSocketBufferSize(int)>[]--><org.apache.http.params.HttpConnectionParams: void setSocketBufferSize(org.apache.http.params.HttpParams,int)>[]--><org.apache.http.params.AbstractHttpParams: org.apache.http.params.HttpParams setIntParameter(java.lang.String,int)>[]--><org.apache.http.params.HttpParams: org.apache.http.params.HttpParams setParameter(java.lang.String,java.lang.Object)>
+#9.the call statck between class <org.apache.http.params.HttpConnectionParamBean: void setSocketBufferSize(int)> to <org.apache.http.params.HttpParams: org.apache.http.params.HttpParams setParameter(java.lang.String,java.lang.Object)>has compatibility isssues！
+-----------------------------------------
+try
+Good road with try: <org.apache.http.params.DefaultedHttpParams: org.apache.http.params.HttpParams copy()>[]--><org.apache.http.params.BasicHttpParams: org.apache.http.params.HttpParams copy()>[[try]]--><org.apache.http.params.BasicHttpParams: java.lang.Object clone()>[]--><org.apache.http.params.BasicHttpParams: void copyParams(org.apache.http.params.HttpParams)>[]--><org.apache.http.params.DefaultedHttpParams: org.apache.http.params.HttpParams setParameter(java.lang.String,java.lang.Object)>[]--><org.apache.http.params.HttpParams: org.apache.http.params.HttpParams setParameter(java.lang.String,java.lang.Object)>
+One road protect good!
+crashApis:14
+containsStatic:false
+containsTry:true
+11call by main package
+-----------------------------------------
+#################################################
+N 18 Potential Issue API: SDKCheck of <org.apache.http.params.HttpParams: java.lang.Object getParameter(java.lang.String)> is checking!!!
+The life time of api is [23,31]
+29call roads:
+0 Mainhead roads:
+29 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.apache.http.params.HttpProtocolParams: java.nio.charset.CodingErrorAction getMalformedInputAction(org.apache.http.params.HttpParams)>[]--><org.apache.http.params.HttpParams: java.lang.Object getParameter(java.lang.String)>
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.apache.http.params.HttpProtocolParams: java.nio.charset.CodingErrorAction getMalformedInputAction(org.apache.http.params.HttpParams)>[]--><org.apache.http.params.DefaultedHttpParams: java.lang.Object getParameter(java.lang.String)>[]--><org.apache.http.params.HttpParams: java.lang.Object getParameter(java.lang.String)>
+#1.the call statck between class <org.apache.http.params.HttpProtocolParams: java.nio.charset.CodingErrorAction getMalformedInputAction(org.apache.http.params.HttpParams)> to <org.apache.http.params.HttpParams: java.lang.Object getParameter(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.apache.http.params.AbstractHttpParams: boolean isParameterTrue(java.lang.String)>[]--><org.apache.http.params.AbstractHttpParams: boolean getBooleanParameter(java.lang.String,boolean)>[]--><org.apache.http.params.HttpParams: java.lang.Object getParameter(java.lang.String)>
+#2.the call statck between class <org.apache.http.params.AbstractHttpParams: boolean isParameterTrue(java.lang.String)> to <org.apache.http.params.HttpParams: java.lang.Object getParameter(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.apache.http.impl.pool.BasicConnFactory: org.apache.http.HttpClientConnection create(java.net.Socket,org.apache.http.params.HttpParams)>[]--><org.apache.http.params.AbstractHttpParams: int getIntParameter(java.lang.String,int)>[]--><org.apache.http.params.HttpParams: java.lang.Object getParameter(java.lang.String)>
+#3.the call statck between class <org.apache.http.impl.pool.BasicConnFactory: org.apache.http.HttpClientConnection create(java.net.Socket,org.apache.http.params.HttpParams)> to <org.apache.http.params.HttpParams: java.lang.Object getParameter(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.apache.http.protocol.HttpRequestExecutor: void preProcess(org.apache.http.HttpRequest,org.apache.http.protocol.HttpProcessor,org.apache.http.protocol.HttpContext)>[]--><org.apache.http.protocol.RequestExpectContinue: void process(org.apache.http.HttpRequest,org.apache.http.protocol.HttpContext)>[]--><org.apache.http.params.AbstractHttpParams: boolean getBooleanParameter(java.lang.String,boolean)>[]--><org.apache.http.params.HttpParams: java.lang.Object getParameter(java.lang.String)>
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.apache.http.protocol.HttpRequestExecutor: void preProcess(org.apache.http.HttpRequest,org.apache.http.protocol.HttpProcessor,org.apache.http.protocol.HttpContext)>[]--><org.apache.http.protocol.RequestUserAgent: void process(org.apache.http.HttpRequest,org.apache.http.protocol.HttpContext)>[]--><org.apache.http.params.DefaultedHttpParams: java.lang.Object getParameter(java.lang.String)>[]--><org.apache.http.params.HttpParams: java.lang.Object getParameter(java.lang.String)>
+#4.the call statck between class <org.apache.http.protocol.HttpRequestExecutor: void preProcess(org.apache.http.HttpRequest,org.apache.http.protocol.HttpProcessor,org.apache.http.protocol.HttpContext)> to <org.apache.http.params.HttpParams: java.lang.Object getParameter(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.apache.http.params.HttpConnectionParams: boolean getSoReuseaddr(org.apache.http.params.HttpParams)>[]--><org.apache.http.params.AbstractHttpParams: boolean getBooleanParameter(java.lang.String,boolean)>[]--><org.apache.http.params.HttpParams: java.lang.Object getParameter(java.lang.String)>
+#5.the call statck between class <org.apache.http.params.HttpConnectionParams: boolean getSoReuseaddr(org.apache.http.params.HttpParams)> to <org.apache.http.params.HttpParams: java.lang.Object getParameter(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.apache.http.params.HttpConnectionParams: boolean isStaleCheckingEnabled(org.apache.http.params.HttpParams)>[]--><org.apache.http.params.AbstractHttpParams: boolean getBooleanParameter(java.lang.String,boolean)>[]--><org.apache.http.params.HttpParams: java.lang.Object getParameter(java.lang.String)>
+#6.the call statck between class <org.apache.http.params.HttpConnectionParams: boolean isStaleCheckingEnabled(org.apache.http.params.HttpParams)> to <org.apache.http.params.HttpParams: java.lang.Object getParameter(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.apache.http.impl.pool.BasicConnPool: void <init>(org.apache.http.params.HttpParams)>[]--><org.apache.http.impl.pool.BasicConnFactory: void <init>(org.apache.http.params.HttpParams)>[]--><org.apache.http.impl.pool.BasicConnFactory: void <init>(javax.net.ssl.SSLSocketFactory,org.apache.http.params.HttpParams)>[]--><org.apache.http.params.HttpParamConfig: org.apache.http.config.ConnectionConfig getConnectionConfig(org.apache.http.params.HttpParams)>[]--><org.apache.http.params.HttpParamConfig: org.apache.http.config.MessageConstraints getMessageConstraints(org.apache.http.params.HttpParams)>[]--><org.apache.http.params.AbstractHttpParams: int getIntParameter(java.lang.String,int)>[]--><org.apache.http.params.HttpParams: java.lang.Object getParameter(java.lang.String)>
+#7.the call statck between class <org.apache.http.impl.pool.BasicConnPool: void <init>(org.apache.http.params.HttpParams)> to <org.apache.http.params.HttpParams: java.lang.Object getParameter(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.apache.http.params.AbstractHttpParams: boolean isParameterFalse(java.lang.String)>[]--><org.apache.http.params.AbstractHttpParams: boolean getBooleanParameter(java.lang.String,boolean)>[]--><org.apache.http.params.HttpParams: java.lang.Object getParameter(java.lang.String)>
+#8.the call statck between class <org.apache.http.params.AbstractHttpParams: boolean isParameterFalse(java.lang.String)> to <org.apache.http.params.HttpParams: java.lang.Object getParameter(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.apache.http.params.HttpProtocolParams: java.lang.String getUserAgent(org.apache.http.params.HttpParams)>[]--><org.apache.http.params.DefaultedHttpParams: java.lang.Object getParameter(java.lang.String)>[]--><org.apache.http.params.HttpParams: java.lang.Object getParameter(java.lang.String)>
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.apache.http.params.HttpProtocolParams: java.lang.String getUserAgent(org.apache.http.params.HttpParams)>[]--><org.apache.http.params.HttpParams: java.lang.Object getParameter(java.lang.String)>
+#9.the call statck between class <org.apache.http.params.HttpProtocolParams: java.lang.String getUserAgent(org.apache.http.params.HttpParams)> to <org.apache.http.params.HttpParams: java.lang.Object getParameter(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.apache.http.params.AbstractHttpParams: long getLongParameter(java.lang.String,long)>[]--><org.apache.http.params.HttpParams: java.lang.Object getParameter(java.lang.String)>
+#10.the call statck between class <org.apache.http.params.AbstractHttpParams: long getLongParameter(java.lang.String,long)> to <org.apache.http.params.HttpParams: java.lang.Object getParameter(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:15
+containsStatic:false
+containsTry:true
+11call by main package
+-----------------------------------------
+#################################################
+N 19 Potential Issue API: SDKCheck of <org.apache.http.params.HttpParams: int getIntParameter(java.lang.String,int)> is checking!!!
+The life time of api is [23,31]
+10call roads:
+0 Mainhead roads:
+10 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.apache.http.impl.io.HttpRequestParser: void <init>(org.apache.http.io.SessionInputBuffer,org.apache.http.message.LineParser,org.apache.http.HttpRequestFactory,org.apache.http.params.HttpParams)>[]--><org.apache.http.impl.io.AbstractMessageParser: void <init>(org.apache.http.io.SessionInputBuffer,org.apache.http.message.LineParser,org.apache.http.params.HttpParams)>[]--><org.apache.http.params.HttpParamConfig: org.apache.http.config.MessageConstraints getMessageConstraints(org.apache.http.params.HttpParams)>[]--><org.apache.http.params.HttpParams: int getIntParameter(java.lang.String,int)>
+#1.the call statck between class <org.apache.http.impl.io.HttpRequestParser: void <init>(org.apache.http.io.SessionInputBuffer,org.apache.http.message.LineParser,org.apache.http.HttpRequestFactory,org.apache.http.params.HttpParams)> to <org.apache.http.params.HttpParams: int getIntParameter(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.apache.http.params.HttpConnectionParams: int getSocketBufferSize(org.apache.http.params.HttpParams)>[]--><org.apache.http.params.HttpParams: int getIntParameter(java.lang.String,int)>
+#2.the call statck between class <org.apache.http.params.HttpConnectionParams: int getSocketBufferSize(org.apache.http.params.HttpParams)> to <org.apache.http.params.HttpParams: int getIntParameter(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.apache.http.impl.io.HttpResponseParser: void <init>(org.apache.http.io.SessionInputBuffer,org.apache.http.message.LineParser,org.apache.http.HttpResponseFactory,org.apache.http.params.HttpParams)>[]--><org.apache.http.impl.io.AbstractMessageParser: void <init>(org.apache.http.io.SessionInputBuffer,org.apache.http.message.LineParser,org.apache.http.params.HttpParams)>[]--><org.apache.http.params.HttpParamConfig: org.apache.http.config.MessageConstraints getMessageConstraints(org.apache.http.params.HttpParams)>[]--><org.apache.http.params.HttpParams: int getIntParameter(java.lang.String,int)>
+#3.the call statck between class <org.apache.http.impl.io.HttpResponseParser: void <init>(org.apache.http.io.SessionInputBuffer,org.apache.http.message.LineParser,org.apache.http.HttpResponseFactory,org.apache.http.params.HttpParams)> to <org.apache.http.params.HttpParams: int getIntParameter(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.apache.http.impl.DefaultHttpServerConnection: void bind(java.net.Socket,org.apache.http.params.HttpParams)>[]--><org.apache.http.impl.SocketHttpServerConnection: void bind(java.net.Socket,org.apache.http.params.HttpParams)>[]--><org.apache.http.impl.AbstractHttpServerConnection: void init(org.apache.http.io.SessionInputBuffer,org.apache.http.io.SessionOutputBuffer,org.apache.http.params.HttpParams)>[]--><org.apache.http.impl.AbstractHttpServerConnection: org.apache.http.io.HttpMessageParser createRequestParser(org.apache.http.io.SessionInputBuffer,org.apache.http.HttpRequestFactory,org.apache.http.params.HttpParams)>[]--><org.apache.http.impl.io.DefaultHttpRequestParser: void <init>(org.apache.http.io.SessionInputBuffer,org.apache.http.message.LineParser,org.apache.http.HttpRequestFactory,org.apache.http.params.HttpParams)>[]--><org.apache.http.impl.io.AbstractMessageParser: void <init>(org.apache.http.io.SessionInputBuffer,org.apache.http.message.LineParser,org.apache.http.params.HttpParams)>[]--><org.apache.http.params.HttpParamConfig: org.apache.http.config.MessageConstraints getMessageConstraints(org.apache.http.params.HttpParams)>[]--><org.apache.http.params.HttpParams: int getIntParameter(java.lang.String,int)>
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.apache.http.impl.DefaultHttpServerConnection: void bind(java.net.Socket,org.apache.http.params.HttpParams)>[]--><org.apache.http.params.HttpParams: int getIntParameter(java.lang.String,int)>
+#4.the call statck between class <org.apache.http.impl.DefaultHttpServerConnection: void bind(java.net.Socket,org.apache.http.params.HttpParams)> to <org.apache.http.params.HttpParams: int getIntParameter(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.apache.http.params.HttpConnectionParams: int getSoTimeout(org.apache.http.params.HttpParams)>[]--><org.apache.http.params.HttpParams: int getIntParameter(java.lang.String,int)>
+#5.the call statck between class <org.apache.http.params.HttpConnectionParams: int getSoTimeout(org.apache.http.params.HttpParams)> to <org.apache.http.params.HttpParams: int getIntParameter(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.apache.http.impl.pool.BasicConnFactory: org.apache.http.HttpClientConnection create(java.net.Socket,org.apache.http.params.HttpParams)>[]--><org.apache.http.params.HttpParams: int getIntParameter(java.lang.String,int)>
+#6.the call statck between class <org.apache.http.impl.pool.BasicConnFactory: org.apache.http.HttpClientConnection create(java.net.Socket,org.apache.http.params.HttpParams)> to <org.apache.http.params.HttpParams: int getIntParameter(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.apache.http.params.HttpConnectionParams: int getConnectionTimeout(org.apache.http.params.HttpParams)>[]--><org.apache.http.params.HttpParams: int getIntParameter(java.lang.String,int)>
+#7.the call statck between class <org.apache.http.params.HttpConnectionParams: int getConnectionTimeout(org.apache.http.params.HttpParams)> to <org.apache.http.params.HttpParams: int getIntParameter(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.apache.http.impl.pool.BasicConnPool: void <init>(org.apache.http.params.HttpParams)>[]--><org.apache.http.impl.pool.BasicConnFactory: void <init>(org.apache.http.params.HttpParams)>[]--><org.apache.http.impl.pool.BasicConnFactory: void <init>(javax.net.ssl.SSLSocketFactory,org.apache.http.params.HttpParams)>[]--><org.apache.http.params.HttpParamConfig: org.apache.http.config.SocketConfig getSocketConfig(org.apache.http.params.HttpParams)>[]--><org.apache.http.params.HttpParams: int getIntParameter(java.lang.String,int)>
+#8.the call statck between class <org.apache.http.impl.pool.BasicConnPool: void <init>(org.apache.http.params.HttpParams)> to <org.apache.http.params.HttpParams: int getIntParameter(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.apache.http.impl.DefaultHttpClientConnection: void bind(java.net.Socket,org.apache.http.params.HttpParams)>[]--><org.apache.http.params.HttpParams: int getIntParameter(java.lang.String,int)>
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.apache.http.impl.DefaultHttpClientConnection: void bind(java.net.Socket,org.apache.http.params.HttpParams)>[]--><org.apache.http.impl.SocketHttpClientConnection: void bind(java.net.Socket,org.apache.http.params.HttpParams)>[]--><org.apache.http.impl.SocketHttpClientConnection: org.apache.http.io.SessionInputBuffer createSessionInputBuffer(java.net.Socket,int,org.apache.http.params.HttpParams)>[]--><org.apache.http.impl.io.SocketInputBuffer: void <init>(java.net.Socket,int,org.apache.http.params.HttpParams)>[]--><org.apache.http.impl.io.AbstractSessionInputBuffer: void init(java.io.InputStream,int,org.apache.http.params.HttpParams)>[]--><org.apache.http.params.HttpParams: int getIntParameter(java.lang.String,int)>
+#9.the call statck between class <org.apache.http.impl.DefaultHttpClientConnection: void bind(java.net.Socket,org.apache.http.params.HttpParams)> to <org.apache.http.params.HttpParams: int getIntParameter(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.apache.http.params.HttpConnectionParams: int getLinger(org.apache.http.params.HttpParams)>[]--><org.apache.http.params.HttpParams: int getIntParameter(java.lang.String,int)>
+#10.the call statck between class <org.apache.http.params.HttpConnectionParams: int getLinger(org.apache.http.params.HttpParams)> to <org.apache.http.params.HttpParams: int getIntParameter(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:16
+containsStatic:false
+containsTry:false
+11call by main package
+-----------------------------------------
+crashApis numbers:16
+crashApis numbers in main road:1
+On Android Version 16 this app may have error api use(at least): 16 and error api roads: 63
+On Android Version 17 this app may have error api use(at least): 16 and error api roads: 63
+On Android Version 18 this app may have error api use(at least): 16 and error api roads: 63
+On Android Version 19 this app may have error api use(at least): 16 and error api roads: 63
+On Android Version 20 this app may have error api use(at least): 16 and error api roads: 63
+On Android Version 21 this app may have error api use(at least): 14 and error api roads: 59
+On Android Version 22 this app may have error api use(at least): 14 and error api roads: 59
+On Android Version 23 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 24 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 25 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 31 this app may have error api use(at least): 0 and error api roads: 0

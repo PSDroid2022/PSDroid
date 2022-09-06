@@ -1,0 +1,218 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/aFreeRDP.apk
+Entry Points[com.freerdp.freerdpcore.presentation.BookmarkActivity, com.freerdp.afreerdp.application.GlobalApp, com.freerdp.freerdpcore.application.NetworkStateReceiver, com.freerdp.freerdpcore.presentation.AboutActivity, com.freerdp.freerdpcore.presentation.ShortcutsActivity, com.freerdp.freerdpcore.presentation.SessionActivity, com.freerdp.freerdpcore.services.SessionRequestHandlerActivity, com.freerdp.freerdpcore.application.ScreenReceiver, com.freerdp.freerdpcore.services.FreeRDPSuggestionProvider, com.freerdp.freerdpcore.presentation.ApplicationSettingsActivity, com.freerdp.freerdpcore.presentation.HelpActivity, com.freerdp.freerdpcore.presentation.HomeActivity, com.freerdp.freerdpcore.presentation.SessionActivity$LibFreeRDPBroadcastReceiver]
+FllowDroidcallgraph size:2501
+Soot started on Mon Jul 11 00:22:17 CST 2022
+Soot finished on Mon Jul 11 00:22:20 CST 2022
+Soot has run for 0 min. 2 sec.
+Found 13 additional DEX files. Now visiting them one by one.
+Soot started on Mon Jul 11 00:22:20 CST 2022
+Soot finished on Mon Jul 11 00:22:25 CST 2022
+Soot has run for 0 min. 4 sec.
+Soot started on Mon Jul 11 00:22:25 CST 2022
+Soot finished on Mon Jul 11 00:22:26 CST 2022
+Soot has run for 0 min. 1 sec.
+Soot started on Mon Jul 11 00:22:26 CST 2022
+Soot finished on Mon Jul 11 00:22:27 CST 2022
+Soot has run for 0 min. 0 sec.
+Soot started on Mon Jul 11 00:22:27 CST 2022
+Soot finished on Mon Jul 11 00:22:28 CST 2022
+Soot has run for 0 min. 1 sec.
+Soot started on Mon Jul 11 00:22:28 CST 2022
+Soot finished on Mon Jul 11 00:22:29 CST 2022
+Soot has run for 0 min. 1 sec.
+Soot started on Mon Jul 11 00:22:29 CST 2022
+Soot finished on Mon Jul 11 00:22:30 CST 2022
+Soot has run for 0 min. 1 sec.
+Soot started on Mon Jul 11 00:22:30 CST 2022
+Soot finished on Mon Jul 11 00:22:31 CST 2022
+Soot has run for 0 min. 0 sec.
+Soot started on Mon Jul 11 00:22:31 CST 2022
+Soot finished on Mon Jul 11 00:22:32 CST 2022
+Soot has run for 0 min. 0 sec.
+Soot started on Mon Jul 11 00:22:32 CST 2022
+Soot finished on Mon Jul 11 00:22:33 CST 2022
+Soot has run for 0 min. 0 sec.
+Soot started on Mon Jul 11 00:22:33 CST 2022
+Soot finished on Mon Jul 11 00:22:34 CST 2022
+Soot has run for 0 min. 0 sec.
+Soot started on Mon Jul 11 00:22:34 CST 2022
+Soot finished on Mon Jul 11 00:22:35 CST 2022
+Soot has run for 0 min. 0 sec.
+Soot started on Mon Jul 11 00:22:35 CST 2022
+Soot finished on Mon Jul 11 00:22:36 CST 2022
+Soot has run for 0 min. 0 sec.
+Soot started on Mon Jul 11 00:22:36 CST 2022
+Soot finished on Mon Jul 11 00:22:37 CST 2022
+Soot has run for 0 min. 1 sec.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 21
+Declared Target Sdk version is: 28
+Declared Max Sdk version is: -1
+Collected 144 Android APIs in the primary DEX file
+Collected 453 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.net.NetworkInfo: int getType()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.freerdp.freerdpcore.application.NetworkStateReceiver dummyMainMethod_com_freerdp_freerdpcore_application_NetworkStateReceiver(android.content.Intent)>[]--><com.freerdp.freerdpcore.application.NetworkStateReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><android.net.NetworkInfo: int getType()>
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><com.freerdp.freerdpcore.application.GlobalApp: void onCreate()>[]--><com.freerdp.freerdpcore.application.NetworkStateReceiver: boolean isConnectedTo3G(android.content.Context)>[]--><android.net.NetworkInfo: int getType()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.NetworkInfo: int getType()>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:1
+crashApisInMain:1
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><com.freerdp.freerdpcore.application.GlobalApp: void onCreate()>[]--><com.freerdp.freerdpcore.application.NetworkStateReceiver: boolean isConnectedTo3G(android.content.Context)>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:2
+crashApisInMain:2
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.net.NetworkInfo: boolean isConnected()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.freerdp.freerdpcore.application.NetworkStateReceiver dummyMainMethod_com_freerdp_freerdpcore_application_NetworkStateReceiver(android.content.Intent)>[]--><com.freerdp.freerdpcore.application.NetworkStateReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><android.net.NetworkInfo: boolean isConnected()>
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><com.freerdp.freerdpcore.application.GlobalApp: void onCreate()>[]--><com.freerdp.freerdpcore.application.NetworkStateReceiver: boolean isConnectedTo3G(android.content.Context)>[]--><android.net.NetworkInfo: boolean isConnected()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.NetworkInfo: boolean isConnected()>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:3
+crashApisInMain:3
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putBooleanArray(java.lang.String,boolean[])> is checking!!!
+The life time of api is [22,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.preference.PreferenceActivity: void onBackPressed()> is checking!!!
+The life time of api is [26,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 21 22 23 24 25 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.freerdp.freerdpcore.presentation.BookmarkActivity dummyMainMethod_com_freerdp_freerdpcore_presentation_BookmarkActivity(android.content.Intent)>[]--><com.freerdp.freerdpcore.presentation.BookmarkActivity: void onBackPressed()>[]--><android.preference.PreferenceActivity: void onBackPressed()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.preference.PreferenceActivity: void onBackPressed()>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:4
+crashApisInMain:4
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 5 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)> is checking!!!
+The life time of api is [22,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 6 Potential Issue API: SDKCheck of <android.view.inputmethod.InputMethodManager: void toggleSoftInput(int,int)> is checking!!!
+The life time of api is [28,31]
+4call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 21 22 23 24 25 26 27 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.freerdp.freerdpcore.presentation.SessionActivity dummyMainMethod_com_freerdp_freerdpcore_presentation_SessionActivity(android.content.Intent)>[]--><com.freerdp.freerdpcore.presentation.SessionActivity: void onPause()>[]--><com.freerdp.freerdpcore.presentation.SessionActivity: void showKeyboard(boolean,boolean)>[]--><com.freerdp.freerdpcore.presentation.SessionActivity: void hideSoftInput()>[]--><android.view.inputmethod.InputMethodManager: void toggleSoftInput(int,int)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.view.inputmethod.InputMethodManager: void toggleSoftInput(int,int)>has compatibility isssues！
+-----------------------------------------
+3 Packageshead roads:
+!!!this api will crash on sdk 21 22 23 24 25 26 27 
+Error road: <com.freerdp.freerdpcore.presentation.SessionActivity: void onTouchPointerToggleExtKeyboard()>[]--><com.freerdp.freerdpcore.presentation.SessionActivity: void showKeyboard(boolean,boolean)>[]--><com.freerdp.freerdpcore.presentation.SessionActivity: void hideSoftInput()>[]--><android.view.inputmethod.InputMethodManager: void toggleSoftInput(int,int)>
+#1.the call statck between class <com.freerdp.freerdpcore.presentation.SessionActivity: void onTouchPointerToggleExtKeyboard()> to <android.view.inputmethod.InputMethodManager: void toggleSoftInput(int,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 21 22 23 24 25 26 27 
+Error road: <com.freerdp.freerdpcore.presentation.SessionActivity: void onTouchPointerToggleKeyboard()>[]--><com.freerdp.freerdpcore.presentation.SessionActivity: void showKeyboard(boolean,boolean)>[]--><com.freerdp.freerdpcore.presentation.SessionActivity: void hideSoftInput()>[]--><android.view.inputmethod.InputMethodManager: void toggleSoftInput(int,int)>
+#2.the call statck between class <com.freerdp.freerdpcore.presentation.SessionActivity: void onTouchPointerToggleKeyboard()> to <android.view.inputmethod.InputMethodManager: void toggleSoftInput(int,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 21 22 23 24 25 26 27 
+Error road: <com.freerdp.freerdpcore.presentation.SessionView: boolean dispatchKeyEventPreIme(android.view.KeyEvent)>[]--><com.freerdp.freerdpcore.presentation.SessionActivity: void onBackPressed()>[]--><com.freerdp.freerdpcore.presentation.SessionActivity: void showKeyboard(boolean,boolean)>[]--><com.freerdp.freerdpcore.presentation.SessionActivity: void hideSoftInput()>[]--><android.view.inputmethod.InputMethodManager: void toggleSoftInput(int,int)>
+#3.the call statck between class <com.freerdp.freerdpcore.presentation.SessionView: boolean dispatchKeyEventPreIme(android.view.KeyEvent)> to <android.view.inputmethod.InputMethodManager: void toggleSoftInput(int,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:5
+crashApisInMain:5
+containsStatic:false
+containsTry:false
+4call by main package
+-----------------------------------------
+#################################################
+N 7 Potential Issue API: SDKCheck of <android.net.NetworkInfo: java.lang.String toString()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.freerdp.freerdpcore.application.NetworkStateReceiver dummyMainMethod_com_freerdp_freerdpcore_application_NetworkStateReceiver(android.content.Intent)>[]--><com.freerdp.freerdpcore.application.NetworkStateReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><android.net.NetworkInfo: java.lang.String toString()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.NetworkInfo: java.lang.String toString()>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:6
+crashApisInMain:6
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 8 Potential Issue API: SDKCheck of <android.net.NetworkInfo: java.lang.String getTypeName()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.freerdp.freerdpcore.application.NetworkStateReceiver dummyMainMethod_com_freerdp_freerdpcore_application_NetworkStateReceiver(android.content.Intent)>[]--><com.freerdp.freerdpcore.application.NetworkStateReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><android.net.NetworkInfo: java.lang.String getTypeName()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.NetworkInfo: java.lang.String getTypeName()>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:7
+crashApisInMain:7
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+crashApis numbers:7
+crashApis numbers in main road:7
+On Android Version 16 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 17 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 18 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 19 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 20 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 21 this app may have error api use(at least): 2 and error api roads: 5
+On Android Version 22 this app may have error api use(at least): 2 and error api roads: 5
+On Android Version 23 this app may have error api use(at least): 2 and error api roads: 5
+On Android Version 24 this app may have error api use(at least): 2 and error api roads: 5
+On Android Version 25 this app may have error api use(at least): 2 and error api roads: 5
+On Android Version 26 this app may have error api use(at least): 1 and error api roads: 4
+On Android Version 27 this app may have error api use(at least): 1 and error api roads: 4
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 31 this app may have error api use(at least): 5 and error api roads: 7

@@ -1,0 +1,767 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/Micopi+.apk
+Entry Points[org.eztarget.micopi.ui.BatchActivity, org.eztarget.micopi.ui.WelcomeActivity, org.eztarget.micopi.ImageService, org.eztarget.micopi.ui.ContactActivity]
+FllowDroidcallgraph size:1449
+Soot started on Mon Jul 11 07:00:46 CST 2022
+StaticCheck:$ys0 < 
+StaticCheck:<com.google.android.gms.internal.zzne: boolean zzcp(int)>< 
+Soot finished on Mon Jul 11 07:01:15 CST 2022
+Soot has run for 0 min. 28 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 19
+Declared Target Sdk version is: 23
+Declared Max Sdk version is: -1
+Collected 907 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.content.pm.PackageInstaller: java.util.List getAllSessions()> is checking!!!
+The life time of api is [21,31]
+284call roads:
+1 Mainhead roads:
+283 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <com.google.android.gms.common.api.internal.zzw: void onActivityResult(int,int,android.content.Intent)>[]--><com.google.android.gms.common.zzc: int isGooglePlayServicesAvailable(android.content.Context)>[]--><com.google.android.gms.common.zze: boolean zzd(android.content.Context,int)>[]--><com.google.android.gms.common.zze: boolean zzi(android.content.Context,java.lang.String)>[]--><android.content.pm.PackageInstaller: java.util.List getAllSessions()>
+#4.the call statck between class <com.google.android.gms.common.api.internal.zzw: void onActivityResult(int,int,android.content.Intent)> to <android.content.pm.PackageInstaller: java.util.List getAllSessions()>has compatibility isssues！
+-----------------------------------------
+crashApis:1
+containsStatic:false
+containsTry:true
+11call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.content.pm.PackageManager: android.content.pm.PackageInstaller getPackageInstaller()> is checking!!!
+The life time of api is [21,31]
+284call roads:
+1 Mainhead roads:
+283 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <com.google.android.gms.common.api.internal.zzw: void onActivityResult(int,int,android.content.Intent)>[]--><com.google.android.gms.common.zzc: int isGooglePlayServicesAvailable(android.content.Context)>[]--><com.google.android.gms.common.zze: boolean zzd(android.content.Context,int)>[]--><com.google.android.gms.common.zze: boolean zzi(android.content.Context,java.lang.String)>[]--><android.content.pm.PackageManager: android.content.pm.PackageInstaller getPackageInstaller()>
+#4.the call statck between class <com.google.android.gms.common.api.internal.zzw: void onActivityResult(int,int,android.content.Intent)> to <android.content.pm.PackageManager: android.content.pm.PackageInstaller getPackageInstaller()>has compatibility isssues！
+-----------------------------------------
+crashApis:2
+containsStatic:false
+containsTry:true
+11call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <org.apache.http.params.HttpConnectionParams: void setConnectionTimeout(org.apache.http.params.HttpParams,int)> is checking!!!
+The life time of api is [23,31]
+271call roads:
+1 Mainhead roads:
+270 Packageshead roads:
+containsStatic:false
+containsTry:true
+271call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.os.BaseBundle: int getInt(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+295call roads:
+1 Mainhead roads:
+294 Packageshead roads:
+try
+Good road with try: <com.google.android.gms.common.api.internal.zzw: void onActivityResult(int,int,android.content.Intent)>[]--><com.google.android.gms.common.zzc: int isGooglePlayServicesAvailable(android.content.Context)>[]--><com.google.android.gms.common.zze: int isGooglePlayServicesAvailable(android.content.Context)>[]--><com.google.android.gms.common.zze: void zzan(android.content.Context)>[[try]]--><android.os.BaseBundle: int getInt(java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.google.android.gms.ads.formats.NativeAppInstallAdView: void <init>(android.content.Context)>[]--><com.google.android.gms.ads.formats.NativeAdView: void <init>(android.content.Context)>[]--><com.google.android.gms.ads.formats.NativeAdView: com.google.android.gms.internal.zzcj zzaI()>[]--><com.google.android.gms.internal.zzcv: com.google.android.gms.internal.zzcj zza(android.content.Context,android.widget.FrameLayout,android.widget.FrameLayout)>[]--><com.google.android.gms.ads.internal.util.client.zza: boolean zzU(android.content.Context)>[]--><com.google.android.gms.common.zze: int isGooglePlayServicesAvailable(android.content.Context)>[]--><com.google.android.gms.common.zze: void zzan(android.content.Context)>[[try]]--><android.os.BaseBundle: int getInt(java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.google.android.gms.ads.identifier.AdvertisingIdClient: com.google.android.gms.ads.identifier.AdvertisingIdClient$Info getAdvertisingIdInfo(android.content.Context)>[[try]]--><com.google.android.gms.ads.identifier.AdvertisingIdClient: void zzb(boolean)>[[try]]--><com.google.android.gms.ads.identifier.AdvertisingIdClient: com.google.android.gms.common.zza zzp(android.content.Context)>[]--><com.google.android.gms.common.zzc: int isGooglePlayServicesAvailable(android.content.Context)>[]--><com.google.android.gms.common.zze: int isGooglePlayServicesAvailable(android.content.Context)>[]--><com.google.android.gms.common.zze: void zzan(android.content.Context)>[[try]]--><android.os.BaseBundle: int getInt(java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.google.android.gms.ads.formats.NativeAppInstallAdView: void <init>(android.content.Context,android.util.AttributeSet,int)>[]--><com.google.android.gms.ads.formats.NativeAdView: void <init>(android.content.Context,android.util.AttributeSet,int)>[]--><com.google.android.gms.ads.formats.NativeAdView: com.google.android.gms.internal.zzcj zzaI()>[]--><com.google.android.gms.internal.zzcv: com.google.android.gms.internal.zzcj zza(android.content.Context,android.widget.FrameLayout,android.widget.FrameLayout)>[]--><com.google.android.gms.ads.internal.util.client.zza: boolean zzU(android.content.Context)>[]--><com.google.android.gms.common.zze: int isGooglePlayServicesAvailable(android.content.Context)>[]--><com.google.android.gms.common.zze: void zzan(android.content.Context)>[[try]]--><android.os.BaseBundle: int getInt(java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.google.android.gms.internal.zzba$5: void zzd(com.google.android.gms.internal.zzeh)>[]--><com.google.android.gms.internal.zzej: void zza(java.lang.String,org.json.JSONObject)>[]--><com.google.android.gms.internal.zzef: void zza(java.lang.String,org.json.JSONObject)>[]--><com.google.android.gms.internal.zzef: void runOnUiThread(java.lang.Runnable)>[]--><com.google.android.gms.internal.zzam$zzb: void run()>[[try]]--><com.google.android.gms.ads.identifier.AdvertisingIdClient: void start()>[]--><com.google.android.gms.ads.identifier.AdvertisingIdClient: void zzb(boolean)>[[try]]--><com.google.android.gms.ads.identifier.AdvertisingIdClient: com.google.android.gms.common.zza zzp(android.content.Context)>[]--><com.google.android.gms.common.zzc: int isGooglePlayServicesAvailable(android.content.Context)>[]--><com.google.android.gms.common.zze: int isGooglePlayServicesAvailable(android.content.Context)>[]--><com.google.android.gms.common.zze: void zzan(android.content.Context)>[[try]]--><android.os.BaseBundle: int getInt(java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.google.android.gms.internal.zzba$5: void zzd(com.google.android.gms.internal.zzeh)>[]--><com.google.android.gms.internal.zzef: void zza(java.lang.String,org.json.JSONObject)>[]--><com.google.android.gms.internal.zzef: void runOnUiThread(java.lang.Runnable)>[]--><com.google.android.gms.internal.zzam$zzb: void run()>[[try]]--><com.google.android.gms.ads.identifier.AdvertisingIdClient: void start()>[]--><com.google.android.gms.ads.identifier.AdvertisingIdClient: void zzb(boolean)>[[try]]--><com.google.android.gms.ads.identifier.AdvertisingIdClient: com.google.android.gms.common.zza zzp(android.content.Context)>[]--><com.google.android.gms.common.zzc: int isGooglePlayServicesAvailable(android.content.Context)>[]--><com.google.android.gms.common.zze: int isGooglePlayServicesAvailable(android.content.Context)>[]--><com.google.android.gms.common.zze: void zzan(android.content.Context)>[[try]]--><android.os.BaseBundle: int getInt(java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.google.android.gms.internal.zzhd$2$1: void zzd(com.google.android.gms.internal.zzeh)>[[try]]--><com.google.android.gms.internal.zzej: void zze(java.lang.String,java.lang.String)>[]--><com.google.android.gms.internal.zzef: void zze(java.lang.String,java.lang.String)>[]--><com.google.android.gms.internal.zzef: void runOnUiThread(java.lang.Runnable)>[]--><com.google.android.gms.internal.zzam$zzb: void run()>[[try]]--><com.google.android.gms.ads.identifier.AdvertisingIdClient: void start()>[]--><com.google.android.gms.ads.identifier.AdvertisingIdClient: void zzb(boolean)>[[try]]--><com.google.android.gms.ads.identifier.AdvertisingIdClient: com.google.android.gms.common.zza zzp(android.content.Context)>[]--><com.google.android.gms.common.zzc: int isGooglePlayServicesAvailable(android.content.Context)>[]--><com.google.android.gms.common.zze: int isGooglePlayServicesAvailable(android.content.Context)>[]--><com.google.android.gms.common.zze: void zzan(android.content.Context)>[[try]]--><android.os.BaseBundle: int getInt(java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.google.android.gms.internal.zzhd$2$1: void zzd(com.google.android.gms.internal.zzeh)>[[try]]--><com.google.android.gms.internal.zzef: void zze(java.lang.String,java.lang.String)>[]--><com.google.android.gms.internal.zzef: void runOnUiThread(java.lang.Runnable)>[]--><com.google.android.gms.internal.zzam$zzb: void run()>[[try]]--><com.google.android.gms.ads.identifier.AdvertisingIdClient: void start()>[]--><com.google.android.gms.ads.identifier.AdvertisingIdClient: void zzb(boolean)>[[try]]--><com.google.android.gms.ads.identifier.AdvertisingIdClient: com.google.android.gms.common.zza zzp(android.content.Context)>[]--><com.google.android.gms.common.zzc: int isGooglePlayServicesAvailable(android.content.Context)>[]--><com.google.android.gms.common.zze: int isGooglePlayServicesAvailable(android.content.Context)>[]--><com.google.android.gms.common.zze: void zzan(android.content.Context)>[[try]]--><android.os.BaseBundle: int getInt(java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.google.android.gms.flags.impl.zza$zzb: java.lang.Integer zza(android.content.SharedPreferences,java.lang.String,java.lang.Integer)>[]--><com.google.android.gms.internal.zzpl: java.lang.Object zzb(java.util.concurrent.Callable)>[[try]]--><com.google.android.gms.internal.zzgw: java.lang.Object call()>[]--><com.google.android.gms.internal.zzgw: com.google.android.gms.internal.zzif zzgl()>[[try]]--><com.google.android.gms.internal.zzgw: org.json.JSONObject zzb(com.google.android.gms.internal.zzed)>[]--><com.google.android.gms.internal.zzej: void zza(java.lang.String,org.json.JSONObject)>[]--><com.google.android.gms.internal.zzef: void zza(java.lang.String,org.json.JSONObject)>[]--><com.google.android.gms.internal.zzef: void runOnUiThread(java.lang.Runnable)>[]--><com.google.android.gms.internal.zzam$zzb: void run()>[[try]]--><com.google.android.gms.ads.identifier.AdvertisingIdClient: void start()>[]--><com.google.android.gms.ads.identifier.AdvertisingIdClient: void zzb(boolean)>[[try]]--><com.google.android.gms.ads.identifier.AdvertisingIdClient: com.google.android.gms.common.zza zzp(android.content.Context)>[]--><com.google.android.gms.common.zzc: int isGooglePlayServicesAvailable(android.content.Context)>[]--><com.google.android.gms.common.zze: int isGooglePlayServicesAvailable(android.content.Context)>[]--><com.google.android.gms.common.zze: void zzan(android.content.Context)>[[try]]--><android.os.BaseBundle: int getInt(java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.google.android.gms.ads.formats.NativeContentAdView: void <init>(android.content.Context)>[]--><com.google.android.gms.ads.formats.NativeAdView: void <init>(android.content.Context)>[]--><com.google.android.gms.ads.formats.NativeAdView: com.google.android.gms.internal.zzcj zzaI()>[]--><com.google.android.gms.internal.zzcv: com.google.android.gms.internal.zzcj zza(android.content.Context,android.widget.FrameLayout,android.widget.FrameLayout)>[]--><com.google.android.gms.ads.internal.util.client.zza: boolean zzU(android.content.Context)>[]--><com.google.android.gms.common.zze: int isGooglePlayServicesAvailable(android.content.Context)>[]--><com.google.android.gms.common.zze: void zzan(android.content.Context)>[[try]]--><android.os.BaseBundle: int getInt(java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.google.android.gms.auth.zzd: void clearToken(android.content.Context,java.lang.String)>[]--><com.google.android.gms.auth.zzd: void zzad(android.content.Context)>[[try]]--><com.google.android.gms.common.zze: void zzad(android.content.Context)>[]--><com.google.android.gms.common.zzc: int isGooglePlayServicesAvailable(android.content.Context)>[]--><com.google.android.gms.common.zze: int isGooglePlayServicesAvailable(android.content.Context)>[]--><com.google.android.gms.common.zze: void zzan(android.content.Context)>[[try]]--><android.os.BaseBundle: int getInt(java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.google.android.gms.ads.AdLoader$Builder: void <init>(android.content.Context,java.lang.String)>[]--><com.google.android.gms.ads.internal.client.zzd: com.google.android.gms.ads.internal.client.zzs zza(android.content.Context,java.lang.String,com.google.android.gms.internal.zzew)>[]--><com.google.android.gms.ads.internal.util.client.zza: boolean zzU(android.content.Context)>[]--><com.google.android.gms.common.zze: int isGooglePlayServicesAvailable(android.content.Context)>[]--><com.google.android.gms.common.zze: void zzan(android.content.Context)>[[try]]--><android.os.BaseBundle: int getInt(java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.google.android.gms.auth.zzd: java.util.List getAccountChangeEvents(android.content.Context,int,java.lang.String)>[]--><com.google.android.gms.auth.zzd: void zzad(android.content.Context)>[[try]]--><com.google.android.gms.common.zze: void zzad(android.content.Context)>[]--><com.google.android.gms.common.zzc: int isGooglePlayServicesAvailable(android.content.Context)>[]--><com.google.android.gms.common.zze: int isGooglePlayServicesAvailable(android.content.Context)>[]--><com.google.android.gms.common.zze: void zzan(android.content.Context)>[[try]]--><android.os.BaseBundle: int getInt(java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.google.android.gms.ads.identifier.AdvertisingIdClient: com.google.android.gms.ads.identifier.AdvertisingIdClient$Info getInfo()>[[try]]--><com.google.android.gms.ads.identifier.AdvertisingIdClient: void zzb(boolean)>[[try]]--><com.google.android.gms.ads.identifier.AdvertisingIdClient: com.google.android.gms.common.zza zzp(android.content.Context)>[]--><com.google.android.gms.common.zzc: int isGooglePlayServicesAvailable(android.content.Context)>[]--><com.google.android.gms.common.zze: int isGooglePlayServicesAvailable(android.content.Context)>[]--><com.google.android.gms.common.zze: void zzan(android.content.Context)>[[try]]--><android.os.BaseBundle: int getInt(java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.google.android.gms.ads.formats.NativeAppInstallAdView: void <init>(android.content.Context,android.util.AttributeSet)>[]--><com.google.android.gms.ads.formats.NativeAdView: void <init>(android.content.Context,android.util.AttributeSet)>[]--><com.google.android.gms.ads.formats.NativeAdView: com.google.android.gms.internal.zzcj zzaI()>[]--><com.google.android.gms.internal.zzcv: com.google.android.gms.internal.zzcj zza(android.content.Context,android.widget.FrameLayout,android.widget.FrameLayout)>[]--><com.google.android.gms.ads.internal.util.client.zza: boolean zzU(android.content.Context)>[]--><com.google.android.gms.common.zze: int isGooglePlayServicesAvailable(android.content.Context)>[]--><com.google.android.gms.common.zze: void zzan(android.content.Context)>[[try]]--><android.os.BaseBundle: int getInt(java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.google.android.gms.internal.zzih: void zze(android.os.Bundle)>[[try]]--><android.os.BaseBundle: int getInt(java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.google.android.gms.auth.zzd: java.lang.String getAccountId(android.content.Context,java.lang.String)>[]--><com.google.android.gms.auth.zzd: java.lang.String getToken(android.content.Context,java.lang.String,java.lang.String,android.os.Bundle)>[]--><com.google.android.gms.auth.zzd: java.lang.String getToken(android.content.Context,android.accounts.Account,java.lang.String,android.os.Bundle)>[]--><com.google.android.gms.auth.zzd: com.google.android.gms.auth.TokenData zzc(android.content.Context,android.accounts.Account,java.lang.String,android.os.Bundle)>[]--><com.google.android.gms.auth.zzd: void zzad(android.content.Context)>[[try]]--><com.google.android.gms.common.zze: void zzad(android.content.Context)>[]--><com.google.android.gms.common.zzc: int isGooglePlayServicesAvailable(android.content.Context)>[]--><com.google.android.gms.common.zze: int isGooglePlayServicesAvailable(android.content.Context)>[]--><com.google.android.gms.common.zze: void zzan(android.content.Context)>[[try]]--><android.os.BaseBundle: int getInt(java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.google.android.gms.auth.zzd: java.lang.String getAccountId(android.content.Context,java.lang.String)>[]--><com.google.android.gms.auth.zzd: void zzad(android.content.Context)>[[try]]--><com.google.android.gms.common.zze: void zzad(android.content.Context)>[]--><com.google.android.gms.common.zzc: int isGooglePlayServicesAvailable(android.content.Context)>[]--><com.google.android.gms.common.zze: int isGooglePlayServicesAvailable(android.content.Context)>[]--><com.google.android.gms.common.zze: void zzan(android.content.Context)>[[try]]--><android.os.BaseBundle: int getInt(java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.google.android.gms.flags.impl.zza$zza: java.lang.Boolean zza(android.content.SharedPreferences,java.lang.String,java.lang.Boolean)>[]--><com.google.android.gms.internal.zzpl: java.lang.Object zzb(java.util.concurrent.Callable)>[[try]]--><com.google.android.gms.internal.zzgw: java.lang.Object call()>[]--><com.google.android.gms.internal.zzgw: com.google.android.gms.internal.zzif zzgl()>[[try]]--><com.google.android.gms.internal.zzgw: org.json.JSONObject zzb(com.google.android.gms.internal.zzed)>[]--><com.google.android.gms.internal.zzej: void zza(java.lang.String,org.json.JSONObject)>[]--><com.google.android.gms.internal.zzef: void zza(java.lang.String,org.json.JSONObject)>[]--><com.google.android.gms.internal.zzef: void runOnUiThread(java.lang.Runnable)>[]--><com.google.android.gms.internal.zzam$zzb: void run()>[[try]]--><com.google.android.gms.ads.identifier.AdvertisingIdClient: void start()>[]--><com.google.android.gms.ads.identifier.AdvertisingIdClient: void zzb(boolean)>[[try]]--><com.google.android.gms.ads.identifier.AdvertisingIdClient: com.google.android.gms.common.zza zzp(android.content.Context)>[]--><com.google.android.gms.common.zzc: int isGooglePlayServicesAvailable(android.content.Context)>[]--><com.google.android.gms.common.zze: int isGooglePlayServicesAvailable(android.content.Context)>[]--><com.google.android.gms.common.zze: void zzan(android.content.Context)>[[try]]--><android.os.BaseBundle: int getInt(java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.google.android.gms.ads.formats.NativeContentAdView: void <init>(android.content.Context,android.util.AttributeSet)>[]--><com.google.android.gms.ads.formats.NativeAdView: void <init>(android.content.Context,android.util.AttributeSet)>[]--><com.google.android.gms.ads.formats.NativeAdView: com.google.android.gms.internal.zzcj zzaI()>[]--><com.google.android.gms.internal.zzcv: com.google.android.gms.internal.zzcj zza(android.content.Context,android.widget.FrameLayout,android.widget.FrameLayout)>[]--><com.google.android.gms.ads.internal.util.client.zza: boolean zzU(android.content.Context)>[]--><com.google.android.gms.common.zze: int isGooglePlayServicesAvailable(android.content.Context)>[]--><com.google.android.gms.common.zze: void zzan(android.content.Context)>[[try]]--><android.os.BaseBundle: int getInt(java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.google.android.gms.internal.zziq$1: java.lang.Void zzdt()>[]--><com.google.android.gms.internal.zzeg$1: void run()>[]--><com.google.android.gms.internal.zzef: void zzZ(java.lang.String)>[]--><com.google.android.gms.internal.zzef: void runOnUiThread(java.lang.Runnable)>[]--><com.google.android.gms.internal.zzam$zzb: void run()>[[try]]--><com.google.android.gms.ads.identifier.AdvertisingIdClient: void start()>[]--><com.google.android.gms.ads.identifier.AdvertisingIdClient: void zzb(boolean)>[[try]]--><com.google.android.gms.ads.identifier.AdvertisingIdClient: com.google.android.gms.common.zza zzp(android.content.Context)>[]--><com.google.android.gms.common.zzc: int isGooglePlayServicesAvailable(android.content.Context)>[]--><com.google.android.gms.common.zze: int isGooglePlayServicesAvailable(android.content.Context)>[]--><com.google.android.gms.common.zze: void zzan(android.content.Context)>[[try]]--><android.os.BaseBundle: int getInt(java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.google.android.gms.internal.zziq$1: java.lang.Void zzdt()>[]--><com.google.android.gms.internal.zzee$1: void run()>[]--><com.google.android.gms.internal.zzef: void zzaa(java.lang.String)>[]--><com.google.android.gms.internal.zzef: void runOnUiThread(java.lang.Runnable)>[]--><com.google.android.gms.internal.zzam$zzb: void run()>[[try]]--><com.google.android.gms.ads.identifier.AdvertisingIdClient: void start()>[]--><com.google.android.gms.ads.identifier.AdvertisingIdClient: void zzb(boolean)>[[try]]--><com.google.android.gms.ads.identifier.AdvertisingIdClient: com.google.android.gms.common.zza zzp(android.content.Context)>[]--><com.google.android.gms.common.zzc: int isGooglePlayServicesAvailable(android.content.Context)>[]--><com.google.android.gms.common.zze: int isGooglePlayServicesAvailable(android.content.Context)>[]--><com.google.android.gms.common.zze: void zzan(android.content.Context)>[[try]]--><android.os.BaseBundle: int getInt(java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.google.android.gms.internal.zziq$1: java.lang.Void zzdt()>[]--><com.google.android.gms.internal.zzam$zzb: void run()>[[try]]--><com.google.android.gms.ads.identifier.AdvertisingIdClient: void start()>[]--><com.google.android.gms.ads.identifier.AdvertisingIdClient: void zzb(boolean)>[[try]]--><com.google.android.gms.ads.identifier.AdvertisingIdClient: com.google.android.gms.common.zza zzp(android.content.Context)>[]--><com.google.android.gms.common.zzc: int isGooglePlayServicesAvailable(android.content.Context)>[]--><com.google.android.gms.common.zze: int isGooglePlayServicesAvailable(android.content.Context)>[]--><com.google.android.gms.common.zze: void zzan(android.content.Context)>[[try]]--><android.os.BaseBundle: int getInt(java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.google.android.gms.internal.zziq$1: java.lang.Void zzdt()>[]--><com.google.android.gms.internal.zznl: void run()>[]--><com.google.android.gms.internal.zzeg$1: void run()>[]--><com.google.android.gms.internal.zzef: void zzZ(java.lang.String)>[]--><com.google.android.gms.internal.zzef: void runOnUiThread(java.lang.Runnable)>[]--><com.google.android.gms.internal.zzam$zzb: void run()>[[try]]--><com.google.android.gms.ads.identifier.AdvertisingIdClient: void start()>[]--><com.google.android.gms.ads.identifier.AdvertisingIdClient: void zzb(boolean)>[[try]]--><com.google.android.gms.ads.identifier.AdvertisingIdClient: com.google.android.gms.common.zza zzp(android.content.Context)>[]--><com.google.android.gms.common.zzc: int isGooglePlayServicesAvailable(android.content.Context)>[]--><com.google.android.gms.common.zze: int isGooglePlayServicesAvailable(android.content.Context)>[]--><com.google.android.gms.common.zze: void zzan(android.content.Context)>[[try]]--><android.os.BaseBundle: int getInt(java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.google.android.gms.ads.internal.request.zzc: com.google.android.gms.internal.zzit zzb(android.content.Context,com.google.android.gms.ads.internal.util.client.VersionInfoParcel,com.google.android.gms.internal.zzji,com.google.android.gms.ads.internal.request.zzc$zza)>[]--><com.google.android.gms.ads.internal.util.client.zza: boolean zzU(android.content.Context)>[]--><com.google.android.gms.common.zze: int isGooglePlayServicesAvailable(android.content.Context)>[]--><com.google.android.gms.common.zze: void zzan(android.content.Context)>[[try]]--><android.os.BaseBundle: int getInt(java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.google.android.gms.flags.impl.FlagProviderImpl: void init(com.google.android.gms.dynamic.zzd)>[[try]]--><com.google.android.gms.flags.impl.zzb: android.content.SharedPreferences zzw(android.content.Context)>[[try]]--><com.google.android.gms.internal.zzpl: java.lang.Object zzb(java.util.concurrent.Callable)>[[try]]--><com.google.android.gms.internal.zzgw: java.lang.Object call()>[]--><com.google.android.gms.internal.zzgw: com.google.android.gms.internal.zzif zzgl()>[[try]]--><com.google.android.gms.internal.zzgw: org.json.JSONObject zzb(com.google.android.gms.internal.zzed)>[]--><com.google.android.gms.internal.zzej: void zza(java.lang.String,org.json.JSONObject)>[]--><com.google.android.gms.internal.zzef: void zza(java.lang.String,org.json.JSONObject)>[]--><com.google.android.gms.internal.zzef: void runOnUiThread(java.lang.Runnable)>[]--><com.google.android.gms.internal.zzam$zzb: void run()>[[try]]--><com.google.android.gms.ads.identifier.AdvertisingIdClient: void start()>[]--><com.google.android.gms.ads.identifier.AdvertisingIdClient: void zzb(boolean)>[[try]]--><com.google.android.gms.ads.identifier.AdvertisingIdClient: com.google.android.gms.common.zza zzp(android.content.Context)>[]--><com.google.android.gms.common.zzc: int isGooglePlayServicesAvailable(android.content.Context)>[]--><com.google.android.gms.common.zze: int isGooglePlayServicesAvailable(android.content.Context)>[]--><com.google.android.gms.common.zze: void zzan(android.content.Context)>[[try]]--><android.os.BaseBundle: int getInt(java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.google.android.gms.ads.internal.formats.zzk: void onGlobalLayout()>[[try]]--><com.google.android.gms.ads.internal.formats.zzi: void zzh(android.view.View)>[[try]]--><com.google.android.gms.ads.internal.formats.zzi: void recordImpression()>[[try]]--><com.google.android.gms.internal.zzef: void zza(java.lang.String,org.json.JSONObject)>[]--><com.google.android.gms.internal.zzef: void runOnUiThread(java.lang.Runnable)>[]--><com.google.android.gms.internal.zzam$zzb: void run()>[[try]]--><com.google.android.gms.ads.identifier.AdvertisingIdClient: void start()>[]--><com.google.android.gms.ads.identifier.AdvertisingIdClient: void zzb(boolean)>[[try]]--><com.google.android.gms.ads.identifier.AdvertisingIdClient: com.google.android.gms.common.zza zzp(android.content.Context)>[]--><com.google.android.gms.common.zzc: int isGooglePlayServicesAvailable(android.content.Context)>[]--><com.google.android.gms.common.zze: int isGooglePlayServicesAvailable(android.content.Context)>[]--><com.google.android.gms.common.zze: void zzan(android.content.Context)>[[try]]--><android.os.BaseBundle: int getInt(java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.google.android.gms.internal.zzaz: void zzb(org.json.JSONObject)>[]--><com.google.android.gms.internal.zzej: void zza(java.lang.String,org.json.JSONObject)>[]--><com.google.android.gms.internal.zzef: void zza(java.lang.String,org.json.JSONObject)>[]--><com.google.android.gms.internal.zzef: void runOnUiThread(java.lang.Runnable)>[]--><com.google.android.gms.internal.zzam$zzb: void run()>[[try]]--><com.google.android.gms.ads.identifier.AdvertisingIdClient: void start()>[]--><com.google.android.gms.ads.identifier.AdvertisingIdClient: void zzb(boolean)>[[try]]--><com.google.android.gms.ads.identifier.AdvertisingIdClient: com.google.android.gms.common.zza zzp(android.content.Context)>[]--><com.google.android.gms.common.zzc: int isGooglePlayServicesAvailable(android.content.Context)>[]--><com.google.android.gms.common.zze: int isGooglePlayServicesAvailable(android.content.Context)>[]--><com.google.android.gms.common.zze: void zzan(android.content.Context)>[[try]]--><android.os.BaseBundle: int getInt(java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.google.android.gms.internal.zzaz: void zzb(org.json.JSONObject)>[]--><com.google.android.gms.internal.zzef: void zza(java.lang.String,org.json.JSONObject)>[]--><com.google.android.gms.internal.zzef: void runOnUiThread(java.lang.Runnable)>[]--><com.google.android.gms.internal.zzam$zzb: void run()>[[try]]--><com.google.android.gms.ads.identifier.AdvertisingIdClient: void start()>[]--><com.google.android.gms.ads.identifier.AdvertisingIdClient: void zzb(boolean)>[[try]]--><com.google.android.gms.ads.identifier.AdvertisingIdClient: com.google.android.gms.common.zza zzp(android.content.Context)>[]--><com.google.android.gms.common.zzc: int isGooglePlayServicesAvailable(android.content.Context)>[]--><com.google.android.gms.common.zze: int isGooglePlayServicesAvailable(android.content.Context)>[]--><com.google.android.gms.common.zze: void zzan(android.content.Context)>[[try]]--><android.os.BaseBundle: int getInt(java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.google.android.gms.ads.MobileAds: void initialize(android.content.Context)>[]--><com.google.android.gms.ads.internal.client.zzad: void initialize(android.content.Context)>[[try]]--><com.google.android.gms.ads.internal.client.zzaf: com.google.android.gms.ads.internal.client.zzy zzu(android.content.Context)>[]--><com.google.android.gms.ads.internal.util.client.zza: boolean zzU(android.content.Context)>[]--><com.google.android.gms.common.zze: int isGooglePlayServicesAvailable(android.content.Context)>[]--><com.google.android.gms.common.zze: void zzan(android.content.Context)>[[try]]--><android.os.BaseBundle: int getInt(java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.google.android.gms.ads.formats.NativeContentAdView: void <init>(android.content.Context,android.util.AttributeSet,int,int)>[]--><com.google.android.gms.ads.formats.NativeAdView: void <init>(android.content.Context,android.util.AttributeSet,int,int)>[]--><com.google.android.gms.ads.formats.NativeAdView: com.google.android.gms.internal.zzcj zzaI()>[]--><com.google.android.gms.internal.zzcv: com.google.android.gms.internal.zzcj zza(android.content.Context,android.widget.FrameLayout,android.widget.FrameLayout)>[]--><com.google.android.gms.ads.internal.util.client.zza: boolean zzU(android.content.Context)>[]--><com.google.android.gms.common.zze: int isGooglePlayServicesAvailable(android.content.Context)>[]--><com.google.android.gms.common.zze: void zzan(android.content.Context)>[[try]]--><android.os.BaseBundle: int getInt(java.lang.String)>
+One road protect good!
+!!!this api will crash on sdk 19 20 
+Error road: <com.google.android.gms.common.api.internal.zzw: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#199.the call statck between class <com.google.android.gms.common.api.internal.zzw: void onCreate(android.os.Bundle)> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:3
+containsStatic:false
+containsTry:true
+200call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <com.google.android.gms.internal.zzhj$zza: void zza(android.content.Context,android.content.pm.PackageManager)>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>
+#1.the call statck between class <com.google.android.gms.internal.zzhj$zza: void zza(android.content.Context,android.content.pm.PackageManager)> to <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>has compatibility isssues！
+-----------------------------------------
+crashApis:4
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 5 Potential Issue API: SDKCheck of <android.graphics.Canvas: void drawRoundRect(float,float,float,float,float,float,android.graphics.Paint)> is checking!!!
+The life time of api is [21,31]
+2call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.eztarget.micopi.ui.ContactActivity dummyMainMethod_org_eztarget_micopi_ui_ContactActivity(android.content.Intent)>[]--><org.eztarget.micopi.ui.ContactActivity: void onActivityResult(int,int,android.content.Intent)>[]--><org.eztarget.micopi.ui.ContactActivity: void setContact(org.eztarget.micopi.Contact)>[]--><org.eztarget.micopi.ui.ContactActivity: void generateImage()>[]--><org.eztarget.micopi.engine.ImageFactory: android.graphics.Bitmap bitmapFrom(android.content.Context,org.eztarget.micopi.Contact,int)>[]--><org.eztarget.micopi.engine.ImageFactory: android.graphics.Bitmap generateBitmap(android.content.Context)>[]--><org.eztarget.micopi.engine.PlatesGenerator: void paint()>[]--><org.eztarget.micopi.engine.Painter: void paintRoundedSquare(int,org.eztarget.micopi.engine.Painter$Texture,float,float,float)>[]--><android.graphics.Canvas: void drawRoundRect(float,float,float,float,float,float,android.graphics.Paint)>
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.eztarget.micopi.ImageService dummyMainMethod_org_eztarget_micopi_ImageService(android.content.Intent)>[]--><org.eztarget.micopi.ImageService: void onHandleIntent(android.content.Intent)>[]--><org.eztarget.micopi.ImageService: void processContacts(org.eztarget.micopi.ImageService$CrawlMode)>[]--><org.eztarget.micopi.engine.ImageFactory: android.graphics.Bitmap bitmapFrom(android.content.Context,org.eztarget.micopi.Contact,int)>[]--><org.eztarget.micopi.engine.ImageFactory: android.graphics.Bitmap generateBitmap(android.content.Context)>[]--><org.eztarget.micopi.engine.PlatesGenerator: void paint()>[]--><org.eztarget.micopi.engine.Painter: void paintRoundedSquare(int,org.eztarget.micopi.engine.Painter$Texture,float,float,float)>[]--><android.graphics.Canvas: void drawRoundRect(float,float,float,float,float,float,android.graphics.Paint)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.graphics.Canvas: void drawRoundRect(float,float,float,float,float,float,android.graphics.Paint)>has compatibility isssues！
+-----------------------------------------
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <org.eztarget.micopi.ui.ContactActivity: void onButtonClicked(android.view.View)>[]--><org.eztarget.micopi.ui.ContactActivity: void generateNew(boolean)>[]--><org.eztarget.micopi.ui.ContactActivity: void generateImage()>[]--><org.eztarget.micopi.engine.ImageFactory: android.graphics.Bitmap bitmapFrom(android.content.Context,org.eztarget.micopi.Contact,int)>[]--><org.eztarget.micopi.engine.ImageFactory: android.graphics.Bitmap generateBitmap(android.content.Context)>[]--><org.eztarget.micopi.engine.PlatesGenerator: void paint()>[]--><org.eztarget.micopi.engine.Painter: void paintRoundedSquare(int,org.eztarget.micopi.engine.Painter$Texture,float,float,float)>[]--><android.graphics.Canvas: void drawRoundRect(float,float,float,float,float,float,android.graphics.Paint)>
+#1.the call statck between class <org.eztarget.micopi.ui.ContactActivity: void onButtonClicked(android.view.View)> to <android.graphics.Canvas: void drawRoundRect(float,float,float,float,float,float,android.graphics.Paint)>has compatibility isssues！
+-----------------------------------------
+crashApis:5
+crashApisInMain:1
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 6 Potential Issue API: SDKCheck of <android.os.BaseBundle: boolean containsKey(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+5call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.eztarget.micopi.ui.ContactActivity dummyMainMethod_org_eztarget_micopi_ui_ContactActivity(android.content.Intent)>[]--><org.eztarget.micopi.ui.ContactActivity: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: boolean containsKey(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: boolean containsKey(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+4 Packageshead roads:
+try
+Good road with try: <com.google.android.gms.ads.internal.zzm$2: void zza(com.google.android.gms.internal.zzjp,boolean)>[[try]]--><com.google.android.gms.ads.internal.zzm: org.json.JSONObject zzb(android.os.Bundle,java.lang.String)>[]--><com.google.android.gms.ads.internal.zzm: org.json.JSONObject zza(android.os.Bundle,java.lang.String)>[]--><android.os.BaseBundle: boolean containsKey(java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.google.android.gms.ads.internal.zzm$1: void zza(com.google.android.gms.internal.zzjp,boolean)>[[try]]--><com.google.android.gms.ads.internal.zzm: org.json.JSONObject zzb(android.os.Bundle,java.lang.String)>[]--><com.google.android.gms.ads.internal.zzm: org.json.JSONObject zza(android.os.Bundle,java.lang.String)>[]--><android.os.BaseBundle: boolean containsKey(java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.google.android.gms.internal.zzih: void zze(android.os.Bundle)>[[try]]--><android.os.BaseBundle: boolean containsKey(java.lang.String)>
+One road protect good!
+!!!this api will crash on sdk 19 20 
+Error road: <com.google.android.gms.auth.zzd: void clearToken(android.content.Context,java.lang.String)>[]--><android.os.BaseBundle: boolean containsKey(java.lang.String)>
+#4.the call statck between class <com.google.android.gms.auth.zzd: void clearToken(android.content.Context,java.lang.String)> to <android.os.BaseBundle: boolean containsKey(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:6
+crashApisInMain:2
+containsStatic:false
+containsTry:true
+5call by main package
+-----------------------------------------
+#################################################
+N 7 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)> is checking!!!
+The life time of api is [21,31]
+281call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.eztarget.micopi.ui.BatchActivity dummyMainMethod_org_eztarget_micopi_ui_BatchActivity(android.content.Intent)>[]--><org.eztarget.micopi.ui.BatchActivity: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+280 Packageshead roads:
+crashApis:7
+crashApisInMain:3
+containsStatic:false
+containsTry:true
+11call by main package
+-----------------------------------------
+#################################################
+N 8 Potential Issue API: SDKCheck of <android.net.ConnectivityManager: boolean isActiveNetworkMetered()> is checking!!!
+The life time of api is [16,30]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i0 < 16
+!!!this api will crash on sdk 31 
+Error road: <com.google.android.gms.internal.zzhj$zza: void zza(android.content.Context,android.content.pm.PackageManager)>[[-$i0 < 16]]--><android.net.ConnectivityManager: boolean isActiveNetworkMetered()>
+#1.the call statck between class <com.google.android.gms.internal.zzhj$zza: void zza(android.content.Context,android.content.pm.PackageManager)> to <android.net.ConnectivityManager: boolean isActiveNetworkMetered()>has compatibility isssues！
+-----------------------------------------
+crashApis:8
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 9 Potential Issue API: SDKCheck of <android.net.http.AndroidHttpClient: android.net.http.AndroidHttpClient newInstance(java.lang.String)> is checking!!!
+The life time of api is [8,22]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+try
+Good road with try: <com.google.android.gms.internal.zzjw: android.webkit.WebResourceResponse shouldInterceptRequest(android.webkit.WebView,java.lang.String)>[[try]]--><com.google.android.gms.internal.zzjw: android.webkit.WebResourceResponse zzd(android.content.Context,java.lang.String,java.lang.String)>[]--><com.google.android.gms.internal.zziw: void <init>(android.content.Context)>[]--><com.google.android.gms.internal.zziw: com.google.android.gms.internal.zzl zzS(android.content.Context)>[[try]]--><com.google.android.gms.internal.zzac: com.google.android.gms.internal.zzl zza(android.content.Context)>[]--><com.google.android.gms.internal.zzac: com.google.android.gms.internal.zzl zza(android.content.Context,com.google.android.gms.internal.zzy)>[[$i0 < 9]]--><android.net.http.AndroidHttpClient: android.net.http.AndroidHttpClient newInstance(java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.google.android.gms.internal.zzgv: void <init>(android.content.Context,com.google.android.gms.ads.internal.zzp,com.google.android.gms.internal.zzee,com.google.android.gms.internal.zzif$zza,com.google.android.gms.internal.zzan,com.google.android.gms.internal.zzgr$zza)>[]--><com.google.android.gms.internal.zziw: void <init>(android.content.Context)>[]--><com.google.android.gms.internal.zziw: com.google.android.gms.internal.zzl zzS(android.content.Context)>[[try]]--><com.google.android.gms.internal.zzac: com.google.android.gms.internal.zzl zza(android.content.Context)>[]--><com.google.android.gms.internal.zzac: com.google.android.gms.internal.zzl zza(android.content.Context,com.google.android.gms.internal.zzy)>[[$i0 < 9]]--><android.net.http.AndroidHttpClient: android.net.http.AndroidHttpClient newInstance(java.lang.String)>
+One road protect good!
+containsStatic:false
+containsTry:true
+3call by main package
+-----------------------------------------
+#################################################
+N 10 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)> is checking!!!
+The life time of api is [22,31]
+10call roads:
+0 Mainhead roads:
+10 Packageshead roads:
+!!!this api will crash on sdk 19 20 21 
+Error road: <com.google.android.gms.common.api.internal.zzw: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+#1.the call statck between class <com.google.android.gms.common.api.internal.zzw: void onSaveInstanceState(android.os.Bundle)> to <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 21 
+Error road: <com.google.ads.mediation.admob.AdMobAdapter: android.os.Bundle zza(android.os.Bundle,android.os.Bundle)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+#2.the call statck between class <com.google.ads.mediation.admob.AdMobAdapter: android.os.Bundle zza(android.os.Bundle,android.os.Bundle)> to <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 21 
+Error road: <com.google.android.gms.internal.zzhe: void zza(java.util.HashMap,com.google.android.gms.internal.zzhj,com.google.android.gms.internal.zzhn$zza)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+#3.the call statck between class <com.google.android.gms.internal.zzhe: void zza(java.util.HashMap,com.google.android.gms.internal.zzhj,com.google.android.gms.internal.zzhn$zza)> to <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+try
+Good road with try: <com.google.android.gms.internal.zzhe: org.json.JSONObject zza(android.content.Context,com.google.android.gms.ads.internal.request.AdRequestInfoParcel,com.google.android.gms.internal.zzhj,com.google.android.gms.internal.zzhn$zza,android.location.Location,com.google.android.gms.internal.zzbm,java.lang.String,java.lang.String,java.util.List,android.os.Bundle)>[[try]]--><com.google.android.gms.ads.internal.request.CapabilityParcel: android.os.Bundle toBundle()>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+One road protect good!
+try
+Good road with try: <com.google.android.gms.ads.internal.zzb: com.google.android.gms.ads.internal.request.AdRequestInfoParcel$zza zza(com.google.android.gms.ads.internal.client.AdRequestParcel,android.os.Bundle)>[]--><com.google.android.gms.internal.zzih: android.os.Bundle zza(android.content.Context,com.google.android.gms.internal.zzij,java.lang.String)>[[try]]--><com.google.android.gms.internal.zzii: android.os.Bundle zzc(android.content.Context,java.lang.String)>[[try]]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+One road protect good!
+!!!this api will crash on sdk 19 20 21 
+Error road: <com.google.ads.mediation.AdUrlAdapter: android.os.Bundle zza(android.os.Bundle,android.os.Bundle)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+#6.the call statck between class <com.google.ads.mediation.AdUrlAdapter: android.os.Bundle zza(android.os.Bundle,android.os.Bundle)> to <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 21 
+Error road: <com.google.android.gms.signin.internal.zzh: void <init>(android.content.Context,android.os.Looper,boolean,com.google.android.gms.common.internal.zzf,com.google.android.gms.internal.zzro,com.google.android.gms.common.api.GoogleApiClient$ConnectionCallbacks,com.google.android.gms.common.api.GoogleApiClient$OnConnectionFailedListener)>[]--><com.google.android.gms.signin.internal.zzh: android.os.Bundle zza(com.google.android.gms.common.internal.zzf)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+#7.the call statck between class <com.google.android.gms.signin.internal.zzh: void <init>(android.content.Context,android.os.Looper,boolean,com.google.android.gms.common.internal.zzf,com.google.android.gms.internal.zzro,com.google.android.gms.common.api.GoogleApiClient$ConnectionCallbacks,com.google.android.gms.common.api.GoogleApiClient$OnConnectionFailedListener)> to <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 21 
+Error road: <com.google.android.gms.internal.zzip$2: void zzbr()>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+#8.the call statck between class <com.google.android.gms.internal.zzip$2: void zzbr()> to <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 21 
+Error road: <com.google.android.gms.internal.zzip$6: void zzbr()>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+#9.the call statck between class <com.google.android.gms.internal.zzip$6: void zzbr()> to <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+try
+Good road with try: <com.google.android.gms.ads.AdActivity: void onSaveInstanceState(android.os.Bundle)>[[try]]--><com.google.android.gms.ads.internal.overlay.zzd: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+One road protect good!
+crashApis:9
+containsStatic:false
+containsTry:true
+11call by main package
+-----------------------------------------
+#################################################
+N 11 Potential Issue API: SDKCheck of <android.widget.FrameLayout: void <init>(android.content.Context,android.util.AttributeSet,int,int)> is checking!!!
+The life time of api is [21,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <com.google.android.gms.ads.formats.NativeContentAdView: void <init>(android.content.Context,android.util.AttributeSet,int,int)>[[]]--><android.widget.FrameLayout: void <init>(android.content.Context,android.util.AttributeSet,int,int)>
+!!!this api will crash on sdk 19 20 
+Error road: <com.google.android.gms.ads.formats.NativeContentAdView: void <init>(android.content.Context,android.util.AttributeSet,int,int)>[]--><com.google.android.gms.ads.formats.NativeAdView: void <init>(android.content.Context,android.util.AttributeSet,int,int)>[]--><android.widget.FrameLayout: void <init>(android.content.Context,android.util.AttributeSet,int,int)>
+#1.the call statck between class <com.google.android.gms.ads.formats.NativeContentAdView: void <init>(android.content.Context,android.util.AttributeSet,int,int)> to <android.widget.FrameLayout: void <init>(android.content.Context,android.util.AttributeSet,int,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <com.google.android.gms.ads.formats.NativeAppInstallAdView: void <init>(android.content.Context,android.util.AttributeSet,int,int)>[]--><com.google.android.gms.ads.formats.NativeAdView: void <init>(android.content.Context,android.util.AttributeSet,int,int)>[]--><android.widget.FrameLayout: void <init>(android.content.Context,android.util.AttributeSet,int,int)>
+!!!this api will crash on sdk 19 20 
+Error road: <com.google.android.gms.ads.formats.NativeAppInstallAdView: void <init>(android.content.Context,android.util.AttributeSet,int,int)>[[]]--><android.widget.FrameLayout: void <init>(android.content.Context,android.util.AttributeSet,int,int)>
+#2.the call statck between class <com.google.android.gms.ads.formats.NativeAppInstallAdView: void <init>(android.content.Context,android.util.AttributeSet,int,int)> to <android.widget.FrameLayout: void <init>(android.content.Context,android.util.AttributeSet,int,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:10
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 12 Potential Issue API: SDKCheck of <android.os.PowerManager: boolean isInteractive()> is checking!!!
+The life time of api is [21,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+try
+Good road with try: <com.google.android.gms.internal.zzrp: void release()>[]--><com.google.android.gms.internal.zzrp: void zzfJ(java.lang.String)>[[try]]--><com.google.android.gms.common.stats.zzi: void zza(android.content.Context,java.lang.String,int,java.lang.String,java.lang.String,int,java.util.List)>[]--><com.google.android.gms.common.stats.zzi: void zza(android.content.Context,java.lang.String,int,java.lang.String,java.lang.String,int,java.util.List,long)>[]--><com.google.android.gms.internal.zzmv: int zzax(android.content.Context)>[]--><android.os.PowerManager: boolean isInteractive()>
+One road protect good!
+try
+Good road with try: <com.google.android.gms.internal.zzrp: void acquire(long)>[]--><com.google.android.gms.internal.zzrp: void zzj(java.lang.String,long)>[[try]]--><com.google.android.gms.common.stats.zzi: void zza(android.content.Context,java.lang.String,int,java.lang.String,java.lang.String,int,java.util.List,long)>[]--><com.google.android.gms.internal.zzmv: int zzax(android.content.Context)>[]--><android.os.PowerManager: boolean isInteractive()>
+One road protect good!
+containsStatic:false
+containsTry:true
+3call by main package
+-----------------------------------------
+#################################################
+N 13 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.lang.Object get(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+274call roads:
+1 Mainhead roads:
+273 Packageshead roads:
+try
+Good road with try: <com.google.android.gms.ads.internal.zzm$1: void zza(com.google.android.gms.internal.zzjp,boolean)>[[try]]--><com.google.android.gms.ads.internal.zzm: org.json.JSONObject zzb(android.os.Bundle,java.lang.String)>[]--><com.google.android.gms.ads.internal.zzm: org.json.JSONObject zza(android.os.Bundle,java.lang.String)>[]--><android.os.BaseBundle: java.lang.Object get(java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.google.android.gms.ads.internal.zzm$2: void zza(com.google.android.gms.internal.zzjp,boolean)>[[try]]--><com.google.android.gms.ads.internal.zzm: org.json.JSONObject zzb(android.os.Bundle,java.lang.String)>[]--><com.google.android.gms.ads.internal.zzm: org.json.JSONObject zza(android.os.Bundle,java.lang.String)>[]--><android.os.BaseBundle: java.lang.Object get(java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.google.android.gms.common.internal.zzm: boolean zza(com.google.android.gms.common.internal.zzm$zza,android.content.ServiceConnection,java.lang.String)>[[try]]--><com.google.android.gms.common.internal.zzm$zzb$zza: void onServiceConnected(android.content.ComponentName,android.os.IBinder)>[[try]]--><com.google.android.gms.ads.internal.purchase.zzc: void onServiceConnected(android.content.ComponentName,android.os.IBinder)>[[try]]--><com.google.android.gms.ads.internal.purchase.zzc: void zzfW()>[]--><com.google.android.gms.ads.internal.purchase.zzi: int zzd(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.Object get(java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.google.android.gms.common.internal.zzm: boolean zza(com.google.android.gms.common.internal.zzm$zza,android.content.ServiceConnection,java.lang.String)>[[try]]--><com.google.android.gms.ads.internal.purchase.zzc: void onServiceConnected(android.content.ComponentName,android.os.IBinder)>[[try]]--><com.google.android.gms.ads.internal.purchase.zzc: void zzfW()>[]--><com.google.android.gms.ads.internal.purchase.zzi: int zzd(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.Object get(java.lang.String)>
+One road protect good!
+!!!this api will crash on sdk 19 20 
+Error road: <com.google.android.gms.internal.zzdy: com.google.android.gms.internal.zzea$zza zza(com.google.android.gms.ads.internal.client.AdRequestParcel,java.lang.String)>[]--><com.google.android.gms.internal.zzdz: void <init>(com.google.android.gms.ads.internal.client.AdRequestParcel,java.lang.String,int)>[]--><com.google.android.gms.internal.zzdz: java.lang.Object[] zza(com.google.android.gms.ads.internal.client.AdRequestParcel,java.lang.String,int)>[]--><com.google.android.gms.internal.zzdz: java.lang.String zzc(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.Object get(java.lang.String)>
+#138.the call statck between class <com.google.android.gms.internal.zzdy: com.google.android.gms.internal.zzea$zza zza(com.google.android.gms.ads.internal.client.AdRequestParcel,java.lang.String)> to <android.os.BaseBundle: java.lang.Object get(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:11
+containsStatic:false
+containsTry:true
+139call by main package
+-----------------------------------------
+#################################################
+N 14 Potential Issue API: SDKCheck of <android.os.BaseBundle: boolean getBoolean(java.lang.String)> is checking!!!
+The life time of api is [22,31]
+3call roads:
+0 Mainhead roads:
+3 Packageshead roads:
+!!!this api will crash on sdk 19 20 21 
+Error road: <com.google.android.gms.auth.zzd$2: java.lang.Void zzao(android.os.IBinder)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+#1.the call statck between class <com.google.android.gms.auth.zzd$2: java.lang.Void zzao(android.os.IBinder)> to <android.os.BaseBundle: boolean getBoolean(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+try
+Good road with try: <com.google.android.gms.internal.zzih: void zze(android.os.Bundle)>[[try]]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+One road protect good!
+!!!this api will crash on sdk 19 20 21 
+Error road: <com.google.android.gms.ads.AdRequest$Builder: com.google.android.gms.ads.AdRequest$Builder addNetworkExtrasBundle(java.lang.Class,android.os.Bundle)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+#3.the call statck between class <com.google.android.gms.ads.AdRequest$Builder: com.google.android.gms.ads.AdRequest$Builder addNetworkExtrasBundle(java.lang.Class,android.os.Bundle)> to <android.os.BaseBundle: boolean getBoolean(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:12
+containsStatic:false
+containsTry:true
+4call by main package
+-----------------------------------------
+#################################################
+N 15 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.lang.String getString(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+290call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.eztarget.micopi.ui.BatchActivity dummyMainMethod_org_eztarget_micopi_ui_BatchActivity(android.content.Intent)>[]--><org.eztarget.micopi.ui.BatchActivity: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+289 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <com.google.android.gms.common.api.internal.zzw: void onActivityResult(int,int,android.content.Intent)>[]--><com.google.android.gms.common.zzc: int isGooglePlayServicesAvailable(android.content.Context)>[]--><com.google.android.gms.common.zze: boolean zzd(android.content.Context,int)>[]--><com.google.android.gms.common.zze: boolean zzi(android.content.Context,java.lang.String)>[]--><com.google.android.gms.common.zze: boolean zzaq(android.content.Context)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#4.the call statck between class <com.google.android.gms.common.api.internal.zzw: void onActivityResult(int,int,android.content.Intent)> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:13
+crashApisInMain:4
+containsStatic:false
+containsTry:true
+11call by main package
+-----------------------------------------
+#################################################
+N 16 Potential Issue API: SDKCheck of <android.net.NetworkInfo: android.net.NetworkInfo.DetailedState getDetailedState()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <com.google.android.gms.internal.zzhj$zza: void zza(android.content.Context,android.content.pm.PackageManager)>[]--><android.net.NetworkInfo: android.net.NetworkInfo.DetailedState getDetailedState()>
+#1.the call statck between class <com.google.android.gms.internal.zzhj$zza: void zza(android.content.Context,android.content.pm.PackageManager)> to <android.net.NetworkInfo: android.net.NetworkInfo.DetailedState getDetailedState()>has compatibility isssues！
+-----------------------------------------
+crashApis:14
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 17 Potential Issue API: SDKCheck of <android.media.MediaPlayer: void setVolume(float,float)> is checking!!!
+The life time of api is [1,17]
+6call roads:
+0 Mainhead roads:
+6 Packageshead roads:
+try
+Good road with try: <com.google.android.gms.ads.internal.overlay.zzc: void zza(float)>[]--><com.google.android.gms.ads.internal.overlay.zzc: void zzfj()>[]--><com.google.android.gms.ads.internal.overlay.zzc: void zzb(float)>[[try]]--><android.media.MediaPlayer: void setVolume(float,float)>
+One road protect good!
+try
+Good road with try: <com.google.android.gms.ads.internal.overlay.zzc: void onPrepared(android.media.MediaPlayer)>[]--><com.google.android.gms.ads.internal.overlay.zzc: void zzfb()>[]--><com.google.android.gms.ads.internal.overlay.zzc: void zzfj()>[]--><com.google.android.gms.ads.internal.overlay.zzc: void zzb(float)>[[try]]--><android.media.MediaPlayer: void setVolume(float,float)>
+One road protect good!
+try
+Good road with try: <com.google.android.gms.ads.internal.overlay.zzc: void onPrepared(android.media.MediaPlayer)>[]--><com.google.android.gms.ads.internal.overlay.zzc: void zzfj()>[]--><com.google.android.gms.ads.internal.overlay.zzc: void zzb(float)>[[try]]--><android.media.MediaPlayer: void setVolume(float,float)>
+One road protect good!
+try
+Good road with try: <com.google.android.gms.ads.internal.overlay.zzc: void onPrepared(android.media.MediaPlayer)>[]--><com.google.android.gms.ads.internal.overlay.zzc: void zzfc()>[]--><com.google.android.gms.ads.internal.overlay.zzc: void zzfh()>[]--><com.google.android.gms.ads.internal.overlay.zzc: void zzfj()>[]--><com.google.android.gms.ads.internal.overlay.zzc: void zzb(float)>[[try]]--><android.media.MediaPlayer: void setVolume(float,float)>
+One road protect good!
+try
+Good road with try: <com.google.android.gms.ads.internal.overlay.zzc: void onAudioFocusChange(int)>[]--><com.google.android.gms.ads.internal.overlay.zzc: void zzfi()>[]--><com.google.android.gms.ads.internal.overlay.zzc: void zzfj()>[]--><com.google.android.gms.ads.internal.overlay.zzc: void zzb(float)>[[try]]--><android.media.MediaPlayer: void setVolume(float,float)>
+One road protect good!
+try
+Good road with try: <com.google.android.gms.ads.internal.overlay.zzc: void onAudioFocusChange(int)>[]--><com.google.android.gms.ads.internal.overlay.zzc: void zzfh()>[]--><com.google.android.gms.ads.internal.overlay.zzc: void zzfj()>[]--><com.google.android.gms.ads.internal.overlay.zzc: void zzb(float)>[[try]]--><android.media.MediaPlayer: void setVolume(float,float)>
+One road protect good!
+try
+Good road with try: <com.google.android.gms.ads.internal.overlay.zzc: void zzfg()>[]--><com.google.android.gms.ads.internal.overlay.zzc: void zzfj()>[]--><com.google.android.gms.ads.internal.overlay.zzc: void zzb(float)>[[try]]--><android.media.MediaPlayer: void setVolume(float,float)>
+One road protect good!
+try
+Good road with try: <com.google.android.gms.ads.internal.overlay.zzc: void zzff()>[]--><com.google.android.gms.ads.internal.overlay.zzc: void zzfj()>[]--><com.google.android.gms.ads.internal.overlay.zzc: void zzb(float)>[[try]]--><android.media.MediaPlayer: void setVolume(float,float)>
+One road protect good!
+-$i0 != 16
+try
+Good road with try: <com.google.android.gms.ads.internal.overlay.zzc: void onMeasure(int,int)>[[-$i0 != 16]]--><com.google.android.gms.ads.internal.overlay.zzc: void zzfb()>[]--><com.google.android.gms.ads.internal.overlay.zzc: void zzfj()>[]--><com.google.android.gms.ads.internal.overlay.zzc: void zzb(float)>[[try]]--><android.media.MediaPlayer: void setVolume(float,float)>
+One road protect good!
+containsStatic:false
+containsTry:true
+7call by main package
+-----------------------------------------
+#################################################
+N 18 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putInt(java.lang.String,int)> is checking!!!
+The life time of api is [21,31]
+277call roads:
+1 Mainhead roads:
+276 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <com.google.android.gms.internal.zzip$4: void zzbr()>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#11.the call statck between class <com.google.android.gms.internal.zzip$4: void zzbr()> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:15
+containsStatic:false
+containsTry:true
+12call by main package
+-----------------------------------------
+#################################################
+N 19 Potential Issue API: SDKCheck of <android.os.BaseBundle: int getInt(java.lang.String,int)> is checking!!!
+The life time of api is [21,31]
+272call roads:
+1 Mainhead roads:
+271 Packageshead roads:
+try
+Good road with try: <com.google.android.gms.internal.zzeu$1: com.google.android.gms.internal.zzes zzeE()>[]--><com.google.android.gms.internal.zzer: com.google.android.gms.internal.zzes zza(long,long)>[[try]]--><com.google.android.gms.internal.zzer: com.google.android.gms.internal.zzfa zzez()>[[try]]--><com.google.android.gms.internal.zzer: boolean zzs(int)>[]--><android.os.BaseBundle: int getInt(java.lang.String,int)>
+One road protect good!
+try
+Good road with try: <com.google.android.gms.internal.zziq$1: java.lang.Void zzdt()>[]--><com.google.android.gms.internal.zzer$1: void run()>[[try]]--><com.google.android.gms.internal.zzer: boolean zza(com.google.android.gms.internal.zzer,int)>[]--><com.google.android.gms.internal.zzer: boolean zzs(int)>[]--><android.os.BaseBundle: int getInt(java.lang.String,int)>
+One road protect good!
+!!!this api will crash on sdk 19 20 
+Error road: <com.google.android.gms.common.api.internal.zzw: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String,int)>
+#184.the call statck between class <com.google.android.gms.common.api.internal.zzw: void onCreate(android.os.Bundle)> to <android.os.BaseBundle: int getInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:16
+containsStatic:false
+containsTry:true
+185call by main package
+-----------------------------------------
+#################################################
+N 20 Potential Issue API: SDKCheck of <android.view.Window: void setStatusBarColor(int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.eztarget.micopi.ui.BatchActivity dummyMainMethod_org_eztarget_micopi_ui_BatchActivity(android.content.Intent)>[]--><org.eztarget.micopi.ui.BatchActivity: void onCreate(android.os.Bundle)>[[-$i0 < 21]]--><android.view.Window: void setStatusBarColor(int)>
+One road protect good!
+-$i0 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.eztarget.micopi.ui.WelcomeActivity dummyMainMethod_org_eztarget_micopi_ui_WelcomeActivity(android.content.Intent)>[]--><org.eztarget.micopi.ui.WelcomeActivity: void onCreate(android.os.Bundle)>[[-$i0 < 21]]--><android.view.Window: void setStatusBarColor(int)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 21 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.util.Set keySet()> is checking!!!
+The life time of api is [21,31]
+274call roads:
+1 Mainhead roads:
+273 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <com.google.android.gms.internal.zzjq: void onReceivedSslError(android.webkit.WebView,android.webkit.SslErrorHandler,android.net.http.SslError)>[]--><com.google.android.gms.internal.zzjq: void zza(android.content.Context,java.lang.String,java.lang.String,java.lang.String)>[]--><com.google.android.gms.internal.zzir: void zza(android.content.Context,java.lang.String,java.lang.String,android.os.Bundle,boolean)>[]--><android.os.BaseBundle: java.util.Set keySet()>
+#12.the call statck between class <com.google.android.gms.internal.zzjq: void onReceivedSslError(android.webkit.WebView,android.webkit.SslErrorHandler,android.net.http.SslError)> to <android.os.BaseBundle: java.util.Set keySet()>has compatibility isssues！
+-----------------------------------------
+crashApis:17
+containsStatic:false
+containsTry:true
+13call by main package
+-----------------------------------------
+#################################################
+N 22 Potential Issue API: SDKCheck of <android.webkit.WebSettings: void setMixedContentMode(int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i0 < 21
+Good road: <com.google.android.gms.internal.zzjt: void <init>(com.google.android.gms.internal.zzjt$zza,com.google.android.gms.ads.internal.client.AdSizeParcel,boolean,boolean,com.google.android.gms.internal.zzan,com.google.android.gms.ads.internal.util.client.VersionInfoParcel,com.google.android.gms.internal.zzcb,com.google.android.gms.ads.internal.zzd)>[[-$i0 < 21]]--><android.webkit.WebSettings: void setMixedContentMode(int)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 23 Potential Issue API: SDKCheck of <android.content.pm.PackageInstaller.SessionInfo: java.lang.String getAppPackageName()> is checking!!!
+The life time of api is [21,31]
+284call roads:
+1 Mainhead roads:
+283 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <com.google.android.gms.common.api.internal.zzw: void onActivityResult(int,int,android.content.Intent)>[]--><com.google.android.gms.common.zzc: int isGooglePlayServicesAvailable(android.content.Context)>[]--><com.google.android.gms.common.zze: boolean zzd(android.content.Context,int)>[]--><com.google.android.gms.common.zze: boolean zzi(android.content.Context,java.lang.String)>[]--><android.content.pm.PackageInstaller.SessionInfo: java.lang.String getAppPackageName()>
+#4.the call statck between class <com.google.android.gms.common.api.internal.zzw: void onActivityResult(int,int,android.content.Intent)> to <android.content.pm.PackageInstaller.SessionInfo: java.lang.String getAppPackageName()>has compatibility isssues！
+-----------------------------------------
+crashApis:18
+containsStatic:false
+containsTry:true
+11call by main package
+-----------------------------------------
+#################################################
+N 24 Potential Issue API: SDKCheck of <android.net.NetworkInfo: int getType()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <com.google.android.gms.internal.zzhj$zza: void zza(android.content.Context,android.content.pm.PackageManager)>[]--><android.net.NetworkInfo: int getType()>
+#1.the call statck between class <com.google.android.gms.internal.zzhj$zza: void zza(android.content.Context,android.content.pm.PackageManager)> to <android.net.NetworkInfo: int getType()>has compatibility isssues！
+-----------------------------------------
+crashApis:19
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 25 Potential Issue API: SDKCheck of <android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)> is checking!!!
+The life time of api is [22,31]
+3call roads:
+0 Mainhead roads:
+3 Packageshead roads:
+!!!this api will crash on sdk 19 20 21 
+Error road: <com.google.android.gms.ads.internal.zzb: boolean zza(com.google.android.gms.internal.zzif)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>
+#1.the call statck between class <com.google.android.gms.ads.internal.zzb: boolean zza(com.google.android.gms.internal.zzif)> to <android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 21 
+Error road: <com.google.android.gms.common.api.internal.zzw: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>
+#2.the call statck between class <com.google.android.gms.common.api.internal.zzw: void onCreate(android.os.Bundle)> to <android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+try
+Good road with try: <com.google.android.gms.ads.AdActivity: void onCreate(android.os.Bundle)>[[try]]--><com.google.android.gms.ads.internal.overlay.zzd: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>
+One road protect good!
+crashApis:20
+containsStatic:false
+containsTry:true
+4call by main package
+-----------------------------------------
+#################################################
+N 26 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putDouble(java.lang.String,double)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <com.google.android.gms.internal.zzhe: void zza(java.util.HashMap,com.google.android.gms.internal.zzhj,com.google.android.gms.internal.zzhn$zza)>[]--><android.os.BaseBundle: void putDouble(java.lang.String,double)>
+#1.the call statck between class <com.google.android.gms.internal.zzhe: void zza(java.util.HashMap,com.google.android.gms.internal.zzhj,com.google.android.gms.internal.zzhn$zza)> to <android.os.BaseBundle: void putDouble(java.lang.String,double)>has compatibility isssues！
+-----------------------------------------
+crashApis:21
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 27 Potential Issue API: SDKCheck of <org.apache.http.params.HttpConnectionParams: void setSoTimeout(org.apache.http.params.HttpParams,int)> is checking!!!
+The life time of api is [23,31]
+271call roads:
+1 Mainhead roads:
+270 Packageshead roads:
+containsStatic:false
+containsTry:true
+271call by main package
+-----------------------------------------
+#################################################
+N 28 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putLong(java.lang.String,long)> is checking!!!
+The life time of api is [21,31]
+5call roads:
+0 Mainhead roads:
+5 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <com.google.android.gms.internal.zzhe: void zza(java.util.HashMap,com.google.android.gms.internal.zzhj,com.google.android.gms.internal.zzhn$zza)>[]--><android.os.BaseBundle: void putLong(java.lang.String,long)>
+#1.the call statck between class <com.google.android.gms.internal.zzhe: void zza(java.util.HashMap,com.google.android.gms.internal.zzhj,com.google.android.gms.internal.zzhn$zza)> to <android.os.BaseBundle: void putLong(java.lang.String,long)>has compatibility isssues！
+-----------------------------------------
+try
+Good road with try: <com.google.android.gms.ads.internal.zzb: com.google.android.gms.ads.internal.request.AdRequestInfoParcel$zza zza(com.google.android.gms.ads.internal.client.AdRequestParcel,android.os.Bundle)>[]--><com.google.android.gms.internal.zzih: android.os.Bundle zza(android.content.Context,com.google.android.gms.internal.zzij,java.lang.String)>[[try]]--><com.google.android.gms.internal.zzii: android.os.Bundle zzc(android.content.Context,java.lang.String)>[[try]]--><android.os.BaseBundle: void putLong(java.lang.String,long)>
+One road protect good!
+!!!this api will crash on sdk 19 20 
+Error road: <com.google.android.gms.auth.zzd: java.lang.String getToken(android.content.Context,java.lang.String,java.lang.String)>[]--><com.google.android.gms.auth.zzd: java.lang.String getToken(android.content.Context,android.accounts.Account,java.lang.String)>[]--><com.google.android.gms.auth.zzd: java.lang.String getToken(android.content.Context,android.accounts.Account,java.lang.String,android.os.Bundle)>[]--><com.google.android.gms.auth.zzd: com.google.android.gms.auth.TokenData zzc(android.content.Context,android.accounts.Account,java.lang.String,android.os.Bundle)>[]--><android.os.BaseBundle: void putLong(java.lang.String,long)>
+#3.the call statck between class <com.google.android.gms.auth.zzd: java.lang.String getToken(android.content.Context,java.lang.String,java.lang.String)> to <android.os.BaseBundle: void putLong(java.lang.String,long)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <com.google.android.gms.internal.zzig$zza: android.os.Bundle toBundle()>[]--><android.os.BaseBundle: void putLong(java.lang.String,long)>
+#4.the call statck between class <com.google.android.gms.internal.zzig$zza: android.os.Bundle toBundle()> to <android.os.BaseBundle: void putLong(java.lang.String,long)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <com.google.android.gms.auth.zzd: java.lang.String getAccountId(android.content.Context,java.lang.String)>[]--><com.google.android.gms.auth.zzd: java.lang.String getToken(android.content.Context,java.lang.String,java.lang.String,android.os.Bundle)>[]--><com.google.android.gms.auth.zzd: java.lang.String getToken(android.content.Context,android.accounts.Account,java.lang.String,android.os.Bundle)>[]--><com.google.android.gms.auth.zzd: com.google.android.gms.auth.TokenData zzc(android.content.Context,android.accounts.Account,java.lang.String,android.os.Bundle)>[]--><android.os.BaseBundle: void putLong(java.lang.String,long)>
+#5.the call statck between class <com.google.android.gms.auth.zzd: java.lang.String getAccountId(android.content.Context,java.lang.String)> to <android.os.BaseBundle: void putLong(java.lang.String,long)>has compatibility isssues！
+-----------------------------------------
+crashApis:22
+containsStatic:false
+containsTry:true
+6call by main package
+-----------------------------------------
+#################################################
+N 29 Potential Issue API: SDKCheck of <android.security.NetworkSecurityPolicy: boolean isCleartextTrafficPermitted()> is checking!!!
+The life time of api is [23,31]
+271call roads:
+1 Mainhead roads:
+270 Packageshead roads:
+containsStatic:false
+containsTry:true
+271call by main package
+-----------------------------------------
+#################################################
+N 30 Potential Issue API: SDKCheck of <android.security.NetworkSecurityPolicy: android.security.NetworkSecurityPolicy getInstance()> is checking!!!
+The life time of api is [23,31]
+271call roads:
+1 Mainhead roads:
+270 Packageshead roads:
+containsStatic:false
+containsTry:true
+271call by main package
+-----------------------------------------
+#################################################
+N 31 Potential Issue API: SDKCheck of <android.os.BaseBundle: boolean isEmpty()> is checking!!!
+The life time of api is [21,31]
+6call roads:
+0 Mainhead roads:
+6 Packageshead roads:
+try
+Good road with try: <com.google.android.gms.common.api.internal.zzh$zza: void zza(com.google.android.gms.common.ConnectionResult)>[[try]]--><com.google.android.gms.common.api.internal.zzh: void zzj(com.google.android.gms.common.api.internal.zzh)>[]--><com.google.android.gms.common.api.internal.zzh: void zzpv()>[]--><com.google.android.gms.common.api.internal.zzh: void zzpw()>[]--><com.google.android.gms.common.api.internal.zzh: void zzpx()>[]--><android.os.BaseBundle: boolean isEmpty()>
+One road protect good!
+try
+Good road with try: <com.google.android.gms.common.api.internal.zzc: void onConnectionFailed(com.google.android.gms.common.ConnectionResult)>[]--><com.google.android.gms.common.api.internal.zzl: void zza(com.google.android.gms.common.ConnectionResult,com.google.android.gms.common.api.Api,int)>[[try]]--><com.google.android.gms.common.api.internal.zzh: void zza(com.google.android.gms.common.ConnectionResult,com.google.android.gms.common.api.Api,int)>[]--><com.google.android.gms.common.api.internal.zzh: void zzpx()>[]--><android.os.BaseBundle: boolean isEmpty()>
+One road protect good!
+!!!this api will crash on sdk 19 20 
+Error road: <com.google.android.gms.playlog.internal.LogEvent: java.lang.String toString()>[]--><android.os.BaseBundle: boolean isEmpty()>
+#3.the call statck between class <com.google.android.gms.playlog.internal.LogEvent: java.lang.String toString()> to <android.os.BaseBundle: boolean isEmpty()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <com.google.android.gms.common.api.internal.zzh$zzd$1: void zzpt()>[]--><com.google.android.gms.common.api.internal.zzh: void zza(com.google.android.gms.common.api.internal.zzh,com.google.android.gms.signin.internal.SignInResponse)>[]--><com.google.android.gms.common.api.internal.zzh: void zza(com.google.android.gms.signin.internal.SignInResponse)>[]--><com.google.android.gms.common.api.internal.zzh: void zzpv()>[]--><com.google.android.gms.common.api.internal.zzh: void zzpw()>[]--><com.google.android.gms.common.api.internal.zzh: void zzpx()>[]--><android.os.BaseBundle: boolean isEmpty()>
+#4.the call statck between class <com.google.android.gms.common.api.internal.zzh$zzd$1: void zzpt()> to <android.os.BaseBundle: boolean isEmpty()>has compatibility isssues！
+-----------------------------------------
+try
+Good road with try: <com.google.android.gms.common.api.internal.zzh$zze: void onConnectionFailed(com.google.android.gms.common.ConnectionResult)>[[try]]--><com.google.android.gms.common.api.internal.zzh: void zzj(com.google.android.gms.common.api.internal.zzh)>[]--><com.google.android.gms.common.api.internal.zzh: void zzpv()>[]--><com.google.android.gms.common.api.internal.zzh: void zzpw()>[]--><com.google.android.gms.common.api.internal.zzh: void zzpx()>[]--><android.os.BaseBundle: boolean isEmpty()>
+One road protect good!
+try
+Good road with try: <com.google.android.gms.common.api.internal.zzc: void onConnected(android.os.Bundle)>[]--><com.google.android.gms.common.api.internal.zzl: void onConnected(android.os.Bundle)>[[try]]--><com.google.android.gms.common.api.internal.zzh: void onConnected(android.os.Bundle)>[]--><com.google.android.gms.common.api.internal.zzh: void zzpx()>[]--><android.os.BaseBundle: boolean isEmpty()>
+One road protect good!
+crashApis:23
+containsStatic:false
+containsTry:true
+7call by main package
+-----------------------------------------
+#################################################
+N 32 Potential Issue API: SDKCheck of <android.content.ContextWrapper: int checkSelfPermission(java.lang.String)> is checking!!!
+The life time of api is [23,31]
+3call roads:
+1 Mainhead roads:
+-$i0 < 23
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.eztarget.micopi.ui.WelcomeActivity dummyMainMethod_org_eztarget_micopi_ui_WelcomeActivity(android.content.Intent)>[]--><org.eztarget.micopi.ui.WelcomeActivity: void onRequestPermissionsResult(int,java.lang.String[],int[])>[]--><org.eztarget.micopi.ui.WelcomeActivity: void continueNavigation()>[]--><org.eztarget.micopi.ui.BaseActivity: boolean hasReadContactsPermission()>[[-$i0 < 23]]--><android.content.ContextWrapper: int checkSelfPermission(java.lang.String)>
+One road protect good!
+-$i0 < 23
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.eztarget.micopi.ui.ContactActivity dummyMainMethod_org_eztarget_micopi_ui_ContactActivity(android.content.Intent)>[]--><org.eztarget.micopi.ui.TaskActivity: void onResume()>[[-$i0 < 23]]--><android.content.ContextWrapper: int checkSelfPermission(java.lang.String)>
+One road protect good!
+-$i0 < 23
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.eztarget.micopi.ui.BatchActivity dummyMainMethod_org_eztarget_micopi_ui_BatchActivity(android.content.Intent)>[]--><org.eztarget.micopi.ui.BatchActivity: void onRequestPermissionsResult(int,java.lang.String[],int[])>[]--><org.eztarget.micopi.ui.BatchActivity: void startCrawl(org.eztarget.micopi.ImageService$CrawlMode)>[]--><org.eztarget.micopi.ui.BaseActivity: boolean hasStoragePermission()>[[-$i0 < 23]]--><android.content.ContextWrapper: int checkSelfPermission(java.lang.String)>
+One road protect good!
+2 Packageshead roads:
+-$i0 < 23
+Good road: <org.eztarget.micopi.ui.WelcomeActivity: void selectButtonPressed(android.view.View)>[]--><org.eztarget.micopi.ui.WelcomeActivity: void continueNavigation()>[]--><org.eztarget.micopi.ui.BaseActivity: boolean hasReadContactsPermission()>[[-$i0 < 23]]--><android.content.ContextWrapper: int checkSelfPermission(java.lang.String)>
+One road protect good!
+-$i0 < 23
+Good road: <org.eztarget.micopi.ui.WelcomeActivity: void crawlButtonPressed(android.view.View)>[]--><org.eztarget.micopi.ui.WelcomeActivity: void continueNavigation()>[]--><org.eztarget.micopi.ui.BaseActivity: boolean hasReadContactsPermission()>[[-$i0 < 23]]--><android.content.ContextWrapper: int checkSelfPermission(java.lang.String)>
+One road protect good!
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+crashApis numbers:23
+crashApis numbers in main road:4
+On Android Version 16 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 17 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 18 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 19 this app may have error api use(at least): 19 and error api roads: 38
+On Android Version 20 this app may have error api use(at least): 19 and error api roads: 38
+On Android Version 21 this app may have error api use(at least): 3 and error api roads: 11
+On Android Version 22 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 23 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 24 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 25 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 31 this app may have error api use(at least): 4 and error api roads: 4

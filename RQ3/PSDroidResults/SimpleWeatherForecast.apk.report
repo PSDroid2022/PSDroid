@@ -1,0 +1,157 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/SimpleWeatherForecast.apk
+Entry Points[fr.tvbarthel.apps.simpleweatherforcast.MainActivity, fr.tvbarthel.apps.simpleweatherforcast.SupportActivity, fr.tvbarthel.apps.simpleweatherforcast.services.DailyForecastUpdateService, fr.tvbarthel.apps.simpleweatherforcast.receivers.WeatherWidgetReceiver, fr.tvbarthel.apps.simpleweatherforcast.services.AppWidgetService]
+FllowDroidcallgraph size:1099
+Soot started on Mon Jul 11 12:16:20 CST 2022
+Soot finished on Mon Jul 11 12:16:25 CST 2022
+Soot has run for 0 min. 5 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 19
+Declared Target Sdk version is: 21
+Declared Max Sdk version is: -1
+Collected 344 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.lang.String getString(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:true
+1call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putStringArray(java.lang.String,java.lang.String[])> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: fr.tvbarthel.apps.simpleweatherforcast.MainActivity dummyMainMethod_fr_tvbarthel_apps_simpleweatherforcast_MainActivity(android.content.Intent)>[]--><fr.tvbarthel.apps.simpleweatherforcast.MainActivity: boolean onOptionsItemSelected(android.view.MenuItem)>[]--><fr.tvbarthel.apps.simpleweatherforcast.MainActivity: boolean handleActionUnitPicker()>[]--><fr.tvbarthel.apps.simpleweatherforcast.fragments.TemperatureUnitPickerDialogFragment: fr.tvbarthel.apps.simpleweatherforcast.fragments.TemperatureUnitPickerDialogFragment newInstance(java.lang.String[],java.lang.String[])>[]--><android.os.BaseBundle: void putStringArray(java.lang.String,java.lang.String[])>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: void putStringArray(java.lang.String,java.lang.String[])>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:1
+crashApisInMain:1
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: fr.tvbarthel.apps.simpleweatherforcast.receivers.WeatherWidgetReceiver dummyMainMethod_fr_tvbarthel_apps_simpleweatherforcast_receivers_WeatherWidgetReceiver(android.content.Intent)>[]--><fr.tvbarthel.apps.simpleweatherforcast.receivers.WeatherWidgetReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><fr.tvbarthel.apps.simpleweatherforcast.utils.ConnectivityUtils: boolean isConnected(android.content.Context)>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: fr.tvbarthel.apps.simpleweatherforcast.services.DailyForecastUpdateService dummyMainMethod_fr_tvbarthel_apps_simpleweatherforcast_services_DailyForecastUpdateService(android.content.Intent)>[]--><fr.tvbarthel.apps.simpleweatherforcast.services.DailyForecastUpdateService: int onStartCommand(android.content.Intent,int,int)>[]--><fr.tvbarthel.apps.simpleweatherforcast.utils.ConnectivityUtils: boolean isConnected(android.content.Context)>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:2
+crashApisInMain:2
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.net.NetworkInfo: boolean isConnected()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: fr.tvbarthel.apps.simpleweatherforcast.receivers.WeatherWidgetReceiver dummyMainMethod_fr_tvbarthel_apps_simpleweatherforcast_receivers_WeatherWidgetReceiver(android.content.Intent)>[]--><fr.tvbarthel.apps.simpleweatherforcast.receivers.WeatherWidgetReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><fr.tvbarthel.apps.simpleweatherforcast.utils.ConnectivityUtils: boolean isConnected(android.content.Context)>[]--><android.net.NetworkInfo: boolean isConnected()>
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: fr.tvbarthel.apps.simpleweatherforcast.services.DailyForecastUpdateService dummyMainMethod_fr_tvbarthel_apps_simpleweatherforcast_services_DailyForecastUpdateService(android.content.Intent)>[]--><fr.tvbarthel.apps.simpleweatherforcast.services.DailyForecastUpdateService: int onStartCommand(android.content.Intent,int,int)>[]--><fr.tvbarthel.apps.simpleweatherforcast.utils.ConnectivityUtils: boolean isConnected(android.content.Context)>[]--><android.net.NetworkInfo: boolean isConnected()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.NetworkInfo: boolean isConnected()>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:3
+crashApisInMain:3
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.os.BaseBundle: boolean containsKey(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:true
+1call by main package
+-----------------------------------------
+#################################################
+N 5 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <fr.tvbarthel.apps.simpleweatherforcast.MainActivity$ForecastPagerAdapter: android.support.v4.app.Fragment getItem(int)>[]--><fr.tvbarthel.apps.simpleweatherforcast.fragments.ForecastFragment: fr.tvbarthel.apps.simpleweatherforcast.fragments.ForecastFragment newInstance(fr.tvbarthel.apps.simpleweatherforcast.openweathermap.DailyForecastModel,java.lang.String)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#1.the call statck between class <fr.tvbarthel.apps.simpleweatherforcast.MainActivity$ForecastPagerAdapter: android.support.v4.app.Fragment getItem(int)> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:4
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 6 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.lang.String[] getStringArray(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <fr.tvbarthel.apps.simpleweatherforcast.fragments.TemperatureUnitPickerDialogFragment: android.app.Dialog onCreateDialog(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String[] getStringArray(java.lang.String)>
+#1.the call statck between class <fr.tvbarthel.apps.simpleweatherforcast.fragments.TemperatureUnitPickerDialogFragment: android.app.Dialog onCreateDialog(android.os.Bundle)> to <android.os.BaseBundle: java.lang.String[] getStringArray(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:5
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 7 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.lang.Object get(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+2call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: fr.tvbarthel.apps.simpleweatherforcast.SupportActivity dummyMainMethod_fr_tvbarthel_apps_simpleweatherforcast_SupportActivity(android.content.Intent)>[]--><fr.tvbarthel.apps.billing.SupportActivity: void onResume()>[]--><fr.tvbarthel.apps.billing.SupportActivity: void requestCoffeeList()>[]--><com.android.vending.billing.util.IabHelper: void queryInventoryAsync(boolean,java.util.List,com.android.vending.billing.util.IabHelper$QueryInventoryFinishedListener)>[]--><java.lang.Thread: void run()>[]--><com.android.vending.billing.util.IabHelper$3: void run()>[]--><com.android.vending.billing.util.IabHelper$3$1: void run()>[]--><fr.tvbarthel.apps.billing.SupportActivity$3: void onConsumeFinished(com.android.vending.billing.util.Purchase,com.android.vending.billing.util.IabResult)>[]--><com.android.vending.billing.util.IabHelper: void launchPurchaseFlow(android.app.Activity,java.lang.String,int,com.android.vending.billing.util.IabHelper$OnIabPurchaseFinishedListener)>[]--><com.android.vending.billing.util.IabHelper: void launchPurchaseFlow(android.app.Activity,java.lang.String,int,com.android.vending.billing.util.IabHelper$OnIabPurchaseFinishedListener,java.lang.String)>[]--><com.android.vending.billing.util.IabHelper: void launchPurchaseFlow(android.app.Activity,java.lang.String,java.lang.String,int,com.android.vending.billing.util.IabHelper$OnIabPurchaseFinishedListener,java.lang.String)>[[try]]--><com.android.vending.billing.util.IabHelper: int getResponseCodeFromBundle(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.Object get(java.lang.String)>
+One road protect good!
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: fr.tvbarthel.apps.simpleweatherforcast.MainActivity dummyMainMethod_fr_tvbarthel_apps_simpleweatherforcast_MainActivity(android.content.Intent)>[]--><fr.tvbarthel.apps.simpleweatherforcast.MainActivity: boolean onCreateOptionsMenu(android.view.Menu)>[]--><fr.tvbarthel.apps.billing.utils.SupportUtils: void checkSupport(android.content.Context,fr.tvbarthel.apps.billing.utils.SupportUtils$OnCheckSupportListener)>[]--><com.android.vending.billing.util.IabHelper: void startSetup(com.android.vending.billing.util.IabHelper$OnIabSetupFinishedListener)>[]--><fr.tvbarthel.apps.billing.utils.SupportUtils$1: void onIabSetupFinished(com.android.vending.billing.util.IabResult)>[]--><com.android.vending.billing.util.IabHelper: void queryInventoryAsync(com.android.vending.billing.util.IabHelper$QueryInventoryFinishedListener)>[]--><com.android.vending.billing.util.IabHelper: void queryInventoryAsync(boolean,java.util.List,com.android.vending.billing.util.IabHelper$QueryInventoryFinishedListener)>[]--><java.lang.Thread: void run()>[]--><com.android.vending.billing.util.IabHelper$3: void run()>[]--><com.android.vending.billing.util.IabHelper$3$1: void run()>[]--><fr.tvbarthel.apps.billing.SupportActivity$3: void onConsumeFinished(com.android.vending.billing.util.Purchase,com.android.vending.billing.util.IabResult)>[]--><com.android.vending.billing.util.IabHelper: void launchPurchaseFlow(android.app.Activity,java.lang.String,int,com.android.vending.billing.util.IabHelper$OnIabPurchaseFinishedListener)>[]--><com.android.vending.billing.util.IabHelper: void launchPurchaseFlow(android.app.Activity,java.lang.String,int,com.android.vending.billing.util.IabHelper$OnIabPurchaseFinishedListener,java.lang.String)>[]--><com.android.vending.billing.util.IabHelper: void launchPurchaseFlow(android.app.Activity,java.lang.String,java.lang.String,int,com.android.vending.billing.util.IabHelper$OnIabPurchaseFinishedListener,java.lang.String)>[[try]]--><com.android.vending.billing.util.IabHelper: int getResponseCodeFromBundle(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.Object get(java.lang.String)>
+One road protect good!
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: fr.tvbarthel.apps.simpleweatherforcast.services.DailyForecastUpdateService dummyMainMethod_fr_tvbarthel_apps_simpleweatherforcast_services_DailyForecastUpdateService(android.content.Intent)>[]--><fr.tvbarthel.apps.simpleweatherforcast.services.DailyForecastUpdateService: void onLocationChanged(android.location.Location)>[]--><fr.tvbarthel.apps.simpleweatherforcast.services.DailyForecastUpdateService: void updateForecast(android.location.Location)>[]--><android.os.Handler: boolean post(java.lang.Runnable)>[]--><com.android.vending.billing.util.IabHelper$3$1: void run()>[]--><fr.tvbarthel.apps.billing.SupportActivity$3: void onConsumeFinished(com.android.vending.billing.util.Purchase,com.android.vending.billing.util.IabResult)>[]--><com.android.vending.billing.util.IabHelper: void launchPurchaseFlow(android.app.Activity,java.lang.String,int,com.android.vending.billing.util.IabHelper$OnIabPurchaseFinishedListener)>[]--><com.android.vending.billing.util.IabHelper: void launchPurchaseFlow(android.app.Activity,java.lang.String,int,com.android.vending.billing.util.IabHelper$OnIabPurchaseFinishedListener,java.lang.String)>[]--><com.android.vending.billing.util.IabHelper: void launchPurchaseFlow(android.app.Activity,java.lang.String,java.lang.String,int,com.android.vending.billing.util.IabHelper$OnIabPurchaseFinishedListener,java.lang.String)>[[try]]--><com.android.vending.billing.util.IabHelper: int getResponseCodeFromBundle(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.Object get(java.lang.String)>
+One road protect good!
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <fr.tvbarthel.apps.billing.SupportActivity: void onActivityResult(int,int,android.content.Intent)>[]--><com.android.vending.billing.util.IabHelper: boolean handleActivityResult(int,int,android.content.Intent)>[]--><com.android.vending.billing.util.IabHelper: int getResponseCodeFromIntent(android.content.Intent)>[]--><android.os.BaseBundle: java.lang.Object get(java.lang.String)>
+#1.the call statck between class <fr.tvbarthel.apps.billing.SupportActivity: void onActivityResult(int,int,android.content.Intent)> to <android.os.BaseBundle: java.lang.Object get(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:6
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+crashApis numbers:6
+crashApis numbers in main road:3
+On Android Version 16 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 17 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 18 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 19 this app may have error api use(at least): 4 and error api roads: 4
+On Android Version 20 this app may have error api use(at least): 4 and error api roads: 4
+On Android Version 21 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 22 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 23 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 24 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 25 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 31 this app may have error api use(at least): 2 and error api roads: 4

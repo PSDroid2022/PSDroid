@@ -1,0 +1,308 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/Hue_Widgets.apk
+Entry Points[is.zi.huewidgets.WidgetProvider, is.zi.hueaccounts.AccountAuthenticatorService, is.zi.huewidgets.PopupActivity, is.zi.huewidgets.MainActivity, is.zi.hue.HueBridgeService, com.amitshekhar.DebugDBInitProvider, is.zi.hueaccounts.AuthenticatorActivity, is.zi.huewidgets.ConfigureActivity, is.zi.huewidgets.QSTileService]
+FllowDroidcallgraph size:2091
+Soot started on Mon Jul 11 05:25:28 CST 2022
+Soot finished on Mon Jul 11 05:25:35 CST 2022
+Soot has run for 0 min. 6 sec.
+Found 1 additional DEX files. Now visiting them one by one.
+Soot started on Mon Jul 11 05:25:35 CST 2022
+Soot finished on Mon Jul 11 05:25:37 CST 2022
+Soot has run for 0 min. 1 sec.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 21
+Declared Target Sdk version is: 28
+Declared Max Sdk version is: -1
+Collected 95 Android APIs in the primary DEX file
+Collected 208 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.service.quicksettings.Tile: void updateTile()> is checking!!!
+The life time of api is [24,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 21 22 23 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: is.zi.huewidgets.QSTileService dummyMainMethod_is_zi_huewidgets_QSTileService(android.content.Intent)>[]--><is.zi.huewidgets.QSTileService: void onClick()>[]--><android.service.quicksettings.Tile: void updateTile()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.service.quicksettings.Tile: void updateTile()>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:1
+crashApisInMain:1
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.service.quicksettings.TileService: android.service.quicksettings.Tile getQsTile()> is checking!!!
+The life time of api is [24,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 21 22 23 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: is.zi.huewidgets.QSTileService dummyMainMethod_is_zi_huewidgets_QSTileService(android.content.Intent)>[]--><is.zi.huewidgets.QSTileService: void onClick()>[]--><android.service.quicksettings.TileService: android.service.quicksettings.Tile getQsTile()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.service.quicksettings.TileService: android.service.quicksettings.Tile getQsTile()>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:2
+crashApisInMain:2
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.service.quicksettings.TileService: void showDialog(android.app.Dialog)> is checking!!!
+The life time of api is [24,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 21 22 23 
+Error road: <is.zi.huewidgets.QSTileService$1: void lambda$onServiceConnected$0(is.zi.huewidgets.QSTileService$1,java.lang.Integer)>[]--><android.service.quicksettings.TileService: void showDialog(android.app.Dialog)>
+#1.the call statck between class <is.zi.huewidgets.QSTileService$1: void lambda$onServiceConnected$0(is.zi.huewidgets.QSTileService$1,java.lang.Integer)> to <android.service.quicksettings.TileService: void showDialog(android.app.Dialog)>has compatibility isssues！
+-----------------------------------------
+crashApis:3
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.graphics.drawable.Icon: android.graphics.drawable.Icon createWithResource(android.content.Context,int)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+1 Mainhead roads:
+-i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: is.zi.huewidgets.ConfigureActivity dummyMainMethod_is_zi_huewidgets_ConfigureActivity(android.content.Intent)>[]--><is.zi.huewidgets.'-$$Lambda$ConfigureActivity$gjE-YfHWTo7JdqWbF96LLJoNhpU': void onItemClick(android.widget.AdapterView,android.view.View,int,long)>[]--><is.zi.huewidgets.ConfigureActivity: void lambda$onCreate$2(is.zi.huewidgets.ConfigureActivity,int,boolean,android.widget.AdapterView,android.view.View,int,long)>[]--><is.zi.huewidgets.ConfigureActivity: void installShortcut(android.content.Intent,java.lang.String,java.lang.String)>[[-i0 < 26]]--><android.graphics.drawable.Icon: android.graphics.drawable.Icon createWithResource(android.content.Context,int)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.net.wifi.WifiInfo: int getIpAddress()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><com.amitshekhar.DebugDBInitProvider: boolean onCreate()>[]--><com.amitshekhar.DebugDB: void initialize(android.content.Context)>[]--><com.amitshekhar.utils.NetworkUtils: java.lang.String getAddressLog(android.content.Context,int)>[]--><android.net.wifi.WifiInfo: int getIpAddress()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.wifi.WifiInfo: int getIpAddress()>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:4
+crashApisInMain:3
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 5 Potential Issue API: SDKCheck of <android.app.Fragment: void onInflate(android.content.Context,android.util.AttributeSet,android.os.Bundle)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 21 22 
+Error road: <is.zi.coffee.Coffee: void onInflate(android.content.Context,android.util.AttributeSet,android.os.Bundle)>[]--><android.app.Fragment: void onInflate(android.content.Context,android.util.AttributeSet,android.os.Bundle)>
+#1.the call statck between class <is.zi.coffee.Coffee: void onInflate(android.content.Context,android.util.AttributeSet,android.os.Bundle)> to <android.app.Fragment: void onInflate(android.content.Context,android.util.AttributeSet,android.os.Bundle)>has compatibility isssues！
+-----------------------------------------
+crashApis:5
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 6 Potential Issue API: SDKCheck of <android.content.Context: java.lang.Object getSystemService(java.lang.Class)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+1 Mainhead roads:
+-i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: is.zi.huewidgets.ConfigureActivity dummyMainMethod_is_zi_huewidgets_ConfigureActivity(android.content.Intent)>[]--><is.zi.huewidgets.'-$$Lambda$ConfigureActivity$gjE-YfHWTo7JdqWbF96LLJoNhpU': void onItemClick(android.widget.AdapterView,android.view.View,int,long)>[]--><is.zi.huewidgets.ConfigureActivity: void lambda$onCreate$2(is.zi.huewidgets.ConfigureActivity,int,boolean,android.widget.AdapterView,android.view.View,int,long)>[]--><is.zi.huewidgets.ConfigureActivity: void installShortcut(android.content.Intent,java.lang.String,java.lang.String)>[[-i0 < 26]]--><android.content.Context: java.lang.Object getSystemService(java.lang.Class)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 7 Potential Issue API: SDKCheck of <android.content.pm.ShortcutInfo.Builder: void <init>(android.content.Context,java.lang.String)> is checking!!!
+The life time of api is [25,31]
+1call roads:
+1 Mainhead roads:
+-i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: is.zi.huewidgets.ConfigureActivity dummyMainMethod_is_zi_huewidgets_ConfigureActivity(android.content.Intent)>[]--><is.zi.huewidgets.'-$$Lambda$ConfigureActivity$gjE-YfHWTo7JdqWbF96LLJoNhpU': void onItemClick(android.widget.AdapterView,android.view.View,int,long)>[]--><is.zi.huewidgets.ConfigureActivity: void lambda$onCreate$2(is.zi.huewidgets.ConfigureActivity,int,boolean,android.widget.AdapterView,android.view.View,int,long)>[]--><is.zi.huewidgets.ConfigureActivity: void installShortcut(android.content.Intent,java.lang.String,java.lang.String)>[[-i0 < 26]]--><android.content.pm.ShortcutInfo.Builder: void <init>(android.content.Context,java.lang.String)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 8 Potential Issue API: SDKCheck of <android.content.pm.ShortcutInfo.Builder: android.content.pm.ShortcutInfo.Builder setShortLabel(java.lang.CharSequence)> is checking!!!
+The life time of api is [25,31]
+1call roads:
+1 Mainhead roads:
+-i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: is.zi.huewidgets.ConfigureActivity dummyMainMethod_is_zi_huewidgets_ConfigureActivity(android.content.Intent)>[]--><is.zi.huewidgets.'-$$Lambda$ConfigureActivity$gjE-YfHWTo7JdqWbF96LLJoNhpU': void onItemClick(android.widget.AdapterView,android.view.View,int,long)>[]--><is.zi.huewidgets.ConfigureActivity: void lambda$onCreate$2(is.zi.huewidgets.ConfigureActivity,int,boolean,android.widget.AdapterView,android.view.View,int,long)>[]--><is.zi.huewidgets.ConfigureActivity: void installShortcut(android.content.Intent,java.lang.String,java.lang.String)>[[-i0 < 26]]--><android.content.pm.ShortcutInfo.Builder: android.content.pm.ShortcutInfo.Builder setShortLabel(java.lang.CharSequence)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 9 Potential Issue API: SDKCheck of <android.accounts.AccountManager: android.content.Intent newChooseAccountIntent(android.accounts.Account,java.util.List,java.lang.String[],java.lang.String,java.lang.String,java.lang.String[],android.os.Bundle)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-i0 < 23
+Good road: <is.zi.hue.HueBridgeService: void withAccount(is.zi.hue.HueBridgeService$OnListener)>[[-i0 < 23]]--><android.accounts.AccountManager: android.content.Intent newChooseAccountIntent(android.accounts.Account,java.util.List,java.lang.String[],java.lang.String,java.lang.String,java.lang.String[],android.os.Bundle)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 10 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager: android.net.wifi.WifiInfo getConnectionInfo()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><com.amitshekhar.DebugDBInitProvider: boolean onCreate()>[]--><com.amitshekhar.DebugDB: void initialize(android.content.Context)>[]--><com.amitshekhar.utils.NetworkUtils: java.lang.String getAddressLog(android.content.Context,int)>[]--><android.net.wifi.WifiManager: android.net.wifi.WifiInfo getConnectionInfo()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.wifi.WifiManager: android.net.wifi.WifiInfo getConnectionInfo()>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:6
+crashApisInMain:4
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 11 Potential Issue API: SDKCheck of <android.content.pm.ShortcutInfo.Builder: android.content.pm.ShortcutInfo.Builder setIntent(android.content.Intent)> is checking!!!
+The life time of api is [24,31]
+1call roads:
+1 Mainhead roads:
+-i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: is.zi.huewidgets.ConfigureActivity dummyMainMethod_is_zi_huewidgets_ConfigureActivity(android.content.Intent)>[]--><is.zi.huewidgets.'-$$Lambda$ConfigureActivity$gjE-YfHWTo7JdqWbF96LLJoNhpU': void onItemClick(android.widget.AdapterView,android.view.View,int,long)>[]--><is.zi.huewidgets.ConfigureActivity: void lambda$onCreate$2(is.zi.huewidgets.ConfigureActivity,int,boolean,android.widget.AdapterView,android.view.View,int,long)>[]--><is.zi.huewidgets.ConfigureActivity: void installShortcut(android.content.Intent,java.lang.String,java.lang.String)>[[-i0 < 26]]--><android.content.pm.ShortcutInfo.Builder: android.content.pm.ShortcutInfo.Builder setIntent(android.content.Intent)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 12 Potential Issue API: SDKCheck of <android.service.quicksettings.Tile: int getState()> is checking!!!
+The life time of api is [24,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 21 22 23 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: is.zi.huewidgets.QSTileService dummyMainMethod_is_zi_huewidgets_QSTileService(android.content.Intent)>[]--><is.zi.huewidgets.QSTileService: void onClick()>[]--><android.service.quicksettings.Tile: int getState()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.service.quicksettings.Tile: int getState()>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:7
+crashApisInMain:5
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 13 Potential Issue API: SDKCheck of <android.service.quicksettings.TileService: void startActivityAndCollapse(android.content.Intent)> is checking!!!
+The life time of api is [24,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 21 22 23 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: is.zi.huewidgets.QSTileService dummyMainMethod_is_zi_huewidgets_QSTileService(android.content.Intent)>[]--><is.zi.huewidgets.QSTileService: void onClick()>[]--><is.zi.huewidgets.QSTileService: void onTileAdded()>[]--><android.service.quicksettings.TileService: void startActivityAndCollapse(android.content.Intent)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.service.quicksettings.TileService: void startActivityAndCollapse(android.content.Intent)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:8
+crashApisInMain:6
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 14 Potential Issue API: SDKCheck of <android.content.pm.ShortcutManager: boolean requestPinShortcut(android.content.pm.ShortcutInfo,android.content.IntentSender)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+1 Mainhead roads:
+-i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: is.zi.huewidgets.ConfigureActivity dummyMainMethod_is_zi_huewidgets_ConfigureActivity(android.content.Intent)>[]--><is.zi.huewidgets.'-$$Lambda$ConfigureActivity$gjE-YfHWTo7JdqWbF96LLJoNhpU': void onItemClick(android.widget.AdapterView,android.view.View,int,long)>[]--><is.zi.huewidgets.ConfigureActivity: void lambda$onCreate$2(is.zi.huewidgets.ConfigureActivity,int,boolean,android.widget.AdapterView,android.view.View,int,long)>[]--><is.zi.huewidgets.ConfigureActivity: void installShortcut(android.content.Intent,java.lang.String,java.lang.String)>[[-i0 < 26]]--><android.content.pm.ShortcutManager: boolean requestPinShortcut(android.content.pm.ShortcutInfo,android.content.IntentSender)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 15 Potential Issue API: SDKCheck of <android.service.quicksettings.Tile: void setState(int)> is checking!!!
+The life time of api is [24,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 21 22 23 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: is.zi.huewidgets.QSTileService dummyMainMethod_is_zi_huewidgets_QSTileService(android.content.Intent)>[]--><is.zi.huewidgets.QSTileService: void onClick()>[]--><android.service.quicksettings.Tile: void setState(int)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.service.quicksettings.Tile: void setState(int)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:9
+crashApisInMain:7
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 16 Potential Issue API: SDKCheck of <android.content.pm.ShortcutInfo.Builder: android.content.pm.ShortcutInfo.Builder setIcon(android.graphics.drawable.Icon)> is checking!!!
+The life time of api is [24,31]
+1call roads:
+1 Mainhead roads:
+-i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: is.zi.huewidgets.ConfigureActivity dummyMainMethod_is_zi_huewidgets_ConfigureActivity(android.content.Intent)>[]--><is.zi.huewidgets.'-$$Lambda$ConfigureActivity$gjE-YfHWTo7JdqWbF96LLJoNhpU': void onItemClick(android.widget.AdapterView,android.view.View,int,long)>[]--><is.zi.huewidgets.ConfigureActivity: void lambda$onCreate$2(is.zi.huewidgets.ConfigureActivity,int,boolean,android.widget.AdapterView,android.view.View,int,long)>[]--><is.zi.huewidgets.ConfigureActivity: void installShortcut(android.content.Intent,java.lang.String,java.lang.String)>[[-i0 < 26]]--><android.content.pm.ShortcutInfo.Builder: android.content.pm.ShortcutInfo.Builder setIcon(android.graphics.drawable.Icon)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 17 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)> is checking!!!
+The life time of api is [22,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 21 
+Error road: <is.zi.hueaccounts.AccountAuthenticatorService$AccountAuthenticator: android.os.Bundle hasFeatures(android.accounts.AccountAuthenticatorResponse,android.accounts.Account,java.lang.String[])>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+#1.the call statck between class <is.zi.hueaccounts.AccountAuthenticatorService$AccountAuthenticator: android.os.Bundle hasFeatures(android.accounts.AccountAuthenticatorResponse,android.accounts.Account,java.lang.String[])> to <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+crashApis:10
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 18 Potential Issue API: SDKCheck of <android.content.pm.ShortcutInfo.Builder: android.content.pm.ShortcutInfo build()> is checking!!!
+The life time of api is [24,31]
+1call roads:
+1 Mainhead roads:
+-i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: is.zi.huewidgets.ConfigureActivity dummyMainMethod_is_zi_huewidgets_ConfigureActivity(android.content.Intent)>[]--><is.zi.huewidgets.'-$$Lambda$ConfigureActivity$gjE-YfHWTo7JdqWbF96LLJoNhpU': void onItemClick(android.widget.AdapterView,android.view.View,int,long)>[]--><is.zi.huewidgets.ConfigureActivity: void lambda$onCreate$2(is.zi.huewidgets.ConfigureActivity,int,boolean,android.widget.AdapterView,android.view.View,int,long)>[]--><is.zi.huewidgets.ConfigureActivity: void installShortcut(android.content.Intent,java.lang.String,java.lang.String)>[[-i0 < 26]]--><android.content.pm.ShortcutInfo.Builder: android.content.pm.ShortcutInfo build()>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+crashApis numbers:10
+crashApis numbers in main road:7
+On Android Version 16 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 17 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 18 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 19 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 20 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 21 this app may have error api use(at least): 8 and error api roads: 8
+On Android Version 22 this app may have error api use(at least): 7 and error api roads: 7
+On Android Version 23 this app may have error api use(at least): 6 and error api roads: 6
+On Android Version 24 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 25 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 31 this app may have error api use(at least): 2 and error api roads: 2

@@ -1,0 +1,248 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/Icicle_for_Freenet.apk
+Entry Points[co.loubo.icicle.SettingsActivity, co.loubo.icicle.UploadActivity, co.loubo.icicle.GlobalState, co.loubo.icicle.FCPService, co.loubo.icicle.MainViewBroadcastReceiver, co.loubo.icicle.OpenReferenceActivity, co.loubo.icicle.NodeManagerActivity, co.loubo.icicle.MainActivity, co.loubo.icicle.FriendNodeManagerActivity]
+FllowDroidcallgraph size:1715
+Soot started on Mon Jul 11 05:25:41 CST 2022
+Soot finished on Mon Jul 11 05:25:47 CST 2022
+Soot has run for 0 min. 5 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 19
+Declared Target Sdk version is: 21
+Declared Max Sdk version is: -1
+Collected 275 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <junit.framework.TestCase: void <init>()> is checking!!!
+The life time of api is [26,27]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 21 22 23 24 25 
+Error road: <net.pterodactylus.fcp.FcpTest: void <init>()>[]--><junit.framework.TestCase: void <init>()>
+!!!this api will crash on sdk 28 29 30 31 
+Error road: <net.pterodactylus.fcp.FcpTest: void <init>()>[]--><junit.framework.TestCase: void <init>()>
+#1.the call statck between class <net.pterodactylus.fcp.FcpTest: void <init>()> to <junit.framework.TestCase: void <init>()>has compatibility isssues！
+-----------------------------------------
+crashApis:1
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.lang.String getString(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+3call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: co.loubo.icicle.FCPService dummyMainMethod_co_loubo_icicle_FCPService(android.content.Intent)>[]--><co.loubo.icicle.FCPService: void onCreate()>[]--><co.loubo.icicle.FreenetUtil: void run()>[[try]]--><co.loubo.icicle.FreenetUtil: void updatePriority(android.os.Bundle)>[[try]]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+One road protect good!
+2 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <co.loubo.icicle.GlobalState$5: void handleMessage(android.os.Message)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#1.the call statck between class <co.loubo.icicle.GlobalState$5: void handleMessage(android.os.Message)> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <co.loubo.icicle.PriorityDialog$2: void onCheckedChanged(android.widget.RadioGroup,int)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#2.the call statck between class <co.loubo.icicle.PriorityDialog$2: void onCheckedChanged(android.widget.RadioGroup,int)> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:2
+containsStatic:false
+containsTry:true
+3call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.provider.MediaStore.Video.Thumbnails: android.graphics.Bitmap getThumbnail(android.content.ContentResolver,long,int,android.graphics.BitmapFactory.Options)> is checking!!!
+The life time of api is [5,29]
+1call roads:
+1 Mainhead roads:
+-$i0 < 19
+!!!this api will crash on sdk 30 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: co.loubo.icicle.UploadActivity dummyMainMethod_co_loubo_icicle_UploadActivity(android.content.Intent)>[]--><co.loubo.icicle.UploadActivity: void onActivityResult(int,int,android.content.Intent)>[[-$i0 < 19]]--><android.provider.MediaStore.Video.Thumbnails: android.graphics.Bitmap getThumbnail(android.content.ContentResolver,long,int,android.graphics.BitmapFactory.Options)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.provider.MediaStore.Video.Thumbnails: android.graphics.Bitmap getThumbnail(android.content.ContentResolver,long,int,android.graphics.BitmapFactory.Options)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:3
+crashApisInMain:1
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.os.BaseBundle: int getInt(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+6call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: co.loubo.icicle.FCPService dummyMainMethod_co_loubo_icicle_FCPService(android.content.Intent)>[]--><co.loubo.icicle.FCPService: void onCreate()>[]--><co.loubo.icicle.FreenetUtil: void run()>[[try]]--><co.loubo.icicle.FreenetUtil: void updatePriority(android.os.Bundle)>[[try]]--><android.os.BaseBundle: int getInt(java.lang.String)>
+One road protect good!
+5 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <co.loubo.icicle.NodeManagerDialog: android.app.Dialog onCreateDialog(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#1.the call statck between class <co.loubo.icicle.NodeManagerDialog: android.app.Dialog onCreateDialog(android.os.Bundle)> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <co.loubo.icicle.MyNodeListFragment: void onActivityCreated(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#2.the call statck between class <co.loubo.icicle.MyNodeListFragment: void onActivityCreated(android.os.Bundle)> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <co.loubo.icicle.FriendNodeManagerDialog: android.app.Dialog onCreateDialog(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#3.the call statck between class <co.loubo.icicle.FriendNodeManagerDialog: android.app.Dialog onCreateDialog(android.os.Bundle)> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <co.loubo.icicle.FriendNodeListFragment: void onActivityCreated(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#4.the call statck between class <co.loubo.icicle.FriendNodeListFragment: void onActivityCreated(android.os.Bundle)> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <co.loubo.icicle.PriorityDialog: android.app.Dialog onCreateDialog(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#5.the call statck between class <co.loubo.icicle.PriorityDialog: android.app.Dialog onCreateDialog(android.os.Bundle)> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:4
+containsStatic:false
+containsTry:true
+6call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.net.NetworkInfo: int getType()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: co.loubo.icicle.FCPService dummyMainMethod_co_loubo_icicle_FCPService(android.content.Intent)>[]--><co.loubo.icicle.FCPService: void onCreate()>[]--><android.net.NetworkInfo: int getType()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.NetworkInfo: int getType()>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:5
+crashApisInMain:2
+containsStatic:false
+containsTry:true
+1call by main package
+-----------------------------------------
+#################################################
+N 5 Potential Issue API: SDKCheck of <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: co.loubo.icicle.FCPService dummyMainMethod_co_loubo_icicle_FCPService(android.content.Intent)>[]--><co.loubo.icicle.FCPService: void onCreate()>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:6
+crashApisInMain:3
+containsStatic:false
+containsTry:true
+1call by main package
+-----------------------------------------
+#################################################
+N 6 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putInt(java.lang.String,int)> is checking!!!
+The life time of api is [21,31]
+5call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: co.loubo.icicle.NodeManagerActivity dummyMainMethod_co_loubo_icicle_NodeManagerActivity(android.content.Intent)>[]--><co.loubo.icicle.NodeManagerActivity$3: void onClick(android.view.View)>[]--><co.loubo.icicle.NodeManagerDialog: co.loubo.icicle.NodeManagerDialog newInstance(int,co.loubo.icicle.LocalNode,boolean)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: co.loubo.icicle.FriendNodeManagerActivity dummyMainMethod_co_loubo_icicle_FriendNodeManagerActivity(android.content.Intent)>[]--><co.loubo.icicle.FriendNodeManagerActivity: boolean onOptionsItemSelected(android.view.MenuItem)>[]--><co.loubo.icicle.FriendNodeManagerActivity: void handleNodeEdit()>[]--><co.loubo.icicle.FriendNodeManagerDialog: co.loubo.icicle.FriendNodeManagerDialog newInstance(int,co.loubo.icicle.FriendNode)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+4 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <co.loubo.icicle.MyNodeListFragment: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#1.the call statck between class <co.loubo.icicle.MyNodeListFragment: void onSaveInstanceState(android.os.Bundle)> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+try
+Good road with try: <co.loubo.icicle.MainActivity: void doPositiveClick(java.lang.String,int)>[[try]]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+One road protect good!
+!!!this api will crash on sdk 19 20 
+Error road: <co.loubo.icicle.FriendNodeListFragment: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#3.the call statck between class <co.loubo.icicle.FriendNodeListFragment: void onSaveInstanceState(android.os.Bundle)> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <co.loubo.icicle.MainActivity: void changeTransferPriority(android.view.View)>[]--><co.loubo.icicle.PriorityDialog: co.loubo.icicle.PriorityDialog newInstance(int,java.lang.String)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#4.the call statck between class <co.loubo.icicle.MainActivity: void changeTransferPriority(android.view.View)> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:7
+crashApisInMain:4
+containsStatic:false
+containsTry:true
+5call by main package
+-----------------------------------------
+#################################################
+N 7 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)> is checking!!!
+The life time of api is [21,31]
+4call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: co.loubo.icicle.FCPService dummyMainMethod_co_loubo_icicle_FCPService(android.content.Intent)>[]--><co.loubo.icicle.FCPService: void onCreate()>[]--><co.loubo.icicle.FreenetUtil: void run()>[[try]]--><co.loubo.icicle.FreenetUtil: void setUp()>[[try]]--><net.pterodactylus.fcp.FcpConnection: void connect()>[]--><java.lang.Thread: void run()>[]--><net.pterodactylus.fcp.FcpConnectionHandler: void run()>[[try]]--><net.pterodactylus.fcp.FcpConnection: void handleMessage(net.pterodactylus.fcp.FcpMessage)>[]--><net.pterodactylus.fcp.FcpConnection: void fireReceivedProtocolError(net.pterodactylus.fcp.ProtocolError)>[]--><co.loubo.icicle.FreenetAdaptor: void receivedProtocolError(net.pterodactylus.fcp.FcpConnection,net.pterodactylus.fcp.ProtocolError)>[]--><co.loubo.icicle.GlobalState: void handleProtocolError(net.pterodactylus.fcp.ProtocolError)>[]--><co.loubo.icicle.GlobalState: void showToast(java.lang.String,int)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+One road protect good!
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: co.loubo.icicle.OpenReferenceActivity dummyMainMethod_co_loubo_icicle_OpenReferenceActivity(android.content.Intent)>[]--><co.loubo.icicle.OpenReferenceActivity: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+3 Packageshead roads:
+try
+Good road with try: <net.pterodactylus.fcp.FcpTest: void setUp()>[]--><net.pterodactylus.fcp.FcpConnection: void connect()>[]--><java.lang.Thread: void run()>[]--><net.pterodactylus.fcp.FcpConnectionHandler: void run()>[[try]]--><net.pterodactylus.fcp.FcpConnection: void handleMessage(net.pterodactylus.fcp.FcpMessage)>[]--><net.pterodactylus.fcp.FcpConnection: void fireReceivedProtocolError(net.pterodactylus.fcp.ProtocolError)>[]--><co.loubo.icicle.FreenetAdaptor: void receivedProtocolError(net.pterodactylus.fcp.FcpConnection,net.pterodactylus.fcp.ProtocolError)>[]--><co.loubo.icicle.GlobalState: void handleProtocolError(net.pterodactylus.fcp.ProtocolError)>[]--><co.loubo.icicle.GlobalState: void showToast(java.lang.String,int)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+One road protect good!
+try
+Good road with try: <co.loubo.icicle.MainActivity: void doPositiveClick(java.lang.String,int)>[[try]]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+One road protect good!
+!!!this api will crash on sdk 19 20 
+Error road: <co.loubo.icicle.MainActivity: void changeTransferPriority(android.view.View)>[]--><co.loubo.icicle.PriorityDialog: co.loubo.icicle.PriorityDialog newInstance(int,java.lang.String)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#3.the call statck between class <co.loubo.icicle.MainActivity: void changeTransferPriority(android.view.View)> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:8
+crashApisInMain:5
+containsStatic:false
+containsTry:true
+4call by main package
+-----------------------------------------
+#################################################
+N 8 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.lang.String getString(java.lang.String,java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: co.loubo.icicle.OpenReferenceActivity dummyMainMethod_co_loubo_icicle_OpenReferenceActivity(android.content.Intent)>[]--><co.loubo.icicle.OpenReferenceActivity: void onResume()>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String,java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: java.lang.String getString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:9
+crashApisInMain:6
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 9 Potential Issue API: SDKCheck of <junit.framework.Assert: void assertNotNull(java.lang.String,java.lang.Object)> is checking!!!
+The life time of api is [26,27]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 21 22 23 24 25 
+Error road: <net.pterodactylus.fcp.FcpTest: void testGenerateSSK()>[]--><junit.framework.Assert: void assertNotNull(java.lang.String,java.lang.Object)>
+!!!this api will crash on sdk 28 29 30 31 
+Error road: <net.pterodactylus.fcp.FcpTest: void testGenerateSSK()>[]--><junit.framework.Assert: void assertNotNull(java.lang.String,java.lang.Object)>
+#1.the call statck between class <net.pterodactylus.fcp.FcpTest: void testGenerateSSK()> to <junit.framework.Assert: void assertNotNull(java.lang.String,java.lang.Object)>has compatibility isssues！
+-----------------------------------------
+crashApis:10
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+crashApis numbers:10
+crashApis numbers in main road:6
+On Android Version 16 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 17 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 18 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 19 this app may have error api use(at least): 7 and error api roads: 17
+On Android Version 20 this app may have error api use(at least): 7 and error api roads: 17
+On Android Version 21 this app may have error api use(at least): 2 and error api roads: 2
+On Android Version 22 this app may have error api use(at least): 2 and error api roads: 2
+On Android Version 23 this app may have error api use(at least): 2 and error api roads: 2
+On Android Version 24 this app may have error api use(at least): 2 and error api roads: 2
+On Android Version 25 this app may have error api use(at least): 2 and error api roads: 2
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 2 and error api roads: 2
+On Android Version 29 this app may have error api use(at least): 2 and error api roads: 2
+On Android Version 30 this app may have error api use(at least): 3 and error api roads: 3
+On Android Version 31 this app may have error api use(at least): 5 and error api roads: 5

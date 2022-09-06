@@ -1,0 +1,313 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/AppOpsX.apk
+Entry Points[com.zzzmode.appopsx.ui.core.AppInstalledRevicer, com.zzzmode.appopsx.ui.permission.AlertInstalledPremActivity, com.zzzmode.appopsx.ui.main.usagestats.PermsUsageStatsActivity, com.zzzmode.appopsx.ui.core.AppGlobal, com.zzzmode.appopsx.ui.main.MainActivity, com.zzzmode.appopsx.ui.main.backup.BackupActivity, com.zzzmode.appopsx.ui.main.SettingsActivity, com.zzzmode.appopsx.ui.main.group.PermissionGroupActivity, com.zzzmode.appopsx.ui.main.HtmlActionActivity, com.zzzmode.appopsx.ui.permission.AppPermissionActivity, com.zzzmode.appopsx.OpsxConfigProvider, com.zzzmode.appopsx.ServerStatusChangeReceiver]
+FllowDroidcallgraph size:4045
+Soot started on Mon Jul 11 01:19:39 CST 2022
+StaticCheck:<com.h6ah4i.android.widget.advrecyclerview.draggable.RecyclerViewDragDropManager: boolean supportsEdgeEffect()>$yysi0 < 14
+Soot finished on Mon Jul 11 01:20:20 CST 2022
+Soot has run for 0 min. 40 sec.
+Found 4 additional DEX files. Now visiting them one by one.
+Soot started on Mon Jul 11 01:20:20 CST 2022
+Soot finished on Mon Jul 11 01:20:21 CST 2022
+Soot has run for 0 min. 0 sec.
+Soot started on Mon Jul 11 01:20:21 CST 2022
+StaticCheck:<com.zzzmode.appopsx.AssetsUtils: boolean is64Bit()>i0 < 21
+Soot finished on Mon Jul 11 01:20:22 CST 2022
+Soot has run for 0 min. 1 sec.
+Soot started on Mon Jul 11 01:20:22 CST 2022
+Soot finished on Mon Jul 11 01:20:23 CST 2022
+Soot has run for 0 min. 1 sec.
+Soot started on Mon Jul 11 01:20:23 CST 2022
+Soot finished on Mon Jul 11 01:20:26 CST 2022
+Soot has run for 0 min. 2 sec.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 21
+Declared Target Sdk version is: 28
+Declared Max Sdk version is: -1
+Collected 328 Android APIs in the primary DEX file
+Collected 327 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.graphics.drawable.Icon: android.graphics.drawable.Icon createWithBitmap(android.graphics.Bitmap)> is checking!!!
+The life time of api is [23,31]
+2151call roads:
+1 Mainhead roads:
+2150 Packageshead roads:
+Roads number exceed, exit!2150
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.content.pm.PackageItemInfo: android.graphics.drawable.Drawable loadUnbadgedIcon(android.content.pm.PackageManager)> is checking!!!
+The life time of api is [22,31]
+2155call roads:
+1 Mainhead roads:
+2154 Packageshead roads:
+Roads number exceed, exit!2154
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.content.Context: java.lang.Object getSystemService(java.lang.Class)> is checking!!!
+The life time of api is [23,31]
+2151call roads:
+1 Mainhead roads:
+2150 Packageshead roads:
+Roads number exceed, exit!2150
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.content.pm.ShortcutInfo.Builder: void <init>(android.content.Context,java.lang.String)> is checking!!!
+The life time of api is [25,31]
+2151call roads:
+1 Mainhead roads:
+2150 Packageshead roads:
+Roads number exceed, exit!2150
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.content.pm.ShortcutInfo.Builder: android.content.pm.ShortcutInfo.Builder setShortLabel(java.lang.CharSequence)> is checking!!!
+The life time of api is [25,31]
+2151call roads:
+1 Mainhead roads:
+2150 Packageshead roads:
+Roads number exceed, exit!2150
+#################################################
+N 5 Potential Issue API: SDKCheck of <android.content.pm.ShortcutManager: boolean setDynamicShortcuts(java.util.List)> is checking!!!
+The life time of api is [25,31]
+2151call roads:
+1 Mainhead roads:
+2150 Packageshead roads:
+Roads number exceed, exit!2150
+#################################################
+N 6 Potential Issue API: SDKCheck of <android.os.LocaleList: void <init>(java.util.Locale[])> is checking!!!
+The life time of api is [24,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+-$i0 < 24
+Good road: <com.zzzmode.appopsx.ui.core.AppGlobal: void attachBaseContext(android.content.Context)>[]--><com.zzzmode.appopsx.ui.core.LangHelper: android.content.Context attachBaseContext(android.content.Context)>[[-$i0 < 24]]--><com.zzzmode.appopsx.ui.core.LangHelper: android.content.Context updateResources(android.content.Context)>[]--><android.os.LocaleList: void <init>(java.util.Locale[])>
+One road protect good!
+-$i0 < 24
+Good road: <com.zzzmode.appopsx.ui.BaseActivity: void attachBaseContext(android.content.Context)>[]--><com.zzzmode.appopsx.ui.core.LangHelper: android.content.Context attachBaseContext(android.content.Context)>[[-$i0 < 24]]--><com.zzzmode.appopsx.ui.core.LangHelper: android.content.Context updateResources(android.content.Context)>[]--><android.os.LocaleList: void <init>(java.util.Locale[])>
+One road protect good!
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 7 Potential Issue API: SDKCheck of <android.os.ServiceManager: android.os.IBinder getService(java.lang.String)> is checking!!!
+The life time of api is [4,26]
+5call roads:
+0 Mainhead roads:
+5 Packageshead roads:
+!!!this api will crash on sdk 27 28 29 30 31 
+Error road: <com.zzzmode.appopsx.remote.AppOpsHandler: void runReset(com.zzzmode.appopsx.common.OpsCommands$Builder)>[]--><android.os.ServiceManager: android.os.IBinder getService(java.lang.String)>
+#1.the call statck between class <com.zzzmode.appopsx.remote.AppOpsHandler: void runReset(com.zzzmode.appopsx.common.OpsCommands$Builder)> to <android.os.ServiceManager: android.os.IBinder getService(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+try
+Good road with try: <com.zzzmode.appopsx.server.RemoteHandler: void onMessage(byte[])>[[try]]--><com.zzzmode.appopsx.server.RemoteHandler: com.zzzmode.appopsx.common.CallerResult callServiceMethod(com.zzzmode.appopsx.common.SystemServiceCaller)>[[try]]--><com.zzzmode.appopsx.server.RemoteHandler: void findFromService(com.zzzmode.appopsx.common.SystemServiceCaller)>[[try]]--><android.os.ServiceManager: android.os.IBinder getService(java.lang.String)>
+One road protect good!
+!!!this api will crash on sdk 27 28 29 30 31 
+Error road: <com.zzzmode.appopsx.remote.AppOpsHandler: com.zzzmode.appopsx.common.OpsResult runGet(com.zzzmode.appopsx.common.OpsCommands$Builder)>[]--><android.os.ServiceManager: android.os.IBinder getService(java.lang.String)>
+#3.the call statck between class <com.zzzmode.appopsx.remote.AppOpsHandler: com.zzzmode.appopsx.common.OpsResult runGet(com.zzzmode.appopsx.common.OpsCommands$Builder)> to <android.os.ServiceManager: android.os.IBinder getService(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 27 28 29 30 31 
+Error road: <com.zzzmode.appopsx.remote.AppOpsHandler: void runSet(com.zzzmode.appopsx.common.OpsCommands$Builder)>[]--><android.os.ServiceManager: android.os.IBinder getService(java.lang.String)>
+#4.the call statck between class <com.zzzmode.appopsx.remote.AppOpsHandler: void runSet(com.zzzmode.appopsx.common.OpsCommands$Builder)> to <android.os.ServiceManager: android.os.IBinder getService(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 27 28 29 30 31 
+Error road: <com.zzzmode.appopsx.remote.AppOpsHandler: com.zzzmode.appopsx.common.OpsResult runGetForOps(com.zzzmode.appopsx.common.OpsCommands$Builder)>[]--><android.os.ServiceManager: android.os.IBinder getService(java.lang.String)>
+#5.the call statck between class <com.zzzmode.appopsx.remote.AppOpsHandler: com.zzzmode.appopsx.common.OpsResult runGetForOps(com.zzzmode.appopsx.common.OpsCommands$Builder)> to <android.os.ServiceManager: android.os.IBinder getService(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:1
+containsStatic:false
+containsTry:true
+6call by main package
+-----------------------------------------
+#################################################
+N 8 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putBooleanArray(java.lang.String,boolean[])> is checking!!!
+The life time of api is [22,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 9 Potential Issue API: SDKCheck of <android.os.LocaleList: java.util.Locale get(int)> is checking!!!
+The life time of api is [24,31]
+5call roads:
+1 Mainhead roads:
+-$i0 < 24
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.zzzmode.appopsx.ui.main.backup.BackupActivity dummyMainMethod_com_zzzmode_appopsx_ui_main_backup_BackupActivity(android.content.Intent)>[]--><com.zzzmode.appopsx.ui.main.backup.BackupActivity: void onCreate(android.os.Bundle)>[]--><com.zzzmode.appopsx.ui.BaseActivity: void onCreate(android.os.Bundle)>[]--><com.zzzmode.appopsx.ui.core.LangHelper: void updateLanguage(android.content.Context)>[]--><com.zzzmode.appopsx.ui.core.LangHelper: void <clinit>()>[[-$i0 < 24]]--><android.os.LocaleList: java.util.Locale get(int)>
+One road protect good!
+-$i0 < 24
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.zzzmode.appopsx.ui.permission.AlertInstalledPremActivity dummyMainMethod_com_zzzmode_appopsx_ui_permission_AlertInstalledPremActivity(android.content.Intent)>[]--><com.zzzmode.appopsx.ui.permission.AlertInstalledPremActivity: void onCreate(android.os.Bundle)>[]--><com.zzzmode.appopsx.ui.BaseActivity: void onCreate(android.os.Bundle)>[]--><com.zzzmode.appopsx.ui.core.LangHelper: void updateLanguage(android.content.Context)>[]--><com.zzzmode.appopsx.ui.core.LangHelper: void <clinit>()>[[-$i0 < 24]]--><android.os.LocaleList: java.util.Locale get(int)>
+One road protect good!
+-$i0 < 24
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.zzzmode.appopsx.ui.main.MainActivity dummyMainMethod_com_zzzmode_appopsx_ui_main_MainActivity(android.content.Intent)>[]--><com.zzzmode.appopsx.ui.main.MainActivity: void onCreate(android.os.Bundle)>[]--><com.zzzmode.appopsx.ui.BaseActivity: void onCreate(android.os.Bundle)>[]--><com.zzzmode.appopsx.ui.core.LangHelper: void updateLanguage(android.content.Context)>[]--><com.zzzmode.appopsx.ui.core.LangHelper: void <clinit>()>[[-$i0 < 24]]--><android.os.LocaleList: java.util.Locale get(int)>
+One road protect good!
+-$i0 < 24
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.zzzmode.appopsx.ui.main.usagestats.PermsUsageStatsActivity dummyMainMethod_com_zzzmode_appopsx_ui_main_usagestats_PermsUsageStatsActivity(android.content.Intent)>[]--><com.zzzmode.appopsx.ui.main.usagestats.PermsUsageStatsActivity: void onCreate(android.os.Bundle)>[]--><com.zzzmode.appopsx.ui.BaseActivity: void onCreate(android.os.Bundle)>[]--><com.zzzmode.appopsx.ui.core.LangHelper: void updateLanguage(android.content.Context)>[]--><com.zzzmode.appopsx.ui.core.LangHelper: void <clinit>()>[[-$i0 < 24]]--><android.os.LocaleList: java.util.Locale get(int)>
+One road protect good!
+-$i0 < 24
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.zzzmode.appopsx.ui.permission.AppPermissionActivity dummyMainMethod_com_zzzmode_appopsx_ui_permission_AppPermissionActivity(android.content.Intent)>[]--><com.zzzmode.appopsx.ui.permission.AppPermissionActivity: void onCreate(android.os.Bundle)>[]--><com.zzzmode.appopsx.ui.BaseActivity: void onCreate(android.os.Bundle)>[]--><com.zzzmode.appopsx.ui.core.LangHelper: void updateLanguage(android.content.Context)>[]--><com.zzzmode.appopsx.ui.core.LangHelper: void <clinit>()>[[-$i0 < 24]]--><android.os.LocaleList: java.util.Locale get(int)>
+One road protect good!
+-$i0 < 24
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.zzzmode.appopsx.ui.main.HtmlActionActivity dummyMainMethod_com_zzzmode_appopsx_ui_main_HtmlActionActivity(android.content.Intent)>[]--><com.zzzmode.appopsx.ui.main.HtmlActionActivity: void onCreate(android.os.Bundle)>[]--><com.zzzmode.appopsx.ui.BaseActivity: void onCreate(android.os.Bundle)>[]--><com.zzzmode.appopsx.ui.core.LangHelper: void updateLanguage(android.content.Context)>[]--><com.zzzmode.appopsx.ui.core.LangHelper: void <clinit>()>[[-$i0 < 24]]--><android.os.LocaleList: java.util.Locale get(int)>
+One road protect good!
+-$i0 < 24
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><com.zzzmode.appopsx.ui.core.AppGlobal: void onCreate()>[]--><com.zzzmode.appopsx.ui.core.LangHelper: void updateLanguage(android.content.Context)>[]--><com.zzzmode.appopsx.ui.core.LangHelper: void <clinit>()>[[-$i0 < 24]]--><android.os.LocaleList: java.util.Locale get(int)>
+One road protect good!
+-$i0 < 24
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.zzzmode.appopsx.ui.main.group.PermissionGroupActivity dummyMainMethod_com_zzzmode_appopsx_ui_main_group_PermissionGroupActivity(android.content.Intent)>[]--><com.zzzmode.appopsx.ui.main.group.PermissionGroupActivity: void onCreate(android.os.Bundle)>[]--><com.zzzmode.appopsx.ui.BaseActivity: void onCreate(android.os.Bundle)>[]--><com.zzzmode.appopsx.ui.core.LangHelper: void updateLanguage(android.content.Context)>[]--><com.zzzmode.appopsx.ui.core.LangHelper: void <clinit>()>[[-$i0 < 24]]--><android.os.LocaleList: java.util.Locale get(int)>
+One road protect good!
+-$i0 < 24
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.zzzmode.appopsx.ui.main.SettingsActivity dummyMainMethod_com_zzzmode_appopsx_ui_main_SettingsActivity(android.content.Intent)>[]--><com.zzzmode.appopsx.ui.main.SettingsActivity: void onCreate(android.os.Bundle)>[]--><com.zzzmode.appopsx.ui.BaseActivity: void onCreate(android.os.Bundle)>[]--><com.zzzmode.appopsx.ui.core.LangHelper: void updateLanguage(android.content.Context)>[]--><com.zzzmode.appopsx.ui.core.LangHelper: void <clinit>()>[[-$i0 < 24]]--><android.os.LocaleList: java.util.Locale get(int)>
+One road protect good!
+4 Packageshead roads:
+-$i0 < 24
+-$i0 < 24
+Good road: <com.zzzmode.appopsx.ui.core.AppGlobal: void attachBaseContext(android.content.Context)>[]--><com.zzzmode.appopsx.ui.core.LangHelper: android.content.Context attachBaseContext(android.content.Context)>[[-$i0 < 24]]--><com.zzzmode.appopsx.ui.core.LangHelper: android.content.Context updateResources(android.content.Context)>[]--><com.zzzmode.appopsx.ui.core.LangHelper: java.util.Locale getLocaleByLanguage(android.content.Context)>[]--><com.zzzmode.appopsx.ui.core.LangHelper: void <clinit>()>[[-$i0 < 24]]--><android.os.LocaleList: java.util.Locale get(int)>
+One road protect good!
+-$i0 < 24
+Good road: <com.zzzmode.appopsx.ui.main.SettingsActivity$MyPreferenceFragment: void switchLanguage()>[]--><com.zzzmode.appopsx.ui.core.LangHelper: void updateLanguage(android.content.Context)>[]--><com.zzzmode.appopsx.ui.core.LangHelper: void <clinit>()>[[-$i0 < 24]]--><android.os.LocaleList: java.util.Locale get(int)>
+One road protect good!
+-$i0 < 24
+-$i0 < 24
+Good road: <com.zzzmode.appopsx.ui.BaseActivity: void attachBaseContext(android.content.Context)>[]--><com.zzzmode.appopsx.ui.core.LangHelper: android.content.Context attachBaseContext(android.content.Context)>[[-$i0 < 24]]--><com.zzzmode.appopsx.ui.core.LangHelper: android.content.Context updateResources(android.content.Context)>[]--><com.zzzmode.appopsx.ui.core.LangHelper: java.util.Locale getLocaleByLanguage(android.content.Context)>[]--><com.zzzmode.appopsx.ui.core.LangHelper: void <clinit>()>[[-$i0 < 24]]--><android.os.LocaleList: java.util.Locale get(int)>
+One road protect good!
+-$i0 < 24
+Good road: <com.zzzmode.appopsx.ui.core.AppGlobal: void onConfigurationChanged(android.content.res.Configuration)>[]--><com.zzzmode.appopsx.ui.core.LangHelper: void updateLanguage(android.content.Context)>[]--><com.zzzmode.appopsx.ui.core.LangHelper: void <clinit>()>[[-$i0 < 24]]--><android.os.LocaleList: java.util.Locale get(int)>
+One road protect good!
+containsStatic:false
+containsTry:false
+5call by main package
+-----------------------------------------
+#################################################
+N 10 Potential Issue API: SDKCheck of <android.content.pm.ShortcutInfo.Builder: android.content.pm.ShortcutInfo.Builder setLongLabel(java.lang.CharSequence)> is checking!!!
+The life time of api is [25,31]
+2151call roads:
+1 Mainhead roads:
+2150 Packageshead roads:
+Roads number exceed, exit!2150
+#################################################
+N 11 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)> is checking!!!
+The life time of api is [22,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 12 Potential Issue API: SDKCheck of <android.os.Message: void setAsynchronous(boolean)> is checking!!!
+The life time of api is [22,31]
+2152call roads:
+1 Mainhead roads:
+2151 Packageshead roads:
+Roads number exceed, exit!2151
+#################################################
+N 13 Potential Issue API: SDKCheck of <android.content.pm.ShortcutInfo.Builder: android.content.pm.ShortcutInfo build()> is checking!!!
+The life time of api is [24,31]
+2151call roads:
+1 Mainhead roads:
+2150 Packageshead roads:
+Roads number exceed, exit!2150
+#################################################
+N 14 Potential Issue API: SDKCheck of <android.content.res.Configuration: void setLocales(android.os.LocaleList)> is checking!!!
+The life time of api is [24,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+-$i0 < 24
+Good road: <com.zzzmode.appopsx.ui.core.AppGlobal: void attachBaseContext(android.content.Context)>[]--><com.zzzmode.appopsx.ui.core.LangHelper: android.content.Context attachBaseContext(android.content.Context)>[[-$i0 < 24]]--><com.zzzmode.appopsx.ui.core.LangHelper: android.content.Context updateResources(android.content.Context)>[]--><android.content.res.Configuration: void setLocales(android.os.LocaleList)>
+One road protect good!
+-$i0 < 24
+Good road: <com.zzzmode.appopsx.ui.BaseActivity: void attachBaseContext(android.content.Context)>[]--><com.zzzmode.appopsx.ui.core.LangHelper: android.content.Context attachBaseContext(android.content.Context)>[[-$i0 < 24]]--><com.zzzmode.appopsx.ui.core.LangHelper: android.content.Context updateResources(android.content.Context)>[]--><android.content.res.Configuration: void setLocales(android.os.LocaleList)>
+One road protect good!
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 15 Potential Issue API: SDKCheck of <android.content.pm.ShortcutInfo.Builder: android.content.pm.ShortcutInfo.Builder setIntent(android.content.Intent)> is checking!!!
+The life time of api is [24,31]
+2151call roads:
+1 Mainhead roads:
+2150 Packageshead roads:
+Roads number exceed, exit!2150
+#################################################
+N 16 Potential Issue API: SDKCheck of <android.content.pm.ShortcutManager: int getMaxShortcutCountPerActivity()> is checking!!!
+The life time of api is [25,31]
+2151call roads:
+1 Mainhead roads:
+2150 Packageshead roads:
+Roads number exceed, exit!2150
+#################################################
+N 17 Potential Issue API: SDKCheck of <android.content.pm.ShortcutInfo.Builder: android.content.pm.ShortcutInfo.Builder setIcon(android.graphics.drawable.Icon)> is checking!!!
+The life time of api is [24,31]
+2151call roads:
+1 Mainhead roads:
+2150 Packageshead roads:
+Roads number exceed, exit!2150
+#################################################
+N 18 Potential Issue API: SDKCheck of <android.os.LocaleList: android.os.LocaleList getDefault()> is checking!!!
+The life time of api is [24,31]
+5call roads:
+1 Mainhead roads:
+-$i0 < 24
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.zzzmode.appopsx.ui.main.backup.BackupActivity dummyMainMethod_com_zzzmode_appopsx_ui_main_backup_BackupActivity(android.content.Intent)>[]--><com.zzzmode.appopsx.ui.main.backup.BackupActivity: void onCreate(android.os.Bundle)>[]--><com.zzzmode.appopsx.ui.BaseActivity: void onCreate(android.os.Bundle)>[]--><com.zzzmode.appopsx.ui.core.LangHelper: void updateLanguage(android.content.Context)>[]--><com.zzzmode.appopsx.ui.core.LangHelper: void <clinit>()>[[-$i0 < 24]]--><android.os.LocaleList: android.os.LocaleList getDefault()>
+One road protect good!
+-$i0 < 24
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.zzzmode.appopsx.ui.permission.AlertInstalledPremActivity dummyMainMethod_com_zzzmode_appopsx_ui_permission_AlertInstalledPremActivity(android.content.Intent)>[]--><com.zzzmode.appopsx.ui.permission.AlertInstalledPremActivity: void onCreate(android.os.Bundle)>[]--><com.zzzmode.appopsx.ui.BaseActivity: void onCreate(android.os.Bundle)>[]--><com.zzzmode.appopsx.ui.core.LangHelper: void updateLanguage(android.content.Context)>[]--><com.zzzmode.appopsx.ui.core.LangHelper: void <clinit>()>[[-$i0 < 24]]--><android.os.LocaleList: android.os.LocaleList getDefault()>
+One road protect good!
+-$i0 < 24
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.zzzmode.appopsx.ui.main.MainActivity dummyMainMethod_com_zzzmode_appopsx_ui_main_MainActivity(android.content.Intent)>[]--><com.zzzmode.appopsx.ui.main.MainActivity: void onCreate(android.os.Bundle)>[]--><com.zzzmode.appopsx.ui.BaseActivity: void onCreate(android.os.Bundle)>[]--><com.zzzmode.appopsx.ui.core.LangHelper: void updateLanguage(android.content.Context)>[]--><com.zzzmode.appopsx.ui.core.LangHelper: void <clinit>()>[[-$i0 < 24]]--><android.os.LocaleList: android.os.LocaleList getDefault()>
+One road protect good!
+-$i0 < 24
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.zzzmode.appopsx.ui.main.usagestats.PermsUsageStatsActivity dummyMainMethod_com_zzzmode_appopsx_ui_main_usagestats_PermsUsageStatsActivity(android.content.Intent)>[]--><com.zzzmode.appopsx.ui.main.usagestats.PermsUsageStatsActivity: void onCreate(android.os.Bundle)>[]--><com.zzzmode.appopsx.ui.BaseActivity: void onCreate(android.os.Bundle)>[]--><com.zzzmode.appopsx.ui.core.LangHelper: void updateLanguage(android.content.Context)>[]--><com.zzzmode.appopsx.ui.core.LangHelper: void <clinit>()>[[-$i0 < 24]]--><android.os.LocaleList: android.os.LocaleList getDefault()>
+One road protect good!
+-$i0 < 24
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.zzzmode.appopsx.ui.permission.AppPermissionActivity dummyMainMethod_com_zzzmode_appopsx_ui_permission_AppPermissionActivity(android.content.Intent)>[]--><com.zzzmode.appopsx.ui.permission.AppPermissionActivity: void onCreate(android.os.Bundle)>[]--><com.zzzmode.appopsx.ui.BaseActivity: void onCreate(android.os.Bundle)>[]--><com.zzzmode.appopsx.ui.core.LangHelper: void updateLanguage(android.content.Context)>[]--><com.zzzmode.appopsx.ui.core.LangHelper: void <clinit>()>[[-$i0 < 24]]--><android.os.LocaleList: android.os.LocaleList getDefault()>
+One road protect good!
+-$i0 < 24
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.zzzmode.appopsx.ui.main.HtmlActionActivity dummyMainMethod_com_zzzmode_appopsx_ui_main_HtmlActionActivity(android.content.Intent)>[]--><com.zzzmode.appopsx.ui.main.HtmlActionActivity: void onCreate(android.os.Bundle)>[]--><com.zzzmode.appopsx.ui.BaseActivity: void onCreate(android.os.Bundle)>[]--><com.zzzmode.appopsx.ui.core.LangHelper: void updateLanguage(android.content.Context)>[]--><com.zzzmode.appopsx.ui.core.LangHelper: void <clinit>()>[[-$i0 < 24]]--><android.os.LocaleList: android.os.LocaleList getDefault()>
+One road protect good!
+-$i0 < 24
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><com.zzzmode.appopsx.ui.core.AppGlobal: void onCreate()>[]--><com.zzzmode.appopsx.ui.core.LangHelper: void updateLanguage(android.content.Context)>[]--><com.zzzmode.appopsx.ui.core.LangHelper: void <clinit>()>[[-$i0 < 24]]--><android.os.LocaleList: android.os.LocaleList getDefault()>
+One road protect good!
+-$i0 < 24
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.zzzmode.appopsx.ui.main.group.PermissionGroupActivity dummyMainMethod_com_zzzmode_appopsx_ui_main_group_PermissionGroupActivity(android.content.Intent)>[]--><com.zzzmode.appopsx.ui.main.group.PermissionGroupActivity: void onCreate(android.os.Bundle)>[]--><com.zzzmode.appopsx.ui.BaseActivity: void onCreate(android.os.Bundle)>[]--><com.zzzmode.appopsx.ui.core.LangHelper: void updateLanguage(android.content.Context)>[]--><com.zzzmode.appopsx.ui.core.LangHelper: void <clinit>()>[[-$i0 < 24]]--><android.os.LocaleList: android.os.LocaleList getDefault()>
+One road protect good!
+-$i0 < 24
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.zzzmode.appopsx.ui.main.SettingsActivity dummyMainMethod_com_zzzmode_appopsx_ui_main_SettingsActivity(android.content.Intent)>[]--><com.zzzmode.appopsx.ui.main.SettingsActivity: void onCreate(android.os.Bundle)>[]--><com.zzzmode.appopsx.ui.BaseActivity: void onCreate(android.os.Bundle)>[]--><com.zzzmode.appopsx.ui.core.LangHelper: void updateLanguage(android.content.Context)>[]--><com.zzzmode.appopsx.ui.core.LangHelper: void <clinit>()>[[-$i0 < 24]]--><android.os.LocaleList: android.os.LocaleList getDefault()>
+One road protect good!
+4 Packageshead roads:
+-$i0 < 24
+-$i0 < 24
+Good road: <com.zzzmode.appopsx.ui.core.AppGlobal: void attachBaseContext(android.content.Context)>[]--><com.zzzmode.appopsx.ui.core.LangHelper: android.content.Context attachBaseContext(android.content.Context)>[[-$i0 < 24]]--><com.zzzmode.appopsx.ui.core.LangHelper: android.content.Context updateResources(android.content.Context)>[]--><com.zzzmode.appopsx.ui.core.LangHelper: java.util.Locale getLocaleByLanguage(android.content.Context)>[]--><com.zzzmode.appopsx.ui.core.LangHelper: void <clinit>()>[[-$i0 < 24]]--><android.os.LocaleList: android.os.LocaleList getDefault()>
+One road protect good!
+-$i0 < 24
+Good road: <com.zzzmode.appopsx.ui.main.SettingsActivity$MyPreferenceFragment: void switchLanguage()>[]--><com.zzzmode.appopsx.ui.core.LangHelper: void updateLanguage(android.content.Context)>[]--><com.zzzmode.appopsx.ui.core.LangHelper: void <clinit>()>[[-$i0 < 24]]--><android.os.LocaleList: android.os.LocaleList getDefault()>
+One road protect good!
+-$i0 < 24
+-$i0 < 24
+Good road: <com.zzzmode.appopsx.ui.BaseActivity: void attachBaseContext(android.content.Context)>[]--><com.zzzmode.appopsx.ui.core.LangHelper: android.content.Context attachBaseContext(android.content.Context)>[[-$i0 < 24]]--><com.zzzmode.appopsx.ui.core.LangHelper: android.content.Context updateResources(android.content.Context)>[]--><com.zzzmode.appopsx.ui.core.LangHelper: java.util.Locale getLocaleByLanguage(android.content.Context)>[]--><com.zzzmode.appopsx.ui.core.LangHelper: void <clinit>()>[[-$i0 < 24]]--><android.os.LocaleList: android.os.LocaleList getDefault()>
+One road protect good!
+-$i0 < 24
+Good road: <com.zzzmode.appopsx.ui.core.AppGlobal: void onConfigurationChanged(android.content.res.Configuration)>[]--><com.zzzmode.appopsx.ui.core.LangHelper: void updateLanguage(android.content.Context)>[]--><com.zzzmode.appopsx.ui.core.LangHelper: void <clinit>()>[[-$i0 < 24]]--><android.os.LocaleList: android.os.LocaleList getDefault()>
+One road protect good!
+containsStatic:false
+containsTry:false
+5call by main package
+-----------------------------------------
+crashApis numbers:1
+crashApis numbers in main road:0
+On Android Version 16 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 17 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 18 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 19 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 20 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 21 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 22 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 23 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 24 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 25 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 1 and error api roads: 4
+On Android Version 28 this app may have error api use(at least): 1 and error api roads: 4
+On Android Version 29 this app may have error api use(at least): 1 and error api roads: 4
+On Android Version 30 this app may have error api use(at least): 1 and error api roads: 4
+On Android Version 31 this app may have error api use(at least): 1 and error api roads: 4

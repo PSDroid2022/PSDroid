@@ -1,0 +1,268 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/Simple_Keyboard.apk
+Entry Points[rkr.simplekeyboard.inputmethod.latin.SystemBroadcastReceiver, rkr.simplekeyboard.inputmethod.latin.LatinIME, rkr.simplekeyboard.inputmethod.latin.settings.SettingsActivity]
+FllowDroidcallgraph size:2053
+Soot started on Mon Jul 11 12:14:01 CST 2022
+Soot finished on Mon Jul 11 12:14:07 CST 2022
+Soot has run for 0 min. 5 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 19
+Declared Target Sdk version is: 30
+Declared Max Sdk version is: -1
+Collected 539 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.view.Window: int getNavigationBarColor()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+-i0 < 28
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: rkr.simplekeyboard.inputmethod.latin.LatinIME dummyMainMethod_rkr_simplekeyboard_inputmethod_latin_LatinIME(android.content.Intent)>[]--><rkr.simplekeyboard.inputmethod.latin.LatinIME: void onWindowShown()>[]--><rkr.simplekeyboard.inputmethod.latin.LatinIME: void setNavigationBarColor()>[[-i0 < 28]]--><android.view.Window: int getNavigationBarColor()>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.view.View: void setOutlineProvider(android.view.ViewOutlineProvider)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: rkr.simplekeyboard.inputmethod.latin.LatinIME dummyMainMethod_rkr_simplekeyboard_inputmethod_latin_LatinIME(android.content.Intent)>[]--><rkr.simplekeyboard.inputmethod.latin.LatinIME: void setInputView(android.view.View)>[]--><rkr.simplekeyboard.inputmethod.compat.ViewOutlineProviderCompatUtils: rkr.simplekeyboard.inputmethod.compat.ViewOutlineProviderCompatUtils$InsetsUpdater setInsetsOutlineProvider(android.view.View)>[]--><rkr.simplekeyboard.inputmethod.compat.ViewOutlineProviderCompatUtilsLXX: rkr.simplekeyboard.inputmethod.compat.ViewOutlineProviderCompatUtils$InsetsUpdater setInsetsOutlineProvider(android.view.View)>[]--><android.view.View: void setOutlineProvider(android.view.ViewOutlineProvider)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.view.View: void setOutlineProvider(android.view.ViewOutlineProvider)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:1
+crashApisInMain:1
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.view.Window: void setNavigationBarColor(int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+-i0 < 28
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: rkr.simplekeyboard.inputmethod.latin.LatinIME dummyMainMethod_rkr_simplekeyboard_inputmethod_latin_LatinIME(android.content.Intent)>[]--><rkr.simplekeyboard.inputmethod.latin.LatinIME: void onWindowShown()>[]--><rkr.simplekeyboard.inputmethod.latin.LatinIME: void setNavigationBarColor()>[[-i0 < 28]]--><android.view.Window: void setNavigationBarColor(int)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.os.BaseBundle: boolean containsKey(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <rkr.simplekeyboard.inputmethod.latin.settings.CustomInputStyleSettingsFragment: void onActivityCreated(android.os.Bundle)>[]--><android.os.BaseBundle: boolean containsKey(java.lang.String)>
+#1.the call statck between class <rkr.simplekeyboard.inputmethod.latin.settings.CustomInputStyleSettingsFragment: void onActivityCreated(android.os.Bundle)> to <android.os.BaseBundle: boolean containsKey(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:2
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <rkr.simplekeyboard.inputmethod.latin.settings.CustomInputStyleSettingsFragment: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#1.the call statck between class <rkr.simplekeyboard.inputmethod.latin.settings.CustomInputStyleSettingsFragment: void onSaveInstanceState(android.os.Bundle)> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:3
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 5 Potential Issue API: SDKCheck of <android.os.LocaleList: java.util.Locale get(int)> is checking!!!
+The life time of api is [24,31]
+1call roads:
+1 Mainhead roads:
+-i0 < 24
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: rkr.simplekeyboard.inputmethod.latin.LatinIME dummyMainMethod_rkr_simplekeyboard_inputmethod_latin_LatinIME(android.content.Intent)>[]--><rkr.simplekeyboard.inputmethod.latin.LatinIME: void onFinishInput()>[]--><rkr.simplekeyboard.inputmethod.latin.LatinIME$UIHandler: void onFinishInput()>[]--><rkr.simplekeyboard.inputmethod.latin.LatinIME$UIHandler: void executePendingImsCallback(rkr.simplekeyboard.inputmethod.latin.LatinIME,android.view.inputmethod.EditorInfo,boolean)>[]--><rkr.simplekeyboard.inputmethod.latin.LatinIME: void onStartInputInternal(android.view.inputmethod.EditorInfo,boolean)>[]--><rkr.simplekeyboard.inputmethod.compat.EditorInfoCompatUtils: java.util.Locale getPrimaryHintLocale(android.view.inputmethod.EditorInfo)>[[-i0 < 24]]--><android.os.LocaleList: java.util.Locale get(int)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 6 Potential Issue API: SDKCheck of <android.os.LocaleList: boolean isEmpty()> is checking!!!
+The life time of api is [24,31]
+1call roads:
+1 Mainhead roads:
+-i0 < 24
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: rkr.simplekeyboard.inputmethod.latin.LatinIME dummyMainMethod_rkr_simplekeyboard_inputmethod_latin_LatinIME(android.content.Intent)>[]--><rkr.simplekeyboard.inputmethod.latin.LatinIME: void onFinishInput()>[]--><rkr.simplekeyboard.inputmethod.latin.LatinIME$UIHandler: void onFinishInput()>[]--><rkr.simplekeyboard.inputmethod.latin.LatinIME$UIHandler: void executePendingImsCallback(rkr.simplekeyboard.inputmethod.latin.LatinIME,android.view.inputmethod.EditorInfo,boolean)>[]--><rkr.simplekeyboard.inputmethod.latin.LatinIME: void onStartInputInternal(android.view.inputmethod.EditorInfo,boolean)>[]--><rkr.simplekeyboard.inputmethod.compat.EditorInfoCompatUtils: java.util.Locale getPrimaryHintLocale(android.view.inputmethod.EditorInfo)>[[-i0 < 24]]--><android.os.LocaleList: boolean isEmpty()>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 7 Potential Issue API: SDKCheck of <android.preference.PreferenceActivity: void onBackPressed()> is checking!!!
+The life time of api is [26,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 21 22 23 24 25 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: rkr.simplekeyboard.inputmethod.latin.settings.SettingsActivity dummyMainMethod_rkr_simplekeyboard_inputmethod_latin_settings_SettingsActivity(android.content.Intent)>[]--><rkr.simplekeyboard.inputmethod.latin.settings.SettingsActivity: boolean onOptionsItemSelected(android.view.MenuItem)>[]--><android.preference.PreferenceActivity: void onBackPressed()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.preference.PreferenceActivity: void onBackPressed()>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:4
+crashApisInMain:2
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 8 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)> is checking!!!
+The life time of api is [22,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 21 
+Error road: <rkr.simplekeyboard.inputmethod.latin.settings.CustomInputStyleSettingsFragment: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+#1.the call statck between class <rkr.simplekeyboard.inputmethod.latin.settings.CustomInputStyleSettingsFragment: void onSaveInstanceState(android.os.Bundle)> to <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+crashApis:5
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 9 Potential Issue API: SDKCheck of <android.graphics.Outline: void setRect(int,int,int,int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <rkr.simplekeyboard.inputmethod.compat.ViewOutlineProviderCompatUtilsLXX$InsetsOutlineProvider: void getOutline(android.view.View,android.graphics.Outline)>[]--><android.graphics.Outline: void setRect(int,int,int,int)>
+#1.the call statck between class <rkr.simplekeyboard.inputmethod.compat.ViewOutlineProviderCompatUtilsLXX$InsetsOutlineProvider: void getOutline(android.view.View,android.graphics.Outline)> to <android.graphics.Outline: void setRect(int,int,int,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:6
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 10 Potential Issue API: SDKCheck of <android.view.View: void invalidateOutline()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: rkr.simplekeyboard.inputmethod.latin.LatinIME dummyMainMethod_rkr_simplekeyboard_inputmethod_latin_LatinIME(android.content.Intent)>[]--><rkr.simplekeyboard.inputmethod.latin.LatinIME: void onComputeInsets(android.inputmethodservice.InputMethodService$Insets)>[]--><rkr.simplekeyboard.inputmethod.compat.ViewOutlineProviderCompatUtilsLXX$InsetsOutlineProvider: void setInsets(android.inputmethodservice.InputMethodService$Insets)>[]--><android.view.View: void invalidateOutline()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.view.View: void invalidateOutline()>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:7
+crashApisInMain:3
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 11 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.lang.String getString(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <rkr.simplekeyboard.inputmethod.latin.settings.CustomInputStyleSettingsFragment: void onActivityCreated(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#1.the call statck between class <rkr.simplekeyboard.inputmethod.latin.settings.CustomInputStyleSettingsFragment: void onActivityCreated(android.os.Bundle)> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:8
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 12 Potential Issue API: SDKCheck of <android.view.ViewOutlineProvider: void getOutline(android.view.View,android.graphics.Outline)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <rkr.simplekeyboard.inputmethod.compat.ViewOutlineProviderCompatUtilsLXX$InsetsOutlineProvider: void getOutline(android.view.View,android.graphics.Outline)>[]--><android.view.ViewOutlineProvider: void getOutline(android.view.View,android.graphics.Outline)>
+#1.the call statck between class <rkr.simplekeyboard.inputmethod.compat.ViewOutlineProviderCompatUtilsLXX$InsetsOutlineProvider: void getOutline(android.view.View,android.graphics.Outline)> to <android.view.ViewOutlineProvider: void getOutline(android.view.View,android.graphics.Outline)>has compatibility isssues！
+-----------------------------------------
+crashApis:9
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 13 Potential Issue API: SDKCheck of <android.preference.PreferenceActivity: boolean onOptionsItemSelected(android.view.MenuItem)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 21 22 23 24 25 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: rkr.simplekeyboard.inputmethod.latin.settings.SettingsActivity dummyMainMethod_rkr_simplekeyboard_inputmethod_latin_settings_SettingsActivity(android.content.Intent)>[]--><rkr.simplekeyboard.inputmethod.latin.settings.SettingsActivity: boolean onOptionsItemSelected(android.view.MenuItem)>[]--><android.preference.PreferenceActivity: boolean onOptionsItemSelected(android.view.MenuItem)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.preference.PreferenceActivity: boolean onOptionsItemSelected(android.view.MenuItem)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:10
+crashApisInMain:4
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 14 Potential Issue API: SDKCheck of <android.view.inputmethod.InputMethodSubtype: java.lang.String getLanguageTag()> is checking!!!
+The life time of api is [24,31]
+7call roads:
+1 Mainhead roads:
+-i0 < 24
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: rkr.simplekeyboard.inputmethod.latin.LatinIME dummyMainMethod_rkr_simplekeyboard_inputmethod_latin_LatinIME(android.content.Intent)>[]--><rkr.simplekeyboard.inputmethod.latin.LatinIME: void onStartInput(android.view.inputmethod.EditorInfo,boolean)>[]--><rkr.simplekeyboard.inputmethod.latin.LatinIME$UIHandler: void onStartInput(android.view.inputmethod.EditorInfo,boolean)>[]--><rkr.simplekeyboard.inputmethod.latin.LatinIME$UIHandler: void executePendingImsCallback(rkr.simplekeyboard.inputmethod.latin.LatinIME,android.view.inputmethod.EditorInfo,boolean)>[]--><rkr.simplekeyboard.inputmethod.latin.LatinIME: void onStartInputInternal(android.view.inputmethod.EditorInfo,boolean)>[]--><rkr.simplekeyboard.inputmethod.latin.RichInputMethodManager: android.view.inputmethod.InputMethodSubtype findSubtypeByLocale(java.util.Locale)>[]--><rkr.simplekeyboard.inputmethod.compat.InputMethodSubtypeCompatUtils: java.util.Locale getLocaleObject(android.view.inputmethod.InputMethodSubtype)>[[-i0 < 24]]--><android.view.inputmethod.InputMethodSubtype: java.lang.String getLanguageTag()>
+One road protect good!
+6 Packageshead roads:
+-i0 < 24
+Good road: <rkr.simplekeyboard.inputmethod.latin.settings.PreferencesSettingsFragment: void onCreate(android.os.Bundle)>[]--><rkr.simplekeyboard.inputmethod.latin.RichInputMethodManager: void init(android.content.Context)>[]--><rkr.simplekeyboard.inputmethod.latin.RichInputMethodManager: void initInternal(android.content.Context)>[]--><rkr.simplekeyboard.inputmethod.latin.RichInputMethodManager: void refreshSubtypeCaches()>[]--><rkr.simplekeyboard.inputmethod.latin.RichInputMethodManager: void updateCurrentSubtype(android.view.inputmethod.InputMethodSubtype)>[]--><rkr.simplekeyboard.inputmethod.latin.RichInputMethodSubtype: rkr.simplekeyboard.inputmethod.latin.RichInputMethodSubtype getRichInputMethodSubtype(android.view.inputmethod.InputMethodSubtype)>[]--><rkr.simplekeyboard.inputmethod.latin.RichInputMethodSubtype: void <init>(android.view.inputmethod.InputMethodSubtype)>[]--><rkr.simplekeyboard.inputmethod.compat.InputMethodSubtypeCompatUtils: java.util.Locale getLocaleObject(android.view.inputmethod.InputMethodSubtype)>[[-i0 < 24]]--><android.view.inputmethod.InputMethodSubtype: java.lang.String getLanguageTag()>
+One road protect good!
+-i0 < 24
+Good road: <rkr.simplekeyboard.inputmethod.latin.settings.CustomInputStyleSettingsFragment: void onPause()>[]--><rkr.simplekeyboard.inputmethod.latin.RichInputMethodManager: void setAdditionalInputMethodSubtypes(android.view.inputmethod.InputMethodSubtype[])>[]--><rkr.simplekeyboard.inputmethod.latin.RichInputMethodManager: void refreshSubtypeCaches()>[]--><rkr.simplekeyboard.inputmethod.latin.RichInputMethodManager: void updateCurrentSubtype(android.view.inputmethod.InputMethodSubtype)>[]--><rkr.simplekeyboard.inputmethod.latin.RichInputMethodSubtype: rkr.simplekeyboard.inputmethod.latin.RichInputMethodSubtype getRichInputMethodSubtype(android.view.inputmethod.InputMethodSubtype)>[]--><rkr.simplekeyboard.inputmethod.latin.RichInputMethodSubtype: void <init>(android.view.inputmethod.InputMethodSubtype)>[]--><rkr.simplekeyboard.inputmethod.compat.InputMethodSubtypeCompatUtils: java.util.Locale getLocaleObject(android.view.inputmethod.InputMethodSubtype)>[[-i0 < 24]]--><android.view.inputmethod.InputMethodSubtype: java.lang.String getLanguageTag()>
+One road protect good!
+-i0 < 24
+Good road: <rkr.simplekeyboard.inputmethod.latin.settings.CustomInputStyleSettingsFragment: void onSaveCustomInputStyle(rkr.simplekeyboard.inputmethod.latin.settings.CustomInputStylePreference)>[]--><rkr.simplekeyboard.inputmethod.latin.RichInputMethodManager: void setAdditionalInputMethodSubtypes(android.view.inputmethod.InputMethodSubtype[])>[]--><rkr.simplekeyboard.inputmethod.latin.RichInputMethodManager: void refreshSubtypeCaches()>[]--><rkr.simplekeyboard.inputmethod.latin.RichInputMethodManager: void updateCurrentSubtype(android.view.inputmethod.InputMethodSubtype)>[]--><rkr.simplekeyboard.inputmethod.latin.RichInputMethodSubtype: rkr.simplekeyboard.inputmethod.latin.RichInputMethodSubtype getRichInputMethodSubtype(android.view.inputmethod.InputMethodSubtype)>[]--><rkr.simplekeyboard.inputmethod.latin.RichInputMethodSubtype: void <init>(android.view.inputmethod.InputMethodSubtype)>[]--><rkr.simplekeyboard.inputmethod.compat.InputMethodSubtypeCompatUtils: java.util.Locale getLocaleObject(android.view.inputmethod.InputMethodSubtype)>[[-i0 < 24]]--><android.view.inputmethod.InputMethodSubtype: java.lang.String getLanguageTag()>
+One road protect good!
+-i0 < 24
+Good road: <rkr.simplekeyboard.inputmethod.latin.settings.CustomInputStyleSettingsFragment: void onCreate(android.os.Bundle)>[]--><rkr.simplekeyboard.inputmethod.latin.RichInputMethodManager: void init(android.content.Context)>[]--><rkr.simplekeyboard.inputmethod.latin.RichInputMethodManager: void initInternal(android.content.Context)>[]--><rkr.simplekeyboard.inputmethod.latin.RichInputMethodManager: void refreshSubtypeCaches()>[]--><rkr.simplekeyboard.inputmethod.latin.RichInputMethodManager: void updateCurrentSubtype(android.view.inputmethod.InputMethodSubtype)>[]--><rkr.simplekeyboard.inputmethod.latin.RichInputMethodSubtype: rkr.simplekeyboard.inputmethod.latin.RichInputMethodSubtype getRichInputMethodSubtype(android.view.inputmethod.InputMethodSubtype)>[]--><rkr.simplekeyboard.inputmethod.latin.RichInputMethodSubtype: void <init>(android.view.inputmethod.InputMethodSubtype)>[]--><rkr.simplekeyboard.inputmethod.compat.InputMethodSubtypeCompatUtils: java.util.Locale getLocaleObject(android.view.inputmethod.InputMethodSubtype)>[[-i0 < 24]]--><android.view.inputmethod.InputMethodSubtype: java.lang.String getLanguageTag()>
+One road protect good!
+-i0 < 24
+Good road: <rkr.simplekeyboard.inputmethod.latin.settings.CustomInputStyleSettingsFragment: void onRemoveCustomInputStyle(rkr.simplekeyboard.inputmethod.latin.settings.CustomInputStylePreference)>[]--><rkr.simplekeyboard.inputmethod.latin.RichInputMethodManager: void setAdditionalInputMethodSubtypes(android.view.inputmethod.InputMethodSubtype[])>[]--><rkr.simplekeyboard.inputmethod.latin.RichInputMethodManager: void refreshSubtypeCaches()>[]--><rkr.simplekeyboard.inputmethod.latin.RichInputMethodManager: void updateCurrentSubtype(android.view.inputmethod.InputMethodSubtype)>[]--><rkr.simplekeyboard.inputmethod.latin.RichInputMethodSubtype: rkr.simplekeyboard.inputmethod.latin.RichInputMethodSubtype getRichInputMethodSubtype(android.view.inputmethod.InputMethodSubtype)>[]--><rkr.simplekeyboard.inputmethod.latin.RichInputMethodSubtype: void <init>(android.view.inputmethod.InputMethodSubtype)>[]--><rkr.simplekeyboard.inputmethod.compat.InputMethodSubtypeCompatUtils: java.util.Locale getLocaleObject(android.view.inputmethod.InputMethodSubtype)>[[-i0 < 24]]--><android.view.inputmethod.InputMethodSubtype: java.lang.String getLanguageTag()>
+One road protect good!
+-i0 < 24
+Good road: <rkr.simplekeyboard.inputmethod.latin.settings.CustomInputStyleSettingsFragment: void onAddCustomInputStyle(rkr.simplekeyboard.inputmethod.latin.settings.CustomInputStylePreference)>[]--><rkr.simplekeyboard.inputmethod.latin.RichInputMethodManager: void setAdditionalInputMethodSubtypes(android.view.inputmethod.InputMethodSubtype[])>[]--><rkr.simplekeyboard.inputmethod.latin.RichInputMethodManager: void refreshSubtypeCaches()>[]--><rkr.simplekeyboard.inputmethod.latin.RichInputMethodManager: void updateCurrentSubtype(android.view.inputmethod.InputMethodSubtype)>[]--><rkr.simplekeyboard.inputmethod.latin.RichInputMethodSubtype: rkr.simplekeyboard.inputmethod.latin.RichInputMethodSubtype getRichInputMethodSubtype(android.view.inputmethod.InputMethodSubtype)>[]--><rkr.simplekeyboard.inputmethod.latin.RichInputMethodSubtype: void <init>(android.view.inputmethod.InputMethodSubtype)>[]--><rkr.simplekeyboard.inputmethod.compat.InputMethodSubtypeCompatUtils: java.util.Locale getLocaleObject(android.view.inputmethod.InputMethodSubtype)>[[-i0 < 24]]--><android.view.inputmethod.InputMethodSubtype: java.lang.String getLanguageTag()>
+One road protect good!
+containsStatic:false
+containsTry:false
+7call by main package
+-----------------------------------------
+crashApis numbers:10
+crashApis numbers in main road:4
+On Android Version 16 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 17 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 18 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 19 this app may have error api use(at least): 10 and error api roads: 10
+On Android Version 20 this app may have error api use(at least): 10 and error api roads: 10
+On Android Version 21 this app may have error api use(at least): 3 and error api roads: 3
+On Android Version 22 this app may have error api use(at least): 2 and error api roads: 2
+On Android Version 23 this app may have error api use(at least): 2 and error api roads: 2
+On Android Version 24 this app may have error api use(at least): 2 and error api roads: 2
+On Android Version 25 this app may have error api use(at least): 2 and error api roads: 2
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 31 this app may have error api use(at least): 0 and error api roads: 0

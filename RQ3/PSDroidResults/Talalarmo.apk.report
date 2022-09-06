@@ -1,0 +1,143 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/Talalarmo.apk
+Entry Points[trikita.talalarmo.SettingsActivity, trikita.talalarmo.App, trikita.talalarmo.alarm.BootReceiver, trikita.talalarmo.alarm.AlarmReceiver, trikita.talalarmo.alarm.AlarmActivity, trikita.talalarmo.alarm.AlarmService, trikita.talalarmo.MainActivity]
+FllowDroidcallgraph size:1321
+Soot started on Mon Jul 11 12:58:18 CST 2022
+Soot finished on Mon Jul 11 12:58:26 CST 2022
+Soot has run for 0 min. 7 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 19
+Declared Target Sdk version is: 25
+Declared Max Sdk version is: -1
+Collected 752 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.app.AlarmManager.AlarmClockInfo: void <init>(long,android.app.PendingIntent)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+$i0 >= 21
+Good road: <trikita.talalarmo.alarm.AlarmController: void dispatch(trikita.jedux.Store,trikita.jedux.Action,trikita.jedux.Store$NextDispatcher)>[]--><trikita.talalarmo.alarm.AlarmController: void restartAlarm(trikita.talalarmo.State)>[[$i0 >= 21]]--><android.app.AlarmManager.AlarmClockInfo: void <init>(long,android.app.PendingIntent)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.app.Activity: void requestPermissions(java.lang.String[],int)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 23
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: trikita.talalarmo.SettingsActivity dummyMainMethod_trikita_talalarmo_SettingsActivity(android.content.Intent)>[]--><trikita.talalarmo.SettingsActivity: void onSharedPreferenceChanged(android.content.SharedPreferences,java.lang.String)>[[-$i0 < 23]]--><android.app.Activity: void requestPermissions(java.lang.String[],int)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.app.AlarmManager: void setAlarmClock(android.app.AlarmManager.AlarmClockInfo,android.app.PendingIntent)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+$i0 >= 21
+Good road: <trikita.talalarmo.alarm.AlarmController: void dispatch(trikita.jedux.Store,trikita.jedux.Action,trikita.jedux.Store$NextDispatcher)>[]--><trikita.talalarmo.alarm.AlarmController: void restartAlarm(trikita.talalarmo.State)>[[$i0 >= 21]]--><android.app.AlarmManager: void setAlarmClock(android.app.AlarmManager.AlarmClockInfo,android.app.PendingIntent)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.view.View: void setForeground(android.graphics.drawable.Drawable)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 21 22 
+Error road: <trikita.anvil.DSL$ForegroundFuncfb47464a: void apply(android.view.View,android.graphics.drawable.Drawable,android.graphics.drawable.Drawable)>[]--><android.view.View: void setForeground(android.graphics.drawable.Drawable)>
+#1.the call statck between class <trikita.anvil.DSL$ForegroundFuncfb47464a: void apply(android.view.View,android.graphics.drawable.Drawable,android.graphics.drawable.Drawable)> to <android.view.View: void setForeground(android.graphics.drawable.Drawable)>has compatibility isssues！
+-----------------------------------------
+crashApis:1
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.media.MediaPlayer: void setVolume(float,float)> is checking!!!
+The life time of api is [1,17]
+78call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: trikita.talalarmo.alarm.AlarmService dummyMainMethod_trikita_talalarmo_alarm_AlarmService(android.content.Intent)>[]--><trikita.talalarmo.alarm.AlarmService: int onStartCommand(android.content.Intent,int,int)>[]--><trikita.talalarmo.alarm.AlarmService: void startPlayer()>[]--><trikita.talalarmo.alarm.AlarmService$2: void run()>[]--><android.media.MediaPlayer: void setVolume(float,float)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.media.MediaPlayer: void setVolume(float,float)>has compatibility isssues！
+-----------------------------------------
+77 Packageshead roads:
+!!!this api will crash on sdk 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <trikita.jedux.Store$1: void dispatch(trikita.jedux.Store,java.lang.Object,trikita.jedux.Store$NextDispatcher)>[]--><trikita.talalarmo.alarm.AlarmService$2: void run()>[]--><android.media.MediaPlayer: void setVolume(float,float)>
+#8.the call statck between class <trikita.jedux.Store$1: void dispatch(trikita.jedux.Store,java.lang.Object,trikita.jedux.Store$NextDispatcher)> to <android.media.MediaPlayer: void setVolume(float,float)>has compatibility isssues！
+-----------------------------------------
+crashApis:2
+crashApisInMain:1
+containsStatic:false
+containsTry:true
+11call by main package
+-----------------------------------------
+#################################################
+N 5 Potential Issue API: SDKCheck of <android.view.Window: void setStatusBarColor(int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+###Multi invoking in one method, need manual check!!!--><trikita.talalarmo.MainActivity: void updateTheme()>[[-$i0 < 21], [$i0 >= 21]]
+###Multi invoking in one method, need manual check!!!--><trikita.talalarmo.MainActivity: void updateTheme()>[[-$i0 < 21]][[$i0 >= 21]]
+-$i0 < 21
+$i0 >= 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: trikita.talalarmo.MainActivity dummyMainMethod_trikita_talalarmo_MainActivity(android.content.Intent)>[]--><trikita.talalarmo.MainActivity: void onResume()>[]--><trikita.talalarmo.MainActivity: void updateTheme()>[[-$i0 < 21], [$i0 >= 21]]--><android.view.Window: void setStatusBarColor(int)>
+One road protect good!
+-$i0 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: trikita.talalarmo.alarm.AlarmActivity dummyMainMethod_trikita_talalarmo_alarm_AlarmActivity(android.content.Intent)>[]--><trikita.talalarmo.alarm.AlarmActivity: void onCreate(android.os.Bundle)>[[-$i0 < 21]]--><android.view.Window: void setStatusBarColor(int)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 6 Potential Issue API: SDKCheck of <android.content.ContextWrapper: int checkSelfPermission(java.lang.String)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+1 Mainhead roads:
+###Multi invoking in one method, need manual check!!!--><trikita.talalarmo.alarm.AlarmService: void startPlayer()>[[-$i0 < 23], [try]]
+###Multi invoking in one method, need manual check!!!--><trikita.talalarmo.alarm.AlarmService: void startPlayer()>[[-$i0 < 23]][[try]]
+-$i0 < 23
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: trikita.talalarmo.alarm.AlarmService dummyMainMethod_trikita_talalarmo_alarm_AlarmService(android.content.Intent)>[]--><trikita.talalarmo.alarm.AlarmService: int onStartCommand(android.content.Intent,int,int)>[]--><trikita.talalarmo.alarm.AlarmService: void startPlayer()>[[-$i0 < 23], [try]]--><android.content.ContextWrapper: int checkSelfPermission(java.lang.String)>
+One road protect good!
+-$i0 < 23
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: trikita.talalarmo.SettingsActivity dummyMainMethod_trikita_talalarmo_SettingsActivity(android.content.Intent)>[]--><trikita.talalarmo.SettingsActivity: void onSharedPreferenceChanged(android.content.SharedPreferences,java.lang.String)>[[-$i0 < 23]]--><android.content.ContextWrapper: int checkSelfPermission(java.lang.String)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:true
+1call by main package
+-----------------------------------------
+crashApis numbers:2
+crashApis numbers in main road:1
+On Android Version 16 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 17 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 18 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 19 this app may have error api use(at least): 2 and error api roads: 3
+On Android Version 20 this app may have error api use(at least): 2 and error api roads: 3
+On Android Version 21 this app may have error api use(at least): 2 and error api roads: 3
+On Android Version 22 this app may have error api use(at least): 2 and error api roads: 3
+On Android Version 23 this app may have error api use(at least): 1 and error api roads: 2
+On Android Version 24 this app may have error api use(at least): 1 and error api roads: 2
+On Android Version 25 this app may have error api use(at least): 1 and error api roads: 2
+On Android Version 26 this app may have error api use(at least): 1 and error api roads: 2
+On Android Version 27 this app may have error api use(at least): 1 and error api roads: 2
+On Android Version 28 this app may have error api use(at least): 1 and error api roads: 2
+On Android Version 29 this app may have error api use(at least): 1 and error api roads: 2
+On Android Version 30 this app may have error api use(at least): 1 and error api roads: 2
+On Android Version 31 this app may have error api use(at least): 1 and error api roads: 2

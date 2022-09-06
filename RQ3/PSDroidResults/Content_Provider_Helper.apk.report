@@ -1,0 +1,111 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/Content_Provider_Helper.apk
+Entry Points[com.jensdriller.contentproviderhelper.ui.activity.ResultActivity, com.jensdriller.contentproviderhelper.app.ContentProviderHelper, com.jensdriller.contentproviderhelper.provider.FileProvider, com.jensdriller.contentproviderhelper.ui.activity.MainActivity, com.jensdriller.contentproviderhelper.ui.activity.PreferenceActivity]
+FllowDroidcallgraph size:510
+Soot started on Mon Jul 11 02:32:17 CST 2022
+Soot finished on Mon Jul 11 02:32:21 CST 2022
+Soot has run for 0 min. 4 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 8
+Declared Target Sdk version is: 21
+Declared Max Sdk version is: -1
+Collected 175 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.jensdriller.contentproviderhelper.ui.activity.MainActivity dummyMainMethod_com_jensdriller_contentproviderhelper_ui_activity_MainActivity(android.content.Intent)>[]--><com.jensdriller.contentproviderhelper.ui.activity.MainActivity: void onClick(android.view.View)>[]--><com.jensdriller.contentproviderhelper.ui.activity.MainActivity: void queryWithFilter()>[]--><com.jensdriller.contentproviderhelper.ui.dialog.QueryWithFilterDialog: com.jensdriller.contentproviderhelper.ui.dialog.QueryWithFilterDialog newInstance(java.lang.String,com.jensdriller.contentproviderhelper.model.ColumnList)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:1
+crashApisInMain:1
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.lang.String getString(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.jensdriller.contentproviderhelper.ui.dialog.QueryWithFilterDialog: android.app.Dialog onCreateDialog(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#1.the call statck between class <com.jensdriller.contentproviderhelper.ui.dialog.QueryWithFilterDialog: android.app.Dialog onCreateDialog(android.os.Bundle)> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:2
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.os.BaseBundle: int getInt(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.jensdriller.contentproviderhelper.ui.dialog.ProgressDialogFragment: android.app.Dialog onCreateDialog(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#1.the call statck between class <com.jensdriller.contentproviderhelper.ui.dialog.ProgressDialogFragment: android.app.Dialog onCreateDialog(android.os.Bundle)> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:3
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putInt(java.lang.String,int)> is checking!!!
+The life time of api is [21,31]
+5call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.jensdriller.contentproviderhelper.ui.activity.ResultActivity dummyMainMethod_com_jensdriller_contentproviderhelper_ui_activity_ResultActivity(android.content.Intent)>[]--><com.jensdriller.contentproviderhelper.ui.activity.ResultActivity: void onCreate(android.os.Bundle)>[]--><com.jensdriller.contentproviderhelper.ui.activity.ResultActivity: void loadResults(java.lang.String,com.jensdriller.contentproviderhelper.task.LoadResultsTask$SQLParams,com.jensdriller.contentproviderhelper.model.ColumnList)>[]--><com.jensdriller.contentproviderhelper.ui.dialog.ProgressDialogFragment: com.jensdriller.contentproviderhelper.ui.dialog.ProgressDialogFragment newInstance(int)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.jensdriller.contentproviderhelper.ui.activity.MainActivity dummyMainMethod_com_jensdriller_contentproviderhelper_ui_activity_MainActivity(android.content.Intent)>[]--><com.jensdriller.contentproviderhelper.ui.activity.MainActivity: void onCreate(android.os.Bundle)>[]--><com.jensdriller.contentproviderhelper.ui.activity.MainActivity: void loadColumns(android.net.Uri)>[]--><com.jensdriller.contentproviderhelper.ui.dialog.ProgressDialogFragment: com.jensdriller.contentproviderhelper.ui.dialog.ProgressDialogFragment newInstance(int)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+4 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.jensdriller.contentproviderhelper.ui.dialog.AddProviderDialog: void access$100(com.jensdriller.contentproviderhelper.ui.dialog.AddProviderDialog)>[]--><com.jensdriller.contentproviderhelper.ui.dialog.AddProviderDialog: void searchProviders()>[]--><com.jensdriller.contentproviderhelper.ui.dialog.ProgressDialogFragment: com.jensdriller.contentproviderhelper.ui.dialog.ProgressDialogFragment newInstance(int)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#1.the call statck between class <com.jensdriller.contentproviderhelper.ui.dialog.AddProviderDialog: void access$100(com.jensdriller.contentproviderhelper.ui.dialog.AddProviderDialog)> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.jensdriller.contentproviderhelper.ui.activity.MainActivity: void onDeleteProviderClicked(java.util.List)>[]--><com.jensdriller.contentproviderhelper.ui.activity.MainActivity: void onProviderSelected(int)>[]--><com.jensdriller.contentproviderhelper.ui.activity.MainActivity: void loadColumns(android.net.Uri)>[]--><com.jensdriller.contentproviderhelper.ui.dialog.ProgressDialogFragment: com.jensdriller.contentproviderhelper.ui.dialog.ProgressDialogFragment newInstance(int)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#2.the call statck between class <com.jensdriller.contentproviderhelper.ui.activity.MainActivity: void onDeleteProviderClicked(java.util.List)> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.jensdriller.contentproviderhelper.ui.activity.MainActivity: void onAddProvider(java.lang.String)>[]--><com.jensdriller.contentproviderhelper.ui.activity.MainActivity: void onProviderSelected(int)>[]--><com.jensdriller.contentproviderhelper.ui.activity.MainActivity: void loadColumns(android.net.Uri)>[]--><com.jensdriller.contentproviderhelper.ui.dialog.ProgressDialogFragment: com.jensdriller.contentproviderhelper.ui.dialog.ProgressDialogFragment newInstance(int)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#3.the call statck between class <com.jensdriller.contentproviderhelper.ui.activity.MainActivity: void onAddProvider(java.lang.String)> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.jensdriller.contentproviderhelper.ui.activity.MainActivity: void access$700(com.jensdriller.contentproviderhelper.ui.activity.MainActivity,int)>[]--><com.jensdriller.contentproviderhelper.ui.activity.MainActivity: void onProviderSelected(int)>[]--><com.jensdriller.contentproviderhelper.ui.activity.MainActivity: void loadColumns(android.net.Uri)>[]--><com.jensdriller.contentproviderhelper.ui.dialog.ProgressDialogFragment: com.jensdriller.contentproviderhelper.ui.dialog.ProgressDialogFragment newInstance(int)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#4.the call statck between class <com.jensdriller.contentproviderhelper.ui.activity.MainActivity: void access$700(com.jensdriller.contentproviderhelper.ui.activity.MainActivity,int)> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:4
+crashApisInMain:2
+containsStatic:false
+containsTry:false
+5call by main package
+-----------------------------------------
+crashApis numbers:4
+crashApis numbers in main road:2
+On Android Version 16 this app may have error api use(at least): 4 and error api roads: 9
+On Android Version 17 this app may have error api use(at least): 4 and error api roads: 9
+On Android Version 18 this app may have error api use(at least): 4 and error api roads: 9
+On Android Version 19 this app may have error api use(at least): 4 and error api roads: 9
+On Android Version 20 this app may have error api use(at least): 4 and error api roads: 9
+On Android Version 21 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 22 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 23 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 24 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 25 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 31 this app may have error api use(at least): 0 and error api roads: 0

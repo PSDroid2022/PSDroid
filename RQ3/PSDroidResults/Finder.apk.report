@@ -1,0 +1,537 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/Finder.apk
+Entry Points[ru.seva.finder.NewReadSms, ru.seva.finder.NewGoogleGeo, ru.seva.finder.HistoryActivity, ru.seva.finder.MapsActivity, ru.seva.finder.WifiSearch, ru.seva.finder.GpsSearch, ru.seva.finder.TrackReceiveService, ru.seva.finder.RemoteAdding, ru.seva.finder.RingingService, ru.seva.finder.SettingsActivity, ru.seva.finder.Tracking, ru.seva.finder.GpsCoordsReceived, ru.seva.finder.HelpActivity, ru.seva.finder.WifiSearch$scan_ready, ru.seva.finder.RingingService$StopRingingReceiver, ru.seva.finder.SmsReceiver, ru.seva.finder.OldReadSms, ru.seva.finder.MainActivity, ru.seva.finder.TrackStatus]
+FllowDroidcallgraph size:4150
+Soot started on Mon Jul 11 04:02:49 CST 2022
+Soot finished on Mon Jul 11 04:03:00 CST 2022
+Soot has run for 0 min. 10 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 19
+Declared Target Sdk version is: 26
+Declared Max Sdk version is: -1
+Collected 639 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.net.NetworkInfo: int getType()> is checking!!!
+The life time of api is [1,30]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+try
+Good road with try: <org.osmdroid.tileprovider.modules.MapTileDownloader$TileLoader: android.graphics.drawable.Drawable loadTile(long)>[[try]]--><org.osmdroid.tileprovider.modules.NetworkAvailabliltyCheck: boolean getNetworkAvailable()>[[-$i0 <= 13]]--><android.net.NetworkInfo: int getType()>
+One road protect good!
+-$i0 <= 13
+!!!this api will crash on sdk 31 
+Error road: <org.osmdroid.tileprovider.MapTileProviderBasic: boolean isDowngradedMode()>[]--><org.osmdroid.tileprovider.modules.NetworkAvailabliltyCheck: boolean getNetworkAvailable()>[[-$i0 <= 13]]--><android.net.NetworkInfo: int getType()>
+#2.the call statck between class <org.osmdroid.tileprovider.MapTileProviderBasic: boolean isDowngradedMode()> to <android.net.NetworkInfo: int getType()>has compatibility isssues！
+-----------------------------------------
+crashApis:1
+containsStatic:false
+containsTry:true
+3call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()> is checking!!!
+The life time of api is [1,30]
+3call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: ru.seva.finder.MainActivity dummyMainMethod_ru_seva_finder_MainActivity(android.content.Intent)>[]--><ru.seva.finder.MainActivity$6: boolean onMenuItemClick(android.view.MenuItem)>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>has compatibility isssues！
+-----------------------------------------
+2 Packageshead roads:
+try
+Good road with try: <org.osmdroid.tileprovider.modules.MapTileDownloader$TileLoader: android.graphics.drawable.Drawable loadTile(long)>[[try]]--><org.osmdroid.tileprovider.modules.NetworkAvailabliltyCheck: boolean getNetworkAvailable()>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>
+One road protect good!
+!!!this api will crash on sdk 31 
+Error road: <org.osmdroid.tileprovider.MapTileProviderBasic: boolean isDowngradedMode()>[]--><org.osmdroid.tileprovider.modules.NetworkAvailabliltyCheck: boolean getNetworkAvailable()>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>
+#2.the call statck between class <org.osmdroid.tileprovider.MapTileProviderBasic: boolean isDowngradedMode()> to <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>has compatibility isssues！
+-----------------------------------------
+crashApis:2
+crashApisInMain:1
+containsStatic:false
+containsTry:true
+3call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.net.NetworkInfo: boolean isConnected()> is checking!!!
+The life time of api is [1,30]
+5call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: ru.seva.finder.MainActivity dummyMainMethod_ru_seva_finder_MainActivity(android.content.Intent)>[]--><ru.seva.finder.MainActivity$6: boolean onMenuItemClick(android.view.MenuItem)>[]--><android.net.NetworkInfo: boolean isConnected()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.NetworkInfo: boolean isConnected()>has compatibility isssues！
+-----------------------------------------
+4 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <org.osmdroid.tileprovider.modules.NetworkAvailabliltyCheck: boolean getWiFiNetworkAvailable()>[]--><android.net.NetworkInfo: boolean isConnected()>
+#1.the call statck between class <org.osmdroid.tileprovider.modules.NetworkAvailabliltyCheck: boolean getWiFiNetworkAvailable()> to <android.net.NetworkInfo: boolean isConnected()>has compatibility isssues！
+-----------------------------------------
+try
+Good road with try: <org.osmdroid.tileprovider.modules.MapTileDownloader$TileLoader: android.graphics.drawable.Drawable loadTile(long)>[[try]]--><org.osmdroid.tileprovider.modules.NetworkAvailabliltyCheck: boolean getNetworkAvailable()>[]--><android.net.NetworkInfo: boolean isConnected()>
+One road protect good!
+!!!this api will crash on sdk 31 
+Error road: <org.osmdroid.tileprovider.modules.NetworkAvailabliltyCheck: boolean getCellularDataNetworkAvailable()>[]--><android.net.NetworkInfo: boolean isConnected()>
+#3.the call statck between class <org.osmdroid.tileprovider.modules.NetworkAvailabliltyCheck: boolean getCellularDataNetworkAvailable()> to <android.net.NetworkInfo: boolean isConnected()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <org.osmdroid.tileprovider.MapTileProviderBasic: boolean isDowngradedMode()>[]--><org.osmdroid.tileprovider.modules.NetworkAvailabliltyCheck: boolean getNetworkAvailable()>[]--><android.net.NetworkInfo: boolean isConnected()>
+#4.the call statck between class <org.osmdroid.tileprovider.MapTileProviderBasic: boolean isDowngradedMode()> to <android.net.NetworkInfo: boolean isConnected()>has compatibility isssues！
+-----------------------------------------
+crashApis:3
+crashApisInMain:2
+containsStatic:false
+containsTry:true
+5call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.app.NotificationChannel: void setDescription(java.lang.String)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+1 Mainhead roads:
+-i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: ru.seva.finder.MainActivity dummyMainMethod_ru_seva_finder_MainActivity(android.content.Intent)>[]--><ru.seva.finder.MainActivity: void onCreate(android.os.Bundle)>[[-i0 < 26]]--><android.app.NotificationChannel: void setDescription(java.lang.String)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager: boolean setWifiEnabled(boolean)> is checking!!!
+The life time of api is [1,30]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: ru.seva.finder.WifiSearch dummyMainMethod_ru_seva_finder_WifiSearch(android.content.Intent)>[]--><ru.seva.finder.WifiSearch: int onStartCommand(android.content.Intent,int,int)>[]--><ru.seva.finder.WifiSearch$Searcher: void run()>[]--><android.net.wifi.WifiManager: boolean setWifiEnabled(boolean)>
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: ru.seva.finder.RingingService$StopRingingReceiver dummyMainMethod_ru_seva_finder_RingingService$StopRingingReceiver(android.content.Intent)>[]--><ru.seva.finder.RingingService$StopRingingReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><ru.seva.finder.WifiSearch$Searcher: void run()>[]--><android.net.wifi.WifiManager: boolean setWifiEnabled(boolean)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.wifi.WifiManager: boolean setWifiEnabled(boolean)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:4
+crashApisInMain:3
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 5 Potential Issue API: SDKCheck of <android.content.Context: int checkSelfPermission(java.lang.String)> is checking!!!
+The life time of api is [23,31]
+23call roads:
+1 Mainhead roads:
+-i0 < 23
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: ru.seva.finder.WifiSearch dummyMainMethod_ru_seva_finder_WifiSearch(android.content.Intent)>[]--><ru.seva.finder.WifiSearch: int onStartCommand(android.content.Intent,int,int)>[]--><ru.seva.finder.WifiSearch$Searcher: void run()>[]--><ru.seva.finder.WifiSearch: void access$300(ru.seva.finder.WifiSearch,java.lang.StringBuilder)>[]--><ru.seva.finder.WifiSearch: void start_send(java.lang.StringBuilder)>[[-i0 < 23]]--><android.content.Context: int checkSelfPermission(java.lang.String)>
+One road protect good!
+-i0 < 23
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: ru.seva.finder.RingingService dummyMainMethod_ru_seva_finder_RingingService(android.content.Intent)>[]--><ru.seva.finder.RingingService: int onStartCommand(android.content.Intent,int,int)>[]--><android.os.Handler: boolean postDelayed(java.lang.Runnable,long)>[]--><ru.seva.finder.GpsSearch$2: void run()>[]--><ru.seva.finder.GpsSearch: void access$600(ru.seva.finder.GpsSearch)>[]--><ru.seva.finder.GpsSearch: void start_send()>[[-i0 < 23]]--><android.content.Context: int checkSelfPermission(java.lang.String)>
+One road protect good!
+###Multi invoking in one method, need manual check!!!--><ru.seva.finder.Tracking$TrackingTask: void run()>[[i0 >= 23], [i0 < 23]]--><android.os.Handler: boolean postDelayed(java.lang.Runnable,long)>[]--><ru.seva.finder.GpsSearch$2: void run()>[]--><ru.seva.finder.GpsSearch: void access$600(ru.seva.finder.GpsSearch)>[]--><ru.seva.finder.GpsSearch: void start_send()>[[-i0 < 23]]
+###Multi invoking in one method, need manual check!!!--><ru.seva.finder.Tracking$TrackingTask: void run()>[[i0 >= 23]][[i0 < 23]]--><android.os.Handler: boolean postDelayed(java.lang.Runnable,long)>[]--><ru.seva.finder.GpsSearch$2: void run()>[]--><ru.seva.finder.GpsSearch: void access$600(ru.seva.finder.GpsSearch)>[]--><ru.seva.finder.GpsSearch: void start_send()>[[-i0 < 23]]
+i0 >= 23
+i0 < 23
+-i0 < 23
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: ru.seva.finder.RingingService$StopRingingReceiver dummyMainMethod_ru_seva_finder_RingingService$StopRingingReceiver(android.content.Intent)>[]--><ru.seva.finder.RingingService$StopRingingReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><ru.seva.finder.Tracking$TrackingTask: void run()>[[i0 >= 23], [i0 < 23]]--><android.os.Handler: boolean postDelayed(java.lang.Runnable,long)>[]--><ru.seva.finder.GpsSearch$2: void run()>[]--><ru.seva.finder.GpsSearch: void access$600(ru.seva.finder.GpsSearch)>[]--><ru.seva.finder.GpsSearch: void start_send()>[[-i0 < 23]]--><android.content.Context: int checkSelfPermission(java.lang.String)>
+One road protect good!
+-i0 < 23
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: ru.seva.finder.MapsActivity dummyMainMethod_ru_seva_finder_MapsActivity(android.content.Intent)>[]--><org.osmdroid.views.MapView: void scrollBy(int,int)>[]--><org.osmdroid.views.MapView: void scrollTo(int,int)>[]--><org.osmdroid.events.DelayedMapListener: boolean onScroll(org.osmdroid.events.ScrollEvent)>[]--><org.osmdroid.events.DelayedMapListener: void dispatch(org.osmdroid.events.MapEvent)>[]--><android.os.Handler: boolean postDelayed(java.lang.Runnable,long)>[]--><ru.seva.finder.GpsSearch$2: void run()>[]--><ru.seva.finder.GpsSearch: void access$600(ru.seva.finder.GpsSearch)>[]--><ru.seva.finder.GpsSearch: void start_send()>[[-i0 < 23]]--><android.content.Context: int checkSelfPermission(java.lang.String)>
+One road protect good!
+-$i0 < 23
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: ru.seva.finder.Tracking dummyMainMethod_ru_seva_finder_Tracking(android.content.Intent)>[]--><ru.seva.finder.Tracking$1: void onLocationChanged(android.location.Location)>[]--><ru.seva.finder.Tracking: void access$500(ru.seva.finder.Tracking,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>[]--><ru.seva.finder.Tracking: void append_send_coordinates(java.lang.String,java.lang.String,java.lang.String,java.lang.String)>[[-$i0 < 23]]--><android.content.Context: int checkSelfPermission(java.lang.String)>
+One road protect good!
+-i0 < 23
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: ru.seva.finder.GpsSearch dummyMainMethod_ru_seva_finder_GpsSearch(android.content.Intent)>[]--><ru.seva.finder.GpsSearch$1: void onLocationChanged(android.location.Location)>[]--><ru.seva.finder.GpsSearch: void access$600(ru.seva.finder.GpsSearch)>[]--><ru.seva.finder.GpsSearch: void start_send()>[[-i0 < 23]]--><android.content.Context: int checkSelfPermission(java.lang.String)>
+One road protect good!
+22 Packageshead roads:
+-i0 < 23
+Good road: <org.osmdroid.views.MapController: void scrollBy(int,int)>[]--><org.osmdroid.views.MapView: void scrollBy(int,int)>[]--><org.osmdroid.views.MapView: void scrollTo(int,int)>[]--><org.osmdroid.events.DelayedMapListener: boolean onScroll(org.osmdroid.events.ScrollEvent)>[]--><org.osmdroid.events.DelayedMapListener: void dispatch(org.osmdroid.events.MapEvent)>[]--><android.os.Handler: boolean postDelayed(java.lang.Runnable,long)>[]--><ru.seva.finder.GpsSearch$2: void run()>[]--><ru.seva.finder.GpsSearch: void access$600(ru.seva.finder.GpsSearch)>[]--><ru.seva.finder.GpsSearch: void start_send()>[[-i0 < 23]]--><android.content.Context: int checkSelfPermission(java.lang.String)>
+One road protect good!
+-i0 < 23
+Good road: <org.osmdroid.views.MapView: boolean zoomInFixing(int,int)>[]--><org.osmdroid.views.MapController: boolean zoomInFixing(int,int)>[]--><org.osmdroid.views.MapController: boolean zoomInFixing(int,int,java.lang.Long)>[]--><org.osmdroid.views.MapController: boolean zoomToFixing(double,int,int,java.lang.Long)>[]--><org.osmdroid.events.DelayedMapListener: boolean onZoom(org.osmdroid.events.ZoomEvent)>[]--><org.osmdroid.events.DelayedMapListener: void dispatch(org.osmdroid.events.MapEvent)>[]--><android.os.Handler: boolean postDelayed(java.lang.Runnable,long)>[]--><ru.seva.finder.GpsSearch$2: void run()>[]--><ru.seva.finder.GpsSearch: void access$600(ru.seva.finder.GpsSearch)>[]--><ru.seva.finder.GpsSearch: void start_send()>[[-i0 < 23]]--><android.content.Context: int checkSelfPermission(java.lang.String)>
+One road protect good!
+-i0 < 23
+Good road: <org.osmdroid.views.MapController: int setZoom(int)>[]--><org.osmdroid.views.MapController: double setZoom(double)>[]--><org.osmdroid.views.MapView: double setZoomLevel(double)>[]--><org.osmdroid.views.MapController: void setCenter(org.osmdroid.api.IGeoPoint)>[]--><org.osmdroid.events.DelayedMapListener: boolean onScroll(org.osmdroid.events.ScrollEvent)>[]--><org.osmdroid.events.DelayedMapListener: void dispatch(org.osmdroid.events.MapEvent)>[]--><android.os.Handler: boolean postDelayed(java.lang.Runnable,long)>[]--><ru.seva.finder.GpsSearch$2: void run()>[]--><ru.seva.finder.GpsSearch: void access$600(ru.seva.finder.GpsSearch)>[]--><ru.seva.finder.GpsSearch: void start_send()>[[-i0 < 23]]--><android.content.Context: int checkSelfPermission(java.lang.String)>
+One road protect good!
+-i0 < 23
+Good road: <org.osmdroid.LocationListenerProxy: void onLocationChanged(android.location.Location)>[]--><ru.seva.finder.GpsSearch$1: void onLocationChanged(android.location.Location)>[]--><ru.seva.finder.GpsSearch: void access$600(ru.seva.finder.GpsSearch)>[]--><ru.seva.finder.GpsSearch: void start_send()>[[-i0 < 23]]--><android.content.Context: int checkSelfPermission(java.lang.String)>
+One road protect good!
+-$i0 < 23
+Good road: <org.osmdroid.LocationListenerProxy: void onLocationChanged(android.location.Location)>[]--><ru.seva.finder.Tracking$1: void onLocationChanged(android.location.Location)>[]--><ru.seva.finder.Tracking: void access$500(ru.seva.finder.Tracking,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>[]--><ru.seva.finder.Tracking: void append_send_coordinates(java.lang.String,java.lang.String,java.lang.String,java.lang.String)>[[-$i0 < 23]]--><android.content.Context: int checkSelfPermission(java.lang.String)>
+One road protect good!
+-i0 < 23
+Good road: <org.osmdroid.views.MapView: void zoomToBoundingBox(org.osmdroid.util.BoundingBox,boolean)>[]--><org.osmdroid.views.MapView: void zoomToBoundingBox(org.osmdroid.util.BoundingBox,boolean,int)>[]--><org.osmdroid.views.MapController: void setCenter(org.osmdroid.api.IGeoPoint)>[]--><org.osmdroid.events.DelayedMapListener: boolean onScroll(org.osmdroid.events.ScrollEvent)>[]--><org.osmdroid.events.DelayedMapListener: void dispatch(org.osmdroid.events.MapEvent)>[]--><android.os.Handler: boolean postDelayed(java.lang.Runnable,long)>[]--><ru.seva.finder.GpsSearch$2: void run()>[]--><ru.seva.finder.GpsSearch: void access$600(ru.seva.finder.GpsSearch)>[]--><ru.seva.finder.GpsSearch: void start_send()>[[-i0 < 23]]--><android.content.Context: int checkSelfPermission(java.lang.String)>
+One road protect good!
+-i0 < 23
+Good road: <org.osmdroid.views.overlay.DefaultOverlayManager: boolean onOptionsItemSelected(android.view.MenuItem,int,org.osmdroid.views.MapView)>[]--><org.osmdroid.views.overlay.TilesOverlay: boolean onOptionsItemSelected(android.view.MenuItem,int,org.osmdroid.views.MapView)>[]--><org.osmdroid.views.MapView: void setTileSource(org.osmdroid.tileprovider.tilesource.ITileSource)>[]--><org.osmdroid.views.MapView: double setZoomLevel(double)>[]--><org.osmdroid.views.MapController: void setCenter(org.osmdroid.api.IGeoPoint)>[]--><org.osmdroid.events.DelayedMapListener: boolean onScroll(org.osmdroid.events.ScrollEvent)>[]--><org.osmdroid.events.DelayedMapListener: void dispatch(org.osmdroid.events.MapEvent)>[]--><android.os.Handler: boolean postDelayed(java.lang.Runnable,long)>[]--><ru.seva.finder.GpsSearch$2: void run()>[]--><ru.seva.finder.GpsSearch: void access$600(ru.seva.finder.GpsSearch)>[]--><ru.seva.finder.GpsSearch: void start_send()>[[-i0 < 23]]--><android.content.Context: int checkSelfPermission(java.lang.String)>
+One road protect good!
+-i0 < 23
+Good road: <org.osmdroid.views.MapController$ZoomAnimatorListener: void onAnimationUpdate(android.animation.ValueAnimator)>[]--><org.osmdroid.views.MapView: void setMultiTouchScale(float)>[]--><org.osmdroid.views.MapView: double setZoomLevel(double)>[]--><org.osmdroid.views.MapController: void setCenter(org.osmdroid.api.IGeoPoint)>[]--><org.osmdroid.events.DelayedMapListener: boolean onScroll(org.osmdroid.events.ScrollEvent)>[]--><org.osmdroid.events.DelayedMapListener: void dispatch(org.osmdroid.events.MapEvent)>[]--><android.os.Handler: boolean postDelayed(java.lang.Runnable,long)>[]--><ru.seva.finder.GpsSearch$2: void run()>[]--><ru.seva.finder.GpsSearch: void access$600(ru.seva.finder.GpsSearch)>[]--><ru.seva.finder.GpsSearch: void start_send()>[[-i0 < 23]]--><android.content.Context: int checkSelfPermission(java.lang.String)>
+One road protect good!
+-i0 < 23
+Good road: <org.osmdroid.views.MapView: boolean zoomOut()>[]--><org.osmdroid.views.MapController: boolean zoomOut()>[]--><org.osmdroid.views.MapController: boolean zoomOut(java.lang.Long)>[]--><org.osmdroid.views.MapController: boolean zoomTo(double,java.lang.Long)>[]--><org.osmdroid.views.MapController: boolean zoomToFixing(double,int,int,java.lang.Long)>[]--><org.osmdroid.events.DelayedMapListener: boolean onZoom(org.osmdroid.events.ZoomEvent)>[]--><org.osmdroid.events.DelayedMapListener: void dispatch(org.osmdroid.events.MapEvent)>[]--><android.os.Handler: boolean postDelayed(java.lang.Runnable,long)>[]--><ru.seva.finder.GpsSearch$2: void run()>[]--><ru.seva.finder.GpsSearch: void access$600(ru.seva.finder.GpsSearch)>[]--><ru.seva.finder.GpsSearch: void start_send()>[[-i0 < 23]]--><android.content.Context: int checkSelfPermission(java.lang.String)>
+One road protect good!
+-i0 < 23
+Good road: <org.osmdroid.views.MapView$MapViewGestureDetectorListener: boolean onScroll(android.view.MotionEvent,android.view.MotionEvent,float,float)>[]--><org.osmdroid.views.MapView: void scrollBy(int,int)>[]--><org.osmdroid.views.MapView: void scrollTo(int,int)>[]--><org.osmdroid.events.DelayedMapListener: boolean onScroll(org.osmdroid.events.ScrollEvent)>[]--><org.osmdroid.events.DelayedMapListener: void dispatch(org.osmdroid.events.MapEvent)>[]--><android.os.Handler: boolean postDelayed(java.lang.Runnable,long)>[]--><ru.seva.finder.GpsSearch$2: void run()>[]--><ru.seva.finder.GpsSearch: void access$600(ru.seva.finder.GpsSearch)>[]--><ru.seva.finder.GpsSearch: void start_send()>[[-i0 < 23]]--><android.content.Context: int checkSelfPermission(java.lang.String)>
+One road protect good!
+-i0 < 23
+Good road: <org.osmdroid.views.MapController$ReplayController: void replayCalls()>[]--><org.osmdroid.views.MapController: void zoomToSpan(int,int)>[]--><org.osmdroid.views.MapController: void zoomToSpan(double,double)>[]--><org.osmdroid.views.MapView: double setZoomLevel(double)>[]--><org.osmdroid.views.MapController: void setCenter(org.osmdroid.api.IGeoPoint)>[]--><org.osmdroid.events.DelayedMapListener: boolean onScroll(org.osmdroid.events.ScrollEvent)>[]--><org.osmdroid.events.DelayedMapListener: void dispatch(org.osmdroid.events.MapEvent)>[]--><android.os.Handler: boolean postDelayed(java.lang.Runnable,long)>[]--><ru.seva.finder.GpsSearch$2: void run()>[]--><ru.seva.finder.GpsSearch: void access$600(ru.seva.finder.GpsSearch)>[]--><ru.seva.finder.GpsSearch: void start_send()>[[-i0 < 23]]--><android.content.Context: int checkSelfPermission(java.lang.String)>
+One road protect good!
+-i0 < 23
+Good road: <org.osmdroid.views.MapController$ReplayController: void replayCalls()>[]--><org.osmdroid.views.MapController: void setCenter(org.osmdroid.api.IGeoPoint)>[]--><org.osmdroid.events.DelayedMapListener: boolean onScroll(org.osmdroid.events.ScrollEvent)>[]--><org.osmdroid.events.DelayedMapListener: void dispatch(org.osmdroid.events.MapEvent)>[]--><android.os.Handler: boolean postDelayed(java.lang.Runnable,long)>[]--><ru.seva.finder.GpsSearch$2: void run()>[]--><ru.seva.finder.GpsSearch: void access$600(ru.seva.finder.GpsSearch)>[]--><ru.seva.finder.GpsSearch: void start_send()>[[-i0 < 23]]--><android.content.Context: int checkSelfPermission(java.lang.String)>
+One road protect good!
+$i0 < 11
+-i0 < 23
+Good road: <org.osmdroid.views.MapController$ZoomAnimatorListener: void onAnimationEnd(android.animation.Animator)>[]--><org.osmdroid.views.MapController: void onAnimationEnd()>[[$i0 < 11]]--><org.osmdroid.views.MapController: double setZoom(double)>[]--><org.osmdroid.views.MapView: double setZoomLevel(double)>[]--><org.osmdroid.views.MapController: void setCenter(org.osmdroid.api.IGeoPoint)>[]--><org.osmdroid.events.DelayedMapListener: boolean onScroll(org.osmdroid.events.ScrollEvent)>[]--><org.osmdroid.events.DelayedMapListener: void dispatch(org.osmdroid.events.MapEvent)>[]--><android.os.Handler: boolean postDelayed(java.lang.Runnable,long)>[]--><ru.seva.finder.GpsSearch$2: void run()>[]--><ru.seva.finder.GpsSearch: void access$600(ru.seva.finder.GpsSearch)>[]--><ru.seva.finder.GpsSearch: void start_send()>[[-i0 < 23]]--><android.content.Context: int checkSelfPermission(java.lang.String)>
+One road protect good!
+-i0 < 23
+Good road: <org.osmdroid.views.MapView$MapViewDoubleClickListener: boolean onDoubleTap(android.view.MotionEvent)>[]--><org.osmdroid.views.MapController: boolean zoomInFixing(int,int)>[]--><org.osmdroid.views.MapController: boolean zoomInFixing(int,int,java.lang.Long)>[]--><org.osmdroid.views.MapController: boolean zoomToFixing(double,int,int,java.lang.Long)>[]--><org.osmdroid.events.DelayedMapListener: boolean onZoom(org.osmdroid.events.ZoomEvent)>[]--><org.osmdroid.events.DelayedMapListener: void dispatch(org.osmdroid.events.MapEvent)>[]--><android.os.Handler: boolean postDelayed(java.lang.Runnable,long)>[]--><ru.seva.finder.GpsSearch$2: void run()>[]--><ru.seva.finder.GpsSearch: void access$600(ru.seva.finder.GpsSearch)>[]--><ru.seva.finder.GpsSearch: void start_send()>[[-i0 < 23]]--><android.content.Context: int checkSelfPermission(java.lang.String)>
+One road protect good!
+-i0 < 23
+Good road: <org.osmdroid.views.MapController: boolean zoomTo(int)>[]--><org.osmdroid.views.MapController: boolean zoomTo(int,java.lang.Long)>[]--><org.osmdroid.views.MapController: boolean zoomTo(double,java.lang.Long)>[]--><org.osmdroid.views.MapController: boolean zoomToFixing(double,int,int,java.lang.Long)>[]--><org.osmdroid.events.DelayedMapListener: boolean onZoom(org.osmdroid.events.ZoomEvent)>[]--><org.osmdroid.events.DelayedMapListener: void dispatch(org.osmdroid.events.MapEvent)>[]--><android.os.Handler: boolean postDelayed(java.lang.Runnable,long)>[]--><ru.seva.finder.GpsSearch$2: void run()>[]--><ru.seva.finder.GpsSearch: void access$600(ru.seva.finder.GpsSearch)>[]--><ru.seva.finder.GpsSearch: void start_send()>[[-i0 < 23]]--><android.content.Context: int checkSelfPermission(java.lang.String)>
+One road protect good!
+-i0 < 23
+Good road: <org.osmdroid.views.MapView: boolean zoomOutFixing(org.osmdroid.api.IGeoPoint)>[]--><org.osmdroid.views.MapView: boolean zoomOutFixing(int,int)>[]--><org.osmdroid.views.MapController: boolean zoomOutFixing(int,int)>[]--><org.osmdroid.views.MapController: boolean zoomToFixing(double,int,int,java.lang.Long)>[]--><org.osmdroid.events.DelayedMapListener: boolean onZoom(org.osmdroid.events.ZoomEvent)>[]--><org.osmdroid.events.DelayedMapListener: void dispatch(org.osmdroid.events.MapEvent)>[]--><android.os.Handler: boolean postDelayed(java.lang.Runnable,long)>[]--><ru.seva.finder.GpsSearch$2: void run()>[]--><ru.seva.finder.GpsSearch: void access$600(ru.seva.finder.GpsSearch)>[]--><ru.seva.finder.GpsSearch: void start_send()>[[-i0 < 23]]--><android.content.Context: int checkSelfPermission(java.lang.String)>
+One road protect good!
+-i0 < 23
+Good road: <org.osmdroid.views.MapView: boolean zoomInFixing(org.osmdroid.api.IGeoPoint)>[]--><org.osmdroid.views.MapController: boolean zoomInFixing(int,int)>[]--><org.osmdroid.views.MapController: boolean zoomInFixing(int,int,java.lang.Long)>[]--><org.osmdroid.views.MapController: boolean zoomToFixing(double,int,int,java.lang.Long)>[]--><org.osmdroid.events.DelayedMapListener: boolean onZoom(org.osmdroid.events.ZoomEvent)>[]--><org.osmdroid.events.DelayedMapListener: void dispatch(org.osmdroid.events.MapEvent)>[]--><android.os.Handler: boolean postDelayed(java.lang.Runnable,long)>[]--><ru.seva.finder.GpsSearch$2: void run()>[]--><ru.seva.finder.GpsSearch: void access$600(ru.seva.finder.GpsSearch)>[]--><ru.seva.finder.GpsSearch: void start_send()>[[-i0 < 23]]--><android.content.Context: int checkSelfPermission(java.lang.String)>
+One road protect good!
+-i0 < 23
+Good road: <org.osmdroid.views.MapView$MapViewZoomListener: void onZoom(boolean)>[]--><org.osmdroid.views.MapController: boolean zoomOut()>[]--><org.osmdroid.views.MapController: boolean zoomOut(java.lang.Long)>[]--><org.osmdroid.views.MapController: boolean zoomTo(double,java.lang.Long)>[]--><org.osmdroid.views.MapController: boolean zoomToFixing(double,int,int,java.lang.Long)>[]--><org.osmdroid.events.DelayedMapListener: boolean onZoom(org.osmdroid.events.ZoomEvent)>[]--><org.osmdroid.events.DelayedMapListener: void dispatch(org.osmdroid.events.MapEvent)>[]--><android.os.Handler: boolean postDelayed(java.lang.Runnable,long)>[]--><ru.seva.finder.GpsSearch$2: void run()>[]--><ru.seva.finder.GpsSearch: void access$600(ru.seva.finder.GpsSearch)>[]--><ru.seva.finder.GpsSearch: void start_send()>[[-i0 < 23]]--><android.content.Context: int checkSelfPermission(java.lang.String)>
+One road protect good!
+-i0 < 23
+Good road: <org.osmdroid.views.MapView$MapViewZoomListener: void onZoom(boolean)>[]--><org.osmdroid.views.MapController: boolean zoomIn()>[]--><org.osmdroid.views.MapController: boolean zoomIn(java.lang.Long)>[]--><org.osmdroid.views.MapController: boolean zoomTo(double,java.lang.Long)>[]--><org.osmdroid.views.MapController: boolean zoomToFixing(double,int,int,java.lang.Long)>[]--><org.osmdroid.events.DelayedMapListener: boolean onZoom(org.osmdroid.events.ZoomEvent)>[]--><org.osmdroid.events.DelayedMapListener: void dispatch(org.osmdroid.events.MapEvent)>[]--><android.os.Handler: boolean postDelayed(java.lang.Runnable,long)>[]--><ru.seva.finder.GpsSearch$2: void run()>[]--><ru.seva.finder.GpsSearch: void access$600(ru.seva.finder.GpsSearch)>[]--><ru.seva.finder.GpsSearch: void start_send()>[[-i0 < 23]]--><android.content.Context: int checkSelfPermission(java.lang.String)>
+One road protect good!
+-i0 < 23
+Good road: <org.osmdroid.views.MapController: boolean zoomToFixing(int,int,int)>[]--><org.osmdroid.views.MapController: boolean zoomToFixing(int,int,int,java.lang.Long)>[]--><org.osmdroid.views.MapController: boolean zoomToFixing(double,int,int,java.lang.Long)>[]--><org.osmdroid.events.DelayedMapListener: boolean onZoom(org.osmdroid.events.ZoomEvent)>[]--><org.osmdroid.events.DelayedMapListener: void dispatch(org.osmdroid.events.MapEvent)>[]--><android.os.Handler: boolean postDelayed(java.lang.Runnable,long)>[]--><ru.seva.finder.GpsSearch$2: void run()>[]--><ru.seva.finder.GpsSearch: void access$600(ru.seva.finder.GpsSearch)>[]--><ru.seva.finder.GpsSearch: void start_send()>[[-i0 < 23]]--><android.content.Context: int checkSelfPermission(java.lang.String)>
+One road protect good!
+-i0 < 23
+Good road: <org.osmdroid.views.MapView: boolean setPositionAndScale(java.lang.Object,org.metalev.multitouch.controller.MultiTouchController$PositionAndScale,org.metalev.multitouch.controller.MultiTouchController$PointInfo)>[]--><org.osmdroid.views.MapView: void setMultiTouchScale(float)>[]--><org.osmdroid.views.MapView: double setZoomLevel(double)>[]--><org.osmdroid.views.MapController: void setCenter(org.osmdroid.api.IGeoPoint)>[]--><org.osmdroid.events.DelayedMapListener: boolean onScroll(org.osmdroid.events.ScrollEvent)>[]--><org.osmdroid.events.DelayedMapListener: void dispatch(org.osmdroid.events.MapEvent)>[]--><android.os.Handler: boolean postDelayed(java.lang.Runnable,long)>[]--><ru.seva.finder.GpsSearch$2: void run()>[]--><ru.seva.finder.GpsSearch: void access$600(ru.seva.finder.GpsSearch)>[]--><ru.seva.finder.GpsSearch: void start_send()>[[-i0 < 23]]--><android.content.Context: int checkSelfPermission(java.lang.String)>
+One road protect good!
+-i0 < 23
+Good road: <org.osmdroid.views.MapView: boolean zoomIn()>[]--><org.osmdroid.views.MapController: boolean zoomIn()>[]--><org.osmdroid.views.MapController: boolean zoomIn(java.lang.Long)>[]--><org.osmdroid.views.MapController: boolean zoomTo(double,java.lang.Long)>[]--><org.osmdroid.views.MapController: boolean zoomToFixing(double,int,int,java.lang.Long)>[]--><org.osmdroid.events.DelayedMapListener: boolean onZoom(org.osmdroid.events.ZoomEvent)>[]--><org.osmdroid.events.DelayedMapListener: void dispatch(org.osmdroid.events.MapEvent)>[]--><android.os.Handler: boolean postDelayed(java.lang.Runnable,long)>[]--><ru.seva.finder.GpsSearch$2: void run()>[]--><ru.seva.finder.GpsSearch: void access$600(ru.seva.finder.GpsSearch)>[]--><ru.seva.finder.GpsSearch: void start_send()>[[-i0 < 23]]--><android.content.Context: int checkSelfPermission(java.lang.String)>
+One road protect good!
+-i0 < 23
+Good road: <ru.seva.finder.MapsActivity: void access$000(ru.seva.finder.MapsActivity)>[]--><ru.seva.finder.MapsActivity: void trackRedraw()>[]--><org.osmdroid.views.MapController: double setZoom(double)>[]--><org.osmdroid.views.MapView: double setZoomLevel(double)>[]--><org.osmdroid.views.MapController: void setCenter(org.osmdroid.api.IGeoPoint)>[]--><org.osmdroid.events.DelayedMapListener: boolean onScroll(org.osmdroid.events.ScrollEvent)>[]--><org.osmdroid.events.DelayedMapListener: void dispatch(org.osmdroid.events.MapEvent)>[]--><android.os.Handler: boolean postDelayed(java.lang.Runnable,long)>[]--><ru.seva.finder.GpsSearch$2: void run()>[]--><ru.seva.finder.GpsSearch: void access$600(ru.seva.finder.GpsSearch)>[]--><ru.seva.finder.GpsSearch: void start_send()>[[-i0 < 23]]--><android.content.Context: int checkSelfPermission(java.lang.String)>
+One road protect good!
+$i0 < 11
+-i0 < 23
+Good road: <org.osmdroid.views.MapController$ZoomAnimationListener: void onAnimationEnd(android.view.animation.Animation)>[]--><org.osmdroid.views.MapController: void onAnimationEnd()>[[$i0 < 11]]--><org.osmdroid.views.MapController: double setZoom(double)>[]--><org.osmdroid.views.MapView: double setZoomLevel(double)>[]--><org.osmdroid.views.MapController: void setCenter(org.osmdroid.api.IGeoPoint)>[]--><org.osmdroid.events.DelayedMapListener: boolean onScroll(org.osmdroid.events.ScrollEvent)>[]--><org.osmdroid.events.DelayedMapListener: void dispatch(org.osmdroid.events.MapEvent)>[]--><android.os.Handler: boolean postDelayed(java.lang.Runnable,long)>[]--><ru.seva.finder.GpsSearch$2: void run()>[]--><ru.seva.finder.GpsSearch: void access$600(ru.seva.finder.GpsSearch)>[]--><ru.seva.finder.GpsSearch: void start_send()>[[-i0 < 23]]--><android.content.Context: int checkSelfPermission(java.lang.String)>
+One road protect good!
+-i0 < 23
+Good road: <org.osmdroid.views.MapController: boolean zoomToFixing(double,int,int)>[]--><org.osmdroid.views.MapController: boolean zoomToFixing(double,int,int,java.lang.Long)>[]--><org.osmdroid.events.DelayedMapListener: boolean onZoom(org.osmdroid.events.ZoomEvent)>[]--><org.osmdroid.events.DelayedMapListener: void dispatch(org.osmdroid.events.MapEvent)>[]--><android.os.Handler: boolean postDelayed(java.lang.Runnable,long)>[]--><ru.seva.finder.GpsSearch$2: void run()>[]--><ru.seva.finder.GpsSearch: void access$600(ru.seva.finder.GpsSearch)>[]--><ru.seva.finder.GpsSearch: void start_send()>[[-i0 < 23]]--><android.content.Context: int checkSelfPermission(java.lang.String)>
+One road protect good!
+containsStatic:false
+containsTry:false
+23call by main package
+-----------------------------------------
+#################################################
+N 6 Potential Issue API: SDKCheck of <android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+1 Mainhead roads:
+-i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: ru.seva.finder.MainActivity dummyMainMethod_ru_seva_finder_MainActivity(android.content.Intent)>[]--><ru.seva.finder.MainActivity: void onCreate(android.os.Bundle)>[[-i0 < 26]]--><android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 7 Potential Issue API: SDKCheck of <android.app.Fragment: void requestPermissions(java.lang.String[],int)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+$i0 != 26
+!!!this api will crash on sdk 19 20 21 22 
+Error road: <ru.seva.finder.SettingsActivity$Frag$5: boolean onPreferenceChange(android.preference.Preference,java.lang.Object)>[[$i0 != 26]]--><android.app.Fragment: void requestPermissions(java.lang.String[],int)>
+#1.the call statck between class <ru.seva.finder.SettingsActivity$Frag$5: boolean onPreferenceChange(android.preference.Preference,java.lang.Object)> to <android.app.Fragment: void requestPermissions(java.lang.String[],int)>has compatibility isssues！
+-----------------------------------------
+crashApis:5
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 8 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager: java.util.List getScanResults()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: ru.seva.finder.WifiSearch$scan_ready dummyMainMethod_ru_seva_finder_WifiSearch$scan__ready(android.content.Intent)>[]--><ru.seva.finder.WifiSearch$scan_ready: void onReceive(android.content.Context,android.content.Intent)>[]--><android.net.wifi.WifiManager: java.util.List getScanResults()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.wifi.WifiManager: java.util.List getScanResults()>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:6
+crashApisInMain:4
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 9 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.lang.Object get(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: ru.seva.finder.SmsReceiver dummyMainMethod_ru_seva_finder_SmsReceiver(android.content.Intent)>[]--><ru.seva.finder.SmsReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><android.os.BaseBundle: java.lang.Object get(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: java.lang.Object get(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:7
+crashApisInMain:5
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 10 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.lang.String getString(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+8call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: ru.seva.finder.MapsActivity dummyMainMethod_ru_seva_finder_MapsActivity(android.content.Intent)>[]--><ru.seva.finder.MapsActivity: void onCreate(android.os.Bundle)>[]--><org.osmdroid.tileprovider.tilesource.MapBoxTileSource: void retrieveMapBoxMapId(android.content.Context)>[]--><org.osmdroid.tileprovider.util.ManifestUtil: java.lang.String retrieveKey(android.content.Context,java.lang.String)>[[try]]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+One road protect good!
+7 Packageshead roads:
+try
+Good road with try: <org.osmdroid.tileprovider.tilesource.MapQuestTileSource: void <init>(android.content.Context)>[]--><org.osmdroid.tileprovider.tilesource.MapQuestTileSource: void retrieveMapBoxMapId(android.content.Context)>[]--><org.osmdroid.tileprovider.util.ManifestUtil: java.lang.String retrieveKey(android.content.Context,java.lang.String)>[[try]]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+One road protect good!
+try
+Good road with try: <org.osmdroid.tileprovider.tilesource.MapQuestTileSource: void <init>(android.content.Context)>[]--><org.osmdroid.tileprovider.tilesource.MapQuestTileSource: void retrieveAccessToken(android.content.Context)>[]--><org.osmdroid.tileprovider.util.ManifestUtil: java.lang.String retrieveKey(android.content.Context,java.lang.String)>[[try]]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+One road protect good!
+try
+Good road with try: <org.osmdroid.tileprovider.util.CloudmadeUtil: void retrieveCloudmadeKey(android.content.Context)>[]--><org.osmdroid.tileprovider.util.ManifestUtil: java.lang.String retrieveKey(android.content.Context,java.lang.String)>[[try]]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+One road protect good!
+try
+Good road with try: <org.osmdroid.tileprovider.tilesource.ThunderforestTileSource: void <init>(android.content.Context,int)>[]--><org.osmdroid.tileprovider.tilesource.ThunderforestTileSource: java.lang.String retrieveMapId(android.content.Context)>[]--><org.osmdroid.tileprovider.util.ManifestUtil: java.lang.String retrieveKey(android.content.Context,java.lang.String)>[[try]]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+One road protect good!
+try
+Good road with try: <org.osmdroid.tileprovider.tilesource.bing.BingMapTileSource: void retrieveBingKey(android.content.Context)>[]--><org.osmdroid.tileprovider.util.ManifestUtil: java.lang.String retrieveKey(android.content.Context,java.lang.String)>[[try]]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+One road protect good!
+try
+Good road with try: <org.osmdroid.tileprovider.tilesource.HEREWeGoTileSource: void <init>(android.content.Context)>[]--><org.osmdroid.tileprovider.tilesource.HEREWeGoTileSource: void retrieveMapBoxMapId(android.content.Context)>[]--><org.osmdroid.tileprovider.util.ManifestUtil: java.lang.String retrieveKey(android.content.Context,java.lang.String)>[[try]]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+One road protect good!
+try
+Good road with try: <org.osmdroid.tileprovider.tilesource.HEREWeGoTileSource: void <init>(android.content.Context)>[]--><org.osmdroid.tileprovider.tilesource.HEREWeGoTileSource: void retrieveDomainOverride(android.content.Context)>[]--><org.osmdroid.tileprovider.util.ManifestUtil: java.lang.String retrieveKey(android.content.Context,java.lang.String)>[[try]]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+One road protect good!
+try
+Good road with try: <org.osmdroid.tileprovider.tilesource.HEREWeGoTileSource: void <init>(android.content.Context)>[]--><org.osmdroid.tileprovider.tilesource.HEREWeGoTileSource: void retrieveAppCode(android.content.Context)>[]--><org.osmdroid.tileprovider.util.ManifestUtil: java.lang.String retrieveKey(android.content.Context,java.lang.String)>[[try]]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+One road protect good!
+try
+Good road with try: <org.osmdroid.tileprovider.tilesource.HEREWeGoTileSource: void <init>(android.content.Context)>[]--><org.osmdroid.tileprovider.tilesource.HEREWeGoTileSource: void retrieveAppId(android.content.Context)>[]--><org.osmdroid.tileprovider.util.ManifestUtil: java.lang.String retrieveKey(android.content.Context,java.lang.String)>[[try]]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+One road protect good!
+try
+Good road with try: <org.osmdroid.tileprovider.tilesource.ThunderforestTileSource: boolean haveMapId(android.content.Context)>[]--><org.osmdroid.tileprovider.util.ManifestUtil: java.lang.String retrieveKey(android.content.Context,java.lang.String)>[[try]]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+One road protect good!
+try
+Good road with try: <org.osmdroid.tileprovider.tilesource.MapBoxTileSource: void <init>(android.content.Context)>[]--><org.osmdroid.tileprovider.tilesource.MapBoxTileSource: void retrieveMapBoxMapId(android.content.Context)>[]--><org.osmdroid.tileprovider.util.ManifestUtil: java.lang.String retrieveKey(android.content.Context,java.lang.String)>[[try]]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+One road protect good!
+try
+Good road with try: <org.osmdroid.tileprovider.tilesource.MapBoxTileSource: void <init>(android.content.Context)>[]--><org.osmdroid.tileprovider.tilesource.MapBoxTileSource: void retrieveAccessToken(android.content.Context)>[]--><org.osmdroid.tileprovider.util.ManifestUtil: java.lang.String retrieveKey(android.content.Context,java.lang.String)>[[try]]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+One road protect good!
+containsStatic:false
+containsTry:true
+8call by main package
+-----------------------------------------
+#################################################
+N 11 Potential Issue API: SDKCheck of <android.app.NotificationManager: boolean isNotificationPolicyAccessGranted()> is checking!!!
+The life time of api is [23,31]
+25call roads:
+1 Mainhead roads:
+-$i1 < 23
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: ru.seva.finder.RingingService dummyMainMethod_ru_seva_finder_RingingService(android.content.Intent)>[]--><ru.seva.finder.RingingService: int onStartCommand(android.content.Intent,int,int)>[]--><android.os.Handler: boolean postDelayed(java.lang.Runnable,long)>[]--><ru.seva.finder.RingingService$1: void run()>[]--><ru.seva.finder.AudioHelper: void stopRinging()>[]--><ru.seva.finder.AudioHelper: void setVolume(int)>[[-$i1 < 23]]--><android.app.NotificationManager: boolean isNotificationPolicyAccessGranted()>
+One road protect good!
+-$i1 < 23
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: ru.seva.finder.RingingService$StopRingingReceiver dummyMainMethod_ru_seva_finder_RingingService$StopRingingReceiver(android.content.Intent)>[]--><ru.seva.finder.RingingService$StopRingingReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><ru.seva.finder.RingingService$1: void run()>[]--><ru.seva.finder.AudioHelper: void stopRinging()>[]--><ru.seva.finder.AudioHelper: void setVolume(int)>[[-$i1 < 23]]--><android.app.NotificationManager: boolean isNotificationPolicyAccessGranted()>
+One road protect good!
+-$i0 < 23
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: ru.seva.finder.MainActivity dummyMainMethod_ru_seva_finder_MainActivity(android.content.Intent)>[]--><ru.seva.finder.MainActivity: void onActivityResult(int,int,android.content.Intent)>[[-$i0 < 23]]--><android.app.NotificationManager: boolean isNotificationPolicyAccessGranted()>
+One road protect good!
+-$i0 < 23
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: ru.seva.finder.SmsReceiver dummyMainMethod_ru_seva_finder_SmsReceiver(android.content.Intent)>[]--><ru.seva.finder.SmsReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><ru.seva.finder.AudioHelper: void pauseSound()>[]--><ru.seva.finder.AudioHelper$SoundPauseThread: void run()>[]--><ru.seva.finder.AudioHelper: void access$200(ru.seva.finder.AudioHelper)>[]--><ru.seva.finder.AudioHelper: void mute()>[[-$i0 < 23]]--><android.app.NotificationManager: boolean isNotificationPolicyAccessGranted()>
+One road protect good!
+-$i1 < 23
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: ru.seva.finder.MapsActivity dummyMainMethod_ru_seva_finder_MapsActivity(android.content.Intent)>[]--><org.osmdroid.views.MapView: void scrollBy(int,int)>[]--><org.osmdroid.views.MapView: void scrollTo(int,int)>[]--><org.osmdroid.events.DelayedMapListener: boolean onScroll(org.osmdroid.events.ScrollEvent)>[]--><org.osmdroid.events.DelayedMapListener: void dispatch(org.osmdroid.events.MapEvent)>[]--><android.os.Handler: boolean postDelayed(java.lang.Runnable,long)>[]--><ru.seva.finder.RingingService$1: void run()>[]--><ru.seva.finder.AudioHelper: void stopRinging()>[]--><ru.seva.finder.AudioHelper: void setVolume(int)>[[-$i1 < 23]]--><android.app.NotificationManager: boolean isNotificationPolicyAccessGranted()>
+One road protect good!
+###Multi invoking in one method, need manual check!!!--><ru.seva.finder.Tracking$TrackingTask: void run()>[[i0 >= 23], [i0 < 23]]--><android.os.Handler: boolean postDelayed(java.lang.Runnable,long)>[]--><ru.seva.finder.RingingService$1: void run()>[]--><ru.seva.finder.AudioHelper: void stopRinging()>[]--><ru.seva.finder.AudioHelper: void setVolume(int)>[[-$i1 < 23]]
+###Multi invoking in one method, need manual check!!!--><ru.seva.finder.Tracking$TrackingTask: void run()>[[i0 >= 23]][[i0 < 23]]--><android.os.Handler: boolean postDelayed(java.lang.Runnable,long)>[]--><ru.seva.finder.RingingService$1: void run()>[]--><ru.seva.finder.AudioHelper: void stopRinging()>[]--><ru.seva.finder.AudioHelper: void setVolume(int)>[[-$i1 < 23]]
+i0 >= 23
+i0 < 23
+-$i1 < 23
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: ru.seva.finder.Tracking dummyMainMethod_ru_seva_finder_Tracking(android.content.Intent)>[]--><ru.seva.finder.Tracking: int onStartCommand(android.content.Intent,int,int)>[]--><java.util.Timer: void scheduleAtFixedRate(java.util.TimerTask,long,long)>[]--><ru.seva.finder.Tracking$TrackingTask: void run()>[[i0 >= 23], [i0 < 23]]--><android.os.Handler: boolean postDelayed(java.lang.Runnable,long)>[]--><ru.seva.finder.RingingService$1: void run()>[]--><ru.seva.finder.AudioHelper: void stopRinging()>[]--><ru.seva.finder.AudioHelper: void setVolume(int)>[[-$i1 < 23]]--><android.app.NotificationManager: boolean isNotificationPolicyAccessGranted()>
+One road protect good!
+-$i1 < 23
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: ru.seva.finder.GpsSearch dummyMainMethod_ru_seva_finder_GpsSearch(android.content.Intent)>[]--><ru.seva.finder.GpsSearch: void onCreate()>[]--><android.os.Handler: boolean postDelayed(java.lang.Runnable,long)>[]--><ru.seva.finder.RingingService$1: void run()>[]--><ru.seva.finder.AudioHelper: void stopRinging()>[]--><ru.seva.finder.AudioHelper: void setVolume(int)>[[-$i1 < 23]]--><android.app.NotificationManager: boolean isNotificationPolicyAccessGranted()>
+One road protect good!
+24 Packageshead roads:
+-$i1 < 23
+Good road: <org.osmdroid.views.MapController: void scrollBy(int,int)>[]--><org.osmdroid.views.MapView: void scrollBy(int,int)>[]--><org.osmdroid.views.MapView: void scrollTo(int,int)>[]--><org.osmdroid.events.DelayedMapListener: boolean onScroll(org.osmdroid.events.ScrollEvent)>[]--><org.osmdroid.events.DelayedMapListener: void dispatch(org.osmdroid.events.MapEvent)>[]--><android.os.Handler: boolean postDelayed(java.lang.Runnable,long)>[]--><ru.seva.finder.RingingService$1: void run()>[]--><ru.seva.finder.AudioHelper: void stopRinging()>[]--><ru.seva.finder.AudioHelper: void setVolume(int)>[[-$i1 < 23]]--><android.app.NotificationManager: boolean isNotificationPolicyAccessGranted()>
+One road protect good!
+-$i1 < 23
+Good road: <org.osmdroid.views.MapView: boolean zoomInFixing(int,int)>[]--><org.osmdroid.views.MapController: boolean zoomInFixing(int,int)>[]--><org.osmdroid.views.MapController: boolean zoomInFixing(int,int,java.lang.Long)>[]--><org.osmdroid.views.MapController: boolean zoomToFixing(double,int,int,java.lang.Long)>[]--><org.osmdroid.events.DelayedMapListener: boolean onZoom(org.osmdroid.events.ZoomEvent)>[]--><org.osmdroid.events.DelayedMapListener: void dispatch(org.osmdroid.events.MapEvent)>[]--><android.os.Handler: boolean postDelayed(java.lang.Runnable,long)>[]--><ru.seva.finder.RingingService$1: void run()>[]--><ru.seva.finder.AudioHelper: void stopRinging()>[]--><ru.seva.finder.AudioHelper: void setVolume(int)>[[-$i1 < 23]]--><android.app.NotificationManager: boolean isNotificationPolicyAccessGranted()>
+One road protect good!
+-$i1 < 23
+Good road: <org.osmdroid.views.MapController: int setZoom(int)>[]--><org.osmdroid.views.MapController: double setZoom(double)>[]--><org.osmdroid.views.MapView: double setZoomLevel(double)>[]--><org.osmdroid.views.MapController: void setCenter(org.osmdroid.api.IGeoPoint)>[]--><org.osmdroid.events.DelayedMapListener: boolean onScroll(org.osmdroid.events.ScrollEvent)>[]--><org.osmdroid.events.DelayedMapListener: void dispatch(org.osmdroid.events.MapEvent)>[]--><android.os.Handler: boolean postDelayed(java.lang.Runnable,long)>[]--><ru.seva.finder.RingingService$1: void run()>[]--><ru.seva.finder.AudioHelper: void stopRinging()>[]--><ru.seva.finder.AudioHelper: void setVolume(int)>[[-$i1 < 23]]--><android.app.NotificationManager: boolean isNotificationPolicyAccessGranted()>
+One road protect good!
+-$i1 < 23
+Good road: <org.osmdroid.views.MapView: void zoomToBoundingBox(org.osmdroid.util.BoundingBox,boolean)>[]--><org.osmdroid.views.MapView: void zoomToBoundingBox(org.osmdroid.util.BoundingBox,boolean,int)>[]--><org.osmdroid.views.MapController: void setCenter(org.osmdroid.api.IGeoPoint)>[]--><org.osmdroid.events.DelayedMapListener: boolean onScroll(org.osmdroid.events.ScrollEvent)>[]--><org.osmdroid.events.DelayedMapListener: void dispatch(org.osmdroid.events.MapEvent)>[]--><android.os.Handler: boolean postDelayed(java.lang.Runnable,long)>[]--><ru.seva.finder.RingingService$1: void run()>[]--><ru.seva.finder.AudioHelper: void stopRinging()>[]--><ru.seva.finder.AudioHelper: void setVolume(int)>[[-$i1 < 23]]--><android.app.NotificationManager: boolean isNotificationPolicyAccessGranted()>
+One road protect good!
+-i0 < 23
+Good road: <ru.seva.finder.SettingsActivity$Frag$4: boolean onPreferenceChange(android.preference.Preference,java.lang.Object)>[[-i0 < 23]]--><android.app.NotificationManager: boolean isNotificationPolicyAccessGranted()>
+One road protect good!
+-$i1 < 23
+Good road: <org.osmdroid.views.overlay.DefaultOverlayManager: boolean onOptionsItemSelected(android.view.MenuItem,int,org.osmdroid.views.MapView)>[]--><org.osmdroid.views.overlay.TilesOverlay: boolean onOptionsItemSelected(android.view.MenuItem,int,org.osmdroid.views.MapView)>[]--><org.osmdroid.views.MapView: void setTileSource(org.osmdroid.tileprovider.tilesource.ITileSource)>[]--><org.osmdroid.views.MapView: double setZoomLevel(double)>[]--><org.osmdroid.views.MapController: void setCenter(org.osmdroid.api.IGeoPoint)>[]--><org.osmdroid.events.DelayedMapListener: boolean onScroll(org.osmdroid.events.ScrollEvent)>[]--><org.osmdroid.events.DelayedMapListener: void dispatch(org.osmdroid.events.MapEvent)>[]--><android.os.Handler: boolean postDelayed(java.lang.Runnable,long)>[]--><ru.seva.finder.RingingService$1: void run()>[]--><ru.seva.finder.AudioHelper: void stopRinging()>[]--><ru.seva.finder.AudioHelper: void setVolume(int)>[[-$i1 < 23]]--><android.app.NotificationManager: boolean isNotificationPolicyAccessGranted()>
+One road protect good!
+-$i1 < 23
+Good road: <org.osmdroid.views.MapController$ZoomAnimatorListener: void onAnimationUpdate(android.animation.ValueAnimator)>[]--><org.osmdroid.views.MapView: void setMultiTouchScale(float)>[]--><org.osmdroid.views.MapView: double setZoomLevel(double)>[]--><org.osmdroid.views.MapController: void setCenter(org.osmdroid.api.IGeoPoint)>[]--><org.osmdroid.events.DelayedMapListener: boolean onScroll(org.osmdroid.events.ScrollEvent)>[]--><org.osmdroid.events.DelayedMapListener: void dispatch(org.osmdroid.events.MapEvent)>[]--><android.os.Handler: boolean postDelayed(java.lang.Runnable,long)>[]--><ru.seva.finder.RingingService$1: void run()>[]--><ru.seva.finder.AudioHelper: void stopRinging()>[]--><ru.seva.finder.AudioHelper: void setVolume(int)>[[-$i1 < 23]]--><android.app.NotificationManager: boolean isNotificationPolicyAccessGranted()>
+One road protect good!
+-$i1 < 23
+Good road: <org.osmdroid.views.MapView: boolean zoomOut()>[]--><org.osmdroid.views.MapController: boolean zoomOut()>[]--><org.osmdroid.views.MapController: boolean zoomOut(java.lang.Long)>[]--><org.osmdroid.views.MapController: boolean zoomTo(double,java.lang.Long)>[]--><org.osmdroid.views.MapController: boolean zoomToFixing(double,int,int,java.lang.Long)>[]--><org.osmdroid.events.DelayedMapListener: boolean onZoom(org.osmdroid.events.ZoomEvent)>[]--><org.osmdroid.events.DelayedMapListener: void dispatch(org.osmdroid.events.MapEvent)>[]--><android.os.Handler: boolean postDelayed(java.lang.Runnable,long)>[]--><ru.seva.finder.RingingService$1: void run()>[]--><ru.seva.finder.AudioHelper: void stopRinging()>[]--><ru.seva.finder.AudioHelper: void setVolume(int)>[[-$i1 < 23]]--><android.app.NotificationManager: boolean isNotificationPolicyAccessGranted()>
+One road protect good!
+-$i1 < 23
+Good road: <org.osmdroid.views.MapView$MapViewGestureDetectorListener: boolean onScroll(android.view.MotionEvent,android.view.MotionEvent,float,float)>[]--><org.osmdroid.views.MapView: void scrollBy(int,int)>[]--><org.osmdroid.views.MapView: void scrollTo(int,int)>[]--><org.osmdroid.events.DelayedMapListener: boolean onScroll(org.osmdroid.events.ScrollEvent)>[]--><org.osmdroid.events.DelayedMapListener: void dispatch(org.osmdroid.events.MapEvent)>[]--><android.os.Handler: boolean postDelayed(java.lang.Runnable,long)>[]--><ru.seva.finder.RingingService$1: void run()>[]--><ru.seva.finder.AudioHelper: void stopRinging()>[]--><ru.seva.finder.AudioHelper: void setVolume(int)>[[-$i1 < 23]]--><android.app.NotificationManager: boolean isNotificationPolicyAccessGranted()>
+One road protect good!
+-$i1 < 23
+Good road: <org.osmdroid.views.MapController$ReplayController: void replayCalls()>[]--><org.osmdroid.views.MapController: void zoomToSpan(int,int)>[]--><org.osmdroid.views.MapController: void zoomToSpan(double,double)>[]--><org.osmdroid.views.MapView: double setZoomLevel(double)>[]--><org.osmdroid.views.MapController: void setCenter(org.osmdroid.api.IGeoPoint)>[]--><org.osmdroid.events.DelayedMapListener: boolean onScroll(org.osmdroid.events.ScrollEvent)>[]--><org.osmdroid.events.DelayedMapListener: void dispatch(org.osmdroid.events.MapEvent)>[]--><android.os.Handler: boolean postDelayed(java.lang.Runnable,long)>[]--><ru.seva.finder.RingingService$1: void run()>[]--><ru.seva.finder.AudioHelper: void stopRinging()>[]--><ru.seva.finder.AudioHelper: void setVolume(int)>[[-$i1 < 23]]--><android.app.NotificationManager: boolean isNotificationPolicyAccessGranted()>
+One road protect good!
+-$i1 < 23
+Good road: <org.osmdroid.views.MapController$ReplayController: void replayCalls()>[]--><org.osmdroid.views.MapController: void setCenter(org.osmdroid.api.IGeoPoint)>[]--><org.osmdroid.events.DelayedMapListener: boolean onScroll(org.osmdroid.events.ScrollEvent)>[]--><org.osmdroid.events.DelayedMapListener: void dispatch(org.osmdroid.events.MapEvent)>[]--><android.os.Handler: boolean postDelayed(java.lang.Runnable,long)>[]--><ru.seva.finder.RingingService$1: void run()>[]--><ru.seva.finder.AudioHelper: void stopRinging()>[]--><ru.seva.finder.AudioHelper: void setVolume(int)>[[-$i1 < 23]]--><android.app.NotificationManager: boolean isNotificationPolicyAccessGranted()>
+One road protect good!
+$i0 < 11
+-$i1 < 23
+Good road: <org.osmdroid.views.MapController$ZoomAnimatorListener: void onAnimationEnd(android.animation.Animator)>[]--><org.osmdroid.views.MapController: void onAnimationEnd()>[[$i0 < 11]]--><org.osmdroid.views.MapController: double setZoom(double)>[]--><org.osmdroid.views.MapView: double setZoomLevel(double)>[]--><org.osmdroid.views.MapController: void setCenter(org.osmdroid.api.IGeoPoint)>[]--><org.osmdroid.events.DelayedMapListener: boolean onScroll(org.osmdroid.events.ScrollEvent)>[]--><org.osmdroid.events.DelayedMapListener: void dispatch(org.osmdroid.events.MapEvent)>[]--><android.os.Handler: boolean postDelayed(java.lang.Runnable,long)>[]--><ru.seva.finder.RingingService$1: void run()>[]--><ru.seva.finder.AudioHelper: void stopRinging()>[]--><ru.seva.finder.AudioHelper: void setVolume(int)>[[-$i1 < 23]]--><android.app.NotificationManager: boolean isNotificationPolicyAccessGranted()>
+One road protect good!
+-$i1 < 23
+Good road: <org.osmdroid.views.MapView$MapViewDoubleClickListener: boolean onDoubleTap(android.view.MotionEvent)>[]--><org.osmdroid.views.MapController: boolean zoomInFixing(int,int)>[]--><org.osmdroid.views.MapController: boolean zoomInFixing(int,int,java.lang.Long)>[]--><org.osmdroid.views.MapController: boolean zoomToFixing(double,int,int,java.lang.Long)>[]--><org.osmdroid.events.DelayedMapListener: boolean onZoom(org.osmdroid.events.ZoomEvent)>[]--><org.osmdroid.events.DelayedMapListener: void dispatch(org.osmdroid.events.MapEvent)>[]--><android.os.Handler: boolean postDelayed(java.lang.Runnable,long)>[]--><ru.seva.finder.RingingService$1: void run()>[]--><ru.seva.finder.AudioHelper: void stopRinging()>[]--><ru.seva.finder.AudioHelper: void setVolume(int)>[[-$i1 < 23]]--><android.app.NotificationManager: boolean isNotificationPolicyAccessGranted()>
+One road protect good!
+-$i1 < 23
+Good road: <org.osmdroid.views.MapController: boolean zoomTo(int)>[]--><org.osmdroid.views.MapController: boolean zoomTo(int,java.lang.Long)>[]--><org.osmdroid.views.MapController: boolean zoomTo(double,java.lang.Long)>[]--><org.osmdroid.views.MapController: boolean zoomToFixing(double,int,int,java.lang.Long)>[]--><org.osmdroid.events.DelayedMapListener: boolean onZoom(org.osmdroid.events.ZoomEvent)>[]--><org.osmdroid.events.DelayedMapListener: void dispatch(org.osmdroid.events.MapEvent)>[]--><android.os.Handler: boolean postDelayed(java.lang.Runnable,long)>[]--><ru.seva.finder.RingingService$1: void run()>[]--><ru.seva.finder.AudioHelper: void stopRinging()>[]--><ru.seva.finder.AudioHelper: void setVolume(int)>[[-$i1 < 23]]--><android.app.NotificationManager: boolean isNotificationPolicyAccessGranted()>
+One road protect good!
+-$i1 < 23
+Good road: <org.osmdroid.views.MapView: boolean zoomOutFixing(org.osmdroid.api.IGeoPoint)>[]--><org.osmdroid.views.MapView: boolean zoomOutFixing(int,int)>[]--><org.osmdroid.views.MapController: boolean zoomOutFixing(int,int)>[]--><org.osmdroid.views.MapController: boolean zoomToFixing(double,int,int,java.lang.Long)>[]--><org.osmdroid.events.DelayedMapListener: boolean onZoom(org.osmdroid.events.ZoomEvent)>[]--><org.osmdroid.events.DelayedMapListener: void dispatch(org.osmdroid.events.MapEvent)>[]--><android.os.Handler: boolean postDelayed(java.lang.Runnable,long)>[]--><ru.seva.finder.RingingService$1: void run()>[]--><ru.seva.finder.AudioHelper: void stopRinging()>[]--><ru.seva.finder.AudioHelper: void setVolume(int)>[[-$i1 < 23]]--><android.app.NotificationManager: boolean isNotificationPolicyAccessGranted()>
+One road protect good!
+-$i1 < 23
+Good road: <org.osmdroid.views.MapView: boolean zoomInFixing(org.osmdroid.api.IGeoPoint)>[]--><org.osmdroid.views.MapController: boolean zoomInFixing(int,int)>[]--><org.osmdroid.views.MapController: boolean zoomInFixing(int,int,java.lang.Long)>[]--><org.osmdroid.views.MapController: boolean zoomToFixing(double,int,int,java.lang.Long)>[]--><org.osmdroid.events.DelayedMapListener: boolean onZoom(org.osmdroid.events.ZoomEvent)>[]--><org.osmdroid.events.DelayedMapListener: void dispatch(org.osmdroid.events.MapEvent)>[]--><android.os.Handler: boolean postDelayed(java.lang.Runnable,long)>[]--><ru.seva.finder.RingingService$1: void run()>[]--><ru.seva.finder.AudioHelper: void stopRinging()>[]--><ru.seva.finder.AudioHelper: void setVolume(int)>[[-$i1 < 23]]--><android.app.NotificationManager: boolean isNotificationPolicyAccessGranted()>
+One road protect good!
+-i0 < 23
+Good road: <ru.seva.finder.SettingsActivity$Frag$6: boolean onPreferenceChange(android.preference.Preference,java.lang.Object)>[[-i0 < 23]]--><android.app.NotificationManager: boolean isNotificationPolicyAccessGranted()>
+One road protect good!
+-$i1 < 23
+Good road: <org.osmdroid.views.MapView$MapViewZoomListener: void onZoom(boolean)>[]--><org.osmdroid.views.MapController: boolean zoomOut()>[]--><org.osmdroid.views.MapController: boolean zoomOut(java.lang.Long)>[]--><org.osmdroid.views.MapController: boolean zoomTo(double,java.lang.Long)>[]--><org.osmdroid.views.MapController: boolean zoomToFixing(double,int,int,java.lang.Long)>[]--><org.osmdroid.events.DelayedMapListener: boolean onZoom(org.osmdroid.events.ZoomEvent)>[]--><org.osmdroid.events.DelayedMapListener: void dispatch(org.osmdroid.events.MapEvent)>[]--><android.os.Handler: boolean postDelayed(java.lang.Runnable,long)>[]--><ru.seva.finder.RingingService$1: void run()>[]--><ru.seva.finder.AudioHelper: void stopRinging()>[]--><ru.seva.finder.AudioHelper: void setVolume(int)>[[-$i1 < 23]]--><android.app.NotificationManager: boolean isNotificationPolicyAccessGranted()>
+One road protect good!
+-$i1 < 23
+Good road: <org.osmdroid.views.MapView$MapViewZoomListener: void onZoom(boolean)>[]--><org.osmdroid.views.MapController: boolean zoomIn()>[]--><org.osmdroid.views.MapController: boolean zoomIn(java.lang.Long)>[]--><org.osmdroid.views.MapController: boolean zoomTo(double,java.lang.Long)>[]--><org.osmdroid.views.MapController: boolean zoomToFixing(double,int,int,java.lang.Long)>[]--><org.osmdroid.events.DelayedMapListener: boolean onZoom(org.osmdroid.events.ZoomEvent)>[]--><org.osmdroid.events.DelayedMapListener: void dispatch(org.osmdroid.events.MapEvent)>[]--><android.os.Handler: boolean postDelayed(java.lang.Runnable,long)>[]--><ru.seva.finder.RingingService$1: void run()>[]--><ru.seva.finder.AudioHelper: void stopRinging()>[]--><ru.seva.finder.AudioHelper: void setVolume(int)>[[-$i1 < 23]]--><android.app.NotificationManager: boolean isNotificationPolicyAccessGranted()>
+One road protect good!
+-$i1 < 23
+Good road: <org.osmdroid.views.MapController: boolean zoomToFixing(int,int,int)>[]--><org.osmdroid.views.MapController: boolean zoomToFixing(int,int,int,java.lang.Long)>[]--><org.osmdroid.views.MapController: boolean zoomToFixing(double,int,int,java.lang.Long)>[]--><org.osmdroid.events.DelayedMapListener: boolean onZoom(org.osmdroid.events.ZoomEvent)>[]--><org.osmdroid.events.DelayedMapListener: void dispatch(org.osmdroid.events.MapEvent)>[]--><android.os.Handler: boolean postDelayed(java.lang.Runnable,long)>[]--><ru.seva.finder.RingingService$1: void run()>[]--><ru.seva.finder.AudioHelper: void stopRinging()>[]--><ru.seva.finder.AudioHelper: void setVolume(int)>[[-$i1 < 23]]--><android.app.NotificationManager: boolean isNotificationPolicyAccessGranted()>
+One road protect good!
+-$i1 < 23
+Good road: <org.osmdroid.views.MapView: boolean setPositionAndScale(java.lang.Object,org.metalev.multitouch.controller.MultiTouchController$PositionAndScale,org.metalev.multitouch.controller.MultiTouchController$PointInfo)>[]--><org.osmdroid.views.MapView: void setMultiTouchScale(float)>[]--><org.osmdroid.views.MapView: double setZoomLevel(double)>[]--><org.osmdroid.views.MapController: void setCenter(org.osmdroid.api.IGeoPoint)>[]--><org.osmdroid.events.DelayedMapListener: boolean onScroll(org.osmdroid.events.ScrollEvent)>[]--><org.osmdroid.events.DelayedMapListener: void dispatch(org.osmdroid.events.MapEvent)>[]--><android.os.Handler: boolean postDelayed(java.lang.Runnable,long)>[]--><ru.seva.finder.RingingService$1: void run()>[]--><ru.seva.finder.AudioHelper: void stopRinging()>[]--><ru.seva.finder.AudioHelper: void setVolume(int)>[[-$i1 < 23]]--><android.app.NotificationManager: boolean isNotificationPolicyAccessGranted()>
+One road protect good!
+-$i1 < 23
+Good road: <org.osmdroid.views.MapView: boolean zoomIn()>[]--><org.osmdroid.views.MapController: boolean zoomIn()>[]--><org.osmdroid.views.MapController: boolean zoomIn(java.lang.Long)>[]--><org.osmdroid.views.MapController: boolean zoomTo(double,java.lang.Long)>[]--><org.osmdroid.views.MapController: boolean zoomToFixing(double,int,int,java.lang.Long)>[]--><org.osmdroid.events.DelayedMapListener: boolean onZoom(org.osmdroid.events.ZoomEvent)>[]--><org.osmdroid.events.DelayedMapListener: void dispatch(org.osmdroid.events.MapEvent)>[]--><android.os.Handler: boolean postDelayed(java.lang.Runnable,long)>[]--><ru.seva.finder.RingingService$1: void run()>[]--><ru.seva.finder.AudioHelper: void stopRinging()>[]--><ru.seva.finder.AudioHelper: void setVolume(int)>[[-$i1 < 23]]--><android.app.NotificationManager: boolean isNotificationPolicyAccessGranted()>
+One road protect good!
+-$i1 < 23
+Good road: <ru.seva.finder.SettingsActivity$Frag: void onActivityResult(int,int,android.content.Intent)>[[-$i1 < 23]]--><android.app.NotificationManager: boolean isNotificationPolicyAccessGranted()>
+One road protect good!
+-$i1 < 23
+Good road: <ru.seva.finder.MapsActivity: void access$000(ru.seva.finder.MapsActivity)>[]--><ru.seva.finder.MapsActivity: void trackRedraw()>[]--><org.osmdroid.views.MapController: double setZoom(double)>[]--><org.osmdroid.views.MapView: double setZoomLevel(double)>[]--><org.osmdroid.views.MapController: void setCenter(org.osmdroid.api.IGeoPoint)>[]--><org.osmdroid.events.DelayedMapListener: boolean onScroll(org.osmdroid.events.ScrollEvent)>[]--><org.osmdroid.events.DelayedMapListener: void dispatch(org.osmdroid.events.MapEvent)>[]--><android.os.Handler: boolean postDelayed(java.lang.Runnable,long)>[]--><ru.seva.finder.RingingService$1: void run()>[]--><ru.seva.finder.AudioHelper: void stopRinging()>[]--><ru.seva.finder.AudioHelper: void setVolume(int)>[[-$i1 < 23]]--><android.app.NotificationManager: boolean isNotificationPolicyAccessGranted()>
+One road protect good!
+$i0 < 11
+-$i1 < 23
+Good road: <org.osmdroid.views.MapController$ZoomAnimationListener: void onAnimationEnd(android.view.animation.Animation)>[]--><org.osmdroid.views.MapController: void onAnimationEnd()>[[$i0 < 11]]--><org.osmdroid.views.MapController: double setZoom(double)>[]--><org.osmdroid.views.MapView: double setZoomLevel(double)>[]--><org.osmdroid.views.MapController: void setCenter(org.osmdroid.api.IGeoPoint)>[]--><org.osmdroid.events.DelayedMapListener: boolean onScroll(org.osmdroid.events.ScrollEvent)>[]--><org.osmdroid.events.DelayedMapListener: void dispatch(org.osmdroid.events.MapEvent)>[]--><android.os.Handler: boolean postDelayed(java.lang.Runnable,long)>[]--><ru.seva.finder.RingingService$1: void run()>[]--><ru.seva.finder.AudioHelper: void stopRinging()>[]--><ru.seva.finder.AudioHelper: void setVolume(int)>[[-$i1 < 23]]--><android.app.NotificationManager: boolean isNotificationPolicyAccessGranted()>
+One road protect good!
+-$i1 < 23
+Good road: <org.osmdroid.views.MapController: boolean zoomToFixing(double,int,int)>[]--><org.osmdroid.views.MapController: boolean zoomToFixing(double,int,int,java.lang.Long)>[]--><org.osmdroid.events.DelayedMapListener: boolean onZoom(org.osmdroid.events.ZoomEvent)>[]--><org.osmdroid.events.DelayedMapListener: void dispatch(org.osmdroid.events.MapEvent)>[]--><android.os.Handler: boolean postDelayed(java.lang.Runnable,long)>[]--><ru.seva.finder.RingingService$1: void run()>[]--><ru.seva.finder.AudioHelper: void stopRinging()>[]--><ru.seva.finder.AudioHelper: void setVolume(int)>[[-$i1 < 23]]--><android.app.NotificationManager: boolean isNotificationPolicyAccessGranted()>
+One road protect good!
+containsStatic:false
+containsTry:false
+25call by main package
+-----------------------------------------
+#################################################
+N 12 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager: boolean isWifiEnabled()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: ru.seva.finder.WifiSearch dummyMainMethod_ru_seva_finder_WifiSearch(android.content.Intent)>[]--><ru.seva.finder.WifiSearch: int onStartCommand(android.content.Intent,int,int)>[]--><ru.seva.finder.WifiSearch$Searcher: void run()>[]--><android.net.wifi.WifiManager: boolean isWifiEnabled()>
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: ru.seva.finder.RingingService$StopRingingReceiver dummyMainMethod_ru_seva_finder_RingingService$StopRingingReceiver(android.content.Intent)>[]--><ru.seva.finder.RingingService$StopRingingReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><ru.seva.finder.WifiSearch$Searcher: void run()>[]--><android.net.wifi.WifiManager: boolean isWifiEnabled()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.wifi.WifiManager: boolean isWifiEnabled()>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:8
+crashApisInMain:6
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 13 Potential Issue API: SDKCheck of <android.net.ConnectivityManager: android.net.NetworkInfo getNetworkInfo(int)> is checking!!!
+The life time of api is [1,30]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <org.osmdroid.tileprovider.modules.NetworkAvailabliltyCheck: boolean getWiFiNetworkAvailable()>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getNetworkInfo(int)>
+#1.the call statck between class <org.osmdroid.tileprovider.modules.NetworkAvailabliltyCheck: boolean getWiFiNetworkAvailable()> to <android.net.ConnectivityManager: android.net.NetworkInfo getNetworkInfo(int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <org.osmdroid.tileprovider.modules.NetworkAvailabliltyCheck: boolean getCellularDataNetworkAvailable()>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getNetworkInfo(int)>
+#2.the call statck between class <org.osmdroid.tileprovider.modules.NetworkAvailabliltyCheck: boolean getCellularDataNetworkAvailable()> to <android.net.ConnectivityManager: android.net.NetworkInfo getNetworkInfo(int)>has compatibility isssues！
+-----------------------------------------
+crashApis:9
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 14 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager: boolean startScan()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: ru.seva.finder.WifiSearch dummyMainMethod_ru_seva_finder_WifiSearch(android.content.Intent)>[]--><ru.seva.finder.WifiSearch: int onStartCommand(android.content.Intent,int,int)>[]--><ru.seva.finder.WifiSearch$Searcher: void run()>[]--><android.net.wifi.WifiManager: boolean startScan()>
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: ru.seva.finder.RingingService$StopRingingReceiver dummyMainMethod_ru_seva_finder_RingingService$StopRingingReceiver(android.content.Intent)>[]--><ru.seva.finder.RingingService$StopRingingReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><ru.seva.finder.WifiSearch$Searcher: void run()>[]--><android.net.wifi.WifiManager: boolean startScan()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.wifi.WifiManager: boolean startScan()>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:10
+crashApisInMain:7
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 15 Potential Issue API: SDKCheck of <android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+1 Mainhead roads:
+-i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: ru.seva.finder.MainActivity dummyMainMethod_ru_seva_finder_MainActivity(android.content.Intent)>[]--><ru.seva.finder.MainActivity: void onCreate(android.os.Bundle)>[[-i0 < 26]]--><android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+crashApis numbers:10
+crashApis numbers in main road:7
+On Android Version 16 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 17 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 18 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 19 this app may have error api use(at least): 2 and error api roads: 2
+On Android Version 20 this app may have error api use(at least): 2 and error api roads: 2
+On Android Version 21 this app may have error api use(at least): 1 and error api roads: 1
+On Android Version 22 this app may have error api use(at least): 1 and error api roads: 1
+On Android Version 23 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 24 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 25 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 31 this app may have error api use(at least): 8 and error api roads: 16

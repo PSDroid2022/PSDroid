@@ -1,0 +1,603 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/WiFi_Manager.apk
+Entry Points[org.secuso.privacyfriendlywifimanager.service.receivers.AlarmReceiver, org.secuso.privacyfriendlywifimanager.view.MainActivity, org.secuso.privacyfriendlywifimanager.view.AboutActivity, org.secuso.privacyfriendlywifimanager.service.receivers.WifiChangedReceiver, org.secuso.privacyfriendlywifimanager.view.DetailsActivity, org.secuso.privacyfriendlywifimanager.view.WifiWidget$WidgetClickListener, org.secuso.privacyfriendlywifimanager.service.WifiNotification$NotificationButtonListener, org.secuso.privacyfriendlywifimanager.view.WifiWidget, org.secuso.privacyfriendlywifimanager.service.WifiUpdaterService, org.secuso.privacyfriendlywifimanager.service.WifiUpdaterService$1, org.secuso.privacyfriendlywifimanager.view.tutorial.TutorialActivity, org.secuso.privacyfriendlywifimanager.service.receivers.BootCompletedReceiver, org.secuso.privacyfriendlywifimanager.service.ManagerService, org.secuso.privacyfriendlywifimanager.view.SplashActivity, org.secuso.privacyfriendlywifimanager.service.WifiNotification$NotificationClickListener]
+FllowDroidcallgraph size:1010
+Soot started on Mon Jul 11 15:23:39 CST 2022
+Soot finished on Mon Jul 11 15:23:45 CST 2022
+Soot has run for 0 min. 5 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 16
+Declared Target Sdk version is: 24
+Declared Max Sdk version is: -1
+Collected 247 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.telephony.CellInfoWcdma: android.telephony.CellSignalStrengthWcdma getCellSignalStrength()> is checking!!!
+The life time of api is [18,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 17
+!!!this api will crash on sdk 17 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.secuso.privacyfriendlywifimanager.service.ManagerService dummyMainMethod_org_secuso_privacyfriendlywifimanager_service_ManagerService(android.content.Intent)>[]--><org.secuso.privacyfriendlywifimanager.service.ManagerService: void onHandleIntent(android.content.Intent)>[]--><org.secuso.privacyfriendlywifimanager.service.ManagerService: boolean checkCells()>[]--><org.secuso.privacyfriendlywifimanager.logic.types.PrimitiveCellInfo: org.secuso.privacyfriendlywifimanager.logic.types.PrimitiveCellInfoTreeSet getAllCells(android.content.Context)>[[-$i0 < 17]]--><org.secuso.privacyfriendlywifimanager.logic.types.PrimitiveCellInfo: org.secuso.privacyfriendlywifimanager.logic.types.PrimitiveCellInfo getPrimitiveCellInfo(android.telephony.CellInfo)>[]--><org.secuso.privacyfriendlywifimanager.logic.types.PrimitiveCellInfo: org.secuso.privacyfriendlywifimanager.logic.types.PrimitiveCellInfo getPrimitiveCellInfo(android.telephony.CellInfoWcdma)>[]--><android.telephony.CellInfoWcdma: android.telephony.CellSignalStrengthWcdma getCellSignalStrength()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.telephony.CellInfoWcdma: android.telephony.CellSignalStrengthWcdma getCellSignalStrength()>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:1
+crashApisInMain:1
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.widget.TimePicker: int getMinute()> is checking!!!
+The life time of api is [23,31]
+4call roads:
+0 Mainhead roads:
+4 Packageshead roads:
+-$i1 < 23
+Good road: <org.secuso.privacyfriendlywifimanager.view.dialog.TimePickerDialog$2$1: void onClick(android.view.View)>[]--><org.secuso.privacyfriendlywifimanager.view.dialog.TimePickerDialog: void onDialogClosed(int,java.lang.Object[])>[[-$i1 < 23]]--><android.widget.TimePicker: int getMinute()>
+One road protect good!
+-$i1 < 23
+Good road: <org.secuso.privacyfriendlywifimanager.view.dialog.TimePickerDialog: void onCancel(android.content.DialogInterface)>[]--><org.secuso.privacyfriendlywifimanager.view.dialog.TimePickerDialog: void onDialogClosed(int,java.lang.Object[])>[[-$i1 < 23]]--><android.widget.TimePicker: int getMinute()>
+One road protect good!
+-$i1 < 23
+Good road: <org.secuso.privacyfriendlywifimanager.view.viewholder.DialogWifiItemViewHolder: void onClick(android.view.View)>[]--><org.secuso.privacyfriendlywifimanager.view.adapter.DialogWifiListAdapter: void onListItemClicked(org.secuso.privacyfriendlywifimanager.logic.types.WifiLocationEntry)>[]--><org.secuso.privacyfriendlywifimanager.view.dialog.TimePickerDialog: void onDialogClosed(int,java.lang.Object[])>[[-$i1 < 23]]--><android.widget.TimePicker: int getMinute()>
+One road protect good!
+-$i1 < 23
+Good road: <org.secuso.privacyfriendlywifimanager.view.dialog.WifiPickerDialog: void onCancel(android.content.DialogInterface)>[]--><org.secuso.privacyfriendlywifimanager.view.dialog.WifiPickerDialog: void onDialogClosed(int,java.lang.Object[])>[]--><org.secuso.privacyfriendlywifimanager.view.dialog.TimePickerDialog: void onDialogClosed(int,java.lang.Object[])>[[-$i1 < 23]]--><android.widget.TimePicker: int getMinute()>
+One road protect good!
+containsStatic:false
+containsTry:false
+5call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.telephony.CellSignalStrengthLte: int getDbm()> is checking!!!
+The life time of api is [17,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 17
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.secuso.privacyfriendlywifimanager.service.ManagerService dummyMainMethod_org_secuso_privacyfriendlywifimanager_service_ManagerService(android.content.Intent)>[]--><org.secuso.privacyfriendlywifimanager.service.ManagerService: void onHandleIntent(android.content.Intent)>[]--><org.secuso.privacyfriendlywifimanager.service.ManagerService: boolean checkCells()>[]--><org.secuso.privacyfriendlywifimanager.logic.types.PrimitiveCellInfo: org.secuso.privacyfriendlywifimanager.logic.types.PrimitiveCellInfoTreeSet getAllCells(android.content.Context)>[[-$i0 < 17]]--><org.secuso.privacyfriendlywifimanager.logic.types.PrimitiveCellInfo: org.secuso.privacyfriendlywifimanager.logic.types.PrimitiveCellInfo getPrimitiveCellInfo(android.telephony.CellInfo)>[]--><org.secuso.privacyfriendlywifimanager.logic.types.PrimitiveCellInfo: org.secuso.privacyfriendlywifimanager.logic.types.PrimitiveCellInfo getPrimitiveCellInfo(android.telephony.CellInfoLte)>[]--><android.telephony.CellSignalStrengthLte: int getDbm()>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.widget.TextView: void setTextAppearance(int)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+1 Mainhead roads:
+$i0 >= 23
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.secuso.privacyfriendlywifimanager.view.DetailsActivity dummyMainMethod_org_secuso_privacyfriendlywifimanager_view_DetailsActivity(android.content.Intent)>[]--><org.secuso.privacyfriendlywifimanager.view.DetailsActivity: void onCreate(android.os.Bundle)>[[$i0 >= 23]]--><android.widget.TextView: void setTextAppearance(int)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.telephony.CellInfoWcdma: android.telephony.CellIdentityWcdma getCellIdentity()> is checking!!!
+The life time of api is [18,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 17
+!!!this api will crash on sdk 17 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.secuso.privacyfriendlywifimanager.service.ManagerService dummyMainMethod_org_secuso_privacyfriendlywifimanager_service_ManagerService(android.content.Intent)>[]--><org.secuso.privacyfriendlywifimanager.service.ManagerService: void onHandleIntent(android.content.Intent)>[]--><org.secuso.privacyfriendlywifimanager.service.ManagerService: boolean checkCells()>[]--><org.secuso.privacyfriendlywifimanager.logic.types.PrimitiveCellInfo: org.secuso.privacyfriendlywifimanager.logic.types.PrimitiveCellInfoTreeSet getAllCells(android.content.Context)>[[-$i0 < 17]]--><org.secuso.privacyfriendlywifimanager.logic.types.PrimitiveCellInfo: org.secuso.privacyfriendlywifimanager.logic.types.PrimitiveCellInfo getPrimitiveCellInfo(android.telephony.CellInfo)>[]--><org.secuso.privacyfriendlywifimanager.logic.types.PrimitiveCellInfo: org.secuso.privacyfriendlywifimanager.logic.types.PrimitiveCellInfo getPrimitiveCellInfo(android.telephony.CellInfoWcdma)>[]--><android.telephony.CellInfoWcdma: android.telephony.CellIdentityWcdma getCellIdentity()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.telephony.CellInfoWcdma: android.telephony.CellIdentityWcdma getCellIdentity()>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:2
+crashApisInMain:2
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 5 Potential Issue API: SDKCheck of <android.telephony.CellSignalStrengthCdma: int getDbm()> is checking!!!
+The life time of api is [17,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 17
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.secuso.privacyfriendlywifimanager.service.ManagerService dummyMainMethod_org_secuso_privacyfriendlywifimanager_service_ManagerService(android.content.Intent)>[]--><org.secuso.privacyfriendlywifimanager.service.ManagerService: void onHandleIntent(android.content.Intent)>[]--><org.secuso.privacyfriendlywifimanager.service.ManagerService: boolean checkCells()>[]--><org.secuso.privacyfriendlywifimanager.logic.types.PrimitiveCellInfo: org.secuso.privacyfriendlywifimanager.logic.types.PrimitiveCellInfoTreeSet getAllCells(android.content.Context)>[[-$i0 < 17]]--><org.secuso.privacyfriendlywifimanager.logic.types.PrimitiveCellInfo: org.secuso.privacyfriendlywifimanager.logic.types.PrimitiveCellInfo getPrimitiveCellInfo(android.telephony.CellInfo)>[]--><org.secuso.privacyfriendlywifimanager.logic.types.PrimitiveCellInfo: org.secuso.privacyfriendlywifimanager.logic.types.PrimitiveCellInfo getPrimitiveCellInfo(android.telephony.CellInfoCdma)>[]--><android.telephony.CellSignalStrengthCdma: int getDbm()>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 6 Potential Issue API: SDKCheck of <android.telephony.CellIdentityCdma: int getBasestationId()> is checking!!!
+The life time of api is [17,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 17
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.secuso.privacyfriendlywifimanager.service.ManagerService dummyMainMethod_org_secuso_privacyfriendlywifimanager_service_ManagerService(android.content.Intent)>[]--><org.secuso.privacyfriendlywifimanager.service.ManagerService: void onHandleIntent(android.content.Intent)>[]--><org.secuso.privacyfriendlywifimanager.service.ManagerService: boolean checkCells()>[]--><org.secuso.privacyfriendlywifimanager.logic.types.PrimitiveCellInfo: org.secuso.privacyfriendlywifimanager.logic.types.PrimitiveCellInfoTreeSet getAllCells(android.content.Context)>[[-$i0 < 17]]--><org.secuso.privacyfriendlywifimanager.logic.types.PrimitiveCellInfo: org.secuso.privacyfriendlywifimanager.logic.types.PrimitiveCellInfo getPrimitiveCellInfo(android.telephony.CellInfo)>[]--><org.secuso.privacyfriendlywifimanager.logic.types.PrimitiveCellInfo: org.secuso.privacyfriendlywifimanager.logic.types.PrimitiveCellInfo getPrimitiveCellInfo(android.telephony.CellInfoCdma)>[]--><android.telephony.CellIdentityCdma: int getBasestationId()>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 7 Potential Issue API: SDKCheck of <android.widget.TimePicker: int getHour()> is checking!!!
+The life time of api is [23,31]
+4call roads:
+0 Mainhead roads:
+4 Packageshead roads:
+-$i1 < 23
+Good road: <org.secuso.privacyfriendlywifimanager.view.dialog.TimePickerDialog$2$1: void onClick(android.view.View)>[]--><org.secuso.privacyfriendlywifimanager.view.dialog.TimePickerDialog: void onDialogClosed(int,java.lang.Object[])>[[-$i1 < 23]]--><android.widget.TimePicker: int getHour()>
+One road protect good!
+-$i1 < 23
+Good road: <org.secuso.privacyfriendlywifimanager.view.dialog.TimePickerDialog: void onCancel(android.content.DialogInterface)>[]--><org.secuso.privacyfriendlywifimanager.view.dialog.TimePickerDialog: void onDialogClosed(int,java.lang.Object[])>[[-$i1 < 23]]--><android.widget.TimePicker: int getHour()>
+One road protect good!
+-$i1 < 23
+Good road: <org.secuso.privacyfriendlywifimanager.view.viewholder.DialogWifiItemViewHolder: void onClick(android.view.View)>[]--><org.secuso.privacyfriendlywifimanager.view.adapter.DialogWifiListAdapter: void onListItemClicked(org.secuso.privacyfriendlywifimanager.logic.types.WifiLocationEntry)>[]--><org.secuso.privacyfriendlywifimanager.view.dialog.TimePickerDialog: void onDialogClosed(int,java.lang.Object[])>[[-$i1 < 23]]--><android.widget.TimePicker: int getHour()>
+One road protect good!
+-$i1 < 23
+Good road: <org.secuso.privacyfriendlywifimanager.view.dialog.WifiPickerDialog: void onCancel(android.content.DialogInterface)>[]--><org.secuso.privacyfriendlywifimanager.view.dialog.WifiPickerDialog: void onDialogClosed(int,java.lang.Object[])>[]--><org.secuso.privacyfriendlywifimanager.view.dialog.TimePickerDialog: void onDialogClosed(int,java.lang.Object[])>[[-$i1 < 23]]--><android.widget.TimePicker: int getHour()>
+One road protect good!
+containsStatic:false
+containsTry:false
+5call by main package
+-----------------------------------------
+#################################################
+N 8 Potential Issue API: SDKCheck of <android.telephony.CellInfoGsm: android.telephony.CellSignalStrengthGsm getCellSignalStrength()> is checking!!!
+The life time of api is [17,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 17
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.secuso.privacyfriendlywifimanager.service.ManagerService dummyMainMethod_org_secuso_privacyfriendlywifimanager_service_ManagerService(android.content.Intent)>[]--><org.secuso.privacyfriendlywifimanager.service.ManagerService: void onHandleIntent(android.content.Intent)>[]--><org.secuso.privacyfriendlywifimanager.service.ManagerService: boolean checkCells()>[]--><org.secuso.privacyfriendlywifimanager.logic.types.PrimitiveCellInfo: org.secuso.privacyfriendlywifimanager.logic.types.PrimitiveCellInfoTreeSet getAllCells(android.content.Context)>[[-$i0 < 17]]--><org.secuso.privacyfriendlywifimanager.logic.types.PrimitiveCellInfo: org.secuso.privacyfriendlywifimanager.logic.types.PrimitiveCellInfo getPrimitiveCellInfo(android.telephony.CellInfo)>[]--><org.secuso.privacyfriendlywifimanager.logic.types.PrimitiveCellInfo: org.secuso.privacyfriendlywifimanager.logic.types.PrimitiveCellInfo getPrimitiveCellInfo(android.telephony.CellInfoGsm)>[]--><android.telephony.CellInfoGsm: android.telephony.CellSignalStrengthGsm getCellSignalStrength()>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 9 Potential Issue API: SDKCheck of <android.telephony.CellIdentityLte: int getCi()> is checking!!!
+The life time of api is [17,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 17
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.secuso.privacyfriendlywifimanager.service.ManagerService dummyMainMethod_org_secuso_privacyfriendlywifimanager_service_ManagerService(android.content.Intent)>[]--><org.secuso.privacyfriendlywifimanager.service.ManagerService: void onHandleIntent(android.content.Intent)>[]--><org.secuso.privacyfriendlywifimanager.service.ManagerService: boolean checkCells()>[]--><org.secuso.privacyfriendlywifimanager.logic.types.PrimitiveCellInfo: org.secuso.privacyfriendlywifimanager.logic.types.PrimitiveCellInfoTreeSet getAllCells(android.content.Context)>[[-$i0 < 17]]--><org.secuso.privacyfriendlywifimanager.logic.types.PrimitiveCellInfo: org.secuso.privacyfriendlywifimanager.logic.types.PrimitiveCellInfo getPrimitiveCellInfo(android.telephony.CellInfo)>[]--><org.secuso.privacyfriendlywifimanager.logic.types.PrimitiveCellInfo: org.secuso.privacyfriendlywifimanager.logic.types.PrimitiveCellInfo getPrimitiveCellInfo(android.telephony.CellInfoLte)>[]--><android.telephony.CellIdentityLte: int getCi()>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 10 Potential Issue API: SDKCheck of <android.telephony.CellIdentityWcdma: int getCid()> is checking!!!
+The life time of api is [18,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 17
+!!!this api will crash on sdk 17 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.secuso.privacyfriendlywifimanager.service.ManagerService dummyMainMethod_org_secuso_privacyfriendlywifimanager_service_ManagerService(android.content.Intent)>[]--><org.secuso.privacyfriendlywifimanager.service.ManagerService: void onHandleIntent(android.content.Intent)>[]--><org.secuso.privacyfriendlywifimanager.service.ManagerService: boolean checkCells()>[]--><org.secuso.privacyfriendlywifimanager.logic.types.PrimitiveCellInfo: org.secuso.privacyfriendlywifimanager.logic.types.PrimitiveCellInfoTreeSet getAllCells(android.content.Context)>[[-$i0 < 17]]--><org.secuso.privacyfriendlywifimanager.logic.types.PrimitiveCellInfo: org.secuso.privacyfriendlywifimanager.logic.types.PrimitiveCellInfo getPrimitiveCellInfo(android.telephony.CellInfo)>[]--><org.secuso.privacyfriendlywifimanager.logic.types.PrimitiveCellInfo: org.secuso.privacyfriendlywifimanager.logic.types.PrimitiveCellInfo getPrimitiveCellInfo(android.telephony.CellInfoWcdma)>[]--><android.telephony.CellIdentityWcdma: int getCid()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.telephony.CellIdentityWcdma: int getCid()>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:3
+crashApisInMain:3
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 11 Potential Issue API: SDKCheck of <android.telephony.CellSignalStrengthGsm: int getDbm()> is checking!!!
+The life time of api is [17,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 17
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.secuso.privacyfriendlywifimanager.service.ManagerService dummyMainMethod_org_secuso_privacyfriendlywifimanager_service_ManagerService(android.content.Intent)>[]--><org.secuso.privacyfriendlywifimanager.service.ManagerService: void onHandleIntent(android.content.Intent)>[]--><org.secuso.privacyfriendlywifimanager.service.ManagerService: boolean checkCells()>[]--><org.secuso.privacyfriendlywifimanager.logic.types.PrimitiveCellInfo: org.secuso.privacyfriendlywifimanager.logic.types.PrimitiveCellInfoTreeSet getAllCells(android.content.Context)>[[-$i0 < 17]]--><org.secuso.privacyfriendlywifimanager.logic.types.PrimitiveCellInfo: org.secuso.privacyfriendlywifimanager.logic.types.PrimitiveCellInfo getPrimitiveCellInfo(android.telephony.CellInfo)>[]--><org.secuso.privacyfriendlywifimanager.logic.types.PrimitiveCellInfo: org.secuso.privacyfriendlywifimanager.logic.types.PrimitiveCellInfo getPrimitiveCellInfo(android.telephony.CellInfoGsm)>[]--><android.telephony.CellSignalStrengthGsm: int getDbm()>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 12 Potential Issue API: SDKCheck of <android.telephony.CellInfoGsm: android.telephony.CellIdentityGsm getCellIdentity()> is checking!!!
+The life time of api is [17,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 17
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.secuso.privacyfriendlywifimanager.service.ManagerService dummyMainMethod_org_secuso_privacyfriendlywifimanager_service_ManagerService(android.content.Intent)>[]--><org.secuso.privacyfriendlywifimanager.service.ManagerService: void onHandleIntent(android.content.Intent)>[]--><org.secuso.privacyfriendlywifimanager.service.ManagerService: boolean checkCells()>[]--><org.secuso.privacyfriendlywifimanager.logic.types.PrimitiveCellInfo: org.secuso.privacyfriendlywifimanager.logic.types.PrimitiveCellInfoTreeSet getAllCells(android.content.Context)>[[-$i0 < 17]]--><org.secuso.privacyfriendlywifimanager.logic.types.PrimitiveCellInfo: org.secuso.privacyfriendlywifimanager.logic.types.PrimitiveCellInfo getPrimitiveCellInfo(android.telephony.CellInfo)>[]--><org.secuso.privacyfriendlywifimanager.logic.types.PrimitiveCellInfo: org.secuso.privacyfriendlywifimanager.logic.types.PrimitiveCellInfo getPrimitiveCellInfo(android.telephony.CellInfoGsm)>[]--><android.telephony.CellInfoGsm: android.telephony.CellIdentityGsm getCellIdentity()>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 13 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager: boolean isWifiEnabled()> is checking!!!
+The life time of api is [1,30]
+2call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.secuso.privacyfriendlywifimanager.service.ManagerService dummyMainMethod_org_secuso_privacyfriendlywifimanager_service_ManagerService(android.content.Intent)>[]--><org.secuso.privacyfriendlywifimanager.service.ManagerService: void onHandleIntent(android.content.Intent)>[]--><org.secuso.privacyfriendlywifimanager.logic.util.WifiHandler: boolean isWifiConnected(android.content.Context)>[]--><android.net.wifi.WifiManager: boolean isWifiEnabled()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.wifi.WifiManager: boolean isWifiEnabled()>has compatibility isssues！
+-----------------------------------------
+1 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <org.secuso.privacyfriendlywifimanager.view.fragment.WifiListFragment$1: void onClick(android.view.View)>[]--><android.net.wifi.WifiManager: boolean isWifiEnabled()>
+#1.the call statck between class <org.secuso.privacyfriendlywifimanager.view.fragment.WifiListFragment$1: void onClick(android.view.View)> to <android.net.wifi.WifiManager: boolean isWifiEnabled()>has compatibility isssues！
+-----------------------------------------
+crashApis:4
+crashApisInMain:4
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 14 Potential Issue API: SDKCheck of <android.net.NetworkInfo: boolean isConnected()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.secuso.privacyfriendlywifimanager.service.receivers.WifiChangedReceiver dummyMainMethod_org_secuso_privacyfriendlywifimanager_service_receivers_WifiChangedReceiver(android.content.Intent)>[]--><org.secuso.privacyfriendlywifimanager.service.receivers.WifiChangedReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><android.net.NetworkInfo: boolean isConnected()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.NetworkInfo: boolean isConnected()>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:5
+crashApisInMain:5
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 15 Potential Issue API: SDKCheck of <android.telephony.CellInfoLte: android.telephony.CellIdentityLte getCellIdentity()> is checking!!!
+The life time of api is [17,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 17
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.secuso.privacyfriendlywifimanager.service.ManagerService dummyMainMethod_org_secuso_privacyfriendlywifimanager_service_ManagerService(android.content.Intent)>[]--><org.secuso.privacyfriendlywifimanager.service.ManagerService: void onHandleIntent(android.content.Intent)>[]--><org.secuso.privacyfriendlywifimanager.service.ManagerService: boolean checkCells()>[]--><org.secuso.privacyfriendlywifimanager.logic.types.PrimitiveCellInfo: org.secuso.privacyfriendlywifimanager.logic.types.PrimitiveCellInfoTreeSet getAllCells(android.content.Context)>[[-$i0 < 17]]--><org.secuso.privacyfriendlywifimanager.logic.types.PrimitiveCellInfo: org.secuso.privacyfriendlywifimanager.logic.types.PrimitiveCellInfo getPrimitiveCellInfo(android.telephony.CellInfo)>[]--><org.secuso.privacyfriendlywifimanager.logic.types.PrimitiveCellInfo: org.secuso.privacyfriendlywifimanager.logic.types.PrimitiveCellInfo getPrimitiveCellInfo(android.telephony.CellInfoLte)>[]--><android.telephony.CellInfoLte: android.telephony.CellIdentityLte getCellIdentity()>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 16 Potential Issue API: SDKCheck of <android.net.wifi.WifiInfo: int getNetworkId()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.secuso.privacyfriendlywifimanager.service.ManagerService dummyMainMethod_org_secuso_privacyfriendlywifimanager_service_ManagerService(android.content.Intent)>[]--><org.secuso.privacyfriendlywifimanager.service.ManagerService: void onHandleIntent(android.content.Intent)>[]--><org.secuso.privacyfriendlywifimanager.logic.util.WifiHandler: boolean isWifiConnected(android.content.Context)>[]--><android.net.wifi.WifiInfo: int getNetworkId()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.wifi.WifiInfo: int getNetworkId()>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:6
+crashApisInMain:6
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 17 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager: boolean setWifiEnabled(boolean)> is checking!!!
+The life time of api is [1,30]
+2call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.secuso.privacyfriendlywifimanager.service.ManagerService dummyMainMethod_org_secuso_privacyfriendlywifimanager_service_ManagerService(android.content.Intent)>[]--><org.secuso.privacyfriendlywifimanager.service.ManagerService: void onHandleIntent(android.content.Intent)>[]--><org.secuso.privacyfriendlywifimanager.logic.effects.WifiToggleEffect: void apply(boolean)>[]--><android.net.wifi.WifiManager: boolean setWifiEnabled(boolean)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.wifi.WifiManager: boolean setWifiEnabled(boolean)>has compatibility isssues！
+-----------------------------------------
+1 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <org.secuso.privacyfriendlywifimanager.view.fragment.WifiListFragment$1$1: void onClick(android.view.View)>[]--><android.net.wifi.WifiManager: boolean setWifiEnabled(boolean)>
+#1.the call statck between class <org.secuso.privacyfriendlywifimanager.view.fragment.WifiListFragment$1$1: void onClick(android.view.View)> to <android.net.wifi.WifiManager: boolean setWifiEnabled(boolean)>has compatibility isssues！
+-----------------------------------------
+crashApis:7
+crashApisInMain:7
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 18 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager: android.net.wifi.WifiInfo getConnectionInfo()> is checking!!!
+The life time of api is [1,30]
+2call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.secuso.privacyfriendlywifimanager.service.ManagerService dummyMainMethod_org_secuso_privacyfriendlywifimanager_service_ManagerService(android.content.Intent)>[]--><org.secuso.privacyfriendlywifimanager.service.ManagerService: void onHandleIntent(android.content.Intent)>[]--><org.secuso.privacyfriendlywifimanager.service.ManagerService: boolean updateCells()>[]--><android.net.wifi.WifiManager: android.net.wifi.WifiInfo getConnectionInfo()>
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.secuso.privacyfriendlywifimanager.service.receivers.WifiChangedReceiver dummyMainMethod_org_secuso_privacyfriendlywifimanager_service_receivers_WifiChangedReceiver(android.content.Intent)>[]--><org.secuso.privacyfriendlywifimanager.service.receivers.WifiChangedReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><android.net.wifi.WifiManager: android.net.wifi.WifiInfo getConnectionInfo()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.wifi.WifiManager: android.net.wifi.WifiInfo getConnectionInfo()>has compatibility isssues！
+-----------------------------------------
+1 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <org.secuso.privacyfriendlywifimanager.logic.types.WifiLocationEntry: int compareTo(java.lang.Object)>[]--><org.secuso.privacyfriendlywifimanager.logic.types.WifiLocationEntry: int compareTo(org.secuso.privacyfriendlywifimanager.logic.types.PreconditionEntry)>[]--><org.secuso.privacyfriendlywifimanager.logic.util.WifiHandler: java.lang.String getCurrentSSID(android.content.Context)>[]--><android.net.wifi.WifiManager: android.net.wifi.WifiInfo getConnectionInfo()>
+#1.the call statck between class <org.secuso.privacyfriendlywifimanager.logic.types.WifiLocationEntry: int compareTo(java.lang.Object)> to <android.net.wifi.WifiManager: android.net.wifi.WifiInfo getConnectionInfo()>has compatibility isssues！
+-----------------------------------------
+crashApis:8
+crashApisInMain:8
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 19 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager: int getWifiState()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.secuso.privacyfriendlywifimanager.service.ManagerService dummyMainMethod_org_secuso_privacyfriendlywifimanager_service_ManagerService(android.content.Intent)>[]--><org.secuso.privacyfriendlywifimanager.service.ManagerService: void onHandleIntent(android.content.Intent)>[]--><org.secuso.privacyfriendlywifimanager.logic.util.WifiHandler: boolean isWifiEnabled(android.content.Context)>[]--><android.net.wifi.WifiManager: int getWifiState()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.wifi.WifiManager: int getWifiState()>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:9
+crashApisInMain:9
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 20 Potential Issue API: SDKCheck of <android.view.Window: void setStatusBarColor(int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+$i0 < 21
+-$i0 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.secuso.privacyfriendlywifimanager.view.tutorial.TutorialActivity dummyMainMethod_org_secuso_privacyfriendlywifimanager_view_tutorial_TutorialActivity(android.content.Intent)>[]--><org.secuso.privacyfriendlywifimanager.view.tutorial.TutorialActivity: void onCreate(android.os.Bundle)>[[$i0 < 21]]--><org.secuso.privacyfriendlywifimanager.view.tutorial.TutorialActivity: void changeStatusBarColor()>[[-$i0 < 21]]--><android.view.Window: void setStatusBarColor(int)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 21 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager: boolean startScan()> is checking!!!
+The life time of api is [1,30]
+2call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.secuso.privacyfriendlywifimanager.service.WifiUpdaterService dummyMainMethod_org_secuso_privacyfriendlywifimanager_service_WifiUpdaterService(android.content.Intent)>[]--><org.secuso.privacyfriendlywifimanager.service.WifiUpdaterService: int onStartCommand(android.content.Intent,int,int)>[]--><android.net.wifi.WifiManager: boolean startScan()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.wifi.WifiManager: boolean startScan()>has compatibility isssues！
+-----------------------------------------
+1 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <org.secuso.privacyfriendlywifimanager.view.fragment.WifiListFragment$1: void onClick(android.view.View)>[]--><org.secuso.privacyfriendlywifimanager.view.dialog.WifiPickerDialog: void show(android.app.Activity,android.view.ViewGroup)>[]--><android.net.wifi.WifiManager: boolean startScan()>
+#1.the call statck between class <org.secuso.privacyfriendlywifimanager.view.fragment.WifiListFragment$1: void onClick(android.view.View)> to <android.net.wifi.WifiManager: boolean startScan()>has compatibility isssues！
+-----------------------------------------
+crashApis:10
+crashApisInMain:10
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 22 Potential Issue API: SDKCheck of <android.telephony.CellInfoLte: android.telephony.CellSignalStrengthLte getCellSignalStrength()> is checking!!!
+The life time of api is [17,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 17
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.secuso.privacyfriendlywifimanager.service.ManagerService dummyMainMethod_org_secuso_privacyfriendlywifimanager_service_ManagerService(android.content.Intent)>[]--><org.secuso.privacyfriendlywifimanager.service.ManagerService: void onHandleIntent(android.content.Intent)>[]--><org.secuso.privacyfriendlywifimanager.service.ManagerService: boolean checkCells()>[]--><org.secuso.privacyfriendlywifimanager.logic.types.PrimitiveCellInfo: org.secuso.privacyfriendlywifimanager.logic.types.PrimitiveCellInfoTreeSet getAllCells(android.content.Context)>[[-$i0 < 17]]--><org.secuso.privacyfriendlywifimanager.logic.types.PrimitiveCellInfo: org.secuso.privacyfriendlywifimanager.logic.types.PrimitiveCellInfo getPrimitiveCellInfo(android.telephony.CellInfo)>[]--><org.secuso.privacyfriendlywifimanager.logic.types.PrimitiveCellInfo: org.secuso.privacyfriendlywifimanager.logic.types.PrimitiveCellInfo getPrimitiveCellInfo(android.telephony.CellInfoLte)>[]--><android.telephony.CellInfoLte: android.telephony.CellSignalStrengthLte getCellSignalStrength()>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 23 Potential Issue API: SDKCheck of <android.telephony.TelephonyManager: java.util.List getAllCellInfo()> is checking!!!
+The life time of api is [17,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 17
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.secuso.privacyfriendlywifimanager.service.ManagerService dummyMainMethod_org_secuso_privacyfriendlywifimanager_service_ManagerService(android.content.Intent)>[]--><org.secuso.privacyfriendlywifimanager.service.ManagerService: void onHandleIntent(android.content.Intent)>[]--><org.secuso.privacyfriendlywifimanager.service.ManagerService: boolean checkCells()>[]--><org.secuso.privacyfriendlywifimanager.logic.types.PrimitiveCellInfo: org.secuso.privacyfriendlywifimanager.logic.types.PrimitiveCellInfoTreeSet getAllCells(android.content.Context)>[[-$i0 < 17]]--><android.telephony.TelephonyManager: java.util.List getAllCellInfo()>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 24 Potential Issue API: SDKCheck of <android.telephony.CellInfoCdma: android.telephony.CellSignalStrengthCdma getCellSignalStrength()> is checking!!!
+The life time of api is [17,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 17
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.secuso.privacyfriendlywifimanager.service.ManagerService dummyMainMethod_org_secuso_privacyfriendlywifimanager_service_ManagerService(android.content.Intent)>[]--><org.secuso.privacyfriendlywifimanager.service.ManagerService: void onHandleIntent(android.content.Intent)>[]--><org.secuso.privacyfriendlywifimanager.service.ManagerService: boolean checkCells()>[]--><org.secuso.privacyfriendlywifimanager.logic.types.PrimitiveCellInfo: org.secuso.privacyfriendlywifimanager.logic.types.PrimitiveCellInfoTreeSet getAllCells(android.content.Context)>[[-$i0 < 17]]--><org.secuso.privacyfriendlywifimanager.logic.types.PrimitiveCellInfo: org.secuso.privacyfriendlywifimanager.logic.types.PrimitiveCellInfo getPrimitiveCellInfo(android.telephony.CellInfo)>[]--><org.secuso.privacyfriendlywifimanager.logic.types.PrimitiveCellInfo: org.secuso.privacyfriendlywifimanager.logic.types.PrimitiveCellInfo getPrimitiveCellInfo(android.telephony.CellInfoCdma)>[]--><android.telephony.CellInfoCdma: android.telephony.CellSignalStrengthCdma getCellSignalStrength()>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 25 Potential Issue API: SDKCheck of <android.telephony.CellSignalStrengthWcdma: int getDbm()> is checking!!!
+The life time of api is [17,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 17
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.secuso.privacyfriendlywifimanager.service.ManagerService dummyMainMethod_org_secuso_privacyfriendlywifimanager_service_ManagerService(android.content.Intent)>[]--><org.secuso.privacyfriendlywifimanager.service.ManagerService: void onHandleIntent(android.content.Intent)>[]--><org.secuso.privacyfriendlywifimanager.service.ManagerService: boolean checkCells()>[]--><org.secuso.privacyfriendlywifimanager.logic.types.PrimitiveCellInfo: org.secuso.privacyfriendlywifimanager.logic.types.PrimitiveCellInfoTreeSet getAllCells(android.content.Context)>[[-$i0 < 17]]--><org.secuso.privacyfriendlywifimanager.logic.types.PrimitiveCellInfo: org.secuso.privacyfriendlywifimanager.logic.types.PrimitiveCellInfo getPrimitiveCellInfo(android.telephony.CellInfo)>[]--><org.secuso.privacyfriendlywifimanager.logic.types.PrimitiveCellInfo: org.secuso.privacyfriendlywifimanager.logic.types.PrimitiveCellInfo getPrimitiveCellInfo(android.telephony.CellInfoWcdma)>[]--><android.telephony.CellSignalStrengthWcdma: int getDbm()>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 26 Potential Issue API: SDKCheck of <android.app.AlarmManager: void setAndAllowWhileIdle(int,long,android.app.PendingIntent)> is checking!!!
+The life time of api is [23,31]
+7call roads:
+1 Mainhead roads:
+-$i1 < 23
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.secuso.privacyfriendlywifimanager.view.WifiWidget$WidgetClickListener dummyMainMethod_org_secuso_privacyfriendlywifimanager_view_WifiWidget$WidgetClickListener(android.content.Intent)>[]--><org.secuso.privacyfriendlywifimanager.view.WifiWidget$WidgetClickListener: void onReceive(android.content.Context,android.content.Intent)>[]--><org.secuso.privacyfriendlywifimanager.service.Controller: void registerReceivers(android.content.Context)>[]--><org.secuso.privacyfriendlywifimanager.service.receivers.AlarmReceiver: void fireAndSchedule(android.content.Context)>[]--><org.secuso.privacyfriendlywifimanager.service.receivers.AlarmReceiver$1: void run()>[]--><org.secuso.privacyfriendlywifimanager.service.receivers.AlarmReceiver: void schedule(android.content.Context)>[]--><org.secuso.privacyfriendlywifimanager.service.receivers.AlarmReceiver: void schedule(android.content.Context,boolean)>[]--><org.secuso.privacyfriendlywifimanager.service.receivers.AlarmReceiver: void setupAlarm(android.content.Context,int)>[[-$i1 < 23]]--><android.app.AlarmManager: void setAndAllowWhileIdle(int,long,android.app.PendingIntent)>
+One road protect good!
+-$i1 < 23
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.secuso.privacyfriendlywifimanager.service.WifiNotification$NotificationButtonListener dummyMainMethod_org_secuso_privacyfriendlywifimanager_service_WifiNotification$NotificationButtonListener(android.content.Intent)>[]--><org.secuso.privacyfriendlywifimanager.service.WifiNotification$NotificationButtonListener: void onReceive(android.content.Context,android.content.Intent)>[]--><org.secuso.privacyfriendlywifimanager.service.receivers.AlarmReceiver: void fireAndSchedule(android.content.Context)>[]--><org.secuso.privacyfriendlywifimanager.service.receivers.AlarmReceiver$1: void run()>[]--><org.secuso.privacyfriendlywifimanager.service.receivers.AlarmReceiver: void schedule(android.content.Context)>[]--><org.secuso.privacyfriendlywifimanager.service.receivers.AlarmReceiver: void schedule(android.content.Context,boolean)>[]--><org.secuso.privacyfriendlywifimanager.service.receivers.AlarmReceiver: void setupAlarm(android.content.Context,int)>[[-$i1 < 23]]--><android.app.AlarmManager: void setAndAllowWhileIdle(int,long,android.app.PendingIntent)>
+One road protect good!
+-$i1 < 23
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.secuso.privacyfriendlywifimanager.view.MainActivity dummyMainMethod_org_secuso_privacyfriendlywifimanager_view_MainActivity(android.content.Intent)>[]--><org.secuso.privacyfriendlywifimanager.view.MainActivity$2: void onClick(android.view.View)>[]--><org.secuso.privacyfriendlywifimanager.service.Controller: void registerReceivers(android.content.Context)>[]--><org.secuso.privacyfriendlywifimanager.service.receivers.AlarmReceiver: void fireAndSchedule(android.content.Context)>[]--><org.secuso.privacyfriendlywifimanager.service.receivers.AlarmReceiver$1: void run()>[]--><org.secuso.privacyfriendlywifimanager.service.receivers.AlarmReceiver: void schedule(android.content.Context)>[]--><org.secuso.privacyfriendlywifimanager.service.receivers.AlarmReceiver: void schedule(android.content.Context,boolean)>[]--><org.secuso.privacyfriendlywifimanager.service.receivers.AlarmReceiver: void setupAlarm(android.content.Context,int)>[[-$i1 < 23]]--><android.app.AlarmManager: void setAndAllowWhileIdle(int,long,android.app.PendingIntent)>
+One road protect good!
+-$i1 < 23
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.secuso.privacyfriendlywifimanager.service.receivers.AlarmReceiver dummyMainMethod_org_secuso_privacyfriendlywifimanager_service_receivers_AlarmReceiver(android.content.Intent)>[]--><org.secuso.privacyfriendlywifimanager.service.receivers.AlarmReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><org.secuso.privacyfriendlywifimanager.service.receivers.AlarmReceiver: void fireAndSchedule(android.content.Context)>[]--><org.secuso.privacyfriendlywifimanager.service.receivers.AlarmReceiver$1: void run()>[]--><org.secuso.privacyfriendlywifimanager.service.receivers.AlarmReceiver: void schedule(android.content.Context)>[]--><org.secuso.privacyfriendlywifimanager.service.receivers.AlarmReceiver: void schedule(android.content.Context,boolean)>[]--><org.secuso.privacyfriendlywifimanager.service.receivers.AlarmReceiver: void setupAlarm(android.content.Context,int)>[[-$i1 < 23]]--><android.app.AlarmManager: void setAndAllowWhileIdle(int,long,android.app.PendingIntent)>
+One road protect good!
+-$i1 < 23
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.secuso.privacyfriendlywifimanager.service.receivers.BootCompletedReceiver dummyMainMethod_org_secuso_privacyfriendlywifimanager_service_receivers_BootCompletedReceiver(android.content.Intent)>[]--><org.secuso.privacyfriendlywifimanager.service.receivers.BootCompletedReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><org.secuso.privacyfriendlywifimanager.service.Controller: void registerReceivers(android.content.Context)>[]--><org.secuso.privacyfriendlywifimanager.service.receivers.AlarmReceiver: void fireAndSchedule(android.content.Context)>[]--><org.secuso.privacyfriendlywifimanager.service.receivers.AlarmReceiver$1: void run()>[]--><org.secuso.privacyfriendlywifimanager.service.receivers.AlarmReceiver: void schedule(android.content.Context)>[]--><org.secuso.privacyfriendlywifimanager.service.receivers.AlarmReceiver: void schedule(android.content.Context,boolean)>[]--><org.secuso.privacyfriendlywifimanager.service.receivers.AlarmReceiver: void setupAlarm(android.content.Context,int)>[[-$i1 < 23]]--><android.app.AlarmManager: void setAndAllowWhileIdle(int,long,android.app.PendingIntent)>
+One road protect good!
+-$i1 < 23
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.secuso.privacyfriendlywifimanager.service.ManagerService dummyMainMethod_org_secuso_privacyfriendlywifimanager_service_ManagerService(android.content.Intent)>[]--><org.secuso.privacyfriendlywifimanager.service.ManagerService: void onHandleIntent(android.content.Intent)>[]--><org.secuso.privacyfriendlywifimanager.service.receivers.AlarmReceiver: void schedule(android.content.Context,boolean)>[]--><org.secuso.privacyfriendlywifimanager.service.receivers.AlarmReceiver: void setupAlarm(android.content.Context,int)>[[-$i1 < 23]]--><android.app.AlarmManager: void setAndAllowWhileIdle(int,long,android.app.PendingIntent)>
+One road protect good!
+-$i1 < 23
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.secuso.privacyfriendlywifimanager.service.receivers.WifiChangedReceiver dummyMainMethod_org_secuso_privacyfriendlywifimanager_service_receivers_WifiChangedReceiver(android.content.Intent)>[]--><org.secuso.privacyfriendlywifimanager.service.receivers.WifiChangedReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><org.secuso.privacyfriendlywifimanager.service.receivers.AlarmReceiver: void fireAndSchedule(android.content.Context,boolean)>[]--><android.os.Handler: boolean post(java.lang.Runnable)>[]--><org.secuso.privacyfriendlywifimanager.service.receivers.AlarmReceiver$2: void run()>[]--><org.secuso.privacyfriendlywifimanager.service.receivers.AlarmReceiver: void schedule(android.content.Context,boolean)>[]--><org.secuso.privacyfriendlywifimanager.service.receivers.AlarmReceiver: void setupAlarm(android.content.Context,int)>[[-$i1 < 23]]--><android.app.AlarmManager: void setAndAllowWhileIdle(int,long,android.app.PendingIntent)>
+One road protect good!
+6 Packageshead roads:
+$i1 < 23
+-$i1 < 23
+Good road: <org.secuso.privacyfriendlywifimanager.view.dialog.TimePickerDialog$2$1: void onClick(android.view.View)>[]--><org.secuso.privacyfriendlywifimanager.view.dialog.TimePickerDialog: void onDialogClosed(int,java.lang.Object[])>[[$i1 < 23]]--><org.secuso.privacyfriendlywifimanager.view.fragment.ScheduleFragment: void onDialogClosed(int,java.lang.Object[])>[]--><org.secuso.privacyfriendlywifimanager.service.receivers.AlarmReceiver: void fireAndSchedule(android.content.Context)>[]--><org.secuso.privacyfriendlywifimanager.service.receivers.AlarmReceiver$1: void run()>[]--><org.secuso.privacyfriendlywifimanager.service.receivers.AlarmReceiver: void schedule(android.content.Context)>[]--><org.secuso.privacyfriendlywifimanager.service.receivers.AlarmReceiver: void schedule(android.content.Context,boolean)>[]--><org.secuso.privacyfriendlywifimanager.service.receivers.AlarmReceiver: void setupAlarm(android.content.Context,int)>[[-$i1 < 23]]--><android.app.AlarmManager: void setAndAllowWhileIdle(int,long,android.app.PendingIntent)>
+One road protect good!
+$i1 < 23
+-$i1 < 23
+Good road: <org.secuso.privacyfriendlywifimanager.view.dialog.TimePickerDialog: void onCancel(android.content.DialogInterface)>[]--><org.secuso.privacyfriendlywifimanager.view.dialog.TimePickerDialog: void onDialogClosed(int,java.lang.Object[])>[[$i1 < 23]]--><org.secuso.privacyfriendlywifimanager.view.fragment.ScheduleFragment: void onDialogClosed(int,java.lang.Object[])>[]--><org.secuso.privacyfriendlywifimanager.service.receivers.AlarmReceiver: void fireAndSchedule(android.content.Context)>[]--><org.secuso.privacyfriendlywifimanager.service.receivers.AlarmReceiver$1: void run()>[]--><org.secuso.privacyfriendlywifimanager.service.receivers.AlarmReceiver: void schedule(android.content.Context)>[]--><org.secuso.privacyfriendlywifimanager.service.receivers.AlarmReceiver: void schedule(android.content.Context,boolean)>[]--><org.secuso.privacyfriendlywifimanager.service.receivers.AlarmReceiver: void setupAlarm(android.content.Context,int)>[[-$i1 < 23]]--><android.app.AlarmManager: void setAndAllowWhileIdle(int,long,android.app.PendingIntent)>
+One road protect good!
+-$i1 < 23
+Good road: <org.secuso.privacyfriendlywifimanager.logic.util.ListHandler: void update(java.util.Observable,java.lang.Object)>[]--><org.secuso.privacyfriendlywifimanager.service.receivers.AlarmReceiver: void fireAndSchedule(android.content.Context)>[]--><org.secuso.privacyfriendlywifimanager.service.receivers.AlarmReceiver$1: void run()>[]--><org.secuso.privacyfriendlywifimanager.service.receivers.AlarmReceiver: void schedule(android.content.Context)>[]--><org.secuso.privacyfriendlywifimanager.service.receivers.AlarmReceiver: void schedule(android.content.Context,boolean)>[]--><org.secuso.privacyfriendlywifimanager.service.receivers.AlarmReceiver: void setupAlarm(android.content.Context,int)>[[-$i1 < 23]]--><android.app.AlarmManager: void setAndAllowWhileIdle(int,long,android.app.PendingIntent)>
+One road protect good!
+-$i1 < 23
+Good road: <org.secuso.privacyfriendlywifimanager.view.MainActivity: boolean onNavigationItemSelected(android.view.MenuItem)>[]--><android.os.Handler: boolean post(java.lang.Runnable)>[]--><org.secuso.privacyfriendlywifimanager.service.receivers.AlarmReceiver$2: void run()>[]--><org.secuso.privacyfriendlywifimanager.service.receivers.AlarmReceiver: void schedule(android.content.Context,boolean)>[]--><org.secuso.privacyfriendlywifimanager.service.receivers.AlarmReceiver: void setupAlarm(android.content.Context,int)>[[-$i1 < 23]]--><android.app.AlarmManager: void setAndAllowWhileIdle(int,long,android.app.PendingIntent)>
+One road protect good!
+$i1 < 23
+-$i1 < 23
+Good road: <org.secuso.privacyfriendlywifimanager.view.viewholder.DialogWifiItemViewHolder: void onClick(android.view.View)>[]--><org.secuso.privacyfriendlywifimanager.view.adapter.DialogWifiListAdapter: void onListItemClicked(org.secuso.privacyfriendlywifimanager.logic.types.WifiLocationEntry)>[]--><org.secuso.privacyfriendlywifimanager.view.dialog.TimePickerDialog: void onDialogClosed(int,java.lang.Object[])>[[$i1 < 23]]--><org.secuso.privacyfriendlywifimanager.view.fragment.ScheduleFragment: void onDialogClosed(int,java.lang.Object[])>[]--><org.secuso.privacyfriendlywifimanager.service.receivers.AlarmReceiver: void fireAndSchedule(android.content.Context)>[]--><org.secuso.privacyfriendlywifimanager.service.receivers.AlarmReceiver$1: void run()>[]--><org.secuso.privacyfriendlywifimanager.service.receivers.AlarmReceiver: void schedule(android.content.Context)>[]--><org.secuso.privacyfriendlywifimanager.service.receivers.AlarmReceiver: void schedule(android.content.Context,boolean)>[]--><org.secuso.privacyfriendlywifimanager.service.receivers.AlarmReceiver: void setupAlarm(android.content.Context,int)>[[-$i1 < 23]]--><android.app.AlarmManager: void setAndAllowWhileIdle(int,long,android.app.PendingIntent)>
+One road protect good!
+-$i1 < 23
+Good road: <org.secuso.privacyfriendlywifimanager.view.dialog.WifiPickerDialog: void onCancel(android.content.DialogInterface)>[]--><org.secuso.privacyfriendlywifimanager.view.dialog.WifiPickerDialog: void onDialogClosed(int,java.lang.Object[])>[]--><org.secuso.privacyfriendlywifimanager.view.fragment.WifiListFragment: void onDialogClosed(int,java.lang.Object[])>[]--><org.secuso.privacyfriendlywifimanager.service.receivers.AlarmReceiver: void fireAndSchedule(android.content.Context)>[]--><org.secuso.privacyfriendlywifimanager.service.receivers.AlarmReceiver$1: void run()>[]--><org.secuso.privacyfriendlywifimanager.service.receivers.AlarmReceiver: void schedule(android.content.Context)>[]--><org.secuso.privacyfriendlywifimanager.service.receivers.AlarmReceiver: void schedule(android.content.Context,boolean)>[]--><org.secuso.privacyfriendlywifimanager.service.receivers.AlarmReceiver: void setupAlarm(android.content.Context,int)>[[-$i1 < 23]]--><android.app.AlarmManager: void setAndAllowWhileIdle(int,long,android.app.PendingIntent)>
+One road protect good!
+containsStatic:false
+containsTry:false
+7call by main package
+-----------------------------------------
+#################################################
+N 27 Potential Issue API: SDKCheck of <android.telephony.CellIdentityGsm: int getCid()> is checking!!!
+The life time of api is [17,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 17
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.secuso.privacyfriendlywifimanager.service.ManagerService dummyMainMethod_org_secuso_privacyfriendlywifimanager_service_ManagerService(android.content.Intent)>[]--><org.secuso.privacyfriendlywifimanager.service.ManagerService: void onHandleIntent(android.content.Intent)>[]--><org.secuso.privacyfriendlywifimanager.service.ManagerService: boolean checkCells()>[]--><org.secuso.privacyfriendlywifimanager.logic.types.PrimitiveCellInfo: org.secuso.privacyfriendlywifimanager.logic.types.PrimitiveCellInfoTreeSet getAllCells(android.content.Context)>[[-$i0 < 17]]--><org.secuso.privacyfriendlywifimanager.logic.types.PrimitiveCellInfo: org.secuso.privacyfriendlywifimanager.logic.types.PrimitiveCellInfo getPrimitiveCellInfo(android.telephony.CellInfo)>[]--><org.secuso.privacyfriendlywifimanager.logic.types.PrimitiveCellInfo: org.secuso.privacyfriendlywifimanager.logic.types.PrimitiveCellInfo getPrimitiveCellInfo(android.telephony.CellInfoGsm)>[]--><android.telephony.CellIdentityGsm: int getCid()>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 28 Potential Issue API: SDKCheck of <android.net.wifi.WifiInfo: java.lang.String getBSSID()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.secuso.privacyfriendlywifimanager.service.ManagerService dummyMainMethod_org_secuso_privacyfriendlywifimanager_service_ManagerService(android.content.Intent)>[]--><org.secuso.privacyfriendlywifimanager.service.ManagerService: void onHandleIntent(android.content.Intent)>[]--><org.secuso.privacyfriendlywifimanager.service.ManagerService: boolean updateCells()>[]--><android.net.wifi.WifiInfo: java.lang.String getBSSID()>
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.secuso.privacyfriendlywifimanager.service.receivers.WifiChangedReceiver dummyMainMethod_org_secuso_privacyfriendlywifimanager_service_receivers_WifiChangedReceiver(android.content.Intent)>[]--><org.secuso.privacyfriendlywifimanager.service.receivers.WifiChangedReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><org.secuso.privacyfriendlywifimanager.service.WifiNotification: void show(android.content.Context,android.net.wifi.WifiInfo)>[]--><android.net.wifi.WifiInfo: java.lang.String getBSSID()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.wifi.WifiInfo: java.lang.String getBSSID()>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:11
+crashApisInMain:11
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 29 Potential Issue API: SDKCheck of <android.widget.TimePicker: void setHour(int)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i2 < 23
+Good road: <org.secuso.privacyfriendlywifimanager.view.fragment.ScheduleFragment$1: void onClick(android.view.View)>[]--><org.secuso.privacyfriendlywifimanager.view.dialog.TimePickerDialog: void show(android.app.Activity,android.view.ViewGroup)>[]--><org.secuso.privacyfriendlywifimanager.view.dialog.TimePickerDialog: void initPicker(android.widget.TimePicker,int,int)>[[-$i2 < 23]]--><android.widget.TimePicker: void setHour(int)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 30 Potential Issue API: SDKCheck of <android.telephony.CellInfoCdma: android.telephony.CellIdentityCdma getCellIdentity()> is checking!!!
+The life time of api is [17,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 17
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.secuso.privacyfriendlywifimanager.service.ManagerService dummyMainMethod_org_secuso_privacyfriendlywifimanager_service_ManagerService(android.content.Intent)>[]--><org.secuso.privacyfriendlywifimanager.service.ManagerService: void onHandleIntent(android.content.Intent)>[]--><org.secuso.privacyfriendlywifimanager.service.ManagerService: boolean checkCells()>[]--><org.secuso.privacyfriendlywifimanager.logic.types.PrimitiveCellInfo: org.secuso.privacyfriendlywifimanager.logic.types.PrimitiveCellInfoTreeSet getAllCells(android.content.Context)>[[-$i0 < 17]]--><org.secuso.privacyfriendlywifimanager.logic.types.PrimitiveCellInfo: org.secuso.privacyfriendlywifimanager.logic.types.PrimitiveCellInfo getPrimitiveCellInfo(android.telephony.CellInfo)>[]--><org.secuso.privacyfriendlywifimanager.logic.types.PrimitiveCellInfo: org.secuso.privacyfriendlywifimanager.logic.types.PrimitiveCellInfo getPrimitiveCellInfo(android.telephony.CellInfoCdma)>[]--><android.telephony.CellInfoCdma: android.telephony.CellIdentityCdma getCellIdentity()>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 31 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager: java.util.List getScanResults()> is checking!!!
+The life time of api is [1,30]
+2call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.secuso.privacyfriendlywifimanager.service.WifiUpdaterService$1 dummyMainMethod_org_secuso_privacyfriendlywifimanager_service_WifiUpdaterService$1(android.content.Intent)>[]--><org.secuso.privacyfriendlywifimanager.service.WifiUpdaterService$1: void onReceive(android.content.Context,android.content.Intent)>[]--><org.secuso.privacyfriendlywifimanager.logic.util.WifiHandler: boolean scanAndUpdateWifis(android.content.Context,java.util.List)>[]--><android.net.wifi.WifiManager: java.util.List getScanResults()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.wifi.WifiManager: java.util.List getScanResults()>has compatibility isssues！
+-----------------------------------------
+1 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <org.secuso.privacyfriendlywifimanager.view.dialog.WifiPickerDialog$1: void onReceive(android.content.Context,android.content.Intent)>[]--><org.secuso.privacyfriendlywifimanager.logic.util.WifiHandler: boolean scanAndUpdateWifis(android.content.Context,java.util.List)>[]--><android.net.wifi.WifiManager: java.util.List getScanResults()>
+#1.the call statck between class <org.secuso.privacyfriendlywifimanager.view.dialog.WifiPickerDialog$1: void onReceive(android.content.Context,android.content.Intent)> to <android.net.wifi.WifiManager: java.util.List getScanResults()>has compatibility isssues！
+-----------------------------------------
+crashApis:12
+crashApisInMain:12
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 32 Potential Issue API: SDKCheck of <android.net.wifi.WifiInfo: java.lang.String getSSID()> is checking!!!
+The life time of api is [1,30]
+2call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.secuso.privacyfriendlywifimanager.service.ManagerService dummyMainMethod_org_secuso_privacyfriendlywifimanager_service_ManagerService(android.content.Intent)>[]--><org.secuso.privacyfriendlywifimanager.service.ManagerService: void onHandleIntent(android.content.Intent)>[]--><org.secuso.privacyfriendlywifimanager.service.ManagerService: boolean updateCells()>[]--><android.net.wifi.WifiInfo: java.lang.String getSSID()>
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.secuso.privacyfriendlywifimanager.service.receivers.WifiChangedReceiver dummyMainMethod_org_secuso_privacyfriendlywifimanager_service_receivers_WifiChangedReceiver(android.content.Intent)>[]--><org.secuso.privacyfriendlywifimanager.service.receivers.WifiChangedReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><org.secuso.privacyfriendlywifimanager.service.WifiNotification: void show(android.content.Context,android.net.wifi.WifiInfo)>[]--><android.net.wifi.WifiInfo: java.lang.String getSSID()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.wifi.WifiInfo: java.lang.String getSSID()>has compatibility isssues！
+-----------------------------------------
+1 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <org.secuso.privacyfriendlywifimanager.logic.types.WifiLocationEntry: int compareTo(java.lang.Object)>[]--><org.secuso.privacyfriendlywifimanager.logic.types.WifiLocationEntry: int compareTo(org.secuso.privacyfriendlywifimanager.logic.types.PreconditionEntry)>[]--><org.secuso.privacyfriendlywifimanager.logic.util.WifiHandler: java.lang.String getCurrentSSID(android.content.Context)>[]--><android.net.wifi.WifiInfo: java.lang.String getSSID()>
+#1.the call statck between class <org.secuso.privacyfriendlywifimanager.logic.types.WifiLocationEntry: int compareTo(java.lang.Object)> to <android.net.wifi.WifiInfo: java.lang.String getSSID()>has compatibility isssues！
+-----------------------------------------
+crashApis:13
+crashApisInMain:13
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 33 Potential Issue API: SDKCheck of <android.widget.TimePicker: void setMinute(int)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i2 < 23
+Good road: <org.secuso.privacyfriendlywifimanager.view.fragment.ScheduleFragment$1: void onClick(android.view.View)>[]--><org.secuso.privacyfriendlywifimanager.view.dialog.TimePickerDialog: void show(android.app.Activity,android.view.ViewGroup)>[]--><org.secuso.privacyfriendlywifimanager.view.dialog.TimePickerDialog: void initPicker(android.widget.TimePicker,int,int)>[[-$i2 < 23]]--><android.widget.TimePicker: void setMinute(int)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+crashApis numbers:13
+crashApis numbers in main road:13
+On Android Version 16 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 17 this app may have error api use(at least): 3 and error api roads: 3
+On Android Version 18 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 19 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 20 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 21 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 22 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 23 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 24 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 25 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 31 this app may have error api use(at least): 10 and error api roads: 19

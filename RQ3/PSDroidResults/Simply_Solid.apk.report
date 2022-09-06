@@ -1,0 +1,115 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/Simply_Solid.apk
+Entry Points[com.enrico.earthquake.AboutActivity, com.enrico.earthquake.MainActivity]
+FllowDroidcallgraph size:280
+Soot started on Mon Jul 11 12:16:29 CST 2022
+Soot finished on Mon Jul 11 12:16:32 CST 2022
+Soot has run for 0 min. 3 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 16
+Declared Target Sdk version is: 25
+Declared Max Sdk version is: -1
+Collected 113 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.widget.TextView: void setFontFeatureSettings(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+-$i1 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.enrico.earthquake.AboutActivity dummyMainMethod_com_enrico_earthquake_AboutActivity(android.content.Intent)>[]--><com.enrico.earthquake.AboutActivity: void onCreate(android.os.Bundle)>[]--><com.enrico.earthquake.AboutActivity: void b(android.widget.TextView[])>[[-$i1 < 21]]--><android.widget.TextView: void setFontFeatureSettings(java.lang.String)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.view.View: void setElevation(float)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+-$i1 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.enrico.earthquake.AboutActivity dummyMainMethod_com_enrico_earthquake_AboutActivity(android.content.Intent)>[]--><com.enrico.earthquake.AboutActivity: void onCreate(android.os.Bundle)>[]--><com.enrico.earthquake.AboutActivity: void b(android.widget.TextView[])>[[-$i1 < 21]]--><android.view.View: void setElevation(float)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.text.Html: android.text.Spanned fromHtml(java.lang.String,int)> is checking!!!
+The life time of api is [24,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 24
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.enrico.earthquake.AboutActivity dummyMainMethod_com_enrico_earthquake_AboutActivity(android.content.Intent)>[]--><com.enrico.earthquake.AboutActivity: void onCreate(android.os.Bundle)>[]--><com.enrico.earthquake.AboutActivity: android.text.Spanned a(java.lang.String,android.widget.TextView[])>[[-$i0 < 24]]--><android.text.Html: android.text.Spanned fromHtml(java.lang.String,int)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.widget.TextView: void setElegantTextHeight(boolean)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+-$i1 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.enrico.earthquake.AboutActivity dummyMainMethod_com_enrico_earthquake_AboutActivity(android.content.Intent)>[]--><com.enrico.earthquake.AboutActivity: void onCreate(android.os.Bundle)>[]--><com.enrico.earthquake.AboutActivity: void b(android.widget.TextView[])>[[-$i1 < 21]]--><android.widget.TextView: void setElegantTextHeight(boolean)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.view.Window: void setStatusBarColor(int)> is checking!!!
+The life time of api is [21,31]
+2call roads:
+1 Mainhead roads:
+-$i0 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.enrico.earthquake.MainActivity dummyMainMethod_com_enrico_earthquake_MainActivity(android.content.Intent)>[]--><com.enrico.earthquake.MainActivity: void onResume()>[]--><com.enrico.earthquake.MainActivity: void b()>[]--><com.enrico.earthquake.MainActivity: void a(int)>[]--><com.enrico.earthquake.MainActivity$5: void run()>[[-$i0 < 21]]--><android.view.Window: void setStatusBarColor(int)>
+One road protect good!
+1 Packageshead roads:
+-$i0 < 21
+Good road: <com.enrico.earthquake.MainActivity: void a(android.support.v4.a.q,int)>[]--><com.enrico.earthquake.MainActivity: void a(int)>[]--><com.enrico.earthquake.MainActivity$5: void run()>[[-$i0 < 21]]--><android.view.Window: void setStatusBarColor(int)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 5 Potential Issue API: SDKCheck of <android.content.ContextWrapper: int checkSelfPermission(java.lang.String)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+1 Mainhead roads:
+###Multi invoking in one method, need manual check!!!--><com.enrico.earthquake.MainActivity$2: void onClick(android.view.View)>[[-$i0 < 23], [try]]
+###Multi invoking in one method, need manual check!!!--><com.enrico.earthquake.MainActivity$2: void onClick(android.view.View)>[[-$i0 < 23]][[try]]
+-$i0 < 23
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.enrico.earthquake.MainActivity dummyMainMethod_com_enrico_earthquake_MainActivity(android.content.Intent)>[]--><com.enrico.earthquake.MainActivity$2: void onClick(android.view.View)>[[-$i0 < 23], [try]]--><android.content.ContextWrapper: int checkSelfPermission(java.lang.String)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:true
+1call by main package
+-----------------------------------------
+crashApis numbers:0
+crashApis numbers in main road:0
+On Android Version 16 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 17 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 18 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 19 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 20 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 21 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 22 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 23 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 24 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 25 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 31 this app may have error api use(at least): 0 and error api roads: 0

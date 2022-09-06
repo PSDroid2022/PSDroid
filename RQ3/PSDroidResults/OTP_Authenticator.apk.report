@@ -1,0 +1,140 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/OTP_Authenticator.apk
+Entry Points[net.bierbaumer.otp_authenticator.CaptureActivityAnyOrientation, com.journeyapps.barcodescanner.CaptureActivity, net.bierbaumer.otp_authenticator.MyApplication, net.bierbaumer.otp_authenticator.MainActivity]
+FllowDroidcallgraph size:1018
+Soot started on Mon Jul 11 10:18:25 CST 2022
+Soot finished on Mon Jul 11 10:18:38 CST 2022
+Soot has run for 0 min. 13 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 19
+Declared Target Sdk version is: 23
+Declared Max Sdk version is: -1
+Collected 330 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.media.MediaPlayer: void setVolume(float,float)> is checking!!!
+The life time of api is [1,17]
+2call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.journeyapps.barcodescanner.CaptureActivity dummyMainMethod_com_journeyapps_barcodescanner_CaptureActivity(android.content.Intent)>[]--><com.journeyapps.barcodescanner.CaptureActivity: void onCreate(android.os.Bundle)>[]--><com.journeyapps.barcodescanner.CaptureManager: void initializeFromIntent(android.content.Intent,android.os.Bundle)>[]--><com.google.zxing.client.android.BeepManager: void updatePrefs()>[[try]]--><com.google.zxing.client.android.BeepManager: android.media.MediaPlayer buildMediaPlayer(android.content.Context)>[[try]]--><android.media.MediaPlayer: void setVolume(float,float)>
+One road protect good!
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: net.bierbaumer.otp_authenticator.CaptureActivityAnyOrientation dummyMainMethod_net_bierbaumer_otp__authenticator_CaptureActivityAnyOrientation(android.content.Intent)>[]--><com.journeyapps.barcodescanner.CaptureActivity: void onCreate(android.os.Bundle)>[]--><com.journeyapps.barcodescanner.CaptureManager: void initializeFromIntent(android.content.Intent,android.os.Bundle)>[]--><com.google.zxing.client.android.BeepManager: void updatePrefs()>[[try]]--><com.google.zxing.client.android.BeepManager: android.media.MediaPlayer buildMediaPlayer(android.content.Context)>[[try]]--><android.media.MediaPlayer: void setVolume(float,float)>
+One road protect good!
+1 Packageshead roads:
+try
+Good road with try: <com.google.zxing.client.android.BeepManager: boolean onError(android.media.MediaPlayer,int,int)>[[try]]--><com.google.zxing.client.android.BeepManager: void updatePrefs()>[[try]]--><com.google.zxing.client.android.BeepManager: android.media.MediaPlayer buildMediaPlayer(android.content.Context)>[[try]]--><android.media.MediaPlayer: void setVolume(float,float)>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putInt(java.lang.String,int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.journeyapps.barcodescanner.CaptureActivity dummyMainMethod_com_journeyapps_barcodescanner_CaptureActivity(android.content.Intent)>[]--><com.journeyapps.barcodescanner.CaptureActivity: void onSaveInstanceState(android.os.Bundle)>[]--><com.journeyapps.barcodescanner.CaptureManager: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: net.bierbaumer.otp_authenticator.CaptureActivityAnyOrientation dummyMainMethod_net_bierbaumer_otp__authenticator_CaptureActivityAnyOrientation(android.content.Intent)>[]--><com.journeyapps.barcodescanner.CaptureActivity: void onSaveInstanceState(android.os.Bundle)>[]--><com.journeyapps.barcodescanner.CaptureManager: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:1
+crashApisInMain:1
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.os.BaseBundle: boolean containsKey(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.journeyapps.barcodescanner.CaptureActivity dummyMainMethod_com_journeyapps_barcodescanner_CaptureActivity(android.content.Intent)>[]--><com.journeyapps.barcodescanner.CaptureActivity: void onCreate(android.os.Bundle)>[]--><com.journeyapps.barcodescanner.CaptureManager: void initializeFromIntent(android.content.Intent,android.os.Bundle)>[]--><com.journeyapps.barcodescanner.CompoundBarcodeView: void initializeFromIntent(android.content.Intent)>[]--><com.google.zxing.client.android.DecodeHintManager: java.util.Map parseDecodeHints(android.content.Intent)>[]--><android.os.BaseBundle: boolean containsKey(java.lang.String)>
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: net.bierbaumer.otp_authenticator.CaptureActivityAnyOrientation dummyMainMethod_net_bierbaumer_otp__authenticator_CaptureActivityAnyOrientation(android.content.Intent)>[]--><com.journeyapps.barcodescanner.CaptureActivity: void onCreate(android.os.Bundle)>[]--><com.journeyapps.barcodescanner.CaptureManager: void initializeFromIntent(android.content.Intent,android.os.Bundle)>[]--><com.journeyapps.barcodescanner.CompoundBarcodeView: void initializeFromIntent(android.content.Intent)>[]--><com.google.zxing.client.android.DecodeHintManager: java.util.Map parseDecodeHints(android.content.Intent)>[]--><android.os.BaseBundle: boolean containsKey(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: boolean containsKey(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:2
+crashApisInMain:2
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.os.BaseBundle: int getInt(java.lang.String,int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.journeyapps.barcodescanner.CaptureActivity dummyMainMethod_com_journeyapps_barcodescanner_CaptureActivity(android.content.Intent)>[]--><com.journeyapps.barcodescanner.CaptureActivity: void onCreate(android.os.Bundle)>[]--><com.journeyapps.barcodescanner.CaptureManager: void initializeFromIntent(android.content.Intent,android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String,int)>
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: net.bierbaumer.otp_authenticator.CaptureActivityAnyOrientation dummyMainMethod_net_bierbaumer_otp__authenticator_CaptureActivityAnyOrientation(android.content.Intent)>[]--><com.journeyapps.barcodescanner.CaptureActivity: void onCreate(android.os.Bundle)>[]--><com.journeyapps.barcodescanner.CaptureManager: void initializeFromIntent(android.content.Intent,android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String,int)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: int getInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:3
+crashApisInMain:3
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.os.BaseBundle: boolean isEmpty()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.journeyapps.barcodescanner.CaptureActivity dummyMainMethod_com_journeyapps_barcodescanner_CaptureActivity(android.content.Intent)>[]--><com.journeyapps.barcodescanner.CaptureActivity: void onCreate(android.os.Bundle)>[]--><com.journeyapps.barcodescanner.CaptureManager: void initializeFromIntent(android.content.Intent,android.os.Bundle)>[]--><com.journeyapps.barcodescanner.CompoundBarcodeView: void initializeFromIntent(android.content.Intent)>[]--><com.google.zxing.client.android.DecodeHintManager: java.util.Map parseDecodeHints(android.content.Intent)>[]--><android.os.BaseBundle: boolean isEmpty()>
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: net.bierbaumer.otp_authenticator.CaptureActivityAnyOrientation dummyMainMethod_net_bierbaumer_otp__authenticator_CaptureActivityAnyOrientation(android.content.Intent)>[]--><com.journeyapps.barcodescanner.CaptureActivity: void onCreate(android.os.Bundle)>[]--><com.journeyapps.barcodescanner.CaptureManager: void initializeFromIntent(android.content.Intent,android.os.Bundle)>[]--><com.journeyapps.barcodescanner.CompoundBarcodeView: void initializeFromIntent(android.content.Intent)>[]--><com.google.zxing.client.android.DecodeHintManager: java.util.Map parseDecodeHints(android.content.Intent)>[]--><android.os.BaseBundle: boolean isEmpty()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: boolean isEmpty()>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:4
+crashApisInMain:4
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 5 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.lang.Object get(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.journeyapps.barcodescanner.CaptureActivity dummyMainMethod_com_journeyapps_barcodescanner_CaptureActivity(android.content.Intent)>[]--><com.journeyapps.barcodescanner.CaptureActivity: void onCreate(android.os.Bundle)>[]--><com.journeyapps.barcodescanner.CaptureManager: void initializeFromIntent(android.content.Intent,android.os.Bundle)>[]--><com.journeyapps.barcodescanner.CompoundBarcodeView: void initializeFromIntent(android.content.Intent)>[]--><com.google.zxing.client.android.DecodeHintManager: java.util.Map parseDecodeHints(android.content.Intent)>[]--><android.os.BaseBundle: java.lang.Object get(java.lang.String)>
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: net.bierbaumer.otp_authenticator.CaptureActivityAnyOrientation dummyMainMethod_net_bierbaumer_otp__authenticator_CaptureActivityAnyOrientation(android.content.Intent)>[]--><com.journeyapps.barcodescanner.CaptureActivity: void onCreate(android.os.Bundle)>[]--><com.journeyapps.barcodescanner.CaptureManager: void initializeFromIntent(android.content.Intent,android.os.Bundle)>[]--><com.journeyapps.barcodescanner.CompoundBarcodeView: void initializeFromIntent(android.content.Intent)>[]--><com.google.zxing.client.android.DecodeHintManager: java.util.Map parseDecodeHints(android.content.Intent)>[]--><android.os.BaseBundle: java.lang.Object get(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: java.lang.Object get(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:5
+crashApisInMain:5
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+crashApis numbers:5
+crashApis numbers in main road:5
+On Android Version 16 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 17 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 18 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 19 this app may have error api use(at least): 5 and error api roads: 10
+On Android Version 20 this app may have error api use(at least): 5 and error api roads: 10
+On Android Version 21 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 22 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 23 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 24 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 25 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 31 this app may have error api use(at least): 0 and error api roads: 0

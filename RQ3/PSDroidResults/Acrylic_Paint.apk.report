@@ -1,0 +1,181 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/Acrylic_Paint.apk
+Entry Points[com.nabinbhandari.android.permissions.PermissionsActivity, anupam.acrylic.AboutActivity, anupam.acrylic.EasyPaint, anupam.acrylic.Splash]
+FllowDroidcallgraph size:526
+Soot started on Mon Jul 11 00:16:45 CST 2022
+Soot finished on Mon Jul 11 00:16:47 CST 2022
+Soot has run for 0 min. 2 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 14
+Declared Target Sdk version is: 28
+Declared Max Sdk version is: -1
+Collected 228 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.renderscript.ScriptIntrinsicBlur: android.renderscript.ScriptIntrinsicBlur create(android.renderscript.RenderScript,android.renderscript.Element)> is checking!!!
+The life time of api is [17,31]
+1call roads:
+1 Mainhead roads:
+###Multi invoking in one method, need manual check!!!--><anupam.acrylic.EasyPaint: boolean onOptionsItemSelected(android.view.MenuItem)>[[try], [-$i0 < 17]]
+###Multi invoking in one method, need manual check!!!--><anupam.acrylic.EasyPaint: boolean onOptionsItemSelected(android.view.MenuItem)>[[try]][[-$i0 < 17]]
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: anupam.acrylic.EasyPaint dummyMainMethod_anupam_acrylic_EasyPaint(android.content.Intent)>[]--><anupam.acrylic.EasyPaint: boolean onOptionsItemSelected(android.view.MenuItem)>[[try], [-$i0 < 17]]--><android.renderscript.ScriptIntrinsicBlur: android.renderscript.ScriptIntrinsicBlur create(android.renderscript.RenderScript,android.renderscript.Element)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:true
+1call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.app.Activity: void requestPermissions(java.lang.String[],int)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.nabinbhandari.android.permissions.PermissionsActivity dummyMainMethod_com_nabinbhandari_android_permissions_PermissionsActivity(android.content.Intent)>[]--><com.nabinbhandari.android.permissions.PermissionsActivity$1: void onClick(android.content.DialogInterface,int)>[]--><android.app.Activity: void requestPermissions(java.lang.String[],int)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.app.Activity: void requestPermissions(java.lang.String[],int)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:1
+crashApisInMain:1
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.content.Context: int checkSelfPermission(java.lang.String)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 23
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: anupam.acrylic.EasyPaint dummyMainMethod_anupam_acrylic_EasyPaint(android.content.Intent)>[]--><anupam.acrylic.EasyPaint: boolean onOptionsItemSelected(android.view.MenuItem)>[]--><anupam.acrylic.EasyPaint: java.io.File takeScreenshot(boolean)>[]--><anupam.acrylic.EasyPaint: boolean isWritePermissionGranted()>[[-$i0 < 23]]--><android.content.Context: int checkSelfPermission(java.lang.String)>
+One road protect good!
+i0 >= 23
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.nabinbhandari.android.permissions.PermissionsActivity dummyMainMethod_com_nabinbhandari_android_permissions_PermissionsActivity(android.content.Intent)>[]--><com.nabinbhandari.android.permissions.PermissionsActivity: void onActivityResult(int,int,android.content.Intent)>[]--><com.nabinbhandari.android.permissions.Permissions: void check(android.content.Context,java.lang.String[],java.lang.String,com.nabinbhandari.android.permissions.Permissions$Options,com.nabinbhandari.android.permissions.PermissionHandler)>[[i0 >= 23]]--><android.content.Context: int checkSelfPermission(java.lang.String)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.renderscript.ScriptIntrinsicBlur: void setInput(android.renderscript.Allocation)> is checking!!!
+The life time of api is [17,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 17
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: anupam.acrylic.EasyPaint dummyMainMethod_anupam_acrylic_EasyPaint(android.content.Intent)>[]--><anupam.acrylic.EasyPaint: boolean onOptionsItemSelected(android.view.MenuItem)>[[-$i0 < 17]]--><android.renderscript.ScriptIntrinsicBlur: void setInput(android.renderscript.Allocation)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.view.Window: void setStatusBarColor(int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.nabinbhandari.android.permissions.PermissionsActivity dummyMainMethod_com_nabinbhandari_android_permissions_PermissionsActivity(android.content.Intent)>[]--><com.nabinbhandari.android.permissions.PermissionsActivity: void onCreate(android.os.Bundle)>[]--><android.view.Window: void setStatusBarColor(int)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.view.Window: void setStatusBarColor(int)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:2
+crashApisInMain:2
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 5 Potential Issue API: SDKCheck of <android.app.Activity: boolean shouldShowRequestPermissionRationale(java.lang.String)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.nabinbhandari.android.permissions.PermissionsActivity dummyMainMethod_com_nabinbhandari_android_permissions_PermissionsActivity(android.content.Intent)>[]--><com.nabinbhandari.android.permissions.PermissionsActivity: void onRequestPermissionsResult(int,java.lang.String[],int[])>[]--><android.app.Activity: boolean shouldShowRequestPermissionRationale(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.app.Activity: boolean shouldShowRequestPermissionRationale(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:3
+crashApisInMain:3
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 6 Potential Issue API: SDKCheck of <android.renderscript.ScriptIntrinsicBlur: void setRadius(float)> is checking!!!
+The life time of api is [17,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 17
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: anupam.acrylic.EasyPaint dummyMainMethod_anupam_acrylic_EasyPaint(android.content.Intent)>[]--><anupam.acrylic.EasyPaint: boolean onOptionsItemSelected(android.view.MenuItem)>[[-$i0 < 17]]--><android.renderscript.ScriptIntrinsicBlur: void setRadius(float)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 7 Potential Issue API: SDKCheck of <android.renderscript.ScriptIntrinsicBlur: void forEach(android.renderscript.Allocation)> is checking!!!
+The life time of api is [17,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 17
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: anupam.acrylic.EasyPaint dummyMainMethod_anupam_acrylic_EasyPaint(android.content.Intent)>[]--><anupam.acrylic.EasyPaint: boolean onOptionsItemSelected(android.view.MenuItem)>[[-$i0 < 17]]--><android.renderscript.ScriptIntrinsicBlur: void forEach(android.renderscript.Allocation)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 8 Potential Issue API: SDKCheck of <android.content.ContextWrapper: int checkSelfPermission(java.lang.String)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 23
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: anupam.acrylic.EasyPaint dummyMainMethod_anupam_acrylic_EasyPaint(android.content.Intent)>[]--><anupam.acrylic.EasyPaint: boolean onOptionsItemSelected(android.view.MenuItem)>[]--><anupam.acrylic.EasyPaint: java.io.File takeScreenshot(boolean)>[]--><anupam.acrylic.EasyPaint: boolean isWritePermissionGranted()>[[-$i0 < 23]]--><android.content.ContextWrapper: int checkSelfPermission(java.lang.String)>
+One road protect good!
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.nabinbhandari.android.permissions.PermissionsActivity dummyMainMethod_com_nabinbhandari_android_permissions_PermissionsActivity(android.content.Intent)>[]--><com.nabinbhandari.android.permissions.PermissionsActivity: void onActivityResult(int,int,android.content.Intent)>[]--><com.nabinbhandari.android.permissions.Permissions: void check(android.content.Context,java.lang.String[],java.lang.String,com.nabinbhandari.android.permissions.Permissions$Options,com.nabinbhandari.android.permissions.PermissionHandler)>[]--><android.content.ContextWrapper: int checkSelfPermission(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.content.ContextWrapper: int checkSelfPermission(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:4
+crashApisInMain:4
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 9 Potential Issue API: SDKCheck of <android.provider.MediaStore.Images.Media: android.graphics.Bitmap getBitmap(android.content.ContentResolver,android.net.Uri)> is checking!!!
+The life time of api is [1,29]
+1call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: anupam.acrylic.EasyPaint dummyMainMethod_anupam_acrylic_EasyPaint(android.content.Intent)>[]--><anupam.acrylic.EasyPaint: void onCreate(android.os.Bundle)>[]--><anupam.acrylic.EasyPaint: void loadFromIntents()>[]--><anupam.acrylic.EasyPaint: void setBackgroundUri(android.net.Uri)>[[try]]--><android.provider.MediaStore.Images.Media: android.graphics.Bitmap getBitmap(android.content.ContentResolver,android.net.Uri)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:true
+1call by main package
+-----------------------------------------
+crashApis numbers:4
+crashApis numbers in main road:4
+On Android Version 16 this app may have error api use(at least): 4 and error api roads: 4
+On Android Version 17 this app may have error api use(at least): 4 and error api roads: 4
+On Android Version 18 this app may have error api use(at least): 4 and error api roads: 4
+On Android Version 19 this app may have error api use(at least): 4 and error api roads: 4
+On Android Version 20 this app may have error api use(at least): 4 and error api roads: 4
+On Android Version 21 this app may have error api use(at least): 3 and error api roads: 3
+On Android Version 22 this app may have error api use(at least): 3 and error api roads: 3
+On Android Version 23 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 24 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 25 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 31 this app may have error api use(at least): 0 and error api roads: 0

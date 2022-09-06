@@ -1,0 +1,101 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/Remote_Droid.apk
+Entry Points[in.omerjerk.remotedroid.app.ServerService, in.omerjerk.remotedroid.app.MainActivity, in.omerjerk.remotedroid.app.ClientActivity, in.omerjerk.remotedroid.app.SettingsActivity]
+FllowDroidcallgraph size:1089
+Soot started on Mon Jul 11 11:39:54 CST 2022
+StaticCheck:<eu.chainfire.libsuperuser.Shell$SU: boolean isSELinuxEnforcing()>$yysi0 < 17
+Soot finished on Mon Jul 11 11:40:01 CST 2022
+Soot has run for 0 min. 7 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 18
+Declared Target Sdk version is: 19
+Declared Max Sdk version is: -1
+Collected 203 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <org.apache.http.conn.ssl.AbstractVerifier: java.lang.String[] getCNs(java.security.cert.X509Certificate)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+try
+Good road with try: <com.koushikdutta.async.AsyncSSLSocketWrapper: void handleHandshakeStatus(javax.net.ssl.SSLEngineResult$HandshakeStatus)>[[try]]--><org.apache.http.conn.ssl.AbstractVerifier: java.lang.String[] getCNs(java.security.cert.X509Certificate)>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <org.apache.http.conn.ssl.AbstractVerifier: void <init>()> is checking!!!
+The life time of api is [23,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 18 19 20 21 22 
+Error road: <com.koushikdutta.async.AsyncSSLSocketWrapper: void handleHandshakeStatus(javax.net.ssl.SSLEngineResult$HandshakeStatus)>[[]]--><org.apache.http.conn.ssl.AbstractVerifier: void <init>()>
+#1.the call statck between class <com.koushikdutta.async.AsyncSSLSocketWrapper: void handleHandshakeStatus(javax.net.ssl.SSLEngineResult$HandshakeStatus)> to <org.apache.http.conn.ssl.AbstractVerifier: void <init>()>has compatibility isssues！
+-----------------------------------------
+crashApis:1
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <org.apache.http.conn.ssl.AbstractVerifier: java.lang.String[] getDNSSubjectAlts(java.security.cert.X509Certificate)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+try
+Good road with try: <com.koushikdutta.async.AsyncSSLSocketWrapper: void handleHandshakeStatus(javax.net.ssl.SSLEngineResult$HandshakeStatus)>[[try]]--><org.apache.http.conn.ssl.AbstractVerifier: java.lang.String[] getDNSSubjectAlts(java.security.cert.X509Certificate)>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <org.apache.http.conn.ssl.StrictHostnameVerifier: void verify(java.lang.String,java.lang.String[],java.lang.String[])> is checking!!!
+The life time of api is [23,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+try
+Good road with try: <com.koushikdutta.async.AsyncSSLSocketWrapper: void handleHandshakeStatus(javax.net.ssl.SSLEngineResult$HandshakeStatus)>[[try]]--><org.apache.http.conn.ssl.StrictHostnameVerifier: void verify(java.lang.String,java.lang.String[],java.lang.String[])>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.hardware.display.DisplayManager: android.hardware.display.VirtualDisplay createVirtualDisplay(java.lang.String,int,int,int,android.view.Surface,int)> is checking!!!
+The life time of api is [19,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 18 
+Error road: <in.omerjerk.remotedroid.app.ServerService$1: void onConnected(com.koushikdutta.async.http.WebSocket,com.koushikdutta.async.http.libcore.RequestHeaders)>[]--><in.omerjerk.remotedroid.app.ServerService: void startDisplayManager()>[]--><android.hardware.display.DisplayManager: android.hardware.display.VirtualDisplay createVirtualDisplay(java.lang.String,int,int,int,android.view.Surface,int)>
+#1.the call statck between class <in.omerjerk.remotedroid.app.ServerService$1: void onConnected(com.koushikdutta.async.http.WebSocket,com.koushikdutta.async.http.libcore.RequestHeaders)> to <android.hardware.display.DisplayManager: android.hardware.display.VirtualDisplay createVirtualDisplay(java.lang.String,int,int,int,android.view.Surface,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:2
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+crashApis numbers:2
+crashApis numbers in main road:0
+On Android Version 16 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 17 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 18 this app may have error api use(at least): 2 and error api roads: 2
+On Android Version 19 this app may have error api use(at least): 1 and error api roads: 1
+On Android Version 20 this app may have error api use(at least): 1 and error api roads: 1
+On Android Version 21 this app may have error api use(at least): 1 and error api roads: 1
+On Android Version 22 this app may have error api use(at least): 1 and error api roads: 1
+On Android Version 23 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 24 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 25 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 31 this app may have error api use(at least): 0 and error api roads: 0

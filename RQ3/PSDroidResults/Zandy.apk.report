@@ -1,0 +1,304 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/Zandy.apk
+Entry Points[com.gimranov.zandy.app.LookupActivity, com.gimranov.zandy.app.TagActivity, com.gimranov.zandy.app.ItemActivity, com.gimranov.zandy.app.NoteActivity, com.gimranov.zandy.app.Application, com.gimranov.zandy.app.ItemDataActivity, com.gimranov.zandy.app.SettingsActivity, com.gimranov.zandy.app.CollectionMembershipActivity, com.gimranov.zandy.app.AttachmentActivity, com.gimranov.zandy.app.MainActivity, com.gimranov.zandy.app.CreatorActivity, com.gimranov.zandy.app.CollectionActivity, com.gimranov.zandy.app.RequestActivity]
+FllowDroidcallgraph size:5306
+Soot started on Mon Jul 11 15:48:11 CST 2022
+Soot finished on Mon Jul 11 15:48:21 CST 2022
+Soot has run for 0 min. 10 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 14
+Declared Target Sdk version is: 26
+Declared Max Sdk version is: -1
+Collected 419 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.text.Html: android.text.Spanned fromHtml(java.lang.String,int)> is checking!!!
+The life time of api is [24,31]
+2call roads:
+1 Mainhead roads:
+-$i0 < 24
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.gimranov.zandy.app.NoteActivity dummyMainMethod_com_gimranov_zandy_app_NoteActivity(android.content.Intent)>[]--><com.gimranov.zandy.app.NoteActivity: void onCreate(android.os.Bundle)>[[-$i0 < 24]]--><android.text.Html: android.text.Spanned fromHtml(java.lang.String,int)>
+One road protect good!
+1 Packageshead roads:
+-$i0 < 24
+Good road: <com.gimranov.zandy.app.RequestActivity$1: void bindView(android.view.View,android.content.Context,android.database.Cursor)>[[-$i0 < 24]]--><android.text.Html: android.text.Spanned fromHtml(java.lang.String,int)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.os.BaseBundle: int getInt(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+2call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.gimranov.zandy.app.CreatorActivity dummyMainMethod_com_gimranov_zandy_app_CreatorActivity(android.content.Intent)>[]--><com.gimranov.zandy.app.CreatorActivity: android.app.Dialog onCreateDialog(int)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.gimranov.zandy.app.TagActivity dummyMainMethod_com_gimranov_zandy_app_TagActivity(android.content.Intent)>[]--><com.gimranov.zandy.app.TagActivity: android.app.Dialog onCreateDialog(int)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.gimranov.zandy.app.TagActivity$1: android.view.View getView(int,android.view.View,android.view.ViewGroup)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#1.the call statck between class <com.gimranov.zandy.app.TagActivity$1: android.view.View getView(int,android.view.View,android.view.ViewGroup)> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:1
+crashApisInMain:1
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()> is checking!!!
+The life time of api is [1,30]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <io.fabric.sdk.android.services.common.ExecutorUtils$1$1: void onRun()>[]--><com.crashlytics.android.core.CrashlyticsController$SendReportRunnable: void run()>[]--><io.fabric.sdk.android.services.common.CommonUtils: boolean canTryConnection(android.content.Context)>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>
+#1.the call statck between class <io.fabric.sdk.android.services.common.ExecutorUtils$1$1: void onRun()> to <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>has compatibility isssues！
+-----------------------------------------
+try
+Good road with try: <com.crashlytics.android.core.CrashlyticsCore: boolean onPreExecute()>[]--><com.crashlytics.android.core.CrashlyticsCore: boolean onPreExecute(android.content.Context)>[[try]]--><io.fabric.sdk.android.services.common.CommonUtils: boolean canTryConnection(android.content.Context)>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>
+One road protect good!
+crashApis:2
+containsStatic:false
+containsTry:true
+3call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.os.BaseBundle: boolean containsKey(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.gimranov.zandy.app.data.Item$1: int compare(android.os.Bundle,android.os.Bundle)>[]--><android.os.BaseBundle: boolean containsKey(java.lang.String)>
+#1.the call statck between class <com.gimranov.zandy.app.data.Item$1: int compare(android.os.Bundle,android.os.Bundle)> to <android.os.BaseBundle: boolean containsKey(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:3
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)> is checking!!!
+The life time of api is [21,31]
+4call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.gimranov.zandy.app.AttachmentActivity dummyMainMethod_com_gimranov_zandy_app_AttachmentActivity(android.content.Intent)>[]--><com.gimranov.zandy.app.AttachmentActivity: boolean onOptionsItemSelected(android.view.MenuItem)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.gimranov.zandy.app.ItemActivity dummyMainMethod_com_gimranov_zandy_app_ItemActivity(android.content.Intent)>[]--><com.gimranov.zandy.app.ItemActivity: void onCreate(android.os.Bundle)>[]--><com.gimranov.zandy.app.ItemActivity: void prepareAdapter()>[]--><com.gimranov.zandy.app.ItemActivity: android.database.Cursor prepareCursor()>[]--><com.gimranov.zandy.app.Query: void set(java.lang.String,java.lang.String)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.gimranov.zandy.app.CreatorActivity dummyMainMethod_com_gimranov_zandy_app_CreatorActivity(android.content.Intent)>[]--><com.gimranov.zandy.app.CreatorActivity: boolean onOptionsItemSelected(android.view.MenuItem)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.gimranov.zandy.app.MainActivity dummyMainMethod_com_gimranov_zandy_app_MainActivity(android.content.Intent)>[]--><com.gimranov.zandy.app.MainActivity: void onNewIntent(android.content.Intent)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.gimranov.zandy.app.ItemDataActivity dummyMainMethod_com_gimranov_zandy_app_ItemDataActivity(android.content.Intent)>[]--><com.gimranov.zandy.app.ItemDataActivity: boolean onOptionsItemSelected(android.view.MenuItem)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.gimranov.zandy.app.LookupActivity dummyMainMethod_com_gimranov_zandy_app_LookupActivity(android.content.Intent)>[]--><com.gimranov.zandy.app.LookupActivity: void onClick(android.view.View)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.gimranov.zandy.app.CollectionMembershipActivity dummyMainMethod_com_gimranov_zandy_app_CollectionMembershipActivity(android.content.Intent)>[]--><com.gimranov.zandy.app.CollectionMembershipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.gimranov.zandy.app.TagActivity dummyMainMethod_com_gimranov_zandy_app_TagActivity(android.content.Intent)>[]--><com.gimranov.zandy.app.TagActivity$5: void onClick(android.content.DialogInterface,int)>[]--><com.gimranov.zandy.app.data.Item: java.util.ArrayList tagsToBundleArray()>[[try]]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+One road protect good!
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+3 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.gimranov.zandy.app.ItemActivity: void syncComplete(com.gimranov.zandy.app.SyncEvent)>[]--><com.gimranov.zandy.app.ItemActivity: void refreshView()>[]--><com.gimranov.zandy.app.ItemActivity: android.database.Cursor prepareCursor()>[]--><com.gimranov.zandy.app.Query: void set(java.lang.String,java.lang.String)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#1.the call statck between class <com.gimranov.zandy.app.ItemActivity: void syncComplete(com.gimranov.zandy.app.SyncEvent)> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.gimranov.zandy.app.ItemActivity: void access$100(com.gimranov.zandy.app.ItemActivity)>[]--><com.gimranov.zandy.app.ItemActivity: void refreshView()>[]--><com.gimranov.zandy.app.ItemActivity: android.database.Cursor prepareCursor()>[]--><com.gimranov.zandy.app.Query: void set(java.lang.String,java.lang.String)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#2.the call statck between class <com.gimranov.zandy.app.ItemActivity: void access$100(com.gimranov.zandy.app.ItemActivity)> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+try
+Good road with try: <io.fabric.sdk.android.services.common.ExecutorUtils$1$1: void onRun()>[]--><com.gimranov.zandy.app.ItemActivity$ProgressThread: void run()>[[try]]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+One road protect good!
+crashApis:4
+crashApisInMain:2
+containsStatic:false
+containsTry:true
+4call by main package
+-----------------------------------------
+#################################################
+N 5 Potential Issue API: SDKCheck of <android.content.res.Resources: android.graphics.drawable.Drawable getDrawable(int,android.content.res.Resources.Theme)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.gimranov.zandy.app.ItemDataActivity dummyMainMethod_com_gimranov_zandy_app_ItemDataActivity(android.content.Intent)>[]--><com.gimranov.zandy.app.ItemDataActivity: void onCreate(android.os.Bundle)>[[-$i0 < 21]]--><android.content.res.Resources: android.graphics.drawable.Drawable getDrawable(int,android.content.res.Resources.Theme)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 6 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.lang.String getString(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+16call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.gimranov.zandy.app.AttachmentActivity dummyMainMethod_com_gimranov_zandy_app_AttachmentActivity(android.content.Intent)>[]--><com.gimranov.zandy.app.AttachmentActivity$3: void onItemClick(android.widget.AdapterView,android.view.View,int,long)>[]--><com.gimranov.zandy.app.AttachmentActivity: void access$100(com.gimranov.zandy.app.AttachmentActivity,android.os.Bundle)>[]--><com.gimranov.zandy.app.AttachmentActivity: void loadFileAttachment(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.gimranov.zandy.app.ItemActivity dummyMainMethod_com_gimranov_zandy_app_ItemActivity(android.content.Intent)>[]--><com.gimranov.zandy.app.ItemActivity: void onCreate(android.os.Bundle)>[]--><com.gimranov.zandy.app.ItemActivity: void prepareAdapter()>[]--><com.gimranov.zandy.app.ItemActivity: android.database.Cursor prepareCursor()>[]--><com.gimranov.zandy.app.ItemActivity: android.database.Cursor getCursor(com.gimranov.zandy.app.Query)>[]--><com.gimranov.zandy.app.Query: android.database.Cursor query(com.gimranov.zandy.app.data.Database)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+###Multi invoking in one method, need manual check!!!--><com.gimranov.zandy.app.MainActivity: void onCreate(android.os.Bundle)>[[try], [$i0 < 24]]
+###Multi invoking in one method, need manual check!!!--><com.gimranov.zandy.app.MainActivity: void onCreate(android.os.Bundle)>[[try]][[$i0 < 24]]
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.gimranov.zandy.app.MainActivity dummyMainMethod_com_gimranov_zandy_app_MainActivity(android.content.Intent)>[]--><com.gimranov.zandy.app.MainActivity: void onCreate(android.os.Bundle)>[[try], [$i0 < 24]]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+One road protect good!
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.gimranov.zandy.app.TagActivity dummyMainMethod_com_gimranov_zandy_app_TagActivity(android.content.Intent)>[]--><com.gimranov.zandy.app.TagActivity: android.app.Dialog onCreateDialog(int)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.gimranov.zandy.app.CreatorActivity dummyMainMethod_com_gimranov_zandy_app_CreatorActivity(android.content.Intent)>[]--><com.gimranov.zandy.app.CreatorActivity$4: void onClick(android.content.DialogInterface,int)>[]--><com.gimranov.zandy.app.data.Item: java.util.ArrayList creatorsToBundleArray()>[[try]]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+One road protect good!
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.gimranov.zandy.app.ItemDataActivity dummyMainMethod_com_gimranov_zandy_app_ItemDataActivity(android.content.Intent)>[]--><com.gimranov.zandy.app.ItemDataActivity$3: void onCreateContextMenu(android.view.ContextMenu,android.view.View,android.view.ContextMenu$ContextMenuInfo)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.gimranov.zandy.app.LookupActivity dummyMainMethod_com_gimranov_zandy_app_LookupActivity(android.content.Intent)>[]--><com.gimranov.zandy.app.LookupActivity: void onPrepareDialog(int,android.app.Dialog)>[]--><com.gimranov.zandy.app.LookupActivity$ProgressThread: void run()>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.gimranov.zandy.app.CollectionMembershipActivity dummyMainMethod_com_gimranov_zandy_app_CollectionMembershipActivity(android.content.Intent)>[]--><com.gimranov.zandy.app.CollectionMembershipActivity: android.app.Dialog onCreateDialog(int)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+15 Packageshead roads:
+try
+Good road with try: <com.crashlytics.android.beta.Beta: java.lang.Object doInBackground()>[]--><com.crashlytics.android.beta.Beta: java.lang.Boolean doInBackground()>[]--><com.crashlytics.android.beta.AbstractCheckForUpdatesController: void initialize(android.content.Context,com.crashlytics.android.beta.Beta,io.fabric.sdk.android.services.common.IdManager,io.fabric.sdk.android.services.settings.BetaSettingsData,com.crashlytics.android.beta.BuildProperties,io.fabric.sdk.android.services.persistence.PreferenceStore,io.fabric.sdk.android.services.common.CurrentTimeProvider,io.fabric.sdk.android.services.network.HttpRequestFactory)>[]--><com.crashlytics.android.beta.AbstractCheckForUpdatesController: void checkForUpdates()>[[try]]--><com.crashlytics.android.beta.AbstractCheckForUpdatesController: void performUpdateCheck()>[]--><io.fabric.sdk.android.services.common.ApiKey: java.lang.String getValue(android.content.Context)>[]--><io.fabric.sdk.android.services.common.ApiKey: java.lang.String getApiKeyFromManifest(android.content.Context)>[[try]]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+One road protect good!
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.gimranov.zandy.app.ItemActivity: void syncComplete(com.gimranov.zandy.app.SyncEvent)>[]--><com.gimranov.zandy.app.ItemActivity: void refreshView()>[]--><com.gimranov.zandy.app.ItemActivity: android.database.Cursor prepareCursor()>[]--><com.gimranov.zandy.app.ItemActivity: android.database.Cursor getCursor(com.gimranov.zandy.app.Query)>[]--><com.gimranov.zandy.app.Query: android.database.Cursor query(com.gimranov.zandy.app.data.Database)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#2.the call statck between class <com.gimranov.zandy.app.ItemActivity: void syncComplete(com.gimranov.zandy.app.SyncEvent)> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.gimranov.zandy.app.ItemActivity: void access$100(com.gimranov.zandy.app.ItemActivity)>[]--><com.gimranov.zandy.app.ItemActivity: void refreshView()>[]--><com.gimranov.zandy.app.ItemActivity: android.database.Cursor prepareCursor()>[]--><com.gimranov.zandy.app.ItemActivity: android.database.Cursor getCursor(com.gimranov.zandy.app.Query)>[]--><com.gimranov.zandy.app.Query: android.database.Cursor query(com.gimranov.zandy.app.data.Database)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#3.the call statck between class <com.gimranov.zandy.app.ItemActivity: void access$100(com.gimranov.zandy.app.ItemActivity)> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+try
+Good road with try: <io.fabric.sdk.android.Onboarding: java.lang.Object doInBackground()>[]--><io.fabric.sdk.android.Onboarding: java.lang.Boolean doInBackground()>[]--><io.fabric.sdk.android.Onboarding: io.fabric.sdk.android.services.settings.SettingsData retrieveSettingsData()>[[try]]--><io.fabric.sdk.android.services.settings.Settings: io.fabric.sdk.android.services.settings.Settings initialize(io.fabric.sdk.android.Kit,io.fabric.sdk.android.services.common.IdManager,io.fabric.sdk.android.services.network.HttpRequestFactory,java.lang.String,java.lang.String,java.lang.String)>[[try]]--><io.fabric.sdk.android.services.common.ApiKey: java.lang.String getValue(android.content.Context)>[]--><io.fabric.sdk.android.services.common.ApiKey: java.lang.String getApiKeyFromManifest(android.content.Context)>[[try]]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.crashlytics.android.core.CrashlyticsCore: boolean onPreExecute()>[]--><com.crashlytics.android.core.CrashlyticsCore: boolean onPreExecute(android.content.Context)>[]--><io.fabric.sdk.android.services.common.ApiKey: java.lang.String getValue(android.content.Context)>[]--><io.fabric.sdk.android.services.common.ApiKey: java.lang.String getApiKeyFromManifest(android.content.Context)>[[try]]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+One road protect good!
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.gimranov.zandy.app.data.Item$1: int compare(android.os.Bundle,android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#6.the call statck between class <com.gimranov.zandy.app.data.Item$1: int compare(android.os.Bundle,android.os.Bundle)> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.gimranov.zandy.app.ItemActivity$9: void handleMessage(android.os.Message)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#7.the call statck between class <com.gimranov.zandy.app.ItemActivity$9: void handleMessage(android.os.Message)> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+try
+Good road with try: <io.fabric.sdk.android.services.common.ApiKey: java.lang.String getApiKey(android.content.Context,boolean)>[]--><io.fabric.sdk.android.services.common.ApiKey: java.lang.String getValue(android.content.Context)>[]--><io.fabric.sdk.android.services.common.ApiKey: java.lang.String getApiKeyFromManifest(android.content.Context)>[[try]]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+One road protect good!
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.gimranov.zandy.app.ItemDataActivity$BundleListAdapter: android.view.View getChildView(int,int,boolean,android.view.View,android.view.ViewGroup)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#9.the call statck between class <com.gimranov.zandy.app.ItemDataActivity$BundleListAdapter: android.view.View getChildView(int,int,boolean,android.view.View,android.view.ViewGroup)> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+try
+Good road with try: <io.fabric.sdk.android.services.common.ApiKey: java.lang.String getApiKey(android.content.Context)>[]--><io.fabric.sdk.android.services.common.ApiKey: java.lang.String getValue(android.content.Context)>[]--><io.fabric.sdk.android.services.common.ApiKey: java.lang.String getApiKeyFromManifest(android.content.Context)>[[try]]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+One road protect good!
+crashApis:5
+crashApisInMain:3
+containsStatic:false
+containsTry:true
+11call by main package
+-----------------------------------------
+#################################################
+N 7 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putInt(java.lang.String,int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.gimranov.zandy.app.ItemDataActivity dummyMainMethod_com_gimranov_zandy_app_ItemDataActivity(android.content.Intent)>[]--><com.gimranov.zandy.app.ItemDataActivity$4: void onClick(android.content.DialogInterface,int)>[]--><com.gimranov.zandy.app.data.Item: java.util.ArrayList toBundleArray(com.gimranov.zandy.app.data.Database)>[[try]]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+One road protect good!
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.gimranov.zandy.app.CreatorActivity dummyMainMethod_com_gimranov_zandy_app_CreatorActivity(android.content.Intent)>[]--><com.gimranov.zandy.app.CreatorActivity$4: void onClick(android.content.DialogInterface,int)>[]--><com.gimranov.zandy.app.data.Item: java.util.ArrayList creatorsToBundleArray()>[[try]]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+One road protect good!
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.gimranov.zandy.app.TagActivity dummyMainMethod_com_gimranov_zandy_app_TagActivity(android.content.Intent)>[]--><com.gimranov.zandy.app.TagActivity$5: void onClick(android.content.DialogInterface,int)>[]--><com.gimranov.zandy.app.data.Item: java.util.ArrayList tagsToBundleArray()>[[try]]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:true
+1call by main package
+-----------------------------------------
+#################################################
+N 8 Potential Issue API: SDKCheck of <android.os.BaseBundle: int getInt(java.lang.String,int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.gimranov.zandy.app.ItemDataActivity$BundleListAdapter: android.view.View getGroupView(int,boolean,android.view.View,android.view.ViewGroup)>[]--><android.os.BaseBundle: int getInt(java.lang.String,int)>
+#1.the call statck between class <com.gimranov.zandy.app.ItemDataActivity$BundleListAdapter: android.view.View getGroupView(int,boolean,android.view.View,android.view.ViewGroup)> to <android.os.BaseBundle: int getInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:6
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 9 Potential Issue API: SDKCheck of <android.net.NetworkInfo: boolean isConnectedOrConnecting()> is checking!!!
+The life time of api is [1,30]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <io.fabric.sdk.android.services.common.ExecutorUtils$1$1: void onRun()>[]--><com.crashlytics.android.core.CrashlyticsController$SendReportRunnable: void run()>[]--><io.fabric.sdk.android.services.common.CommonUtils: boolean canTryConnection(android.content.Context)>[]--><android.net.NetworkInfo: boolean isConnectedOrConnecting()>
+#1.the call statck between class <io.fabric.sdk.android.services.common.ExecutorUtils$1$1: void onRun()> to <android.net.NetworkInfo: boolean isConnectedOrConnecting()>has compatibility isssues！
+-----------------------------------------
+try
+Good road with try: <com.crashlytics.android.core.CrashlyticsCore: boolean onPreExecute()>[]--><com.crashlytics.android.core.CrashlyticsCore: boolean onPreExecute(android.content.Context)>[[try]]--><io.fabric.sdk.android.services.common.CommonUtils: boolean canTryConnection(android.content.Context)>[]--><android.net.NetworkInfo: boolean isConnectedOrConnecting()>
+One road protect good!
+crashApis:7
+containsStatic:false
+containsTry:true
+3call by main package
+-----------------------------------------
+#################################################
+N 10 Potential Issue API: SDKCheck of <org.apache.http.params.HttpParams: org.apache.http.params.HttpParams setParameter(java.lang.String,java.lang.Object)> is checking!!!
+The life time of api is [23,31]
+2call roads:
+1 Mainhead roads:
+1 Packageshead roads:
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 11 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.util.Set keySet()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.gimranov.zandy.app.MainActivity dummyMainMethod_com_gimranov_zandy_app_MainActivity(android.content.Intent)>[]--><com.gimranov.zandy.app.MainActivity: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: java.util.Set keySet()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: java.util.Set keySet()>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:8
+crashApisInMain:4
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+crashApis numbers:8
+crashApis numbers in main road:4
+On Android Version 16 this app may have error api use(at least): 6 and error api roads: 26
+On Android Version 17 this app may have error api use(at least): 6 and error api roads: 26
+On Android Version 18 this app may have error api use(at least): 6 and error api roads: 26
+On Android Version 19 this app may have error api use(at least): 6 and error api roads: 26
+On Android Version 20 this app may have error api use(at least): 6 and error api roads: 26
+On Android Version 21 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 22 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 23 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 24 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 25 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 31 this app may have error api use(at least): 2 and error api roads: 2

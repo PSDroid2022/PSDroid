@@ -1,0 +1,66 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/kboard.apk
+Entry Points[com.adgad.kboard.CustomKeysActivity, com.adgad.kboard.PrefsActivity, com.adgad.kboard.KboardIME]
+FllowDroidcallgraph size:1560
+Soot started on Mon Jul 11 05:53:39 CST 2022
+Soot finished on Mon Jul 11 05:53:42 CST 2022
+Soot has run for 0 min. 2 sec.
+Found 1 additional DEX files. Now visiting them one by one.
+Soot started on Mon Jul 11 05:53:42 CST 2022
+Soot finished on Mon Jul 11 05:53:50 CST 2022
+Soot has run for 0 min. 8 sec.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 24
+Declared Target Sdk version is: 28
+Declared Max Sdk version is: -1
+Collected 155 Android APIs in the primary DEX file
+Collected 283 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.net.http.AndroidHttpClient: android.net.http.AndroidHttpClient newInstance(java.lang.String)> is checking!!!
+The life time of api is [8,22]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+i0 < 9
+Good road: <com.adgad.kboard.KCommands: void curl(int,java.lang.String)>[]--><com.android.volley.toolbox.Volley: com.android.volley.RequestQueue newRequestQueue(android.content.Context)>[]--><com.android.volley.toolbox.Volley: com.android.volley.RequestQueue newRequestQueue(android.content.Context,com.android.volley.toolbox.BaseHttpStack)>[[i0 < 9]]--><android.net.http.AndroidHttpClient: android.net.http.AndroidHttpClient newInstance(java.lang.String)>
+One road protect good!
+i0 < 9
+Good road: <com.android.volley.toolbox.Volley: com.android.volley.RequestQueue newRequestQueue(android.content.Context,com.android.volley.toolbox.HttpStack)>[]--><com.android.volley.toolbox.Volley: com.android.volley.RequestQueue newRequestQueue(android.content.Context,com.android.volley.toolbox.BaseHttpStack)>[[i0 < 9]]--><android.net.http.AndroidHttpClient: android.net.http.AndroidHttpClient newInstance(java.lang.String)>
+One road protect good!
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.preference.PreferenceActivity: boolean onOptionsItemSelected(android.view.MenuItem)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 24 25 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.adgad.kboard.PrefsActivity dummyMainMethod_com_adgad_kboard_PrefsActivity(android.content.Intent)>[]--><com.adgad.kboard.PrefsActivity: boolean onOptionsItemSelected(android.view.MenuItem)>[]--><android.preference.PreferenceActivity: boolean onOptionsItemSelected(android.view.MenuItem)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.preference.PreferenceActivity: boolean onOptionsItemSelected(android.view.MenuItem)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:1
+crashApisInMain:1
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+crashApis numbers:1
+crashApis numbers in main road:1
+On Android Version 16 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 17 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 18 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 19 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 20 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 21 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 22 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 23 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 24 this app may have error api use(at least): 1 and error api roads: 1
+On Android Version 25 this app may have error api use(at least): 1 and error api roads: 1
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 31 this app may have error api use(at least): 0 and error api roads: 0

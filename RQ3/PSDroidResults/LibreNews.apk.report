@@ -1,0 +1,151 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/LibreNews.apk
+Entry Points[app.librenews.io.librenews.views.MainFlashActivity, app.librenews.io.librenews.views.WelcomeActivity, app.librenews.io.librenews.controllers.SyncManager$RefreshBroadcastReceiver]
+FllowDroidcallgraph size:414
+Soot started on Mon Jul 11 06:33:24 CST 2022
+Soot finished on Mon Jul 11 06:33:36 CST 2022
+Soot has run for 0 min. 12 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 16
+Declared Target Sdk version is: 26
+Declared Max Sdk version is: -1
+Collected 111 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)> is checking!!!
+The life time of api is [26,31]
+3call roads:
+1 Mainhead roads:
+###Multi invoking in one method, need manual check!!!--><app.librenews.io.librenews.controllers.DebugManager: void sendDebugNotification(java.lang.String,android.content.Context)>[[$i0 < 21], [-$i0 < 26]]
+###Multi invoking in one method, need manual check!!!--><app.librenews.io.librenews.controllers.DebugManager: void sendDebugNotification(java.lang.String,android.content.Context)>[[$i0 < 21]][[-$i0 < 26]]
+$i0 < 21
+-$i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: app.librenews.io.librenews.views.MainFlashActivity dummyMainMethod_app_librenews_io_librenews_views_MainFlashActivity(android.content.Intent)>[]--><app.librenews.io.librenews.views.MainFlashActivity$1: void onClick(android.view.View)>[]--><app.librenews.io.librenews.controllers.FlashManager: void refresh()>[]--><app.librenews.io.librenews.controllers.FlashManager: java.util.ArrayList getLatestPushedFlashes()>[]--><app.librenews.io.librenews.controllers.DebugManager: void sendDebugNotification(java.lang.String,android.content.Context)>[[$i0 < 21], [-$i0 < 26]]--><android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)>
+One road protect good!
+###Multi invoking in one method, need manual check!!!--><app.librenews.io.librenews.controllers.DebugManager: void sendDebugNotification(java.lang.String,android.content.Context)>[[$i0 < 21], [-$i0 < 26]]
+###Multi invoking in one method, need manual check!!!--><app.librenews.io.librenews.controllers.DebugManager: void sendDebugNotification(java.lang.String,android.content.Context)>[[$i0 < 21]][[-$i0 < 26]]
+$i0 < 21
+-$i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: app.librenews.io.librenews.controllers.SyncManager$RefreshBroadcastReceiver dummyMainMethod_app_librenews_io_librenews_controllers_SyncManager$RefreshBroadcastReceiver(android.content.Intent)>[]--><app.librenews.io.librenews.controllers.SyncManager$RefreshBroadcastReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><app.librenews.io.librenews.controllers.FlashManager: void refresh()>[]--><app.librenews.io.librenews.controllers.FlashManager: java.util.ArrayList getLatestPushedFlashes()>[]--><app.librenews.io.librenews.controllers.DebugManager: void sendDebugNotification(java.lang.String,android.content.Context)>[[$i0 < 21], [-$i0 < 26]]--><android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)>
+One road protect good!
+2 Packageshead roads:
+###Multi invoking in one method, need manual check!!!--><app.librenews.io.librenews.controllers.DebugManager: void sendDebugNotification(java.lang.String,android.content.Context)>[[$i0 < 21], [-$i0 < 26]]
+###Multi invoking in one method, need manual check!!!--><app.librenews.io.librenews.controllers.DebugManager: void sendDebugNotification(java.lang.String,android.content.Context)>[[$i0 < 21]][[-$i0 < 26]]
+$i0 < 21
+-$i0 < 26
+Good road: <app.librenews.io.librenews.controllers.SyncManager$BootReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><app.librenews.io.librenews.controllers.SyncManager: void startSyncService()>[]--><app.librenews.io.librenews.controllers.DebugManager: void sendDebugNotification(java.lang.String,android.content.Context)>[[$i0 < 21], [-$i0 < 26]]--><android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)>
+One road protect good!
+###Multi invoking in one method, need manual check!!!--><app.librenews.io.librenews.controllers.FlashManager: void <init>(android.content.Context)>[[try]]--><app.librenews.io.librenews.controllers.FlashManager: void refresh()>[]--><app.librenews.io.librenews.controllers.FlashManager: java.util.ArrayList getLatestPushedFlashes()>[]--><app.librenews.io.librenews.controllers.DebugManager: void sendDebugNotification(java.lang.String,android.content.Context)>[[$i0 < 21], [-$i0 < 26]]
+###Multi invoking in one method, need manual check!!!--><app.librenews.io.librenews.controllers.FlashManager: void <init>(android.content.Context)>[[try]]--><app.librenews.io.librenews.controllers.FlashManager: void refresh()>[]--><app.librenews.io.librenews.controllers.FlashManager: java.util.ArrayList getLatestPushedFlashes()>[]--><app.librenews.io.librenews.controllers.DebugManager: void sendDebugNotification(java.lang.String,android.content.Context)>[[$i0 < 21]][[-$i0 < 26]]
+try
+Good road with try: <app.librenews.io.librenews.controllers.SyncManager$BootReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><app.librenews.io.librenews.controllers.FlashManager: void <init>(android.content.Context)>[[try]]--><app.librenews.io.librenews.controllers.FlashManager: void refresh()>[]--><app.librenews.io.librenews.controllers.FlashManager: java.util.ArrayList getLatestPushedFlashes()>[]--><app.librenews.io.librenews.controllers.DebugManager: void sendDebugNotification(java.lang.String,android.content.Context)>[[$i0 < 21], [-$i0 < 26]]--><android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)>
+One road protect good!
+###Multi invoking in one method, need manual check!!!--><app.librenews.io.librenews.controllers.FlashManager: void <init>(android.content.Context)>[[try]]--><app.librenews.io.librenews.controllers.FlashManager: void refresh()>[]--><app.librenews.io.librenews.controllers.FlashManager: java.util.ArrayList getLatestPushedFlashes()>[]--><app.librenews.io.librenews.controllers.DebugManager: void sendDebugNotification(java.lang.String,android.content.Context)>[[$i0 < 21], [-$i0 < 26]]
+###Multi invoking in one method, need manual check!!!--><app.librenews.io.librenews.controllers.FlashManager: void <init>(android.content.Context)>[[try]]--><app.librenews.io.librenews.controllers.FlashManager: void refresh()>[]--><app.librenews.io.librenews.controllers.FlashManager: java.util.ArrayList getLatestPushedFlashes()>[]--><app.librenews.io.librenews.controllers.DebugManager: void sendDebugNotification(java.lang.String,android.content.Context)>[[$i0 < 21]][[-$i0 < 26]]
+try
+Good road with try: <app.librenews.io.librenews.views.SettingsActivityFragment: void onSharedPreferenceChanged(android.content.SharedPreferences,java.lang.String)>[]--><app.librenews.io.librenews.controllers.FlashManager: void <init>(android.content.Context)>[[try]]--><app.librenews.io.librenews.controllers.FlashManager: void refresh()>[]--><app.librenews.io.librenews.controllers.FlashManager: java.util.ArrayList getLatestPushedFlashes()>[]--><app.librenews.io.librenews.controllers.DebugManager: void sendDebugNotification(java.lang.String,android.content.Context)>[[$i0 < 21], [-$i0 < 26]]--><android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)>
+One road protect good!
+###Multi invoking in one method, need manual check!!!--><app.librenews.io.librenews.controllers.DebugManager: void sendDebugNotification(java.lang.String,android.content.Context)>[[$i0 < 21], [-$i0 < 26]]
+###Multi invoking in one method, need manual check!!!--><app.librenews.io.librenews.controllers.DebugManager: void sendDebugNotification(java.lang.String,android.content.Context)>[[$i0 < 21]][[-$i0 < 26]]
+$i0 < 21
+-$i0 < 26
+Good road: <app.librenews.io.librenews.views.SettingsActivityFragment: void onSharedPreferenceChanged(android.content.SharedPreferences,java.lang.String)>[]--><app.librenews.io.librenews.controllers.SyncManager: void startSyncService()>[]--><app.librenews.io.librenews.controllers.DebugManager: void sendDebugNotification(java.lang.String,android.content.Context)>[[$i0 < 21], [-$i0 < 26]]--><android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)>
+One road protect good!
+containsStatic:false
+containsTry:true
+3call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)> is checking!!!
+The life time of api is [26,31]
+3call roads:
+1 Mainhead roads:
+###Multi invoking in one method, need manual check!!!--><app.librenews.io.librenews.controllers.DebugManager: void sendDebugNotification(java.lang.String,android.content.Context)>[[$i0 < 21], [-$i0 < 26]]
+###Multi invoking in one method, need manual check!!!--><app.librenews.io.librenews.controllers.DebugManager: void sendDebugNotification(java.lang.String,android.content.Context)>[[$i0 < 21]][[-$i0 < 26]]
+$i0 < 21
+-$i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: app.librenews.io.librenews.views.MainFlashActivity dummyMainMethod_app_librenews_io_librenews_views_MainFlashActivity(android.content.Intent)>[]--><app.librenews.io.librenews.views.MainFlashActivity$1: void onClick(android.view.View)>[]--><app.librenews.io.librenews.controllers.FlashManager: void refresh()>[]--><app.librenews.io.librenews.controllers.FlashManager: java.util.ArrayList getLatestPushedFlashes()>[]--><app.librenews.io.librenews.controllers.DebugManager: void sendDebugNotification(java.lang.String,android.content.Context)>[[$i0 < 21], [-$i0 < 26]]--><android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)>
+One road protect good!
+###Multi invoking in one method, need manual check!!!--><app.librenews.io.librenews.controllers.DebugManager: void sendDebugNotification(java.lang.String,android.content.Context)>[[$i0 < 21], [-$i0 < 26]]
+###Multi invoking in one method, need manual check!!!--><app.librenews.io.librenews.controllers.DebugManager: void sendDebugNotification(java.lang.String,android.content.Context)>[[$i0 < 21]][[-$i0 < 26]]
+$i0 < 21
+-$i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: app.librenews.io.librenews.controllers.SyncManager$RefreshBroadcastReceiver dummyMainMethod_app_librenews_io_librenews_controllers_SyncManager$RefreshBroadcastReceiver(android.content.Intent)>[]--><app.librenews.io.librenews.controllers.SyncManager$RefreshBroadcastReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><app.librenews.io.librenews.controllers.FlashManager: void refresh()>[]--><app.librenews.io.librenews.controllers.FlashManager: java.util.ArrayList getLatestPushedFlashes()>[]--><app.librenews.io.librenews.controllers.DebugManager: void sendDebugNotification(java.lang.String,android.content.Context)>[[$i0 < 21], [-$i0 < 26]]--><android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)>
+One road protect good!
+2 Packageshead roads:
+###Multi invoking in one method, need manual check!!!--><app.librenews.io.librenews.controllers.DebugManager: void sendDebugNotification(java.lang.String,android.content.Context)>[[$i0 < 21], [-$i0 < 26]]
+###Multi invoking in one method, need manual check!!!--><app.librenews.io.librenews.controllers.DebugManager: void sendDebugNotification(java.lang.String,android.content.Context)>[[$i0 < 21]][[-$i0 < 26]]
+$i0 < 21
+-$i0 < 26
+Good road: <app.librenews.io.librenews.controllers.SyncManager$BootReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><app.librenews.io.librenews.controllers.SyncManager: void startSyncService()>[]--><app.librenews.io.librenews.controllers.DebugManager: void sendDebugNotification(java.lang.String,android.content.Context)>[[$i0 < 21], [-$i0 < 26]]--><android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)>
+One road protect good!
+###Multi invoking in one method, need manual check!!!--><app.librenews.io.librenews.controllers.FlashManager: void <init>(android.content.Context)>[[try]]--><app.librenews.io.librenews.controllers.FlashManager: void refresh()>[]--><app.librenews.io.librenews.controllers.FlashManager: java.util.ArrayList getLatestPushedFlashes()>[]--><app.librenews.io.librenews.controllers.DebugManager: void sendDebugNotification(java.lang.String,android.content.Context)>[[$i0 < 21], [-$i0 < 26]]
+###Multi invoking in one method, need manual check!!!--><app.librenews.io.librenews.controllers.FlashManager: void <init>(android.content.Context)>[[try]]--><app.librenews.io.librenews.controllers.FlashManager: void refresh()>[]--><app.librenews.io.librenews.controllers.FlashManager: java.util.ArrayList getLatestPushedFlashes()>[]--><app.librenews.io.librenews.controllers.DebugManager: void sendDebugNotification(java.lang.String,android.content.Context)>[[$i0 < 21]][[-$i0 < 26]]
+try
+Good road with try: <app.librenews.io.librenews.controllers.SyncManager$BootReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><app.librenews.io.librenews.controllers.FlashManager: void <init>(android.content.Context)>[[try]]--><app.librenews.io.librenews.controllers.FlashManager: void refresh()>[]--><app.librenews.io.librenews.controllers.FlashManager: java.util.ArrayList getLatestPushedFlashes()>[]--><app.librenews.io.librenews.controllers.DebugManager: void sendDebugNotification(java.lang.String,android.content.Context)>[[$i0 < 21], [-$i0 < 26]]--><android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)>
+One road protect good!
+###Multi invoking in one method, need manual check!!!--><app.librenews.io.librenews.controllers.FlashManager: void <init>(android.content.Context)>[[try]]--><app.librenews.io.librenews.controllers.FlashManager: void refresh()>[]--><app.librenews.io.librenews.controllers.FlashManager: java.util.ArrayList getLatestPushedFlashes()>[]--><app.librenews.io.librenews.controllers.DebugManager: void sendDebugNotification(java.lang.String,android.content.Context)>[[$i0 < 21], [-$i0 < 26]]
+###Multi invoking in one method, need manual check!!!--><app.librenews.io.librenews.controllers.FlashManager: void <init>(android.content.Context)>[[try]]--><app.librenews.io.librenews.controllers.FlashManager: void refresh()>[]--><app.librenews.io.librenews.controllers.FlashManager: java.util.ArrayList getLatestPushedFlashes()>[]--><app.librenews.io.librenews.controllers.DebugManager: void sendDebugNotification(java.lang.String,android.content.Context)>[[$i0 < 21]][[-$i0 < 26]]
+try
+Good road with try: <app.librenews.io.librenews.views.SettingsActivityFragment: void onSharedPreferenceChanged(android.content.SharedPreferences,java.lang.String)>[]--><app.librenews.io.librenews.controllers.FlashManager: void <init>(android.content.Context)>[[try]]--><app.librenews.io.librenews.controllers.FlashManager: void refresh()>[]--><app.librenews.io.librenews.controllers.FlashManager: java.util.ArrayList getLatestPushedFlashes()>[]--><app.librenews.io.librenews.controllers.DebugManager: void sendDebugNotification(java.lang.String,android.content.Context)>[[$i0 < 21], [-$i0 < 26]]--><android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)>
+One road protect good!
+###Multi invoking in one method, need manual check!!!--><app.librenews.io.librenews.controllers.DebugManager: void sendDebugNotification(java.lang.String,android.content.Context)>[[$i0 < 21], [-$i0 < 26]]
+###Multi invoking in one method, need manual check!!!--><app.librenews.io.librenews.controllers.DebugManager: void sendDebugNotification(java.lang.String,android.content.Context)>[[$i0 < 21]][[-$i0 < 26]]
+$i0 < 21
+-$i0 < 26
+Good road: <app.librenews.io.librenews.views.SettingsActivityFragment: void onSharedPreferenceChanged(android.content.SharedPreferences,java.lang.String)>[]--><app.librenews.io.librenews.controllers.SyncManager: void startSyncService()>[]--><app.librenews.io.librenews.controllers.DebugManager: void sendDebugNotification(java.lang.String,android.content.Context)>[[$i0 < 21], [-$i0 < 26]]--><android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)>
+One road protect good!
+containsStatic:false
+containsTry:true
+3call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.net.NetworkInfo: int getType()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: app.librenews.io.librenews.controllers.SyncManager$RefreshBroadcastReceiver dummyMainMethod_app_librenews_io_librenews_controllers_SyncManager$RefreshBroadcastReceiver(android.content.Intent)>[]--><app.librenews.io.librenews.controllers.SyncManager$RefreshBroadcastReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><android.net.NetworkInfo: int getType()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.NetworkInfo: int getType()>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:1
+crashApisInMain:1
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: app.librenews.io.librenews.controllers.SyncManager$RefreshBroadcastReceiver dummyMainMethod_app_librenews_io_librenews_controllers_SyncManager$RefreshBroadcastReceiver(android.content.Intent)>[]--><app.librenews.io.librenews.controllers.SyncManager$RefreshBroadcastReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:2
+crashApisInMain:2
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+crashApis numbers:2
+crashApis numbers in main road:2
+On Android Version 16 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 17 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 18 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 19 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 20 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 21 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 22 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 23 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 24 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 25 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 31 this app may have error api use(at least): 2 and error api roads: 2

@@ -1,0 +1,205 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/Balanduino.apk
+Entry Points[com.tkjelectronics.balanduino.DeviceListActivity, com.tkjelectronics.balanduino.BalanduinoActivity]
+FllowDroidcallgraph size:1051
+Soot started on Mon Jul 11 01:32:22 CST 2022
+StaticCheck:<com.actionbarsherlock.internal.ResourcesCompat: boolean getResources_getBoolean(android.content.Context,int)>$yysi1 < 13
+StaticCheck:<com.actionbarsherlock.internal.view.menu.ActionMenuPresenter: boolean reserveOverflow(android.content.Context)>$yysi0 >= 14
+Soot finished on Mon Jul 11 01:32:29 CST 2022
+Soot has run for 0 min. 7 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 10
+Declared Target Sdk version is: 17
+Declared Max Sdk version is: -1
+Collected 983 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.widget.FrameLayout: void setVisibility(int)> is checking!!!
+The life time of api is [21,22]
+42call roads:
+0 Mainhead roads:
+42 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.actionbarsherlock.internal.ActionBarSherlockCompat: void setSecondaryProgress(int)>[]--><com.actionbarsherlock.internal.ActionBarSherlockCompat: void setFeatureInt(int,int)>[]--><com.actionbarsherlock.internal.ActionBarSherlockCompat: void updateInt(int,int,boolean)>[]--><com.actionbarsherlock.internal.ActionBarSherlockCompat: void onIntChanged(int,int)>[]--><com.actionbarsherlock.internal.ActionBarSherlockCompat: void updateProgressBars(int)>[]--><com.actionbarsherlock.internal.ActionBarSherlockCompat: com.actionbarsherlock.internal.widget.IcsProgressBar getCircularProgressBar(boolean)>[]--><com.actionbarsherlock.internal.ActionBarSherlockCompat: void installDecor()>[]--><com.actionbarsherlock.internal.widget.ActionBarView: void setSplitActionBar(boolean)>[[]]--><android.widget.FrameLayout: void setVisibility(int)>
+!!!this api will crash on sdk 23 24 25 26 27 28 29 30 31 
+Error road: <com.actionbarsherlock.internal.ActionBarSherlockCompat: void setSecondaryProgress(int)>[]--><com.actionbarsherlock.internal.ActionBarSherlockCompat: void setFeatureInt(int,int)>[]--><com.actionbarsherlock.internal.ActionBarSherlockCompat: void updateInt(int,int,boolean)>[]--><com.actionbarsherlock.internal.ActionBarSherlockCompat: void onIntChanged(int,int)>[]--><com.actionbarsherlock.internal.ActionBarSherlockCompat: void updateProgressBars(int)>[]--><com.actionbarsherlock.internal.ActionBarSherlockCompat: com.actionbarsherlock.internal.widget.IcsProgressBar getCircularProgressBar(boolean)>[]--><com.actionbarsherlock.internal.ActionBarSherlockCompat: void installDecor()>[]--><com.actionbarsherlock.internal.widget.ActionBarView: void setSplitActionBar(boolean)>[[]]--><android.widget.FrameLayout: void setVisibility(int)>
+#1.the call statck between class <com.actionbarsherlock.internal.ActionBarSherlockCompat: void setSecondaryProgress(int)> to <android.widget.FrameLayout: void setVisibility(int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.actionbarsherlock.internal.ActionBarSherlockCompat: void setProgressBarVisibility(boolean)>[]--><com.actionbarsherlock.internal.ActionBarSherlockCompat: void setFeatureInt(int,int)>[]--><com.actionbarsherlock.internal.ActionBarSherlockCompat: void updateInt(int,int,boolean)>[]--><com.actionbarsherlock.internal.ActionBarSherlockCompat: void onIntChanged(int,int)>[]--><com.actionbarsherlock.internal.ActionBarSherlockCompat: void updateProgressBars(int)>[]--><com.actionbarsherlock.internal.ActionBarSherlockCompat: com.actionbarsherlock.internal.widget.IcsProgressBar getCircularProgressBar(boolean)>[]--><com.actionbarsherlock.internal.ActionBarSherlockCompat: void installDecor()>[]--><com.actionbarsherlock.internal.widget.ActionBarView: void setSplitActionBar(boolean)>[[]]--><android.widget.FrameLayout: void setVisibility(int)>
+!!!this api will crash on sdk 23 24 25 26 27 28 29 30 31 
+Error road: <com.actionbarsherlock.internal.ActionBarSherlockCompat: void setProgressBarVisibility(boolean)>[]--><com.actionbarsherlock.internal.ActionBarSherlockCompat: void setFeatureInt(int,int)>[]--><com.actionbarsherlock.internal.ActionBarSherlockCompat: void updateInt(int,int,boolean)>[]--><com.actionbarsherlock.internal.ActionBarSherlockCompat: void onIntChanged(int,int)>[]--><com.actionbarsherlock.internal.ActionBarSherlockCompat: void updateProgressBars(int)>[]--><com.actionbarsherlock.internal.ActionBarSherlockCompat: com.actionbarsherlock.internal.widget.IcsProgressBar getCircularProgressBar(boolean)>[]--><com.actionbarsherlock.internal.ActionBarSherlockCompat: void installDecor()>[]--><com.actionbarsherlock.internal.widget.ActionBarView: void setSplitActionBar(boolean)>[[]]--><android.widget.FrameLayout: void setVisibility(int)>
+#2.the call statck between class <com.actionbarsherlock.internal.ActionBarSherlockCompat: void setProgressBarVisibility(boolean)> to <android.widget.FrameLayout: void setVisibility(int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.actionbarsherlock.internal.widget.ScrollingTabContainerView$VisibilityAnimListener: void onAnimationEnd(com.actionbarsherlock.internal.nineoldandroids.animation.Animator)>[[]]--><android.widget.FrameLayout: void setVisibility(int)>
+!!!this api will crash on sdk 23 24 25 26 27 28 29 30 31 
+Error road: <com.actionbarsherlock.internal.widget.ScrollingTabContainerView$VisibilityAnimListener: void onAnimationEnd(com.actionbarsherlock.internal.nineoldandroids.animation.Animator)>[[]]--><android.widget.FrameLayout: void setVisibility(int)>
+#3.the call statck between class <com.actionbarsherlock.internal.widget.ScrollingTabContainerView$VisibilityAnimListener: void onAnimationEnd(com.actionbarsherlock.internal.nineoldandroids.animation.Animator)> to <android.widget.FrameLayout: void setVisibility(int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.actionbarsherlock.internal.widget.ActionBarView: void onRestoreInstanceState(android.os.Parcelable)>[]--><com.actionbarsherlock.internal.view.menu.MenuItemImpl: boolean expandActionView()>[]--><com.actionbarsherlock.internal.view.menu.MenuBuilder: boolean expandItemActionView(com.actionbarsherlock.internal.view.menu.MenuItemImpl)>[]--><com.actionbarsherlock.internal.widget.ActionBarView$ExpandedActionViewMenuPresenter: boolean expandItemActionView(com.actionbarsherlock.internal.view.menu.MenuBuilder,com.actionbarsherlock.internal.view.menu.MenuItemImpl)>[[]]--><android.widget.FrameLayout: void setVisibility(int)>
+!!!this api will crash on sdk 23 24 25 26 27 28 29 30 31 
+Error road: <com.actionbarsherlock.internal.widget.ActionBarView: void onRestoreInstanceState(android.os.Parcelable)>[]--><com.actionbarsherlock.internal.view.menu.MenuItemImpl: boolean expandActionView()>[]--><com.actionbarsherlock.internal.view.menu.MenuBuilder: boolean expandItemActionView(com.actionbarsherlock.internal.view.menu.MenuItemImpl)>[]--><com.actionbarsherlock.internal.widget.ActionBarView$ExpandedActionViewMenuPresenter: boolean expandItemActionView(com.actionbarsherlock.internal.view.menu.MenuBuilder,com.actionbarsherlock.internal.view.menu.MenuItemImpl)>[[]]--><android.widget.FrameLayout: void setVisibility(int)>
+#4.the call statck between class <com.actionbarsherlock.internal.widget.ActionBarView: void onRestoreInstanceState(android.os.Parcelable)> to <android.widget.FrameLayout: void setVisibility(int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.actionbarsherlock.internal.app.ActionBarImpl: com.actionbarsherlock.view.ActionMode startActionMode(com.actionbarsherlock.view.ActionMode$Callback)>[[]]--><android.widget.FrameLayout: void setVisibility(int)>
+!!!this api will crash on sdk 23 24 25 26 27 28 29 30 31 
+Error road: <com.actionbarsherlock.internal.app.ActionBarImpl: com.actionbarsherlock.view.ActionMode startActionMode(com.actionbarsherlock.view.ActionMode$Callback)>[[]]--><android.widget.FrameLayout: void setVisibility(int)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.actionbarsherlock.internal.app.ActionBarImpl: com.actionbarsherlock.view.ActionMode startActionMode(com.actionbarsherlock.view.ActionMode$Callback)>[]--><com.actionbarsherlock.internal.app.ActionBarImpl: void animateToMode(boolean)>[]--><com.actionbarsherlock.internal.app.ActionBarImpl: void show(boolean)>[[]]--><android.widget.FrameLayout: void setVisibility(int)>
+!!!this api will crash on sdk 23 24 25 26 27 28 29 30 31 
+Error road: <com.actionbarsherlock.internal.app.ActionBarImpl: com.actionbarsherlock.view.ActionMode startActionMode(com.actionbarsherlock.view.ActionMode$Callback)>[]--><com.actionbarsherlock.internal.app.ActionBarImpl: void animateToMode(boolean)>[]--><com.actionbarsherlock.internal.app.ActionBarImpl: void show(boolean)>[[]]--><android.widget.FrameLayout: void setVisibility(int)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.actionbarsherlock.internal.app.ActionBarImpl: com.actionbarsherlock.view.ActionMode startActionMode(com.actionbarsherlock.view.ActionMode$Callback)>[]--><com.actionbarsherlock.internal.widget.ActionBarContextView: void initForMode(com.actionbarsherlock.view.ActionMode)>[]--><com.actionbarsherlock.internal.view.menu.MenuBuilder: void addMenuPresenter(com.actionbarsherlock.internal.view.menu.MenuPresenter)>[]--><com.actionbarsherlock.internal.widget.ActionBarView$ExpandedActionViewMenuPresenter: void initForMenu(android.content.Context,com.actionbarsherlock.internal.view.menu.MenuBuilder)>[]--><com.actionbarsherlock.internal.view.menu.MenuBuilder: boolean collapseItemActionView(com.actionbarsherlock.internal.view.menu.MenuItemImpl)>[]--><com.actionbarsherlock.internal.widget.ActionBarView$ExpandedActionViewMenuPresenter: boolean collapseItemActionView(com.actionbarsherlock.internal.view.menu.MenuBuilder,com.actionbarsherlock.internal.view.menu.MenuItemImpl)>[[]]--><android.widget.FrameLayout: void setVisibility(int)>
+!!!this api will crash on sdk 23 24 25 26 27 28 29 30 31 
+Error road: <com.actionbarsherlock.internal.app.ActionBarImpl: com.actionbarsherlock.view.ActionMode startActionMode(com.actionbarsherlock.view.ActionMode$Callback)>[]--><com.actionbarsherlock.internal.widget.ActionBarContextView: void initForMode(com.actionbarsherlock.view.ActionMode)>[]--><com.actionbarsherlock.internal.view.menu.MenuBuilder: void addMenuPresenter(com.actionbarsherlock.internal.view.menu.MenuPresenter)>[]--><com.actionbarsherlock.internal.widget.ActionBarView$ExpandedActionViewMenuPresenter: void initForMenu(android.content.Context,com.actionbarsherlock.internal.view.menu.MenuBuilder)>[]--><com.actionbarsherlock.internal.view.menu.MenuBuilder: boolean collapseItemActionView(com.actionbarsherlock.internal.view.menu.MenuItemImpl)>[]--><com.actionbarsherlock.internal.widget.ActionBarView$ExpandedActionViewMenuPresenter: boolean collapseItemActionView(com.actionbarsherlock.internal.view.menu.MenuBuilder,com.actionbarsherlock.internal.view.menu.MenuItemImpl)>[[]]--><android.widget.FrameLayout: void setVisibility(int)>
+#5.the call statck between class <com.actionbarsherlock.internal.app.ActionBarImpl: com.actionbarsherlock.view.ActionMode startActionMode(com.actionbarsherlock.view.ActionMode$Callback)> to <android.widget.FrameLayout: void setVisibility(int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.actionbarsherlock.internal.view.menu.SubMenuBuilder: boolean collapseItemActionView(com.actionbarsherlock.internal.view.menu.MenuItemImpl)>[]--><com.actionbarsherlock.internal.view.menu.MenuBuilder: boolean collapseItemActionView(com.actionbarsherlock.internal.view.menu.MenuItemImpl)>[]--><com.actionbarsherlock.internal.widget.ActionBarView$ExpandedActionViewMenuPresenter: boolean collapseItemActionView(com.actionbarsherlock.internal.view.menu.MenuBuilder,com.actionbarsherlock.internal.view.menu.MenuItemImpl)>[[]]--><android.widget.FrameLayout: void setVisibility(int)>
+!!!this api will crash on sdk 23 24 25 26 27 28 29 30 31 
+Error road: <com.actionbarsherlock.internal.view.menu.SubMenuBuilder: boolean collapseItemActionView(com.actionbarsherlock.internal.view.menu.MenuItemImpl)>[]--><com.actionbarsherlock.internal.view.menu.MenuBuilder: boolean collapseItemActionView(com.actionbarsherlock.internal.view.menu.MenuItemImpl)>[]--><com.actionbarsherlock.internal.widget.ActionBarView$ExpandedActionViewMenuPresenter: boolean collapseItemActionView(com.actionbarsherlock.internal.view.menu.MenuBuilder,com.actionbarsherlock.internal.view.menu.MenuItemImpl)>[[]]--><android.widget.FrameLayout: void setVisibility(int)>
+#6.the call statck between class <com.actionbarsherlock.internal.view.menu.SubMenuBuilder: boolean collapseItemActionView(com.actionbarsherlock.internal.view.menu.MenuItemImpl)> to <android.widget.FrameLayout: void setVisibility(int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.actionbarsherlock.internal.view.menu.MenuPopupHelper: void <init>(android.content.Context,com.actionbarsherlock.internal.view.menu.MenuBuilder,android.view.View)>[]--><com.actionbarsherlock.internal.view.menu.MenuPopupHelper: void <init>(android.content.Context,com.actionbarsherlock.internal.view.menu.MenuBuilder,android.view.View,boolean)>[]--><com.actionbarsherlock.internal.view.menu.MenuBuilder: void addMenuPresenter(com.actionbarsherlock.internal.view.menu.MenuPresenter)>[]--><com.actionbarsherlock.internal.widget.ActionBarView$ExpandedActionViewMenuPresenter: void initForMenu(android.content.Context,com.actionbarsherlock.internal.view.menu.MenuBuilder)>[]--><com.actionbarsherlock.internal.view.menu.MenuBuilder: boolean collapseItemActionView(com.actionbarsherlock.internal.view.menu.MenuItemImpl)>[]--><com.actionbarsherlock.internal.widget.ActionBarView$ExpandedActionViewMenuPresenter: boolean collapseItemActionView(com.actionbarsherlock.internal.view.menu.MenuBuilder,com.actionbarsherlock.internal.view.menu.MenuItemImpl)>[[]]--><android.widget.FrameLayout: void setVisibility(int)>
+!!!this api will crash on sdk 23 24 25 26 27 28 29 30 31 
+Error road: <com.actionbarsherlock.internal.view.menu.MenuPopupHelper: void <init>(android.content.Context,com.actionbarsherlock.internal.view.menu.MenuBuilder,android.view.View)>[]--><com.actionbarsherlock.internal.view.menu.MenuPopupHelper: void <init>(android.content.Context,com.actionbarsherlock.internal.view.menu.MenuBuilder,android.view.View,boolean)>[]--><com.actionbarsherlock.internal.view.menu.MenuBuilder: void addMenuPresenter(com.actionbarsherlock.internal.view.menu.MenuPresenter)>[]--><com.actionbarsherlock.internal.widget.ActionBarView$ExpandedActionViewMenuPresenter: void initForMenu(android.content.Context,com.actionbarsherlock.internal.view.menu.MenuBuilder)>[]--><com.actionbarsherlock.internal.view.menu.MenuBuilder: boolean collapseItemActionView(com.actionbarsherlock.internal.view.menu.MenuItemImpl)>[]--><com.actionbarsherlock.internal.widget.ActionBarView$ExpandedActionViewMenuPresenter: boolean collapseItemActionView(com.actionbarsherlock.internal.view.menu.MenuBuilder,com.actionbarsherlock.internal.view.menu.MenuItemImpl)>[[]]--><android.widget.FrameLayout: void setVisibility(int)>
+#7.the call statck between class <com.actionbarsherlock.internal.view.menu.MenuPopupHelper: void <init>(android.content.Context,com.actionbarsherlock.internal.view.menu.MenuBuilder,android.view.View)> to <android.widget.FrameLayout: void setVisibility(int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.actionbarsherlock.internal.view.menu.MenuBuilder: void clearAll()>[]--><com.actionbarsherlock.internal.view.menu.MenuBuilder: void clear()>[]--><com.actionbarsherlock.internal.view.menu.MenuBuilder: boolean collapseItemActionView(com.actionbarsherlock.internal.view.menu.MenuItemImpl)>[]--><com.actionbarsherlock.internal.widget.ActionBarView$ExpandedActionViewMenuPresenter: boolean collapseItemActionView(com.actionbarsherlock.internal.view.menu.MenuBuilder,com.actionbarsherlock.internal.view.menu.MenuItemImpl)>[[]]--><android.widget.FrameLayout: void setVisibility(int)>
+!!!this api will crash on sdk 23 24 25 26 27 28 29 30 31 
+Error road: <com.actionbarsherlock.internal.view.menu.MenuBuilder: void clearAll()>[]--><com.actionbarsherlock.internal.view.menu.MenuBuilder: void clear()>[]--><com.actionbarsherlock.internal.view.menu.MenuBuilder: boolean collapseItemActionView(com.actionbarsherlock.internal.view.menu.MenuItemImpl)>[]--><com.actionbarsherlock.internal.widget.ActionBarView$ExpandedActionViewMenuPresenter: boolean collapseItemActionView(com.actionbarsherlock.internal.view.menu.MenuBuilder,com.actionbarsherlock.internal.view.menu.MenuItemImpl)>[[]]--><android.widget.FrameLayout: void setVisibility(int)>
+#8.the call statck between class <com.actionbarsherlock.internal.view.menu.MenuBuilder: void clearAll()> to <android.widget.FrameLayout: void setVisibility(int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.actionbarsherlock.internal.app.ActionBarImpl: void addTab(com.actionbarsherlock.app.ActionBar$Tab,boolean)>[]--><com.actionbarsherlock.internal.app.ActionBarImpl: void ensureTabsExist()>[[]]--><android.widget.FrameLayout: void setVisibility(int)>
+!!!this api will crash on sdk 23 24 25 26 27 28 29 30 31 
+Error road: <com.actionbarsherlock.internal.app.ActionBarImpl: void addTab(com.actionbarsherlock.app.ActionBar$Tab,boolean)>[]--><com.actionbarsherlock.internal.app.ActionBarImpl: void ensureTabsExist()>[[]]--><android.widget.FrameLayout: void setVisibility(int)>
+#9.the call statck between class <com.actionbarsherlock.internal.app.ActionBarImpl: void addTab(com.actionbarsherlock.app.ActionBar$Tab,boolean)> to <android.widget.FrameLayout: void setVisibility(int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.actionbarsherlock.internal.view.menu.ActionMenuPresenter$ActionButtonSubmenu: void <init>(com.actionbarsherlock.internal.view.menu.ActionMenuPresenter,android.content.Context,com.actionbarsherlock.internal.view.menu.SubMenuBuilder)>[]--><com.actionbarsherlock.internal.view.menu.MenuPopupHelper: void <init>(android.content.Context,com.actionbarsherlock.internal.view.menu.MenuBuilder)>[]--><com.actionbarsherlock.internal.view.menu.MenuPopupHelper: void <init>(android.content.Context,com.actionbarsherlock.internal.view.menu.MenuBuilder,android.view.View,boolean)>[]--><com.actionbarsherlock.internal.view.menu.MenuBuilder: void addMenuPresenter(com.actionbarsherlock.internal.view.menu.MenuPresenter)>[]--><com.actionbarsherlock.internal.widget.ActionBarView$ExpandedActionViewMenuPresenter: void initForMenu(android.content.Context,com.actionbarsherlock.internal.view.menu.MenuBuilder)>[]--><com.actionbarsherlock.internal.view.menu.MenuBuilder: boolean collapseItemActionView(com.actionbarsherlock.internal.view.menu.MenuItemImpl)>[]--><com.actionbarsherlock.internal.widget.ActionBarView$ExpandedActionViewMenuPresenter: boolean collapseItemActionView(com.actionbarsherlock.internal.view.menu.MenuBuilder,com.actionbarsherlock.internal.view.menu.MenuItemImpl)>[[]]--><android.widget.FrameLayout: void setVisibility(int)>
+!!!this api will crash on sdk 23 24 25 26 27 28 29 30 31 
+Error road: <com.actionbarsherlock.internal.view.menu.ActionMenuPresenter$ActionButtonSubmenu: void <init>(com.actionbarsherlock.internal.view.menu.ActionMenuPresenter,android.content.Context,com.actionbarsherlock.internal.view.menu.SubMenuBuilder)>[]--><com.actionbarsherlock.internal.view.menu.MenuPopupHelper: void <init>(android.content.Context,com.actionbarsherlock.internal.view.menu.MenuBuilder)>[]--><com.actionbarsherlock.internal.view.menu.MenuPopupHelper: void <init>(android.content.Context,com.actionbarsherlock.internal.view.menu.MenuBuilder,android.view.View,boolean)>[]--><com.actionbarsherlock.internal.view.menu.MenuBuilder: void addMenuPresenter(com.actionbarsherlock.internal.view.menu.MenuPresenter)>[]--><com.actionbarsherlock.internal.widget.ActionBarView$ExpandedActionViewMenuPresenter: void initForMenu(android.content.Context,com.actionbarsherlock.internal.view.menu.MenuBuilder)>[]--><com.actionbarsherlock.internal.view.menu.MenuBuilder: boolean collapseItemActionView(com.actionbarsherlock.internal.view.menu.MenuItemImpl)>[]--><com.actionbarsherlock.internal.widget.ActionBarView$ExpandedActionViewMenuPresenter: boolean collapseItemActionView(com.actionbarsherlock.internal.view.menu.MenuBuilder,com.actionbarsherlock.internal.view.menu.MenuItemImpl)>[[]]--><android.widget.FrameLayout: void setVisibility(int)>
+#10.the call statck between class <com.actionbarsherlock.internal.view.menu.ActionMenuPresenter$ActionButtonSubmenu: void <init>(com.actionbarsherlock.internal.view.menu.ActionMenuPresenter,android.content.Context,com.actionbarsherlock.internal.view.menu.SubMenuBuilder)> to <android.widget.FrameLayout: void setVisibility(int)>has compatibility isssues！
+-----------------------------------------
+crashApis:1
+containsStatic:false
+containsTry:false
+11call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.widget.AdapterView: void setFocusable(boolean)> is checking!!!
+The life time of api is [1,25]
+16call roads:
+0 Mainhead roads:
+16 Packageshead roads:
+!!!this api will crash on sdk 26 27 28 29 30 31 
+Error road: <com.actionbarsherlock.widget.ActivityChooserView: void access$500(com.actionbarsherlock.widget.ActivityChooserView,int)>[]--><com.actionbarsherlock.widget.ActivityChooserView: void showPopupUnchecked(int)>[]--><com.actionbarsherlock.internal.widget.IcsListPopupWindow: void show()>[]--><com.actionbarsherlock.internal.widget.IcsListPopupWindow: int buildDropDown()>[]--><android.widget.AdapterView: void setFocusable(boolean)>
+#1.the call statck between class <com.actionbarsherlock.widget.ActivityChooserView: void access$500(com.actionbarsherlock.widget.ActivityChooserView,int)> to <android.widget.AdapterView: void setFocusable(boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 26 27 28 29 30 31 
+Error road: <com.actionbarsherlock.internal.widget.IcsSpinner$DropdownPopup: void show()>[]--><com.actionbarsherlock.internal.widget.IcsListPopupWindow: void show()>[]--><com.actionbarsherlock.internal.widget.IcsListPopupWindow: int buildDropDown()>[]--><android.widget.AdapterView: void setFocusable(boolean)>
+#2.the call statck between class <com.actionbarsherlock.internal.widget.IcsSpinner$DropdownPopup: void show()> to <android.widget.AdapterView: void setFocusable(boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 26 27 28 29 30 31 
+Error road: <com.actionbarsherlock.widget.ActivityChooserView: void onLayout(boolean,int,int,int,int)>[]--><com.actionbarsherlock.widget.ActivityChooserView: void showPopupUnchecked(int)>[]--><com.actionbarsherlock.internal.widget.IcsListPopupWindow: void show()>[]--><com.actionbarsherlock.internal.widget.IcsListPopupWindow: int buildDropDown()>[]--><android.widget.AdapterView: void setFocusable(boolean)>
+#3.the call statck between class <com.actionbarsherlock.widget.ActivityChooserView: void onLayout(boolean,int,int,int,int)> to <android.widget.AdapterView: void setFocusable(boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 26 27 28 29 30 31 
+Error road: <com.actionbarsherlock.widget.ShareActionProvider: android.view.View onCreateActionView()>[]--><com.actionbarsherlock.widget.ActivityChooserView: void setActivityChooserModel(com.actionbarsherlock.widget.ActivityChooserModel)>[]--><com.actionbarsherlock.widget.ActivityChooserView: boolean showPopup()>[]--><com.actionbarsherlock.widget.ActivityChooserView: void showPopupUnchecked(int)>[]--><com.actionbarsherlock.internal.widget.IcsListPopupWindow: void show()>[]--><com.actionbarsherlock.internal.widget.IcsListPopupWindow: int buildDropDown()>[]--><android.widget.AdapterView: void setFocusable(boolean)>
+#4.the call statck between class <com.actionbarsherlock.widget.ShareActionProvider: android.view.View onCreateActionView()> to <android.widget.AdapterView: void setFocusable(boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 26 27 28 29 30 31 
+Error road: <com.actionbarsherlock.internal.view.menu.MenuPopupHelper: void onGlobalLayout()>[]--><com.actionbarsherlock.internal.widget.IcsListPopupWindow: void show()>[]--><com.actionbarsherlock.internal.widget.IcsListPopupWindow: int buildDropDown()>[]--><android.widget.AdapterView: void setFocusable(boolean)>
+#5.the call statck between class <com.actionbarsherlock.internal.view.menu.MenuPopupHelper: void onGlobalLayout()> to <android.widget.AdapterView: void setFocusable(boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 26 27 28 29 30 31 
+Error road: <com.viewpagerindicator.UnderlinePageIndicator: void onPageSelected(int)>[]--><com.actionbarsherlock.internal.widget.IcsListPopupWindow$ResizePopupRunnable: void run()>[]--><com.actionbarsherlock.internal.widget.IcsListPopupWindow: void show()>[]--><com.actionbarsherlock.internal.widget.IcsListPopupWindow: int buildDropDown()>[]--><android.widget.AdapterView: void setFocusable(boolean)>
+!!!this api will crash on sdk 26 27 28 29 30 31 
+Error road: <com.viewpagerindicator.UnderlinePageIndicator: void onPageSelected(int)>[]--><com.actionbarsherlock.internal.view.menu.ActionMenuPresenter$OpenOverflowRunnable: void run()>[]--><com.actionbarsherlock.internal.view.menu.MenuPopupHelper: boolean tryShow()>[]--><com.actionbarsherlock.internal.widget.IcsListPopupWindow: void show()>[]--><com.actionbarsherlock.internal.widget.IcsListPopupWindow: int buildDropDown()>[]--><android.widget.AdapterView: void setFocusable(boolean)>
+#6.the call statck between class <com.viewpagerindicator.UnderlinePageIndicator: void onPageSelected(int)> to <android.widget.AdapterView: void setFocusable(boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 26 27 28 29 30 31 
+Error road: <com.actionbarsherlock.internal.view.menu.MenuBuilder: boolean performShortcut(int,android.view.KeyEvent,int)>[]--><com.actionbarsherlock.internal.view.menu.MenuBuilder: boolean performItemAction(com.actionbarsherlock.view.MenuItem,int)>[]--><com.actionbarsherlock.internal.view.menu.MenuBuilder: boolean dispatchSubMenuSelected(com.actionbarsherlock.internal.view.menu.SubMenuBuilder)>[]--><com.actionbarsherlock.internal.view.menu.ActionMenuPresenter: boolean onSubMenuSelected(com.actionbarsherlock.internal.view.menu.SubMenuBuilder)>[]--><com.actionbarsherlock.internal.view.menu.MenuPopupHelper: void show()>[]--><com.actionbarsherlock.internal.view.menu.MenuPopupHelper: boolean tryShow()>[]--><com.actionbarsherlock.internal.widget.IcsListPopupWindow: void show()>[]--><com.actionbarsherlock.internal.widget.IcsListPopupWindow: int buildDropDown()>[]--><android.widget.AdapterView: void setFocusable(boolean)>
+#7.the call statck between class <com.actionbarsherlock.internal.view.menu.MenuBuilder: boolean performShortcut(int,android.view.KeyEvent,int)> to <android.widget.AdapterView: void setFocusable(boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 26 27 28 29 30 31 
+Error road: <com.actionbarsherlock.internal.widget.IcsListPopupWindow$PopupDataSetObserver: void onChanged()>[]--><com.actionbarsherlock.internal.widget.IcsListPopupWindow: void show()>[]--><com.actionbarsherlock.internal.widget.IcsListPopupWindow: int buildDropDown()>[]--><android.widget.AdapterView: void setFocusable(boolean)>
+#8.the call statck between class <com.actionbarsherlock.internal.widget.IcsListPopupWindow$PopupDataSetObserver: void onChanged()> to <android.widget.AdapterView: void setFocusable(boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 26 27 28 29 30 31 
+Error road: <com.actionbarsherlock.internal.view.menu.MenuBuilder: void restorePresenterStates(android.os.Bundle)>[]--><com.actionbarsherlock.internal.view.menu.MenuBuilder: void dispatchRestoreInstanceState(android.os.Bundle)>[]--><com.actionbarsherlock.internal.view.menu.ActionMenuPresenter: void onRestoreInstanceState(android.os.Parcelable)>[]--><com.actionbarsherlock.internal.view.menu.ActionMenuPresenter: boolean onSubMenuSelected(com.actionbarsherlock.internal.view.menu.SubMenuBuilder)>[]--><com.actionbarsherlock.internal.view.menu.MenuPopupHelper: void show()>[]--><com.actionbarsherlock.internal.view.menu.MenuPopupHelper: boolean tryShow()>[]--><com.actionbarsherlock.internal.widget.IcsListPopupWindow: void show()>[]--><com.actionbarsherlock.internal.widget.IcsListPopupWindow: int buildDropDown()>[]--><android.widget.AdapterView: void setFocusable(boolean)>
+#9.the call statck between class <com.actionbarsherlock.internal.view.menu.MenuBuilder: void restorePresenterStates(android.os.Bundle)> to <android.widget.AdapterView: void setFocusable(boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 26 27 28 29 30 31 
+Error road: <com.actionbarsherlock.internal.app.ActionBarImpl$ActionModeImpl: boolean onSubMenuSelected(com.actionbarsherlock.internal.view.menu.SubMenuBuilder)>[]--><com.actionbarsherlock.internal.view.menu.MenuPopupHelper: void show()>[]--><com.actionbarsherlock.internal.view.menu.MenuPopupHelper: boolean tryShow()>[]--><com.actionbarsherlock.internal.widget.IcsListPopupWindow: void show()>[]--><com.actionbarsherlock.internal.widget.IcsListPopupWindow: int buildDropDown()>[]--><android.widget.AdapterView: void setFocusable(boolean)>
+#10.the call statck between class <com.actionbarsherlock.internal.app.ActionBarImpl$ActionModeImpl: boolean onSubMenuSelected(com.actionbarsherlock.internal.view.menu.SubMenuBuilder)> to <android.widget.AdapterView: void setFocusable(boolean)>has compatibility isssues！
+-----------------------------------------
+crashApis:2
+containsStatic:false
+containsTry:false
+11call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.widget.FrameLayout: void setForeground(android.graphics.drawable.Drawable)> is checking!!!
+The life time of api is [1,22]
+11call roads:
+0 Mainhead roads:
+11 Packageshead roads:
+containsStatic:false
+containsTry:false
+12call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.widget.LinearLayout: void onInitializeAccessibilityNodeInfo(android.view.accessibility.AccessibilityNodeInfo)> is checking!!!
+The life time of api is [16,22]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 23 24 25 26 27 28 29 30 31 
+Error road: <com.actionbarsherlock.widget.SearchView: void onInitializeAccessibilityNodeInfo(android.view.accessibility.AccessibilityNodeInfo)>[]--><android.widget.LinearLayout: void onInitializeAccessibilityNodeInfo(android.view.accessibility.AccessibilityNodeInfo)>
+#1.the call statck between class <com.actionbarsherlock.widget.SearchView: void onInitializeAccessibilityNodeInfo(android.view.accessibility.AccessibilityNodeInfo)> to <android.widget.LinearLayout: void onInitializeAccessibilityNodeInfo(android.view.accessibility.AccessibilityNodeInfo)>has compatibility isssues！
+-----------------------------------------
+crashApis:3
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.widget.LinearLayout: void onInitializeAccessibilityEvent(android.view.accessibility.AccessibilityEvent)> is checking!!!
+The life time of api is [16,22]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 23 24 25 26 27 28 29 30 31 
+Error road: <com.actionbarsherlock.widget.SearchView: void onInitializeAccessibilityEvent(android.view.accessibility.AccessibilityEvent)>[]--><android.widget.LinearLayout: void onInitializeAccessibilityEvent(android.view.accessibility.AccessibilityEvent)>
+#1.the call statck between class <com.actionbarsherlock.widget.SearchView: void onInitializeAccessibilityEvent(android.view.accessibility.AccessibilityEvent)> to <android.widget.LinearLayout: void onInitializeAccessibilityEvent(android.view.accessibility.AccessibilityEvent)>has compatibility isssues！
+-----------------------------------------
+crashApis:4
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+crashApis numbers:4
+crashApis numbers in main road:0
+On Android Version 16 this app may have error api use(at least): 1 and error api roads: 12
+On Android Version 17 this app may have error api use(at least): 1 and error api roads: 12
+On Android Version 18 this app may have error api use(at least): 1 and error api roads: 12
+On Android Version 19 this app may have error api use(at least): 1 and error api roads: 12
+On Android Version 20 this app may have error api use(at least): 1 and error api roads: 12
+On Android Version 21 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 22 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 23 this app may have error api use(at least): 3 and error api roads: 14
+On Android Version 24 this app may have error api use(at least): 3 and error api roads: 14
+On Android Version 25 this app may have error api use(at least): 3 and error api roads: 14
+On Android Version 26 this app may have error api use(at least): 4 and error api roads: 25
+On Android Version 27 this app may have error api use(at least): 4 and error api roads: 25
+On Android Version 28 this app may have error api use(at least): 4 and error api roads: 25
+On Android Version 29 this app may have error api use(at least): 4 and error api roads: 25
+On Android Version 30 this app may have error api use(at least): 4 and error api roads: 25
+On Android Version 31 this app may have error api use(at least): 4 and error api roads: 25

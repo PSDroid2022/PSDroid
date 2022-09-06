@@ -1,0 +1,705 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/GLT_Companion.apk
+Entry Points[be.digitalia.fosdem.activities.SettingsActivity, be.digitalia.fosdem.activities.EventDetailsActivity, be.digitalia.fosdem.FosdemApplication, be.digitalia.fosdem.activities.SearchResultActivity, be.digitalia.fosdem.services.AlarmIntentService, be.digitalia.fosdem.receivers.AlarmReceiver, be.digitalia.fosdem.activities.TrackScheduleEventActivity, be.digitalia.fosdem.activities.PersonInfoActivity, be.digitalia.fosdem.activities.MainActivity, be.digitalia.fosdem.providers.BookmarksExportProvider, be.digitalia.fosdem.activities.RoomImageDialogActivity, be.digitalia.fosdem.activities.TrackScheduleActivity, be.digitalia.fosdem.providers.SearchSuggestionProvider]
+FllowDroidcallgraph size:1476
+Soot started on Mon Jul 11 04:41:00 CST 2022
+Soot finished on Mon Jul 11 04:41:08 CST 2022
+Soot has run for 0 min. 8 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 15
+Declared Target Sdk version is: 28
+Declared Max Sdk version is: -1
+Collected 677 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.os.BaseBundle: int getInt(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+4call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: be.digitalia.fosdem.activities.MainActivity dummyMainMethod_be_digitalia_fosdem_activities_MainActivity(android.content.Intent)>[]--><be.digitalia.fosdem.activities.MainActivity: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+3 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <androidx.browser.browseractions.BrowserActionsIntent: void openBrowserAction(android.content.Context,android.net.Uri)>[]--><androidx.browser.browseractions.BrowserActionsIntent: void launchIntent(android.content.Context,android.content.Intent)>[]--><androidx.browser.browseractions.BrowserActionsIntent: void launchIntent(android.content.Context,android.content.Intent,java.util.List)>[]--><androidx.browser.browseractions.BrowserActionsIntent: void openFallbackBrowserActionsMenu(android.content.Context,android.content.Intent)>[]--><androidx.browser.browseractions.BrowserActionsIntent: java.util.List parseBrowserActionItems(java.util.ArrayList)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#1.the call statck between class <androidx.browser.browseractions.BrowserActionsIntent: void openBrowserAction(android.content.Context,android.net.Uri)> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <androidx.browser.browseractions.BrowserActionsIntent: void openBrowserAction(android.content.Context,android.net.Uri,int,java.util.ArrayList,android.app.PendingIntent)>[]--><androidx.browser.browseractions.BrowserActionsIntent: void launchIntent(android.content.Context,android.content.Intent)>[]--><androidx.browser.browseractions.BrowserActionsIntent: void launchIntent(android.content.Context,android.content.Intent,java.util.List)>[]--><androidx.browser.browseractions.BrowserActionsIntent: void openFallbackBrowserActionsMenu(android.content.Context,android.content.Intent)>[]--><androidx.browser.browseractions.BrowserActionsIntent: java.util.List parseBrowserActionItems(java.util.ArrayList)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#2.the call statck between class <androidx.browser.browseractions.BrowserActionsIntent: void openBrowserAction(android.content.Context,android.net.Uri,int,java.util.ArrayList,android.app.PendingIntent)> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <be.digitalia.fosdem.fragments.RoomImageDialogFragment: android.app.Dialog onCreateDialog(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#3.the call statck between class <be.digitalia.fosdem.fragments.RoomImageDialogFragment: android.app.Dialog onCreateDialog(android.os.Bundle)> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:1
+crashApisInMain:1
+containsStatic:false
+containsTry:false
+4call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putLongArray(java.lang.String,long[])> is checking!!!
+The life time of api is [21,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.content.Context: java.lang.Object getSystemService(java.lang.Class)> is checking!!!
+The life time of api is [23,31]
+2call roads:
+1 Mainhead roads:
+###Multi invoking in one method, need manual check!!!--><be.digitalia.fosdem.services.AlarmIntentService: void onHandleWork(android.content.Intent)>[[-$z0 == 0], [-$i1 < 26]]--><be.digitalia.fosdem.services.AlarmIntentService: void createNotificationChannel(android.content.Context)>[]
+###Multi invoking in one method, need manual check!!!--><be.digitalia.fosdem.services.AlarmIntentService: void onHandleWork(android.content.Intent)>[[-$z0 == 0]][[-$i1 < 26]]--><be.digitalia.fosdem.services.AlarmIntentService: void createNotificationChannel(android.content.Context)>[]
+-$z0 == 0
+-$i1 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: be.digitalia.fosdem.services.AlarmIntentService dummyMainMethod_be_digitalia_fosdem_services_AlarmIntentService(android.content.Intent)>[]--><be.digitalia.fosdem.services.AlarmIntentService: void onHandleWork(android.content.Intent)>[[-$z0 == 0], [-$i1 < 26]]--><be.digitalia.fosdem.services.AlarmIntentService: void createNotificationChannel(android.content.Context)>[]--><android.content.Context: java.lang.Object getSystemService(java.lang.Class)>
+One road protect good!
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <be.digitalia.fosdem.fragments.SettingsFragment$1: boolean onPreferenceClick(android.support.v7.preference.Preference)>[]--><be.digitalia.fosdem.services.AlarmIntentService: void startChannelNotificationSettingsActivity(android.content.Context)>[]--><be.digitalia.fosdem.services.AlarmIntentService: void createNotificationChannel(android.content.Context)>[]--><android.content.Context: java.lang.Object getSystemService(java.lang.Class)>
+#1.the call statck between class <be.digitalia.fosdem.fragments.SettingsFragment$1: boolean onPreferenceClick(android.support.v7.preference.Preference)> to <android.content.Context: java.lang.Object getSystemService(java.lang.Class)>has compatibility isssues！
+-----------------------------------------
+crashApis:2
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.util.Size: int getWidth()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <androidx.versionedparcelable.VersionedParcel: void writeSize(android.util.Size,int)>[]--><android.util.Size: int getWidth()>
+#1.the call statck between class <androidx.versionedparcelable.VersionedParcel: void writeSize(android.util.Size,int)> to <android.util.Size: int getWidth()>has compatibility isssues！
+-----------------------------------------
+crashApis:3
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.app.NotificationChannel: void setLockscreenVisibility(int)> is checking!!!
+The life time of api is [26,31]
+2call roads:
+1 Mainhead roads:
+###Multi invoking in one method, need manual check!!!--><be.digitalia.fosdem.services.AlarmIntentService: void onHandleWork(android.content.Intent)>[[-$z0 == 0], [-$i1 < 26]]--><be.digitalia.fosdem.services.AlarmIntentService: void createNotificationChannel(android.content.Context)>[]
+###Multi invoking in one method, need manual check!!!--><be.digitalia.fosdem.services.AlarmIntentService: void onHandleWork(android.content.Intent)>[[-$z0 == 0]][[-$i1 < 26]]--><be.digitalia.fosdem.services.AlarmIntentService: void createNotificationChannel(android.content.Context)>[]
+-$z0 == 0
+-$i1 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: be.digitalia.fosdem.services.AlarmIntentService dummyMainMethod_be_digitalia_fosdem_services_AlarmIntentService(android.content.Intent)>[]--><be.digitalia.fosdem.services.AlarmIntentService: void onHandleWork(android.content.Intent)>[[-$z0 == 0], [-$i1 < 26]]--><be.digitalia.fosdem.services.AlarmIntentService: void createNotificationChannel(android.content.Context)>[]--><android.app.NotificationChannel: void setLockscreenVisibility(int)>
+One road protect good!
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 24 25 
+Error road: <be.digitalia.fosdem.fragments.SettingsFragment$1: boolean onPreferenceClick(android.support.v7.preference.Preference)>[]--><be.digitalia.fosdem.services.AlarmIntentService: void startChannelNotificationSettingsActivity(android.content.Context)>[]--><be.digitalia.fosdem.services.AlarmIntentService: void createNotificationChannel(android.content.Context)>[]--><android.app.NotificationChannel: void setLockscreenVisibility(int)>
+#1.the call statck between class <be.digitalia.fosdem.fragments.SettingsFragment$1: boolean onPreferenceClick(android.support.v7.preference.Preference)> to <android.app.NotificationChannel: void setLockscreenVisibility(int)>has compatibility isssues！
+-----------------------------------------
+crashApis:4
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 5 Potential Issue API: SDKCheck of <android.os.BaseBundle: long getLong(java.lang.String,long)> is checking!!!
+The life time of api is [21,31]
+2call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: be.digitalia.fosdem.activities.TrackScheduleActivity dummyMainMethod_be_digitalia_fosdem_activities_TrackScheduleActivity(android.content.Intent)>[]--><be.digitalia.fosdem.activities.TrackScheduleActivity: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: long getLong(java.lang.String,long)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: long getLong(java.lang.String,long)>has compatibility isssues！
+-----------------------------------------
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <be.digitalia.fosdem.fragments.TrackScheduleListFragment: void onLoadFinished(android.support.v4.content.Loader,java.lang.Object)>[]--><be.digitalia.fosdem.fragments.TrackScheduleListFragment: void onLoadFinished(android.support.v4.content.Loader,android.database.Cursor)>[]--><be.digitalia.fosdem.fragments.TrackScheduleListFragment: int getDefaultPosition()>[]--><android.os.BaseBundle: long getLong(java.lang.String,long)>
+#1.the call statck between class <be.digitalia.fosdem.fragments.TrackScheduleListFragment: void onLoadFinished(android.support.v4.content.Loader,java.lang.Object)> to <android.os.BaseBundle: long getLong(java.lang.String,long)>has compatibility isssues！
+-----------------------------------------
+crashApis:5
+crashApisInMain:2
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 6 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)> is checking!!!
+The life time of api is [21,31]
+3call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: be.digitalia.fosdem.activities.SearchResultActivity dummyMainMethod_be_digitalia_fosdem_activities_SearchResultActivity(android.content.Intent)>[]--><be.digitalia.fosdem.activities.SearchResultActivity: void onCreate(android.os.Bundle)>[]--><be.digitalia.fosdem.activities.SearchResultActivity: void handleIntent(android.content.Intent,boolean)>[]--><be.digitalia.fosdem.fragments.SearchResultListFragment: be.digitalia.fosdem.fragments.SearchResultListFragment newInstance(java.lang.String)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+2 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <androidx.browser.browseractions.BrowserActionsIntent$Builder: android.os.Bundle getBundleFromItem(androidx.browser.browseractions.BrowserActionItem)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#1.the call statck between class <androidx.browser.browseractions.BrowserActionsIntent$Builder: android.os.Bundle getBundleFromItem(androidx.browser.browseractions.BrowserActionItem)> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <be.digitalia.fosdem.fragments.EventDetailsFragment$1: void onClick(android.view.View)>[]--><be.digitalia.fosdem.fragments.RoomImageDialogFragment: be.digitalia.fosdem.fragments.RoomImageDialogFragment newInstance(java.lang.String,int)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#2.the call statck between class <be.digitalia.fosdem.fragments.EventDetailsFragment$1: void onClick(android.view.View)> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:6
+crashApisInMain:3
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 7 Potential Issue API: SDKCheck of <android.graphics.drawable.Drawable: void setHotspot(float,float)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <be.digitalia.fosdem.widgets.ForegroundLinearLayout: void drawableHotspotChanged(float,float)>[]--><android.graphics.drawable.Drawable: void setHotspot(float,float)>
+#1.the call statck between class <be.digitalia.fosdem.widgets.ForegroundLinearLayout: void drawableHotspotChanged(float,float)> to <android.graphics.drawable.Drawable: void setHotspot(float,float)>has compatibility isssues！
+-----------------------------------------
+crashApis:7
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 8 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putBooleanArray(java.lang.String,boolean[])> is checking!!!
+The life time of api is [22,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 9 Potential Issue API: SDKCheck of <android.app.Activity: void setTaskDescription(android.app.ActivityManager.TaskDescription)> is checking!!!
+The life time of api is [21,31]
+2call roads:
+1 Mainhead roads:
+-i1 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: be.digitalia.fosdem.activities.TrackScheduleActivity dummyMainMethod_be_digitalia_fosdem_activities_TrackScheduleActivity(android.content.Intent)>[]--><be.digitalia.fosdem.activities.TrackScheduleActivity: void onCreate(android.os.Bundle)>[]--><be.digitalia.fosdem.utils.ThemeUtils: void setActionBarTrackColor(android.support.v7.app.AppCompatActivity,be.digitalia.fosdem.model.Track$Type)>[[-i1 < 21]]--><android.app.Activity: void setTaskDescription(android.app.ActivityManager.TaskDescription)>
+One road protect good!
+-i1 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: be.digitalia.fosdem.activities.TrackScheduleEventActivity dummyMainMethod_be_digitalia_fosdem_activities_TrackScheduleEventActivity(android.content.Intent)>[]--><be.digitalia.fosdem.activities.TrackScheduleEventActivity: void onCreate(android.os.Bundle)>[]--><be.digitalia.fosdem.utils.ThemeUtils: void setActionBarTrackColor(android.support.v7.app.AppCompatActivity,be.digitalia.fosdem.model.Track$Type)>[[-i1 < 21]]--><android.app.Activity: void setTaskDescription(android.app.ActivityManager.TaskDescription)>
+One road protect good!
+-i1 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: be.digitalia.fosdem.activities.EventDetailsActivity dummyMainMethod_be_digitalia_fosdem_activities_EventDetailsActivity(android.content.Intent)>[]--><be.digitalia.fosdem.activities.EventDetailsActivity: void onCreate(android.os.Bundle)>[]--><be.digitalia.fosdem.activities.EventDetailsActivity: void initEvent(be.digitalia.fosdem.model.Event)>[]--><be.digitalia.fosdem.utils.ThemeUtils: void setActionBarTrackColor(android.support.v7.app.AppCompatActivity,be.digitalia.fosdem.model.Track$Type)>[[-i1 < 21]]--><android.app.Activity: void setTaskDescription(android.app.ActivityManager.TaskDescription)>
+One road protect good!
+1 Packageshead roads:
+-i1 < 21
+Good road: <android.arch.lifecycle.LiveData: void considerNotify(android.arch.lifecycle.LiveData$ObserverWrapper)>[]--><android.arch.lifecycle.MediatorLiveData$Source: void onChanged(java.lang.Object)>[]--><be.digitalia.fosdem.activities.EventDetailsActivity: void onChanged(java.lang.Object)>[]--><be.digitalia.fosdem.activities.EventDetailsActivity: void onChanged(be.digitalia.fosdem.model.Event)>[]--><be.digitalia.fosdem.activities.EventDetailsActivity: void initEvent(be.digitalia.fosdem.model.Event)>[]--><be.digitalia.fosdem.utils.ThemeUtils: void setActionBarTrackColor(android.support.v7.app.AppCompatActivity,be.digitalia.fosdem.model.Track$Type)>[[-i1 < 21]]--><android.app.Activity: void setTaskDescription(android.app.ActivityManager.TaskDescription)>
+One road protect good!
+-i1 < 21
+Good road: <android.arch.lifecycle.LiveData: void considerNotify(android.arch.lifecycle.LiveData$ObserverWrapper)>[]--><be.digitalia.fosdem.activities.EventDetailsActivity: void onChanged(java.lang.Object)>[]--><be.digitalia.fosdem.activities.EventDetailsActivity: void onChanged(be.digitalia.fosdem.model.Event)>[]--><be.digitalia.fosdem.activities.EventDetailsActivity: void initEvent(be.digitalia.fosdem.model.Event)>[]--><be.digitalia.fosdem.utils.ThemeUtils: void setActionBarTrackColor(android.support.v7.app.AppCompatActivity,be.digitalia.fosdem.model.Track$Type)>[[-i1 < 21]]--><android.app.Activity: void setTaskDescription(android.app.ActivityManager.TaskDescription)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 10 Potential Issue API: SDKCheck of <android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)> is checking!!!
+The life time of api is [26,31]
+2call roads:
+1 Mainhead roads:
+###Multi invoking in one method, need manual check!!!--><be.digitalia.fosdem.services.AlarmIntentService: void onHandleWork(android.content.Intent)>[[-$z0 == 0], [-$i1 < 26]]--><be.digitalia.fosdem.services.AlarmIntentService: void createNotificationChannel(android.content.Context)>[]
+###Multi invoking in one method, need manual check!!!--><be.digitalia.fosdem.services.AlarmIntentService: void onHandleWork(android.content.Intent)>[[-$z0 == 0]][[-$i1 < 26]]--><be.digitalia.fosdem.services.AlarmIntentService: void createNotificationChannel(android.content.Context)>[]
+-$z0 == 0
+-$i1 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: be.digitalia.fosdem.services.AlarmIntentService dummyMainMethod_be_digitalia_fosdem_services_AlarmIntentService(android.content.Intent)>[]--><be.digitalia.fosdem.services.AlarmIntentService: void onHandleWork(android.content.Intent)>[[-$z0 == 0], [-$i1 < 26]]--><be.digitalia.fosdem.services.AlarmIntentService: void createNotificationChannel(android.content.Context)>[]--><android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)>
+One road protect good!
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 24 25 
+Error road: <be.digitalia.fosdem.fragments.SettingsFragment$1: boolean onPreferenceClick(android.support.v7.preference.Preference)>[]--><be.digitalia.fosdem.services.AlarmIntentService: void startChannelNotificationSettingsActivity(android.content.Context)>[]--><be.digitalia.fosdem.services.AlarmIntentService: void createNotificationChannel(android.content.Context)>[]--><android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)>
+#1.the call statck between class <be.digitalia.fosdem.fragments.SettingsFragment$1: boolean onPreferenceClick(android.support.v7.preference.Preference)> to <android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:8
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 11 Potential Issue API: SDKCheck of <android.app.NotificationChannel: void setLightColor(int)> is checking!!!
+The life time of api is [26,31]
+2call roads:
+1 Mainhead roads:
+###Multi invoking in one method, need manual check!!!--><be.digitalia.fosdem.services.AlarmIntentService: void onHandleWork(android.content.Intent)>[[-$z0 == 0], [-$i1 < 26]]--><be.digitalia.fosdem.services.AlarmIntentService: void createNotificationChannel(android.content.Context)>[]
+###Multi invoking in one method, need manual check!!!--><be.digitalia.fosdem.services.AlarmIntentService: void onHandleWork(android.content.Intent)>[[-$z0 == 0]][[-$i1 < 26]]--><be.digitalia.fosdem.services.AlarmIntentService: void createNotificationChannel(android.content.Context)>[]
+-$z0 == 0
+-$i1 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: be.digitalia.fosdem.services.AlarmIntentService dummyMainMethod_be_digitalia_fosdem_services_AlarmIntentService(android.content.Intent)>[]--><be.digitalia.fosdem.services.AlarmIntentService: void onHandleWork(android.content.Intent)>[[-$z0 == 0], [-$i1 < 26]]--><be.digitalia.fosdem.services.AlarmIntentService: void createNotificationChannel(android.content.Context)>[]--><android.app.NotificationChannel: void setLightColor(int)>
+One road protect good!
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 24 25 
+Error road: <be.digitalia.fosdem.fragments.SettingsFragment$1: boolean onPreferenceClick(android.support.v7.preference.Preference)>[]--><be.digitalia.fosdem.services.AlarmIntentService: void startChannelNotificationSettingsActivity(android.content.Context)>[]--><be.digitalia.fosdem.services.AlarmIntentService: void createNotificationChannel(android.content.Context)>[]--><android.app.NotificationChannel: void setLightColor(int)>
+#1.the call statck between class <be.digitalia.fosdem.fragments.SettingsFragment$1: boolean onPreferenceClick(android.support.v7.preference.Preference)> to <android.app.NotificationChannel: void setLightColor(int)>has compatibility isssues！
+-----------------------------------------
+crashApis:9
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 12 Potential Issue API: SDKCheck of <android.util.Size: void <init>(int,int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <androidx.versionedparcelable.VersionedParcel: android.util.Size readSize(android.util.Size,int)>[]--><android.util.Size: void <init>(int,int)>
+#1.the call statck between class <androidx.versionedparcelable.VersionedParcel: android.util.Size readSize(android.util.Size,int)> to <android.util.Size: void <init>(int,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:10
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 13 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)> is checking!!!
+The life time of api is [22,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: be.digitalia.fosdem.activities.TrackScheduleActivity dummyMainMethod_be_digitalia_fosdem_activities_TrackScheduleActivity(android.content.Intent)>[]--><dummyMainClass: be.digitalia.fosdem.fragments.TrackScheduleListFragment dummyMainMethod_be_digitalia_fosdem_fragments_TrackScheduleListFragment(android.content.Intent,android.app.Activity)>[]--><be.digitalia.fosdem.fragments.TrackScheduleListFragment: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:11
+crashApisInMain:4
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 14 Potential Issue API: SDKCheck of <android.content.Context: int getColor(int)> is checking!!!
+The life time of api is [23,31]
+2call roads:
+1 Mainhead roads:
+###Multi invoking in one method, need manual check!!!--><be.digitalia.fosdem.services.AlarmIntentService: void onHandleWork(android.content.Intent)>[[-$z0 == 0], [-$i1 < 26]]--><be.digitalia.fosdem.services.AlarmIntentService: void createNotificationChannel(android.content.Context)>[]
+###Multi invoking in one method, need manual check!!!--><be.digitalia.fosdem.services.AlarmIntentService: void onHandleWork(android.content.Intent)>[[-$z0 == 0]][[-$i1 < 26]]--><be.digitalia.fosdem.services.AlarmIntentService: void createNotificationChannel(android.content.Context)>[]
+-$z0 == 0
+-$i1 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: be.digitalia.fosdem.services.AlarmIntentService dummyMainMethod_be_digitalia_fosdem_services_AlarmIntentService(android.content.Intent)>[]--><be.digitalia.fosdem.services.AlarmIntentService: void onHandleWork(android.content.Intent)>[[-$z0 == 0], [-$i1 < 26]]--><be.digitalia.fosdem.services.AlarmIntentService: void createNotificationChannel(android.content.Context)>[]--><android.content.Context: int getColor(int)>
+One road protect good!
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <be.digitalia.fosdem.fragments.SettingsFragment$1: boolean onPreferenceClick(android.support.v7.preference.Preference)>[]--><be.digitalia.fosdem.services.AlarmIntentService: void startChannelNotificationSettingsActivity(android.content.Context)>[]--><be.digitalia.fosdem.services.AlarmIntentService: void createNotificationChannel(android.content.Context)>[]--><android.content.Context: int getColor(int)>
+#1.the call statck between class <be.digitalia.fosdem.fragments.SettingsFragment$1: boolean onPreferenceClick(android.support.v7.preference.Preference)> to <android.content.Context: int getColor(int)>has compatibility isssues！
+-----------------------------------------
+crashApis:12
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 15 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putDouble(java.lang.String,double)> is checking!!!
+The life time of api is [21,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 16 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putIntArray(java.lang.String,int[])> is checking!!!
+The life time of api is [21,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 17 Potential Issue API: SDKCheck of <android.util.SizeF: float getHeight()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <androidx.versionedparcelable.VersionedParcel: void writeSizeF(android.util.SizeF,int)>[]--><android.util.SizeF: float getHeight()>
+#1.the call statck between class <androidx.versionedparcelable.VersionedParcel: void writeSizeF(android.util.SizeF,int)> to <android.util.SizeF: float getHeight()>has compatibility isssues！
+-----------------------------------------
+crashApis:13
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 18 Potential Issue API: SDKCheck of <android.view.View: void drawableHotspotChanged(float,float)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <be.digitalia.fosdem.widgets.ForegroundLinearLayout: void drawableHotspotChanged(float,float)>[]--><android.view.View: void drawableHotspotChanged(float,float)>
+#1.the call statck between class <be.digitalia.fosdem.widgets.ForegroundLinearLayout: void drawableHotspotChanged(float,float)> to <android.view.View: void drawableHotspotChanged(float,float)>has compatibility isssues！
+-----------------------------------------
+crashApis:14
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 19 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.lang.Object get(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:true
+1call by main package
+-----------------------------------------
+#################################################
+N 20 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putDoubleArray(java.lang.String,double[])> is checking!!!
+The life time of api is [21,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 21 Potential Issue API: SDKCheck of <android.app.PendingIntent: java.lang.String getCreatorPackage()> is checking!!!
+The life time of api is [17,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i0 < 17
+Good road: <androidx.browser.browseractions.BrowserActionsIntent: java.lang.String getCreatorPackageName(android.content.Intent)>[[-$i0 < 17]]--><android.app.PendingIntent: java.lang.String getCreatorPackage()>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 22 Potential Issue API: SDKCheck of <android.view.View: void setElevation(float)> is checking!!!
+The life time of api is [21,31]
+2call roads:
+1 Mainhead roads:
+-$i0 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: be.digitalia.fosdem.activities.MainActivity dummyMainMethod_be_digitalia_fosdem_activities_MainActivity(android.content.Intent)>[]--><be.digitalia.fosdem.activities.MainActivity: void onCreate(android.os.Bundle)>[]--><be.digitalia.fosdem.activities.MainActivity: void updateActionBar()>[[-$i0 < 21]]--><android.view.View: void setElevation(float)>
+One road protect good!
+1 Packageshead roads:
+-$i0 < 21
+Good road: <be.digitalia.fosdem.activities.MainActivity$4: void onDrawerClosed(android.view.View)>[]--><be.digitalia.fosdem.activities.MainActivity: void selectMenuSection(int)>[]--><be.digitalia.fosdem.activities.MainActivity: void updateActionBar()>[[-$i0 < 21]]--><android.view.View: void setElevation(float)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 23 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putLong(java.lang.String,long)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: be.digitalia.fosdem.activities.TrackScheduleActivity dummyMainMethod_be_digitalia_fosdem_activities_TrackScheduleActivity(android.content.Intent)>[]--><be.digitalia.fosdem.activities.TrackScheduleActivity: void onCreate(android.os.Bundle)>[]--><be.digitalia.fosdem.fragments.TrackScheduleListFragment: be.digitalia.fosdem.fragments.TrackScheduleListFragment newInstance(be.digitalia.fosdem.model.Day,be.digitalia.fosdem.model.Track,long)>[]--><android.os.BaseBundle: void putLong(java.lang.String,long)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: void putLong(java.lang.String,long)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:15
+crashApisInMain:5
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 24 Potential Issue API: SDKCheck of <android.os.BaseBundle: boolean getBoolean(java.lang.String)> is checking!!!
+The life time of api is [22,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: be.digitalia.fosdem.activities.TrackScheduleActivity dummyMainMethod_be_digitalia_fosdem_activities_TrackScheduleActivity(android.content.Intent)>[]--><dummyMainClass: be.digitalia.fosdem.fragments.TrackScheduleListFragment dummyMainMethod_be_digitalia_fosdem_fragments_TrackScheduleListFragment(android.content.Intent,android.app.Activity)>[]--><be.digitalia.fosdem.fragments.TrackScheduleListFragment: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: boolean getBoolean(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:16
+crashApisInMain:6
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 25 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.lang.String getString(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+5call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: be.digitalia.fosdem.activities.SearchResultActivity dummyMainMethod_be_digitalia_fosdem_activities_SearchResultActivity(android.content.Intent)>[]--><be.digitalia.fosdem.activities.SearchResultActivity: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+4 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <androidx.browser.browseractions.BrowserActionsIntent: void openBrowserAction(android.content.Context,android.net.Uri)>[]--><androidx.browser.browseractions.BrowserActionsIntent: void launchIntent(android.content.Context,android.content.Intent)>[]--><androidx.browser.browseractions.BrowserActionsIntent: void launchIntent(android.content.Context,android.content.Intent,java.util.List)>[]--><androidx.browser.browseractions.BrowserActionsIntent: void openFallbackBrowserActionsMenu(android.content.Context,android.content.Intent)>[]--><androidx.browser.browseractions.BrowserActionsIntent: java.util.List parseBrowserActionItems(java.util.ArrayList)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#1.the call statck between class <androidx.browser.browseractions.BrowserActionsIntent: void openBrowserAction(android.content.Context,android.net.Uri)> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <androidx.browser.browseractions.BrowserActionsIntent: void openBrowserAction(android.content.Context,android.net.Uri,int,java.util.ArrayList,android.app.PendingIntent)>[]--><androidx.browser.browseractions.BrowserActionsIntent: void launchIntent(android.content.Context,android.content.Intent)>[]--><androidx.browser.browseractions.BrowserActionsIntent: void launchIntent(android.content.Context,android.content.Intent,java.util.List)>[]--><androidx.browser.browseractions.BrowserActionsIntent: void openFallbackBrowserActionsMenu(android.content.Context,android.content.Intent)>[]--><androidx.browser.browseractions.BrowserActionsIntent: java.util.List parseBrowserActionItems(java.util.ArrayList)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#2.the call statck between class <androidx.browser.browseractions.BrowserActionsIntent: void openBrowserAction(android.content.Context,android.net.Uri,int,java.util.ArrayList,android.app.PendingIntent)> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <be.digitalia.fosdem.fragments.SearchResultListFragment: android.support.v4.content.Loader onCreateLoader(int,android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#3.the call statck between class <be.digitalia.fosdem.fragments.SearchResultListFragment: android.support.v4.content.Loader onCreateLoader(int,android.os.Bundle)> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <be.digitalia.fosdem.fragments.RoomImageDialogFragment: android.app.Dialog onCreateDialog(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#4.the call statck between class <be.digitalia.fosdem.fragments.RoomImageDialogFragment: android.app.Dialog onCreateDialog(android.os.Bundle)> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:17
+crashApisInMain:7
+containsStatic:false
+containsTry:false
+5call by main package
+-----------------------------------------
+#################################################
+N 26 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putStringArray(java.lang.String,java.lang.String[])> is checking!!!
+The life time of api is [21,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 27 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putInt(java.lang.String,int)> is checking!!!
+The life time of api is [21,31]
+4call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: be.digitalia.fosdem.activities.MainActivity dummyMainMethod_be_digitalia_fosdem_activities_MainActivity(android.content.Intent)>[]--><be.digitalia.fosdem.activities.MainActivity: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: be.digitalia.fosdem.activities.SearchResultActivity dummyMainMethod_be_digitalia_fosdem_activities_SearchResultActivity(android.content.Intent)>[]--><be.digitalia.fosdem.activities.SearchResultActivity: void onCreate(android.os.Bundle)>[]--><be.digitalia.fosdem.activities.SearchResultActivity: void handleIntent(android.content.Intent,boolean)>[]--><be.digitalia.fosdem.fragments.MessageDialogFragment: be.digitalia.fosdem.fragments.MessageDialogFragment newInstance(int,int)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+3 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <androidx.browser.browseractions.BrowserActionsIntent$Builder: android.os.Bundle getBundleFromItem(androidx.browser.browseractions.BrowserActionItem)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#1.the call statck between class <androidx.browser.browseractions.BrowserActionsIntent$Builder: android.os.Bundle getBundleFromItem(androidx.browser.browseractions.BrowserActionItem)> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <be.digitalia.fosdem.fragments.MessageDialogFragment: be.digitalia.fosdem.fragments.MessageDialogFragment newInstance(int,java.lang.CharSequence)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#2.the call statck between class <be.digitalia.fosdem.fragments.MessageDialogFragment: be.digitalia.fosdem.fragments.MessageDialogFragment newInstance(int,java.lang.CharSequence)> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <be.digitalia.fosdem.fragments.EventDetailsFragment$1: void onClick(android.view.View)>[]--><be.digitalia.fosdem.fragments.RoomImageDialogFragment: be.digitalia.fosdem.fragments.RoomImageDialogFragment newInstance(java.lang.String,int)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#3.the call statck between class <be.digitalia.fosdem.fragments.EventDetailsFragment$1: void onClick(android.view.View)> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:18
+crashApisInMain:8
+containsStatic:false
+containsTry:false
+4call by main package
+-----------------------------------------
+#################################################
+N 28 Potential Issue API: SDKCheck of <android.util.SizeF: float getWidth()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <androidx.versionedparcelable.VersionedParcel: void writeSizeF(android.util.SizeF,int)>[]--><android.util.SizeF: float getWidth()>
+#1.the call statck between class <androidx.versionedparcelable.VersionedParcel: void writeSizeF(android.util.SizeF,int)> to <android.util.SizeF: float getWidth()>has compatibility isssues！
+-----------------------------------------
+crashApis:19
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 29 Potential Issue API: SDKCheck of <android.os.BaseBundle: int getInt(java.lang.String,int)> is checking!!!
+The life time of api is [21,31]
+2call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: be.digitalia.fosdem.activities.TrackScheduleEventActivity dummyMainMethod_be_digitalia_fosdem_activities_TrackScheduleEventActivity(android.content.Intent)>[]--><be.digitalia.fosdem.activities.TrackScheduleEventActivity: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String,int)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: int getInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <be.digitalia.fosdem.fragments.MessageDialogFragment: android.app.Dialog onCreateDialog(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String,int)>
+#1.the call statck between class <be.digitalia.fosdem.fragments.MessageDialogFragment: android.app.Dialog onCreateDialog(android.os.Bundle)> to <android.os.BaseBundle: int getInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:20
+crashApisInMain:9
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 30 Potential Issue API: SDKCheck of <android.app.ActivityManager.TaskDescription: void <init>(java.lang.String,android.graphics.Bitmap,int)> is checking!!!
+The life time of api is [21,31]
+2call roads:
+1 Mainhead roads:
+-i1 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: be.digitalia.fosdem.activities.TrackScheduleActivity dummyMainMethod_be_digitalia_fosdem_activities_TrackScheduleActivity(android.content.Intent)>[]--><be.digitalia.fosdem.activities.TrackScheduleActivity: void onCreate(android.os.Bundle)>[]--><be.digitalia.fosdem.utils.ThemeUtils: void setActionBarTrackColor(android.support.v7.app.AppCompatActivity,be.digitalia.fosdem.model.Track$Type)>[[-i1 < 21]]--><android.app.ActivityManager.TaskDescription: void <init>(java.lang.String,android.graphics.Bitmap,int)>
+One road protect good!
+-i1 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: be.digitalia.fosdem.activities.TrackScheduleEventActivity dummyMainMethod_be_digitalia_fosdem_activities_TrackScheduleEventActivity(android.content.Intent)>[]--><be.digitalia.fosdem.activities.TrackScheduleEventActivity: void onCreate(android.os.Bundle)>[]--><be.digitalia.fosdem.utils.ThemeUtils: void setActionBarTrackColor(android.support.v7.app.AppCompatActivity,be.digitalia.fosdem.model.Track$Type)>[[-i1 < 21]]--><android.app.ActivityManager.TaskDescription: void <init>(java.lang.String,android.graphics.Bitmap,int)>
+One road protect good!
+-i1 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: be.digitalia.fosdem.activities.EventDetailsActivity dummyMainMethod_be_digitalia_fosdem_activities_EventDetailsActivity(android.content.Intent)>[]--><be.digitalia.fosdem.activities.EventDetailsActivity: void onCreate(android.os.Bundle)>[]--><be.digitalia.fosdem.activities.EventDetailsActivity: void initEvent(be.digitalia.fosdem.model.Event)>[]--><be.digitalia.fosdem.utils.ThemeUtils: void setActionBarTrackColor(android.support.v7.app.AppCompatActivity,be.digitalia.fosdem.model.Track$Type)>[[-i1 < 21]]--><android.app.ActivityManager.TaskDescription: void <init>(java.lang.String,android.graphics.Bitmap,int)>
+One road protect good!
+1 Packageshead roads:
+-i1 < 21
+Good road: <android.arch.lifecycle.LiveData: void considerNotify(android.arch.lifecycle.LiveData$ObserverWrapper)>[]--><android.arch.lifecycle.MediatorLiveData$Source: void onChanged(java.lang.Object)>[]--><be.digitalia.fosdem.activities.EventDetailsActivity: void onChanged(java.lang.Object)>[]--><be.digitalia.fosdem.activities.EventDetailsActivity: void onChanged(be.digitalia.fosdem.model.Event)>[]--><be.digitalia.fosdem.activities.EventDetailsActivity: void initEvent(be.digitalia.fosdem.model.Event)>[]--><be.digitalia.fosdem.utils.ThemeUtils: void setActionBarTrackColor(android.support.v7.app.AppCompatActivity,be.digitalia.fosdem.model.Track$Type)>[[-i1 < 21]]--><android.app.ActivityManager.TaskDescription: void <init>(java.lang.String,android.graphics.Bitmap,int)>
+One road protect good!
+-i1 < 21
+Good road: <android.arch.lifecycle.LiveData: void considerNotify(android.arch.lifecycle.LiveData$ObserverWrapper)>[]--><be.digitalia.fosdem.activities.EventDetailsActivity: void onChanged(java.lang.Object)>[]--><be.digitalia.fosdem.activities.EventDetailsActivity: void onChanged(be.digitalia.fosdem.model.Event)>[]--><be.digitalia.fosdem.activities.EventDetailsActivity: void initEvent(be.digitalia.fosdem.model.Event)>[]--><be.digitalia.fosdem.utils.ThemeUtils: void setActionBarTrackColor(android.support.v7.app.AppCompatActivity,be.digitalia.fosdem.model.Track$Type)>[[-i1 < 21]]--><android.app.ActivityManager.TaskDescription: void <init>(java.lang.String,android.graphics.Bitmap,int)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 31 Potential Issue API: SDKCheck of <android.view.Window: void setStatusBarColor(int)> is checking!!!
+The life time of api is [21,31]
+2call roads:
+1 Mainhead roads:
+-i1 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: be.digitalia.fosdem.activities.TrackScheduleActivity dummyMainMethod_be_digitalia_fosdem_activities_TrackScheduleActivity(android.content.Intent)>[]--><be.digitalia.fosdem.activities.TrackScheduleActivity: void onCreate(android.os.Bundle)>[]--><be.digitalia.fosdem.utils.ThemeUtils: void setActionBarTrackColor(android.support.v7.app.AppCompatActivity,be.digitalia.fosdem.model.Track$Type)>[[-i1 < 21]]--><android.view.Window: void setStatusBarColor(int)>
+One road protect good!
+-i1 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: be.digitalia.fosdem.activities.TrackScheduleEventActivity dummyMainMethod_be_digitalia_fosdem_activities_TrackScheduleEventActivity(android.content.Intent)>[]--><be.digitalia.fosdem.activities.TrackScheduleEventActivity: void onCreate(android.os.Bundle)>[]--><be.digitalia.fosdem.utils.ThemeUtils: void setActionBarTrackColor(android.support.v7.app.AppCompatActivity,be.digitalia.fosdem.model.Track$Type)>[[-i1 < 21]]--><android.view.Window: void setStatusBarColor(int)>
+One road protect good!
+-i1 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: be.digitalia.fosdem.activities.EventDetailsActivity dummyMainMethod_be_digitalia_fosdem_activities_EventDetailsActivity(android.content.Intent)>[]--><be.digitalia.fosdem.activities.EventDetailsActivity: void onCreate(android.os.Bundle)>[]--><be.digitalia.fosdem.activities.EventDetailsActivity: void initEvent(be.digitalia.fosdem.model.Event)>[]--><be.digitalia.fosdem.utils.ThemeUtils: void setActionBarTrackColor(android.support.v7.app.AppCompatActivity,be.digitalia.fosdem.model.Track$Type)>[[-i1 < 21]]--><android.view.Window: void setStatusBarColor(int)>
+One road protect good!
+1 Packageshead roads:
+-i1 < 21
+Good road: <android.arch.lifecycle.LiveData: void considerNotify(android.arch.lifecycle.LiveData$ObserverWrapper)>[]--><android.arch.lifecycle.MediatorLiveData$Source: void onChanged(java.lang.Object)>[]--><be.digitalia.fosdem.activities.EventDetailsActivity: void onChanged(java.lang.Object)>[]--><be.digitalia.fosdem.activities.EventDetailsActivity: void onChanged(be.digitalia.fosdem.model.Event)>[]--><be.digitalia.fosdem.activities.EventDetailsActivity: void initEvent(be.digitalia.fosdem.model.Event)>[]--><be.digitalia.fosdem.utils.ThemeUtils: void setActionBarTrackColor(android.support.v7.app.AppCompatActivity,be.digitalia.fosdem.model.Track$Type)>[[-i1 < 21]]--><android.view.Window: void setStatusBarColor(int)>
+One road protect good!
+-i1 < 21
+Good road: <android.arch.lifecycle.LiveData: void considerNotify(android.arch.lifecycle.LiveData$ObserverWrapper)>[]--><be.digitalia.fosdem.activities.EventDetailsActivity: void onChanged(java.lang.Object)>[]--><be.digitalia.fosdem.activities.EventDetailsActivity: void onChanged(be.digitalia.fosdem.model.Event)>[]--><be.digitalia.fosdem.activities.EventDetailsActivity: void initEvent(be.digitalia.fosdem.model.Event)>[]--><be.digitalia.fosdem.utils.ThemeUtils: void setActionBarTrackColor(android.support.v7.app.AppCompatActivity,be.digitalia.fosdem.model.Track$Type)>[[-i1 < 21]]--><android.view.Window: void setStatusBarColor(int)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 32 Potential Issue API: SDKCheck of <android.util.SizeF: void <init>(float,float)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <androidx.versionedparcelable.VersionedParcel: android.util.SizeF readSizeF(android.util.SizeF,int)>[]--><android.util.SizeF: void <init>(float,float)>
+#1.the call statck between class <androidx.versionedparcelable.VersionedParcel: android.util.SizeF readSizeF(android.util.SizeF,int)> to <android.util.SizeF: void <init>(float,float)>has compatibility isssues！
+-----------------------------------------
+crashApis:21
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 33 Potential Issue API: SDKCheck of <android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)> is checking!!!
+The life time of api is [26,31]
+2call roads:
+1 Mainhead roads:
+###Multi invoking in one method, need manual check!!!--><be.digitalia.fosdem.services.AlarmIntentService: void onHandleWork(android.content.Intent)>[[-$z0 == 0], [-$i1 < 26]]--><be.digitalia.fosdem.services.AlarmIntentService: void createNotificationChannel(android.content.Context)>[]
+###Multi invoking in one method, need manual check!!!--><be.digitalia.fosdem.services.AlarmIntentService: void onHandleWork(android.content.Intent)>[[-$z0 == 0]][[-$i1 < 26]]--><be.digitalia.fosdem.services.AlarmIntentService: void createNotificationChannel(android.content.Context)>[]
+-$z0 == 0
+-$i1 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: be.digitalia.fosdem.services.AlarmIntentService dummyMainMethod_be_digitalia_fosdem_services_AlarmIntentService(android.content.Intent)>[]--><be.digitalia.fosdem.services.AlarmIntentService: void onHandleWork(android.content.Intent)>[[-$z0 == 0], [-$i1 < 26]]--><be.digitalia.fosdem.services.AlarmIntentService: void createNotificationChannel(android.content.Context)>[]--><android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)>
+One road protect good!
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 24 25 
+Error road: <be.digitalia.fosdem.fragments.SettingsFragment$1: boolean onPreferenceClick(android.support.v7.preference.Preference)>[]--><be.digitalia.fosdem.services.AlarmIntentService: void startChannelNotificationSettingsActivity(android.content.Context)>[]--><be.digitalia.fosdem.services.AlarmIntentService: void createNotificationChannel(android.content.Context)>[]--><android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)>
+#1.the call statck between class <be.digitalia.fosdem.fragments.SettingsFragment$1: boolean onPreferenceClick(android.support.v7.preference.Preference)> to <android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)>has compatibility isssues！
+-----------------------------------------
+crashApis:22
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 34 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.util.Set keySet()> is checking!!!
+The life time of api is [21,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:true
+1call by main package
+-----------------------------------------
+#################################################
+N 35 Potential Issue API: SDKCheck of <android.util.Size: int getHeight()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <androidx.versionedparcelable.VersionedParcel: void writeSize(android.util.Size,int)>[]--><android.util.Size: int getHeight()>
+#1.the call statck between class <androidx.versionedparcelable.VersionedParcel: void writeSize(android.util.Size,int)> to <android.util.Size: int getHeight()>has compatibility isssues！
+-----------------------------------------
+crashApis:23
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 36 Potential Issue API: SDKCheck of <android.app.NotificationChannel: void setShowBadge(boolean)> is checking!!!
+The life time of api is [26,31]
+2call roads:
+1 Mainhead roads:
+###Multi invoking in one method, need manual check!!!--><be.digitalia.fosdem.services.AlarmIntentService: void onHandleWork(android.content.Intent)>[[-$z0 == 0], [-$i1 < 26]]--><be.digitalia.fosdem.services.AlarmIntentService: void createNotificationChannel(android.content.Context)>[]
+###Multi invoking in one method, need manual check!!!--><be.digitalia.fosdem.services.AlarmIntentService: void onHandleWork(android.content.Intent)>[[-$z0 == 0]][[-$i1 < 26]]--><be.digitalia.fosdem.services.AlarmIntentService: void createNotificationChannel(android.content.Context)>[]
+-$z0 == 0
+-$i1 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: be.digitalia.fosdem.services.AlarmIntentService dummyMainMethod_be_digitalia_fosdem_services_AlarmIntentService(android.content.Intent)>[]--><be.digitalia.fosdem.services.AlarmIntentService: void onHandleWork(android.content.Intent)>[[-$z0 == 0], [-$i1 < 26]]--><be.digitalia.fosdem.services.AlarmIntentService: void createNotificationChannel(android.content.Context)>[]--><android.app.NotificationChannel: void setShowBadge(boolean)>
+One road protect good!
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 24 25 
+Error road: <be.digitalia.fosdem.fragments.SettingsFragment$1: boolean onPreferenceClick(android.support.v7.preference.Preference)>[]--><be.digitalia.fosdem.services.AlarmIntentService: void startChannelNotificationSettingsActivity(android.content.Context)>[]--><be.digitalia.fosdem.services.AlarmIntentService: void createNotificationChannel(android.content.Context)>[]--><android.app.NotificationChannel: void setShowBadge(boolean)>
+#1.the call statck between class <be.digitalia.fosdem.fragments.SettingsFragment$1: boolean onPreferenceClick(android.support.v7.preference.Preference)> to <android.app.NotificationChannel: void setShowBadge(boolean)>has compatibility isssues！
+-----------------------------------------
+crashApis:24
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 37 Potential Issue API: SDKCheck of <android.app.NotificationChannel: void enableVibration(boolean)> is checking!!!
+The life time of api is [26,31]
+2call roads:
+1 Mainhead roads:
+###Multi invoking in one method, need manual check!!!--><be.digitalia.fosdem.services.AlarmIntentService: void onHandleWork(android.content.Intent)>[[-$z0 == 0], [-$i1 < 26]]--><be.digitalia.fosdem.services.AlarmIntentService: void createNotificationChannel(android.content.Context)>[]
+###Multi invoking in one method, need manual check!!!--><be.digitalia.fosdem.services.AlarmIntentService: void onHandleWork(android.content.Intent)>[[-$z0 == 0]][[-$i1 < 26]]--><be.digitalia.fosdem.services.AlarmIntentService: void createNotificationChannel(android.content.Context)>[]
+-$z0 == 0
+-$i1 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: be.digitalia.fosdem.services.AlarmIntentService dummyMainMethod_be_digitalia_fosdem_services_AlarmIntentService(android.content.Intent)>[]--><be.digitalia.fosdem.services.AlarmIntentService: void onHandleWork(android.content.Intent)>[[-$z0 == 0], [-$i1 < 26]]--><be.digitalia.fosdem.services.AlarmIntentService: void createNotificationChannel(android.content.Context)>[]--><android.app.NotificationChannel: void enableVibration(boolean)>
+One road protect good!
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 24 25 
+Error road: <be.digitalia.fosdem.fragments.SettingsFragment$1: boolean onPreferenceClick(android.support.v7.preference.Preference)>[]--><be.digitalia.fosdem.services.AlarmIntentService: void startChannelNotificationSettingsActivity(android.content.Context)>[]--><be.digitalia.fosdem.services.AlarmIntentService: void createNotificationChannel(android.content.Context)>[]--><android.app.NotificationChannel: void enableVibration(boolean)>
+#1.the call statck between class <be.digitalia.fosdem.fragments.SettingsFragment$1: boolean onPreferenceClick(android.support.v7.preference.Preference)> to <android.app.NotificationChannel: void enableVibration(boolean)>has compatibility isssues！
+-----------------------------------------
+crashApis:25
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+crashApis numbers:25
+crashApis numbers in main road:9
+On Android Version 16 this app may have error api use(at least): 25 and error api roads: 40
+On Android Version 17 this app may have error api use(at least): 25 and error api roads: 40
+On Android Version 18 this app may have error api use(at least): 25 and error api roads: 40
+On Android Version 19 this app may have error api use(at least): 25 and error api roads: 40
+On Android Version 20 this app may have error api use(at least): 25 and error api roads: 40
+On Android Version 21 this app may have error api use(at least): 10 and error api roads: 10
+On Android Version 22 this app may have error api use(at least): 8 and error api roads: 8
+On Android Version 23 this app may have error api use(at least): 6 and error api roads: 6
+On Android Version 24 this app may have error api use(at least): 6 and error api roads: 6
+On Android Version 25 this app may have error api use(at least): 6 and error api roads: 6
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 31 this app may have error api use(at least): 0 and error api roads: 0

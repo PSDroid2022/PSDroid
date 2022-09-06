@@ -1,0 +1,249 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/DuckDuckGo_Privacy_Browser.apk
+Entry Points[com.duckduckgo.mobile.android.duckduckgo.ui.bookmarks.BookmarksActivity, com.duckduckgo.mobile.android.duckduckgo.ui.main.MainActivity, com.duckduckgo.mobile.android.duckduckgo.App]
+FllowDroidcallgraph size:425
+Soot started on Mon Jul 11 03:14:20 CST 2022
+Soot finished on Mon Jul 11 03:14:26 CST 2022
+Soot has run for 0 min. 5 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 16
+Declared Target Sdk version is: 25
+Declared Max Sdk version is: -1
+Collected 182 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.duckduckgo.mobile.android.duckduckgo.ui.main.MainActivity dummyMainMethod_com_duckduckgo_mobile_android_duckduckgo_ui_main_MainActivity(android.content.Intent)>[]--><dummyMainClass: com.duckduckgo.mobile.android.duckduckgo.ui.browser.BrowserFragment dummyMainMethod_com_duckduckgo_mobile_android_duckduckgo_ui_browser_BrowserFragment(android.content.Intent,android.app.Activity)>[]--><com.duckduckgo.mobile.android.duckduckgo.ui.browser.BrowserFragment: void onSaveInstanceState(android.os.Bundle)>[]--><com.duckduckgo.mobile.android.duckduckgo.ui.browser.Browser: void saveState(android.os.Bundle)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:1
+crashApisInMain:1
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.os.BaseBundle: boolean getBoolean(java.lang.String)> is checking!!!
+The life time of api is [22,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.duckduckgo.mobile.android.duckduckgo.ui.bookmarks.BookmarksActivity dummyMainMethod_com_duckduckgo_mobile_android_duckduckgo_ui_bookmarks_BookmarksActivity(android.content.Intent)>[]--><com.duckduckgo.mobile.android.duckduckgo.ui.bookmarks.BookmarksActivity: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: boolean getBoolean(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:2
+crashApisInMain:2
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.webkit.WebView: void <init>(android.content.Context,android.util.AttributeSet,int,int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.duckduckgo.mobile.android.duckduckgo.ui.tab.DDGWebView: void <init>(android.content.Context,android.util.AttributeSet,int,int)>[]--><android.webkit.WebView: void <init>(android.content.Context,android.util.AttributeSet,int,int)>
+#1.the call statck between class <com.duckduckgo.mobile.android.duckduckgo.ui.tab.DDGWebView: void <init>(android.content.Context,android.util.AttributeSet,int,int)> to <android.webkit.WebView: void <init>(android.content.Context,android.util.AttributeSet,int,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:3
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.lang.String getString(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.duckduckgo.mobile.android.duckduckgo.ui.main.MainActivity dummyMainMethod_com_duckduckgo_mobile_android_duckduckgo_ui_main_MainActivity(android.content.Intent)>[]--><dummyMainClass: com.duckduckgo.mobile.android.duckduckgo.ui.browser.BrowserFragment dummyMainMethod_com_duckduckgo_mobile_android_duckduckgo_ui_browser_BrowserFragment(android.content.Intent,android.app.Activity)>[]--><com.duckduckgo.mobile.android.duckduckgo.ui.browser.BrowserFragment: void onActivityCreated(android.os.Bundle)>[]--><com.duckduckgo.mobile.android.duckduckgo.ui.browser.Browser: void restoreState(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:4
+crashApisInMain:3
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.view.Window: void setStatusBarColor(int)> is checking!!!
+The life time of api is [21,31]
+6call roads:
+1 Mainhead roads:
+-$i1 < 23
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.duckduckgo.mobile.android.duckduckgo.ui.main.MainActivity dummyMainMethod_com_duckduckgo_mobile_android_duckduckgo_ui_main_MainActivity(android.content.Intent)>[]--><com.duckduckgo.mobile.android.duckduckgo.ui.main.MainActivity: void onCreate(android.os.Bundle)>[]--><com.duckduckgo.mobile.android.duckduckgo.ui.main.MainActivity: void handleIntent(android.content.Intent)>[]--><com.duckduckgo.mobile.android.duckduckgo.ui.main.MainActivity: void handleActionWebSearch(android.content.Intent)>[]--><com.duckduckgo.mobile.android.duckduckgo.ui.browser.BrowserPresenterImpl: void requestSearchInNewTab(java.lang.String)>[]--><com.duckduckgo.mobile.android.duckduckgo.ui.browser.BrowserPresenterImpl: void actionSearchInNewTab(java.lang.String)>[]--><com.duckduckgo.mobile.android.duckduckgo.ui.browser.BrowserPresenterImpl: void openNewTab()>[]--><com.duckduckgo.mobile.android.duckduckgo.ui.browser.BrowserPresenterImpl: void dismissTabSwitcher()>[]--><com.duckduckgo.mobile.android.duckduckgo.ui.main.MainActivity: void dismissTabSwitcher()>[]--><com.duckduckgo.mobile.android.duckduckgo.ui.main.MainActivity: void removeTabSwitcher()>[]--><com.duckduckgo.mobile.android.duckduckgo.ui.main.MainActivity: void updateStatusBarColor(int,boolean)>[[-$i1 < 23]]--><android.view.Window: void setStatusBarColor(int)>
+One road protect good!
+5 Packageshead roads:
+-$i1 < 23
+Good road: <com.duckduckgo.mobile.android.duckduckgo.ui.tabswitcher.TabSwitcherFragment$2: void onClick(android.view.View)>[]--><com.duckduckgo.mobile.android.duckduckgo.ui.browser.BrowserPresenterImpl: void openNewTab()>[]--><com.duckduckgo.mobile.android.duckduckgo.ui.browser.BrowserPresenterImpl: void dismissTabSwitcher()>[]--><com.duckduckgo.mobile.android.duckduckgo.ui.main.MainActivity: void dismissTabSwitcher()>[]--><com.duckduckgo.mobile.android.duckduckgo.ui.main.MainActivity: void removeTabSwitcher()>[]--><com.duckduckgo.mobile.android.duckduckgo.ui.main.MainActivity: void updateStatusBarColor(int,boolean)>[[-$i1 < 23]]--><android.view.Window: void setStatusBarColor(int)>
+One road protect good!
+-$i1 < 23
+Good road: <com.duckduckgo.mobile.android.duckduckgo.ui.browser.BrowserFragment$4: boolean onMenuItemClick(android.view.MenuItem)>[]--><com.duckduckgo.mobile.android.duckduckgo.ui.browser.BrowserPresenterImpl: void openTabSwitcher()>[]--><com.duckduckgo.mobile.android.duckduckgo.ui.main.MainActivity: void navigateToTabSwitcher()>[]--><com.duckduckgo.mobile.android.duckduckgo.ui.main.MainActivity: void showTabSwitcher()>[]--><com.duckduckgo.mobile.android.duckduckgo.ui.main.MainActivity: void updateStatusBarColor(int,boolean)>[[-$i1 < 23]]--><android.view.Window: void setStatusBarColor(int)>
+One road protect good!
+-$i1 < 23
+Good road: <com.duckduckgo.mobile.android.duckduckgo.ui.tabswitcher.TabSwitcherFragment$4: void onClick(android.view.View,int)>[]--><com.duckduckgo.mobile.android.duckduckgo.ui.browser.BrowserPresenterImpl: void openTab(int)>[]--><com.duckduckgo.mobile.android.duckduckgo.ui.browser.BrowserPresenterImpl: void dismissTabSwitcher()>[]--><com.duckduckgo.mobile.android.duckduckgo.ui.main.MainActivity: void dismissTabSwitcher()>[]--><com.duckduckgo.mobile.android.duckduckgo.ui.main.MainActivity: void removeTabSwitcher()>[]--><com.duckduckgo.mobile.android.duckduckgo.ui.main.MainActivity: void updateStatusBarColor(int,boolean)>[[-$i1 < 23]]--><android.view.Window: void setStatusBarColor(int)>
+One road protect good!
+-$i1 < 23
+Good road: <com.duckduckgo.mobile.android.duckduckgo.ui.tabswitcher.TabSwitcherFragment$1: void onClick(android.view.View)>[]--><com.duckduckgo.mobile.android.duckduckgo.ui.browser.BrowserPresenterImpl: void dismissTabSwitcher()>[]--><com.duckduckgo.mobile.android.duckduckgo.ui.main.MainActivity: void dismissTabSwitcher()>[]--><com.duckduckgo.mobile.android.duckduckgo.ui.main.MainActivity: void removeTabSwitcher()>[]--><com.duckduckgo.mobile.android.duckduckgo.ui.main.MainActivity: void updateStatusBarColor(int,boolean)>[[-$i1 < 23]]--><android.view.Window: void setStatusBarColor(int)>
+One road protect good!
+-$i1 < 23
+Good road: <com.duckduckgo.mobile.android.duckduckgo.ui.browser.BrowserFragment$1: boolean onMenuItemClick(android.view.MenuItem)>[]--><com.duckduckgo.mobile.android.duckduckgo.ui.browser.BrowserPresenterImpl: void openNewTab()>[]--><com.duckduckgo.mobile.android.duckduckgo.ui.browser.BrowserPresenterImpl: void dismissTabSwitcher()>[]--><com.duckduckgo.mobile.android.duckduckgo.ui.main.MainActivity: void dismissTabSwitcher()>[]--><com.duckduckgo.mobile.android.duckduckgo.ui.main.MainActivity: void removeTabSwitcher()>[]--><com.duckduckgo.mobile.android.duckduckgo.ui.main.MainActivity: void updateStatusBarColor(int,boolean)>[[-$i1 < 23]]--><android.view.Window: void setStatusBarColor(int)>
+One road protect good!
+containsStatic:false
+containsTry:false
+6call by main package
+-----------------------------------------
+#################################################
+N 5 Potential Issue API: SDKCheck of <android.webkit.CookieManager: void removeAllCookies(android.webkit.ValueCallback)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i0 < 22
+Good road: <com.duckduckgo.mobile.android.duckduckgo.ui.tabswitcher.TabSwitcherFragment$3: void onClick(android.view.View)>[]--><com.duckduckgo.mobile.android.duckduckgo.ui.browser.BrowserPresenterImpl: void fire()>[]--><com.duckduckgo.mobile.android.duckduckgo.ui.browser.Browser: void deleteAllPrivacyData()>[]--><com.duckduckgo.mobile.android.duckduckgo.ui.browser.Browser: void deleteCookies()>[[-$i0 < 22]]--><android.webkit.CookieManager: void removeAllCookies(android.webkit.ValueCallback)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 6 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)> is checking!!!
+The life time of api is [22,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.duckduckgo.mobile.android.duckduckgo.ui.bookmarks.BookmarksActivity dummyMainMethod_com_duckduckgo_mobile_android_duckduckgo_ui_bookmarks_BookmarksActivity(android.content.Intent)>[]--><com.duckduckgo.mobile.android.duckduckgo.ui.bookmarks.BookmarksActivity: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:5
+crashApisInMain:4
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 7 Potential Issue API: SDKCheck of <android.os.BaseBundle: int getInt(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.duckduckgo.mobile.android.duckduckgo.ui.editbookmark.EditBookmarkDialogFragment: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#1.the call statck between class <com.duckduckgo.mobile.android.duckduckgo.ui.editbookmark.EditBookmarkDialogFragment: void onCreate(android.os.Bundle)> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:6
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 8 Potential Issue API: SDKCheck of <android.view.View: int generateViewId()> is checking!!!
+The life time of api is [17,31]
+6call roads:
+1 Mainhead roads:
+5 Packageshead roads:
+-$i0 < 17
+Good road: <com.duckduckgo.mobile.android.duckduckgo.ui.tabswitcher.TabSwitcherFragment$4: void onDelete(android.view.View,int)>[]--><com.duckduckgo.mobile.android.duckduckgo.ui.browser.BrowserPresenterImpl: void closeTab(int)>[]--><com.duckduckgo.mobile.android.duckduckgo.ui.browser.BrowserPresenterImpl: com.duckduckgo.mobile.android.duckduckgo.ui.tab.TabEntity createNewTab()>[]--><com.duckduckgo.mobile.android.duckduckgo.ui.browser.Browser: void createNewTab(java.lang.String)>[]--><com.duckduckgo.mobile.android.duckduckgo.ui.browser.Browser: com.duckduckgo.mobile.android.duckduckgo.ui.tab.DDGWebView instantiateNewWebView(java.lang.String)>[]--><com.duckduckgo.mobile.android.duckduckgo.ui.browser.Browser: int createViewId()>[[-$i0 < 17]]--><android.view.View: int generateViewId()>
+One road protect good!
+containsStatic:false
+containsTry:false
+6call by main package
+-----------------------------------------
+#################################################
+N 9 Potential Issue API: SDKCheck of <android.widget.FrameLayout: void <init>(android.content.Context,android.util.AttributeSet,int,int)> is checking!!!
+The life time of api is [21,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.duckduckgo.mobile.android.duckduckgo.ui.navigationbar.NavigationBar: void <init>(android.content.Context,android.util.AttributeSet,int,int)>[]--><android.widget.FrameLayout: void <init>(android.content.Context,android.util.AttributeSet,int,int)>
+#1.the call statck between class <com.duckduckgo.mobile.android.duckduckgo.ui.navigationbar.NavigationBar: void <init>(android.content.Context,android.util.AttributeSet,int,int)> to <android.widget.FrameLayout: void <init>(android.content.Context,android.util.AttributeSet,int,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.duckduckgo.mobile.android.duckduckgo.ui.browser.Browser: void <init>(android.content.Context,android.util.AttributeSet,int,int)>[]--><android.widget.FrameLayout: void <init>(android.content.Context,android.util.AttributeSet,int,int)>
+#2.the call statck between class <com.duckduckgo.mobile.android.duckduckgo.ui.browser.Browser: void <init>(android.content.Context,android.util.AttributeSet,int,int)> to <android.widget.FrameLayout: void <init>(android.content.Context,android.util.AttributeSet,int,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:7
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 10 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.util.Set keySet()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.duckduckgo.mobile.android.duckduckgo.ui.main.MainActivity dummyMainMethod_com_duckduckgo_mobile_android_duckduckgo_ui_main_MainActivity(android.content.Intent)>[]--><dummyMainClass: com.duckduckgo.mobile.android.duckduckgo.ui.browser.BrowserFragment dummyMainMethod_com_duckduckgo_mobile_android_duckduckgo_ui_browser_BrowserFragment(android.content.Intent,android.app.Activity)>[]--><com.duckduckgo.mobile.android.duckduckgo.ui.browser.BrowserFragment: void onActivityCreated(android.os.Bundle)>[]--><com.duckduckgo.mobile.android.duckduckgo.ui.browser.Browser: void restoreState(android.os.Bundle)>[]--><android.os.BaseBundle: java.util.Set keySet()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: java.util.Set keySet()>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:8
+crashApisInMain:5
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 11 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putInt(java.lang.String,int)> is checking!!!
+The life time of api is [21,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.duckduckgo.mobile.android.duckduckgo.ui.bookmarks.BookmarksActivity$3: void onBookmarkSelected(android.view.View,int)>[]--><com.duckduckgo.mobile.android.duckduckgo.ui.bookmarks.BookmarksPresenterImpl: void bookmarkSelected(int)>[]--><com.duckduckgo.mobile.android.duckduckgo.ui.bookmarks.BookmarksActivity: void showEditBookmark(com.duckduckgo.mobile.android.duckduckgo.ui.bookmarks.BookmarkEntity)>[]--><com.duckduckgo.mobile.android.duckduckgo.ui.editbookmark.EditBookmarkDialogFragment: com.duckduckgo.mobile.android.duckduckgo.ui.editbookmark.EditBookmarkDialogFragment newInstance(int,com.duckduckgo.mobile.android.duckduckgo.ui.bookmarks.BookmarkEntity)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#1.the call statck between class <com.duckduckgo.mobile.android.duckduckgo.ui.bookmarks.BookmarksActivity$3: void onBookmarkSelected(android.view.View,int)> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.duckduckgo.mobile.android.duckduckgo.ui.browser.BrowserFragment$1: boolean onMenuItemClick(android.view.MenuItem)>[]--><com.duckduckgo.mobile.android.duckduckgo.ui.browser.BrowserPresenterImpl: void requestSaveCurrentPageAsBookmark()>[]--><com.duckduckgo.mobile.android.duckduckgo.ui.main.MainActivity: void showConfirmSaveBookmark(com.duckduckgo.mobile.android.duckduckgo.ui.bookmarks.BookmarkEntity)>[]--><com.duckduckgo.mobile.android.duckduckgo.ui.editbookmark.EditBookmarkDialogFragment: com.duckduckgo.mobile.android.duckduckgo.ui.editbookmark.EditBookmarkDialogFragment newInstance(int,com.duckduckgo.mobile.android.duckduckgo.ui.bookmarks.BookmarkEntity)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#2.the call statck between class <com.duckduckgo.mobile.android.duckduckgo.ui.browser.BrowserFragment$1: boolean onMenuItemClick(android.view.MenuItem)> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:9
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 12 Potential Issue API: SDKCheck of <android.os.BaseBundle: boolean containsKey(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.duckduckgo.mobile.android.duckduckgo.ui.main.MainActivity dummyMainMethod_com_duckduckgo_mobile_android_duckduckgo_ui_main_MainActivity(android.content.Intent)>[]--><dummyMainClass: com.duckduckgo.mobile.android.duckduckgo.ui.browser.BrowserFragment dummyMainMethod_com_duckduckgo_mobile_android_duckduckgo_ui_browser_BrowserFragment(android.content.Intent,android.app.Activity)>[]--><com.duckduckgo.mobile.android.duckduckgo.ui.browser.BrowserFragment: void onActivityCreated(android.os.Bundle)>[]--><com.duckduckgo.mobile.android.duckduckgo.ui.browser.Browser: void restoreState(android.os.Bundle)>[]--><android.os.BaseBundle: boolean containsKey(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: boolean containsKey(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:10
+crashApisInMain:6
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+crashApis numbers:10
+crashApis numbers in main road:6
+On Android Version 16 this app may have error api use(at least): 10 and error api roads: 12
+On Android Version 17 this app may have error api use(at least): 10 and error api roads: 12
+On Android Version 18 this app may have error api use(at least): 10 and error api roads: 12
+On Android Version 19 this app may have error api use(at least): 10 and error api roads: 12
+On Android Version 20 this app may have error api use(at least): 10 and error api roads: 12
+On Android Version 21 this app may have error api use(at least): 2 and error api roads: 2
+On Android Version 22 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 23 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 24 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 25 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 31 this app may have error api use(at least): 0 and error api roads: 0

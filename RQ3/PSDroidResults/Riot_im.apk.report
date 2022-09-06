@@ -1,0 +1,654 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/Riot_im.apk
+[main] INFO soot.jimple.infoflow.android.SetupApplication - Initializing Soot...
+[main] INFO soot.jimple.infoflow.android.SetupApplication - Loading dex files...
+[main] INFO soot.jimple.infoflow.android.SetupApplication - ARSC file parsing took 0.065944052 seconds
+[main] INFO soot.jimple.infoflow.memory.MemoryWarningSystem - Registered a memory warning system for 9,571.5 MiB
+[main] INFO soot.jimple.infoflow.memory.FlowDroidTimeoutWatcher - FlowDroid timeout watcher started
+[main] INFO soot.jimple.infoflow.android.entryPointCreators.AndroidEntryPointCreator - Creating Android entry point for 65 components...
+[main] INFO soot.jimple.infoflow.android.SetupApplication - Constructing the callgraph...
+[FlowDroid Timeout Watcher] WARN soot.jimple.infoflow.memory.FlowDroidTimeoutWatcher - Timeout reached, stopping the solvers...
+[FlowDroid Timeout Watcher] INFO soot.jimple.infoflow.memory.FlowDroidTimeoutWatcher - FlowDroid timeout watcher terminated
+[main] ERROR soot.jimple.infoflow.android.SetupApplication - Could not calculate callback methods
+java.lang.RuntimeException: An error occurred while processing <org.matrix.androidsdk.call.MXWebRtcView: void setStream(org.webrtc.MediaStream)> in callgraph
+	at soot.jimple.spark.solver.OnFlyCallGraph.processReachables(OnFlyCallGraph.java:122)
+	at soot.jimple.spark.solver.OnFlyCallGraph.build(OnFlyCallGraph.java:106)
+	at soot.jimple.spark.solver.PropWorklist.handleVarNode(PropWorklist.java:158)
+	at soot.jimple.spark.solver.PropWorklist.propagate(PropWorklist.java:81)
+	at soot.jimple.spark.SparkTransformer.propagatePAG(SparkTransformer.java:238)
+	at soot.jimple.spark.SparkTransformer.internalTransform(SparkTransformer.java:155)
+	at soot.SceneTransformer.transform(SceneTransformer.java:36)
+	at soot.Transform.apply(Transform.java:105)
+	at soot.RadioScenePack.internalApply(RadioScenePack.java:64)
+	at soot.jimple.toolkits.callgraph.CallGraphPack.internalApply(CallGraphPack.java:61)
+	at soot.Pack.apply(Pack.java:118)
+	at soot.jimple.infoflow.android.SetupApplication.constructCallgraphInternal(SetupApplication.java:600)
+	at soot.jimple.infoflow.android.SetupApplication.calculateCallbackMethods(SetupApplication.java:718)
+	at soot.jimple.infoflow.android.SetupApplication.calculateCallbacks(SetupApplication.java:502)
+	at soot.jimple.infoflow.android.SetupApplication.calculateCallbacks(SetupApplication.java:449)
+	at soot.jimple.infoflow.android.SetupApplication.processEntryPoint(SetupApplication.java:1501)
+	at soot.jimple.infoflow.android.SetupApplication.runInfoflow(SetupApplication.java:1467)
+	at soot.jimple.infoflow.android.SetupApplication.constructCallgraph(SetupApplication.java:1311)
+	at lu.uni.snt.cid.CiD.mine(CiD.java:101)
+	at lu.uni.snt.cid.CiD.main(CiD.java:59)
+Caused by: java.lang.RuntimeException: null field
+	at soot.jimple.spark.pag.FieldRefNode.<init>(FieldRefNode.java:64)
+	at soot.jimple.spark.pag.PAG.makeFieldRefNode(PAG.java:854)
+	at soot.jimple.spark.pag.PAG.makeLocalFieldRefNode(PAG.java:823)
+	at soot.jimple.spark.builder.MethodNodeFactory.caseInstanceFieldRef(MethodNodeFactory.java:337)
+	at soot.jimple.internal.AbstractInstanceFieldRef.apply(AbstractInstanceFieldRef.java:114)
+	at soot.jimple.spark.builder.MethodNodeFactory$1.caseAssignStmt(MethodNodeFactory.java:162)
+	at soot.jimple.internal.JAssignStmt.apply(JAssignStmt.java:215)
+	at soot.jimple.spark.builder.MethodNodeFactory.handleStmt(MethodNodeFactory.java:150)
+	at soot.jimple.spark.pag.MethodPAG.buildNormal(MethodPAG.java:224)
+	at soot.jimple.spark.pag.MethodPAG.build(MethodPAG.java:186)
+	at soot.jimple.spark.solver.OnFlyCallGraph.processReachables(OnFlyCallGraph.java:116)
+	... 19 more
+[main] INFO soot.jimple.infoflow.memory.MemoryWarningSystem - Shutting down the memory warning system...
+[main] ERROR soot.jimple.infoflow.android.SetupApplication - Could not construct callgraph
+java.lang.RuntimeException: An error occurred while processing <org.matrix.androidsdk.call.MXWebRtcView: void setStream(org.webrtc.MediaStream)> in callgraph
+	at soot.jimple.spark.solver.OnFlyCallGraph.processReachables(OnFlyCallGraph.java:122)
+	at soot.jimple.spark.solver.OnFlyCallGraph.build(OnFlyCallGraph.java:106)
+	at soot.jimple.spark.solver.PropWorklist.handleVarNode(PropWorklist.java:158)
+	at soot.jimple.spark.solver.PropWorklist.propagate(PropWorklist.java:81)
+	at soot.jimple.spark.SparkTransformer.propagatePAG(SparkTransformer.java:238)
+	at soot.jimple.spark.SparkTransformer.internalTransform(SparkTransformer.java:155)
+	at soot.SceneTransformer.transform(SceneTransformer.java:36)
+	at soot.Transform.apply(Transform.java:105)
+	at soot.RadioScenePack.internalApply(RadioScenePack.java:64)
+	at soot.jimple.toolkits.callgraph.CallGraphPack.internalApply(CallGraphPack.java:61)
+	at soot.Pack.apply(Pack.java:118)
+	at soot.jimple.infoflow.android.SetupApplication.constructCallgraphInternal(SetupApplication.java:600)
+	at soot.jimple.infoflow.android.SetupApplication.calculateCallbackMethods(SetupApplication.java:718)
+	at soot.jimple.infoflow.android.SetupApplication.calculateCallbacks(SetupApplication.java:502)
+	at soot.jimple.infoflow.android.SetupApplication.calculateCallbacks(SetupApplication.java:449)
+	at soot.jimple.infoflow.android.SetupApplication.processEntryPoint(SetupApplication.java:1501)
+	at soot.jimple.infoflow.android.SetupApplication.runInfoflow(SetupApplication.java:1467)
+	at soot.jimple.infoflow.android.SetupApplication.constructCallgraph(SetupApplication.java:1311)
+	at lu.uni.snt.cid.CiD.mine(CiD.java:101)
+	at lu.uni.snt.cid.CiD.main(CiD.java:59)
+Caused by: java.lang.RuntimeException: null field
+	at soot.jimple.spark.pag.FieldRefNode.<init>(FieldRefNode.java:64)
+	at soot.jimple.spark.pag.PAG.makeFieldRefNode(PAG.java:854)
+	at soot.jimple.spark.pag.PAG.makeLocalFieldRefNode(PAG.java:823)
+	at soot.jimple.spark.builder.MethodNodeFactory.caseInstanceFieldRef(MethodNodeFactory.java:337)
+	at soot.jimple.internal.AbstractInstanceFieldRef.apply(AbstractInstanceFieldRef.java:114)
+	at soot.jimple.spark.builder.MethodNodeFactory$1.caseAssignStmt(MethodNodeFactory.java:162)
+	at soot.jimple.internal.JAssignStmt.apply(JAssignStmt.java:215)
+	at soot.jimple.spark.builder.MethodNodeFactory.handleStmt(MethodNodeFactory.java:150)
+	at soot.jimple.spark.pag.MethodPAG.buildNormal(MethodPAG.java:224)
+	at soot.jimple.spark.pag.MethodPAG.build(MethodPAG.java:186)
+	at soot.jimple.spark.solver.OnFlyCallGraph.processReachables(OnFlyCallGraph.java:116)
+	... 19 more
+[main] INFO soot.jimple.infoflow.android.SetupApplication - Classes containing entry points:
+[main] INFO soot.jimple.infoflow.android.SetupApplication - 	im.vector.activity.VectorCallViewActivity
+[main] INFO soot.jimple.infoflow.android.SetupApplication - 	androidx.work.impl.WorkManagerInitializer
+[main] INFO soot.jimple.infoflow.android.SetupApplication - 	com.facebook.react.devsupport.DevSettingsActivity
+[main] INFO soot.jimple.infoflow.android.SetupApplication - 	im.vector.activity.VectorMediaPickerActivity
+[main] INFO soot.jimple.infoflow.android.SetupApplication - 	im.vector.activity.LoginActivity
+[main] INFO soot.jimple.infoflow.android.SetupApplication - 	androidx.work.impl.background.systemalarm.SystemAlarmService
+[main] INFO soot.jimple.infoflow.android.SetupApplication - 	im.vector.activity.LoggingOutActivity
+[main] INFO soot.jimple.infoflow.android.SetupApplication - 	org.jitsi.meet.sdk.ConnectionService
+[main] INFO soot.jimple.infoflow.android.SetupApplication - 	im.vector.activity.StickerPickerActivity
+[main] INFO soot.jimple.infoflow.android.SetupApplication - 	im.vector.activity.VectorWebViewActivity
+[main] INFO soot.jimple.infoflow.android.SetupApplication - 	im.vector.activity.JitsiCallActivity
+[main] INFO soot.jimple.infoflow.android.SetupApplication - 	im.vector.VectorApp
+[main] INFO soot.jimple.infoflow.android.SetupApplication - 	androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver
+[main] INFO soot.jimple.infoflow.android.SetupApplication - 	im.vector.activity.CountryPickerActivity
+[main] INFO soot.jimple.infoflow.android.SetupApplication - 	im.vector.activity.VectorPublicRoomsActivity
+[main] INFO soot.jimple.infoflow.android.SetupApplication - 	im.vector.activity.VectorGroupDetailsActivity
+[main] INFO soot.jimple.infoflow.android.SetupApplication - 	im.vector.activity.BugReportActivity
+[main] INFO soot.jimple.infoflow.android.SetupApplication - 	im.vector.receiver.VectorBootReceiver
+[main] INFO soot.jimple.infoflow.android.SetupApplication - 	im.vector.activity.VectorSharedFilesActivity
+[main] INFO soot.jimple.infoflow.android.SetupApplication - 	im.vector.activity.PhoneNumberAdditionActivity
+[main] INFO soot.jimple.infoflow.android.SetupApplication - 	im.vector.receiver.VectorReferrerReceiver
+[main] INFO soot.jimple.infoflow.android.SetupApplication - 	im.vector.activity.VectorUnifiedSearchActivity
+[main] INFO soot.jimple.infoflow.android.SetupApplication - 	im.vector.activity.SplashActivity
+[main] INFO soot.jimple.infoflow.android.SetupApplication - 	im.vector.push.fcm.VectorFirebaseMessagingService
+[main] INFO soot.jimple.infoflow.android.SetupApplication - 	im.vector.activity.PhoneNumberVerificationActivity
+[main] INFO soot.jimple.infoflow.android.SetupApplication - 	im.vector.db.VectorContentProvider
+[main] INFO soot.jimple.infoflow.android.SetupApplication - 	im.vector.receiver.NotificationBroadcastReceiver
+[main] INFO soot.jimple.infoflow.android.SetupApplication - 	im.vector.activity.LockScreenActivity
+[main] INFO soot.jimple.infoflow.android.SetupApplication - 	im.vector.activity.JoinRoomActivity
+[main] INFO soot.jimple.infoflow.android.SetupApplication - 	im.vector.activity.VectorSettingsActivity
+[main] INFO soot.jimple.infoflow.android.SetupApplication - 	org.piwik.sdk.extra.InstallReferrerReceiver
+[main] INFO soot.jimple.infoflow.android.SetupApplication - 	im.vector.activity.VectorAvatarViewerActivity
+[main] INFO soot.jimple.infoflow.android.SetupApplication - 	im.vector.activity.DeactivateAccountActivity
+[main] INFO soot.jimple.infoflow.android.SetupApplication - 	im.vector.activity.VectorRoomActivity
+[main] INFO soot.jimple.infoflow.android.SetupApplication - 	im.vector.activity.VectorRoomDetailsActivity
+[main] INFO soot.jimple.infoflow.android.SetupApplication - 	im.vector.activity.TestLinkifyActivity
+[main] INFO soot.jimple.infoflow.android.SetupApplication - 	im.vector.activity.policies.AccountCreationTermsActivity
+[main] INFO soot.jimple.infoflow.android.SetupApplication - 	im.vector.receiver.VectorRegistrationReceiver
+[main] INFO soot.jimple.infoflow.android.SetupApplication - 	im.vector.services.EventStreamServiceX
+[main] INFO soot.jimple.infoflow.android.SetupApplication - 	androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver
+[main] INFO soot.jimple.infoflow.android.SetupApplication - 	im.vector.activity.VectorHomeActivity
+[main] INFO soot.jimple.infoflow.android.SetupApplication - 	im.vector.activity.VectorMemberDetailsActivity
+[main] INFO soot.jimple.infoflow.android.SetupApplication - 	im.vector.activity.VectorFakeRoomPreviewActivity
+[main] INFO soot.jimple.infoflow.android.SetupApplication - 	im.vector.activity.KeysBackupSetupActivity
+[main] INFO soot.jimple.infoflow.android.SetupApplication - 	im.vector.activity.FallbackAuthenticationActivity
+[main] INFO soot.jimple.infoflow.android.SetupApplication - 	im.vector.activity.KeysBackupManageActivity
+[main] INFO soot.jimple.infoflow.android.SetupApplication - 	im.vector.activity.DebugMenuActivity
+[main] INFO soot.jimple.infoflow.android.SetupApplication - 	im.vector.activity.VectorMediaViewerActivity
+[main] INFO soot.jimple.infoflow.android.SetupApplication - 	im.vector.activity.VectorRoomInviteMembersActivity
+[main] INFO soot.jimple.infoflow.android.SetupApplication - 	im.vector.activity.HistoricalRoomsActivity
+[main] INFO soot.jimple.infoflow.android.SetupApplication - 	im.vector.activity.AccountCreationCaptchaActivity
+[main] INFO soot.jimple.infoflow.android.SetupApplication - 	androidx.work.impl.background.systemjob.SystemJobService
+[main] INFO soot.jimple.infoflow.android.SetupApplication - 	im.vector.receiver.VectorUniversalLinkReceiver
+[main] INFO soot.jimple.infoflow.android.SetupApplication - 	im.vector.activity.IntegrationManagerActivity
+[main] INFO soot.jimple.infoflow.android.SetupApplication - 	im.vector.activity.VectorLauncherActivity
+[main] INFO soot.jimple.infoflow.android.SetupApplication - 	im.vector.services.CallService
+[main] INFO soot.jimple.infoflow.android.SetupApplication - 	im.vector.activity.KeysBackupRestoreActivity
+[main] INFO soot.jimple.infoflow.android.SetupApplication - 	im.vector.activity.VectorRoomCreationActivity
+[main] INFO soot.jimple.infoflow.android.SetupApplication - 	org.matrix.androidsdk.sync.EventsThread$SyncDelayReceiver
+[main] INFO soot.jimple.infoflow.android.SetupApplication - 	im.vector.activity.NotificationPrivacyActivity
+[main] INFO soot.jimple.infoflow.android.SetupApplication - 	im.vector.activity.LanguagePickerActivity
+[main] INFO soot.jimple.infoflow.android.SetupApplication - 	im.vector.activity.VectorUniversalLinkActivity
+[main] INFO soot.jimple.infoflow.android.SetupApplication - 	im.vector.activity.RoomDirectoryPickerActivity
+[main] INFO soot.jimple.infoflow.android.SetupApplication - 	im.vector.activity.WidgetActivity
+[main] INFO soot.jimple.infoflow.android.SetupApplication - 	im.vector.activity.MediaPreviewerActivity
+[main] INFO soot.jimple.infoflow.android.SetupApplication - End of Entrypoints
+Entry Points[im.vector.activity.VectorCallViewActivity, androidx.work.impl.WorkManagerInitializer, com.facebook.react.devsupport.DevSettingsActivity, im.vector.activity.VectorMediaPickerActivity, im.vector.activity.LoginActivity, androidx.work.impl.background.systemalarm.SystemAlarmService, im.vector.activity.LoggingOutActivity, org.jitsi.meet.sdk.ConnectionService, im.vector.activity.StickerPickerActivity, im.vector.activity.VectorWebViewActivity, im.vector.activity.JitsiCallActivity, im.vector.VectorApp, androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver, im.vector.activity.CountryPickerActivity, im.vector.activity.VectorPublicRoomsActivity, im.vector.activity.VectorGroupDetailsActivity, im.vector.activity.BugReportActivity, im.vector.receiver.VectorBootReceiver, im.vector.activity.VectorSharedFilesActivity, im.vector.activity.PhoneNumberAdditionActivity, im.vector.receiver.VectorReferrerReceiver, im.vector.activity.VectorUnifiedSearchActivity, im.vector.activity.SplashActivity, im.vector.push.fcm.VectorFirebaseMessagingService, im.vector.activity.PhoneNumberVerificationActivity, im.vector.db.VectorContentProvider, im.vector.receiver.NotificationBroadcastReceiver, im.vector.activity.LockScreenActivity, im.vector.activity.JoinRoomActivity, im.vector.activity.VectorSettingsActivity, org.piwik.sdk.extra.InstallReferrerReceiver, im.vector.activity.VectorAvatarViewerActivity, im.vector.activity.DeactivateAccountActivity, im.vector.activity.VectorRoomActivity, im.vector.activity.VectorRoomDetailsActivity, im.vector.activity.TestLinkifyActivity, im.vector.activity.policies.AccountCreationTermsActivity, im.vector.receiver.VectorRegistrationReceiver, im.vector.services.EventStreamServiceX, androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver, im.vector.activity.VectorHomeActivity, im.vector.activity.VectorMemberDetailsActivity, im.vector.activity.VectorFakeRoomPreviewActivity, im.vector.activity.KeysBackupSetupActivity, im.vector.activity.FallbackAuthenticationActivity, im.vector.activity.KeysBackupManageActivity, im.vector.activity.DebugMenuActivity, im.vector.activity.VectorMediaViewerActivity, im.vector.activity.VectorRoomInviteMembersActivity, im.vector.activity.HistoricalRoomsActivity, im.vector.activity.AccountCreationCaptchaActivity, androidx.work.impl.background.systemjob.SystemJobService, im.vector.receiver.VectorUniversalLinkReceiver, im.vector.activity.IntegrationManagerActivity, im.vector.activity.VectorLauncherActivity, im.vector.services.CallService, im.vector.activity.KeysBackupRestoreActivity, im.vector.activity.VectorRoomCreationActivity, org.matrix.androidsdk.sync.EventsThread$SyncDelayReceiver, im.vector.activity.NotificationPrivacyActivity, im.vector.activity.LanguagePickerActivity, im.vector.activity.VectorUniversalLinkActivity, im.vector.activity.RoomDirectoryPickerActivity, im.vector.activity.WidgetActivity, im.vector.activity.MediaPreviewerActivity]
+FllowDroidcallgraph size:43327
+Soot started on Mon Jul 11 17:01:21 CST 2022
+[main] WARN soot.dexpler.DexFileProvider - Multiple dex files detected, only processing 'classes.dex'. Use '-process-multiple-dex' option to process them all.
+Soot finished on Mon Jul 11 17:01:29 CST 2022
+Soot has run for 0 min. 8 sec.
+Found 3 additional DEX files. Now visiting them one by one.
+Soot started on Mon Jul 11 17:01:29 CST 2022
+StaticCheck:<com.google.android.gms.internal.common.zzg: boolean zzam()>$yysi0 < 24
+StaticCheck:<com.google.firebase.iid.FirebaseInstanceId: boolean zzm()>$yysi0 != 23
+StaticCheck:<com.dylanvann.fastimage.FastImageViewManager: boolean isActivityDestroyed(android.app.Activity)>$yysi0 < 17
+StaticCheck:<com.facebook.common.webp.WebpSupportStatus: boolean sIsWebpSupportRequired>$yysi0 > 17
+StaticCheck:<com.facebook.common.webp.WebpSupportStatus: boolean isExtendedWebpSupported()>i0 >= 17
+StaticCheck:<com.google.android.gms.measurement.internal.zzgd: boolean zzb(android.content.Context,boolean)>$yysi0 < 24
+StaticCheck:<com.facebook.react.devsupport.DebugOverlayController: boolean permissionCheck(android.content.Context)>$yysi0 < 23
+StaticCheck:<com.facebook.react.modules.network.ForwardingCookieHandler: boolean USES_LEGACY_STORE>$yysi0 >= 21
+[main] ERROR soot.jimple.toolkits.typing.fast.TypePromotionUseVisitor - Failed Typing in <com.google.android.gms.auth.api.credentials.CredentialPickerConfig: void <init>(int,boolean,boolean,boolean,int)> at statement this.<com.google.android.gms.auth.api.credentials.CredentialPickerConfig: boolean zzw> = $u3#3: Is not cast compatible: boolean <-- [0..127]
+StaticCheck:<com.google.android.gms.common.util.PlatformVersion: boolean isAtLeastJellyBeanMR1()>$yysi0 < 17
+StaticCheck:<com.google.android.gms.common.util.PlatformVersion: boolean isAtLeastJellyBeanMR2()>$yysi0 < 18
+StaticCheck:<com.google.android.gms.common.util.PlatformVersion: boolean isAtLeastKitKat()>$yysi0 < 19
+StaticCheck:<com.google.android.gms.common.util.PlatformVersion: boolean isAtLeastKitKatWatch()>$yysi0 < 20
+StaticCheck:<com.google.android.gms.common.util.PlatformVersion: boolean isAtLeastLollipop()>$yysi0 < 21
+StaticCheck:<com.google.android.gms.common.util.PlatformVersion: boolean isAtLeastLollipopMR1()>$yysi0 < 22
+StaticCheck:<com.google.android.gms.common.util.PlatformVersion: boolean isAtLeastM()>$yysi0 < 23
+StaticCheck:<com.google.android.gms.common.util.PlatformVersion: boolean isAtLeastN()>$yysi0 < 24
+StaticCheck:<com.google.android.gms.common.util.PlatformVersion: boolean isAtLeastO()>$yysi0 < 26
+StaticCheck:<com.google.android.gms.common.util.PlatformVersion: boolean isAtLeastP()>$yysi0 < 28
+StaticCheck:<com.google.android.gms.common.util.PlatformVersion: boolean isAtLeastQ()>$yysi0 >= 29
+StaticCheck:<com.facebook.react.modules.camera.CameraRollManager: boolean IS_JELLY_BEAN_OR_LATER>$yysi0 < 16
+StaticCheck:<com.facebook.react.modules.camera.CameraRollManager: boolean putImageInfo(android.content.ContentResolver,android.database.Cursor,com.facebook.react.bridge.WritableMap,int,int,int,java.lang.String)>i0 < 10
+StaticCheck:<com.facebook.react.modules.core.ChoreographerCompat: boolean IS_JELLYBEAN_OR_HIGHER>$yysi0 < 16
+StaticCheck:<com.google.android.gms.internal.measurement.zzck: boolean zzji()>$yysi0 < 24
+Soot finished on Mon Jul 11 17:03:33 CST 2022
+Soot has run for 2 min. 3 sec.
+Soot started on Mon Jul 11 17:03:33 CST 2022
+StaticCheck:<org.matrix.androidsdk.call.MXChromeCall: boolean isSupported()>$yysi0 < 21
+leftOp<org.webrtc.EglBase14: int CURRENT_SDK_VERSION>
+StaticCheck:<org.webrtc.Camera2Enumerator: boolean isSupported(android.content.Context)>i0 >= 21
+StaticCheck:<org.webrtc.audio.WebRtcAudioUtils: boolean runningOnJellyBeanMR1OrHigher()>$yysi0 < 17
+StaticCheck:<org.webrtc.audio.WebRtcAudioUtils: boolean runningOnJellyBeanMR2OrHigher()>$yysi0 < 18
+StaticCheck:<org.webrtc.audio.WebRtcAudioUtils: boolean runningOnLollipopOrHigher()>$yysi0 < 21
+StaticCheck:<org.webrtc.audio.WebRtcAudioUtils: boolean runningOnMarshmallowOrHigher()>$yysi0 < 23
+StaticCheck:<org.webrtc.audio.WebRtcAudioUtils: boolean runningOnNougatOrHigher()>$yysi0 < 24
+StaticCheck:<org.webrtc.audio.WebRtcAudioUtils: boolean runningOnOreoMR1OrHigher()>$yysi0 < 27
+StaticCheck:<org.webrtc.audio.WebRtcAudioUtils: boolean runningOnOreoOrHigher()>$yysi0 < 26
+StaticCheck:<org.webrtc.voiceengine.WebRtcAudioUtils: boolean runningOnJellyBeanMR1OrHigher()>$yysi0 < 17
+StaticCheck:<org.webrtc.voiceengine.WebRtcAudioUtils: boolean runningOnJellyBeanMR2OrHigher()>$yysi0 < 18
+StaticCheck:<org.webrtc.voiceengine.WebRtcAudioUtils: boolean runningOnLollipopOrHigher()>$yysi0 < 21
+StaticCheck:<org.webrtc.voiceengine.WebRtcAudioUtils: boolean runningOnMarshmallowOrHigher()>$yysi0 < 23
+StaticCheck:<org.webrtc.voiceengine.WebRtcAudioUtils: boolean runningOnNougatOrHigher()>$yysi0 < 24
+StaticCheck:<org.webrtc.voiceengine.WebRtcAudioUtils: boolean runningOnOreoMR1OrHigher()>$yysi0 < 27
+StaticCheck:<org.webrtc.voiceengine.WebRtcAudioUtils: boolean runningOnOreoOrHigher()>$yysi0 < 26
+StaticCheck:<org.webrtc.MediaCodecVideoDecoder: boolean isH264HighProfileHwSupported()>$yysi0 < 21
+Soot finished on Mon Jul 11 17:03:49 CST 2022
+Soot has run for 0 min. 15 sec.
+Soot started on Mon Jul 11 17:03:49 CST 2022
+StaticCheck:<androidx.work.impl.constraints.trackers.NetworkStateTracker: boolean isNetworkCallbackSupported()>$yysi0 < 24
+StaticCheck:<com.airbnb.epoxy.EpoxyRecyclerView: boolean isActivityDestroyed(android.content.Context)>$yysi0 < 17
+StaticCheck:<androidx.work.impl.utils.EnqueueRunnable: boolean enqueueWorkWithPrerequisites(androidx.work.impl.WorkManagerImpl,java.util.List,java.lang.String[],java.lang.String,androidx.work.ExistingWorkPolicy)>i1 < 23
+StaticCheck:<org.jitsi.meet.sdk.PictureInPictureModule: boolean isPictureInPictureSupported()>$yysi0 < 26
+StaticCheck:<com.bumptech.glide.load.engine.cache.MemorySizeCalculator: boolean isLowMemoryDevice(android.app.ActivityManager)>$yysi0 < 19
+StaticCheck:<org.jitsi.meet.sdk.AudioModeModule: boolean useConnectionService()>$yysi0 < 26
+Soot finished on Mon Jul 11 17:05:12 CST 2022
+Soot has run for 1 min. 22 sec.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 16
+Declared Target Sdk version is: 28
+Declared Max Sdk version is: -1
+Collected 551 Android APIs in the primary DEX file
+Collected 2929 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.view.ViewOverlay: void add(android.graphics.drawable.Drawable)> is checking!!!
+The life time of api is [18,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 
+Error road: <com.facebook.stetho.inspector.elements.android.ViewHighlightOverlays$ViewHighlightOverlaysJellybeanMR2: void highlightView(android.view.View,android.graphics.Rect,int)>[]--><android.view.ViewOverlay: void add(android.graphics.drawable.Drawable)>
+#1.the call statck between class <com.facebook.stetho.inspector.elements.android.ViewHighlightOverlays$ViewHighlightOverlaysJellybeanMR2: void highlightView(android.view.View,android.graphics.Rect,int)> to <android.view.ViewOverlay: void add(android.graphics.drawable.Drawable)>has compatibility isssues！
+-----------------------------------------
+crashApis:1
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.media.MediaCodec: android.view.Surface createInputSurface()> is checking!!!
+The life time of api is [18,31]
+3call roads:
+0 Mainhead roads:
+3 Packageshead roads:
+try
+Good road with try: <org.webrtc.HardwareVideoEncoder: org.webrtc.VideoCodecStatus initEncode(org.webrtc.VideoEncoder$Settings,org.webrtc.VideoEncoder$Callback)>[]--><org.webrtc.HardwareVideoEncoder: org.webrtc.VideoCodecStatus initEncodeInternal()>[[try]]--><android.media.MediaCodec: android.view.Surface createInputSurface()>
+One road protect good!
+try
+Good road with try: <org.webrtc.HardwareVideoEncoder: org.webrtc.VideoCodecStatus encode(org.webrtc.VideoFrame,org.webrtc.VideoEncoder$EncodeInfo)>[]--><org.webrtc.HardwareVideoEncoder: org.webrtc.VideoCodecStatus resetCodec(int,int,boolean)>[]--><org.webrtc.HardwareVideoEncoder: org.webrtc.VideoCodecStatus initEncodeInternal()>[[try]]--><android.media.MediaCodec: android.view.Surface createInputSurface()>
+One road protect good!
+###Multi invoking in one method, need manual check!!!<org.webrtc.MediaCodecVideoEncoder: boolean initEncode(org.webrtc.MediaCodecVideoEncoder$VideoCodecType,int,int,int,int,int,boolean)>[[try], [i4 == 21]]
+###Multi invoking in one method, need manual check!!!<org.webrtc.MediaCodecVideoEncoder: boolean initEncode(org.webrtc.MediaCodecVideoEncoder$VideoCodecType,int,int,int,int,int,boolean)>[[try]][[i4 == 21]]
+try
+Good road with try: <org.webrtc.MediaCodecVideoEncoder: boolean initEncode(org.webrtc.MediaCodecVideoEncoder$VideoCodecType,int,int,int,int,int,boolean)>[[try], [i4 == 21]]--><android.media.MediaCodec: android.view.Surface createInputSurface()>
+One road protect good!
+containsStatic:false
+containsTry:true
+4call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.widget.TextView: void setLetterSpacing(float)> is checking!!!
+The life time of api is [21,31]
+4call roads:
+0 Mainhead roads:
+4 Packageshead roads:
+-$i0 < 21
+Good road: <com.facebook.react.views.textinput.ReactEditText: void setTextSize(float)>[]--><com.facebook.react.views.textinput.ReactEditText: void updateLetterSpacing()>[[-$i0 < 21]]--><android.widget.TextView: void setLetterSpacing(float)>
+One road protect good!
+-$i0 < 21
+Good road: <com.facebook.react.views.textinput.ReactTextInputManager: void setFontSize(com.facebook.react.views.textinput.ReactEditText,float)>[]--><com.facebook.react.views.textinput.ReactEditText: void setTextSize(int,float)>[]--><com.facebook.react.views.textinput.ReactEditText: void updateLetterSpacing()>[[-$i0 < 21]]--><android.widget.TextView: void setLetterSpacing(float)>
+One road protect good!
+-$i0 < 21
+Good road: <com.facebook.react.views.textinput.ReactTextInputManager: android.view.View createViewInstance(com.facebook.react.uimanager.ThemedReactContext)>[]--><com.facebook.react.views.textinput.ReactTextInputManager: com.facebook.react.views.textinput.ReactEditText createViewInstance(com.facebook.react.uimanager.ThemedReactContext)>[]--><com.facebook.react.views.textinput.ReactEditText: void setTextSize(int,float)>[]--><com.facebook.react.views.textinput.ReactEditText: void updateLetterSpacing()>[[-$i0 < 21]]--><android.widget.TextView: void setLetterSpacing(float)>
+One road protect good!
+-$i0 < 21
+Good road: <com.facebook.react.views.textinput.ReactTextInputManager: void setLetterSpacing(com.facebook.react.views.textinput.ReactEditText,float)>[]--><com.facebook.react.views.textinput.ReactEditText: void setLetterSpacingPt(float)>[]--><com.facebook.react.views.textinput.ReactEditText: void updateLetterSpacing()>[[-$i0 < 21]]--><android.widget.TextView: void setLetterSpacing(float)>
+One road protect good!
+containsStatic:false
+containsTry:false
+5call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.graphics.Bitmap: void reconfigure(int,int,android.graphics.Bitmap.Config)> is checking!!!
+The life time of api is [19,31]
+4call roads:
+0 Mainhead roads:
+4 Packageshead roads:
+try
+Good road with try: <com.facebook.imagepipeline.platform.ArtDecoder: com.facebook.common.references.CloseableReference decodeStaticImageFromStream(java.io.InputStream,android.graphics.BitmapFactory$Options,android.graphics.Rect)>[[try]]--><android.graphics.Bitmap: void reconfigure(int,int,android.graphics.Bitmap.Config)>
+One road protect good!
+!!!this api will crash on sdk 16 17 18 
+Error road: <com.bumptech.glide.load.engine.bitmap_recycle.SizeStrategy: android.graphics.Bitmap get(int,int,android.graphics.Bitmap$Config)>[]--><android.graphics.Bitmap: void reconfigure(int,int,android.graphics.Bitmap.Config)>
+#2.the call statck between class <com.bumptech.glide.load.engine.bitmap_recycle.SizeStrategy: android.graphics.Bitmap get(int,int,android.graphics.Bitmap$Config)> to <android.graphics.Bitmap: void reconfigure(int,int,android.graphics.Bitmap.Config)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 
+Error road: <com.facebook.imagepipeline.nativecode.Bitmaps: void reconfigureBitmap(android.graphics.Bitmap,int,int,android.graphics.Bitmap$Config)>[]--><android.graphics.Bitmap: void reconfigure(int,int,android.graphics.Bitmap.Config)>
+#3.the call statck between class <com.facebook.imagepipeline.nativecode.Bitmaps: void reconfigureBitmap(android.graphics.Bitmap,int,int,android.graphics.Bitmap$Config)> to <android.graphics.Bitmap: void reconfigure(int,int,android.graphics.Bitmap.Config)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 
+Error road: <com.bumptech.glide.load.engine.bitmap_recycle.SizeConfigStrategy: android.graphics.Bitmap get(int,int,android.graphics.Bitmap$Config)>[]--><android.graphics.Bitmap: void reconfigure(int,int,android.graphics.Bitmap.Config)>
+#4.the call statck between class <com.bumptech.glide.load.engine.bitmap_recycle.SizeConfigStrategy: android.graphics.Bitmap get(int,int,android.graphics.Bitmap$Config)> to <android.graphics.Bitmap: void reconfigure(int,int,android.graphics.Bitmap.Config)>has compatibility isssues！
+-----------------------------------------
+crashApis:2
+containsStatic:false
+containsTry:true
+5call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.media.AudioDeviceInfo: int getId()> is checking!!!
+The life time of api is [23,31]
+17call roads:
+0 Mainhead roads:
+17 Packageshead roads:
+###Multi invoking in one method, need manual check!!!--><org.webrtc.voiceengine.WebRtcAudioUtils: void logAudioDeviceInfo(java.lang.String,android.media.AudioManager)>[[$z0 == 0], [-$yysi0 < 23]]
+###Multi invoking in one method, need manual check!!!--><org.webrtc.voiceengine.WebRtcAudioUtils: void logAudioDeviceInfo(java.lang.String,android.media.AudioManager)>[[$z0 == 0]][[-$yysi0 < 23]]
+$z0 == 0
+-$yysi0 < 23
+Good road: <org.webrtc.voiceengine.WebRtcAudioRecord: boolean stopRecording()>[]--><org.webrtc.voiceengine.WebRtcAudioUtils: void logAudioState(java.lang.String)>[]--><org.webrtc.voiceengine.WebRtcAudioUtils: void logAudioDeviceInfo(java.lang.String,android.media.AudioManager)>[[$z0 == 0], [-$yysi0 < 23]]--><android.media.AudioDeviceInfo: int getId()>
+One road protect good!
+###Multi invoking in one method, need manual check!!!--><org.webrtc.voiceengine.WebRtcAudioUtils: void logAudioDeviceInfo(java.lang.String,android.media.AudioManager)>[[$z0 == 0], [-$yysi0 < 23]]
+###Multi invoking in one method, need manual check!!!--><org.webrtc.voiceengine.WebRtcAudioUtils: void logAudioDeviceInfo(java.lang.String,android.media.AudioManager)>[[$z0 == 0]][[-$yysi0 < 23]]
+$z0 == 0
+-$yysi0 < 23
+Good road: <org.webrtc.voiceengine.WebRtcAudioRecord: void reportWebRtcAudioRecordStartError(org.webrtc.voiceengine.WebRtcAudioRecord$AudioRecordStartErrorCode,java.lang.String)>[]--><org.webrtc.voiceengine.WebRtcAudioUtils: void logAudioState(java.lang.String)>[]--><org.webrtc.voiceengine.WebRtcAudioUtils: void logAudioDeviceInfo(java.lang.String,android.media.AudioManager)>[[$z0 == 0], [-$yysi0 < 23]]--><android.media.AudioDeviceInfo: int getId()>
+One road protect good!
+###Multi invoking in one method, need manual check!!!--><org.webrtc.audio.WebRtcAudioUtils: void logAudioDeviceInfo(java.lang.String,android.media.AudioManager)>[[$z0 == 0], [-$yysi0 < 23]]
+###Multi invoking in one method, need manual check!!!--><org.webrtc.audio.WebRtcAudioUtils: void logAudioDeviceInfo(java.lang.String,android.media.AudioManager)>[[$z0 == 0]][[-$yysi0 < 23]]
+$z0 == 0
+-$yysi0 < 23
+Good road: <org.webrtc.audio.WebRtcAudioTrack: void reportWebRtcAudioTrackStartError(org.webrtc.audio.JavaAudioDeviceModule$AudioTrackStartErrorCode,java.lang.String)>[]--><org.webrtc.audio.WebRtcAudioUtils: void logAudioState(java.lang.String,android.content.Context,android.media.AudioManager)>[]--><org.webrtc.audio.WebRtcAudioUtils: void logAudioDeviceInfo(java.lang.String,android.media.AudioManager)>[[$z0 == 0], [-$yysi0 < 23]]--><android.media.AudioDeviceInfo: int getId()>
+One road protect good!
+###Multi invoking in one method, need manual check!!!--><org.webrtc.audio.WebRtcAudioUtils: void logAudioDeviceInfo(java.lang.String,android.media.AudioManager)>[[$z0 == 0], [-$yysi0 < 23]]
+###Multi invoking in one method, need manual check!!!--><org.webrtc.audio.WebRtcAudioUtils: void logAudioDeviceInfo(java.lang.String,android.media.AudioManager)>[[$z0 == 0]][[-$yysi0 < 23]]
+$z0 == 0
+-$yysi0 < 23
+Good road: <org.webrtc.audio.WebRtcAudioRecord: void reportWebRtcAudioRecordStartError(org.webrtc.audio.JavaAudioDeviceModule$AudioRecordStartErrorCode,java.lang.String)>[]--><org.webrtc.audio.WebRtcAudioUtils: void logAudioState(java.lang.String,android.content.Context,android.media.AudioManager)>[]--><org.webrtc.audio.WebRtcAudioUtils: void logAudioDeviceInfo(java.lang.String,android.media.AudioManager)>[[$z0 == 0], [-$yysi0 < 23]]--><android.media.AudioDeviceInfo: int getId()>
+One road protect good!
+###Multi invoking in one method, need manual check!!!--><org.webrtc.voiceengine.WebRtcAudioUtils: void logAudioDeviceInfo(java.lang.String,android.media.AudioManager)>[[$z0 == 0], [-$yysi0 < 23]]
+###Multi invoking in one method, need manual check!!!--><org.webrtc.voiceengine.WebRtcAudioUtils: void logAudioDeviceInfo(java.lang.String,android.media.AudioManager)>[[$z0 == 0]][[-$yysi0 < 23]]
+$z0 == 0
+-$yysi0 < 23
+Good road: <org.webrtc.voiceengine.WebRtcAudioTrack: void reportWebRtcAudioTrackStartError(org.webrtc.voiceengine.WebRtcAudioTrack$AudioTrackStartErrorCode,java.lang.String)>[]--><org.webrtc.voiceengine.WebRtcAudioUtils: void logAudioState(java.lang.String)>[]--><org.webrtc.voiceengine.WebRtcAudioUtils: void logAudioDeviceInfo(java.lang.String,android.media.AudioManager)>[[$z0 == 0], [-$yysi0 < 23]]--><android.media.AudioDeviceInfo: int getId()>
+One road protect good!
+###Multi invoking in one method, need manual check!!!--><org.webrtc.voiceengine.WebRtcAudioUtils: void logAudioDeviceInfo(java.lang.String,android.media.AudioManager)>[[$z0 == 0], [-$yysi0 < 23]]
+###Multi invoking in one method, need manual check!!!--><org.webrtc.voiceengine.WebRtcAudioUtils: void logAudioDeviceInfo(java.lang.String,android.media.AudioManager)>[[$z0 == 0]][[-$yysi0 < 23]]
+$z0 == 0
+-$yysi0 < 23
+Good road: <org.webrtc.voiceengine.WebRtcAudioTrack: boolean initPlayout(int,int)>[]--><org.webrtc.voiceengine.WebRtcAudioTrack: void reportWebRtcAudioTrackInitError(java.lang.String)>[]--><org.webrtc.voiceengine.WebRtcAudioUtils: void logAudioState(java.lang.String)>[]--><org.webrtc.voiceengine.WebRtcAudioUtils: void logAudioDeviceInfo(java.lang.String,android.media.AudioManager)>[[$z0 == 0], [-$yysi0 < 23]]--><android.media.AudioDeviceInfo: int getId()>
+One road protect good!
+###Multi invoking in one method, need manual check!!!--><org.webrtc.voiceengine.WebRtcAudioUtils: void logAudioDeviceInfo(java.lang.String,android.media.AudioManager)>[[$z0 == 0], [-$yysi0 < 23]]
+###Multi invoking in one method, need manual check!!!--><org.webrtc.voiceengine.WebRtcAudioUtils: void logAudioDeviceInfo(java.lang.String,android.media.AudioManager)>[[$z0 == 0]][[-$yysi0 < 23]]
+$z0 == 0
+-$yysi0 < 23
+Good road: <org.webrtc.voiceengine.WebRtcAudioRecord: void access$900(org.webrtc.voiceengine.WebRtcAudioRecord,java.lang.String)>[]--><org.webrtc.voiceengine.WebRtcAudioRecord: void reportWebRtcAudioRecordError(java.lang.String)>[]--><org.webrtc.voiceengine.WebRtcAudioUtils: void logAudioState(java.lang.String)>[]--><org.webrtc.voiceengine.WebRtcAudioUtils: void logAudioDeviceInfo(java.lang.String,android.media.AudioManager)>[[$z0 == 0], [-$yysi0 < 23]]--><android.media.AudioDeviceInfo: int getId()>
+One road protect good!
+###Multi invoking in one method, need manual check!!!--><org.webrtc.audio.WebRtcAudioUtils: void logAudioDeviceInfo(java.lang.String,android.media.AudioManager)>[[$z0 == 0], [-$yysi0 < 23]]
+###Multi invoking in one method, need manual check!!!--><org.webrtc.audio.WebRtcAudioUtils: void logAudioDeviceInfo(java.lang.String,android.media.AudioManager)>[[$z0 == 0]][[-$yysi0 < 23]]
+$z0 == 0
+-$yysi0 < 23
+Good road: <org.webrtc.audio.WebRtcAudioRecord: void access$800(org.webrtc.audio.WebRtcAudioRecord,java.lang.String)>[]--><org.webrtc.audio.WebRtcAudioRecord: void reportWebRtcAudioRecordError(java.lang.String)>[]--><org.webrtc.audio.WebRtcAudioUtils: void logAudioState(java.lang.String,android.content.Context,android.media.AudioManager)>[]--><org.webrtc.audio.WebRtcAudioUtils: void logAudioDeviceInfo(java.lang.String,android.media.AudioManager)>[[$z0 == 0], [-$yysi0 < 23]]--><android.media.AudioDeviceInfo: int getId()>
+One road protect good!
+###Multi invoking in one method, need manual check!!!--><org.webrtc.voiceengine.WebRtcAudioUtils: void logAudioDeviceInfo(java.lang.String,android.media.AudioManager)>[[$z0 == 0], [-$yysi0 < 23]]
+###Multi invoking in one method, need manual check!!!--><org.webrtc.voiceengine.WebRtcAudioUtils: void logAudioDeviceInfo(java.lang.String,android.media.AudioManager)>[[$z0 == 0]][[-$yysi0 < 23]]
+$z0 == 0
+-$yysi0 < 23
+Good road: <org.webrtc.voiceengine.WebRtcAudioManager: void <init>(long)>[]--><org.webrtc.voiceengine.WebRtcAudioUtils: void logAudioState(java.lang.String)>[]--><org.webrtc.voiceengine.WebRtcAudioUtils: void logAudioDeviceInfo(java.lang.String,android.media.AudioManager)>[[$z0 == 0], [-$yysi0 < 23]]--><android.media.AudioDeviceInfo: int getId()>
+One road protect good!
+###Multi invoking in one method, need manual check!!!--><org.webrtc.audio.WebRtcAudioUtils: void logAudioDeviceInfo(java.lang.String,android.media.AudioManager)>[[$z0 == 0], [-$yysi0 < 23]]
+###Multi invoking in one method, need manual check!!!--><org.webrtc.audio.WebRtcAudioUtils: void logAudioDeviceInfo(java.lang.String,android.media.AudioManager)>[[$z0 == 0]][[-$yysi0 < 23]]
+$z0 == 0
+-$yysi0 < 23
+Good road: <org.webrtc.audio.WebRtcAudioRecord: int initRecording(int,int)>[]--><org.webrtc.audio.WebRtcAudioRecord: void reportWebRtcAudioRecordInitError(java.lang.String)>[]--><org.webrtc.audio.WebRtcAudioUtils: void logAudioState(java.lang.String,android.content.Context,android.media.AudioManager)>[]--><org.webrtc.audio.WebRtcAudioUtils: void logAudioDeviceInfo(java.lang.String,android.media.AudioManager)>[[$z0 == 0], [-$yysi0 < 23]]--><android.media.AudioDeviceInfo: int getId()>
+One road protect good!
+###Multi invoking in one method, need manual check!!!--><org.webrtc.audio.WebRtcAudioUtils: void logAudioDeviceInfo(java.lang.String,android.media.AudioManager)>[[$z0 == 0], [-$yysi0 < 23]]
+###Multi invoking in one method, need manual check!!!--><org.webrtc.audio.WebRtcAudioUtils: void logAudioDeviceInfo(java.lang.String,android.media.AudioManager)>[[$z0 == 0]][[-$yysi0 < 23]]
+$z0 == 0
+-$yysi0 < 23
+Good road: <org.webrtc.audio.WebRtcAudioRecord: boolean stopRecording()>[]--><org.webrtc.audio.WebRtcAudioUtils: void logAudioState(java.lang.String,android.content.Context,android.media.AudioManager)>[]--><org.webrtc.audio.WebRtcAudioUtils: void logAudioDeviceInfo(java.lang.String,android.media.AudioManager)>[[$z0 == 0], [-$yysi0 < 23]]--><android.media.AudioDeviceInfo: int getId()>
+One road protect good!
+###Multi invoking in one method, need manual check!!!--><org.webrtc.voiceengine.WebRtcAudioUtils: void logAudioDeviceInfo(java.lang.String,android.media.AudioManager)>[[$z0 == 0], [-$yysi0 < 23]]
+###Multi invoking in one method, need manual check!!!--><org.webrtc.voiceengine.WebRtcAudioUtils: void logAudioDeviceInfo(java.lang.String,android.media.AudioManager)>[[$z0 == 0]][[-$yysi0 < 23]]
+$z0 == 0
+-$yysi0 < 23
+Good road: <org.webrtc.voiceengine.WebRtcAudioRecord: int initRecording(int,int)>[]--><org.webrtc.voiceengine.WebRtcAudioRecord: void reportWebRtcAudioRecordInitError(java.lang.String)>[]--><org.webrtc.voiceengine.WebRtcAudioUtils: void logAudioState(java.lang.String)>[]--><org.webrtc.voiceengine.WebRtcAudioUtils: void logAudioDeviceInfo(java.lang.String,android.media.AudioManager)>[[$z0 == 0], [-$yysi0 < 23]]--><android.media.AudioDeviceInfo: int getId()>
+One road protect good!
+###Multi invoking in one method, need manual check!!!--><org.webrtc.voiceengine.WebRtcAudioUtils: void logAudioDeviceInfo(java.lang.String,android.media.AudioManager)>[[$z0 == 0], [-$yysi0 < 23]]
+###Multi invoking in one method, need manual check!!!--><org.webrtc.voiceengine.WebRtcAudioUtils: void logAudioDeviceInfo(java.lang.String,android.media.AudioManager)>[[$z0 == 0]][[-$yysi0 < 23]]
+$z0 == 0
+-$yysi0 < 23
+Good road: <org.webrtc.voiceengine.WebRtcAudioTrack: void access$700(org.webrtc.voiceengine.WebRtcAudioTrack,java.lang.String)>[]--><org.webrtc.voiceengine.WebRtcAudioTrack: void reportWebRtcAudioTrackError(java.lang.String)>[]--><org.webrtc.voiceengine.WebRtcAudioUtils: void logAudioState(java.lang.String)>[]--><org.webrtc.voiceengine.WebRtcAudioUtils: void logAudioDeviceInfo(java.lang.String,android.media.AudioManager)>[[$z0 == 0], [-$yysi0 < 23]]--><android.media.AudioDeviceInfo: int getId()>
+One road protect good!
+###Multi invoking in one method, need manual check!!!--><org.webrtc.audio.WebRtcAudioUtils: void logAudioDeviceInfo(java.lang.String,android.media.AudioManager)>[[$z0 == 0], [-$yysi0 < 23]]
+###Multi invoking in one method, need manual check!!!--><org.webrtc.audio.WebRtcAudioUtils: void logAudioDeviceInfo(java.lang.String,android.media.AudioManager)>[[$z0 == 0]][[-$yysi0 < 23]]
+$z0 == 0
+-$yysi0 < 23
+Good road: <org.webrtc.audio.WebRtcAudioTrack: void access$700(org.webrtc.audio.WebRtcAudioTrack,java.lang.String)>[]--><org.webrtc.audio.WebRtcAudioTrack: void reportWebRtcAudioTrackError(java.lang.String)>[]--><org.webrtc.audio.WebRtcAudioUtils: void logAudioState(java.lang.String,android.content.Context,android.media.AudioManager)>[]--><org.webrtc.audio.WebRtcAudioUtils: void logAudioDeviceInfo(java.lang.String,android.media.AudioManager)>[[$z0 == 0], [-$yysi0 < 23]]--><android.media.AudioDeviceInfo: int getId()>
+One road protect good!
+###Multi invoking in one method, need manual check!!!--><org.webrtc.audio.WebRtcAudioUtils: void logAudioDeviceInfo(java.lang.String,android.media.AudioManager)>[[$z0 == 0], [-$yysi0 < 23]]
+###Multi invoking in one method, need manual check!!!--><org.webrtc.audio.WebRtcAudioUtils: void logAudioDeviceInfo(java.lang.String,android.media.AudioManager)>[[$z0 == 0]][[-$yysi0 < 23]]
+$z0 == 0
+-$yysi0 < 23
+Good road: <org.webrtc.audio.WebRtcAudioTrack: boolean stopPlayout()>[]--><org.webrtc.audio.WebRtcAudioUtils: void logAudioState(java.lang.String,android.content.Context,android.media.AudioManager)>[]--><org.webrtc.audio.WebRtcAudioUtils: void logAudioDeviceInfo(java.lang.String,android.media.AudioManager)>[[$z0 == 0], [-$yysi0 < 23]]--><android.media.AudioDeviceInfo: int getId()>
+One road protect good!
+###Multi invoking in one method, need manual check!!!--><org.webrtc.voiceengine.WebRtcAudioUtils: void logAudioDeviceInfo(java.lang.String,android.media.AudioManager)>[[$z0 == 0], [-$yysi0 < 23]]
+###Multi invoking in one method, need manual check!!!--><org.webrtc.voiceengine.WebRtcAudioUtils: void logAudioDeviceInfo(java.lang.String,android.media.AudioManager)>[[$z0 == 0]][[-$yysi0 < 23]]
+$z0 == 0
+-$yysi0 < 23
+Good road: <org.webrtc.voiceengine.WebRtcAudioTrack: boolean stopPlayout()>[]--><org.webrtc.voiceengine.WebRtcAudioUtils: void logAudioState(java.lang.String)>[]--><org.webrtc.voiceengine.WebRtcAudioUtils: void logAudioDeviceInfo(java.lang.String,android.media.AudioManager)>[[$z0 == 0], [-$yysi0 < 23]]--><android.media.AudioDeviceInfo: int getId()>
+One road protect good!
+###Multi invoking in one method, need manual check!!!--><org.webrtc.audio.WebRtcAudioUtils: void logAudioDeviceInfo(java.lang.String,android.media.AudioManager)>[[$z0 == 0], [-$yysi0 < 23]]
+###Multi invoking in one method, need manual check!!!--><org.webrtc.audio.WebRtcAudioUtils: void logAudioDeviceInfo(java.lang.String,android.media.AudioManager)>[[$z0 == 0]][[-$yysi0 < 23]]
+$z0 == 0
+-$yysi0 < 23
+Good road: <org.webrtc.audio.WebRtcAudioTrack: boolean initPlayout(int,int)>[]--><org.webrtc.audio.WebRtcAudioTrack: void reportWebRtcAudioTrackInitError(java.lang.String)>[]--><org.webrtc.audio.WebRtcAudioUtils: void logAudioState(java.lang.String,android.content.Context,android.media.AudioManager)>[]--><org.webrtc.audio.WebRtcAudioUtils: void logAudioDeviceInfo(java.lang.String,android.media.AudioManager)>[[$z0 == 0], [-$yysi0 < 23]]--><android.media.AudioDeviceInfo: int getId()>
+One road protect good!
+containsStatic:true
+containsTry:false
+18call by main package
+-----------------------------------------
+#################################################
+N 5 Potential Issue API: SDKCheck of <android.content.pm.PackageInstaller: java.util.List getAllSessions()> is checking!!!
+The life time of api is [21,31]
+7528call roads:
+214 Mainhead roads:
+7314 Packageshead roads:
+Roads number exceed, exit!7314
+containsStatic:true
+containsTry:true
+1call by main package
+-----------------------------------------
+#################################################
+N 6 Potential Issue API: SDKCheck of <android.telecom.Connection: void setAddress(android.net.Uri,int)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.jitsi.meet.sdk.ConnectionService: android.telecom.Connection onCreateOutgoingConnection(android.telecom.PhoneAccountHandle,android.telecom.ConnectionRequest)>[]--><android.telecom.Connection: void setAddress(android.net.Uri,int)>
+#1.the call statck between class <org.jitsi.meet.sdk.ConnectionService: android.telecom.Connection onCreateOutgoingConnection(android.telecom.PhoneAccountHandle,android.telecom.ConnectionRequest)> to <android.telecom.Connection: void setAddress(android.net.Uri,int)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:3
+crashApisInMain:1
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 7 Potential Issue API: SDKCheck of <android.content.pm.PackageManager: android.content.pm.PackageInstaller getPackageInstaller()> is checking!!!
+The life time of api is [21,31]
+7528call roads:
+214 Mainhead roads:
+7314 Packageshead roads:
+Roads number exceed, exit!7314
+containsStatic:true
+containsTry:true
+1call by main package
+-----------------------------------------
+#################################################
+N 8 Potential Issue API: SDKCheck of <android.app.Activity: boolean enterPictureInPictureMode(android.app.PictureInPictureParams)> is checking!!!
+The life time of api is [26,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+try
+Good road with try: <org.jitsi.meet.sdk.PictureInPictureModule: void enterPictureInPicture(com.facebook.react.bridge.Promise)>[[try]]--><org.jitsi.meet.sdk.PictureInPictureModule: void enterPictureInPicture()>[[-$yysi0 < 26]]--><android.app.Activity: boolean enterPictureInPictureMode(android.app.PictureInPictureParams)>
+One road protect good!
+try
+Good road with try: <org.jitsi.meet.sdk.JitsiMeetActivity: void onUserLeaveHint()>[]--><org.jitsi.meet.sdk.JitsiMeetView: void enterPictureInPicture()>[[try]]--><org.jitsi.meet.sdk.PictureInPictureModule: void enterPictureInPicture()>[[-$yysi0 < 26]]--><android.app.Activity: boolean enterPictureInPictureMode(android.app.PictureInPictureParams)>
+One road protect good!
+containsStatic:true
+containsTry:true
+3call by main package
+-----------------------------------------
+#################################################
+N 9 Potential Issue API: SDKCheck of <android.view.ViewGroup: boolean getClipToPadding()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.airbnb.epoxy.Carousel: void onChildAttachedToWindow(android.view.View)>[]--><com.airbnb.epoxy.Carousel: int getSpaceForChildren(boolean)>[[]]--><android.view.ViewGroup: boolean getClipToPadding()>
+#1.the call statck between class <com.airbnb.epoxy.Carousel: void onChildAttachedToWindow(android.view.View)> to <android.view.ViewGroup: boolean getClipToPadding()>has compatibility isssues！
+-----------------------------------------
+crashApis:4
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 10 Potential Issue API: SDKCheck of <android.app.Activity: void requestPermissions(java.lang.String[],int)> is checking!!!
+The life time of api is [23,31]
+4call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <im.vector.activity.JitsiCallActivity: void requestPermissions(java.lang.String[],int,com.facebook.react.modules.core.PermissionListener)>[]--><org.jitsi.meet.sdk.ReactActivityLifecycleCallbacks: void requestPermissions(android.app.Activity,java.lang.String[],int,com.facebook.react.modules.core.PermissionListener)>[]--><android.app.Activity: void requestPermissions(java.lang.String[],int)>
+#1.the call statck between class <im.vector.activity.JitsiCallActivity: void requestPermissions(java.lang.String[],int,com.facebook.react.modules.core.PermissionListener)> to <android.app.Activity: void requestPermissions(java.lang.String[],int)>has compatibility isssues！
+-----------------------------------------
+3 Packageshead roads:
+###Multi invoking in one method, need manual check!!!<com.facebook.react.modules.permissions.PermissionsModule: void requestPermission(java.lang.String,com.facebook.react.bridge.Promise)>[[try], [i0 >= 23]]--><com.facebook.react.ReactActivity: void requestPermissions(java.lang.String[],int,com.facebook.react.modules.core.PermissionListener)>[]--><com.facebook.react.ReactActivityDelegate: void requestPermissions(java.lang.String[],int,com.facebook.react.modules.core.PermissionListener)>[]
+###Multi invoking in one method, need manual check!!!<com.facebook.react.modules.permissions.PermissionsModule: void requestPermission(java.lang.String,com.facebook.react.bridge.Promise)>[[try]][[i0 >= 23]]--><com.facebook.react.ReactActivity: void requestPermissions(java.lang.String[],int,com.facebook.react.modules.core.PermissionListener)>[]--><com.facebook.react.ReactActivityDelegate: void requestPermissions(java.lang.String[],int,com.facebook.react.modules.core.PermissionListener)>[]
+try
+Good road with try: <com.facebook.react.modules.permissions.PermissionsModule: void requestPermission(java.lang.String,com.facebook.react.bridge.Promise)>[[try], [i0 >= 23]]--><com.facebook.react.ReactActivity: void requestPermissions(java.lang.String[],int,com.facebook.react.modules.core.PermissionListener)>[]--><com.facebook.react.ReactActivityDelegate: void requestPermissions(java.lang.String[],int,com.facebook.react.modules.core.PermissionListener)>[]--><android.app.Activity: void requestPermissions(java.lang.String[],int)>
+One road protect good!
+###Multi invoking in one method, need manual check!!!<com.facebook.react.modules.permissions.PermissionsModule: void requestPermission(java.lang.String,com.facebook.react.bridge.Promise)>[[try], [i0 >= 23]]--><com.facebook.react.ReactFragmentActivity: void requestPermissions(java.lang.String[],int,com.facebook.react.modules.core.PermissionListener)>[]--><com.facebook.react.ReactActivityDelegate: void requestPermissions(java.lang.String[],int,com.facebook.react.modules.core.PermissionListener)>[]
+###Multi invoking in one method, need manual check!!!<com.facebook.react.modules.permissions.PermissionsModule: void requestPermission(java.lang.String,com.facebook.react.bridge.Promise)>[[try]][[i0 >= 23]]--><com.facebook.react.ReactFragmentActivity: void requestPermissions(java.lang.String[],int,com.facebook.react.modules.core.PermissionListener)>[]--><com.facebook.react.ReactActivityDelegate: void requestPermissions(java.lang.String[],int,com.facebook.react.modules.core.PermissionListener)>[]
+try
+Good road with try: <com.facebook.react.modules.permissions.PermissionsModule: void requestPermission(java.lang.String,com.facebook.react.bridge.Promise)>[[try], [i0 >= 23]]--><com.facebook.react.ReactFragmentActivity: void requestPermissions(java.lang.String[],int,com.facebook.react.modules.core.PermissionListener)>[]--><com.facebook.react.ReactActivityDelegate: void requestPermissions(java.lang.String[],int,com.facebook.react.modules.core.PermissionListener)>[]--><android.app.Activity: void requestPermissions(java.lang.String[],int)>
+One road protect good!
+###Multi invoking in one method, need manual check!!!<com.facebook.react.modules.permissions.PermissionsModule: void requestMultiplePermissions(com.facebook.react.bridge.ReadableArray,com.facebook.react.bridge.Promise)>[[$i2 >= 23], [try]]--><com.facebook.react.ReactActivity: void requestPermissions(java.lang.String[],int,com.facebook.react.modules.core.PermissionListener)>[]--><com.facebook.react.ReactActivityDelegate: void requestPermissions(java.lang.String[],int,com.facebook.react.modules.core.PermissionListener)>[]
+###Multi invoking in one method, need manual check!!!<com.facebook.react.modules.permissions.PermissionsModule: void requestMultiplePermissions(com.facebook.react.bridge.ReadableArray,com.facebook.react.bridge.Promise)>[[$i2 >= 23]][[try]]--><com.facebook.react.ReactActivity: void requestPermissions(java.lang.String[],int,com.facebook.react.modules.core.PermissionListener)>[]--><com.facebook.react.ReactActivityDelegate: void requestPermissions(java.lang.String[],int,com.facebook.react.modules.core.PermissionListener)>[]
+$i2 >= 23
+try
+Good road with try: <com.facebook.react.modules.permissions.PermissionsModule: void requestMultiplePermissions(com.facebook.react.bridge.ReadableArray,com.facebook.react.bridge.Promise)>[[$i2 >= 23], [try]]--><com.facebook.react.ReactActivity: void requestPermissions(java.lang.String[],int,com.facebook.react.modules.core.PermissionListener)>[]--><com.facebook.react.ReactActivityDelegate: void requestPermissions(java.lang.String[],int,com.facebook.react.modules.core.PermissionListener)>[]--><android.app.Activity: void requestPermissions(java.lang.String[],int)>
+One road protect good!
+###Multi invoking in one method, need manual check!!!<com.facebook.react.modules.permissions.PermissionsModule: void requestMultiplePermissions(com.facebook.react.bridge.ReadableArray,com.facebook.react.bridge.Promise)>[[$i2 >= 23], [try]]--><com.facebook.react.ReactFragmentActivity: void requestPermissions(java.lang.String[],int,com.facebook.react.modules.core.PermissionListener)>[]--><com.facebook.react.ReactActivityDelegate: void requestPermissions(java.lang.String[],int,com.facebook.react.modules.core.PermissionListener)>[]
+###Multi invoking in one method, need manual check!!!<com.facebook.react.modules.permissions.PermissionsModule: void requestMultiplePermissions(com.facebook.react.bridge.ReadableArray,com.facebook.react.bridge.Promise)>[[$i2 >= 23]][[try]]--><com.facebook.react.ReactFragmentActivity: void requestPermissions(java.lang.String[],int,com.facebook.react.modules.core.PermissionListener)>[]--><com.facebook.react.ReactActivityDelegate: void requestPermissions(java.lang.String[],int,com.facebook.react.modules.core.PermissionListener)>[]
+$i2 >= 23
+try
+Good road with try: <com.facebook.react.modules.permissions.PermissionsModule: void requestMultiplePermissions(com.facebook.react.bridge.ReadableArray,com.facebook.react.bridge.Promise)>[[$i2 >= 23], [try]]--><com.facebook.react.ReactFragmentActivity: void requestPermissions(java.lang.String[],int,com.facebook.react.modules.core.PermissionListener)>[]--><com.facebook.react.ReactActivityDelegate: void requestPermissions(java.lang.String[],int,com.facebook.react.modules.core.PermissionListener)>[]--><android.app.Activity: void requestPermissions(java.lang.String[],int)>
+One road protect good!
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.jitsi.meet.sdk.JitsiMeetActivity: void requestPermissions(java.lang.String[],int,com.facebook.react.modules.core.PermissionListener)>[]--><org.jitsi.meet.sdk.ReactActivityLifecycleCallbacks: void requestPermissions(android.app.Activity,java.lang.String[],int,com.facebook.react.modules.core.PermissionListener)>[]--><android.app.Activity: void requestPermissions(java.lang.String[],int)>
+#3.the call statck between class <org.jitsi.meet.sdk.JitsiMeetActivity: void requestPermissions(java.lang.String[],int,com.facebook.react.modules.core.PermissionListener)> to <android.app.Activity: void requestPermissions(java.lang.String[],int)>has compatibility isssues！
+-----------------------------------------
+crashApis:5
+crashApisInMain:2
+containsStatic:false
+containsTry:true
+4call by main package
+-----------------------------------------
+#################################################
+N 11 Potential Issue API: SDKCheck of <android.widget.TextView: int getBreakStrategy()> is checking!!!
+The life time of api is [23,31]
+5call roads:
+0 Mainhead roads:
+5 Packageshead roads:
+-$i0 < 23
+Good road: <com.facebook.yoga.YogaNode: long measure(float,int,float,int)>[]--><com.facebook.react.views.textinput.ReactTextInputShadowNode: long measure(com.facebook.yoga.YogaNode,float,com.facebook.yoga.YogaMeasureMode,float,com.facebook.yoga.YogaMeasureMode)>[[-$i0 < 23]]--><android.widget.TextView: int getBreakStrategy()>
+One road protect good!
+-i0 < 23
+Good road: <com.facebook.react.views.text.ReactTextViewManager: void updateExtraData(android.view.View,java.lang.Object)>[]--><com.facebook.react.views.text.ReactTextViewManager: void updateExtraData(com.facebook.react.views.text.ReactTextView,java.lang.Object)>[]--><com.facebook.react.views.text.ReactTextView: void setText(com.facebook.react.views.text.ReactTextUpdate)>[[-i0 < 23]]--><android.widget.TextView: int getBreakStrategy()>
+One road protect good!
+-$i0 < 23
+Good road: <com.facebook.react.views.textinput.ReactTextInputManager: void updateExtraData(android.view.View,java.lang.Object)>[]--><com.facebook.react.views.textinput.ReactTextInputManager: void updateExtraData(com.facebook.react.views.textinput.ReactEditText,java.lang.Object)>[]--><com.facebook.react.views.textinput.ReactEditText: void maybeSetText(com.facebook.react.views.text.ReactTextUpdate)>[[-$i0 < 23]]--><android.widget.TextView: int getBreakStrategy()>
+One road protect good!
+###Multi invoking in one method, need manual check!!!--><com.facebook.react.views.textinput.ReactTextInputLocalData: void <init>(android.widget.EditText)>[[-$i0 < 23], [$i0 < 16]]
+###Multi invoking in one method, need manual check!!!--><com.facebook.react.views.textinput.ReactTextInputLocalData: void <init>(android.widget.EditText)>[[-$i0 < 23]][[$i0 < 16]]
+-$i0 < 23
+$i0 < 16
+Good road: <com.facebook.react.views.textinput.ReactEditText: void onLayout(boolean,int,int,int,int)>[]--><com.facebook.react.views.textinput.ReactEditText: void onContentSizeChange()>[]--><com.facebook.react.views.textinput.ReactEditText: void setIntrinsicContentSize()>[]--><com.facebook.react.views.textinput.ReactTextInputLocalData: void <init>(android.widget.EditText)>[[-$i0 < 23], [$i0 < 16]]--><android.widget.TextView: int getBreakStrategy()>
+One road protect good!
+###Multi invoking in one method, need manual check!!!--><com.facebook.react.views.textinput.ReactTextInputLocalData: void <init>(android.widget.EditText)>[[-$i0 < 23], [$i0 < 16]]
+###Multi invoking in one method, need manual check!!!--><com.facebook.react.views.textinput.ReactTextInputLocalData: void <init>(android.widget.EditText)>[[-$i0 < 23]][[$i0 < 16]]
+-$i0 < 23
+$i0 < 16
+Good road: <com.facebook.react.views.textinput.ReactEditText: void access$300(com.facebook.react.views.textinput.ReactEditText)>[]--><com.facebook.react.views.textinput.ReactEditText: void onContentSizeChange()>[]--><com.facebook.react.views.textinput.ReactEditText: void setIntrinsicContentSize()>[]--><com.facebook.react.views.textinput.ReactTextInputLocalData: void <init>(android.widget.EditText)>[[-$i0 < 23], [$i0 < 16]]--><android.widget.TextView: int getBreakStrategy()>
+One road protect good!
+containsStatic:false
+containsTry:false
+6call by main package
+-----------------------------------------
+#################################################
+N 12 Potential Issue API: SDKCheck of <android.os.BaseBundle: int getInt(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+8737call roads:
+219 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <im.vector.activity.PhoneNumberAdditionActivity: boolean onOptionsItemSelected(android.view.MenuItem)>[]--><im.vector.activity.PhoneNumberAdditionActivity: void submitPhoneNumber()>[]--><com.google.i18n.phonenumbers.PhoneNumberUtil: com.google.i18n.phonenumbers.PhoneNumberUtil getInstance()>[]--><com.google.i18n.phonenumbers.PhoneNumberUtil: void <clinit>()>[]--><com.google.android.gms.common.data.DataBufferIterator: java.lang.Object next()>[]--><com.google.android.gms.common.data.EntityBuffer: java.lang.Object get(int)>[]--><com.google.android.gms.common.data.DataHolder: java.lang.String getString(java.lang.String,int,int)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#6.the call statck between class <im.vector.activity.PhoneNumberAdditionActivity: boolean onOptionsItemSelected(android.view.MenuItem)> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+try
+Good road with try: <im.vector.activity.PhoneNumberAdditionActivity: void onActivityResult(int,int,android.content.Intent)>[]--><im.vector.activity.PhoneNumberAdditionActivity: void formatPhoneNumber(java.lang.String)>[[try]]--><com.google.i18n.phonenumbers.PhoneNumberUtil: com.google.i18n.phonenumbers.PhoneNumberUtil getInstance()>[]--><com.google.i18n.phonenumbers.PhoneNumberUtil: void <clinit>()>[]--><com.google.android.gms.common.data.DataBufferIterator: java.lang.Object next()>[]--><com.google.android.gms.common.data.EntityBuffer: java.lang.Object get(int)>[]--><com.google.android.gms.common.data.DataHolder: java.lang.String getString(java.lang.String,int,int)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+One road protect good!
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <im.vector.activity.PhoneNumberAdditionActivity: void onActivityResult(int,int,android.content.Intent)>[]--><im.vector.activity.PhoneNumberAdditionActivity: void setCountryCode(java.lang.String)>[]--><com.google.i18n.phonenumbers.PhoneNumberUtil: com.google.i18n.phonenumbers.PhoneNumberUtil getInstance()>[]--><com.google.i18n.phonenumbers.PhoneNumberUtil: void <clinit>()>[]--><com.google.android.gms.common.data.DataBufferIterator: java.lang.Object next()>[]--><com.google.android.gms.common.data.EntityBuffer: java.lang.Object get(int)>[]--><com.google.android.gms.common.data.DataHolder: java.lang.String getString(java.lang.String,int,int)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#15.the call statck between class <im.vector.activity.PhoneNumberAdditionActivity: void onActivityResult(int,int,android.content.Intent)> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <im.vector.activity.PhoneNumberAdditionActivity: boolean onEditorAction(android.widget.TextView,int,android.view.KeyEvent)>[]--><im.vector.activity.PhoneNumberAdditionActivity: void submitPhoneNumber()>[]--><com.google.i18n.phonenumbers.PhoneNumberUtil: com.google.i18n.phonenumbers.PhoneNumberUtil getInstance()>[]--><com.google.i18n.phonenumbers.PhoneNumberUtil: void <clinit>()>[]--><com.google.android.gms.common.data.DataBufferIterator: java.lang.Object next()>[]--><com.google.android.gms.common.data.EntityBuffer: java.lang.Object get(int)>[]--><com.google.android.gms.common.data.DataHolder: java.lang.String getString(java.lang.String,int,int)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#35.the call statck between class <im.vector.activity.PhoneNumberAdditionActivity: boolean onEditorAction(android.widget.TextView,int,android.view.KeyEvent)> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <im.vector.activity.LoginActivity: void onUsernameAvailabilityChecked(boolean)>[]--><im.vector.activity.LoginActivity: void initThreePidView()>[]--><im.vector.RegistrationManager: java.lang.String getThreePidInstructions(android.content.Context)>[]--><im.vector.RegistrationManager: boolean isRequired(java.lang.String)>[]--><io.realm.OrderedRealmCollectionSnapshot: boolean contains(java.lang.Object)>[]--><io.realm.OrderedRealmCollectionImpl: boolean contains(java.lang.Object)>[]--><com.google.android.gms.internal.measurement.zzhv: java.lang.Object next()>[]--><com.google.android.gms.common.data.SingleRefDataBufferIterator: java.lang.Object next()>[]--><com.google.android.gms.common.data.EntityBuffer: java.lang.Object get(int)>[]--><com.google.android.gms.common.data.DataHolder: java.lang.String getString(java.lang.String,int,int)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#68.the call statck between class <im.vector.activity.LoginActivity: void onUsernameAvailabilityChecked(boolean)> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+try
+Good road with try: <im.vector.activity.VectorRoomDetailsActivity: void onActivityResult(int,int,android.content.Intent)>[]--><com.google.android.gms.common.data.DataBufferIterator: boolean hasNext()>[]--><com.google.android.gms.common.data.EntityBuffer: int getCount()>[]--><com.google.android.gms.common.data.EntityBuffer: void zacb()>[[try]]--><com.google.android.gms.common.data.DataHolder: java.lang.String getString(java.lang.String,int,int)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+One road protect good!
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <im.vector.activity.VectorRoomDetailsActivity: void onActivityResult(int,int,android.content.Intent)>[]--><com.google.android.gms.common.data.DataBufferIterator: java.lang.Object next()>[]--><com.google.android.gms.common.data.EntityBuffer: java.lang.Object get(int)>[]--><com.google.android.gms.common.data.DataHolder: java.lang.String getString(java.lang.String,int,int)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <im.vector.activity.VectorRoomDetailsActivity: void onActivityResult(int,int,android.content.Intent)>[]--><com.google.android.gms.internal.measurement.zzhv: java.lang.Object next()>[]--><com.google.android.gms.common.data.SingleRefDataBufferIterator: java.lang.Object next()>[]--><com.google.android.gms.common.data.EntityBuffer: java.lang.Object get(int)>[]--><com.google.android.gms.common.data.DataHolder: java.lang.String getString(java.lang.String,int,int)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <im.vector.activity.VectorRoomDetailsActivity: void onActivityResult(int,int,android.content.Intent)>[]--><com.google.android.gms.common.data.SingleRefDataBufferIterator: java.lang.Object next()>[]--><com.google.android.gms.common.data.EntityBuffer: java.lang.Object get(int)>[]--><com.google.android.gms.common.data.DataHolder: java.lang.String getString(java.lang.String,int,int)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <im.vector.activity.VectorRoomDetailsActivity: void onActivityResult(int,int,android.content.Intent)>[]--><com.google.android.gms.internal.measurement.zzfn: java.lang.Object next()>[]--><com.google.android.gms.common.data.SingleRefDataBufferIterator: java.lang.Object next()>[]--><com.google.android.gms.common.data.EntityBuffer: java.lang.Object get(int)>[]--><com.google.android.gms.common.data.DataHolder: java.lang.String getString(java.lang.String,int,int)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <im.vector.activity.VectorRoomDetailsActivity: void onActivityResult(int,int,android.content.Intent)>[]--><com.google.android.gms.internal.measurement.zzhj: java.lang.Object next()>[]--><com.google.android.gms.internal.measurement.zzfn: java.lang.Object next()>[]--><com.google.android.gms.common.data.SingleRefDataBufferIterator: java.lang.Object next()>[]--><com.google.android.gms.common.data.EntityBuffer: java.lang.Object get(int)>[]--><com.google.android.gms.common.data.DataHolder: java.lang.String getString(java.lang.String,int,int)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#125.the call statck between class <im.vector.activity.VectorRoomDetailsActivity: void onActivityResult(int,int,android.content.Intent)> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <im.vector.activity.PhoneNumberAdditionActivity: void addPhoneNumber(com.google.i18n.phonenumbers.Phonenumber$PhoneNumber)>[]--><com.google.i18n.phonenumbers.PhoneNumberUtil: com.google.i18n.phonenumbers.PhoneNumberUtil getInstance()>[]--><com.google.i18n.phonenumbers.PhoneNumberUtil: void <clinit>()>[]--><com.google.android.gms.common.data.DataBufferIterator: java.lang.Object next()>[]--><com.google.android.gms.common.data.EntityBuffer: java.lang.Object get(int)>[]--><com.google.android.gms.common.data.DataHolder: java.lang.String getString(java.lang.String,int,int)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#126.the call statck between class <im.vector.activity.PhoneNumberAdditionActivity: void addPhoneNumber(com.google.i18n.phonenumbers.Phonenumber$PhoneNumber)> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <im.vector.activity.policies.AccountCreationTermsActivity: void setChecked(org.matrix.androidsdk.rest.model.login.LocalizedFlowDataLoginTerms,boolean)>[]--><im.vector.activity.policies.AccountCreationTermsViewState: void uncheck(org.matrix.androidsdk.rest.model.login.LocalizedFlowDataLoginTerms)>[]--><com.google.android.gms.common.data.SingleRefDataBufferIterator: java.lang.Object next()>[]--><com.google.android.gms.common.data.EntityBuffer: java.lang.Object get(int)>[]--><com.google.android.gms.common.data.DataHolder: java.lang.String getString(java.lang.String,int,int)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#150.the call statck between class <im.vector.activity.policies.AccountCreationTermsActivity: void setChecked(org.matrix.androidsdk.rest.model.login.LocalizedFlowDataLoginTerms,boolean)> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+try
+Good road with try: <im.vector.activity.StickerPickerActivity: boolean dealsWithWidgetRequest(java.util.Map)>[]--><im.vector.activity.StickerPickerActivity: void sendSticker(java.util.Map)>[]--><com.google.gson.Gson: java.lang.String toJson(java.lang.Object)>[]--><com.google.gson.Gson: java.lang.String toJson(com.google.gson.JsonElement)>[]--><com.google.gson.Gson: void toJson(com.google.gson.JsonElement,java.lang.Appendable)>[[try]]--><com.google.gson.Gson: void toJson(com.google.gson.JsonElement,com.google.gson.stream.JsonWriter)>[[try]]--><com.google.gson.internal.Streams: void write(com.google.gson.JsonElement,com.google.gson.stream.JsonWriter)>[]--><com.google.gson.internal.bind.TypeAdapters$29: void write(com.google.gson.stream.JsonWriter,java.lang.Object)>[]--><com.google.gson.internal.bind.TypeAdapters$29: void write(com.google.gson.stream.JsonWriter,com.google.gson.JsonElement)>[]--><com.google.android.gms.internal.measurement.zzfn: java.lang.Object next()>[]--><com.google.android.gms.common.data.SingleRefDataBufferIterator: java.lang.Object next()>[]--><com.google.android.gms.common.data.EntityBuffer: java.lang.Object get(int)>[]--><com.google.android.gms.common.data.DataHolder: java.lang.String getString(java.lang.String,int,int)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+One road protect good!
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <im.vector.activity.VectorGroupDetailsActivity: void onActivityResult(int,int,android.content.Intent)>[]--><com.google.android.gms.common.data.DataBufferIterator: java.lang.Object next()>[]--><com.google.android.gms.common.data.EntityBuffer: java.lang.Object get(int)>[]--><com.google.android.gms.common.data.DataHolder: java.lang.String getString(java.lang.String,int,int)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <im.vector.activity.VectorGroupDetailsActivity: void onActivityResult(int,int,android.content.Intent)>[]--><com.google.android.gms.internal.measurement.zzhv: java.lang.Object next()>[]--><com.google.android.gms.common.data.SingleRefDataBufferIterator: java.lang.Object next()>[]--><com.google.android.gms.common.data.EntityBuffer: java.lang.Object get(int)>[]--><com.google.android.gms.common.data.DataHolder: java.lang.String getString(java.lang.String,int,int)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <im.vector.activity.VectorGroupDetailsActivity: void onActivityResult(int,int,android.content.Intent)>[]--><com.google.android.gms.common.data.SingleRefDataBufferIterator: java.lang.Object next()>[]--><com.google.android.gms.common.data.EntityBuffer: java.lang.Object get(int)>[]--><com.google.android.gms.common.data.DataHolder: java.lang.String getString(java.lang.String,int,int)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <im.vector.activity.VectorGroupDetailsActivity: void onActivityResult(int,int,android.content.Intent)>[]--><com.google.android.gms.internal.measurement.zzfn: java.lang.Object next()>[]--><com.google.android.gms.common.data.SingleRefDataBufferIterator: java.lang.Object next()>[]--><com.google.android.gms.common.data.EntityBuffer: java.lang.Object get(int)>[]--><com.google.android.gms.common.data.DataHolder: java.lang.String getString(java.lang.String,int,int)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <im.vector.activity.VectorGroupDetailsActivity: void onActivityResult(int,int,android.content.Intent)>[]--><com.google.android.gms.internal.measurement.zzhj: java.lang.Object next()>[]--><com.google.android.gms.internal.measurement.zzfn: java.lang.Object next()>[]--><com.google.android.gms.common.data.SingleRefDataBufferIterator: java.lang.Object next()>[]--><com.google.android.gms.common.data.EntityBuffer: java.lang.Object get(int)>[]--><com.google.android.gms.common.data.DataHolder: java.lang.String getString(java.lang.String,int,int)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+try
+Good road with try: <im.vector.activity.VectorGroupDetailsActivity: void onActivityResult(int,int,android.content.Intent)>[]--><com.google.android.gms.common.data.DataBufferIterator: boolean hasNext()>[]--><com.google.android.gms.common.data.EntityBuffer: int getCount()>[]--><com.google.android.gms.common.data.EntityBuffer: void zacb()>[[try]]--><com.google.android.gms.common.data.DataHolder: java.lang.String getString(java.lang.String,int,int)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+One road protect good!
+#179.the call statck between class <im.vector.activity.VectorGroupDetailsActivity: void onActivityResult(int,int,android.content.Intent)> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <im.vector.activity.LoginActivity: void onActivityResult(int,int,android.content.Intent)>[]--><im.vector.PhoneNumberHandler: void setCountryCode(java.lang.String)>[]--><im.vector.PhoneNumberHandler: void formatPhoneNumber(java.lang.String)>[]--><com.google.i18n.phonenumbers.PhoneNumberUtil: com.google.i18n.phonenumbers.Phonenumber$PhoneNumber parse(java.lang.CharSequence,java.lang.String)>[]--><com.google.i18n.phonenumbers.PhoneNumberUtil: void parse(java.lang.CharSequence,java.lang.String,com.google.i18n.phonenumbers.Phonenumber$PhoneNumber)>[]--><com.google.i18n.phonenumbers.PhoneNumberUtil: void parseHelper(java.lang.CharSequence,java.lang.String,boolean,boolean,com.google.i18n.phonenumbers.Phonenumber$PhoneNumber)>[]--><com.google.i18n.phonenumbers.PhoneNumberUtil: void buildNationalNumberForParsing(java.lang.String,java.lang.StringBuilder)>[]--><com.google.i18n.phonenumbers.PhoneNumberUtil: java.lang.CharSequence extractPossibleNumber(java.lang.CharSequence)>[]--><com.google.i18n.phonenumbers.PhoneNumberUtil: void <clinit>()>[]--><com.google.android.gms.common.data.DataBufferIterator: java.lang.Object next()>[]--><com.google.android.gms.common.data.EntityBuffer: java.lang.Object get(int)>[]--><com.google.android.gms.common.data.DataHolder: java.lang.String getString(java.lang.String,int,int)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#214.the call statck between class <im.vector.activity.LoginActivity: void onActivityResult(int,int,android.content.Intent)> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+8518 Packageshead roads:
+Roads number exceed, exit!8518
+crashApis:6
+crashApisInMain:3
+containsStatic:true
+containsTry:true
+1call by main package
+-----------------------------------------
+#################################################
+N 13 Potential Issue API: SDKCheck of <android.graphics.Color: android.graphics.Color valueOf(long)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 24 25 
+Error road: <androidx.core.graphics.ColorKt: android.graphics.Color toColor(long)>[]--><android.graphics.Color: android.graphics.Color valueOf(long)>
+#1.the call statck between class <androidx.core.graphics.ColorKt: android.graphics.Color toColor(long)> to <android.graphics.Color: android.graphics.Color valueOf(long)>has compatibility isssues！
+-----------------------------------------
+crashApis:7
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 14 Potential Issue API: SDKCheck of <android.opengl.EGL14: android.opengl.EGLSurface eglCreatePbufferSurface(android.opengl.EGLDisplay,android.opengl.EGLConfig,int[],int)> is checking!!!
+The life time of api is [17,31]
+7492call roads:
+214 Mainhead roads:
+

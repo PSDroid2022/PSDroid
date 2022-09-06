@@ -1,0 +1,974 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/cSploit.apk
+Entry Points[org.csploit.android.core.MultiAttackService, org.csploit.android.SettingsActivity, org.csploit.android.plugins.ExploitFinder, org.csploit.android.plugins.mitm.MITM, org.csploit.android.gui.Console, org.acra.CrashReportDialog, org.csploit.android.MainActivity, org.csploit.android.plugins.mitm.DNSSpoofing, org.csploit.android.plugins.mitm.hijacker.HijackerWebView, org.csploit.android.gui.FileEdit, org.csploit.android.plugins.PortScanner, org.csploit.android.ActionActivity, org.csploit.android.gui.MsfPreferences, org.csploit.android.plugins.LoginCracker, org.csploit.android.plugins.mitm.PasswordSniffer, org.csploit.android.WifiScannerActivity, org.csploit.android.CSploitApplication, org.csploit.android.plugins.Sessions, org.csploit.android.plugins.RouterPwn, org.csploit.android.services.UpdateService, org.csploit.android.gui.DirectoryPicker, org.csploit.android.core.ManagedReceiver, org.csploit.android.plugins.PacketForger, org.csploit.android.plugins.mitm.hijacker.Hijacker, org.csploit.android.plugins.mitm.Sniffer, org.csploit.android.plugins.Inspector, org.csploit.android.plugins.Traceroute]
+FllowDroidcallgraph size:12127
+Soot started on Sat Aug 27 22:21:33 CST 2022
+Soot finished on Sat Aug 27 22:22:01 CST 2022
+Soot has run for 0 min. 28 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 19
+Declared Target Sdk version is: 22
+Declared Max Sdk version is: -1
+Collected 546 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <org.apache.http.params.HttpConnectionParams: void setConnectionTimeout(org.apache.http.params.HttpParams,int)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 21 22 
+Error road: <org.acra.util.HttpRequest: void send(android.content.Context,java.net.URL,org.acra.sender.HttpSender$Method,java.lang.String,org.acra.sender.HttpSender$Type)>[]--><org.acra.util.HttpRequest: org.apache.http.client.HttpClient getHttpClient(android.content.Context)>[]--><org.apache.http.params.HttpConnectionParams: void setConnectionTimeout(org.apache.http.params.HttpParams,int)>
+#1.the call statck between class <org.acra.util.HttpRequest: void send(android.content.Context,java.net.URL,org.acra.sender.HttpSender$Method,java.lang.String,org.acra.sender.HttpSender$Type)> to <org.apache.http.params.HttpConnectionParams: void setConnectionTimeout(org.apache.http.params.HttpParams,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:1
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <org.apache.http.conn.ssl.SSLSocketFactory: void setHostnameVerifier(org.apache.http.conn.ssl.X509HostnameVerifier)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+try
+Good road with try: <org.acra.util.HttpRequest: void send(android.content.Context,java.net.URL,org.acra.sender.HttpSender$Method,java.lang.String,org.acra.sender.HttpSender$Type)>[]--><org.acra.util.HttpRequest: org.apache.http.client.HttpClient getHttpClient(android.content.Context)>[[try]]--><org.apache.http.conn.ssl.SSLSocketFactory: void setHostnameVerifier(org.apache.http.conn.ssl.X509HostnameVerifier)>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()> is checking!!!
+The life time of api is [1,30]
+4call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.csploit.android.MainActivity dummyMainMethod_org_csploit_android_MainActivity(android.content.Intent)>[]--><dummyMainClass: org.csploit.android.MainFragment dummyMainMethod_org_csploit_android_MainFragment(android.content.Intent,android.app.Activity)>[]--><org.csploit.android.MainFragment: void onViewCreated(android.view.View,android.os.Bundle)>[]--><org.csploit.android.MainFragment: void startAllServices()>[]--><org.csploit.android.MainFragment: void startUpdateChecker()>[]--><org.csploit.android.MainFragment: boolean isConnectivityAvailable()>[]--><org.csploit.android.net.Network: boolean isConnectivityAvailable(android.content.Context)>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>has compatibility isssues！
+-----------------------------------------
+3 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <org.csploit.android.MainFragment$UpdateReceiver: void onUpdateDone(org.csploit.android.update.Update)>[]--><org.csploit.android.MainFragment: void startUpdateChecker()>[]--><org.csploit.android.MainFragment: boolean isConnectivityAvailable()>[]--><org.csploit.android.net.Network: boolean isConnectivityAvailable(android.content.Context)>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>
+#1.the call statck between class <org.csploit.android.MainFragment$UpdateReceiver: void onUpdateDone(org.csploit.android.update.Update)> to <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <org.csploit.android.MainFragment$2: void run()>[]--><org.csploit.android.MainFragment: void init()>[]--><org.csploit.android.MainFragment: boolean isConnectivityAvailable()>[]--><org.csploit.android.net.Network: boolean isConnectivityAvailable(android.content.Context)>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>
+#2.the call statck between class <org.csploit.android.MainFragment$2: void run()> to <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <org.csploit.android.MainFragment: void access$000(org.csploit.android.MainFragment)>[]--><org.csploit.android.MainFragment: void startAllServices()>[]--><org.csploit.android.MainFragment: void startUpdateChecker()>[]--><org.csploit.android.MainFragment: boolean isConnectivityAvailable()>[]--><org.csploit.android.net.Network: boolean isConnectivityAvailable(android.content.Context)>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>
+#3.the call statck between class <org.csploit.android.MainFragment: void access$000(org.csploit.android.MainFragment)> to <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>has compatibility isssues！
+-----------------------------------------
+crashApis:2
+crashApisInMain:1
+containsStatic:false
+containsTry:false
+4call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager: boolean enableNetwork(int,boolean)> is checking!!!
+The life time of api is [1,30]
+4call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.csploit.android.plugins.mitm.Sniffer dummyMainMethod_org_csploit_android_plugins_mitm_Sniffer(android.content.Intent)>[]--><org.csploit.android.plugins.mitm.Sniffer$2: void onClick(android.view.View)>[]--><org.csploit.android.plugins.mitm.Sniffer: void access$300(org.csploit.android.plugins.mitm.Sniffer)>[]--><org.csploit.android.plugins.mitm.Sniffer: void setStartedState()>[]--><org.csploit.android.plugins.mitm.SpoofSession: void start(org.csploit.android.plugins.mitm.SpoofSession$OnSessionReadyListener)>[]--><org.csploit.android.plugins.mitm.SpoofSession: void start(org.csploit.android.net.Target,org.csploit.android.plugins.mitm.SpoofSession$OnSessionReadyListener)>[]--><java.lang.Thread: void run()>[]--><org.csploit.android.WifiScannerFragment$2: void run()>[]--><org.csploit.android.WifiScannerFragment: void access$300(org.csploit.android.WifiScannerFragment)>[]--><org.csploit.android.WifiScannerFragment: void nextConnectionAttempt()>[]--><org.csploit.android.WifiScannerFragment: int performConnection(android.net.wifi.ScanResult,java.lang.String)>[]--><android.net.wifi.WifiManager: boolean enableNetwork(int,boolean)>
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.csploit.android.SettingsActivity dummyMainMethod_org_csploit_android_SettingsActivity(android.content.Intent)>[]--><dummyMainClass: org.csploit.android.SettingsFragment dummyMainMethod_org_csploit_android_SettingsFragment(android.content.Intent,android.app.Activity)>[]--><org.csploit.android.SettingsFragment$PrefsFrag: void onSharedPreferenceChanged(android.content.SharedPreferences,java.lang.String)>[]--><org.csploit.android.SettingsFragment$PrefsFrag: void onMsfEnabled()>[]--><org.csploit.android.SettingsFragment$PrefsFrag: void getMsfBranches()>[]--><java.lang.Thread: void run()>[]--><org.csploit.android.WifiScannerFragment$2: void run()>[]--><org.csploit.android.WifiScannerFragment: void access$300(org.csploit.android.WifiScannerFragment)>[]--><org.csploit.android.WifiScannerFragment: void nextConnectionAttempt()>[]--><org.csploit.android.WifiScannerFragment: int performConnection(android.net.wifi.ScanResult,java.lang.String)>[]--><android.net.wifi.WifiManager: boolean enableNetwork(int,boolean)>
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.csploit.android.plugins.mitm.MITM dummyMainMethod_org_csploit_android_plugins_mitm_MITM(android.content.Intent)>[]--><org.csploit.android.plugins.mitm.MITM: void onActivityResult(int,int,android.content.Intent)>[]--><org.csploit.android.plugins.mitm.SpoofSession: void start(org.csploit.android.plugins.mitm.SpoofSession$OnSessionReadyListener)>[]--><org.csploit.android.plugins.mitm.SpoofSession: void start(org.csploit.android.net.Target,org.csploit.android.plugins.mitm.SpoofSession$OnSessionReadyListener)>[]--><java.lang.Thread: void run()>[]--><org.csploit.android.WifiScannerFragment$2: void run()>[]--><org.csploit.android.WifiScannerFragment: void access$300(org.csploit.android.WifiScannerFragment)>[]--><org.csploit.android.WifiScannerFragment: void nextConnectionAttempt()>[]--><org.csploit.android.WifiScannerFragment: int performConnection(android.net.wifi.ScanResult,java.lang.String)>[]--><android.net.wifi.WifiManager: boolean enableNetwork(int,boolean)>
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.csploit.android.plugins.ExploitFinder dummyMainMethod_org_csploit_android_plugins_ExploitFinder(android.content.Intent)>[]--><org.csploit.android.plugins.ExploitFinder: boolean onOptionsItemSelected(android.view.MenuItem)>[]--><org.csploit.android.plugins.ExploitFinder: void launchExploit(org.csploit.android.net.metasploit.MsfExploit)>[]--><java.lang.Thread: void run()>[]--><org.csploit.android.WifiScannerFragment$2: void run()>[]--><org.csploit.android.WifiScannerFragment: void access$300(org.csploit.android.WifiScannerFragment)>[]--><org.csploit.android.WifiScannerFragment: void nextConnectionAttempt()>[]--><org.csploit.android.WifiScannerFragment: int performConnection(android.net.wifi.ScanResult,java.lang.String)>[]--><android.net.wifi.WifiManager: boolean enableNetwork(int,boolean)>
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.csploit.android.plugins.PortScanner dummyMainMethod_org_csploit_android_plugins_PortScanner(android.content.Intent)>[]--><org.csploit.android.gui.dialogs.InputDialog$1: void onClick(android.content.DialogInterface,int)>[]--><org.csploit.android.WifiScannerFragment$4: void onInputEntered(java.lang.String)>[]--><org.csploit.android.WifiScannerFragment: int access$500(org.csploit.android.WifiScannerFragment,android.net.wifi.ScanResult,java.lang.String)>[]--><org.csploit.android.WifiScannerFragment: int performConnection(android.net.wifi.ScanResult,java.lang.String)>[]--><android.net.wifi.WifiManager: boolean enableNetwork(int,boolean)>
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.csploit.android.plugins.mitm.hijacker.Hijacker dummyMainMethod_org_csploit_android_plugins_mitm_hijacker_Hijacker(android.content.Intent)>[]--><org.csploit.android.plugins.mitm.hijacker.Hijacker$3: void onClick(android.view.View)>[]--><org.csploit.android.plugins.mitm.hijacker.Hijacker: void access$400(org.csploit.android.plugins.mitm.hijacker.Hijacker)>[]--><org.csploit.android.plugins.mitm.hijacker.Hijacker: void setStartedState()>[]--><org.csploit.android.plugins.mitm.SpoofSession: void start(org.csploit.android.plugins.mitm.SpoofSession$OnSessionReadyListener)>[]--><org.csploit.android.plugins.mitm.SpoofSession: void start(org.csploit.android.net.Target,org.csploit.android.plugins.mitm.SpoofSession$OnSessionReadyListener)>[]--><java.lang.Thread: void run()>[]--><org.csploit.android.WifiScannerFragment$2: void run()>[]--><org.csploit.android.WifiScannerFragment: void access$300(org.csploit.android.WifiScannerFragment)>[]--><org.csploit.android.WifiScannerFragment: void nextConnectionAttempt()>[]--><org.csploit.android.WifiScannerFragment: int performConnection(android.net.wifi.ScanResult,java.lang.String)>[]--><android.net.wifi.WifiManager: boolean enableNetwork(int,boolean)>
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.csploit.android.plugins.Sessions dummyMainMethod_org_csploit_android_plugins_Sessions(android.content.Intent)>[]--><org.csploit.android.gui.dialogs.ListChoiceDialog$1: void onItemClick(android.widget.AdapterView,android.view.View,int,long)>[]--><org.csploit.android.plugins.ExploitFinder$1$1: void onChoice(int)>[]--><org.csploit.android.plugins.ExploitFinder: void launchExploit(org.csploit.android.net.metasploit.MsfExploit)>[]--><java.lang.Thread: void run()>[]--><org.csploit.android.WifiScannerFragment$2: void run()>[]--><org.csploit.android.WifiScannerFragment: void access$300(org.csploit.android.WifiScannerFragment)>[]--><org.csploit.android.WifiScannerFragment: void nextConnectionAttempt()>[]--><org.csploit.android.WifiScannerFragment: int performConnection(android.net.wifi.ScanResult,java.lang.String)>[]--><android.net.wifi.WifiManager: boolean enableNetwork(int,boolean)>
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.csploit.android.WifiScannerActivity dummyMainMethod_org_csploit_android_WifiScannerActivity(android.content.Intent)>[]--><dummyMainClass: org.csploit.android.WifiScannerFragment dummyMainMethod_org_csploit_android_WifiScannerFragment(android.content.Intent,android.app.Activity)>[]--><org.csploit.android.gui.dialogs.WifiCrackDialog$2: void onClick(android.content.DialogInterface,int)>[]--><org.csploit.android.WifiScannerFragment$3: void onCrack()>[]--><org.csploit.android.WifiScannerFragment: void access$700(org.csploit.android.WifiScannerFragment,org.csploit.android.wifi.Keygen,android.net.wifi.ScanResult)>[]--><org.csploit.android.WifiScannerFragment: void performCracking(org.csploit.android.wifi.Keygen,android.net.wifi.ScanResult)>[]--><java.lang.Thread: void run()>[]--><org.csploit.android.WifiScannerFragment$2: void run()>[]--><org.csploit.android.WifiScannerFragment: void access$300(org.csploit.android.WifiScannerFragment)>[]--><org.csploit.android.WifiScannerFragment: void nextConnectionAttempt()>[]--><org.csploit.android.WifiScannerFragment: int performConnection(android.net.wifi.ScanResult,java.lang.String)>[]--><android.net.wifi.WifiManager: boolean enableNetwork(int,boolean)>
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.csploit.android.MainActivity dummyMainMethod_org_csploit_android_MainActivity(android.content.Intent)>[]--><dummyMainClass: org.csploit.android.MainFragment dummyMainMethod_org_csploit_android_MainFragment(android.content.Intent,android.app.Activity)>[]--><org.csploit.android.gui.dialogs.InputDialog$1: void onClick(android.content.DialogInterface,int)>[]--><org.csploit.android.WifiScannerFragment$4: void onInputEntered(java.lang.String)>[]--><org.csploit.android.WifiScannerFragment: int access$500(org.csploit.android.WifiScannerFragment,android.net.wifi.ScanResult,java.lang.String)>[]--><org.csploit.android.WifiScannerFragment: int performConnection(android.net.wifi.ScanResult,java.lang.String)>[]--><android.net.wifi.WifiManager: boolean enableNetwork(int,boolean)>
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.csploit.android.plugins.PacketForger dummyMainMethod_org_csploit_android_plugins_PacketForger(android.content.Intent)>[]--><org.csploit.android.plugins.PacketForger: void onClick(android.view.View)>[]--><java.lang.Thread: void run()>[]--><org.csploit.android.WifiScannerFragment$2: void run()>[]--><org.csploit.android.WifiScannerFragment: void access$300(org.csploit.android.WifiScannerFragment)>[]--><org.csploit.android.WifiScannerFragment: void nextConnectionAttempt()>[]--><org.csploit.android.WifiScannerFragment: int performConnection(android.net.wifi.ScanResult,java.lang.String)>[]--><android.net.wifi.WifiManager: boolean enableNetwork(int,boolean)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.wifi.WifiManager: boolean enableNetwork(int,boolean)>has compatibility isssues！
+-----------------------------------------
+3 Packageshead roads:
+try
+Good road with try: <org.csploit.android.core.ChildManager: void access$000(org.csploit.android.core.Child,org.csploit.android.events.Event)>[]--><org.csploit.android.core.ChildManager: void dispatchEvent(org.csploit.android.core.Child,org.csploit.android.events.Event)>[]--><org.csploit.android.core.CrashReporter: void notifyChildCrashed(int,int)>[]--><org.csploit.android.core.CrashReporter: void notifyNativeError(org.acra.ErrorReporter,java.lang.Throwable)>[]--><org.acra.ErrorReporter: void handleException(java.lang.Throwable)>[]--><org.acra.ErrorReporter$ReportBuilder: void send()>[]--><org.acra.ErrorReporter: void access$1400(org.acra.ErrorReporter,org.acra.ErrorReporter$ReportBuilder)>[]--><org.acra.ErrorReporter: void report(org.acra.ErrorReporter$ReportBuilder)>[]--><org.acra.collector.CrashReportDataFactory: org.acra.collector.CrashReportData createCrashData(java.lang.String,java.lang.Throwable,java.util.Map,boolean,java.lang.Thread)>[[try]]--><org.acra.collector.LogCatCollector: java.lang.String collectLogCat(java.lang.String)>[]--><java.lang.Thread: void run()>[]--><org.csploit.android.WifiScannerFragment$2: void run()>[]--><org.csploit.android.WifiScannerFragment: void access$300(org.csploit.android.WifiScannerFragment)>[]--><org.csploit.android.WifiScannerFragment: void nextConnectionAttempt()>[]--><org.csploit.android.WifiScannerFragment: int performConnection(android.net.wifi.ScanResult,java.lang.String)>[]--><android.net.wifi.WifiManager: boolean enableNetwork(int,boolean)>
+One road protect good!
+try
+Good road with try: <org.csploit.android.MainFragment$2: void run()>[]--><org.csploit.android.MainFragment: void init()>[[try]]--><org.csploit.android.core.CrashReporter: void notifyNativeLibraryCrash()>[]--><org.csploit.android.core.CrashReporter: void notifyNativeError(org.acra.ErrorReporter,java.lang.Throwable)>[]--><org.acra.ErrorReporter: void handleException(java.lang.Throwable)>[]--><org.acra.ErrorReporter$ReportBuilder: void send()>[]--><org.acra.ErrorReporter: void access$1400(org.acra.ErrorReporter,org.acra.ErrorReporter$ReportBuilder)>[]--><org.acra.ErrorReporter: void report(org.acra.ErrorReporter$ReportBuilder)>[]--><org.acra.collector.CrashReportDataFactory: org.acra.collector.CrashReportData createCrashData(java.lang.String,java.lang.Throwable,java.util.Map,boolean,java.lang.Thread)>[[try]]--><org.acra.collector.LogCatCollector: java.lang.String collectLogCat(java.lang.String)>[]--><java.lang.Thread: void run()>[]--><org.csploit.android.WifiScannerFragment$2: void run()>[]--><org.csploit.android.WifiScannerFragment: void access$300(org.csploit.android.WifiScannerFragment)>[]--><org.csploit.android.WifiScannerFragment: void nextConnectionAttempt()>[]--><org.csploit.android.WifiScannerFragment: int performConnection(android.net.wifi.ScanResult,java.lang.String)>[]--><android.net.wifi.WifiManager: boolean enableNetwork(int,boolean)>
+One road protect good!
+!!!this api will crash on sdk 31 
+Error road: <org.csploit.android.WifiScannerFragment$ConnectionReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><org.csploit.android.WifiScannerFragment: void onSuccessfulConnection()>[]--><org.csploit.android.WifiScannerFragment: void onEnd()>[]--><android.net.wifi.WifiManager: boolean enableNetwork(int,boolean)>
+!!!this api will crash on sdk 31 
+Error road: <org.csploit.android.WifiScannerFragment$ConnectionReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><org.csploit.android.WifiScannerFragment: void onFailedConnection()>[]--><android.net.wifi.WifiManager: boolean enableNetwork(int,boolean)>
+#3.the call statck between class <org.csploit.android.WifiScannerFragment$ConnectionReceiver: void onReceive(android.content.Context,android.content.Intent)> to <android.net.wifi.WifiManager: boolean enableNetwork(int,boolean)>has compatibility isssues！
+-----------------------------------------
+crashApis:3
+crashApisInMain:2
+containsStatic:false
+containsTry:true
+4call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.net.NetworkInfo: boolean isConnected()> is checking!!!
+The life time of api is [1,30]
+4call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.csploit.android.MainActivity dummyMainMethod_org_csploit_android_MainActivity(android.content.Intent)>[]--><dummyMainClass: org.csploit.android.MainFragment dummyMainMethod_org_csploit_android_MainFragment(android.content.Intent,android.app.Activity)>[]--><org.csploit.android.MainFragment: void onViewCreated(android.view.View,android.os.Bundle)>[]--><org.csploit.android.MainFragment: void startAllServices()>[]--><org.csploit.android.MainFragment: void startUpdateChecker()>[]--><org.csploit.android.MainFragment: boolean isConnectivityAvailable()>[]--><org.csploit.android.net.Network: boolean isConnectivityAvailable(android.content.Context)>[]--><android.net.NetworkInfo: boolean isConnected()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.NetworkInfo: boolean isConnected()>has compatibility isssues！
+-----------------------------------------
+3 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <org.csploit.android.MainFragment$UpdateReceiver: void onUpdateDone(org.csploit.android.update.Update)>[]--><org.csploit.android.MainFragment: void startUpdateChecker()>[]--><org.csploit.android.MainFragment: boolean isConnectivityAvailable()>[]--><org.csploit.android.net.Network: boolean isConnectivityAvailable(android.content.Context)>[]--><android.net.NetworkInfo: boolean isConnected()>
+#1.the call statck between class <org.csploit.android.MainFragment$UpdateReceiver: void onUpdateDone(org.csploit.android.update.Update)> to <android.net.NetworkInfo: boolean isConnected()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <org.csploit.android.MainFragment$2: void run()>[]--><org.csploit.android.MainFragment: void init()>[]--><org.csploit.android.MainFragment: boolean isConnectivityAvailable()>[]--><org.csploit.android.net.Network: boolean isConnectivityAvailable(android.content.Context)>[]--><android.net.NetworkInfo: boolean isConnected()>
+#2.the call statck between class <org.csploit.android.MainFragment$2: void run()> to <android.net.NetworkInfo: boolean isConnected()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <org.csploit.android.MainFragment: void access$000(org.csploit.android.MainFragment)>[]--><org.csploit.android.MainFragment: void startAllServices()>[]--><org.csploit.android.MainFragment: void startUpdateChecker()>[]--><org.csploit.android.MainFragment: boolean isConnectivityAvailable()>[]--><org.csploit.android.net.Network: boolean isConnectivityAvailable(android.content.Context)>[]--><android.net.NetworkInfo: boolean isConnected()>
+#3.the call statck between class <org.csploit.android.MainFragment: void access$000(org.csploit.android.MainFragment)> to <android.net.NetworkInfo: boolean isConnected()>has compatibility isssues！
+-----------------------------------------
+crashApis:4
+crashApisInMain:3
+containsStatic:false
+containsTry:false
+4call by main package
+-----------------------------------------
+#################################################
+N 5 Potential Issue API: SDKCheck of <android.webkit.CookieSyncManager: void startSync()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+$i0 < 21
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.csploit.android.plugins.mitm.hijacker.HijackerWebView dummyMainMethod_org_csploit_android_plugins_mitm_hijacker_HijackerWebView(android.content.Intent)>[]--><org.csploit.android.plugins.mitm.hijacker.HijackerWebView: void onResume()>[[$i0 < 21]]--><android.webkit.CookieSyncManager: void startSync()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.webkit.CookieSyncManager: void startSync()>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:5
+crashApisInMain:4
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 6 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager: boolean setWifiEnabled(boolean)> is checking!!!
+The life time of api is [1,30]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.csploit.android.WifiScannerActivity dummyMainMethod_org_csploit_android_WifiScannerActivity(android.content.Intent)>[]--><dummyMainClass: org.csploit.android.WifiScannerFragment dummyMainMethod_org_csploit_android_WifiScannerFragment(android.content.Intent,android.app.Activity)>[]--><org.csploit.android.WifiScannerFragment: void onViewCreated(android.view.View,android.os.Bundle)>[]--><android.net.wifi.WifiManager: boolean setWifiEnabled(boolean)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.wifi.WifiManager: boolean setWifiEnabled(boolean)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:6
+crashApisInMain:5
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 7 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.acra.CrashReportDialog dummyMainMethod_org_acra_CrashReportDialog(android.content.Intent)>[]--><org.acra.CrashReportDialog: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:7
+crashApisInMain:6
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 8 Potential Issue API: SDKCheck of <android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)> is checking!!!
+The life time of api is [22,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.csploit.android.gui.DirectoryPicker dummyMainMethod_org_csploit_android_gui_DirectoryPicker(android.content.Intent)>[]--><org.csploit.android.gui.DirectoryPicker: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:8
+crashApisInMain:7
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 9 Potential Issue API: SDKCheck of <org.apache.http.conn.ssl.AbstractVerifier: void <init>()> is checking!!!
+The life time of api is [23,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 21 22 
+Error road: <org.acra.util.TlsSniSocketFactory: void <clinit>()>[[]]--><org.apache.http.conn.ssl.AbstractVerifier: void <init>()>
+#1.the call statck between class <org.acra.util.TlsSniSocketFactory: void <clinit>()> to <org.apache.http.conn.ssl.AbstractVerifier: void <init>()>has compatibility isssues！
+-----------------------------------------
+crashApis:9
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 10 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)> is checking!!!
+The life time of api is [22,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.csploit.android.WifiScannerActivity dummyMainMethod_org_csploit_android_WifiScannerActivity(android.content.Intent)>[]--><org.csploit.android.WifiScannerActivity: void onBackPressed()>[]--><org.csploit.android.WifiScannerFragment: void onBackPressed()>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:10
+crashApisInMain:8
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 11 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager: android.net.wifi.WifiManager.WifiLock createWifiLock(int,java.lang.String)> is checking!!!
+The life time of api is [3,30]
+2call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.csploit.android.MainActivity dummyMainMethod_org_csploit_android_MainActivity(android.content.Intent)>[]--><dummyMainClass: org.csploit.android.MainFragment dummyMainMethod_org_csploit_android_MainFragment(android.content.Intent,android.app.Activity)>[]--><org.csploit.android.MainFragment: void onActivityResult(int,int,android.content.Intent)>[]--><org.csploit.android.MainFragment: void init()>[]--><org.csploit.android.MainFragment: boolean initSystem()>[[try]]--><org.csploit.android.core.System: void init(android.content.Context)>[[try]]--><android.net.wifi.WifiManager: android.net.wifi.WifiManager.WifiLock createWifiLock(int,java.lang.String)>
+One road protect good!
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><org.csploit.android.CSploitApplication: void onCreate()>[[try]]--><org.csploit.android.core.System: void init(android.content.Context)>[[try]]--><android.net.wifi.WifiManager: android.net.wifi.WifiManager.WifiLock createWifiLock(int,java.lang.String)>
+One road protect good!
+1 Packageshead roads:
+try
+Good road with try: <org.csploit.android.MainFragment$2: void run()>[]--><org.csploit.android.MainFragment: void init()>[]--><org.csploit.android.MainFragment: boolean initSystem()>[[try]]--><org.csploit.android.core.System: void init(android.content.Context)>[[try]]--><android.net.wifi.WifiManager: android.net.wifi.WifiManager.WifiLock createWifiLock(int,java.lang.String)>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 12 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager: int addNetwork(android.net.wifi.WifiConfiguration)> is checking!!!
+The life time of api is [1,30]
+4call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.csploit.android.plugins.mitm.Sniffer dummyMainMethod_org_csploit_android_plugins_mitm_Sniffer(android.content.Intent)>[]--><org.csploit.android.plugins.mitm.Sniffer$2: void onClick(android.view.View)>[]--><org.csploit.android.plugins.mitm.Sniffer: void access$300(org.csploit.android.plugins.mitm.Sniffer)>[]--><org.csploit.android.plugins.mitm.Sniffer: void setStartedState()>[]--><org.csploit.android.plugins.mitm.SpoofSession: void start(org.csploit.android.plugins.mitm.SpoofSession$OnSessionReadyListener)>[]--><org.csploit.android.plugins.mitm.SpoofSession: void start(org.csploit.android.net.Target,org.csploit.android.plugins.mitm.SpoofSession$OnSessionReadyListener)>[]--><java.lang.Thread: void run()>[]--><org.csploit.android.WifiScannerFragment$2: void run()>[]--><org.csploit.android.WifiScannerFragment: void access$300(org.csploit.android.WifiScannerFragment)>[]--><org.csploit.android.WifiScannerFragment: void nextConnectionAttempt()>[]--><org.csploit.android.WifiScannerFragment: int performConnection(android.net.wifi.ScanResult,java.lang.String)>[]--><android.net.wifi.WifiManager: int addNetwork(android.net.wifi.WifiConfiguration)>
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.csploit.android.SettingsActivity dummyMainMethod_org_csploit_android_SettingsActivity(android.content.Intent)>[]--><dummyMainClass: org.csploit.android.SettingsFragment dummyMainMethod_org_csploit_android_SettingsFragment(android.content.Intent,android.app.Activity)>[]--><org.csploit.android.SettingsFragment$PrefsFrag: void onSharedPreferenceChanged(android.content.SharedPreferences,java.lang.String)>[]--><org.csploit.android.SettingsFragment$PrefsFrag: void onMsfEnabled()>[]--><org.csploit.android.SettingsFragment$PrefsFrag: void getMsfBranches()>[]--><java.lang.Thread: void run()>[]--><org.csploit.android.WifiScannerFragment$2: void run()>[]--><org.csploit.android.WifiScannerFragment: void access$300(org.csploit.android.WifiScannerFragment)>[]--><org.csploit.android.WifiScannerFragment: void nextConnectionAttempt()>[]--><org.csploit.android.WifiScannerFragment: int performConnection(android.net.wifi.ScanResult,java.lang.String)>[]--><android.net.wifi.WifiManager: int addNetwork(android.net.wifi.WifiConfiguration)>
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.csploit.android.plugins.mitm.MITM dummyMainMethod_org_csploit_android_plugins_mitm_MITM(android.content.Intent)>[]--><org.csploit.android.plugins.mitm.MITM: void onActivityResult(int,int,android.content.Intent)>[]--><org.csploit.android.plugins.mitm.SpoofSession: void start(org.csploit.android.plugins.mitm.SpoofSession$OnSessionReadyListener)>[]--><org.csploit.android.plugins.mitm.SpoofSession: void start(org.csploit.android.net.Target,org.csploit.android.plugins.mitm.SpoofSession$OnSessionReadyListener)>[]--><java.lang.Thread: void run()>[]--><org.csploit.android.WifiScannerFragment$2: void run()>[]--><org.csploit.android.WifiScannerFragment: void access$300(org.csploit.android.WifiScannerFragment)>[]--><org.csploit.android.WifiScannerFragment: void nextConnectionAttempt()>[]--><org.csploit.android.WifiScannerFragment: int performConnection(android.net.wifi.ScanResult,java.lang.String)>[]--><android.net.wifi.WifiManager: int addNetwork(android.net.wifi.WifiConfiguration)>
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.csploit.android.plugins.ExploitFinder dummyMainMethod_org_csploit_android_plugins_ExploitFinder(android.content.Intent)>[]--><org.csploit.android.plugins.ExploitFinder: boolean onOptionsItemSelected(android.view.MenuItem)>[]--><org.csploit.android.plugins.ExploitFinder: void launchExploit(org.csploit.android.net.metasploit.MsfExploit)>[]--><java.lang.Thread: void run()>[]--><org.csploit.android.WifiScannerFragment$2: void run()>[]--><org.csploit.android.WifiScannerFragment: void access$300(org.csploit.android.WifiScannerFragment)>[]--><org.csploit.android.WifiScannerFragment: void nextConnectionAttempt()>[]--><org.csploit.android.WifiScannerFragment: int performConnection(android.net.wifi.ScanResult,java.lang.String)>[]--><android.net.wifi.WifiManager: int addNetwork(android.net.wifi.WifiConfiguration)>
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.csploit.android.plugins.PortScanner dummyMainMethod_org_csploit_android_plugins_PortScanner(android.content.Intent)>[]--><org.csploit.android.gui.dialogs.InputDialog$1: void onClick(android.content.DialogInterface,int)>[]--><org.csploit.android.WifiScannerFragment$4: void onInputEntered(java.lang.String)>[]--><org.csploit.android.WifiScannerFragment: int access$500(org.csploit.android.WifiScannerFragment,android.net.wifi.ScanResult,java.lang.String)>[]--><org.csploit.android.WifiScannerFragment: int performConnection(android.net.wifi.ScanResult,java.lang.String)>[]--><android.net.wifi.WifiManager: int addNetwork(android.net.wifi.WifiConfiguration)>
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.csploit.android.plugins.mitm.hijacker.Hijacker dummyMainMethod_org_csploit_android_plugins_mitm_hijacker_Hijacker(android.content.Intent)>[]--><org.csploit.android.plugins.mitm.hijacker.Hijacker$3: void onClick(android.view.View)>[]--><org.csploit.android.plugins.mitm.hijacker.Hijacker: void access$400(org.csploit.android.plugins.mitm.hijacker.Hijacker)>[]--><org.csploit.android.plugins.mitm.hijacker.Hijacker: void setStartedState()>[]--><org.csploit.android.plugins.mitm.SpoofSession: void start(org.csploit.android.plugins.mitm.SpoofSession$OnSessionReadyListener)>[]--><org.csploit.android.plugins.mitm.SpoofSession: void start(org.csploit.android.net.Target,org.csploit.android.plugins.mitm.SpoofSession$OnSessionReadyListener)>[]--><java.lang.Thread: void run()>[]--><org.csploit.android.WifiScannerFragment$2: void run()>[]--><org.csploit.android.WifiScannerFragment: void access$300(org.csploit.android.WifiScannerFragment)>[]--><org.csploit.android.WifiScannerFragment: void nextConnectionAttempt()>[]--><org.csploit.android.WifiScannerFragment: int performConnection(android.net.wifi.ScanResult,java.lang.String)>[]--><android.net.wifi.WifiManager: int addNetwork(android.net.wifi.WifiConfiguration)>
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.csploit.android.plugins.Sessions dummyMainMethod_org_csploit_android_plugins_Sessions(android.content.Intent)>[]--><org.csploit.android.gui.dialogs.ListChoiceDialog$1: void onItemClick(android.widget.AdapterView,android.view.View,int,long)>[]--><org.csploit.android.plugins.ExploitFinder$1$1: void onChoice(int)>[]--><org.csploit.android.plugins.ExploitFinder: void launchExploit(org.csploit.android.net.metasploit.MsfExploit)>[]--><java.lang.Thread: void run()>[]--><org.csploit.android.WifiScannerFragment$2: void run()>[]--><org.csploit.android.WifiScannerFragment: void access$300(org.csploit.android.WifiScannerFragment)>[]--><org.csploit.android.WifiScannerFragment: void nextConnectionAttempt()>[]--><org.csploit.android.WifiScannerFragment: int performConnection(android.net.wifi.ScanResult,java.lang.String)>[]--><android.net.wifi.WifiManager: int addNetwork(android.net.wifi.WifiConfiguration)>
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.csploit.android.WifiScannerActivity dummyMainMethod_org_csploit_android_WifiScannerActivity(android.content.Intent)>[]--><dummyMainClass: org.csploit.android.WifiScannerFragment dummyMainMethod_org_csploit_android_WifiScannerFragment(android.content.Intent,android.app.Activity)>[]--><org.csploit.android.gui.dialogs.WifiCrackDialog$2: void onClick(android.content.DialogInterface,int)>[]--><org.csploit.android.WifiScannerFragment$3: void onCrack()>[]--><org.csploit.android.WifiScannerFragment: void access$700(org.csploit.android.WifiScannerFragment,org.csploit.android.wifi.Keygen,android.net.wifi.ScanResult)>[]--><org.csploit.android.WifiScannerFragment: void performCracking(org.csploit.android.wifi.Keygen,android.net.wifi.ScanResult)>[]--><java.lang.Thread: void run()>[]--><org.csploit.android.WifiScannerFragment$2: void run()>[]--><org.csploit.android.WifiScannerFragment: void access$300(org.csploit.android.WifiScannerFragment)>[]--><org.csploit.android.WifiScannerFragment: void nextConnectionAttempt()>[]--><org.csploit.android.WifiScannerFragment: int performConnection(android.net.wifi.ScanResult,java.lang.String)>[]--><android.net.wifi.WifiManager: int addNetwork(android.net.wifi.WifiConfiguration)>
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.csploit.android.MainActivity dummyMainMethod_org_csploit_android_MainActivity(android.content.Intent)>[]--><dummyMainClass: org.csploit.android.MainFragment dummyMainMethod_org_csploit_android_MainFragment(android.content.Intent,android.app.Activity)>[]--><org.csploit.android.gui.dialogs.InputDialog$1: void onClick(android.content.DialogInterface,int)>[]--><org.csploit.android.WifiScannerFragment$4: void onInputEntered(java.lang.String)>[]--><org.csploit.android.WifiScannerFragment: int access$500(org.csploit.android.WifiScannerFragment,android.net.wifi.ScanResult,java.lang.String)>[]--><org.csploit.android.WifiScannerFragment: int performConnection(android.net.wifi.ScanResult,java.lang.String)>[]--><android.net.wifi.WifiManager: int addNetwork(android.net.wifi.WifiConfiguration)>
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.csploit.android.plugins.PacketForger dummyMainMethod_org_csploit_android_plugins_PacketForger(android.content.Intent)>[]--><org.csploit.android.plugins.PacketForger: void onClick(android.view.View)>[]--><java.lang.Thread: void run()>[]--><org.csploit.android.WifiScannerFragment$2: void run()>[]--><org.csploit.android.WifiScannerFragment: void access$300(org.csploit.android.WifiScannerFragment)>[]--><org.csploit.android.WifiScannerFragment: void nextConnectionAttempt()>[]--><org.csploit.android.WifiScannerFragment: int performConnection(android.net.wifi.ScanResult,java.lang.String)>[]--><android.net.wifi.WifiManager: int addNetwork(android.net.wifi.WifiConfiguration)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.wifi.WifiManager: int addNetwork(android.net.wifi.WifiConfiguration)>has compatibility isssues！
+-----------------------------------------
+3 Packageshead roads:
+try
+Good road with try: <org.csploit.android.core.ChildManager: void access$000(org.csploit.android.core.Child,org.csploit.android.events.Event)>[]--><org.csploit.android.core.ChildManager: void dispatchEvent(org.csploit.android.core.Child,org.csploit.android.events.Event)>[]--><org.csploit.android.core.CrashReporter: void notifyChildCrashed(int,int)>[]--><org.csploit.android.core.CrashReporter: void notifyNativeError(org.acra.ErrorReporter,java.lang.Throwable)>[]--><org.acra.ErrorReporter: void handleException(java.lang.Throwable)>[]--><org.acra.ErrorReporter$ReportBuilder: void send()>[]--><org.acra.ErrorReporter: void access$1400(org.acra.ErrorReporter,org.acra.ErrorReporter$ReportBuilder)>[]--><org.acra.ErrorReporter: void report(org.acra.ErrorReporter$ReportBuilder)>[]--><org.acra.collector.CrashReportDataFactory: org.acra.collector.CrashReportData createCrashData(java.lang.String,java.lang.Throwable,java.util.Map,boolean,java.lang.Thread)>[[try]]--><org.acra.collector.LogCatCollector: java.lang.String collectLogCat(java.lang.String)>[]--><java.lang.Thread: void run()>[]--><org.csploit.android.WifiScannerFragment$2: void run()>[]--><org.csploit.android.WifiScannerFragment: void access$300(org.csploit.android.WifiScannerFragment)>[]--><org.csploit.android.WifiScannerFragment: void nextConnectionAttempt()>[]--><org.csploit.android.WifiScannerFragment: int performConnection(android.net.wifi.ScanResult,java.lang.String)>[]--><android.net.wifi.WifiManager: int addNetwork(android.net.wifi.WifiConfiguration)>
+One road protect good!
+try
+Good road with try: <org.csploit.android.MainFragment$2: void run()>[]--><org.csploit.android.MainFragment: void init()>[[try]]--><org.csploit.android.core.CrashReporter: void notifyNativeLibraryCrash()>[]--><org.csploit.android.core.CrashReporter: void notifyNativeError(org.acra.ErrorReporter,java.lang.Throwable)>[]--><org.acra.ErrorReporter: void handleException(java.lang.Throwable)>[]--><org.acra.ErrorReporter$ReportBuilder: void send()>[]--><org.acra.ErrorReporter: void access$1400(org.acra.ErrorReporter,org.acra.ErrorReporter$ReportBuilder)>[]--><org.acra.ErrorReporter: void report(org.acra.ErrorReporter$ReportBuilder)>[]--><org.acra.collector.CrashReportDataFactory: org.acra.collector.CrashReportData createCrashData(java.lang.String,java.lang.Throwable,java.util.Map,boolean,java.lang.Thread)>[[try]]--><org.acra.collector.LogCatCollector: java.lang.String collectLogCat(java.lang.String)>[]--><java.lang.Thread: void run()>[]--><org.csploit.android.WifiScannerFragment$2: void run()>[]--><org.csploit.android.WifiScannerFragment: void access$300(org.csploit.android.WifiScannerFragment)>[]--><org.csploit.android.WifiScannerFragment: void nextConnectionAttempt()>[]--><org.csploit.android.WifiScannerFragment: int performConnection(android.net.wifi.ScanResult,java.lang.String)>[]--><android.net.wifi.WifiManager: int addNetwork(android.net.wifi.WifiConfiguration)>
+One road protect good!
+!!!this api will crash on sdk 31 
+Error road: <org.csploit.android.WifiScannerFragment$ConnectionReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><org.csploit.android.WifiScannerFragment: void onSuccessfulConnection()>[]--><org.csploit.android.WifiScannerFragment: void onEnd()>[]--><org.csploit.android.WifiScannerFragment: void restorePreviousConfig()>[]--><android.net.wifi.WifiManager: int addNetwork(android.net.wifi.WifiConfiguration)>
+!!!this api will crash on sdk 31 
+Error road: <org.csploit.android.WifiScannerFragment$ConnectionReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><org.csploit.android.WifiScannerFragment: void onFailedConnection()>[]--><org.csploit.android.WifiScannerFragment: void nextConnectionAttempt()>[]--><org.csploit.android.WifiScannerFragment: int performConnection(android.net.wifi.ScanResult,java.lang.String)>[]--><android.net.wifi.WifiManager: int addNetwork(android.net.wifi.WifiConfiguration)>
+#3.the call statck between class <org.csploit.android.WifiScannerFragment$ConnectionReceiver: void onReceive(android.content.Context,android.content.Intent)> to <android.net.wifi.WifiManager: int addNetwork(android.net.wifi.WifiConfiguration)>has compatibility isssues！
+-----------------------------------------
+crashApis:11
+crashApisInMain:9
+containsStatic:false
+containsTry:true
+4call by main package
+-----------------------------------------
+#################################################
+N 13 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager: java.util.List getScanResults()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <org.csploit.android.WifiScannerFragment$ScanReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><android.net.wifi.WifiManager: java.util.List getScanResults()>
+#1.the call statck between class <org.csploit.android.WifiScannerFragment$ScanReceiver: void onReceive(android.content.Context,android.content.Intent)> to <android.net.wifi.WifiManager: java.util.List getScanResults()>has compatibility isssues！
+-----------------------------------------
+crashApis:12
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 14 Potential Issue API: SDKCheck of <org.apache.http.conn.ssl.SSLSocketFactory: org.apache.http.conn.ssl.SSLSocketFactory getSocketFactory()> is checking!!!
+The life time of api is [23,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 21 22 
+Error road: <org.acra.util.HttpRequest: void send(android.content.Context,java.net.URL,org.acra.sender.HttpSender$Method,java.lang.String,org.acra.sender.HttpSender$Type)>[]--><org.acra.util.HttpRequest: org.apache.http.client.HttpClient getHttpClient(android.content.Context)>[]--><org.apache.http.conn.ssl.SSLSocketFactory: org.apache.http.conn.ssl.SSLSocketFactory getSocketFactory()>
+#1.the call statck between class <org.acra.util.HttpRequest: void send(android.content.Context,java.net.URL,org.acra.sender.HttpSender$Method,java.lang.String,org.acra.sender.HttpSender$Type)> to <org.apache.http.conn.ssl.SSLSocketFactory: org.apache.http.conn.ssl.SSLSocketFactory getSocketFactory()>has compatibility isssues！
+-----------------------------------------
+crashApis:13
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 15 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.lang.Object get(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+2call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.csploit.android.gui.DirectoryPicker dummyMainMethod_org_csploit_android_gui_DirectoryPicker(android.content.Intent)>[]--><org.csploit.android.gui.DirectoryPicker: void onActivityResult(int,int,android.content.Intent)>[]--><android.os.BaseBundle: java.lang.Object get(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: java.lang.Object get(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <org.csploit.android.SettingsFragment$PrefsFrag: void onActivityResult(int,int,android.content.Intent)>[]--><android.os.BaseBundle: java.lang.Object get(java.lang.String)>
+#1.the call statck between class <org.csploit.android.SettingsFragment$PrefsFrag: void onActivityResult(int,int,android.content.Intent)> to <android.os.BaseBundle: java.lang.Object get(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:14
+crashApisInMain:10
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 16 Potential Issue API: SDKCheck of <org.apache.http.params.HttpConnectionParams: void setSoTimeout(org.apache.http.params.HttpParams,int)> is checking!!!
+The life time of api is [23,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 19 20 21 22 
+Error road: <org.acra.util.HttpRequest$SocketTimeOutRetryHandler: boolean retryRequest(java.io.IOException,int,org.apache.http.protocol.HttpContext)>[]--><org.apache.http.params.HttpConnectionParams: void setSoTimeout(org.apache.http.params.HttpParams,int)>
+#1.the call statck between class <org.acra.util.HttpRequest$SocketTimeOutRetryHandler: boolean retryRequest(java.io.IOException,int,org.apache.http.protocol.HttpContext)> to <org.apache.http.params.HttpConnectionParams: void setSoTimeout(org.apache.http.params.HttpParams,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 21 22 
+Error road: <org.acra.util.HttpRequest: void send(android.content.Context,java.net.URL,org.acra.sender.HttpSender$Method,java.lang.String,org.acra.sender.HttpSender$Type)>[]--><org.acra.util.HttpRequest: org.apache.http.client.HttpClient getHttpClient(android.content.Context)>[]--><org.apache.http.params.HttpConnectionParams: void setSoTimeout(org.apache.http.params.HttpParams,int)>
+#2.the call statck between class <org.acra.util.HttpRequest: void send(android.content.Context,java.net.URL,org.acra.sender.HttpSender$Method,java.lang.String,org.acra.sender.HttpSender$Type)> to <org.apache.http.params.HttpConnectionParams: void setSoTimeout(org.apache.http.params.HttpParams,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:15
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 17 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager.WifiLock: void release()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.csploit.android.MainActivity dummyMainMethod_org_csploit_android_MainActivity(android.content.Intent)>[]--><dummyMainClass: org.csploit.android.MainFragment dummyMainMethod_org_csploit_android_MainFragment(android.content.Intent,android.app.Activity)>[]--><org.csploit.android.MainFragment: void onDestroy()>[]--><org.csploit.android.core.System: void clean(boolean)>[[try]]--><android.net.wifi.WifiManager.WifiLock: void release()>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:true
+1call by main package
+-----------------------------------------
+#################################################
+N 18 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager: boolean disconnect()> is checking!!!
+The life time of api is [1,30]
+4call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.csploit.android.plugins.PortScanner dummyMainMethod_org_csploit_android_plugins_PortScanner(android.content.Intent)>[]--><org.csploit.android.gui.dialogs.InputDialog$1: void onClick(android.content.DialogInterface,int)>[]--><org.csploit.android.WifiScannerFragment$4: void onInputEntered(java.lang.String)>[]--><org.csploit.android.WifiScannerFragment: int access$500(org.csploit.android.WifiScannerFragment,android.net.wifi.ScanResult,java.lang.String)>[]--><org.csploit.android.WifiScannerFragment: int performConnection(android.net.wifi.ScanResult,java.lang.String)>[]--><android.net.wifi.WifiManager: boolean disconnect()>
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.csploit.android.MainActivity dummyMainMethod_org_csploit_android_MainActivity(android.content.Intent)>[]--><dummyMainClass: org.csploit.android.MainFragment dummyMainMethod_org_csploit_android_MainFragment(android.content.Intent,android.app.Activity)>[]--><org.csploit.android.gui.dialogs.InputDialog$1: void onClick(android.content.DialogInterface,int)>[]--><org.csploit.android.WifiScannerFragment$4: void onInputEntered(java.lang.String)>[]--><org.csploit.android.WifiScannerFragment: int access$500(org.csploit.android.WifiScannerFragment,android.net.wifi.ScanResult,java.lang.String)>[]--><org.csploit.android.WifiScannerFragment: int performConnection(android.net.wifi.ScanResult,java.lang.String)>[]--><android.net.wifi.WifiManager: boolean disconnect()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.wifi.WifiManager: boolean disconnect()>has compatibility isssues！
+-----------------------------------------
+3 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <org.csploit.android.WifiScannerFragment$ConnectionReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><org.csploit.android.WifiScannerFragment: void onFailedConnection()>[]--><org.csploit.android.WifiScannerFragment: void nextConnectionAttempt()>[]--><org.csploit.android.WifiScannerFragment: int performConnection(android.net.wifi.ScanResult,java.lang.String)>[]--><android.net.wifi.WifiManager: boolean disconnect()>
+#3.the call statck between class <org.csploit.android.WifiScannerFragment$ConnectionReceiver: void onReceive(android.content.Context,android.content.Intent)> to <android.net.wifi.WifiManager: boolean disconnect()>has compatibility isssues！
+-----------------------------------------
+crashApis:16
+crashApisInMain:11
+containsStatic:false
+containsTry:true
+4call by main package
+-----------------------------------------
+#################################################
+N 19 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.lang.String getString(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.acra.CrashReportDialog dummyMainMethod_org_acra_CrashReportDialog(android.content.Intent)>[]--><org.acra.CrashReportDialog: void onCreate(android.os.Bundle)>[]--><org.acra.CrashReportDialog: android.view.View buildCustomView(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.csploit.android.gui.FileEdit dummyMainMethod_org_csploit_android_gui_FileEdit(android.content.Intent)>[]--><org.csploit.android.gui.FileEdit: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.csploit.android.gui.DirectoryPicker dummyMainMethod_org_csploit_android_gui_DirectoryPicker(android.content.Intent)>[]--><org.csploit.android.gui.DirectoryPicker: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:17
+crashApisInMain:12
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 20 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager: android.net.DhcpInfo getDhcpInfo()> is checking!!!
+The life time of api is [1,30]
+3call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.csploit.android.MainActivity dummyMainMethod_org_csploit_android_MainActivity(android.content.Intent)>[]--><dummyMainClass: org.csploit.android.MainFragment dummyMainMethod_org_csploit_android_MainFragment(android.content.Intent,android.app.Activity)>[]--><org.csploit.android.MainFragment: void onViewCreated(android.view.View,android.os.Bundle)>[]--><org.csploit.android.MainFragment: void init()>[]--><org.csploit.android.MainFragment: boolean initSystem()>[[try]]--><org.csploit.android.core.System: void init(android.content.Context)>[[try]]--><org.csploit.android.core.System: void uncaughtReloadNetworkMapping()>[]--><org.csploit.android.net.Network: void <init>(android.content.Context,java.lang.String)>[]--><android.net.wifi.WifiManager: android.net.DhcpInfo getDhcpInfo()>
+One road protect good!
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><org.csploit.android.CSploitApplication: void onCreate()>[[try]]--><org.csploit.android.core.System: void init(android.content.Context)>[[try]]--><org.csploit.android.core.System: void uncaughtReloadNetworkMapping()>[]--><org.csploit.android.net.Network: void <init>(android.content.Context,java.lang.String)>[]--><android.net.wifi.WifiManager: android.net.DhcpInfo getDhcpInfo()>
+One road protect good!
+2 Packageshead roads:
+try
+Good road with try: <org.csploit.android.MainFragment: void displayNetworkInterfaces()>[]--><org.csploit.android.MainFragment: void displayNetworkInterfaces(boolean)>[]--><org.csploit.android.MainFragment: void onNetworkInterfaceChanged()>[]--><org.csploit.android.core.System: boolean reloadNetworkMapping()>[[try]]--><org.csploit.android.core.System: void uncaughtReloadNetworkMapping()>[]--><org.csploit.android.net.Network: void <init>(android.content.Context,java.lang.String)>[]--><android.net.wifi.WifiManager: android.net.DhcpInfo getDhcpInfo()>
+One road protect good!
+try
+Good road with try: <org.csploit.android.MainFragment$2: void run()>[]--><org.csploit.android.MainFragment: void init()>[]--><org.csploit.android.MainFragment: boolean initSystem()>[[try]]--><org.csploit.android.core.System: void init(android.content.Context)>[[try]]--><org.csploit.android.core.System: void uncaughtReloadNetworkMapping()>[]--><org.csploit.android.net.Network: void <init>(android.content.Context,java.lang.String)>[]--><android.net.wifi.WifiManager: android.net.DhcpInfo getDhcpInfo()>
+One road protect good!
+containsStatic:false
+containsTry:true
+3call by main package
+-----------------------------------------
+#################################################
+N 21 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager: boolean saveConfiguration()> is checking!!!
+The life time of api is [1,30]
+4call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.csploit.android.plugins.mitm.Sniffer dummyMainMethod_org_csploit_android_plugins_mitm_Sniffer(android.content.Intent)>[]--><org.csploit.android.plugins.mitm.Sniffer$2: void onClick(android.view.View)>[]--><org.csploit.android.plugins.mitm.Sniffer: void access$300(org.csploit.android.plugins.mitm.Sniffer)>[]--><org.csploit.android.plugins.mitm.Sniffer: void setStartedState()>[]--><org.csploit.android.plugins.mitm.SpoofSession: void start(org.csploit.android.plugins.mitm.SpoofSession$OnSessionReadyListener)>[]--><org.csploit.android.plugins.mitm.SpoofSession: void start(org.csploit.android.net.Target,org.csploit.android.plugins.mitm.SpoofSession$OnSessionReadyListener)>[]--><java.lang.Thread: void run()>[]--><org.csploit.android.WifiScannerFragment$2: void run()>[]--><org.csploit.android.WifiScannerFragment: void access$300(org.csploit.android.WifiScannerFragment)>[]--><org.csploit.android.WifiScannerFragment: void nextConnectionAttempt()>[]--><org.csploit.android.WifiScannerFragment: int performConnection(android.net.wifi.ScanResult,java.lang.String)>[]--><org.csploit.android.wifi.NetworkManager: int shiftPriorityAndSave(android.net.wifi.WifiManager)>[]--><android.net.wifi.WifiManager: boolean saveConfiguration()>
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.csploit.android.SettingsActivity dummyMainMethod_org_csploit_android_SettingsActivity(android.content.Intent)>[]--><dummyMainClass: org.csploit.android.SettingsFragment dummyMainMethod_org_csploit_android_SettingsFragment(android.content.Intent,android.app.Activity)>[]--><org.csploit.android.SettingsFragment$PrefsFrag: void onSharedPreferenceChanged(android.content.SharedPreferences,java.lang.String)>[]--><org.csploit.android.SettingsFragment$PrefsFrag: void onMsfEnabled()>[]--><org.csploit.android.SettingsFragment$PrefsFrag: void getMsfBranches()>[]--><java.lang.Thread: void run()>[]--><org.csploit.android.WifiScannerFragment$2: void run()>[]--><org.csploit.android.WifiScannerFragment: void access$300(org.csploit.android.WifiScannerFragment)>[]--><org.csploit.android.WifiScannerFragment: void nextConnectionAttempt()>[]--><org.csploit.android.WifiScannerFragment: int performConnection(android.net.wifi.ScanResult,java.lang.String)>[]--><org.csploit.android.wifi.NetworkManager: int shiftPriorityAndSave(android.net.wifi.WifiManager)>[]--><android.net.wifi.WifiManager: boolean saveConfiguration()>
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.csploit.android.plugins.mitm.MITM dummyMainMethod_org_csploit_android_plugins_mitm_MITM(android.content.Intent)>[]--><org.csploit.android.plugins.mitm.MITM: void onActivityResult(int,int,android.content.Intent)>[]--><org.csploit.android.plugins.mitm.SpoofSession: void start(org.csploit.android.plugins.mitm.SpoofSession$OnSessionReadyListener)>[]--><org.csploit.android.plugins.mitm.SpoofSession: void start(org.csploit.android.net.Target,org.csploit.android.plugins.mitm.SpoofSession$OnSessionReadyListener)>[]--><java.lang.Thread: void run()>[]--><org.csploit.android.WifiScannerFragment$2: void run()>[]--><org.csploit.android.WifiScannerFragment: void access$300(org.csploit.android.WifiScannerFragment)>[]--><org.csploit.android.WifiScannerFragment: void nextConnectionAttempt()>[]--><org.csploit.android.WifiScannerFragment: int performConnection(android.net.wifi.ScanResult,java.lang.String)>[]--><org.csploit.android.wifi.NetworkManager: int shiftPriorityAndSave(android.net.wifi.WifiManager)>[]--><android.net.wifi.WifiManager: boolean saveConfiguration()>
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.csploit.android.plugins.ExploitFinder dummyMainMethod_org_csploit_android_plugins_ExploitFinder(android.content.Intent)>[]--><org.csploit.android.plugins.ExploitFinder: boolean onOptionsItemSelected(android.view.MenuItem)>[]--><org.csploit.android.plugins.ExploitFinder: void launchExploit(org.csploit.android.net.metasploit.MsfExploit)>[]--><java.lang.Thread: void run()>[]--><org.csploit.android.WifiScannerFragment$2: void run()>[]--><org.csploit.android.WifiScannerFragment: void access$300(org.csploit.android.WifiScannerFragment)>[]--><org.csploit.android.WifiScannerFragment: void nextConnectionAttempt()>[]--><org.csploit.android.WifiScannerFragment: int performConnection(android.net.wifi.ScanResult,java.lang.String)>[]--><org.csploit.android.wifi.NetworkManager: int shiftPriorityAndSave(android.net.wifi.WifiManager)>[]--><android.net.wifi.WifiManager: boolean saveConfiguration()>
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.csploit.android.plugins.PortScanner dummyMainMethod_org_csploit_android_plugins_PortScanner(android.content.Intent)>[]--><org.csploit.android.gui.dialogs.InputDialog$1: void onClick(android.content.DialogInterface,int)>[]--><org.csploit.android.WifiScannerFragment$4: void onInputEntered(java.lang.String)>[]--><org.csploit.android.WifiScannerFragment: int access$500(org.csploit.android.WifiScannerFragment,android.net.wifi.ScanResult,java.lang.String)>[]--><org.csploit.android.WifiScannerFragment: int performConnection(android.net.wifi.ScanResult,java.lang.String)>[]--><org.csploit.android.wifi.NetworkManager: int shiftPriorityAndSave(android.net.wifi.WifiManager)>[]--><android.net.wifi.WifiManager: boolean saveConfiguration()>
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.csploit.android.plugins.mitm.hijacker.Hijacker dummyMainMethod_org_csploit_android_plugins_mitm_hijacker_Hijacker(android.content.Intent)>[]--><org.csploit.android.plugins.mitm.hijacker.Hijacker$3: void onClick(android.view.View)>[]--><org.csploit.android.plugins.mitm.hijacker.Hijacker: void access$400(org.csploit.android.plugins.mitm.hijacker.Hijacker)>[]--><org.csploit.android.plugins.mitm.hijacker.Hijacker: void setStartedState()>[]--><org.csploit.android.plugins.mitm.SpoofSession: void start(org.csploit.android.plugins.mitm.SpoofSession$OnSessionReadyListener)>[]--><org.csploit.android.plugins.mitm.SpoofSession: void start(org.csploit.android.net.Target,org.csploit.android.plugins.mitm.SpoofSession$OnSessionReadyListener)>[]--><java.lang.Thread: void run()>[]--><org.csploit.android.WifiScannerFragment$2: void run()>[]--><org.csploit.android.WifiScannerFragment: void access$300(org.csploit.android.WifiScannerFragment)>[]--><org.csploit.android.WifiScannerFragment: void nextConnectionAttempt()>[]--><org.csploit.android.WifiScannerFragment: int performConnection(android.net.wifi.ScanResult,java.lang.String)>[]--><org.csploit.android.wifi.NetworkManager: int shiftPriorityAndSave(android.net.wifi.WifiManager)>[]--><android.net.wifi.WifiManager: boolean saveConfiguration()>
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.csploit.android.plugins.Sessions dummyMainMethod_org_csploit_android_plugins_Sessions(android.content.Intent)>[]--><org.csploit.android.gui.dialogs.ListChoiceDialog$1: void onItemClick(android.widget.AdapterView,android.view.View,int,long)>[]--><org.csploit.android.plugins.ExploitFinder$1$1: void onChoice(int)>[]--><org.csploit.android.plugins.ExploitFinder: void launchExploit(org.csploit.android.net.metasploit.MsfExploit)>[]--><java.lang.Thread: void run()>[]--><org.csploit.android.WifiScannerFragment$2: void run()>[]--><org.csploit.android.WifiScannerFragment: void access$300(org.csploit.android.WifiScannerFragment)>[]--><org.csploit.android.WifiScannerFragment: void nextConnectionAttempt()>[]--><org.csploit.android.WifiScannerFragment: int performConnection(android.net.wifi.ScanResult,java.lang.String)>[]--><org.csploit.android.wifi.NetworkManager: int shiftPriorityAndSave(android.net.wifi.WifiManager)>[]--><android.net.wifi.WifiManager: boolean saveConfiguration()>
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.csploit.android.WifiScannerActivity dummyMainMethod_org_csploit_android_WifiScannerActivity(android.content.Intent)>[]--><dummyMainClass: org.csploit.android.WifiScannerFragment dummyMainMethod_org_csploit_android_WifiScannerFragment(android.content.Intent,android.app.Activity)>[]--><org.csploit.android.gui.dialogs.WifiCrackDialog$2: void onClick(android.content.DialogInterface,int)>[]--><org.csploit.android.WifiScannerFragment$3: void onCrack()>[]--><org.csploit.android.WifiScannerFragment: void access$700(org.csploit.android.WifiScannerFragment,org.csploit.android.wifi.Keygen,android.net.wifi.ScanResult)>[]--><org.csploit.android.WifiScannerFragment: void performCracking(org.csploit.android.wifi.Keygen,android.net.wifi.ScanResult)>[]--><java.lang.Thread: void run()>[]--><org.csploit.android.WifiScannerFragment$2: void run()>[]--><org.csploit.android.WifiScannerFragment: void access$300(org.csploit.android.WifiScannerFragment)>[]--><org.csploit.android.WifiScannerFragment: void nextConnectionAttempt()>[]--><org.csploit.android.WifiScannerFragment: int performConnection(android.net.wifi.ScanResult,java.lang.String)>[]--><org.csploit.android.wifi.NetworkManager: int shiftPriorityAndSave(android.net.wifi.WifiManager)>[]--><android.net.wifi.WifiManager: boolean saveConfiguration()>
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.csploit.android.MainActivity dummyMainMethod_org_csploit_android_MainActivity(android.content.Intent)>[]--><dummyMainClass: org.csploit.android.MainFragment dummyMainMethod_org_csploit_android_MainFragment(android.content.Intent,android.app.Activity)>[]--><org.csploit.android.gui.dialogs.InputDialog$1: void onClick(android.content.DialogInterface,int)>[]--><org.csploit.android.WifiScannerFragment$4: void onInputEntered(java.lang.String)>[]--><org.csploit.android.WifiScannerFragment: int access$500(org.csploit.android.WifiScannerFragment,android.net.wifi.ScanResult,java.lang.String)>[]--><org.csploit.android.WifiScannerFragment: int performConnection(android.net.wifi.ScanResult,java.lang.String)>[]--><org.csploit.android.wifi.NetworkManager: int shiftPriorityAndSave(android.net.wifi.WifiManager)>[]--><android.net.wifi.WifiManager: boolean saveConfiguration()>
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.csploit.android.plugins.PacketForger dummyMainMethod_org_csploit_android_plugins_PacketForger(android.content.Intent)>[]--><org.csploit.android.plugins.PacketForger: void onClick(android.view.View)>[]--><java.lang.Thread: void run()>[]--><org.csploit.android.WifiScannerFragment$2: void run()>[]--><org.csploit.android.WifiScannerFragment: void access$300(org.csploit.android.WifiScannerFragment)>[]--><org.csploit.android.WifiScannerFragment: void nextConnectionAttempt()>[]--><org.csploit.android.WifiScannerFragment: int performConnection(android.net.wifi.ScanResult,java.lang.String)>[]--><org.csploit.android.wifi.NetworkManager: int shiftPriorityAndSave(android.net.wifi.WifiManager)>[]--><android.net.wifi.WifiManager: boolean saveConfiguration()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.wifi.WifiManager: boolean saveConfiguration()>has compatibility isssues！
+-----------------------------------------
+3 Packageshead roads:
+try
+Good road with try: <org.csploit.android.core.ChildManager: void access$000(org.csploit.android.core.Child,org.csploit.android.events.Event)>[]--><org.csploit.android.core.ChildManager: void dispatchEvent(org.csploit.android.core.Child,org.csploit.android.events.Event)>[]--><org.csploit.android.core.CrashReporter: void notifyChildCrashed(int,int)>[]--><org.csploit.android.core.CrashReporter: void notifyNativeError(org.acra.ErrorReporter,java.lang.Throwable)>[]--><org.acra.ErrorReporter: void handleException(java.lang.Throwable)>[]--><org.acra.ErrorReporter$ReportBuilder: void send()>[]--><org.acra.ErrorReporter: void access$1400(org.acra.ErrorReporter,org.acra.ErrorReporter$ReportBuilder)>[]--><org.acra.ErrorReporter: void report(org.acra.ErrorReporter$ReportBuilder)>[]--><org.acra.collector.CrashReportDataFactory: org.acra.collector.CrashReportData createCrashData(java.lang.String,java.lang.Throwable,java.util.Map,boolean,java.lang.Thread)>[[try]]--><org.acra.collector.LogCatCollector: java.lang.String collectLogCat(java.lang.String)>[]--><java.lang.Thread: void run()>[]--><org.csploit.android.WifiScannerFragment$2: void run()>[]--><org.csploit.android.WifiScannerFragment: void access$300(org.csploit.android.WifiScannerFragment)>[]--><org.csploit.android.WifiScannerFragment: void nextConnectionAttempt()>[]--><org.csploit.android.WifiScannerFragment: int performConnection(android.net.wifi.ScanResult,java.lang.String)>[]--><org.csploit.android.wifi.NetworkManager: int shiftPriorityAndSave(android.net.wifi.WifiManager)>[]--><android.net.wifi.WifiManager: boolean saveConfiguration()>
+One road protect good!
+try
+Good road with try: <org.csploit.android.MainFragment$2: void run()>[]--><org.csploit.android.MainFragment: void init()>[[try]]--><org.csploit.android.core.CrashReporter: void notifyNativeLibraryCrash()>[]--><org.csploit.android.core.CrashReporter: void notifyNativeError(org.acra.ErrorReporter,java.lang.Throwable)>[]--><org.acra.ErrorReporter: void handleException(java.lang.Throwable)>[]--><org.acra.ErrorReporter$ReportBuilder: void send()>[]--><org.acra.ErrorReporter: void access$1400(org.acra.ErrorReporter,org.acra.ErrorReporter$ReportBuilder)>[]--><org.acra.ErrorReporter: void report(org.acra.ErrorReporter$ReportBuilder)>[]--><org.acra.collector.CrashReportDataFactory: org.acra.collector.CrashReportData createCrashData(java.lang.String,java.lang.Throwable,java.util.Map,boolean,java.lang.Thread)>[[try]]--><org.acra.collector.LogCatCollector: java.lang.String collectLogCat(java.lang.String)>[]--><java.lang.Thread: void run()>[]--><org.csploit.android.WifiScannerFragment$2: void run()>[]--><org.csploit.android.WifiScannerFragment: void access$300(org.csploit.android.WifiScannerFragment)>[]--><org.csploit.android.WifiScannerFragment: void nextConnectionAttempt()>[]--><org.csploit.android.WifiScannerFragment: int performConnection(android.net.wifi.ScanResult,java.lang.String)>[]--><org.csploit.android.wifi.NetworkManager: int shiftPriorityAndSave(android.net.wifi.WifiManager)>[]--><android.net.wifi.WifiManager: boolean saveConfiguration()>
+One road protect good!
+!!!this api will crash on sdk 31 
+Error road: <org.csploit.android.WifiScannerFragment$ConnectionReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><org.csploit.android.WifiScannerFragment: void onSuccessfulConnection()>[]--><org.csploit.android.WifiScannerFragment: void onEnd()>[]--><org.csploit.android.WifiScannerFragment: void restorePreviousConfig()>[]--><android.net.wifi.WifiManager: boolean saveConfiguration()>
+!!!this api will crash on sdk 31 
+Error road: <org.csploit.android.WifiScannerFragment$ConnectionReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><org.csploit.android.WifiScannerFragment: void onFailedConnection()>[]--><org.csploit.android.WifiScannerFragment: void nextConnectionAttempt()>[]--><org.csploit.android.WifiScannerFragment: int performConnection(android.net.wifi.ScanResult,java.lang.String)>[]--><org.csploit.android.wifi.NetworkManager: int shiftPriorityAndSave(android.net.wifi.WifiManager)>[]--><android.net.wifi.WifiManager: boolean saveConfiguration()>
+#3.the call statck between class <org.csploit.android.WifiScannerFragment$ConnectionReceiver: void onReceive(android.content.Context,android.content.Intent)> to <android.net.wifi.WifiManager: boolean saveConfiguration()>has compatibility isssues！
+-----------------------------------------
+crashApis:18
+crashApisInMain:13
+containsStatic:false
+containsTry:true
+4call by main package
+-----------------------------------------
+#################################################
+N 22 Potential Issue API: SDKCheck of <org.apache.http.conn.ssl.SSLSocketFactory: void <init>(java.security.KeyStore)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+try
+Good road with try: <org.acra.util.HttpRequest: void send(android.content.Context,java.net.URL,org.acra.sender.HttpSender$Method,java.lang.String,org.acra.sender.HttpSender$Type)>[]--><org.acra.util.HttpRequest: org.apache.http.client.HttpClient getHttpClient(android.content.Context)>[[try]]--><org.apache.http.conn.ssl.SSLSocketFactory: void <init>(java.security.KeyStore)>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 23 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager: boolean removeNetwork(int)> is checking!!!
+The life time of api is [1,30]
+2call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.csploit.android.WifiScannerActivity dummyMainMethod_org_csploit_android_WifiScannerActivity(android.content.Intent)>[]--><dummyMainClass: org.csploit.android.WifiScannerFragment dummyMainMethod_org_csploit_android_WifiScannerFragment(android.content.Intent,android.app.Activity)>[]--><org.csploit.android.WifiScannerFragment: void onListItemClick(android.widget.ListView,android.view.View,int,long)>[]--><android.net.wifi.WifiManager: boolean removeNetwork(int)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.wifi.WifiManager: boolean removeNetwork(int)>has compatibility isssues！
+-----------------------------------------
+1 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <org.csploit.android.WifiScannerFragment$ConnectionReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><org.csploit.android.WifiScannerFragment: void onFailedConnection()>[]--><android.net.wifi.WifiManager: boolean removeNetwork(int)>
+!!!this api will crash on sdk 31 
+Error road: <org.csploit.android.WifiScannerFragment$ConnectionReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><org.csploit.android.WifiScannerFragment: void onSuccessfulConnection()>[]--><org.csploit.android.WifiScannerFragment: void onEnd()>[]--><org.csploit.android.WifiScannerFragment: void restorePreviousConfig()>[]--><android.net.wifi.WifiManager: boolean removeNetwork(int)>
+#1.the call statck between class <org.csploit.android.WifiScannerFragment$ConnectionReceiver: void onReceive(android.content.Context,android.content.Intent)> to <android.net.wifi.WifiManager: boolean removeNetwork(int)>has compatibility isssues！
+-----------------------------------------
+crashApis:19
+crashApisInMain:14
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 24 Potential Issue API: SDKCheck of <android.webkit.CookieManager: void flush()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.csploit.android.plugins.mitm.hijacker.HijackerWebView dummyMainMethod_org_csploit_android_plugins_mitm_hijacker_HijackerWebView(android.content.Intent)>[]--><org.csploit.android.plugins.mitm.hijacker.HijackerWebView: void onResume()>[[-$i0 < 21]]--><android.webkit.CookieManager: void flush()>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 25 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager: boolean isWifiEnabled()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.csploit.android.WifiScannerActivity dummyMainMethod_org_csploit_android_WifiScannerActivity(android.content.Intent)>[]--><dummyMainClass: org.csploit.android.WifiScannerFragment dummyMainMethod_org_csploit_android_WifiScannerFragment(android.content.Intent,android.app.Activity)>[]--><org.csploit.android.WifiScannerFragment: void onViewCreated(android.view.View,android.os.Bundle)>[]--><android.net.wifi.WifiManager: boolean isWifiEnabled()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.wifi.WifiManager: boolean isWifiEnabled()>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:20
+crashApisInMain:15
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 26 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager: boolean reassociate()> is checking!!!
+The life time of api is [1,30]
+4call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.csploit.android.plugins.PortScanner dummyMainMethod_org_csploit_android_plugins_PortScanner(android.content.Intent)>[]--><org.csploit.android.gui.dialogs.InputDialog$1: void onClick(android.content.DialogInterface,int)>[]--><org.csploit.android.WifiScannerFragment$4: void onInputEntered(java.lang.String)>[]--><org.csploit.android.WifiScannerFragment: int access$500(org.csploit.android.WifiScannerFragment,android.net.wifi.ScanResult,java.lang.String)>[]--><org.csploit.android.WifiScannerFragment: int performConnection(android.net.wifi.ScanResult,java.lang.String)>[]--><android.net.wifi.WifiManager: boolean reassociate()>
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.csploit.android.MainActivity dummyMainMethod_org_csploit_android_MainActivity(android.content.Intent)>[]--><dummyMainClass: org.csploit.android.MainFragment dummyMainMethod_org_csploit_android_MainFragment(android.content.Intent,android.app.Activity)>[]--><org.csploit.android.gui.dialogs.InputDialog$1: void onClick(android.content.DialogInterface,int)>[]--><org.csploit.android.WifiScannerFragment$4: void onInputEntered(java.lang.String)>[]--><org.csploit.android.WifiScannerFragment: int access$500(org.csploit.android.WifiScannerFragment,android.net.wifi.ScanResult,java.lang.String)>[]--><org.csploit.android.WifiScannerFragment: int performConnection(android.net.wifi.ScanResult,java.lang.String)>[]--><android.net.wifi.WifiManager: boolean reassociate()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.wifi.WifiManager: boolean reassociate()>has compatibility isssues！
+-----------------------------------------
+3 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <org.csploit.android.WifiScannerFragment$ConnectionReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><org.csploit.android.WifiScannerFragment: void onFailedConnection()>[]--><org.csploit.android.WifiScannerFragment: void nextConnectionAttempt()>[]--><org.csploit.android.WifiScannerFragment: int performConnection(android.net.wifi.ScanResult,java.lang.String)>[]--><android.net.wifi.WifiManager: boolean reassociate()>
+#3.the call statck between class <org.csploit.android.WifiScannerFragment$ConnectionReceiver: void onReceive(android.content.Context,android.content.Intent)> to <android.net.wifi.WifiManager: boolean reassociate()>has compatibility isssues！
+-----------------------------------------
+crashApis:21
+crashApisInMain:16
+containsStatic:false
+containsTry:true
+4call by main package
+-----------------------------------------
+#################################################
+N 27 Potential Issue API: SDKCheck of <android.net.wifi.WifiConfiguration: void <init>()> is checking!!!
+The life time of api is [1,30]
+4call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.csploit.android.plugins.PortScanner dummyMainMethod_org_csploit_android_plugins_PortScanner(android.content.Intent)>[]--><org.csploit.android.gui.dialogs.InputDialog$1: void onClick(android.content.DialogInterface,int)>[]--><org.csploit.android.WifiScannerFragment$4: void onInputEntered(java.lang.String)>[]--><org.csploit.android.WifiScannerFragment: int access$500(org.csploit.android.WifiScannerFragment,android.net.wifi.ScanResult,java.lang.String)>[]--><org.csploit.android.WifiScannerFragment: int performConnection(android.net.wifi.ScanResult,java.lang.String)>[]--><android.net.wifi.WifiConfiguration: void <init>()>
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.csploit.android.MainActivity dummyMainMethod_org_csploit_android_MainActivity(android.content.Intent)>[]--><dummyMainClass: org.csploit.android.MainFragment dummyMainMethod_org_csploit_android_MainFragment(android.content.Intent,android.app.Activity)>[]--><org.csploit.android.gui.dialogs.InputDialog$1: void onClick(android.content.DialogInterface,int)>[]--><org.csploit.android.WifiScannerFragment$4: void onInputEntered(java.lang.String)>[]--><org.csploit.android.WifiScannerFragment: int access$500(org.csploit.android.WifiScannerFragment,android.net.wifi.ScanResult,java.lang.String)>[]--><org.csploit.android.WifiScannerFragment: int performConnection(android.net.wifi.ScanResult,java.lang.String)>[]--><android.net.wifi.WifiConfiguration: void <init>()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.wifi.WifiConfiguration: void <init>()>has compatibility isssues！
+-----------------------------------------
+3 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <org.csploit.android.WifiScannerFragment$ConnectionReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><org.csploit.android.WifiScannerFragment: void onFailedConnection()>[]--><org.csploit.android.WifiScannerFragment: void nextConnectionAttempt()>[]--><org.csploit.android.WifiScannerFragment: int performConnection(android.net.wifi.ScanResult,java.lang.String)>[]--><android.net.wifi.WifiConfiguration: void <init>()>
+#3.the call statck between class <org.csploit.android.WifiScannerFragment$ConnectionReceiver: void onReceive(android.content.Context,android.content.Intent)> to <android.net.wifi.WifiConfiguration: void <init>()>has compatibility isssues！
+-----------------------------------------
+crashApis:22
+crashApisInMain:17
+containsStatic:false
+containsTry:true
+4call by main package
+-----------------------------------------
+#################################################
+N 28 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager: android.net.wifi.WifiInfo getConnectionInfo()> is checking!!!
+The life time of api is [1,30]
+3call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.csploit.android.MainActivity dummyMainMethod_org_csploit_android_MainActivity(android.content.Intent)>[]--><dummyMainClass: org.csploit.android.MainFragment dummyMainMethod_org_csploit_android_MainFragment(android.content.Intent,android.app.Activity)>[]--><org.csploit.android.MainFragment: void onViewCreated(android.view.View,android.os.Bundle)>[]--><org.csploit.android.MainFragment: void init()>[]--><org.csploit.android.MainFragment: boolean initSystem()>[[try]]--><org.csploit.android.core.System: void init(android.content.Context)>[[try]]--><org.csploit.android.core.System: void uncaughtReloadNetworkMapping()>[]--><org.csploit.android.net.Network: void <init>(android.content.Context,java.lang.String)>[]--><android.net.wifi.WifiManager: android.net.wifi.WifiInfo getConnectionInfo()>
+One road protect good!
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><org.csploit.android.CSploitApplication: void onCreate()>[[try]]--><org.csploit.android.core.System: void init(android.content.Context)>[[try]]--><org.csploit.android.core.System: void uncaughtReloadNetworkMapping()>[]--><org.csploit.android.net.Network: void <init>(android.content.Context,java.lang.String)>[]--><android.net.wifi.WifiManager: android.net.wifi.WifiInfo getConnectionInfo()>
+One road protect good!
+2 Packageshead roads:
+try
+Good road with try: <org.csploit.android.MainFragment: void displayNetworkInterfaces()>[]--><org.csploit.android.MainFragment: void displayNetworkInterfaces(boolean)>[]--><org.csploit.android.MainFragment: void onNetworkInterfaceChanged()>[]--><org.csploit.android.core.System: boolean reloadNetworkMapping()>[[try]]--><org.csploit.android.core.System: void uncaughtReloadNetworkMapping()>[]--><org.csploit.android.net.Network: void <init>(android.content.Context,java.lang.String)>[]--><android.net.wifi.WifiManager: android.net.wifi.WifiInfo getConnectionInfo()>
+One road protect good!
+try
+Good road with try: <org.csploit.android.MainFragment$2: void run()>[]--><org.csploit.android.MainFragment: void init()>[]--><org.csploit.android.MainFragment: boolean initSystem()>[[try]]--><org.csploit.android.core.System: void init(android.content.Context)>[[try]]--><org.csploit.android.core.System: void uncaughtReloadNetworkMapping()>[]--><org.csploit.android.net.Network: void <init>(android.content.Context,java.lang.String)>[]--><android.net.wifi.WifiManager: android.net.wifi.WifiInfo getConnectionInfo()>
+One road protect good!
+containsStatic:false
+containsTry:true
+3call by main package
+-----------------------------------------
+#################################################
+N 29 Potential Issue API: SDKCheck of <android.net.ConnectivityManager: android.net.NetworkInfo getNetworkInfo(int)> is checking!!!
+The life time of api is [1,30]
+4call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.csploit.android.MainActivity dummyMainMethod_org_csploit_android_MainActivity(android.content.Intent)>[]--><dummyMainClass: org.csploit.android.MainFragment dummyMainMethod_org_csploit_android_MainFragment(android.content.Intent,android.app.Activity)>[]--><org.csploit.android.MainFragment: void onViewCreated(android.view.View,android.os.Bundle)>[]--><org.csploit.android.MainFragment: void startAllServices()>[]--><org.csploit.android.MainFragment: void startUpdateChecker()>[]--><org.csploit.android.MainFragment: boolean isConnectivityAvailable()>[]--><org.csploit.android.net.Network: boolean isWifiConnected(android.content.Context)>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getNetworkInfo(int)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.ConnectivityManager: android.net.NetworkInfo getNetworkInfo(int)>has compatibility isssues！
+-----------------------------------------
+3 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <org.csploit.android.MainFragment$UpdateReceiver: void onUpdateDone(org.csploit.android.update.Update)>[]--><org.csploit.android.MainFragment: void startUpdateChecker()>[]--><org.csploit.android.MainFragment: boolean isConnectivityAvailable()>[]--><org.csploit.android.net.Network: boolean isWifiConnected(android.content.Context)>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getNetworkInfo(int)>
+#1.the call statck between class <org.csploit.android.MainFragment$UpdateReceiver: void onUpdateDone(org.csploit.android.update.Update)> to <android.net.ConnectivityManager: android.net.NetworkInfo getNetworkInfo(int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <org.csploit.android.MainFragment$2: void run()>[]--><org.csploit.android.MainFragment: void init()>[]--><org.csploit.android.MainFragment: boolean isConnectivityAvailable()>[]--><org.csploit.android.net.Network: boolean isWifiConnected(android.content.Context)>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getNetworkInfo(int)>
+#2.the call statck between class <org.csploit.android.MainFragment$2: void run()> to <android.net.ConnectivityManager: android.net.NetworkInfo getNetworkInfo(int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <org.csploit.android.MainFragment: void access$000(org.csploit.android.MainFragment)>[]--><org.csploit.android.MainFragment: void startAllServices()>[]--><org.csploit.android.MainFragment: void startUpdateChecker()>[]--><org.csploit.android.MainFragment: boolean isConnectivityAvailable()>[]--><org.csploit.android.net.Network: boolean isWifiConnected(android.content.Context)>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getNetworkInfo(int)>
+#3.the call statck between class <org.csploit.android.MainFragment: void access$000(org.csploit.android.MainFragment)> to <android.net.ConnectivityManager: android.net.NetworkInfo getNetworkInfo(int)>has compatibility isssues！
+-----------------------------------------
+crashApis:23
+crashApisInMain:18
+containsStatic:false
+containsTry:false
+4call by main package
+-----------------------------------------
+#################################################
+N 30 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager.WifiLock: boolean isHeld()> is checking!!!
+The life time of api is [1,30]
+2call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.csploit.android.MainActivity dummyMainMethod_org_csploit_android_MainActivity(android.content.Intent)>[]--><dummyMainClass: org.csploit.android.MainFragment dummyMainMethod_org_csploit_android_MainFragment(android.content.Intent,android.app.Activity)>[]--><org.csploit.android.MainFragment: void onViewCreated(android.view.View,android.os.Bundle)>[]--><org.csploit.android.MainFragment: void init()>[]--><org.csploit.android.MainFragment: boolean initSystem()>[[try]]--><org.csploit.android.core.System: void init(android.content.Context)>[[try]]--><android.net.wifi.WifiManager.WifiLock: boolean isHeld()>
+One road protect good!
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><org.csploit.android.CSploitApplication: void onCreate()>[[try]]--><org.csploit.android.core.System: void init(android.content.Context)>[[try]]--><android.net.wifi.WifiManager.WifiLock: boolean isHeld()>
+One road protect good!
+1 Packageshead roads:
+try
+Good road with try: <org.csploit.android.MainFragment$2: void run()>[]--><org.csploit.android.MainFragment: void init()>[]--><org.csploit.android.MainFragment: boolean initSystem()>[[try]]--><org.csploit.android.core.System: void init(android.content.Context)>[[try]]--><android.net.wifi.WifiManager.WifiLock: boolean isHeld()>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 31 Potential Issue API: SDKCheck of <org.apache.http.params.HttpConnectionParams: void setSocketBufferSize(org.apache.http.params.HttpParams,int)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 21 22 
+Error road: <org.acra.util.HttpRequest: void send(android.content.Context,java.net.URL,org.acra.sender.HttpSender$Method,java.lang.String,org.acra.sender.HttpSender$Type)>[]--><org.acra.util.HttpRequest: org.apache.http.client.HttpClient getHttpClient(android.content.Context)>[]--><org.apache.http.params.HttpConnectionParams: void setSocketBufferSize(org.apache.http.params.HttpParams,int)>
+#1.the call statck between class <org.acra.util.HttpRequest: void send(android.content.Context,java.net.URL,org.acra.sender.HttpSender$Method,java.lang.String,org.acra.sender.HttpSender$Type)> to <org.apache.http.params.HttpConnectionParams: void setSocketBufferSize(org.apache.http.params.HttpParams,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:24
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 32 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager: boolean startScan()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.csploit.android.WifiScannerActivity dummyMainMethod_org_csploit_android_WifiScannerActivity(android.content.Intent)>[]--><dummyMainClass: org.csploit.android.WifiScannerFragment dummyMainMethod_org_csploit_android_WifiScannerFragment(android.content.Intent,android.app.Activity)>[]--><org.csploit.android.WifiScannerFragment: void onViewCreated(android.view.View,android.os.Bundle)>[]--><android.net.wifi.WifiManager: boolean startScan()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.wifi.WifiManager: boolean startScan()>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:25
+crashApisInMain:19
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 33 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager.WifiLock: void acquire()> is checking!!!
+The life time of api is [1,30]
+2call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.csploit.android.MainActivity dummyMainMethod_org_csploit_android_MainActivity(android.content.Intent)>[]--><dummyMainClass: org.csploit.android.MainFragment dummyMainMethod_org_csploit_android_MainFragment(android.content.Intent,android.app.Activity)>[]--><org.csploit.android.MainFragment: void onActivityResult(int,int,android.content.Intent)>[]--><org.csploit.android.MainFragment: void init()>[]--><org.csploit.android.MainFragment: boolean initSystem()>[[try]]--><org.csploit.android.core.System: void init(android.content.Context)>[[try]]--><android.net.wifi.WifiManager.WifiLock: void acquire()>
+One road protect good!
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><org.csploit.android.CSploitApplication: void onCreate()>[[try]]--><org.csploit.android.core.System: void init(android.content.Context)>[[try]]--><android.net.wifi.WifiManager.WifiLock: void acquire()>
+One road protect good!
+1 Packageshead roads:
+try
+Good road with try: <org.csploit.android.MainFragment$2: void run()>[]--><org.csploit.android.MainFragment: void init()>[]--><org.csploit.android.MainFragment: boolean initSystem()>[[try]]--><org.csploit.android.core.System: void init(android.content.Context)>[[try]]--><android.net.wifi.WifiManager.WifiLock: void acquire()>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 34 Potential Issue API: SDKCheck of <org.apache.http.params.HttpParams: org.apache.http.params.HttpParams setParameter(java.lang.String,java.lang.Object)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 21 22 
+Error road: <org.acra.util.HttpRequest: void send(android.content.Context,java.net.URL,org.acra.sender.HttpSender$Method,java.lang.String,org.acra.sender.HttpSender$Type)>[]--><org.acra.util.HttpRequest: org.apache.http.client.HttpClient getHttpClient(android.content.Context)>[]--><org.apache.http.params.HttpParams: org.apache.http.params.HttpParams setParameter(java.lang.String,java.lang.Object)>
+#1.the call statck between class <org.acra.util.HttpRequest: void send(android.content.Context,java.net.URL,org.acra.sender.HttpSender$Method,java.lang.String,org.acra.sender.HttpSender$Type)> to <org.apache.http.params.HttpParams: org.apache.http.params.HttpParams setParameter(java.lang.String,java.lang.Object)>has compatibility isssues！
+-----------------------------------------
+crashApis:26
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 35 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager: int updateNetwork(android.net.wifi.WifiConfiguration)> is checking!!!
+The life time of api is [1,30]
+4call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.csploit.android.plugins.PortScanner dummyMainMethod_org_csploit_android_plugins_PortScanner(android.content.Intent)>[]--><org.csploit.android.gui.dialogs.InputDialog$1: void onClick(android.content.DialogInterface,int)>[]--><org.csploit.android.WifiScannerFragment$4: void onInputEntered(java.lang.String)>[]--><org.csploit.android.WifiScannerFragment: int access$500(org.csploit.android.WifiScannerFragment,android.net.wifi.ScanResult,java.lang.String)>[]--><org.csploit.android.WifiScannerFragment: int performConnection(android.net.wifi.ScanResult,java.lang.String)>[]--><org.csploit.android.wifi.NetworkManager: int shiftPriorityAndSave(android.net.wifi.WifiManager)>[]--><android.net.wifi.WifiManager: int updateNetwork(android.net.wifi.WifiConfiguration)>
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.csploit.android.MainActivity dummyMainMethod_org_csploit_android_MainActivity(android.content.Intent)>[]--><dummyMainClass: org.csploit.android.MainFragment dummyMainMethod_org_csploit_android_MainFragment(android.content.Intent,android.app.Activity)>[]--><org.csploit.android.gui.dialogs.InputDialog$1: void onClick(android.content.DialogInterface,int)>[]--><org.csploit.android.WifiScannerFragment$4: void onInputEntered(java.lang.String)>[]--><org.csploit.android.WifiScannerFragment: int access$500(org.csploit.android.WifiScannerFragment,android.net.wifi.ScanResult,java.lang.String)>[]--><org.csploit.android.WifiScannerFragment: int performConnection(android.net.wifi.ScanResult,java.lang.String)>[]--><org.csploit.android.wifi.NetworkManager: int shiftPriorityAndSave(android.net.wifi.WifiManager)>[]--><android.net.wifi.WifiManager: int updateNetwork(android.net.wifi.WifiConfiguration)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.wifi.WifiManager: int updateNetwork(android.net.wifi.WifiConfiguration)>has compatibility isssues！
+-----------------------------------------
+3 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <org.csploit.android.WifiScannerFragment$ConnectionReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><org.csploit.android.WifiScannerFragment: void onFailedConnection()>[]--><org.csploit.android.WifiScannerFragment: void nextConnectionAttempt()>[]--><org.csploit.android.WifiScannerFragment: int performConnection(android.net.wifi.ScanResult,java.lang.String)>[]--><org.csploit.android.wifi.NetworkManager: int shiftPriorityAndSave(android.net.wifi.WifiManager)>[]--><android.net.wifi.WifiManager: int updateNetwork(android.net.wifi.WifiConfiguration)>
+#3.the call statck between class <org.csploit.android.WifiScannerFragment$ConnectionReceiver: void onReceive(android.content.Context,android.content.Intent)> to <android.net.wifi.WifiManager: int updateNetwork(android.net.wifi.WifiConfiguration)>has compatibility isssues！
+-----------------------------------------
+crashApis:27
+crashApisInMain:20
+containsStatic:false
+containsTry:true
+4call by main package
+-----------------------------------------
+#################################################
+N 36 Potential Issue API: SDKCheck of <android.net.NetworkInfo: boolean isAvailable()> is checking!!!
+The life time of api is [1,30]
+4call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.csploit.android.MainActivity dummyMainMethod_org_csploit_android_MainActivity(android.content.Intent)>[]--><dummyMainClass: org.csploit.android.MainFragment dummyMainMethod_org_csploit_android_MainFragment(android.content.Intent,android.app.Activity)>[]--><org.csploit.android.MainFragment: void onViewCreated(android.view.View,android.os.Bundle)>[]--><org.csploit.android.MainFragment: void startAllServices()>[]--><org.csploit.android.MainFragment: void startUpdateChecker()>[]--><org.csploit.android.MainFragment: boolean isConnectivityAvailable()>[]--><org.csploit.android.net.Network: boolean isWifiConnected(android.content.Context)>[]--><android.net.NetworkInfo: boolean isAvailable()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.NetworkInfo: boolean isAvailable()>has compatibility isssues！
+-----------------------------------------
+3 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <org.csploit.android.MainFragment$UpdateReceiver: void onUpdateDone(org.csploit.android.update.Update)>[]--><org.csploit.android.MainFragment: void startUpdateChecker()>[]--><org.csploit.android.MainFragment: boolean isConnectivityAvailable()>[]--><org.csploit.android.net.Network: boolean isWifiConnected(android.content.Context)>[]--><android.net.NetworkInfo: boolean isAvailable()>
+#1.the call statck between class <org.csploit.android.MainFragment$UpdateReceiver: void onUpdateDone(org.csploit.android.update.Update)> to <android.net.NetworkInfo: boolean isAvailable()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <org.csploit.android.MainFragment$2: void run()>[]--><org.csploit.android.MainFragment: void init()>[]--><org.csploit.android.MainFragment: boolean isConnectivityAvailable()>[]--><org.csploit.android.net.Network: boolean isWifiConnected(android.content.Context)>[]--><android.net.NetworkInfo: boolean isAvailable()>
+#2.the call statck between class <org.csploit.android.MainFragment$2: void run()> to <android.net.NetworkInfo: boolean isAvailable()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <org.csploit.android.MainFragment: void access$000(org.csploit.android.MainFragment)>[]--><org.csploit.android.MainFragment: void startAllServices()>[]--><org.csploit.android.MainFragment: void startUpdateChecker()>[]--><org.csploit.android.MainFragment: boolean isConnectivityAvailable()>[]--><org.csploit.android.net.Network: boolean isWifiConnected(android.content.Context)>[]--><android.net.NetworkInfo: boolean isAvailable()>
+#3.the call statck between class <org.csploit.android.MainFragment: void access$000(org.csploit.android.MainFragment)> to <android.net.NetworkInfo: boolean isAvailable()>has compatibility isssues！
+-----------------------------------------
+crashApis:28
+crashApisInMain:21
+containsStatic:false
+containsTry:false
+4call by main package
+-----------------------------------------
+#################################################
+N 37 Potential Issue API: SDKCheck of <android.net.wifi.WifiInfo: java.lang.String getBSSID()> is checking!!!
+The life time of api is [1,30]
+3call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.csploit.android.plugins.mitm.Sniffer dummyMainMethod_org_csploit_android_plugins_mitm_Sniffer(android.content.Intent)>[]--><org.csploit.android.gui.dialogs.ConfirmDialog$1: void onClick(android.content.DialogInterface,int)>[]--><org.csploit.android.MainFragment$16: void onConfirm()>[[try]]--><org.csploit.android.core.System: void reset()>[[try]]--><org.csploit.android.net.Network: byte[] getGatewayHardware()>[]--><android.net.wifi.WifiInfo: java.lang.String getBSSID()>
+One road protect good!
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.csploit.android.MainActivity dummyMainMethod_org_csploit_android_MainActivity(android.content.Intent)>[]--><org.csploit.android.gui.dialogs.ConfirmDialog$1: void onClick(android.content.DialogInterface,int)>[]--><org.csploit.android.MainFragment$16: void onConfirm()>[[try]]--><org.csploit.android.core.System: void reset()>[[try]]--><org.csploit.android.net.Network: byte[] getGatewayHardware()>[]--><android.net.wifi.WifiInfo: java.lang.String getBSSID()>
+One road protect good!
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.csploit.android.plugins.PortScanner dummyMainMethod_org_csploit_android_plugins_PortScanner(android.content.Intent)>[]--><org.csploit.android.gui.dialogs.ConfirmDialog$1: void onClick(android.content.DialogInterface,int)>[]--><org.csploit.android.MainFragment$16: void onConfirm()>[[try]]--><org.csploit.android.core.System: void reset()>[[try]]--><org.csploit.android.net.Network: byte[] getGatewayHardware()>[]--><android.net.wifi.WifiInfo: java.lang.String getBSSID()>
+One road protect good!
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.csploit.android.plugins.mitm.hijacker.Hijacker dummyMainMethod_org_csploit_android_plugins_mitm_hijacker_Hijacker(android.content.Intent)>[]--><org.csploit.android.gui.dialogs.SpinnerDialog$2: void onClick(android.content.DialogInterface,int)>[]--><org.csploit.android.MainFragment$18: void onItemSelected(int)>[[try]]--><org.csploit.android.core.System: void loadSession(java.lang.String)>[[try]]--><org.csploit.android.core.System: void reset()>[[try]]--><org.csploit.android.net.Network: byte[] getGatewayHardware()>[]--><android.net.wifi.WifiInfo: java.lang.String getBSSID()>
+One road protect good!
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><org.csploit.android.CSploitApplication: void onCreate()>[[try]]--><org.csploit.android.core.System: void init(android.content.Context)>[[try]]--><org.csploit.android.core.System: void uncaughtReloadNetworkMapping()>[]--><org.csploit.android.core.System: void reset()>[[try]]--><org.csploit.android.net.Network: byte[] getGatewayHardware()>[]--><android.net.wifi.WifiInfo: java.lang.String getBSSID()>
+One road protect good!
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.csploit.android.plugins.mitm.MITM dummyMainMethod_org_csploit_android_plugins_mitm_MITM(android.content.Intent)>[]--><org.csploit.android.gui.dialogs.ConfirmDialog$1: void onClick(android.content.DialogInterface,int)>[]--><org.csploit.android.MainFragment$16: void onConfirm()>[[try]]--><org.csploit.android.core.System: void reset()>[[try]]--><org.csploit.android.net.Network: byte[] getGatewayHardware()>[]--><android.net.wifi.WifiInfo: java.lang.String getBSSID()>
+One road protect good!
+2 Packageshead roads:
+try
+Good road with try: <org.csploit.android.MainFragment: void displayNetworkInterfaces()>[]--><org.csploit.android.MainFragment: void displayNetworkInterfaces(boolean)>[]--><org.csploit.android.MainFragment: void onNetworkInterfaceChanged()>[]--><org.csploit.android.core.System: boolean reloadNetworkMapping()>[[try]]--><org.csploit.android.core.System: void uncaughtReloadNetworkMapping()>[]--><org.csploit.android.core.System: void reset()>[[try]]--><org.csploit.android.net.Network: byte[] getGatewayHardware()>[]--><android.net.wifi.WifiInfo: java.lang.String getBSSID()>
+One road protect good!
+try
+Good road with try: <org.csploit.android.MainFragment$2: void run()>[]--><org.csploit.android.MainFragment: void init()>[[try]]--><org.csploit.android.core.System: void initCore()>[]--><org.csploit.android.net.Network: void onCoreAttached()>[]--><org.csploit.android.net.Network: byte[] getGatewayHardware()>[]--><android.net.wifi.WifiInfo: java.lang.String getBSSID()>
+One road protect good!
+containsStatic:false
+containsTry:true
+3call by main package
+-----------------------------------------
+#################################################
+N 38 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager: java.util.List getConfiguredNetworks()> is checking!!!
+The life time of api is [1,30]
+4call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.csploit.android.plugins.mitm.Sniffer dummyMainMethod_org_csploit_android_plugins_mitm_Sniffer(android.content.Intent)>[]--><org.csploit.android.plugins.mitm.Sniffer$2: void onClick(android.view.View)>[]--><org.csploit.android.plugins.mitm.Sniffer: void access$300(org.csploit.android.plugins.mitm.Sniffer)>[]--><org.csploit.android.plugins.mitm.Sniffer: void setStartedState()>[]--><org.csploit.android.plugins.mitm.SpoofSession: void start(org.csploit.android.plugins.mitm.SpoofSession$OnSessionReadyListener)>[]--><org.csploit.android.plugins.mitm.SpoofSession: void start(org.csploit.android.net.Target,org.csploit.android.plugins.mitm.SpoofSession$OnSessionReadyListener)>[]--><java.lang.Thread: void run()>[]--><org.csploit.android.WifiScannerFragment$2: void run()>[]--><org.csploit.android.WifiScannerFragment: void access$300(org.csploit.android.WifiScannerFragment)>[]--><org.csploit.android.WifiScannerFragment: void nextConnectionAttempt()>[]--><org.csploit.android.WifiScannerFragment: int performConnection(android.net.wifi.ScanResult,java.lang.String)>[]--><org.csploit.android.wifi.NetworkManager: int shiftPriorityAndSave(android.net.wifi.WifiManager)>[]--><android.net.wifi.WifiManager: java.util.List getConfiguredNetworks()>
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.csploit.android.SettingsActivity dummyMainMethod_org_csploit_android_SettingsActivity(android.content.Intent)>[]--><dummyMainClass: org.csploit.android.SettingsFragment dummyMainMethod_org_csploit_android_SettingsFragment(android.content.Intent,android.app.Activity)>[]--><org.csploit.android.SettingsFragment$PrefsFrag: void onSharedPreferenceChanged(android.content.SharedPreferences,java.lang.String)>[]--><org.csploit.android.SettingsFragment$PrefsFrag: void onMsfEnabled()>[]--><org.csploit.android.SettingsFragment$PrefsFrag: void getMsfBranches()>[]--><java.lang.Thread: void run()>[]--><org.csploit.android.WifiScannerFragment$2: void run()>[]--><org.csploit.android.WifiScannerFragment: void access$300(org.csploit.android.WifiScannerFragment)>[]--><org.csploit.android.WifiScannerFragment: void nextConnectionAttempt()>[]--><org.csploit.android.WifiScannerFragment: int performConnection(android.net.wifi.ScanResult,java.lang.String)>[]--><org.csploit.android.wifi.NetworkManager: int shiftPriorityAndSave(android.net.wifi.WifiManager)>[]--><android.net.wifi.WifiManager: java.util.List getConfiguredNetworks()>
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.csploit.android.plugins.mitm.MITM dummyMainMethod_org_csploit_android_plugins_mitm_MITM(android.content.Intent)>[]--><org.csploit.android.plugins.mitm.MITM: void onActivityResult(int,int,android.content.Intent)>[]--><org.csploit.android.plugins.mitm.SpoofSession: void start(org.csploit.android.plugins.mitm.SpoofSession$OnSessionReadyListener)>[]--><org.csploit.android.plugins.mitm.SpoofSession: void start(org.csploit.android.net.Target,org.csploit.android.plugins.mitm.SpoofSession$OnSessionReadyListener)>[]--><java.lang.Thread: void run()>[]--><org.csploit.android.WifiScannerFragment$2: void run()>[]--><org.csploit.android.WifiScannerFragment: void access$300(org.csploit.android.WifiScannerFragment)>[]--><org.csploit.android.WifiScannerFragment: void nextConnectionAttempt()>[]--><org.csploit.android.WifiScannerFragment: int performConnection(android.net.wifi.ScanResult,java.lang.String)>[]--><org.csploit.android.wifi.NetworkManager: int shiftPriorityAndSave(android.net.wifi.WifiManager)>[]--><android.net.wifi.WifiManager: java.util.List getConfiguredNetworks()>
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.csploit.android.plugins.ExploitFinder dummyMainMethod_org_csploit_android_plugins_ExploitFinder(android.content.Intent)>[]--><org.csploit.android.plugins.ExploitFinder: boolean onOptionsItemSelected(android.view.MenuItem)>[]--><org.csploit.android.plugins.ExploitFinder: void launchExploit(org.csploit.android.net.metasploit.MsfExploit)>[]--><java.lang.Thread: void run()>[]--><org.csploit.android.WifiScannerFragment$2: void run()>[]--><org.csploit.android.WifiScannerFragment: void access$300(org.csploit.android.WifiScannerFragment)>[]--><org.csploit.android.WifiScannerFragment: void nextConnectionAttempt()>[]--><org.csploit.android.WifiScannerFragment: int performConnection(android.net.wifi.ScanResult,java.lang.String)>[]--><org.csploit.android.wifi.NetworkManager: int shiftPriorityAndSave(android.net.wifi.WifiManager)>[]--><android.net.wifi.WifiManager: java.util.List getConfiguredNetworks()>
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.csploit.android.plugins.PortScanner dummyMainMethod_org_csploit_android_plugins_PortScanner(android.content.Intent)>[]--><org.csploit.android.gui.dialogs.InputDialog$1: void onClick(android.content.DialogInterface,int)>[]--><org.csploit.android.WifiScannerFragment$4: void onInputEntered(java.lang.String)>[]--><org.csploit.android.WifiScannerFragment: int access$500(org.csploit.android.WifiScannerFragment,android.net.wifi.ScanResult,java.lang.String)>[]--><org.csploit.android.WifiScannerFragment: int performConnection(android.net.wifi.ScanResult,java.lang.String)>[]--><org.csploit.android.wifi.NetworkManager: int shiftPriorityAndSave(android.net.wifi.WifiManager)>[]--><android.net.wifi.WifiManager: java.util.List getConfiguredNetworks()>
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.csploit.android.plugins.mitm.hijacker.Hijacker dummyMainMethod_org_csploit_android_plugins_mitm_hijacker_Hijacker(android.content.Intent)>[]--><org.csploit.android.plugins.mitm.hijacker.Hijacker$3: void onClick(android.view.View)>[]--><org.csploit.android.plugins.mitm.hijacker.Hijacker: void access$400(org.csploit.android.plugins.mitm.hijacker.Hijacker)>[]--><org.csploit.android.plugins.mitm.hijacker.Hijacker: void setStartedState()>[]--><org.csploit.android.plugins.mitm.SpoofSession: void start(org.csploit.android.plugins.mitm.SpoofSession$OnSessionReadyListener)>[]--><org.csploit.android.plugins.mitm.SpoofSession: void start(org.csploit.android.net.Target,org.csploit.android.plugins.mitm.SpoofSession$OnSessionReadyListener)>[]--><java.lang.Thread: void run()>[]--><org.csploit.android.WifiScannerFragment$2: void run()>[]--><org.csploit.android.WifiScannerFragment: void access$300(org.csploit.android.WifiScannerFragment)>[]--><org.csploit.android.WifiScannerFragment: void nextConnectionAttempt()>[]--><org.csploit.android.WifiScannerFragment: int performConnection(android.net.wifi.ScanResult,java.lang.String)>[]--><org.csploit.android.wifi.NetworkManager: int shiftPriorityAndSave(android.net.wifi.WifiManager)>[]--><android.net.wifi.WifiManager: java.util.List getConfiguredNetworks()>
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.csploit.android.plugins.Sessions dummyMainMethod_org_csploit_android_plugins_Sessions(android.content.Intent)>[]--><org.csploit.android.gui.dialogs.ListChoiceDialog$1: void onItemClick(android.widget.AdapterView,android.view.View,int,long)>[]--><org.csploit.android.plugins.ExploitFinder$1$1: void onChoice(int)>[]--><org.csploit.android.plugins.ExploitFinder: void launchExploit(org.csploit.android.net.metasploit.MsfExploit)>[]--><java.lang.Thread: void run()>[]--><org.csploit.android.WifiScannerFragment$2: void run()>[]--><org.csploit.android.WifiScannerFragment: void access$300(org.csploit.android.WifiScannerFragment)>[]--><org.csploit.android.WifiScannerFragment: void nextConnectionAttempt()>[]--><org.csploit.android.WifiScannerFragment: int performConnection(android.net.wifi.ScanResult,java.lang.String)>[]--><org.csploit.android.wifi.NetworkManager: int shiftPriorityAndSave(android.net.wifi.WifiManager)>[]--><android.net.wifi.WifiManager: java.util.List getConfiguredNetworks()>
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.csploit.android.WifiScannerActivity dummyMainMethod_org_csploit_android_WifiScannerActivity(android.content.Intent)>[]--><dummyMainClass: org.csploit.android.WifiScannerFragment dummyMainMethod_org_csploit_android_WifiScannerFragment(android.content.Intent,android.app.Activity)>[]--><org.csploit.android.gui.dialogs.WifiCrackDialog$2: void onClick(android.content.DialogInterface,int)>[]--><org.csploit.android.WifiScannerFragment$3: void onCrack()>[]--><org.csploit.android.WifiScannerFragment: void access$700(org.csploit.android.WifiScannerFragment,org.csploit.android.wifi.Keygen,android.net.wifi.ScanResult)>[]--><org.csploit.android.WifiScannerFragment: void performCracking(org.csploit.android.wifi.Keygen,android.net.wifi.ScanResult)>[]--><java.lang.Thread: void run()>[]--><org.csploit.android.WifiScannerFragment$2: void run()>[]--><org.csploit.android.WifiScannerFragment: void access$300(org.csploit.android.WifiScannerFragment)>[]--><org.csploit.android.WifiScannerFragment: void nextConnectionAttempt()>[]--><org.csploit.android.WifiScannerFragment: int performConnection(android.net.wifi.ScanResult,java.lang.String)>[]--><org.csploit.android.wifi.NetworkManager: int shiftPriorityAndSave(android.net.wifi.WifiManager)>[]--><android.net.wifi.WifiManager: java.util.List getConfiguredNetworks()>
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.csploit.android.MainActivity dummyMainMethod_org_csploit_android_MainActivity(android.content.Intent)>[]--><dummyMainClass: org.csploit.android.MainFragment dummyMainMethod_org_csploit_android_MainFragment(android.content.Intent,android.app.Activity)>[]--><org.csploit.android.gui.dialogs.InputDialog$1: void onClick(android.content.DialogInterface,int)>[]--><org.csploit.android.WifiScannerFragment$4: void onInputEntered(java.lang.String)>[]--><org.csploit.android.WifiScannerFragment: int access$500(org.csploit.android.WifiScannerFragment,android.net.wifi.ScanResult,java.lang.String)>[]--><org.csploit.android.WifiScannerFragment: int performConnection(android.net.wifi.ScanResult,java.lang.String)>[]--><org.csploit.android.wifi.NetworkManager: int shiftPriorityAndSave(android.net.wifi.WifiManager)>[]--><android.net.wifi.WifiManager: java.util.List getConfiguredNetworks()>
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.csploit.android.plugins.PacketForger dummyMainMethod_org_csploit_android_plugins_PacketForger(android.content.Intent)>[]--><org.csploit.android.plugins.PacketForger: void onClick(android.view.View)>[]--><java.lang.Thread: void run()>[]--><org.csploit.android.WifiScannerFragment$2: void run()>[]--><org.csploit.android.WifiScannerFragment: void access$300(org.csploit.android.WifiScannerFragment)>[]--><org.csploit.android.WifiScannerFragment: void nextConnectionAttempt()>[]--><org.csploit.android.WifiScannerFragment: int performConnection(android.net.wifi.ScanResult,java.lang.String)>[]--><org.csploit.android.wifi.NetworkManager: int shiftPriorityAndSave(android.net.wifi.WifiManager)>[]--><android.net.wifi.WifiManager: java.util.List getConfiguredNetworks()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.wifi.WifiManager: java.util.List getConfiguredNetworks()>has compatibility isssues！
+-----------------------------------------
+3 Packageshead roads:
+try
+Good road with try: <org.csploit.android.core.ChildManager: void access$000(org.csploit.android.core.Child,org.csploit.android.events.Event)>[]--><org.csploit.android.core.ChildManager: void dispatchEvent(org.csploit.android.core.Child,org.csploit.android.events.Event)>[]--><org.csploit.android.core.CrashReporter: void notifyChildCrashed(int,int)>[]--><org.csploit.android.core.CrashReporter: void notifyNativeError(org.acra.ErrorReporter,java.lang.Throwable)>[]--><org.acra.ErrorReporter: void handleException(java.lang.Throwable)>[]--><org.acra.ErrorReporter$ReportBuilder: void send()>[]--><org.acra.ErrorReporter: void access$1400(org.acra.ErrorReporter,org.acra.ErrorReporter$ReportBuilder)>[]--><org.acra.ErrorReporter: void report(org.acra.ErrorReporter$ReportBuilder)>[]--><org.acra.collector.CrashReportDataFactory: org.acra.collector.CrashReportData createCrashData(java.lang.String,java.lang.Throwable,java.util.Map,boolean,java.lang.Thread)>[[try]]--><org.acra.collector.LogCatCollector: java.lang.String collectLogCat(java.lang.String)>[]--><java.lang.Thread: void run()>[]--><org.csploit.android.WifiScannerFragment$2: void run()>[]--><org.csploit.android.WifiScannerFragment: void access$300(org.csploit.android.WifiScannerFragment)>[]--><org.csploit.android.WifiScannerFragment: void nextConnectionAttempt()>[]--><org.csploit.android.WifiScannerFragment: int performConnection(android.net.wifi.ScanResult,java.lang.String)>[]--><org.csploit.android.wifi.NetworkManager: int shiftPriorityAndSave(android.net.wifi.WifiManager)>[]--><android.net.wifi.WifiManager: java.util.List getConfiguredNetworks()>
+One road protect good!
+try
+Good road with try: <org.csploit.android.MainFragment$2: void run()>[]--><org.csploit.android.MainFragment: void init()>[[try]]--><org.csploit.android.core.CrashReporter: void notifyNativeLibraryCrash()>[]--><org.csploit.android.core.CrashReporter: void notifyNativeError(org.acra.ErrorReporter,java.lang.Throwable)>[]--><org.acra.ErrorReporter: void handleException(java.lang.Throwable)>[]--><org.acra.ErrorReporter$ReportBuilder: void send()>[]--><org.acra.ErrorReporter: void access$1400(org.acra.ErrorReporter,org.acra.ErrorReporter$ReportBuilder)>[]--><org.acra.ErrorReporter: void report(org.acra.ErrorReporter$ReportBuilder)>[]--><org.acra.collector.CrashReportDataFactory: org.acra.collector.CrashReportData createCrashData(java.lang.String,java.lang.Throwable,java.util.Map,boolean,java.lang.Thread)>[[try]]--><org.acra.collector.LogCatCollector: java.lang.String collectLogCat(java.lang.String)>[]--><java.lang.Thread: void run()>[]--><org.csploit.android.WifiScannerFragment$2: void run()>[]--><org.csploit.android.WifiScannerFragment: void access$300(org.csploit.android.WifiScannerFragment)>[]--><org.csploit.android.WifiScannerFragment: void nextConnectionAttempt()>[]--><org.csploit.android.WifiScannerFragment: int performConnection(android.net.wifi.ScanResult,java.lang.String)>[]--><org.csploit.android.wifi.NetworkManager: int shiftPriorityAndSave(android.net.wifi.WifiManager)>[]--><android.net.wifi.WifiManager: java.util.List getConfiguredNetworks()>
+One road protect good!
+!!!this api will crash on sdk 31 
+Error road: <org.csploit.android.WifiScannerFragment$ConnectionReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><org.csploit.android.WifiScannerFragment: void onSuccessfulConnection()>[]--><org.csploit.android.WifiScannerFragment: void onEnd()>[]--><org.csploit.android.WifiScannerFragment: void restorePreviousConfig()>[]--><org.csploit.android.wifi.NetworkManager: android.net.wifi.WifiConfiguration getWifiConfiguration(android.net.wifi.WifiManager,android.net.wifi.WifiConfiguration)>[]--><org.csploit.android.wifi.NetworkManager: android.net.wifi.WifiConfiguration getWifiConfiguration(android.net.wifi.WifiManager,java.lang.String,java.lang.String)>[]--><android.net.wifi.WifiManager: java.util.List getConfiguredNetworks()>
+!!!this api will crash on sdk 31 
+Error road: <org.csploit.android.WifiScannerFragment$ConnectionReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><org.csploit.android.WifiScannerFragment: void onFailedConnection()>[]--><android.net.wifi.WifiManager: java.util.List getConfiguredNetworks()>
+#3.the call statck between class <org.csploit.android.WifiScannerFragment$ConnectionReceiver: void onReceive(android.content.Context,android.content.Intent)> to <android.net.wifi.WifiManager: java.util.List getConfiguredNetworks()>has compatibility isssues！
+-----------------------------------------
+crashApis:29
+crashApisInMain:22
+containsStatic:false
+containsTry:true
+4call by main package
+-----------------------------------------
+#################################################
+N 39 Potential Issue API: SDKCheck of <android.net.wifi.WifiInfo: java.lang.String getSSID()> is checking!!!
+The life time of api is [1,30]
+3call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.csploit.android.plugins.mitm.Sniffer dummyMainMethod_org_csploit_android_plugins_mitm_Sniffer(android.content.Intent)>[]--><org.csploit.android.gui.dialogs.ConfirmDialog$1: void onClick(android.content.DialogInterface,int)>[]--><org.csploit.android.MainFragment$16: void onConfirm()>[[try]]--><org.csploit.android.core.System: void reset()>[[try]]--><org.csploit.android.net.Network: java.lang.String getSSID()>[]--><android.net.wifi.WifiInfo: java.lang.String getSSID()>
+One road protect good!
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.csploit.android.MainActivity dummyMainMethod_org_csploit_android_MainActivity(android.content.Intent)>[]--><org.csploit.android.gui.dialogs.ConfirmDialog$1: void onClick(android.content.DialogInterface,int)>[]--><org.csploit.android.MainFragment$16: void onConfirm()>[[try]]--><org.csploit.android.core.System: void reset()>[[try]]--><org.csploit.android.net.Network: java.lang.String getSSID()>[]--><android.net.wifi.WifiInfo: java.lang.String getSSID()>
+One road protect good!
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.csploit.android.plugins.PortScanner dummyMainMethod_org_csploit_android_plugins_PortScanner(android.content.Intent)>[]--><org.csploit.android.gui.dialogs.ConfirmDialog$1: void onClick(android.content.DialogInterface,int)>[]--><org.csploit.android.MainFragment$16: void onConfirm()>[[try]]--><org.csploit.android.core.System: void reset()>[[try]]--><org.csploit.android.net.Network: java.lang.String getSSID()>[]--><android.net.wifi.WifiInfo: java.lang.String getSSID()>
+One road protect good!
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.csploit.android.plugins.mitm.hijacker.Hijacker dummyMainMethod_org_csploit_android_plugins_mitm_hijacker_Hijacker(android.content.Intent)>[]--><org.csploit.android.gui.dialogs.SpinnerDialog$2: void onClick(android.content.DialogInterface,int)>[]--><org.csploit.android.MainFragment$18: void onItemSelected(int)>[[try]]--><org.csploit.android.core.System: void loadSession(java.lang.String)>[[try]]--><org.csploit.android.core.System: void reset()>[[try]]--><org.csploit.android.net.Network: java.lang.String getSSID()>[]--><android.net.wifi.WifiInfo: java.lang.String getSSID()>
+One road protect good!
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><org.csploit.android.CSploitApplication: void onCreate()>[[try]]--><org.csploit.android.core.System: void init(android.content.Context)>[[try]]--><org.csploit.android.core.System: void uncaughtReloadNetworkMapping()>[]--><org.csploit.android.core.System: void reset()>[[try]]--><org.csploit.android.net.Network: java.lang.String getSSID()>[]--><android.net.wifi.WifiInfo: java.lang.String getSSID()>
+One road protect good!
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.csploit.android.plugins.mitm.MITM dummyMainMethod_org_csploit_android_plugins_mitm_MITM(android.content.Intent)>[]--><org.csploit.android.gui.dialogs.ConfirmDialog$1: void onClick(android.content.DialogInterface,int)>[]--><org.csploit.android.MainFragment$16: void onConfirm()>[[try]]--><org.csploit.android.core.System: void reset()>[[try]]--><org.csploit.android.net.Network: java.lang.String getSSID()>[]--><android.net.wifi.WifiInfo: java.lang.String getSSID()>
+One road protect good!
+2 Packageshead roads:
+try
+Good road with try: <org.csploit.android.MainFragment: void displayNetworkInterfaces()>[]--><org.csploit.android.MainFragment: void displayNetworkInterfaces(boolean)>[]--><org.csploit.android.MainFragment: void onNetworkInterfaceChanged()>[]--><org.csploit.android.core.System: boolean reloadNetworkMapping()>[[try]]--><org.csploit.android.core.System: void uncaughtReloadNetworkMapping()>[]--><org.csploit.android.core.System: void reset()>[[try]]--><org.csploit.android.net.Network: java.lang.String getSSID()>[]--><android.net.wifi.WifiInfo: java.lang.String getSSID()>
+One road protect good!
+try
+Good road with try: <org.csploit.android.MainFragment$2: void run()>[]--><org.csploit.android.MainFragment: void init()>[[try]]--><org.csploit.android.core.System: void initCore()>[]--><org.csploit.android.net.Network: void onCoreAttached()>[]--><org.csploit.android.net.Network: java.lang.String getSSID()>[]--><android.net.wifi.WifiInfo: java.lang.String getSSID()>
+One road protect good!
+containsStatic:false
+containsTry:true
+3call by main package
+-----------------------------------------
+#################################################
+N 40 Potential Issue API: SDKCheck of <org.apache.http.params.HttpConnectionParams: int getSoTimeout(org.apache.http.params.HttpParams)> is checking!!!
+The life time of api is [23,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 19 20 21 22 
+Error road: <org.acra.util.FakeSocketFactory: java.net.Socket connectSocket(java.net.Socket,java.lang.String,int,java.net.InetAddress,int,org.apache.http.params.HttpParams)>[]--><org.apache.http.params.HttpConnectionParams: int getSoTimeout(org.apache.http.params.HttpParams)>
+#1.the call statck between class <org.acra.util.FakeSocketFactory: java.net.Socket connectSocket(java.net.Socket,java.lang.String,int,java.net.InetAddress,int,org.apache.http.params.HttpParams)> to <org.apache.http.params.HttpConnectionParams: int getSoTimeout(org.apache.http.params.HttpParams)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 21 22 
+Error road: <org.acra.util.HttpRequest$SocketTimeOutRetryHandler: boolean retryRequest(java.io.IOException,int,org.apache.http.protocol.HttpContext)>[]--><org.apache.http.params.HttpConnectionParams: int getSoTimeout(org.apache.http.params.HttpParams)>
+#2.the call statck between class <org.acra.util.HttpRequest$SocketTimeOutRetryHandler: boolean retryRequest(java.io.IOException,int,org.apache.http.protocol.HttpContext)> to <org.apache.http.params.HttpConnectionParams: int getSoTimeout(org.apache.http.params.HttpParams)>has compatibility isssues！
+-----------------------------------------
+crashApis:30
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 41 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager: int calculateSignalLevel(int,int)> is checking!!!
+The life time of api is [1,30]
+2call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.csploit.android.WifiScannerActivity dummyMainMethod_org_csploit_android_WifiScannerActivity(android.content.Intent)>[]--><dummyMainClass: org.csploit.android.WifiScannerFragment dummyMainMethod_org_csploit_android_WifiScannerFragment(android.content.Intent,android.app.Activity)>[]--><org.csploit.android.WifiScannerFragment: void onListItemClick(android.widget.ListView,android.view.View,int,long)>[]--><org.csploit.android.wifi.WirelessMatcher: org.csploit.android.wifi.Keygen getKeygen(android.net.wifi.ScanResult)>[]--><android.net.wifi.WifiManager: int calculateSignalLevel(int,int)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.wifi.WifiManager: int calculateSignalLevel(int,int)>has compatibility isssues！
+-----------------------------------------
+1 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <org.csploit.android.WifiScannerFragment$ScanAdapter: android.view.View getView(int,android.view.View,android.view.ViewGroup)>[]--><org.csploit.android.wifi.WirelessMatcher: org.csploit.android.wifi.Keygen getKeygen(android.net.wifi.ScanResult)>[]--><android.net.wifi.WifiManager: int calculateSignalLevel(int,int)>
+#1.the call statck between class <org.csploit.android.WifiScannerFragment$ScanAdapter: android.view.View getView(int,android.view.View,android.view.ViewGroup)> to <android.net.wifi.WifiManager: int calculateSignalLevel(int,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:31
+crashApisInMain:23
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 42 Potential Issue API: SDKCheck of <org.apache.http.params.HttpConnectionParams: int getConnectionTimeout(org.apache.http.params.HttpParams)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 21 22 
+Error road: <org.acra.util.FakeSocketFactory: java.net.Socket connectSocket(java.net.Socket,java.lang.String,int,java.net.InetAddress,int,org.apache.http.params.HttpParams)>[]--><org.apache.http.params.HttpConnectionParams: int getConnectionTimeout(org.apache.http.params.HttpParams)>
+#1.the call statck between class <org.acra.util.FakeSocketFactory: java.net.Socket connectSocket(java.net.Socket,java.lang.String,int,java.net.InetAddress,int,org.apache.http.params.HttpParams)> to <org.apache.http.params.HttpConnectionParams: int getConnectionTimeout(org.apache.http.params.HttpParams)>has compatibility isssues！
+-----------------------------------------
+crashApis:32
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+crashApis numbers:32
+crashApis numbers in main road:23
+On Android Version 16 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 17 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 18 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 19 this app may have error api use(at least): 14 and error api roads: 19
+On Android Version 20 this app may have error api use(at least): 14 and error api roads: 19
+On Android Version 21 this app may have error api use(at least): 10 and error api roads: 12
+On Android Version 22 this app may have error api use(at least): 8 and error api roads: 10
+On Android Version 23 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 24 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 25 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 31 this app may have error api use(at least): 18 and error api roads: 85

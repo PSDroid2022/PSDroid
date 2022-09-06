@@ -1,0 +1,498 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/MobileOrg.apk
+Entry Points[com.matburt.mobileorg2.OrgData.MobileOrgApplication, com.matburt.mobileorg2.OrgData.OrgProvider, com.matburt.mobileorg2.OrgNodeDetailActivity, com.matburt.mobileorg2.Gui.Agenda.AgendasActivity, com.dropbox.client2.android.AuthActivity, com.matburt.mobileorg2.Plugin.Synchronize, com.matburt.mobileorg2.EditNodeActivity, com.matburt.mobileorg2.Gui.Agenda.AgendaActivity, com.matburt.mobileorg2.Gui.FileDecryptionActivity, com.matburt.mobileorg2.OrgNodeListActivity$SynchServiceReceiver, layout.com.aaa.ScrollingActivity, com.matburt.mobileorg2.Services.MobileOrgStartupIntentReceiver, com.matburt.mobileorg2.Settings.Synchronizers.ScpSettingsActivity, com.matburt.mobileorg2.OrgNodeListActivity, com.matburt.mobileorg2.Gui.Wizard.WizardActivity, com.matburt.mobileorg2.Settings.SettingsActivity, com.matburt.mobileorg2.Gui.CertificateConflictActivity, com.matburt.mobileorg2.Gui.Agenda.AgendaSettings, com.matburt.mobileorg2.Gui.Agenda.AgendaEntrySetting, com.matburt.mobileorg2.Gui.Widget.MobileOrgWidget$MobileOrgWidgetService, com.matburt.mobileorg2.Gui.Widget.MobileOrgWidget, com.matburt.mobileorg2.Settings.Synchronizers.WebDAVSettingsActivity, com.matburt.mobileorg2.Services.TimeclockService, com.matburt.mobileorg2.Settings.Synchronizers.SDCardSettingsActivity, com.matburt.mobileorg2.Gui.Outline.ConflictResolverActivity, com.matburt.mobileorg2.Services.CalendarSyncService, com.matburt.mobileorg2.Settings.Synchronizers.UbuntuOneSettingsActivity, com.matburt.mobileorg2.Services.SyncService]
+FllowDroidcallgraph size:8019
+Soot started on Mon Jul 11 07:16:37 CST 2022
+Soot finished on Mon Jul 11 07:17:10 CST 2022
+Soot has run for 0 min. 32 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 19
+Declared Target Sdk version is: 23
+Declared Max Sdk version is: -1
+Collected 476 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <org.apache.http.params.HttpConnectionParams: void setConnectionTimeout(org.apache.http.params.HttpParams,int)> is checking!!!
+The life time of api is [23,31]
+12call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.matburt.mobileorg2.Gui.Wizard.WizardActivity dummyMainMethod_com_matburt_mobileorg2_Gui_Wizard_WizardActivity(android.content.Intent)>[]--><com.matburt.mobileorg2.Gui.Wizard.WizardActivity: void onResume()>[]--><com.matburt.mobileorg2.Gui.Wizard.Wizards.DropboxWizard: void refresh()>[]--><com.matburt.mobileorg2.Gui.Wizard.Wizards.DropboxWizard: void handleDropboxResume()>[]--><com.dropbox.client2.DropboxAPI: com.dropbox.client2.DropboxAPI$Account accountInfo()>[]--><com.dropbox.client2.RESTUtility: java.lang.Object request(com.dropbox.client2.RESTUtility$RequestMethod,java.lang.String,java.lang.String,int,java.lang.String[],com.dropbox.client2.session.Session)>[]--><com.dropbox.client2.RESTUtility: com.dropbox.client2.DropboxAPI$RequestAndResponse streamRequest(com.dropbox.client2.RESTUtility$RequestMethod,java.lang.String,java.lang.String,int,java.lang.String[],com.dropbox.client2.session.Session)>[]--><com.dropbox.client2.RESTUtility: org.apache.http.HttpResponse execute(com.dropbox.client2.session.Session,org.apache.http.client.methods.HttpUriRequest)>[]--><com.dropbox.client2.RESTUtility: org.apache.http.HttpResponse execute(com.dropbox.client2.session.Session,org.apache.http.client.methods.HttpUriRequest,int)>[]--><com.dropbox.client2.RESTUtility: org.apache.http.client.HttpClient updatedHttpClient(com.dropbox.client2.session.Session)>[[try]]--><com.dropbox.client2.session.AbstractSession: org.apache.http.client.HttpClient getHttpClient()>[[try]]--><org.apache.http.params.HttpConnectionParams: void setConnectionTimeout(org.apache.http.params.HttpParams,int)>
+One road protect good!
+11 Packageshead roads:
+try
+Good road with try: <com.dropbox.client2.DropboxAPI$BasicUploadRequest: com.dropbox.client2.DropboxAPI$Entry upload()>[[try]]--><com.dropbox.client2.RESTUtility: org.apache.http.HttpResponse execute(com.dropbox.client2.session.Session,org.apache.http.client.methods.HttpUriRequest,int)>[]--><com.dropbox.client2.RESTUtility: org.apache.http.client.HttpClient updatedHttpClient(com.dropbox.client2.session.Session)>[[try]]--><com.dropbox.client2.session.AbstractSession: org.apache.http.client.HttpClient getHttpClient()>[[try]]--><org.apache.http.params.HttpConnectionParams: void setConnectionTimeout(org.apache.http.params.HttpParams,int)>
+One road protect good!
+try
+Good road with try: <com.dropbox.client2.DropboxAPI: com.dropbox.client2.DropboxAPI$DropboxInputStream getFileStream(java.lang.String,java.lang.String)>[]--><com.dropbox.client2.RESTUtility: org.apache.http.HttpResponse execute(com.dropbox.client2.session.Session,org.apache.http.client.methods.HttpUriRequest)>[]--><com.dropbox.client2.RESTUtility: org.apache.http.HttpResponse execute(com.dropbox.client2.session.Session,org.apache.http.client.methods.HttpUriRequest,int)>[]--><com.dropbox.client2.RESTUtility: org.apache.http.client.HttpClient updatedHttpClient(com.dropbox.client2.session.Session)>[[try]]--><com.dropbox.client2.session.AbstractSession: org.apache.http.client.HttpClient getHttpClient()>[[try]]--><org.apache.http.params.HttpConnectionParams: void setConnectionTimeout(org.apache.http.params.HttpParams,int)>
+One road protect good!
+try
+Good road with try: <com.matburt.mobileorg2.Gui.Wizard.Wizards.DropboxDirectoryBrowser: void browseTo(int)>[]--><com.matburt.mobileorg2.Gui.Wizard.Wizards.DropboxDirectoryBrowser: void browseTo(java.lang.String)>[]--><com.dropbox.client2.DropboxAPI: com.dropbox.client2.DropboxAPI$Entry metadata(java.lang.String,int,java.lang.String,boolean,java.lang.String)>[]--><com.dropbox.client2.RESTUtility: java.lang.Object request(com.dropbox.client2.RESTUtility$RequestMethod,java.lang.String,java.lang.String,int,java.lang.String[],com.dropbox.client2.session.Session)>[]--><com.dropbox.client2.RESTUtility: com.dropbox.client2.DropboxAPI$RequestAndResponse streamRequest(com.dropbox.client2.RESTUtility$RequestMethod,java.lang.String,java.lang.String,int,java.lang.String[],com.dropbox.client2.session.Session)>[]--><com.dropbox.client2.RESTUtility: org.apache.http.HttpResponse execute(com.dropbox.client2.session.Session,org.apache.http.client.methods.HttpUriRequest)>[]--><com.dropbox.client2.RESTUtility: org.apache.http.HttpResponse execute(com.dropbox.client2.session.Session,org.apache.http.client.methods.HttpUriRequest,int)>[]--><com.dropbox.client2.RESTUtility: org.apache.http.client.HttpClient updatedHttpClient(com.dropbox.client2.session.Session)>[[try]]--><com.dropbox.client2.session.AbstractSession: org.apache.http.client.HttpClient getHttpClient()>[[try]]--><org.apache.http.params.HttpConnectionParams: void setConnectionTimeout(org.apache.http.params.HttpParams,int)>
+One road protect good!
+!!!this api will crash on sdk 19 20 21 22 
+Error road: <com.matburt.mobileorg2.Synchronizers.UbuntuOneSynchronizer: void putUrl(java.lang.String,java.lang.String)>[]--><com.matburt.mobileorg2.Synchronizers.UbuntuOneSynchronizer: org.apache.http.HttpResponse executeRequest(org.apache.http.client.methods.HttpUriRequest)>[]--><org.apache.http.params.HttpConnectionParams: void setConnectionTimeout(org.apache.http.params.HttpParams,int)>
+#6.the call statck between class <com.matburt.mobileorg2.Synchronizers.UbuntuOneSynchronizer: void putUrl(java.lang.String,java.lang.String)> to <org.apache.http.params.HttpConnectionParams: void setConnectionTimeout(org.apache.http.params.HttpParams,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 21 22 
+Error road: <com.matburt.mobileorg2.Synchronizers.UbuntuOneSynchronizer: java.io.InputStream getUrl(java.lang.String)>[]--><com.matburt.mobileorg2.Synchronizers.UbuntuOneSynchronizer: org.apache.http.HttpResponse executeRequest(org.apache.http.client.methods.HttpUriRequest)>[]--><org.apache.http.params.HttpConnectionParams: void setConnectionTimeout(org.apache.http.params.HttpParams,int)>
+#7.the call statck between class <com.matburt.mobileorg2.Synchronizers.UbuntuOneSynchronizer: java.io.InputStream getUrl(java.lang.String)> to <org.apache.http.params.HttpConnectionParams: void setConnectionTimeout(org.apache.http.params.HttpParams,int)>has compatibility isssues！
+-----------------------------------------
+try
+Good road with try: <com.dropbox.client2.DropboxAPI$ChunkedUploadRequest: com.dropbox.client2.DropboxAPI$ChunkedUploadResponse upload()>[[try]]--><com.dropbox.client2.RESTUtility: org.apache.http.HttpResponse execute(com.dropbox.client2.session.Session,org.apache.http.client.methods.HttpUriRequest,int)>[]--><com.dropbox.client2.RESTUtility: org.apache.http.client.HttpClient updatedHttpClient(com.dropbox.client2.session.Session)>[[try]]--><com.dropbox.client2.session.AbstractSession: org.apache.http.client.HttpClient getHttpClient()>[[try]]--><org.apache.http.params.HttpConnectionParams: void setConnectionTimeout(org.apache.http.params.HttpParams,int)>
+One road protect good!
+crashApis:1
+containsStatic:false
+containsTry:true
+11call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.os.BaseBundle: int getInt(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <com.matburt.mobileorg2.EditNodeFragment$TimePickerFragment: android.app.Dialog onCreateDialog(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#1.the call statck between class <com.matburt.mobileorg2.EditNodeFragment$TimePickerFragment: android.app.Dialog onCreateDialog(android.os.Bundle)> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:2
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.net.NetworkInfo: android.net.NetworkInfo.State getState()> is checking!!!
+The life time of api is [1,30]
+7call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.matburt.mobileorg2.Services.SyncService dummyMainMethod_com_matburt_mobileorg2_Services_SyncService(android.content.Intent)>[]--><com.matburt.mobileorg2.Services.SyncService: int onStartCommand(android.content.Intent,int,int)>[]--><com.matburt.mobileorg2.Services.SyncService: void runSynchronizer()>[]--><com.matburt.mobileorg2.Services.SyncService$1: void run()>[]--><com.matburt.mobileorg2.Synchronizers.SynchronizerManager: java.util.HashSet runSynchronizer(com.matburt.mobileorg2.OrgData.OrgFileParser)>[]--><com.matburt.mobileorg2.Synchronizers.DropboxSynchronizer: boolean isConnectable()>[]--><com.matburt.mobileorg2.util.OrgUtils: boolean isNetworkOnline(android.content.Context)>[]--><com.matburt.mobileorg2.util.OrgUtils: boolean isWifiOnline(android.content.Context)>[]--><android.net.NetworkInfo: android.net.NetworkInfo.State getState()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.NetworkInfo: android.net.NetworkInfo.State getState()>has compatibility isssues！
+-----------------------------------------
+6 Packageshead roads:
+crashApis:3
+crashApisInMain:1
+containsStatic:false
+containsTry:true
+7call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.os.BaseBundle: boolean containsKey(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+3call roads:
+0 Mainhead roads:
+3 Packageshead roads:
+try
+Good road with try: <com.matburt.mobileorg2.Plugin.BundleScrubber: boolean scrub(android.content.Intent)>[]--><com.matburt.mobileorg2.Plugin.BundleScrubber: boolean scrub(android.os.Bundle)>[[try]]--><android.os.BaseBundle: boolean containsKey(java.lang.String)>
+One road protect good!
+!!!this api will crash on sdk 19 20 
+Error road: <com.matburt.mobileorg2.Plugin.PluginBundleManager: boolean isBundleValid(android.os.Bundle)>[]--><android.os.BaseBundle: boolean containsKey(java.lang.String)>
+#2.the call statck between class <com.matburt.mobileorg2.Plugin.PluginBundleManager: boolean isBundleValid(android.os.Bundle)> to <android.os.BaseBundle: boolean containsKey(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <com.matburt.mobileorg2.OrgNodeDetailFragment: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: boolean containsKey(java.lang.String)>
+#3.the call statck between class <com.matburt.mobileorg2.OrgNodeDetailFragment: void onCreate(android.os.Bundle)> to <android.os.BaseBundle: boolean containsKey(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:4
+containsStatic:false
+containsTry:true
+4call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.os.BaseBundle: long getLong(java.lang.String,long)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.matburt.mobileorg2.EditNodeActivity dummyMainMethod_com_matburt_mobileorg2_EditNodeActivity(android.content.Intent)>[]--><dummyMainClass: com.matburt.mobileorg2.EditNodeFragment dummyMainMethod_com_matburt_mobileorg2_EditNodeFragment(android.content.Intent,android.app.Activity)>[]--><com.matburt.mobileorg2.EditNodeFragment: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)>[]--><android.os.BaseBundle: long getLong(java.lang.String,long)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: long getLong(java.lang.String,long)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:5
+crashApisInMain:2
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 5 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.dropbox.client2.android.AuthActivity dummyMainMethod_com_dropbox_client2_android_AuthActivity(android.content.Intent)>[]--><com.dropbox.client2.android.AuthActivity: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:6
+crashApisInMain:3
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 6 Potential Issue API: SDKCheck of <android.os.BaseBundle: long getLong(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <com.matburt.mobileorg2.OrgNodeDetailFragment: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: long getLong(java.lang.String)>
+#1.the call statck between class <com.matburt.mobileorg2.OrgNodeDetailFragment: void onCreate(android.os.Bundle)> to <android.os.BaseBundle: long getLong(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:7
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 7 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)> is checking!!!
+The life time of api is [22,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.dropbox.client2.android.AuthActivity dummyMainMethod_com_dropbox_client2_android_AuthActivity(android.content.Intent)>[]--><com.dropbox.client2.android.AuthActivity: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:8
+crashApisInMain:4
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 8 Potential Issue API: SDKCheck of <org.apache.http.conn.ssl.SSLSocketFactory: org.apache.http.conn.ssl.SSLSocketFactory getSocketFactory()> is checking!!!
+The life time of api is [23,31]
+6call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.matburt.mobileorg2.Gui.Wizard.WizardActivity dummyMainMethod_com_matburt_mobileorg2_Gui_Wizard_WizardActivity(android.content.Intent)>[]--><com.matburt.mobileorg2.Gui.Wizard.WizardActivity: void onResume()>[]--><com.matburt.mobileorg2.Gui.Wizard.Wizards.DropboxWizard: void refresh()>[]--><com.matburt.mobileorg2.Gui.Wizard.Wizards.DropboxWizard: void handleDropboxResume()>[]--><com.dropbox.client2.DropboxAPI: com.dropbox.client2.DropboxAPI$Account accountInfo()>[]--><com.dropbox.client2.RESTUtility: java.lang.Object request(com.dropbox.client2.RESTUtility$RequestMethod,java.lang.String,java.lang.String,int,java.lang.String[],com.dropbox.client2.session.Session)>[]--><com.dropbox.client2.RESTUtility: com.dropbox.client2.DropboxAPI$RequestAndResponse streamRequest(com.dropbox.client2.RESTUtility$RequestMethod,java.lang.String,java.lang.String,int,java.lang.String[],com.dropbox.client2.session.Session)>[]--><com.dropbox.client2.RESTUtility: org.apache.http.HttpResponse execute(com.dropbox.client2.session.Session,org.apache.http.client.methods.HttpUriRequest)>[]--><com.dropbox.client2.RESTUtility: org.apache.http.HttpResponse execute(com.dropbox.client2.session.Session,org.apache.http.client.methods.HttpUriRequest,int)>[]--><com.dropbox.client2.RESTUtility: org.apache.http.client.HttpClient updatedHttpClient(com.dropbox.client2.session.Session)>[[try]]--><com.dropbox.client2.session.AbstractSession: org.apache.http.client.HttpClient getHttpClient()>[[try]]--><org.apache.http.conn.ssl.SSLSocketFactory: org.apache.http.conn.ssl.SSLSocketFactory getSocketFactory()>
+One road protect good!
+5 Packageshead roads:
+try
+Good road with try: <com.dropbox.client2.DropboxAPI$BasicUploadRequest: com.dropbox.client2.DropboxAPI$Entry upload()>[[try]]--><com.dropbox.client2.RESTUtility: org.apache.http.HttpResponse execute(com.dropbox.client2.session.Session,org.apache.http.client.methods.HttpUriRequest,int)>[]--><com.dropbox.client2.RESTUtility: org.apache.http.client.HttpClient updatedHttpClient(com.dropbox.client2.session.Session)>[[try]]--><com.dropbox.client2.session.AbstractSession: org.apache.http.client.HttpClient getHttpClient()>[[try]]--><org.apache.http.conn.ssl.SSLSocketFactory: org.apache.http.conn.ssl.SSLSocketFactory getSocketFactory()>
+One road protect good!
+try
+Good road with try: <com.dropbox.client2.DropboxAPI: com.dropbox.client2.DropboxAPI$DropboxInputStream getFileStream(java.lang.String,java.lang.String)>[]--><com.dropbox.client2.RESTUtility: org.apache.http.HttpResponse execute(com.dropbox.client2.session.Session,org.apache.http.client.methods.HttpUriRequest)>[]--><com.dropbox.client2.RESTUtility: org.apache.http.HttpResponse execute(com.dropbox.client2.session.Session,org.apache.http.client.methods.HttpUriRequest,int)>[]--><com.dropbox.client2.RESTUtility: org.apache.http.client.HttpClient updatedHttpClient(com.dropbox.client2.session.Session)>[[try]]--><com.dropbox.client2.session.AbstractSession: org.apache.http.client.HttpClient getHttpClient()>[[try]]--><org.apache.http.conn.ssl.SSLSocketFactory: org.apache.http.conn.ssl.SSLSocketFactory getSocketFactory()>
+One road protect good!
+try
+Good road with try: <com.matburt.mobileorg2.Gui.Wizard.Wizards.DropboxDirectoryBrowser: void browseTo(int)>[]--><com.matburt.mobileorg2.Gui.Wizard.Wizards.DropboxDirectoryBrowser: void browseTo(java.lang.String)>[]--><com.dropbox.client2.DropboxAPI: com.dropbox.client2.DropboxAPI$Entry metadata(java.lang.String,int,java.lang.String,boolean,java.lang.String)>[]--><com.dropbox.client2.RESTUtility: java.lang.Object request(com.dropbox.client2.RESTUtility$RequestMethod,java.lang.String,java.lang.String,int,java.lang.String[],com.dropbox.client2.session.Session)>[]--><com.dropbox.client2.RESTUtility: com.dropbox.client2.DropboxAPI$RequestAndResponse streamRequest(com.dropbox.client2.RESTUtility$RequestMethod,java.lang.String,java.lang.String,int,java.lang.String[],com.dropbox.client2.session.Session)>[]--><com.dropbox.client2.RESTUtility: org.apache.http.HttpResponse execute(com.dropbox.client2.session.Session,org.apache.http.client.methods.HttpUriRequest)>[]--><com.dropbox.client2.RESTUtility: org.apache.http.HttpResponse execute(com.dropbox.client2.session.Session,org.apache.http.client.methods.HttpUriRequest,int)>[]--><com.dropbox.client2.RESTUtility: org.apache.http.client.HttpClient updatedHttpClient(com.dropbox.client2.session.Session)>[[try]]--><com.dropbox.client2.session.AbstractSession: org.apache.http.client.HttpClient getHttpClient()>[[try]]--><org.apache.http.conn.ssl.SSLSocketFactory: org.apache.http.conn.ssl.SSLSocketFactory getSocketFactory()>
+One road protect good!
+try
+Good road with try: <com.dropbox.client2.DropboxAPI$ChunkedUploadRequest: com.dropbox.client2.DropboxAPI$ChunkedUploadResponse upload()>[[try]]--><com.dropbox.client2.RESTUtility: org.apache.http.HttpResponse execute(com.dropbox.client2.session.Session,org.apache.http.client.methods.HttpUriRequest,int)>[]--><com.dropbox.client2.RESTUtility: org.apache.http.client.HttpClient updatedHttpClient(com.dropbox.client2.session.Session)>[[try]]--><com.dropbox.client2.session.AbstractSession: org.apache.http.client.HttpClient getHttpClient()>[[try]]--><org.apache.http.conn.ssl.SSLSocketFactory: org.apache.http.conn.ssl.SSLSocketFactory getSocketFactory()>
+One road protect good!
+try
+Good road with try: <com.dropbox.client2.DropboxAPI: com.dropbox.client2.DropboxAPI$Entry commitChunkedUpload(java.lang.String,java.lang.String,boolean,java.lang.String)>[]--><com.dropbox.client2.RESTUtility: org.apache.http.HttpResponse execute(com.dropbox.client2.session.Session,org.apache.http.client.methods.HttpUriRequest)>[]--><com.dropbox.client2.RESTUtility: org.apache.http.HttpResponse execute(com.dropbox.client2.session.Session,org.apache.http.client.methods.HttpUriRequest,int)>[]--><com.dropbox.client2.RESTUtility: org.apache.http.client.HttpClient updatedHttpClient(com.dropbox.client2.session.Session)>[[try]]--><com.dropbox.client2.session.AbstractSession: org.apache.http.client.HttpClient getHttpClient()>[[try]]--><org.apache.http.conn.ssl.SSLSocketFactory: org.apache.http.conn.ssl.SSLSocketFactory getSocketFactory()>
+One road protect good!
+containsStatic:false
+containsTry:true
+6call by main package
+-----------------------------------------
+#################################################
+N 9 Potential Issue API: SDKCheck of <org.apache.http.params.HttpConnectionParams: void setSoTimeout(org.apache.http.params.HttpParams,int)> is checking!!!
+The life time of api is [23,31]
+12call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 21 22 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.matburt.mobileorg2.Gui.Wizard.WizardActivity dummyMainMethod_com_matburt_mobileorg2_Gui_Wizard_WizardActivity(android.content.Intent)>[]--><com.matburt.mobileorg2.Gui.Wizard.WizardActivity: void onResume()>[]--><com.matburt.mobileorg2.Gui.Wizard.Wizards.DropboxWizard: void refresh()>[]--><com.matburt.mobileorg2.Gui.Wizard.Wizards.DropboxWizard: void handleDropboxResume()>[]--><com.dropbox.client2.DropboxAPI: com.dropbox.client2.DropboxAPI$Account accountInfo()>[]--><com.dropbox.client2.RESTUtility: java.lang.Object request(com.dropbox.client2.RESTUtility$RequestMethod,java.lang.String,java.lang.String,int,java.lang.String[],com.dropbox.client2.session.Session)>[]--><com.dropbox.client2.RESTUtility: com.dropbox.client2.DropboxAPI$RequestAndResponse streamRequest(com.dropbox.client2.RESTUtility$RequestMethod,java.lang.String,java.lang.String,int,java.lang.String[],com.dropbox.client2.session.Session)>[]--><com.dropbox.client2.RESTUtility: org.apache.http.HttpResponse execute(com.dropbox.client2.session.Session,org.apache.http.client.methods.HttpUriRequest)>[]--><com.dropbox.client2.RESTUtility: org.apache.http.HttpResponse execute(com.dropbox.client2.session.Session,org.apache.http.client.methods.HttpUriRequest,int)>[]--><org.apache.http.params.HttpConnectionParams: void setSoTimeout(org.apache.http.params.HttpParams,int)>
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.matburt.mobileorg2.Services.SyncService dummyMainMethod_com_matburt_mobileorg2_Services_SyncService(android.content.Intent)>[]--><com.matburt.mobileorg2.Services.SyncService: int onStartCommand(android.content.Intent,int,int)>[]--><com.matburt.mobileorg2.Services.SyncService: void runSynchronizer()>[]--><com.matburt.mobileorg2.Services.SyncService: void startSynchronizer()>[]--><com.matburt.mobileorg2.Synchronizers.UbuntuOneSynchronizer: void <init>(android.content.Context)>[]--><com.matburt.mobileorg2.Synchronizers.UbuntuOneSynchronizer: void getBaseUser()>[[try]]--><com.matburt.mobileorg2.Synchronizers.UbuntuOneSynchronizer: void signRequest(org.apache.http.HttpRequest)>[]--><com.matburt.mobileorg2.Synchronizers.UbuntuOneSynchronizer: boolean login()>[[try]]--><com.matburt.mobileorg2.Synchronizers.UbuntuOneSynchronizer: void ping_u1_url(java.lang.String)>[[try]]--><org.apache.http.params.HttpConnectionParams: void setSoTimeout(org.apache.http.params.HttpParams,int)>
+One road protect good!
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <org.apache.http.params.HttpConnectionParams: void setSoTimeout(org.apache.http.params.HttpParams,int)>has compatibility isssues！
+-----------------------------------------
+11 Packageshead roads:
+try
+Good road with try: <com.dropbox.client2.DropboxAPI$BasicUploadRequest: com.dropbox.client2.DropboxAPI$Entry upload()>[[try]]--><com.dropbox.client2.RESTUtility: org.apache.http.HttpResponse execute(com.dropbox.client2.session.Session,org.apache.http.client.methods.HttpUriRequest,int)>[]--><org.apache.http.params.HttpConnectionParams: void setSoTimeout(org.apache.http.params.HttpParams,int)>
+One road protect good!
+!!!this api will crash on sdk 19 20 21 22 
+Error road: <com.dropbox.client2.DropboxAPI: com.dropbox.client2.DropboxAPI$DropboxInputStream getFileStream(java.lang.String,java.lang.String)>[]--><com.dropbox.client2.RESTUtility: org.apache.http.HttpResponse execute(com.dropbox.client2.session.Session,org.apache.http.client.methods.HttpUriRequest)>[]--><com.dropbox.client2.RESTUtility: org.apache.http.HttpResponse execute(com.dropbox.client2.session.Session,org.apache.http.client.methods.HttpUriRequest,int)>[]--><org.apache.http.params.HttpConnectionParams: void setSoTimeout(org.apache.http.params.HttpParams,int)>
+#2.the call statck between class <com.dropbox.client2.DropboxAPI: com.dropbox.client2.DropboxAPI$DropboxInputStream getFileStream(java.lang.String,java.lang.String)> to <org.apache.http.params.HttpConnectionParams: void setSoTimeout(org.apache.http.params.HttpParams,int)>has compatibility isssues！
+-----------------------------------------
+try
+Good road with try: <com.matburt.mobileorg2.Settings.DirectoryBrowser$UbuntuOneDirectoryBrowser: void browseTo(java.lang.String)>[]--><com.matburt.mobileorg2.Synchronizers.UbuntuOneSynchronizer: java.util.ArrayList getDirectoryList(java.lang.String)>[[try]]--><com.matburt.mobileorg2.Synchronizers.UbuntuOneSynchronizer: void signRequest(org.apache.http.HttpRequest)>[]--><com.matburt.mobileorg2.Synchronizers.UbuntuOneSynchronizer: boolean login()>[[try]]--><com.matburt.mobileorg2.Synchronizers.UbuntuOneSynchronizer: void ping_u1_url(java.lang.String)>[[try]]--><org.apache.http.params.HttpConnectionParams: void setSoTimeout(org.apache.http.params.HttpParams,int)>
+One road protect good!
+try
+Good road with try: <com.matburt.mobileorg2.Synchronizers.UbuntuOneSynchronizer: void putRemoteFile(java.lang.String,java.lang.String)>[[try]]--><com.matburt.mobileorg2.Synchronizers.UbuntuOneSynchronizer: void signRequest(org.apache.http.HttpRequest)>[]--><com.matburt.mobileorg2.Synchronizers.UbuntuOneSynchronizer: boolean login()>[[try]]--><com.matburt.mobileorg2.Synchronizers.UbuntuOneSynchronizer: void ping_u1_url(java.lang.String)>[[try]]--><org.apache.http.params.HttpConnectionParams: void setSoTimeout(org.apache.http.params.HttpParams,int)>
+One road protect good!
+!!!this api will crash on sdk 19 20 21 22 
+Error road: <com.matburt.mobileorg2.Gui.Wizard.Wizards.DropboxDirectoryBrowser: void browseTo(int)>[]--><com.matburt.mobileorg2.Gui.Wizard.Wizards.DropboxDirectoryBrowser: void browseTo(java.lang.String)>[]--><com.dropbox.client2.DropboxAPI: com.dropbox.client2.DropboxAPI$Entry metadata(java.lang.String,int,java.lang.String,boolean,java.lang.String)>[]--><com.dropbox.client2.RESTUtility: java.lang.Object request(com.dropbox.client2.RESTUtility$RequestMethod,java.lang.String,java.lang.String,int,java.lang.String[],com.dropbox.client2.session.Session)>[]--><com.dropbox.client2.RESTUtility: com.dropbox.client2.DropboxAPI$RequestAndResponse streamRequest(com.dropbox.client2.RESTUtility$RequestMethod,java.lang.String,java.lang.String,int,java.lang.String[],com.dropbox.client2.session.Session)>[]--><com.dropbox.client2.RESTUtility: org.apache.http.HttpResponse execute(com.dropbox.client2.session.Session,org.apache.http.client.methods.HttpUriRequest)>[]--><com.dropbox.client2.RESTUtility: org.apache.http.HttpResponse execute(com.dropbox.client2.session.Session,org.apache.http.client.methods.HttpUriRequest,int)>[]--><org.apache.http.params.HttpConnectionParams: void setSoTimeout(org.apache.http.params.HttpParams,int)>
+#5.the call statck between class <com.matburt.mobileorg2.Gui.Wizard.Wizards.DropboxDirectoryBrowser: void browseTo(int)> to <org.apache.http.params.HttpConnectionParams: void setSoTimeout(org.apache.http.params.HttpParams,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 21 22 
+Error road: <com.matburt.mobileorg2.Synchronizers.UbuntuOneSynchronizer: void putUrl(java.lang.String,java.lang.String)>[]--><com.matburt.mobileorg2.Synchronizers.UbuntuOneSynchronizer: org.apache.http.HttpResponse executeRequest(org.apache.http.client.methods.HttpUriRequest)>[]--><org.apache.http.params.HttpConnectionParams: void setSoTimeout(org.apache.http.params.HttpParams,int)>
+#6.the call statck between class <com.matburt.mobileorg2.Synchronizers.UbuntuOneSynchronizer: void putUrl(java.lang.String,java.lang.String)> to <org.apache.http.params.HttpConnectionParams: void setSoTimeout(org.apache.http.params.HttpParams,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 21 22 
+Error road: <com.matburt.mobileorg2.Synchronizers.UbuntuOneSynchronizer: java.io.InputStream getUrl(java.lang.String)>[]--><com.matburt.mobileorg2.Synchronizers.UbuntuOneSynchronizer: org.apache.http.HttpResponse executeRequest(org.apache.http.client.methods.HttpUriRequest)>[]--><org.apache.http.params.HttpConnectionParams: void setSoTimeout(org.apache.http.params.HttpParams,int)>
+#7.the call statck between class <com.matburt.mobileorg2.Synchronizers.UbuntuOneSynchronizer: java.io.InputStream getUrl(java.lang.String)> to <org.apache.http.params.HttpConnectionParams: void setSoTimeout(org.apache.http.params.HttpParams,int)>has compatibility isssues！
+-----------------------------------------
+try
+Good road with try: <com.dropbox.client2.DropboxAPI$ChunkedUploadRequest: com.dropbox.client2.DropboxAPI$ChunkedUploadResponse upload()>[[try]]--><com.dropbox.client2.RESTUtility: org.apache.http.HttpResponse execute(com.dropbox.client2.session.Session,org.apache.http.client.methods.HttpUriRequest,int)>[]--><org.apache.http.params.HttpConnectionParams: void setSoTimeout(org.apache.http.params.HttpParams,int)>
+One road protect good!
+try
+Good road with try: <com.matburt.mobileorg2.Synchronizers.UbuntuOneSynchronizer: java.io.BufferedReader getRemoteFile(java.lang.String)>[[try]]--><com.matburt.mobileorg2.Synchronizers.UbuntuOneSynchronizer: void signRequest(org.apache.http.HttpRequest)>[]--><com.matburt.mobileorg2.Synchronizers.UbuntuOneSynchronizer: boolean login()>[[try]]--><com.matburt.mobileorg2.Synchronizers.UbuntuOneSynchronizer: void ping_u1_url(java.lang.String)>[[try]]--><org.apache.http.params.HttpConnectionParams: void setSoTimeout(org.apache.http.params.HttpParams,int)>
+One road protect good!
+try
+Good road with try: <com.matburt.mobileorg2.Gui.Wizard.Wizards.UbuntuOneDirectoryBrowser: void browseTo(int)>[]--><com.matburt.mobileorg2.Gui.Wizard.Wizards.UbuntuOneDirectoryBrowser: void browseTo(java.lang.String)>[]--><com.matburt.mobileorg2.Synchronizers.UbuntuOneSynchronizer: java.util.ArrayList getDirectoryList(java.lang.String)>[[try]]--><com.matburt.mobileorg2.Synchronizers.UbuntuOneSynchronizer: void signRequest(org.apache.http.HttpRequest)>[]--><com.matburt.mobileorg2.Synchronizers.UbuntuOneSynchronizer: boolean login()>[[try]]--><com.matburt.mobileorg2.Synchronizers.UbuntuOneSynchronizer: void ping_u1_url(java.lang.String)>[[try]]--><org.apache.http.params.HttpConnectionParams: void setSoTimeout(org.apache.http.params.HttpParams,int)>
+One road protect good!
+crashApis:9
+crashApisInMain:5
+containsStatic:false
+containsTry:true
+11call by main package
+-----------------------------------------
+#################################################
+N 10 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putLong(java.lang.String,long)> is checking!!!
+The life time of api is [21,31]
+6call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.matburt.mobileorg2.OrgNodeDetailActivity dummyMainMethod_com_matburt_mobileorg2_OrgNodeDetailActivity(android.content.Intent)>[]--><com.matburt.mobileorg2.OrgNodeDetailActivity: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: void putLong(java.lang.String,long)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: void putLong(java.lang.String,long)>has compatibility isssues！
+-----------------------------------------
+5 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <com.matburt.mobileorg2.OrgNodeDetailFragment$MainRecyclerViewAdapter$SimpleItemTouchHelperCallback: void onSwiped(android.support.v7.widget.RecyclerView$ViewHolder,int)>[]--><com.matburt.mobileorg2.OrgNodeDetailFragment: void createEditNodeFragment(int,int,int)>[]--><android.os.BaseBundle: void putLong(java.lang.String,long)>
+#1.the call statck between class <com.matburt.mobileorg2.OrgNodeDetailFragment$MainRecyclerViewAdapter$SimpleItemTouchHelperCallback: void onSwiped(android.support.v7.widget.RecyclerView$ViewHolder,int)> to <android.os.BaseBundle: void putLong(java.lang.String,long)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <com.matburt.mobileorg2.Gui.Outline.OutlineAdapter$2: void onClick(android.view.View)>[]--><android.os.BaseBundle: void putLong(java.lang.String,long)>
+#2.the call statck between class <com.matburt.mobileorg2.Gui.Outline.OutlineAdapter$2: void onClick(android.view.View)> to <android.os.BaseBundle: void putLong(java.lang.String,long)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <com.matburt.mobileorg2.OrgNodeDetailFragment$SecondaryRecyclerViewAdapter$4: void onClick(android.view.View)>[]--><com.matburt.mobileorg2.OrgNodeDetailFragment: void createEditNodeFragment(int,int,int)>[]--><android.os.BaseBundle: void putLong(java.lang.String,long)>
+#3.the call statck between class <com.matburt.mobileorg2.OrgNodeDetailFragment$SecondaryRecyclerViewAdapter$4: void onClick(android.view.View)> to <android.os.BaseBundle: void putLong(java.lang.String,long)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <com.matburt.mobileorg2.OrgNodeDetailFragment$SecondaryRecyclerViewAdapter$5: void onClick(android.view.View)>[]--><com.matburt.mobileorg2.OrgNodeDetailFragment: void createEditNodeFragment(int,int,int)>[]--><android.os.BaseBundle: void putLong(java.lang.String,long)>
+#4.the call statck between class <com.matburt.mobileorg2.OrgNodeDetailFragment$SecondaryRecyclerViewAdapter$5: void onClick(android.view.View)> to <android.os.BaseBundle: void putLong(java.lang.String,long)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <com.matburt.mobileorg2.OrgNodeDetailFragment$2: void onClick(android.view.View)>[]--><com.matburt.mobileorg2.OrgNodeDetailFragment: void createEditNodeFragment(int,int,int)>[]--><android.os.BaseBundle: void putLong(java.lang.String,long)>
+#5.the call statck between class <com.matburt.mobileorg2.OrgNodeDetailFragment$2: void onClick(android.view.View)> to <android.os.BaseBundle: void putLong(java.lang.String,long)>has compatibility isssues！
+-----------------------------------------
+crashApis:10
+crashApisInMain:6
+containsStatic:false
+containsTry:false
+6call by main package
+-----------------------------------------
+#################################################
+N 11 Potential Issue API: SDKCheck of <android.os.BaseBundle: boolean getBoolean(java.lang.String)> is checking!!!
+The life time of api is [22,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.dropbox.client2.android.AuthActivity dummyMainMethod_com_dropbox_client2_android_AuthActivity(android.content.Intent)>[]--><com.dropbox.client2.android.AuthActivity: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: boolean getBoolean(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:11
+crashApisInMain:7
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 12 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.lang.String getString(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+2call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.dropbox.client2.android.AuthActivity dummyMainMethod_com_dropbox_client2_android_AuthActivity(android.content.Intent)>[]--><com.dropbox.client2.android.AuthActivity: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.matburt.mobileorg2.OrgNodeListActivity dummyMainMethod_com_matburt_mobileorg2_OrgNodeListActivity(android.content.Intent)>[]--><com.matburt.mobileorg2.OrgNodeListActivity: void onNewIntent(android.content.Intent)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <com.matburt.mobileorg2.Plugin.PluginBundleManager: boolean isBundleValid(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#1.the call statck between class <com.matburt.mobileorg2.Plugin.PluginBundleManager: boolean isBundleValid(android.os.Bundle)> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:12
+crashApisInMain:8
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 13 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putInt(java.lang.String,int)> is checking!!!
+The life time of api is [21,31]
+4call roads:
+0 Mainhead roads:
+4 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <com.matburt.mobileorg2.OrgNodeDetailFragment$MainRecyclerViewAdapter$SimpleItemTouchHelperCallback: void onSwiped(android.support.v7.widget.RecyclerView$ViewHolder,int)>[]--><com.matburt.mobileorg2.OrgNodeDetailFragment: void createEditNodeFragment(int,int,int)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#1.the call statck between class <com.matburt.mobileorg2.OrgNodeDetailFragment$MainRecyclerViewAdapter$SimpleItemTouchHelperCallback: void onSwiped(android.support.v7.widget.RecyclerView$ViewHolder,int)> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <com.matburt.mobileorg2.OrgNodeDetailFragment$SecondaryRecyclerViewAdapter$4: void onClick(android.view.View)>[]--><com.matburt.mobileorg2.OrgNodeDetailFragment: void createEditNodeFragment(int,int,int)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#2.the call statck between class <com.matburt.mobileorg2.OrgNodeDetailFragment$SecondaryRecyclerViewAdapter$4: void onClick(android.view.View)> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <com.matburt.mobileorg2.OrgNodeDetailFragment$SecondaryRecyclerViewAdapter$5: void onClick(android.view.View)>[]--><com.matburt.mobileorg2.OrgNodeDetailFragment: void createEditNodeFragment(int,int,int)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#3.the call statck between class <com.matburt.mobileorg2.OrgNodeDetailFragment$SecondaryRecyclerViewAdapter$5: void onClick(android.view.View)> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <com.matburt.mobileorg2.OrgNodeDetailFragment$2: void onClick(android.view.View)>[]--><com.matburt.mobileorg2.OrgNodeDetailFragment: void createEditNodeFragment(int,int,int)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#4.the call statck between class <com.matburt.mobileorg2.OrgNodeDetailFragment$2: void onClick(android.view.View)> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:13
+containsStatic:false
+containsTry:false
+5call by main package
+-----------------------------------------
+#################################################
+N 14 Potential Issue API: SDKCheck of <android.net.ConnectivityManager: android.net.NetworkInfo getNetworkInfo(int)> is checking!!!
+The life time of api is [1,30]
+7call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.matburt.mobileorg2.Services.SyncService dummyMainMethod_com_matburt_mobileorg2_Services_SyncService(android.content.Intent)>[]--><com.matburt.mobileorg2.Services.SyncService: int onStartCommand(android.content.Intent,int,int)>[]--><com.matburt.mobileorg2.Services.SyncService: void runSynchronizer()>[]--><com.matburt.mobileorg2.Services.SyncService$1: void run()>[]--><com.matburt.mobileorg2.Synchronizers.SynchronizerManager: java.util.HashSet runSynchronizer(com.matburt.mobileorg2.OrgData.OrgFileParser)>[]--><com.matburt.mobileorg2.Synchronizers.DropboxSynchronizer: boolean isConnectable()>[]--><com.matburt.mobileorg2.util.OrgUtils: boolean isNetworkOnline(android.content.Context)>[]--><com.matburt.mobileorg2.util.OrgUtils: boolean isWifiOnline(android.content.Context)>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getNetworkInfo(int)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.ConnectivityManager: android.net.NetworkInfo getNetworkInfo(int)>has compatibility isssues！
+-----------------------------------------
+6 Packageshead roads:
+crashApis:14
+crashApisInMain:9
+containsStatic:false
+containsTry:true
+7call by main package
+-----------------------------------------
+#################################################
+N 15 Potential Issue API: SDKCheck of <android.os.BaseBundle: int getInt(java.lang.String,int)> is checking!!!
+The life time of api is [21,31]
+2call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.matburt.mobileorg2.EditNodeActivity dummyMainMethod_com_matburt_mobileorg2_EditNodeActivity(android.content.Intent)>[]--><dummyMainClass: com.matburt.mobileorg2.EditNodeFragment dummyMainMethod_com_matburt_mobileorg2_EditNodeFragment(android.content.Intent,android.app.Activity)>[]--><com.matburt.mobileorg2.EditNodeFragment: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String,int)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: int getInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <com.matburt.mobileorg2.Plugin.PluginBundleManager: boolean isBundleValid(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String,int)>
+#1.the call statck between class <com.matburt.mobileorg2.Plugin.PluginBundleManager: boolean isBundleValid(android.os.Bundle)> to <android.os.BaseBundle: int getInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:15
+crashApisInMain:10
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 16 Potential Issue API: SDKCheck of <org.apache.http.params.HttpConnectionParams: void setSocketBufferSize(org.apache.http.params.HttpParams,int)> is checking!!!
+The life time of api is [23,31]
+6call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.matburt.mobileorg2.Gui.Wizard.WizardActivity dummyMainMethod_com_matburt_mobileorg2_Gui_Wizard_WizardActivity(android.content.Intent)>[]--><com.matburt.mobileorg2.Gui.Wizard.WizardActivity: void onResume()>[]--><com.matburt.mobileorg2.Gui.Wizard.Wizards.DropboxWizard: void refresh()>[]--><com.matburt.mobileorg2.Gui.Wizard.Wizards.DropboxWizard: void handleDropboxResume()>[]--><com.dropbox.client2.DropboxAPI: com.dropbox.client2.DropboxAPI$Account accountInfo()>[]--><com.dropbox.client2.RESTUtility: java.lang.Object request(com.dropbox.client2.RESTUtility$RequestMethod,java.lang.String,java.lang.String,int,java.lang.String[],com.dropbox.client2.session.Session)>[]--><com.dropbox.client2.RESTUtility: com.dropbox.client2.DropboxAPI$RequestAndResponse streamRequest(com.dropbox.client2.RESTUtility$RequestMethod,java.lang.String,java.lang.String,int,java.lang.String[],com.dropbox.client2.session.Session)>[]--><com.dropbox.client2.RESTUtility: org.apache.http.HttpResponse execute(com.dropbox.client2.session.Session,org.apache.http.client.methods.HttpUriRequest)>[]--><com.dropbox.client2.RESTUtility: org.apache.http.HttpResponse execute(com.dropbox.client2.session.Session,org.apache.http.client.methods.HttpUriRequest,int)>[]--><com.dropbox.client2.RESTUtility: org.apache.http.client.HttpClient updatedHttpClient(com.dropbox.client2.session.Session)>[[try]]--><com.dropbox.client2.session.AbstractSession: org.apache.http.client.HttpClient getHttpClient()>[[try]]--><org.apache.http.params.HttpConnectionParams: void setSocketBufferSize(org.apache.http.params.HttpParams,int)>
+One road protect good!
+5 Packageshead roads:
+try
+Good road with try: <com.dropbox.client2.DropboxAPI$BasicUploadRequest: com.dropbox.client2.DropboxAPI$Entry upload()>[[try]]--><com.dropbox.client2.RESTUtility: org.apache.http.HttpResponse execute(com.dropbox.client2.session.Session,org.apache.http.client.methods.HttpUriRequest,int)>[]--><com.dropbox.client2.RESTUtility: org.apache.http.client.HttpClient updatedHttpClient(com.dropbox.client2.session.Session)>[[try]]--><com.dropbox.client2.session.AbstractSession: org.apache.http.client.HttpClient getHttpClient()>[[try]]--><org.apache.http.params.HttpConnectionParams: void setSocketBufferSize(org.apache.http.params.HttpParams,int)>
+One road protect good!
+try
+Good road with try: <com.dropbox.client2.DropboxAPI: com.dropbox.client2.DropboxAPI$DropboxInputStream getFileStream(java.lang.String,java.lang.String)>[]--><com.dropbox.client2.RESTUtility: org.apache.http.HttpResponse execute(com.dropbox.client2.session.Session,org.apache.http.client.methods.HttpUriRequest)>[]--><com.dropbox.client2.RESTUtility: org.apache.http.HttpResponse execute(com.dropbox.client2.session.Session,org.apache.http.client.methods.HttpUriRequest,int)>[]--><com.dropbox.client2.RESTUtility: org.apache.http.client.HttpClient updatedHttpClient(com.dropbox.client2.session.Session)>[[try]]--><com.dropbox.client2.session.AbstractSession: org.apache.http.client.HttpClient getHttpClient()>[[try]]--><org.apache.http.params.HttpConnectionParams: void setSocketBufferSize(org.apache.http.params.HttpParams,int)>
+One road protect good!
+try
+Good road with try: <com.matburt.mobileorg2.Gui.Wizard.Wizards.DropboxDirectoryBrowser: void browseTo(int)>[]--><com.matburt.mobileorg2.Gui.Wizard.Wizards.DropboxDirectoryBrowser: void browseTo(java.lang.String)>[]--><com.dropbox.client2.DropboxAPI: com.dropbox.client2.DropboxAPI$Entry metadata(java.lang.String,int,java.lang.String,boolean,java.lang.String)>[]--><com.dropbox.client2.RESTUtility: java.lang.Object request(com.dropbox.client2.RESTUtility$RequestMethod,java.lang.String,java.lang.String,int,java.lang.String[],com.dropbox.client2.session.Session)>[]--><com.dropbox.client2.RESTUtility: com.dropbox.client2.DropboxAPI$RequestAndResponse streamRequest(com.dropbox.client2.RESTUtility$RequestMethod,java.lang.String,java.lang.String,int,java.lang.String[],com.dropbox.client2.session.Session)>[]--><com.dropbox.client2.RESTUtility: org.apache.http.HttpResponse execute(com.dropbox.client2.session.Session,org.apache.http.client.methods.HttpUriRequest)>[]--><com.dropbox.client2.RESTUtility: org.apache.http.HttpResponse execute(com.dropbox.client2.session.Session,org.apache.http.client.methods.HttpUriRequest,int)>[]--><com.dropbox.client2.RESTUtility: org.apache.http.client.HttpClient updatedHttpClient(com.dropbox.client2.session.Session)>[[try]]--><com.dropbox.client2.session.AbstractSession: org.apache.http.client.HttpClient getHttpClient()>[[try]]--><org.apache.http.params.HttpConnectionParams: void setSocketBufferSize(org.apache.http.params.HttpParams,int)>
+One road protect good!
+try
+Good road with try: <com.dropbox.client2.DropboxAPI$ChunkedUploadRequest: com.dropbox.client2.DropboxAPI$ChunkedUploadResponse upload()>[[try]]--><com.dropbox.client2.RESTUtility: org.apache.http.HttpResponse execute(com.dropbox.client2.session.Session,org.apache.http.client.methods.HttpUriRequest,int)>[]--><com.dropbox.client2.RESTUtility: org.apache.http.client.HttpClient updatedHttpClient(com.dropbox.client2.session.Session)>[[try]]--><com.dropbox.client2.session.AbstractSession: org.apache.http.client.HttpClient getHttpClient()>[[try]]--><org.apache.http.params.HttpConnectionParams: void setSocketBufferSize(org.apache.http.params.HttpParams,int)>
+One road protect good!
+try
+Good road with try: <com.dropbox.client2.DropboxAPI: com.dropbox.client2.DropboxAPI$Entry commitChunkedUpload(java.lang.String,java.lang.String,boolean,java.lang.String)>[]--><com.dropbox.client2.RESTUtility: org.apache.http.HttpResponse execute(com.dropbox.client2.session.Session,org.apache.http.client.methods.HttpUriRequest)>[]--><com.dropbox.client2.RESTUtility: org.apache.http.HttpResponse execute(com.dropbox.client2.session.Session,org.apache.http.client.methods.HttpUriRequest,int)>[]--><com.dropbox.client2.RESTUtility: org.apache.http.client.HttpClient updatedHttpClient(com.dropbox.client2.session.Session)>[[try]]--><com.dropbox.client2.session.AbstractSession: org.apache.http.client.HttpClient getHttpClient()>[[try]]--><org.apache.http.params.HttpConnectionParams: void setSocketBufferSize(org.apache.http.params.HttpParams,int)>
+One road protect good!
+containsStatic:false
+containsTry:true
+6call by main package
+-----------------------------------------
+#################################################
+N 17 Potential Issue API: SDKCheck of <org.apache.http.params.HttpParams: boolean removeParameter(java.lang.String)> is checking!!!
+The life time of api is [23,31]
+6call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.matburt.mobileorg2.Gui.Wizard.WizardActivity dummyMainMethod_com_matburt_mobileorg2_Gui_Wizard_WizardActivity(android.content.Intent)>[]--><com.matburt.mobileorg2.Gui.Wizard.WizardActivity: void onResume()>[]--><com.matburt.mobileorg2.Gui.Wizard.Wizards.DropboxWizard: void refresh()>[]--><com.matburt.mobileorg2.Gui.Wizard.Wizards.DropboxWizard: void handleDropboxResume()>[]--><com.dropbox.client2.DropboxAPI: com.dropbox.client2.DropboxAPI$Account accountInfo()>[]--><com.dropbox.client2.RESTUtility: java.lang.Object request(com.dropbox.client2.RESTUtility$RequestMethod,java.lang.String,java.lang.String,int,java.lang.String[],com.dropbox.client2.session.Session)>[]--><com.dropbox.client2.RESTUtility: com.dropbox.client2.DropboxAPI$RequestAndResponse streamRequest(com.dropbox.client2.RESTUtility$RequestMethod,java.lang.String,java.lang.String,int,java.lang.String[],com.dropbox.client2.session.Session)>[]--><com.dropbox.client2.RESTUtility: org.apache.http.HttpResponse execute(com.dropbox.client2.session.Session,org.apache.http.client.methods.HttpUriRequest)>[]--><com.dropbox.client2.RESTUtility: org.apache.http.HttpResponse execute(com.dropbox.client2.session.Session,org.apache.http.client.methods.HttpUriRequest,int)>[[try]]--><com.dropbox.client2.RESTUtility: void updateClientProxy(org.apache.http.client.HttpClient,com.dropbox.client2.session.Session)>[]--><org.apache.http.params.HttpParams: boolean removeParameter(java.lang.String)>
+One road protect good!
+5 Packageshead roads:
+try
+Good road with try: <com.dropbox.client2.DropboxAPI$BasicUploadRequest: com.dropbox.client2.DropboxAPI$Entry upload()>[[try]]--><com.dropbox.client2.RESTUtility: org.apache.http.HttpResponse execute(com.dropbox.client2.session.Session,org.apache.http.client.methods.HttpUriRequest,int)>[[try]]--><com.dropbox.client2.RESTUtility: void updateClientProxy(org.apache.http.client.HttpClient,com.dropbox.client2.session.Session)>[]--><org.apache.http.params.HttpParams: boolean removeParameter(java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.dropbox.client2.DropboxAPI: com.dropbox.client2.DropboxAPI$DropboxInputStream getFileStream(java.lang.String,java.lang.String)>[]--><com.dropbox.client2.RESTUtility: org.apache.http.HttpResponse execute(com.dropbox.client2.session.Session,org.apache.http.client.methods.HttpUriRequest)>[]--><com.dropbox.client2.RESTUtility: org.apache.http.HttpResponse execute(com.dropbox.client2.session.Session,org.apache.http.client.methods.HttpUriRequest,int)>[[try]]--><com.dropbox.client2.RESTUtility: void updateClientProxy(org.apache.http.client.HttpClient,com.dropbox.client2.session.Session)>[]--><org.apache.http.params.HttpParams: boolean removeParameter(java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.matburt.mobileorg2.Gui.Wizard.Wizards.DropboxDirectoryBrowser: void browseTo(int)>[]--><com.matburt.mobileorg2.Gui.Wizard.Wizards.DropboxDirectoryBrowser: void browseTo(java.lang.String)>[]--><com.dropbox.client2.DropboxAPI: com.dropbox.client2.DropboxAPI$Entry metadata(java.lang.String,int,java.lang.String,boolean,java.lang.String)>[]--><com.dropbox.client2.RESTUtility: java.lang.Object request(com.dropbox.client2.RESTUtility$RequestMethod,java.lang.String,java.lang.String,int,java.lang.String[],com.dropbox.client2.session.Session)>[]--><com.dropbox.client2.RESTUtility: com.dropbox.client2.DropboxAPI$RequestAndResponse streamRequest(com.dropbox.client2.RESTUtility$RequestMethod,java.lang.String,java.lang.String,int,java.lang.String[],com.dropbox.client2.session.Session)>[]--><com.dropbox.client2.RESTUtility: org.apache.http.HttpResponse execute(com.dropbox.client2.session.Session,org.apache.http.client.methods.HttpUriRequest)>[]--><com.dropbox.client2.RESTUtility: org.apache.http.HttpResponse execute(com.dropbox.client2.session.Session,org.apache.http.client.methods.HttpUriRequest,int)>[[try]]--><com.dropbox.client2.RESTUtility: void updateClientProxy(org.apache.http.client.HttpClient,com.dropbox.client2.session.Session)>[]--><org.apache.http.params.HttpParams: boolean removeParameter(java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.dropbox.client2.DropboxAPI$ChunkedUploadRequest: com.dropbox.client2.DropboxAPI$ChunkedUploadResponse upload()>[[try]]--><com.dropbox.client2.RESTUtility: org.apache.http.HttpResponse execute(com.dropbox.client2.session.Session,org.apache.http.client.methods.HttpUriRequest,int)>[[try]]--><com.dropbox.client2.RESTUtility: void updateClientProxy(org.apache.http.client.HttpClient,com.dropbox.client2.session.Session)>[]--><org.apache.http.params.HttpParams: boolean removeParameter(java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.dropbox.client2.DropboxAPI: com.dropbox.client2.DropboxAPI$Entry commitChunkedUpload(java.lang.String,java.lang.String,boolean,java.lang.String)>[]--><com.dropbox.client2.RESTUtility: org.apache.http.HttpResponse execute(com.dropbox.client2.session.Session,org.apache.http.client.methods.HttpUriRequest)>[]--><com.dropbox.client2.RESTUtility: org.apache.http.HttpResponse execute(com.dropbox.client2.session.Session,org.apache.http.client.methods.HttpUriRequest,int)>[[try]]--><com.dropbox.client2.RESTUtility: void updateClientProxy(org.apache.http.client.HttpClient,com.dropbox.client2.session.Session)>[]--><org.apache.http.params.HttpParams: boolean removeParameter(java.lang.String)>
+One road protect good!
+containsStatic:false
+containsTry:true
+6call by main package
+-----------------------------------------
+#################################################
+N 18 Potential Issue API: SDKCheck of <org.apache.http.params.HttpParams: org.apache.http.params.HttpParams setParameter(java.lang.String,java.lang.Object)> is checking!!!
+The life time of api is [23,31]
+6call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.matburt.mobileorg2.Gui.Wizard.WizardActivity dummyMainMethod_com_matburt_mobileorg2_Gui_Wizard_WizardActivity(android.content.Intent)>[]--><com.matburt.mobileorg2.Gui.Wizard.WizardActivity: void onResume()>[]--><com.matburt.mobileorg2.Gui.Wizard.Wizards.DropboxWizard: void refresh()>[]--><com.matburt.mobileorg2.Gui.Wizard.Wizards.DropboxWizard: void handleDropboxResume()>[]--><com.dropbox.client2.DropboxAPI: com.dropbox.client2.DropboxAPI$Account accountInfo()>[]--><com.dropbox.client2.RESTUtility: java.lang.Object request(com.dropbox.client2.RESTUtility$RequestMethod,java.lang.String,java.lang.String,int,java.lang.String[],com.dropbox.client2.session.Session)>[]--><com.dropbox.client2.RESTUtility: com.dropbox.client2.DropboxAPI$RequestAndResponse streamRequest(com.dropbox.client2.RESTUtility$RequestMethod,java.lang.String,java.lang.String,int,java.lang.String[],com.dropbox.client2.session.Session)>[]--><com.dropbox.client2.RESTUtility: org.apache.http.HttpResponse execute(com.dropbox.client2.session.Session,org.apache.http.client.methods.HttpUriRequest)>[]--><com.dropbox.client2.RESTUtility: org.apache.http.HttpResponse execute(com.dropbox.client2.session.Session,org.apache.http.client.methods.HttpUriRequest,int)>[[try]]--><com.dropbox.client2.RESTUtility: void updateClientProxy(org.apache.http.client.HttpClient,com.dropbox.client2.session.Session)>[]--><org.apache.http.params.HttpParams: org.apache.http.params.HttpParams setParameter(java.lang.String,java.lang.Object)>
+One road protect good!
+5 Packageshead roads:
+try
+Good road with try: <com.dropbox.client2.DropboxAPI$BasicUploadRequest: com.dropbox.client2.DropboxAPI$Entry upload()>[[try]]--><com.dropbox.client2.RESTUtility: org.apache.http.HttpResponse execute(com.dropbox.client2.session.Session,org.apache.http.client.methods.HttpUriRequest,int)>[[try]]--><com.dropbox.client2.RESTUtility: void updateClientProxy(org.apache.http.client.HttpClient,com.dropbox.client2.session.Session)>[]--><org.apache.http.params.HttpParams: org.apache.http.params.HttpParams setParameter(java.lang.String,java.lang.Object)>
+One road protect good!
+try
+Good road with try: <com.dropbox.client2.DropboxAPI: com.dropbox.client2.DropboxAPI$DropboxInputStream getFileStream(java.lang.String,java.lang.String)>[]--><com.dropbox.client2.RESTUtility: org.apache.http.HttpResponse execute(com.dropbox.client2.session.Session,org.apache.http.client.methods.HttpUriRequest)>[]--><com.dropbox.client2.RESTUtility: org.apache.http.HttpResponse execute(com.dropbox.client2.session.Session,org.apache.http.client.methods.HttpUriRequest,int)>[[try]]--><com.dropbox.client2.RESTUtility: void updateClientProxy(org.apache.http.client.HttpClient,com.dropbox.client2.session.Session)>[]--><org.apache.http.params.HttpParams: org.apache.http.params.HttpParams setParameter(java.lang.String,java.lang.Object)>
+One road protect good!
+try
+Good road with try: <com.matburt.mobileorg2.Gui.Wizard.Wizards.DropboxDirectoryBrowser: void browseTo(int)>[]--><com.matburt.mobileorg2.Gui.Wizard.Wizards.DropboxDirectoryBrowser: void browseTo(java.lang.String)>[]--><com.dropbox.client2.DropboxAPI: com.dropbox.client2.DropboxAPI$Entry metadata(java.lang.String,int,java.lang.String,boolean,java.lang.String)>[]--><com.dropbox.client2.RESTUtility: java.lang.Object request(com.dropbox.client2.RESTUtility$RequestMethod,java.lang.String,java.lang.String,int,java.lang.String[],com.dropbox.client2.session.Session)>[]--><com.dropbox.client2.RESTUtility: com.dropbox.client2.DropboxAPI$RequestAndResponse streamRequest(com.dropbox.client2.RESTUtility$RequestMethod,java.lang.String,java.lang.String,int,java.lang.String[],com.dropbox.client2.session.Session)>[]--><com.dropbox.client2.RESTUtility: org.apache.http.HttpResponse execute(com.dropbox.client2.session.Session,org.apache.http.client.methods.HttpUriRequest)>[]--><com.dropbox.client2.RESTUtility: org.apache.http.HttpResponse execute(com.dropbox.client2.session.Session,org.apache.http.client.methods.HttpUriRequest,int)>[[try]]--><com.dropbox.client2.RESTUtility: void updateClientProxy(org.apache.http.client.HttpClient,com.dropbox.client2.session.Session)>[]--><org.apache.http.params.HttpParams: org.apache.http.params.HttpParams setParameter(java.lang.String,java.lang.Object)>
+One road protect good!
+try
+Good road with try: <com.dropbox.client2.DropboxAPI$ChunkedUploadRequest: com.dropbox.client2.DropboxAPI$ChunkedUploadResponse upload()>[[try]]--><com.dropbox.client2.RESTUtility: org.apache.http.HttpResponse execute(com.dropbox.client2.session.Session,org.apache.http.client.methods.HttpUriRequest,int)>[[try]]--><com.dropbox.client2.RESTUtility: void updateClientProxy(org.apache.http.client.HttpClient,com.dropbox.client2.session.Session)>[]--><org.apache.http.params.HttpParams: org.apache.http.params.HttpParams setParameter(java.lang.String,java.lang.Object)>
+One road protect good!
+try
+Good road with try: <com.dropbox.client2.DropboxAPI: com.dropbox.client2.DropboxAPI$Entry commitChunkedUpload(java.lang.String,java.lang.String,boolean,java.lang.String)>[]--><com.dropbox.client2.RESTUtility: org.apache.http.HttpResponse execute(com.dropbox.client2.session.Session,org.apache.http.client.methods.HttpUriRequest)>[]--><com.dropbox.client2.RESTUtility: org.apache.http.HttpResponse execute(com.dropbox.client2.session.Session,org.apache.http.client.methods.HttpUriRequest,int)>[[try]]--><com.dropbox.client2.RESTUtility: void updateClientProxy(org.apache.http.client.HttpClient,com.dropbox.client2.session.Session)>[]--><org.apache.http.params.HttpParams: org.apache.http.params.HttpParams setParameter(java.lang.String,java.lang.Object)>
+One road protect good!
+containsStatic:false
+containsTry:true
+6call by main package
+-----------------------------------------
+#################################################
+N 19 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.util.Set keySet()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <com.matburt.mobileorg2.Plugin.PluginBundleManager: boolean isBundleValid(android.os.Bundle)>[]--><android.os.BaseBundle: java.util.Set keySet()>
+#1.the call statck between class <com.matburt.mobileorg2.Plugin.PluginBundleManager: boolean isBundleValid(android.os.Bundle)> to <android.os.BaseBundle: java.util.Set keySet()>has compatibility isssues！
+-----------------------------------------
+crashApis:16
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+crashApis numbers:16
+crashApis numbers in main road:10
+On Android Version 16 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 17 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 18 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 19 this app may have error api use(at least): 14 and error api roads: 31
+On Android Version 20 this app may have error api use(at least): 14 and error api roads: 31
+On Android Version 21 this app may have error api use(at least): 4 and error api roads: 9
+On Android Version 22 this app may have error api use(at least): 2 and error api roads: 7
+On Android Version 23 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 24 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 25 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 31 this app may have error api use(at least): 2 and error api roads: 2

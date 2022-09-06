@@ -1,0 +1,321 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/Tinfoil_for_Facebook.apk
+Entry Points[com.danvelazco.fbwrapper.FbWrapper, com.danvelazco.fbwrapper.preferences.FacebookPreferences]
+FllowDroidcallgraph size:98
+Soot started on Mon Jul 11 13:18:13 CST 2022
+StaticCheck:<com.danvelazco.fbwrapper.util.WebViewProxyUtil: boolean setProxy(android.content.Context,android.webkit.WebView,java.lang.String,int)>$yysi1 > 15
+Soot finished on Mon Jul 11 13:18:18 CST 2022
+Soot has run for 0 min. 4 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 14
+Declared Target Sdk version is: 22
+Declared Max Sdk version is: -1
+Collected 306 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.webkit.WebChromeClient.FileChooserParams: android.net.Uri[] parseResult(int,android.content.Intent)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.danvelazco.fbwrapper.activity.BaseFacebookWebViewActivity: void onActivityResult(int,int,android.content.Intent)>[]--><android.webkit.WebChromeClient.FileChooserParams: android.net.Uri[] parseResult(int,android.content.Intent)>
+#1.the call statck between class <com.danvelazco.fbwrapper.activity.BaseFacebookWebViewActivity: void onActivityResult(int,int,android.content.Intent)> to <android.webkit.WebChromeClient.FileChooserParams: android.net.Uri[] parseResult(int,android.content.Intent)>has compatibility isssues！
+-----------------------------------------
+crashApis:1
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putLong(java.lang.String,long)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.danvelazco.fbwrapper.FbWrapper dummyMainMethod_com_danvelazco_fbwrapper_FbWrapper(android.content.Intent)>[]--><com.danvelazco.fbwrapper.activity.BaseFacebookWebViewActivity: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putLong(java.lang.String,long)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: void putLong(java.lang.String,long)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:2
+crashApisInMain:1
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.provider.MediaStore.Video.Thumbnails: android.graphics.Bitmap getThumbnail(android.content.ContentResolver,long,int,android.graphics.BitmapFactory.Options)> is checking!!!
+The life time of api is [5,29]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 30 31 
+Error road: <com.squareup.picasso.MediaStoreRequestHandler: com.squareup.picasso.RequestHandler$Result load(com.squareup.picasso.Request,int)>[]--><android.provider.MediaStore.Video.Thumbnails: android.graphics.Bitmap getThumbnail(android.content.ContentResolver,long,int,android.graphics.BitmapFactory.Options)>
+#1.the call statck between class <com.squareup.picasso.MediaStoreRequestHandler: com.squareup.picasso.RequestHandler$Result load(com.squareup.picasso.Request,int)> to <android.provider.MediaStore.Video.Thumbnails: android.graphics.Bitmap getThumbnail(android.content.ContentResolver,long,int,android.graphics.BitmapFactory.Options)>has compatibility isssues！
+-----------------------------------------
+crashApis:3
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.util.ArrayMap: java.util.Set keySet()> is checking!!!
+The life time of api is [19,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+###Multi invoking in one method, need manual check!!!--><com.danvelazco.fbwrapper.util.WebViewProxyUtil: boolean setProxy(android.content.Context,android.webkit.WebView,java.lang.String,int)>[[$i1 > 15], [$i1 > 18]]--><com.danvelazco.fbwrapper.util.WebViewProxyUtil: boolean setKitKatWebViewProxy(android.content.Context,java.lang.String,int)>[[try]]
+###Multi invoking in one method, need manual check!!!--><com.danvelazco.fbwrapper.util.WebViewProxyUtil: boolean setProxy(android.content.Context,android.webkit.WebView,java.lang.String,int)>[[$i1 > 15]][[$i1 > 18]]--><com.danvelazco.fbwrapper.util.WebViewProxyUtil: boolean setKitKatWebViewProxy(android.content.Context,java.lang.String,int)>[[try]]
+$i1 > 15
+$i1 > 18
+try
+Good road with try: <com.danvelazco.fbwrapper.FbWrapper: void onWebViewInit(android.os.Bundle)>[]--><com.danvelazco.fbwrapper.FbWrapper: void loadPreferences()>[]--><com.danvelazco.fbwrapper.activity.BaseFacebookWebViewActivity: void setProxy(java.lang.String,int)>[]--><com.danvelazco.fbwrapper.util.WebViewProxyUtil: boolean setProxy(android.content.Context,android.webkit.WebView,java.lang.String,int)>[[$i1 > 15], [$i1 > 18]]--><com.danvelazco.fbwrapper.util.WebViewProxyUtil: boolean setKitKatWebViewProxy(android.content.Context,java.lang.String,int)>[[try]]--><android.util.ArrayMap: java.util.Set keySet()>
+One road protect good!
+###Multi invoking in one method, need manual check!!!--><com.danvelazco.fbwrapper.util.WebViewProxyUtil: boolean setProxy(android.content.Context,android.webkit.WebView,java.lang.String,int)>[[$i1 > 15], [$i1 > 18]]--><com.danvelazco.fbwrapper.util.WebViewProxyUtil: boolean setKitKatWebViewProxy(android.content.Context,java.lang.String,int)>[[try]]
+###Multi invoking in one method, need manual check!!!--><com.danvelazco.fbwrapper.util.WebViewProxyUtil: boolean setProxy(android.content.Context,android.webkit.WebView,java.lang.String,int)>[[$i1 > 15]][[$i1 > 18]]--><com.danvelazco.fbwrapper.util.WebViewProxyUtil: boolean setKitKatWebViewProxy(android.content.Context,java.lang.String,int)>[[try]]
+$i1 > 15
+$i1 > 18
+try
+Good road with try: <com.danvelazco.fbwrapper.FbWrapper: void onResumeActivity()>[]--><com.danvelazco.fbwrapper.FbWrapper: void loadPreferences()>[]--><com.danvelazco.fbwrapper.activity.BaseFacebookWebViewActivity: void setProxy(java.lang.String,int)>[]--><com.danvelazco.fbwrapper.util.WebViewProxyUtil: boolean setProxy(android.content.Context,android.webkit.WebView,java.lang.String,int)>[[$i1 > 15], [$i1 > 18]]--><com.danvelazco.fbwrapper.util.WebViewProxyUtil: boolean setKitKatWebViewProxy(android.content.Context,java.lang.String,int)>[[try]]--><android.util.ArrayMap: java.util.Set keySet()>
+One road protect good!
+containsStatic:false
+containsTry:true
+3call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.net.NetworkInfo: int getType()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <com.squareup.picasso.Dispatcher$DispatcherHandler: void handleMessage(android.os.Message)>[]--><com.squareup.picasso.Dispatcher: void performNetworkStateChange(android.net.NetworkInfo)>[]--><com.squareup.picasso.PicassoExecutorService: void adjustThreadCount(android.net.NetworkInfo)>[]--><android.net.NetworkInfo: int getType()>
+#1.the call statck between class <com.squareup.picasso.Dispatcher$DispatcherHandler: void handleMessage(android.os.Message)> to <android.net.NetworkInfo: int getType()>has compatibility isssues！
+-----------------------------------------
+crashApis:4
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 5 Potential Issue API: SDKCheck of <android.webkit.WebChromeClient.FileChooserParams: android.content.Intent createIntent()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+try
+Good road with try: <com.danvelazco.fbwrapper.activity.BaseFacebookWebViewActivity: boolean openFileChooser(android.webkit.ValueCallback,android.webkit.WebChromeClient$FileChooserParams)>[[try]]--><android.webkit.WebChromeClient.FileChooserParams: android.content.Intent createIntent()>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 6 Potential Issue API: SDKCheck of <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()> is checking!!!
+The life time of api is [1,30]
+4call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.danvelazco.fbwrapper.FbWrapper dummyMainMethod_com_danvelazco_fbwrapper_FbWrapper(android.content.Intent)>[]--><com.danvelazco.fbwrapper.activity.BaseFacebookWebViewActivity: void onResume()>[]--><com.danvelazco.fbwrapper.activity.BaseFacebookWebViewActivity: void updateCacheMode()>[]--><com.danvelazco.fbwrapper.activity.BaseFacebookWebViewActivity: boolean checkNetworkConnection()>[[try]]--><android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>
+One road protect good!
+3 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <com.squareup.picasso.Dispatcher$DispatcherHandler: void handleMessage(android.os.Message)>[]--><com.squareup.picasso.Dispatcher: void performRetry(com.squareup.picasso.BitmapHunter)>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>
+#1.the call statck between class <com.squareup.picasso.Dispatcher$DispatcherHandler: void handleMessage(android.os.Message)> to <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>has compatibility isssues！
+-----------------------------------------
+try
+Good road with try: <com.danvelazco.fbwrapper.activity.BaseFacebookWebViewActivity: void access$000(com.danvelazco.fbwrapper.activity.BaseFacebookWebViewActivity)>[]--><com.danvelazco.fbwrapper.activity.BaseFacebookWebViewActivity: void updateCacheMode()>[]--><com.danvelazco.fbwrapper.activity.BaseFacebookWebViewActivity: boolean checkNetworkConnection()>[[try]]--><android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>
+One road protect good!
+!!!this api will crash on sdk 31 
+Error road: <com.squareup.picasso.Dispatcher$NetworkBroadcastReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>
+#3.the call statck between class <com.squareup.picasso.Dispatcher$NetworkBroadcastReceiver: void onReceive(android.content.Context,android.content.Intent)> to <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>has compatibility isssues！
+-----------------------------------------
+crashApis:5
+containsStatic:false
+containsTry:true
+4call by main package
+-----------------------------------------
+#################################################
+N 7 Potential Issue API: SDKCheck of <android.net.NetworkInfo: boolean isConnected()> is checking!!!
+The life time of api is [1,30]
+4call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.danvelazco.fbwrapper.FbWrapper dummyMainMethod_com_danvelazco_fbwrapper_FbWrapper(android.content.Intent)>[]--><com.danvelazco.fbwrapper.activity.BaseFacebookWebViewActivity: void onResume()>[]--><com.danvelazco.fbwrapper.activity.BaseFacebookWebViewActivity: void updateCacheMode()>[]--><com.danvelazco.fbwrapper.activity.BaseFacebookWebViewActivity: boolean checkNetworkConnection()>[[try]]--><android.net.NetworkInfo: boolean isConnected()>
+One road protect good!
+3 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <com.squareup.picasso.NetworkRequestHandler: boolean shouldRetry(boolean,android.net.NetworkInfo)>[]--><android.net.NetworkInfo: boolean isConnected()>
+#1.the call statck between class <com.squareup.picasso.NetworkRequestHandler: boolean shouldRetry(boolean,android.net.NetworkInfo)> to <android.net.NetworkInfo: boolean isConnected()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <com.squareup.picasso.Dispatcher$DispatcherHandler: void handleMessage(android.os.Message)>[]--><com.squareup.picasso.Dispatcher: void performNetworkStateChange(android.net.NetworkInfo)>[]--><android.net.NetworkInfo: boolean isConnected()>
+!!!this api will crash on sdk 31 
+Error road: <com.squareup.picasso.Dispatcher$DispatcherHandler: void handleMessage(android.os.Message)>[]--><com.squareup.picasso.Dispatcher: void performRetry(com.squareup.picasso.BitmapHunter)>[]--><android.net.NetworkInfo: boolean isConnected()>
+#2.the call statck between class <com.squareup.picasso.Dispatcher$DispatcherHandler: void handleMessage(android.os.Message)> to <android.net.NetworkInfo: boolean isConnected()>has compatibility isssues！
+-----------------------------------------
+try
+Good road with try: <com.danvelazco.fbwrapper.activity.BaseFacebookWebViewActivity: void access$000(com.danvelazco.fbwrapper.activity.BaseFacebookWebViewActivity)>[]--><com.danvelazco.fbwrapper.activity.BaseFacebookWebViewActivity: void updateCacheMode()>[]--><com.danvelazco.fbwrapper.activity.BaseFacebookWebViewActivity: boolean checkNetworkConnection()>[[try]]--><android.net.NetworkInfo: boolean isConnected()>
+One road protect good!
+crashApis:6
+containsStatic:false
+containsTry:true
+4call by main package
+-----------------------------------------
+#################################################
+N 8 Potential Issue API: SDKCheck of <android.webkit.CookieSyncManager: void startSync()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.danvelazco.fbwrapper.FbWrapper dummyMainMethod_com_danvelazco_fbwrapper_FbWrapper(android.content.Intent)>[]--><com.danvelazco.fbwrapper.activity.BaseFacebookWebViewActivity: void onResume()>[]--><android.webkit.CookieSyncManager: void startSync()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.webkit.CookieSyncManager: void startSync()>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:7
+crashApisInMain:2
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 9 Potential Issue API: SDKCheck of <android.os.BaseBundle: long getLong(java.lang.String,long)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.danvelazco.fbwrapper.FbWrapper: void onWebViewInit(android.os.Bundle)>[]--><android.os.BaseBundle: long getLong(java.lang.String,long)>
+#1.the call statck between class <com.danvelazco.fbwrapper.FbWrapper: void onWebViewInit(android.os.Bundle)> to <android.os.BaseBundle: long getLong(java.lang.String,long)>has compatibility isssues！
+-----------------------------------------
+crashApis:8
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 10 Potential Issue API: SDKCheck of <android.webkit.CookieSyncManager: void stopSync()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.danvelazco.fbwrapper.FbWrapper dummyMainMethod_com_danvelazco_fbwrapper_FbWrapper(android.content.Intent)>[]--><com.danvelazco.fbwrapper.activity.BaseFacebookWebViewActivity: void onPause()>[]--><android.webkit.CookieSyncManager: void stopSync()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.webkit.CookieSyncManager: void stopSync()>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:9
+crashApisInMain:3
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 11 Potential Issue API: SDKCheck of <android.provider.MediaStore.Images.Thumbnails: android.graphics.Bitmap getThumbnail(android.content.ContentResolver,long,int,android.graphics.BitmapFactory.Options)> is checking!!!
+The life time of api is [5,29]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 30 31 
+Error road: <com.squareup.picasso.MediaStoreRequestHandler: com.squareup.picasso.RequestHandler$Result load(com.squareup.picasso.Request,int)>[]--><android.provider.MediaStore.Images.Thumbnails: android.graphics.Bitmap getThumbnail(android.content.ContentResolver,long,int,android.graphics.BitmapFactory.Options)>
+#1.the call statck between class <com.squareup.picasso.MediaStoreRequestHandler: com.squareup.picasso.RequestHandler$Result load(com.squareup.picasso.Request,int)> to <android.provider.MediaStore.Images.Thumbnails: android.graphics.Bitmap getThumbnail(android.content.ContentResolver,long,int,android.graphics.BitmapFactory.Options)>has compatibility isssues！
+-----------------------------------------
+crashApis:10
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 12 Potential Issue API: SDKCheck of <android.widget.FrameLayout: void setVisibility(int)> is checking!!!
+The life time of api is [21,22]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.danvelazco.fbwrapper.webview.FacebookWebChromeClient: void onShowCustomView(android.view.View,android.webkit.WebChromeClient$CustomViewCallback)>[]--><android.widget.FrameLayout: void setVisibility(int)>
+!!!this api will crash on sdk 23 24 25 26 27 28 29 30 31 
+Error road: <com.danvelazco.fbwrapper.webview.FacebookWebChromeClient: void onShowCustomView(android.view.View,android.webkit.WebChromeClient$CustomViewCallback)>[]--><android.widget.FrameLayout: void setVisibility(int)>
+#1.the call statck between class <com.danvelazco.fbwrapper.webview.FacebookWebChromeClient: void onShowCustomView(android.view.View,android.webkit.WebChromeClient$CustomViewCallback)> to <android.widget.FrameLayout: void setVisibility(int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.danvelazco.fbwrapper.webview.FacebookWebView: boolean onKeyDown(int,android.view.KeyEvent)>[]--><com.danvelazco.fbwrapper.webview.FacebookWebChromeClient: void onHideCustomView()>[]--><android.widget.FrameLayout: void setVisibility(int)>
+!!!this api will crash on sdk 23 24 25 26 27 28 29 30 31 
+Error road: <com.danvelazco.fbwrapper.webview.FacebookWebView: boolean onKeyDown(int,android.view.KeyEvent)>[]--><com.danvelazco.fbwrapper.webview.FacebookWebChromeClient: void onHideCustomView()>[]--><android.widget.FrameLayout: void setVisibility(int)>
+#2.the call statck between class <com.danvelazco.fbwrapper.webview.FacebookWebView: boolean onKeyDown(int,android.view.KeyEvent)> to <android.widget.FrameLayout: void setVisibility(int)>has compatibility isssues！
+-----------------------------------------
+crashApis:11
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 13 Potential Issue API: SDKCheck of <android.net.NetworkInfo: boolean isConnectedOrConnecting()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <com.squareup.picasso.Dispatcher$DispatcherHandler: void handleMessage(android.os.Message)>[]--><com.squareup.picasso.Dispatcher: void performNetworkStateChange(android.net.NetworkInfo)>[]--><com.squareup.picasso.PicassoExecutorService: void adjustThreadCount(android.net.NetworkInfo)>[]--><android.net.NetworkInfo: boolean isConnectedOrConnecting()>
+#1.the call statck between class <com.squareup.picasso.Dispatcher$DispatcherHandler: void handleMessage(android.os.Message)> to <android.net.NetworkInfo: boolean isConnectedOrConnecting()>has compatibility isssues！
+-----------------------------------------
+crashApis:12
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 14 Potential Issue API: SDKCheck of <android.util.ArrayMap: java.util.Collection values()> is checking!!!
+The life time of api is [19,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+###Multi invoking in one method, need manual check!!!--><com.danvelazco.fbwrapper.util.WebViewProxyUtil: boolean setProxy(android.content.Context,android.webkit.WebView,java.lang.String,int)>[[$i1 > 15], [$i1 > 18]]--><com.danvelazco.fbwrapper.util.WebViewProxyUtil: boolean setKitKatWebViewProxy(android.content.Context,java.lang.String,int)>[[try]]
+###Multi invoking in one method, need manual check!!!--><com.danvelazco.fbwrapper.util.WebViewProxyUtil: boolean setProxy(android.content.Context,android.webkit.WebView,java.lang.String,int)>[[$i1 > 15]][[$i1 > 18]]--><com.danvelazco.fbwrapper.util.WebViewProxyUtil: boolean setKitKatWebViewProxy(android.content.Context,java.lang.String,int)>[[try]]
+$i1 > 15
+$i1 > 18
+try
+Good road with try: <com.danvelazco.fbwrapper.FbWrapper: void onWebViewInit(android.os.Bundle)>[]--><com.danvelazco.fbwrapper.FbWrapper: void loadPreferences()>[]--><com.danvelazco.fbwrapper.activity.BaseFacebookWebViewActivity: void setProxy(java.lang.String,int)>[]--><com.danvelazco.fbwrapper.util.WebViewProxyUtil: boolean setProxy(android.content.Context,android.webkit.WebView,java.lang.String,int)>[[$i1 > 15], [$i1 > 18]]--><com.danvelazco.fbwrapper.util.WebViewProxyUtil: boolean setKitKatWebViewProxy(android.content.Context,java.lang.String,int)>[[try]]--><android.util.ArrayMap: java.util.Collection values()>
+One road protect good!
+###Multi invoking in one method, need manual check!!!--><com.danvelazco.fbwrapper.util.WebViewProxyUtil: boolean setProxy(android.content.Context,android.webkit.WebView,java.lang.String,int)>[[$i1 > 15], [$i1 > 18]]--><com.danvelazco.fbwrapper.util.WebViewProxyUtil: boolean setKitKatWebViewProxy(android.content.Context,java.lang.String,int)>[[try]]
+###Multi invoking in one method, need manual check!!!--><com.danvelazco.fbwrapper.util.WebViewProxyUtil: boolean setProxy(android.content.Context,android.webkit.WebView,java.lang.String,int)>[[$i1 > 15]][[$i1 > 18]]--><com.danvelazco.fbwrapper.util.WebViewProxyUtil: boolean setKitKatWebViewProxy(android.content.Context,java.lang.String,int)>[[try]]
+$i1 > 15
+$i1 > 18
+try
+Good road with try: <com.danvelazco.fbwrapper.FbWrapper: void onResumeActivity()>[]--><com.danvelazco.fbwrapper.FbWrapper: void loadPreferences()>[]--><com.danvelazco.fbwrapper.activity.BaseFacebookWebViewActivity: void setProxy(java.lang.String,int)>[]--><com.danvelazco.fbwrapper.util.WebViewProxyUtil: boolean setProxy(android.content.Context,android.webkit.WebView,java.lang.String,int)>[[$i1 > 15], [$i1 > 18]]--><com.danvelazco.fbwrapper.util.WebViewProxyUtil: boolean setKitKatWebViewProxy(android.content.Context,java.lang.String,int)>[[try]]--><android.util.ArrayMap: java.util.Collection values()>
+One road protect good!
+containsStatic:false
+containsTry:true
+3call by main package
+-----------------------------------------
+#################################################
+N 15 Potential Issue API: SDKCheck of <android.net.NetworkInfo: int getSubtype()> is checking!!!
+The life time of api is [3,30]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <com.squareup.picasso.Dispatcher$DispatcherHandler: void handleMessage(android.os.Message)>[]--><com.squareup.picasso.Dispatcher: void performNetworkStateChange(android.net.NetworkInfo)>[]--><com.squareup.picasso.PicassoExecutorService: void adjustThreadCount(android.net.NetworkInfo)>[]--><android.net.NetworkInfo: int getSubtype()>
+#1.the call statck between class <com.squareup.picasso.Dispatcher$DispatcherHandler: void handleMessage(android.os.Message)> to <android.net.NetworkInfo: int getSubtype()>has compatibility isssues！
+-----------------------------------------
+crashApis:13
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+crashApis numbers:13
+crashApis numbers in main road:3
+On Android Version 16 this app may have error api use(at least): 6 and error api roads: 7
+On Android Version 17 this app may have error api use(at least): 6 and error api roads: 7
+On Android Version 18 this app may have error api use(at least): 6 and error api roads: 7
+On Android Version 19 this app may have error api use(at least): 6 and error api roads: 7
+On Android Version 20 this app may have error api use(at least): 6 and error api roads: 7
+On Android Version 21 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 22 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 23 this app may have error api use(at least): 1 and error api roads: 2
+On Android Version 24 this app may have error api use(at least): 1 and error api roads: 2
+On Android Version 25 this app may have error api use(at least): 1 and error api roads: 2
+On Android Version 26 this app may have error api use(at least): 1 and error api roads: 2
+On Android Version 27 this app may have error api use(at least): 1 and error api roads: 2
+On Android Version 28 this app may have error api use(at least): 1 and error api roads: 2
+On Android Version 29 this app may have error api use(at least): 1 and error api roads: 2
+On Android Version 30 this app may have error api use(at least): 3 and error api roads: 4
+On Android Version 31 this app may have error api use(at least): 8 and error api roads: 12

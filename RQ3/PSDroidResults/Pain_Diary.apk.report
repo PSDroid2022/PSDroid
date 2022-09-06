@@ -1,0 +1,278 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/Pain_Diary.apk
+Entry Points[org.secuso.privacyfriendlypaindiary.activities.UserDetailsActivity, org.secuso.privacyfriendlypaindiary.activities.HelpActivity, org.secuso.privacyfriendlypaindiary.activities.SplashActivity, org.secuso.privacyfriendlypaindiary.activities.ExportPDFActivity, org.secuso.privacyfriendlypaindiary.activities.DiaryEntryActivity, org.secuso.privacyfriendlypaindiary.activities.AboutActivity, org.secuso.privacyfriendlypaindiary.helpers.NotificationJobService, org.secuso.privacyfriendlypaindiary.tutorial.TutorialActivity, org.secuso.privacyfriendlypaindiary.helpers.NotificationJobService$NotificationReceiver, org.secuso.privacyfriendlypaindiary.activities.SettingsActivity, org.secuso.privacyfriendlypaindiary.activities.MainActivity]
+FllowDroidcallgraph size:1558
+Soot started on Mon Jul 11 10:25:43 CST 2022
+StaticCheck:<com.bumptech.glide.load.engine.cache.MemorySizeCalculator: boolean isLowMemoryDevice(android.app.ActivityManager)>$yysi0 < 19
+Soot finished on Mon Jul 11 10:25:56 CST 2022
+Soot has run for 0 min. 12 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 21
+Declared Target Sdk version is: 26
+Declared Max Sdk version is: -1
+Collected 691 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.widget.TimePicker: int getMinute()> is checking!!!
+The life time of api is [23,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i0 < 23
+Good road: <org.secuso.privacyfriendlypaindiary.helpers.TimePreference: void onDialogClosed(boolean)>[]--><org.secuso.privacyfriendlypaindiary.helpers.TimePreference: int getMinute(android.widget.TimePicker)>[[-$i0 < 23]]--><android.widget.TimePicker: int getMinute()>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.widget.TimePicker: int getHour()> is checking!!!
+The life time of api is [23,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i0 < 23
+Good road: <org.secuso.privacyfriendlypaindiary.helpers.TimePreference: void onDialogClosed(boolean)>[]--><org.secuso.privacyfriendlypaindiary.helpers.TimePreference: int getHour(android.widget.TimePicker)>[[-$i0 < 23]]--><android.widget.TimePicker: int getHour()>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.text.StaticLayout: void <init>(java.lang.CharSequence,android.text.TextPaint,int,android.text.Layout.Alignment,float,float,boolean)> is checking!!!
+The life time of api is [1,30]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.secuso.privacyfriendlypaindiary.activities.ExportPDFActivity dummyMainMethod_org_secuso_privacyfriendlypaindiary_activities_ExportPDFActivity(android.content.Intent)>[]--><org.secuso.privacyfriendlypaindiary.activities.ExportPDFActivity: void onClick(android.view.View)>[]--><org.secuso.privacyfriendlypaindiary.activities.ExportPDFActivity: void exportAndShare()>[]--><org.secuso.privacyfriendlypaindiary.activities.ExportPDFActivity: java.io.File exportAsPDF()>[]--><org.secuso.privacyfriendlypaindiary.helpers.PdfCreator: android.graphics.pdf.PdfDocument createPdfDocument()>[]--><org.secuso.privacyfriendlypaindiary.helpers.PdfCreator: int drawDiaryEntry(android.graphics.Canvas,int,org.secuso.privacyfriendlypaindiary.database.entities.interfaces.DiaryEntryInterface)>[]--><android.text.StaticLayout: void <init>(java.lang.CharSequence,android.text.TextPaint,int,android.text.Layout.Alignment,float,float,boolean)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.text.StaticLayout: void <init>(java.lang.CharSequence,android.text.TextPaint,int,android.text.Layout.Alignment,float,float,boolean)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:1
+crashApisInMain:1
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.graphics.drawable.Icon: android.graphics.drawable.Icon createWithResource(android.content.Context,int)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 23
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.secuso.privacyfriendlypaindiary.helpers.NotificationJobService dummyMainMethod_org_secuso_privacyfriendlypaindiary_helpers_NotificationJobService(android.content.Intent)>[]--><org.secuso.privacyfriendlypaindiary.helpers.NotificationJobService: boolean onStartJob(android.app.job.JobParameters)>[[-$i0 < 23]]--><android.graphics.drawable.Icon: android.graphics.drawable.Icon createWithResource(android.content.Context,int)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()> is checking!!!
+The life time of api is [1,30]
+5call roads:
+0 Mainhead roads:
+5 Packageshead roads:
+try
+Good road with try: <com.bumptech.glide.manager.SupportRequestManagerFragment: void onStart()>[]--><com.bumptech.glide.manager.ActivityFragmentLifecycle: void onStart()>[]--><com.bumptech.glide.RequestManager: void onStart()>[]--><com.bumptech.glide.manager.TargetTracker: void onStart()>[]--><com.bumptech.glide.manager.DefaultConnectivityMonitor: void onStart()>[]--><com.bumptech.glide.manager.DefaultConnectivityMonitor: void register()>[]--><com.bumptech.glide.manager.DefaultConnectivityMonitor: boolean isConnected(android.content.Context)>[[try]]--><android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>
+One road protect good!
+try
+Good road with try: <com.bumptech.glide.manager.DefaultConnectivityMonitor$1: void onReceive(android.content.Context,android.content.Intent)>[]--><com.bumptech.glide.manager.DefaultConnectivityMonitor: boolean isConnected(android.content.Context)>[[try]]--><android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>
+One road protect good!
+try
+Good road with try: <com.bumptech.glide.manager.RequestManagerFragment: void onStart()>[]--><com.bumptech.glide.manager.ActivityFragmentLifecycle: void onStart()>[]--><com.bumptech.glide.RequestManager: void onStart()>[]--><com.bumptech.glide.manager.TargetTracker: void onStart()>[]--><com.bumptech.glide.manager.DefaultConnectivityMonitor: void onStart()>[]--><com.bumptech.glide.manager.DefaultConnectivityMonitor: void register()>[]--><com.bumptech.glide.manager.DefaultConnectivityMonitor: boolean isConnected(android.content.Context)>[[try]]--><android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>
+One road protect good!
+try
+Good road with try: <com.bumptech.glide.manager.RequestManagerRetriever$1: com.bumptech.glide.RequestManager build(com.bumptech.glide.Glide,com.bumptech.glide.manager.Lifecycle,com.bumptech.glide.manager.RequestManagerTreeNode,android.content.Context)>[]--><com.bumptech.glide.RequestManager: void <init>(com.bumptech.glide.Glide,com.bumptech.glide.manager.Lifecycle,com.bumptech.glide.manager.RequestManagerTreeNode,android.content.Context)>[]--><com.bumptech.glide.RequestManager: void <init>(com.bumptech.glide.Glide,com.bumptech.glide.manager.Lifecycle,com.bumptech.glide.manager.RequestManagerTreeNode,com.bumptech.glide.manager.RequestTracker,com.bumptech.glide.manager.ConnectivityMonitorFactory,android.content.Context)>[]--><com.bumptech.glide.manager.ApplicationLifecycle: void addListener(com.bumptech.glide.manager.LifecycleListener)>[]--><com.bumptech.glide.RequestManager: void onStart()>[]--><com.bumptech.glide.manager.TargetTracker: void onStart()>[]--><com.bumptech.glide.manager.DefaultConnectivityMonitor: void onStart()>[]--><com.bumptech.glide.manager.DefaultConnectivityMonitor: void register()>[]--><com.bumptech.glide.manager.DefaultConnectivityMonitor: boolean isConnected(android.content.Context)>[[try]]--><android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>
+One road protect good!
+try
+Good road with try: <com.bumptech.glide.RequestManager$1: void run()>[]--><com.bumptech.glide.manager.ActivityFragmentLifecycle: void addListener(com.bumptech.glide.manager.LifecycleListener)>[]--><com.bumptech.glide.RequestManager: void onStart()>[]--><com.bumptech.glide.manager.TargetTracker: void onStart()>[]--><com.bumptech.glide.manager.DefaultConnectivityMonitor: void onStart()>[]--><com.bumptech.glide.manager.DefaultConnectivityMonitor: void register()>[]--><com.bumptech.glide.manager.DefaultConnectivityMonitor: boolean isConnected(android.content.Context)>[[try]]--><android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>
+One road protect good!
+try
+Good road with try: <com.bumptech.glide.RequestManager$1: void run()>[]--><com.bumptech.glide.manager.ApplicationLifecycle: void addListener(com.bumptech.glide.manager.LifecycleListener)>[]--><com.bumptech.glide.RequestManager: void onStart()>[]--><com.bumptech.glide.manager.TargetTracker: void onStart()>[]--><com.bumptech.glide.manager.DefaultConnectivityMonitor: void onStart()>[]--><com.bumptech.glide.manager.DefaultConnectivityMonitor: void register()>[]--><com.bumptech.glide.manager.DefaultConnectivityMonitor: boolean isConnected(android.content.Context)>[[try]]--><android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>
+One road protect good!
+containsStatic:false
+containsTry:true
+6call by main package
+-----------------------------------------
+#################################################
+N 5 Potential Issue API: SDKCheck of <android.app.NotificationChannel: void setLockscreenVisibility(int)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.secuso.privacyfriendlypaindiary.helpers.NotificationJobService dummyMainMethod_org_secuso_privacyfriendlypaindiary_helpers_NotificationJobService(android.content.Intent)>[]--><org.secuso.privacyfriendlypaindiary.helpers.NotificationJobService: boolean onStartJob(android.app.job.JobParameters)>[]--><org.secuso.privacyfriendlypaindiary.helpers.NotificationHelper: void <init>(android.content.Context)>[]--><org.secuso.privacyfriendlypaindiary.helpers.NotificationHelper: void createChannel()>[[-$i0 < 26]]--><android.app.NotificationChannel: void setLockscreenVisibility(int)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 6 Potential Issue API: SDKCheck of <android.net.NetworkInfo: boolean isConnected()> is checking!!!
+The life time of api is [1,30]
+5call roads:
+0 Mainhead roads:
+5 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <com.bumptech.glide.manager.SupportRequestManagerFragment: void onStart()>[]--><com.bumptech.glide.manager.ActivityFragmentLifecycle: void onStart()>[]--><com.bumptech.glide.RequestManager: void onStart()>[]--><com.bumptech.glide.manager.TargetTracker: void onStart()>[]--><com.bumptech.glide.manager.DefaultConnectivityMonitor: void onStart()>[]--><com.bumptech.glide.manager.DefaultConnectivityMonitor: void register()>[]--><com.bumptech.glide.manager.DefaultConnectivityMonitor: boolean isConnected(android.content.Context)>[]--><android.net.NetworkInfo: boolean isConnected()>
+#1.the call statck between class <com.bumptech.glide.manager.SupportRequestManagerFragment: void onStart()> to <android.net.NetworkInfo: boolean isConnected()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <com.bumptech.glide.manager.DefaultConnectivityMonitor$1: void onReceive(android.content.Context,android.content.Intent)>[]--><com.bumptech.glide.manager.DefaultConnectivityMonitor: boolean isConnected(android.content.Context)>[]--><android.net.NetworkInfo: boolean isConnected()>
+#2.the call statck between class <com.bumptech.glide.manager.DefaultConnectivityMonitor$1: void onReceive(android.content.Context,android.content.Intent)> to <android.net.NetworkInfo: boolean isConnected()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <com.bumptech.glide.manager.RequestManagerFragment: void onStart()>[]--><com.bumptech.glide.manager.ActivityFragmentLifecycle: void onStart()>[]--><com.bumptech.glide.RequestManager: void onStart()>[]--><com.bumptech.glide.manager.TargetTracker: void onStart()>[]--><com.bumptech.glide.manager.DefaultConnectivityMonitor: void onStart()>[]--><com.bumptech.glide.manager.DefaultConnectivityMonitor: void register()>[]--><com.bumptech.glide.manager.DefaultConnectivityMonitor: boolean isConnected(android.content.Context)>[]--><android.net.NetworkInfo: boolean isConnected()>
+#3.the call statck between class <com.bumptech.glide.manager.RequestManagerFragment: void onStart()> to <android.net.NetworkInfo: boolean isConnected()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <com.bumptech.glide.manager.RequestManagerRetriever$1: com.bumptech.glide.RequestManager build(com.bumptech.glide.Glide,com.bumptech.glide.manager.Lifecycle,com.bumptech.glide.manager.RequestManagerTreeNode,android.content.Context)>[]--><com.bumptech.glide.RequestManager: void <init>(com.bumptech.glide.Glide,com.bumptech.glide.manager.Lifecycle,com.bumptech.glide.manager.RequestManagerTreeNode,android.content.Context)>[]--><com.bumptech.glide.RequestManager: void <init>(com.bumptech.glide.Glide,com.bumptech.glide.manager.Lifecycle,com.bumptech.glide.manager.RequestManagerTreeNode,com.bumptech.glide.manager.RequestTracker,com.bumptech.glide.manager.ConnectivityMonitorFactory,android.content.Context)>[]--><com.bumptech.glide.manager.ApplicationLifecycle: void addListener(com.bumptech.glide.manager.LifecycleListener)>[]--><com.bumptech.glide.RequestManager: void onStart()>[]--><com.bumptech.glide.manager.TargetTracker: void onStart()>[]--><com.bumptech.glide.manager.DefaultConnectivityMonitor: void onStart()>[]--><com.bumptech.glide.manager.DefaultConnectivityMonitor: void register()>[]--><com.bumptech.glide.manager.DefaultConnectivityMonitor: boolean isConnected(android.content.Context)>[]--><android.net.NetworkInfo: boolean isConnected()>
+#4.the call statck between class <com.bumptech.glide.manager.RequestManagerRetriever$1: com.bumptech.glide.RequestManager build(com.bumptech.glide.Glide,com.bumptech.glide.manager.Lifecycle,com.bumptech.glide.manager.RequestManagerTreeNode,android.content.Context)> to <android.net.NetworkInfo: boolean isConnected()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <com.bumptech.glide.RequestManager$1: void run()>[]--><com.bumptech.glide.manager.ActivityFragmentLifecycle: void addListener(com.bumptech.glide.manager.LifecycleListener)>[]--><com.bumptech.glide.RequestManager: void onStart()>[]--><com.bumptech.glide.manager.TargetTracker: void onStart()>[]--><com.bumptech.glide.manager.DefaultConnectivityMonitor: void onStart()>[]--><com.bumptech.glide.manager.DefaultConnectivityMonitor: void register()>[]--><com.bumptech.glide.manager.DefaultConnectivityMonitor: boolean isConnected(android.content.Context)>[]--><android.net.NetworkInfo: boolean isConnected()>
+!!!this api will crash on sdk 31 
+Error road: <com.bumptech.glide.RequestManager$1: void run()>[]--><com.bumptech.glide.manager.ApplicationLifecycle: void addListener(com.bumptech.glide.manager.LifecycleListener)>[]--><com.bumptech.glide.RequestManager: void onStart()>[]--><com.bumptech.glide.manager.TargetTracker: void onStart()>[]--><com.bumptech.glide.manager.DefaultConnectivityMonitor: void onStart()>[]--><com.bumptech.glide.manager.DefaultConnectivityMonitor: void register()>[]--><com.bumptech.glide.manager.DefaultConnectivityMonitor: boolean isConnected(android.content.Context)>[]--><android.net.NetworkInfo: boolean isConnected()>
+#5.the call statck between class <com.bumptech.glide.RequestManager$1: void run()> to <android.net.NetworkInfo: boolean isConnected()>has compatibility isssues！
+-----------------------------------------
+crashApis:2
+containsStatic:false
+containsTry:false
+6call by main package
+-----------------------------------------
+#################################################
+N 7 Potential Issue API: SDKCheck of <android.app.Notification.Action.Builder: void <init>(android.graphics.drawable.Icon,java.lang.CharSequence,android.app.PendingIntent)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 23
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.secuso.privacyfriendlypaindiary.helpers.NotificationJobService dummyMainMethod_org_secuso_privacyfriendlypaindiary_helpers_NotificationJobService(android.content.Intent)>[]--><org.secuso.privacyfriendlypaindiary.helpers.NotificationJobService: boolean onStartJob(android.app.job.JobParameters)>[[-$i0 < 23]]--><android.app.Notification.Action.Builder: void <init>(android.graphics.drawable.Icon,java.lang.CharSequence,android.app.PendingIntent)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 8 Potential Issue API: SDKCheck of <android.media.MediaMetadataRetriever: android.graphics.Bitmap getScaledFrameAtTime(long,int,int,int)> is checking!!!
+The life time of api is [27,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+try
+Good road with try: <com.bumptech.glide.load.engine.DecodePath: com.bumptech.glide.load.engine.Resource decode(com.bumptech.glide.load.data.DataRewinder,int,int,com.bumptech.glide.load.Options,com.bumptech.glide.load.engine.DecodePath$DecodeCallback)>[]--><com.bumptech.glide.load.engine.DecodePath: com.bumptech.glide.load.engine.Resource decodeResource(com.bumptech.glide.load.data.DataRewinder,int,int,com.bumptech.glide.load.Options)>[[try]]--><com.bumptech.glide.load.engine.DecodePath: com.bumptech.glide.load.engine.Resource decodeResourceWithList(com.bumptech.glide.load.data.DataRewinder,int,int,com.bumptech.glide.load.Options,java.util.List)>[[try]]--><com.bumptech.glide.load.resource.gif.StreamGifDecoder: com.bumptech.glide.load.engine.Resource decode(java.lang.Object,int,int,com.bumptech.glide.load.Options)>[]--><com.bumptech.glide.load.resource.gif.StreamGifDecoder: com.bumptech.glide.load.engine.Resource decode(java.io.InputStream,int,int,com.bumptech.glide.load.Options)>[]--><com.bumptech.glide.load.resource.bitmap.BitmapDrawableDecoder: com.bumptech.glide.load.engine.Resource decode(java.lang.Object,int,int,com.bumptech.glide.load.Options)>[]--><com.bumptech.glide.load.resource.bitmap.VideoDecoder: com.bumptech.glide.load.engine.Resource decode(java.lang.Object,int,int,com.bumptech.glide.load.Options)>[[try]]--><com.bumptech.glide.load.resource.bitmap.VideoDecoder: android.graphics.Bitmap decodeFrame(android.media.MediaMetadataRetriever,long,int,int,int)>[[-$i4 < 27]]--><android.media.MediaMetadataRetriever: android.graphics.Bitmap getScaledFrameAtTime(long,int,int,int)>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 9 Potential Issue API: SDKCheck of <android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.secuso.privacyfriendlypaindiary.helpers.NotificationJobService dummyMainMethod_org_secuso_privacyfriendlypaindiary_helpers_NotificationJobService(android.content.Intent)>[]--><org.secuso.privacyfriendlypaindiary.helpers.NotificationJobService: boolean onStartJob(android.app.job.JobParameters)>[]--><org.secuso.privacyfriendlypaindiary.helpers.NotificationHelper: void <init>(android.content.Context)>[]--><org.secuso.privacyfriendlypaindiary.helpers.NotificationHelper: void createChannel()>[[-$i0 < 26]]--><android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 10 Potential Issue API: SDKCheck of <android.widget.TimePicker: void setHour(int)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i1 < 23
+Good road: <org.secuso.privacyfriendlypaindiary.helpers.TimePreference: void onBindDialogView(android.view.View)>[]--><org.secuso.privacyfriendlypaindiary.helpers.TimePreference: void setHour(android.widget.TimePicker,int)>[[-$i1 < 23]]--><android.widget.TimePicker: void setHour(int)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 11 Potential Issue API: SDKCheck of <android.app.FragmentManager: java.util.List getFragments()> is checking!!!
+The life time of api is [26,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i0 < 26
+Good road: <com.bumptech.glide.Glide: com.bumptech.glide.RequestManager 'with'(android.view.View)>[]--><com.bumptech.glide.manager.RequestManagerRetriever: com.bumptech.glide.RequestManager get(android.view.View)>[]--><com.bumptech.glide.manager.RequestManagerRetriever: android.app.Fragment findFragment(android.view.View,android.app.Activity)>[]--><com.bumptech.glide.manager.RequestManagerRetriever: void findAllFragmentsWithViews(android.app.FragmentManager,android.support.v4.util.ArrayMap)>[[-$i0 < 26]]--><android.app.FragmentManager: java.util.List getFragments()>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 12 Potential Issue API: SDKCheck of <android.app.Notification.Builder: void <init>(android.content.Context,java.lang.String)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.secuso.privacyfriendlypaindiary.helpers.NotificationJobService dummyMainMethod_org_secuso_privacyfriendlypaindiary_helpers_NotificationJobService(android.content.Intent)>[]--><org.secuso.privacyfriendlypaindiary.helpers.NotificationJobService: boolean onStartJob(android.app.job.JobParameters)>[]--><org.secuso.privacyfriendlypaindiary.helpers.NotificationHelper: android.app.Notification$Builder getNotificationBuilder(java.lang.String,java.lang.String)>[[-$i0 < 26]]--><android.app.Notification.Builder: void <init>(android.content.Context,java.lang.String)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 13 Potential Issue API: SDKCheck of <android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.secuso.privacyfriendlypaindiary.helpers.NotificationJobService dummyMainMethod_org_secuso_privacyfriendlypaindiary_helpers_NotificationJobService(android.content.Intent)>[]--><org.secuso.privacyfriendlypaindiary.helpers.NotificationJobService: boolean onStartJob(android.app.job.JobParameters)>[]--><org.secuso.privacyfriendlypaindiary.helpers.NotificationHelper: void <init>(android.content.Context)>[]--><org.secuso.privacyfriendlypaindiary.helpers.NotificationHelper: void createChannel()>[[-$i0 < 26]]--><android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 14 Potential Issue API: SDKCheck of <android.app.NotificationChannel: void setShowBadge(boolean)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.secuso.privacyfriendlypaindiary.helpers.NotificationJobService dummyMainMethod_org_secuso_privacyfriendlypaindiary_helpers_NotificationJobService(android.content.Intent)>[]--><org.secuso.privacyfriendlypaindiary.helpers.NotificationJobService: boolean onStartJob(android.app.job.JobParameters)>[]--><org.secuso.privacyfriendlypaindiary.helpers.NotificationHelper: void <init>(android.content.Context)>[]--><org.secuso.privacyfriendlypaindiary.helpers.NotificationHelper: void createChannel()>[[-$i0 < 26]]--><android.app.NotificationChannel: void setShowBadge(boolean)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 15 Potential Issue API: SDKCheck of <android.widget.TimePicker: void setMinute(int)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i1 < 23
+Good road: <org.secuso.privacyfriendlypaindiary.helpers.TimePreference: void onBindDialogView(android.view.View)>[]--><org.secuso.privacyfriendlypaindiary.helpers.TimePreference: void setMinute(android.widget.TimePicker,int)>[[-$i1 < 23]]--><android.widget.TimePicker: void setMinute(int)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+crashApis numbers:2
+crashApis numbers in main road:1
+On Android Version 16 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 17 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 18 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 19 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 20 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 21 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 22 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 23 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 24 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 25 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 31 this app may have error api use(at least): 2 and error api roads: 7

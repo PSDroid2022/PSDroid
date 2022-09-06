@@ -1,0 +1,427 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/AudioAnchor.apk
+Entry Points[com.prangesoftwaresolutions.audioanchor.SettingsActivity, com.prangesoftwaresolutions.audioanchor.AlbumActivity, com.prangesoftwaresolutions.audioanchor.MainActivity, com.prangesoftwaresolutions.audioanchor.AboutActivity, com.prangesoftwaresolutions.audioanchor.data.AnchorProvider, com.prangesoftwaresolutions.audioanchor.PlayActivity, com.prangesoftwaresolutions.audioanchor.MediaPlayerService, com.prangesoftwaresolutions.audioanchor.MediaButtonIntentReceiver]
+FllowDroidcallgraph size:2955
+Soot started on Mon Jul 11 01:29:39 CST 2022
+Soot finished on Mon Jul 11 01:29:48 CST 2022
+Soot has run for 0 min. 8 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 19
+Declared Target Sdk version is: 26
+Declared Max Sdk version is: -1
+Collected 337 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.media.PlaybackParams: android.media.PlaybackParams setSpeed(float)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+1 Mainhead roads:
+###Multi invoking in one method, need manual check!!!--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void initMediaPlayer(java.lang.String,int)>[[-i1 < 23], [try]]
+###Multi invoking in one method, need manual check!!!--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void initMediaPlayer(java.lang.String,int)>[[-i1 < 23]][[try]]
+-i1 < 23
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.prangesoftwaresolutions.audioanchor.PlayActivity dummyMainMethod_com_prangesoftwaresolutions_audioanchor_PlayActivity(android.content.Intent)>[]--><com.prangesoftwaresolutions.audioanchor.'-$$Lambda$PlayActivity$sA9LkJXd0E2LdBm1dsMZKdfR4GQ': void onClick(android.view.View)>[]--><com.prangesoftwaresolutions.audioanchor.PlayActivity: void lambda$showPlaybackSpeedDialog$17$PlayActivity(android.widget.TextView,android.widget.SeekBar,android.view.View)>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void setPlaybackSpeed(float)>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void initMediaPlayer(java.lang.String,int)>[[-i1 < 23], [try]]--><android.media.PlaybackParams: android.media.PlaybackParams setSpeed(float)>
+One road protect good!
+###Multi invoking in one method, need manual check!!!--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void initMediaPlayer(java.lang.String,int)>[[-i1 < 23], [try]]
+###Multi invoking in one method, need manual check!!!--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void initMediaPlayer(java.lang.String,int)>[[-i1 < 23]][[try]]
+-i1 < 23
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.prangesoftwaresolutions.audioanchor.MediaPlayerService dummyMainMethod_com_prangesoftwaresolutions_audioanchor_MediaPlayerService(android.content.Intent)>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void onAudioFocusChange(int)>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void initMediaPlayer(java.lang.String,int)>[[-i1 < 23], [try]]--><android.media.PlaybackParams: android.media.PlaybackParams setSpeed(float)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:true
+1call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.os.BaseBundle: boolean getBoolean(java.lang.String)> is checking!!!
+The life time of api is [22,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.prangesoftwaresolutions.audioanchor.PlayActivity dummyMainMethod_com_prangesoftwaresolutions_audioanchor_PlayActivity(android.content.Intent)>[]--><com.prangesoftwaresolutions.audioanchor.PlayActivity: void onRestoreInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: boolean getBoolean(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:1
+crashApisInMain:1
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.content.Context: android.content.ComponentName startForegroundService(android.content.Intent)> is checking!!!
+The life time of api is [26,31]
+2call roads:
+1 Mainhead roads:
+-$i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.prangesoftwaresolutions.audioanchor.PlayActivity dummyMainMethod_com_prangesoftwaresolutions_audioanchor_PlayActivity(android.content.Intent)>[]--><com.prangesoftwaresolutions.audioanchor.'-$$Lambda$PlayActivity$7LnEDYxQgidvWbQA7N5Hmlei6Tg': void onClick(android.view.View)>[]--><com.prangesoftwaresolutions.audioanchor.PlayActivity: void lambda$onCreate$0$PlayActivity(android.view.View)>[]--><com.prangesoftwaresolutions.audioanchor.PlayActivity: void playAudio()>[]--><com.prangesoftwaresolutions.audioanchor.PlayActivity: void startService()>[[-$i0 < 26]]--><android.content.Context: android.content.ComponentName startForegroundService(android.content.Intent)>
+One road protect good!
+-$i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.prangesoftwaresolutions.audioanchor.MediaButtonIntentReceiver dummyMainMethod_com_prangesoftwaresolutions_audioanchor_MediaButtonIntentReceiver(android.content.Intent)>[]--><com.prangesoftwaresolutions.audioanchor.MediaButtonIntentReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><com.prangesoftwaresolutions.audioanchor.MediaButtonIntentReceiver: boolean handleIntent(android.content.Context,android.content.Intent)>[]--><com.prangesoftwaresolutions.audioanchor.MediaButtonIntentReceiver: void acquireWakeLockAndSendMessage(android.content.Context,android.os.Message,long)>[]--><com.prangesoftwaresolutions.audioanchor.MediaButtonIntentReceiver$1: void handleMessage(android.os.Message)>[]--><com.prangesoftwaresolutions.audioanchor.MediaButtonIntentReceiver: void access$000(android.content.Context,java.lang.String)>[]--><com.prangesoftwaresolutions.audioanchor.MediaButtonIntentReceiver: void startService(android.content.Context,java.lang.String)>[[-$i0 < 26]]--><android.content.Context: android.content.ComponentName startForegroundService(android.content.Intent)>
+One road protect good!
+1 Packageshead roads:
+-$i0 < 26
+Good road: <com.prangesoftwaresolutions.audioanchor.MediaSessionCallback: boolean onMediaButtonEvent(android.content.Intent)>[]--><com.prangesoftwaresolutions.audioanchor.MediaButtonIntentReceiver: boolean handleIntent(android.content.Context,android.content.Intent)>[]--><com.prangesoftwaresolutions.audioanchor.MediaButtonIntentReceiver: void acquireWakeLockAndSendMessage(android.content.Context,android.os.Message,long)>[]--><com.prangesoftwaresolutions.audioanchor.MediaButtonIntentReceiver$1: void handleMessage(android.os.Message)>[]--><com.prangesoftwaresolutions.audioanchor.MediaButtonIntentReceiver: void access$000(android.content.Context,java.lang.String)>[]--><com.prangesoftwaresolutions.audioanchor.MediaButtonIntentReceiver: void startService(android.content.Context,java.lang.String)>[[-$i0 < 26]]--><android.content.Context: android.content.ComponentName startForegroundService(android.content.Intent)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.media.MediaPlayer: void setVolume(float,float)> is checking!!!
+The life time of api is [1,17]
+4call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.prangesoftwaresolutions.audioanchor.MediaPlayerService dummyMainMethod_com_prangesoftwaresolutions_audioanchor_MediaPlayerService(android.content.Intent)>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void onAudioFocusChange(int)>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void setVolume(float)>[]--><android.media.MediaPlayer: void setVolume(float,float)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.media.MediaPlayer: void setVolume(float,float)>has compatibility isssues！
+-----------------------------------------
+3 Packageshead roads:
+!!!this api will crash on sdk 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <com.prangesoftwaresolutions.audioanchor.SleepTimer: void access$000(com.prangesoftwaresolutions.audioanchor.SleepTimer)>[]--><com.prangesoftwaresolutions.audioanchor.SleepTimer: void restartTimer()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void setVolume(float)>[]--><android.media.MediaPlayer: void setVolume(float,float)>
+#1.the call statck between class <com.prangesoftwaresolutions.audioanchor.SleepTimer: void access$000(com.prangesoftwaresolutions.audioanchor.SleepTimer)> to <android.media.MediaPlayer: void setVolume(float,float)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <com.prangesoftwaresolutions.audioanchor.SleepTimer: void lambda$disableTimer$0$SleepTimer()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void setVolume(float)>[]--><android.media.MediaPlayer: void setVolume(float,float)>
+#2.the call statck between class <com.prangesoftwaresolutions.audioanchor.SleepTimer: void lambda$disableTimer$0$SleepTimer()> to <android.media.MediaPlayer: void setVolume(float,float)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <com.prangesoftwaresolutions.audioanchor.SleepTimer$2: void onTick(long)>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void decreaseVolume(int,int)>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void setVolume(float)>[]--><android.media.MediaPlayer: void setVolume(float,float)>
+#3.the call statck between class <com.prangesoftwaresolutions.audioanchor.SleepTimer$2: void onTick(long)> to <android.media.MediaPlayer: void setVolume(float,float)>has compatibility isssues！
+-----------------------------------------
+crashApis:2
+crashApisInMain:2
+containsStatic:false
+containsTry:false
+4call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.content.Context: java.lang.Object getSystemService(java.lang.Class)> is checking!!!
+The life time of api is [23,31]
+8call roads:
+1 Mainhead roads:
+-i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.prangesoftwaresolutions.audioanchor.MediaPlayerService dummyMainMethod_com_prangesoftwaresolutions_audioanchor_MediaPlayerService(android.content.Intent)>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void onAudioFocusChange(int)>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void pause()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void buildNotification()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void createNotificationChannel()>[[-i0 < 26]]--><android.content.Context: java.lang.Object getSystemService(java.lang.Class)>
+One road protect good!
+7 Packageshead roads:
+-i0 < 26
+Good road: <com.prangesoftwaresolutions.audioanchor.MediaSessionCallback: void onPlay()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void play()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void buildNotification()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void createNotificationChannel()>[[-i0 < 26]]--><android.content.Context: java.lang.Object getSystemService(java.lang.Class)>
+One road protect good!
+-i0 < 26
+Good road: <com.prangesoftwaresolutions.audioanchor.MediaPlayerService$5: void onCallStateChanged(int,java.lang.String)>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void pause()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void buildNotification()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void createNotificationChannel()>[[-i0 < 26]]--><android.content.Context: java.lang.Object getSystemService(java.lang.Class)>
+One road protect good!
+-i0 < 26
+Good road: <com.prangesoftwaresolutions.audioanchor.MediaPlayerService$5: void onCallStateChanged(int,java.lang.String)>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void play()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void buildNotification()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void createNotificationChannel()>[[-i0 < 26]]--><android.content.Context: java.lang.Object getSystemService(java.lang.Class)>
+One road protect good!
+-i0 < 26
+Good road: <com.prangesoftwaresolutions.audioanchor.MediaPlayerService$6: void finished()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void pause()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void buildNotification()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void createNotificationChannel()>[[-i0 < 26]]--><android.content.Context: java.lang.Object getSystemService(java.lang.Class)>
+One road protect good!
+-i0 < 26
+Good road: <com.prangesoftwaresolutions.audioanchor.MediaSessionCallback: void onPause()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void pause()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void buildNotification()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void createNotificationChannel()>[[-i0 < 26]]--><android.content.Context: java.lang.Object getSystemService(java.lang.Class)>
+One road protect good!
+-i0 < 26
+Good road: <com.prangesoftwaresolutions.audioanchor.MediaPlayerService$2: void onReceive(android.content.Context,android.content.Intent)>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void play()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void buildNotification()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void createNotificationChannel()>[[-i0 < 26]]--><android.content.Context: java.lang.Object getSystemService(java.lang.Class)>
+One road protect good!
+-i0 < 26
+Good road: <com.prangesoftwaresolutions.audioanchor.MediaPlayerService$1: void onReceive(android.content.Context,android.content.Intent)>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void pause()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void buildNotification()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void createNotificationChannel()>[[-i0 < 26]]--><android.content.Context: java.lang.Object getSystemService(java.lang.Class)>
+One road protect good!
+-i0 < 26
+Good road: <com.prangesoftwaresolutions.audioanchor.MediaPlayerService$3: void onReceive(android.content.Context,android.content.Intent)>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void pause()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void buildNotification()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void createNotificationChannel()>[[-i0 < 26]]--><android.content.Context: java.lang.Object getSystemService(java.lang.Class)>
+One road protect good!
+containsStatic:false
+containsTry:false
+8call by main package
+-----------------------------------------
+#################################################
+N 5 Potential Issue API: SDKCheck of <android.app.NotificationChannel: void setDescription(java.lang.String)> is checking!!!
+The life time of api is [26,31]
+8call roads:
+1 Mainhead roads:
+-i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.prangesoftwaresolutions.audioanchor.MediaPlayerService dummyMainMethod_com_prangesoftwaresolutions_audioanchor_MediaPlayerService(android.content.Intent)>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void onAudioFocusChange(int)>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void pause()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void buildNotification()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void createNotificationChannel()>[[-i0 < 26]]--><android.app.NotificationChannel: void setDescription(java.lang.String)>
+One road protect good!
+7 Packageshead roads:
+-i0 < 26
+Good road: <com.prangesoftwaresolutions.audioanchor.MediaSessionCallback: void onPlay()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void play()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void buildNotification()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void createNotificationChannel()>[[-i0 < 26]]--><android.app.NotificationChannel: void setDescription(java.lang.String)>
+One road protect good!
+-i0 < 26
+Good road: <com.prangesoftwaresolutions.audioanchor.MediaPlayerService$5: void onCallStateChanged(int,java.lang.String)>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void pause()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void buildNotification()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void createNotificationChannel()>[[-i0 < 26]]--><android.app.NotificationChannel: void setDescription(java.lang.String)>
+One road protect good!
+-i0 < 26
+Good road: <com.prangesoftwaresolutions.audioanchor.MediaPlayerService$5: void onCallStateChanged(int,java.lang.String)>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void play()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void buildNotification()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void createNotificationChannel()>[[-i0 < 26]]--><android.app.NotificationChannel: void setDescription(java.lang.String)>
+One road protect good!
+-i0 < 26
+Good road: <com.prangesoftwaresolutions.audioanchor.MediaPlayerService$6: void finished()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void pause()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void buildNotification()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void createNotificationChannel()>[[-i0 < 26]]--><android.app.NotificationChannel: void setDescription(java.lang.String)>
+One road protect good!
+-i0 < 26
+Good road: <com.prangesoftwaresolutions.audioanchor.MediaSessionCallback: void onPause()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void pause()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void buildNotification()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void createNotificationChannel()>[[-i0 < 26]]--><android.app.NotificationChannel: void setDescription(java.lang.String)>
+One road protect good!
+-i0 < 26
+Good road: <com.prangesoftwaresolutions.audioanchor.MediaPlayerService$2: void onReceive(android.content.Context,android.content.Intent)>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void play()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void buildNotification()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void createNotificationChannel()>[[-i0 < 26]]--><android.app.NotificationChannel: void setDescription(java.lang.String)>
+One road protect good!
+-i0 < 26
+Good road: <com.prangesoftwaresolutions.audioanchor.MediaPlayerService$1: void onReceive(android.content.Context,android.content.Intent)>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void pause()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void buildNotification()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void createNotificationChannel()>[[-i0 < 26]]--><android.app.NotificationChannel: void setDescription(java.lang.String)>
+One road protect good!
+-i0 < 26
+Good road: <com.prangesoftwaresolutions.audioanchor.MediaPlayerService$3: void onReceive(android.content.Context,android.content.Intent)>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void pause()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void buildNotification()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void createNotificationChannel()>[[-i0 < 26]]--><android.app.NotificationChannel: void setDescription(java.lang.String)>
+One road protect good!
+containsStatic:false
+containsTry:false
+8call by main package
+-----------------------------------------
+#################################################
+N 6 Potential Issue API: SDKCheck of <android.content.ContextWrapper: android.content.ComponentName startForegroundService(android.content.Intent)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.prangesoftwaresolutions.audioanchor.PlayActivity dummyMainMethod_com_prangesoftwaresolutions_audioanchor_PlayActivity(android.content.Intent)>[]--><com.prangesoftwaresolutions.audioanchor.'-$$Lambda$PlayActivity$7LnEDYxQgidvWbQA7N5Hmlei6Tg': void onClick(android.view.View)>[]--><com.prangesoftwaresolutions.audioanchor.PlayActivity: void lambda$onCreate$0$PlayActivity(android.view.View)>[]--><com.prangesoftwaresolutions.audioanchor.PlayActivity: void playAudio()>[]--><com.prangesoftwaresolutions.audioanchor.PlayActivity: void startService()>[[-$i0 < 26]]--><android.content.ContextWrapper: android.content.ComponentName startForegroundService(android.content.Intent)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 7 Potential Issue API: SDKCheck of <android.app.Activity: void onSaveInstanceState(android.os.Bundle,android.os.PersistableBundle)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.prangesoftwaresolutions.audioanchor.PlayActivity dummyMainMethod_com_prangesoftwaresolutions_audioanchor_PlayActivity(android.content.Intent)>[]--><com.prangesoftwaresolutions.audioanchor.PlayActivity: void onSaveInstanceState(android.os.Bundle,android.os.PersistableBundle)>[]--><android.app.Activity: void onSaveInstanceState(android.os.Bundle,android.os.PersistableBundle)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.app.Activity: void onSaveInstanceState(android.os.Bundle,android.os.PersistableBundle)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:3
+crashApisInMain:3
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 8 Potential Issue API: SDKCheck of <android.media.MediaPlayer: void setPlaybackParams(android.media.PlaybackParams)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 21 22 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.prangesoftwaresolutions.audioanchor.PlayActivity dummyMainMethod_com_prangesoftwaresolutions_audioanchor_PlayActivity(android.content.Intent)>[]--><com.prangesoftwaresolutions.audioanchor.'-$$Lambda$PlayActivity$sA9LkJXd0E2LdBm1dsMZKdfR4GQ': void onClick(android.view.View)>[]--><com.prangesoftwaresolutions.audioanchor.PlayActivity: void lambda$showPlaybackSpeedDialog$17$PlayActivity(android.widget.TextView,android.widget.SeekBar,android.view.View)>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void setPlaybackSpeed(float)>[]--><android.media.MediaPlayer: void setPlaybackParams(android.media.PlaybackParams)>
+###Multi invoking in one method, need manual check!!!--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void initMediaPlayer(java.lang.String,int)>[[-i1 < 23], [try]]
+###Multi invoking in one method, need manual check!!!--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void initMediaPlayer(java.lang.String,int)>[[-i1 < 23]][[try]]
+-i1 < 23
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.prangesoftwaresolutions.audioanchor.MediaPlayerService dummyMainMethod_com_prangesoftwaresolutions_audioanchor_MediaPlayerService(android.content.Intent)>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void onAudioFocusChange(int)>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void initMediaPlayer(java.lang.String,int)>[[-i1 < 23], [try]]--><android.media.MediaPlayer: void setPlaybackParams(android.media.PlaybackParams)>
+One road protect good!
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.media.MediaPlayer: void setPlaybackParams(android.media.PlaybackParams)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:4
+crashApisInMain:4
+containsStatic:false
+containsTry:true
+1call by main package
+-----------------------------------------
+#################################################
+N 9 Potential Issue API: SDKCheck of <android.media.MediaPlayer: android.media.PlaybackParams getPlaybackParams()> is checking!!!
+The life time of api is [23,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 21 22 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.prangesoftwaresolutions.audioanchor.PlayActivity dummyMainMethod_com_prangesoftwaresolutions_audioanchor_PlayActivity(android.content.Intent)>[]--><com.prangesoftwaresolutions.audioanchor.'-$$Lambda$PlayActivity$sA9LkJXd0E2LdBm1dsMZKdfR4GQ': void onClick(android.view.View)>[]--><com.prangesoftwaresolutions.audioanchor.PlayActivity: void lambda$showPlaybackSpeedDialog$17$PlayActivity(android.widget.TextView,android.widget.SeekBar,android.view.View)>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void setPlaybackSpeed(float)>[]--><android.media.MediaPlayer: android.media.PlaybackParams getPlaybackParams()>
+###Multi invoking in one method, need manual check!!!--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void initMediaPlayer(java.lang.String,int)>[[-i1 < 23], [try]]
+###Multi invoking in one method, need manual check!!!--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void initMediaPlayer(java.lang.String,int)>[[-i1 < 23]][[try]]
+-i1 < 23
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.prangesoftwaresolutions.audioanchor.MediaPlayerService dummyMainMethod_com_prangesoftwaresolutions_audioanchor_MediaPlayerService(android.content.Intent)>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void onAudioFocusChange(int)>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void initMediaPlayer(java.lang.String,int)>[[-i1 < 23], [try]]--><android.media.MediaPlayer: android.media.PlaybackParams getPlaybackParams()>
+One road protect good!
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.media.MediaPlayer: android.media.PlaybackParams getPlaybackParams()>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:5
+crashApisInMain:5
+containsStatic:false
+containsTry:true
+1call by main package
+-----------------------------------------
+#################################################
+N 10 Potential Issue API: SDKCheck of <android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)> is checking!!!
+The life time of api is [26,31]
+8call roads:
+1 Mainhead roads:
+-i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.prangesoftwaresolutions.audioanchor.MediaPlayerService dummyMainMethod_com_prangesoftwaresolutions_audioanchor_MediaPlayerService(android.content.Intent)>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void onAudioFocusChange(int)>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void pause()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void buildNotification()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void createNotificationChannel()>[[-i0 < 26]]--><android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)>
+One road protect good!
+7 Packageshead roads:
+-i0 < 26
+Good road: <com.prangesoftwaresolutions.audioanchor.MediaSessionCallback: void onPlay()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void play()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void buildNotification()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void createNotificationChannel()>[[-i0 < 26]]--><android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)>
+One road protect good!
+-i0 < 26
+Good road: <com.prangesoftwaresolutions.audioanchor.MediaPlayerService$5: void onCallStateChanged(int,java.lang.String)>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void pause()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void buildNotification()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void createNotificationChannel()>[[-i0 < 26]]--><android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)>
+One road protect good!
+-i0 < 26
+Good road: <com.prangesoftwaresolutions.audioanchor.MediaPlayerService$5: void onCallStateChanged(int,java.lang.String)>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void play()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void buildNotification()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void createNotificationChannel()>[[-i0 < 26]]--><android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)>
+One road protect good!
+-i0 < 26
+Good road: <com.prangesoftwaresolutions.audioanchor.MediaPlayerService$6: void finished()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void pause()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void buildNotification()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void createNotificationChannel()>[[-i0 < 26]]--><android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)>
+One road protect good!
+-i0 < 26
+Good road: <com.prangesoftwaresolutions.audioanchor.MediaSessionCallback: void onPause()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void pause()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void buildNotification()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void createNotificationChannel()>[[-i0 < 26]]--><android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)>
+One road protect good!
+-i0 < 26
+Good road: <com.prangesoftwaresolutions.audioanchor.MediaPlayerService$2: void onReceive(android.content.Context,android.content.Intent)>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void play()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void buildNotification()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void createNotificationChannel()>[[-i0 < 26]]--><android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)>
+One road protect good!
+-i0 < 26
+Good road: <com.prangesoftwaresolutions.audioanchor.MediaPlayerService$1: void onReceive(android.content.Context,android.content.Intent)>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void pause()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void buildNotification()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void createNotificationChannel()>[[-i0 < 26]]--><android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)>
+One road protect good!
+-i0 < 26
+Good road: <com.prangesoftwaresolutions.audioanchor.MediaPlayerService$3: void onReceive(android.content.Context,android.content.Intent)>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void pause()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void buildNotification()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void createNotificationChannel()>[[-i0 < 26]]--><android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)>
+One road protect good!
+containsStatic:false
+containsTry:false
+8call by main package
+-----------------------------------------
+#################################################
+N 11 Potential Issue API: SDKCheck of <android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)> is checking!!!
+The life time of api is [26,31]
+8call roads:
+1 Mainhead roads:
+-i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.prangesoftwaresolutions.audioanchor.MediaPlayerService dummyMainMethod_com_prangesoftwaresolutions_audioanchor_MediaPlayerService(android.content.Intent)>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void onAudioFocusChange(int)>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void pause()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void buildNotification()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void createNotificationChannel()>[[-i0 < 26]]--><android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)>
+One road protect good!
+7 Packageshead roads:
+-i0 < 26
+Good road: <com.prangesoftwaresolutions.audioanchor.MediaSessionCallback: void onPlay()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void play()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void buildNotification()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void createNotificationChannel()>[[-i0 < 26]]--><android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)>
+One road protect good!
+-i0 < 26
+Good road: <com.prangesoftwaresolutions.audioanchor.MediaPlayerService$5: void onCallStateChanged(int,java.lang.String)>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void pause()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void buildNotification()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void createNotificationChannel()>[[-i0 < 26]]--><android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)>
+One road protect good!
+-i0 < 26
+Good road: <com.prangesoftwaresolutions.audioanchor.MediaPlayerService$5: void onCallStateChanged(int,java.lang.String)>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void play()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void buildNotification()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void createNotificationChannel()>[[-i0 < 26]]--><android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)>
+One road protect good!
+-i0 < 26
+Good road: <com.prangesoftwaresolutions.audioanchor.MediaPlayerService$6: void finished()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void pause()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void buildNotification()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void createNotificationChannel()>[[-i0 < 26]]--><android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)>
+One road protect good!
+-i0 < 26
+Good road: <com.prangesoftwaresolutions.audioanchor.MediaSessionCallback: void onPause()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void pause()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void buildNotification()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void createNotificationChannel()>[[-i0 < 26]]--><android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)>
+One road protect good!
+-i0 < 26
+Good road: <com.prangesoftwaresolutions.audioanchor.MediaPlayerService$2: void onReceive(android.content.Context,android.content.Intent)>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void play()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void buildNotification()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void createNotificationChannel()>[[-i0 < 26]]--><android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)>
+One road protect good!
+-i0 < 26
+Good road: <com.prangesoftwaresolutions.audioanchor.MediaPlayerService$1: void onReceive(android.content.Context,android.content.Intent)>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void pause()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void buildNotification()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void createNotificationChannel()>[[-i0 < 26]]--><android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)>
+One road protect good!
+-i0 < 26
+Good road: <com.prangesoftwaresolutions.audioanchor.MediaPlayerService$3: void onReceive(android.content.Context,android.content.Intent)>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void pause()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void buildNotification()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void createNotificationChannel()>[[-i0 < 26]]--><android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)>
+One road protect good!
+containsStatic:false
+containsTry:false
+8call by main package
+-----------------------------------------
+#################################################
+N 12 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)> is checking!!!
+The life time of api is [22,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.prangesoftwaresolutions.audioanchor.PlayActivity dummyMainMethod_com_prangesoftwaresolutions_audioanchor_PlayActivity(android.content.Intent)>[]--><com.prangesoftwaresolutions.audioanchor.PlayActivity: void onSaveInstanceState(android.os.Bundle,android.os.PersistableBundle)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:6
+crashApisInMain:6
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 13 Potential Issue API: SDKCheck of <android.app.NotificationChannel: void setShowBadge(boolean)> is checking!!!
+The life time of api is [26,31]
+8call roads:
+1 Mainhead roads:
+-i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.prangesoftwaresolutions.audioanchor.MediaPlayerService dummyMainMethod_com_prangesoftwaresolutions_audioanchor_MediaPlayerService(android.content.Intent)>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void onAudioFocusChange(int)>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void pause()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void buildNotification()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void createNotificationChannel()>[[-i0 < 26]]--><android.app.NotificationChannel: void setShowBadge(boolean)>
+One road protect good!
+7 Packageshead roads:
+-i0 < 26
+Good road: <com.prangesoftwaresolutions.audioanchor.MediaSessionCallback: void onPlay()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void play()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void buildNotification()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void createNotificationChannel()>[[-i0 < 26]]--><android.app.NotificationChannel: void setShowBadge(boolean)>
+One road protect good!
+-i0 < 26
+Good road: <com.prangesoftwaresolutions.audioanchor.MediaPlayerService$5: void onCallStateChanged(int,java.lang.String)>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void pause()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void buildNotification()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void createNotificationChannel()>[[-i0 < 26]]--><android.app.NotificationChannel: void setShowBadge(boolean)>
+One road protect good!
+-i0 < 26
+Good road: <com.prangesoftwaresolutions.audioanchor.MediaPlayerService$5: void onCallStateChanged(int,java.lang.String)>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void play()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void buildNotification()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void createNotificationChannel()>[[-i0 < 26]]--><android.app.NotificationChannel: void setShowBadge(boolean)>
+One road protect good!
+-i0 < 26
+Good road: <com.prangesoftwaresolutions.audioanchor.MediaPlayerService$6: void finished()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void pause()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void buildNotification()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void createNotificationChannel()>[[-i0 < 26]]--><android.app.NotificationChannel: void setShowBadge(boolean)>
+One road protect good!
+-i0 < 26
+Good road: <com.prangesoftwaresolutions.audioanchor.MediaSessionCallback: void onPause()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void pause()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void buildNotification()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void createNotificationChannel()>[[-i0 < 26]]--><android.app.NotificationChannel: void setShowBadge(boolean)>
+One road protect good!
+-i0 < 26
+Good road: <com.prangesoftwaresolutions.audioanchor.MediaPlayerService$2: void onReceive(android.content.Context,android.content.Intent)>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void play()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void buildNotification()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void createNotificationChannel()>[[-i0 < 26]]--><android.app.NotificationChannel: void setShowBadge(boolean)>
+One road protect good!
+-i0 < 26
+Good road: <com.prangesoftwaresolutions.audioanchor.MediaPlayerService$1: void onReceive(android.content.Context,android.content.Intent)>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void pause()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void buildNotification()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void createNotificationChannel()>[[-i0 < 26]]--><android.app.NotificationChannel: void setShowBadge(boolean)>
+One road protect good!
+-i0 < 26
+Good road: <com.prangesoftwaresolutions.audioanchor.MediaPlayerService$3: void onReceive(android.content.Context,android.content.Intent)>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void pause()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void buildNotification()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void createNotificationChannel()>[[-i0 < 26]]--><android.app.NotificationChannel: void setShowBadge(boolean)>
+One road protect good!
+containsStatic:false
+containsTry:false
+8call by main package
+-----------------------------------------
+#################################################
+N 14 Potential Issue API: SDKCheck of <android.app.NotificationChannel: void setSound(android.net.Uri,android.media.AudioAttributes)> is checking!!!
+The life time of api is [26,31]
+8call roads:
+1 Mainhead roads:
+-i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.prangesoftwaresolutions.audioanchor.MediaPlayerService dummyMainMethod_com_prangesoftwaresolutions_audioanchor_MediaPlayerService(android.content.Intent)>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void onAudioFocusChange(int)>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void pause()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void buildNotification()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void createNotificationChannel()>[[-i0 < 26]]--><android.app.NotificationChannel: void setSound(android.net.Uri,android.media.AudioAttributes)>
+One road protect good!
+7 Packageshead roads:
+-i0 < 26
+Good road: <com.prangesoftwaresolutions.audioanchor.MediaSessionCallback: void onPlay()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void play()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void buildNotification()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void createNotificationChannel()>[[-i0 < 26]]--><android.app.NotificationChannel: void setSound(android.net.Uri,android.media.AudioAttributes)>
+One road protect good!
+-i0 < 26
+Good road: <com.prangesoftwaresolutions.audioanchor.MediaPlayerService$5: void onCallStateChanged(int,java.lang.String)>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void pause()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void buildNotification()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void createNotificationChannel()>[[-i0 < 26]]--><android.app.NotificationChannel: void setSound(android.net.Uri,android.media.AudioAttributes)>
+One road protect good!
+-i0 < 26
+Good road: <com.prangesoftwaresolutions.audioanchor.MediaPlayerService$5: void onCallStateChanged(int,java.lang.String)>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void play()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void buildNotification()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void createNotificationChannel()>[[-i0 < 26]]--><android.app.NotificationChannel: void setSound(android.net.Uri,android.media.AudioAttributes)>
+One road protect good!
+-i0 < 26
+Good road: <com.prangesoftwaresolutions.audioanchor.MediaPlayerService$6: void finished()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void pause()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void buildNotification()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void createNotificationChannel()>[[-i0 < 26]]--><android.app.NotificationChannel: void setSound(android.net.Uri,android.media.AudioAttributes)>
+One road protect good!
+-i0 < 26
+Good road: <com.prangesoftwaresolutions.audioanchor.MediaSessionCallback: void onPause()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void pause()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void buildNotification()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void createNotificationChannel()>[[-i0 < 26]]--><android.app.NotificationChannel: void setSound(android.net.Uri,android.media.AudioAttributes)>
+One road protect good!
+-i0 < 26
+Good road: <com.prangesoftwaresolutions.audioanchor.MediaPlayerService$2: void onReceive(android.content.Context,android.content.Intent)>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void play()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void buildNotification()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void createNotificationChannel()>[[-i0 < 26]]--><android.app.NotificationChannel: void setSound(android.net.Uri,android.media.AudioAttributes)>
+One road protect good!
+-i0 < 26
+Good road: <com.prangesoftwaresolutions.audioanchor.MediaPlayerService$1: void onReceive(android.content.Context,android.content.Intent)>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void pause()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void buildNotification()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void createNotificationChannel()>[[-i0 < 26]]--><android.app.NotificationChannel: void setSound(android.net.Uri,android.media.AudioAttributes)>
+One road protect good!
+-i0 < 26
+Good road: <com.prangesoftwaresolutions.audioanchor.MediaPlayerService$3: void onReceive(android.content.Context,android.content.Intent)>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void pause()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void buildNotification()>[]--><com.prangesoftwaresolutions.audioanchor.MediaPlayerService: void createNotificationChannel()>[[-i0 < 26]]--><android.app.NotificationChannel: void setSound(android.net.Uri,android.media.AudioAttributes)>
+One road protect good!
+containsStatic:false
+containsTry:false
+8call by main package
+-----------------------------------------
+crashApis numbers:6
+crashApis numbers in main road:6
+On Android Version 16 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 17 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 18 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 19 this app may have error api use(at least): 6 and error api roads: 9
+On Android Version 20 this app may have error api use(at least): 6 and error api roads: 9
+On Android Version 21 this app may have error api use(at least): 5 and error api roads: 8
+On Android Version 22 this app may have error api use(at least): 3 and error api roads: 6
+On Android Version 23 this app may have error api use(at least): 1 and error api roads: 4
+On Android Version 24 this app may have error api use(at least): 1 and error api roads: 4
+On Android Version 25 this app may have error api use(at least): 1 and error api roads: 4
+On Android Version 26 this app may have error api use(at least): 1 and error api roads: 4
+On Android Version 27 this app may have error api use(at least): 1 and error api roads: 4
+On Android Version 28 this app may have error api use(at least): 1 and error api roads: 4
+On Android Version 29 this app may have error api use(at least): 1 and error api roads: 4
+On Android Version 30 this app may have error api use(at least): 1 and error api roads: 4
+On Android Version 31 this app may have error api use(at least): 1 and error api roads: 4

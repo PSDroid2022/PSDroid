@@ -1,0 +1,189 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/Tron_Wallet.apk
+Entry Points[com.eletac.tronwallet.wallet.ParticipateAssetActivity, com.eletac.tronwallet.wallet.ImportWalletActivity, com.eletac.tronwallet.settings.SettingConnectionActivity, com.eletac.tronwallet.MainActivity, com.eletac.tronwallet.wallet.AboutActivity, com.eletac.tronwallet.wallet.SendReceiveActivity, com.journeyapps.barcodescanner.CaptureActivity, com.eletac.tronwallet.wallet.cold.SignedTransactionActivity, com.eletac.tronwallet.TronWalletApplication, com.eletac.tronwallet.wallet.CreateWalletActivity, com.eletac.tronwallet.wallet.VoteActivity, com.eletac.tronwallet.wallet.SignTransactionActivity, com.eletac.tronwallet.CaptureActivityPortrait, com.eletac.tronwallet.wallet.AccountActivity]
+FllowDroidcallgraph size:9945
+Soot started on Mon Jul 11 14:11:38 CST 2022
+StaticCheck:<com.roughike.bottombar.NavbarUtils: boolean hasSoftKeys(android.content.Context)>$yysi0 < 17
+Soot finished on Mon Jul 11 14:13:26 CST 2022
+Soot has run for 1 min. 48 sec.
+Found 1 additional DEX files. Now visiting them one by one.
+Soot started on Mon Jul 11 14:13:26 CST 2022
+Soot finished on Mon Jul 11 14:14:10 CST 2022
+Soot has run for 0 min. 43 sec.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 21
+Declared Target Sdk version is: 27
+Declared Max Sdk version is: -1
+Collected 749 Android APIs in the primary DEX file
+Collected 74 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.widget.TextView: void setTextAppearance(int)> is checking!!!
+The life time of api is [23,31]
+5call roads:
+1 Mainhead roads:
+-$i0 < 23
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.eletac.tronwallet.MainActivity dummyMainMethod_com_eletac_tronwallet_MainActivity(android.content.Intent)>[]--><com.roughike.bottombar.BottomBar: void <init>(android.content.Context)>[]--><com.roughike.bottombar.BottomBar: void <init>(android.content.Context,android.util.AttributeSet)>[]--><com.roughike.bottombar.BottomBar: void <init>(android.content.Context,android.util.AttributeSet,int)>[]--><com.roughike.bottombar.BottomBar: void init(android.content.Context,android.util.AttributeSet,int,int)>[]--><com.roughike.bottombar.BottomBar: void setItems(int)>[]--><com.roughike.bottombar.BottomBar: void setItems(int,com.roughike.bottombar.BottomBarTab$Config)>[]--><com.roughike.bottombar.BottomBar: void updateItems(java.util.List)>[]--><com.roughike.bottombar.BottomBarTab: void prepareLayout()>[]--><com.roughike.bottombar.BottomBarTab: void updateCustomTextAppearance()>[[-$i0 < 23]]--><android.widget.TextView: void setTextAppearance(int)>
+One road protect good!
+4 Packageshead roads:
+-$i1 < 23
+Good road: <com.roughike.bottombar.BottomBarTab: void onRestoreInstanceState(android.os.Parcelable)>[]--><com.roughike.bottombar.BottomBarTab: void restoreState(android.os.Bundle)>[]--><com.roughike.bottombar.BottomBarTab: void setBadgeCount(int)>[]--><com.roughike.bottombar.BottomBarBadge: void attachToTab(com.roughike.bottombar.BottomBarTab,int)>[]--><com.roughike.bottombar.MiscUtils: void setTextAppearance(android.widget.TextView,int)>[[-$i1 < 23]]--><android.widget.TextView: void setTextAppearance(int)>
+One road protect good!
+-$i1 < 23
+Good road: <com.roughike.bottombar.BottomBarTab: void removeBadge()>[]--><com.roughike.bottombar.BottomBarTab: void setBadgeCount(int)>[]--><com.roughike.bottombar.BottomBarBadge: void attachToTab(com.roughike.bottombar.BottomBarTab,int)>[]--><com.roughike.bottombar.MiscUtils: void setTextAppearance(android.widget.TextView,int)>[[-$i1 < 23]]--><android.widget.TextView: void setTextAppearance(int)>
+One road protect good!
+-$i0 < 23
+Good road: <com.roughike.bottombar.BottomBar$7: void update(com.roughike.bottombar.BottomBarTab)>[]--><com.roughike.bottombar.BottomBarTab: void setTitleTextAppearance(int)>[]--><com.roughike.bottombar.BottomBarTab: void updateCustomTextAppearance()>[[-$i0 < 23]]--><android.widget.TextView: void setTextAppearance(int)>
+One road protect good!
+-$i0 < 23
+Good road: <com.roughike.bottombar.BottomBar: void <init>(android.content.Context,android.util.AttributeSet,int,int)>[]--><com.roughike.bottombar.BottomBar: void init(android.content.Context,android.util.AttributeSet,int,int)>[]--><com.roughike.bottombar.BottomBar: void setItems(int)>[]--><com.roughike.bottombar.BottomBar: void setItems(int,com.roughike.bottombar.BottomBarTab$Config)>[]--><com.roughike.bottombar.BottomBar: void updateItems(java.util.List)>[]--><com.roughike.bottombar.BottomBarTab: void prepareLayout()>[]--><com.roughike.bottombar.BottomBarTab: void updateCustomTextAppearance()>[[-$i0 < 23]]--><android.widget.TextView: void setTextAppearance(int)>
+One road protect good!
+containsStatic:false
+containsTry:true
+5call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.os.BaseBundle: boolean[] getBooleanArray(java.lang.String)> is checking!!!
+The life time of api is [22,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 21 
+Error road: <com.yarolegovich.lovelydialog.LovelyChoiceDialog: void restoreState(android.os.Bundle)>[]--><android.os.BaseBundle: boolean[] getBooleanArray(java.lang.String)>
+#1.the call statck between class <com.yarolegovich.lovelydialog.LovelyChoiceDialog: void restoreState(android.os.Bundle)> to <android.os.BaseBundle: boolean[] getBooleanArray(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:1
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putBooleanArray(java.lang.String,boolean[])> is checking!!!
+The life time of api is [22,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 21 
+Error road: <com.yarolegovich.lovelydialog.LovelyChoiceDialog: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putBooleanArray(java.lang.String,boolean[])>
+#1.the call statck between class <com.yarolegovich.lovelydialog.LovelyChoiceDialog: void onSaveInstanceState(android.os.Bundle)> to <android.os.BaseBundle: void putBooleanArray(java.lang.String,boolean[])>has compatibility isssues！
+-----------------------------------------
+crashApis:2
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)> is checking!!!
+The life time of api is [22,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 21 
+Error road: <com.yarolegovich.lovelydialog.LovelyTextInputDialog: void restoreState(android.os.Bundle)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>
+#1.the call statck between class <com.yarolegovich.lovelydialog.LovelyTextInputDialog: void restoreState(android.os.Bundle)> to <android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+crashApis:3
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)> is checking!!!
+The life time of api is [22,31]
+3call roads:
+0 Mainhead roads:
+3 Packageshead roads:
+!!!this api will crash on sdk 21 
+Error road: <com.yarolegovich.lovelydialog.LovelyInfoDialog: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+#1.the call statck between class <com.yarolegovich.lovelydialog.LovelyInfoDialog: void onSaveInstanceState(android.os.Bundle)> to <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 21 
+Error road: <com.yarolegovich.lovelydialog.LovelyTextInputDialog: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+#2.the call statck between class <com.yarolegovich.lovelydialog.LovelyTextInputDialog: void onSaveInstanceState(android.os.Bundle)> to <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 21 
+Error road: <com.journeyapps.barcodescanner.CameraPreview: android.os.Parcelable onSaveInstanceState()>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+#3.the call statck between class <com.journeyapps.barcodescanner.CameraPreview: android.os.Parcelable onSaveInstanceState()> to <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+crashApis:4
+containsStatic:false
+containsTry:false
+4call by main package
+-----------------------------------------
+#################################################
+N 5 Potential Issue API: SDKCheck of <android.os.BaseBundle: boolean getBoolean(java.lang.String)> is checking!!!
+The life time of api is [22,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 21 
+Error road: <com.journeyapps.barcodescanner.CameraPreview: void onRestoreInstanceState(android.os.Parcelable)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+#1.the call statck between class <com.journeyapps.barcodescanner.CameraPreview: void onRestoreInstanceState(android.os.Parcelable)> to <android.os.BaseBundle: boolean getBoolean(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 21 
+Error road: <com.yarolegovich.lovelydialog.LovelyInfoDialog: void restoreState(android.os.Bundle)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+#2.the call statck between class <com.yarolegovich.lovelydialog.LovelyInfoDialog: void restoreState(android.os.Bundle)> to <android.os.BaseBundle: boolean getBoolean(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:5
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 6 Potential Issue API: SDKCheck of <java.beans.PropertyDescriptor: java.lang.reflect.Method getWriteMethod()> is checking!!!
+The life time of api is [1,8]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+try
+Good road with try: <com.typesafe.config.ConfigBeanFactory: java.lang.Object create(com.typesafe.config.Config,java.lang.Class)>[]--><com.typesafe.config.impl.ConfigBeanImpl: java.lang.Object createInternal(com.typesafe.config.Config,java.lang.Class)>[[try]]--><java.beans.PropertyDescriptor: java.lang.reflect.Method getWriteMethod()>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 7 Potential Issue API: SDKCheck of <java.beans.PropertyDescriptor: java.lang.reflect.Method getReadMethod()> is checking!!!
+The life time of api is [1,8]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+try
+Good road with try: <com.typesafe.config.ConfigBeanFactory: java.lang.Object create(com.typesafe.config.Config,java.lang.Class)>[]--><com.typesafe.config.impl.ConfigBeanImpl: java.lang.Object createInternal(com.typesafe.config.Config,java.lang.Class)>[[try]]--><java.beans.PropertyDescriptor: java.lang.reflect.Method getReadMethod()>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 8 Potential Issue API: SDKCheck of <android.media.MediaPlayer: void setVolume(float,float)> is checking!!!
+The life time of api is [1,17]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+try
+Good road with try: <com.journeyapps.barcodescanner.BarcodeView$1: boolean handleMessage(android.os.Message)>[]--><com.journeyapps.barcodescanner.DecoratedBarcodeView$WrappedCallback: void barcodeResult(com.journeyapps.barcodescanner.BarcodeResult)>[]--><com.journeyapps.barcodescanner.CaptureManager$1: void barcodeResult(com.journeyapps.barcodescanner.BarcodeResult)>[]--><com.google.zxing.client.android.BeepManager: void playBeepSoundAndVibrate()>[[try]]--><com.google.zxing.client.android.BeepManager: android.media.MediaPlayer playBeepSound()>[[try]]--><android.media.MediaPlayer: void setVolume(float,float)>
+One road protect good!
+try
+Good road with try: <com.journeyapps.barcodescanner.BarcodeView$1: boolean handleMessage(android.os.Message)>[]--><com.journeyapps.barcodescanner.CaptureManager$1: void barcodeResult(com.journeyapps.barcodescanner.BarcodeResult)>[]--><com.google.zxing.client.android.BeepManager: void playBeepSoundAndVibrate()>[[try]]--><com.google.zxing.client.android.BeepManager: android.media.MediaPlayer playBeepSound()>[[try]]--><android.media.MediaPlayer: void setVolume(float,float)>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+crashApis numbers:5
+crashApis numbers in main road:0
+On Android Version 16 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 17 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 18 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 19 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 20 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 21 this app may have error api use(at least): 5 and error api roads: 8
+On Android Version 22 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 23 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 24 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 25 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 31 this app may have error api use(at least): 0 and error api roads: 0

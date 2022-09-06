@@ -1,0 +1,99 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/Emerald_Dialer.apk
+Entry Points[ru.henridellal.dialer.PickContactNumberActivity, ru.henridellal.dialer.SpeedDialActivity, ru.henridellal.dialer.AboutActivity, ru.henridellal.dialer.DialerActivity, ru.henridellal.dialer.DialerPreferencesActivity]
+FllowDroidcallgraph size:574
+Soot started on Mon Jul 11 03:30:36 CST 2022
+Soot finished on Mon Jul 11 03:30:39 CST 2022
+Soot has run for 0 min. 2 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 21
+Declared Target Sdk version is: 30
+Declared Max Sdk version is: -1
+Collected 189 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.preference.PreferenceActivity: void onBackPressed()> is checking!!!
+The life time of api is [26,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 21 22 23 24 25 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: ru.henridellal.dialer.DialerPreferencesActivity dummyMainMethod_ru_henridellal_dialer_DialerPreferencesActivity(android.content.Intent)>[]--><ru.henridellal.dialer.DialerPreferencesActivity: void onBackPressed()>[]--><android.preference.PreferenceActivity: void onBackPressed()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.preference.PreferenceActivity: void onBackPressed()>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:1
+crashApisInMain:1
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.app.Activity: void requestPermissions(java.lang.String[],int)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+1 Mainhead roads:
+-i0 < 23
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: ru.henridellal.dialer.DialerActivity dummyMainMethod_ru_henridellal_dialer_DialerActivity(android.content.Intent)>[]--><ru.henridellal.dialer.DialerActivity: void onCreate(android.os.Bundle)>[[-i0 < 23]]--><android.app.Activity: void requestPermissions(java.lang.String[],int)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.content.ContextWrapper: int checkSelfPermission(java.lang.String)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+1 Mainhead roads:
+-i0 < 23
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: ru.henridellal.dialer.DialerActivity dummyMainMethod_ru_henridellal_dialer_DialerActivity(android.content.Intent)>[]--><ru.henridellal.dialer.DialerActivity: void onCreate(android.os.Bundle)>[[-i0 < 23]]--><ru.henridellal.dialer.DialerActivity: boolean hasRequiredPermissions()>[]--><android.content.ContextWrapper: int checkSelfPermission(java.lang.String)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.telephony.TelephonyManager: java.lang.String getMeid()> is checking!!!
+The life time of api is [26,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+i0 >= 26
+Good road: <ru.henridellal.dialer.DialerActivity: void onTextChanged(java.lang.CharSequence,int,int,int)>[]--><ru.henridellal.dialer.DialerActivity: void showDeviceId()>[[i0 >= 26]]--><android.telephony.TelephonyManager: java.lang.String getMeid()>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.telephony.TelephonyManager: java.lang.String getImei()> is checking!!!
+The life time of api is [26,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+i0 >= 26
+Good road: <ru.henridellal.dialer.DialerActivity: void onTextChanged(java.lang.CharSequence,int,int,int)>[]--><ru.henridellal.dialer.DialerActivity: void showDeviceId()>[[i0 >= 26]]--><android.telephony.TelephonyManager: java.lang.String getImei()>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+crashApis numbers:1
+crashApis numbers in main road:1
+On Android Version 16 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 17 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 18 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 19 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 20 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 21 this app may have error api use(at least): 1 and error api roads: 1
+On Android Version 22 this app may have error api use(at least): 1 and error api roads: 1
+On Android Version 23 this app may have error api use(at least): 1 and error api roads: 1
+On Android Version 24 this app may have error api use(at least): 1 and error api roads: 1
+On Android Version 25 this app may have error api use(at least): 1 and error api roads: 1
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 31 this app may have error api use(at least): 0 and error api roads: 0

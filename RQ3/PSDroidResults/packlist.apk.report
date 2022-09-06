@@ -1,0 +1,1247 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/packlist.apk
+Entry Points[com.nbossard.packlist.gui.MainActivity, org.acra.dialog.CrashReportDialog, com.nbossard.packlist.gui.AboutActivity, com.nbossard.packlist.gui.MainActivityForTest, com.nbossard.packlist.PackListApp, org.acra.sender.SenderService, com.nbossard.packlist.gui.HelpThirdPartyActivity]
+FllowDroidcallgraph size:10806
+Soot started on Mon Jul 11 10:23:01 CST 2022
+leftOp<android.databinding.ViewDataBinding: int SDK_INT>
+StaticCheck:<com.fourmob.datetimepicker.Utils: boolean isJellybeanOrLater()>$yysi0 < 16
+StaticCheck:<com.fourmob.datetimepicker.Utils: boolean isTouchExplorationEnabled(android.view.accessibility.AccessibilityManager)>$yysi0 < 14
+Soot finished on Mon Jul 11 10:24:33 CST 2022
+Soot has run for 1 min. 31 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 14
+Declared Target Sdk version is: 23
+Declared Max Sdk version is: -1
+Collected 776 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <java.awt.Font: java.lang.String getFontName()> is checking!!!
+The life time of api is [1,8]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <groovyjarjaropenbeans.AwtFontPersistenceDelegate: groovyjarjaropenbeans.Expression instantiate(java.lang.Object,groovyjarjaropenbeans.Encoder)>[]--><java.awt.Font: java.lang.String getFontName()>
+#1.the call statck between class <groovyjarjaropenbeans.AwtFontPersistenceDelegate: groovyjarjaropenbeans.Expression instantiate(java.lang.Object,groovyjarjaropenbeans.Encoder)> to <java.awt.Font: java.lang.String getFontName()>has compatibility isssues！
+-----------------------------------------
+crashApis:1
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.widget.TimePicker: int getMinute()> is checking!!!
+The life time of api is [23,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+-$i1 < 23
+Good road: <android.databinding.adapters.TimePickerBindingAdapter: void setMinute(android.widget.TimePicker,int)>[[-$i1 < 23]]--><android.widget.TimePicker: int getMinute()>
+One road protect good!
+-$i0 < 23
+Good road: <android.databinding.adapters.TimePickerBindingAdapter: int getMinute(android.widget.TimePicker)>[[-$i0 < 23]]--><android.widget.TimePicker: int getMinute()>
+One road protect good!
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <java.awt.Graphics: void drawBytes(byte[],int,int,int,int)> is checking!!!
+The life time of api is [1,8]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <groovyjarjarharmonybeans.editors.FontEditor: void paintValue(java.awt.Graphics,java.awt.Rectangle)>[]--><java.awt.Graphics: void drawBytes(byte[],int,int,int,int)>
+#1.the call statck between class <groovyjarjarharmonybeans.editors.FontEditor: void paintValue(java.awt.Graphics,java.awt.Rectangle)> to <java.awt.Graphics: void drawBytes(byte[],int,int,int,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:2
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.widget.TimePicker: int getHour()> is checking!!!
+The life time of api is [23,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+-$i0 < 23
+Good road: <android.databinding.adapters.TimePickerBindingAdapter: int getHour(android.widget.TimePicker)>[[-$i0 < 23]]--><android.widget.TimePicker: int getHour()>
+One road protect good!
+-$i1 < 23
+Good road: <android.databinding.adapters.TimePickerBindingAdapter: void setHour(android.widget.TimePicker,int)>[[-$i1 < 23]]--><android.widget.TimePicker: int getHour()>
+One road protect good!
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.os.BaseBundle: int getInt(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+4call roads:
+0 Mainhead roads:
+4 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.fourmob.datetimepicker.date.DatePickerDialog: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#1.the call statck between class <com.fourmob.datetimepicker.date.DatePickerDialog: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.sleepbot.datetimepicker.time.TimePickerDialog: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#2.the call statck between class <com.sleepbot.datetimepicker.time.TimePickerDialog: void onCreate(android.os.Bundle)> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.fourmob.datetimepicker.date.DatePickerDialog: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#3.the call statck between class <com.fourmob.datetimepicker.date.DatePickerDialog: void onCreate(android.os.Bundle)> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.sleepbot.datetimepicker.time.TimePickerDialog: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#4.the call statck between class <com.sleepbot.datetimepicker.time.TimePickerDialog: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:3
+containsStatic:false
+containsTry:false
+5call by main package
+-----------------------------------------
+#################################################
+N 5 Potential Issue API: SDKCheck of <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()> is checking!!!
+The life time of api is [1,30]
+4call roads:
+0 Mainhead roads:
+4 Packageshead roads:
+try
+Good road with try: <it.gmariotti.changelibs.library.view.ChangeLogRecyclerView: void <init>(android.content.Context)>[]--><it.gmariotti.changelibs.library.view.ChangeLogRecyclerView: void <init>(android.content.Context,android.util.AttributeSet)>[]--><it.gmariotti.changelibs.library.view.ChangeLogRecyclerView: void <init>(android.content.Context,android.util.AttributeSet,int)>[]--><it.gmariotti.changelibs.library.view.ChangeLogRecyclerView: void init(android.util.AttributeSet,int)>[]--><it.gmariotti.changelibs.library.view.ChangeLogRecyclerView: void initAdapter()>[[try]]--><it.gmariotti.changelibs.library.Util: boolean isConnected(android.content.Context)>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>
+One road protect good!
+try
+Good road with try: <it.gmariotti.changelibs.library.view.ChangeLogRecyclerView$ParseAsyncTask: it.gmariotti.changelibs.library.internal.ChangeLog doInBackground(java.lang.Void[])>[[try]]--><it.gmariotti.changelibs.library.parser.XmlParser: it.gmariotti.changelibs.library.internal.ChangeLog readChangeLogFile()>[[try]]--><it.gmariotti.changelibs.library.Util: boolean isConnected(android.content.Context)>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>
+One road protect good!
+try
+Good road with try: <it.gmariotti.changelibs.library.view.ChangeLogListView$ParseAsyncTask: it.gmariotti.changelibs.library.internal.ChangeLog doInBackground(java.lang.Void[])>[[try]]--><it.gmariotti.changelibs.library.parser.XmlParser: it.gmariotti.changelibs.library.internal.ChangeLog readChangeLogFile()>[[try]]--><it.gmariotti.changelibs.library.Util: boolean isConnected(android.content.Context)>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>
+One road protect good!
+try
+Good road with try: <it.gmariotti.changelibs.library.view.ChangeLogListView: void <init>(android.content.Context)>[]--><it.gmariotti.changelibs.library.view.ChangeLogListView: void <init>(android.content.Context,android.util.AttributeSet)>[]--><it.gmariotti.changelibs.library.view.ChangeLogListView: void <init>(android.content.Context,android.util.AttributeSet,int)>[]--><it.gmariotti.changelibs.library.view.ChangeLogListView: void init(android.util.AttributeSet,int)>[]--><it.gmariotti.changelibs.library.view.ChangeLogListView: void initAdapter()>[[try]]--><it.gmariotti.changelibs.library.Util: boolean isConnected(android.content.Context)>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>
+One road protect good!
+containsStatic:false
+containsTry:true
+5call by main package
+-----------------------------------------
+#################################################
+N 6 Potential Issue API: SDKCheck of <java.awt.Dimension: void <init>(int,int)> is checking!!!
+The life time of api is [1,8]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+try
+Good road with try: <org.codehaus.groovy.antlr.LexerFrame: void main(java.lang.String[])>[]--><org.codehaus.groovy.antlr.LexerFrame: void <init>(java.lang.Class,java.lang.Class)>[[try]]--><org.codehaus.groovy.antlr.LexerFrame: void jbInit()>[]--><java.awt.Dimension: void <init>(int,int)>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 7 Potential Issue API: SDKCheck of <java.awt.Font: java.lang.String getName()> is checking!!!
+The life time of api is [1,8]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <groovyjarjarharmonybeans.editors.FontEditor: java.lang.String getJavaInitializationString()>[]--><java.awt.Font: java.lang.String getName()>
+#1.the call statck between class <groovyjarjarharmonybeans.editors.FontEditor: java.lang.String getJavaInitializationString()> to <java.awt.Font: java.lang.String getName()>has compatibility isssues！
+-----------------------------------------
+crashApis:4
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 8 Potential Issue API: SDKCheck of <android.os.BaseBundle: boolean containsKey(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.sleepbot.datetimepicker.time.TimePickerDialog: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: boolean containsKey(java.lang.String)>
+#1.the call statck between class <com.sleepbot.datetimepicker.time.TimePickerDialog: void onCreate(android.os.Bundle)> to <android.os.BaseBundle: boolean containsKey(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.sleepbot.datetimepicker.time.TimePickerDialog: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)>[]--><android.os.BaseBundle: boolean containsKey(java.lang.String)>
+#2.the call statck between class <com.sleepbot.datetimepicker.time.TimePickerDialog: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)> to <android.os.BaseBundle: boolean containsKey(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:5
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 9 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.acra.dialog.CrashReportDialog dummyMainMethod_org_acra_dialog_CrashReportDialog(android.content.Intent)>[]--><org.acra.dialog.CrashReportDialog: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:6
+crashApisInMain:1
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 10 Potential Issue API: SDKCheck of <android.os.StatFs: long getBlockCountLong()> is checking!!!
+The life time of api is [18,31]
+3call roads:
+1 Mainhead roads:
+###Multi invoking in one method, need manual check!!!--><org.acra.collector.CrashReportDataFactory: org.acra.collector.CrashReportData createCrashData(org.acra.builder.ReportBuilder)>[[try], [$i0 < 16]]--><org.acra.util.ReportUtils: long getTotalInternalMemorySize()>[[-$i0 < 18]]
+###Multi invoking in one method, need manual check!!!--><org.acra.collector.CrashReportDataFactory: org.acra.collector.CrashReportData createCrashData(org.acra.builder.ReportBuilder)>[[try]][[$i0 < 16]]--><org.acra.util.ReportUtils: long getTotalInternalMemorySize()>[[-$i0 < 18]]
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.nbossard.packlist.gui.MainActivity dummyMainMethod_com_nbossard_packlist_gui_MainActivity(android.content.Intent)>[]--><com.nbossard.packlist.gui.MainActivity: boolean onOptionsItemSelected(android.view.MenuItem)>[]--><com.nbossard.packlist.PackListApp: void sendUserDebugReport()>[]--><org.acra.ErrorReporter: void handleException(java.lang.Throwable)>[]--><org.acra.ErrorReporter: void handleException(java.lang.Throwable,boolean)>[]--><org.acra.builder.ReportBuilder: void build(org.acra.builder.ReportExecutor)>[]--><org.acra.builder.ReportExecutor: void execute(org.acra.builder.ReportBuilder)>[]--><org.acra.collector.CrashReportDataFactory: org.acra.collector.CrashReportData createCrashData(org.acra.builder.ReportBuilder)>[[try], [$i0 < 16]]--><org.acra.util.ReportUtils: long getTotalInternalMemorySize()>[[-$i0 < 18]]--><android.os.StatFs: long getBlockCountLong()>
+One road protect good!
+2 Packageshead roads:
+###Multi invoking in one method, need manual check!!!--><org.acra.collector.CrashReportDataFactory: org.acra.collector.CrashReportData createCrashData(org.acra.builder.ReportBuilder)>[[try], [$i0 < 16]]--><org.acra.util.ReportUtils: long getTotalInternalMemorySize()>[[-$i0 < 18]]
+###Multi invoking in one method, need manual check!!!--><org.acra.collector.CrashReportDataFactory: org.acra.collector.CrashReportData createCrashData(org.acra.builder.ReportBuilder)>[[try]][[$i0 < 16]]--><org.acra.util.ReportUtils: long getTotalInternalMemorySize()>[[-$i0 < 18]]
+try
+Good road with try: <org.acra.ErrorReporter: void handleSilentException(java.lang.Throwable)>[]--><org.acra.builder.ReportBuilder: void build(org.acra.builder.ReportExecutor)>[]--><org.acra.builder.ReportExecutor: void execute(org.acra.builder.ReportBuilder)>[]--><org.acra.collector.CrashReportDataFactory: org.acra.collector.CrashReportData createCrashData(org.acra.builder.ReportBuilder)>[[try], [$i0 < 16]]--><org.acra.util.ReportUtils: long getTotalInternalMemorySize()>[[-$i0 < 18]]--><android.os.StatFs: long getBlockCountLong()>
+One road protect good!
+###Multi invoking in one method, need manual check!!!<org.acra.ErrorReporter: void uncaughtException(java.lang.Thread,java.lang.Throwable)>[[try]]--><org.acra.builder.ReportBuilder: void build(org.acra.builder.ReportExecutor)>[]--><org.acra.builder.ReportExecutor: void execute(org.acra.builder.ReportBuilder)>[]--><org.acra.collector.CrashReportDataFactory: org.acra.collector.CrashReportData createCrashData(org.acra.builder.ReportBuilder)>[[try], [$i0 < 16]]--><org.acra.util.ReportUtils: long getTotalInternalMemorySize()>[[-$i0 < 18]]
+###Multi invoking in one method, need manual check!!!<org.acra.ErrorReporter: void uncaughtException(java.lang.Thread,java.lang.Throwable)>[[try]]--><org.acra.builder.ReportBuilder: void build(org.acra.builder.ReportExecutor)>[]--><org.acra.builder.ReportExecutor: void execute(org.acra.builder.ReportBuilder)>[]--><org.acra.collector.CrashReportDataFactory: org.acra.collector.CrashReportData createCrashData(org.acra.builder.ReportBuilder)>[[try]][[$i0 < 16]]--><org.acra.util.ReportUtils: long getTotalInternalMemorySize()>[[-$i0 < 18]]
+try
+Good road with try: <org.acra.ErrorReporter: void uncaughtException(java.lang.Thread,java.lang.Throwable)>[[try]]--><org.acra.builder.ReportBuilder: void build(org.acra.builder.ReportExecutor)>[]--><org.acra.builder.ReportExecutor: void execute(org.acra.builder.ReportBuilder)>[]--><org.acra.collector.CrashReportDataFactory: org.acra.collector.CrashReportData createCrashData(org.acra.builder.ReportBuilder)>[[try], [$i0 < 16]]--><org.acra.util.ReportUtils: long getTotalInternalMemorySize()>[[-$i0 < 18]]--><android.os.StatFs: long getBlockCountLong()>
+One road protect good!
+containsStatic:false
+containsTry:true
+3call by main package
+-----------------------------------------
+#################################################
+N 11 Potential Issue API: SDKCheck of <android.util.SparseLongArray: long get(int)> is checking!!!
+The life time of api is [18,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 
+Error road: <android.databinding.ViewDataBinding: long getFromList(android.util.SparseLongArray,int)>[]--><android.util.SparseLongArray: long get(int)>
+#1.the call statck between class <android.databinding.ViewDataBinding: long getFromList(android.util.SparseLongArray,int)> to <android.util.SparseLongArray: long get(int)>has compatibility isssues！
+-----------------------------------------
+crashApis:7
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 12 Potential Issue API: SDKCheck of <android.media.MediaCodecList: android.media.MediaCodecInfo[] getCodecInfos()> is checking!!!
+The life time of api is [21,31]
+3call roads:
+1 Mainhead roads:
+###Multi invoking in one method, need manual check!!!--><org.acra.collector.CrashReportDataFactory: org.acra.collector.CrashReportData createCrashData(org.acra.builder.ReportBuilder)>[[try], [$i0 < 16]]--><org.acra.collector.MediaCodecListCollector: java.lang.String collectMediaCodecList()>[[$i1 >= 21], [$i1 >= 16]]
+###Multi invoking in one method, need manual check!!!--><org.acra.collector.CrashReportDataFactory: org.acra.collector.CrashReportData createCrashData(org.acra.builder.ReportBuilder)>[[try]][[$i0 < 16]]--><org.acra.collector.MediaCodecListCollector: java.lang.String collectMediaCodecList()>[[$i1 >= 21]][[$i1 >= 16]]
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.nbossard.packlist.gui.MainActivity dummyMainMethod_com_nbossard_packlist_gui_MainActivity(android.content.Intent)>[]--><com.nbossard.packlist.gui.MainActivity: boolean onOptionsItemSelected(android.view.MenuItem)>[]--><com.nbossard.packlist.PackListApp: void sendUserDebugReport()>[]--><org.acra.ErrorReporter: void handleException(java.lang.Throwable)>[]--><org.acra.ErrorReporter: void handleException(java.lang.Throwable,boolean)>[]--><org.acra.builder.ReportBuilder: void build(org.acra.builder.ReportExecutor)>[]--><org.acra.builder.ReportExecutor: void execute(org.acra.builder.ReportBuilder)>[]--><org.acra.collector.CrashReportDataFactory: org.acra.collector.CrashReportData createCrashData(org.acra.builder.ReportBuilder)>[[try], [$i0 < 16]]--><org.acra.collector.MediaCodecListCollector: java.lang.String collectMediaCodecList()>[[$i1 >= 21], [$i1 >= 16]]--><android.media.MediaCodecList: android.media.MediaCodecInfo[] getCodecInfos()>
+One road protect good!
+2 Packageshead roads:
+###Multi invoking in one method, need manual check!!!--><org.acra.collector.CrashReportDataFactory: org.acra.collector.CrashReportData createCrashData(org.acra.builder.ReportBuilder)>[[try], [$i0 < 16]]--><org.acra.collector.MediaCodecListCollector: java.lang.String collectMediaCodecList()>[[$i1 >= 21], [$i1 >= 16]]
+###Multi invoking in one method, need manual check!!!--><org.acra.collector.CrashReportDataFactory: org.acra.collector.CrashReportData createCrashData(org.acra.builder.ReportBuilder)>[[try]][[$i0 < 16]]--><org.acra.collector.MediaCodecListCollector: java.lang.String collectMediaCodecList()>[[$i1 >= 21]][[$i1 >= 16]]
+try
+Good road with try: <org.acra.ErrorReporter: void handleSilentException(java.lang.Throwable)>[]--><org.acra.builder.ReportBuilder: void build(org.acra.builder.ReportExecutor)>[]--><org.acra.builder.ReportExecutor: void execute(org.acra.builder.ReportBuilder)>[]--><org.acra.collector.CrashReportDataFactory: org.acra.collector.CrashReportData createCrashData(org.acra.builder.ReportBuilder)>[[try], [$i0 < 16]]--><org.acra.collector.MediaCodecListCollector: java.lang.String collectMediaCodecList()>[[$i1 >= 21], [$i1 >= 16]]--><android.media.MediaCodecList: android.media.MediaCodecInfo[] getCodecInfos()>
+One road protect good!
+###Multi invoking in one method, need manual check!!!<org.acra.ErrorReporter: void uncaughtException(java.lang.Thread,java.lang.Throwable)>[[try]]--><org.acra.builder.ReportBuilder: void build(org.acra.builder.ReportExecutor)>[]--><org.acra.builder.ReportExecutor: void execute(org.acra.builder.ReportBuilder)>[]--><org.acra.collector.CrashReportDataFactory: org.acra.collector.CrashReportData createCrashData(org.acra.builder.ReportBuilder)>[[try], [$i0 < 16]]--><org.acra.collector.MediaCodecListCollector: java.lang.String collectMediaCodecList()>[[$i1 >= 21], [$i1 >= 16]]
+###Multi invoking in one method, need manual check!!!<org.acra.ErrorReporter: void uncaughtException(java.lang.Thread,java.lang.Throwable)>[[try]]--><org.acra.builder.ReportBuilder: void build(org.acra.builder.ReportExecutor)>[]--><org.acra.builder.ReportExecutor: void execute(org.acra.builder.ReportBuilder)>[]--><org.acra.collector.CrashReportDataFactory: org.acra.collector.CrashReportData createCrashData(org.acra.builder.ReportBuilder)>[[try]][[$i0 < 16]]--><org.acra.collector.MediaCodecListCollector: java.lang.String collectMediaCodecList()>[[$i1 >= 21]][[$i1 >= 16]]
+try
+Good road with try: <org.acra.ErrorReporter: void uncaughtException(java.lang.Thread,java.lang.Throwable)>[[try]]--><org.acra.builder.ReportBuilder: void build(org.acra.builder.ReportExecutor)>[]--><org.acra.builder.ReportExecutor: void execute(org.acra.builder.ReportBuilder)>[]--><org.acra.collector.CrashReportDataFactory: org.acra.collector.CrashReportData createCrashData(org.acra.builder.ReportBuilder)>[[try], [$i0 < 16]]--><org.acra.collector.MediaCodecListCollector: java.lang.String collectMediaCodecList()>[[$i1 >= 21], [$i1 >= 16]]--><android.media.MediaCodecList: android.media.MediaCodecInfo[] getCodecInfos()>
+One road protect good!
+containsStatic:false
+containsTry:true
+3call by main package
+-----------------------------------------
+#################################################
+N 13 Potential Issue API: SDKCheck of <java.awt.event.MouseEvent: int getY()> is checking!!!
+The life time of api is [1,8]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <org.codehaus.groovy.antlr.LexerFrame$1: void mouseReleased(java.awt.event.MouseEvent)>[]--><java.awt.event.MouseEvent: int getY()>
+#1.the call statck between class <org.codehaus.groovy.antlr.LexerFrame$1: void mouseReleased(java.awt.event.MouseEvent)> to <java.awt.event.MouseEvent: int getY()>has compatibility isssues！
+-----------------------------------------
+crashApis:8
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 14 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)> is checking!!!
+The life time of api is [22,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 
+Error road: <com.sleepbot.datetimepicker.time.TimePickerDialog: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+#1.the call statck between class <com.sleepbot.datetimepicker.time.TimePickerDialog: void onSaveInstanceState(android.os.Bundle)> to <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 
+Error road: <com.fourmob.datetimepicker.date.DatePickerDialog: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+#2.the call statck between class <com.fourmob.datetimepicker.date.DatePickerDialog: void onSaveInstanceState(android.os.Bundle)> to <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+crashApis:9
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 15 Potential Issue API: SDKCheck of <android.os.StatFs: long getBlockSizeLong()> is checking!!!
+The life time of api is [18,31]
+3call roads:
+1 Mainhead roads:
+###Multi invoking in one method, need manual check!!!--><org.acra.collector.CrashReportDataFactory: org.acra.collector.CrashReportData createCrashData(org.acra.builder.ReportBuilder)>[[try], [$i0 < 16]]--><org.acra.util.ReportUtils: long getTotalInternalMemorySize()>[[-$i0 < 18]]
+###Multi invoking in one method, need manual check!!!--><org.acra.collector.CrashReportDataFactory: org.acra.collector.CrashReportData createCrashData(org.acra.builder.ReportBuilder)>[[try]][[$i0 < 16]]--><org.acra.util.ReportUtils: long getTotalInternalMemorySize()>[[-$i0 < 18]]
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.nbossard.packlist.gui.MainActivity dummyMainMethod_com_nbossard_packlist_gui_MainActivity(android.content.Intent)>[]--><com.nbossard.packlist.gui.MainActivity: boolean onOptionsItemSelected(android.view.MenuItem)>[]--><com.nbossard.packlist.PackListApp: void sendUserDebugReport()>[]--><org.acra.ErrorReporter: void handleException(java.lang.Throwable)>[]--><org.acra.ErrorReporter: void handleException(java.lang.Throwable,boolean)>[]--><org.acra.builder.ReportBuilder: void build(org.acra.builder.ReportExecutor)>[]--><org.acra.builder.ReportExecutor: void execute(org.acra.builder.ReportBuilder)>[]--><org.acra.collector.CrashReportDataFactory: org.acra.collector.CrashReportData createCrashData(org.acra.builder.ReportBuilder)>[[try], [$i0 < 16]]--><org.acra.util.ReportUtils: long getTotalInternalMemorySize()>[[-$i0 < 18]]--><android.os.StatFs: long getBlockSizeLong()>
+One road protect good!
+2 Packageshead roads:
+###Multi invoking in one method, need manual check!!!--><org.acra.collector.CrashReportDataFactory: org.acra.collector.CrashReportData createCrashData(org.acra.builder.ReportBuilder)>[[try], [$i0 < 16]]--><org.acra.util.ReportUtils: long getTotalInternalMemorySize()>[[-$i0 < 18]]
+###Multi invoking in one method, need manual check!!!--><org.acra.collector.CrashReportDataFactory: org.acra.collector.CrashReportData createCrashData(org.acra.builder.ReportBuilder)>[[try]][[$i0 < 16]]--><org.acra.util.ReportUtils: long getTotalInternalMemorySize()>[[-$i0 < 18]]
+try
+Good road with try: <org.acra.ErrorReporter: void handleSilentException(java.lang.Throwable)>[]--><org.acra.builder.ReportBuilder: void build(org.acra.builder.ReportExecutor)>[]--><org.acra.builder.ReportExecutor: void execute(org.acra.builder.ReportBuilder)>[]--><org.acra.collector.CrashReportDataFactory: org.acra.collector.CrashReportData createCrashData(org.acra.builder.ReportBuilder)>[[try], [$i0 < 16]]--><org.acra.util.ReportUtils: long getTotalInternalMemorySize()>[[-$i0 < 18]]--><android.os.StatFs: long getBlockSizeLong()>
+One road protect good!
+###Multi invoking in one method, need manual check!!!<org.acra.ErrorReporter: void uncaughtException(java.lang.Thread,java.lang.Throwable)>[[try]]--><org.acra.builder.ReportBuilder: void build(org.acra.builder.ReportExecutor)>[]--><org.acra.builder.ReportExecutor: void execute(org.acra.builder.ReportBuilder)>[]--><org.acra.collector.CrashReportDataFactory: org.acra.collector.CrashReportData createCrashData(org.acra.builder.ReportBuilder)>[[try], [$i0 < 16]]--><org.acra.util.ReportUtils: long getTotalInternalMemorySize()>[[-$i0 < 18]]
+###Multi invoking in one method, need manual check!!!<org.acra.ErrorReporter: void uncaughtException(java.lang.Thread,java.lang.Throwable)>[[try]]--><org.acra.builder.ReportBuilder: void build(org.acra.builder.ReportExecutor)>[]--><org.acra.builder.ReportExecutor: void execute(org.acra.builder.ReportBuilder)>[]--><org.acra.collector.CrashReportDataFactory: org.acra.collector.CrashReportData createCrashData(org.acra.builder.ReportBuilder)>[[try]][[$i0 < 16]]--><org.acra.util.ReportUtils: long getTotalInternalMemorySize()>[[-$i0 < 18]]
+try
+Good road with try: <org.acra.ErrorReporter: void uncaughtException(java.lang.Thread,java.lang.Throwable)>[[try]]--><org.acra.builder.ReportBuilder: void build(org.acra.builder.ReportExecutor)>[]--><org.acra.builder.ReportExecutor: void execute(org.acra.builder.ReportBuilder)>[]--><org.acra.collector.CrashReportDataFactory: org.acra.collector.CrashReportData createCrashData(org.acra.builder.ReportBuilder)>[[try], [$i0 < 16]]--><org.acra.util.ReportUtils: long getTotalInternalMemorySize()>[[-$i0 < 18]]--><android.os.StatFs: long getBlockSizeLong()>
+One road protect good!
+containsStatic:false
+containsTry:true
+3call by main package
+-----------------------------------------
+#################################################
+N 16 Potential Issue API: SDKCheck of <android.view.View: void setPaddingRelative(int,int,int,int)> is checking!!!
+The life time of api is [17,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+-$i1 < 17
+Good road: <android.databinding.adapters.ViewBindingAdapter: void setPaddingStart(android.view.View,float)>[[-$i1 < 17]]--><android.view.View: void setPaddingRelative(int,int,int,int)>
+One road protect good!
+-$i1 < 17
+Good road: <android.databinding.adapters.ViewBindingAdapter: void setPaddingEnd(android.view.View,float)>[[-$i1 < 17]]--><android.view.View: void setPaddingRelative(int,int,int,int)>
+One road protect good!
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 17 Potential Issue API: SDKCheck of <java.awt.Toolkit: java.awt.Image createImage(java.net.URL)> is checking!!!
+The life time of api is [1,8]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <groovyjarjaropenbeans.SimpleBeanInfo: java.awt.Image loadImage(java.lang.String)>[]--><java.awt.Toolkit: java.awt.Image createImage(java.net.URL)>
+#1.the call statck between class <groovyjarjaropenbeans.SimpleBeanInfo: java.awt.Image loadImage(java.lang.String)> to <java.awt.Toolkit: java.awt.Image createImage(java.net.URL)>has compatibility isssues！
+-----------------------------------------
+crashApis:10
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 18 Potential Issue API: SDKCheck of <java.awt.Font: int getStyle()> is checking!!!
+The life time of api is [1,8]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <groovyjarjarharmonybeans.editors.FontEditor: java.lang.String getJavaInitializationString()>[]--><java.awt.Font: int getStyle()>
+#1.the call statck between class <groovyjarjarharmonybeans.editors.FontEditor: java.lang.String getJavaInitializationString()> to <java.awt.Font: int getStyle()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <groovyjarjaropenbeans.AwtFontPersistenceDelegate: groovyjarjaropenbeans.Expression instantiate(java.lang.Object,groovyjarjaropenbeans.Encoder)>[]--><java.awt.Font: int getStyle()>
+#2.the call statck between class <groovyjarjaropenbeans.AwtFontPersistenceDelegate: groovyjarjaropenbeans.Expression instantiate(java.lang.Object,groovyjarjaropenbeans.Encoder)> to <java.awt.Font: int getStyle()>has compatibility isssues！
+-----------------------------------------
+crashApis:11
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 19 Potential Issue API: SDKCheck of <android.os.BaseBundle: boolean getBoolean(java.lang.String)> is checking!!!
+The life time of api is [22,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 
+Error road: <com.sleepbot.datetimepicker.time.TimePickerDialog: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+#1.the call statck between class <com.sleepbot.datetimepicker.time.TimePickerDialog: void onCreate(android.os.Bundle)> to <android.os.BaseBundle: boolean getBoolean(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 
+Error road: <com.fourmob.datetimepicker.date.DatePickerDialog: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+#2.the call statck between class <com.fourmob.datetimepicker.date.DatePickerDialog: void onCreate(android.os.Bundle)> to <android.os.BaseBundle: boolean getBoolean(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:12
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 20 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.lang.String getString(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+2call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.acra.dialog.CrashReportDialog dummyMainMethod_org_acra_dialog_CrashReportDialog(android.content.Intent)>[]--><org.acra.dialog.CrashReportDialog: void onCreate(android.os.Bundle)>[]--><org.acra.dialog.CrashReportDialog: void buildAndShowDialog(android.os.Bundle)>[]--><org.acra.dialog.CrashReportDialog: android.view.View buildCustomView(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <org.acra.CrashReportDialog: void buildAndShowDialog(android.os.Bundle)>[]--><org.acra.dialog.CrashReportDialog: void buildAndShowDialog(android.os.Bundle)>[]--><org.acra.dialog.CrashReportDialog: android.view.View buildCustomView(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#1.the call statck between class <org.acra.CrashReportDialog: void buildAndShowDialog(android.os.Bundle)> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:13
+crashApisInMain:2
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 21 Potential Issue API: SDKCheck of <java.awt.Graphics: void drawRect(int,int,int,int)> is checking!!!
+The life time of api is [1,8]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <groovyjarjarharmonybeans.editors.ColorEditor: void paintValue(java.awt.Graphics,java.awt.Rectangle)>[]--><java.awt.Graphics: void drawRect(int,int,int,int)>
+#1.the call statck between class <groovyjarjarharmonybeans.editors.ColorEditor: void paintValue(java.awt.Graphics,java.awt.Rectangle)> to <java.awt.Graphics: void drawRect(int,int,int,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:14
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 22 Potential Issue API: SDKCheck of <java.awt.Graphics: void setColor(java.awt.Color)> is checking!!!
+The life time of api is [1,8]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <groovyjarjarharmonybeans.editors.ColorEditor: void paintValue(java.awt.Graphics,java.awt.Rectangle)>[]--><java.awt.Graphics: void setColor(java.awt.Color)>
+#1.the call statck between class <groovyjarjarharmonybeans.editors.ColorEditor: void paintValue(java.awt.Graphics,java.awt.Rectangle)> to <java.awt.Graphics: void setColor(java.awt.Color)>has compatibility isssues！
+-----------------------------------------
+crashApis:15
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 23 Potential Issue API: SDKCheck of <java.awt.Color: int getAlpha()> is checking!!!
+The life time of api is [1,8]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <groovyjarjaropenbeans.AwtColorPersistenceDelegate: groovyjarjaropenbeans.Expression instantiate(java.lang.Object,groovyjarjaropenbeans.Encoder)>[]--><java.awt.Color: int getAlpha()>
+#1.the call statck between class <groovyjarjaropenbeans.AwtColorPersistenceDelegate: groovyjarjaropenbeans.Expression instantiate(java.lang.Object,groovyjarjaropenbeans.Encoder)> to <java.awt.Color: int getAlpha()>has compatibility isssues！
+-----------------------------------------
+crashApis:16
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 24 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putInt(java.lang.String,int)> is checking!!!
+The life time of api is [21,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.sleepbot.datetimepicker.time.TimePickerDialog: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#1.the call statck between class <com.sleepbot.datetimepicker.time.TimePickerDialog: void onSaveInstanceState(android.os.Bundle)> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.fourmob.datetimepicker.date.DatePickerDialog: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#2.the call statck between class <com.fourmob.datetimepicker.date.DatePickerDialog: void onSaveInstanceState(android.os.Bundle)> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:17
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 25 Potential Issue API: SDKCheck of <android.util.SparseLongArray: void put(int,long)> is checking!!!
+The life time of api is [18,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 
+Error road: <android.databinding.ViewDataBinding: void setTo(android.util.SparseLongArray,int,long)>[]--><android.util.SparseLongArray: void put(int,long)>
+#1.the call statck between class <android.databinding.ViewDataBinding: void setTo(android.util.SparseLongArray,int,long)> to <android.util.SparseLongArray: void put(int,long)>has compatibility isssues！
+-----------------------------------------
+crashApis:18
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 26 Potential Issue API: SDKCheck of <android.os.StatFs: long getAvailableBlocksLong()> is checking!!!
+The life time of api is [18,31]
+3call roads:
+1 Mainhead roads:
+###Multi invoking in one method, need manual check!!!--><org.acra.collector.CrashReportDataFactory: org.acra.collector.CrashReportData createCrashData(org.acra.builder.ReportBuilder)>[[try], [$i0 < 16]]--><org.acra.util.ReportUtils: long getAvailableInternalMemorySize()>[[-$i0 < 18]]
+###Multi invoking in one method, need manual check!!!--><org.acra.collector.CrashReportDataFactory: org.acra.collector.CrashReportData createCrashData(org.acra.builder.ReportBuilder)>[[try]][[$i0 < 16]]--><org.acra.util.ReportUtils: long getAvailableInternalMemorySize()>[[-$i0 < 18]]
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.nbossard.packlist.gui.MainActivity dummyMainMethod_com_nbossard_packlist_gui_MainActivity(android.content.Intent)>[]--><com.nbossard.packlist.gui.MainActivity: boolean onOptionsItemSelected(android.view.MenuItem)>[]--><com.nbossard.packlist.PackListApp: void sendUserDebugReport()>[]--><org.acra.ErrorReporter: void handleException(java.lang.Throwable)>[]--><org.acra.ErrorReporter: void handleException(java.lang.Throwable,boolean)>[]--><org.acra.builder.ReportBuilder: void build(org.acra.builder.ReportExecutor)>[]--><org.acra.builder.ReportExecutor: void execute(org.acra.builder.ReportBuilder)>[]--><org.acra.collector.CrashReportDataFactory: org.acra.collector.CrashReportData createCrashData(org.acra.builder.ReportBuilder)>[[try], [$i0 < 16]]--><org.acra.util.ReportUtils: long getAvailableInternalMemorySize()>[[-$i0 < 18]]--><android.os.StatFs: long getAvailableBlocksLong()>
+One road protect good!
+2 Packageshead roads:
+###Multi invoking in one method, need manual check!!!--><org.acra.collector.CrashReportDataFactory: org.acra.collector.CrashReportData createCrashData(org.acra.builder.ReportBuilder)>[[try], [$i0 < 16]]--><org.acra.util.ReportUtils: long getAvailableInternalMemorySize()>[[-$i0 < 18]]
+###Multi invoking in one method, need manual check!!!--><org.acra.collector.CrashReportDataFactory: org.acra.collector.CrashReportData createCrashData(org.acra.builder.ReportBuilder)>[[try]][[$i0 < 16]]--><org.acra.util.ReportUtils: long getAvailableInternalMemorySize()>[[-$i0 < 18]]
+try
+Good road with try: <org.acra.ErrorReporter: void handleSilentException(java.lang.Throwable)>[]--><org.acra.builder.ReportBuilder: void build(org.acra.builder.ReportExecutor)>[]--><org.acra.builder.ReportExecutor: void execute(org.acra.builder.ReportBuilder)>[]--><org.acra.collector.CrashReportDataFactory: org.acra.collector.CrashReportData createCrashData(org.acra.builder.ReportBuilder)>[[try], [$i0 < 16]]--><org.acra.util.ReportUtils: long getAvailableInternalMemorySize()>[[-$i0 < 18]]--><android.os.StatFs: long getAvailableBlocksLong()>
+One road protect good!
+###Multi invoking in one method, need manual check!!!<org.acra.ErrorReporter: void uncaughtException(java.lang.Thread,java.lang.Throwable)>[[try]]--><org.acra.builder.ReportBuilder: void build(org.acra.builder.ReportExecutor)>[]--><org.acra.builder.ReportExecutor: void execute(org.acra.builder.ReportBuilder)>[]--><org.acra.collector.CrashReportDataFactory: org.acra.collector.CrashReportData createCrashData(org.acra.builder.ReportBuilder)>[[try], [$i0 < 16]]--><org.acra.util.ReportUtils: long getAvailableInternalMemorySize()>[[-$i0 < 18]]
+###Multi invoking in one method, need manual check!!!<org.acra.ErrorReporter: void uncaughtException(java.lang.Thread,java.lang.Throwable)>[[try]]--><org.acra.builder.ReportBuilder: void build(org.acra.builder.ReportExecutor)>[]--><org.acra.builder.ReportExecutor: void execute(org.acra.builder.ReportBuilder)>[]--><org.acra.collector.CrashReportDataFactory: org.acra.collector.CrashReportData createCrashData(org.acra.builder.ReportBuilder)>[[try]][[$i0 < 16]]--><org.acra.util.ReportUtils: long getAvailableInternalMemorySize()>[[-$i0 < 18]]
+try
+Good road with try: <org.acra.ErrorReporter: void uncaughtException(java.lang.Thread,java.lang.Throwable)>[[try]]--><org.acra.builder.ReportBuilder: void build(org.acra.builder.ReportExecutor)>[]--><org.acra.builder.ReportExecutor: void execute(org.acra.builder.ReportBuilder)>[]--><org.acra.collector.CrashReportDataFactory: org.acra.collector.CrashReportData createCrashData(org.acra.builder.ReportBuilder)>[[try], [$i0 < 16]]--><org.acra.util.ReportUtils: long getAvailableInternalMemorySize()>[[-$i0 < 18]]--><android.os.StatFs: long getAvailableBlocksLong()>
+One road protect good!
+containsStatic:false
+containsTry:true
+3call by main package
+-----------------------------------------
+#################################################
+N 27 Potential Issue API: SDKCheck of <android.view.Display: void getRealSize(android.graphics.Point)> is checking!!!
+The life time of api is [17,31]
+3call roads:
+1 Mainhead roads:
+###Multi invoking in one method, need manual check!!!--><org.acra.collector.CrashReportDataFactory: org.acra.collector.CrashReportData createCrashData(org.acra.builder.ReportBuilder)>[[try], [$i0 < 16]]--><org.acra.collector.DisplayManagerCollector: java.lang.String collectDisplays(android.content.Context)>[[i0 >= 17]]--><org.acra.collector.DisplayManagerCollector: java.lang.Object collectDisplayData(android.view.Display)>[]--><org.acra.collector.DisplayManagerCollector: java.lang.String collectRealSize(android.view.Display)>[[-$i0 < 17]]
+###Multi invoking in one method, need manual check!!!--><org.acra.collector.CrashReportDataFactory: org.acra.collector.CrashReportData createCrashData(org.acra.builder.ReportBuilder)>[[try]][[$i0 < 16]]--><org.acra.collector.DisplayManagerCollector: java.lang.String collectDisplays(android.content.Context)>[[i0 >= 17]]--><org.acra.collector.DisplayManagerCollector: java.lang.Object collectDisplayData(android.view.Display)>[]--><org.acra.collector.DisplayManagerCollector: java.lang.String collectRealSize(android.view.Display)>[[-$i0 < 17]]
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.nbossard.packlist.gui.MainActivity dummyMainMethod_com_nbossard_packlist_gui_MainActivity(android.content.Intent)>[]--><com.nbossard.packlist.gui.MainActivity: boolean onOptionsItemSelected(android.view.MenuItem)>[]--><com.nbossard.packlist.PackListApp: void sendUserDebugReport()>[]--><org.acra.ErrorReporter: void handleException(java.lang.Throwable)>[]--><org.acra.ErrorReporter: void handleException(java.lang.Throwable,boolean)>[]--><org.acra.builder.ReportBuilder: void build(org.acra.builder.ReportExecutor)>[]--><org.acra.builder.ReportExecutor: void execute(org.acra.builder.ReportBuilder)>[]--><org.acra.collector.CrashReportDataFactory: org.acra.collector.CrashReportData createCrashData(org.acra.builder.ReportBuilder)>[[try], [$i0 < 16]]--><org.acra.collector.DisplayManagerCollector: java.lang.String collectDisplays(android.content.Context)>[[i0 >= 17]]--><org.acra.collector.DisplayManagerCollector: java.lang.Object collectDisplayData(android.view.Display)>[]--><org.acra.collector.DisplayManagerCollector: java.lang.String collectRealSize(android.view.Display)>[[-$i0 < 17]]--><android.view.Display: void getRealSize(android.graphics.Point)>
+One road protect good!
+2 Packageshead roads:
+###Multi invoking in one method, need manual check!!!--><org.acra.collector.CrashReportDataFactory: org.acra.collector.CrashReportData createCrashData(org.acra.builder.ReportBuilder)>[[try], [$i0 < 16]]--><org.acra.collector.DisplayManagerCollector: java.lang.String collectDisplays(android.content.Context)>[[i0 >= 17]]--><org.acra.collector.DisplayManagerCollector: java.lang.Object collectDisplayData(android.view.Display)>[]--><org.acra.collector.DisplayManagerCollector: java.lang.String collectRealSize(android.view.Display)>[[-$i0 < 17]]
+###Multi invoking in one method, need manual check!!!--><org.acra.collector.CrashReportDataFactory: org.acra.collector.CrashReportData createCrashData(org.acra.builder.ReportBuilder)>[[try]][[$i0 < 16]]--><org.acra.collector.DisplayManagerCollector: java.lang.String collectDisplays(android.content.Context)>[[i0 >= 17]]--><org.acra.collector.DisplayManagerCollector: java.lang.Object collectDisplayData(android.view.Display)>[]--><org.acra.collector.DisplayManagerCollector: java.lang.String collectRealSize(android.view.Display)>[[-$i0 < 17]]
+try
+Good road with try: <org.acra.ErrorReporter: void handleSilentException(java.lang.Throwable)>[]--><org.acra.builder.ReportBuilder: void build(org.acra.builder.ReportExecutor)>[]--><org.acra.builder.ReportExecutor: void execute(org.acra.builder.ReportBuilder)>[]--><org.acra.collector.CrashReportDataFactory: org.acra.collector.CrashReportData createCrashData(org.acra.builder.ReportBuilder)>[[try], [$i0 < 16]]--><org.acra.collector.DisplayManagerCollector: java.lang.String collectDisplays(android.content.Context)>[[i0 >= 17]]--><org.acra.collector.DisplayManagerCollector: java.lang.Object collectDisplayData(android.view.Display)>[]--><org.acra.collector.DisplayManagerCollector: java.lang.String collectRealSize(android.view.Display)>[[-$i0 < 17]]--><android.view.Display: void getRealSize(android.graphics.Point)>
+One road protect good!
+###Multi invoking in one method, need manual check!!!<org.acra.ErrorReporter: void uncaughtException(java.lang.Thread,java.lang.Throwable)>[[try]]--><org.acra.builder.ReportBuilder: void build(org.acra.builder.ReportExecutor)>[]--><org.acra.builder.ReportExecutor: void execute(org.acra.builder.ReportBuilder)>[]--><org.acra.collector.CrashReportDataFactory: org.acra.collector.CrashReportData createCrashData(org.acra.builder.ReportBuilder)>[[try], [$i0 < 16]]--><org.acra.collector.DisplayManagerCollector: java.lang.String collectDisplays(android.content.Context)>[[i0 >= 17]]--><org.acra.collector.DisplayManagerCollector: java.lang.Object collectDisplayData(android.view.Display)>[]--><org.acra.collector.DisplayManagerCollector: java.lang.String collectRealSize(android.view.Display)>[[-$i0 < 17]]
+###Multi invoking in one method, need manual check!!!<org.acra.ErrorReporter: void uncaughtException(java.lang.Thread,java.lang.Throwable)>[[try]]--><org.acra.builder.ReportBuilder: void build(org.acra.builder.ReportExecutor)>[]--><org.acra.builder.ReportExecutor: void execute(org.acra.builder.ReportBuilder)>[]--><org.acra.collector.CrashReportDataFactory: org.acra.collector.CrashReportData createCrashData(org.acra.builder.ReportBuilder)>[[try]][[$i0 < 16]]--><org.acra.collector.DisplayManagerCollector: java.lang.String collectDisplays(android.content.Context)>[[i0 >= 17]]--><org.acra.collector.DisplayManagerCollector: java.lang.Object collectDisplayData(android.view.Display)>[]--><org.acra.collector.DisplayManagerCollector: java.lang.String collectRealSize(android.view.Display)>[[-$i0 < 17]]
+try
+Good road with try: <org.acra.ErrorReporter: void uncaughtException(java.lang.Thread,java.lang.Throwable)>[[try]]--><org.acra.builder.ReportBuilder: void build(org.acra.builder.ReportExecutor)>[]--><org.acra.builder.ReportExecutor: void execute(org.acra.builder.ReportBuilder)>[]--><org.acra.collector.CrashReportDataFactory: org.acra.collector.CrashReportData createCrashData(org.acra.builder.ReportBuilder)>[[try], [$i0 < 16]]--><org.acra.collector.DisplayManagerCollector: java.lang.String collectDisplays(android.content.Context)>[[i0 >= 17]]--><org.acra.collector.DisplayManagerCollector: java.lang.Object collectDisplayData(android.view.Display)>[]--><org.acra.collector.DisplayManagerCollector: java.lang.String collectRealSize(android.view.Display)>[[-$i0 < 17]]--><android.view.Display: void getRealSize(android.graphics.Point)>
+One road protect good!
+containsStatic:false
+containsTry:true
+3call by main package
+-----------------------------------------
+#################################################
+N 28 Potential Issue API: SDKCheck of <android.net.NetworkInfo: boolean isConnectedOrConnecting()> is checking!!!
+The life time of api is [1,30]
+4call roads:
+0 Mainhead roads:
+4 Packageshead roads:
+try
+Good road with try: <it.gmariotti.changelibs.library.view.ChangeLogRecyclerView: void <init>(android.content.Context)>[]--><it.gmariotti.changelibs.library.view.ChangeLogRecyclerView: void <init>(android.content.Context,android.util.AttributeSet)>[]--><it.gmariotti.changelibs.library.view.ChangeLogRecyclerView: void <init>(android.content.Context,android.util.AttributeSet,int)>[]--><it.gmariotti.changelibs.library.view.ChangeLogRecyclerView: void init(android.util.AttributeSet,int)>[]--><it.gmariotti.changelibs.library.view.ChangeLogRecyclerView: void initAdapter()>[[try]]--><it.gmariotti.changelibs.library.Util: boolean isConnected(android.content.Context)>[]--><android.net.NetworkInfo: boolean isConnectedOrConnecting()>
+One road protect good!
+try
+Good road with try: <it.gmariotti.changelibs.library.view.ChangeLogRecyclerView$ParseAsyncTask: it.gmariotti.changelibs.library.internal.ChangeLog doInBackground(java.lang.Void[])>[[try]]--><it.gmariotti.changelibs.library.parser.XmlParser: it.gmariotti.changelibs.library.internal.ChangeLog readChangeLogFile()>[[try]]--><it.gmariotti.changelibs.library.Util: boolean isConnected(android.content.Context)>[]--><android.net.NetworkInfo: boolean isConnectedOrConnecting()>
+One road protect good!
+try
+Good road with try: <it.gmariotti.changelibs.library.view.ChangeLogListView$ParseAsyncTask: it.gmariotti.changelibs.library.internal.ChangeLog doInBackground(java.lang.Void[])>[[try]]--><it.gmariotti.changelibs.library.parser.XmlParser: it.gmariotti.changelibs.library.internal.ChangeLog readChangeLogFile()>[[try]]--><it.gmariotti.changelibs.library.Util: boolean isConnected(android.content.Context)>[]--><android.net.NetworkInfo: boolean isConnectedOrConnecting()>
+One road protect good!
+try
+Good road with try: <it.gmariotti.changelibs.library.view.ChangeLogListView: void <init>(android.content.Context)>[]--><it.gmariotti.changelibs.library.view.ChangeLogListView: void <init>(android.content.Context,android.util.AttributeSet)>[]--><it.gmariotti.changelibs.library.view.ChangeLogListView: void <init>(android.content.Context,android.util.AttributeSet,int)>[]--><it.gmariotti.changelibs.library.view.ChangeLogListView: void init(android.util.AttributeSet,int)>[]--><it.gmariotti.changelibs.library.view.ChangeLogListView: void initAdapter()>[[try]]--><it.gmariotti.changelibs.library.Util: boolean isConnected(android.content.Context)>[]--><android.net.NetworkInfo: boolean isConnectedOrConnecting()>
+One road protect good!
+containsStatic:false
+containsTry:true
+5call by main package
+-----------------------------------------
+#################################################
+N 29 Potential Issue API: SDKCheck of <java.awt.Color: int getRed()> is checking!!!
+The life time of api is [1,8]
+3call roads:
+0 Mainhead roads:
+3 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <groovyjarjarharmonybeans.editors.ColorEditor: java.lang.String getAsText()>[]--><java.awt.Color: int getRed()>
+#1.the call statck between class <groovyjarjarharmonybeans.editors.ColorEditor: java.lang.String getAsText()> to <java.awt.Color: int getRed()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <groovyjarjaropenbeans.AwtColorPersistenceDelegate: groovyjarjaropenbeans.Expression instantiate(java.lang.Object,groovyjarjaropenbeans.Encoder)>[]--><java.awt.Color: int getRed()>
+#2.the call statck between class <groovyjarjaropenbeans.AwtColorPersistenceDelegate: groovyjarjaropenbeans.Expression instantiate(java.lang.Object,groovyjarjaropenbeans.Encoder)> to <java.awt.Color: int getRed()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <groovyjarjarharmonybeans.editors.ColorEditor: java.lang.String getJavaInitializationString()>[]--><java.awt.Color: int getRed()>
+#3.the call statck between class <groovyjarjarharmonybeans.editors.ColorEditor: java.lang.String getJavaInitializationString()> to <java.awt.Color: int getRed()>has compatibility isssues！
+-----------------------------------------
+crashApis:19
+containsStatic:false
+containsTry:false
+4call by main package
+-----------------------------------------
+#################################################
+N 30 Potential Issue API: SDKCheck of <java.awt.Color: void <init>(int,int,int)> is checking!!!
+The life time of api is [1,8]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+try
+Good road with try: <groovyjarjarharmonybeans.editors.ColorEditor: void setAsText(java.lang.String)>[[try]]--><java.awt.Color: void <init>(int,int,int)>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 31 Potential Issue API: SDKCheck of <android.content.Context: android.content.res.ColorStateList getColorStateList(int)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i1 < 23
+Good road: <android.databinding.ViewDataBinding: android.content.res.ColorStateList getColorStateListFromResource(int)>[[-$i1 < 23]]--><android.content.Context: android.content.res.ColorStateList getColorStateList(int)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 32 Potential Issue API: SDKCheck of <java.awt.event.WindowAdapter: void <init>()> is checking!!!
+The life time of api is [1,8]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <groovyjarjarantlr.debug.misc.ASTFrame$1: void <init>(groovyjarjarantlr.debug.misc.ASTFrame)>[]--><java.awt.event.WindowAdapter: void <init>()>
+#1.the call statck between class <groovyjarjarantlr.debug.misc.ASTFrame$1: void <init>(groovyjarjarantlr.debug.misc.ASTFrame)> to <java.awt.event.WindowAdapter: void <init>()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <org.codehaus.groovy.antlr.Main$1: void <init>(groovyjarjarantlr.debug.misc.ASTFrame)>[]--><java.awt.event.WindowAdapter: void <init>()>
+#2.the call statck between class <org.codehaus.groovy.antlr.Main$1: void <init>(groovyjarjarantlr.debug.misc.ASTFrame)> to <java.awt.event.WindowAdapter: void <init>()>has compatibility isssues！
+-----------------------------------------
+crashApis:20
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 33 Potential Issue API: SDKCheck of <java.awt.Color: int getBlue()> is checking!!!
+The life time of api is [1,8]
+3call roads:
+0 Mainhead roads:
+3 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <groovyjarjarharmonybeans.editors.ColorEditor: java.lang.String getAsText()>[]--><java.awt.Color: int getBlue()>
+#1.the call statck between class <groovyjarjarharmonybeans.editors.ColorEditor: java.lang.String getAsText()> to <java.awt.Color: int getBlue()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <groovyjarjaropenbeans.AwtColorPersistenceDelegate: groovyjarjaropenbeans.Expression instantiate(java.lang.Object,groovyjarjaropenbeans.Encoder)>[]--><java.awt.Color: int getBlue()>
+#2.the call statck between class <groovyjarjaropenbeans.AwtColorPersistenceDelegate: groovyjarjaropenbeans.Expression instantiate(java.lang.Object,groovyjarjaropenbeans.Encoder)> to <java.awt.Color: int getBlue()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <groovyjarjarharmonybeans.editors.ColorEditor: java.lang.String getJavaInitializationString()>[]--><java.awt.Color: int getBlue()>
+#3.the call statck between class <groovyjarjarharmonybeans.editors.ColorEditor: java.lang.String getJavaInitializationString()> to <java.awt.Color: int getBlue()>has compatibility isssues！
+-----------------------------------------
+crashApis:21
+containsStatic:false
+containsTry:false
+4call by main package
+-----------------------------------------
+#################################################
+N 34 Potential Issue API: SDKCheck of <android.view.View: int getPaddingEnd()> is checking!!!
+The life time of api is [17,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i1 < 17
+Good road: <android.databinding.adapters.ViewBindingAdapter: void setPaddingStart(android.view.View,float)>[[-$i1 < 17]]--><android.view.View: int getPaddingEnd()>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 35 Potential Issue API: SDKCheck of <android.util.SparseLongArray: int size()> is checking!!!
+The life time of api is [18,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 
+Error road: <android.databinding.ViewDataBinding: void setTo(android.util.SparseLongArray,int,long)>[]--><android.util.SparseLongArray: int size()>
+#1.the call statck between class <android.databinding.ViewDataBinding: void setTo(android.util.SparseLongArray,int,long)> to <android.util.SparseLongArray: int size()>has compatibility isssues！
+-----------------------------------------
+crashApis:22
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 36 Potential Issue API: SDKCheck of <android.view.Display: int getFlags()> is checking!!!
+The life time of api is [17,31]
+3call roads:
+1 Mainhead roads:
+###Multi invoking in one method, need manual check!!!--><org.acra.collector.CrashReportDataFactory: org.acra.collector.CrashReportData createCrashData(org.acra.builder.ReportBuilder)>[[try], [$i0 < 16]]--><org.acra.collector.DisplayManagerCollector: java.lang.String collectDisplays(android.content.Context)>[[i0 >= 17]]--><org.acra.collector.DisplayManagerCollector: java.lang.Object collectDisplayData(android.view.Display)>[]--><org.acra.collector.DisplayManagerCollector: java.lang.String collectFlags(android.view.Display)>[[-$i1 < 17]]
+###Multi invoking in one method, need manual check!!!--><org.acra.collector.CrashReportDataFactory: org.acra.collector.CrashReportData createCrashData(org.acra.builder.ReportBuilder)>[[try]][[$i0 < 16]]--><org.acra.collector.DisplayManagerCollector: java.lang.String collectDisplays(android.content.Context)>[[i0 >= 17]]--><org.acra.collector.DisplayManagerCollector: java.lang.Object collectDisplayData(android.view.Display)>[]--><org.acra.collector.DisplayManagerCollector: java.lang.String collectFlags(android.view.Display)>[[-$i1 < 17]]
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.nbossard.packlist.gui.MainActivity dummyMainMethod_com_nbossard_packlist_gui_MainActivity(android.content.Intent)>[]--><com.nbossard.packlist.gui.MainActivity: boolean onOptionsItemSelected(android.view.MenuItem)>[]--><com.nbossard.packlist.PackListApp: void sendUserDebugReport()>[]--><org.acra.ErrorReporter: void handleException(java.lang.Throwable)>[]--><org.acra.ErrorReporter: void handleException(java.lang.Throwable,boolean)>[]--><org.acra.builder.ReportBuilder: void build(org.acra.builder.ReportExecutor)>[]--><org.acra.builder.ReportExecutor: void execute(org.acra.builder.ReportBuilder)>[]--><org.acra.collector.CrashReportDataFactory: org.acra.collector.CrashReportData createCrashData(org.acra.builder.ReportBuilder)>[[try], [$i0 < 16]]--><org.acra.collector.DisplayManagerCollector: java.lang.String collectDisplays(android.content.Context)>[[i0 >= 17]]--><org.acra.collector.DisplayManagerCollector: java.lang.Object collectDisplayData(android.view.Display)>[]--><org.acra.collector.DisplayManagerCollector: java.lang.String collectFlags(android.view.Display)>[[-$i1 < 17]]--><android.view.Display: int getFlags()>
+One road protect good!
+2 Packageshead roads:
+###Multi invoking in one method, need manual check!!!--><org.acra.collector.CrashReportDataFactory: org.acra.collector.CrashReportData createCrashData(org.acra.builder.ReportBuilder)>[[try], [$i0 < 16]]--><org.acra.collector.DisplayManagerCollector: java.lang.String collectDisplays(android.content.Context)>[[i0 >= 17]]--><org.acra.collector.DisplayManagerCollector: java.lang.Object collectDisplayData(android.view.Display)>[]--><org.acra.collector.DisplayManagerCollector: java.lang.String collectFlags(android.view.Display)>[[-$i1 < 17]]
+###Multi invoking in one method, need manual check!!!--><org.acra.collector.CrashReportDataFactory: org.acra.collector.CrashReportData createCrashData(org.acra.builder.ReportBuilder)>[[try]][[$i0 < 16]]--><org.acra.collector.DisplayManagerCollector: java.lang.String collectDisplays(android.content.Context)>[[i0 >= 17]]--><org.acra.collector.DisplayManagerCollector: java.lang.Object collectDisplayData(android.view.Display)>[]--><org.acra.collector.DisplayManagerCollector: java.lang.String collectFlags(android.view.Display)>[[-$i1 < 17]]
+try
+Good road with try: <org.acra.ErrorReporter: void handleSilentException(java.lang.Throwable)>[]--><org.acra.builder.ReportBuilder: void build(org.acra.builder.ReportExecutor)>[]--><org.acra.builder.ReportExecutor: void execute(org.acra.builder.ReportBuilder)>[]--><org.acra.collector.CrashReportDataFactory: org.acra.collector.CrashReportData createCrashData(org.acra.builder.ReportBuilder)>[[try], [$i0 < 16]]--><org.acra.collector.DisplayManagerCollector: java.lang.String collectDisplays(android.content.Context)>[[i0 >= 17]]--><org.acra.collector.DisplayManagerCollector: java.lang.Object collectDisplayData(android.view.Display)>[]--><org.acra.collector.DisplayManagerCollector: java.lang.String collectFlags(android.view.Display)>[[-$i1 < 17]]--><android.view.Display: int getFlags()>
+One road protect good!
+###Multi invoking in one method, need manual check!!!<org.acra.ErrorReporter: void uncaughtException(java.lang.Thread,java.lang.Throwable)>[[try]]--><org.acra.builder.ReportBuilder: void build(org.acra.builder.ReportExecutor)>[]--><org.acra.builder.ReportExecutor: void execute(org.acra.builder.ReportBuilder)>[]--><org.acra.collector.CrashReportDataFactory: org.acra.collector.CrashReportData createCrashData(org.acra.builder.ReportBuilder)>[[try], [$i0 < 16]]--><org.acra.collector.DisplayManagerCollector: java.lang.String collectDisplays(android.content.Context)>[[i0 >= 17]]--><org.acra.collector.DisplayManagerCollector: java.lang.Object collectDisplayData(android.view.Display)>[]--><org.acra.collector.DisplayManagerCollector: java.lang.String collectFlags(android.view.Display)>[[-$i1 < 17]]
+###Multi invoking in one method, need manual check!!!<org.acra.ErrorReporter: void uncaughtException(java.lang.Thread,java.lang.Throwable)>[[try]]--><org.acra.builder.ReportBuilder: void build(org.acra.builder.ReportExecutor)>[]--><org.acra.builder.ReportExecutor: void execute(org.acra.builder.ReportBuilder)>[]--><org.acra.collector.CrashReportDataFactory: org.acra.collector.CrashReportData createCrashData(org.acra.builder.ReportBuilder)>[[try]][[$i0 < 16]]--><org.acra.collector.DisplayManagerCollector: java.lang.String collectDisplays(android.content.Context)>[[i0 >= 17]]--><org.acra.collector.DisplayManagerCollector: java.lang.Object collectDisplayData(android.view.Display)>[]--><org.acra.collector.DisplayManagerCollector: java.lang.String collectFlags(android.view.Display)>[[-$i1 < 17]]
+try
+Good road with try: <org.acra.ErrorReporter: void uncaughtException(java.lang.Thread,java.lang.Throwable)>[[try]]--><org.acra.builder.ReportBuilder: void build(org.acra.builder.ReportExecutor)>[]--><org.acra.builder.ReportExecutor: void execute(org.acra.builder.ReportBuilder)>[]--><org.acra.collector.CrashReportDataFactory: org.acra.collector.CrashReportData createCrashData(org.acra.builder.ReportBuilder)>[[try], [$i0 < 16]]--><org.acra.collector.DisplayManagerCollector: java.lang.String collectDisplays(android.content.Context)>[[i0 >= 17]]--><org.acra.collector.DisplayManagerCollector: java.lang.Object collectDisplayData(android.view.Display)>[]--><org.acra.collector.DisplayManagerCollector: java.lang.String collectFlags(android.view.Display)>[[-$i1 < 17]]--><android.view.Display: int getFlags()>
+One road protect good!
+containsStatic:false
+containsTry:true
+3call by main package
+-----------------------------------------
+#################################################
+N 37 Potential Issue API: SDKCheck of <android.content.Context: android.graphics.drawable.Drawable getDrawable(int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i1 < 21
+Good road: <android.databinding.ViewDataBinding: android.graphics.drawable.Drawable getDrawableFromResource(int)>[[-$i1 < 21]]--><android.content.Context: android.graphics.drawable.Drawable getDrawable(int)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 38 Potential Issue API: SDKCheck of <java.awt.Color: int getGreen()> is checking!!!
+The life time of api is [1,8]
+3call roads:
+0 Mainhead roads:
+3 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <groovyjarjarharmonybeans.editors.ColorEditor: java.lang.String getAsText()>[]--><java.awt.Color: int getGreen()>
+#1.the call statck between class <groovyjarjarharmonybeans.editors.ColorEditor: java.lang.String getAsText()> to <java.awt.Color: int getGreen()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <groovyjarjaropenbeans.AwtColorPersistenceDelegate: groovyjarjaropenbeans.Expression instantiate(java.lang.Object,groovyjarjaropenbeans.Encoder)>[]--><java.awt.Color: int getGreen()>
+#2.the call statck between class <groovyjarjaropenbeans.AwtColorPersistenceDelegate: groovyjarjaropenbeans.Expression instantiate(java.lang.Object,groovyjarjaropenbeans.Encoder)> to <java.awt.Color: int getGreen()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <groovyjarjarharmonybeans.editors.ColorEditor: java.lang.String getJavaInitializationString()>[]--><java.awt.Color: int getGreen()>
+#3.the call statck between class <groovyjarjarharmonybeans.editors.ColorEditor: java.lang.String getJavaInitializationString()> to <java.awt.Color: int getGreen()>has compatibility isssues！
+-----------------------------------------
+crashApis:23
+containsStatic:false
+containsTry:false
+4call by main package
+-----------------------------------------
+#################################################
+N 39 Potential Issue API: SDKCheck of <android.view.Display: boolean isValid()> is checking!!!
+The life time of api is [17,31]
+3call roads:
+1 Mainhead roads:
+###Multi invoking in one method, need manual check!!!--><org.acra.collector.CrashReportDataFactory: org.acra.collector.CrashReportData createCrashData(org.acra.builder.ReportBuilder)>[[try], [$i0 < 16]]--><org.acra.collector.DisplayManagerCollector: java.lang.String collectDisplays(android.content.Context)>[[i0 >= 17]]--><org.acra.collector.DisplayManagerCollector: java.lang.Object collectDisplayData(android.view.Display)>[]--><org.acra.collector.DisplayManagerCollector: java.lang.String collectIsValid(android.view.Display)>[[-$i0 < 17]]
+###Multi invoking in one method, need manual check!!!--><org.acra.collector.CrashReportDataFactory: org.acra.collector.CrashReportData createCrashData(org.acra.builder.ReportBuilder)>[[try]][[$i0 < 16]]--><org.acra.collector.DisplayManagerCollector: java.lang.String collectDisplays(android.content.Context)>[[i0 >= 17]]--><org.acra.collector.DisplayManagerCollector: java.lang.Object collectDisplayData(android.view.Display)>[]--><org.acra.collector.DisplayManagerCollector: java.lang.String collectIsValid(android.view.Display)>[[-$i0 < 17]]
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.nbossard.packlist.gui.MainActivity dummyMainMethod_com_nbossard_packlist_gui_MainActivity(android.content.Intent)>[]--><com.nbossard.packlist.gui.MainActivity: boolean onOptionsItemSelected(android.view.MenuItem)>[]--><com.nbossard.packlist.PackListApp: void sendUserDebugReport()>[]--><org.acra.ErrorReporter: void handleException(java.lang.Throwable)>[]--><org.acra.ErrorReporter: void handleException(java.lang.Throwable,boolean)>[]--><org.acra.builder.ReportBuilder: void build(org.acra.builder.ReportExecutor)>[]--><org.acra.builder.ReportExecutor: void execute(org.acra.builder.ReportBuilder)>[]--><org.acra.collector.CrashReportDataFactory: org.acra.collector.CrashReportData createCrashData(org.acra.builder.ReportBuilder)>[[try], [$i0 < 16]]--><org.acra.collector.DisplayManagerCollector: java.lang.String collectDisplays(android.content.Context)>[[i0 >= 17]]--><org.acra.collector.DisplayManagerCollector: java.lang.Object collectDisplayData(android.view.Display)>[]--><org.acra.collector.DisplayManagerCollector: java.lang.String collectIsValid(android.view.Display)>[[-$i0 < 17]]--><android.view.Display: boolean isValid()>
+One road protect good!
+2 Packageshead roads:
+###Multi invoking in one method, need manual check!!!--><org.acra.collector.CrashReportDataFactory: org.acra.collector.CrashReportData createCrashData(org.acra.builder.ReportBuilder)>[[try], [$i0 < 16]]--><org.acra.collector.DisplayManagerCollector: java.lang.String collectDisplays(android.content.Context)>[[i0 >= 17]]--><org.acra.collector.DisplayManagerCollector: java.lang.Object collectDisplayData(android.view.Display)>[]--><org.acra.collector.DisplayManagerCollector: java.lang.String collectIsValid(android.view.Display)>[[-$i0 < 17]]
+###Multi invoking in one method, need manual check!!!--><org.acra.collector.CrashReportDataFactory: org.acra.collector.CrashReportData createCrashData(org.acra.builder.ReportBuilder)>[[try]][[$i0 < 16]]--><org.acra.collector.DisplayManagerCollector: java.lang.String collectDisplays(android.content.Context)>[[i0 >= 17]]--><org.acra.collector.DisplayManagerCollector: java.lang.Object collectDisplayData(android.view.Display)>[]--><org.acra.collector.DisplayManagerCollector: java.lang.String collectIsValid(android.view.Display)>[[-$i0 < 17]]
+try
+Good road with try: <org.acra.ErrorReporter: void handleSilentException(java.lang.Throwable)>[]--><org.acra.builder.ReportBuilder: void build(org.acra.builder.ReportExecutor)>[]--><org.acra.builder.ReportExecutor: void execute(org.acra.builder.ReportBuilder)>[]--><org.acra.collector.CrashReportDataFactory: org.acra.collector.CrashReportData createCrashData(org.acra.builder.ReportBuilder)>[[try], [$i0 < 16]]--><org.acra.collector.DisplayManagerCollector: java.lang.String collectDisplays(android.content.Context)>[[i0 >= 17]]--><org.acra.collector.DisplayManagerCollector: java.lang.Object collectDisplayData(android.view.Display)>[]--><org.acra.collector.DisplayManagerCollector: java.lang.String collectIsValid(android.view.Display)>[[-$i0 < 17]]--><android.view.Display: boolean isValid()>
+One road protect good!
+###Multi invoking in one method, need manual check!!!<org.acra.ErrorReporter: void uncaughtException(java.lang.Thread,java.lang.Throwable)>[[try]]--><org.acra.builder.ReportBuilder: void build(org.acra.builder.ReportExecutor)>[]--><org.acra.builder.ReportExecutor: void execute(org.acra.builder.ReportBuilder)>[]--><org.acra.collector.CrashReportDataFactory: org.acra.collector.CrashReportData createCrashData(org.acra.builder.ReportBuilder)>[[try], [$i0 < 16]]--><org.acra.collector.DisplayManagerCollector: java.lang.String collectDisplays(android.content.Context)>[[i0 >= 17]]--><org.acra.collector.DisplayManagerCollector: java.lang.Object collectDisplayData(android.view.Display)>[]--><org.acra.collector.DisplayManagerCollector: java.lang.String collectIsValid(android.view.Display)>[[-$i0 < 17]]
+###Multi invoking in one method, need manual check!!!<org.acra.ErrorReporter: void uncaughtException(java.lang.Thread,java.lang.Throwable)>[[try]]--><org.acra.builder.ReportBuilder: void build(org.acra.builder.ReportExecutor)>[]--><org.acra.builder.ReportExecutor: void execute(org.acra.builder.ReportBuilder)>[]--><org.acra.collector.CrashReportDataFactory: org.acra.collector.CrashReportData createCrashData(org.acra.builder.ReportBuilder)>[[try]][[$i0 < 16]]--><org.acra.collector.DisplayManagerCollector: java.lang.String collectDisplays(android.content.Context)>[[i0 >= 17]]--><org.acra.collector.DisplayManagerCollector: java.lang.Object collectDisplayData(android.view.Display)>[]--><org.acra.collector.DisplayManagerCollector: java.lang.String collectIsValid(android.view.Display)>[[-$i0 < 17]]
+try
+Good road with try: <org.acra.ErrorReporter: void uncaughtException(java.lang.Thread,java.lang.Throwable)>[[try]]--><org.acra.builder.ReportBuilder: void build(org.acra.builder.ReportExecutor)>[]--><org.acra.builder.ReportExecutor: void execute(org.acra.builder.ReportBuilder)>[]--><org.acra.collector.CrashReportDataFactory: org.acra.collector.CrashReportData createCrashData(org.acra.builder.ReportBuilder)>[[try], [$i0 < 16]]--><org.acra.collector.DisplayManagerCollector: java.lang.String collectDisplays(android.content.Context)>[[i0 >= 17]]--><org.acra.collector.DisplayManagerCollector: java.lang.Object collectDisplayData(android.view.Display)>[]--><org.acra.collector.DisplayManagerCollector: java.lang.String collectIsValid(android.view.Display)>[[-$i0 < 17]]--><android.view.Display: boolean isValid()>
+One road protect good!
+containsStatic:false
+containsTry:true
+3call by main package
+-----------------------------------------
+#################################################
+N 40 Potential Issue API: SDKCheck of <android.text.InputFilter.LengthFilter: int getMax()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i2 < 21
+Good road: <android.databinding.adapters.TextViewBindingAdapter: void setMaxLength(android.widget.TextView,int)>[[-$i2 < 21]]--><android.text.InputFilter.LengthFilter: int getMax()>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 41 Potential Issue API: SDKCheck of <android.view.Display: java.lang.String getName()> is checking!!!
+The life time of api is [17,31]
+3call roads:
+1 Mainhead roads:
+###Multi invoking in one method, need manual check!!!--><org.acra.collector.CrashReportDataFactory: org.acra.collector.CrashReportData createCrashData(org.acra.builder.ReportBuilder)>[[try], [$i0 < 16]]--><org.acra.collector.DisplayManagerCollector: java.lang.String collectDisplays(android.content.Context)>[[i0 >= 17]]--><org.acra.collector.DisplayManagerCollector: java.lang.Object collectDisplayData(android.view.Display)>[]--><org.acra.collector.DisplayManagerCollector: java.lang.String collectName(android.view.Display)>[[-$i0 < 17]]
+###Multi invoking in one method, need manual check!!!--><org.acra.collector.CrashReportDataFactory: org.acra.collector.CrashReportData createCrashData(org.acra.builder.ReportBuilder)>[[try]][[$i0 < 16]]--><org.acra.collector.DisplayManagerCollector: java.lang.String collectDisplays(android.content.Context)>[[i0 >= 17]]--><org.acra.collector.DisplayManagerCollector: java.lang.Object collectDisplayData(android.view.Display)>[]--><org.acra.collector.DisplayManagerCollector: java.lang.String collectName(android.view.Display)>[[-$i0 < 17]]
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.nbossard.packlist.gui.MainActivity dummyMainMethod_com_nbossard_packlist_gui_MainActivity(android.content.Intent)>[]--><com.nbossard.packlist.gui.MainActivity: boolean onOptionsItemSelected(android.view.MenuItem)>[]--><com.nbossard.packlist.PackListApp: void sendUserDebugReport()>[]--><org.acra.ErrorReporter: void handleException(java.lang.Throwable)>[]--><org.acra.ErrorReporter: void handleException(java.lang.Throwable,boolean)>[]--><org.acra.builder.ReportBuilder: void build(org.acra.builder.ReportExecutor)>[]--><org.acra.builder.ReportExecutor: void execute(org.acra.builder.ReportBuilder)>[]--><org.acra.collector.CrashReportDataFactory: org.acra.collector.CrashReportData createCrashData(org.acra.builder.ReportBuilder)>[[try], [$i0 < 16]]--><org.acra.collector.DisplayManagerCollector: java.lang.String collectDisplays(android.content.Context)>[[i0 >= 17]]--><org.acra.collector.DisplayManagerCollector: java.lang.Object collectDisplayData(android.view.Display)>[]--><org.acra.collector.DisplayManagerCollector: java.lang.String collectName(android.view.Display)>[[-$i0 < 17]]--><android.view.Display: java.lang.String getName()>
+One road protect good!
+2 Packageshead roads:
+###Multi invoking in one method, need manual check!!!--><org.acra.collector.CrashReportDataFactory: org.acra.collector.CrashReportData createCrashData(org.acra.builder.ReportBuilder)>[[try], [$i0 < 16]]--><org.acra.collector.DisplayManagerCollector: java.lang.String collectDisplays(android.content.Context)>[[i0 >= 17]]--><org.acra.collector.DisplayManagerCollector: java.lang.Object collectDisplayData(android.view.Display)>[]--><org.acra.collector.DisplayManagerCollector: java.lang.String collectName(android.view.Display)>[[-$i0 < 17]]
+###Multi invoking in one method, need manual check!!!--><org.acra.collector.CrashReportDataFactory: org.acra.collector.CrashReportData createCrashData(org.acra.builder.ReportBuilder)>[[try]][[$i0 < 16]]--><org.acra.collector.DisplayManagerCollector: java.lang.String collectDisplays(android.content.Context)>[[i0 >= 17]]--><org.acra.collector.DisplayManagerCollector: java.lang.Object collectDisplayData(android.view.Display)>[]--><org.acra.collector.DisplayManagerCollector: java.lang.String collectName(android.view.Display)>[[-$i0 < 17]]
+try
+Good road with try: <org.acra.ErrorReporter: void handleSilentException(java.lang.Throwable)>[]--><org.acra.builder.ReportBuilder: void build(org.acra.builder.ReportExecutor)>[]--><org.acra.builder.ReportExecutor: void execute(org.acra.builder.ReportBuilder)>[]--><org.acra.collector.CrashReportDataFactory: org.acra.collector.CrashReportData createCrashData(org.acra.builder.ReportBuilder)>[[try], [$i0 < 16]]--><org.acra.collector.DisplayManagerCollector: java.lang.String collectDisplays(android.content.Context)>[[i0 >= 17]]--><org.acra.collector.DisplayManagerCollector: java.lang.Object collectDisplayData(android.view.Display)>[]--><org.acra.collector.DisplayManagerCollector: java.lang.String collectName(android.view.Display)>[[-$i0 < 17]]--><android.view.Display: java.lang.String getName()>
+One road protect good!
+###Multi invoking in one method, need manual check!!!<org.acra.ErrorReporter: void uncaughtException(java.lang.Thread,java.lang.Throwable)>[[try]]--><org.acra.builder.ReportBuilder: void build(org.acra.builder.ReportExecutor)>[]--><org.acra.builder.ReportExecutor: void execute(org.acra.builder.ReportBuilder)>[]--><org.acra.collector.CrashReportDataFactory: org.acra.collector.CrashReportData createCrashData(org.acra.builder.ReportBuilder)>[[try], [$i0 < 16]]--><org.acra.collector.DisplayManagerCollector: java.lang.String collectDisplays(android.content.Context)>[[i0 >= 17]]--><org.acra.collector.DisplayManagerCollector: java.lang.Object collectDisplayData(android.view.Display)>[]--><org.acra.collector.DisplayManagerCollector: java.lang.String collectName(android.view.Display)>[[-$i0 < 17]]
+###Multi invoking in one method, need manual check!!!<org.acra.ErrorReporter: void uncaughtException(java.lang.Thread,java.lang.Throwable)>[[try]]--><org.acra.builder.ReportBuilder: void build(org.acra.builder.ReportExecutor)>[]--><org.acra.builder.ReportExecutor: void execute(org.acra.builder.ReportBuilder)>[]--><org.acra.collector.CrashReportDataFactory: org.acra.collector.CrashReportData createCrashData(org.acra.builder.ReportBuilder)>[[try]][[$i0 < 16]]--><org.acra.collector.DisplayManagerCollector: java.lang.String collectDisplays(android.content.Context)>[[i0 >= 17]]--><org.acra.collector.DisplayManagerCollector: java.lang.Object collectDisplayData(android.view.Display)>[]--><org.acra.collector.DisplayManagerCollector: java.lang.String collectName(android.view.Display)>[[-$i0 < 17]]
+try
+Good road with try: <org.acra.ErrorReporter: void uncaughtException(java.lang.Thread,java.lang.Throwable)>[[try]]--><org.acra.builder.ReportBuilder: void build(org.acra.builder.ReportExecutor)>[]--><org.acra.builder.ReportExecutor: void execute(org.acra.builder.ReportBuilder)>[]--><org.acra.collector.CrashReportDataFactory: org.acra.collector.CrashReportData createCrashData(org.acra.builder.ReportBuilder)>[[try], [$i0 < 16]]--><org.acra.collector.DisplayManagerCollector: java.lang.String collectDisplays(android.content.Context)>[[i0 >= 17]]--><org.acra.collector.DisplayManagerCollector: java.lang.Object collectDisplayData(android.view.Display)>[]--><org.acra.collector.DisplayManagerCollector: java.lang.String collectName(android.view.Display)>[[-$i0 < 17]]--><android.view.Display: java.lang.String getName()>
+One road protect good!
+containsStatic:false
+containsTry:true
+3call by main package
+-----------------------------------------
+#################################################
+N 42 Potential Issue API: SDKCheck of <android.view.View: boolean isAttachedToWindow()> is checking!!!
+The life time of api is [19,31]
+14call roads:
+0 Mainhead roads:
+14 Packageshead roads:
+-$i0 < 19
+Good road: <groovy.lang.GroovyShell: java.lang.Object run(java.lang.String,java.lang.String,java.util.List)>[]--><groovy.lang.GroovyShell: java.lang.Object run(java.lang.String,java.lang.String,java.lang.String[])>[]--><groovy.lang.GroovyShell: java.lang.Object run(groovy.lang.GroovyCodeSource,java.lang.String[])>[]--><groovy.lang.GroovyShell: java.lang.Object runScriptOrMainOrTestOrRunnable(java.lang.Class,java.lang.String[])>[]--><groovy.lang.GroovyShell: java.lang.Object runRunnable(java.lang.Class,java.lang.String[])>[]--><android.databinding.ViewDataBinding$6: void run()>[[-$i0 < 19]]--><android.view.View: boolean isAttachedToWindow()>
+One road protect good!
+-$i0 < 19
+Good road: <groovy.lang.GroovyShell: java.lang.Object run(java.io.Reader,java.lang.String,java.util.List)>[]--><groovy.lang.GroovyShell: java.lang.Object run(java.io.Reader,java.lang.String,java.lang.String[])>[]--><groovy.lang.GroovyShell: java.lang.Object runScriptOrMainOrTestOrRunnable(java.lang.Class,java.lang.String[])>[]--><groovy.lang.GroovyShell: java.lang.Object runRunnable(java.lang.Class,java.lang.String[])>[]--><android.databinding.ViewDataBinding$6: void run()>[[-$i0 < 19]]--><android.view.View: boolean isAttachedToWindow()>
+One road protect good!
+-$i0 < 19
+Good road: <groovy.lang.GroovyShell: java.lang.Object run(java.io.File,java.util.List)>[]--><groovy.lang.GroovyShell: java.lang.Object run(java.io.File,java.lang.String[])>[]--><groovy.lang.GroovyShell: java.lang.Object runScriptOrMainOrTestOrRunnable(java.lang.Class,java.lang.String[])>[]--><groovy.lang.GroovyShell: java.lang.Object runRunnable(java.lang.Class,java.lang.String[])>[]--><android.databinding.ViewDataBinding$6: void run()>[[-$i0 < 19]]--><android.view.View: boolean isAttachedToWindow()>
+One road protect good!
+try
+Good road with try: <groovy.lang.GroovyShell: void main(java.lang.String[])>[]--><groovy.ui.GroovyMain: void main(java.lang.String[])>[]--><groovy.ui.GroovyMain: void processArgs(java.lang.String[],java.io.PrintStream)>[[try]]--><groovy.ui.GroovyMain: boolean process(groovyjarjarcommonscli.CommandLine)>[]--><groovy.ui.GroovyMain: boolean run()>[[try]]--><groovy.ui.GroovyMain: void processOnce()>[]--><groovy.lang.GroovyShell: java.lang.Object run(groovy.lang.GroovyCodeSource,java.util.List)>[]--><groovy.lang.GroovyShell: java.lang.Object run(groovy.lang.GroovyCodeSource,java.lang.String[])>[]--><groovy.lang.GroovyShell: java.lang.Object runScriptOrMainOrTestOrRunnable(java.lang.Class,java.lang.String[])>[]--><groovy.lang.GroovyShell: java.lang.Object runRunnable(java.lang.Class,java.lang.String[])>[]--><android.databinding.ViewDataBinding$6: void run()>[[-$i0 < 19]]--><android.view.View: boolean isAttachedToWindow()>
+One road protect good!
+-$i0 < 19
+Good road: <org.codehaus.groovy.ast.stmt.SynchronizedStatement: void visit(org.codehaus.groovy.ast.GroovyCodeVisitor)>[]--><org.codehaus.groovy.classgen.AsmClassGenerator: void visitSynchronizedStatement(org.codehaus.groovy.ast.stmt.SynchronizedStatement)>[]--><org.codehaus.groovy.classgen.asm.StatementWriter: void writeSynchronized(org.codehaus.groovy.ast.stmt.SynchronizedStatement)>[]--><android.databinding.ViewDataBinding$6: void run()>[[-$i0 < 19]]--><android.view.View: boolean isAttachedToWindow()>
+One road protect good!
+-$i0 < 19
+Good road: <android.databinding.ViewDataBinding$5: void onViewAttachedToWindow(android.view.View)>[]--><android.databinding.ViewDataBinding$6: void run()>[[-$i0 < 19]]--><android.view.View: boolean isAttachedToWindow()>
+One road protect good!
+-$i0 < 19
+Good road: <groovy.lang.Script: void run(java.io.File,java.lang.String[])>[]--><groovy.lang.GroovyShell: java.lang.Object run(java.io.File,java.lang.String[])>[]--><groovy.lang.GroovyShell: java.lang.Object runScriptOrMainOrTestOrRunnable(java.lang.Class,java.lang.String[])>[]--><groovy.lang.GroovyShell: java.lang.Object runRunnable(java.lang.Class,java.lang.String[])>[]--><android.databinding.ViewDataBinding$6: void run()>[[-$i0 < 19]]--><android.view.View: boolean isAttachedToWindow()>
+One road protect good!
+-$i0 < 19
+Good road: <org.codehaus.groovy.ast.stmt.ContinueStatement: void visit(org.codehaus.groovy.ast.GroovyCodeVisitor)>[]--><org.codehaus.groovy.classgen.AsmClassGenerator: void visitContinueStatement(org.codehaus.groovy.ast.stmt.ContinueStatement)>[]--><org.codehaus.groovy.classgen.asm.StatementWriter: void writeContinue(org.codehaus.groovy.ast.stmt.ContinueStatement)>[]--><org.codehaus.groovy.classgen.asm.CompileStack: void applyFinallyBlocks(groovyjarjarasm.asm.Label,boolean)>[]--><org.codehaus.groovy.classgen.asm.CompileStack: void applyBlockRecorder(java.util.List)>[]--><android.databinding.ViewDataBinding$6: void run()>[[-$i0 < 19]]--><android.view.View: boolean isAttachedToWindow()>
+One road protect good!
+-$i0 < 19
+Good road: <org.codehaus.groovy.classgen.asm.OptimizingStatementWriter: void writeReturn(org.codehaus.groovy.ast.stmt.ReturnStatement)>[]--><org.codehaus.groovy.classgen.asm.StatementWriter: void writeReturn(org.codehaus.groovy.ast.stmt.ReturnStatement)>[]--><org.codehaus.groovy.classgen.asm.CompileStack: void applyBlockRecorder()>[]--><org.codehaus.groovy.classgen.asm.CompileStack: void applyBlockRecorder(java.util.List)>[]--><android.databinding.ViewDataBinding$6: void run()>[[-$i0 < 19]]--><android.view.View: boolean isAttachedToWindow()>
+One road protect good!
+-$i0 < 19
+Good road: <groovy.lang.GroovyShell: java.lang.Object run(java.net.URI,java.lang.String[])>[]--><groovy.lang.GroovyShell: java.lang.Object run(groovy.lang.GroovyCodeSource,java.lang.String[])>[]--><groovy.lang.GroovyShell: java.lang.Object runScriptOrMainOrTestOrRunnable(java.lang.Class,java.lang.String[])>[]--><groovy.lang.GroovyShell: java.lang.Object runRunnable(java.lang.Class,java.lang.String[])>[]--><android.databinding.ViewDataBinding$6: void run()>[[-$i0 < 19]]--><android.view.View: boolean isAttachedToWindow()>
+One road protect good!
+-$i0 < 19
+Good road: <groovy.lang.GroovyShell: java.lang.Object run(java.net.URI,java.util.List)>[]--><groovy.lang.GroovyShell: java.lang.Object run(groovy.lang.GroovyCodeSource,java.lang.String[])>[]--><groovy.lang.GroovyShell: java.lang.Object runScriptOrMainOrTestOrRunnable(java.lang.Class,java.lang.String[])>[]--><groovy.lang.GroovyShell: java.lang.Object runRunnable(java.lang.Class,java.lang.String[])>[]--><android.databinding.ViewDataBinding$6: void run()>[[-$i0 < 19]]--><android.view.View: boolean isAttachedToWindow()>
+One road protect good!
+-$i0 < 19
+Good road: <org.codehaus.groovy.ast.stmt.BreakStatement: void visit(org.codehaus.groovy.ast.GroovyCodeVisitor)>[]--><org.codehaus.groovy.classgen.AsmClassGenerator: void visitBreakStatement(org.codehaus.groovy.ast.stmt.BreakStatement)>[]--><org.codehaus.groovy.classgen.asm.StatementWriter: void writeBreak(org.codehaus.groovy.ast.stmt.BreakStatement)>[]--><org.codehaus.groovy.classgen.asm.CompileStack: void applyFinallyBlocks(groovyjarjarasm.asm.Label,boolean)>[]--><org.codehaus.groovy.classgen.asm.CompileStack: void applyBlockRecorder(java.util.List)>[]--><android.databinding.ViewDataBinding$6: void run()>[[-$i0 < 19]]--><android.view.View: boolean isAttachedToWindow()>
+One road protect good!
+-$i0 < 19
+Good road: <org.codehaus.groovy.ast.stmt.ReturnStatement: void visit(org.codehaus.groovy.ast.GroovyCodeVisitor)>[]--><org.codehaus.groovy.classgen.AsmClassGenerator: void visitReturnStatement(org.codehaus.groovy.ast.stmt.ReturnStatement)>[]--><org.codehaus.groovy.classgen.asm.StatementWriter: void writeReturn(org.codehaus.groovy.ast.stmt.ReturnStatement)>[]--><org.codehaus.groovy.classgen.asm.CompileStack: void applyBlockRecorder()>[]--><org.codehaus.groovy.classgen.asm.CompileStack: void applyBlockRecorder(java.util.List)>[]--><android.databinding.ViewDataBinding$6: void run()>[[-$i0 < 19]]--><android.view.View: boolean isAttachedToWindow()>
+One road protect good!
+-$i0 < 19
+Good road: <android.databinding.ViewDataBinding$7: void doFrame(long)>[]--><android.databinding.ViewDataBinding$6: void run()>[[-$i0 < 19]]--><android.view.View: boolean isAttachedToWindow()>
+One road protect good!
+containsStatic:false
+containsTry:true
+15call by main package
+-----------------------------------------
+#################################################
+N 43 Potential Issue API: SDKCheck of <java.awt.Font: void <init>(java.lang.String,int,int)> is checking!!!
+The life time of api is [1,8]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+try
+Good road with try: <org.codehaus.groovy.antlr.LexerFrame: void main(java.lang.String[])>[]--><org.codehaus.groovy.antlr.LexerFrame: void <init>(java.lang.Class,java.lang.Class)>[[try]]--><org.codehaus.groovy.antlr.LexerFrame: void jbInit()>[]--><java.awt.Font: void <init>(java.lang.String,int,int)>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 44 Potential Issue API: SDKCheck of <android.content.Context: int getColor(int)> is checking!!!
+The life time of api is [23,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+-$i1 < 23
+Good road: <android.databinding.DynamicUtil: int getColorFromResource(android.view.View,int)>[[-$i1 < 23]]--><android.content.Context: int getColor(int)>
+One road protect good!
+-$i1 < 23
+Good road: <android.databinding.ViewDataBinding: int getColorFromResource(int)>[[-$i1 < 23]]--><android.content.Context: int getColor(int)>
+One road protect good!
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 45 Potential Issue API: SDKCheck of <android.widget.TextView: android.graphics.drawable.Drawable[] getCompoundDrawablesRelative()> is checking!!!
+The life time of api is [17,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+$i0 >= 17
+Good road: <android.databinding.adapters.TextViewBindingAdapter: void setDrawableEnd(android.widget.TextView,android.graphics.drawable.Drawable)>[[$i0 >= 17]]--><android.widget.TextView: android.graphics.drawable.Drawable[] getCompoundDrawablesRelative()>
+One road protect good!
+$i0 >= 17
+Good road: <android.databinding.adapters.TextViewBindingAdapter: void setDrawableStart(android.widget.TextView,android.graphics.drawable.Drawable)>[[$i0 >= 17]]--><android.widget.TextView: android.graphics.drawable.Drawable[] getCompoundDrawablesRelative()>
+One road protect good!
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 46 Potential Issue API: SDKCheck of <java.awt.Font: java.lang.String toString()> is checking!!!
+The life time of api is [1,8]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <groovyjarjarharmonybeans.editors.FontEditor: void setAsText(java.lang.String)>[]--><java.awt.Font: java.lang.String toString()>
+#1.the call statck between class <groovyjarjarharmonybeans.editors.FontEditor: void setAsText(java.lang.String)> to <java.awt.Font: java.lang.String toString()>has compatibility isssues！
+-----------------------------------------
+crashApis:24
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 47 Potential Issue API: SDKCheck of <android.view.Display: void getRealMetrics(android.util.DisplayMetrics)> is checking!!!
+The life time of api is [17,31]
+3call roads:
+1 Mainhead roads:
+###Multi invoking in one method, need manual check!!!--><org.acra.collector.CrashReportDataFactory: org.acra.collector.CrashReportData createCrashData(org.acra.builder.ReportBuilder)>[[try], [$i0 < 16]]--><org.acra.collector.DisplayManagerCollector: java.lang.String collectDisplays(android.content.Context)>[[i0 >= 17]]--><org.acra.collector.DisplayManagerCollector: java.lang.Object collectDisplayData(android.view.Display)>[]--><org.acra.collector.DisplayManagerCollector: java.lang.String collectRealMetrics(android.view.Display)>[[-$i0 < 17]]
+###Multi invoking in one method, need manual check!!!--><org.acra.collector.CrashReportDataFactory: org.acra.collector.CrashReportData createCrashData(org.acra.builder.ReportBuilder)>[[try]][[$i0 < 16]]--><org.acra.collector.DisplayManagerCollector: java.lang.String collectDisplays(android.content.Context)>[[i0 >= 17]]--><org.acra.collector.DisplayManagerCollector: java.lang.Object collectDisplayData(android.view.Display)>[]--><org.acra.collector.DisplayManagerCollector: java.lang.String collectRealMetrics(android.view.Display)>[[-$i0 < 17]]
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.nbossard.packlist.gui.MainActivity dummyMainMethod_com_nbossard_packlist_gui_MainActivity(android.content.Intent)>[]--><com.nbossard.packlist.gui.MainActivity: boolean onOptionsItemSelected(android.view.MenuItem)>[]--><com.nbossard.packlist.PackListApp: void sendUserDebugReport()>[]--><org.acra.ErrorReporter: void handleException(java.lang.Throwable)>[]--><org.acra.ErrorReporter: void handleException(java.lang.Throwable,boolean)>[]--><org.acra.builder.ReportBuilder: void build(org.acra.builder.ReportExecutor)>[]--><org.acra.builder.ReportExecutor: void execute(org.acra.builder.ReportBuilder)>[]--><org.acra.collector.CrashReportDataFactory: org.acra.collector.CrashReportData createCrashData(org.acra.builder.ReportBuilder)>[[try], [$i0 < 16]]--><org.acra.collector.DisplayManagerCollector: java.lang.String collectDisplays(android.content.Context)>[[i0 >= 17]]--><org.acra.collector.DisplayManagerCollector: java.lang.Object collectDisplayData(android.view.Display)>[]--><org.acra.collector.DisplayManagerCollector: java.lang.String collectRealMetrics(android.view.Display)>[[-$i0 < 17]]--><android.view.Display: void getRealMetrics(android.util.DisplayMetrics)>
+One road protect good!
+2 Packageshead roads:
+###Multi invoking in one method, need manual check!!!--><org.acra.collector.CrashReportDataFactory: org.acra.collector.CrashReportData createCrashData(org.acra.builder.ReportBuilder)>[[try], [$i0 < 16]]--><org.acra.collector.DisplayManagerCollector: java.lang.String collectDisplays(android.content.Context)>[[i0 >= 17]]--><org.acra.collector.DisplayManagerCollector: java.lang.Object collectDisplayData(android.view.Display)>[]--><org.acra.collector.DisplayManagerCollector: java.lang.String collectRealMetrics(android.view.Display)>[[-$i0 < 17]]
+###Multi invoking in one method, need manual check!!!--><org.acra.collector.CrashReportDataFactory: org.acra.collector.CrashReportData createCrashData(org.acra.builder.ReportBuilder)>[[try]][[$i0 < 16]]--><org.acra.collector.DisplayManagerCollector: java.lang.String collectDisplays(android.content.Context)>[[i0 >= 17]]--><org.acra.collector.DisplayManagerCollector: java.lang.Object collectDisplayData(android.view.Display)>[]--><org.acra.collector.DisplayManagerCollector: java.lang.String collectRealMetrics(android.view.Display)>[[-$i0 < 17]]
+try
+Good road with try: <org.acra.ErrorReporter: void handleSilentException(java.lang.Throwable)>[]--><org.acra.builder.ReportBuilder: void build(org.acra.builder.ReportExecutor)>[]--><org.acra.builder.ReportExecutor: void execute(org.acra.builder.ReportBuilder)>[]--><org.acra.collector.CrashReportDataFactory: org.acra.collector.CrashReportData createCrashData(org.acra.builder.ReportBuilder)>[[try], [$i0 < 16]]--><org.acra.collector.DisplayManagerCollector: java.lang.String collectDisplays(android.content.Context)>[[i0 >= 17]]--><org.acra.collector.DisplayManagerCollector: java.lang.Object collectDisplayData(android.view.Display)>[]--><org.acra.collector.DisplayManagerCollector: java.lang.String collectRealMetrics(android.view.Display)>[[-$i0 < 17]]--><android.view.Display: void getRealMetrics(android.util.DisplayMetrics)>
+One road protect good!
+###Multi invoking in one method, need manual check!!!<org.acra.ErrorReporter: void uncaughtException(java.lang.Thread,java.lang.Throwable)>[[try]]--><org.acra.builder.ReportBuilder: void build(org.acra.builder.ReportExecutor)>[]--><org.acra.builder.ReportExecutor: void execute(org.acra.builder.ReportBuilder)>[]--><org.acra.collector.CrashReportDataFactory: org.acra.collector.CrashReportData createCrashData(org.acra.builder.ReportBuilder)>[[try], [$i0 < 16]]--><org.acra.collector.DisplayManagerCollector: java.lang.String collectDisplays(android.content.Context)>[[i0 >= 17]]--><org.acra.collector.DisplayManagerCollector: java.lang.Object collectDisplayData(android.view.Display)>[]--><org.acra.collector.DisplayManagerCollector: java.lang.String collectRealMetrics(android.view.Display)>[[-$i0 < 17]]
+###Multi invoking in one method, need manual check!!!<org.acra.ErrorReporter: void uncaughtException(java.lang.Thread,java.lang.Throwable)>[[try]]--><org.acra.builder.ReportBuilder: void build(org.acra.builder.ReportExecutor)>[]--><org.acra.builder.ReportExecutor: void execute(org.acra.builder.ReportBuilder)>[]--><org.acra.collector.CrashReportDataFactory: org.acra.collector.CrashReportData createCrashData(org.acra.builder.ReportBuilder)>[[try]][[$i0 < 16]]--><org.acra.collector.DisplayManagerCollector: java.lang.String collectDisplays(android.content.Context)>[[i0 >= 17]]--><org.acra.collector.DisplayManagerCollector: java.lang.Object collectDisplayData(android.view.Display)>[]--><org.acra.collector.DisplayManagerCollector: java.lang.String collectRealMetrics(android.view.Display)>[[-$i0 < 17]]
+try
+Good road with try: <org.acra.ErrorReporter: void uncaughtException(java.lang.Thread,java.lang.Throwable)>[[try]]--><org.acra.builder.ReportBuilder: void build(org.acra.builder.ReportExecutor)>[]--><org.acra.builder.ReportExecutor: void execute(org.acra.builder.ReportBuilder)>[]--><org.acra.collector.CrashReportDataFactory: org.acra.collector.CrashReportData createCrashData(org.acra.builder.ReportBuilder)>[[try], [$i0 < 16]]--><org.acra.collector.DisplayManagerCollector: java.lang.String collectDisplays(android.content.Context)>[[i0 >= 17]]--><org.acra.collector.DisplayManagerCollector: java.lang.Object collectDisplayData(android.view.Display)>[]--><org.acra.collector.DisplayManagerCollector: java.lang.String collectRealMetrics(android.view.Display)>[[-$i0 < 17]]--><android.view.Display: void getRealMetrics(android.util.DisplayMetrics)>
+One road protect good!
+containsStatic:false
+containsTry:true
+3call by main package
+-----------------------------------------
+#################################################
+N 48 Potential Issue API: SDKCheck of <java.awt.Toolkit: java.awt.Toolkit getDefaultToolkit()> is checking!!!
+The life time of api is [1,8]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <groovyjarjaropenbeans.SimpleBeanInfo: java.awt.Image loadImage(java.lang.String)>[]--><java.awt.Toolkit: java.awt.Toolkit getDefaultToolkit()>
+#1.the call statck between class <groovyjarjaropenbeans.SimpleBeanInfo: java.awt.Image loadImage(java.lang.String)> to <java.awt.Toolkit: java.awt.Toolkit getDefaultToolkit()>has compatibility isssues！
+-----------------------------------------
+crashApis:25
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 49 Potential Issue API: SDKCheck of <android.widget.TimePicker: void setHour(int)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i1 < 23
+Good road: <android.databinding.adapters.TimePickerBindingAdapter: void setHour(android.widget.TimePicker,int)>[[-$i1 < 23]]--><android.widget.TimePicker: void setHour(int)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 50 Potential Issue API: SDKCheck of <java.awt.Graphics: void setFont(java.awt.Font)> is checking!!!
+The life time of api is [1,8]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <groovyjarjarharmonybeans.editors.FontEditor: void paintValue(java.awt.Graphics,java.awt.Rectangle)>[]--><java.awt.Graphics: void setFont(java.awt.Font)>
+#1.the call statck between class <groovyjarjarharmonybeans.editors.FontEditor: void paintValue(java.awt.Graphics,java.awt.Rectangle)> to <java.awt.Graphics: void setFont(java.awt.Font)>has compatibility isssues！
+-----------------------------------------
+crashApis:26
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 51 Potential Issue API: SDKCheck of <java.awt.event.MouseEvent: int getX()> is checking!!!
+The life time of api is [1,8]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <org.codehaus.groovy.antlr.LexerFrame$1: void mouseReleased(java.awt.event.MouseEvent)>[]--><java.awt.event.MouseEvent: int getX()>
+#1.the call statck between class <org.codehaus.groovy.antlr.LexerFrame$1: void mouseReleased(java.awt.event.MouseEvent)> to <java.awt.event.MouseEvent: int getX()>has compatibility isssues！
+-----------------------------------------
+crashApis:27
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 52 Potential Issue API: SDKCheck of <android.widget.AbsListView: void setSelectionFromTop(int,int)> is checking!!!
+The life time of api is [21,31]
+14call roads:
+0 Mainhead roads:
+14 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <groovy.lang.GroovyShell: java.lang.Object run(java.lang.String,java.lang.String,java.util.List)>[]--><groovy.lang.GroovyShell: java.lang.Object run(java.lang.String,java.lang.String,java.lang.String[])>[]--><groovy.lang.GroovyShell: java.lang.Object run(groovy.lang.GroovyCodeSource,java.lang.String[])>[]--><groovy.lang.GroovyShell: java.lang.Object runScriptOrMainOrTestOrRunnable(java.lang.Class,java.lang.String[])>[]--><groovy.lang.GroovyShell: java.lang.Object runRunnable(java.lang.Class,java.lang.String[])>[]--><com.fourmob.datetimepicker.date.YearPickerView$1: void run()>[]--><android.widget.AbsListView: void setSelectionFromTop(int,int)>
+#1.the call statck between class <groovy.lang.GroovyShell: java.lang.Object run(java.lang.String,java.lang.String,java.util.List)> to <android.widget.AbsListView: void setSelectionFromTop(int,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <groovy.lang.GroovyShell: java.lang.Object run(java.io.Reader,java.lang.String,java.util.List)>[]--><groovy.lang.GroovyShell: java.lang.Object run(java.io.Reader,java.lang.String,java.lang.String[])>[]--><groovy.lang.GroovyShell: java.lang.Object runScriptOrMainOrTestOrRunnable(java.lang.Class,java.lang.String[])>[]--><groovy.lang.GroovyShell: java.lang.Object runRunnable(java.lang.Class,java.lang.String[])>[]--><com.fourmob.datetimepicker.date.YearPickerView$1: void run()>[]--><android.widget.AbsListView: void setSelectionFromTop(int,int)>
+#2.the call statck between class <groovy.lang.GroovyShell: java.lang.Object run(java.io.Reader,java.lang.String,java.util.List)> to <android.widget.AbsListView: void setSelectionFromTop(int,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <groovy.lang.GroovyShell: java.lang.Object run(java.io.File,java.util.List)>[]--><groovy.lang.GroovyShell: java.lang.Object run(java.io.File,java.lang.String[])>[]--><groovy.lang.GroovyShell: java.lang.Object runScriptOrMainOrTestOrRunnable(java.lang.Class,java.lang.String[])>[]--><groovy.lang.GroovyShell: java.lang.Object runRunnable(java.lang.Class,java.lang.String[])>[]--><com.fourmob.datetimepicker.date.YearPickerView$1: void run()>[]--><android.widget.AbsListView: void setSelectionFromTop(int,int)>
+#3.the call statck between class <groovy.lang.GroovyShell: java.lang.Object run(java.io.File,java.util.List)> to <android.widget.AbsListView: void setSelectionFromTop(int,int)>has compatibility isssues！
+-----------------------------------------
+try
+Good road with try: <groovy.lang.GroovyShell: void main(java.lang.String[])>[]--><groovy.ui.GroovyMain: void main(java.lang.String[])>[]--><groovy.ui.GroovyMain: void processArgs(java.lang.String[],java.io.PrintStream)>[[try]]--><groovy.ui.GroovyMain: boolean process(groovyjarjarcommonscli.CommandLine)>[]--><groovy.ui.GroovyMain: boolean run()>[[try]]--><groovy.ui.GroovyMain: void processOnce()>[]--><groovy.lang.GroovyShell: java.lang.Object run(groovy.lang.GroovyCodeSource,java.util.List)>[]--><groovy.lang.GroovyShell: java.lang.Object run(groovy.lang.GroovyCodeSource,java.lang.String[])>[]--><groovy.lang.GroovyShell: java.lang.Object runScriptOrMainOrTestOrRunnable(java.lang.Class,java.lang.String[])>[]--><groovy.lang.GroovyShell: java.lang.Object runRunnable(java.lang.Class,java.lang.String[])>[]--><com.fourmob.datetimepicker.date.YearPickerView$1: void run()>[]--><android.widget.AbsListView: void setSelectionFromTop(int,int)>
+One road protect good!
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <org.codehaus.groovy.ast.stmt.SynchronizedStatement: void visit(org.codehaus.groovy.ast.GroovyCodeVisitor)>[]--><org.codehaus.groovy.classgen.AsmClassGenerator: void visitSynchronizedStatement(org.codehaus.groovy.ast.stmt.SynchronizedStatement)>[]--><org.codehaus.groovy.classgen.asm.StatementWriter: void writeSynchronized(org.codehaus.groovy.ast.stmt.SynchronizedStatement)>[]--><com.fourmob.datetimepicker.date.YearPickerView$1: void run()>[]--><android.widget.AbsListView: void setSelectionFromTop(int,int)>
+#5.the call statck between class <org.codehaus.groovy.ast.stmt.SynchronizedStatement: void visit(org.codehaus.groovy.ast.GroovyCodeVisitor)> to <android.widget.AbsListView: void setSelectionFromTop(int,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <android.databinding.ViewDataBinding$5: void onViewAttachedToWindow(android.view.View)>[]--><com.fourmob.datetimepicker.date.YearPickerView$1: void run()>[]--><android.widget.AbsListView: void setSelectionFromTop(int,int)>
+#6.the call statck between class <android.databinding.ViewDataBinding$5: void onViewAttachedToWindow(android.view.View)> to <android.widget.AbsListView: void setSelectionFromTop(int,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <groovy.lang.Script: void run(java.io.File,java.lang.String[])>[]--><groovy.lang.GroovyShell: java.lang.Object run(java.io.File,java.lang.String[])>[]--><groovy.lang.GroovyShell: java.lang.Object runScriptOrMainOrTestOrRunnable(java.lang.Class,java.lang.String[])>[]--><groovy.lang.GroovyShell: java.lang.Object runRunnable(java.lang.Class,java.lang.String[])>[]--><com.fourmob.datetimepicker.date.YearPickerView$1: void run()>[]--><android.widget.AbsListView: void setSelectionFromTop(int,int)>
+#7.the call statck between class <groovy.lang.Script: void run(java.io.File,java.lang.String[])> to <android.widget.AbsListView: void setSelectionFromTop(int,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <org.codehaus.groovy.ast.stmt.ContinueStatement: void visit(org.codehaus.groovy.ast.GroovyCodeVisitor)>[]--><org.codehaus.groovy.classgen.AsmClassGenerator: void visitContinueStatement(org.codehaus.groovy.ast.stmt.ContinueStatement)>[]--><org.codehaus.groovy.classgen.asm.StatementWriter: void writeContinue(org.codehaus.groovy.ast.stmt.ContinueStatement)>[]--><org.codehaus.groovy.classgen.asm.CompileStack: void applyFinallyBlocks(groovyjarjarasm.asm.Label,boolean)>[]--><org.codehaus.groovy.classgen.asm.CompileStack: void applyBlockRecorder(java.util.List)>[]--><com.fourmob.datetimepicker.date.YearPickerView$1: void run()>[]--><android.widget.AbsListView: void setSelectionFromTop(int,int)>
+#8.the call statck between class <org.codehaus.groovy.ast.stmt.ContinueStatement: void visit(org.codehaus.groovy.ast.GroovyCodeVisitor)> to <android.widget.AbsListView: void setSelectionFromTop(int,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <org.codehaus.groovy.classgen.asm.OptimizingStatementWriter: void writeReturn(org.codehaus.groovy.ast.stmt.ReturnStatement)>[]--><org.codehaus.groovy.classgen.asm.StatementWriter: void writeReturn(org.codehaus.groovy.ast.stmt.ReturnStatement)>[]--><org.codehaus.groovy.classgen.asm.CompileStack: void applyBlockRecorder()>[]--><org.codehaus.groovy.classgen.asm.CompileStack: void applyBlockRecorder(java.util.List)>[]--><com.fourmob.datetimepicker.date.YearPickerView$1: void run()>[]--><android.widget.AbsListView: void setSelectionFromTop(int,int)>
+#9.the call statck between class <org.codehaus.groovy.classgen.asm.OptimizingStatementWriter: void writeReturn(org.codehaus.groovy.ast.stmt.ReturnStatement)> to <android.widget.AbsListView: void setSelectionFromTop(int,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <groovy.lang.GroovyShell: java.lang.Object run(java.net.URI,java.lang.String[])>[]--><groovy.lang.GroovyShell: java.lang.Object run(groovy.lang.GroovyCodeSource,java.lang.String[])>[]--><groovy.lang.GroovyShell: java.lang.Object runScriptOrMainOrTestOrRunnable(java.lang.Class,java.lang.String[])>[]--><groovy.lang.GroovyShell: java.lang.Object runRunnable(java.lang.Class,java.lang.String[])>[]--><com.fourmob.datetimepicker.date.YearPickerView$1: void run()>[]--><android.widget.AbsListView: void setSelectionFromTop(int,int)>
+#10.the call statck between class <groovy.lang.GroovyShell: java.lang.Object run(java.net.URI,java.lang.String[])> to <android.widget.AbsListView: void setSelectionFromTop(int,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:28
+containsStatic:false
+containsTry:true
+11call by main package
+-----------------------------------------
+#################################################
+N 53 Potential Issue API: SDKCheck of <java.awt.Font: int getSize()> is checking!!!
+The life time of api is [1,8]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <groovyjarjarharmonybeans.editors.FontEditor: java.lang.String getJavaInitializationString()>[]--><java.awt.Font: int getSize()>
+#1.the call statck between class <groovyjarjarharmonybeans.editors.FontEditor: java.lang.String getJavaInitializationString()> to <java.awt.Font: int getSize()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <groovyjarjaropenbeans.AwtFontPersistenceDelegate: groovyjarjaropenbeans.Expression instantiate(java.lang.Object,groovyjarjaropenbeans.Encoder)>[]--><java.awt.Font: int getSize()>
+#2.the call statck between class <groovyjarjaropenbeans.AwtFontPersistenceDelegate: groovyjarjaropenbeans.Expression instantiate(java.lang.Object,groovyjarjaropenbeans.Encoder)> to <java.awt.Font: int getSize()>has compatibility isssues！
+-----------------------------------------
+crashApis:29
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 54 Potential Issue API: SDKCheck of <android.media.MediaCodecList: void <init>(int)> is checking!!!
+The life time of api is [21,31]
+3call roads:
+1 Mainhead roads:
+###Multi invoking in one method, need manual check!!!--><org.acra.collector.CrashReportDataFactory: org.acra.collector.CrashReportData createCrashData(org.acra.builder.ReportBuilder)>[[try], [$i0 < 16]]--><org.acra.collector.MediaCodecListCollector: java.lang.String collectMediaCodecList()>[[$i1 >= 21], [$i1 >= 16]]
+###Multi invoking in one method, need manual check!!!--><org.acra.collector.CrashReportDataFactory: org.acra.collector.CrashReportData createCrashData(org.acra.builder.ReportBuilder)>[[try]][[$i0 < 16]]--><org.acra.collector.MediaCodecListCollector: java.lang.String collectMediaCodecList()>[[$i1 >= 21]][[$i1 >= 16]]
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.nbossard.packlist.gui.MainActivity dummyMainMethod_com_nbossard_packlist_gui_MainActivity(android.content.Intent)>[]--><com.nbossard.packlist.gui.MainActivity: boolean onOptionsItemSelected(android.view.MenuItem)>[]--><com.nbossard.packlist.PackListApp: void sendUserDebugReport()>[]--><org.acra.ErrorReporter: void handleException(java.lang.Throwable)>[]--><org.acra.ErrorReporter: void handleException(java.lang.Throwable,boolean)>[]--><org.acra.builder.ReportBuilder: void build(org.acra.builder.ReportExecutor)>[]--><org.acra.builder.ReportExecutor: void execute(org.acra.builder.ReportBuilder)>[]--><org.acra.collector.CrashReportDataFactory: org.acra.collector.CrashReportData createCrashData(org.acra.builder.ReportBuilder)>[[try], [$i0 < 16]]--><org.acra.collector.MediaCodecListCollector: java.lang.String collectMediaCodecList()>[[$i1 >= 21], [$i1 >= 16]]--><android.media.MediaCodecList: void <init>(int)>
+One road protect good!
+2 Packageshead roads:
+###Multi invoking in one method, need manual check!!!--><org.acra.collector.CrashReportDataFactory: org.acra.collector.CrashReportData createCrashData(org.acra.builder.ReportBuilder)>[[try], [$i0 < 16]]--><org.acra.collector.MediaCodecListCollector: java.lang.String collectMediaCodecList()>[[$i1 >= 21], [$i1 >= 16]]
+###Multi invoking in one method, need manual check!!!--><org.acra.collector.CrashReportDataFactory: org.acra.collector.CrashReportData createCrashData(org.acra.builder.ReportBuilder)>[[try]][[$i0 < 16]]--><org.acra.collector.MediaCodecListCollector: java.lang.String collectMediaCodecList()>[[$i1 >= 21]][[$i1 >= 16]]
+try
+Good road with try: <org.acra.ErrorReporter: void handleSilentException(java.lang.Throwable)>[]--><org.acra.builder.ReportBuilder: void build(org.acra.builder.ReportExecutor)>[]--><org.acra.builder.ReportExecutor: void execute(org.acra.builder.ReportBuilder)>[]--><org.acra.collector.CrashReportDataFactory: org.acra.collector.CrashReportData createCrashData(org.acra.builder.ReportBuilder)>[[try], [$i0 < 16]]--><org.acra.collector.MediaCodecListCollector: java.lang.String collectMediaCodecList()>[[$i1 >= 21], [$i1 >= 16]]--><android.media.MediaCodecList: void <init>(int)>
+One road protect good!
+###Multi invoking in one method, need manual check!!!<org.acra.ErrorReporter: void uncaughtException(java.lang.Thread,java.lang.Throwable)>[[try]]--><org.acra.builder.ReportBuilder: void build(org.acra.builder.ReportExecutor)>[]--><org.acra.builder.ReportExecutor: void execute(org.acra.builder.ReportBuilder)>[]--><org.acra.collector.CrashReportDataFactory: org.acra.collector.CrashReportData createCrashData(org.acra.builder.ReportBuilder)>[[try], [$i0 < 16]]--><org.acra.collector.MediaCodecListCollector: java.lang.String collectMediaCodecList()>[[$i1 >= 21], [$i1 >= 16]]
+###Multi invoking in one method, need manual check!!!<org.acra.ErrorReporter: void uncaughtException(java.lang.Thread,java.lang.Throwable)>[[try]]--><org.acra.builder.ReportBuilder: void build(org.acra.builder.ReportExecutor)>[]--><org.acra.builder.ReportExecutor: void execute(org.acra.builder.ReportBuilder)>[]--><org.acra.collector.CrashReportDataFactory: org.acra.collector.CrashReportData createCrashData(org.acra.builder.ReportBuilder)>[[try]][[$i0 < 16]]--><org.acra.collector.MediaCodecListCollector: java.lang.String collectMediaCodecList()>[[$i1 >= 21]][[$i1 >= 16]]
+try
+Good road with try: <org.acra.ErrorReporter: void uncaughtException(java.lang.Thread,java.lang.Throwable)>[[try]]--><org.acra.builder.ReportBuilder: void build(org.acra.builder.ReportExecutor)>[]--><org.acra.builder.ReportExecutor: void execute(org.acra.builder.ReportBuilder)>[]--><org.acra.collector.CrashReportDataFactory: org.acra.collector.CrashReportData createCrashData(org.acra.builder.ReportBuilder)>[[try], [$i0 < 16]]--><org.acra.collector.MediaCodecListCollector: java.lang.String collectMediaCodecList()>[[$i1 >= 21], [$i1 >= 16]]--><android.media.MediaCodecList: void <init>(int)>
+One road protect good!
+containsStatic:false
+containsTry:true
+3call by main package
+-----------------------------------------
+#################################################
+N 55 Potential Issue API: SDKCheck of <java.awt.Cursor: int getType()> is checking!!!
+The life time of api is [1,8]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <groovyjarjaropenbeans.AwtCursorPersistenceDelegate: groovyjarjaropenbeans.Expression instantiate(java.lang.Object,groovyjarjaropenbeans.Encoder)>[]--><java.awt.Cursor: int getType()>
+#1.the call statck between class <groovyjarjaropenbeans.AwtCursorPersistenceDelegate: groovyjarjaropenbeans.Expression instantiate(java.lang.Object,groovyjarjaropenbeans.Encoder)> to <java.awt.Cursor: int getType()>has compatibility isssues！
+-----------------------------------------
+crashApis:30
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 56 Potential Issue API: SDKCheck of <java.awt.event.MouseAdapter: void <init>()> is checking!!!
+The life time of api is [1,8]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <org.codehaus.groovy.antlr.LexerFrame$1: void <init>(org.codehaus.groovy.antlr.LexerFrame,javax.swing.JPopupMenu)>[]--><java.awt.event.MouseAdapter: void <init>()>
+#1.the call statck between class <org.codehaus.groovy.antlr.LexerFrame$1: void <init>(org.codehaus.groovy.antlr.LexerFrame,javax.swing.JPopupMenu)> to <java.awt.event.MouseAdapter: void <init>()>has compatibility isssues！
+-----------------------------------------
+crashApis:31
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 57 Potential Issue API: SDKCheck of <android.widget.TextView: void setCompoundDrawablesRelative(android.graphics.drawable.Drawable,android.graphics.drawable.Drawable,android.graphics.drawable.Drawable,android.graphics.drawable.Drawable)> is checking!!!
+The life time of api is [17,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+$i0 >= 17
+Good road: <android.databinding.adapters.TextViewBindingAdapter: void setDrawableEnd(android.widget.TextView,android.graphics.drawable.Drawable)>[[$i0 >= 17]]--><android.widget.TextView: void setCompoundDrawablesRelative(android.graphics.drawable.Drawable,android.graphics.drawable.Drawable,android.graphics.drawable.Drawable,android.graphics.drawable.Drawable)>
+One road protect good!
+$i0 >= 17
+Good road: <android.databinding.adapters.TextViewBindingAdapter: void setDrawableStart(android.widget.TextView,android.graphics.drawable.Drawable)>[[$i0 >= 17]]--><android.widget.TextView: void setCompoundDrawablesRelative(android.graphics.drawable.Drawable,android.graphics.drawable.Drawable,android.graphics.drawable.Drawable,android.graphics.drawable.Drawable)>
+One road protect good!
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 58 Potential Issue API: SDKCheck of <android.view.View: void setNestedScrollingEnabled(boolean)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i1 < 21
+Good road: <it.gmariotti.changelibs.library.view.ChangeLogListView: void <init>(android.content.Context)>[]--><it.gmariotti.changelibs.library.view.ChangeLogListView: void <init>(android.content.Context,android.util.AttributeSet)>[]--><it.gmariotti.changelibs.library.view.ChangeLogListView: void <init>(android.content.Context,android.util.AttributeSet,int)>[[-$i1 < 21]]--><android.view.View: void setNestedScrollingEnabled(boolean)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 59 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.lang.String getString(java.lang.String,java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.nbossard.packlist.gui.NewTripFragment: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String,java.lang.String)>
+#1.the call statck between class <com.nbossard.packlist.gui.NewTripFragment: void onCreate(android.os.Bundle)> to <android.os.BaseBundle: java.lang.String getString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:32
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 60 Potential Issue API: SDKCheck of <android.hardware.display.DisplayManager: android.view.Display[] getDisplays()> is checking!!!
+The life time of api is [17,31]
+3call roads:
+1 Mainhead roads:
+###Multi invoking in one method, need manual check!!!--><org.acra.collector.CrashReportDataFactory: org.acra.collector.CrashReportData createCrashData(org.acra.builder.ReportBuilder)>[[try], [$i0 < 16]]--><org.acra.collector.DisplayManagerCollector: java.lang.String collectDisplays(android.content.Context)>[[i0 >= 17]]
+###Multi invoking in one method, need manual check!!!--><org.acra.collector.CrashReportDataFactory: org.acra.collector.CrashReportData createCrashData(org.acra.builder.ReportBuilder)>[[try]][[$i0 < 16]]--><org.acra.collector.DisplayManagerCollector: java.lang.String collectDisplays(android.content.Context)>[[i0 >= 17]]
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.nbossard.packlist.gui.MainActivity dummyMainMethod_com_nbossard_packlist_gui_MainActivity(android.content.Intent)>[]--><com.nbossard.packlist.gui.MainActivity: boolean onOptionsItemSelected(android.view.MenuItem)>[]--><com.nbossard.packlist.PackListApp: void sendUserDebugReport()>[]--><org.acra.ErrorReporter: void handleException(java.lang.Throwable)>[]--><org.acra.ErrorReporter: void handleException(java.lang.Throwable,boolean)>[]--><org.acra.builder.ReportBuilder: void build(org.acra.builder.ReportExecutor)>[]--><org.acra.builder.ReportExecutor: void execute(org.acra.builder.ReportBuilder)>[]--><org.acra.collector.CrashReportDataFactory: org.acra.collector.CrashReportData createCrashData(org.acra.builder.ReportBuilder)>[[try], [$i0 < 16]]--><org.acra.collector.DisplayManagerCollector: java.lang.String collectDisplays(android.content.Context)>[[i0 >= 17]]--><android.hardware.display.DisplayManager: android.view.Display[] getDisplays()>
+One road protect good!
+2 Packageshead roads:
+###Multi invoking in one method, need manual check!!!--><org.acra.collector.CrashReportDataFactory: org.acra.collector.CrashReportData createCrashData(org.acra.builder.ReportBuilder)>[[try], [$i0 < 16]]--><org.acra.collector.DisplayManagerCollector: java.lang.String collectDisplays(android.content.Context)>[[i0 >= 17]]
+###Multi invoking in one method, need manual check!!!--><org.acra.collector.CrashReportDataFactory: org.acra.collector.CrashReportData createCrashData(org.acra.builder.ReportBuilder)>[[try]][[$i0 < 16]]--><org.acra.collector.DisplayManagerCollector: java.lang.String collectDisplays(android.content.Context)>[[i0 >= 17]]
+try
+Good road with try: <org.acra.ErrorReporter: void handleSilentException(java.lang.Throwable)>[]--><org.acra.builder.ReportBuilder: void build(org.acra.builder.ReportExecutor)>[]--><org.acra.builder.ReportExecutor: void execute(org.acra.builder.ReportBuilder)>[]--><org.acra.collector.CrashReportDataFactory: org.acra.collector.CrashReportData createCrashData(org.acra.builder.ReportBuilder)>[[try], [$i0 < 16]]--><org.acra.collector.DisplayManagerCollector: java.lang.String collectDisplays(android.content.Context)>[[i0 >= 17]]--><android.hardware.display.DisplayManager: android.view.Display[] getDisplays()>
+One road protect good!
+###Multi invoking in one method, need manual check!!!<org.acra.ErrorReporter: void uncaughtException(java.lang.Thread,java.lang.Throwable)>[[try]]--><org.acra.builder.ReportBuilder: void build(org.acra.builder.ReportExecutor)>[]--><org.acra.builder.ReportExecutor: void execute(org.acra.builder.ReportBuilder)>[]--><org.acra.collector.CrashReportDataFactory: org.acra.collector.CrashReportData createCrashData(org.acra.builder.ReportBuilder)>[[try], [$i0 < 16]]--><org.acra.collector.DisplayManagerCollector: java.lang.String collectDisplays(android.content.Context)>[[i0 >= 17]]
+###Multi invoking in one method, need manual check!!!<org.acra.ErrorReporter: void uncaughtException(java.lang.Thread,java.lang.Throwable)>[[try]]--><org.acra.builder.ReportBuilder: void build(org.acra.builder.ReportExecutor)>[]--><org.acra.builder.ReportExecutor: void execute(org.acra.builder.ReportBuilder)>[]--><org.acra.collector.CrashReportDataFactory: org.acra.collector.CrashReportData createCrashData(org.acra.builder.ReportBuilder)>[[try]][[$i0 < 16]]--><org.acra.collector.DisplayManagerCollector: java.lang.String collectDisplays(android.content.Context)>[[i0 >= 17]]
+try
+Good road with try: <org.acra.ErrorReporter: void uncaughtException(java.lang.Thread,java.lang.Throwable)>[[try]]--><org.acra.builder.ReportBuilder: void build(org.acra.builder.ReportExecutor)>[]--><org.acra.builder.ReportExecutor: void execute(org.acra.builder.ReportBuilder)>[]--><org.acra.collector.CrashReportDataFactory: org.acra.collector.CrashReportData createCrashData(org.acra.builder.ReportBuilder)>[[try], [$i0 < 16]]--><org.acra.collector.DisplayManagerCollector: java.lang.String collectDisplays(android.content.Context)>[[i0 >= 17]]--><android.hardware.display.DisplayManager: android.view.Display[] getDisplays()>
+One road protect good!
+containsStatic:false
+containsTry:true
+3call by main package
+-----------------------------------------
+#################################################
+N 61 Potential Issue API: SDKCheck of <android.widget.TimePicker: void setMinute(int)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i1 < 23
+Good road: <android.databinding.adapters.TimePickerBindingAdapter: void setMinute(android.widget.TimePicker,int)>[[-$i1 < 23]]--><android.widget.TimePicker: void setMinute(int)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 62 Potential Issue API: SDKCheck of <java.awt.Insets: void <init>(int,int,int,int)> is checking!!!
+The life time of api is [1,8]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+try
+Good road with try: <org.codehaus.groovy.antlr.LexerFrame: void main(java.lang.String[])>[]--><org.codehaus.groovy.antlr.LexerFrame: void <init>(java.lang.Class,java.lang.Class)>[[try]]--><org.codehaus.groovy.antlr.LexerFrame: void jbInit()>[]--><java.awt.Insets: void <init>(int,int,int,int)>
+One road protect good!
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <org.codehaus.groovy.antlr.LexerFrame: void access$000(org.codehaus.groovy.antlr.LexerFrame,java.io.File)>[]--><org.codehaus.groovy.antlr.LexerFrame: void scanScript(java.io.File)>[]--><java.awt.Insets: void <init>(int,int,int,int)>
+#2.the call statck between class <org.codehaus.groovy.antlr.LexerFrame: void access$000(org.codehaus.groovy.antlr.LexerFrame,java.io.File)> to <java.awt.Insets: void <init>(int,int,int,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:33
+containsStatic:false
+containsTry:true
+3call by main package
+-----------------------------------------
+#################################################
+N 63 Potential Issue API: SDKCheck of <android.view.View: int getPaddingStart()> is checking!!!
+The life time of api is [17,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i1 < 17
+Good road: <android.databinding.adapters.ViewBindingAdapter: void setPaddingEnd(android.view.View,float)>[[-$i1 < 17]]--><android.view.View: int getPaddingStart()>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+crashApis numbers:33
+crashApis numbers in main road:2
+On Android Version 16 this app may have error api use(at least): 33 and error api roads: 58
+On Android Version 17 this app may have error api use(at least): 33 and error api roads: 58
+On Android Version 18 this app may have error api use(at least): 30 and error api roads: 55
+On Android Version 19 this app may have error api use(at least): 30 and error api roads: 55
+On Android Version 20 this app may have error api use(at least): 30 and error api roads: 55
+On Android Version 21 this app may have error api use(at least): 23 and error api roads: 34
+On Android Version 22 this app may have error api use(at least): 21 and error api roads: 30
+On Android Version 23 this app may have error api use(at least): 21 and error api roads: 30
+On Android Version 24 this app may have error api use(at least): 21 and error api roads: 30
+On Android Version 25 this app may have error api use(at least): 21 and error api roads: 30
+On Android Version 26 this app may have error api use(at least): 21 and error api roads: 30
+On Android Version 27 this app may have error api use(at least): 21 and error api roads: 30
+On Android Version 28 this app may have error api use(at least): 21 and error api roads: 30
+On Android Version 29 this app may have error api use(at least): 21 and error api roads: 30
+On Android Version 30 this app may have error api use(at least): 21 and error api roads: 30
+On Android Version 31 this app may have error api use(at least): 21 and error api roads: 30

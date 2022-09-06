@@ -1,0 +1,906 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/TEdit.apk
+Entry Points[com.atr.tedit.TEditActivity]
+FllowDroidcallgraph size:2545
+Soot started on Mon Jul 11 13:11:37 CST 2022
+StaticCheck:<com.atr.tedit.settings.Settings: boolean isFirstRun(com.atr.tedit.TEditActivity)>$yysi3 < 28
+StaticCheck:<com.atr.tedit.mainstate.Browser: boolean writeFile(com.atr.tedit.file.descriptor.AndFile,com.atr.tedit.TEditActivity,java.lang.String)>$yysi0 < 23
+Soot finished on Mon Jul 11 13:11:45 CST 2022
+Soot has run for 0 min. 8 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 14
+Declared Target Sdk version is: 30
+Declared Max Sdk version is: -1
+Collected 407 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.content.ContextWrapper: android.view.Display getDisplay()> is checking!!!
+The life time of api is [30,31]
+1call roads:
+1 Mainhead roads:
+-i0 < 29
+!!!this api will crash on sdk 29 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.atr.tedit.TEditActivity dummyMainMethod_com_atr_tedit_TEditActivity(android.content.Intent)>[]--><com.atr.tedit.TEditActivity: void onCreate(android.os.Bundle)>[[-i0 < 29]]--><android.content.ContextWrapper: android.view.Display getDisplay()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.content.ContextWrapper: android.view.Display getDisplay()>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:1
+crashApisInMain:1
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.content.res.Resources: int getColor(int,android.content.res.Resources.Theme)> is checking!!!
+The life time of api is [23,31]
+15call roads:
+1 Mainhead roads:
+i0 < 29
+-$i1 < 23
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.atr.tedit.TEditActivity dummyMainMethod_com_atr_tedit_TEditActivity(android.content.Intent)>[]--><com.atr.tedit.TEditActivity: void onCreate(android.os.Bundle)>[[i0 < 29]]--><com.atr.tedit.settings.SettingsWindow: void <init>(com.atr.tedit.TEditActivity)>[]--><com.atr.tedit.TEditActivity: int getThemeColor(int)>[[-$i1 < 23]]--><android.content.res.Resources: int getColor(int,android.content.res.Resources.Theme)>
+One road protect good!
+14 Packageshead roads:
+-$i1 < 23
+Good road: <com.atr.tedit.dialog.PossibleBinary: android.app.Dialog onCreateDialog(android.os.Bundle)>[]--><com.atr.tedit.dialog.TDialog: void setTitle(int)>[]--><com.atr.tedit.dialog.TDialog: void setTitle(java.lang.String)>[]--><com.atr.tedit.TEditActivity: int getThemeColor(int)>[[-$i1 < 23]]--><android.content.res.Resources: int getColor(int,android.content.res.Resources.Theme)>
+One road protect good!
+-$i1 < 23
+Good road: <com.atr.tedit.dialog.ErrorMessage: android.app.Dialog onCreateDialog(android.os.Bundle)>[]--><com.atr.tedit.dialog.TDialog: void setTitle(java.lang.String)>[]--><com.atr.tedit.TEditActivity: int getThemeColor(int)>[[-$i1 < 23]]--><android.content.res.Resources: int getColor(int,android.content.res.Resources.Theme)>
+One road protect good!
+-$i1 < 23
+Good road: <com.atr.tedit.dialog.VolumePicker: android.app.Dialog onCreateDialog(android.os.Bundle)>[]--><com.atr.tedit.dialog.TDialog: void setTitle(int)>[]--><com.atr.tedit.dialog.TDialog: void setTitle(java.lang.String)>[]--><com.atr.tedit.TEditActivity: int getThemeColor(int)>[[-$i1 < 23]]--><android.content.res.Resources: int getColor(int,android.content.res.Resources.Theme)>
+One road protect good!
+-$i1 < 23
+Good road: <com.atr.tedit.mainstate.Browser$DeleteDialog: android.app.Dialog onCreateDialog(android.os.Bundle)>[]--><com.atr.tedit.dialog.TDialog: void setTitle(int)>[]--><com.atr.tedit.dialog.TDialog: void setTitle(java.lang.String)>[]--><com.atr.tedit.TEditActivity: int getThemeColor(int)>[[-$i1 < 23]]--><android.content.res.Resources: int getColor(int,android.content.res.Resources.Theme)>
+One road protect good!
+-$i1 < 23
+Good road: <com.atr.tedit.settings.dialog.TypefacePicker: android.app.Dialog onCreateDialog(android.os.Bundle)>[]--><com.atr.tedit.dialog.TDialog: void setTitle(int)>[]--><com.atr.tedit.dialog.TDialog: void setTitle(java.lang.String)>[]--><com.atr.tedit.TEditActivity: int getThemeColor(int)>[[-$i1 < 23]]--><android.content.res.Resources: int getColor(int,android.content.res.Resources.Theme)>
+One road protect good!
+-$i1 < 23
+Good road: <com.atr.tedit.dialog.ConfirmCloseText: android.app.Dialog onCreateDialog(android.os.Bundle)>[]--><com.atr.tedit.dialog.TDialog: void setTitle(int)>[]--><com.atr.tedit.dialog.TDialog: void setTitle(java.lang.String)>[]--><com.atr.tedit.TEditActivity: int getThemeColor(int)>[[-$i1 < 23]]--><android.content.res.Resources: int getColor(int,android.content.res.Resources.Theme)>
+One road protect good!
+-$i1 < 23
+Good road: <com.atr.tedit.mainstate.Browser$NewDirectory: android.app.Dialog onCreateDialog(android.os.Bundle)>[]--><com.atr.tedit.dialog.TDialog: void setTitle(int)>[]--><com.atr.tedit.dialog.TDialog: void setTitle(java.lang.String)>[]--><com.atr.tedit.TEditActivity: int getThemeColor(int)>[[-$i1 < 23]]--><android.content.res.Resources: int getColor(int,android.content.res.Resources.Theme)>
+One road protect good!
+-$i1 < 23
+Good road: <com.atr.tedit.settings.dialog.DirectoryPicker: android.app.Dialog onCreateDialog(android.os.Bundle)>[]--><com.atr.tedit.dialog.TDialog: void setTitle(int)>[]--><com.atr.tedit.dialog.TDialog: void setTitle(java.lang.String)>[]--><com.atr.tedit.TEditActivity: int getThemeColor(int)>[[-$i1 < 23]]--><android.content.res.Resources: int getColor(int,android.content.res.Resources.Theme)>
+One road protect good!
+-$i1 < 23
+Good road: <com.atr.tedit.dialog.TDialog: void setPositiveButton(java.lang.String,android.view.View$OnClickListener)>[]--><com.atr.tedit.TEditActivity: int getThemeColor(int)>[[-$i1 < 23]]--><android.content.res.Resources: int getColor(int,android.content.res.Resources.Theme)>
+One road protect good!
+-$i1 < 23
+Good road: <com.atr.tedit.mainstate.Browser$OverwriteDialog: android.app.Dialog onCreateDialog(android.os.Bundle)>[]--><com.atr.tedit.dialog.TDialog: void setTitle(java.lang.String)>[]--><com.atr.tedit.TEditActivity: int getThemeColor(int)>[[-$i1 < 23]]--><android.content.res.Resources: int getColor(int,android.content.res.Resources.Theme)>
+One road protect good!
+-$i1 < 23
+Good road: <com.atr.tedit.dialog.TDialog: void setNeutralButton(java.lang.String,android.view.View$OnClickListener)>[]--><com.atr.tedit.TEditActivity: int getThemeColor(int)>[[-$i1 < 23]]--><android.content.res.Resources: int getColor(int,android.content.res.Resources.Theme)>
+One road protect good!
+-$i1 < 23
+Good road: <com.atr.tedit.dialog.TDialog: void setNegativeButton(java.lang.String,android.view.View$OnClickListener)>[]--><com.atr.tedit.TEditActivity: int getThemeColor(int)>[[-$i1 < 23]]--><android.content.res.Resources: int getColor(int,android.content.res.Resources.Theme)>
+One road protect good!
+-$i1 < 23
+Good road: <com.atr.tedit.dialog.HelpDialog: android.app.Dialog onCreateDialog(android.os.Bundle)>[]--><com.atr.tedit.dialog.TDialog: void setTitle(java.lang.String)>[]--><com.atr.tedit.TEditActivity: int getThemeColor(int)>[[-$i1 < 23]]--><android.content.res.Resources: int getColor(int,android.content.res.Resources.Theme)>
+One road protect good!
+-$i1 < 23
+Good road: <com.atr.tedit.utilitybar.state.BrowserState$LaunchSDCardIntent: android.app.Dialog onCreateDialog(android.os.Bundle)>[]--><com.atr.tedit.dialog.TDialog: void setTitle(int)>[]--><com.atr.tedit.dialog.TDialog: void setTitle(java.lang.String)>[]--><com.atr.tedit.TEditActivity: int getThemeColor(int)>[[-$i1 < 23]]--><android.content.res.Resources: int getColor(int,android.content.res.Resources.Theme)>
+One road protect good!
+containsStatic:false
+containsTry:false
+15call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putLongArray(java.lang.String,long[])> is checking!!!
+The life time of api is [21,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.util.Size: int getWidth()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <androidx.versionedparcelable.VersionedParcel: void writeSize(android.util.Size,int)>[]--><android.util.Size: int getWidth()>
+#1.the call statck between class <androidx.versionedparcelable.VersionedParcel: void writeSize(android.util.Size,int)> to <android.util.Size: int getWidth()>has compatibility isssues！
+-----------------------------------------
+crashApis:2
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.os.BaseBundle: long getLong(java.lang.String,long)> is checking!!!
+The life time of api is [21,31]
+3call roads:
+1 Mainhead roads:
+i0 < 29
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.atr.tedit.TEditActivity dummyMainMethod_com_atr_tedit_TEditActivity(android.content.Intent)>[]--><com.atr.tedit.TEditActivity: void onCreate(android.os.Bundle)>[[i0 < 29]]--><android.os.BaseBundle: long getLong(java.lang.String,long)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: long getLong(java.lang.String,long)>has compatibility isssues！
+-----------------------------------------
+2 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.atr.tedit.dialog.ConfirmCloseText: android.app.Dialog onCreateDialog(android.os.Bundle)>[]--><android.os.BaseBundle: long getLong(java.lang.String,long)>
+#1.the call statck between class <com.atr.tedit.dialog.ConfirmCloseText: android.app.Dialog onCreateDialog(android.os.Bundle)> to <android.os.BaseBundle: long getLong(java.lang.String,long)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.atr.tedit.mainstate.Editor: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: long getLong(java.lang.String,long)>
+#2.the call statck between class <com.atr.tedit.mainstate.Editor: void onCreate(android.os.Bundle)> to <android.os.BaseBundle: long getLong(java.lang.String,long)>has compatibility isssues！
+-----------------------------------------
+crashApis:3
+crashApisInMain:2
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 5 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)> is checking!!!
+The life time of api is [21,31]
+32call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.atr.tedit.TEditActivity dummyMainMethod_com_atr_tedit_TEditActivity(android.content.Intent)>[]--><dummyMainClass: com.atr.tedit.mainstate.Tabs dummyMainMethod_com_atr_tedit_mainstate_Tabs(android.content.Intent,android.app.Activity)>[]--><com.atr.tedit.mainstate.Tabs: void onListItemClick(android.widget.ListView,android.view.View,int,long)>[]--><com.atr.tedit.TEditActivity: void openDocument(long)>[]--><com.atr.tedit.dialog.ErrorMessage: com.atr.tedit.dialog.ErrorMessage getInstance(java.lang.String,java.lang.String)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+31 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.atr.tedit.settings.dialog.DirectoryPicker: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#1.the call statck between class <com.atr.tedit.settings.dialog.DirectoryPicker: void onSaveInstanceState(android.os.Bundle)> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.atr.tedit.utilitybar.state.TextSearchState$7: void onClick(android.view.View)>[]--><com.atr.tedit.dialog.HelpDialog: com.atr.tedit.dialog.HelpDialog newInstance(int,java.lang.String)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#2.the call statck between class <com.atr.tedit.utilitybar.state.TextSearchState$7: void onClick(android.view.View)> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+###Multi invoking in one method, need manual check!!!--><com.atr.tedit.mainstate.Browser: com.atr.tedit.file.descriptor.AndFile saveFile(java.lang.String,java.lang.String)>[[-$yysi0 < 23], [-$z0 != 0]]--><com.atr.tedit.dialog.ErrorMessage: com.atr.tedit.dialog.ErrorMessage getInstance(java.lang.String,java.lang.String)>[]
+###Multi invoking in one method, need manual check!!!--><com.atr.tedit.mainstate.Browser: com.atr.tedit.file.descriptor.AndFile saveFile(java.lang.String,java.lang.String)>[[-$yysi0 < 23]][[-$z0 != 0]]--><com.atr.tedit.dialog.ErrorMessage: com.atr.tedit.dialog.ErrorMessage getInstance(java.lang.String,java.lang.String)>[]
+-$yysi0 < 23
+-$z0 != 0
+Good road: <com.atr.tedit.TEditActivity: void saveFile(android.view.View)>[]--><com.atr.tedit.mainstate.Browser: com.atr.tedit.file.descriptor.AndFile saveFile(java.lang.String,java.lang.String)>[[-$yysi0 < 23], [-$z0 != 0]]--><com.atr.tedit.dialog.ErrorMessage: com.atr.tedit.dialog.ErrorMessage getInstance(java.lang.String,java.lang.String)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+One road protect good!
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.atr.tedit.TEditActivity: void saveFile(android.view.View)>[]--><com.atr.tedit.TEditActivity: void openDocument(long)>[]--><com.atr.tedit.dialog.ErrorMessage: com.atr.tedit.dialog.ErrorMessage getInstance(java.lang.String,java.lang.String)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.atr.tedit.TEditActivity: void saveFile(android.view.View)>[]--><com.atr.tedit.dialog.ErrorMessage: com.atr.tedit.dialog.ErrorMessage getInstance(java.lang.String,java.lang.String)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#3.the call statck between class <com.atr.tedit.TEditActivity: void saveFile(android.view.View)> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+i0 < 28
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.atr.tedit.dialog.VolumePicker$3: void onClick(android.view.View)>[]--><com.atr.tedit.settings.dialog.DirectoryPicker: void setVolume(com.atr.tedit.file.descriptor.AndFile)>[]--><com.atr.tedit.settings.dialog.DirectoryPicker: void populateBrowser()>[[i0 < 28]]--><com.atr.tedit.dialog.ErrorMessage: com.atr.tedit.dialog.ErrorMessage getInstance(java.lang.String,java.lang.String)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#4.the call statck between class <com.atr.tedit.dialog.VolumePicker$3: void onClick(android.view.View)> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.atr.tedit.utilitybar.state.TextSearchState$4: void onClick(android.view.View)>[]--><com.atr.tedit.mainstate.Editor: void replaceAll(java.lang.String,java.lang.String)>[]--><com.atr.tedit.dialog.ErrorMessage: com.atr.tedit.dialog.ErrorMessage getInstance(java.lang.String,java.lang.String)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#5.the call statck between class <com.atr.tedit.utilitybar.state.TextSearchState$4: void onClick(android.view.View)> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.atr.tedit.dialog.HelpDialog: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#6.the call statck between class <com.atr.tedit.dialog.HelpDialog: void onSaveInstanceState(android.os.Bundle)> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.atr.tedit.mainstate.Tabs$DBAdapter$1: boolean onTouch(android.view.View,android.view.MotionEvent)>[]--><com.atr.tedit.mainstate.Tabs: void onListItemClick(android.widget.ListView,android.view.View,int,long)>[]--><com.atr.tedit.TEditActivity: void openDocument(long)>[]--><com.atr.tedit.dialog.ErrorMessage: com.atr.tedit.dialog.ErrorMessage getInstance(java.lang.String,java.lang.String)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#7.the call statck between class <com.atr.tedit.mainstate.Tabs$DBAdapter$1: boolean onTouch(android.view.View,android.view.MotionEvent)> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.atr.tedit.utilitybar.state.TextSearchState$5: void onClick(android.view.View)>[]--><com.atr.tedit.mainstate.Editor: void findPrevious(java.lang.String)>[]--><com.atr.tedit.dialog.ErrorMessage: com.atr.tedit.dialog.ErrorMessage getInstance(java.lang.String,java.lang.String)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#8.the call statck between class <com.atr.tedit.utilitybar.state.TextSearchState$5: void onClick(android.view.View)> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.atr.tedit.mainstate.Browser$NewDirectory: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#9.the call statck between class <com.atr.tedit.mainstate.Browser$NewDirectory: void onSaveInstanceState(android.os.Bundle)> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.atr.tedit.mainstate.Browser$DeleteDialog$2: void onClick(android.view.View)>[]--><com.atr.tedit.dialog.ErrorMessage: com.atr.tedit.dialog.ErrorMessage getInstance(java.lang.String,java.lang.String)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#10.the call statck between class <com.atr.tedit.mainstate.Browser$DeleteDialog$2: void onClick(android.view.View)> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:4
+crashApisInMain:3
+containsStatic:true
+containsTry:true
+11call by main package
+-----------------------------------------
+#################################################
+N 6 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putBooleanArray(java.lang.String,boolean[])> is checking!!!
+The life time of api is [22,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 7 Potential Issue API: SDKCheck of <android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)> is checking!!!
+The life time of api is [22,31]
+1call roads:
+1 Mainhead roads:
+i0 < 29
+!!!this api will crash on sdk 16 17 18 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.atr.tedit.TEditActivity dummyMainMethod_com_atr_tedit_TEditActivity(android.content.Intent)>[]--><com.atr.tedit.TEditActivity: void onCreate(android.os.Bundle)>[[i0 < 29]]--><com.atr.tedit.settings.SettingsWindow: void setState(android.os.Bundle)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:5
+crashApisInMain:4
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 8 Potential Issue API: SDKCheck of <android.util.Size: void <init>(int,int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <androidx.versionedparcelable.VersionedParcel: android.util.Size readSize(android.util.Size,int)>[]--><android.util.Size: void <init>(int,int)>
+#1.the call statck between class <androidx.versionedparcelable.VersionedParcel: android.util.Size readSize(android.util.Size,int)> to <android.util.Size: void <init>(int,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:6
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 9 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)> is checking!!!
+The life time of api is [22,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.atr.tedit.TEditActivity dummyMainMethod_com_atr_tedit_TEditActivity(android.content.Intent)>[]--><com.atr.tedit.TEditActivity: void onSaveInstanceState(android.os.Bundle)>[]--><com.atr.tedit.settings.SettingsWindow: void saveState(android.os.Bundle)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:7
+crashApisInMain:5
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 10 Potential Issue API: SDKCheck of <android.view.View: void setTextDirection(int)> is checking!!!
+The life time of api is [17,31]
+9call roads:
+1 Mainhead roads:
+-i0 < 17
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.atr.tedit.TEditActivity dummyMainMethod_com_atr_tedit_TEditActivity(android.content.Intent)>[]--><dummyMainClass: com.atr.tedit.mainstate.Browser dummyMainMethod_com_atr_tedit_mainstate_Browser(android.content.Intent,android.app.Activity)>[]--><com.atr.tedit.mainstate.Browser: void onResume()>[]--><com.atr.tedit.mainstate.Browser: void applySettings()>[[-i0 < 17]]--><android.view.View: void setTextDirection(int)>
+One road protect good!
+8 Packageshead roads:
+-$i0 < 17
+Good road: <com.atr.tedit.settings.dialog.DirectoryPicker: android.app.Dialog onCreateDialog(android.os.Bundle)>[[-$i0 < 17]]--><android.view.View: void setTextDirection(int)>
+One road protect good!
+-$i1 < 17
+Good road: <com.atr.tedit.settings.dialog.DirectoryPicker$7: android.view.View getView(int,android.view.View,android.view.ViewGroup)>[[-$i1 < 17]]--><android.view.View: void setTextDirection(int)>
+One road protect good!
+-$i1 < 17
+Good road: <com.atr.tedit.mainstate.Browser$2$1: android.view.View getView(int,android.view.View,android.view.ViewGroup)>[[-$i1 < 17]]--><android.view.View: void setTextDirection(int)>
+One road protect good!
+-$i1 < 17
+Good road: <com.atr.tedit.mainstate.Browser$6$1: android.view.View getView(int,android.view.View,android.view.ViewGroup)>[[-$i1 < 17]]--><android.view.View: void setTextDirection(int)>
+One road protect good!
+-$i1 < 17
+Good road: <com.atr.tedit.settings.dialog.DirectoryPicker$9: android.view.View getView(int,android.view.View,android.view.ViewGroup)>[[-$i1 < 17]]--><android.view.View: void setTextDirection(int)>
+One road protect good!
+-i0 < 17
+Good road: <com.atr.tedit.mainstate.Editor: void onResume()>[]--><com.atr.tedit.mainstate.Editor: void applySettings()>[[-i0 < 17]]--><android.view.View: void setTextDirection(int)>
+One road protect good!
+-i0 < 17
+Good road: <com.atr.tedit.mainstate.Editor: void onResume()>[]--><com.atr.tedit.utilitybar.state.TextSearchState: void <init>(com.atr.tedit.utilitybar.UtilityBar,java.lang.String,java.lang.String,boolean,boolean)>[]--><com.atr.tedit.utilitybar.state.TextSearchState: void <init>(com.atr.tedit.utilitybar.UtilityBar)>[[-i0 < 17]]--><android.view.View: void setTextDirection(int)>
+One road protect good!
+###Multi invoking in one method, need manual check!!!<com.atr.tedit.mainstate.Tabs$DBAdapter: android.view.View getView(int,android.view.View,android.view.ViewGroup)>[[-$i1 != 0], [-$i1 < 17]]
+###Multi invoking in one method, need manual check!!!<com.atr.tedit.mainstate.Tabs$DBAdapter: android.view.View getView(int,android.view.View,android.view.ViewGroup)>[[-$i1 != 0]][[-$i1 < 17]]
+-$i1 != 0
+-$i1 < 17
+Good road: <com.atr.tedit.mainstate.Tabs$DBAdapter: android.view.View getView(int,android.view.View,android.view.ViewGroup)>[[-$i1 != 0], [-$i1 < 17]]--><android.view.View: void setTextDirection(int)>
+One road protect good!
+-$i1 < 17
+Good road: <com.atr.tedit.settings.dialog.TypefacePicker$1: android.view.View getView(int,android.view.View,android.view.ViewGroup)>[[-$i1 < 17]]--><android.view.View: void setTextDirection(int)>
+One road protect good!
+containsStatic:false
+containsTry:false
+9call by main package
+-----------------------------------------
+#################################################
+N 11 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putDouble(java.lang.String,double)> is checking!!!
+The life time of api is [21,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 12 Potential Issue API: SDKCheck of <android.view.Display: void getRealMetrics(android.util.DisplayMetrics)> is checking!!!
+The life time of api is [17,31]
+1call roads:
+1 Mainhead roads:
+-i0 < 29
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.atr.tedit.TEditActivity dummyMainMethod_com_atr_tedit_TEditActivity(android.content.Intent)>[]--><com.atr.tedit.TEditActivity: void onCreate(android.os.Bundle)>[[-i0 < 29]]--><android.view.Display: void getRealMetrics(android.util.DisplayMetrics)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 13 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putIntArray(java.lang.String,int[])> is checking!!!
+The life time of api is [21,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 14 Potential Issue API: SDKCheck of <android.util.SizeF: float getHeight()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <androidx.versionedparcelable.VersionedParcel: void writeSizeF(android.util.SizeF,int)>[]--><android.util.SizeF: float getHeight()>
+#1.the call statck between class <androidx.versionedparcelable.VersionedParcel: void writeSizeF(android.util.SizeF,int)> to <android.util.SizeF: float getHeight()>has compatibility isssues！
+-----------------------------------------
+crashApis:8
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 15 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.lang.Object get(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+i0 < 29
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.atr.tedit.TEditActivity dummyMainMethod_com_atr_tedit_TEditActivity(android.content.Intent)>[]--><com.atr.tedit.TEditActivity: void onCreate(android.os.Bundle)>[[i0 < 29]]--><android.os.BaseBundle: java.lang.Object get(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: java.lang.Object get(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:9
+crashApisInMain:6
+containsStatic:false
+containsTry:true
+1call by main package
+-----------------------------------------
+#################################################
+N 16 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putDoubleArray(java.lang.String,double[])> is checking!!!
+The life time of api is [21,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 17 Potential Issue API: SDKCheck of <android.content.UriPermission: boolean isReadPermission()> is checking!!!
+The life time of api is [19,31]
+8call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.atr.tedit.TEditActivity dummyMainMethod_com_atr_tedit_TEditActivity(android.content.Intent)>[]--><com.atr.tedit.utilitybar.state.BrowserState$6: void onClick(android.view.View)>[]--><com.atr.tedit.utilitybar.state.BrowserState: void access$000(com.atr.tedit.utilitybar.state.BrowserState)>[]--><com.atr.tedit.utilitybar.state.BrowserState: void launchVolumePicker()>[]--><com.atr.tedit.TEditActivity: android.net.Uri[] getPermittedUris()>[]--><android.content.UriPermission: boolean isReadPermission()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.content.UriPermission: boolean isReadPermission()>has compatibility isssues！
+-----------------------------------------
+7 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 
+Error road: <com.atr.tedit.dialog.VolumePicker: android.app.Dialog onCreateDialog(android.os.Bundle)>[]--><com.atr.tedit.TEditActivity: android.net.Uri[] getPermittedUris()>[]--><android.content.UriPermission: boolean isReadPermission()>
+#1.the call statck between class <com.atr.tedit.dialog.VolumePicker: android.app.Dialog onCreateDialog(android.os.Bundle)> to <android.content.UriPermission: boolean isReadPermission()>has compatibility isssues！
+-----------------------------------------
+###Multi invoking in one method, need manual check!!!<com.atr.tedit.settings.dialog.DirectoryPicker$1: void onItemClick(android.widget.AdapterView,android.view.View,int,long)>[[-i2 >= 28], [-i2 < 21]]--><com.atr.tedit.settings.dialog.DirectoryPicker: void launchVolumePicker()>[]--><com.atr.tedit.settings.dialog.DirectoryPicker: void launchVolumePicker(boolean)>[]--><com.atr.tedit.TEditActivity: android.net.Uri[] getPermittedUris()>[]
+###Multi invoking in one method, need manual check!!!<com.atr.tedit.settings.dialog.DirectoryPicker$1: void onItemClick(android.widget.AdapterView,android.view.View,int,long)>[[-i2 >= 28]][[-i2 < 21]]--><com.atr.tedit.settings.dialog.DirectoryPicker: void launchVolumePicker()>[]--><com.atr.tedit.settings.dialog.DirectoryPicker: void launchVolumePicker(boolean)>[]--><com.atr.tedit.TEditActivity: android.net.Uri[] getPermittedUris()>[]
+-i2 >= 28
+-i2 < 21
+Good road: <com.atr.tedit.settings.dialog.DirectoryPicker$1: void onItemClick(android.widget.AdapterView,android.view.View,int,long)>[[-i2 >= 28], [-i2 < 21]]--><com.atr.tedit.settings.dialog.DirectoryPicker: void launchVolumePicker()>[]--><com.atr.tedit.settings.dialog.DirectoryPicker: void launchVolumePicker(boolean)>[]--><com.atr.tedit.TEditActivity: android.net.Uri[] getPermittedUris()>[]--><android.content.UriPermission: boolean isReadPermission()>
+One road protect good!
+-i0 < 28
+Good road: <com.atr.tedit.dialog.VolumePicker$3: void onClick(android.view.View)>[]--><com.atr.tedit.mainstate.Browser: void setVolume(com.atr.tedit.file.descriptor.AndFile)>[]--><com.atr.tedit.mainstate.Browser: void populateBrowser()>[[-i0 < 28]]--><com.atr.tedit.mainstate.Browser: void populatePermittedDirectories()>[]--><com.atr.tedit.mainstate.Browser$6: void handleMessage(android.os.Message)>[]--><com.atr.tedit.TEditActivity: android.net.Uri[] getPermittedUris()>[]--><android.content.UriPermission: boolean isReadPermission()>
+One road protect good!
+-i0 < 28
+Good road: <com.atr.tedit.mainstate.Browser: void access$1500(com.atr.tedit.mainstate.Browser)>[]--><com.atr.tedit.mainstate.Browser: void populateBrowser()>[[-i0 < 28]]--><com.atr.tedit.mainstate.Browser: void populatePermittedDirectories()>[]--><com.atr.tedit.mainstate.Browser$6: void handleMessage(android.os.Message)>[]--><com.atr.tedit.TEditActivity: android.net.Uri[] getPermittedUris()>[]--><android.content.UriPermission: boolean isReadPermission()>
+One road protect good!
+!!!this api will crash on sdk 16 17 18 
+Error road: <com.atr.tedit.utilitybar.state.BrowserState$LaunchSDCardIntent$1: void onClick(android.view.View)>[]--><com.atr.tedit.settings.dialog.DirectoryPicker: void launchVolumePicker(boolean)>[]--><com.atr.tedit.TEditActivity: android.net.Uri[] getPermittedUris()>[]--><android.content.UriPermission: boolean isReadPermission()>
+#7.the call statck between class <com.atr.tedit.utilitybar.state.BrowserState$LaunchSDCardIntent$1: void onClick(android.view.View)> to <android.content.UriPermission: boolean isReadPermission()>has compatibility isssues！
+-----------------------------------------
+crashApis:10
+crashApisInMain:7
+containsStatic:false
+containsTry:false
+8call by main package
+-----------------------------------------
+#################################################
+N 18 Potential Issue API: SDKCheck of <android.view.View: void setTextAlignment(int)> is checking!!!
+The life time of api is [17,31]
+9call roads:
+1 Mainhead roads:
+-i0 < 17
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.atr.tedit.TEditActivity dummyMainMethod_com_atr_tedit_TEditActivity(android.content.Intent)>[]--><dummyMainClass: com.atr.tedit.mainstate.Browser dummyMainMethod_com_atr_tedit_mainstate_Browser(android.content.Intent,android.app.Activity)>[]--><com.atr.tedit.mainstate.Browser: void onResume()>[]--><com.atr.tedit.mainstate.Browser: void applySettings()>[[-i0 < 17]]--><android.view.View: void setTextAlignment(int)>
+One road protect good!
+8 Packageshead roads:
+-$i0 < 17
+Good road: <com.atr.tedit.settings.dialog.DirectoryPicker: android.app.Dialog onCreateDialog(android.os.Bundle)>[[-$i0 < 17]]--><android.view.View: void setTextAlignment(int)>
+One road protect good!
+-$i1 < 17
+Good road: <com.atr.tedit.settings.dialog.DirectoryPicker$7: android.view.View getView(int,android.view.View,android.view.ViewGroup)>[[-$i1 < 17]]--><android.view.View: void setTextAlignment(int)>
+One road protect good!
+-$i1 < 17
+Good road: <com.atr.tedit.mainstate.Browser$2$1: android.view.View getView(int,android.view.View,android.view.ViewGroup)>[[-$i1 < 17]]--><android.view.View: void setTextAlignment(int)>
+One road protect good!
+-$i1 < 17
+Good road: <com.atr.tedit.mainstate.Browser$6$1: android.view.View getView(int,android.view.View,android.view.ViewGroup)>[[-$i1 < 17]]--><android.view.View: void setTextAlignment(int)>
+One road protect good!
+-$i1 < 17
+Good road: <com.atr.tedit.settings.dialog.DirectoryPicker$9: android.view.View getView(int,android.view.View,android.view.ViewGroup)>[[-$i1 < 17]]--><android.view.View: void setTextAlignment(int)>
+One road protect good!
+-i0 < 17
+Good road: <com.atr.tedit.mainstate.Editor: void onResume()>[]--><com.atr.tedit.mainstate.Editor: void applySettings()>[]--><com.atr.tedit.utilitybar.state.TextSearchState: void applySettings()>[[-i0 < 17]]--><android.view.View: void setTextAlignment(int)>
+One road protect good!
+-i0 < 17
+Good road: <com.atr.tedit.mainstate.Editor: void onResume()>[]--><com.atr.tedit.utilitybar.state.TextSearchState: void <init>(com.atr.tedit.utilitybar.UtilityBar,java.lang.String,java.lang.String,boolean,boolean)>[]--><com.atr.tedit.utilitybar.state.TextSearchState: void <init>(com.atr.tedit.utilitybar.UtilityBar)>[[-i0 < 17]]--><android.view.View: void setTextAlignment(int)>
+One road protect good!
+-$i1 < 17
+Good road: <com.atr.tedit.mainstate.Tabs$DBAdapter: android.view.View getView(int,android.view.View,android.view.ViewGroup)>[[-$i1 < 17]]--><android.view.View: void setTextAlignment(int)>
+One road protect good!
+-$i1 < 17
+Good road: <com.atr.tedit.settings.dialog.TypefacePicker$1: android.view.View getView(int,android.view.View,android.view.ViewGroup)>[[-$i1 < 17]]--><android.view.View: void setTextAlignment(int)>
+One road protect good!
+containsStatic:false
+containsTry:false
+9call by main package
+-----------------------------------------
+#################################################
+N 19 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putLong(java.lang.String,long)> is checking!!!
+The life time of api is [21,31]
+10call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.atr.tedit.TEditActivity dummyMainMethod_com_atr_tedit_TEditActivity(android.content.Intent)>[]--><dummyMainClass: com.atr.tedit.mainstate.Tabs dummyMainMethod_com_atr_tedit_mainstate_Tabs(android.content.Intent,android.app.Activity)>[]--><com.atr.tedit.mainstate.Tabs: void onResume()>[]--><com.atr.tedit.mainstate.Tabs: void populateTabs()>[]--><com.atr.tedit.mainstate.Tabs: void closeTabsView()>[]--><com.atr.tedit.TEditActivity: void openDocument(long)>[]--><com.atr.tedit.mainstate.Editor: com.atr.tedit.mainstate.Editor newInstance(long)>[]--><android.os.BaseBundle: void putLong(java.lang.String,long)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: void putLong(java.lang.String,long)>has compatibility isssues！
+-----------------------------------------
+9 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.atr.tedit.mainstate.Editor: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putLong(java.lang.String,long)>
+#1.the call statck between class <com.atr.tedit.mainstate.Editor: void onSaveInstanceState(android.os.Bundle)> to <android.os.BaseBundle: void putLong(java.lang.String,long)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.atr.tedit.TEditActivity: void saveFile(android.view.View)>[]--><com.atr.tedit.TEditActivity: void openDocument(long)>[]--><com.atr.tedit.mainstate.Editor: com.atr.tedit.mainstate.Editor newInstance(long)>[]--><android.os.BaseBundle: void putLong(java.lang.String,long)>
+#2.the call statck between class <com.atr.tedit.TEditActivity: void saveFile(android.view.View)> to <android.os.BaseBundle: void putLong(java.lang.String,long)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.atr.tedit.mainstate.Browser$OverwriteDialog$1: void onClick(android.view.View)>[]--><com.atr.tedit.TEditActivity: void openDocument(long)>[]--><com.atr.tedit.mainstate.Editor: com.atr.tedit.mainstate.Editor newInstance(long)>[]--><android.os.BaseBundle: void putLong(java.lang.String,long)>
+#3.the call statck between class <com.atr.tedit.mainstate.Browser$OverwriteDialog$1: void onClick(android.view.View)> to <android.os.BaseBundle: void putLong(java.lang.String,long)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.atr.tedit.dialog.PossibleBinary$2: void onClick(android.view.View)>[]--><com.atr.tedit.mainstate.Browser: void openFile(com.atr.tedit.file.descriptor.AndFile,boolean)>[]--><com.atr.tedit.TEditActivity: void newDocument(java.lang.String,java.lang.String)>[]--><com.atr.tedit.TEditActivity: void openDocument(long)>[]--><com.atr.tedit.mainstate.Editor: com.atr.tedit.mainstate.Editor newInstance(long)>[]--><android.os.BaseBundle: void putLong(java.lang.String,long)>
+#4.the call statck between class <com.atr.tedit.dialog.PossibleBinary$2: void onClick(android.view.View)> to <android.os.BaseBundle: void putLong(java.lang.String,long)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.atr.tedit.dialog.ConfirmCloseText: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putLong(java.lang.String,long)>
+#5.the call statck between class <com.atr.tedit.dialog.ConfirmCloseText: void onSaveInstanceState(android.os.Bundle)> to <android.os.BaseBundle: void putLong(java.lang.String,long)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.atr.tedit.dialog.ConfirmCloseText$1: void onClick(android.view.View)>[]--><com.atr.tedit.TEditActivity: void closeText()>[]--><com.atr.tedit.TEditActivity: void openDocument(long)>[]--><com.atr.tedit.mainstate.Editor: com.atr.tedit.mainstate.Editor newInstance(long)>[]--><android.os.BaseBundle: void putLong(java.lang.String,long)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.atr.tedit.dialog.ConfirmCloseText$1: void onClick(android.view.View)>[]--><com.atr.tedit.mainstate.Tabs: void reset()>[]--><com.atr.tedit.mainstate.Tabs: void closeTabsView()>[]--><com.atr.tedit.TEditActivity: void openDocument(long)>[]--><com.atr.tedit.mainstate.Editor: com.atr.tedit.mainstate.Editor newInstance(long)>[]--><android.os.BaseBundle: void putLong(java.lang.String,long)>
+#6.the call statck between class <com.atr.tedit.dialog.ConfirmCloseText$1: void onClick(android.view.View)> to <android.os.BaseBundle: void putLong(java.lang.String,long)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.atr.tedit.mainstate.Tabs: void access$700(com.atr.tedit.mainstate.Tabs,long)>[]--><com.atr.tedit.mainstate.Tabs: void closeTab(long)>[]--><com.atr.tedit.dialog.ConfirmCloseText: com.atr.tedit.dialog.ConfirmCloseText getInstance(long)>[]--><android.os.BaseBundle: void putLong(java.lang.String,long)>
+#7.the call statck between class <com.atr.tedit.mainstate.Tabs: void access$700(com.atr.tedit.mainstate.Tabs,long)> to <android.os.BaseBundle: void putLong(java.lang.String,long)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.atr.tedit.mainstate.Tabs$DBAdapter$1: boolean onTouch(android.view.View,android.view.MotionEvent)>[]--><com.atr.tedit.mainstate.Tabs: void onListItemClick(android.widget.ListView,android.view.View,int,long)>[]--><com.atr.tedit.TEditActivity: void openDocument(long)>[]--><com.atr.tedit.mainstate.Editor: com.atr.tedit.mainstate.Editor newInstance(long)>[]--><android.os.BaseBundle: void putLong(java.lang.String,long)>
+#8.the call statck between class <com.atr.tedit.mainstate.Tabs$DBAdapter$1: boolean onTouch(android.view.View,android.view.MotionEvent)> to <android.os.BaseBundle: void putLong(java.lang.String,long)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.atr.tedit.dialog.ConfirmCloseText$2: void onClick(android.view.View)>[]--><com.atr.tedit.mainstate.Tabs: void reset()>[]--><com.atr.tedit.mainstate.Tabs: void closeTabsView()>[]--><com.atr.tedit.TEditActivity: void openDocument(long)>[]--><com.atr.tedit.mainstate.Editor: com.atr.tedit.mainstate.Editor newInstance(long)>[]--><android.os.BaseBundle: void putLong(java.lang.String,long)>
+#9.the call statck between class <com.atr.tedit.dialog.ConfirmCloseText$2: void onClick(android.view.View)> to <android.os.BaseBundle: void putLong(java.lang.String,long)>has compatibility isssues！
+-----------------------------------------
+crashApis:11
+crashApisInMain:8
+containsStatic:false
+containsTry:false
+10call by main package
+-----------------------------------------
+#################################################
+N 20 Potential Issue API: SDKCheck of <android.content.ContentResolver: java.util.List getPersistedUriPermissions()> is checking!!!
+The life time of api is [19,31]
+8call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.atr.tedit.TEditActivity dummyMainMethod_com_atr_tedit_TEditActivity(android.content.Intent)>[]--><com.atr.tedit.utilitybar.state.BrowserState$6: void onClick(android.view.View)>[]--><com.atr.tedit.utilitybar.state.BrowserState: void access$000(com.atr.tedit.utilitybar.state.BrowserState)>[]--><com.atr.tedit.utilitybar.state.BrowserState: void launchVolumePicker()>[]--><com.atr.tedit.TEditActivity: android.net.Uri[] getPermittedUris()>[]--><android.content.ContentResolver: java.util.List getPersistedUriPermissions()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.content.ContentResolver: java.util.List getPersistedUriPermissions()>has compatibility isssues！
+-----------------------------------------
+7 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 
+Error road: <com.atr.tedit.dialog.VolumePicker: android.app.Dialog onCreateDialog(android.os.Bundle)>[]--><com.atr.tedit.TEditActivity: android.net.Uri[] getPermittedUris()>[]--><android.content.ContentResolver: java.util.List getPersistedUriPermissions()>
+#1.the call statck between class <com.atr.tedit.dialog.VolumePicker: android.app.Dialog onCreateDialog(android.os.Bundle)> to <android.content.ContentResolver: java.util.List getPersistedUriPermissions()>has compatibility isssues！
+-----------------------------------------
+###Multi invoking in one method, need manual check!!!<com.atr.tedit.settings.dialog.DirectoryPicker$1: void onItemClick(android.widget.AdapterView,android.view.View,int,long)>[[-i2 >= 28], [-i2 < 21]]--><com.atr.tedit.settings.dialog.DirectoryPicker: void launchVolumePicker()>[]--><com.atr.tedit.settings.dialog.DirectoryPicker: void launchVolumePicker(boolean)>[]--><com.atr.tedit.TEditActivity: android.net.Uri[] getPermittedUris()>[]
+###Multi invoking in one method, need manual check!!!<com.atr.tedit.settings.dialog.DirectoryPicker$1: void onItemClick(android.widget.AdapterView,android.view.View,int,long)>[[-i2 >= 28]][[-i2 < 21]]--><com.atr.tedit.settings.dialog.DirectoryPicker: void launchVolumePicker()>[]--><com.atr.tedit.settings.dialog.DirectoryPicker: void launchVolumePicker(boolean)>[]--><com.atr.tedit.TEditActivity: android.net.Uri[] getPermittedUris()>[]
+-i2 >= 28
+-i2 < 21
+Good road: <com.atr.tedit.settings.dialog.DirectoryPicker$1: void onItemClick(android.widget.AdapterView,android.view.View,int,long)>[[-i2 >= 28], [-i2 < 21]]--><com.atr.tedit.settings.dialog.DirectoryPicker: void launchVolumePicker()>[]--><com.atr.tedit.settings.dialog.DirectoryPicker: void launchVolumePicker(boolean)>[]--><com.atr.tedit.TEditActivity: android.net.Uri[] getPermittedUris()>[]--><android.content.ContentResolver: java.util.List getPersistedUriPermissions()>
+One road protect good!
+-i0 < 28
+Good road: <com.atr.tedit.dialog.VolumePicker$3: void onClick(android.view.View)>[]--><com.atr.tedit.mainstate.Browser: void setVolume(com.atr.tedit.file.descriptor.AndFile)>[]--><com.atr.tedit.mainstate.Browser: void populateBrowser()>[[-i0 < 28]]--><com.atr.tedit.mainstate.Browser: void populatePermittedDirectories()>[]--><com.atr.tedit.mainstate.Browser$6: void handleMessage(android.os.Message)>[]--><com.atr.tedit.TEditActivity: android.net.Uri[] getPermittedUris()>[]--><android.content.ContentResolver: java.util.List getPersistedUriPermissions()>
+One road protect good!
+-i0 < 28
+Good road: <com.atr.tedit.mainstate.Browser: void access$1500(com.atr.tedit.mainstate.Browser)>[]--><com.atr.tedit.mainstate.Browser: void populateBrowser()>[[-i0 < 28]]--><com.atr.tedit.mainstate.Browser: void populatePermittedDirectories()>[]--><com.atr.tedit.mainstate.Browser$6: void handleMessage(android.os.Message)>[]--><com.atr.tedit.TEditActivity: android.net.Uri[] getPermittedUris()>[]--><android.content.ContentResolver: java.util.List getPersistedUriPermissions()>
+One road protect good!
+!!!this api will crash on sdk 16 17 18 
+Error road: <com.atr.tedit.utilitybar.state.BrowserState$LaunchSDCardIntent$1: void onClick(android.view.View)>[]--><com.atr.tedit.settings.dialog.DirectoryPicker: void launchVolumePicker(boolean)>[]--><com.atr.tedit.TEditActivity: android.net.Uri[] getPermittedUris()>[]--><android.content.ContentResolver: java.util.List getPersistedUriPermissions()>
+#7.the call statck between class <com.atr.tedit.utilitybar.state.BrowserState$LaunchSDCardIntent$1: void onClick(android.view.View)> to <android.content.ContentResolver: java.util.List getPersistedUriPermissions()>has compatibility isssues！
+-----------------------------------------
+crashApis:12
+crashApisInMain:9
+containsStatic:false
+containsTry:false
+8call by main package
+-----------------------------------------
+#################################################
+N 21 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putStringArray(java.lang.String,java.lang.String[])> is checking!!!
+The life time of api is [21,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 22 Potential Issue API: SDKCheck of <android.content.UriPermission: android.net.Uri getUri()> is checking!!!
+The life time of api is [19,31]
+8call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.atr.tedit.TEditActivity dummyMainMethod_com_atr_tedit_TEditActivity(android.content.Intent)>[]--><com.atr.tedit.utilitybar.state.BrowserState$6: void onClick(android.view.View)>[]--><com.atr.tedit.utilitybar.state.BrowserState: void access$000(com.atr.tedit.utilitybar.state.BrowserState)>[]--><com.atr.tedit.utilitybar.state.BrowserState: void launchVolumePicker()>[]--><com.atr.tedit.TEditActivity: android.net.Uri[] getPermittedUris()>[]--><android.content.UriPermission: android.net.Uri getUri()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.content.UriPermission: android.net.Uri getUri()>has compatibility isssues！
+-----------------------------------------
+7 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 
+Error road: <com.atr.tedit.dialog.VolumePicker: android.app.Dialog onCreateDialog(android.os.Bundle)>[]--><com.atr.tedit.TEditActivity: android.net.Uri[] getPermittedUris()>[]--><android.content.UriPermission: android.net.Uri getUri()>
+#1.the call statck between class <com.atr.tedit.dialog.VolumePicker: android.app.Dialog onCreateDialog(android.os.Bundle)> to <android.content.UriPermission: android.net.Uri getUri()>has compatibility isssues！
+-----------------------------------------
+###Multi invoking in one method, need manual check!!!<com.atr.tedit.settings.dialog.DirectoryPicker$1: void onItemClick(android.widget.AdapterView,android.view.View,int,long)>[[-i2 >= 28], [-i2 < 21]]--><com.atr.tedit.settings.dialog.DirectoryPicker: void launchVolumePicker()>[]--><com.atr.tedit.settings.dialog.DirectoryPicker: void launchVolumePicker(boolean)>[]--><com.atr.tedit.TEditActivity: android.net.Uri[] getPermittedUris()>[]
+###Multi invoking in one method, need manual check!!!<com.atr.tedit.settings.dialog.DirectoryPicker$1: void onItemClick(android.widget.AdapterView,android.view.View,int,long)>[[-i2 >= 28]][[-i2 < 21]]--><com.atr.tedit.settings.dialog.DirectoryPicker: void launchVolumePicker()>[]--><com.atr.tedit.settings.dialog.DirectoryPicker: void launchVolumePicker(boolean)>[]--><com.atr.tedit.TEditActivity: android.net.Uri[] getPermittedUris()>[]
+-i2 >= 28
+-i2 < 21
+Good road: <com.atr.tedit.settings.dialog.DirectoryPicker$1: void onItemClick(android.widget.AdapterView,android.view.View,int,long)>[[-i2 >= 28], [-i2 < 21]]--><com.atr.tedit.settings.dialog.DirectoryPicker: void launchVolumePicker()>[]--><com.atr.tedit.settings.dialog.DirectoryPicker: void launchVolumePicker(boolean)>[]--><com.atr.tedit.TEditActivity: android.net.Uri[] getPermittedUris()>[]--><android.content.UriPermission: android.net.Uri getUri()>
+One road protect good!
+-i0 < 28
+Good road: <com.atr.tedit.dialog.VolumePicker$3: void onClick(android.view.View)>[]--><com.atr.tedit.mainstate.Browser: void setVolume(com.atr.tedit.file.descriptor.AndFile)>[]--><com.atr.tedit.mainstate.Browser: void populateBrowser()>[[-i0 < 28]]--><com.atr.tedit.mainstate.Browser: void populatePermittedDirectories()>[]--><com.atr.tedit.mainstate.Browser$6: void handleMessage(android.os.Message)>[]--><com.atr.tedit.TEditActivity: android.net.Uri[] getPermittedUris()>[]--><android.content.UriPermission: android.net.Uri getUri()>
+One road protect good!
+-i0 < 28
+Good road: <com.atr.tedit.mainstate.Browser: void access$1500(com.atr.tedit.mainstate.Browser)>[]--><com.atr.tedit.mainstate.Browser: void populateBrowser()>[[-i0 < 28]]--><com.atr.tedit.mainstate.Browser: void populatePermittedDirectories()>[]--><com.atr.tedit.mainstate.Browser$6: void handleMessage(android.os.Message)>[]--><com.atr.tedit.TEditActivity: android.net.Uri[] getPermittedUris()>[]--><android.content.UriPermission: android.net.Uri getUri()>
+One road protect good!
+!!!this api will crash on sdk 16 17 18 
+Error road: <com.atr.tedit.utilitybar.state.BrowserState$LaunchSDCardIntent$1: void onClick(android.view.View)>[]--><com.atr.tedit.settings.dialog.DirectoryPicker: void launchVolumePicker(boolean)>[]--><com.atr.tedit.TEditActivity: android.net.Uri[] getPermittedUris()>[]--><android.content.UriPermission: android.net.Uri getUri()>
+#7.the call statck between class <com.atr.tedit.utilitybar.state.BrowserState$LaunchSDCardIntent$1: void onClick(android.view.View)> to <android.content.UriPermission: android.net.Uri getUri()>has compatibility isssues！
+-----------------------------------------
+crashApis:13
+crashApisInMain:10
+containsStatic:false
+containsTry:false
+8call by main package
+-----------------------------------------
+#################################################
+N 23 Potential Issue API: SDKCheck of <android.content.ContentResolver: void takePersistableUriPermission(android.net.Uri,int)> is checking!!!
+The life time of api is [19,31]
+1call roads:
+1 Mainhead roads:
+###Multi invoking in one method, need manual check!!!--><com.atr.tedit.TEditActivity: void onActivityResult(int,int,android.content.Intent)>[[-$i0 < 19], [-$i0 != 0]]--><com.atr.tedit.TEditActivity: void takePersistableUriPermission(android.net.Uri)>[]
+###Multi invoking in one method, need manual check!!!--><com.atr.tedit.TEditActivity: void onActivityResult(int,int,android.content.Intent)>[[-$i0 < 19]][[-$i0 != 0]]--><com.atr.tedit.TEditActivity: void takePersistableUriPermission(android.net.Uri)>[]
+-$i0 < 19
+-$i0 != 0
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.atr.tedit.TEditActivity dummyMainMethod_com_atr_tedit_TEditActivity(android.content.Intent)>[]--><com.atr.tedit.TEditActivity: void onActivityResult(int,int,android.content.Intent)>[[-$i0 < 19], [-$i0 != 0]]--><com.atr.tedit.TEditActivity: void takePersistableUriPermission(android.net.Uri)>[]--><android.content.ContentResolver: void takePersistableUriPermission(android.net.Uri,int)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 24 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putInt(java.lang.String,int)> is checking!!!
+The life time of api is [21,31]
+9call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.atr.tedit.TEditActivity dummyMainMethod_com_atr_tedit_TEditActivity(android.content.Intent)>[]--><dummyMainClass: com.atr.tedit.mainstate.Tabs dummyMainMethod_com_atr_tedit_mainstate_Tabs(android.content.Intent,android.app.Activity)>[]--><com.atr.tedit.mainstate.Tabs: void onListItemClick(android.widget.ListView,android.view.View,int,long)>[]--><com.atr.tedit.mainstate.Tabs: void populateTabs()>[]--><com.atr.tedit.mainstate.Tabs: void closeTabsView()>[]--><com.atr.tedit.TEditActivity: void openBrowser(com.atr.tedit.file.AndPath)>[]--><com.atr.tedit.mainstate.Browser: com.atr.tedit.mainstate.Browser newInstance(com.atr.tedit.file.AndPath)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+8 Packageshead roads:
+###Multi invoking in one method, need manual check!!!<com.atr.tedit.mainstate.Browser$6$2$1: void onAnimationEnd(android.view.animation.Animation)>[[-$z0 == 0], [try]]--><com.atr.tedit.TEditActivity: void displayWhatsNew()>[]--><com.atr.tedit.dialog.HelpDialog: com.atr.tedit.dialog.HelpDialog newInstance(int,java.lang.String)>[]
+###Multi invoking in one method, need manual check!!!<com.atr.tedit.mainstate.Browser$6$2$1: void onAnimationEnd(android.view.animation.Animation)>[[-$z0 == 0]][[try]]--><com.atr.tedit.TEditActivity: void displayWhatsNew()>[]--><com.atr.tedit.dialog.HelpDialog: com.atr.tedit.dialog.HelpDialog newInstance(int,java.lang.String)>[]
+-$z0 == 0
+try
+Good road with try: <com.atr.tedit.mainstate.Browser$6$2$1: void onAnimationEnd(android.view.animation.Animation)>[[-$z0 == 0], [try]]--><com.atr.tedit.TEditActivity: void displayWhatsNew()>[]--><com.atr.tedit.dialog.HelpDialog: com.atr.tedit.dialog.HelpDialog newInstance(int,java.lang.String)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+One road protect good!
+###Multi invoking in one method, need manual check!!!<com.atr.tedit.mainstate.Browser$6$2$1: void onAnimationEnd(android.view.animation.Animation)>[[-$z0 == 0], [try]]--><com.atr.tedit.dialog.HelpDialog: com.atr.tedit.dialog.HelpDialog newInstance(int,java.lang.String)>[]
+###Multi invoking in one method, need manual check!!!<com.atr.tedit.mainstate.Browser$6$2$1: void onAnimationEnd(android.view.animation.Animation)>[[-$z0 == 0]][[try]]--><com.atr.tedit.dialog.HelpDialog: com.atr.tedit.dialog.HelpDialog newInstance(int,java.lang.String)>[]
+-$z0 == 0
+try
+Good road with try: <com.atr.tedit.mainstate.Browser$6$2$1: void onAnimationEnd(android.view.animation.Animation)>[[-$z0 == 0], [try]]--><com.atr.tedit.dialog.HelpDialog: com.atr.tedit.dialog.HelpDialog newInstance(int,java.lang.String)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+One road protect good!
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.atr.tedit.utilitybar.state.TextSearchState$7: void onClick(android.view.View)>[]--><com.atr.tedit.dialog.HelpDialog: com.atr.tedit.dialog.HelpDialog newInstance(int,java.lang.String)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#2.the call statck between class <com.atr.tedit.utilitybar.state.TextSearchState$7: void onClick(android.view.View)> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.atr.tedit.dialog.ConfirmCloseText$1: void onClick(android.view.View)>[]--><com.atr.tedit.TEditActivity: void closeText()>[]--><com.atr.tedit.TEditActivity: void openBrowser(com.atr.tedit.file.AndPath)>[]--><com.atr.tedit.mainstate.Browser: com.atr.tedit.mainstate.Browser newInstance(com.atr.tedit.file.AndPath)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.atr.tedit.dialog.ConfirmCloseText$1: void onClick(android.view.View)>[]--><com.atr.tedit.mainstate.Tabs: void reset()>[]--><com.atr.tedit.mainstate.Tabs: void closeTabsView()>[]--><com.atr.tedit.TEditActivity: void openBrowser(com.atr.tedit.file.AndPath)>[]--><com.atr.tedit.mainstate.Browser: com.atr.tedit.mainstate.Browser newInstance(com.atr.tedit.file.AndPath)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#3.the call statck between class <com.atr.tedit.dialog.ConfirmCloseText$1: void onClick(android.view.View)> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.atr.tedit.mainstate.Tabs: void access$700(com.atr.tedit.mainstate.Tabs,long)>[]--><com.atr.tedit.mainstate.Tabs: void closeTab(long)>[]--><com.atr.tedit.mainstate.Tabs: void closeTabsView()>[]--><com.atr.tedit.TEditActivity: void openBrowser(com.atr.tedit.file.AndPath)>[]--><com.atr.tedit.mainstate.Browser: com.atr.tedit.mainstate.Browser newInstance(com.atr.tedit.file.AndPath)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#4.the call statck between class <com.atr.tedit.mainstate.Tabs: void access$700(com.atr.tedit.mainstate.Tabs,long)> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.atr.tedit.dialog.HelpDialog: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#5.the call statck between class <com.atr.tedit.dialog.HelpDialog: void onSaveInstanceState(android.os.Bundle)> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.atr.tedit.mainstate.Tabs$DBAdapter$1: boolean onTouch(android.view.View,android.view.MotionEvent)>[]--><com.atr.tedit.mainstate.Tabs: void onListItemClick(android.widget.ListView,android.view.View,int,long)>[]--><com.atr.tedit.mainstate.Tabs: void populateTabs()>[]--><com.atr.tedit.mainstate.Tabs: void closeTabsView()>[]--><com.atr.tedit.TEditActivity: void openBrowser(com.atr.tedit.file.AndPath)>[]--><com.atr.tedit.mainstate.Browser: com.atr.tedit.mainstate.Browser newInstance(com.atr.tedit.file.AndPath)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#6.the call statck between class <com.atr.tedit.mainstate.Tabs$DBAdapter$1: boolean onTouch(android.view.View,android.view.MotionEvent)> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.atr.tedit.dialog.ConfirmCloseText$2: void onClick(android.view.View)>[]--><com.atr.tedit.mainstate.Tabs: void reset()>[]--><com.atr.tedit.mainstate.Tabs: void closeTabsView()>[]--><com.atr.tedit.TEditActivity: void openBrowser(com.atr.tedit.file.AndPath)>[]--><com.atr.tedit.mainstate.Browser: com.atr.tedit.mainstate.Browser newInstance(com.atr.tedit.file.AndPath)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#7.the call statck between class <com.atr.tedit.dialog.ConfirmCloseText$2: void onClick(android.view.View)> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.atr.tedit.settings.dialog.TypefacePicker: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#8.the call statck between class <com.atr.tedit.settings.dialog.TypefacePicker: void onSaveInstanceState(android.os.Bundle)> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:14
+crashApisInMain:11
+containsStatic:true
+containsTry:true
+9call by main package
+-----------------------------------------
+#################################################
+N 25 Potential Issue API: SDKCheck of <android.provider.MediaStore.Files: android.net.Uri getContentUri(java.lang.String)> is checking!!!
+The life time of api is [11,29]
+1call roads:
+1 Mainhead roads:
+i0 < 29
+$z0 != 0
+-$i0 < 19
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.atr.tedit.TEditActivity dummyMainMethod_com_atr_tedit_TEditActivity(android.content.Intent)>[]--><com.atr.tedit.TEditActivity: void onCreate(android.os.Bundle)>[[i0 < 29]]--><com.atr.tedit.TEditActivity: void initializeToText(android.net.Uri,boolean)>[[$z0 != 0]]--><com.atr.tedit.util.DataAccessUtil: java.io.File getDataFile(android.content.Context,android.net.Uri)>[]--><com.atr.tedit.util.DataAccessUtil: java.lang.String getDataPath(android.content.Context,android.net.Uri)>[[-$i0 < 19]]--><com.atr.tedit.util.DataAccessUtil: java.lang.String getPostKitKatPath(android.net.Uri,android.content.Context)>[]--><android.provider.MediaStore.Files: android.net.Uri getContentUri(java.lang.String)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 26 Potential Issue API: SDKCheck of <android.util.SizeF: float getWidth()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <androidx.versionedparcelable.VersionedParcel: void writeSizeF(android.util.SizeF,int)>[]--><android.util.SizeF: float getWidth()>
+#1.the call statck between class <androidx.versionedparcelable.VersionedParcel: void writeSizeF(android.util.SizeF,int)> to <android.util.SizeF: float getWidth()>has compatibility isssues！
+-----------------------------------------
+crashApis:15
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 27 Potential Issue API: SDKCheck of <android.os.BaseBundle: int getInt(java.lang.String,int)> is checking!!!
+The life time of api is [21,31]
+3call roads:
+1 Mainhead roads:
+i0 < 29
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.atr.tedit.TEditActivity dummyMainMethod_com_atr_tedit_TEditActivity(android.content.Intent)>[]--><com.atr.tedit.TEditActivity: void onCreate(android.os.Bundle)>[[i0 < 29]]--><android.os.BaseBundle: int getInt(java.lang.String,int)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: int getInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+2 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.atr.tedit.dialog.HelpDialog: android.app.Dialog onCreateDialog(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String,int)>
+#1.the call statck between class <com.atr.tedit.dialog.HelpDialog: android.app.Dialog onCreateDialog(android.os.Bundle)> to <android.os.BaseBundle: int getInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.atr.tedit.settings.dialog.TypefacePicker: android.app.Dialog onCreateDialog(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String,int)>
+#2.the call statck between class <com.atr.tedit.settings.dialog.TypefacePicker: android.app.Dialog onCreateDialog(android.os.Bundle)> to <android.os.BaseBundle: int getInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:16
+crashApisInMain:12
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 28 Potential Issue API: SDKCheck of <android.provider.DocumentsContract: boolean isDocumentUri(android.content.Context,android.net.Uri)> is checking!!!
+The life time of api is [19,31]
+1call roads:
+1 Mainhead roads:
+i0 < 29
+$z0 != 0
+-$i0 < 19
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.atr.tedit.TEditActivity dummyMainMethod_com_atr_tedit_TEditActivity(android.content.Intent)>[]--><com.atr.tedit.TEditActivity: void onCreate(android.os.Bundle)>[[i0 < 29]]--><com.atr.tedit.TEditActivity: void initializeToText(android.net.Uri,boolean)>[[$z0 != 0]]--><com.atr.tedit.util.DataAccessUtil: java.io.File getDataFile(android.content.Context,android.net.Uri)>[]--><com.atr.tedit.util.DataAccessUtil: java.lang.String getDataPath(android.content.Context,android.net.Uri)>[[-$i0 < 19]]--><com.atr.tedit.util.DataAccessUtil: java.lang.String getPostKitKatPath(android.net.Uri,android.content.Context)>[]--><android.provider.DocumentsContract: boolean isDocumentUri(android.content.Context,android.net.Uri)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 29 Potential Issue API: SDKCheck of <android.util.SizeF: void <init>(float,float)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <androidx.versionedparcelable.VersionedParcel: android.util.SizeF readSizeF(android.util.SizeF,int)>[]--><android.util.SizeF: void <init>(float,float)>
+#1.the call statck between class <androidx.versionedparcelable.VersionedParcel: android.util.SizeF readSizeF(android.util.SizeF,int)> to <android.util.SizeF: void <init>(float,float)>has compatibility isssues！
+-----------------------------------------
+crashApis:17
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 30 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.lang.String getString(java.lang.String,java.lang.String)> is checking!!!
+The life time of api is [21,31]
+10call roads:
+1 Mainhead roads:
+###Multi invoking in one method, need manual check!!!--><com.atr.tedit.TEditActivity: void onCreate(android.os.Bundle)>[[i0 < 29]]--><com.atr.tedit.settings.SettingsWindow: void setState(android.os.Bundle)>[[try], [$i0 != 0], [-i1 < 17]]
+###Multi invoking in one method, need manual check!!!--><com.atr.tedit.TEditActivity: void onCreate(android.os.Bundle)>[[i0 < 29]]--><com.atr.tedit.settings.SettingsWindow: void setState(android.os.Bundle)>[[try]][[$i0 != 0]][[-i1 < 17]]
+i0 < 29
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.atr.tedit.TEditActivity dummyMainMethod_com_atr_tedit_TEditActivity(android.content.Intent)>[]--><com.atr.tedit.TEditActivity: void onCreate(android.os.Bundle)>[[i0 < 29]]--><com.atr.tedit.settings.SettingsWindow: void setState(android.os.Bundle)>[[try], [$i0 != 0], [-i1 < 17]]--><android.os.BaseBundle: java.lang.String getString(java.lang.String,java.lang.String)>
+One road protect good!
+9 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.atr.tedit.mainstate.Browser$NewDirectory: android.app.Dialog onCreateDialog(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String,java.lang.String)>
+#1.the call statck between class <com.atr.tedit.mainstate.Browser$NewDirectory: android.app.Dialog onCreateDialog(android.os.Bundle)> to <android.os.BaseBundle: java.lang.String getString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.atr.tedit.settings.dialog.DirectoryPicker: android.app.Dialog onCreateDialog(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String,java.lang.String)>
+#2.the call statck between class <com.atr.tedit.settings.dialog.DirectoryPicker: android.app.Dialog onCreateDialog(android.os.Bundle)> to <android.os.BaseBundle: java.lang.String getString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.atr.tedit.mainstate.Browser$OverwriteDialog: android.app.Dialog onCreateDialog(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String,java.lang.String)>
+#3.the call statck between class <com.atr.tedit.mainstate.Browser$OverwriteDialog: android.app.Dialog onCreateDialog(android.os.Bundle)> to <android.os.BaseBundle: java.lang.String getString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.atr.tedit.dialog.PossibleBinary: android.app.Dialog onCreateDialog(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String,java.lang.String)>
+#4.the call statck between class <com.atr.tedit.dialog.PossibleBinary: android.app.Dialog onCreateDialog(android.os.Bundle)> to <android.os.BaseBundle: java.lang.String getString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.atr.tedit.dialog.ErrorMessage: android.app.Dialog onCreateDialog(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String,java.lang.String)>
+#5.the call statck between class <com.atr.tedit.dialog.ErrorMessage: android.app.Dialog onCreateDialog(android.os.Bundle)> to <android.os.BaseBundle: java.lang.String getString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.atr.tedit.dialog.VolumePicker: android.app.Dialog onCreateDialog(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String,java.lang.String)>
+#6.the call statck between class <com.atr.tedit.dialog.VolumePicker: android.app.Dialog onCreateDialog(android.os.Bundle)> to <android.os.BaseBundle: java.lang.String getString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.atr.tedit.dialog.HelpDialog: android.app.Dialog onCreateDialog(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String,java.lang.String)>
+#7.the call statck between class <com.atr.tedit.dialog.HelpDialog: android.app.Dialog onCreateDialog(android.os.Bundle)> to <android.os.BaseBundle: java.lang.String getString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.atr.tedit.mainstate.Browser$DeleteDialog: android.app.Dialog onCreateDialog(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String,java.lang.String)>
+#8.the call statck between class <com.atr.tedit.mainstate.Browser$DeleteDialog: android.app.Dialog onCreateDialog(android.os.Bundle)> to <android.os.BaseBundle: java.lang.String getString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.atr.tedit.settings.dialog.TypefacePicker: android.app.Dialog onCreateDialog(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String,java.lang.String)>
+#9.the call statck between class <com.atr.tedit.settings.dialog.TypefacePicker: android.app.Dialog onCreateDialog(android.os.Bundle)> to <android.os.BaseBundle: java.lang.String getString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:18
+containsStatic:false
+containsTry:true
+10call by main package
+-----------------------------------------
+#################################################
+N 31 Potential Issue API: SDKCheck of <android.content.pm.PackageInfo: long getLongVersionCode()> is checking!!!
+The life time of api is [28,31]
+2call roads:
+1 Mainhead roads:
+###Multi invoking in one method, need manual check!!!--><com.atr.tedit.TEditActivity: void onCreate(android.os.Bundle)>[[i0 < 29]]--><com.atr.tedit.TEditActivity: void initializeToBrowser()>[]--><com.atr.tedit.TEditActivity: void initializeToBrowser(boolean)>[[-i0 >= 28], [i0 >= 21], [i0 < 23]]--><com.atr.tedit.settings.Settings: boolean isFirstRun(com.atr.tedit.TEditActivity)>[[try], [-$i3 < 28]]
+###Multi invoking in one method, need manual check!!!--><com.atr.tedit.TEditActivity: void onCreate(android.os.Bundle)>[[i0 < 29]]--><com.atr.tedit.TEditActivity: void initializeToBrowser()>[]--><com.atr.tedit.TEditActivity: void initializeToBrowser(boolean)>[[-i0 >= 28]][[i0 >= 21]][[i0 < 23]]--><com.atr.tedit.settings.Settings: boolean isFirstRun(com.atr.tedit.TEditActivity)>[[try]][[-$i3 < 28]]
+i0 < 29
+-i0 >= 28
+i0 >= 21
+i0 < 23
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.atr.tedit.TEditActivity dummyMainMethod_com_atr_tedit_TEditActivity(android.content.Intent)>[]--><com.atr.tedit.TEditActivity: void onCreate(android.os.Bundle)>[[i0 < 29]]--><com.atr.tedit.TEditActivity: void initializeToBrowser()>[]--><com.atr.tedit.TEditActivity: void initializeToBrowser(boolean)>[[-i0 >= 28], [i0 >= 21], [i0 < 23]]--><com.atr.tedit.settings.Settings: boolean isFirstRun(com.atr.tedit.TEditActivity)>[[try], [-$i3 < 28]]--><android.content.pm.PackageInfo: long getLongVersionCode()>
+One road protect good!
+1 Packageshead roads:
+###Multi invoking in one method, need manual check!!!<com.atr.tedit.mainstate.Browser$6$2$1: void onAnimationEnd(android.view.animation.Animation)>[[-$z0 == 0], [try]]--><com.atr.tedit.settings.Settings: boolean isFirstRun(com.atr.tedit.TEditActivity)>[[try], [-$i3 < 28]]
+###Multi invoking in one method, need manual check!!!<com.atr.tedit.mainstate.Browser$6$2$1: void onAnimationEnd(android.view.animation.Animation)>[[-$z0 == 0]][[try]]--><com.atr.tedit.settings.Settings: boolean isFirstRun(com.atr.tedit.TEditActivity)>[[try]][[-$i3 < 28]]
+-$z0 == 0
+try
+Good road with try: <com.atr.tedit.mainstate.Browser$6$2$1: void onAnimationEnd(android.view.animation.Animation)>[[-$z0 == 0], [try]]--><com.atr.tedit.settings.Settings: boolean isFirstRun(com.atr.tedit.TEditActivity)>[[try], [-$i3 < 28]]--><android.content.pm.PackageInfo: long getLongVersionCode()>
+One road protect good!
+###Multi invoking in one method, need manual check!!!<com.atr.tedit.mainstate.Browser$6$2$1: void onAnimationEnd(android.view.animation.Animation)>[[-$z0 == 0], [try]]--><com.atr.tedit.settings.Settings: void saveVer(com.atr.tedit.TEditActivity)>[[try], [-i0 < 28]]
+###Multi invoking in one method, need manual check!!!<com.atr.tedit.mainstate.Browser$6$2$1: void onAnimationEnd(android.view.animation.Animation)>[[-$z0 == 0]][[try]]--><com.atr.tedit.settings.Settings: void saveVer(com.atr.tedit.TEditActivity)>[[try]][[-i0 < 28]]
+-$z0 == 0
+try
+Good road with try: <com.atr.tedit.mainstate.Browser$6$2$1: void onAnimationEnd(android.view.animation.Animation)>[[-$z0 == 0], [try]]--><com.atr.tedit.settings.Settings: void saveVer(com.atr.tedit.TEditActivity)>[[try], [-i0 < 28]]--><android.content.pm.PackageInfo: long getLongVersionCode()>
+One road protect good!
+containsStatic:true
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 32 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.util.Set keySet()> is checking!!!
+The life time of api is [21,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:true
+1call by main package
+-----------------------------------------
+#################################################
+N 33 Potential Issue API: SDKCheck of <android.util.Size: int getHeight()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <androidx.versionedparcelable.VersionedParcel: void writeSize(android.util.Size,int)>[]--><android.util.Size: int getHeight()>
+#1.the call statck between class <androidx.versionedparcelable.VersionedParcel: void writeSize(android.util.Size,int)> to <android.util.Size: int getHeight()>has compatibility isssues！
+-----------------------------------------
+crashApis:19
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 34 Potential Issue API: SDKCheck of <android.provider.DocumentsContract: java.lang.String getDocumentId(android.net.Uri)> is checking!!!
+The life time of api is [19,31]
+1call roads:
+1 Mainhead roads:
+i0 < 29
+$z0 != 0
+-$i0 < 19
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.atr.tedit.TEditActivity dummyMainMethod_com_atr_tedit_TEditActivity(android.content.Intent)>[]--><com.atr.tedit.TEditActivity: void onCreate(android.os.Bundle)>[[i0 < 29]]--><com.atr.tedit.TEditActivity: void initializeToText(android.net.Uri,boolean)>[[$z0 != 0]]--><com.atr.tedit.util.DataAccessUtil: java.io.File getDataFile(android.content.Context,android.net.Uri)>[]--><com.atr.tedit.util.DataAccessUtil: java.lang.String getDataPath(android.content.Context,android.net.Uri)>[[-$i0 < 19]]--><com.atr.tedit.util.DataAccessUtil: java.lang.String getPostKitKatPath(android.net.Uri,android.content.Context)>[]--><android.provider.DocumentsContract: java.lang.String getDocumentId(android.net.Uri)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 35 Potential Issue API: SDKCheck of <android.content.ContentResolver: void releasePersistableUriPermission(android.net.Uri,int)> is checking!!!
+The life time of api is [19,31]
+1call roads:
+1 Mainhead roads:
+-i0 < 19
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.atr.tedit.TEditActivity dummyMainMethod_com_atr_tedit_TEditActivity(android.content.Intent)>[]--><dummyMainClass: com.atr.tedit.mainstate.Browser dummyMainMethod_com_atr_tedit_mainstate_Browser(android.content.Intent,android.app.Activity)>[]--><com.atr.tedit.mainstate.Browser: boolean onContextItemSelected(android.view.MenuItem)>[[-i0 < 19]]--><com.atr.tedit.TEditActivity: void releasePersistableUriPermission(android.net.Uri)>[[try]]--><android.content.ContentResolver: void releasePersistableUriPermission(android.net.Uri,int)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:true
+1call by main package
+-----------------------------------------
+crashApis numbers:19
+crashApis numbers in main road:12
+On Android Version 16 this app may have error api use(at least): 18 and error api roads: 65
+On Android Version 17 this app may have error api use(at least): 18 and error api roads: 65
+On Android Version 18 this app may have error api use(at least): 18 and error api roads: 65
+On Android Version 19 this app may have error api use(at least): 15 and error api roads: 56
+On Android Version 20 this app may have error api use(at least): 15 and error api roads: 56
+On Android Version 21 this app may have error api use(at least): 2 and error api roads: 2
+On Android Version 22 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 23 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 24 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 25 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 1 and error api roads: 1
+On Android Version 30 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 31 this app may have error api use(at least): 0 and error api roads: 0

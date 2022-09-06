@@ -1,0 +1,201 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/TransektCount.apk
+Entry Points[com.wmstein.transektcount.SettingsActivity, com.wmstein.transektcount.CountingActivity, com.wmstein.filechooser.AdvFileChooser, com.wmstein.transektcount.ListSectionActivity, com.wmstein.transektcount.CountOptionsActivity, com.wmstein.transektcount.DummyActivity, com.wmstein.transektcount.ListSpeciesActivity, com.wmstein.transektcount.WelcomeActivity, com.wmstein.transektcount.NewSectionActivity, com.wmstein.transektcount.EditSectionActivity, com.wmstein.transektcount.TransektCountApplication, com.wmstein.transektcount.EditMetaActivity, com.wmstein.transektcount.CountingLActivity]
+FllowDroidcallgraph size:2741
+Soot started on Mon Jul 11 13:40:37 CST 2022
+Soot finished on Mon Jul 11 13:40:45 CST 2022
+Soot has run for 0 min. 7 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 17
+Declared Target Sdk version is: 27
+Declared Max Sdk version is: -1
+Collected 281 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.lang.String getString(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.wmstein.filechooser.AdvFileChooser dummyMainMethod_com_wmstein_filechooser_AdvFileChooser(android.content.Intent)>[]--><com.wmstein.filechooser.AdvFileChooser: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:1
+crashApisInMain:1
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.os.PowerManager: boolean isWakeLockLevelSupported(int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+###Multi invoking in one method, need manual check!!!--><com.wmstein.transektcount.CountingLActivity: void onCreate(android.os.Bundle)>[[-$i0 < 21], [try]]
+###Multi invoking in one method, need manual check!!!--><com.wmstein.transektcount.CountingLActivity: void onCreate(android.os.Bundle)>[[-$i0 < 21]][[try]]
+-$i0 < 21
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.wmstein.transektcount.CountingLActivity dummyMainMethod_com_wmstein_transektcount_CountingLActivity(android.content.Intent)>[]--><com.wmstein.transektcount.CountingLActivity: void onCreate(android.os.Bundle)>[[-$i0 < 21], [try]]--><android.os.PowerManager: boolean isWakeLockLevelSupported(int)>
+One road protect good!
+###Multi invoking in one method, need manual check!!!--><com.wmstein.transektcount.CountingActivity: void onCreate(android.os.Bundle)>[[-$i0 < 21], [try]]
+###Multi invoking in one method, need manual check!!!--><com.wmstein.transektcount.CountingActivity: void onCreate(android.os.Bundle)>[[-$i0 < 21]][[try]]
+-$i0 < 21
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.wmstein.transektcount.CountingActivity dummyMainMethod_com_wmstein_transektcount_CountingActivity(android.content.Intent)>[]--><com.wmstein.transektcount.CountingActivity: void onCreate(android.os.Bundle)>[[-$i0 < 21], [try]]--><android.os.PowerManager: boolean isWakeLockLevelSupported(int)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:true
+1call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.app.Activity: void requestPermissions(java.lang.String[],int)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 23
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.wmstein.transektcount.WelcomeActivity dummyMainMethod_com_wmstein_transektcount_WelcomeActivity(android.content.Intent)>[]--><com.wmstein.transektcount.WelcomeActivity: void onCreate(android.os.Bundle)>[[-$i0 < 23]]--><android.app.Activity: void requestPermissions(java.lang.String[],int)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.os.BaseBundle: int getInt(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.wmstein.transektcount.EditSectionActivity dummyMainMethod_com_wmstein_transektcount_EditSectionActivity(android.content.Intent)>[]--><com.wmstein.transektcount.EditSectionActivity: void onResume()>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+!!!this api will crash on sdk 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.wmstein.transektcount.CountingLActivity dummyMainMethod_com_wmstein_transektcount_CountingLActivity(android.content.Intent)>[]--><com.wmstein.transektcount.CountingLActivity: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+!!!this api will crash on sdk 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.wmstein.transektcount.CountOptionsActivity dummyMainMethod_com_wmstein_transektcount_CountOptionsActivity(android.content.Intent)>[]--><com.wmstein.transektcount.CountOptionsActivity: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+!!!this api will crash on sdk 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.wmstein.transektcount.CountingActivity dummyMainMethod_com_wmstein_transektcount_CountingActivity(android.content.Intent)>[]--><com.wmstein.transektcount.CountingActivity: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:2
+crashApisInMain:2
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.os.PowerManager.WakeLock: void release(int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.wmstein.transektcount.CountingLActivity dummyMainMethod_com_wmstein_transektcount_CountingLActivity(android.content.Intent)>[]--><com.wmstein.transektcount.CountingLActivity: boolean onOptionsItemSelected(android.view.MenuItem)>[[-$i0 < 21]]--><com.wmstein.transektcount.CountingLActivity: void disableProximitySensor()>[]--><android.os.PowerManager.WakeLock: void release(int)>
+One road protect good!
+-$i0 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.wmstein.transektcount.CountingActivity dummyMainMethod_com_wmstein_transektcount_CountingActivity(android.content.Intent)>[]--><com.wmstein.transektcount.CountingActivity: void onPause()>[[-$i0 < 21]]--><com.wmstein.transektcount.CountingActivity: void disableProximitySensor()>[]--><android.os.PowerManager.WakeLock: void release(int)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 5 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putInt(java.lang.String,int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.wmstein.transektcount.CountingLActivity dummyMainMethod_com_wmstein_transektcount_CountingLActivity(android.content.Intent)>[]--><com.wmstein.transektcount.CountingLActivity: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+!!!this api will crash on sdk 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.wmstein.transektcount.CountingActivity dummyMainMethod_com_wmstein_transektcount_CountingActivity(android.content.Intent)>[]--><com.wmstein.transektcount.CountingActivity: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:3
+crashApisInMain:3
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 6 Potential Issue API: SDKCheck of <android.os.BaseBundle: int getInt(java.lang.String,int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.wmstein.transektcount.CountingLActivity dummyMainMethod_com_wmstein_transektcount_CountingLActivity(android.content.Intent)>[]--><com.wmstein.transektcount.CountingLActivity: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String,int)>
+!!!this api will crash on sdk 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.wmstein.transektcount.CountingActivity dummyMainMethod_com_wmstein_transektcount_CountingActivity(android.content.Intent)>[]--><com.wmstein.transektcount.CountingActivity: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String,int)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: int getInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:4
+crashApisInMain:4
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 7 Potential Issue API: SDKCheck of <android.preference.PreferenceActivity: boolean onOptionsItemSelected(android.view.MenuItem)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 17 18 19 20 21 22 23 24 25 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.wmstein.transektcount.SettingsActivity dummyMainMethod_com_wmstein_transektcount_SettingsActivity(android.content.Intent)>[]--><com.wmstein.transektcount.SettingsActivity: boolean onOptionsItemSelected(android.view.MenuItem)>[]--><android.preference.PreferenceActivity: boolean onOptionsItemSelected(android.view.MenuItem)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.preference.PreferenceActivity: boolean onOptionsItemSelected(android.view.MenuItem)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:5
+crashApisInMain:5
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 8 Potential Issue API: SDKCheck of <android.content.ContextWrapper: int checkSelfPermission(java.lang.String)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 23
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.wmstein.transektcount.WelcomeActivity dummyMainMethod_com_wmstein_transektcount_WelcomeActivity(android.content.Intent)>[]--><com.wmstein.transektcount.WelcomeActivity: void onCreate(android.os.Bundle)>[[-$i0 < 23]]--><android.content.ContextWrapper: int checkSelfPermission(java.lang.String)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 9 Potential Issue API: SDKCheck of <android.app.TimePickerDialog: void show()> is checking!!!
+The life time of api is [26,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 17 18 19 20 21 22 23 24 25 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.wmstein.transektcount.EditMetaActivity dummyMainMethod_com_wmstein_transektcount_EditMetaActivity(android.content.Intent)>[]--><com.wmstein.transektcount.EditMetaActivity$6: boolean onLongClick(android.view.View)>[]--><android.app.TimePickerDialog: void show()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.app.TimePickerDialog: void show()>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:6
+crashApisInMain:6
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+crashApis numbers:6
+crashApis numbers in main road:6
+On Android Version 16 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 17 this app may have error api use(at least): 6 and error api roads: 11
+On Android Version 18 this app may have error api use(at least): 6 and error api roads: 11
+On Android Version 19 this app may have error api use(at least): 6 and error api roads: 11
+On Android Version 20 this app may have error api use(at least): 6 and error api roads: 11
+On Android Version 21 this app may have error api use(at least): 2 and error api roads: 2
+On Android Version 22 this app may have error api use(at least): 2 and error api roads: 2
+On Android Version 23 this app may have error api use(at least): 2 and error api roads: 2
+On Android Version 24 this app may have error api use(at least): 2 and error api roads: 2
+On Android Version 25 this app may have error api use(at least): 2 and error api roads: 2
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 31 this app may have error api use(at least): 0 and error api roads: 0

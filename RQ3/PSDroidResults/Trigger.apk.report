@@ -1,0 +1,463 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/Trigger.apk
+Entry Points[app.trigger.ssh.KeyPairActivity, app.trigger.ImageActivity, app.trigger.QRShowActivity, app.trigger.https.CertificateActivity, app.trigger.SetupActivity, app.trigger.QRScanActivity, com.journeyapps.barcodescanner.CaptureActivity, app.trigger.MainActivity, app.trigger.AboutActivity, app.trigger.BackupActivity]
+FllowDroidcallgraph size:9250
+Soot started on Mon Jul 11 14:10:51 CST 2022
+Soot finished on Mon Jul 11 14:10:56 CST 2022
+Soot has run for 0 min. 4 sec.
+Found 1 additional DEX files. Now visiting them one by one.
+Soot started on Mon Jul 11 14:10:56 CST 2022
+Soot finished on Mon Jul 11 14:11:14 CST 2022
+Soot has run for 0 min. 18 sec.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 21
+Declared Target Sdk version is: 29
+Declared Max Sdk version is: -1
+Collected 146 Android APIs in the primary DEX file
+Collected 600 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.text.Html: android.text.Spanned fromHtml(java.lang.String,int)> is checking!!!
+The life time of api is [24,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+-i0 < 24
+Good road: <eltos.simpledialogfragment.SimpleImageDialog: android.app.Dialog onCreateDialog(android.os.Bundle)>[]--><eltos.simpledialogfragment.CustomViewDialog: android.app.Dialog onCreateDialog(android.os.Bundle)>[[-i0 < 24]]--><android.text.Html: android.text.Spanned fromHtml(java.lang.String,int)>
+One road protect good!
+-$i0 < 24
+Good road: <eltos.simpledialogfragment.CustomViewDialog: android.view.View extractContentView(android.os.Bundle)>[]--><eltos.simpledialogfragment.SimpleDialog: android.app.Dialog onCreateDialog(android.os.Bundle)>[[-$i0 < 24]]--><android.text.Html: android.text.Spanned fromHtml(java.lang.String,int)>
+One road protect good!
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.widget.ImageView: void setImageIcon(android.graphics.drawable.Icon)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i0 < 23
+Good road: <eltos.simpledialogfragment.SimpleImageDialog$ImageCreator: void onPostExecute(java.lang.Object)>[[-$i0 < 23]]--><android.widget.ImageView: void setImageIcon(android.graphics.drawable.Icon)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.os.BaseBundle: boolean[] getBooleanArray(java.lang.String)> is checking!!!
+The life time of api is [22,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 21 
+Error road: <com.github.isabsent.filepicker.SimpleFilePickerDialog: void onActivityCreated(android.os.Bundle)>[]--><android.os.BaseBundle: boolean[] getBooleanArray(java.lang.String)>
+#1.the call statck between class <com.github.isabsent.filepicker.SimpleFilePickerDialog: void onActivityCreated(android.os.Bundle)> to <android.os.BaseBundle: boolean[] getBooleanArray(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:1
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.net.NetworkInfo: int getType()> is checking!!!
+The life time of api is [1,30]
+4call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: app.trigger.MainActivity dummyMainMethod_app_trigger_MainActivity(android.content.Intent)>[]--><app.trigger.MainActivity: void onResume()>[]--><app.trigger.MainActivity: void updateSpinner(boolean)>[]--><app.trigger.MainActivity: int getPreferredSpinnerIndex(java.util.ArrayList,boolean)>[]--><app.trigger.WifiTools: boolean isConnected()>[]--><android.net.NetworkInfo: int getType()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.NetworkInfo: int getType()>has compatibility isssues！
+-----------------------------------------
+3 Packageshead roads:
+try
+Good road with try: <com.jcraft.jsch.Session: void connect()>[]--><com.jcraft.jsch.Session: void connect(int)>[[try]]--><com.jcraft.jsch.Session: void requestPortForwarding()>[]--><com.jcraft.jsch.Session: int setPortForwardingL(java.lang.String)>[]--><com.jcraft.jsch.Session: int setPortForwardingL(java.lang.String,int,java.lang.String,int)>[]--><com.jcraft.jsch.Session: int setPortForwardingL(java.lang.String,int,java.lang.String,int,com.jcraft.jsch.ServerSocketFactory)>[]--><com.jcraft.jsch.Session: int setPortForwardingL(java.lang.String,int,java.lang.String,int,com.jcraft.jsch.ServerSocketFactory,int)>[]--><java.lang.Thread: void run()>[]--><com.jcraft.jsch.ChannelForwardedTCPIP: void run()>[]--><app.trigger.ssh.SshRequestHandler: void run()>[]--><app.trigger.WifiTools: boolean isConnected()>[]--><android.net.NetworkInfo: int getType()>
+One road protect good!
+!!!this api will crash on sdk 31 
+Error road: <android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)>[]--><com.jcraft.jsch.Session: void run()>[]--><java.lang.Thread: void run()>[]--><com.jcraft.jsch.ChannelForwardedTCPIP: void run()>[]--><app.trigger.ssh.SshRequestHandler: void run()>[]--><app.trigger.WifiTools: boolean isConnected()>[]--><android.net.NetworkInfo: int getType()>
+try
+Good road with try: <android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)>[]--><com.jcraft.jsch.PortWatcher: void run()>[[try]]--><com.jcraft.jsch.ChannelDirectTCPIP: void connect(int)>[]--><java.lang.Thread: void run()>[]--><com.jcraft.jsch.ChannelForwardedTCPIP: void run()>[]--><app.trigger.ssh.SshRequestHandler: void run()>[]--><app.trigger.WifiTools: boolean isConnected()>[]--><android.net.NetworkInfo: int getType()>
+One road protect good!
+try
+Good road with try: <android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)>[]--><com.jcraft.jsch.ChannelX11: void run()>[[try]]--><com.jcraft.jsch.Util: java.net.Socket createSocket(java.lang.String,int,int)>[]--><java.lang.Thread: void run()>[]--><com.jcraft.jsch.ChannelForwardedTCPIP: void run()>[]--><app.trigger.ssh.SshRequestHandler: void run()>[]--><app.trigger.WifiTools: boolean isConnected()>[]--><android.net.NetworkInfo: int getType()>
+One road protect good!
+!!!this api will crash on sdk 31 
+Error road: <android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)>[]--><com.jcraft.jsch.ChannelForwardedTCPIP: void run()>[]--><app.trigger.ssh.SshRequestHandler: void run()>[]--><app.trigger.WifiTools: boolean isConnected()>[]--><android.net.NetworkInfo: int getType()>
+#2.the call statck between class <android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)> to <android.net.NetworkInfo: int getType()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <com.jcraft.jsch.Session: int setPortForwardingL(int,java.lang.String,int)>[]--><com.jcraft.jsch.Session: int setPortForwardingL(java.lang.String,int,java.lang.String,int)>[]--><com.jcraft.jsch.Session: int setPortForwardingL(java.lang.String,int,java.lang.String,int,com.jcraft.jsch.ServerSocketFactory)>[]--><com.jcraft.jsch.Session: int setPortForwardingL(java.lang.String,int,java.lang.String,int,com.jcraft.jsch.ServerSocketFactory,int)>[]--><java.lang.Thread: void run()>[]--><com.jcraft.jsch.ChannelForwardedTCPIP: void run()>[]--><app.trigger.ssh.SshRequestHandler: void run()>[]--><app.trigger.WifiTools: boolean isConnected()>[]--><android.net.NetworkInfo: int getType()>
+#3.the call statck between class <com.jcraft.jsch.Session: int setPortForwardingL(int,java.lang.String,int)> to <android.net.NetworkInfo: int getType()>has compatibility isssues！
+-----------------------------------------
+crashApis:2
+crashApisInMain:1
+containsStatic:false
+containsTry:true
+4call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()> is checking!!!
+The life time of api is [1,30]
+4call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: app.trigger.MainActivity dummyMainMethod_app_trigger_MainActivity(android.content.Intent)>[]--><app.trigger.MainActivity: void onResume()>[]--><app.trigger.MainActivity: void updateSpinner(boolean)>[]--><app.trigger.MainActivity: int getPreferredSpinnerIndex(java.util.ArrayList,boolean)>[]--><app.trigger.WifiTools: boolean isConnected()>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>has compatibility isssues！
+-----------------------------------------
+3 Packageshead roads:
+try
+Good road with try: <com.jcraft.jsch.Session: void connect()>[]--><com.jcraft.jsch.Session: void connect(int)>[[try]]--><com.jcraft.jsch.Session: void requestPortForwarding()>[]--><com.jcraft.jsch.Session: int setPortForwardingL(java.lang.String)>[]--><com.jcraft.jsch.Session: int setPortForwardingL(java.lang.String,int,java.lang.String,int)>[]--><com.jcraft.jsch.Session: int setPortForwardingL(java.lang.String,int,java.lang.String,int,com.jcraft.jsch.ServerSocketFactory)>[]--><com.jcraft.jsch.Session: int setPortForwardingL(java.lang.String,int,java.lang.String,int,com.jcraft.jsch.ServerSocketFactory,int)>[]--><java.lang.Thread: void run()>[]--><com.jcraft.jsch.ChannelForwardedTCPIP: void run()>[]--><app.trigger.ssh.SshRequestHandler: void run()>[]--><app.trigger.WifiTools: boolean isConnected()>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>
+One road protect good!
+!!!this api will crash on sdk 31 
+Error road: <android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)>[]--><com.jcraft.jsch.Session: void run()>[]--><java.lang.Thread: void run()>[]--><com.jcraft.jsch.ChannelForwardedTCPIP: void run()>[]--><app.trigger.ssh.SshRequestHandler: void run()>[]--><app.trigger.WifiTools: boolean isConnected()>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>
+try
+Good road with try: <android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)>[]--><com.jcraft.jsch.PortWatcher: void run()>[[try]]--><com.jcraft.jsch.ChannelDirectTCPIP: void connect(int)>[]--><java.lang.Thread: void run()>[]--><com.jcraft.jsch.ChannelForwardedTCPIP: void run()>[]--><app.trigger.ssh.SshRequestHandler: void run()>[]--><app.trigger.WifiTools: boolean isConnected()>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>
+One road protect good!
+try
+Good road with try: <android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)>[]--><com.jcraft.jsch.ChannelX11: void run()>[[try]]--><com.jcraft.jsch.Util: java.net.Socket createSocket(java.lang.String,int,int)>[]--><java.lang.Thread: void run()>[]--><com.jcraft.jsch.ChannelForwardedTCPIP: void run()>[]--><app.trigger.ssh.SshRequestHandler: void run()>[]--><app.trigger.WifiTools: boolean isConnected()>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>
+One road protect good!
+!!!this api will crash on sdk 31 
+Error road: <android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)>[]--><com.jcraft.jsch.ChannelForwardedTCPIP: void run()>[]--><app.trigger.ssh.SshRequestHandler: void run()>[]--><app.trigger.WifiTools: boolean isConnected()>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>
+#2.the call statck between class <android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)> to <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <com.jcraft.jsch.Session: int setPortForwardingL(int,java.lang.String,int)>[]--><com.jcraft.jsch.Session: int setPortForwardingL(java.lang.String,int,java.lang.String,int)>[]--><com.jcraft.jsch.Session: int setPortForwardingL(java.lang.String,int,java.lang.String,int,com.jcraft.jsch.ServerSocketFactory)>[]--><com.jcraft.jsch.Session: int setPortForwardingL(java.lang.String,int,java.lang.String,int,com.jcraft.jsch.ServerSocketFactory,int)>[]--><java.lang.Thread: void run()>[]--><com.jcraft.jsch.ChannelForwardedTCPIP: void run()>[]--><app.trigger.ssh.SshRequestHandler: void run()>[]--><app.trigger.WifiTools: boolean isConnected()>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>
+#3.the call statck between class <com.jcraft.jsch.Session: int setPortForwardingL(int,java.lang.String,int)> to <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>has compatibility isssues！
+-----------------------------------------
+crashApis:3
+crashApisInMain:2
+containsStatic:false
+containsTry:true
+4call by main package
+-----------------------------------------
+#################################################
+N 5 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putBooleanArray(java.lang.String,boolean[])> is checking!!!
+The life time of api is [22,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 21 
+Error road: <com.github.isabsent.filepicker.SimpleFilePickerDialog: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putBooleanArray(java.lang.String,boolean[])>
+#1.the call statck between class <com.github.isabsent.filepicker.SimpleFilePickerDialog: void onSaveInstanceState(android.os.Bundle)> to <android.os.BaseBundle: void putBooleanArray(java.lang.String,boolean[])>has compatibility isssues！
+-----------------------------------------
+crashApis:4
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 6 Potential Issue API: SDKCheck of <android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)> is checking!!!
+The life time of api is [22,31]
+5call roads:
+0 Mainhead roads:
+5 Packageshead roads:
+!!!this api will crash on sdk 21 
+Error road: <eltos.simpledialogfragment.SimpleCheckDialog: android.view.View onCreateContentView(android.os.Bundle)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>
+#1.the call statck between class <eltos.simpledialogfragment.SimpleCheckDialog: android.view.View onCreateContentView(android.os.Bundle)> to <android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+$i0 < 24
+!!!this api will crash on sdk 21 
+Error road: <eltos.simpledialogfragment.SimpleImageDialog: android.app.Dialog onCreateDialog(android.os.Bundle)>[]--><eltos.simpledialogfragment.CustomViewDialog: android.app.Dialog onCreateDialog(android.os.Bundle)>[]--><eltos.simpledialogfragment.SimpleDialog: android.app.Dialog onCreateDialog(android.os.Bundle)>[[$i0 < 24]]--><android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>
+#2.the call statck between class <eltos.simpledialogfragment.SimpleImageDialog: android.app.Dialog onCreateDialog(android.os.Bundle)> to <android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+$i0 < 24
+!!!this api will crash on sdk 21 
+Error road: <eltos.simpledialogfragment.CustomViewDialog: android.view.View extractContentView(android.os.Bundle)>[]--><eltos.simpledialogfragment.SimpleDialog: android.app.Dialog onCreateDialog(android.os.Bundle)>[[$i0 < 24]]--><android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>
+#3.the call statck between class <eltos.simpledialogfragment.CustomViewDialog: android.view.View extractContentView(android.os.Bundle)> to <android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 21 
+Error road: <eltos.simpledialogfragment.color.SimpleColorDialog: void onCreate(android.os.Bundle)>[]--><eltos.simpledialogfragment.CustomViewDialog: void onCreate(android.os.Bundle)>[]--><eltos.simpledialogfragment.SimpleDialog: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>
+#4.the call statck between class <eltos.simpledialogfragment.color.SimpleColorDialog: void onCreate(android.os.Bundle)> to <android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 21 
+Error road: <com.github.isabsent.filepicker.SimpleFilePickerDialog: void onCreate(android.os.Bundle)>[]--><eltos.simpledialogfragment.CustomViewDialog: void onCreate(android.os.Bundle)>[]--><eltos.simpledialogfragment.SimpleDialog: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>
+#5.the call statck between class <com.github.isabsent.filepicker.SimpleFilePickerDialog: void onCreate(android.os.Bundle)> to <android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+crashApis:5
+containsStatic:false
+containsTry:false
+6call by main package
+-----------------------------------------
+#################################################
+N 7 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)> is checking!!!
+The life time of api is [22,31]
+18call roads:
+0 Mainhead roads:
+18 Packageshead roads:
+!!!this api will crash on sdk 21 
+Error road: <eltos.simpledialogfragment.SimpleCheckDialog: android.os.Bundle onResult(int)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+#1.the call statck between class <eltos.simpledialogfragment.SimpleCheckDialog: android.os.Bundle onResult(int)> to <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 21 
+Error road: <eltos.simpledialogfragment.SimpleDialog: eltos.simpledialogfragment.SimpleDialog cancelable(boolean)>[]--><eltos.simpledialogfragment.SimpleDialog: eltos.simpledialogfragment.SimpleDialog setArg(java.lang.String,boolean)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+#2.the call statck between class <eltos.simpledialogfragment.SimpleDialog: eltos.simpledialogfragment.SimpleDialog cancelable(boolean)> to <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 21 
+Error road: <eltos.simpledialogfragment.color.SimpleColorDialog: void onItemClick(android.widget.AdapterView,android.view.View,int,long)>[]--><eltos.simpledialogfragment.color.SimpleColorWheelDialog: eltos.simpledialogfragment.color.SimpleColorWheelDialog alpha(boolean)>[]--><eltos.simpledialogfragment.SimpleDialog: eltos.simpledialogfragment.SimpleDialog setArg(java.lang.String,boolean)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+#3.the call statck between class <eltos.simpledialogfragment.color.SimpleColorDialog: void onItemClick(android.widget.AdapterView,android.view.View,int,long)> to <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 21 
+Error road: <eltos.simpledialogfragment.color.SimpleColorDialog: eltos.simpledialogfragment.color.SimpleColorDialog allowCustom(boolean)>[]--><eltos.simpledialogfragment.SimpleDialog: eltos.simpledialogfragment.SimpleDialog setArg(java.lang.String,boolean)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+#4.the call statck between class <eltos.simpledialogfragment.color.SimpleColorDialog: eltos.simpledialogfragment.color.SimpleColorDialog allowCustom(boolean)> to <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 21 
+Error road: <eltos.simpledialogfragment.SimpleDialog: eltos.simpledialogfragment.SimpleDialog msgHtml(int)>[]--><eltos.simpledialogfragment.SimpleDialog: eltos.simpledialogfragment.SimpleDialog setArg(java.lang.String,boolean)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+#5.the call statck between class <eltos.simpledialogfragment.SimpleDialog: eltos.simpledialogfragment.SimpleDialog msgHtml(int)> to <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 21 
+Error road: <eltos.simpledialogfragment.color.SimpleColorDialog: eltos.simpledialogfragment.color.SimpleColorDialog build()>[]--><eltos.simpledialogfragment.color.SimpleColorDialog: void <init>()>[]--><eltos.simpledialogfragment.list.CustomListDialog: eltos.simpledialogfragment.list.CustomListDialog grid()>[]--><eltos.simpledialogfragment.SimpleDialog: eltos.simpledialogfragment.SimpleDialog setArg(java.lang.String,boolean)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+#6.the call statck between class <eltos.simpledialogfragment.color.SimpleColorDialog: eltos.simpledialogfragment.color.SimpleColorDialog build()> to <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 21 
+Error road: <eltos.simpledialogfragment.list.SimpleListDialog: eltos.simpledialogfragment.list.SimpleListDialog filterable(boolean,boolean)>[]--><eltos.simpledialogfragment.list.CustomListDialog: eltos.simpledialogfragment.list.CustomListDialog filterable(boolean)>[]--><eltos.simpledialogfragment.SimpleDialog: eltos.simpledialogfragment.SimpleDialog setArg(java.lang.String,boolean)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+!!!this api will crash on sdk 21 
+Error road: <eltos.simpledialogfragment.list.SimpleListDialog: eltos.simpledialogfragment.list.SimpleListDialog filterable(boolean,boolean)>[]--><eltos.simpledialogfragment.SimpleDialog: eltos.simpledialogfragment.SimpleDialog setArg(java.lang.String,boolean)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+#7.the call statck between class <eltos.simpledialogfragment.list.SimpleListDialog: eltos.simpledialogfragment.list.SimpleListDialog filterable(boolean,boolean)> to <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 21 
+Error road: <eltos.simpledialogfragment.form.CheckViewHolder: void putResults(android.os.Bundle,java.lang.String)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+#8.the call statck between class <eltos.simpledialogfragment.form.CheckViewHolder: void putResults(android.os.Bundle,java.lang.String)> to <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 21 
+Error road: <com.github.isabsent.filepicker.SimpleFilePickerDialog: com.github.isabsent.filepicker.SimpleFilePickerDialog filterable(boolean,boolean)>[]--><eltos.simpledialogfragment.SimpleDialog: eltos.simpledialogfragment.SimpleDialog setArg(java.lang.String,boolean)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+!!!this api will crash on sdk 21 
+Error road: <com.github.isabsent.filepicker.SimpleFilePickerDialog: com.github.isabsent.filepicker.SimpleFilePickerDialog filterable(boolean,boolean)>[]--><eltos.simpledialogfragment.list.CustomListDialog: eltos.simpledialogfragment.list.CustomListDialog filterable(boolean)>[]--><eltos.simpledialogfragment.SimpleDialog: eltos.simpledialogfragment.SimpleDialog setArg(java.lang.String,boolean)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+#9.the call statck between class <com.github.isabsent.filepicker.SimpleFilePickerDialog: com.github.isabsent.filepicker.SimpleFilePickerDialog filterable(boolean,boolean)> to <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 21 
+Error road: <eltos.simpledialogfragment.SimpleCheckDialog: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+#10.the call statck between class <eltos.simpledialogfragment.SimpleCheckDialog: void onSaveInstanceState(android.os.Bundle)> to <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+crashApis:6
+containsStatic:false
+containsTry:false
+11call by main package
+-----------------------------------------
+#################################################
+N 8 Potential Issue API: SDKCheck of <android.view.View: void setForeground(android.graphics.drawable.Drawable)> is checking!!!
+The life time of api is [23,31]
+7call roads:
+0 Mainhead roads:
+7 Packageshead roads:
+$i0 >= 16
+!!!this api will crash on sdk 21 22 
+Error road: <eltos.simpledialogfragment.color.ColorView: void setOutlineWidth(int)>[]--><eltos.simpledialogfragment.color.ColorView: void update()>[[$i0 >= 16]]--><android.view.View: void setForeground(android.graphics.drawable.Drawable)>
+#1.the call statck between class <eltos.simpledialogfragment.color.ColorView: void setOutlineWidth(int)> to <android.view.View: void setForeground(android.graphics.drawable.Drawable)>has compatibility isssues！
+-----------------------------------------
+$i0 >= 16
+!!!this api will crash on sdk 21 22 
+Error road: <eltos.simpledialogfragment.color.ColorView: void setStyle(eltos.simpledialogfragment.color.ColorView$Style)>[]--><eltos.simpledialogfragment.color.ColorView: void update()>[[$i0 >= 16]]--><android.view.View: void setForeground(android.graphics.drawable.Drawable)>
+#2.the call statck between class <eltos.simpledialogfragment.color.ColorView: void setStyle(eltos.simpledialogfragment.color.ColorView$Style)> to <android.view.View: void setForeground(android.graphics.drawable.Drawable)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 21 22 
+Error road: <eltos.simpledialogfragment.list.SimpleListDialog$SimpleListAdapter: android.view.View getView(int,android.view.View,android.view.ViewGroup)>[]--><eltos.simpledialogfragment.list.AdvancedAdapter: android.view.View getView(int,android.view.View,android.view.ViewGroup)>[]--><eltos.simpledialogfragment.color.ColorView: void setChecked(boolean)>[]--><eltos.simpledialogfragment.color.ColorView: void setChecked(boolean,boolean)>[]--><android.view.View: void setForeground(android.graphics.drawable.Drawable)>
+#3.the call statck between class <eltos.simpledialogfragment.list.SimpleListDialog$SimpleListAdapter: android.view.View getView(int,android.view.View,android.view.ViewGroup)> to <android.view.View: void setForeground(android.graphics.drawable.Drawable)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 21 22 
+Error road: <com.github.isabsent.filepicker.entity.ItemViewHolder: void bind(com.github.isabsent.filepicker.entity.Item,com.github.isabsent.filepicker.SimpleFilePickerDialog$CompositeMode,boolean,android.text.Spannable)>[]--><eltos.simpledialogfragment.color.ColorView: void setChecked(boolean)>[]--><eltos.simpledialogfragment.color.ColorView: void setChecked(boolean,boolean)>[]--><android.view.View: void setForeground(android.graphics.drawable.Drawable)>
+#4.the call statck between class <com.github.isabsent.filepicker.entity.ItemViewHolder: void bind(com.github.isabsent.filepicker.entity.Item,com.github.isabsent.filepicker.SimpleFilePickerDialog$CompositeMode,boolean,android.text.Spannable)> to <android.view.View: void setForeground(android.graphics.drawable.Drawable)>has compatibility isssues！
+-----------------------------------------
+$i0 >= 16
+!!!this api will crash on sdk 21 22 
+Error road: <eltos.simpledialogfragment.color.SimpleColorDialog$ColorAdapter: android.view.View getView(int,android.view.View,android.view.ViewGroup)>[]--><eltos.simpledialogfragment.color.ColorView: void setColor(int)>[]--><eltos.simpledialogfragment.color.ColorView: void update()>[[$i0 >= 16]]--><android.view.View: void setForeground(android.graphics.drawable.Drawable)>
+!!!this api will crash on sdk 21 22 
+Error road: <eltos.simpledialogfragment.color.SimpleColorDialog$ColorAdapter: android.view.View getView(int,android.view.View,android.view.ViewGroup)>[]--><eltos.simpledialogfragment.list.AdvancedAdapter: android.view.View getView(int,android.view.View,android.view.ViewGroup)>[]--><eltos.simpledialogfragment.color.ColorView: void setChecked(boolean)>[]--><eltos.simpledialogfragment.color.ColorView: void setChecked(boolean,boolean)>[]--><android.view.View: void setForeground(android.graphics.drawable.Drawable)>
+$i0 >= 16
+!!!this api will crash on sdk 21 22 
+Error road: <eltos.simpledialogfragment.color.SimpleColorDialog$ColorAdapter: android.view.View getView(int,android.view.View,android.view.ViewGroup)>[]--><eltos.simpledialogfragment.color.ColorView: void <init>(android.content.Context)>[]--><eltos.simpledialogfragment.color.ColorView: void <init>(android.content.Context,android.util.AttributeSet)>[]--><eltos.simpledialogfragment.color.ColorView: void <init>(android.content.Context,android.util.AttributeSet,int)>[]--><eltos.simpledialogfragment.color.ColorView: void update()>[[$i0 >= 16]]--><android.view.View: void setForeground(android.graphics.drawable.Drawable)>
+#5.the call statck between class <eltos.simpledialogfragment.color.SimpleColorDialog$ColorAdapter: android.view.View getView(int,android.view.View,android.view.ViewGroup)> to <android.view.View: void setForeground(android.graphics.drawable.Drawable)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 21 22 
+Error road: <com.github.isabsent.filepicker.SimpleFilePickerDialog$SimpleFilePickerAdapter: android.view.View getView(int,android.view.View,android.view.ViewGroup)>[]--><eltos.simpledialogfragment.list.AdvancedAdapter: android.view.View getView(int,android.view.View,android.view.ViewGroup)>[]--><eltos.simpledialogfragment.color.ColorView: void setChecked(boolean)>[]--><eltos.simpledialogfragment.color.ColorView: void setChecked(boolean,boolean)>[]--><android.view.View: void setForeground(android.graphics.drawable.Drawable)>
+#6.the call statck between class <com.github.isabsent.filepicker.SimpleFilePickerDialog$SimpleFilePickerAdapter: android.view.View getView(int,android.view.View,android.view.ViewGroup)> to <android.view.View: void setForeground(android.graphics.drawable.Drawable)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 21 22 
+Error road: <eltos.simpledialogfragment.color.ColorView: void toggle()>[]--><eltos.simpledialogfragment.color.ColorView: void setChecked(boolean)>[]--><eltos.simpledialogfragment.color.ColorView: void setChecked(boolean,boolean)>[]--><android.view.View: void setForeground(android.graphics.drawable.Drawable)>
+#7.the call statck between class <eltos.simpledialogfragment.color.ColorView: void toggle()> to <android.view.View: void setForeground(android.graphics.drawable.Drawable)>has compatibility isssues！
+-----------------------------------------
+crashApis:7
+containsStatic:false
+containsTry:false
+8call by main package
+-----------------------------------------
+#################################################
+N 9 Potential Issue API: SDKCheck of <android.os.BaseBundle: boolean getBoolean(java.lang.String)> is checking!!!
+The life time of api is [22,31]
+15call roads:
+0 Mainhead roads:
+15 Packageshead roads:
+!!!this api will crash on sdk 21 
+Error road: <eltos.simpledialogfragment.input.SimpleInputDialog: void onDialogShown()>[]--><eltos.simpledialogfragment.input.SimpleInputDialog: boolean posEnabled()>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+#1.the call statck between class <eltos.simpledialogfragment.input.SimpleInputDialog: void onDialogShown()> to <android.os.BaseBundle: boolean getBoolean(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 21 
+Error road: <eltos.simpledialogfragment.color.SimpleColorDialog: eltos.simpledialogfragment.list.AdvancedAdapter onCreateAdapter()>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+#2.the call statck between class <eltos.simpledialogfragment.color.SimpleColorDialog: eltos.simpledialogfragment.list.AdvancedAdapter onCreateAdapter()> to <android.os.BaseBundle: boolean getBoolean(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 21 
+Error road: <eltos.simpledialogfragment.SimpleImageDialog: android.app.Dialog onCreateDialog(android.os.Bundle)>[]--><eltos.simpledialogfragment.CustomViewDialog: android.app.Dialog onCreateDialog(android.os.Bundle)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+#3.the call statck between class <eltos.simpledialogfragment.SimpleImageDialog: android.app.Dialog onCreateDialog(android.os.Bundle)> to <android.os.BaseBundle: boolean getBoolean(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 21 
+Error road: <eltos.simpledialogfragment.CustomViewDialog: android.view.View extractContentView(android.os.Bundle)>[]--><eltos.simpledialogfragment.SimpleDialog: android.app.Dialog onCreateDialog(android.os.Bundle)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+#4.the call statck between class <eltos.simpledialogfragment.CustomViewDialog: android.view.View extractContentView(android.os.Bundle)> to <android.os.BaseBundle: boolean getBoolean(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 21 
+Error road: <eltos.simpledialogfragment.SimpleCheckDialog: boolean access$000(eltos.simpledialogfragment.SimpleCheckDialog)>[]--><eltos.simpledialogfragment.SimpleCheckDialog: boolean canGoAhead()>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+#5.the call statck between class <eltos.simpledialogfragment.SimpleCheckDialog: boolean access$000(eltos.simpledialogfragment.SimpleCheckDialog)> to <android.os.BaseBundle: boolean getBoolean(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 21 
+Error road: <eltos.simpledialogfragment.color.SimpleColorWheelDialog: android.view.View onCreateContentView(android.os.Bundle)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+#6.the call statck between class <eltos.simpledialogfragment.color.SimpleColorWheelDialog: android.view.View onCreateContentView(android.os.Bundle)> to <android.os.BaseBundle: boolean getBoolean(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 21 
+Error road: <com.journeyapps.barcodescanner.CameraPreview: void onRestoreInstanceState(android.os.Parcelable)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+#7.the call statck between class <com.journeyapps.barcodescanner.CameraPreview: void onRestoreInstanceState(android.os.Parcelable)> to <android.os.BaseBundle: boolean getBoolean(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 21 
+Error road: <com.github.isabsent.filepicker.SimpleFilePickerDialog$SimpleFilePickerAdapter: android.view.View getView(int,android.view.View,android.view.ViewGroup)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+#8.the call statck between class <com.github.isabsent.filepicker.SimpleFilePickerDialog$SimpleFilePickerAdapter: android.view.View getView(int,android.view.View,android.view.ViewGroup)> to <android.os.BaseBundle: boolean getBoolean(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 21 
+Error road: <com.github.isabsent.filepicker.SimpleFilePickerDialog: void onDialogShown()>[]--><eltos.simpledialogfragment.list.CustomListDialog: void onDialogShown()>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+#9.the call statck between class <com.github.isabsent.filepicker.SimpleFilePickerDialog: void onDialogShown()> to <android.os.BaseBundle: boolean getBoolean(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 21 
+Error road: <eltos.simpledialogfragment.form.CheckViewHolder: void setUpView(android.view.View,android.content.Context,android.os.Bundle,eltos.simpledialogfragment.form.SimpleFormDialog$DialogActions,boolean,boolean)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+#10.the call statck between class <eltos.simpledialogfragment.form.CheckViewHolder: void setUpView(android.view.View,android.content.Context,android.os.Bundle,eltos.simpledialogfragment.form.SimpleFormDialog$DialogActions,boolean,boolean)> to <android.os.BaseBundle: boolean getBoolean(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:8
+containsStatic:false
+containsTry:false
+11call by main package
+-----------------------------------------
+#################################################
+N 10 Potential Issue API: SDKCheck of <android.media.MediaPlayer: void setVolume(float,float)> is checking!!!
+The life time of api is [1,17]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+try
+Good road with try: <com.journeyapps.barcodescanner.BarcodeView$1: boolean handleMessage(android.os.Message)>[]--><com.journeyapps.barcodescanner.DecoratedBarcodeView$WrappedCallback: void barcodeResult(com.journeyapps.barcodescanner.BarcodeResult)>[]--><com.journeyapps.barcodescanner.CaptureManager$1: void barcodeResult(com.journeyapps.barcodescanner.BarcodeResult)>[]--><com.google.zxing.client.android.BeepManager: void playBeepSoundAndVibrate()>[[try]]--><com.google.zxing.client.android.BeepManager: android.media.MediaPlayer playBeepSound()>[[try]]--><android.media.MediaPlayer: void setVolume(float,float)>
+One road protect good!
+try
+Good road with try: <com.journeyapps.barcodescanner.BarcodeView$1: boolean handleMessage(android.os.Message)>[]--><com.journeyapps.barcodescanner.CaptureManager$1: void barcodeResult(com.journeyapps.barcodescanner.BarcodeResult)>[]--><com.google.zxing.client.android.BeepManager: void playBeepSoundAndVibrate()>[[try]]--><com.google.zxing.client.android.BeepManager: android.media.MediaPlayer playBeepSound()>[[try]]--><android.media.MediaPlayer: void setVolume(float,float)>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 11 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager: android.net.wifi.WifiInfo getConnectionInfo()> is checking!!!
+The life time of api is [1,30]
+4call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: app.trigger.MainActivity dummyMainMethod_app_trigger_MainActivity(android.content.Intent)>[]--><app.trigger.MainActivity: void onResume()>[]--><app.trigger.MainActivity: void updateSpinner(boolean)>[]--><app.trigger.MainActivity: int getPreferredSpinnerIndex(java.util.ArrayList,boolean)>[]--><app.trigger.WifiTools: java.lang.String getCurrentSSID()>[]--><android.net.wifi.WifiManager: android.net.wifi.WifiInfo getConnectionInfo()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.wifi.WifiManager: android.net.wifi.WifiInfo getConnectionInfo()>has compatibility isssues！
+-----------------------------------------
+3 Packageshead roads:
+try
+Good road with try: <com.jcraft.jsch.Session: void connect()>[]--><com.jcraft.jsch.Session: void connect(int)>[[try]]--><com.jcraft.jsch.Session: void requestPortForwarding()>[]--><com.jcraft.jsch.Session: int setPortForwardingL(java.lang.String)>[]--><com.jcraft.jsch.Session: int setPortForwardingL(java.lang.String,int,java.lang.String,int)>[]--><com.jcraft.jsch.Session: int setPortForwardingL(java.lang.String,int,java.lang.String,int,com.jcraft.jsch.ServerSocketFactory)>[]--><com.jcraft.jsch.Session: int setPortForwardingL(java.lang.String,int,java.lang.String,int,com.jcraft.jsch.ServerSocketFactory,int)>[]--><java.lang.Thread: void run()>[]--><com.jcraft.jsch.ChannelForwardedTCPIP: void run()>[]--><app.trigger.ssh.SshRequestHandler: void run()>[]--><app.trigger.WifiTools: java.lang.String getCurrentSSID()>[]--><android.net.wifi.WifiManager: android.net.wifi.WifiInfo getConnectionInfo()>
+One road protect good!
+!!!this api will crash on sdk 31 
+Error road: <android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)>[]--><com.jcraft.jsch.Session: void run()>[]--><java.lang.Thread: void run()>[]--><com.jcraft.jsch.ChannelForwardedTCPIP: void run()>[]--><app.trigger.ssh.SshRequestHandler: void run()>[]--><app.trigger.WifiTools: java.lang.String getCurrentSSID()>[]--><android.net.wifi.WifiManager: android.net.wifi.WifiInfo getConnectionInfo()>
+try
+Good road with try: <android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)>[]--><com.jcraft.jsch.PortWatcher: void run()>[[try]]--><com.jcraft.jsch.ChannelDirectTCPIP: void connect(int)>[]--><java.lang.Thread: void run()>[]--><com.jcraft.jsch.ChannelForwardedTCPIP: void run()>[]--><app.trigger.ssh.SshRequestHandler: void run()>[]--><app.trigger.WifiTools: java.lang.String getCurrentSSID()>[]--><android.net.wifi.WifiManager: android.net.wifi.WifiInfo getConnectionInfo()>
+One road protect good!
+try
+Good road with try: <android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)>[]--><com.jcraft.jsch.ChannelX11: void run()>[[try]]--><com.jcraft.jsch.Util: java.net.Socket createSocket(java.lang.String,int,int)>[]--><java.lang.Thread: void run()>[]--><com.jcraft.jsch.ChannelForwardedTCPIP: void run()>[]--><app.trigger.ssh.SshRequestHandler: void run()>[]--><app.trigger.WifiTools: java.lang.String getCurrentSSID()>[]--><android.net.wifi.WifiManager: android.net.wifi.WifiInfo getConnectionInfo()>
+One road protect good!
+!!!this api will crash on sdk 31 
+Error road: <android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)>[]--><com.jcraft.jsch.ChannelForwardedTCPIP: void run()>[]--><app.trigger.ssh.SshRequestHandler: void run()>[]--><app.trigger.WifiTools: java.lang.String getCurrentSSID()>[]--><android.net.wifi.WifiManager: android.net.wifi.WifiInfo getConnectionInfo()>
+#2.the call statck between class <android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)> to <android.net.wifi.WifiManager: android.net.wifi.WifiInfo getConnectionInfo()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <com.jcraft.jsch.Session: int setPortForwardingL(int,java.lang.String,int)>[]--><com.jcraft.jsch.Session: int setPortForwardingL(java.lang.String,int,java.lang.String,int)>[]--><com.jcraft.jsch.Session: int setPortForwardingL(java.lang.String,int,java.lang.String,int,com.jcraft.jsch.ServerSocketFactory)>[]--><com.jcraft.jsch.Session: int setPortForwardingL(java.lang.String,int,java.lang.String,int,com.jcraft.jsch.ServerSocketFactory,int)>[]--><java.lang.Thread: void run()>[]--><com.jcraft.jsch.ChannelForwardedTCPIP: void run()>[]--><app.trigger.ssh.SshRequestHandler: void run()>[]--><app.trigger.WifiTools: java.lang.String getCurrentSSID()>[]--><android.net.wifi.WifiManager: android.net.wifi.WifiInfo getConnectionInfo()>
+#3.the call statck between class <com.jcraft.jsch.Session: int setPortForwardingL(int,java.lang.String,int)> to <android.net.wifi.WifiManager: android.net.wifi.WifiInfo getConnectionInfo()>has compatibility isssues！
+-----------------------------------------
+crashApis:9
+crashApisInMain:3
+containsStatic:false
+containsTry:true
+4call by main package
+-----------------------------------------
+#################################################
+N 12 Potential Issue API: SDKCheck of <android.bluetooth.BluetoothDevice: android.bluetooth.BluetoothGatt connectGatt(android.content.Context,boolean,android.bluetooth.BluetoothGattCallback,int)> is checking!!!
+The life time of api is [23,31]
+4call roads:
+1 Mainhead roads:
+-$i0 < 23
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: app.trigger.MainActivity dummyMainMethod_app_trigger_MainActivity(android.content.Intent)>[]--><app.trigger.MainActivity: void doUnlock(android.view.View)>[]--><app.trigger.MainActivity: void callRequestHandler(app.trigger.MainActivity$Action)>[]--><app.trigger.nuki.NukiRequestHandler: void run()>[[-$i0 < 23]]--><android.bluetooth.BluetoothDevice: android.bluetooth.BluetoothGatt connectGatt(android.content.Context,boolean,android.bluetooth.BluetoothGattCallback,int)>
+One road protect good!
+3 Packageshead roads:
+containsStatic:false
+containsTry:true
+4call by main package
+-----------------------------------------
+#################################################
+N 13 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager: java.util.List getConfiguredNetworks()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <app.trigger.WifiTools: java.util.ArrayList getConfiguredSSIDs()>[]--><android.net.wifi.WifiManager: java.util.List getConfiguredNetworks()>
+#1.the call statck between class <app.trigger.WifiTools: java.util.ArrayList getConfiguredSSIDs()> to <android.net.wifi.WifiManager: java.util.List getConfiguredNetworks()>has compatibility isssues！
+-----------------------------------------
+crashApis:10
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 14 Potential Issue API: SDKCheck of <android.net.wifi.WifiInfo: java.lang.String getSSID()> is checking!!!
+The life time of api is [1,30]
+4call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: app.trigger.MainActivity dummyMainMethod_app_trigger_MainActivity(android.content.Intent)>[]--><app.trigger.MainActivity: void onResume()>[]--><app.trigger.MainActivity: void updateSpinner(boolean)>[]--><app.trigger.MainActivity: int getPreferredSpinnerIndex(java.util.ArrayList,boolean)>[]--><app.trigger.WifiTools: java.lang.String getCurrentSSID()>[]--><android.net.wifi.WifiInfo: java.lang.String getSSID()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.wifi.WifiInfo: java.lang.String getSSID()>has compatibility isssues！
+-----------------------------------------
+3 Packageshead roads:
+try
+Good road with try: <com.jcraft.jsch.Session: void connect()>[]--><com.jcraft.jsch.Session: void connect(int)>[[try]]--><com.jcraft.jsch.Session: void requestPortForwarding()>[]--><com.jcraft.jsch.Session: int setPortForwardingL(java.lang.String)>[]--><com.jcraft.jsch.Session: int setPortForwardingL(java.lang.String,int,java.lang.String,int)>[]--><com.jcraft.jsch.Session: int setPortForwardingL(java.lang.String,int,java.lang.String,int,com.jcraft.jsch.ServerSocketFactory)>[]--><com.jcraft.jsch.Session: int setPortForwardingL(java.lang.String,int,java.lang.String,int,com.jcraft.jsch.ServerSocketFactory,int)>[]--><java.lang.Thread: void run()>[]--><com.jcraft.jsch.ChannelForwardedTCPIP: void run()>[]--><app.trigger.ssh.SshRequestHandler: void run()>[]--><app.trigger.WifiTools: java.lang.String getCurrentSSID()>[]--><android.net.wifi.WifiInfo: java.lang.String getSSID()>
+One road protect good!
+!!!this api will crash on sdk 31 
+Error road: <android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)>[]--><com.jcraft.jsch.Session: void run()>[]--><java.lang.Thread: void run()>[]--><com.jcraft.jsch.ChannelForwardedTCPIP: void run()>[]--><app.trigger.ssh.SshRequestHandler: void run()>[]--><app.trigger.WifiTools: java.lang.String getCurrentSSID()>[]--><android.net.wifi.WifiInfo: java.lang.String getSSID()>
+try
+Good road with try: <android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)>[]--><com.jcraft.jsch.PortWatcher: void run()>[[try]]--><com.jcraft.jsch.ChannelDirectTCPIP: void connect(int)>[]--><java.lang.Thread: void run()>[]--><com.jcraft.jsch.ChannelForwardedTCPIP: void run()>[]--><app.trigger.ssh.SshRequestHandler: void run()>[]--><app.trigger.WifiTools: java.lang.String getCurrentSSID()>[]--><android.net.wifi.WifiInfo: java.lang.String getSSID()>
+One road protect good!
+try
+Good road with try: <android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)>[]--><com.jcraft.jsch.ChannelX11: void run()>[[try]]--><com.jcraft.jsch.Util: java.net.Socket createSocket(java.lang.String,int,int)>[]--><java.lang.Thread: void run()>[]--><com.jcraft.jsch.ChannelForwardedTCPIP: void run()>[]--><app.trigger.ssh.SshRequestHandler: void run()>[]--><app.trigger.WifiTools: java.lang.String getCurrentSSID()>[]--><android.net.wifi.WifiInfo: java.lang.String getSSID()>
+One road protect good!
+!!!this api will crash on sdk 31 
+Error road: <android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)>[]--><com.jcraft.jsch.ChannelForwardedTCPIP: void run()>[]--><app.trigger.ssh.SshRequestHandler: void run()>[]--><app.trigger.WifiTools: java.lang.String getCurrentSSID()>[]--><android.net.wifi.WifiInfo: java.lang.String getSSID()>
+#2.the call statck between class <android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)> to <android.net.wifi.WifiInfo: java.lang.String getSSID()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <com.jcraft.jsch.Session: int setPortForwardingL(int,java.lang.String,int)>[]--><com.jcraft.jsch.Session: int setPortForwardingL(java.lang.String,int,java.lang.String,int)>[]--><com.jcraft.jsch.Session: int setPortForwardingL(java.lang.String,int,java.lang.String,int,com.jcraft.jsch.ServerSocketFactory)>[]--><com.jcraft.jsch.Session: int setPortForwardingL(java.lang.String,int,java.lang.String,int,com.jcraft.jsch.ServerSocketFactory,int)>[]--><java.lang.Thread: void run()>[]--><com.jcraft.jsch.ChannelForwardedTCPIP: void run()>[]--><app.trigger.ssh.SshRequestHandler: void run()>[]--><app.trigger.WifiTools: java.lang.String getCurrentSSID()>[]--><android.net.wifi.WifiInfo: java.lang.String getSSID()>
+#3.the call statck between class <com.jcraft.jsch.Session: int setPortForwardingL(int,java.lang.String,int)> to <android.net.wifi.WifiInfo: java.lang.String getSSID()>has compatibility isssues！
+-----------------------------------------
+crashApis:11
+crashApisInMain:4
+containsStatic:false
+containsTry:true
+4call by main package
+-----------------------------------------
+crashApis numbers:11
+crashApis numbers in main road:4
+On Android Version 16 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 17 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 18 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 19 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 20 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 21 this app may have error api use(at least): 6 and error api roads: 38
+On Android Version 22 this app may have error api use(at least): 1 and error api roads: 9
+On Android Version 23 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 24 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 25 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 31 this app may have error api use(at least): 5 and error api roads: 17

@@ -1,0 +1,293 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/billthefarmer#notes.apk
+Entry Points[org.billthefarmer.notes.Notes, org.billthefarmer.notes.Settings, org.billthefarmer.notes.Editor]
+FllowDroidcallgraph size:1062
+Soot started on Mon Jul 11 01:39:04 CST 2022
+Soot finished on Mon Jul 11 01:39:08 CST 2022
+Soot has run for 0 min. 3 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 14
+Declared Target Sdk version is: 28
+Declared Max Sdk version is: -1
+Collected 255 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putLong(java.lang.String,long)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.billthefarmer.notes.Notes dummyMainMethod_org_billthefarmer_notes_Notes(android.content.Intent)>[]--><org.billthefarmer.notes.Notes: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putLong(java.lang.String,long)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: void putLong(java.lang.String,long)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:1
+crashApisInMain:1
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.os.BaseBundle: boolean getBoolean(java.lang.String)> is checking!!!
+The life time of api is [22,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.billthefarmer.notes.Editor dummyMainMethod_org_billthefarmer_notes_Editor(android.content.Intent)>[]--><org.billthefarmer.notes.Editor: void onRestoreInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+!!!this api will crash on sdk 16 17 18 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.billthefarmer.notes.Notes dummyMainMethod_org_billthefarmer_notes_Notes(android.content.Intent)>[]--><org.billthefarmer.notes.Notes: void onRestoreInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: boolean getBoolean(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:2
+crashApisInMain:2
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.lang.String getString(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.billthefarmer.notes.Notes dummyMainMethod_org_billthefarmer_notes_Notes(android.content.Intent)>[]--><org.billthefarmer.notes.Notes: void onRestoreInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:3
+crashApisInMain:3
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.provider.MediaStore.Video.Thumbnails: android.graphics.Bitmap getThumbnail(android.content.ContentResolver,long,int,android.graphics.BitmapFactory.Options)> is checking!!!
+The life time of api is [5,29]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+try
+Good road with try: <org.billthefarmer.notes.FileUtils: android.graphics.Bitmap getThumbnail(android.content.Context,java.io.File)>[]--><org.billthefarmer.notes.FileUtils: android.graphics.Bitmap getThumbnail(android.content.Context,android.net.Uri,java.lang.String)>[[try]]--><android.provider.MediaStore.Video.Thumbnails: android.graphics.Bitmap getThumbnail(android.content.ContentResolver,long,int,android.graphics.BitmapFactory.Options)>
+One road protect good!
+try
+Good road with try: <org.billthefarmer.notes.FileUtils: android.graphics.Bitmap getThumbnail(android.content.Context,android.net.Uri)>[]--><org.billthefarmer.notes.FileUtils: android.graphics.Bitmap getThumbnail(android.content.Context,android.net.Uri,java.lang.String)>[[try]]--><android.provider.MediaStore.Video.Thumbnails: android.graphics.Bitmap getThumbnail(android.content.ContentResolver,long,int,android.graphics.BitmapFactory.Options)>
+One road protect good!
+containsStatic:false
+containsTry:true
+3call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.app.Activity: void requestPermissions(java.lang.String[],int)> is checking!!!
+The life time of api is [23,31]
+4call roads:
+1 Mainhead roads:
+-i0 < 23
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.billthefarmer.notes.Editor dummyMainMethod_org_billthefarmer_notes_Editor(android.content.Intent)>[]--><org.billthefarmer.notes.'-$$Lambda$Editor$rXxBAaNe64fY0nXI0NNfl4bbi7I': void onClick(android.view.View)>[]--><org.billthefarmer.notes.Editor: void lambda$setListeners$1$Editor(android.view.View)>[]--><org.billthefarmer.notes.Editor: void write(java.lang.CharSequence,java.io.File)>[[-i0 < 23]]--><android.app.Activity: void requestPermissions(java.lang.String[],int)>
+One road protect good!
+-i0 < 23
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.billthefarmer.notes.Notes dummyMainMethod_org_billthefarmer_notes_Notes(android.content.Intent)>[]--><org.billthefarmer.notes.Notes: void onCreate(android.os.Bundle)>[]--><org.billthefarmer.notes.Notes: void newFile()>[]--><org.billthefarmer.notes.Notes: void loadTemplate()>[[-i0 < 23]]--><android.app.Activity: void requestPermissions(java.lang.String[],int)>
+One road protect good!
+3 Packageshead roads:
+-i0 < 23
+Good road: <org.billthefarmer.notes.Notes: void access$300(org.billthefarmer.notes.Notes,android.net.Uri)>[]--><org.billthefarmer.notes.Notes: void getNote(android.net.Uri)>[]--><org.billthefarmer.notes.Notes: void readNote(android.net.Uri)>[[-i0 < 23]]--><android.app.Activity: void requestPermissions(java.lang.String[],int)>
+One road protect good!
+-i0 < 23
+Good road: <org.billthefarmer.notes.Notes: void lambda$getNote$14$Notes(android.net.Uri,android.content.DialogInterface,int)>[]--><org.billthefarmer.notes.Notes: void readNote(android.net.Uri)>[[-i0 < 23]]--><android.app.Activity: void requestPermissions(java.lang.String[],int)>
+One road protect good!
+-$i1 < 23
+Good road: <org.billthefarmer.notes.Notes: void lambda$getNote$14$Notes(android.net.Uri,android.content.DialogInterface,int)>[]--><org.billthefarmer.notes.Notes: void saveNote()>[[-$i1 < 23]]--><android.app.Activity: void requestPermissions(java.lang.String[],int)>
+One road protect good!
+-$i1 < 23
+Good road: <org.billthefarmer.notes.Notes: void lambda$getAssetFile$17$Notes(java.lang.String,android.content.DialogInterface,int)>[]--><org.billthefarmer.notes.Notes: void saveNote()>[[-$i1 < 23]]--><android.app.Activity: void requestPermissions(java.lang.String[],int)>
+One road protect good!
+containsStatic:false
+containsTry:false
+4call by main package
+-----------------------------------------
+#################################################
+N 5 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.billthefarmer.notes.Notes dummyMainMethod_org_billthefarmer_notes_Notes(android.content.Intent)>[]--><org.billthefarmer.notes.Notes: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:4
+crashApisInMain:4
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 6 Potential Issue API: SDKCheck of <android.provider.MediaStore.Images.Thumbnails: android.graphics.Bitmap getThumbnail(android.content.ContentResolver,long,int,android.graphics.BitmapFactory.Options)> is checking!!!
+The life time of api is [5,29]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+try
+Good road with try: <org.billthefarmer.notes.FileUtils: android.graphics.Bitmap getThumbnail(android.content.Context,java.io.File)>[]--><org.billthefarmer.notes.FileUtils: android.graphics.Bitmap getThumbnail(android.content.Context,android.net.Uri,java.lang.String)>[[try]]--><android.provider.MediaStore.Images.Thumbnails: android.graphics.Bitmap getThumbnail(android.content.ContentResolver,long,int,android.graphics.BitmapFactory.Options)>
+One road protect good!
+try
+Good road with try: <org.billthefarmer.notes.FileUtils: android.graphics.Bitmap getThumbnail(android.content.Context,android.net.Uri)>[]--><org.billthefarmer.notes.FileUtils: android.graphics.Bitmap getThumbnail(android.content.Context,android.net.Uri,java.lang.String)>[[try]]--><android.provider.MediaStore.Images.Thumbnails: android.graphics.Bitmap getThumbnail(android.content.ContentResolver,long,int,android.graphics.BitmapFactory.Options)>
+One road protect good!
+containsStatic:false
+containsTry:true
+3call by main package
+-----------------------------------------
+#################################################
+N 7 Potential Issue API: SDKCheck of <android.provider.DocumentsContract: boolean isDocumentUri(android.content.Context,android.net.Uri)> is checking!!!
+The life time of api is [19,31]
+5call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.billthefarmer.notes.Editor dummyMainMethod_org_billthefarmer_notes_Editor(android.content.Intent)>[]--><org.billthefarmer.notes.Editor: void onCreate(android.os.Bundle)>[]--><org.billthefarmer.notes.Editor: android.net.Uri resolveContent(android.net.Uri)>[]--><org.billthefarmer.notes.FileUtils: java.lang.String getPath(android.content.Context,android.net.Uri)>[]--><android.provider.DocumentsContract: boolean isDocumentUri(android.content.Context,android.net.Uri)>
+!!!this api will crash on sdk 16 17 18 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.billthefarmer.notes.Notes dummyMainMethod_org_billthefarmer_notes_Notes(android.content.Intent)>[]--><org.billthefarmer.notes.'-$$Lambda$Notes$QmOwiHpuINqGNhjQceCznDhIKPA': void onClick(android.content.DialogInterface,int)>[]--><org.billthefarmer.notes.Notes: void lambda$getNote$13$Notes(java.util.List,android.content.DialogInterface,int)>[]--><org.billthefarmer.notes.Notes: void readNote(android.net.Uri)>[]--><org.billthefarmer.notes.Notes: android.net.Uri resolveContent(android.net.Uri)>[]--><org.billthefarmer.notes.FileUtils: java.lang.String getPath(android.content.Context,android.net.Uri)>[]--><android.provider.DocumentsContract: boolean isDocumentUri(android.content.Context,android.net.Uri)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.provider.DocumentsContract: boolean isDocumentUri(android.content.Context,android.net.Uri)>has compatibility isssues！
+-----------------------------------------
+4 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 
+Error road: <org.billthefarmer.notes.FileUtils: java.io.File getFile(android.content.Context,android.net.Uri)>[]--><org.billthefarmer.notes.FileUtils: java.lang.String getPath(android.content.Context,android.net.Uri)>[]--><android.provider.DocumentsContract: boolean isDocumentUri(android.content.Context,android.net.Uri)>
+#1.the call statck between class <org.billthefarmer.notes.FileUtils: java.io.File getFile(android.content.Context,android.net.Uri)> to <android.provider.DocumentsContract: boolean isDocumentUri(android.content.Context,android.net.Uri)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 
+Error road: <org.billthefarmer.notes.Notes: void access$300(org.billthefarmer.notes.Notes,android.net.Uri)>[]--><org.billthefarmer.notes.Notes: void getNote(android.net.Uri)>[]--><org.billthefarmer.notes.Notes: void readNote(android.net.Uri)>[]--><org.billthefarmer.notes.Notes: android.net.Uri resolveContent(android.net.Uri)>[]--><org.billthefarmer.notes.FileUtils: java.lang.String getPath(android.content.Context,android.net.Uri)>[]--><android.provider.DocumentsContract: boolean isDocumentUri(android.content.Context,android.net.Uri)>
+#2.the call statck between class <org.billthefarmer.notes.Notes: void access$300(org.billthefarmer.notes.Notes,android.net.Uri)> to <android.provider.DocumentsContract: boolean isDocumentUri(android.content.Context,android.net.Uri)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 
+Error road: <org.billthefarmer.notes.FileUtils: android.graphics.Bitmap getThumbnail(android.content.Context,android.net.Uri)>[]--><org.billthefarmer.notes.FileUtils: java.lang.String getMimeType(android.content.Context,android.net.Uri)>[]--><org.billthefarmer.notes.FileUtils: java.lang.String getPath(android.content.Context,android.net.Uri)>[]--><android.provider.DocumentsContract: boolean isDocumentUri(android.content.Context,android.net.Uri)>
+#3.the call statck between class <org.billthefarmer.notes.FileUtils: android.graphics.Bitmap getThumbnail(android.content.Context,android.net.Uri)> to <android.provider.DocumentsContract: boolean isDocumentUri(android.content.Context,android.net.Uri)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 
+Error road: <org.billthefarmer.notes.Notes: void lambda$getNote$14$Notes(android.net.Uri,android.content.DialogInterface,int)>[]--><org.billthefarmer.notes.Notes: void readNote(android.net.Uri)>[]--><org.billthefarmer.notes.Notes: android.net.Uri resolveContent(android.net.Uri)>[]--><org.billthefarmer.notes.FileUtils: java.lang.String getPath(android.content.Context,android.net.Uri)>[]--><android.provider.DocumentsContract: boolean isDocumentUri(android.content.Context,android.net.Uri)>
+#4.the call statck between class <org.billthefarmer.notes.Notes: void lambda$getNote$14$Notes(android.net.Uri,android.content.DialogInterface,int)> to <android.provider.DocumentsContract: boolean isDocumentUri(android.content.Context,android.net.Uri)>has compatibility isssues！
+-----------------------------------------
+crashApis:5
+crashApisInMain:5
+containsStatic:false
+containsTry:false
+5call by main package
+-----------------------------------------
+#################################################
+N 8 Potential Issue API: SDKCheck of <android.os.BaseBundle: long getLong(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.billthefarmer.notes.Notes dummyMainMethod_org_billthefarmer_notes_Notes(android.content.Intent)>[]--><org.billthefarmer.notes.Notes: void onRestoreInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: long getLong(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: long getLong(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:6
+crashApisInMain:6
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 9 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)> is checking!!!
+The life time of api is [22,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.billthefarmer.notes.Editor dummyMainMethod_org_billthefarmer_notes_Editor(android.content.Intent)>[]--><org.billthefarmer.notes.Editor: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+!!!this api will crash on sdk 16 17 18 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.billthefarmer.notes.Notes dummyMainMethod_org_billthefarmer_notes_Notes(android.content.Intent)>[]--><org.billthefarmer.notes.Notes: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:7
+crashApisInMain:7
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 10 Potential Issue API: SDKCheck of <android.content.ContextWrapper: int checkSelfPermission(java.lang.String)> is checking!!!
+The life time of api is [23,31]
+4call roads:
+1 Mainhead roads:
+-i0 < 23
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.billthefarmer.notes.Editor dummyMainMethod_org_billthefarmer_notes_Editor(android.content.Intent)>[]--><org.billthefarmer.notes.'-$$Lambda$Editor$rXxBAaNe64fY0nXI0NNfl4bbi7I': void onClick(android.view.View)>[]--><org.billthefarmer.notes.Editor: void lambda$setListeners$1$Editor(android.view.View)>[]--><org.billthefarmer.notes.Editor: void write(java.lang.CharSequence,java.io.File)>[[-i0 < 23]]--><android.content.ContextWrapper: int checkSelfPermission(java.lang.String)>
+One road protect good!
+-i0 < 23
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.billthefarmer.notes.Notes dummyMainMethod_org_billthefarmer_notes_Notes(android.content.Intent)>[]--><org.billthefarmer.notes.Notes: void onCreate(android.os.Bundle)>[]--><org.billthefarmer.notes.Notes: void newFile()>[]--><org.billthefarmer.notes.Notes: void loadTemplate()>[[-i0 < 23]]--><android.content.ContextWrapper: int checkSelfPermission(java.lang.String)>
+One road protect good!
+3 Packageshead roads:
+-i0 < 23
+Good road: <org.billthefarmer.notes.Notes: void access$300(org.billthefarmer.notes.Notes,android.net.Uri)>[]--><org.billthefarmer.notes.Notes: void getNote(android.net.Uri)>[]--><org.billthefarmer.notes.Notes: void readNote(android.net.Uri)>[[-i0 < 23]]--><android.content.ContextWrapper: int checkSelfPermission(java.lang.String)>
+One road protect good!
+-i0 < 23
+Good road: <org.billthefarmer.notes.Notes: void lambda$getNote$14$Notes(android.net.Uri,android.content.DialogInterface,int)>[]--><org.billthefarmer.notes.Notes: void readNote(android.net.Uri)>[[-i0 < 23]]--><android.content.ContextWrapper: int checkSelfPermission(java.lang.String)>
+One road protect good!
+-$i1 < 23
+Good road: <org.billthefarmer.notes.Notes: void lambda$getNote$14$Notes(android.net.Uri,android.content.DialogInterface,int)>[]--><org.billthefarmer.notes.Notes: void saveNote()>[[-$i1 < 23]]--><android.content.ContextWrapper: int checkSelfPermission(java.lang.String)>
+One road protect good!
+-$i1 < 23
+Good road: <org.billthefarmer.notes.Notes: void lambda$getAssetFile$17$Notes(java.lang.String,android.content.DialogInterface,int)>[]--><org.billthefarmer.notes.Notes: void saveNote()>[[-$i1 < 23]]--><android.content.ContextWrapper: int checkSelfPermission(java.lang.String)>
+One road protect good!
+containsStatic:false
+containsTry:false
+4call by main package
+-----------------------------------------
+#################################################
+N 11 Potential Issue API: SDKCheck of <android.provider.DocumentsContract: java.lang.String getDocumentId(android.net.Uri)> is checking!!!
+The life time of api is [19,31]
+5call roads:
+1 Mainhead roads:
+###Multi invoking in one method, need manual check!!!--><org.billthefarmer.notes.FileUtils: java.lang.String getPath(android.content.Context,android.net.Uri)>[[try], [-$i0 < 19]]
+###Multi invoking in one method, need manual check!!!--><org.billthefarmer.notes.FileUtils: java.lang.String getPath(android.content.Context,android.net.Uri)>[[try]][[-$i0 < 19]]
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.billthefarmer.notes.Editor dummyMainMethod_org_billthefarmer_notes_Editor(android.content.Intent)>[]--><org.billthefarmer.notes.Editor: void onCreate(android.os.Bundle)>[]--><org.billthefarmer.notes.Editor: android.net.Uri resolveContent(android.net.Uri)>[]--><org.billthefarmer.notes.FileUtils: java.lang.String getPath(android.content.Context,android.net.Uri)>[[try], [-$i0 < 19]]--><android.provider.DocumentsContract: java.lang.String getDocumentId(android.net.Uri)>
+One road protect good!
+###Multi invoking in one method, need manual check!!!--><org.billthefarmer.notes.FileUtils: java.lang.String getPath(android.content.Context,android.net.Uri)>[[try], [-$i0 < 19]]
+###Multi invoking in one method, need manual check!!!--><org.billthefarmer.notes.FileUtils: java.lang.String getPath(android.content.Context,android.net.Uri)>[[try]][[-$i0 < 19]]
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.billthefarmer.notes.Notes dummyMainMethod_org_billthefarmer_notes_Notes(android.content.Intent)>[]--><org.billthefarmer.notes.'-$$Lambda$Notes$QmOwiHpuINqGNhjQceCznDhIKPA': void onClick(android.content.DialogInterface,int)>[]--><org.billthefarmer.notes.Notes: void lambda$getNote$13$Notes(java.util.List,android.content.DialogInterface,int)>[]--><org.billthefarmer.notes.Notes: void readNote(android.net.Uri)>[]--><org.billthefarmer.notes.Notes: android.net.Uri resolveContent(android.net.Uri)>[]--><org.billthefarmer.notes.FileUtils: java.lang.String getPath(android.content.Context,android.net.Uri)>[[try], [-$i0 < 19]]--><android.provider.DocumentsContract: java.lang.String getDocumentId(android.net.Uri)>
+One road protect good!
+4 Packageshead roads:
+###Multi invoking in one method, need manual check!!!--><org.billthefarmer.notes.FileUtils: java.lang.String getPath(android.content.Context,android.net.Uri)>[[try], [-$i0 < 19]]
+###Multi invoking in one method, need manual check!!!--><org.billthefarmer.notes.FileUtils: java.lang.String getPath(android.content.Context,android.net.Uri)>[[try]][[-$i0 < 19]]
+try
+Good road with try: <org.billthefarmer.notes.FileUtils: java.io.File getFile(android.content.Context,android.net.Uri)>[]--><org.billthefarmer.notes.FileUtils: java.lang.String getPath(android.content.Context,android.net.Uri)>[[try], [-$i0 < 19]]--><android.provider.DocumentsContract: java.lang.String getDocumentId(android.net.Uri)>
+One road protect good!
+###Multi invoking in one method, need manual check!!!--><org.billthefarmer.notes.FileUtils: java.lang.String getPath(android.content.Context,android.net.Uri)>[[try], [-$i0 < 19]]
+###Multi invoking in one method, need manual check!!!--><org.billthefarmer.notes.FileUtils: java.lang.String getPath(android.content.Context,android.net.Uri)>[[try]][[-$i0 < 19]]
+try
+Good road with try: <org.billthefarmer.notes.Notes: void access$300(org.billthefarmer.notes.Notes,android.net.Uri)>[]--><org.billthefarmer.notes.Notes: void getNote(android.net.Uri)>[]--><org.billthefarmer.notes.Notes: void readNote(android.net.Uri)>[]--><org.billthefarmer.notes.Notes: android.net.Uri resolveContent(android.net.Uri)>[]--><org.billthefarmer.notes.FileUtils: java.lang.String getPath(android.content.Context,android.net.Uri)>[[try], [-$i0 < 19]]--><android.provider.DocumentsContract: java.lang.String getDocumentId(android.net.Uri)>
+One road protect good!
+###Multi invoking in one method, need manual check!!!--><org.billthefarmer.notes.FileUtils: java.lang.String getPath(android.content.Context,android.net.Uri)>[[try], [-$i0 < 19]]
+###Multi invoking in one method, need manual check!!!--><org.billthefarmer.notes.FileUtils: java.lang.String getPath(android.content.Context,android.net.Uri)>[[try]][[-$i0 < 19]]
+try
+Good road with try: <org.billthefarmer.notes.FileUtils: android.graphics.Bitmap getThumbnail(android.content.Context,android.net.Uri)>[]--><org.billthefarmer.notes.FileUtils: java.lang.String getMimeType(android.content.Context,android.net.Uri)>[]--><org.billthefarmer.notes.FileUtils: java.lang.String getPath(android.content.Context,android.net.Uri)>[[try], [-$i0 < 19]]--><android.provider.DocumentsContract: java.lang.String getDocumentId(android.net.Uri)>
+One road protect good!
+###Multi invoking in one method, need manual check!!!--><org.billthefarmer.notes.FileUtils: java.lang.String getPath(android.content.Context,android.net.Uri)>[[try], [-$i0 < 19]]
+###Multi invoking in one method, need manual check!!!--><org.billthefarmer.notes.FileUtils: java.lang.String getPath(android.content.Context,android.net.Uri)>[[try]][[-$i0 < 19]]
+try
+Good road with try: <org.billthefarmer.notes.Notes: void lambda$getNote$14$Notes(android.net.Uri,android.content.DialogInterface,int)>[]--><org.billthefarmer.notes.Notes: void readNote(android.net.Uri)>[]--><org.billthefarmer.notes.Notes: android.net.Uri resolveContent(android.net.Uri)>[]--><org.billthefarmer.notes.FileUtils: java.lang.String getPath(android.content.Context,android.net.Uri)>[[try], [-$i0 < 19]]--><android.provider.DocumentsContract: java.lang.String getDocumentId(android.net.Uri)>
+One road protect good!
+containsStatic:false
+containsTry:true
+5call by main package
+-----------------------------------------
+crashApis numbers:7
+crashApis numbers in main road:7
+On Android Version 16 this app may have error api use(at least): 7 and error api roads: 14
+On Android Version 17 this app may have error api use(at least): 7 and error api roads: 14
+On Android Version 18 this app may have error api use(at least): 7 and error api roads: 14
+On Android Version 19 this app may have error api use(at least): 6 and error api roads: 8
+On Android Version 20 this app may have error api use(at least): 6 and error api roads: 8
+On Android Version 21 this app may have error api use(at least): 2 and error api roads: 4
+On Android Version 22 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 23 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 24 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 25 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 31 this app may have error api use(at least): 0 and error api roads: 0

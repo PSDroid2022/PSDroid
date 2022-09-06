@@ -1,0 +1,219 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/Suntimes_Calendars.apk
+Entry Points[com.forrestguice.suntimeswidget.calendar.SuntimesCalendarTaskService, com.forrestguice.suntimeswidget.calendar.SuntimesCalendarActivity, com.forrestguice.suntimeswidget.calendar.SuntimesCalendarProvider, com.forrestguice.suntimeswidget.calendar.SuntimesCalendarSyncService, com.forrestguice.suntimeswidget.calendar.SuntimesCalendarErrorActivity]
+FllowDroidcallgraph size:869
+Soot started on Mon Jul 11 12:41:17 CST 2022
+Soot finished on Mon Jul 11 12:41:22 CST 2022
+Soot has run for 0 min. 5 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 11
+Declared Target Sdk version is: 25
+Declared Max Sdk version is: -1
+Collected 170 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.forrestguice.suntimeswidget.calendar.AboutDialog: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#1.the call statck between class <com.forrestguice.suntimeswidget.calendar.AboutDialog: void onSaveInstanceState(android.os.Bundle)> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:1
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.content.res.Configuration: void setLocale(java.util.Locale)> is checking!!!
+The life time of api is [17,31]
+1call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.forrestguice.suntimeswidget.calendar.SuntimesCalendarActivity dummyMainMethod_com_forrestguice_suntimeswidget_calendar_SuntimesCalendarActivity(android.content.Intent)>[]--><com.forrestguice.suntimeswidget.calendar.SuntimesCalendarActivity: void attachBaseContext(android.content.Context)>[[try]]--><com.forrestguice.suntimeswidget.calendar.SuntimesCalendarActivity: android.content.Context resetLocale(android.content.Context)>[]--><com.forrestguice.suntimeswidget.calendar.SuntimesCalendarActivity: android.content.Context loadLocale(android.content.Context,java.lang.String)>[[-$i0 < 17]]--><android.content.res.Configuration: void setLocale(java.util.Locale)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:true
+1call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.os.BaseBundle: boolean getBoolean(java.lang.String)> is checking!!!
+The life time of api is [22,31]
+2call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.forrestguice.suntimeswidget.calendar.SuntimesCalendarActivity dummyMainMethod_com_forrestguice_suntimeswidget_calendar_SuntimesCalendarActivity(android.content.Intent)>[]--><com.forrestguice.suntimeswidget.calendar.SuntimesCalendarActivity: void onRestoreInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: boolean getBoolean(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 
+Error road: <com.forrestguice.suntimeswidget.calendar.AboutDialog: android.app.Dialog onCreateDialog(android.os.Bundle)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+#1.the call statck between class <com.forrestguice.suntimeswidget.calendar.AboutDialog: android.app.Dialog onCreateDialog(android.os.Bundle)> to <android.os.BaseBundle: boolean getBoolean(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:2
+crashApisInMain:1
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.text.Html: android.text.Spanned fromHtml(java.lang.String,int)> is checking!!!
+The life time of api is [24,31]
+2call roads:
+1 Mainhead roads:
+-$i0 < 24
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.forrestguice.suntimeswidget.calendar.SuntimesCalendarActivity dummyMainMethod_com_forrestguice_suntimeswidget_calendar_SuntimesCalendarActivity(android.content.Intent)>[]--><dummyMainClass: com.forrestguice.suntimeswidget.calendar.SuntimesCalendarActivity$CalendarPrefsFragment dummyMainMethod_com_forrestguice_suntimeswidget_calendar_SuntimesCalendarActivity$CalendarPrefsFragment(android.content.Intent,android.app.Activity)>[]--><com.forrestguice.suntimeswidget.calendar.SuntimesCalendarActivity$CalendarPrefsFragment: void onCreate(android.os.Bundle)>[]--><com.forrestguice.suntimeswidget.calendar.SuntimesCalendarActivity: void showPermissionDeniedMessage(android.app.Activity,android.view.View)>[]--><com.forrestguice.suntimeswidget.calendar.SuntimesCalendarActivity: android.text.Spanned fromHtml(java.lang.String)>[[-$i0 < 24]]--><android.text.Html: android.text.Spanned fromHtml(java.lang.String,int)>
+One road protect good!
+1 Packageshead roads:
+-$i0 < 17
+-$i0 < 24
+Good road: <com.forrestguice.suntimeswidget.calendar.AboutDialog: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)>[]--><com.forrestguice.suntimeswidget.calendar.AboutDialog: void initViews(android.content.Context,android.view.View)>[[-$i0 < 17]]--><com.forrestguice.suntimeswidget.calendar.AboutDialog: android.text.Spanned fromHtml(java.lang.String)>[[-$i0 < 24]]--><android.text.Html: android.text.Spanned fromHtml(java.lang.String,int)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.lang.String getString(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.forrestguice.suntimeswidget.calendar.AboutDialog: android.app.Dialog onCreateDialog(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#1.the call statck between class <com.forrestguice.suntimeswidget.calendar.AboutDialog: android.app.Dialog onCreateDialog(android.os.Bundle)> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:3
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 5 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)> is checking!!!
+The life time of api is [22,31]
+2call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.forrestguice.suntimeswidget.calendar.SuntimesCalendarActivity dummyMainMethod_com_forrestguice_suntimeswidget_calendar_SuntimesCalendarActivity(android.content.Intent)>[]--><com.forrestguice.suntimeswidget.calendar.SuntimesCalendarActivity: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 
+Error road: <com.forrestguice.suntimeswidget.calendar.AboutDialog: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+#1.the call statck between class <com.forrestguice.suntimeswidget.calendar.AboutDialog: void onSaveInstanceState(android.os.Bundle)> to <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+crashApis:4
+crashApisInMain:2
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 6 Potential Issue API: SDKCheck of <android.os.BaseBundle: int getInt(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+2call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.forrestguice.suntimeswidget.calendar.SuntimesCalendarActivity dummyMainMethod_com_forrestguice_suntimeswidget_calendar_SuntimesCalendarActivity(android.content.Intent)>[]--><dummyMainClass: com.forrestguice.suntimeswidget.calendar.SuntimesCalendarActivity$CalendarPrefsFragment dummyMainMethod_com_forrestguice_suntimeswidget_calendar_SuntimesCalendarActivity$CalendarPrefsFragment(android.content.Intent,android.app.Activity)>[]--><com.forrestguice.suntimeswidget.calendar.SuntimesCalendarActivity$CalendarPrefsFragment: void onCreate(android.os.Bundle)>[]--><com.forrestguice.suntimeswidget.calendar.SuntimesCalendarActivity$CalendarPrefsFragmentBase: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.forrestguice.suntimeswidget.calendar.AboutDialog: android.app.Dialog onCreateDialog(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#1.the call statck between class <com.forrestguice.suntimeswidget.calendar.AboutDialog: android.app.Dialog onCreateDialog(android.os.Bundle)> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:5
+crashApisInMain:3
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 7 Potential Issue API: SDKCheck of <android.widget.TextView: void setCompoundDrawablesRelativeWithIntrinsicBounds(android.graphics.drawable.Drawable,android.graphics.drawable.Drawable,android.graphics.drawable.Drawable,android.graphics.drawable.Drawable)> is checking!!!
+The life time of api is [17,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i0 < 17
+Good road: <com.forrestguice.suntimeswidget.calendar.AboutDialog: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)>[]--><com.forrestguice.suntimeswidget.calendar.AboutDialog: void initViews(android.content.Context,android.view.View)>[[-$i0 < 17]]--><android.widget.TextView: void setCompoundDrawablesRelativeWithIntrinsicBounds(android.graphics.drawable.Drawable,android.graphics.drawable.Drawable,android.graphics.drawable.Drawable,android.graphics.drawable.Drawable)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 8 Potential Issue API: SDKCheck of <android.content.Context: android.content.Context createConfigurationContext(android.content.res.Configuration)> is checking!!!
+The life time of api is [17,31]
+1call roads:
+1 Mainhead roads:
+###Multi invoking in one method, need manual check!!!--><com.forrestguice.suntimeswidget.calendar.SuntimesCalendarActivity: void attachBaseContext(android.content.Context)>[[try]]--><com.forrestguice.suntimeswidget.calendar.SuntimesCalendarActivity: android.content.Context resetLocale(android.content.Context)>[]--><com.forrestguice.suntimeswidget.calendar.SuntimesCalendarActivity: android.content.Context loadLocale(android.content.Context,java.lang.String)>[[$i0 < 17], [-$i0 < 25]]
+###Multi invoking in one method, need manual check!!!--><com.forrestguice.suntimeswidget.calendar.SuntimesCalendarActivity: void attachBaseContext(android.content.Context)>[[try]]--><com.forrestguice.suntimeswidget.calendar.SuntimesCalendarActivity: android.content.Context resetLocale(android.content.Context)>[]--><com.forrestguice.suntimeswidget.calendar.SuntimesCalendarActivity: android.content.Context loadLocale(android.content.Context,java.lang.String)>[[$i0 < 17]][[-$i0 < 25]]
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.forrestguice.suntimeswidget.calendar.SuntimesCalendarActivity dummyMainMethod_com_forrestguice_suntimeswidget_calendar_SuntimesCalendarActivity(android.content.Intent)>[]--><com.forrestguice.suntimeswidget.calendar.SuntimesCalendarActivity: void attachBaseContext(android.content.Context)>[[try]]--><com.forrestguice.suntimeswidget.calendar.SuntimesCalendarActivity: android.content.Context resetLocale(android.content.Context)>[]--><com.forrestguice.suntimeswidget.calendar.SuntimesCalendarActivity: android.content.Context loadLocale(android.content.Context,java.lang.String)>[[$i0 < 17], [-$i0 < 25]]--><android.content.Context: android.content.Context createConfigurationContext(android.content.res.Configuration)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:true
+1call by main package
+-----------------------------------------
+#################################################
+N 9 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putInt(java.lang.String,int)> is checking!!!
+The life time of api is [21,31]
+2call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.forrestguice.suntimeswidget.calendar.SuntimesCalendarActivity dummyMainMethod_com_forrestguice_suntimeswidget_calendar_SuntimesCalendarActivity(android.content.Intent)>[]--><dummyMainClass: com.forrestguice.suntimeswidget.calendar.SuntimesCalendarActivity$CalendarPrefsFragment dummyMainMethod_com_forrestguice_suntimeswidget_calendar_SuntimesCalendarActivity$CalendarPrefsFragment(android.content.Intent,android.app.Activity)>[]--><com.forrestguice.suntimeswidget.calendar.SuntimesCalendarActivity$CalendarPrefsFragmentBase: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.forrestguice.suntimeswidget.calendar.AboutDialog: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#1.the call statck between class <com.forrestguice.suntimeswidget.calendar.AboutDialog: void onSaveInstanceState(android.os.Bundle)> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:6
+crashApisInMain:4
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 10 Potential Issue API: SDKCheck of <android.os.BaseBundle: boolean containsKey(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+2call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.forrestguice.suntimeswidget.calendar.SuntimesCalendarActivity dummyMainMethod_com_forrestguice_suntimeswidget_calendar_SuntimesCalendarActivity(android.content.Intent)>[]--><dummyMainClass: com.forrestguice.suntimeswidget.calendar.SuntimesCalendarActivity$CalendarPrefsFragment dummyMainMethod_com_forrestguice_suntimeswidget_calendar_SuntimesCalendarActivity$CalendarPrefsFragment(android.content.Intent,android.app.Activity)>[]--><com.forrestguice.suntimeswidget.calendar.SuntimesCalendarActivity$CalendarPrefsFragment: void onCreate(android.os.Bundle)>[]--><com.forrestguice.suntimeswidget.calendar.SuntimesCalendarActivity$CalendarPrefsFragmentBase: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: boolean containsKey(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: boolean containsKey(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.forrestguice.suntimeswidget.calendar.AboutDialog: android.app.Dialog onCreateDialog(android.os.Bundle)>[]--><android.os.BaseBundle: boolean containsKey(java.lang.String)>
+#1.the call statck between class <com.forrestguice.suntimeswidget.calendar.AboutDialog: android.app.Dialog onCreateDialog(android.os.Bundle)> to <android.os.BaseBundle: boolean containsKey(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:7
+crashApisInMain:5
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+crashApis numbers:7
+crashApis numbers in main road:5
+On Android Version 16 this app may have error api use(at least): 7 and error api roads: 12
+On Android Version 17 this app may have error api use(at least): 7 and error api roads: 12
+On Android Version 18 this app may have error api use(at least): 7 and error api roads: 12
+On Android Version 19 this app may have error api use(at least): 7 and error api roads: 12
+On Android Version 20 this app may have error api use(at least): 7 and error api roads: 12
+On Android Version 21 this app may have error api use(at least): 2 and error api roads: 4
+On Android Version 22 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 23 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 24 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 25 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 31 this app may have error api use(at least): 0 and error api roads: 0

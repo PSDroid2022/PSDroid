@@ -1,0 +1,510 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/T-UI.apk
+Entry Points[ohi.andre.consolelauncher.tuils.stuff.PolicyReceiver, ohi.andre.consolelauncher.tuils.PublicIOReceiver, ohi.andre.consolelauncher.LauncherActivity, ohi.andre.consolelauncher.managers.music.MusicService, ohi.andre.consolelauncher.tuils.GenericFileProvider, ohi.andre.consolelauncher.managers.notifications.KeeperService, ohi.andre.consolelauncher.managers.notifications.NotificationService, ohi.andre.consolelauncher.commands.tuixt.TuixtActivity, ohi.andre.consolelauncher.managers.notifications.NotificationMonitorService]
+FllowDroidcallgraph size:10266
+Soot started on Mon Jul 11 14:15:30 CST 2022
+StaticCheck:<ohi.andre.consolelauncher.tuils.libsuperuser.Shell$SU: boolean isSELinuxEnforcing()>i0 < 17
+StaticCheck:<ohi.andre.consolelauncher.tuils.LongClickableSpan: boolean execute(android.view.View,java.lang.Object,java.lang.String)>$yysi0 < 11
+Soot finished on Mon Jul 11 14:15:59 CST 2022
+Soot has run for 0 min. 29 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 19
+Declared Target Sdk version is: 26
+Declared Max Sdk version is: -1
+Collected 560 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.hardware.camera2.CameraCharacteristics: java.lang.Object get(android.hardware.camera2.CameraCharacteristics.Key)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+try
+Good road with try: <ohi.andre.consolelauncher.managers.flashlight.Flashlight2: void turnOn()>[[try]]--><android.hardware.camera2.CameraCharacteristics: java.lang.Object get(android.hardware.camera2.CameraCharacteristics.Key)>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.app.RemoteInput: java.lang.String getResultKey()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-i1 < 20
+Good road: <ohi.andre.consolelauncher.tuils.PrivateIOReceiver: void onReceive(android.content.Context,android.content.Intent)>[[-i1 < 20]]--><android.app.RemoteInput: java.lang.String getResultKey()>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.app.RemoteInput: void addResultsToIntent(android.app.RemoteInput[],android.content.Intent,android.os.Bundle)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-i1 < 20
+Good road: <ohi.andre.consolelauncher.tuils.PrivateIOReceiver: void onReceive(android.content.Context,android.content.Intent)>[[-i1 < 20]]--><android.app.RemoteInput: void addResultsToIntent(android.app.RemoteInput[],android.content.Intent,android.os.Bundle)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.app.Notification.Action: android.app.RemoteInput[] getRemoteInputs()> is checking!!!
+The life time of api is [21,31]
+16call roads:
+1 Mainhead roads:
+15 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)>[]--><ohi.andre.consolelauncher.managers.notifications.NotificationService$1: void run()>[]--><ohi.andre.consolelauncher.managers.notifications.reply.ReplyManager: void onNotification(android.service.notification.StatusBarNotification,java.lang.CharSequence)>[]--><ohi.andre.consolelauncher.managers.notifications.reply.ReplyManager: ohi.andre.consolelauncher.managers.notifications.reply.NotificationWear extractWearNotification(android.service.notification.StatusBarNotification)>[]--><android.app.Notification.Action: android.app.RemoteInput[] getRemoteInputs()>
+#4.the call statck between class <android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)> to <android.app.Notification.Action: android.app.RemoteInput[] getRemoteInputs()>has compatibility isssues！
+-----------------------------------------
+crashApis:1
+containsStatic:false
+containsTry:true
+11call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.app.Notification.WearableExtender: void <init>(android.app.Notification)> is checking!!!
+The life time of api is [21,31]
+16call roads:
+1 Mainhead roads:
+15 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)>[]--><ohi.andre.consolelauncher.managers.notifications.NotificationService$1: void run()>[]--><ohi.andre.consolelauncher.managers.notifications.reply.ReplyManager: void onNotification(android.service.notification.StatusBarNotification,java.lang.CharSequence)>[]--><ohi.andre.consolelauncher.managers.notifications.reply.ReplyManager: ohi.andre.consolelauncher.managers.notifications.reply.NotificationWear extractWearNotification(android.service.notification.StatusBarNotification)>[]--><android.app.Notification.WearableExtender: void <init>(android.app.Notification)>
+#4.the call statck between class <android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)> to <android.app.Notification.WearableExtender: void <init>(android.app.Notification)>has compatibility isssues！
+-----------------------------------------
+crashApis:2
+containsStatic:false
+containsTry:true
+11call by main package
+-----------------------------------------
+#################################################
+N 5 Potential Issue API: SDKCheck of <android.provider.Settings.System: boolean canWrite(android.content.Context)> is checking!!!
+The life time of api is [23,31]
+16call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: ohi.andre.consolelauncher.commands.tuixt.TuixtActivity dummyMainMethod_ohi_andre_consolelauncher_commands_tuixt_TuixtActivity(android.content.Intent)>[]--><ohi.andre.consolelauncher.commands.tuixt.'-$$Lambda$TuixtActivity$0RzvveiQUIJ9rZVykD0dVbgJbho': void onClick(android.view.View)>[]--><ohi.andre.consolelauncher.commands.tuixt.TuixtActivity: void lambda$onCreate$0(ohi.andre.consolelauncher.commands.tuixt.TuixtActivity,android.view.View)>[]--><ohi.andre.consolelauncher.commands.tuixt.TuixtActivity: void onNewInput()>[[try]]--><ohi.andre.consolelauncher.commands.Command: java.lang.String exec(ohi.andre.consolelauncher.commands.ExecutePack)>[]--><ohi.andre.consolelauncher.commands.main.raw.brightness: java.lang.String exec(ohi.andre.consolelauncher.commands.ExecutePack)>[[-i0 < 23]]--><android.provider.Settings.System: boolean canWrite(android.content.Context)>
+One road protect good!
+15 Packageshead roads:
+try
+Good road with try: <android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)>[]--><ohi.andre.consolelauncher.MainManager$TuiCommandTrigger$1: void run()>[[try]]--><ohi.andre.consolelauncher.commands.Command: java.lang.String exec(ohi.andre.consolelauncher.commands.ExecutePack)>[]--><ohi.andre.consolelauncher.commands.main.raw.brightness: java.lang.String exec(ohi.andre.consolelauncher.commands.ExecutePack)>[[-i0 < 23]]--><android.provider.Settings.System: boolean canWrite(android.content.Context)>
+One road protect good!
+containsStatic:false
+containsTry:true
+16call by main package
+-----------------------------------------
+#################################################
+N 6 Potential Issue API: SDKCheck of <android.net.NetworkInfo: android.net.NetworkInfo.State getState()> is checking!!!
+The life time of api is [1,30]
+16call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: ohi.andre.consolelauncher.commands.tuixt.TuixtActivity dummyMainMethod_ohi_andre_consolelauncher_commands_tuixt_TuixtActivity(android.content.Intent)>[]--><ohi.andre.consolelauncher.commands.tuixt.'-$$Lambda$TuixtActivity$0RzvveiQUIJ9rZVykD0dVbgJbho': void onClick(android.view.View)>[]--><ohi.andre.consolelauncher.commands.tuixt.TuixtActivity: void lambda$onCreate$0(ohi.andre.consolelauncher.commands.tuixt.TuixtActivity,android.view.View)>[]--><ohi.andre.consolelauncher.commands.tuixt.TuixtActivity: void onNewInput()>[[try]]--><ohi.andre.consolelauncher.commands.Command: java.lang.String exec(ohi.andre.consolelauncher.commands.ExecutePack)>[]--><ohi.andre.consolelauncher.commands.main.raw.data: java.lang.String exec(ohi.andre.consolelauncher.commands.ExecutePack)>[]--><ohi.andre.consolelauncher.commands.main.raw.data: boolean toggle(ohi.andre.consolelauncher.commands.main.MainPack)>[]--><android.net.NetworkInfo: android.net.NetworkInfo.State getState()>
+One road protect good!
+15 Packageshead roads:
+try
+Good road with try: <android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)>[]--><ohi.andre.consolelauncher.MainManager$TuiCommandTrigger$1: void run()>[[try]]--><ohi.andre.consolelauncher.commands.Command: java.lang.String exec(ohi.andre.consolelauncher.commands.ExecutePack)>[]--><ohi.andre.consolelauncher.commands.main.raw.data: java.lang.String exec(ohi.andre.consolelauncher.commands.ExecutePack)>[]--><ohi.andre.consolelauncher.commands.main.raw.data: boolean toggle(ohi.andre.consolelauncher.commands.main.MainPack)>[]--><android.net.NetworkInfo: android.net.NetworkInfo.State getState()>
+One road protect good!
+containsStatic:false
+containsTry:true
+16call by main package
+-----------------------------------------
+#################################################
+N 7 Potential Issue API: SDKCheck of <android.net.NetworkInfo: boolean isConnected()> is checking!!!
+The life time of api is [1,30]
+16call roads:
+1 Mainhead roads:
+15 Packageshead roads:
+containsStatic:false
+containsTry:true
+16call by main package
+-----------------------------------------
+#################################################
+N 8 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager: boolean setWifiEnabled(boolean)> is checking!!!
+The life time of api is [1,30]
+16call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: ohi.andre.consolelauncher.commands.tuixt.TuixtActivity dummyMainMethod_ohi_andre_consolelauncher_commands_tuixt_TuixtActivity(android.content.Intent)>[]--><ohi.andre.consolelauncher.commands.tuixt.'-$$Lambda$TuixtActivity$0RzvveiQUIJ9rZVykD0dVbgJbho': void onClick(android.view.View)>[]--><ohi.andre.consolelauncher.commands.tuixt.TuixtActivity: void lambda$onCreate$0(ohi.andre.consolelauncher.commands.tuixt.TuixtActivity,android.view.View)>[]--><ohi.andre.consolelauncher.commands.tuixt.TuixtActivity: void onNewInput()>[[try]]--><ohi.andre.consolelauncher.commands.Command: java.lang.String exec(ohi.andre.consolelauncher.commands.ExecutePack)>[]--><ohi.andre.consolelauncher.commands.main.raw.wifi: java.lang.String exec(ohi.andre.consolelauncher.commands.ExecutePack)>[]--><android.net.wifi.WifiManager: boolean setWifiEnabled(boolean)>
+One road protect good!
+15 Packageshead roads:
+try
+Good road with try: <android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)>[]--><ohi.andre.consolelauncher.MainManager$TuiCommandTrigger$1: void run()>[[try]]--><ohi.andre.consolelauncher.commands.Command: java.lang.String exec(ohi.andre.consolelauncher.commands.ExecutePack)>[]--><ohi.andre.consolelauncher.commands.main.raw.wifi: java.lang.String exec(ohi.andre.consolelauncher.commands.ExecutePack)>[]--><android.net.wifi.WifiManager: boolean setWifiEnabled(boolean)>
+One road protect good!
+containsStatic:false
+containsTry:true
+16call by main package
+-----------------------------------------
+#################################################
+N 9 Potential Issue API: SDKCheck of <android.view.Window: void setNavigationBarColor(int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+-i0 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: ohi.andre.consolelauncher.commands.tuixt.TuixtActivity dummyMainMethod_ohi_andre_consolelauncher_commands_tuixt_TuixtActivity(android.content.Intent)>[]--><ohi.andre.consolelauncher.commands.tuixt.TuixtActivity: void onCreate(android.os.Bundle)>[[-i0 < 21]]--><android.view.Window: void setNavigationBarColor(int)>
+One road protect good!
+###Multi invoking in one method, need manual check!!!--><ohi.andre.consolelauncher.LauncherActivity: void onCreate(android.os.Bundle)>[[-$i0 != 0], [$i0 == 0]]--><ohi.andre.consolelauncher.LauncherActivity: void finishOnCreate()>[[-$i0 < 21], [$i0 < 18]]
+###Multi invoking in one method, need manual check!!!--><ohi.andre.consolelauncher.LauncherActivity: void onCreate(android.os.Bundle)>[[-$i0 != 0]][[$i0 == 0]]--><ohi.andre.consolelauncher.LauncherActivity: void finishOnCreate()>[[-$i0 < 21]][[$i0 < 18]]
+-$i0 != 0
+$i0 == 0
+-$i0 < 21
+$i0 < 18
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: ohi.andre.consolelauncher.LauncherActivity dummyMainMethod_ohi_andre_consolelauncher_LauncherActivity(android.content.Intent)>[]--><ohi.andre.consolelauncher.LauncherActivity: void onCreate(android.os.Bundle)>[[-$i0 != 0], [$i0 == 0]]--><ohi.andre.consolelauncher.LauncherActivity: void finishOnCreate()>[[-$i0 < 21], [$i0 < 18]]--><android.view.Window: void setNavigationBarColor(int)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:true
+1call by main package
+-----------------------------------------
+#################################################
+N 10 Potential Issue API: SDKCheck of <android.content.pm.LauncherApps: void startShortcut(android.content.pm.ShortcutInfo,android.graphics.Rect,android.os.Bundle)> is checking!!!
+The life time of api is [25,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 21 22 23 24 
+Error road: <ohi.andre.consolelauncher.commands.main.raw.shortcut$Param$1: java.lang.String startShortcut(android.content.pm.ShortcutInfo,android.content.Context)>[]--><android.content.pm.LauncherApps: void startShortcut(android.content.pm.ShortcutInfo,android.graphics.Rect,android.os.Bundle)>
+#1.the call statck between class <ohi.andre.consolelauncher.commands.main.raw.shortcut$Param$1: java.lang.String startShortcut(android.content.pm.ShortcutInfo,android.content.Context)> to <android.content.pm.LauncherApps: void startShortcut(android.content.pm.ShortcutInfo,android.graphics.Rect,android.os.Bundle)>has compatibility isssues！
+-----------------------------------------
+crashApis:3
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 11 Potential Issue API: SDKCheck of <android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+1 Mainhead roads:
+###Multi invoking in one method, need manual check!!!,boolean,int)>[[-$i2 < 21], [-$i2 < 26]]
+###Multi invoking in one method, need manual check!!!,boolean,int)>[[-$i2 < 21]][[-$i2 < 26]]
+-$i2 < 21
+-$i2 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: ohi.andre.consolelauncher.managers.notifications.KeeperService dummyMainMethod_ohi_andre_consolelauncher_managers_notifications_KeeperService(android.content.Intent)>[]--><ohi.andre.consolelauncher.managers.notifications.KeeperService: int onStartCommand(android.content.Intent,int,int)>[]--><ohi.andre.consolelauncher.managers.notifications.KeeperService: android.app.Notification buildNotification(android.content.Context,java.lang.String,java.lang.String,java.lang.String,java.lang.String,boolean,java.lang.CharSequence[],boolean,int)>[[-$i2 < 21], [-$i2 < 26]]--><android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 12 Potential Issue API: SDKCheck of <android.content.pm.LauncherApps.ShortcutQuery: android.content.pm.LauncherApps.ShortcutQuery setQueryFlags(int)> is checking!!!
+The life time of api is [25,31]
+16call roads:
+1 Mainhead roads:
+15 Packageshead roads:
+###Multi invoking in one method, need manual check!!!--><ohi.andre.consolelauncher.managers.AppsManager: java.util.List createAppMap(android.content.pm.PackageManager)>[[try], [-i0 < 25]]
+###Multi invoking in one method, need manual check!!!--><ohi.andre.consolelauncher.managers.AppsManager: java.util.List createAppMap(android.content.pm.PackageManager)>[[try]][[-i0 < 25]]
+try
+Good road with try: <android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)>[]--><ohi.andre.consolelauncher.managers.AppsManager$2: void run()>[]--><ohi.andre.consolelauncher.managers.AppsManager: void fill()>[]--><ohi.andre.consolelauncher.managers.AppsManager: java.util.List createAppMap(android.content.pm.PackageManager)>[[try], [-i0 < 25]]--><android.content.pm.LauncherApps.ShortcutQuery: android.content.pm.LauncherApps.ShortcutQuery setQueryFlags(int)>
+One road protect good!
+containsStatic:false
+containsTry:true
+16call by main package
+-----------------------------------------
+#################################################
+N 13 Potential Issue API: SDKCheck of <android.content.pm.LauncherApps.ShortcutQuery: void <init>()> is checking!!!
+The life time of api is [25,31]
+16call roads:
+1 Mainhead roads:
+15 Packageshead roads:
+###Multi invoking in one method, need manual check!!!--><ohi.andre.consolelauncher.managers.AppsManager: java.util.List createAppMap(android.content.pm.PackageManager)>[[try], [-i0 < 25]]
+###Multi invoking in one method, need manual check!!!--><ohi.andre.consolelauncher.managers.AppsManager: java.util.List createAppMap(android.content.pm.PackageManager)>[[try]][[-i0 < 25]]
+try
+Good road with try: <android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)>[]--><ohi.andre.consolelauncher.managers.AppsManager$2: void run()>[]--><ohi.andre.consolelauncher.managers.AppsManager: void fill()>[]--><ohi.andre.consolelauncher.managers.AppsManager: java.util.List createAppMap(android.content.pm.PackageManager)>[[try], [-i0 < 25]]--><android.content.pm.LauncherApps.ShortcutQuery: void <init>()>
+One road protect good!
+containsStatic:false
+containsTry:true
+16call by main package
+-----------------------------------------
+#################################################
+N 14 Potential Issue API: SDKCheck of <android.os.BaseBundle: boolean getBoolean(java.lang.String)> is checking!!!
+The life time of api is [22,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: ohi.andre.consolelauncher.tuils.PublicIOReceiver dummyMainMethod_ohi_andre_consolelauncher_tuils_PublicIOReceiver(android.content.Intent)>[]--><ohi.andre.consolelauncher.tuils.PublicIOReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: boolean getBoolean(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:4
+crashApisInMain:1
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 15 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.lang.String getString(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+2call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: ohi.andre.consolelauncher.tuils.PublicIOReceiver dummyMainMethod_ohi_andre_consolelauncher_tuils_PublicIOReceiver(android.content.Intent)>[]--><ohi.andre.consolelauncher.tuils.PublicIOReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <ohi.andre.consolelauncher.tuils.PrivateIOReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#1.the call statck between class <ohi.andre.consolelauncher.tuils.PrivateIOReceiver: void onReceive(android.content.Context,android.content.Intent)> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:5
+crashApisInMain:2
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 16 Potential Issue API: SDKCheck of <android.app.NotificationManager: boolean isNotificationPolicyAccessGranted()> is checking!!!
+The life time of api is [23,31]
+16call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: ohi.andre.consolelauncher.commands.tuixt.TuixtActivity dummyMainMethod_ohi_andre_consolelauncher_commands_tuixt_TuixtActivity(android.content.Intent)>[]--><ohi.andre.consolelauncher.commands.tuixt.'-$$Lambda$TuixtActivity$0RzvveiQUIJ9rZVykD0dVbgJbho': void onClick(android.view.View)>[]--><ohi.andre.consolelauncher.commands.tuixt.TuixtActivity: void lambda$onCreate$0(ohi.andre.consolelauncher.commands.tuixt.TuixtActivity,android.view.View)>[]--><ohi.andre.consolelauncher.commands.tuixt.TuixtActivity: void onNewInput()>[[try]]--><ohi.andre.consolelauncher.commands.Command: java.lang.String exec(ohi.andre.consolelauncher.commands.ExecutePack)>[]--><ohi.andre.consolelauncher.commands.main.specific.ParamCommand: java.lang.String exec(ohi.andre.consolelauncher.commands.ExecutePack)>[]--><ohi.andre.consolelauncher.commands.main.raw.volume$Param$2: java.lang.String exec(ohi.andre.consolelauncher.commands.ExecutePack)>[[-i0 < 24]]--><android.app.NotificationManager: boolean isNotificationPolicyAccessGranted()>
+One road protect good!
+15 Packageshead roads:
+try
+Good road with try: <android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)>[]--><ohi.andre.consolelauncher.MainManager$TuiCommandTrigger$1: void run()>[[try]]--><ohi.andre.consolelauncher.commands.Command: java.lang.String exec(ohi.andre.consolelauncher.commands.ExecutePack)>[]--><ohi.andre.consolelauncher.commands.main.specific.ParamCommand: java.lang.String exec(ohi.andre.consolelauncher.commands.ExecutePack)>[]--><ohi.andre.consolelauncher.commands.main.raw.volume$Param$2: java.lang.String exec(ohi.andre.consolelauncher.commands.ExecutePack)>[[-i0 < 24]]--><android.app.NotificationManager: boolean isNotificationPolicyAccessGranted()>
+One road protect good!
+containsStatic:false
+containsTry:true
+16call by main package
+-----------------------------------------
+#################################################
+N 17 Potential Issue API: SDKCheck of <android.content.pm.ShortcutInfo: java.lang.String getId()> is checking!!!
+The life time of api is [25,31]
+17call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: ohi.andre.consolelauncher.commands.tuixt.TuixtActivity dummyMainMethod_ohi_andre_consolelauncher_commands_tuixt_TuixtActivity(android.content.Intent)>[]--><ohi.andre.consolelauncher.commands.tuixt.'-$$Lambda$TuixtActivity$0RzvveiQUIJ9rZVykD0dVbgJbho': void onClick(android.view.View)>[]--><ohi.andre.consolelauncher.commands.tuixt.TuixtActivity: void lambda$onCreate$0(ohi.andre.consolelauncher.commands.tuixt.TuixtActivity,android.view.View)>[]--><ohi.andre.consolelauncher.commands.tuixt.TuixtActivity: void onNewInput()>[[try]]--><ohi.andre.consolelauncher.commands.Command: java.lang.String exec(ohi.andre.consolelauncher.commands.ExecutePack)>[]--><ohi.andre.consolelauncher.commands.main.specific.ParamCommand: java.lang.String exec(ohi.andre.consolelauncher.commands.ExecutePack)>[]--><ohi.andre.consolelauncher.commands.main.raw.shortcut$Param$1: java.lang.String exec(ohi.andre.consolelauncher.commands.ExecutePack)>[]--><android.content.pm.ShortcutInfo: java.lang.String getId()>
+One road protect good!
+16 Packageshead roads:
+try
+Good road with try: <android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)>[]--><ohi.andre.consolelauncher.MainManager$TuiCommandTrigger$1: void run()>[[try]]--><ohi.andre.consolelauncher.commands.Command: java.lang.String exec(ohi.andre.consolelauncher.commands.ExecutePack)>[]--><ohi.andre.consolelauncher.commands.main.specific.ParamCommand: java.lang.String exec(ohi.andre.consolelauncher.commands.ExecutePack)>[]--><ohi.andre.consolelauncher.commands.main.raw.shortcut$Param$1: java.lang.String exec(ohi.andre.consolelauncher.commands.ExecutePack)>[]--><android.content.pm.ShortcutInfo: java.lang.String getId()>
+One road protect good!
+!!!this api will crash on sdk 19 20 21 22 23 24 
+Error road: <ohi.andre.consolelauncher.commands.main.raw.shortcut$Param: void append(java.lang.StringBuilder,java.util.List,java.lang.String)>[]--><android.content.pm.ShortcutInfo: java.lang.String getId()>
+#7.the call statck between class <ohi.andre.consolelauncher.commands.main.raw.shortcut$Param: void append(java.lang.StringBuilder,java.util.List,java.lang.String)> to <android.content.pm.ShortcutInfo: java.lang.String getId()>has compatibility isssues！
+-----------------------------------------
+crashApis:6
+containsStatic:false
+containsTry:true
+11call by main package
+-----------------------------------------
+#################################################
+N 18 Potential Issue API: SDKCheck of <android.os.BaseBundle: int size()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <ohi.andre.consolelauncher.tuils.PrivateIOReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><android.os.BaseBundle: int size()>
+#1.the call statck between class <ohi.andre.consolelauncher.tuils.PrivateIOReceiver: void onReceive(android.content.Context,android.content.Intent)> to <android.os.BaseBundle: int size()>has compatibility isssues！
+-----------------------------------------
+crashApis:7
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 19 Potential Issue API: SDKCheck of <android.app.Notification.WearableExtender: java.util.List getActions()> is checking!!!
+The life time of api is [21,31]
+16call roads:
+1 Mainhead roads:
+15 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)>[]--><ohi.andre.consolelauncher.managers.notifications.NotificationService$1: void run()>[]--><ohi.andre.consolelauncher.managers.notifications.reply.ReplyManager: void onNotification(android.service.notification.StatusBarNotification,java.lang.CharSequence)>[]--><ohi.andre.consolelauncher.managers.notifications.reply.ReplyManager: ohi.andre.consolelauncher.managers.notifications.reply.NotificationWear extractWearNotification(android.service.notification.StatusBarNotification)>[]--><android.app.Notification.WearableExtender: java.util.List getActions()>
+#4.the call statck between class <android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)> to <android.app.Notification.WearableExtender: java.util.List getActions()>has compatibility isssues！
+-----------------------------------------
+crashApis:8
+containsStatic:false
+containsTry:true
+11call by main package
+-----------------------------------------
+#################################################
+N 20 Potential Issue API: SDKCheck of <android.content.pm.ShortcutInfo: java.lang.CharSequence getShortLabel()> is checking!!!
+The life time of api is [25,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 21 22 23 24 
+Error road: <ohi.andre.consolelauncher.commands.main.raw.shortcut$Param: void append(java.lang.StringBuilder,java.util.List,java.lang.String)>[]--><android.content.pm.ShortcutInfo: java.lang.CharSequence getShortLabel()>
+#1.the call statck between class <ohi.andre.consolelauncher.commands.main.raw.shortcut$Param: void append(java.lang.StringBuilder,java.util.List,java.lang.String)> to <android.content.pm.ShortcutInfo: java.lang.CharSequence getShortLabel()>has compatibility isssues！
+-----------------------------------------
+crashApis:9
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 21 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager: boolean isWifiEnabled()> is checking!!!
+The life time of api is [1,30]
+16call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: ohi.andre.consolelauncher.commands.tuixt.TuixtActivity dummyMainMethod_ohi_andre_consolelauncher_commands_tuixt_TuixtActivity(android.content.Intent)>[]--><ohi.andre.consolelauncher.commands.tuixt.'-$$Lambda$TuixtActivity$0RzvveiQUIJ9rZVykD0dVbgJbho': void onClick(android.view.View)>[]--><ohi.andre.consolelauncher.commands.tuixt.TuixtActivity: void lambda$onCreate$0(ohi.andre.consolelauncher.commands.tuixt.TuixtActivity,android.view.View)>[]--><ohi.andre.consolelauncher.commands.tuixt.TuixtActivity: void onNewInput()>[[try]]--><ohi.andre.consolelauncher.commands.Command: java.lang.String exec(ohi.andre.consolelauncher.commands.ExecutePack)>[]--><ohi.andre.consolelauncher.commands.main.raw.data: java.lang.String exec(ohi.andre.consolelauncher.commands.ExecutePack)>[]--><ohi.andre.consolelauncher.commands.main.raw.data: boolean toggle(ohi.andre.consolelauncher.commands.main.MainPack)>[]--><android.net.wifi.WifiManager: boolean isWifiEnabled()>
+One road protect good!
+15 Packageshead roads:
+try
+Good road with try: <android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)>[]--><ohi.andre.consolelauncher.MainManager$TuiCommandTrigger$1: void run()>[[try]]--><ohi.andre.consolelauncher.commands.Command: java.lang.String exec(ohi.andre.consolelauncher.commands.ExecutePack)>[]--><ohi.andre.consolelauncher.commands.main.raw.data: java.lang.String exec(ohi.andre.consolelauncher.commands.ExecutePack)>[]--><ohi.andre.consolelauncher.commands.main.raw.data: boolean toggle(ohi.andre.consolelauncher.commands.main.MainPack)>[]--><android.net.wifi.WifiManager: boolean isWifiEnabled()>
+One road protect good!
+containsStatic:false
+containsTry:true
+16call by main package
+-----------------------------------------
+#################################################
+N 22 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager: android.net.wifi.WifiInfo getConnectionInfo()> is checking!!!
+The life time of api is [1,30]
+16call roads:
+1 Mainhead roads:
+15 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)>[]--><ohi.andre.consolelauncher.UIManager$NetworkRunnable: void run()>[]--><android.net.wifi.WifiManager: android.net.wifi.WifiInfo getConnectionInfo()>
+#4.the call statck between class <android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)> to <android.net.wifi.WifiManager: android.net.wifi.WifiInfo getConnectionInfo()>has compatibility isssues！
+-----------------------------------------
+crashApis:10
+containsStatic:false
+containsTry:true
+11call by main package
+-----------------------------------------
+#################################################
+N 23 Potential Issue API: SDKCheck of <android.net.ConnectivityManager: android.net.NetworkInfo getNetworkInfo(int)> is checking!!!
+The life time of api is [1,30]
+16call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: ohi.andre.consolelauncher.commands.tuixt.TuixtActivity dummyMainMethod_ohi_andre_consolelauncher_commands_tuixt_TuixtActivity(android.content.Intent)>[]--><ohi.andre.consolelauncher.commands.tuixt.'-$$Lambda$TuixtActivity$0RzvveiQUIJ9rZVykD0dVbgJbho': void onClick(android.view.View)>[]--><ohi.andre.consolelauncher.commands.tuixt.TuixtActivity: void lambda$onCreate$0(ohi.andre.consolelauncher.commands.tuixt.TuixtActivity,android.view.View)>[]--><ohi.andre.consolelauncher.commands.tuixt.TuixtActivity: void onNewInput()>[[try]]--><ohi.andre.consolelauncher.commands.Command: java.lang.String exec(ohi.andre.consolelauncher.commands.ExecutePack)>[]--><ohi.andre.consolelauncher.commands.main.raw.data: java.lang.String exec(ohi.andre.consolelauncher.commands.ExecutePack)>[]--><ohi.andre.consolelauncher.commands.main.raw.data: boolean toggle(ohi.andre.consolelauncher.commands.main.MainPack)>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getNetworkInfo(int)>
+One road protect good!
+15 Packageshead roads:
+try
+Good road with try: <android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)>[]--><ohi.andre.consolelauncher.MainManager$TuiCommandTrigger$1: void run()>[[try]]--><ohi.andre.consolelauncher.commands.Command: java.lang.String exec(ohi.andre.consolelauncher.commands.ExecutePack)>[]--><ohi.andre.consolelauncher.commands.main.raw.data: java.lang.String exec(ohi.andre.consolelauncher.commands.ExecutePack)>[]--><ohi.andre.consolelauncher.commands.main.raw.data: boolean toggle(ohi.andre.consolelauncher.commands.main.MainPack)>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getNetworkInfo(int)>
+One road protect good!
+!!!this api will crash on sdk 31 
+Error road: <android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)>[]--><ohi.andre.consolelauncher.UIManager$NetworkRunnable: void run()>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getNetworkInfo(int)>
+#4.the call statck between class <android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)> to <android.net.ConnectivityManager: android.net.NetworkInfo getNetworkInfo(int)>has compatibility isssues！
+-----------------------------------------
+crashApis:11
+containsStatic:false
+containsTry:true
+11call by main package
+-----------------------------------------
+#################################################
+N 24 Potential Issue API: SDKCheck of <android.view.Window: void setStatusBarColor(int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+-i0 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: ohi.andre.consolelauncher.commands.tuixt.TuixtActivity dummyMainMethod_ohi_andre_consolelauncher_commands_tuixt_TuixtActivity(android.content.Intent)>[]--><ohi.andre.consolelauncher.commands.tuixt.TuixtActivity: void onCreate(android.os.Bundle)>[[-i0 < 21]]--><android.view.Window: void setStatusBarColor(int)>
+One road protect good!
+###Multi invoking in one method, need manual check!!!--><ohi.andre.consolelauncher.LauncherActivity: void onCreate(android.os.Bundle)>[[-$i0 != 0], [$i0 == 0]]--><ohi.andre.consolelauncher.LauncherActivity: void finishOnCreate()>[[-$i0 < 21], [$i0 < 18]]
+###Multi invoking in one method, need manual check!!!--><ohi.andre.consolelauncher.LauncherActivity: void onCreate(android.os.Bundle)>[[-$i0 != 0]][[$i0 == 0]]--><ohi.andre.consolelauncher.LauncherActivity: void finishOnCreate()>[[-$i0 < 21]][[$i0 < 18]]
+-$i0 != 0
+$i0 == 0
+-$i0 < 21
+$i0 < 18
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: ohi.andre.consolelauncher.LauncherActivity dummyMainMethod_ohi_andre_consolelauncher_LauncherActivity(android.content.Intent)>[]--><ohi.andre.consolelauncher.LauncherActivity: void onCreate(android.os.Bundle)>[[-$i0 != 0], [$i0 == 0]]--><ohi.andre.consolelauncher.LauncherActivity: void finishOnCreate()>[[-$i0 < 21], [$i0 < 18]]--><android.view.Window: void setStatusBarColor(int)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:true
+1call by main package
+-----------------------------------------
+#################################################
+N 25 Potential Issue API: SDKCheck of <android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+1 Mainhead roads:
+###Multi invoking in one method, need manual check!!!,boolean,int)>[[-$i2 < 21], [-$i2 < 26]]
+###Multi invoking in one method, need manual check!!!,boolean,int)>[[-$i2 < 21]][[-$i2 < 26]]
+-$i2 < 21
+-$i2 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: ohi.andre.consolelauncher.managers.notifications.KeeperService dummyMainMethod_ohi_andre_consolelauncher_managers_notifications_KeeperService(android.content.Intent)>[]--><ohi.andre.consolelauncher.managers.notifications.KeeperService: int onStartCommand(android.content.Intent,int,int)>[]--><ohi.andre.consolelauncher.managers.notifications.KeeperService: android.app.Notification buildNotification(android.content.Context,java.lang.String,java.lang.String,java.lang.String,java.lang.String,boolean,java.lang.CharSequence[],boolean,int)>[[-$i2 < 21], [-$i2 < 26]]--><android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 26 Potential Issue API: SDKCheck of <android.content.pm.LauncherApps: java.util.List getShortcuts(android.content.pm.LauncherApps.ShortcutQuery,android.os.UserHandle)> is checking!!!
+The life time of api is [25,31]
+16call roads:
+1 Mainhead roads:
+15 Packageshead roads:
+###Multi invoking in one method, need manual check!!!--><ohi.andre.consolelauncher.managers.AppsManager: java.util.List createAppMap(android.content.pm.PackageManager)>[[try], [-i0 < 25]]
+###Multi invoking in one method, need manual check!!!--><ohi.andre.consolelauncher.managers.AppsManager: java.util.List createAppMap(android.content.pm.PackageManager)>[[try]][[-i0 < 25]]
+try
+Good road with try: <android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)>[]--><ohi.andre.consolelauncher.managers.AppsManager$2: void run()>[]--><ohi.andre.consolelauncher.managers.AppsManager: void fill()>[]--><ohi.andre.consolelauncher.managers.AppsManager: java.util.List createAppMap(android.content.pm.PackageManager)>[[try], [-i0 < 25]]--><android.content.pm.LauncherApps: java.util.List getShortcuts(android.content.pm.LauncherApps.ShortcutQuery,android.os.UserHandle)>
+One road protect good!
+containsStatic:false
+containsTry:true
+16call by main package
+-----------------------------------------
+#################################################
+N 27 Potential Issue API: SDKCheck of <android.hardware.camera2.CameraManager: void setTorchMode(java.lang.String,boolean)> is checking!!!
+The life time of api is [23,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+try
+Good road with try: <ohi.andre.consolelauncher.managers.flashlight.Flashlight2: void turnOn()>[[try]]--><android.hardware.camera2.CameraManager: void setTorchMode(java.lang.String,boolean)>
+One road protect good!
+try
+Good road with try: <ohi.andre.consolelauncher.managers.flashlight.Flashlight2: void turnOff()>[[try]]--><android.hardware.camera2.CameraManager: void setTorchMode(java.lang.String,boolean)>
+One road protect good!
+containsStatic:false
+containsTry:true
+3call by main package
+-----------------------------------------
+#################################################
+N 28 Potential Issue API: SDKCheck of <android.content.pm.LauncherApps.ShortcutQuery: android.content.pm.LauncherApps.ShortcutQuery setPackage(java.lang.String)> is checking!!!
+The life time of api is [25,31]
+16call roads:
+1 Mainhead roads:
+15 Packageshead roads:
+###Multi invoking in one method, need manual check!!!--><ohi.andre.consolelauncher.managers.AppsManager: java.util.List createAppMap(android.content.pm.PackageManager)>[[try], [-i0 < 25]]
+###Multi invoking in one method, need manual check!!!--><ohi.andre.consolelauncher.managers.AppsManager: java.util.List createAppMap(android.content.pm.PackageManager)>[[try]][[-i0 < 25]]
+try
+Good road with try: <android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)>[]--><ohi.andre.consolelauncher.managers.AppsManager$2: void run()>[]--><ohi.andre.consolelauncher.managers.AppsManager: void fill()>[]--><ohi.andre.consolelauncher.managers.AppsManager: java.util.List createAppMap(android.content.pm.PackageManager)>[[try], [-i0 < 25]]--><android.content.pm.LauncherApps.ShortcutQuery: android.content.pm.LauncherApps.ShortcutQuery setPackage(java.lang.String)>
+One road protect good!
+containsStatic:false
+containsTry:true
+16call by main package
+-----------------------------------------
+#################################################
+N 29 Potential Issue API: SDKCheck of <android.net.wifi.WifiInfo: java.lang.String getSSID()> is checking!!!
+The life time of api is [1,30]
+16call roads:
+1 Mainhead roads:
+15 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)>[]--><ohi.andre.consolelauncher.UIManager$NetworkRunnable: void run()>[]--><android.net.wifi.WifiInfo: java.lang.String getSSID()>
+#4.the call statck between class <android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)> to <android.net.wifi.WifiInfo: java.lang.String getSSID()>has compatibility isssues！
+-----------------------------------------
+crashApis:12
+containsStatic:false
+containsTry:true
+11call by main package
+-----------------------------------------
+crashApis numbers:12
+crashApis numbers in main road:2
+On Android Version 16 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 17 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 18 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 19 this app may have error api use(at least): 9 and error api roads: 10
+On Android Version 20 this app may have error api use(at least): 9 and error api roads: 10
+On Android Version 21 this app may have error api use(at least): 4 and error api roads: 4
+On Android Version 22 this app may have error api use(at least): 3 and error api roads: 3
+On Android Version 23 this app may have error api use(at least): 3 and error api roads: 3
+On Android Version 24 this app may have error api use(at least): 3 and error api roads: 3
+On Android Version 25 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 31 this app may have error api use(at least): 3 and error api roads: 3

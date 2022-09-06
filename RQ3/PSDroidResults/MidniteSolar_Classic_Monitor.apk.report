@@ -1,0 +1,333 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/MidniteSolar_Classic_Monitor.apk
+Entry Points[ca.farrelltonsolar.classic.MonitorApplication, ca.farrelltonsolar.classic.Settings, ca.farrelltonsolar.classic.ModbusService, ca.farrelltonsolar.classic.MonitorActivity, ca.farrelltonsolar.classic.PVOutputService, ca.farrelltonsolar.classic.UDPListener]
+FllowDroidcallgraph size:3249
+Soot started on Mon Jul 11 07:03:00 CST 2022
+Soot finished on Mon Jul 11 07:03:13 CST 2022
+Soot has run for 0 min. 12 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 19
+Declared Target Sdk version is: 21
+Declared Max Sdk version is: -1
+Collected 449 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.text.StaticLayout: void <init>(java.lang.CharSequence,android.text.TextPaint,int,android.text.Layout.Alignment,float,float,boolean)> is checking!!!
+The life time of api is [1,30]
+16call roads:
+0 Mainhead roads:
+16 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <me.grantland.widget.AutofitTextView: void setMaxLines(int)>[]--><me.grantland.widget.AutofitHelper: me.grantland.widget.AutofitHelper setMaxLines(int)>[]--><me.grantland.widget.AutofitHelper: void autofit()>[]--><me.grantland.widget.AutofitHelper: void autofit(android.widget.TextView,android.text.TextPaint,float,float,int,float)>[]--><me.grantland.widget.AutofitHelper: int getLineCount(java.lang.CharSequence,android.text.TextPaint,float,float,android.util.DisplayMetrics)>[]--><android.text.StaticLayout: void <init>(java.lang.CharSequence,android.text.TextPaint,int,android.text.Layout.Alignment,float,float,boolean)>
+#1.the call statck between class <me.grantland.widget.AutofitTextView: void setMaxLines(int)> to <android.text.StaticLayout: void <init>(java.lang.CharSequence,android.text.TextPaint,int,android.text.Layout.Alignment,float,float,boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <me.grantland.widget.AutofitTextView: void <init>(android.content.Context,android.util.AttributeSet)>[]--><me.grantland.widget.AutofitTextView: void init(android.content.Context,android.util.AttributeSet,int)>[]--><me.grantland.widget.AutofitHelper: me.grantland.widget.AutofitHelper create(android.widget.TextView,android.util.AttributeSet,int)>[]--><me.grantland.widget.AutofitHelper: me.grantland.widget.AutofitHelper setMinTextSize(int,float)>[]--><me.grantland.widget.AutofitHelper: void setRawMinTextSize(float)>[]--><me.grantland.widget.AutofitHelper: void autofit()>[]--><me.grantland.widget.AutofitHelper: void autofit(android.widget.TextView,android.text.TextPaint,float,float,int,float)>[]--><me.grantland.widget.AutofitHelper: int getLineCount(java.lang.CharSequence,android.text.TextPaint,float,float,android.util.DisplayMetrics)>[]--><android.text.StaticLayout: void <init>(java.lang.CharSequence,android.text.TextPaint,int,android.text.Layout.Alignment,float,float,boolean)>
+#2.the call statck between class <me.grantland.widget.AutofitTextView: void <init>(android.content.Context,android.util.AttributeSet)> to <android.text.StaticLayout: void <init>(java.lang.CharSequence,android.text.TextPaint,int,android.text.Layout.Alignment,float,float,boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <me.grantland.widget.AutofitTextView: void setMaxTextSize(float)>[]--><me.grantland.widget.AutofitHelper: me.grantland.widget.AutofitHelper setMaxTextSize(float)>[]--><me.grantland.widget.AutofitHelper: me.grantland.widget.AutofitHelper setMaxTextSize(int,float)>[]--><me.grantland.widget.AutofitHelper: void setRawMaxTextSize(float)>[]--><me.grantland.widget.AutofitHelper: void autofit()>[]--><me.grantland.widget.AutofitHelper: void autofit(android.widget.TextView,android.text.TextPaint,float,float,int,float)>[]--><me.grantland.widget.AutofitHelper: int getLineCount(java.lang.CharSequence,android.text.TextPaint,float,float,android.util.DisplayMetrics)>[]--><android.text.StaticLayout: void <init>(java.lang.CharSequence,android.text.TextPaint,int,android.text.Layout.Alignment,float,float,boolean)>
+#3.the call statck between class <me.grantland.widget.AutofitTextView: void setMaxTextSize(float)> to <android.text.StaticLayout: void <init>(java.lang.CharSequence,android.text.TextPaint,int,android.text.Layout.Alignment,float,float,boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <me.grantland.widget.AutofitHelper: me.grantland.widget.AutofitHelper setMinTextSize(float)>[]--><me.grantland.widget.AutofitHelper: me.grantland.widget.AutofitHelper setMinTextSize(int,float)>[]--><me.grantland.widget.AutofitHelper: void setRawMinTextSize(float)>[]--><me.grantland.widget.AutofitHelper: void autofit()>[]--><me.grantland.widget.AutofitHelper: void autofit(android.widget.TextView,android.text.TextPaint,float,float,int,float)>[]--><me.grantland.widget.AutofitHelper: int getLineCount(java.lang.CharSequence,android.text.TextPaint,float,float,android.util.DisplayMetrics)>[]--><android.text.StaticLayout: void <init>(java.lang.CharSequence,android.text.TextPaint,int,android.text.Layout.Alignment,float,float,boolean)>
+#4.the call statck between class <me.grantland.widget.AutofitHelper: me.grantland.widget.AutofitHelper setMinTextSize(float)> to <android.text.StaticLayout: void <init>(java.lang.CharSequence,android.text.TextPaint,int,android.text.Layout.Alignment,float,float,boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <me.grantland.widget.AutofitTextView: void <init>(android.content.Context,android.util.AttributeSet,int)>[]--><me.grantland.widget.AutofitTextView: void init(android.content.Context,android.util.AttributeSet,int)>[]--><me.grantland.widget.AutofitHelper: me.grantland.widget.AutofitHelper create(android.widget.TextView,android.util.AttributeSet,int)>[]--><me.grantland.widget.AutofitHelper: me.grantland.widget.AutofitHelper setMinTextSize(int,float)>[]--><me.grantland.widget.AutofitHelper: void setRawMinTextSize(float)>[]--><me.grantland.widget.AutofitHelper: void autofit()>[]--><me.grantland.widget.AutofitHelper: void autofit(android.widget.TextView,android.text.TextPaint,float,float,int,float)>[]--><me.grantland.widget.AutofitHelper: int getLineCount(java.lang.CharSequence,android.text.TextPaint,float,float,android.util.DisplayMetrics)>[]--><android.text.StaticLayout: void <init>(java.lang.CharSequence,android.text.TextPaint,int,android.text.Layout.Alignment,float,float,boolean)>
+#5.the call statck between class <me.grantland.widget.AutofitTextView: void <init>(android.content.Context,android.util.AttributeSet,int)> to <android.text.StaticLayout: void <init>(java.lang.CharSequence,android.text.TextPaint,int,android.text.Layout.Alignment,float,float,boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <me.grantland.widget.AutofitTextView: void <init>(android.content.Context)>[]--><me.grantland.widget.AutofitTextView: void init(android.content.Context,android.util.AttributeSet,int)>[]--><me.grantland.widget.AutofitHelper: me.grantland.widget.AutofitHelper create(android.widget.TextView,android.util.AttributeSet,int)>[]--><me.grantland.widget.AutofitHelper: me.grantland.widget.AutofitHelper setMinTextSize(int,float)>[]--><me.grantland.widget.AutofitHelper: void setRawMinTextSize(float)>[]--><me.grantland.widget.AutofitHelper: void autofit()>[]--><me.grantland.widget.AutofitHelper: void autofit(android.widget.TextView,android.text.TextPaint,float,float,int,float)>[]--><me.grantland.widget.AutofitHelper: int getLineCount(java.lang.CharSequence,android.text.TextPaint,float,float,android.util.DisplayMetrics)>[]--><android.text.StaticLayout: void <init>(java.lang.CharSequence,android.text.TextPaint,int,android.text.Layout.Alignment,float,float,boolean)>
+#6.the call statck between class <me.grantland.widget.AutofitTextView: void <init>(android.content.Context)> to <android.text.StaticLayout: void <init>(java.lang.CharSequence,android.text.TextPaint,int,android.text.Layout.Alignment,float,float,boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <me.grantland.widget.AutofitTextView: void setLines(int)>[]--><me.grantland.widget.AutofitHelper: me.grantland.widget.AutofitHelper setMaxLines(int)>[]--><me.grantland.widget.AutofitHelper: void autofit()>[]--><me.grantland.widget.AutofitHelper: void autofit(android.widget.TextView,android.text.TextPaint,float,float,int,float)>[]--><me.grantland.widget.AutofitHelper: int getLineCount(java.lang.CharSequence,android.text.TextPaint,float,float,android.util.DisplayMetrics)>[]--><android.text.StaticLayout: void <init>(java.lang.CharSequence,android.text.TextPaint,int,android.text.Layout.Alignment,float,float,boolean)>
+#7.the call statck between class <me.grantland.widget.AutofitTextView: void setLines(int)> to <android.text.StaticLayout: void <init>(java.lang.CharSequence,android.text.TextPaint,int,android.text.Layout.Alignment,float,float,boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <me.grantland.widget.AutofitTextView: void setMaxTextSize(int,float)>[]--><me.grantland.widget.AutofitHelper: me.grantland.widget.AutofitHelper setMaxTextSize(int,float)>[]--><me.grantland.widget.AutofitHelper: void setRawMaxTextSize(float)>[]--><me.grantland.widget.AutofitHelper: void autofit()>[]--><me.grantland.widget.AutofitHelper: void autofit(android.widget.TextView,android.text.TextPaint,float,float,int,float)>[]--><me.grantland.widget.AutofitHelper: int getLineCount(java.lang.CharSequence,android.text.TextPaint,float,float,android.util.DisplayMetrics)>[]--><android.text.StaticLayout: void <init>(java.lang.CharSequence,android.text.TextPaint,int,android.text.Layout.Alignment,float,float,boolean)>
+#8.the call statck between class <me.grantland.widget.AutofitTextView: void setMaxTextSize(int,float)> to <android.text.StaticLayout: void <init>(java.lang.CharSequence,android.text.TextPaint,int,android.text.Layout.Alignment,float,float,boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <me.grantland.widget.AutofitTextView: void setPrecision(float)>[]--><me.grantland.widget.AutofitHelper: me.grantland.widget.AutofitHelper setPrecision(float)>[]--><me.grantland.widget.AutofitHelper: void autofit()>[]--><me.grantland.widget.AutofitHelper: void autofit(android.widget.TextView,android.text.TextPaint,float,float,int,float)>[]--><me.grantland.widget.AutofitHelper: int getLineCount(java.lang.CharSequence,android.text.TextPaint,float,float,android.util.DisplayMetrics)>[]--><android.text.StaticLayout: void <init>(java.lang.CharSequence,android.text.TextPaint,int,android.text.Layout.Alignment,float,float,boolean)>
+#9.the call statck between class <me.grantland.widget.AutofitTextView: void setPrecision(float)> to <android.text.StaticLayout: void <init>(java.lang.CharSequence,android.text.TextPaint,int,android.text.Layout.Alignment,float,float,boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <me.grantland.widget.AutofitLayout: void addView(android.view.View,int,android.view.ViewGroup$LayoutParams)>[]--><me.grantland.widget.AutofitHelper: me.grantland.widget.AutofitHelper create(android.widget.TextView)>[]--><me.grantland.widget.AutofitHelper: me.grantland.widget.AutofitHelper create(android.widget.TextView,android.util.AttributeSet,int)>[]--><me.grantland.widget.AutofitHelper: me.grantland.widget.AutofitHelper setMinTextSize(int,float)>[]--><me.grantland.widget.AutofitHelper: void setRawMinTextSize(float)>[]--><me.grantland.widget.AutofitHelper: void autofit()>[]--><me.grantland.widget.AutofitHelper: void autofit(android.widget.TextView,android.text.TextPaint,float,float,int,float)>[]--><me.grantland.widget.AutofitHelper: int getLineCount(java.lang.CharSequence,android.text.TextPaint,float,float,android.util.DisplayMetrics)>[]--><android.text.StaticLayout: void <init>(java.lang.CharSequence,android.text.TextPaint,int,android.text.Layout.Alignment,float,float,boolean)>
+!!!this api will crash on sdk 31 
+Error road: <me.grantland.widget.AutofitLayout: void addView(android.view.View,int,android.view.ViewGroup$LayoutParams)>[]--><me.grantland.widget.AutofitHelper: me.grantland.widget.AutofitHelper setEnabled(boolean)>[]--><me.grantland.widget.AutofitHelper: void autofit()>[]--><me.grantland.widget.AutofitHelper: void autofit(android.widget.TextView,android.text.TextPaint,float,float,int,float)>[]--><me.grantland.widget.AutofitHelper: int getLineCount(java.lang.CharSequence,android.text.TextPaint,float,float,android.util.DisplayMetrics)>[]--><android.text.StaticLayout: void <init>(java.lang.CharSequence,android.text.TextPaint,int,android.text.Layout.Alignment,float,float,boolean)>
+!!!this api will crash on sdk 31 
+Error road: <me.grantland.widget.AutofitLayout: void addView(android.view.View,int,android.view.ViewGroup$LayoutParams)>[]--><me.grantland.widget.AutofitHelper: me.grantland.widget.AutofitHelper setMinTextSize(int,float)>[]--><me.grantland.widget.AutofitHelper: void setRawMinTextSize(float)>[]--><me.grantland.widget.AutofitHelper: void autofit()>[]--><me.grantland.widget.AutofitHelper: void autofit(android.widget.TextView,android.text.TextPaint,float,float,int,float)>[]--><me.grantland.widget.AutofitHelper: int getLineCount(java.lang.CharSequence,android.text.TextPaint,float,float,android.util.DisplayMetrics)>[]--><android.text.StaticLayout: void <init>(java.lang.CharSequence,android.text.TextPaint,int,android.text.Layout.Alignment,float,float,boolean)>
+!!!this api will crash on sdk 31 
+Error road: <me.grantland.widget.AutofitLayout: void addView(android.view.View,int,android.view.ViewGroup$LayoutParams)>[]--><me.grantland.widget.AutofitHelper: me.grantland.widget.AutofitHelper setPrecision(float)>[]--><me.grantland.widget.AutofitHelper: void autofit()>[]--><me.grantland.widget.AutofitHelper: void autofit(android.widget.TextView,android.text.TextPaint,float,float,int,float)>[]--><me.grantland.widget.AutofitHelper: int getLineCount(java.lang.CharSequence,android.text.TextPaint,float,float,android.util.DisplayMetrics)>[]--><android.text.StaticLayout: void <init>(java.lang.CharSequence,android.text.TextPaint,int,android.text.Layout.Alignment,float,float,boolean)>
+#10.the call statck between class <me.grantland.widget.AutofitLayout: void addView(android.view.View,int,android.view.ViewGroup$LayoutParams)> to <android.text.StaticLayout: void <init>(java.lang.CharSequence,android.text.TextPaint,int,android.text.Layout.Alignment,float,float,boolean)>has compatibility isssues！
+-----------------------------------------
+crashApis:1
+containsStatic:false
+containsTry:true
+11call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.os.BaseBundle: int getInt(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+3call roads:
+0 Mainhead roads:
+3 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <ca.farrelltonsolar.classic.MonitorActivity$2: void onReceive(android.content.Context,android.content.Intent)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#1.the call statck between class <ca.farrelltonsolar.classic.MonitorActivity$2: void onReceive(android.content.Context,android.content.Intent)> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+try
+Good road with try: <ca.farrelltonsolar.classic.UDPListener$ListenerThread$NameUpdaterThread: void run()>[[try]]--><ca.farrelltonsolar.classic.ChargeControllers: void update(android.os.Bundle,java.lang.String,int,boolean)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+One road protect good!
+try
+Good road with try: <ca.farrelltonsolar.classic.UDPListener$ListenerThread$StaticNameUpdaterThread$CheckReachableThread: void run()>[[try]]--><ca.farrelltonsolar.classic.ChargeControllers: void update(android.os.Bundle,java.lang.String,int,boolean)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+One road protect good!
+crashApis:2
+containsStatic:false
+containsTry:true
+4call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)> is checking!!!
+The life time of api is [21,31]
+3call roads:
+0 Mainhead roads:
+3 Packageshead roads:
+try
+Good road with try: <ca.farrelltonsolar.classic.UDPListener$ListenerThread$NameUpdaterThread: void run()>[[try]]--><ca.farrelltonsolar.classic.ModbusTask: android.os.Bundle getChargeControllerInformation()>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+One road protect good!
+try
+Good road with try: <ca.farrelltonsolar.classic.UDPListener$ListenerThread$StaticNameUpdaterThread$CheckReachableThread: void run()>[[try]]--><ca.farrelltonsolar.classic.ModbusTask: android.os.Bundle getChargeControllerInformation()>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+One road protect good!
+try
+Good road with try: <ca.farrelltonsolar.classic.Readings: void set(ca.farrelltonsolar.classic.RegisterName,java.lang.String)>[[try]]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+One road protect good!
+containsStatic:false
+containsTry:true
+4call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager.WifiLock: void release()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: ca.farrelltonsolar.classic.MonitorActivity dummyMainMethod_ca_farrelltonsolar_classic_MonitorActivity(android.content.Intent)>[]--><ca.farrelltonsolar.classic.MonitorApplication: void onActivityDestroyed(android.app.Activity)>[]--><android.net.wifi.WifiManager.WifiLock: void release()>
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: ca.farrelltonsolar.classic.Settings dummyMainMethod_ca_farrelltonsolar_classic_Settings(android.content.Intent)>[]--><ca.farrelltonsolar.classic.MonitorApplication: void onActivityDestroyed(android.app.Activity)>[]--><android.net.wifi.WifiManager.WifiLock: void release()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.wifi.WifiManager.WifiLock: void release()>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:3
+crashApisInMain:1
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.lang.String getString(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+4call roads:
+0 Mainhead roads:
+4 Packageshead roads:
+try
+Good road with try: <ca.farrelltonsolar.classic.Readings: java.lang.String GetString(ca.farrelltonsolar.classic.RegisterName)>[[try]]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+One road protect good!
+try
+Good road with try: <ca.farrelltonsolar.classic.UDPListener$ListenerThread$NameUpdaterThread: void run()>[[try]]--><ca.farrelltonsolar.classic.ChargeControllers: void update(android.os.Bundle,java.lang.String,int,boolean)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+One road protect good!
+try
+Good road with try: <ca.farrelltonsolar.classic.UDPListener$ListenerThread$StaticNameUpdaterThread$CheckReachableThread: void run()>[[try]]--><ca.farrelltonsolar.classic.ChargeControllers: void update(android.os.Bundle,java.lang.String,int,boolean)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+One road protect good!
+!!!this api will crash on sdk 19 20 
+Error road: <ca.farrelltonsolar.classic.ChargeControllerInfo: void updateBoilerPlate(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#4.the call statck between class <ca.farrelltonsolar.classic.ChargeControllerInfo: void updateBoilerPlate(android.os.Bundle)> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:4
+containsStatic:false
+containsTry:true
+5call by main package
+-----------------------------------------
+#################################################
+N 5 Potential Issue API: SDKCheck of <android.os.BaseBundle: int size()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+try
+Good road with try: <ca.farrelltonsolar.classic.ModbusTask: void run()>[[try]]--><ca.farrelltonsolar.classic.ModbusTask: void loadDayLogs()>[[try]]--><android.os.BaseBundle: int size()>
+One road protect good!
+try
+Good road with try: <ca.farrelltonsolar.classic.ModbusTask: void run()>[[try]]--><ca.farrelltonsolar.classic.ModbusTask: void loadMinuteLogs()>[[try]]--><android.os.BaseBundle: int size()>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 6 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager: android.net.wifi.WifiManager.WifiLock createWifiLock(java.lang.String)> is checking!!!
+The life time of api is [1,30]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><ca.farrelltonsolar.classic.MonitorApplication: void onCreate()>[]--><android.net.wifi.WifiManager: android.net.wifi.WifiManager.WifiLock createWifiLock(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.wifi.WifiManager: android.net.wifi.WifiManager.WifiLock createWifiLock(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:5
+crashApisInMain:2
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 7 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putInt(java.lang.String,int)> is checking!!!
+The life time of api is [21,31]
+6call roads:
+0 Mainhead roads:
+6 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <ca.farrelltonsolar.classic.IPAddressDialog: ca.farrelltonsolar.classic.IPAddressDialog newInstance(int)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#1.the call statck between class <ca.farrelltonsolar.classic.IPAddressDialog: ca.farrelltonsolar.classic.IPAddressDialog newInstance(int)> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+try
+Good road with try: <ca.farrelltonsolar.classic.UDPListener$ListenerThread$NameUpdaterThread: void run()>[[try]]--><ca.farrelltonsolar.classic.ModbusTask: void disconnect()>[]--><ca.farrelltonsolar.classic.ModbusTask: void clearReadings()>[]--><ca.farrelltonsolar.classic.Readings: void set(ca.farrelltonsolar.classic.RegisterName,int)>[[try]]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+One road protect good!
+try
+Good road with try: <ca.farrelltonsolar.classic.UDPListener$ListenerThread$NameUpdaterThread: void run()>[[try]]--><ca.farrelltonsolar.classic.ModbusTask: boolean connect()>[[try]]--><ca.farrelltonsolar.classic.ModbusTask: void disconnect()>[]--><ca.farrelltonsolar.classic.ModbusTask: void clearReadings()>[]--><ca.farrelltonsolar.classic.Readings: void set(ca.farrelltonsolar.classic.RegisterName,int)>[[try]]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+One road protect good!
+try
+Good road with try: <ca.farrelltonsolar.classic.UDPListener$ListenerThread$NameUpdaterThread: void run()>[[try]]--><ca.farrelltonsolar.classic.ModbusTask: android.os.Bundle getChargeControllerInformation()>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+One road protect good!
+try
+Good road with try: <ca.farrelltonsolar.classic.UDPListener$ListenerThread$StaticNameUpdaterThread$CheckReachableThread: void run()>[[try]]--><ca.farrelltonsolar.classic.ModbusTask: android.os.Bundle getChargeControllerInformation()>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+One road protect good!
+try
+Good road with try: <ca.farrelltonsolar.classic.UDPListener$ListenerThread$StaticNameUpdaterThread$CheckReachableThread: void run()>[[try]]--><ca.farrelltonsolar.classic.ModbusTask: void disconnect()>[]--><ca.farrelltonsolar.classic.ModbusTask: void clearReadings()>[]--><ca.farrelltonsolar.classic.Readings: void set(ca.farrelltonsolar.classic.RegisterName,int)>[[try]]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+One road protect good!
+try
+Good road with try: <ca.farrelltonsolar.classic.UDPListener$ListenerThread$StaticNameUpdaterThread$CheckReachableThread: void run()>[[try]]--><ca.farrelltonsolar.classic.ModbusTask: boolean connect()>[[try]]--><ca.farrelltonsolar.classic.ModbusTask: void disconnect()>[]--><ca.farrelltonsolar.classic.ModbusTask: void clearReadings()>[]--><ca.farrelltonsolar.classic.Readings: void set(ca.farrelltonsolar.classic.RegisterName,int)>[[try]]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+One road protect good!
+try
+Good road with try: <ca.farrelltonsolar.classic.ModbusTask: boolean cancel()>[]--><ca.farrelltonsolar.classic.ModbusTask: void disconnect()>[]--><ca.farrelltonsolar.classic.ModbusTask: void clearReadings()>[]--><ca.farrelltonsolar.classic.Readings: void set(ca.farrelltonsolar.classic.RegisterName,int)>[[try]]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+One road protect good!
+try
+Good road with try: <ca.farrelltonsolar.classic.ModbusTask: void run()>[[try]]--><ca.farrelltonsolar.classic.ModbusTask: void GetModbusReadings()>[[try]]--><ca.farrelltonsolar.classic.Readings: void set(ca.farrelltonsolar.classic.RegisterName,int)>[[try]]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+One road protect good!
+try
+Good road with try: <ca.farrelltonsolar.classic.ModbusTask: void run()>[]--><ca.farrelltonsolar.classic.ModbusTask: void disconnect()>[]--><ca.farrelltonsolar.classic.ModbusTask: void clearReadings()>[]--><ca.farrelltonsolar.classic.Readings: void set(ca.farrelltonsolar.classic.RegisterName,int)>[[try]]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+One road protect good!
+try
+Good road with try: <ca.farrelltonsolar.classic.ModbusTask: void run()>[[try]]--><ca.farrelltonsolar.classic.ModbusTask: boolean connect()>[[try]]--><ca.farrelltonsolar.classic.ModbusTask: void disconnect()>[]--><ca.farrelltonsolar.classic.ModbusTask: void clearReadings()>[]--><ca.farrelltonsolar.classic.Readings: void set(ca.farrelltonsolar.classic.RegisterName,int)>[[try]]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+One road protect good!
+try
+Good road with try: <ca.farrelltonsolar.classic.ModbusService$Disconnector: java.lang.String doInBackground(java.lang.String[])>[]--><ca.farrelltonsolar.classic.ModbusTask: void disconnect()>[]--><ca.farrelltonsolar.classic.ModbusTask: void clearReadings()>[]--><ca.farrelltonsolar.classic.Readings: void set(ca.farrelltonsolar.classic.RegisterName,int)>[[try]]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+One road protect good!
+crashApis:6
+containsStatic:false
+containsTry:true
+7call by main package
+-----------------------------------------
+#################################################
+N 8 Potential Issue API: SDKCheck of <android.os.BaseBundle: int getInt(java.lang.String,int)> is checking!!!
+The life time of api is [21,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <ca.farrelltonsolar.classic.MessageFragment$1: void onReceive(android.content.Context,android.content.Intent)>[]--><android.os.BaseBundle: int getInt(java.lang.String,int)>
+#1.the call statck between class <ca.farrelltonsolar.classic.MessageFragment$1: void onReceive(android.content.Context,android.content.Intent)> to <android.os.BaseBundle: int getInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+try
+Good road with try: <ca.farrelltonsolar.classic.StateOfChargeFragment: void setReadings(ca.farrelltonsolar.classic.Readings)>[[try]]--><ca.farrelltonsolar.classic.Readings: int getInt(ca.farrelltonsolar.classic.RegisterName)>[[try]]--><android.os.BaseBundle: int getInt(java.lang.String,int)>
+One road protect good!
+crashApis:7
+containsStatic:false
+containsTry:true
+3call by main package
+-----------------------------------------
+#################################################
+N 9 Potential Issue API: SDKCheck of <android.os.BaseBundle: boolean isEmpty()> is checking!!!
+The life time of api is [21,31]
+5call roads:
+0 Mainhead roads:
+5 Packageshead roads:
+try
+Good road with try: <ca.farrelltonsolar.classic.UDPListener$ListenerThread$NameUpdaterThread: void run()>[[try]]--><ca.farrelltonsolar.classic.ModbusTask: void disconnect()>[]--><ca.farrelltonsolar.classic.ModbusTask: void clearReadings()>[]--><ca.farrelltonsolar.classic.Readings: void broadcastReadings(android.content.Context,java.lang.String)>[]--><android.os.BaseBundle: boolean isEmpty()>
+One road protect good!
+try
+Good road with try: <ca.farrelltonsolar.classic.UDPListener$ListenerThread$NameUpdaterThread: void run()>[[try]]--><ca.farrelltonsolar.classic.ModbusTask: boolean connect()>[[try]]--><ca.farrelltonsolar.classic.ModbusTask: void disconnect()>[]--><ca.farrelltonsolar.classic.ModbusTask: void clearReadings()>[]--><ca.farrelltonsolar.classic.Readings: void broadcastReadings(android.content.Context,java.lang.String)>[]--><android.os.BaseBundle: boolean isEmpty()>
+One road protect good!
+try
+Good road with try: <ca.farrelltonsolar.classic.UDPListener$ListenerThread$StaticNameUpdaterThread$CheckReachableThread: void run()>[[try]]--><ca.farrelltonsolar.classic.ModbusTask: void disconnect()>[]--><ca.farrelltonsolar.classic.ModbusTask: void clearReadings()>[]--><ca.farrelltonsolar.classic.Readings: void broadcastReadings(android.content.Context,java.lang.String)>[]--><android.os.BaseBundle: boolean isEmpty()>
+One road protect good!
+try
+Good road with try: <ca.farrelltonsolar.classic.UDPListener$ListenerThread$StaticNameUpdaterThread$CheckReachableThread: void run()>[[try]]--><ca.farrelltonsolar.classic.ModbusTask: boolean connect()>[[try]]--><ca.farrelltonsolar.classic.ModbusTask: void disconnect()>[]--><ca.farrelltonsolar.classic.ModbusTask: void clearReadings()>[]--><ca.farrelltonsolar.classic.Readings: void broadcastReadings(android.content.Context,java.lang.String)>[]--><android.os.BaseBundle: boolean isEmpty()>
+One road protect good!
+!!!this api will crash on sdk 19 20 
+Error road: <ca.farrelltonsolar.classic.ModbusTask: boolean cancel()>[]--><ca.farrelltonsolar.classic.ModbusTask: void disconnect()>[]--><ca.farrelltonsolar.classic.ModbusTask: void clearReadings()>[]--><ca.farrelltonsolar.classic.Readings: void broadcastReadings(android.content.Context,java.lang.String)>[]--><android.os.BaseBundle: boolean isEmpty()>
+#3.the call statck between class <ca.farrelltonsolar.classic.ModbusTask: boolean cancel()> to <android.os.BaseBundle: boolean isEmpty()>has compatibility isssues！
+-----------------------------------------
+try
+Good road with try: <ca.farrelltonsolar.classic.ModbusTask: void run()>[[try]]--><ca.farrelltonsolar.classic.ModbusTask: void GetModbusReadings()>[[try]]--><ca.farrelltonsolar.classic.Readings: void broadcastReadings(android.content.Context,java.lang.String)>[]--><android.os.BaseBundle: boolean isEmpty()>
+One road protect good!
+!!!this api will crash on sdk 19 20 
+Error road: <ca.farrelltonsolar.classic.ModbusTask: void run()>[]--><ca.farrelltonsolar.classic.ModbusTask: void disconnect()>[]--><ca.farrelltonsolar.classic.ModbusTask: void clearReadings()>[]--><ca.farrelltonsolar.classic.Readings: void broadcastReadings(android.content.Context,java.lang.String)>[]--><android.os.BaseBundle: boolean isEmpty()>
+try
+Good road with try: <ca.farrelltonsolar.classic.ModbusTask: void run()>[[try]]--><ca.farrelltonsolar.classic.LogEntry: boolean isEmpty()>[]--><android.os.BaseBundle: boolean isEmpty()>
+One road protect good!
+try
+Good road with try: <ca.farrelltonsolar.classic.ModbusTask: void run()>[[try]]--><ca.farrelltonsolar.classic.LogEntry: void broadcastLogs(android.content.Context,java.lang.String)>[]--><android.os.BaseBundle: boolean isEmpty()>
+One road protect good!
+try
+Good road with try: <ca.farrelltonsolar.classic.ModbusTask: void run()>[[try]]--><ca.farrelltonsolar.classic.ModbusTask: boolean connect()>[[try]]--><ca.farrelltonsolar.classic.ModbusTask: void disconnect()>[]--><ca.farrelltonsolar.classic.ModbusTask: void clearReadings()>[]--><ca.farrelltonsolar.classic.Readings: void broadcastReadings(android.content.Context,java.lang.String)>[]--><android.os.BaseBundle: boolean isEmpty()>
+One road protect good!
+#4.the call statck between class <ca.farrelltonsolar.classic.ModbusTask: void run()> to <android.os.BaseBundle: boolean isEmpty()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <ca.farrelltonsolar.classic.ModbusService$Disconnector: java.lang.String doInBackground(java.lang.String[])>[]--><ca.farrelltonsolar.classic.ModbusTask: void disconnect()>[]--><ca.farrelltonsolar.classic.ModbusTask: void clearReadings()>[]--><ca.farrelltonsolar.classic.Readings: void broadcastReadings(android.content.Context,java.lang.String)>[]--><android.os.BaseBundle: boolean isEmpty()>
+#5.the call statck between class <ca.farrelltonsolar.classic.ModbusService$Disconnector: java.lang.String doInBackground(java.lang.String[])> to <android.os.BaseBundle: boolean isEmpty()>has compatibility isssues！
+-----------------------------------------
+crashApis:8
+containsStatic:false
+containsTry:true
+6call by main package
+-----------------------------------------
+#################################################
+N 10 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager.WifiLock: void acquire()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: ca.farrelltonsolar.classic.MonitorActivity dummyMainMethod_ca_farrelltonsolar_classic_MonitorActivity(android.content.Intent)>[]--><ca.farrelltonsolar.classic.MonitorApplication: void onActivityCreated(android.app.Activity,android.os.Bundle)>[]--><android.net.wifi.WifiManager.WifiLock: void acquire()>
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: ca.farrelltonsolar.classic.Settings dummyMainMethod_ca_farrelltonsolar_classic_Settings(android.content.Intent)>[]--><ca.farrelltonsolar.classic.MonitorApplication: void onActivityCreated(android.app.Activity,android.os.Bundle)>[]--><android.net.wifi.WifiManager.WifiLock: void acquire()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.wifi.WifiManager.WifiLock: void acquire()>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:9
+crashApisInMain:3
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+crashApis numbers:9
+crashApis numbers in main road:3
+On Android Version 16 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 17 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 18 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 19 this app may have error api use(at least): 5 and error api roads: 7
+On Android Version 20 this app may have error api use(at least): 5 and error api roads: 7
+On Android Version 21 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 22 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 23 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 24 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 25 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 31 this app may have error api use(at least): 4 and error api roads: 18

@@ -1,0 +1,147 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/Webthingify.apk
+Entry Points[be.humanoids.webthingify.MainActivity, be.humanoids.webthingify.WebthingService]
+FllowDroidcallgraph size:1724
+Soot started on Mon Jul 11 15:12:24 CST 2022
+Soot finished on Mon Jul 11 15:13:53 CST 2022
+Soot has run for 1 min. 29 sec.
+Found 1 additional DEX files. Now visiting them one by one.
+Soot started on Mon Jul 11 15:13:53 CST 2022
+Soot finished on Mon Jul 11 15:13:55 CST 2022
+Soot has run for 0 min. 1 sec.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 27
+Declared Target Sdk version is: 28
+Declared Max Sdk version is: -1
+Collected 333 Android APIs in the primary DEX file
+Collected 73 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <java.beans.IntrospectionException: void <init>(java.lang.String)> is checking!!!
+The life time of api is [1,8]
+2964call roads:
+1 Mainhead roads:
+2963 Packageshead roads:
+Roads number exceed, exit!2963
+#################################################
+N 1 Potential Issue API: SDKCheck of <java.beans.PropertyDescriptor: void <init>(java.lang.String,java.lang.reflect.Method,java.lang.reflect.Method)> is checking!!!
+The life time of api is [1,8]
+2962call roads:
+1 Mainhead roads:
+2961 Packageshead roads:
+Roads number exceed, exit!2961
+#################################################
+N 2 Potential Issue API: SDKCheck of <java.beans.IndexedPropertyDescriptor: java.lang.reflect.Method getIndexedReadMethod()> is checking!!!
+The life time of api is [1,8]
+2961call roads:
+1 Mainhead roads:
+2960 Packageshead roads:
+Roads number exceed, exit!2960
+#################################################
+N 3 Potential Issue API: SDKCheck of <java.beans.PropertyDescriptor: java.lang.reflect.Method getWriteMethod()> is checking!!!
+The life time of api is [1,8]
+2963call roads:
+1 Mainhead roads:
+2962 Packageshead roads:
+Roads number exceed, exit!2962
+#################################################
+N 4 Potential Issue API: SDKCheck of <java.beans.IndexedPropertyDescriptor: java.lang.Class getIndexedPropertyType()> is checking!!!
+The life time of api is [1,8]
+8call roads:
+0 Mainhead roads:
+8 Packageshead roads:
+try
+Good road with try: <org.apache.commons.digester.SetNestedPropertiesRule$AnyChildRule: void body(java.lang.String)>[[try]]--><org.apache.commons.beanutils.BeanUtils: void setProperty(java.lang.Object,java.lang.String,java.lang.Object)>[]--><org.apache.commons.beanutils.BeanUtilsBean: void setProperty(java.lang.Object,java.lang.String,java.lang.Object)>[]--><java.beans.IndexedPropertyDescriptor: java.lang.Class getIndexedPropertyType()>
+One road protect good!
+!!!this api will crash on sdk 27 28 29 30 31 
+Error road: <org.apache.commons.beanutils.PropertyUtils: java.lang.Class getPropertyType(java.lang.Object,java.lang.String)>[]--><org.apache.commons.beanutils.PropertyUtilsBean: java.lang.Class getPropertyType(java.lang.Object,java.lang.String)>[]--><java.beans.IndexedPropertyDescriptor: java.lang.Class getIndexedPropertyType()>
+#2.the call statck between class <org.apache.commons.beanutils.PropertyUtils: java.lang.Class getPropertyType(java.lang.Object,java.lang.String)> to <java.beans.IndexedPropertyDescriptor: java.lang.Class getIndexedPropertyType()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 27 28 29 30 31 
+Error road: <org.apache.commons.digester.SetPropertiesRule: void begin(org.xml.sax.Attributes)>[]--><org.apache.commons.beanutils.BeanUtils: void populate(java.lang.Object,java.util.Map)>[]--><org.apache.commons.beanutils.BeanUtilsBean: void populate(java.lang.Object,java.util.Map)>[]--><org.apache.commons.beanutils.BeanUtilsBean: void setProperty(java.lang.Object,java.lang.String,java.lang.Object)>[]--><java.beans.IndexedPropertyDescriptor: java.lang.Class getIndexedPropertyType()>
+#3.the call statck between class <org.apache.commons.digester.SetPropertiesRule: void begin(org.xml.sax.Attributes)> to <java.beans.IndexedPropertyDescriptor: java.lang.Class getIndexedPropertyType()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 27 28 29 30 31 
+Error road: <org.apache.commons.beanutils.locale.LocaleBeanUtils: void setProperty(java.lang.Object,java.lang.String,java.lang.Object,java.lang.String)>[]--><org.apache.commons.beanutils.locale.LocaleBeanUtilsBean: void setProperty(java.lang.Object,java.lang.String,java.lang.Object,java.lang.String)>[]--><org.apache.commons.beanutils.locale.LocaleBeanUtilsBean: java.lang.Class definePropertyType(java.lang.Object,java.lang.String,java.lang.String)>[]--><java.beans.IndexedPropertyDescriptor: java.lang.Class getIndexedPropertyType()>
+#4.the call statck between class <org.apache.commons.beanutils.locale.LocaleBeanUtils: void setProperty(java.lang.Object,java.lang.String,java.lang.Object,java.lang.String)> to <java.beans.IndexedPropertyDescriptor: java.lang.Class getIndexedPropertyType()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 27 28 29 30 31 
+Error road: <org.apache.commons.beanutils.locale.LocaleBeanUtils: void setProperty(java.lang.Object,java.lang.String,java.lang.Object)>[]--><org.apache.commons.beanutils.locale.LocaleBeanUtilsBean: void setProperty(java.lang.Object,java.lang.String,java.lang.Object)>[]--><org.apache.commons.beanutils.locale.LocaleBeanUtilsBean: void setProperty(java.lang.Object,java.lang.String,java.lang.Object,java.lang.String)>[]--><org.apache.commons.beanutils.locale.LocaleBeanUtilsBean: java.lang.Class definePropertyType(java.lang.Object,java.lang.String,java.lang.String)>[]--><java.beans.IndexedPropertyDescriptor: java.lang.Class getIndexedPropertyType()>
+#5.the call statck between class <org.apache.commons.beanutils.locale.LocaleBeanUtils: void setProperty(java.lang.Object,java.lang.String,java.lang.Object)> to <java.beans.IndexedPropertyDescriptor: java.lang.Class getIndexedPropertyType()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 27 28 29 30 31 
+Error road: <org.apache.commons.digester.BeanPropertySetterRule: void end(java.lang.String,java.lang.String)>[]--><org.apache.commons.beanutils.BeanUtils: void setProperty(java.lang.Object,java.lang.String,java.lang.Object)>[]--><org.apache.commons.beanutils.BeanUtilsBean: void setProperty(java.lang.Object,java.lang.String,java.lang.Object)>[]--><java.beans.IndexedPropertyDescriptor: java.lang.Class getIndexedPropertyType()>
+#6.the call statck between class <org.apache.commons.digester.BeanPropertySetterRule: void end(java.lang.String,java.lang.String)> to <java.beans.IndexedPropertyDescriptor: java.lang.Class getIndexedPropertyType()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 27 28 29 30 31 
+Error road: <org.apache.commons.digester.SetPropertyRule: void begin(org.xml.sax.Attributes)>[]--><org.apache.commons.beanutils.BeanUtils: void setProperty(java.lang.Object,java.lang.String,java.lang.Object)>[]--><org.apache.commons.beanutils.BeanUtilsBean: void setProperty(java.lang.Object,java.lang.String,java.lang.Object)>[]--><java.beans.IndexedPropertyDescriptor: java.lang.Class getIndexedPropertyType()>
+#7.the call statck between class <org.apache.commons.digester.SetPropertyRule: void begin(org.xml.sax.Attributes)> to <java.beans.IndexedPropertyDescriptor: java.lang.Class getIndexedPropertyType()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 27 28 29 30 31 
+Error road: <org.apache.commons.beanutils.locale.LocaleBeanUtils: java.lang.Class definePropertyType(java.lang.Object,java.lang.String,java.lang.String)>[]--><org.apache.commons.beanutils.locale.LocaleBeanUtilsBean: java.lang.Class definePropertyType(java.lang.Object,java.lang.String,java.lang.String)>[]--><java.beans.IndexedPropertyDescriptor: java.lang.Class getIndexedPropertyType()>
+#8.the call statck between class <org.apache.commons.beanutils.locale.LocaleBeanUtils: java.lang.Class definePropertyType(java.lang.Object,java.lang.String,java.lang.String)> to <java.beans.IndexedPropertyDescriptor: java.lang.Class getIndexedPropertyType()>has compatibility isssues！
+-----------------------------------------
+crashApis:1
+containsStatic:false
+containsTry:true
+9call by main package
+-----------------------------------------
+#################################################
+N 5 Potential Issue API: SDKCheck of <java.beans.PropertyDescriptor: java.lang.reflect.Method getReadMethod()> is checking!!!
+The life time of api is [1,8]
+2963call roads:
+1 Mainhead roads:
+2962 Packageshead roads:
+Roads number exceed, exit!2962
+#################################################
+N 6 Potential Issue API: SDKCheck of <java.beans.PropertyDescriptor: void setWriteMethod(java.lang.reflect.Method)> is checking!!!
+The life time of api is [1,8]
+2961call roads:
+1 Mainhead roads:
+2960 Packageshead roads:
+Roads number exceed, exit!2960
+#################################################
+N 7 Potential Issue API: SDKCheck of <java.beans.PropertyDescriptor: java.lang.Class getPropertyEditorClass()> is checking!!!
+The life time of api is [1,8]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 27 28 29 30 31 
+Error road: <org.apache.commons.beanutils.PropertyUtils: java.lang.Class getPropertyEditorClass(java.lang.Object,java.lang.String)>[]--><org.apache.commons.beanutils.PropertyUtilsBean: java.lang.Class getPropertyEditorClass(java.lang.Object,java.lang.String)>[]--><java.beans.PropertyDescriptor: java.lang.Class getPropertyEditorClass()>
+#1.the call statck between class <org.apache.commons.beanutils.PropertyUtils: java.lang.Class getPropertyEditorClass(java.lang.Object,java.lang.String)> to <java.beans.PropertyDescriptor: java.lang.Class getPropertyEditorClass()>has compatibility isssues！
+-----------------------------------------
+crashApis:2
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 8 Potential Issue API: SDKCheck of <java.beans.PropertyDescriptor: java.lang.Class getPropertyType()> is checking!!!
+The life time of api is [1,8]
+2963call roads:
+1 Mainhead roads:
+2962 Packageshead roads:
+Roads number exceed, exit!2962
+#################################################
+N 9 Potential Issue API: SDKCheck of <java.beans.IndexedPropertyDescriptor: java.lang.reflect.Method getIndexedWriteMethod()> is checking!!!
+The life time of api is [1,8]
+2961call roads:
+1 Mainhead roads:
+2960 Packageshead roads:
+Roads number exceed, exit!2960
+crashApis numbers:2
+crashApis numbers in main road:0
+On Android Version 16 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 17 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 18 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 19 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 20 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 21 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 22 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 23 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 24 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 25 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 2 and error api roads: 8
+On Android Version 28 this app may have error api use(at least): 2 and error api roads: 8
+On Android Version 29 this app may have error api use(at least): 2 and error api roads: 8
+On Android Version 30 this app may have error api use(at least): 2 and error api roads: 8
+On Android Version 31 this app may have error api use(at least): 2 and error api roads: 8

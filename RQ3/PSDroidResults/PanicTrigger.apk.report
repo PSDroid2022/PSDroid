@@ -1,0 +1,120 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/PanicTrigger.apk
+Entry Points[at.tacticaldevc.panictrigger.ContactPickerActivity, at.tacticaldevc.panictrigger.TriggerActivity, at.tacticaldevc.panictrigger.SMSListener, at.tacticaldevc.panictrigger.MapActivity, at.tacticaldevc.panictrigger.SettingsActivity]
+FllowDroidcallgraph size:2159
+Soot started on Mon Jul 11 10:26:03 CST 2022
+Soot finished on Mon Jul 11 10:26:05 CST 2022
+Soot has run for 0 min. 2 sec.
+Found 1 additional DEX files. Now visiting them one by one.
+Soot started on Mon Jul 11 10:26:05 CST 2022
+Soot finished on Mon Jul 11 10:26:16 CST 2022
+Soot has run for 0 min. 10 sec.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 23
+Declared Target Sdk version is: 28
+Declared Max Sdk version is: -1
+Collected 62 Android APIs in the primary DEX file
+Collected 514 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.net.NetworkInfo: int getType()> is checking!!!
+The life time of api is [1,30]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+-$i0 <= 13
+!!!this api will crash on sdk 31 
+Error road: <org.osmdroid.tileprovider.MapTileProviderBasic: boolean isDowngradedMode(long)>[]--><org.osmdroid.tileprovider.modules.NetworkAvailabliltyCheck: boolean getNetworkAvailable()>[[-$i0 <= 13]]--><android.net.NetworkInfo: int getType()>
+#1.the call statck between class <org.osmdroid.tileprovider.MapTileProviderBasic: boolean isDowngradedMode(long)> to <android.net.NetworkInfo: int getType()>has compatibility isssues！
+-----------------------------------------
+-$i0 <= 13
+!!!this api will crash on sdk 31 
+Error road: <org.osmdroid.tileprovider.modules.MapTileDownloader$TileLoader: android.graphics.drawable.Drawable loadTile(long)>[]--><org.osmdroid.tileprovider.modules.NetworkAvailabliltyCheck: boolean getNetworkAvailable()>[[-$i0 <= 13]]--><android.net.NetworkInfo: int getType()>
+#2.the call statck between class <org.osmdroid.tileprovider.modules.MapTileDownloader$TileLoader: android.graphics.drawable.Drawable loadTile(long)> to <android.net.NetworkInfo: int getType()>has compatibility isssues！
+-----------------------------------------
+crashApis:1
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()> is checking!!!
+The life time of api is [1,30]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <org.osmdroid.tileprovider.MapTileProviderBasic: boolean isDowngradedMode(long)>[]--><org.osmdroid.tileprovider.modules.NetworkAvailabliltyCheck: boolean getNetworkAvailable()>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>
+#1.the call statck between class <org.osmdroid.tileprovider.MapTileProviderBasic: boolean isDowngradedMode(long)> to <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <org.osmdroid.tileprovider.modules.MapTileDownloader$TileLoader: android.graphics.drawable.Drawable loadTile(long)>[]--><org.osmdroid.tileprovider.modules.NetworkAvailabliltyCheck: boolean getNetworkAvailable()>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>
+#2.the call statck between class <org.osmdroid.tileprovider.modules.MapTileDownloader$TileLoader: android.graphics.drawable.Drawable loadTile(long)> to <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>has compatibility isssues！
+-----------------------------------------
+crashApis:2
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.net.NetworkInfo: boolean isConnected()> is checking!!!
+The life time of api is [1,30]
+4call roads:
+0 Mainhead roads:
+4 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <org.osmdroid.tileprovider.modules.NetworkAvailabliltyCheck: boolean getWiFiNetworkAvailable()>[]--><android.net.NetworkInfo: boolean isConnected()>
+#1.the call statck between class <org.osmdroid.tileprovider.modules.NetworkAvailabliltyCheck: boolean getWiFiNetworkAvailable()> to <android.net.NetworkInfo: boolean isConnected()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <org.osmdroid.tileprovider.MapTileProviderBasic: boolean isDowngradedMode(long)>[]--><org.osmdroid.tileprovider.modules.NetworkAvailabliltyCheck: boolean getNetworkAvailable()>[]--><android.net.NetworkInfo: boolean isConnected()>
+#2.the call statck between class <org.osmdroid.tileprovider.MapTileProviderBasic: boolean isDowngradedMode(long)> to <android.net.NetworkInfo: boolean isConnected()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <org.osmdroid.tileprovider.modules.MapTileDownloader$TileLoader: android.graphics.drawable.Drawable loadTile(long)>[]--><org.osmdroid.tileprovider.modules.NetworkAvailabliltyCheck: boolean getNetworkAvailable()>[]--><android.net.NetworkInfo: boolean isConnected()>
+#3.the call statck between class <org.osmdroid.tileprovider.modules.MapTileDownloader$TileLoader: android.graphics.drawable.Drawable loadTile(long)> to <android.net.NetworkInfo: boolean isConnected()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <org.osmdroid.tileprovider.modules.NetworkAvailabliltyCheck: boolean getCellularDataNetworkAvailable()>[]--><android.net.NetworkInfo: boolean isConnected()>
+#4.the call statck between class <org.osmdroid.tileprovider.modules.NetworkAvailabliltyCheck: boolean getCellularDataNetworkAvailable()> to <android.net.NetworkInfo: boolean isConnected()>has compatibility isssues！
+-----------------------------------------
+crashApis:3
+containsStatic:false
+containsTry:false
+5call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.net.ConnectivityManager: android.net.NetworkInfo getNetworkInfo(int)> is checking!!!
+The life time of api is [1,30]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <org.osmdroid.tileprovider.modules.NetworkAvailabliltyCheck: boolean getWiFiNetworkAvailable()>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getNetworkInfo(int)>
+#1.the call statck between class <org.osmdroid.tileprovider.modules.NetworkAvailabliltyCheck: boolean getWiFiNetworkAvailable()> to <android.net.ConnectivityManager: android.net.NetworkInfo getNetworkInfo(int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <org.osmdroid.tileprovider.modules.NetworkAvailabliltyCheck: boolean getCellularDataNetworkAvailable()>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getNetworkInfo(int)>
+#2.the call statck between class <org.osmdroid.tileprovider.modules.NetworkAvailabliltyCheck: boolean getCellularDataNetworkAvailable()> to <android.net.ConnectivityManager: android.net.NetworkInfo getNetworkInfo(int)>has compatibility isssues！
+-----------------------------------------
+crashApis:4
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+crashApis numbers:4
+crashApis numbers in main road:0
+On Android Version 16 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 17 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 18 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 19 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 20 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 21 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 22 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 23 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 24 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 25 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 31 this app may have error api use(at least): 4 and error api roads: 10

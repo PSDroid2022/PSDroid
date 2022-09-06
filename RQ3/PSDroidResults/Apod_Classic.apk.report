@@ -1,0 +1,163 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/Apod_Classic.apk
+Entry Points[com.jvillalba.nasa.apod.activities.ViewActivity, com.jvillalba.nasa.apod.activities.ImageActivity, com.jvillalba.nasa.apod.activities.MainActivity, com.squareup.picasso.Dispatcher$NetworkBroadcastReceiver]
+FllowDroidcallgraph size:2729
+Soot started on Mon Jul 11 01:18:36 CST 2022
+Soot finished on Mon Jul 11 01:18:50 CST 2022
+Soot has run for 0 min. 14 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 16
+Declared Target Sdk version is: 26
+Declared Max Sdk version is: -1
+Collected 237 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.lang.String getString(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.jvillalba.nasa.apod.activities.ImageActivity dummyMainMethod_com_jvillalba_nasa_apod_activities_ImageActivity(android.content.Intent)>[]--><com.jvillalba.nasa.apod.activities.ImageActivity: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:1
+crashApisInMain:1
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.provider.MediaStore.Video.Thumbnails: android.graphics.Bitmap getThumbnail(android.content.ContentResolver,long,int,android.graphics.BitmapFactory.Options)> is checking!!!
+The life time of api is [5,29]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 30 31 
+Error road: <com.squareup.picasso.MediaStoreRequestHandler: com.squareup.picasso.RequestHandler$Result load(com.squareup.picasso.Request,int)>[]--><android.provider.MediaStore.Video.Thumbnails: android.graphics.Bitmap getThumbnail(android.content.ContentResolver,long,int,android.graphics.BitmapFactory.Options)>
+#1.the call statck between class <com.squareup.picasso.MediaStoreRequestHandler: com.squareup.picasso.RequestHandler$Result load(com.squareup.picasso.Request,int)> to <android.provider.MediaStore.Video.Thumbnails: android.graphics.Bitmap getThumbnail(android.content.ContentResolver,long,int,android.graphics.BitmapFactory.Options)>has compatibility isssues！
+-----------------------------------------
+crashApis:2
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.net.NetworkInfo: int getType()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <com.squareup.picasso.Dispatcher$DispatcherHandler: void handleMessage(android.os.Message)>[]--><com.squareup.picasso.Dispatcher: void performNetworkStateChange(android.net.NetworkInfo)>[]--><com.squareup.picasso.PicassoExecutorService: void adjustThreadCount(android.net.NetworkInfo)>[]--><android.net.NetworkInfo: int getType()>
+#1.the call statck between class <com.squareup.picasso.Dispatcher$DispatcherHandler: void handleMessage(android.os.Message)> to <android.net.NetworkInfo: int getType()>has compatibility isssues！
+-----------------------------------------
+crashApis:3
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()> is checking!!!
+The life time of api is [1,30]
+2call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.squareup.picasso.Dispatcher$NetworkBroadcastReceiver dummyMainMethod_com_squareup_picasso_Dispatcher$NetworkBroadcastReceiver(android.content.Intent)>[]--><com.squareup.picasso.Dispatcher$NetworkBroadcastReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>has compatibility isssues！
+-----------------------------------------
+1 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <com.squareup.picasso.Dispatcher$DispatcherHandler: void handleMessage(android.os.Message)>[]--><com.squareup.picasso.Dispatcher: void performRetry(com.squareup.picasso.BitmapHunter)>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>
+#1.the call statck between class <com.squareup.picasso.Dispatcher$DispatcherHandler: void handleMessage(android.os.Message)> to <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>has compatibility isssues！
+-----------------------------------------
+crashApis:4
+crashApisInMain:2
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.net.NetworkInfo: boolean isConnected()> is checking!!!
+The life time of api is [1,30]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <com.squareup.picasso.NetworkRequestHandler: boolean shouldRetry(boolean,android.net.NetworkInfo)>[]--><android.net.NetworkInfo: boolean isConnected()>
+#1.the call statck between class <com.squareup.picasso.NetworkRequestHandler: boolean shouldRetry(boolean,android.net.NetworkInfo)> to <android.net.NetworkInfo: boolean isConnected()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <com.squareup.picasso.Dispatcher$DispatcherHandler: void handleMessage(android.os.Message)>[]--><com.squareup.picasso.Dispatcher: void performRetry(com.squareup.picasso.BitmapHunter)>[]--><android.net.NetworkInfo: boolean isConnected()>
+!!!this api will crash on sdk 31 
+Error road: <com.squareup.picasso.Dispatcher$DispatcherHandler: void handleMessage(android.os.Message)>[]--><com.squareup.picasso.Dispatcher: void performNetworkStateChange(android.net.NetworkInfo)>[]--><android.net.NetworkInfo: boolean isConnected()>
+#2.the call statck between class <com.squareup.picasso.Dispatcher$DispatcherHandler: void handleMessage(android.os.Message)> to <android.net.NetworkInfo: boolean isConnected()>has compatibility isssues！
+-----------------------------------------
+crashApis:5
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 5 Potential Issue API: SDKCheck of <android.provider.MediaStore.Images.Thumbnails: android.graphics.Bitmap getThumbnail(android.content.ContentResolver,long,int,android.graphics.BitmapFactory.Options)> is checking!!!
+The life time of api is [5,29]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 30 31 
+Error road: <com.squareup.picasso.MediaStoreRequestHandler: com.squareup.picasso.RequestHandler$Result load(com.squareup.picasso.Request,int)>[]--><android.provider.MediaStore.Images.Thumbnails: android.graphics.Bitmap getThumbnail(android.content.ContentResolver,long,int,android.graphics.BitmapFactory.Options)>
+#1.the call statck between class <com.squareup.picasso.MediaStoreRequestHandler: com.squareup.picasso.RequestHandler$Result load(com.squareup.picasso.Request,int)> to <android.provider.MediaStore.Images.Thumbnails: android.graphics.Bitmap getThumbnail(android.content.ContentResolver,long,int,android.graphics.BitmapFactory.Options)>has compatibility isssues！
+-----------------------------------------
+crashApis:6
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 6 Potential Issue API: SDKCheck of <android.net.NetworkInfo: boolean isConnectedOrConnecting()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <com.squareup.picasso.Dispatcher$DispatcherHandler: void handleMessage(android.os.Message)>[]--><com.squareup.picasso.Dispatcher: void performNetworkStateChange(android.net.NetworkInfo)>[]--><com.squareup.picasso.PicassoExecutorService: void adjustThreadCount(android.net.NetworkInfo)>[]--><android.net.NetworkInfo: boolean isConnectedOrConnecting()>
+#1.the call statck between class <com.squareup.picasso.Dispatcher$DispatcherHandler: void handleMessage(android.os.Message)> to <android.net.NetworkInfo: boolean isConnectedOrConnecting()>has compatibility isssues！
+-----------------------------------------
+crashApis:7
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 7 Potential Issue API: SDKCheck of <android.net.NetworkInfo: int getSubtype()> is checking!!!
+The life time of api is [3,30]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <com.squareup.picasso.Dispatcher$DispatcherHandler: void handleMessage(android.os.Message)>[]--><com.squareup.picasso.Dispatcher: void performNetworkStateChange(android.net.NetworkInfo)>[]--><com.squareup.picasso.PicassoExecutorService: void adjustThreadCount(android.net.NetworkInfo)>[]--><android.net.NetworkInfo: int getSubtype()>
+#1.the call statck between class <com.squareup.picasso.Dispatcher$DispatcherHandler: void handleMessage(android.os.Message)> to <android.net.NetworkInfo: int getSubtype()>has compatibility isssues！
+-----------------------------------------
+crashApis:8
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+crashApis numbers:8
+crashApis numbers in main road:2
+On Android Version 16 this app may have error api use(at least): 1 and error api roads: 1
+On Android Version 17 this app may have error api use(at least): 1 and error api roads: 1
+On Android Version 18 this app may have error api use(at least): 1 and error api roads: 1
+On Android Version 19 this app may have error api use(at least): 1 and error api roads: 1
+On Android Version 20 this app may have error api use(at least): 1 and error api roads: 1
+On Android Version 21 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 22 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 23 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 24 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 25 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 2 and error api roads: 2
+On Android Version 31 this app may have error api use(at least): 7 and error api roads: 10

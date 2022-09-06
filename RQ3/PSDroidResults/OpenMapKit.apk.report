@@ -1,0 +1,906 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/OpenMapKit.apk
+Entry Points[com.journeyapps.barcodescanner.CaptureActivity, org.redcross.openmapkit.MapActivity, org.redcross.openmapkit.ZXingActivity, org.redcross.openmapkit.tagswipe.TagSwipeActivity, org.redcross.openmapkit.deployments.DeploymentsActivity, org.redcross.openmapkit.deployments.DeploymentDetailsActivity]
+FllowDroidcallgraph size:9710
+Soot started on Mon Jul 11 09:53:38 CST 2022
+Soot finished on Mon Jul 11 09:54:48 CST 2022
+Soot has run for 1 min. 10 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 19
+Declared Target Sdk version is: 26
+Declared Max Sdk version is: -1
+Collected 1086 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <java.awt.geom.PathIterator: boolean isDone()> is checking!!!
+The life time of api is [1,8]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <com.vividsolutions.jts.awt.FontGlyphReader: com.vividsolutions.jts.geom.Geometry read(java.lang.String,java.lang.String,int,com.vividsolutions.jts.geom.GeometryFactory)>[]--><com.vividsolutions.jts.awt.FontGlyphReader: com.vividsolutions.jts.geom.Geometry read(java.lang.String,java.awt.Font,com.vividsolutions.jts.geom.GeometryFactory)>[]--><com.vividsolutions.jts.awt.FontGlyphReader: com.vividsolutions.jts.geom.Geometry read(java.lang.String,java.awt.Font,double,com.vividsolutions.jts.geom.GeometryFactory)>[]--><com.vividsolutions.jts.awt.ShapeReader: com.vividsolutions.jts.geom.Geometry read(java.awt.Shape,double,com.vividsolutions.jts.geom.GeometryFactory)>[]--><com.vividsolutions.jts.awt.GeometryCollectionShape: java.awt.geom.PathIterator getPathIterator(java.awt.geom.AffineTransform,double)>[]--><com.vividsolutions.jts.awt.GeometryCollectionShape: java.awt.geom.PathIterator getPathIterator(java.awt.geom.AffineTransform)>[]--><com.vividsolutions.jts.awt.ShapeCollectionPathIterator: void <init>(java.util.Collection,java.awt.geom.AffineTransform)>[]--><com.vividsolutions.jts.awt.ShapeCollectionPathIterator: void next()>[]--><java.awt.geom.PathIterator: boolean isDone()>
+#1.the call statck between class <com.vividsolutions.jts.awt.FontGlyphReader: com.vividsolutions.jts.geom.Geometry read(java.lang.String,java.lang.String,int,com.vividsolutions.jts.geom.GeometryFactory)> to <java.awt.geom.PathIterator: boolean isDone()>has compatibility isssues！
+-----------------------------------------
+crashApis:1
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <java.awt.geom.GeneralPath: void <init>(int)> is checking!!!
+The life time of api is [1,8]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.os.BaseBundle: int getInt(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+4call roads:
+0 Mainhead roads:
+4 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <org.redcross.openmapkit.tagswipe.StringTagValueFragment: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#1.the call statck between class <org.redcross.openmapkit.tagswipe.StringTagValueFragment: void onCreate(android.os.Bundle)> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <org.redcross.openmapkit.tagswipe.SelectMultipleTagValueFragment: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#2.the call statck between class <org.redcross.openmapkit.tagswipe.SelectMultipleTagValueFragment: void onCreate(android.os.Bundle)> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <org.redcross.openmapkit.tagswipe.ReadOnlyTagFragment: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#3.the call statck between class <org.redcross.openmapkit.tagswipe.ReadOnlyTagFragment: void onCreate(android.os.Bundle)> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <org.redcross.openmapkit.tagswipe.SelectOneTagValueFragment: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#4.the call statck between class <org.redcross.openmapkit.tagswipe.SelectOneTagValueFragment: void onCreate(android.os.Bundle)> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:2
+containsStatic:false
+containsTry:false
+5call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()> is checking!!!
+The life time of api is [1,30]
+1992call roads:
+1 Mainhead roads:
+1991 Packageshead roads:
+Roads number exceed, exit!1991
+#################################################
+N 4 Potential Issue API: SDKCheck of <java.awt.geom.GeneralPath: boolean contains(java.awt.geom.Rectangle2D)> is checking!!!
+The life time of api is [1,8]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <com.vividsolutions.jts.awt.PolygonShape: boolean contains(java.awt.geom.Rectangle2D)>[]--><java.awt.geom.GeneralPath: boolean contains(java.awt.geom.Rectangle2D)>
+#1.the call statck between class <com.vividsolutions.jts.awt.PolygonShape: boolean contains(java.awt.geom.Rectangle2D)> to <java.awt.geom.GeneralPath: boolean contains(java.awt.geom.Rectangle2D)>has compatibility isssues！
+-----------------------------------------
+crashApis:3
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 5 Potential Issue API: SDKCheck of <java.awt.geom.Ellipse2D.Double: void <init>(double,double,double,double)> is checking!!!
+The life time of api is [1,8]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 6 Potential Issue API: SDKCheck of <android.os.BaseBundle: boolean containsKey(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.redcross.openmapkit.ZXingActivity dummyMainMethod_org_redcross_openmapkit_ZXingActivity(android.content.Intent)>[]--><com.journeyapps.barcodescanner.CaptureActivity: void onCreate(android.os.Bundle)>[]--><com.journeyapps.barcodescanner.CaptureManager: void initializeFromIntent(android.content.Intent,android.os.Bundle)>[]--><com.journeyapps.barcodescanner.CompoundBarcodeView: void initializeFromIntent(android.content.Intent)>[]--><com.google.zxing.client.android.DecodeHintManager: java.util.Map parseDecodeHints(android.content.Intent)>[]--><android.os.BaseBundle: boolean containsKey(java.lang.String)>
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.journeyapps.barcodescanner.CaptureActivity dummyMainMethod_com_journeyapps_barcodescanner_CaptureActivity(android.content.Intent)>[]--><com.journeyapps.barcodescanner.CaptureActivity: void onCreate(android.os.Bundle)>[]--><com.journeyapps.barcodescanner.CaptureManager: void initializeFromIntent(android.content.Intent,android.os.Bundle)>[]--><com.journeyapps.barcodescanner.CompoundBarcodeView: void initializeFromIntent(android.content.Intent)>[]--><com.google.zxing.client.android.DecodeHintManager: java.util.Map parseDecodeHints(android.content.Intent)>[]--><android.os.BaseBundle: boolean containsKey(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: boolean containsKey(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:4
+crashApisInMain:1
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 7 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <org.redcross.openmapkit.tagswipe.TagSwipeActivity$SectionsPagerAdapter: android.support.v4.app.Fragment getItem(int)>[]--><org.redcross.openmapkit.tagswipe.StandaloneFragment: org.redcross.openmapkit.tagswipe.StandaloneFragment newInstance(java.lang.String,java.lang.String)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#1.the call statck between class <org.redcross.openmapkit.tagswipe.TagSwipeActivity$SectionsPagerAdapter: android.support.v4.app.Fragment getItem(int)> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:5
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 8 Potential Issue API: SDKCheck of <java.awt.geom.Point2D.Double: void <init>()> is checking!!!
+The life time of api is [1,8]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <com.vividsolutions.jts.awt.ShapeWriter: void <init>(com.vividsolutions.jts.awt.PointTransformation)>[]--><com.vividsolutions.jts.awt.ShapeWriter: void <init>(com.vividsolutions.jts.awt.PointTransformation,com.vividsolutions.jts.awt.PointShapeFactory)>[]--><java.awt.geom.Point2D.Double: void <init>()>
+#1.the call statck between class <com.vividsolutions.jts.awt.ShapeWriter: void <init>(com.vividsolutions.jts.awt.PointTransformation)> to <java.awt.geom.Point2D.Double: void <init>()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <com.vividsolutions.jts.awt.ShapeWriter: void <init>()>[]--><java.awt.geom.Point2D.Double: void <init>()>
+#2.the call statck between class <com.vividsolutions.jts.awt.ShapeWriter: void <init>()> to <java.awt.geom.Point2D.Double: void <init>()>has compatibility isssues！
+-----------------------------------------
+crashApis:6
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 9 Potential Issue API: SDKCheck of <java.awt.geom.GeneralPath: boolean contains(double,double,double,double)> is checking!!!
+The life time of api is [1,8]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <com.vividsolutions.jts.awt.PolygonShape: boolean contains(double,double,double,double)>[]--><java.awt.geom.GeneralPath: boolean contains(double,double,double,double)>
+#1.the call statck between class <com.vividsolutions.jts.awt.PolygonShape: boolean contains(double,double,double,double)> to <java.awt.geom.GeneralPath: boolean contains(double,double,double,double)>has compatibility isssues！
+-----------------------------------------
+crashApis:7
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 10 Potential Issue API: SDKCheck of <java.awt.geom.Rectangle2D.Double: void <init>(double,double,double,double)> is checking!!!
+The life time of api is [1,8]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 11 Potential Issue API: SDKCheck of <android.content.res.Resources: android.graphics.drawable.Drawable getDrawable(int,android.content.res.Resources.Theme)> is checking!!!
+The life time of api is [21,31]
+5call roads:
+1 Mainhead roads:
+-$i0 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.redcross.openmapkit.deployments.DeploymentDetailsActivity dummyMainMethod_org_redcross_openmapkit_deployments_DeploymentDetailsActivity(android.content.Intent)>[]--><org.redcross.openmapkit.deployments.DeploymentDetailsActivity: void onClick(android.view.View)>[]--><org.redcross.openmapkit.deployments.DeploymentDetailsActivity: void startDownload()>[]--><org.redcross.openmapkit.deployments.DeploymentDetailsActivity: void setCancelFab()>[[-$i0 < 21]]--><android.content.res.Resources: android.graphics.drawable.Drawable getDrawable(int,android.content.res.Resources.Theme)>
+One road protect good!
+4 Packageshead roads:
+-$i0 < 21
+Good road: <org.redcross.openmapkit.deployments.DeploymentDownloader: void onPreExecute()>[]--><org.redcross.openmapkit.deployments.DeploymentDownloader: void notifyDeploymentDownloadProgressUpdate(java.lang.String,long)>[]--><org.redcross.openmapkit.deployments.DeploymentDetailsActivity: void onDeploymentDownloadProgressUpdate(java.lang.String,long)>[]--><org.redcross.openmapkit.deployments.DeploymentDetailsActivity: void setCancelFab()>[[-$i0 < 21]]--><android.content.res.Resources: android.graphics.drawable.Drawable getDrawable(int,android.content.res.Resources.Theme)>
+One road protect good!
+-$i0 < 21
+Good road: <org.redcross.openmapkit.deployments.DeploymentDownloader: void onProgressUpdate(java.lang.Object[])>[]--><org.redcross.openmapkit.deployments.DeploymentDownloader: void onProgressUpdate(java.lang.Void[])>[]--><org.redcross.openmapkit.deployments.DeploymentDownloader: void notifyDeploymentDownloadProgressUpdate(java.lang.String,long)>[]--><org.redcross.openmapkit.deployments.DeploymentDetailsActivity: void onDeploymentDownloadProgressUpdate(java.lang.String,long)>[]--><org.redcross.openmapkit.deployments.DeploymentDetailsActivity: void setCancelFab()>[[-$i0 < 21]]--><android.content.res.Resources: android.graphics.drawable.Drawable getDrawable(int,android.content.res.Resources.Theme)>
+One road protect good!
+-$i0 < 21
+Good road: <org.redcross.openmapkit.deployments.DeploymentDetailsActivity: void onDeploymentDownloadError(java.lang.String)>[]--><org.redcross.openmapkit.deployments.DeploymentDetailsActivity: void setDownloadFab()>[[-$i0 < 21]]--><android.content.res.Resources: android.graphics.drawable.Drawable getDrawable(int,android.content.res.Resources.Theme)>
+One road protect good!
+-$i0 < 21
+Good road: <org.redcross.openmapkit.deployments.DeploymentDownloader: void onPostExecute(java.lang.Object)>[]--><org.redcross.openmapkit.deployments.DeploymentDownloader: void onPostExecute(java.lang.Void)>[]--><org.redcross.openmapkit.deployments.DeploymentDownloader: void notifyDeploymentDownloadComplete()>[]--><org.redcross.openmapkit.deployments.DeploymentDetailsActivity: void onDeploymentDownloadComplete()>[]--><org.redcross.openmapkit.deployments.DeploymentDetailsActivity: void setDeleteFab()>[[-$i0 < 21]]--><android.content.res.Resources: android.graphics.drawable.Drawable getDrawable(int,android.content.res.Resources.Theme)>
+One road protect good!
+containsStatic:false
+containsTry:false
+5call by main package
+-----------------------------------------
+#################################################
+N 12 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)> is checking!!!
+The life time of api is [22,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 21 
+Error road: <com.journeyapps.barcodescanner.CameraPreview: android.os.Parcelable onSaveInstanceState()>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+#1.the call statck between class <com.journeyapps.barcodescanner.CameraPreview: android.os.Parcelable onSaveInstanceState()> to <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+crashApis:8
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 13 Potential Issue API: SDKCheck of <java.awt.geom.GeneralPath: java.awt.geom.Rectangle2D getBounds2D()> is checking!!!
+The life time of api is [1,8]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <com.vividsolutions.jts.awt.GeometryCollectionShape: java.awt.geom.Rectangle2D getBounds2D()>[]--><com.vividsolutions.jts.awt.PolygonShape: java.awt.geom.Rectangle2D getBounds2D()>[]--><java.awt.geom.GeneralPath: java.awt.geom.Rectangle2D getBounds2D()>
+#1.the call statck between class <com.vividsolutions.jts.awt.GeometryCollectionShape: java.awt.geom.Rectangle2D getBounds2D()> to <java.awt.geom.GeneralPath: java.awt.geom.Rectangle2D getBounds2D()>has compatibility isssues！
+-----------------------------------------
+crashApis:9
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 14 Potential Issue API: SDKCheck of <java.awt.geom.Point2D: double getX()> is checking!!!
+The life time of api is [1,8]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 15 Potential Issue API: SDKCheck of <java.awt.font.GlyphVector: java.awt.Shape getGlyphOutline(int)> is checking!!!
+The life time of api is [1,8]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <com.vividsolutions.jts.awt.FontGlyphReader: com.vividsolutions.jts.geom.Geometry read(java.lang.String,java.lang.String,int,com.vividsolutions.jts.geom.GeometryFactory)>[]--><com.vividsolutions.jts.awt.FontGlyphReader: com.vividsolutions.jts.geom.Geometry read(java.lang.String,java.awt.Font,com.vividsolutions.jts.geom.GeometryFactory)>[]--><com.vividsolutions.jts.awt.FontGlyphReader: com.vividsolutions.jts.geom.Geometry read(java.lang.String,java.awt.Font,double,com.vividsolutions.jts.geom.GeometryFactory)>[]--><java.awt.font.GlyphVector: java.awt.Shape getGlyphOutline(int)>
+#1.the call statck between class <com.vividsolutions.jts.awt.FontGlyphReader: com.vividsolutions.jts.geom.Geometry read(java.lang.String,java.lang.String,int,com.vividsolutions.jts.geom.GeometryFactory)> to <java.awt.font.GlyphVector: java.awt.Shape getGlyphOutline(int)>has compatibility isssues！
+-----------------------------------------
+crashApis:10
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 16 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.lang.Object get(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.redcross.openmapkit.ZXingActivity dummyMainMethod_org_redcross_openmapkit_ZXingActivity(android.content.Intent)>[]--><com.journeyapps.barcodescanner.CaptureActivity: void onCreate(android.os.Bundle)>[]--><com.journeyapps.barcodescanner.CaptureManager: void initializeFromIntent(android.content.Intent,android.os.Bundle)>[]--><com.journeyapps.barcodescanner.CompoundBarcodeView: void initializeFromIntent(android.content.Intent)>[]--><com.google.zxing.client.android.DecodeHintManager: java.util.Map parseDecodeHints(android.content.Intent)>[]--><android.os.BaseBundle: java.lang.Object get(java.lang.String)>
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.journeyapps.barcodescanner.CaptureActivity dummyMainMethod_com_journeyapps_barcodescanner_CaptureActivity(android.content.Intent)>[]--><com.journeyapps.barcodescanner.CaptureActivity: void onCreate(android.os.Bundle)>[]--><com.journeyapps.barcodescanner.CaptureManager: void initializeFromIntent(android.content.Intent,android.os.Bundle)>[]--><com.journeyapps.barcodescanner.CompoundBarcodeView: void initializeFromIntent(android.content.Intent)>[]--><com.google.zxing.client.android.DecodeHintManager: java.util.Map parseDecodeHints(android.content.Intent)>[]--><android.os.BaseBundle: java.lang.Object get(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: java.lang.Object get(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:11
+crashApisInMain:2
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 17 Potential Issue API: SDKCheck of <java.awt.font.FontRenderContext: void <init>(java.awt.geom.AffineTransform,boolean,boolean)> is checking!!!
+The life time of api is [1,8]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <com.vividsolutions.jts.awt.FontGlyphReader: com.vividsolutions.jts.geom.Geometry read(java.lang.String,java.lang.String,int,com.vividsolutions.jts.geom.GeometryFactory)>[]--><com.vividsolutions.jts.awt.FontGlyphReader: com.vividsolutions.jts.geom.Geometry read(java.lang.String,java.awt.Font,com.vividsolutions.jts.geom.GeometryFactory)>[]--><com.vividsolutions.jts.awt.FontGlyphReader: com.vividsolutions.jts.geom.Geometry read(java.lang.String,java.awt.Font,double,com.vividsolutions.jts.geom.GeometryFactory)>[]--><java.awt.font.FontRenderContext: void <init>(java.awt.geom.AffineTransform,boolean,boolean)>
+#1.the call statck between class <com.vividsolutions.jts.awt.FontGlyphReader: com.vividsolutions.jts.geom.Geometry read(java.lang.String,java.lang.String,int,com.vividsolutions.jts.geom.GeometryFactory)> to <java.awt.font.FontRenderContext: void <init>(java.awt.geom.AffineTransform,boolean,boolean)>has compatibility isssues！
+-----------------------------------------
+crashApis:12
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 18 Potential Issue API: SDKCheck of <android.os.BaseBundle: boolean getBoolean(java.lang.String)> is checking!!!
+The life time of api is [22,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 21 
+Error road: <com.journeyapps.barcodescanner.CameraPreview: void onRestoreInstanceState(android.os.Parcelable)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+#1.the call statck between class <com.journeyapps.barcodescanner.CameraPreview: void onRestoreInstanceState(android.os.Parcelable)> to <android.os.BaseBundle: boolean getBoolean(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:13
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 19 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.lang.String getString(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+$i0 < 21
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.redcross.openmapkit.MapActivity dummyMainMethod_org_redcross_openmapkit_MapActivity(android.content.Intent)>[]--><org.redcross.openmapkit.MapActivity: void onCreate(android.os.Bundle)>[[$i0 < 21]]--><org.redcross.openmapkit.odkcollect.ODKCollectHandler: void registerIntent(android.content.Intent)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.redcross.openmapkit.tagswipe.TagSwipeActivity dummyMainMethod_org_redcross_openmapkit_tagswipe_TagSwipeActivity(android.content.Intent)>[]--><dummyMainClass: org.redcross.openmapkit.tagswipe.StandaloneFragment dummyMainMethod_org_redcross_openmapkit_tagswipe_StandaloneFragment(android.content.Intent,android.app.Activity)>[]--><org.redcross.openmapkit.tagswipe.StandaloneFragment: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:14
+crashApisInMain:3
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 20 Potential Issue API: SDKCheck of <java.awt.geom.GeneralPath: boolean intersects(double,double,double,double)> is checking!!!
+The life time of api is [1,8]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <com.vividsolutions.jts.awt.PolygonShape: boolean intersects(double,double,double,double)>[]--><java.awt.geom.GeneralPath: boolean intersects(double,double,double,double)>
+#1.the call statck between class <com.vividsolutions.jts.awt.PolygonShape: boolean intersects(double,double,double,double)> to <java.awt.geom.GeneralPath: boolean intersects(double,double,double,double)>has compatibility isssues！
+-----------------------------------------
+crashApis:15
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 21 Potential Issue API: SDKCheck of <android.media.MediaPlayer: void setVolume(float,float)> is checking!!!
+The life time of api is [1,17]
+2call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.redcross.openmapkit.ZXingActivity dummyMainMethod_org_redcross_openmapkit_ZXingActivity(android.content.Intent)>[]--><com.journeyapps.barcodescanner.CaptureActivity: void onResume()>[]--><com.journeyapps.barcodescanner.CaptureManager: void onResume()>[]--><com.google.zxing.client.android.BeepManager: void updatePrefs()>[[try]]--><com.google.zxing.client.android.BeepManager: android.media.MediaPlayer buildMediaPlayer(android.content.Context)>[[try]]--><android.media.MediaPlayer: void setVolume(float,float)>
+One road protect good!
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.journeyapps.barcodescanner.CaptureActivity dummyMainMethod_com_journeyapps_barcodescanner_CaptureActivity(android.content.Intent)>[]--><com.journeyapps.barcodescanner.CaptureManager: void <init>(android.app.Activity,com.journeyapps.barcodescanner.CompoundBarcodeView)>[]--><com.google.zxing.client.android.BeepManager: void <init>(android.app.Activity)>[]--><com.google.zxing.client.android.BeepManager: void updatePrefs()>[[try]]--><com.google.zxing.client.android.BeepManager: android.media.MediaPlayer buildMediaPlayer(android.content.Context)>[[try]]--><android.media.MediaPlayer: void setVolume(float,float)>
+One road protect good!
+1 Packageshead roads:
+try
+Good road with try: <com.google.zxing.client.android.BeepManager: boolean onError(android.media.MediaPlayer,int,int)>[[try]]--><com.google.zxing.client.android.BeepManager: void updatePrefs()>[[try]]--><com.google.zxing.client.android.BeepManager: android.media.MediaPlayer buildMediaPlayer(android.content.Context)>[[try]]--><android.media.MediaPlayer: void setVolume(float,float)>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 22 Potential Issue API: SDKCheck of <java.awt.Font: java.awt.font.GlyphVector createGlyphVector(java.awt.font.FontRenderContext,char[])> is checking!!!
+The life time of api is [1,8]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <com.vividsolutions.jts.awt.FontGlyphReader: com.vividsolutions.jts.geom.Geometry read(java.lang.String,java.lang.String,int,com.vividsolutions.jts.geom.GeometryFactory)>[]--><com.vividsolutions.jts.awt.FontGlyphReader: com.vividsolutions.jts.geom.Geometry read(java.lang.String,java.awt.Font,com.vividsolutions.jts.geom.GeometryFactory)>[]--><com.vividsolutions.jts.awt.FontGlyphReader: com.vividsolutions.jts.geom.Geometry read(java.lang.String,java.awt.Font,double,com.vividsolutions.jts.geom.GeometryFactory)>[]--><java.awt.Font: java.awt.font.GlyphVector createGlyphVector(java.awt.font.FontRenderContext,char[])>
+#1.the call statck between class <com.vividsolutions.jts.awt.FontGlyphReader: com.vividsolutions.jts.geom.Geometry read(java.lang.String,java.lang.String,int,com.vividsolutions.jts.geom.GeometryFactory)> to <java.awt.Font: java.awt.font.GlyphVector createGlyphVector(java.awt.font.FontRenderContext,char[])>has compatibility isssues！
+-----------------------------------------
+crashApis:16
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 23 Potential Issue API: SDKCheck of <java.awt.geom.Line2D.Double: void <init>(double,double,double,double)> is checking!!!
+The life time of api is [1,8]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 24 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putInt(java.lang.String,int)> is checking!!!
+The life time of api is [21,31]
+2call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.redcross.openmapkit.ZXingActivity dummyMainMethod_org_redcross_openmapkit_ZXingActivity(android.content.Intent)>[]--><com.journeyapps.barcodescanner.CaptureActivity: void onSaveInstanceState(android.os.Bundle)>[]--><com.journeyapps.barcodescanner.CaptureManager: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.journeyapps.barcodescanner.CaptureActivity dummyMainMethod_com_journeyapps_barcodescanner_CaptureActivity(android.content.Intent)>[]--><com.journeyapps.barcodescanner.CaptureActivity: void onSaveInstanceState(android.os.Bundle)>[]--><com.journeyapps.barcodescanner.CaptureManager: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <org.redcross.openmapkit.tagswipe.TagSwipeActivity$SectionsPagerAdapter: android.support.v4.app.Fragment getItem(int)>[]--><org.redcross.openmapkit.tagswipe.ReadOnlyTagFragment: org.redcross.openmapkit.tagswipe.ReadOnlyTagFragment newInstance(int)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+!!!this api will crash on sdk 19 20 
+Error road: <org.redcross.openmapkit.tagswipe.TagSwipeActivity$SectionsPagerAdapter: android.support.v4.app.Fragment getItem(int)>[]--><org.redcross.openmapkit.tagswipe.StringTagValueFragment: org.redcross.openmapkit.tagswipe.StringTagValueFragment newInstance(int)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+!!!this api will crash on sdk 19 20 
+Error road: <org.redcross.openmapkit.tagswipe.TagSwipeActivity$SectionsPagerAdapter: android.support.v4.app.Fragment getItem(int)>[]--><org.redcross.openmapkit.tagswipe.SelectOneTagValueFragment: org.redcross.openmapkit.tagswipe.SelectOneTagValueFragment newInstance(int)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+!!!this api will crash on sdk 19 20 
+Error road: <org.redcross.openmapkit.tagswipe.TagSwipeActivity$SectionsPagerAdapter: android.support.v4.app.Fragment getItem(int)>[]--><org.redcross.openmapkit.tagswipe.SelectMultipleTagValueFragment: org.redcross.openmapkit.tagswipe.SelectMultipleTagValueFragment newInstance(int)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#1.the call statck between class <org.redcross.openmapkit.tagswipe.TagSwipeActivity$SectionsPagerAdapter: android.support.v4.app.Fragment getItem(int)> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:17
+crashApisInMain:4
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 25 Potential Issue API: SDKCheck of <java.awt.geom.Point2D: void setLocation(double,double)> is checking!!!
+The life time of api is [1,8]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 26 Potential Issue API: SDKCheck of <java.awt.geom.GeneralPath: boolean intersects(java.awt.geom.Rectangle2D)> is checking!!!
+The life time of api is [1,8]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <com.vividsolutions.jts.awt.PolygonShape: boolean intersects(java.awt.geom.Rectangle2D)>[]--><java.awt.geom.GeneralPath: boolean intersects(java.awt.geom.Rectangle2D)>
+#1.the call statck between class <com.vividsolutions.jts.awt.PolygonShape: boolean intersects(java.awt.geom.Rectangle2D)> to <java.awt.geom.GeneralPath: boolean intersects(java.awt.geom.Rectangle2D)>has compatibility isssues！
+-----------------------------------------
+crashApis:18
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 27 Potential Issue API: SDKCheck of <java.awt.geom.GeneralPath: void closePath()> is checking!!!
+The life time of api is [1,8]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 28 Potential Issue API: SDKCheck of <android.net.ConnectivityManager: android.net.NetworkInfo getNetworkInfo(int)> is checking!!!
+The life time of api is [1,30]
+3call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.redcross.openmapkit.MapActivity dummyMainMethod_org_redcross_openmapkit_MapActivity(android.content.Intent)>[]--><org.redcross.openmapkit.MapActivity: boolean onOptionsItemSelected(android.view.MenuItem)>[]--><org.redcross.openmapkit.Basemap: void presentBasemapsOptions()>[]--><org.redcross.openmapkit.Connectivity: boolean isConnected(android.content.Context)>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getNetworkInfo(int)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.ConnectivityManager: android.net.NetworkInfo getNetworkInfo(int)>has compatibility isssues！
+-----------------------------------------
+2 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <com.mapbox.mapboxsdk.tileprovider.modules.NetworkAvailabilityCheck: boolean getWiFiNetworkAvailable()>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getNetworkInfo(int)>
+#1.the call statck between class <com.mapbox.mapboxsdk.tileprovider.modules.NetworkAvailabilityCheck: boolean getWiFiNetworkAvailable()> to <android.net.ConnectivityManager: android.net.NetworkInfo getNetworkInfo(int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <com.mapbox.mapboxsdk.tileprovider.modules.NetworkAvailabilityCheck: boolean getCellularDataNetworkAvailable()>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getNetworkInfo(int)>
+#2.the call statck between class <com.mapbox.mapboxsdk.tileprovider.modules.NetworkAvailabilityCheck: boolean getCellularDataNetworkAvailable()> to <android.net.ConnectivityManager: android.net.NetworkInfo getNetworkInfo(int)>has compatibility isssues！
+-----------------------------------------
+crashApis:19
+crashApisInMain:5
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 29 Potential Issue API: SDKCheck of <android.os.BaseBundle: int getInt(java.lang.String,int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.redcross.openmapkit.ZXingActivity dummyMainMethod_org_redcross_openmapkit_ZXingActivity(android.content.Intent)>[]--><com.journeyapps.barcodescanner.CaptureActivity: void onCreate(android.os.Bundle)>[]--><com.journeyapps.barcodescanner.CaptureManager: void initializeFromIntent(android.content.Intent,android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String,int)>
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.journeyapps.barcodescanner.CaptureActivity dummyMainMethod_com_journeyapps_barcodescanner_CaptureActivity(android.content.Intent)>[]--><com.journeyapps.barcodescanner.CaptureActivity: void onCreate(android.os.Bundle)>[]--><com.journeyapps.barcodescanner.CaptureManager: void initializeFromIntent(android.content.Intent,android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String,int)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: int getInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:20
+crashApisInMain:6
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 30 Potential Issue API: SDKCheck of <android.view.Window: void setStatusBarColor(int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.redcross.openmapkit.MapActivity dummyMainMethod_org_redcross_openmapkit_MapActivity(android.content.Intent)>[]--><org.redcross.openmapkit.MapActivity: void onCreate(android.os.Bundle)>[[-$i0 < 21]]--><android.view.Window: void setStatusBarColor(int)>
+One road protect good!
+-$i0 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.redcross.openmapkit.deployments.DeploymentDetailsActivity dummyMainMethod_org_redcross_openmapkit_deployments_DeploymentDetailsActivity(android.content.Intent)>[]--><org.redcross.openmapkit.deployments.DeploymentDetailsActivity: void onCreate(android.os.Bundle)>[[-$i0 < 21]]--><android.view.Window: void setStatusBarColor(int)>
+One road protect good!
+-$i0 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.redcross.openmapkit.deployments.DeploymentsActivity dummyMainMethod_org_redcross_openmapkit_deployments_DeploymentsActivity(android.content.Intent)>[]--><org.redcross.openmapkit.deployments.DeploymentsActivity: void onCreate(android.os.Bundle)>[[-$i0 < 21]]--><android.view.Window: void setStatusBarColor(int)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 31 Potential Issue API: SDKCheck of <java.awt.geom.GeneralPath: void <init>(int,int)> is checking!!!
+The life time of api is [1,8]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <com.vividsolutions.jts.awt.PolygonShape: void <init>(com.vividsolutions.jts.geom.Coordinate[],java.util.Collection)>[]--><com.vividsolutions.jts.awt.PolygonShape: java.awt.geom.GeneralPath toPath(com.vividsolutions.jts.geom.Coordinate[])>[]--><java.awt.geom.GeneralPath: void <init>(int,int)>
+#1.the call statck between class <com.vividsolutions.jts.awt.PolygonShape: void <init>(com.vividsolutions.jts.geom.Coordinate[],java.util.Collection)> to <java.awt.geom.GeneralPath: void <init>(int,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:21
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 32 Potential Issue API: SDKCheck of <java.awt.Shape: java.awt.geom.Rectangle2D getBounds2D()> is checking!!!
+The life time of api is [1,8]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <com.vividsolutions.jts.awt.GeometryCollectionShape: java.awt.geom.Rectangle2D getBounds2D()>[]--><java.awt.Shape: java.awt.geom.Rectangle2D getBounds2D()>
+#1.the call statck between class <com.vividsolutions.jts.awt.GeometryCollectionShape: java.awt.geom.Rectangle2D getBounds2D()> to <java.awt.Shape: java.awt.geom.Rectangle2D getBounds2D()>has compatibility isssues！
+-----------------------------------------
+crashApis:22
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 33 Potential Issue API: SDKCheck of <java.awt.geom.AffineTransform: java.awt.geom.AffineTransform getScaleInstance(double,double)> is checking!!!
+The life time of api is [1,8]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <com.vividsolutions.jts.awt.ShapeReader: void <clinit>()>[]--><java.awt.geom.AffineTransform: java.awt.geom.AffineTransform getScaleInstance(double,double)>
+#1.the call statck between class <com.vividsolutions.jts.awt.ShapeReader: void <clinit>()> to <java.awt.geom.AffineTransform: java.awt.geom.AffineTransform getScaleInstance(double,double)>has compatibility isssues！
+-----------------------------------------
+crashApis:23
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 34 Potential Issue API: SDKCheck of <java.awt.geom.GeneralPath: boolean contains(java.awt.geom.Point2D)> is checking!!!
+The life time of api is [1,8]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <com.vividsolutions.jts.awt.PolygonShape: boolean contains(java.awt.geom.Point2D)>[]--><java.awt.geom.GeneralPath: boolean contains(java.awt.geom.Point2D)>
+#1.the call statck between class <com.vividsolutions.jts.awt.PolygonShape: boolean contains(java.awt.geom.Point2D)> to <java.awt.geom.GeneralPath: boolean contains(java.awt.geom.Point2D)>has compatibility isssues！
+-----------------------------------------
+crashApis:24
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 35 Potential Issue API: SDKCheck of <android.net.NetworkInfo: boolean isConnected()> is checking!!!
+The life time of api is [1,30]
+3call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.redcross.openmapkit.MapActivity dummyMainMethod_org_redcross_openmapkit_MapActivity(android.content.Intent)>[]--><org.redcross.openmapkit.MapActivity: boolean onOptionsItemSelected(android.view.MenuItem)>[]--><org.redcross.openmapkit.Basemap: void presentBasemapsOptions()>[]--><org.redcross.openmapkit.Connectivity: boolean isConnected(android.content.Context)>[]--><android.net.NetworkInfo: boolean isConnected()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.NetworkInfo: boolean isConnected()>has compatibility isssues！
+-----------------------------------------
+2 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <com.mapbox.mapboxsdk.offline.OfflineMapDownloader: void beginDownloadingMapID(java.lang.String,com.mapbox.mapboxsdk.geometry.CoordinateRegion,java.lang.Integer,java.lang.Integer,boolean,boolean,com.mapbox.mapboxsdk.constants.MapboxConstants$RasterImageQuality)>[]--><com.mapbox.mapboxsdk.util.NetworkUtils: boolean isNetworkAvailable(android.content.Context)>[]--><android.net.NetworkInfo: boolean isConnected()>
+#1.the call statck between class <com.mapbox.mapboxsdk.offline.OfflineMapDownloader: void beginDownloadingMapID(java.lang.String,com.mapbox.mapboxsdk.geometry.CoordinateRegion,java.lang.Integer,java.lang.Integer,boolean,boolean,com.mapbox.mapboxsdk.constants.MapboxConstants$RasterImageQuality)> to <android.net.NetworkInfo: boolean isConnected()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <com.mapbox.mapboxsdk.views.MapView: void loadFromGeoJSONURL(java.lang.String)>[]--><com.mapbox.mapboxsdk.util.NetworkUtils: boolean isNetworkAvailable(android.content.Context)>[]--><android.net.NetworkInfo: boolean isConnected()>
+#2.the call statck between class <com.mapbox.mapboxsdk.views.MapView: void loadFromGeoJSONURL(java.lang.String)> to <android.net.NetworkInfo: boolean isConnected()>has compatibility isssues！
+-----------------------------------------
+crashApis:25
+crashApisInMain:7
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 36 Potential Issue API: SDKCheck of <java.awt.geom.Point2D: double getY()> is checking!!!
+The life time of api is [1,8]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 37 Potential Issue API: SDKCheck of <java.awt.geom.GeneralPath: boolean contains(double,double)> is checking!!!
+The life time of api is [1,8]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <com.vividsolutions.jts.awt.PolygonShape: boolean contains(double,double)>[]--><java.awt.geom.GeneralPath: boolean contains(double,double)>
+#1.the call statck between class <com.vividsolutions.jts.awt.PolygonShape: boolean contains(double,double)> to <java.awt.geom.GeneralPath: boolean contains(double,double)>has compatibility isssues！
+-----------------------------------------
+crashApis:26
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 38 Potential Issue API: SDKCheck of <java.awt.geom.GeneralPath: void moveTo(float,float)> is checking!!!
+The life time of api is [1,8]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <com.vividsolutions.jts.awt.PolygonShape: void <init>(com.vividsolutions.jts.geom.Coordinate[],java.util.Collection)>[]--><com.vividsolutions.jts.awt.PolygonShape: java.awt.geom.GeneralPath toPath(com.vividsolutions.jts.geom.Coordinate[])>[]--><java.awt.geom.GeneralPath: void moveTo(float,float)>
+#1.the call statck between class <com.vividsolutions.jts.awt.PolygonShape: void <init>(com.vividsolutions.jts.geom.Coordinate[],java.util.Collection)> to <java.awt.geom.GeneralPath: void moveTo(float,float)>has compatibility isssues！
+-----------------------------------------
+crashApis:27
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 39 Potential Issue API: SDKCheck of <java.awt.Shape: java.awt.geom.PathIterator getPathIterator(java.awt.geom.AffineTransform)> is checking!!!
+The life time of api is [1,8]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <com.vividsolutions.jts.awt.FontGlyphReader: com.vividsolutions.jts.geom.Geometry read(java.lang.String,java.lang.String,int,com.vividsolutions.jts.geom.GeometryFactory)>[]--><com.vividsolutions.jts.awt.FontGlyphReader: com.vividsolutions.jts.geom.Geometry read(java.lang.String,java.awt.Font,com.vividsolutions.jts.geom.GeometryFactory)>[]--><com.vividsolutions.jts.awt.FontGlyphReader: com.vividsolutions.jts.geom.Geometry read(java.lang.String,java.awt.Font,double,com.vividsolutions.jts.geom.GeometryFactory)>[]--><com.vividsolutions.jts.awt.ShapeReader: com.vividsolutions.jts.geom.Geometry read(java.awt.Shape,double,com.vividsolutions.jts.geom.GeometryFactory)>[]--><com.vividsolutions.jts.awt.GeometryCollectionShape: java.awt.geom.PathIterator getPathIterator(java.awt.geom.AffineTransform,double)>[]--><com.vividsolutions.jts.awt.GeometryCollectionShape: java.awt.geom.PathIterator getPathIterator(java.awt.geom.AffineTransform)>[]--><com.vividsolutions.jts.awt.ShapeCollectionPathIterator: void <init>(java.util.Collection,java.awt.geom.AffineTransform)>[]--><com.vividsolutions.jts.awt.ShapeCollectionPathIterator: void next()>[]--><java.awt.Shape: java.awt.geom.PathIterator getPathIterator(java.awt.geom.AffineTransform)>
+#1.the call statck between class <com.vividsolutions.jts.awt.FontGlyphReader: com.vividsolutions.jts.geom.Geometry read(java.lang.String,java.lang.String,int,com.vividsolutions.jts.geom.GeometryFactory)> to <java.awt.Shape: java.awt.geom.PathIterator getPathIterator(java.awt.geom.AffineTransform)>has compatibility isssues！
+-----------------------------------------
+crashApis:28
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 40 Potential Issue API: SDKCheck of <java.awt.Font: void <init>(java.lang.String,int,int)> is checking!!!
+The life time of api is [1,8]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <com.vividsolutions.jts.awt.FontGlyphReader: com.vividsolutions.jts.geom.Geometry read(java.lang.String,java.lang.String,int,com.vividsolutions.jts.geom.GeometryFactory)>[]--><java.awt.Font: void <init>(java.lang.String,int,int)>
+#1.the call statck between class <com.vividsolutions.jts.awt.FontGlyphReader: com.vividsolutions.jts.geom.Geometry read(java.lang.String,java.lang.String,int,com.vividsolutions.jts.geom.GeometryFactory)> to <java.awt.Font: void <init>(java.lang.String,int,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:29
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 41 Potential Issue API: SDKCheck of <java.awt.geom.PathIterator: int currentSegment(float[])> is checking!!!
+The life time of api is [1,8]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <com.vividsolutions.jts.awt.ShapeCollectionPathIterator: int currentSegment(float[])>[]--><java.awt.geom.PathIterator: int currentSegment(float[])>
+#1.the call statck between class <com.vividsolutions.jts.awt.ShapeCollectionPathIterator: int currentSegment(float[])> to <java.awt.geom.PathIterator: int currentSegment(float[])>has compatibility isssues！
+-----------------------------------------
+crashApis:30
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 42 Potential Issue API: SDKCheck of <java.awt.geom.PathIterator: void next()> is checking!!!
+The life time of api is [1,8]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <com.vividsolutions.jts.awt.FontGlyphReader: com.vividsolutions.jts.geom.Geometry read(java.lang.String,java.lang.String,int,com.vividsolutions.jts.geom.GeometryFactory)>[]--><com.vividsolutions.jts.awt.FontGlyphReader: com.vividsolutions.jts.geom.Geometry read(java.lang.String,java.awt.Font,com.vividsolutions.jts.geom.GeometryFactory)>[]--><com.vividsolutions.jts.awt.FontGlyphReader: com.vividsolutions.jts.geom.Geometry read(java.lang.String,java.awt.Font,double,com.vividsolutions.jts.geom.GeometryFactory)>[]--><com.vividsolutions.jts.awt.ShapeReader: com.vividsolutions.jts.geom.Geometry read(java.awt.Shape,double,com.vividsolutions.jts.geom.GeometryFactory)>[]--><com.vividsolutions.jts.awt.GeometryCollectionShape: java.awt.geom.PathIterator getPathIterator(java.awt.geom.AffineTransform,double)>[]--><com.vividsolutions.jts.awt.GeometryCollectionShape: java.awt.geom.PathIterator getPathIterator(java.awt.geom.AffineTransform)>[]--><com.vividsolutions.jts.awt.ShapeCollectionPathIterator: void <init>(java.util.Collection,java.awt.geom.AffineTransform)>[]--><com.vividsolutions.jts.awt.ShapeCollectionPathIterator: void next()>[]--><java.awt.geom.PathIterator: void next()>
+#1.the call statck between class <com.vividsolutions.jts.awt.FontGlyphReader: com.vividsolutions.jts.geom.Geometry read(java.lang.String,java.lang.String,int,com.vividsolutions.jts.geom.GeometryFactory)> to <java.awt.geom.PathIterator: void next()>has compatibility isssues！
+-----------------------------------------
+crashApis:31
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 43 Potential Issue API: SDKCheck of <java.awt.geom.GeneralPath: void append(java.awt.Shape,boolean)> is checking!!!
+The life time of api is [1,8]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <com.vividsolutions.jts.awt.PolygonShape: void <init>(com.vividsolutions.jts.geom.Coordinate[],java.util.Collection)>[]--><java.awt.geom.GeneralPath: void append(java.awt.Shape,boolean)>
+#1.the call statck between class <com.vividsolutions.jts.awt.PolygonShape: void <init>(com.vividsolutions.jts.geom.Coordinate[],java.util.Collection)> to <java.awt.geom.GeneralPath: void append(java.awt.Shape,boolean)>has compatibility isssues！
+-----------------------------------------
+crashApis:32
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 44 Potential Issue API: SDKCheck of <java.awt.Font: int getSize()> is checking!!!
+The life time of api is [1,8]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <com.vividsolutions.jts.awt.FontGlyphReader: com.vividsolutions.jts.geom.Geometry read(java.lang.String,java.lang.String,int,com.vividsolutions.jts.geom.GeometryFactory)>[]--><com.vividsolutions.jts.awt.FontGlyphReader: com.vividsolutions.jts.geom.Geometry read(java.lang.String,java.awt.Font,com.vividsolutions.jts.geom.GeometryFactory)>[]--><java.awt.Font: int getSize()>
+#1.the call statck between class <com.vividsolutions.jts.awt.FontGlyphReader: com.vividsolutions.jts.geom.Geometry read(java.lang.String,java.lang.String,int,com.vividsolutions.jts.geom.GeometryFactory)> to <java.awt.Font: int getSize()>has compatibility isssues！
+-----------------------------------------
+crashApis:33
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 45 Potential Issue API: SDKCheck of <java.awt.Shape: java.awt.geom.PathIterator getPathIterator(java.awt.geom.AffineTransform,double)> is checking!!!
+The life time of api is [1,8]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <com.vividsolutions.jts.awt.FontGlyphReader: com.vividsolutions.jts.geom.Geometry read(java.lang.String,java.lang.String,int,com.vividsolutions.jts.geom.GeometryFactory)>[]--><com.vividsolutions.jts.awt.FontGlyphReader: com.vividsolutions.jts.geom.Geometry read(java.lang.String,java.awt.Font,com.vividsolutions.jts.geom.GeometryFactory)>[]--><com.vividsolutions.jts.awt.FontGlyphReader: com.vividsolutions.jts.geom.Geometry read(java.lang.String,java.awt.Font,double,com.vividsolutions.jts.geom.GeometryFactory)>[]--><com.vividsolutions.jts.awt.ShapeReader: com.vividsolutions.jts.geom.Geometry read(java.awt.Shape,double,com.vividsolutions.jts.geom.GeometryFactory)>[]--><java.awt.Shape: java.awt.geom.PathIterator getPathIterator(java.awt.geom.AffineTransform,double)>
+#1.the call statck between class <com.vividsolutions.jts.awt.FontGlyphReader: com.vividsolutions.jts.geom.Geometry read(java.lang.String,java.lang.String,int,com.vividsolutions.jts.geom.GeometryFactory)> to <java.awt.Shape: java.awt.geom.PathIterator getPathIterator(java.awt.geom.AffineTransform,double)>has compatibility isssues！
+-----------------------------------------
+crashApis:34
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 46 Potential Issue API: SDKCheck of <java.awt.geom.GeneralPath: java.awt.Rectangle getBounds()> is checking!!!
+The life time of api is [1,8]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <com.vividsolutions.jts.awt.PolygonShape: java.awt.Rectangle getBounds()>[]--><java.awt.geom.GeneralPath: java.awt.Rectangle getBounds()>
+#1.the call statck between class <com.vividsolutions.jts.awt.PolygonShape: java.awt.Rectangle getBounds()> to <java.awt.geom.GeneralPath: java.awt.Rectangle getBounds()>has compatibility isssues！
+-----------------------------------------
+crashApis:35
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 47 Potential Issue API: SDKCheck of <java.awt.geom.GeneralPath: void lineTo(float,float)> is checking!!!
+The life time of api is [1,8]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <com.vividsolutions.jts.awt.PolygonShape: void <init>(com.vividsolutions.jts.geom.Coordinate[],java.util.Collection)>[]--><com.vividsolutions.jts.awt.PolygonShape: java.awt.geom.GeneralPath toPath(com.vividsolutions.jts.geom.Coordinate[])>[]--><java.awt.geom.GeneralPath: void lineTo(float,float)>
+#1.the call statck between class <com.vividsolutions.jts.awt.PolygonShape: void <init>(com.vividsolutions.jts.geom.Coordinate[],java.util.Collection)> to <java.awt.geom.GeneralPath: void lineTo(float,float)>has compatibility isssues！
+-----------------------------------------
+crashApis:36
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 48 Potential Issue API: SDKCheck of <java.awt.geom.PathIterator: int currentSegment(double[])> is checking!!!
+The life time of api is [1,8]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <com.vividsolutions.jts.awt.FontGlyphReader: com.vividsolutions.jts.geom.Geometry read(java.lang.String,java.lang.String,int,com.vividsolutions.jts.geom.GeometryFactory)>[]--><com.vividsolutions.jts.awt.FontGlyphReader: com.vividsolutions.jts.geom.Geometry read(java.lang.String,java.awt.Font,com.vividsolutions.jts.geom.GeometryFactory)>[]--><com.vividsolutions.jts.awt.FontGlyphReader: com.vividsolutions.jts.geom.Geometry read(java.lang.String,java.awt.Font,double,com.vividsolutions.jts.geom.GeometryFactory)>[]--><com.vividsolutions.jts.awt.ShapeReader: com.vividsolutions.jts.geom.Geometry read(java.awt.Shape,double,com.vividsolutions.jts.geom.GeometryFactory)>[]--><com.vividsolutions.jts.awt.ShapeReader: com.vividsolutions.jts.geom.Geometry read(java.awt.geom.PathIterator,com.vividsolutions.jts.geom.GeometryFactory)>[]--><com.vividsolutions.jts.awt.ShapeReader: com.vividsolutions.jts.geom.Geometry read(java.awt.geom.PathIterator)>[]--><com.vividsolutions.jts.awt.ShapeReader: java.util.List toCoordinates(java.awt.geom.PathIterator)>[]--><com.vividsolutions.jts.awt.ShapeReader: com.vividsolutions.jts.geom.Coordinate[] nextCoordinateArray(java.awt.geom.PathIterator)>[]--><java.awt.geom.PathIterator: int currentSegment(double[])>
+#1.the call statck between class <com.vividsolutions.jts.awt.FontGlyphReader: com.vividsolutions.jts.geom.Geometry read(java.lang.String,java.lang.String,int,com.vividsolutions.jts.geom.GeometryFactory)> to <java.awt.geom.PathIterator: int currentSegment(double[])>has compatibility isssues！
+-----------------------------------------
+crashApis:37
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 49 Potential Issue API: SDKCheck of <android.graphics.Path: void finalize()> is checking!!!
+The life time of api is [1,27]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 28 29 30 31 
+Error road: <com.mapbox.mapboxsdk.views.safecanvas.SafeTranslatedPath: void finalize()>[]--><android.graphics.Path: void finalize()>
+#1.the call statck between class <com.mapbox.mapboxsdk.views.safecanvas.SafeTranslatedPath: void finalize()> to <android.graphics.Path: void finalize()>has compatibility isssues！
+-----------------------------------------
+crashApis:38
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 50 Potential Issue API: SDKCheck of <android.os.BaseBundle: boolean isEmpty()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.redcross.openmapkit.ZXingActivity dummyMainMethod_org_redcross_openmapkit_ZXingActivity(android.content.Intent)>[]--><com.journeyapps.barcodescanner.CaptureActivity: void onCreate(android.os.Bundle)>[]--><com.journeyapps.barcodescanner.CaptureManager: void initializeFromIntent(android.content.Intent,android.os.Bundle)>[]--><com.journeyapps.barcodescanner.CompoundBarcodeView: void initializeFromIntent(android.content.Intent)>[]--><com.google.zxing.client.android.DecodeHintManager: java.util.Map parseDecodeHints(android.content.Intent)>[]--><android.os.BaseBundle: boolean isEmpty()>
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.journeyapps.barcodescanner.CaptureActivity dummyMainMethod_com_journeyapps_barcodescanner_CaptureActivity(android.content.Intent)>[]--><com.journeyapps.barcodescanner.CaptureActivity: void onCreate(android.os.Bundle)>[]--><com.journeyapps.barcodescanner.CaptureManager: void initializeFromIntent(android.content.Intent,android.os.Bundle)>[]--><com.journeyapps.barcodescanner.CompoundBarcodeView: void initializeFromIntent(android.content.Intent)>[]--><com.google.zxing.client.android.DecodeHintManager: java.util.Map parseDecodeHints(android.content.Intent)>[]--><android.os.BaseBundle: boolean isEmpty()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: boolean isEmpty()>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:39
+crashApisInMain:8
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 51 Potential Issue API: SDKCheck of <java.awt.font.GlyphVector: int getNumGlyphs()> is checking!!!
+The life time of api is [1,8]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <com.vividsolutions.jts.awt.FontGlyphReader: com.vividsolutions.jts.geom.Geometry read(java.lang.String,java.lang.String,int,com.vividsolutions.jts.geom.GeometryFactory)>[]--><com.vividsolutions.jts.awt.FontGlyphReader: com.vividsolutions.jts.geom.Geometry read(java.lang.String,java.awt.Font,com.vividsolutions.jts.geom.GeometryFactory)>[]--><com.vividsolutions.jts.awt.FontGlyphReader: com.vividsolutions.jts.geom.Geometry read(java.lang.String,java.awt.Font,double,com.vividsolutions.jts.geom.GeometryFactory)>[]--><java.awt.font.GlyphVector: int getNumGlyphs()>
+#1.the call statck between class <com.vividsolutions.jts.awt.FontGlyphReader: com.vividsolutions.jts.geom.Geometry read(java.lang.String,java.lang.String,int,com.vividsolutions.jts.geom.GeometryFactory)> to <java.awt.font.GlyphVector: int getNumGlyphs()>has compatibility isssues！
+-----------------------------------------
+crashApis:40
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 52 Potential Issue API: SDKCheck of <java.awt.geom.GeneralPath: java.awt.geom.PathIterator getPathIterator(java.awt.geom.AffineTransform)> is checking!!!
+The life time of api is [1,8]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <com.vividsolutions.jts.awt.FontGlyphReader: com.vividsolutions.jts.geom.Geometry read(java.lang.String,java.lang.String,int,com.vividsolutions.jts.geom.GeometryFactory)>[]--><com.vividsolutions.jts.awt.FontGlyphReader: com.vividsolutions.jts.geom.Geometry read(java.lang.String,java.awt.Font,com.vividsolutions.jts.geom.GeometryFactory)>[]--><com.vividsolutions.jts.awt.FontGlyphReader: com.vividsolutions.jts.geom.Geometry read(java.lang.String,java.awt.Font,double,com.vividsolutions.jts.geom.GeometryFactory)>[]--><com.vividsolutions.jts.awt.ShapeReader: com.vividsolutions.jts.geom.Geometry read(java.awt.Shape,double,com.vividsolutions.jts.geom.GeometryFactory)>[]--><com.vividsolutions.jts.awt.GeometryCollectionShape: java.awt.geom.PathIterator getPathIterator(java.awt.geom.AffineTransform,double)>[]--><com.vividsolutions.jts.awt.GeometryCollectionShape: java.awt.geom.PathIterator getPathIterator(java.awt.geom.AffineTransform)>[]--><com.vividsolutions.jts.awt.ShapeCollectionPathIterator: void <init>(java.util.Collection,java.awt.geom.AffineTransform)>[]--><com.vividsolutions.jts.awt.ShapeCollectionPathIterator: void next()>[]--><com.vividsolutions.jts.awt.PolygonShape: java.awt.geom.PathIterator getPathIterator(java.awt.geom.AffineTransform)>[]--><java.awt.geom.GeneralPath: java.awt.geom.PathIterator getPathIterator(java.awt.geom.AffineTransform)>
+#1.the call statck between class <com.vividsolutions.jts.awt.FontGlyphReader: com.vividsolutions.jts.geom.Geometry read(java.lang.String,java.lang.String,int,com.vividsolutions.jts.geom.GeometryFactory)> to <java.awt.geom.GeneralPath: java.awt.geom.PathIterator getPathIterator(java.awt.geom.AffineTransform)>has compatibility isssues！
+-----------------------------------------
+crashApis:41
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 53 Potential Issue API: SDKCheck of <java.awt.geom.GeneralPath: void <init>()> is checking!!!
+The life time of api is [1,8]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 54 Potential Issue API: SDKCheck of <android.net.NetworkInfo: boolean isAvailable()> is checking!!!
+The life time of api is [1,30]
+1993call roads:
+1 Mainhead roads:
+1992 Packageshead roads:
+Roads number exceed, exit!1992
+#################################################
+N 55 Potential Issue API: SDKCheck of <android.net.ConnectivityManager: boolean requestRouteToHost(int,int)> is checking!!!
+The life time of api is [1,30]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <com.mapbox.mapboxsdk.tileprovider.modules.NetworkAvailabilityCheck: boolean getRouteToPathExists(int)>[]--><android.net.ConnectivityManager: boolean requestRouteToHost(int,int)>
+#1.the call statck between class <com.mapbox.mapboxsdk.tileprovider.modules.NetworkAvailabilityCheck: boolean getRouteToPathExists(int)> to <android.net.ConnectivityManager: boolean requestRouteToHost(int,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:42
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 56 Potential Issue API: SDKCheck of <java.awt.geom.Rectangle2D: void add(java.awt.geom.Rectangle2D)> is checking!!!
+The life time of api is [1,8]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <com.vividsolutions.jts.awt.GeometryCollectionShape: java.awt.geom.Rectangle2D getBounds2D()>[]--><java.awt.geom.Rectangle2D: void add(java.awt.geom.Rectangle2D)>
+#1.the call statck between class <com.vividsolutions.jts.awt.GeometryCollectionShape: java.awt.geom.Rectangle2D getBounds2D()> to <java.awt.geom.Rectangle2D: void add(java.awt.geom.Rectangle2D)>has compatibility isssues！
+-----------------------------------------
+crashApis:43
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+crashApis numbers:43
+crashApis numbers in main road:8
+On Android Version 16 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 17 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 18 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 19 this app may have error api use(at least): 39 and error api roads: 53
+On Android Version 20 this app may have error api use(at least): 39 and error api roads: 53
+On Android Version 21 this app may have error api use(at least): 31 and error api roads: 32
+On Android Version 22 this app may have error api use(at least): 29 and error api roads: 30
+On Android Version 23 this app may have error api use(at least): 29 and error api roads: 30
+On Android Version 24 this app may have error api use(at least): 29 and error api roads: 30
+On Android Version 25 this app may have error api use(at least): 29 and error api roads: 30
+On Android Version 26 this app may have error api use(at least): 29 and error api roads: 30
+On Android Version 27 this app may have error api use(at least): 29 and error api roads: 30
+On Android Version 28 this app may have error api use(at least): 30 and error api roads: 31
+On Android Version 29 this app may have error api use(at least): 30 and error api roads: 31
+On Android Version 30 this app may have error api use(at least): 30 and error api roads: 31
+On Android Version 31 this app may have error api use(at least): 33 and error api roads: 38

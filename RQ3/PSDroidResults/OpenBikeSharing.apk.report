@@ -1,0 +1,133 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/OpenBikeSharing.apk
+Entry Points[be.brunoparmentier.openbikesharing.app.ui.StationActivity, be.brunoparmentier.openbikesharing.app.ui.SettingsActivity, be.brunoparmentier.openbikesharing.app.ui.MapActivity, be.brunoparmentier.openbikesharing.app.ui.BikeNetworksListActivity, be.brunoparmentier.openbikesharing.app.ui.StationsListActivity]
+FllowDroidcallgraph size:1981
+Soot started on Mon Jul 11 09:37:54 CST 2022
+StaticCheck:<be.brunoparmentier.openbikesharing.app.ui.SettingsActivity: boolean isSimplePreferences(android.content.Context)>$yysi0 < 11
+Soot finished on Mon Jul 11 09:38:00 CST 2022
+Soot has run for 0 min. 5 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 19
+Declared Target Sdk version is: 19
+Declared Max Sdk version is: -1
+Collected 402 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+try
+Good road with try: <org.osmdroid.tileprovider.modules.MapTileDownloader$TileLoader: android.graphics.drawable.Drawable loadTile(org.osmdroid.tileprovider.MapTileRequestState)>[[try]]--><org.osmdroid.tileprovider.modules.NetworkAvailabliltyCheck: boolean getNetworkAvailable()>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.net.ConnectivityManager: android.net.NetworkInfo getNetworkInfo(int)> is checking!!!
+The life time of api is [1,30]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <org.osmdroid.tileprovider.modules.NetworkAvailabliltyCheck: boolean getWiFiNetworkAvailable()>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getNetworkInfo(int)>
+#1.the call statck between class <org.osmdroid.tileprovider.modules.NetworkAvailabliltyCheck: boolean getWiFiNetworkAvailable()> to <android.net.ConnectivityManager: android.net.NetworkInfo getNetworkInfo(int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <org.osmdroid.tileprovider.modules.NetworkAvailabliltyCheck: boolean getCellularDataNetworkAvailable()>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getNetworkInfo(int)>
+#2.the call statck between class <org.osmdroid.tileprovider.modules.NetworkAvailabliltyCheck: boolean getCellularDataNetworkAvailable()> to <android.net.ConnectivityManager: android.net.NetworkInfo getNetworkInfo(int)>has compatibility isssues！
+-----------------------------------------
+crashApis:1
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <org.apache.http.params.HttpParams: org.apache.http.params.HttpParams setBooleanParameter(java.lang.String,boolean)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+try
+Good road with try: <org.osmdroid.contributor.GpxToPHPUploader$1: void run()>[[try]]--><org.apache.http.params.HttpParams: org.apache.http.params.HttpParams setBooleanParameter(java.lang.String,boolean)>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <org.apache.http.params.HttpParams: org.apache.http.params.HttpParams setParameter(java.lang.String,java.lang.Object)> is checking!!!
+The life time of api is [23,31]
+3call roads:
+0 Mainhead roads:
+3 Packageshead roads:
+try
+Good road with try: <org.osmdroid.tileprovider.tilesource.CloudmadeTileSource: java.lang.String getTileURLString(org.osmdroid.tileprovider.MapTile)>[]--><org.osmdroid.tileprovider.util.CloudmadeUtil: java.lang.String getCloudmadeToken()>[[try]]--><org.osmdroid.http.HttpClientFactory: org.apache.http.client.HttpClient createHttpClient()>[]--><org.osmdroid.http.HttpClientFactory$1: org.apache.http.client.HttpClient createHttpClient()>[]--><org.apache.http.params.HttpParams: org.apache.http.params.HttpParams setParameter(java.lang.String,java.lang.Object)>
+One road protect good!
+try
+Good road with try: <org.osmdroid.contributor.GpxToPHPUploader$1: void run()>[[try]]--><org.osmdroid.http.HttpClientFactory: org.apache.http.client.HttpClient createHttpClient()>[]--><org.osmdroid.http.HttpClientFactory$1: org.apache.http.client.HttpClient createHttpClient()>[]--><org.apache.http.params.HttpParams: org.apache.http.params.HttpParams setParameter(java.lang.String,java.lang.Object)>
+One road protect good!
+try
+Good road with try: <org.osmdroid.tileprovider.modules.MapTileDownloader$TileLoader: android.graphics.drawable.Drawable loadTile(org.osmdroid.tileprovider.MapTileRequestState)>[[try]]--><org.osmdroid.http.HttpClientFactory: org.apache.http.client.HttpClient createHttpClient()>[]--><org.osmdroid.http.HttpClientFactory$1: org.apache.http.client.HttpClient createHttpClient()>[]--><org.apache.http.params.HttpParams: org.apache.http.params.HttpParams setParameter(java.lang.String,java.lang.Object)>
+One road protect good!
+containsStatic:false
+containsTry:true
+4call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.net.NetworkInfo: boolean isAvailable()> is checking!!!
+The life time of api is [1,30]
+3call roads:
+0 Mainhead roads:
+3 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <org.osmdroid.tileprovider.modules.NetworkAvailabliltyCheck: boolean getWiFiNetworkAvailable()>[]--><android.net.NetworkInfo: boolean isAvailable()>
+#1.the call statck between class <org.osmdroid.tileprovider.modules.NetworkAvailabliltyCheck: boolean getWiFiNetworkAvailable()> to <android.net.NetworkInfo: boolean isAvailable()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <org.osmdroid.tileprovider.modules.NetworkAvailabliltyCheck: boolean getCellularDataNetworkAvailable()>[]--><android.net.NetworkInfo: boolean isAvailable()>
+#2.the call statck between class <org.osmdroid.tileprovider.modules.NetworkAvailabliltyCheck: boolean getCellularDataNetworkAvailable()> to <android.net.NetworkInfo: boolean isAvailable()>has compatibility isssues！
+-----------------------------------------
+try
+Good road with try: <org.osmdroid.tileprovider.modules.MapTileDownloader$TileLoader: android.graphics.drawable.Drawable loadTile(org.osmdroid.tileprovider.MapTileRequestState)>[[try]]--><org.osmdroid.tileprovider.modules.NetworkAvailabliltyCheck: boolean getNetworkAvailable()>[]--><android.net.NetworkInfo: boolean isAvailable()>
+One road protect good!
+crashApis:2
+containsStatic:false
+containsTry:true
+4call by main package
+-----------------------------------------
+#################################################
+N 5 Potential Issue API: SDKCheck of <android.net.ConnectivityManager: boolean requestRouteToHost(int,int)> is checking!!!
+The life time of api is [1,30]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <org.osmdroid.tileprovider.modules.NetworkAvailabliltyCheck: boolean getRouteToPathExists(int)>[]--><android.net.ConnectivityManager: boolean requestRouteToHost(int,int)>
+#1.the call statck between class <org.osmdroid.tileprovider.modules.NetworkAvailabliltyCheck: boolean getRouteToPathExists(int)> to <android.net.ConnectivityManager: boolean requestRouteToHost(int,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:3
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+crashApis numbers:3
+crashApis numbers in main road:0
+On Android Version 16 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 17 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 18 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 19 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 20 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 21 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 22 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 23 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 24 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 25 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 31 this app may have error api use(at least): 3 and error api roads: 5

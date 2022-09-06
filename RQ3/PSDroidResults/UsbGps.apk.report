@@ -1,0 +1,253 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/UsbGps.apk
+Entry Points[org.broeuschmeul.android.gps.usb.provider.ui.SettingsActivity, org.broeuschmeul.android.gps.usb.provider.driver.USBGpsProviderService$BootReceiver, org.broeuschmeul.android.gps.usb.provider.USBGpsApplication, org.broeuschmeul.android.gps.usb.provider.ui.GpsInfoActivity, org.broeuschmeul.android.gps.usb.provider.driver.USBGpsProviderService]
+FllowDroidcallgraph size:802
+Soot started on Mon Jul 11 14:43:30 CST 2022
+Soot finished on Mon Jul 11 14:43:37 CST 2022
+Soot has run for 0 min. 6 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 14
+Declared Target Sdk version is: 27
+Declared Max Sdk version is: -1
+Collected 218 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putLong(java.lang.String,long)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+try
+Good road with try: <org.broeuschmeul.android.gps.usb.provider.driver.USBGpsManager: boolean access$2100(org.broeuschmeul.android.gps.usb.provider.driver.USBGpsManager,java.lang.String)>[]--><org.broeuschmeul.android.gps.usb.provider.driver.USBGpsManager: boolean notifyNmeaSentence(java.lang.String)>[[try]]--><org.broeuschmeul.android.gps.nmea.util.NmeaParser: java.lang.String parseNmeaSentence(java.lang.String)>[]--><android.os.BaseBundle: void putLong(java.lang.String,long)>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.app.Activity: void requestPermissions(java.lang.String[],int)> is checking!!!
+The life time of api is [23,31]
+2call roads:
+1 Mainhead roads:
+-$i0 < 23
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.broeuschmeul.android.gps.usb.provider.ui.GpsInfoActivity dummyMainMethod_org_broeuschmeul_android_gps_usb_provider_ui_GpsInfoActivity(android.content.Intent)>[]--><org.broeuschmeul.android.gps.usb.provider.ui.GpsInfoActivity: void onCreate(android.os.Bundle)>[]--><org.broeuschmeul.android.gps.usb.provider.ui.USBGpsBaseActivity: void onCreate(android.os.Bundle)>[[-$i0 < 23]]--><android.app.Activity: void requestPermissions(java.lang.String[],int)>
+One road protect good!
+-$i0 < 23
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.broeuschmeul.android.gps.usb.provider.ui.SettingsActivity dummyMainMethod_org_broeuschmeul_android_gps_usb_provider_ui_SettingsActivity(android.content.Intent)>[]--><org.broeuschmeul.android.gps.usb.provider.ui.SettingsActivity: void onCreate(android.os.Bundle)>[]--><org.broeuschmeul.android.gps.usb.provider.ui.USBGpsBaseActivity: void onCreate(android.os.Bundle)>[[-$i0 < 23]]--><android.app.Activity: void requestPermissions(java.lang.String[],int)>
+One road protect good!
+1 Packageshead roads:
+-$i1 < 23
+Good road: <org.broeuschmeul.android.gps.usb.provider.ui.GpsInfoActivity: void onSharedPreferenceChanged(android.content.SharedPreferences,java.lang.String)>[]--><org.broeuschmeul.android.gps.usb.provider.ui.USBGpsBaseActivity: void onSharedPreferenceChanged(android.content.SharedPreferences,java.lang.String)>[[-$i1 < 23]]--><android.app.Activity: void requestPermissions(java.lang.String[],int)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.os.BaseBundle: int getInt(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+3call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.broeuschmeul.android.gps.usb.provider.ui.GpsInfoActivity dummyMainMethod_org_broeuschmeul_android_gps_usb_provider_ui_GpsInfoActivity(android.content.Intent)>[]--><org.broeuschmeul.android.gps.usb.provider.ui.GpsInfoActivity: void onResume()>[]--><org.broeuschmeul.android.gps.usb.provider.ui.GpsInfoActivity: void updateData()>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+2 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <org.broeuschmeul.android.gps.usb.provider.ui.GpsInfoActivity: void onLocationNotified(android.location.Location)>[]--><org.broeuschmeul.android.gps.usb.provider.ui.GpsInfoActivity: void updateData()>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#1.the call statck between class <org.broeuschmeul.android.gps.usb.provider.ui.GpsInfoActivity: void onLocationNotified(android.location.Location)> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <org.broeuschmeul.android.gps.usb.provider.ui.GpsInfoActivity: void onSharedPreferenceChanged(android.content.SharedPreferences,java.lang.String)>[]--><org.broeuschmeul.android.gps.usb.provider.ui.GpsInfoActivity: void updateData()>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#2.the call statck between class <org.broeuschmeul.android.gps.usb.provider.ui.GpsInfoActivity: void onSharedPreferenceChanged(android.content.SharedPreferences,java.lang.String)> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:1
+crashApisInMain:1
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.location.Location: void setElapsedRealtimeNanos(long)> is checking!!!
+The life time of api is [17,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+try
+Good road with try: <org.broeuschmeul.android.gps.usb.provider.driver.USBGpsManager: boolean access$2100(org.broeuschmeul.android.gps.usb.provider.driver.USBGpsManager,java.lang.String)>[]--><org.broeuschmeul.android.gps.usb.provider.driver.USBGpsManager: boolean notifyNmeaSentence(java.lang.String)>[[try]]--><org.broeuschmeul.android.gps.nmea.util.NmeaParser: java.lang.String parseNmeaSentence(java.lang.String)>[]--><org.broeuschmeul.android.gps.nmea.util.NmeaParser: void notifyFix(android.location.Location)>[[-$i1 < 17]]--><android.location.Location: void setElapsedRealtimeNanos(long)>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.app.AppOpsManager: int checkOp(java.lang.String,int,java.lang.String)> is checking!!!
+The life time of api is [19,31]
+1call roads:
+1 Mainhead roads:
+###Multi invoking in one method, need manual check!!!--><org.broeuschmeul.android.gps.usb.provider.driver.USBGpsManager: boolean enable()>[[try]]--><org.broeuschmeul.android.gps.usb.provider.driver.USBGpsManager: boolean isMockLocationEnabled()>[[-$i0 < 23], [try]]
+###Multi invoking in one method, need manual check!!!--><org.broeuschmeul.android.gps.usb.provider.driver.USBGpsManager: boolean enable()>[[try]]--><org.broeuschmeul.android.gps.usb.provider.driver.USBGpsManager: boolean isMockLocationEnabled()>[[-$i0 < 23]][[try]]
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.broeuschmeul.android.gps.usb.provider.driver.USBGpsProviderService dummyMainMethod_org_broeuschmeul_android_gps_usb_provider_driver_USBGpsProviderService(android.content.Intent)>[]--><org.broeuschmeul.android.gps.usb.provider.driver.USBGpsProviderService: int onStartCommand(android.content.Intent,int,int)>[]--><org.broeuschmeul.android.gps.usb.provider.driver.USBGpsManager: boolean enable()>[[try]]--><org.broeuschmeul.android.gps.usb.provider.driver.USBGpsManager: boolean isMockLocationEnabled()>[[-$i0 < 23], [try]]--><android.app.AppOpsManager: int checkOp(java.lang.String,int,java.lang.String)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:true
+1call by main package
+-----------------------------------------
+#################################################
+N 5 Potential Issue API: SDKCheck of <android.hardware.usb.UsbDevice: java.lang.String getProductName()> is checking!!!
+The life time of api is [21,31]
+5call roads:
+0 Mainhead roads:
+5 Packageshead roads:
+-$i2 < 21
+Good road: <org.broeuschmeul.android.gps.usb.provider.ui.USBGpsSettingsFragment: void onResume()>[]--><org.broeuschmeul.android.gps.usb.provider.ui.USBGpsSettingsFragment: void updateDevicePreferenceList()>[]--><org.broeuschmeul.android.gps.usb.provider.ui.USBGpsSettingsFragment: void updateDevicePreferenceSummary()>[]--><org.broeuschmeul.android.gps.usb.provider.ui.USBGpsSettingsFragment: java.lang.String getSelectedDeviceSummary()>[[-$i2 < 21]]--><android.hardware.usb.UsbDevice: java.lang.String getProductName()>
+One road protect good!
+-$i1 < 21
+Good road: <org.broeuschmeul.android.gps.usb.provider.ui.USBGpsSettingsFragment: void onResume()>[]--><org.broeuschmeul.android.gps.usb.provider.ui.USBGpsSettingsFragment: void updateDevicesList()>[[-$i1 < 21]]--><android.hardware.usb.UsbDevice: java.lang.String getProductName()>
+One road protect good!
+-$i2 < 21
+Good road: <org.broeuschmeul.android.gps.usb.provider.ui.USBGpsSettingsFragment: boolean onPreferenceChange(android.support.v7.preference.Preference,java.lang.Object)>[]--><org.broeuschmeul.android.gps.usb.provider.ui.USBGpsSettingsFragment: void updateDevicePreferenceSummary()>[]--><org.broeuschmeul.android.gps.usb.provider.ui.USBGpsSettingsFragment: java.lang.String getSelectedDeviceSummary()>[[-$i2 < 21]]--><android.hardware.usb.UsbDevice: java.lang.String getProductName()>
+One road protect good!
+-$i1 < 21
+Good road: <org.broeuschmeul.android.gps.usb.provider.ui.USBGpsSettingsFragment: void access$200(org.broeuschmeul.android.gps.usb.provider.ui.USBGpsSettingsFragment)>[]--><org.broeuschmeul.android.gps.usb.provider.ui.USBGpsSettingsFragment: void updateDevicesList()>[[-$i1 < 21]]--><android.hardware.usb.UsbDevice: java.lang.String getProductName()>
+One road protect good!
+-$i2 < 21
+Good road: <org.broeuschmeul.android.gps.usb.provider.ui.USBGpsSettingsFragment: void onSharedPreferenceChanged(android.content.SharedPreferences,java.lang.String)>[]--><org.broeuschmeul.android.gps.usb.provider.ui.USBGpsSettingsFragment: void updateDevicePreferenceSummary()>[]--><org.broeuschmeul.android.gps.usb.provider.ui.USBGpsSettingsFragment: java.lang.String getSelectedDeviceSummary()>[[-$i2 < 21]]--><android.hardware.usb.UsbDevice: java.lang.String getProductName()>
+One road protect good!
+-$i2 < 21
+Good road: <org.broeuschmeul.android.gps.usb.provider.ui.USBGpsSettingsFragment: void access$100(org.broeuschmeul.android.gps.usb.provider.ui.USBGpsSettingsFragment)>[]--><org.broeuschmeul.android.gps.usb.provider.ui.USBGpsSettingsFragment: void updateDevicePreferenceSummary()>[]--><org.broeuschmeul.android.gps.usb.provider.ui.USBGpsSettingsFragment: java.lang.String getSelectedDeviceSummary()>[[-$i2 < 21]]--><android.hardware.usb.UsbDevice: java.lang.String getProductName()>
+One road protect good!
+containsStatic:false
+containsTry:false
+6call by main package
+-----------------------------------------
+#################################################
+N 6 Potential Issue API: SDKCheck of <android.os.SystemClock: long elapsedRealtimeNanos()> is checking!!!
+The life time of api is [17,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+try
+Good road with try: <org.broeuschmeul.android.gps.usb.provider.driver.USBGpsManager: boolean access$2100(org.broeuschmeul.android.gps.usb.provider.driver.USBGpsManager,java.lang.String)>[]--><org.broeuschmeul.android.gps.usb.provider.driver.USBGpsManager: boolean notifyNmeaSentence(java.lang.String)>[[try]]--><org.broeuschmeul.android.gps.nmea.util.NmeaParser: java.lang.String parseNmeaSentence(java.lang.String)>[]--><org.broeuschmeul.android.gps.nmea.util.NmeaParser: void notifyFix(android.location.Location)>[[-$i1 < 17]]--><android.os.SystemClock: long elapsedRealtimeNanos()>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 7 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putInt(java.lang.String,int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+try
+Good road with try: <org.broeuschmeul.android.gps.usb.provider.driver.USBGpsManager: boolean access$2100(org.broeuschmeul.android.gps.usb.provider.driver.USBGpsManager,java.lang.String)>[]--><org.broeuschmeul.android.gps.usb.provider.driver.USBGpsManager: boolean notifyNmeaSentence(java.lang.String)>[[try]]--><org.broeuschmeul.android.gps.nmea.util.NmeaParser: java.lang.String parseNmeaSentence(java.lang.String)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 8 Potential Issue API: SDKCheck of <android.os.BaseBundle: boolean containsKey(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.broeuschmeul.android.gps.usb.provider.driver.USBGpsProviderService dummyMainMethod_org_broeuschmeul_android_gps_usb_provider_driver_USBGpsProviderService(android.content.Intent)>[]--><org.broeuschmeul.android.gps.usb.provider.driver.USBGpsProviderService: int onStartCommand(android.content.Intent,int,int)>[]--><org.broeuschmeul.android.gps.usb.provider.driver.USBGpsManager: void enableSirfConfig(android.os.Bundle)>[]--><org.broeuschmeul.android.gps.usb.provider.driver.USBGpsManager$6: void run()>[]--><android.os.BaseBundle: boolean containsKey(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: boolean containsKey(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:2
+crashApisInMain:2
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 9 Potential Issue API: SDKCheck of <android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)> is checking!!!
+The life time of api is [22,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.broeuschmeul.android.gps.usb.provider.driver.USBGpsProviderService dummyMainMethod_org_broeuschmeul_android_gps_usb_provider_driver_USBGpsProviderService(android.content.Intent)>[]--><org.broeuschmeul.android.gps.usb.provider.driver.USBGpsProviderService: int onStartCommand(android.content.Intent,int,int)>[]--><org.broeuschmeul.android.gps.usb.provider.driver.USBGpsManager: void enableSirfConfig(android.os.Bundle)>[]--><org.broeuschmeul.android.gps.usb.provider.driver.USBGpsManager$6: void run()>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:3
+crashApisInMain:3
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 10 Potential Issue API: SDKCheck of <android.os.BaseBundle: long getLong(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+3call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.broeuschmeul.android.gps.usb.provider.ui.GpsInfoActivity dummyMainMethod_org_broeuschmeul_android_gps_usb_provider_ui_GpsInfoActivity(android.content.Intent)>[]--><org.broeuschmeul.android.gps.usb.provider.ui.GpsInfoActivity: void onResume()>[]--><org.broeuschmeul.android.gps.usb.provider.ui.GpsInfoActivity: void updateData()>[]--><android.os.BaseBundle: long getLong(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: long getLong(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+2 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <org.broeuschmeul.android.gps.usb.provider.ui.GpsInfoActivity: void onLocationNotified(android.location.Location)>[]--><org.broeuschmeul.android.gps.usb.provider.ui.GpsInfoActivity: void updateData()>[]--><android.os.BaseBundle: long getLong(java.lang.String)>
+#1.the call statck between class <org.broeuschmeul.android.gps.usb.provider.ui.GpsInfoActivity: void onLocationNotified(android.location.Location)> to <android.os.BaseBundle: long getLong(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <org.broeuschmeul.android.gps.usb.provider.ui.GpsInfoActivity: void onSharedPreferenceChanged(android.content.SharedPreferences,java.lang.String)>[]--><org.broeuschmeul.android.gps.usb.provider.ui.GpsInfoActivity: void updateData()>[]--><android.os.BaseBundle: long getLong(java.lang.String)>
+#2.the call statck between class <org.broeuschmeul.android.gps.usb.provider.ui.GpsInfoActivity: void onSharedPreferenceChanged(android.content.SharedPreferences,java.lang.String)> to <android.os.BaseBundle: long getLong(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:4
+crashApisInMain:4
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 11 Potential Issue API: SDKCheck of <android.hardware.usb.UsbDevice: java.lang.String getManufacturerName()> is checking!!!
+The life time of api is [21,31]
+5call roads:
+0 Mainhead roads:
+5 Packageshead roads:
+-$i2 < 21
+Good road: <org.broeuschmeul.android.gps.usb.provider.ui.USBGpsSettingsFragment: void onResume()>[]--><org.broeuschmeul.android.gps.usb.provider.ui.USBGpsSettingsFragment: void updateDevicePreferenceList()>[]--><org.broeuschmeul.android.gps.usb.provider.ui.USBGpsSettingsFragment: void updateDevicePreferenceSummary()>[]--><org.broeuschmeul.android.gps.usb.provider.ui.USBGpsSettingsFragment: java.lang.String getSelectedDeviceSummary()>[[-$i2 < 21]]--><android.hardware.usb.UsbDevice: java.lang.String getManufacturerName()>
+One road protect good!
+-$i1 < 21
+Good road: <org.broeuschmeul.android.gps.usb.provider.ui.USBGpsSettingsFragment: void onResume()>[]--><org.broeuschmeul.android.gps.usb.provider.ui.USBGpsSettingsFragment: void updateDevicesList()>[[-$i1 < 21]]--><android.hardware.usb.UsbDevice: java.lang.String getManufacturerName()>
+One road protect good!
+-$i2 < 21
+Good road: <org.broeuschmeul.android.gps.usb.provider.ui.USBGpsSettingsFragment: boolean onPreferenceChange(android.support.v7.preference.Preference,java.lang.Object)>[]--><org.broeuschmeul.android.gps.usb.provider.ui.USBGpsSettingsFragment: void updateDevicePreferenceSummary()>[]--><org.broeuschmeul.android.gps.usb.provider.ui.USBGpsSettingsFragment: java.lang.String getSelectedDeviceSummary()>[[-$i2 < 21]]--><android.hardware.usb.UsbDevice: java.lang.String getManufacturerName()>
+One road protect good!
+-$i2 < 21
+Good road: <org.broeuschmeul.android.gps.usb.provider.ui.USBGpsSettingsFragment: void onSharedPreferenceChanged(android.content.SharedPreferences,java.lang.String)>[]--><org.broeuschmeul.android.gps.usb.provider.ui.USBGpsSettingsFragment: void updateDevicePreferenceSummary()>[]--><org.broeuschmeul.android.gps.usb.provider.ui.USBGpsSettingsFragment: java.lang.String getSelectedDeviceSummary()>[[-$i2 < 21]]--><android.hardware.usb.UsbDevice: java.lang.String getManufacturerName()>
+One road protect good!
+-$i1 < 21
+Good road: <org.broeuschmeul.android.gps.usb.provider.ui.USBGpsSettingsFragment: void access$200(org.broeuschmeul.android.gps.usb.provider.ui.USBGpsSettingsFragment)>[]--><org.broeuschmeul.android.gps.usb.provider.ui.USBGpsSettingsFragment: void updateDevicesList()>[[-$i1 < 21]]--><android.hardware.usb.UsbDevice: java.lang.String getManufacturerName()>
+One road protect good!
+-$i2 < 21
+Good road: <org.broeuschmeul.android.gps.usb.provider.ui.USBGpsSettingsFragment: void access$100(org.broeuschmeul.android.gps.usb.provider.ui.USBGpsSettingsFragment)>[]--><org.broeuschmeul.android.gps.usb.provider.ui.USBGpsSettingsFragment: void updateDevicePreferenceSummary()>[]--><org.broeuschmeul.android.gps.usb.provider.ui.USBGpsSettingsFragment: java.lang.String getSelectedDeviceSummary()>[[-$i2 < 21]]--><android.hardware.usb.UsbDevice: java.lang.String getManufacturerName()>
+One road protect good!
+containsStatic:false
+containsTry:false
+6call by main package
+-----------------------------------------
+crashApis numbers:4
+crashApis numbers in main road:4
+On Android Version 16 this app may have error api use(at least): 4 and error api roads: 8
+On Android Version 17 this app may have error api use(at least): 4 and error api roads: 8
+On Android Version 18 this app may have error api use(at least): 4 and error api roads: 8
+On Android Version 19 this app may have error api use(at least): 4 and error api roads: 8
+On Android Version 20 this app may have error api use(at least): 4 and error api roads: 8
+On Android Version 21 this app may have error api use(at least): 1 and error api roads: 1
+On Android Version 22 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 23 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 24 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 25 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 31 this app may have error api use(at least): 0 and error api roads: 0

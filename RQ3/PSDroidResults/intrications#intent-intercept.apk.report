@@ -1,0 +1,117 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/intrications#intent-intercept.apk
+Entry Points[uk.co.ashtonbrsc.intentexplode.Explode, uk.co.ashtonbrsc.intentexplode.SettingsActivity, uk.co.ashtonbrsc.intentexplode.StartupActivity, uk.co.ashtonbrsc.intentexplode.Pre15SettingsActivity]
+FllowDroidcallgraph size:399
+Soot started on Mon Jul 11 05:29:02 CST 2022
+Soot finished on Mon Jul 11 05:29:07 CST 2022
+Soot has run for 0 min. 4 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 19
+Declared Target Sdk version is: 24
+Declared Max Sdk version is: -1
+Collected 124 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.os.BaseBundle: boolean getBoolean(java.lang.String)> is checking!!!
+The life time of api is [22,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: uk.co.ashtonbrsc.intentexplode.Explode dummyMainMethod_uk_co_ashtonbrsc_intentexplode_Explode(android.content.Intent)>[]--><uk.co.ashtonbrsc.intentexplode.Explode: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: boolean getBoolean(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:1
+crashApisInMain:1
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.os.BaseBundle: boolean isEmpty()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: uk.co.ashtonbrsc.intentexplode.Explode dummyMainMethod_uk_co_ashtonbrsc_intentexplode_Explode(android.content.Intent)>[]--><uk.co.ashtonbrsc.intentexplode.Explode: void onCreate(android.os.Bundle)>[]--><uk.co.ashtonbrsc.intentexplode.Explode: void rememberIntent(android.content.Intent)>[]--><android.os.BaseBundle: boolean isEmpty()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: boolean isEmpty()>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:2
+crashApisInMain:2
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)> is checking!!!
+The life time of api is [22,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: uk.co.ashtonbrsc.intentexplode.Explode dummyMainMethod_uk_co_ashtonbrsc_intentexplode_Explode(android.content.Intent)>[]--><uk.co.ashtonbrsc.intentexplode.Explode: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:3
+crashApisInMain:3
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.util.Set keySet()> is checking!!!
+The life time of api is [21,31]
+3call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: uk.co.ashtonbrsc.intentexplode.Explode dummyMainMethod_uk_co_ashtonbrsc_intentexplode_Explode(android.content.Intent)>[]--><uk.co.ashtonbrsc.intentexplode.Explode: void onCreate(android.os.Bundle)>[]--><uk.co.ashtonbrsc.intentexplode.Explode: void showInitialIntent(boolean)>[]--><uk.co.ashtonbrsc.intentexplode.Explode: void showAllIntentData(android.widget.TextView)>[]--><uk.co.ashtonbrsc.intentexplode.Explode: void refreshUI()>[]--><uk.co.ashtonbrsc.intentexplode.Explode: android.content.Intent createShareIntent()>[]--><uk.co.ashtonbrsc.intentexplode.Explode: android.text.Spanned getIntentDetailsString()>[]--><uk.co.ashtonbrsc.intentexplode.Explode: java.lang.StringBuilder appendIntentDetails(java.lang.StringBuilder,android.content.Intent,boolean)>[[try]]--><android.os.BaseBundle: java.util.Set keySet()>
+One road protect good!
+2 Packageshead roads:
+try
+Good road with try: <uk.co.ashtonbrsc.intentexplode.Explode: void access$300(uk.co.ashtonbrsc.intentexplode.Explode)>[]--><uk.co.ashtonbrsc.intentexplode.Explode: void refreshUI()>[]--><uk.co.ashtonbrsc.intentexplode.Explode: android.content.Intent createShareIntent()>[]--><uk.co.ashtonbrsc.intentexplode.Explode: android.text.Spanned getIntentDetailsString()>[]--><uk.co.ashtonbrsc.intentexplode.Explode: java.lang.StringBuilder appendIntentDetails(java.lang.StringBuilder,android.content.Intent,boolean)>[[try]]--><android.os.BaseBundle: java.util.Set keySet()>
+One road protect good!
+try
+Good road with try: <uk.co.ashtonbrsc.intentexplode.Explode: void access$700(uk.co.ashtonbrsc.intentexplode.Explode,android.widget.TextView)>[]--><uk.co.ashtonbrsc.intentexplode.Explode: void showAllIntentData(android.widget.TextView)>[]--><uk.co.ashtonbrsc.intentexplode.Explode: void refreshUI()>[]--><uk.co.ashtonbrsc.intentexplode.Explode: android.content.Intent createShareIntent()>[]--><uk.co.ashtonbrsc.intentexplode.Explode: android.text.Spanned getIntentDetailsString()>[]--><uk.co.ashtonbrsc.intentexplode.Explode: java.lang.StringBuilder appendIntentDetails(java.lang.StringBuilder,android.content.Intent,boolean)>[[try]]--><android.os.BaseBundle: java.util.Set keySet()>
+One road protect good!
+containsStatic:false
+containsTry:true
+3call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.lang.Object get(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+3call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: uk.co.ashtonbrsc.intentexplode.Explode dummyMainMethod_uk_co_ashtonbrsc_intentexplode_Explode(android.content.Intent)>[]--><uk.co.ashtonbrsc.intentexplode.Explode: void onCreate(android.os.Bundle)>[]--><uk.co.ashtonbrsc.intentexplode.Explode: void showInitialIntent(boolean)>[]--><uk.co.ashtonbrsc.intentexplode.Explode: void showAllIntentData(android.widget.TextView)>[[try]]--><android.os.BaseBundle: java.lang.Object get(java.lang.String)>
+One road protect good!
+2 Packageshead roads:
+try
+Good road with try: <uk.co.ashtonbrsc.intentexplode.Explode: void access$300(uk.co.ashtonbrsc.intentexplode.Explode)>[]--><uk.co.ashtonbrsc.intentexplode.Explode: void refreshUI()>[]--><uk.co.ashtonbrsc.intentexplode.Explode: android.content.Intent createShareIntent()>[]--><uk.co.ashtonbrsc.intentexplode.Explode: android.text.Spanned getIntentDetailsString()>[]--><uk.co.ashtonbrsc.intentexplode.Explode: java.lang.StringBuilder appendIntentDetails(java.lang.StringBuilder,android.content.Intent,boolean)>[[try]]--><android.os.BaseBundle: java.lang.Object get(java.lang.String)>
+One road protect good!
+try
+Good road with try: <uk.co.ashtonbrsc.intentexplode.Explode: void access$700(uk.co.ashtonbrsc.intentexplode.Explode,android.widget.TextView)>[]--><uk.co.ashtonbrsc.intentexplode.Explode: void showAllIntentData(android.widget.TextView)>[[try]]--><android.os.BaseBundle: java.lang.Object get(java.lang.String)>
+One road protect good!
+containsStatic:false
+containsTry:true
+3call by main package
+-----------------------------------------
+crashApis numbers:3
+crashApis numbers in main road:3
+On Android Version 16 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 17 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 18 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 19 this app may have error api use(at least): 3 and error api roads: 3
+On Android Version 20 this app may have error api use(at least): 3 and error api roads: 3
+On Android Version 21 this app may have error api use(at least): 2 and error api roads: 2
+On Android Version 22 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 23 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 24 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 25 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 31 this app may have error api use(at least): 0 and error api roads: 0

@@ -1,0 +1,247 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/Wirebug.apk
+Entry Points[com.github.sryze.wirebug.BootCompletedReceiver, com.github.sryze.wirebug.WirebugApp, com.github.sryze.wirebug.SettingsActivity, com.github.sryze.wirebug.MainActivity, com.github.sryze.wirebug.DebugStatusService]
+FllowDroidcallgraph size:362
+Soot started on Mon Jul 11 15:35:23 CST 2022
+StaticCheck:<com.github.sryze.wirebug.NetworkUtils: boolean isConnectedToWifi(android.net.ConnectivityManager)>$yysi0 < 21
+Soot finished on Mon Jul 11 15:35:28 CST 2022
+Soot has run for 0 min. 4 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 15
+Declared Target Sdk version is: 25
+Declared Max Sdk version is: -1
+Collected 103 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager: android.net.wifi.WifiInfo getConnectionInfo()> is checking!!!
+The life time of api is [1,30]
+2call roads:
+1 Mainhead roads:
+###Multi invoking in one method, need manual check!!!--><com.github.sryze.wirebug.DebugStatusService: void updateStatus()>[[-$z1 == 0], [$yysi0 < 21]]--><com.github.sryze.wirebug.NetworkUtils: java.lang.String getWifiIpAddressString(android.net.wifi.WifiManager)>[]
+###Multi invoking in one method, need manual check!!!--><com.github.sryze.wirebug.DebugStatusService: void updateStatus()>[[-$z1 == 0]][[$yysi0 < 21]]--><com.github.sryze.wirebug.NetworkUtils: java.lang.String getWifiIpAddressString(android.net.wifi.WifiManager)>[]
+-$z1 == 0
+$yysi0 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.github.sryze.wirebug.DebugStatusService dummyMainMethod_com_github_sryze_wirebug_DebugStatusService(android.content.Intent)>[]--><com.github.sryze.wirebug.DebugStatusService: int onStartCommand(android.content.Intent,int,int)>[]--><com.github.sryze.wirebug.DebugStatusService: void updateStatus()>[[-$z1 == 0], [$yysi0 < 21]]--><com.github.sryze.wirebug.NetworkUtils: java.lang.String getWifiIpAddressString(android.net.wifi.WifiManager)>[]--><android.net.wifi.WifiManager: android.net.wifi.WifiInfo getConnectionInfo()>
+One road protect good!
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.github.sryze.wirebug.MainActivity dummyMainMethod_com_github_sryze_wirebug_MainActivity(android.content.Intent)>[]--><com.github.sryze.wirebug.MainActivity$1: void onCheckedChanged(android.widget.CompoundButton,boolean)>[]--><com.github.sryze.wirebug.MainActivity: void access$000(com.github.sryze.wirebug.MainActivity,boolean)>[]--><com.github.sryze.wirebug.MainActivity: void updateInstructions(boolean)>[]--><com.github.sryze.wirebug.MainActivity: void updateConnectionInfo()>[]--><com.github.sryze.wirebug.NetworkUtils: java.lang.String getWifiIpAddressString(android.net.wifi.WifiManager)>[]--><android.net.wifi.WifiManager: android.net.wifi.WifiInfo getConnectionInfo()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.wifi.WifiManager: android.net.wifi.WifiInfo getConnectionInfo()>has compatibility isssues！
+-----------------------------------------
+1 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <com.github.sryze.wirebug.MainActivity: void access$500(com.github.sryze.wirebug.MainActivity)>[]--><com.github.sryze.wirebug.MainActivity: void updateConnectionInfo()>[]--><com.github.sryze.wirebug.NetworkUtils: java.lang.String getWifiIpAddressString(android.net.wifi.WifiManager)>[]--><android.net.wifi.WifiManager: android.net.wifi.WifiInfo getConnectionInfo()>
+#1.the call statck between class <com.github.sryze.wirebug.MainActivity: void access$500(com.github.sryze.wirebug.MainActivity)> to <android.net.wifi.WifiManager: android.net.wifi.WifiInfo getConnectionInfo()>has compatibility isssues！
+-----------------------------------------
+crashApis:1
+crashApisInMain:1
+containsStatic:true
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.net.ConnectivityManager: android.net.NetworkInfo getNetworkInfo(android.net.Network)> is checking!!!
+The life time of api is [21,30]
+1call roads:
+1 Mainhead roads:
+-$i0 < 21
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.github.sryze.wirebug.MainActivity dummyMainMethod_com_github_sryze_wirebug_MainActivity(android.content.Intent)>[]--><com.github.sryze.wirebug.MainActivity: void onResume()>[]--><com.github.sryze.wirebug.NetworkUtils: boolean isConnectedToWifi(android.net.ConnectivityManager)>[[-$i0 < 21]]--><android.net.ConnectivityManager: android.net.NetworkInfo getNetworkInfo(android.net.Network)>
+-$i0 < 21
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.github.sryze.wirebug.DebugStatusService dummyMainMethod_com_github_sryze_wirebug_DebugStatusService(android.content.Intent)>[]--><com.github.sryze.wirebug.DebugStatusService: int onStartCommand(android.content.Intent,int,int)>[]--><com.github.sryze.wirebug.DebugStatusService: void updateStatus()>[]--><com.github.sryze.wirebug.NetworkUtils: boolean isConnectedToWifi(android.net.ConnectivityManager)>[[-$i0 < 21]]--><android.net.ConnectivityManager: android.net.NetworkInfo getNetworkInfo(android.net.Network)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.ConnectivityManager: android.net.NetworkInfo getNetworkInfo(android.net.Network)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:2
+crashApisInMain:2
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.app.ActivityManager.TaskDescription: void <init>(java.lang.String,android.graphics.Bitmap,int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.github.sryze.wirebug.MainActivity dummyMainMethod_com_github_sryze_wirebug_MainActivity(android.content.Intent)>[]--><com.github.sryze.wirebug.MainActivity: void onCreate(android.os.Bundle)>[[-$i0 < 21]]--><android.app.ActivityManager.TaskDescription: void <init>(java.lang.String,android.graphics.Bitmap,int)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.net.ConnectivityManager: android.net.Network[] getAllNetworks()> is checking!!!
+The life time of api is [21,30]
+1call roads:
+1 Mainhead roads:
+-$i0 < 21
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.github.sryze.wirebug.MainActivity dummyMainMethod_com_github_sryze_wirebug_MainActivity(android.content.Intent)>[]--><com.github.sryze.wirebug.MainActivity: void onResume()>[]--><com.github.sryze.wirebug.NetworkUtils: boolean isConnectedToWifi(android.net.ConnectivityManager)>[[-$i0 < 21]]--><android.net.ConnectivityManager: android.net.Network[] getAllNetworks()>
+-$i0 < 21
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.github.sryze.wirebug.DebugStatusService dummyMainMethod_com_github_sryze_wirebug_DebugStatusService(android.content.Intent)>[]--><com.github.sryze.wirebug.DebugStatusService: int onStartCommand(android.content.Intent,int,int)>[]--><com.github.sryze.wirebug.DebugStatusService: void updateStatus()>[]--><com.github.sryze.wirebug.NetworkUtils: boolean isConnectedToWifi(android.net.ConnectivityManager)>[[-$i0 < 21]]--><android.net.ConnectivityManager: android.net.Network[] getAllNetworks()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.ConnectivityManager: android.net.Network[] getAllNetworks()>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:3
+crashApisInMain:3
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.app.Activity: void setTaskDescription(android.app.ActivityManager.TaskDescription)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.github.sryze.wirebug.MainActivity dummyMainMethod_com_github_sryze_wirebug_MainActivity(android.content.Intent)>[]--><com.github.sryze.wirebug.MainActivity: void onCreate(android.os.Bundle)>[[-$i0 < 21]]--><android.app.Activity: void setTaskDescription(android.app.ActivityManager.TaskDescription)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 5 Potential Issue API: SDKCheck of <android.net.NetworkInfo: int getType()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+1 Mainhead roads:
+-$i0 < 21
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.github.sryze.wirebug.MainActivity dummyMainMethod_com_github_sryze_wirebug_MainActivity(android.content.Intent)>[]--><com.github.sryze.wirebug.MainActivity: void onResume()>[]--><com.github.sryze.wirebug.NetworkUtils: boolean isConnectedToWifi(android.net.ConnectivityManager)>[[-$i0 < 21]]--><android.net.NetworkInfo: int getType()>
+-$i0 < 21
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.github.sryze.wirebug.DebugStatusService dummyMainMethod_com_github_sryze_wirebug_DebugStatusService(android.content.Intent)>[]--><com.github.sryze.wirebug.DebugStatusService: int onStartCommand(android.content.Intent,int,int)>[]--><com.github.sryze.wirebug.DebugStatusService: void updateStatus()>[]--><com.github.sryze.wirebug.NetworkUtils: boolean isConnectedToWifi(android.net.ConnectivityManager)>[[-$i0 < 21]]--><android.net.NetworkInfo: int getType()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.NetworkInfo: int getType()>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:4
+crashApisInMain:4
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 6 Potential Issue API: SDKCheck of <android.net.wifi.WifiInfo: int getIpAddress()> is checking!!!
+The life time of api is [1,30]
+2call roads:
+1 Mainhead roads:
+###Multi invoking in one method, need manual check!!!--><com.github.sryze.wirebug.DebugStatusService: void updateStatus()>[[-$z1 == 0], [$yysi0 < 21]]--><com.github.sryze.wirebug.NetworkUtils: java.lang.String getWifiIpAddressString(android.net.wifi.WifiManager)>[]
+###Multi invoking in one method, need manual check!!!--><com.github.sryze.wirebug.DebugStatusService: void updateStatus()>[[-$z1 == 0]][[$yysi0 < 21]]--><com.github.sryze.wirebug.NetworkUtils: java.lang.String getWifiIpAddressString(android.net.wifi.WifiManager)>[]
+-$z1 == 0
+$yysi0 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.github.sryze.wirebug.DebugStatusService dummyMainMethod_com_github_sryze_wirebug_DebugStatusService(android.content.Intent)>[]--><com.github.sryze.wirebug.DebugStatusService: int onStartCommand(android.content.Intent,int,int)>[]--><com.github.sryze.wirebug.DebugStatusService: void updateStatus()>[[-$z1 == 0], [$yysi0 < 21]]--><com.github.sryze.wirebug.NetworkUtils: java.lang.String getWifiIpAddressString(android.net.wifi.WifiManager)>[]--><android.net.wifi.WifiInfo: int getIpAddress()>
+One road protect good!
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.github.sryze.wirebug.MainActivity dummyMainMethod_com_github_sryze_wirebug_MainActivity(android.content.Intent)>[]--><com.github.sryze.wirebug.MainActivity$1: void onCheckedChanged(android.widget.CompoundButton,boolean)>[]--><com.github.sryze.wirebug.MainActivity: void access$000(com.github.sryze.wirebug.MainActivity,boolean)>[]--><com.github.sryze.wirebug.MainActivity: void updateInstructions(boolean)>[]--><com.github.sryze.wirebug.MainActivity: void updateConnectionInfo()>[]--><com.github.sryze.wirebug.NetworkUtils: java.lang.String getWifiIpAddressString(android.net.wifi.WifiManager)>[]--><android.net.wifi.WifiInfo: int getIpAddress()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.wifi.WifiInfo: int getIpAddress()>has compatibility isssues！
+-----------------------------------------
+1 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <com.github.sryze.wirebug.MainActivity: void access$500(com.github.sryze.wirebug.MainActivity)>[]--><com.github.sryze.wirebug.MainActivity: void updateConnectionInfo()>[]--><com.github.sryze.wirebug.NetworkUtils: java.lang.String getWifiIpAddressString(android.net.wifi.WifiManager)>[]--><android.net.wifi.WifiInfo: int getIpAddress()>
+#1.the call statck between class <com.github.sryze.wirebug.MainActivity: void access$500(com.github.sryze.wirebug.MainActivity)> to <android.net.wifi.WifiInfo: int getIpAddress()>has compatibility isssues！
+-----------------------------------------
+crashApis:5
+crashApisInMain:5
+containsStatic:true
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 7 Potential Issue API: SDKCheck of <android.net.NetworkInfo: android.net.NetworkInfo.State getState()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <com.github.sryze.wirebug.MainActivity$2: void onReceive(android.content.Context,android.content.Intent)>[]--><android.net.NetworkInfo: android.net.NetworkInfo.State getState()>
+#1.the call statck between class <com.github.sryze.wirebug.MainActivity$2: void onReceive(android.content.Context,android.content.Intent)> to <android.net.NetworkInfo: android.net.NetworkInfo.State getState()>has compatibility isssues！
+-----------------------------------------
+crashApis:6
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 8 Potential Issue API: SDKCheck of <android.net.wifi.WifiInfo: java.lang.String getSSID()> is checking!!!
+The life time of api is [1,30]
+2call roads:
+1 Mainhead roads:
+###Multi invoking in one method, need manual check!!!--><com.github.sryze.wirebug.DebugStatusService: void updateStatus()>[[-$z1 == 0], [$yysi0 < 21]]--><com.github.sryze.wirebug.NetworkUtils: java.lang.String getWifiNetworkName(android.net.wifi.WifiManager)>[]
+###Multi invoking in one method, need manual check!!!--><com.github.sryze.wirebug.DebugStatusService: void updateStatus()>[[-$z1 == 0]][[$yysi0 < 21]]--><com.github.sryze.wirebug.NetworkUtils: java.lang.String getWifiNetworkName(android.net.wifi.WifiManager)>[]
+-$z1 == 0
+$yysi0 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.github.sryze.wirebug.DebugStatusService dummyMainMethod_com_github_sryze_wirebug_DebugStatusService(android.content.Intent)>[]--><com.github.sryze.wirebug.DebugStatusService: int onStartCommand(android.content.Intent,int,int)>[]--><com.github.sryze.wirebug.DebugStatusService: void updateStatus()>[[-$z1 == 0], [$yysi0 < 21]]--><com.github.sryze.wirebug.NetworkUtils: java.lang.String getWifiNetworkName(android.net.wifi.WifiManager)>[]--><android.net.wifi.WifiInfo: java.lang.String getSSID()>
+One road protect good!
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.github.sryze.wirebug.MainActivity dummyMainMethod_com_github_sryze_wirebug_MainActivity(android.content.Intent)>[]--><com.github.sryze.wirebug.MainActivity$1: void onCheckedChanged(android.widget.CompoundButton,boolean)>[]--><com.github.sryze.wirebug.MainActivity: void access$000(com.github.sryze.wirebug.MainActivity,boolean)>[]--><com.github.sryze.wirebug.MainActivity: void updateInstructions(boolean)>[]--><com.github.sryze.wirebug.MainActivity: void updateConnectionInfo()>[]--><com.github.sryze.wirebug.NetworkUtils: java.lang.String getWifiNetworkName(android.net.wifi.WifiManager)>[]--><android.net.wifi.WifiInfo: java.lang.String getSSID()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.wifi.WifiInfo: java.lang.String getSSID()>has compatibility isssues！
+-----------------------------------------
+1 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <com.github.sryze.wirebug.MainActivity: void access$500(com.github.sryze.wirebug.MainActivity)>[]--><com.github.sryze.wirebug.MainActivity: void updateConnectionInfo()>[]--><com.github.sryze.wirebug.NetworkUtils: java.lang.String getWifiNetworkName(android.net.wifi.WifiManager)>[]--><android.net.wifi.WifiInfo: java.lang.String getSSID()>
+#1.the call statck between class <com.github.sryze.wirebug.MainActivity: void access$500(com.github.sryze.wirebug.MainActivity)> to <android.net.wifi.WifiInfo: java.lang.String getSSID()>has compatibility isssues！
+-----------------------------------------
+crashApis:7
+crashApisInMain:6
+containsStatic:true
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 9 Potential Issue API: SDKCheck of <android.net.NetworkInfo: boolean isConnected()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+1 Mainhead roads:
+-$i0 < 21
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.github.sryze.wirebug.MainActivity dummyMainMethod_com_github_sryze_wirebug_MainActivity(android.content.Intent)>[]--><com.github.sryze.wirebug.MainActivity: void onResume()>[]--><com.github.sryze.wirebug.NetworkUtils: boolean isConnectedToWifi(android.net.ConnectivityManager)>[[-$i0 < 21]]--><android.net.NetworkInfo: boolean isConnected()>
+-$i0 < 21
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.github.sryze.wirebug.DebugStatusService dummyMainMethod_com_github_sryze_wirebug_DebugStatusService(android.content.Intent)>[]--><com.github.sryze.wirebug.DebugStatusService: int onStartCommand(android.content.Intent,int,int)>[]--><com.github.sryze.wirebug.DebugStatusService: void updateStatus()>[]--><com.github.sryze.wirebug.NetworkUtils: boolean isConnectedToWifi(android.net.ConnectivityManager)>[[-$i0 < 21]]--><android.net.NetworkInfo: boolean isConnected()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.NetworkInfo: boolean isConnected()>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:8
+crashApisInMain:7
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 10 Potential Issue API: SDKCheck of <android.net.ConnectivityManager: android.net.NetworkInfo[] getAllNetworkInfo()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+1 Mainhead roads:
+$i0 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.github.sryze.wirebug.MainActivity dummyMainMethod_com_github_sryze_wirebug_MainActivity(android.content.Intent)>[]--><com.github.sryze.wirebug.MainActivity: void onResume()>[]--><com.github.sryze.wirebug.NetworkUtils: boolean isConnectedToWifi(android.net.ConnectivityManager)>[[$i0 < 21]]--><android.net.ConnectivityManager: android.net.NetworkInfo[] getAllNetworkInfo()>
+One road protect good!
+$i0 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.github.sryze.wirebug.DebugStatusService dummyMainMethod_com_github_sryze_wirebug_DebugStatusService(android.content.Intent)>[]--><com.github.sryze.wirebug.DebugStatusService: int onStartCommand(android.content.Intent,int,int)>[]--><com.github.sryze.wirebug.DebugStatusService: void updateStatus()>[]--><com.github.sryze.wirebug.NetworkUtils: boolean isConnectedToWifi(android.net.ConnectivityManager)>[[$i0 < 21]]--><android.net.ConnectivityManager: android.net.NetworkInfo[] getAllNetworkInfo()>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+crashApis numbers:8
+crashApis numbers in main road:7
+On Android Version 16 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 17 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 18 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 19 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 20 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 21 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 22 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 23 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 24 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 25 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 31 this app may have error api use(at least): 8 and error api roads: 15

@@ -1,0 +1,663 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/Kolab_Notes.apk
+Entry Points[org.kore.kolabnotes.android.AttachmentActivity, org.kore.kolabnotes.android.widget.StickyNoteWidgetConfigureActivity, org.kore.kolabnotes.android.widget.ListWidgetConfigureActivity, org.kore.kolabnotes.android.TagListActivity, org.kore.kolabnotes.android.DrawEditorActivity, org.kore.kolabnotes.android.security.AuthenticatorActivity, org.kore.kolabnotes.android.widget.StickyNoteWidget, org.kore.kolabnotes.android.widget.ListWidgetService, org.kore.kolabnotes.android.setting.SettingsActivity, org.kore.kolabnotes.android.DetailActivity, org.kore.kolabnotes.android.async.KolabSyncService, org.kore.kolabnotes.android.security.AccountAuthenticatorService, org.kore.kolabnotes.android.content.KolabNotesContentProvider, org.kore.kolabnotes.android.MainActivity, org.kore.kolabnotes.android.widget.ListWidget]
+FllowDroidcallgraph size:1357
+Soot started on Mon Jul 11 06:17:00 CST 2022
+Soot finished on Mon Jul 11 06:17:12 CST 2022
+Soot has run for 0 min. 12 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 16
+Declared Target Sdk version is: 26
+Declared Max Sdk version is: -1
+Collected 621 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.webkit.WebView: android.print.PrintDocumentAdapter createPrintDocumentAdapter()> is checking!!!
+The life time of api is [19,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-i0 < 19
+Good road: <org.kore.kolabnotes.android.fragment.OverviewFragment: boolean onOptionsItemSelected(android.view.MenuItem)>[]--><org.kore.kolabnotes.android.MainActivity: void dispatchMenuEvent(android.view.MenuItem)>[]--><org.kore.kolabnotes.android.fragment.DetailFragment: boolean onOptionsItemSelected(android.view.MenuItem)>[]--><org.kore.kolabnotes.android.fragment.DetailFragment: void printNote()>[[-i0 < 19]]--><android.webkit.WebView: android.print.PrintDocumentAdapter createPrintDocumentAdapter()>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.app.Activity: boolean isInMultiWindowMode()> is checking!!!
+The life time of api is [24,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-i0 < 24
+Good road: <org.kore.kolabnotes.android.fragment.DetailFragment: void onActivityCreated(android.os.Bundle)>[[-i0 < 24]]--><android.app.Activity: boolean isInMultiWindowMode()>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.print.PrintAttributes.Builder: android.print.PrintAttributes build()> is checking!!!
+The life time of api is [19,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-i0 < 19
+Good road: <org.kore.kolabnotes.android.fragment.OverviewFragment: boolean onOptionsItemSelected(android.view.MenuItem)>[]--><org.kore.kolabnotes.android.MainActivity: void dispatchMenuEvent(android.view.MenuItem)>[]--><org.kore.kolabnotes.android.fragment.DetailFragment: boolean onOptionsItemSelected(android.view.MenuItem)>[]--><org.kore.kolabnotes.android.fragment.DetailFragment: void printNote()>[[-i0 < 19]]--><android.print.PrintAttributes.Builder: android.print.PrintAttributes build()>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.os.BaseBundle: int getInt(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <org.kore.kolabnotes.android.fragment.DrawEditorFragment: void onActivityCreated(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#1.the call statck between class <org.kore.kolabnotes.android.fragment.DrawEditorFragment: void onActivityCreated(android.os.Bundle)> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <org.kore.kolabnotes.android.draweditor.DrawingView: void onRestoreInstanceState(android.os.Parcelable)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#2.the call statck between class <org.kore.kolabnotes.android.draweditor.DrawingView: void onRestoreInstanceState(android.os.Parcelable)> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:1
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.view.View: void setOutlineProvider(android.view.ViewOutlineProvider)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i0 < 21
+Good road: <org.kore.kolabnotes.android.fragment.OverviewFragment: void onActivityCreated(android.os.Bundle)>[]--><org.kore.kolabnotes.android.Utils: void configureFab(android.view.View)>[[-$i0 < 21]]--><android.view.View: void setOutlineProvider(android.view.ViewOutlineProvider)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 5 Potential Issue API: SDKCheck of <android.graphics.Outline: void setOval(int,int,int,int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <org.kore.kolabnotes.android.Utils$1: void getOutline(android.view.View,android.graphics.Outline)>[]--><android.graphics.Outline: void setOval(int,int,int,int)>
+#1.the call statck between class <org.kore.kolabnotes.android.Utils$1: void getOutline(android.view.View,android.graphics.Outline)> to <android.graphics.Outline: void setOval(int,int,int,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:2
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 6 Potential Issue API: SDKCheck of <android.webkit.WebView: void evaluateJavascript(java.lang.String,android.webkit.ValueCallback)> is checking!!!
+The life time of api is [19,31]
+48call roads:
+0 Mainhead roads:
+48 Packageshead roads:
+try
+Good road with try: <org.kore.kolabnotes.android.fragment.OverviewFragment: void onItemClicked(int,org.kore.kolab.notes.Note)>[]--><org.kore.kolabnotes.android.fragment.OverviewFragment: void select(org.kore.kolab.notes.Note,boolean)>[]--><org.kore.kolabnotes.android.fragment.OverviewFragment: void setDetailFragment(org.kore.kolabnotes.android.content.ActiveAccount,org.kore.kolab.notes.Note,boolean)>[]--><org.kore.kolabnotes.android.fragment.OverviewFragment: void replaceDetailFragment(org.kore.kolabnotes.android.fragment.DetailFragment,java.lang.String,java.lang.String,org.kore.kolabnotes.android.content.ActiveAccount)>[]--><org.kore.kolabnotes.android.fragment.DetailFragment: void updateFragmentDataWithNewNoteSelection(java.lang.String,java.lang.String,org.kore.kolabnotes.android.content.ActiveAccount)>[]--><org.kore.kolabnotes.android.fragment.DetailFragment: java.lang.String initNote(java.lang.String,java.lang.String,org.kore.kolabnotes.android.content.ActiveAccount)>[]--><org.kore.kolabnotes.android.fragment.DetailFragment: void setHtml(java.lang.String)>[]--><jp.wasabeef.richeditor.RichEditor: void setHtml(java.lang.String)>[[try]]--><jp.wasabeef.richeditor.RichEditor: void exec(java.lang.String)>[]--><jp.wasabeef.richeditor.RichEditor: void load(java.lang.String)>[[-$i0 < 19]]--><android.webkit.WebView: void evaluateJavascript(java.lang.String,android.webkit.ValueCallback)>
+One road protect good!
+try
+Good road with try: <org.kore.kolabnotes.android.fragment.OverviewFragment: void access$2900(org.kore.kolabnotes.android.fragment.OverviewFragment,org.kore.kolabnotes.android.fragment.DetailFragment,java.lang.String,java.lang.String,org.kore.kolabnotes.android.content.ActiveAccount)>[]--><org.kore.kolabnotes.android.fragment.OverviewFragment: void replaceDetailFragment(org.kore.kolabnotes.android.fragment.DetailFragment,java.lang.String,java.lang.String,org.kore.kolabnotes.android.content.ActiveAccount)>[]--><org.kore.kolabnotes.android.fragment.DetailFragment: void updateFragmentDataWithNewNoteSelection(java.lang.String,java.lang.String,org.kore.kolabnotes.android.content.ActiveAccount)>[]--><org.kore.kolabnotes.android.fragment.DetailFragment: java.lang.String initNote(java.lang.String,java.lang.String,org.kore.kolabnotes.android.content.ActiveAccount)>[]--><org.kore.kolabnotes.android.fragment.DetailFragment: void setHtml(java.lang.String)>[]--><jp.wasabeef.richeditor.RichEditor: void setHtml(java.lang.String)>[[try]]--><jp.wasabeef.richeditor.RichEditor: void exec(java.lang.String)>[]--><jp.wasabeef.richeditor.RichEditor: void load(java.lang.String)>[[-$i0 < 19]]--><android.webkit.WebView: void evaluateJavascript(java.lang.String,android.webkit.ValueCallback)>
+One road protect good!
+-$i0 < 19
+Good road: <org.kore.kolabnotes.android.fragment.DetailFragment$26: void onClick(android.view.View)>[]--><jp.wasabeef.richeditor.RichEditor: void setBullets()>[]--><jp.wasabeef.richeditor.RichEditor: void exec(java.lang.String)>[]--><jp.wasabeef.richeditor.RichEditor: void load(java.lang.String)>[[-$i0 < 19]]--><android.webkit.WebView: void evaluateJavascript(java.lang.String,android.webkit.ValueCallback)>
+One road protect good!
+-$i0 < 19
+Good road: <jp.wasabeef.richeditor.RichEditor: void loadCSS(java.lang.String)>[]--><jp.wasabeef.richeditor.RichEditor: void exec(java.lang.String)>[]--><jp.wasabeef.richeditor.RichEditor: void load(java.lang.String)>[[-$i0 < 19]]--><android.webkit.WebView: void evaluateJavascript(java.lang.String,android.webkit.ValueCallback)>
+One road protect good!
+-$i0 < 19
+Good road: <org.kore.kolabnotes.android.fragment.DetailFragment$21: void onClick(android.view.View)>[]--><jp.wasabeef.richeditor.RichEditor: void setOutdent()>[]--><jp.wasabeef.richeditor.RichEditor: void exec(java.lang.String)>[]--><jp.wasabeef.richeditor.RichEditor: void load(java.lang.String)>[[-$i0 < 19]]--><android.webkit.WebView: void evaluateJavascript(java.lang.String,android.webkit.ValueCallback)>
+One road protect good!
+-$i0 < 19
+Good road: <org.kore.kolabnotes.android.fragment.DetailFragment: void onActivityResult(int,int,android.content.Intent)>[]--><jp.wasabeef.richeditor.RichEditor: void focusEditor()>[]--><jp.wasabeef.richeditor.RichEditor: void exec(java.lang.String)>[]--><jp.wasabeef.richeditor.RichEditor: void load(java.lang.String)>[[-$i0 < 19]]--><android.webkit.WebView: void evaluateJavascript(java.lang.String,android.webkit.ValueCallback)>
+One road protect good!
+-$i0 < 19
+Good road: <org.kore.kolabnotes.android.fragment.DetailFragment: void onActivityResult(int,int,android.content.Intent)>[]--><jp.wasabeef.richeditor.RichEditor: void insertImage(java.lang.String,java.lang.String)>[]--><jp.wasabeef.richeditor.RichEditor: void exec(java.lang.String)>[]--><jp.wasabeef.richeditor.RichEditor: void load(java.lang.String)>[[-$i0 < 19]]--><android.webkit.WebView: void evaluateJavascript(java.lang.String,android.webkit.ValueCallback)>
+One road protect good!
+try
+Good road with try: <org.kore.kolabnotes.android.fragment.DetailFragment: void onActivityResult(int,int,android.content.Intent)>[]--><org.kore.kolabnotes.android.fragment.DetailFragment: void loadImageFromIntent(android.content.Intent)>[]--><org.kore.kolabnotes.android.fragment.DetailFragment: void loadImageFromUri(android.net.Uri)>[[try]]--><jp.wasabeef.richeditor.RichEditor: void focusEditor()>[]--><jp.wasabeef.richeditor.RichEditor: void exec(java.lang.String)>[]--><jp.wasabeef.richeditor.RichEditor: void load(java.lang.String)>[[-$i0 < 19]]--><android.webkit.WebView: void evaluateJavascript(java.lang.String,android.webkit.ValueCallback)>
+One road protect good!
+-$i0 < 19
+Good road: <org.kore.kolabnotes.android.fragment.DetailFragment$6: void onClick(android.view.View)>[]--><jp.wasabeef.richeditor.RichEditor: void setBold()>[]--><jp.wasabeef.richeditor.RichEditor: void exec(java.lang.String)>[]--><jp.wasabeef.richeditor.RichEditor: void load(java.lang.String)>[[-$i0 < 19]]--><android.webkit.WebView: void evaluateJavascript(java.lang.String,android.webkit.ValueCallback)>
+One road protect good!
+-$i0 < 19
+Good road: <org.kore.kolabnotes.android.fragment.DetailFragment$17: void onClick(android.view.View)>[]--><jp.wasabeef.richeditor.RichEditor: void setHeading(int)>[]--><jp.wasabeef.richeditor.RichEditor: void exec(java.lang.String)>[]--><jp.wasabeef.richeditor.RichEditor: void load(java.lang.String)>[[-$i0 < 19]]--><android.webkit.WebView: void evaluateJavascript(java.lang.String,android.webkit.ValueCallback)>
+One road protect good!
+-$i0 < 19
+Good road: <jp.wasabeef.richeditor.RichEditor: void clearFocusEditor()>[]--><jp.wasabeef.richeditor.RichEditor: void exec(java.lang.String)>[]--><jp.wasabeef.richeditor.RichEditor: void load(java.lang.String)>[[-$i0 < 19]]--><android.webkit.WebView: void evaluateJavascript(java.lang.String,android.webkit.ValueCallback)>
+One road protect good!
+-$i0 < 19
+Good road: <jp.wasabeef.richeditor.RichEditor: void setBackground(android.graphics.drawable.Drawable)>[]--><jp.wasabeef.richeditor.RichEditor: void exec(java.lang.String)>[]--><jp.wasabeef.richeditor.RichEditor: void load(java.lang.String)>[[-$i0 < 19]]--><android.webkit.WebView: void evaluateJavascript(java.lang.String,android.webkit.ValueCallback)>
+One road protect good!
+-$i0 < 19
+Good road: <org.kore.kolabnotes.android.fragment.DetailFragment$12: void onClick(android.view.View)>[]--><jp.wasabeef.richeditor.RichEditor: void setHeading(int)>[]--><jp.wasabeef.richeditor.RichEditor: void exec(java.lang.String)>[]--><jp.wasabeef.richeditor.RichEditor: void load(java.lang.String)>[[-$i0 < 19]]--><android.webkit.WebView: void evaluateJavascript(java.lang.String,android.webkit.ValueCallback)>
+One road protect good!
+-$i0 < 19
+Good road: <org.kore.kolabnotes.android.fragment.DetailFragment$18$1: void onOk(yuku.ambilwarna.AmbilWarnaDialog,int)>[]--><jp.wasabeef.richeditor.RichEditor: void setTextColor(int)>[]--><jp.wasabeef.richeditor.RichEditor: void exec(java.lang.String)>[]--><jp.wasabeef.richeditor.RichEditor: void load(java.lang.String)>[[-$i0 < 19]]--><android.webkit.WebView: void evaluateJavascript(java.lang.String,android.webkit.ValueCallback)>
+One road protect good!
+-$i0 < 19
+Good road: <jp.wasabeef.richeditor.RichEditor: void setPlaceholder(java.lang.String)>[]--><jp.wasabeef.richeditor.RichEditor: void exec(java.lang.String)>[]--><jp.wasabeef.richeditor.RichEditor: void load(java.lang.String)>[[-$i0 < 19]]--><android.webkit.WebView: void evaluateJavascript(java.lang.String,android.webkit.ValueCallback)>
+One road protect good!
+-$i0 < 19
+Good road: <org.kore.kolabnotes.android.fragment.KolabNotesRichEditor: void <init>(android.content.Context,android.util.AttributeSet,int)>[]--><jp.wasabeef.richeditor.RichEditor: void <init>(android.content.Context,android.util.AttributeSet,int)>[]--><jp.wasabeef.richeditor.RichEditor: void applyAttributes(android.content.Context,android.util.AttributeSet)>[]--><jp.wasabeef.richeditor.RichEditor: void exec(java.lang.String)>[]--><jp.wasabeef.richeditor.RichEditor: void load(java.lang.String)>[[-$i0 < 19]]--><android.webkit.WebView: void evaluateJavascript(java.lang.String,android.webkit.ValueCallback)>
+One road protect good!
+-$i0 < 19
+Good road: <org.kore.kolabnotes.android.fragment.DetailFragment$10: void onClick(android.view.View)>[]--><jp.wasabeef.richeditor.RichEditor: void setStrikeThrough()>[]--><jp.wasabeef.richeditor.RichEditor: void exec(java.lang.String)>[]--><jp.wasabeef.richeditor.RichEditor: void load(java.lang.String)>[[-$i0 < 19]]--><android.webkit.WebView: void evaluateJavascript(java.lang.String,android.webkit.ValueCallback)>
+One road protect good!
+-$i0 < 19
+Good road: <org.kore.kolabnotes.android.fragment.KolabNotesRichEditor: void <init>(android.content.Context,android.util.AttributeSet)>[]--><jp.wasabeef.richeditor.RichEditor: void <init>(android.content.Context,android.util.AttributeSet)>[]--><jp.wasabeef.richeditor.RichEditor: void <init>(android.content.Context,android.util.AttributeSet,int)>[]--><jp.wasabeef.richeditor.RichEditor: void applyAttributes(android.content.Context,android.util.AttributeSet)>[]--><jp.wasabeef.richeditor.RichEditor: void exec(java.lang.String)>[]--><jp.wasabeef.richeditor.RichEditor: void load(java.lang.String)>[[-$i0 < 19]]--><android.webkit.WebView: void evaluateJavascript(java.lang.String,android.webkit.ValueCallback)>
+One road protect good!
+-$i0 < 19
+Good road: <jp.wasabeef.richeditor.RichEditor: void removeFormat()>[]--><jp.wasabeef.richeditor.RichEditor: void exec(java.lang.String)>[]--><jp.wasabeef.richeditor.RichEditor: void load(java.lang.String)>[[-$i0 < 19]]--><android.webkit.WebView: void evaluateJavascript(java.lang.String,android.webkit.ValueCallback)>
+One road protect good!
+-$i0 < 19
+Good road: <org.kore.kolabnotes.android.fragment.DetailFragment$13: void onClick(android.view.View)>[]--><jp.wasabeef.richeditor.RichEditor: void setHeading(int)>[]--><jp.wasabeef.richeditor.RichEditor: void exec(java.lang.String)>[]--><jp.wasabeef.richeditor.RichEditor: void load(java.lang.String)>[[-$i0 < 19]]--><android.webkit.WebView: void evaluateJavascript(java.lang.String,android.webkit.ValueCallback)>
+One road protect good!
+-$i0 < 19
+Good road: <jp.wasabeef.richeditor.RichEditor: void setBackground(java.lang.String)>[]--><jp.wasabeef.richeditor.RichEditor: void exec(java.lang.String)>[]--><jp.wasabeef.richeditor.RichEditor: void load(java.lang.String)>[[-$i0 < 19]]--><android.webkit.WebView: void evaluateJavascript(java.lang.String,android.webkit.ValueCallback)>
+One road protect good!
+-$i0 < 19
+Good road: <org.kore.kolabnotes.android.fragment.DetailFragment$30: void onClick(android.view.View)>[]--><jp.wasabeef.richeditor.RichEditor: void insertTodo()>[]--><jp.wasabeef.richeditor.RichEditor: void exec(java.lang.String)>[]--><jp.wasabeef.richeditor.RichEditor: void load(java.lang.String)>[[-$i0 < 19]]--><android.webkit.WebView: void evaluateJavascript(java.lang.String,android.webkit.ValueCallback)>
+One road protect good!
+-$i0 < 19
+Good road: <jp.wasabeef.richeditor.RichEditor: void setEditorFontSize(int)>[]--><jp.wasabeef.richeditor.RichEditor: void exec(java.lang.String)>[]--><jp.wasabeef.richeditor.RichEditor: void load(java.lang.String)>[[-$i0 < 19]]--><android.webkit.WebView: void evaluateJavascript(java.lang.String,android.webkit.ValueCallback)>
+One road protect good!
+-$i0 < 19
+Good road: <jp.wasabeef.richeditor.RichEditor: void setPaddingRelative(int,int,int,int)>[]--><jp.wasabeef.richeditor.RichEditor: void setPadding(int,int,int,int)>[]--><jp.wasabeef.richeditor.RichEditor: void exec(java.lang.String)>[]--><jp.wasabeef.richeditor.RichEditor: void load(java.lang.String)>[[-$i0 < 19]]--><android.webkit.WebView: void evaluateJavascript(java.lang.String,android.webkit.ValueCallback)>
+One road protect good!
+-$i0 < 19
+Good road: <org.kore.kolabnotes.android.fragment.DetailFragment$15: void onClick(android.view.View)>[]--><jp.wasabeef.richeditor.RichEditor: void setHeading(int)>[]--><jp.wasabeef.richeditor.RichEditor: void exec(java.lang.String)>[]--><jp.wasabeef.richeditor.RichEditor: void load(java.lang.String)>[[-$i0 < 19]]--><android.webkit.WebView: void evaluateJavascript(java.lang.String,android.webkit.ValueCallback)>
+One road protect good!
+-$i0 < 19
+Good road: <org.kore.kolabnotes.android.fragment.DetailFragment$24: void onClick(android.view.View)>[]--><jp.wasabeef.richeditor.RichEditor: void setAlignRight()>[]--><jp.wasabeef.richeditor.RichEditor: void exec(java.lang.String)>[]--><jp.wasabeef.richeditor.RichEditor: void load(java.lang.String)>[[-$i0 < 19]]--><android.webkit.WebView: void evaluateJavascript(java.lang.String,android.webkit.ValueCallback)>
+One road protect good!
+-$i0 < 19
+Good road: <org.kore.kolabnotes.android.fragment.DetailFragment$9: void onClick(android.view.View)>[]--><jp.wasabeef.richeditor.RichEditor: void setSuperscript()>[]--><jp.wasabeef.richeditor.RichEditor: void exec(java.lang.String)>[]--><jp.wasabeef.richeditor.RichEditor: void load(java.lang.String)>[[-$i0 < 19]]--><android.webkit.WebView: void evaluateJavascript(java.lang.String,android.webkit.ValueCallback)>
+One road protect good!
+-$i0 < 19
+Good road: <org.kore.kolabnotes.android.fragment.DetailFragment$19$1: void onOk(yuku.ambilwarna.AmbilWarnaDialog,int)>[]--><jp.wasabeef.richeditor.RichEditor: void setTextBackgroundColor(int)>[]--><jp.wasabeef.richeditor.RichEditor: void exec(java.lang.String)>[]--><jp.wasabeef.richeditor.RichEditor: void load(java.lang.String)>[[-$i0 < 19]]--><android.webkit.WebView: void evaluateJavascript(java.lang.String,android.webkit.ValueCallback)>
+One road protect good!
+-$i0 < 19
+Good road: <org.kore.kolabnotes.android.fragment.DetailFragment$4: void onClick(android.view.View)>[]--><jp.wasabeef.richeditor.RichEditor: void undo()>[]--><jp.wasabeef.richeditor.RichEditor: void exec(java.lang.String)>[]--><jp.wasabeef.richeditor.RichEditor: void load(java.lang.String)>[[-$i0 < 19]]--><android.webkit.WebView: void evaluateJavascript(java.lang.String,android.webkit.ValueCallback)>
+One road protect good!
+-$i0 < 19
+Good road: <jp.wasabeef.richeditor.RichEditor: void setFontSize(int)>[]--><jp.wasabeef.richeditor.RichEditor: void exec(java.lang.String)>[]--><jp.wasabeef.richeditor.RichEditor: void load(java.lang.String)>[[-$i0 < 19]]--><android.webkit.WebView: void evaluateJavascript(java.lang.String,android.webkit.ValueCallback)>
+One road protect good!
+-$i0 < 19
+Good road: <org.kore.kolabnotes.android.fragment.DetailFragment$16: void onClick(android.view.View)>[]--><jp.wasabeef.richeditor.RichEditor: void setHeading(int)>[]--><jp.wasabeef.richeditor.RichEditor: void exec(java.lang.String)>[]--><jp.wasabeef.richeditor.RichEditor: void load(java.lang.String)>[[-$i0 < 19]]--><android.webkit.WebView: void evaluateJavascript(java.lang.String,android.webkit.ValueCallback)>
+One road protect good!
+-$i0 < 19
+Good road: <org.kore.kolabnotes.android.fragment.DetailFragment$5: void onClick(android.view.View)>[]--><jp.wasabeef.richeditor.RichEditor: void redo()>[]--><jp.wasabeef.richeditor.RichEditor: void exec(java.lang.String)>[]--><jp.wasabeef.richeditor.RichEditor: void load(java.lang.String)>[[-$i0 < 19]]--><android.webkit.WebView: void evaluateJavascript(java.lang.String,android.webkit.ValueCallback)>
+One road protect good!
+-$i0 < 19
+Good road: <org.kore.kolabnotes.android.fragment.DetailFragment$11: void onClick(android.view.View)>[]--><jp.wasabeef.richeditor.RichEditor: void setUnderline()>[]--><jp.wasabeef.richeditor.RichEditor: void exec(java.lang.String)>[]--><jp.wasabeef.richeditor.RichEditor: void load(java.lang.String)>[[-$i0 < 19]]--><android.webkit.WebView: void evaluateJavascript(java.lang.String,android.webkit.ValueCallback)>
+One road protect good!
+-$i0 < 19
+Good road: <org.kore.kolabnotes.android.fragment.KolabNotesRichEditor: void <init>(android.content.Context)>[]--><jp.wasabeef.richeditor.RichEditor: void <init>(android.content.Context)>[]--><jp.wasabeef.richeditor.RichEditor: void <init>(android.content.Context,android.util.AttributeSet)>[]--><jp.wasabeef.richeditor.RichEditor: void <init>(android.content.Context,android.util.AttributeSet,int)>[]--><jp.wasabeef.richeditor.RichEditor: void applyAttributes(android.content.Context,android.util.AttributeSet)>[]--><jp.wasabeef.richeditor.RichEditor: void exec(java.lang.String)>[]--><jp.wasabeef.richeditor.RichEditor: void load(java.lang.String)>[[-$i0 < 19]]--><android.webkit.WebView: void evaluateJavascript(java.lang.String,android.webkit.ValueCallback)>
+One road protect good!
+-$i0 < 19
+Good road: <org.kore.kolabnotes.android.fragment.DetailFragment$27: void onClick(android.view.View)>[]--><jp.wasabeef.richeditor.RichEditor: void setNumbers()>[]--><jp.wasabeef.richeditor.RichEditor: void exec(java.lang.String)>[]--><jp.wasabeef.richeditor.RichEditor: void load(java.lang.String)>[[-$i0 < 19]]--><android.webkit.WebView: void evaluateJavascript(java.lang.String,android.webkit.ValueCallback)>
+One road protect good!
+-$i0 < 19
+Good road: <org.kore.kolabnotes.android.fragment.DetailFragment$7: void onClick(android.view.View)>[]--><jp.wasabeef.richeditor.RichEditor: void setItalic()>[]--><jp.wasabeef.richeditor.RichEditor: void exec(java.lang.String)>[]--><jp.wasabeef.richeditor.RichEditor: void load(java.lang.String)>[[-$i0 < 19]]--><android.webkit.WebView: void evaluateJavascript(java.lang.String,android.webkit.ValueCallback)>
+One road protect good!
+-$i0 < 19
+Good road: <org.kore.kolabnotes.android.fragment.DetailFragment$22: void onClick(android.view.View)>[]--><jp.wasabeef.richeditor.RichEditor: void setAlignLeft()>[]--><jp.wasabeef.richeditor.RichEditor: void exec(java.lang.String)>[]--><jp.wasabeef.richeditor.RichEditor: void load(java.lang.String)>[[-$i0 < 19]]--><android.webkit.WebView: void evaluateJavascript(java.lang.String,android.webkit.ValueCallback)>
+One road protect good!
+-$i0 < 19
+Good road: <jp.wasabeef.richeditor.RichEditor$1: void run()>[]--><jp.wasabeef.richeditor.RichEditor: void exec(java.lang.String)>[]--><jp.wasabeef.richeditor.RichEditor: void load(java.lang.String)>[[-$i0 < 19]]--><android.webkit.WebView: void evaluateJavascript(java.lang.String,android.webkit.ValueCallback)>
+One road protect good!
+-$i0 < 19
+Good road: <jp.wasabeef.richeditor.RichEditor: void setInputEnabled(java.lang.Boolean)>[]--><jp.wasabeef.richeditor.RichEditor: void exec(java.lang.String)>[]--><jp.wasabeef.richeditor.RichEditor: void load(java.lang.String)>[[-$i0 < 19]]--><android.webkit.WebView: void evaluateJavascript(java.lang.String,android.webkit.ValueCallback)>
+One road protect good!
+try
+Good road with try: <org.kore.kolabnotes.android.fragment.OverviewFragment$2: void onClick(android.content.DialogInterface,int)>[]--><org.kore.kolabnotes.android.fragment.OverviewFragment: void setDetailFragment(org.kore.kolabnotes.android.content.ActiveAccount,org.kore.kolab.notes.Note,boolean)>[]--><org.kore.kolabnotes.android.fragment.OverviewFragment: void replaceDetailFragment(org.kore.kolabnotes.android.fragment.DetailFragment,java.lang.String,java.lang.String,org.kore.kolabnotes.android.content.ActiveAccount)>[]--><org.kore.kolabnotes.android.fragment.DetailFragment: void updateFragmentDataWithNewNoteSelection(java.lang.String,java.lang.String,org.kore.kolabnotes.android.content.ActiveAccount)>[]--><org.kore.kolabnotes.android.fragment.DetailFragment: java.lang.String initNote(java.lang.String,java.lang.String,org.kore.kolabnotes.android.content.ActiveAccount)>[]--><org.kore.kolabnotes.android.fragment.DetailFragment: void setHtml(java.lang.String)>[]--><jp.wasabeef.richeditor.RichEditor: void setHtml(java.lang.String)>[[try]]--><jp.wasabeef.richeditor.RichEditor: void exec(java.lang.String)>[]--><jp.wasabeef.richeditor.RichEditor: void load(java.lang.String)>[[-$i0 < 19]]--><android.webkit.WebView: void evaluateJavascript(java.lang.String,android.webkit.ValueCallback)>
+One road protect good!
+-$i0 < 19
+Good road: <org.kore.kolabnotes.android.fragment.DetailFragment$20: void onClick(android.view.View)>[]--><jp.wasabeef.richeditor.RichEditor: void setIndent()>[]--><jp.wasabeef.richeditor.RichEditor: void exec(java.lang.String)>[]--><jp.wasabeef.richeditor.RichEditor: void load(java.lang.String)>[[-$i0 < 19]]--><android.webkit.WebView: void evaluateJavascript(java.lang.String,android.webkit.ValueCallback)>
+One road protect good!
+-$i0 < 19
+Good road: <jp.wasabeef.richeditor.RichEditor: void setEditorWidth(int)>[]--><jp.wasabeef.richeditor.RichEditor: void exec(java.lang.String)>[]--><jp.wasabeef.richeditor.RichEditor: void load(java.lang.String)>[[-$i0 < 19]]--><android.webkit.WebView: void evaluateJavascript(java.lang.String,android.webkit.ValueCallback)>
+One road protect good!
+-$i0 < 19
+Good road: <org.kore.kolabnotes.android.fragment.DetailFragment$14: void onClick(android.view.View)>[]--><jp.wasabeef.richeditor.RichEditor: void setHeading(int)>[]--><jp.wasabeef.richeditor.RichEditor: void exec(java.lang.String)>[]--><jp.wasabeef.richeditor.RichEditor: void load(java.lang.String)>[[-$i0 < 19]]--><android.webkit.WebView: void evaluateJavascript(java.lang.String,android.webkit.ValueCallback)>
+One road protect good!
+-$i0 < 19
+Good road: <org.kore.kolabnotes.android.fragment.DetailFragment$29$1: void onClick(android.content.DialogInterface,int)>[]--><jp.wasabeef.richeditor.RichEditor: void insertLink(java.lang.String,java.lang.String)>[]--><jp.wasabeef.richeditor.RichEditor: void exec(java.lang.String)>[]--><jp.wasabeef.richeditor.RichEditor: void load(java.lang.String)>[[-$i0 < 19]]--><android.webkit.WebView: void evaluateJavascript(java.lang.String,android.webkit.ValueCallback)>
+One road protect good!
+-$i0 < 19
+Good road: <jp.wasabeef.richeditor.RichEditor: void setBackgroundResource(int)>[]--><jp.wasabeef.richeditor.RichEditor: void exec(java.lang.String)>[]--><jp.wasabeef.richeditor.RichEditor: void load(java.lang.String)>[[-$i0 < 19]]--><android.webkit.WebView: void evaluateJavascript(java.lang.String,android.webkit.ValueCallback)>
+One road protect good!
+-$i0 < 19
+Good road: <org.kore.kolabnotes.android.fragment.DetailFragment$8: void onClick(android.view.View)>[]--><jp.wasabeef.richeditor.RichEditor: void setSubscript()>[]--><jp.wasabeef.richeditor.RichEditor: void exec(java.lang.String)>[]--><jp.wasabeef.richeditor.RichEditor: void load(java.lang.String)>[[-$i0 < 19]]--><android.webkit.WebView: void evaluateJavascript(java.lang.String,android.webkit.ValueCallback)>
+One road protect good!
+-$i0 < 19
+Good road: <org.kore.kolabnotes.android.fragment.DetailFragment$23: void onClick(android.view.View)>[]--><jp.wasabeef.richeditor.RichEditor: void setAlignCenter()>[]--><jp.wasabeef.richeditor.RichEditor: void exec(java.lang.String)>[]--><jp.wasabeef.richeditor.RichEditor: void load(java.lang.String)>[[-$i0 < 19]]--><android.webkit.WebView: void evaluateJavascript(java.lang.String,android.webkit.ValueCallback)>
+One road protect good!
+-$i0 < 19
+Good road: <org.kore.kolabnotes.android.fragment.DetailFragment$25: void onClick(android.view.View)>[]--><jp.wasabeef.richeditor.RichEditor: void setBlockquote()>[]--><jp.wasabeef.richeditor.RichEditor: void exec(java.lang.String)>[]--><jp.wasabeef.richeditor.RichEditor: void load(java.lang.String)>[[-$i0 < 19]]--><android.webkit.WebView: void evaluateJavascript(java.lang.String,android.webkit.ValueCallback)>
+One road protect good!
+i0 < 24
+try
+Good road with try: <org.kore.kolabnotes.android.fragment.DetailFragment: void onActivityCreated(android.os.Bundle)>[[i0 < 24]]--><org.kore.kolabnotes.android.fragment.DetailFragment: java.lang.String initNote(java.lang.String,java.lang.String,org.kore.kolabnotes.android.content.ActiveAccount)>[]--><org.kore.kolabnotes.android.fragment.DetailFragment: void setHtml(java.lang.String)>[]--><jp.wasabeef.richeditor.RichEditor: void setHtml(java.lang.String)>[[try]]--><jp.wasabeef.richeditor.RichEditor: void exec(java.lang.String)>[]--><jp.wasabeef.richeditor.RichEditor: void load(java.lang.String)>[[-$i0 < 19]]--><android.webkit.WebView: void evaluateJavascript(java.lang.String,android.webkit.ValueCallback)>
+One road protect good!
+try
+Good road with try: <org.kore.kolabnotes.android.fragment.DetailFragment: void onActivityCreated(android.os.Bundle)>[]--><org.kore.kolabnotes.android.fragment.DetailFragment: void loadImageFromIntent(android.content.Intent)>[]--><org.kore.kolabnotes.android.fragment.DetailFragment: void loadImageFromUri(android.net.Uri)>[[try]]--><jp.wasabeef.richeditor.RichEditor: void focusEditor()>[]--><jp.wasabeef.richeditor.RichEditor: void exec(java.lang.String)>[]--><jp.wasabeef.richeditor.RichEditor: void load(java.lang.String)>[[-$i0 < 19]]--><android.webkit.WebView: void evaluateJavascript(java.lang.String,android.webkit.ValueCallback)>
+One road protect good!
+i0 < 24
+try
+Good road with try: <org.kore.kolabnotes.android.fragment.DetailFragment: void onActivityCreated(android.os.Bundle)>[[i0 < 24]]--><org.kore.kolabnotes.android.fragment.DetailFragment: void setHtml(java.lang.String)>[]--><jp.wasabeef.richeditor.RichEditor: void setHtml(java.lang.String)>[[try]]--><jp.wasabeef.richeditor.RichEditor: void exec(java.lang.String)>[]--><jp.wasabeef.richeditor.RichEditor: void load(java.lang.String)>[[-$i0 < 19]]--><android.webkit.WebView: void evaluateJavascript(java.lang.String,android.webkit.ValueCallback)>
+One road protect good!
+-$i0 < 19
+Good road: <org.kore.kolabnotes.android.fragment.DetailFragment: void onActivityCreated(android.os.Bundle)>[]--><org.kore.kolabnotes.android.fragment.DetailFragment: void initTextEditor()>[]--><jp.wasabeef.richeditor.RichEditor: void setEditorHeight(int)>[]--><jp.wasabeef.richeditor.RichEditor: void exec(java.lang.String)>[]--><jp.wasabeef.richeditor.RichEditor: void load(java.lang.String)>[[-$i0 < 19]]--><android.webkit.WebView: void evaluateJavascript(java.lang.String,android.webkit.ValueCallback)>
+One road protect good!
+i0 < 24
+try
+Good road with try: <org.kore.kolabnotes.android.fragment.DetailFragment: void onActivityCreated(android.os.Bundle)>[[i0 < 24]]--><org.kore.kolabnotes.android.fragment.DetailFragment: void takeTextFromIntent(android.content.Intent)>[]--><org.kore.kolabnotes.android.fragment.DetailFragment: void setHtml(java.lang.String)>[]--><jp.wasabeef.richeditor.RichEditor: void setHtml(java.lang.String)>[[try]]--><jp.wasabeef.richeditor.RichEditor: void exec(java.lang.String)>[]--><jp.wasabeef.richeditor.RichEditor: void load(java.lang.String)>[[-$i0 < 19]]--><android.webkit.WebView: void evaluateJavascript(java.lang.String,android.webkit.ValueCallback)>
+One road protect good!
+-$i0 < 19
+Good road: <jp.wasabeef.richeditor.RichEditor: void setEditorFontColor(int)>[]--><jp.wasabeef.richeditor.RichEditor: void exec(java.lang.String)>[]--><jp.wasabeef.richeditor.RichEditor: void load(java.lang.String)>[[-$i0 < 19]]--><android.webkit.WebView: void evaluateJavascript(java.lang.String,android.webkit.ValueCallback)>
+One road protect good!
+containsStatic:false
+containsTry:true
+49call by main package
+-----------------------------------------
+#################################################
+N 7 Potential Issue API: SDKCheck of <android.view.Window: void setNavigationBarColor(int)> is checking!!!
+The life time of api is [21,31]
+4call roads:
+0 Mainhead roads:
+4 Packageshead roads:
+-$i0 < 21
+Good road: <org.kore.kolabnotes.android.fragment.TagListFragment$ActionModeCallback: void onDestroyActionMode(android.view.ActionMode)>[[-$i0 < 21]]--><android.view.Window: void setNavigationBarColor(int)>
+One road protect good!
+-$i0 < 21
+Good road: <org.kore.kolabnotes.android.fragment.OverviewFragment$ActionModeCallback: void onDestroyActionMode(android.view.ActionMode)>[[-$i0 < 21]]--><android.view.Window: void setNavigationBarColor(int)>
+One road protect good!
+-$i0 < 21
+Good road: <org.kore.kolabnotes.android.fragment.TagListFragment$ActionModeCallback: boolean onCreateActionMode(android.view.ActionMode,android.view.Menu)>[[-$i0 < 21]]--><android.view.Window: void setNavigationBarColor(int)>
+One road protect good!
+-$i0 < 21
+Good road: <org.kore.kolabnotes.android.fragment.OverviewFragment$ActionModeCallback: boolean onCreateActionMode(android.view.ActionMode,android.view.Menu)>[[-$i0 < 21]]--><android.view.Window: void setNavigationBarColor(int)>
+One road protect good!
+containsStatic:false
+containsTry:false
+5call by main package
+-----------------------------------------
+#################################################
+N 8 Potential Issue API: SDKCheck of <android.app.Fragment: android.content.Context getContext()> is checking!!!
+The life time of api is [23,31]
+4call roads:
+0 Mainhead roads:
+4 Packageshead roads:
+-$i0 < 21
+-$i0 < 23
+Good road: <org.kore.kolabnotes.android.fragment.TagListFragment$ActionModeCallback: void onDestroyActionMode(android.view.ActionMode)>[[-$i0 < 21]]--><org.kore.kolabnotes.android.fragment.TagListFragment: android.content.Context getContext()>[[-$i0 < 23]]--><android.app.Fragment: android.content.Context getContext()>
+One road protect good!
+-$i0 < 21
+!!!this api will crash on sdk 21 22 
+Error road: <org.kore.kolabnotes.android.fragment.TagListFragment$ActionModeCallback: void onDestroyActionMode(android.view.ActionMode)>[[-$i0 < 21]]--><android.app.Fragment: android.content.Context getContext()>
+#1.the call statck between class <org.kore.kolabnotes.android.fragment.TagListFragment$ActionModeCallback: void onDestroyActionMode(android.view.ActionMode)> to <android.app.Fragment: android.content.Context getContext()>has compatibility isssues！
+-----------------------------------------
+-$i0 < 21
+-$i0 < 23
+Good road: <org.kore.kolabnotes.android.fragment.OverviewFragment$ActionModeCallback: void onDestroyActionMode(android.view.ActionMode)>[[-$i0 < 21]]--><org.kore.kolabnotes.android.fragment.OverviewFragment: android.content.Context getContext()>[[-$i0 < 23]]--><android.app.Fragment: android.content.Context getContext()>
+One road protect good!
+-$i0 < 21
+!!!this api will crash on sdk 21 22 
+Error road: <org.kore.kolabnotes.android.fragment.OverviewFragment$ActionModeCallback: void onDestroyActionMode(android.view.ActionMode)>[[-$i0 < 21]]--><android.app.Fragment: android.content.Context getContext()>
+#2.the call statck between class <org.kore.kolabnotes.android.fragment.OverviewFragment$ActionModeCallback: void onDestroyActionMode(android.view.ActionMode)> to <android.app.Fragment: android.content.Context getContext()>has compatibility isssues！
+-----------------------------------------
+-$i0 < 21
+!!!this api will crash on sdk 21 22 
+Error road: <org.kore.kolabnotes.android.fragment.TagListFragment$ActionModeCallback: boolean onCreateActionMode(android.view.ActionMode,android.view.Menu)>[[-$i0 < 21]]--><android.app.Fragment: android.content.Context getContext()>
+-$i0 < 21
+-$i0 < 23
+Good road: <org.kore.kolabnotes.android.fragment.TagListFragment$ActionModeCallback: boolean onCreateActionMode(android.view.ActionMode,android.view.Menu)>[[-$i0 < 21]]--><org.kore.kolabnotes.android.fragment.TagListFragment: android.content.Context getContext()>[[-$i0 < 23]]--><android.app.Fragment: android.content.Context getContext()>
+One road protect good!
+#3.the call statck between class <org.kore.kolabnotes.android.fragment.TagListFragment$ActionModeCallback: boolean onCreateActionMode(android.view.ActionMode,android.view.Menu)> to <android.app.Fragment: android.content.Context getContext()>has compatibility isssues！
+-----------------------------------------
+-$i0 < 21
+-$i0 < 23
+Good road: <org.kore.kolabnotes.android.fragment.OverviewFragment$ActionModeCallback: boolean onCreateActionMode(android.view.ActionMode,android.view.Menu)>[[-$i0 < 21]]--><org.kore.kolabnotes.android.fragment.OverviewFragment: android.content.Context getContext()>[[-$i0 < 23]]--><android.app.Fragment: android.content.Context getContext()>
+One road protect good!
+-$i0 < 21
+!!!this api will crash on sdk 21 22 
+Error road: <org.kore.kolabnotes.android.fragment.OverviewFragment$ActionModeCallback: boolean onCreateActionMode(android.view.ActionMode,android.view.Menu)>[[-$i0 < 21]]--><android.app.Fragment: android.content.Context getContext()>
+#4.the call statck between class <org.kore.kolabnotes.android.fragment.OverviewFragment$ActionModeCallback: boolean onCreateActionMode(android.view.ActionMode,android.view.Menu)> to <android.app.Fragment: android.content.Context getContext()>has compatibility isssues！
+-----------------------------------------
+crashApis:3
+containsStatic:false
+containsTry:false
+5call by main package
+-----------------------------------------
+#################################################
+N 9 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)> is checking!!!
+The life time of api is [21,31]
+3call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.kore.kolabnotes.android.security.AuthenticatorActivity dummyMainMethod_org_kore_kolabnotes_android_security_AuthenticatorActivity(android.content.Intent)>[]--><org.kore.kolabnotes.android.security.AuthenticatorActivity$1: void onClick(android.view.View)>[]--><org.kore.kolabnotes.android.security.AuthenticatorActivity: void submit()>[[try]]--><org.kore.kolabnotes.android.security.AuthenticatorActivity: android.os.Bundle createAuthBundle(org.kore.kolabnotes.android.security.KolabAccount,long)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+One road protect good!
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.kore.kolabnotes.android.AttachmentActivity dummyMainMethod_org_kore_kolabnotes_android_AttachmentActivity(android.content.Intent)>[]--><org.kore.kolabnotes.android.AttachmentActivity: void onCreate(android.os.Bundle)>[]--><org.kore.kolabnotes.android.fragment.PreviewFragment: org.kore.kolabnotes.android.fragment.PreviewFragment newInstance(java.lang.String,java.lang.String)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+2 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <org.kore.kolabnotes.android.fragment.DetailFragment: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#1.the call statck between class <org.kore.kolabnotes.android.fragment.DetailFragment: void onSaveInstanceState(android.os.Bundle)> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <org.kore.kolabnotes.android.fragment.AttachmentFragment: org.kore.kolabnotes.android.fragment.AttachmentFragment newInstance(java.lang.String)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#2.the call statck between class <org.kore.kolabnotes.android.fragment.AttachmentFragment: org.kore.kolabnotes.android.fragment.AttachmentFragment newInstance(java.lang.String)> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:4
+crashApisInMain:1
+containsStatic:false
+containsTry:true
+3call by main package
+-----------------------------------------
+#################################################
+N 10 Potential Issue API: SDKCheck of <android.app.Fragment: void onViewStateRestored(android.os.Bundle)> is checking!!!
+The life time of api is [17,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 
+Error road: <org.kore.kolabnotes.android.fragment.DrawEditorFragment: void onViewStateRestored(android.os.Bundle)>[]--><android.app.Fragment: void onViewStateRestored(android.os.Bundle)>
+#1.the call statck between class <org.kore.kolabnotes.android.fragment.DrawEditorFragment: void onViewStateRestored(android.os.Bundle)> to <android.app.Fragment: void onViewStateRestored(android.os.Bundle)>has compatibility isssues！
+-----------------------------------------
+crashApis:5
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 11 Potential Issue API: SDKCheck of <android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)> is checking!!!
+The life time of api is [22,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 
+Error road: <org.kore.kolabnotes.android.fragment.TagListFragment: void onActivityCreated(android.os.Bundle)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>
+#1.the call statck between class <org.kore.kolabnotes.android.fragment.TagListFragment: void onActivityCreated(android.os.Bundle)> to <android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 
+Error road: <org.kore.kolabnotes.android.fragment.OverviewFragment: void onActivityCreated(android.os.Bundle)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>
+#2.the call statck between class <org.kore.kolabnotes.android.fragment.OverviewFragment: void onActivityCreated(android.os.Bundle)> to <android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+crashApis:6
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 12 Potential Issue API: SDKCheck of <android.view.MenuItem: android.view.MenuItem setTooltipText(java.lang.CharSequence)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i0 < 26
+Good road: <org.kore.kolabnotes.android.fragment.OverviewFragment$InitializeApplicationsTask$1: void run()>[]--><org.kore.kolabnotes.android.drawer.DrawerAccountsService: java.util.Set overrideAccounts(org.kore.kolabnotes.android.fragment.OnAccountSwitchedFromNavListener,android.accounts.Account[],android.accounts.AccountManager,android.support.v4.widget.DrawerLayout)>[]--><org.kore.kolabnotes.android.drawer.DrawerAccountsService: org.kore.kolabnotes.android.content.AccountIdentifier createMenuItem(org.kore.kolabnotes.android.fragment.OnAccountSwitchedFromNavListener,android.view.Menu,android.content.Context,int,java.lang.String,java.lang.String,java.lang.String,java.lang.String,android.support.v4.widget.DrawerLayout)>[[-$i0 < 26]]--><android.view.MenuItem: android.view.MenuItem setTooltipText(java.lang.CharSequence)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 13 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)> is checking!!!
+The life time of api is [22,31]
+5call roads:
+0 Mainhead roads:
+5 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 
+Error road: <org.kore.kolabnotes.android.fragment.OverviewFragment$1: void onRefresh()>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+#1.the call statck between class <org.kore.kolabnotes.android.fragment.OverviewFragment$1: void onRefresh()> to <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 
+Error road: <org.kore.kolabnotes.android.fragment.DrawEditorFragment: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+#2.the call statck between class <org.kore.kolabnotes.android.fragment.DrawEditorFragment: void onSaveInstanceState(android.os.Bundle)> to <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 
+Error road: <org.kore.kolabnotes.android.fragment.TagListFragment: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+#3.the call statck between class <org.kore.kolabnotes.android.fragment.TagListFragment: void onSaveInstanceState(android.os.Bundle)> to <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 
+Error road: <org.kore.kolabnotes.android.draweditor.DrawingView: android.os.Parcelable onSaveInstanceState()>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+#4.the call statck between class <org.kore.kolabnotes.android.draweditor.DrawingView: android.os.Parcelable onSaveInstanceState()> to <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 
+Error road: <org.kore.kolabnotes.android.fragment.OverviewFragment: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+#5.the call statck between class <org.kore.kolabnotes.android.fragment.OverviewFragment: void onSaveInstanceState(android.os.Bundle)> to <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+crashApis:7
+containsStatic:false
+containsTry:false
+6call by main package
+-----------------------------------------
+#################################################
+N 14 Potential Issue API: SDKCheck of <android.view.View: void setElevation(float)> is checking!!!
+The life time of api is [21,31]
+7call roads:
+0 Mainhead roads:
+7 Packageshead roads:
+-$i0 < 21
+Good road: <org.kore.kolabnotes.android.fragment.DrawEditorFragment: void onActivityCreated(android.os.Bundle)>[]--><org.kore.kolabnotes.android.Utils: void setElevation(android.view.View,float)>[[-$i0 < 21]]--><android.view.View: void setElevation(float)>
+One road protect good!
+-$i0 < 21
+Good road: <org.kore.kolabnotes.android.adapter.NoteAdapter: void onBindViewHolder(org.kore.kolabnotes.android.adapter.NoteAdapter$ViewHolder,int)>[]--><org.kore.kolabnotes.android.Utils: void setElevation(android.view.View,float)>[[-$i0 < 21]]--><android.view.View: void setElevation(float)>
+One road protect good!
+-$i0 < 21
+Good road: <org.kore.kolabnotes.android.adapter.TagAdapter: void onBindViewHolder(org.kore.kolabnotes.android.adapter.TagAdapter$ViewHolder,int)>[]--><org.kore.kolabnotes.android.Utils: void setElevation(android.view.View,float)>[[-$i0 < 21]]--><android.view.View: void setElevation(float)>
+One road protect good!
+-$i0 < 21
+Good road: <org.kore.kolabnotes.android.fragment.DetailFragment: void onActivityResult(int,int,android.content.Intent)>[]--><org.kore.kolabnotes.android.MainActivity: void fileSelected()>[]--><org.kore.kolabnotes.android.fragment.OverviewFragment: void preventBlankDisplaying()>[]--><org.kore.kolabnotes.android.adapter.NoteAdapter: void restoreElevation(android.support.v7.widget.RecyclerView)>[]--><org.kore.kolabnotes.android.Utils: void setElevation(android.view.View,float)>[[-$i0 < 21]]--><android.view.View: void setElevation(float)>
+One road protect good!
+try
+Good road with try: <org.kore.kolabnotes.android.fragment.DetailFragment: void onActivityResult(int,int,android.content.Intent)>[]--><org.kore.kolabnotes.android.fragment.DetailFragment: void loadImageFromIntent(android.content.Intent)>[]--><org.kore.kolabnotes.android.fragment.DetailFragment: void loadImageFromUri(android.net.Uri)>[[try]]--><org.kore.kolabnotes.android.MainActivity: void fileSelected()>[]--><org.kore.kolabnotes.android.fragment.OverviewFragment: void preventBlankDisplaying()>[]--><org.kore.kolabnotes.android.adapter.NoteAdapter: void restoreElevation(android.support.v7.widget.RecyclerView)>[]--><org.kore.kolabnotes.android.Utils: void setElevation(android.view.View,float)>[[-$i0 < 21]]--><android.view.View: void setElevation(float)>
+One road protect good!
+-$i0 < 21
+Good road: <org.kore.kolabnotes.android.adapter.NoteAdapter$ViewHolder: void onClick(android.view.View)>[]--><org.kore.kolabnotes.android.Utils: void setElevation(android.view.View,float)>[[-$i0 < 21]]--><android.view.View: void setElevation(float)>
+One road protect good!
+-$i0 < 21
+Good road: <org.kore.kolabnotes.android.adapter.NoteAdapter$ViewHolder: boolean onLongClick(android.view.View)>[]--><org.kore.kolabnotes.android.Utils: void setElevation(android.view.View,float)>[[-$i0 < 21]]--><android.view.View: void setElevation(float)>
+One road protect good!
+try
+Good road with try: <org.kore.kolabnotes.android.fragment.DetailFragment: void onActivityCreated(android.os.Bundle)>[]--><org.kore.kolabnotes.android.fragment.DetailFragment: void loadImageFromIntent(android.content.Intent)>[]--><org.kore.kolabnotes.android.fragment.DetailFragment: void loadImageFromUri(android.net.Uri)>[[try]]--><org.kore.kolabnotes.android.MainActivity: void fileSelected()>[]--><org.kore.kolabnotes.android.fragment.OverviewFragment: void preventBlankDisplaying()>[]--><org.kore.kolabnotes.android.adapter.NoteAdapter: void restoreElevation(android.support.v7.widget.RecyclerView)>[]--><org.kore.kolabnotes.android.Utils: void setElevation(android.view.View,float)>[[-$i0 < 21]]--><android.view.View: void setElevation(float)>
+One road protect good!
+containsStatic:false
+containsTry:true
+8call by main package
+-----------------------------------------
+#################################################
+N 15 Potential Issue API: SDKCheck of <android.os.BaseBundle: boolean getBoolean(java.lang.String)> is checking!!!
+The life time of api is [22,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 
+Error road: <org.kore.kolabnotes.android.fragment.DrawEditorFragment: void onActivityCreated(android.os.Bundle)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+#1.the call statck between class <org.kore.kolabnotes.android.fragment.DrawEditorFragment: void onActivityCreated(android.os.Bundle)> to <android.os.BaseBundle: boolean getBoolean(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 
+Error road: <org.kore.kolabnotes.android.draweditor.DrawingView: void onRestoreInstanceState(android.os.Parcelable)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+#2.the call statck between class <org.kore.kolabnotes.android.draweditor.DrawingView: void onRestoreInstanceState(android.os.Parcelable)> to <android.os.BaseBundle: boolean getBoolean(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:8
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 16 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.lang.String getString(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+2call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.kore.kolabnotes.android.AttachmentActivity dummyMainMethod_org_kore_kolabnotes_android_AttachmentActivity(android.content.Intent)>[]--><dummyMainClass: org.kore.kolabnotes.android.fragment.PreviewFragment dummyMainMethod_org_kore_kolabnotes_android_fragment_PreviewFragment(android.content.Intent,android.app.Activity)>[]--><org.kore.kolabnotes.android.fragment.PreviewFragment: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+1 Packageshead roads:
+i0 < 24
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <org.kore.kolabnotes.android.fragment.DetailFragment: void onActivityCreated(android.os.Bundle)>[[i0 < 24]]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#1.the call statck between class <org.kore.kolabnotes.android.fragment.DetailFragment: void onActivityCreated(android.os.Bundle)> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:9
+crashApisInMain:2
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 17 Potential Issue API: SDKCheck of <android.app.FragmentManager: java.util.List getFragments()> is checking!!!
+The life time of api is [26,31]
+1call roads:
+1 Mainhead roads:
+-i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.kore.kolabnotes.android.MainActivity dummyMainMethod_org_kore_kolabnotes_android_MainActivity(android.content.Intent)>[]--><org.kore.kolabnotes.android.MainActivity: void onPause()>[]--><org.kore.kolabnotes.android.MainActivity: void saveDataInSaveableFragments()>[[-i0 < 26]]--><android.app.FragmentManager: java.util.List getFragments()>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 18 Potential Issue API: SDKCheck of <android.app.Fragment: void onAttach(android.content.Context)> is checking!!!
+The life time of api is [23,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.kore.kolabnotes.android.fragment.DrawEditorFragment: void onAttach(android.content.Context)>[]--><android.app.Fragment: void onAttach(android.content.Context)>
+#1.the call statck between class <org.kore.kolabnotes.android.fragment.DrawEditorFragment: void onAttach(android.content.Context)> to <android.app.Fragment: void onAttach(android.content.Context)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.kore.kolabnotes.android.fragment.TagListFragment: void onAttach(android.content.Context)>[]--><android.app.Fragment: void onAttach(android.content.Context)>
+#2.the call statck between class <org.kore.kolabnotes.android.fragment.TagListFragment: void onAttach(android.content.Context)> to <android.app.Fragment: void onAttach(android.content.Context)>has compatibility isssues！
+-----------------------------------------
+crashApis:10
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 19 Potential Issue API: SDKCheck of <android.app.FragmentTransaction: void commitNow()> is checking!!!
+The life time of api is [24,31]
+3call roads:
+0 Mainhead roads:
+3 Packageshead roads:
+-$i0 < 24
+Good road: <org.kore.kolabnotes.android.fragment.OverviewFragment: void onItemClicked(int,org.kore.kolab.notes.Note)>[]--><org.kore.kolabnotes.android.fragment.OverviewFragment: void select(org.kore.kolab.notes.Note,boolean)>[]--><org.kore.kolabnotes.android.fragment.OverviewFragment: void setDetailFragment(org.kore.kolabnotes.android.content.ActiveAccount,org.kore.kolab.notes.Note,boolean)>[]--><org.kore.kolabnotes.android.fragment.OverviewFragment: void replaceDetailFragment(org.kore.kolabnotes.android.fragment.DetailFragment,java.lang.String,java.lang.String,org.kore.kolabnotes.android.content.ActiveAccount)>[[-$i0 < 24]]--><android.app.FragmentTransaction: void commitNow()>
+One road protect good!
+-$i0 < 24
+Good road: <org.kore.kolabnotes.android.fragment.OverviewFragment$2: void onClick(android.content.DialogInterface,int)>[]--><org.kore.kolabnotes.android.fragment.OverviewFragment: void setDetailFragment(org.kore.kolabnotes.android.content.ActiveAccount,org.kore.kolab.notes.Note,boolean)>[]--><org.kore.kolabnotes.android.fragment.OverviewFragment: void replaceDetailFragment(org.kore.kolabnotes.android.fragment.DetailFragment,java.lang.String,java.lang.String,org.kore.kolabnotes.android.content.ActiveAccount)>[[-$i0 < 24]]--><android.app.FragmentTransaction: void commitNow()>
+One road protect good!
+-$i0 < 24
+Good road: <org.kore.kolabnotes.android.fragment.OverviewFragment: void access$2900(org.kore.kolabnotes.android.fragment.OverviewFragment,org.kore.kolabnotes.android.fragment.DetailFragment,java.lang.String,java.lang.String,org.kore.kolabnotes.android.content.ActiveAccount)>[]--><org.kore.kolabnotes.android.fragment.OverviewFragment: void replaceDetailFragment(org.kore.kolabnotes.android.fragment.DetailFragment,java.lang.String,java.lang.String,org.kore.kolabnotes.android.content.ActiveAccount)>[[-$i0 < 24]]--><android.app.FragmentTransaction: void commitNow()>
+One road protect good!
+containsStatic:false
+containsTry:false
+4call by main package
+-----------------------------------------
+#################################################
+N 20 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putInt(java.lang.String,int)> is checking!!!
+The life time of api is [21,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <org.kore.kolabnotes.android.fragment.DrawEditorFragment: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#1.the call statck between class <org.kore.kolabnotes.android.fragment.DrawEditorFragment: void onSaveInstanceState(android.os.Bundle)> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <org.kore.kolabnotes.android.draweditor.DrawingView: android.os.Parcelable onSaveInstanceState()>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#2.the call statck between class <org.kore.kolabnotes.android.draweditor.DrawingView: android.os.Parcelable onSaveInstanceState()> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:11
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 21 Potential Issue API: SDKCheck of <android.os.BaseBundle: int getInt(java.lang.String,int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.kore.kolabnotes.android.widget.StickyNoteWidgetConfigureActivity dummyMainMethod_org_kore_kolabnotes_android_widget_StickyNoteWidgetConfigureActivity(android.content.Intent)>[]--><org.kore.kolabnotes.android.widget.StickyNoteWidgetConfigureActivity: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String,int)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.kore.kolabnotes.android.widget.ListWidgetConfigureActivity dummyMainMethod_org_kore_kolabnotes_android_widget_ListWidgetConfigureActivity(android.content.Intent)>[]--><org.kore.kolabnotes.android.widget.ListWidgetConfigureActivity: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String,int)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: int getInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:12
+crashApisInMain:3
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 22 Potential Issue API: SDKCheck of <android.view.Window: void setStatusBarColor(int)> is checking!!!
+The life time of api is [21,31]
+4call roads:
+0 Mainhead roads:
+4 Packageshead roads:
+-$i0 < 21
+Good road: <org.kore.kolabnotes.android.fragment.TagListFragment$ActionModeCallback: void onDestroyActionMode(android.view.ActionMode)>[[-$i0 < 21]]--><android.view.Window: void setStatusBarColor(int)>
+One road protect good!
+-$i0 < 21
+Good road: <org.kore.kolabnotes.android.fragment.OverviewFragment$ActionModeCallback: void onDestroyActionMode(android.view.ActionMode)>[[-$i0 < 21]]--><android.view.Window: void setStatusBarColor(int)>
+One road protect good!
+-$i0 < 21
+Good road: <org.kore.kolabnotes.android.fragment.TagListFragment$ActionModeCallback: boolean onCreateActionMode(android.view.ActionMode,android.view.Menu)>[[-$i0 < 21]]--><android.view.Window: void setStatusBarColor(int)>
+One road protect good!
+-$i0 < 21
+Good road: <org.kore.kolabnotes.android.fragment.OverviewFragment$ActionModeCallback: boolean onCreateActionMode(android.view.ActionMode,android.view.Menu)>[[-$i0 < 21]]--><android.view.Window: void setStatusBarColor(int)>
+One road protect good!
+containsStatic:false
+containsTry:false
+5call by main package
+-----------------------------------------
+#################################################
+N 23 Potential Issue API: SDKCheck of <android.print.PrintManager: android.print.PrintJob print(java.lang.String,android.print.PrintDocumentAdapter,android.print.PrintAttributes)> is checking!!!
+The life time of api is [19,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-i0 < 19
+Good road: <org.kore.kolabnotes.android.fragment.OverviewFragment: boolean onOptionsItemSelected(android.view.MenuItem)>[]--><org.kore.kolabnotes.android.MainActivity: void dispatchMenuEvent(android.view.MenuItem)>[]--><org.kore.kolabnotes.android.fragment.DetailFragment: boolean onOptionsItemSelected(android.view.MenuItem)>[]--><org.kore.kolabnotes.android.fragment.DetailFragment: void printNote()>[[-i0 < 19]]--><android.print.PrintManager: android.print.PrintJob print(java.lang.String,android.print.PrintDocumentAdapter,android.print.PrintAttributes)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+crashApis numbers:12
+crashApis numbers in main road:3
+On Android Version 16 this app may have error api use(at least): 11 and error api roads: 24
+On Android Version 17 this app may have error api use(at least): 10 and error api roads: 23
+On Android Version 18 this app may have error api use(at least): 10 and error api roads: 23
+On Android Version 19 this app may have error api use(at least): 10 and error api roads: 23
+On Android Version 20 this app may have error api use(at least): 10 and error api roads: 23
+On Android Version 21 this app may have error api use(at least): 5 and error api roads: 15
+On Android Version 22 this app may have error api use(at least): 2 and error api roads: 6
+On Android Version 23 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 24 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 25 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 31 this app may have error api use(at least): 0 and error api roads: 0

@@ -1,0 +1,189 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/Hangar.apk
+Entry Points[ca.mimic.apphangar.AppsWidget, ca.mimic.apphangar.Instructions, ca.mimic.apphangar.AppsWidgetSettings, ca.mimic.apphangar.StatsWidget, ca.mimic.apphangar.BootStart, ca.mimic.apphangar.Settings, ca.mimic.apphangar.StatsWidgetSettings, ca.mimic.apphangar.WatchfulService]
+FllowDroidcallgraph size:2306
+Soot started on Mon Jul 11 05:11:57 CST 2022
+StaticCheck:<ca.mimic.apphangar.Tools: boolean isLollipop()>$yysi0 < 21
+Soot finished on Mon Jul 11 05:12:03 CST 2022
+Soot has run for 0 min. 5 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 19
+Declared Target Sdk version is: 22
+Declared Max Sdk version is: -1
+Collected 528 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.os.BaseBundle: int getInt(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+5call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: ca.mimic.apphangar.AppsWidget dummyMainMethod_ca_mimic_apphangar_AppsWidget(android.content.Intent)>[]--><ca.mimic.apphangar.AppsWidget: void onReceive(android.content.Context,android.content.Intent)>[[try]]--><ca.mimic.apphangar.AppsWidget: void updateAppWidget(android.content.Context,android.appwidget.AppWidgetManager,int,android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+One road protect good!
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: ca.mimic.apphangar.StatsWidget dummyMainMethod_ca_mimic_apphangar_StatsWidget(android.content.Intent)>[]--><ca.mimic.apphangar.StatsWidget: void onReceive(android.content.Context,android.content.Intent)>[[try]]--><ca.mimic.apphangar.StatsWidget: void updateAppWidget(android.content.Context,android.appwidget.AppWidgetManager,int,android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+One road protect good!
+4 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <net.margaritov.preference.colorpicker.ColorPickerPreference: void onRestoreInstanceState(android.os.Parcelable)>[]--><net.margaritov.preference.colorpicker.ColorPickerPreference: void showDialog(android.os.Bundle)>[]--><net.margaritov.preference.colorpicker.ColorPickerDialog: void onRestoreInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#1.the call statck between class <net.margaritov.preference.colorpicker.ColorPickerPreference: void onRestoreInstanceState(android.os.Parcelable)> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <ca.mimic.apphangar.Instructions$PlaceholderFragment: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#2.the call statck between class <ca.mimic.apphangar.Instructions$PlaceholderFragment: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <ca.mimic.apphangar.Settings$PrefsFragment: void onActivityCreated(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#3.the call statck between class <ca.mimic.apphangar.Settings$PrefsFragment: void onActivityCreated(android.os.Bundle)> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <net.margaritov.preference.colorpicker.ColorPickerPreference: boolean onPreferenceClick(android.preference.Preference)>[]--><net.margaritov.preference.colorpicker.ColorPickerPreference: void showDialog(android.os.Bundle)>[]--><net.margaritov.preference.colorpicker.ColorPickerDialog: void onRestoreInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#4.the call statck between class <net.margaritov.preference.colorpicker.ColorPickerPreference: boolean onPreferenceClick(android.preference.Preference)> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:1
+containsStatic:false
+containsTry:true
+5call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.app.usage.UsageStats: java.lang.String getPackageName()> is checking!!!
+The life time of api is [21,31]
+2call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: ca.mimic.apphangar.Settings dummyMainMethod_ca_mimic_apphangar_Settings(android.content.Intent)>[]--><ca.mimic.apphangar.Settings: void onActivityResult(int,int,android.content.Intent)>[]--><ca.mimic.apphangar.Settings$ServiceCall: void execute(int)>[]--><java.lang.Thread: void run()>[]--><ca.mimic.apphangar.Settings$ServiceCall$1: void run()>[[try]]--><ca.mimic.apphangar.WatchfulService$1: void buildReorderAndLaunch()>[[try]]--><ca.mimic.apphangar.WatchfulService: void buildReorderAndLaunch(boolean)>[[-$yysi0 < 21]]--><ca.mimic.apphangar.WatchfulService: void buildLBaseTasks()>[]--><android.app.usage.UsageStats: java.lang.String getPackageName()>
+One road protect good!
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: ca.mimic.apphangar.WatchfulService dummyMainMethod_ca_mimic_apphangar_WatchfulService(android.content.Intent)>[]--><ca.mimic.apphangar.WatchfulService: int onStartCommand(android.content.Intent,int,int)>[]--><ca.mimic.apphangar.WatchfulService$3: void run()>[]--><ca.mimic.apphangar.WatchfulService: void buildTasks()>[]--><java.lang.Thread: void run()>[]--><ca.mimic.apphangar.Settings$ServiceCall$1: void run()>[[try]]--><ca.mimic.apphangar.WatchfulService$1: void buildReorderAndLaunch()>[[try]]--><ca.mimic.apphangar.WatchfulService: void buildReorderAndLaunch(boolean)>[[-$yysi0 < 21]]--><ca.mimic.apphangar.WatchfulService: void buildLBaseTasks()>[]--><android.app.usage.UsageStats: java.lang.String getPackageName()>
+One road protect good!
+1 Packageshead roads:
+try
+Good road with try: <ca.mimic.apphangar.Settings$IconPackUpdate: void iconPackUpdated()>[]--><android.os.Handler: boolean postDelayed(java.lang.Runnable,long)>[]--><ca.mimic.apphangar.WatchfulService$3: void run()>[]--><ca.mimic.apphangar.WatchfulService: void buildTasks()>[]--><java.lang.Thread: void run()>[]--><ca.mimic.apphangar.Settings$ServiceCall$1: void run()>[[try]]--><ca.mimic.apphangar.WatchfulService$1: void buildReorderAndLaunch()>[[try]]--><ca.mimic.apphangar.WatchfulService: void buildReorderAndLaunch(boolean)>[[-$yysi0 < 21]]--><ca.mimic.apphangar.WatchfulService: void buildLBaseTasks()>[]--><android.app.usage.UsageStats: java.lang.String getPackageName()>
+One road protect good!
+containsStatic:true
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.app.usage.UsageStats: long getTotalTimeInForeground()> is checking!!!
+The life time of api is [21,31]
+2call roads:
+1 Mainhead roads:
+1 Packageshead roads:
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.app.Notification.Builder: android.app.Notification.Builder setVisibility(int)> is checking!!!
+The life time of api is [21,31]
+2call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: ca.mimic.apphangar.Settings dummyMainMethod_ca_mimic_apphangar_Settings(android.content.Intent)>[]--><ca.mimic.apphangar.Settings: void onActivityResult(int,int,android.content.Intent)>[]--><ca.mimic.apphangar.Settings$ServiceCall: void execute(int)>[]--><java.lang.Thread: void run()>[]--><ca.mimic.apphangar.Settings$ServiceCall$1: void run()>[[try]]--><ca.mimic.apphangar.WatchfulService$1: void buildReorderAndLaunch()>[[try]]--><ca.mimic.apphangar.WatchfulService: void buildReorderAndLaunch(boolean)>[]--><ca.mimic.apphangar.WatchfulService: void reorderAndLaunch()>[]--><ca.mimic.apphangar.WatchfulService: void reorderAndLaunch(boolean)>[]--><ca.mimic.apphangar.WatchfulService: void createNotification()>[]--><ca.mimic.apphangar.WatchfulService: void lollipopNotificationSettings(android.app.Notification$Builder)>[[-$yysi0 < 21]]--><android.app.Notification.Builder: android.app.Notification.Builder setVisibility(int)>
+One road protect good!
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: ca.mimic.apphangar.WatchfulService dummyMainMethod_ca_mimic_apphangar_WatchfulService(android.content.Intent)>[]--><ca.mimic.apphangar.WatchfulService: int onStartCommand(android.content.Intent,int,int)>[]--><ca.mimic.apphangar.WatchfulService$3: void run()>[]--><ca.mimic.apphangar.WatchfulService: void buildTasks()>[]--><java.lang.Thread: void run()>[]--><ca.mimic.apphangar.Settings$ServiceCall$1: void run()>[[try]]--><ca.mimic.apphangar.WatchfulService$1: void buildReorderAndLaunch()>[[try]]--><ca.mimic.apphangar.WatchfulService: void buildReorderAndLaunch(boolean)>[]--><ca.mimic.apphangar.WatchfulService: void reorderAndLaunch()>[]--><ca.mimic.apphangar.WatchfulService: void reorderAndLaunch(boolean)>[]--><ca.mimic.apphangar.WatchfulService: void createNotification()>[]--><ca.mimic.apphangar.WatchfulService: void lollipopNotificationSettings(android.app.Notification$Builder)>[[-$yysi0 < 21]]--><android.app.Notification.Builder: android.app.Notification.Builder setVisibility(int)>
+One road protect good!
+1 Packageshead roads:
+try
+Good road with try: <ca.mimic.apphangar.Settings$IconPackUpdate: void iconPackUpdated()>[]--><android.os.Handler: boolean postDelayed(java.lang.Runnable,long)>[]--><ca.mimic.apphangar.WatchfulService$3: void run()>[]--><ca.mimic.apphangar.WatchfulService: void buildTasks()>[]--><java.lang.Thread: void run()>[]--><ca.mimic.apphangar.Settings$ServiceCall$1: void run()>[[try]]--><ca.mimic.apphangar.WatchfulService$1: void buildReorderAndLaunch()>[[try]]--><ca.mimic.apphangar.WatchfulService: void buildReorderAndLaunch(boolean)>[]--><ca.mimic.apphangar.WatchfulService: void reorderAndLaunch()>[]--><ca.mimic.apphangar.WatchfulService: void reorderAndLaunch(boolean)>[]--><ca.mimic.apphangar.WatchfulService: void createNotification()>[]--><ca.mimic.apphangar.WatchfulService: void lollipopNotificationSettings(android.app.Notification$Builder)>[[-$yysi0 < 21]]--><android.app.Notification.Builder: android.app.Notification.Builder setVisibility(int)>
+One road protect good!
+containsStatic:true
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putInt(java.lang.String,int)> is checking!!!
+The life time of api is [21,31]
+3call roads:
+0 Mainhead roads:
+3 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <net.margaritov.preference.colorpicker.ColorPickerPreference: android.os.Parcelable onSaveInstanceState()>[]--><net.margaritov.preference.colorpicker.ColorPickerDialog: android.os.Bundle onSaveInstanceState()>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#1.the call statck between class <net.margaritov.preference.colorpicker.ColorPickerPreference: android.os.Parcelable onSaveInstanceState()> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <ca.mimic.apphangar.Instructions$PlaceholderFragment: ca.mimic.apphangar.Instructions$PlaceholderFragment newInstance(int)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#2.the call statck between class <ca.mimic.apphangar.Instructions$PlaceholderFragment: ca.mimic.apphangar.Instructions$PlaceholderFragment newInstance(int)> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <ca.mimic.apphangar.Settings$PrefsFragment: ca.mimic.apphangar.Settings$PrefsFragment newInstance(int)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#3.the call statck between class <ca.mimic.apphangar.Settings$PrefsFragment: ca.mimic.apphangar.Settings$PrefsFragment newInstance(int)> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:2
+containsStatic:false
+containsTry:false
+4call by main package
+-----------------------------------------
+#################################################
+N 5 Potential Issue API: SDKCheck of <android.os.BaseBundle: int getInt(java.lang.String,int)> is checking!!!
+The life time of api is [21,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <ca.mimic.apphangar.StatsWidgetSettings$StatsWidgetFragment$1: void onClick(android.view.View)>[]--><android.os.BaseBundle: int getInt(java.lang.String,int)>
+#1.the call statck between class <ca.mimic.apphangar.StatsWidgetSettings$StatsWidgetFragment$1: void onClick(android.view.View)> to <android.os.BaseBundle: int getInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <ca.mimic.apphangar.AppsWidgetSettings$StatsWidgetFragment$1: void onClick(android.view.View)>[]--><android.os.BaseBundle: int getInt(java.lang.String,int)>
+#2.the call statck between class <ca.mimic.apphangar.AppsWidgetSettings$StatsWidgetFragment$1: void onClick(android.view.View)> to <android.os.BaseBundle: int getInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:3
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 6 Potential Issue API: SDKCheck of <android.app.usage.UsageStatsManager: java.util.List queryUsageStats(int,long,long)> is checking!!!
+The life time of api is [21,31]
+2call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: ca.mimic.apphangar.Settings dummyMainMethod_ca_mimic_apphangar_Settings(android.content.Intent)>[]--><ca.mimic.apphangar.Settings: void onActivityResult(int,int,android.content.Intent)>[]--><ca.mimic.apphangar.Settings$ServiceCall: void execute(int)>[]--><java.lang.Thread: void run()>[]--><ca.mimic.apphangar.Settings$ServiceCall$1: void run()>[[try]]--><ca.mimic.apphangar.WatchfulService$1: void buildReorderAndLaunch()>[[try]]--><ca.mimic.apphangar.WatchfulService: void buildReorderAndLaunch(boolean)>[[-$yysi0 < 21]]--><ca.mimic.apphangar.WatchfulService: void buildLBaseTasks()>[]--><ca.mimic.apphangar.Tools: java.util.List getUsageStats(android.content.Context)>[]--><android.app.usage.UsageStatsManager: java.util.List queryUsageStats(int,long,long)>
+One road protect good!
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: ca.mimic.apphangar.WatchfulService dummyMainMethod_ca_mimic_apphangar_WatchfulService(android.content.Intent)>[]--><ca.mimic.apphangar.WatchfulService: int onStartCommand(android.content.Intent,int,int)>[]--><ca.mimic.apphangar.WatchfulService$3: void run()>[]--><ca.mimic.apphangar.WatchfulService: void buildTasks()>[]--><java.lang.Thread: void run()>[]--><ca.mimic.apphangar.Settings$ServiceCall$1: void run()>[[try]]--><ca.mimic.apphangar.WatchfulService$1: void buildReorderAndLaunch()>[[try]]--><ca.mimic.apphangar.WatchfulService: void buildReorderAndLaunch(boolean)>[[-$yysi0 < 21]]--><ca.mimic.apphangar.WatchfulService: void buildLBaseTasks()>[]--><ca.mimic.apphangar.Tools: java.util.List getUsageStats(android.content.Context)>[]--><android.app.usage.UsageStatsManager: java.util.List queryUsageStats(int,long,long)>
+One road protect good!
+1 Packageshead roads:
+try
+Good road with try: <ca.mimic.apphangar.Settings$IconPackUpdate: void iconPackUpdated()>[]--><android.os.Handler: boolean postDelayed(java.lang.Runnable,long)>[]--><ca.mimic.apphangar.WatchfulService$3: void run()>[]--><ca.mimic.apphangar.WatchfulService: void buildTasks()>[]--><java.lang.Thread: void run()>[]--><ca.mimic.apphangar.Settings$ServiceCall$1: void run()>[[try]]--><ca.mimic.apphangar.WatchfulService$1: void buildReorderAndLaunch()>[[try]]--><ca.mimic.apphangar.WatchfulService: void buildReorderAndLaunch(boolean)>[[-$yysi0 < 21]]--><ca.mimic.apphangar.WatchfulService: void buildLBaseTasks()>[]--><ca.mimic.apphangar.Tools: java.util.List getUsageStats(android.content.Context)>[]--><android.app.usage.UsageStatsManager: java.util.List queryUsageStats(int,long,long)>
+One road protect good!
+containsStatic:true
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 7 Potential Issue API: SDKCheck of <android.app.usage.UsageStats: long getLastTimeUsed()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <ca.mimic.apphangar.Tools$UsageStatsComparator: int compare(android.app.usage.UsageStats,android.app.usage.UsageStats)>[]--><android.app.usage.UsageStats: long getLastTimeUsed()>
+#1.the call statck between class <ca.mimic.apphangar.Tools$UsageStatsComparator: int compare(android.app.usage.UsageStats,android.app.usage.UsageStats)> to <android.app.usage.UsageStats: long getLastTimeUsed()>has compatibility isssues！
+-----------------------------------------
+crashApis:4
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+crashApis numbers:4
+crashApis numbers in main road:0
+On Android Version 16 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 17 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 18 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 19 this app may have error api use(at least): 4 and error api roads: 10
+On Android Version 20 this app may have error api use(at least): 4 and error api roads: 10
+On Android Version 21 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 22 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 23 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 24 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 25 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 31 this app may have error api use(at least): 0 and error api roads: 0

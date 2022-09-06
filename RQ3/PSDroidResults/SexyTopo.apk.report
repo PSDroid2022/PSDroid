@@ -1,0 +1,378 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/SexyTopo.apk
+Entry Points[org.hwyl.sexytopo.control.activity.CalibrationActivity, org.hwyl.sexytopo.control.activity.TripActivity, org.hwyl.sexytopo.control.NewStationNotificationService, org.hwyl.sexytopo.control.activity.SystemLogActivity, com.crashlytics.android.CrashlyticsInitProvider, org.hwyl.sexytopo.control.activity.StartUpActivity, org.hwyl.sexytopo.control.activity.PlanActivity, org.hwyl.sexytopo.control.activity.StatsActivity, org.hwyl.sexytopo.control.activity.DeviceActivity$StateChangeReceiver, org.hwyl.sexytopo.control.activity.DeviceActivity$ScanReceiver, org.hwyl.sexytopo.control.activity.TableActivity, org.hwyl.sexytopo.control.SexyTopo, org.hwyl.sexytopo.control.activity.GuideActivity, org.hwyl.sexytopo.control.activity.SettingsActivity, org.hwyl.sexytopo.control.activity.ExtendedElevationActivity, org.hwyl.sexytopo.control.activity.DeviceActivity]
+FllowDroidcallgraph size:4643
+Soot started on Mon Jul 11 12:02:01 CST 2022
+Soot finished on Mon Jul 11 12:02:23 CST 2022
+Soot has run for 0 min. 21 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 18
+Declared Target Sdk version is: 28
+Declared Max Sdk version is: -1
+Collected 512 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()> is checking!!!
+The life time of api is [1,30]
+3call roads:
+0 Mainhead roads:
+3 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <io.fabric.sdk.android.services.common.ExecutorUtils$1$1: void onRun()>[]--><com.crashlytics.android.core.CrashlyticsController$SendReportRunnable: void run()>[]--><io.fabric.sdk.android.services.common.CommonUtils: boolean canTryConnection(android.content.Context)>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>
+#1.the call statck between class <io.fabric.sdk.android.services.common.ExecutorUtils$1$1: void onRun()> to <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)>[]--><com.crashlytics.android.core.CrashlyticsController$SendReportRunnable: void run()>[]--><io.fabric.sdk.android.services.common.CommonUtils: boolean canTryConnection(android.content.Context)>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>
+#2.the call statck between class <android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)> to <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>has compatibility isssues！
+-----------------------------------------
+try
+Good road with try: <com.crashlytics.android.core.CrashlyticsCore: boolean onPreExecute()>[]--><com.crashlytics.android.core.CrashlyticsCore: boolean onPreExecute(android.content.Context)>[[try]]--><io.fabric.sdk.android.services.common.CommonUtils: boolean canTryConnection(android.content.Context)>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>
+One road protect good!
+crashApis:1
+containsStatic:false
+containsTry:true
+4call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.os.BaseBundle: boolean containsKey(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+10call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><com.crashlytics.android.CrashlyticsInitProvider: boolean onCreate()>[]--><com.crashlytics.android.CrashlyticsInitProvider: boolean shouldInitializeFabric(android.content.Context,io.fabric.sdk.android.services.common.FirebaseInfo,com.crashlytics.android.CrashlyticsInitProvider$EnabledCheckStrategy)>[]--><com.crashlytics.android.ManifestEnabledCheckStrategy: boolean isCrashlyticsEnabled(android.content.Context)>[]--><io.fabric.sdk.android.services.common.DataCollectionArbiter: io.fabric.sdk.android.services.common.DataCollectionArbiter getInstance(android.content.Context)>[[try]]--><io.fabric.sdk.android.services.common.DataCollectionArbiter: void <init>(android.content.Context)>[[try]]--><android.os.BaseBundle: boolean containsKey(java.lang.String)>
+One road protect good!
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><org.hwyl.sexytopo.control.SexyTopo: void onCreate()>[]--><io.fabric.sdk.android.Fabric: io.fabric.sdk.android.Fabric 'with'(android.content.Context,io.fabric.sdk.android.Kit[])>[]--><io.fabric.sdk.android.Fabric$Builder: io.fabric.sdk.android.Fabric$Builder kits(io.fabric.sdk.android.Kit[])>[]--><io.fabric.sdk.android.services.common.DataCollectionArbiter: io.fabric.sdk.android.services.common.DataCollectionArbiter getInstance(android.content.Context)>[[try]]--><io.fabric.sdk.android.services.common.DataCollectionArbiter: void <init>(android.content.Context)>[[try]]--><android.os.BaseBundle: boolean containsKey(java.lang.String)>
+One road protect good!
+9 Packageshead roads:
+try
+Good road with try: <com.crashlytics.android.core.CrashlyticsCore$1: java.lang.Void call()>[]--><com.crashlytics.android.core.CrashlyticsCore: java.lang.Void doInBackground()>[[try]]--><io.fabric.sdk.android.services.common.DataCollectionArbiter: io.fabric.sdk.android.services.common.DataCollectionArbiter getInstance(android.content.Context)>[[try]]--><io.fabric.sdk.android.services.common.DataCollectionArbiter: void <init>(android.content.Context)>[[try]]--><android.os.BaseBundle: boolean containsKey(java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.crashlytics.android.core.CrashlyticsCore: java.lang.Object doInBackground()>[]--><com.crashlytics.android.core.CrashlyticsCore: java.lang.Void doInBackground()>[[try]]--><io.fabric.sdk.android.services.common.DataCollectionArbiter: io.fabric.sdk.android.services.common.DataCollectionArbiter getInstance(android.content.Context)>[[try]]--><io.fabric.sdk.android.services.common.DataCollectionArbiter: void <init>(android.content.Context)>[[try]]--><android.os.BaseBundle: boolean containsKey(java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.crashlytics.android.core.CrashlyticsController$7: java.lang.Void call()>[]--><io.fabric.sdk.android.services.common.DataCollectionArbiter: io.fabric.sdk.android.services.common.DataCollectionArbiter getInstance(android.content.Context)>[[try]]--><io.fabric.sdk.android.services.common.DataCollectionArbiter: void <init>(android.content.Context)>[[try]]--><android.os.BaseBundle: boolean containsKey(java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.crashlytics.android.Crashlytics: boolean isCrashlyticsCollectionEnabled()>[]--><io.fabric.sdk.android.services.common.DataCollectionArbiter: io.fabric.sdk.android.services.common.DataCollectionArbiter getInstance(android.content.Context)>[[try]]--><io.fabric.sdk.android.services.common.DataCollectionArbiter: void <init>(android.content.Context)>[[try]]--><android.os.BaseBundle: boolean containsKey(java.lang.String)>
+One road protect good!
+try
+Good road with try: <io.fabric.sdk.android.Onboarding: java.lang.Object doInBackground()>[]--><io.fabric.sdk.android.Onboarding: java.lang.Boolean doInBackground()>[]--><io.fabric.sdk.android.Onboarding: io.fabric.sdk.android.services.settings.SettingsData retrieveSettingsData()>[[try]]--><io.fabric.sdk.android.services.common.DataCollectionArbiter: io.fabric.sdk.android.services.common.DataCollectionArbiter getInstance(android.content.Context)>[[try]]--><io.fabric.sdk.android.services.common.DataCollectionArbiter: void <init>(android.content.Context)>[[try]]--><android.os.BaseBundle: boolean containsKey(java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.crashlytics.android.Crashlytics: void setCrashlyticsCollectionEnabled(boolean)>[]--><io.fabric.sdk.android.services.common.DataCollectionArbiter: io.fabric.sdk.android.services.common.DataCollectionArbiter getInstance(android.content.Context)>[[try]]--><io.fabric.sdk.android.services.common.DataCollectionArbiter: void <init>(android.content.Context)>[[try]]--><android.os.BaseBundle: boolean containsKey(java.lang.String)>
+One road protect good!
+try
+Good road with try: <io.fabric.sdk.android.services.common.DataCollectionArbiter: void resetForTesting(android.content.Context)>[[try]]--><io.fabric.sdk.android.services.common.DataCollectionArbiter: void <init>(android.content.Context)>[[try]]--><android.os.BaseBundle: boolean containsKey(java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.crashlytics.android.core.CrashlyticsCore: boolean onPreExecute()>[]--><com.crashlytics.android.core.CrashlyticsCore: boolean onPreExecute(android.content.Context)>[]--><io.fabric.sdk.android.services.common.DataCollectionArbiter: io.fabric.sdk.android.services.common.DataCollectionArbiter getInstance(android.content.Context)>[[try]]--><io.fabric.sdk.android.services.common.DataCollectionArbiter: void <init>(android.content.Context)>[[try]]--><android.os.BaseBundle: boolean containsKey(java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.crashlytics.android.answers.Answers: java.lang.Object doInBackground()>[]--><com.crashlytics.android.answers.Answers: java.lang.Boolean doInBackground()>[]--><io.fabric.sdk.android.services.common.DataCollectionArbiter: io.fabric.sdk.android.services.common.DataCollectionArbiter getInstance(android.content.Context)>[[try]]--><io.fabric.sdk.android.services.common.DataCollectionArbiter: void <init>(android.content.Context)>[[try]]--><android.os.BaseBundle: boolean containsKey(java.lang.String)>
+One road protect good!
+containsStatic:false
+containsTry:true
+10call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)> is checking!!!
+The life time of api is [21,31]
+3call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.hwyl.sexytopo.control.activity.TableActivity dummyMainMethod_org_hwyl_sexytopo_control_activity_TableActivity(android.content.Intent)>[]--><org.hwyl.sexytopo.control.activity.TableActivity: boolean onMenuItemClick(android.view.MenuItem)>[]--><org.hwyl.sexytopo.control.activity.SexyTopoActivity: void jumpToStation(org.hwyl.sexytopo.model.survey.Station,java.lang.Class)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+2 Packageshead roads:
+try
+Good road with try: <com.crashlytics.android.answers.EnabledSessionAnalyticsManagerStrategy: void processEvent(com.crashlytics.android.answers.SessionEvent$Builder)>[[try]]--><com.crashlytics.android.answers.FirebaseAnalyticsApiAdapter: void processEvent(com.crashlytics.android.answers.SessionEvent)>[]--><com.crashlytics.android.answers.FirebaseAnalyticsEventMapper: com.crashlytics.android.answers.FirebaseAnalyticsEvent mapEvent(com.crashlytics.android.answers.SessionEvent)>[]--><com.crashlytics.android.answers.FirebaseAnalyticsEventMapper: void mapCustomEventAttributes(android.os.Bundle,java.util.Map)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+One road protect good!
+!!!this api will crash on sdk 18 19 20 
+Error road: <org.hwyl.sexytopo.control.graph.GraphView$3: void onClick(android.view.View)>[]--><org.hwyl.sexytopo.control.activity.SexyTopoActivity: void jumpToStation(org.hwyl.sexytopo.model.survey.Station,java.lang.Class)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#2.the call statck between class <org.hwyl.sexytopo.control.graph.GraphView$3: void onClick(android.view.View)> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:2
+crashApisInMain:1
+containsStatic:false
+containsTry:true
+3call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putDouble(java.lang.String,double)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+try
+Good road with try: <com.crashlytics.android.answers.EnabledSessionAnalyticsManagerStrategy: void processEvent(com.crashlytics.android.answers.SessionEvent$Builder)>[[try]]--><com.crashlytics.android.answers.FirebaseAnalyticsApiAdapter: void processEvent(com.crashlytics.android.answers.SessionEvent)>[]--><com.crashlytics.android.answers.FirebaseAnalyticsEventMapper: com.crashlytics.android.answers.FirebaseAnalyticsEvent mapEvent(com.crashlytics.android.answers.SessionEvent)>[]--><com.crashlytics.android.answers.FirebaseAnalyticsEventMapper: void mapCustomEventAttributes(android.os.Bundle,java.util.Map)>[]--><android.os.BaseBundle: void putDouble(java.lang.String,double)>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.lang.Object get(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+try
+Good road with try: <com.crashlytics.android.core.DefaultAppMeasurementEventListenerRegistrar: void access$100(com.crashlytics.android.core.CrashlyticsCore,java.lang.String,android.os.Bundle)>[]--><com.crashlytics.android.core.DefaultAppMeasurementEventListenerRegistrar: void writeEventToUserLog(com.crashlytics.android.core.CrashlyticsCore,java.lang.String,android.os.Bundle)>[[try]]--><com.crashlytics.android.core.DefaultAppMeasurementEventListenerRegistrar: java.lang.String serializeEvent(java.lang.String,android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.Object get(java.lang.String)>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 5 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putLong(java.lang.String,long)> is checking!!!
+The life time of api is [21,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 18 19 20 
+Error road: <com.crashlytics.android.core.CrashlyticsController: void access$600(com.crashlytics.android.core.CrashlyticsController,long)>[]--><com.crashlytics.android.core.CrashlyticsController: void recordFatalFirebaseEvent(long)>[]--><android.os.BaseBundle: void putLong(java.lang.String,long)>
+#1.the call statck between class <com.crashlytics.android.core.CrashlyticsController: void access$600(com.crashlytics.android.core.CrashlyticsController,long)> to <android.os.BaseBundle: void putLong(java.lang.String,long)>has compatibility isssues！
+-----------------------------------------
+try
+Good road with try: <com.crashlytics.android.answers.EnabledSessionAnalyticsManagerStrategy: void processEvent(com.crashlytics.android.answers.SessionEvent$Builder)>[[try]]--><com.crashlytics.android.answers.FirebaseAnalyticsApiAdapter: void processEvent(com.crashlytics.android.answers.SessionEvent)>[]--><com.crashlytics.android.answers.FirebaseAnalyticsEventMapper: com.crashlytics.android.answers.FirebaseAnalyticsEvent mapEvent(com.crashlytics.android.answers.SessionEvent)>[]--><com.crashlytics.android.answers.FirebaseAnalyticsEventMapper: void mapCustomEventAttributes(android.os.Bundle,java.util.Map)>[]--><android.os.BaseBundle: void putLong(java.lang.String,long)>
+One road protect good!
+crashApis:3
+containsStatic:false
+containsTry:true
+3call by main package
+-----------------------------------------
+#################################################
+N 6 Potential Issue API: SDKCheck of <android.os.BaseBundle: boolean getBoolean(java.lang.String)> is checking!!!
+The life time of api is [22,31]
+10call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><com.crashlytics.android.CrashlyticsInitProvider: boolean onCreate()>[]--><com.crashlytics.android.CrashlyticsInitProvider: boolean shouldInitializeFabric(android.content.Context,io.fabric.sdk.android.services.common.FirebaseInfo,com.crashlytics.android.CrashlyticsInitProvider$EnabledCheckStrategy)>[]--><com.crashlytics.android.ManifestEnabledCheckStrategy: boolean isCrashlyticsEnabled(android.content.Context)>[]--><io.fabric.sdk.android.services.common.DataCollectionArbiter: io.fabric.sdk.android.services.common.DataCollectionArbiter getInstance(android.content.Context)>[[try]]--><io.fabric.sdk.android.services.common.DataCollectionArbiter: void <init>(android.content.Context)>[[try]]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+One road protect good!
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><org.hwyl.sexytopo.control.SexyTopo: void onCreate()>[]--><io.fabric.sdk.android.Fabric: io.fabric.sdk.android.Fabric 'with'(android.content.Context,io.fabric.sdk.android.Kit[])>[]--><io.fabric.sdk.android.Fabric$Builder: io.fabric.sdk.android.Fabric$Builder kits(io.fabric.sdk.android.Kit[])>[]--><io.fabric.sdk.android.services.common.DataCollectionArbiter: io.fabric.sdk.android.services.common.DataCollectionArbiter getInstance(android.content.Context)>[[try]]--><io.fabric.sdk.android.services.common.DataCollectionArbiter: void <init>(android.content.Context)>[[try]]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+One road protect good!
+9 Packageshead roads:
+try
+Good road with try: <com.crashlytics.android.core.CrashlyticsCore$1: java.lang.Void call()>[]--><com.crashlytics.android.core.CrashlyticsCore: java.lang.Void doInBackground()>[[try]]--><io.fabric.sdk.android.services.common.DataCollectionArbiter: io.fabric.sdk.android.services.common.DataCollectionArbiter getInstance(android.content.Context)>[[try]]--><io.fabric.sdk.android.services.common.DataCollectionArbiter: void <init>(android.content.Context)>[[try]]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.crashlytics.android.core.CrashlyticsCore: java.lang.Object doInBackground()>[]--><com.crashlytics.android.core.CrashlyticsCore: java.lang.Void doInBackground()>[[try]]--><io.fabric.sdk.android.services.common.DataCollectionArbiter: io.fabric.sdk.android.services.common.DataCollectionArbiter getInstance(android.content.Context)>[[try]]--><io.fabric.sdk.android.services.common.DataCollectionArbiter: void <init>(android.content.Context)>[[try]]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.crashlytics.android.core.CrashlyticsController$7: java.lang.Void call()>[]--><io.fabric.sdk.android.services.common.DataCollectionArbiter: io.fabric.sdk.android.services.common.DataCollectionArbiter getInstance(android.content.Context)>[[try]]--><io.fabric.sdk.android.services.common.DataCollectionArbiter: void <init>(android.content.Context)>[[try]]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.crashlytics.android.Crashlytics: boolean isCrashlyticsCollectionEnabled()>[]--><io.fabric.sdk.android.services.common.DataCollectionArbiter: io.fabric.sdk.android.services.common.DataCollectionArbiter getInstance(android.content.Context)>[[try]]--><io.fabric.sdk.android.services.common.DataCollectionArbiter: void <init>(android.content.Context)>[[try]]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+One road protect good!
+try
+Good road with try: <io.fabric.sdk.android.Onboarding: java.lang.Object doInBackground()>[]--><io.fabric.sdk.android.Onboarding: java.lang.Boolean doInBackground()>[]--><io.fabric.sdk.android.Onboarding: io.fabric.sdk.android.services.settings.SettingsData retrieveSettingsData()>[[try]]--><io.fabric.sdk.android.services.common.DataCollectionArbiter: io.fabric.sdk.android.services.common.DataCollectionArbiter getInstance(android.content.Context)>[[try]]--><io.fabric.sdk.android.services.common.DataCollectionArbiter: void <init>(android.content.Context)>[[try]]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.crashlytics.android.Crashlytics: void setCrashlyticsCollectionEnabled(boolean)>[]--><io.fabric.sdk.android.services.common.DataCollectionArbiter: io.fabric.sdk.android.services.common.DataCollectionArbiter getInstance(android.content.Context)>[[try]]--><io.fabric.sdk.android.services.common.DataCollectionArbiter: void <init>(android.content.Context)>[[try]]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+One road protect good!
+try
+Good road with try: <io.fabric.sdk.android.services.common.DataCollectionArbiter: void resetForTesting(android.content.Context)>[[try]]--><io.fabric.sdk.android.services.common.DataCollectionArbiter: void <init>(android.content.Context)>[[try]]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.crashlytics.android.core.CrashlyticsCore: boolean onPreExecute()>[]--><com.crashlytics.android.core.CrashlyticsCore: boolean onPreExecute(android.content.Context)>[]--><io.fabric.sdk.android.services.common.DataCollectionArbiter: io.fabric.sdk.android.services.common.DataCollectionArbiter getInstance(android.content.Context)>[[try]]--><io.fabric.sdk.android.services.common.DataCollectionArbiter: void <init>(android.content.Context)>[[try]]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.crashlytics.android.answers.Answers: java.lang.Object doInBackground()>[]--><com.crashlytics.android.answers.Answers: java.lang.Boolean doInBackground()>[]--><io.fabric.sdk.android.services.common.DataCollectionArbiter: io.fabric.sdk.android.services.common.DataCollectionArbiter getInstance(android.content.Context)>[[try]]--><io.fabric.sdk.android.services.common.DataCollectionArbiter: void <init>(android.content.Context)>[[try]]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+One road protect good!
+containsStatic:false
+containsTry:true
+10call by main package
+-----------------------------------------
+#################################################
+N 7 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.lang.String getString(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+8call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.hwyl.sexytopo.control.activity.PlanActivity dummyMainMethod_org_hwyl_sexytopo_control_activity_PlanActivity(android.content.Intent)>[]--><org.hwyl.sexytopo.control.activity.GraphActivity: void onCreate(android.os.Bundle)>[]--><org.hwyl.sexytopo.control.activity.GraphActivity$3: void run()>[]--><org.hwyl.sexytopo.control.activity.GraphActivity: void access$200(org.hwyl.sexytopo.control.activity.GraphActivity)>[]--><org.hwyl.sexytopo.control.activity.GraphActivity: void setViewLocation()>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><com.crashlytics.android.CrashlyticsInitProvider: boolean onCreate()>[]--><com.crashlytics.android.CrashlyticsInitProvider: boolean shouldInitializeFabric(android.content.Context,io.fabric.sdk.android.services.common.FirebaseInfo,com.crashlytics.android.CrashlyticsInitProvider$EnabledCheckStrategy)>[]--><io.fabric.sdk.android.services.common.FirebaseInfo: boolean isFirebaseCrashlyticsEnabled(android.content.Context)>[]--><io.fabric.sdk.android.services.common.FirebaseInfo: boolean hasApiKey(android.content.Context)>[]--><io.fabric.sdk.android.services.common.ApiKey: java.lang.String getApiKeyFromManifest(android.content.Context)>[[try]]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+One road protect good!
+!!!this api will crash on sdk 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.hwyl.sexytopo.control.activity.ExtendedElevationActivity dummyMainMethod_org_hwyl_sexytopo_control_activity_ExtendedElevationActivity(android.content.Intent)>[]--><org.hwyl.sexytopo.control.activity.GraphActivity: void onCreate(android.os.Bundle)>[]--><org.hwyl.sexytopo.control.activity.GraphActivity$3: void run()>[]--><org.hwyl.sexytopo.control.activity.GraphActivity: void access$200(org.hwyl.sexytopo.control.activity.GraphActivity)>[]--><org.hwyl.sexytopo.control.activity.GraphActivity: void setViewLocation()>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+!!!this api will crash on sdk 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.hwyl.sexytopo.control.activity.TableActivity dummyMainMethod_org_hwyl_sexytopo_control_activity_TableActivity(android.content.Intent)>[]--><org.hwyl.sexytopo.control.activity.TableActivity: void onResume()>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+7 Packageshead roads:
+try
+Good road with try: <io.fabric.sdk.android.services.common.ApiKey: java.lang.String getApiKey(android.content.Context)>[]--><io.fabric.sdk.android.services.common.ApiKey: java.lang.String getValue(android.content.Context)>[]--><io.fabric.sdk.android.services.common.ApiKey: java.lang.String getApiKeyFromManifest(android.content.Context)>[[try]]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+One road protect good!
+try
+Good road with try: <io.fabric.sdk.android.services.common.ExecutorUtils$1$1: void onRun()>[]--><com.crashlytics.android.core.CrashlyticsBackgroundWorker$1: void run()>[[try]]--><io.fabric.sdk.android.services.concurrency.AsyncTask$SerialExecutor$1: void run()>[[try]]--><org.hwyl.sexytopo.control.activity.GraphActivity$3: void run()>[]--><org.hwyl.sexytopo.control.activity.GraphActivity: void access$200(org.hwyl.sexytopo.control.activity.GraphActivity)>[]--><org.hwyl.sexytopo.control.activity.GraphActivity: void setViewLocation()>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+One road protect good!
+!!!this api will crash on sdk 18 19 20 
+Error road: <io.fabric.sdk.android.services.common.ExecutorUtils$1$1: void onRun()>[]--><org.hwyl.sexytopo.control.activity.GraphActivity$3: void run()>[]--><org.hwyl.sexytopo.control.activity.GraphActivity: void access$200(org.hwyl.sexytopo.control.activity.GraphActivity)>[]--><org.hwyl.sexytopo.control.activity.GraphActivity: void setViewLocation()>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+try
+Good road with try: <io.fabric.sdk.android.services.common.ExecutorUtils$1$1: void onRun()>[]--><com.crashlytics.android.answers.AnswersEventsHandler$4: void run()>[[try]]--><com.crashlytics.android.answers.SessionMetadataCollector: com.crashlytics.android.answers.SessionEventMetadata getMetadata()>[]--><io.fabric.sdk.android.services.common.IdManager: java.lang.Boolean isLimitAdTrackingEnabled()>[]--><io.fabric.sdk.android.services.common.IdManager: boolean shouldCollectHardwareIds()>[]--><io.fabric.sdk.android.services.common.FirebaseInfo: boolean isFirebaseCrashlyticsEnabled(android.content.Context)>[]--><io.fabric.sdk.android.services.common.FirebaseInfo: boolean hasApiKey(android.content.Context)>[]--><io.fabric.sdk.android.services.common.ApiKey: java.lang.String getApiKeyFromManifest(android.content.Context)>[[try]]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+One road protect good!
+try
+Good road with try: <io.fabric.sdk.android.services.common.ExecutorUtils$1$1: void onRun()>[]--><io.fabric.sdk.android.services.concurrency.AsyncTask$SerialExecutor$1: void run()>[[try]]--><org.hwyl.sexytopo.control.activity.GraphActivity$3: void run()>[]--><org.hwyl.sexytopo.control.activity.GraphActivity: void access$200(org.hwyl.sexytopo.control.activity.GraphActivity)>[]--><org.hwyl.sexytopo.control.activity.GraphActivity: void setViewLocation()>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+One road protect good!
+try
+Good road with try: <io.fabric.sdk.android.services.common.ExecutorUtils$1$1: void onRun()>[]--><com.crashlytics.android.answers.AnswersEventsHandler$1: void run()>[[try]]--><com.crashlytics.android.answers.EnabledSessionAnalyticsManagerStrategy: void setAnalyticsSettingsData(io.fabric.sdk.android.services.settings.AnalyticsSettingsData,java.lang.String)>[]--><io.fabric.sdk.android.services.common.ApiKey: java.lang.String getValue(android.content.Context)>[]--><io.fabric.sdk.android.services.common.ApiKey: java.lang.String getApiKeyFromManifest(android.content.Context)>[[try]]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+One road protect good!
+#2.the call statck between class <io.fabric.sdk.android.services.common.ExecutorUtils$1$1: void onRun()> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+try
+Good road with try: <com.crashlytics.android.answers.Answers: boolean onPreExecute()>[[try]]--><io.fabric.sdk.android.services.common.FirebaseInfo: boolean isFirebaseCrashlyticsEnabled(android.content.Context)>[]--><io.fabric.sdk.android.services.common.FirebaseInfo: boolean hasApiKey(android.content.Context)>[]--><io.fabric.sdk.android.services.common.ApiKey: java.lang.String getApiKeyFromManifest(android.content.Context)>[[try]]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+One road protect good!
+try
+Good road with try: <io.fabric.sdk.android.Onboarding: java.lang.Object doInBackground()>[]--><io.fabric.sdk.android.Onboarding: java.lang.Boolean doInBackground()>[]--><io.fabric.sdk.android.Onboarding: io.fabric.sdk.android.services.settings.SettingsData retrieveSettingsData()>[[try]]--><io.fabric.sdk.android.services.settings.Settings: io.fabric.sdk.android.services.settings.Settings initialize(io.fabric.sdk.android.Kit,io.fabric.sdk.android.services.common.IdManager,io.fabric.sdk.android.services.network.HttpRequestFactory,java.lang.String,java.lang.String,java.lang.String,io.fabric.sdk.android.services.common.DataCollectionArbiter)>[[try]]--><io.fabric.sdk.android.services.common.ApiKey: java.lang.String getValue(android.content.Context)>[]--><io.fabric.sdk.android.services.common.ApiKey: java.lang.String getApiKeyFromManifest(android.content.Context)>[[try]]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+One road protect good!
+try
+Good road with try: <android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)>[]--><com.crashlytics.android.core.CrashlyticsBackgroundWorker$1: void run()>[[try]]--><io.fabric.sdk.android.services.concurrency.AsyncTask$SerialExecutor$1: void run()>[[try]]--><org.hwyl.sexytopo.control.activity.GraphActivity$3: void run()>[]--><org.hwyl.sexytopo.control.activity.GraphActivity: void access$200(org.hwyl.sexytopo.control.activity.GraphActivity)>[]--><org.hwyl.sexytopo.control.activity.GraphActivity: void setViewLocation()>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+One road protect good!
+try
+Good road with try: <android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)>[]--><io.fabric.sdk.android.services.concurrency.AsyncTask$SerialExecutor$1: void run()>[[try]]--><org.hwyl.sexytopo.control.activity.GraphActivity$3: void run()>[]--><org.hwyl.sexytopo.control.activity.GraphActivity: void access$200(org.hwyl.sexytopo.control.activity.GraphActivity)>[]--><org.hwyl.sexytopo.control.activity.GraphActivity: void setViewLocation()>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+One road protect good!
+try
+Good road with try: <android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)>[]--><com.crashlytics.android.answers.AnswersEventsHandler$1: void run()>[[try]]--><com.crashlytics.android.answers.EnabledSessionAnalyticsManagerStrategy: void setAnalyticsSettingsData(io.fabric.sdk.android.services.settings.AnalyticsSettingsData,java.lang.String)>[]--><io.fabric.sdk.android.services.common.ApiKey: java.lang.String getValue(android.content.Context)>[]--><io.fabric.sdk.android.services.common.ApiKey: java.lang.String getApiKeyFromManifest(android.content.Context)>[[try]]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+One road protect good!
+try
+Good road with try: <android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)>[]--><com.crashlytics.android.answers.AnswersEventsHandler$4: void run()>[[try]]--><com.crashlytics.android.answers.SessionMetadataCollector: com.crashlytics.android.answers.SessionEventMetadata getMetadata()>[]--><io.fabric.sdk.android.services.common.IdManager: java.lang.Boolean isLimitAdTrackingEnabled()>[]--><io.fabric.sdk.android.services.common.IdManager: boolean shouldCollectHardwareIds()>[]--><io.fabric.sdk.android.services.common.FirebaseInfo: boolean isFirebaseCrashlyticsEnabled(android.content.Context)>[]--><io.fabric.sdk.android.services.common.FirebaseInfo: boolean hasApiKey(android.content.Context)>[]--><io.fabric.sdk.android.services.common.ApiKey: java.lang.String getApiKeyFromManifest(android.content.Context)>[[try]]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+One road protect good!
+!!!this api will crash on sdk 18 19 20 
+Error road: <android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)>[]--><org.hwyl.sexytopo.control.activity.GraphActivity$3: void run()>[]--><org.hwyl.sexytopo.control.activity.GraphActivity: void access$200(org.hwyl.sexytopo.control.activity.GraphActivity)>[]--><org.hwyl.sexytopo.control.activity.GraphActivity: void setViewLocation()>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#5.the call statck between class <android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+try
+Good road with try: <com.crashlytics.android.core.CrashlyticsCore: boolean onPreExecute()>[]--><com.crashlytics.android.core.CrashlyticsCore: boolean onPreExecute(android.content.Context)>[[try]]--><io.fabric.sdk.android.services.common.FirebaseInfo: boolean isFirebaseCrashlyticsEnabled(android.content.Context)>[]--><io.fabric.sdk.android.services.common.FirebaseInfo: boolean hasApiKey(android.content.Context)>[]--><io.fabric.sdk.android.services.common.ApiKey: java.lang.String getApiKeyFromManifest(android.content.Context)>[[try]]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+One road protect good!
+try
+Good road with try: <io.fabric.sdk.android.services.common.ApiKey: java.lang.String getApiKey(android.content.Context,boolean)>[]--><io.fabric.sdk.android.services.common.ApiKey: java.lang.String getValue(android.content.Context)>[]--><io.fabric.sdk.android.services.common.ApiKey: java.lang.String getApiKeyFromManifest(android.content.Context)>[[try]]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+One road protect good!
+crashApis:4
+crashApisInMain:2
+containsStatic:false
+containsTry:true
+8call by main package
+-----------------------------------------
+#################################################
+N 8 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putInt(java.lang.String,int)> is checking!!!
+The life time of api is [21,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 18 19 20 
+Error road: <com.crashlytics.android.core.CrashlyticsController: void access$600(com.crashlytics.android.core.CrashlyticsController,long)>[]--><com.crashlytics.android.core.CrashlyticsController: void recordFatalFirebaseEvent(long)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#1.the call statck between class <com.crashlytics.android.core.CrashlyticsController: void access$600(com.crashlytics.android.core.CrashlyticsController,long)> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+try
+Good road with try: <com.crashlytics.android.answers.EnabledSessionAnalyticsManagerStrategy: void processEvent(com.crashlytics.android.answers.SessionEvent$Builder)>[[try]]--><com.crashlytics.android.answers.FirebaseAnalyticsApiAdapter: void processEvent(com.crashlytics.android.answers.SessionEvent)>[]--><com.crashlytics.android.answers.FirebaseAnalyticsEventMapper: com.crashlytics.android.answers.FirebaseAnalyticsEvent mapEvent(com.crashlytics.android.answers.SessionEvent)>[]--><com.crashlytics.android.answers.FirebaseAnalyticsEventMapper: void mapCustomEventAttributes(android.os.Bundle,java.util.Map)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+One road protect good!
+crashApis:5
+containsStatic:false
+containsTry:true
+3call by main package
+-----------------------------------------
+#################################################
+N 9 Potential Issue API: SDKCheck of <android.net.NetworkInfo: boolean isConnectedOrConnecting()> is checking!!!
+The life time of api is [1,30]
+3call roads:
+0 Mainhead roads:
+3 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <io.fabric.sdk.android.services.common.ExecutorUtils$1$1: void onRun()>[]--><com.crashlytics.android.core.CrashlyticsController$SendReportRunnable: void run()>[]--><io.fabric.sdk.android.services.common.CommonUtils: boolean canTryConnection(android.content.Context)>[]--><android.net.NetworkInfo: boolean isConnectedOrConnecting()>
+#1.the call statck between class <io.fabric.sdk.android.services.common.ExecutorUtils$1$1: void onRun()> to <android.net.NetworkInfo: boolean isConnectedOrConnecting()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)>[]--><com.crashlytics.android.core.CrashlyticsController$SendReportRunnable: void run()>[]--><io.fabric.sdk.android.services.common.CommonUtils: boolean canTryConnection(android.content.Context)>[]--><android.net.NetworkInfo: boolean isConnectedOrConnecting()>
+#2.the call statck between class <android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)> to <android.net.NetworkInfo: boolean isConnectedOrConnecting()>has compatibility isssues！
+-----------------------------------------
+try
+Good road with try: <com.crashlytics.android.core.CrashlyticsCore: boolean onPreExecute()>[]--><com.crashlytics.android.core.CrashlyticsCore: boolean onPreExecute(android.content.Context)>[[try]]--><io.fabric.sdk.android.services.common.CommonUtils: boolean canTryConnection(android.content.Context)>[]--><android.net.NetworkInfo: boolean isConnectedOrConnecting()>
+One road protect good!
+crashApis:6
+containsStatic:false
+containsTry:true
+4call by main package
+-----------------------------------------
+#################################################
+N 10 Potential Issue API: SDKCheck of <android.bluetooth.BluetoothDevice: android.bluetooth.BluetoothGatt connectGatt(android.content.Context,boolean,android.bluetooth.BluetoothGattCallback,int)> is checking!!!
+The life time of api is [23,31]
+7call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.hwyl.sexytopo.control.activity.DeviceActivity dummyMainMethod_org_hwyl_sexytopo_control_activity_DeviceActivity(android.content.Intent)>[]--><org.hwyl.sexytopo.control.activity.DeviceActivity: void onResume()>[]--><org.hwyl.sexytopo.control.activity.DeviceActivity: void updateStatuses()>[]--><org.hwyl.sexytopo.control.activity.DeviceActivity: void updatePairedStatus()>[]--><org.hwyl.sexytopo.control.activity.DeviceActivity: void stopConnection()>[[try]]--><org.hwyl.sexytopo.control.activity.SexyTopoActivity: org.hwyl.sexytopo.comms.DistoXCommunicator requestComms()>[]--><org.hwyl.sexytopo.control.activity.SexyTopoActivity: org.hwyl.sexytopo.comms.DistoXCommunicator requestComms(org.hwyl.sexytopo.comms.DistoXCommunicator$Protocol)>[]--><org.hwyl.sexytopo.comms.DistoXCommunicator: void requestStart(org.hwyl.sexytopo.comms.DistoXCommunicator$Protocol)>[]--><org.hwyl.sexytopo.comms.DistoXCommunicator: void start()>[]--><org.hwyl.sexytopo.comms.DistoXCommunicator: void run()>[]--><org.hwyl.sexytopo.comms.DistoXCommunicator: void tryToConnectUntilConnected()>[]--><org.hwyl.sexytopo.comms.DistoXCommunicator: void tryToConnectIfNotConnected()>[[try]]--><org.hwyl.sexytopo.comms.SerialSocket: void <init>(android.bluetooth.BluetoothDevice)>[]--><org.hwyl.sexytopo.comms.SerialSocket: void BLEConnect()>[]--><org.hwyl.sexytopo.comms.BLESocket: void connect(android.content.Context,org.hwyl.sexytopo.comms.BLEListener,android.bluetooth.BluetoothDevice)>[[$i0 >= 23]]--><android.bluetooth.BluetoothDevice: android.bluetooth.BluetoothGatt connectGatt(android.content.Context,boolean,android.bluetooth.BluetoothGattCallback,int)>
+One road protect good!
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.hwyl.sexytopo.control.activity.CalibrationActivity dummyMainMethod_org_hwyl_sexytopo_control_activity_CalibrationActivity(android.content.Intent)>[]--><org.hwyl.sexytopo.control.activity.CalibrationActivity: void requestDeleteLast(android.view.View)>[]--><org.hwyl.sexytopo.control.activity.CalibrationActivity: void syncWithReadings()>[]--><org.hwyl.sexytopo.control.activity.CalibrationActivity: void updateFields()>[]--><org.hwyl.sexytopo.control.activity.CalibrationActivity: boolean useNonLinearAlgorithm()>[]--><org.hwyl.sexytopo.control.activity.SexyTopoActivity: org.hwyl.sexytopo.comms.DistoXCommunicator requestComms()>[]--><org.hwyl.sexytopo.control.activity.SexyTopoActivity: org.hwyl.sexytopo.comms.DistoXCommunicator requestComms(org.hwyl.sexytopo.comms.DistoXCommunicator$Protocol)>[]--><org.hwyl.sexytopo.comms.DistoXCommunicator: void requestStart(org.hwyl.sexytopo.comms.DistoXCommunicator$Protocol)>[]--><org.hwyl.sexytopo.comms.DistoXCommunicator: void start()>[]--><org.hwyl.sexytopo.comms.DistoXCommunicator: void run()>[]--><org.hwyl.sexytopo.comms.DistoXCommunicator: void tryToConnectUntilConnected()>[]--><org.hwyl.sexytopo.comms.DistoXCommunicator: void tryToConnectIfNotConnected()>[[try]]--><org.hwyl.sexytopo.comms.SerialSocket: void <init>(android.bluetooth.BluetoothDevice)>[]--><org.hwyl.sexytopo.comms.SerialSocket: void BLEConnect()>[]--><org.hwyl.sexytopo.comms.BLESocket: void connect(android.content.Context,org.hwyl.sexytopo.comms.BLEListener,android.bluetooth.BluetoothDevice)>[[$i0 >= 23]]--><android.bluetooth.BluetoothDevice: android.bluetooth.BluetoothGatt connectGatt(android.content.Context,boolean,android.bluetooth.BluetoothGattCallback,int)>
+One road protect good!
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.hwyl.sexytopo.control.activity.DeviceActivity$StateChangeReceiver dummyMainMethod_org_hwyl_sexytopo_control_activity_DeviceActivity$StateChangeReceiver(android.content.Intent)>[]--><org.hwyl.sexytopo.control.activity.DeviceActivity$StateChangeReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><org.hwyl.sexytopo.control.activity.DeviceActivity: void access$500(org.hwyl.sexytopo.control.activity.DeviceActivity)>[]--><org.hwyl.sexytopo.control.activity.DeviceActivity: void updateStatuses()>[]--><org.hwyl.sexytopo.control.activity.DeviceActivity: void updatePairedStatus()>[]--><org.hwyl.sexytopo.control.activity.DeviceActivity: void stopConnection()>[[try]]--><org.hwyl.sexytopo.control.activity.SexyTopoActivity: org.hwyl.sexytopo.comms.DistoXCommunicator requestComms()>[]--><org.hwyl.sexytopo.control.activity.SexyTopoActivity: org.hwyl.sexytopo.comms.DistoXCommunicator requestComms(org.hwyl.sexytopo.comms.DistoXCommunicator$Protocol)>[]--><org.hwyl.sexytopo.comms.DistoXCommunicator: void requestStart(org.hwyl.sexytopo.comms.DistoXCommunicator$Protocol)>[]--><org.hwyl.sexytopo.comms.DistoXCommunicator: void start()>[]--><org.hwyl.sexytopo.comms.DistoXCommunicator: void run()>[]--><org.hwyl.sexytopo.comms.DistoXCommunicator: void tryToConnectUntilConnected()>[]--><org.hwyl.sexytopo.comms.DistoXCommunicator: void tryToConnectIfNotConnected()>[[try]]--><org.hwyl.sexytopo.comms.SerialSocket: void <init>(android.bluetooth.BluetoothDevice)>[]--><org.hwyl.sexytopo.comms.SerialSocket: void BLEConnect()>[]--><org.hwyl.sexytopo.comms.BLESocket: void connect(android.content.Context,org.hwyl.sexytopo.comms.BLEListener,android.bluetooth.BluetoothDevice)>[[$i0 >= 23]]--><android.bluetooth.BluetoothDevice: android.bluetooth.BluetoothGatt connectGatt(android.content.Context,boolean,android.bluetooth.BluetoothGattCallback,int)>
+One road protect good!
+6 Packageshead roads:
+try
+Good road with try: <io.fabric.sdk.android.services.common.ExecutorUtils$1$1: void onRun()>[]--><com.crashlytics.android.core.CrashlyticsBackgroundWorker$1: void run()>[[try]]--><io.fabric.sdk.android.services.concurrency.AsyncTask$SerialExecutor$1: void run()>[[try]]--><org.hwyl.sexytopo.comms.DistoXCommunicator: void run()>[]--><org.hwyl.sexytopo.comms.DistoXCommunicator: void tryToConnectUntilConnected()>[]--><org.hwyl.sexytopo.comms.DistoXCommunicator: void tryToConnectIfNotConnected()>[[try]]--><org.hwyl.sexytopo.comms.SerialSocket: void <init>(android.bluetooth.BluetoothDevice)>[]--><org.hwyl.sexytopo.comms.SerialSocket: void BLEConnect()>[]--><org.hwyl.sexytopo.comms.BLESocket: void connect(android.content.Context,org.hwyl.sexytopo.comms.BLEListener,android.bluetooth.BluetoothDevice)>[[$i0 >= 23]]--><android.bluetooth.BluetoothDevice: android.bluetooth.BluetoothGatt connectGatt(android.content.Context,boolean,android.bluetooth.BluetoothGattCallback,int)>
+One road protect good!
+try
+Good road with try: <io.fabric.sdk.android.services.common.ExecutorUtils$1$1: void onRun()>[]--><org.hwyl.sexytopo.comms.DistoXCommunicator: void run()>[]--><org.hwyl.sexytopo.comms.DistoXCommunicator: void tryToConnectUntilConnected()>[]--><org.hwyl.sexytopo.comms.DistoXCommunicator: void tryToConnectIfNotConnected()>[[try]]--><org.hwyl.sexytopo.comms.SerialSocket: void <init>(android.bluetooth.BluetoothDevice)>[]--><org.hwyl.sexytopo.comms.SerialSocket: void BLEConnect()>[]--><org.hwyl.sexytopo.comms.BLESocket: void connect(android.content.Context,org.hwyl.sexytopo.comms.BLEListener,android.bluetooth.BluetoothDevice)>[[$i0 >= 23]]--><android.bluetooth.BluetoothDevice: android.bluetooth.BluetoothGatt connectGatt(android.content.Context,boolean,android.bluetooth.BluetoothGattCallback,int)>
+One road protect good!
+try
+Good road with try: <io.fabric.sdk.android.services.common.ExecutorUtils$1$1: void onRun()>[]--><io.fabric.sdk.android.services.concurrency.AsyncTask$SerialExecutor$1: void run()>[[try]]--><org.hwyl.sexytopo.comms.DistoXCommunicator: void run()>[]--><org.hwyl.sexytopo.comms.DistoXCommunicator: void tryToConnectUntilConnected()>[]--><org.hwyl.sexytopo.comms.DistoXCommunicator: void tryToConnectIfNotConnected()>[[try]]--><org.hwyl.sexytopo.comms.SerialSocket: void <init>(android.bluetooth.BluetoothDevice)>[]--><org.hwyl.sexytopo.comms.SerialSocket: void BLEConnect()>[]--><org.hwyl.sexytopo.comms.BLESocket: void connect(android.content.Context,org.hwyl.sexytopo.comms.BLEListener,android.bluetooth.BluetoothDevice)>[[$i0 >= 23]]--><android.bluetooth.BluetoothDevice: android.bluetooth.BluetoothGatt connectGatt(android.content.Context,boolean,android.bluetooth.BluetoothGattCallback,int)>
+One road protect good!
+try
+Good road with try: <org.hwyl.sexytopo.control.activity.CalibrationActivity: void access$400(org.hwyl.sexytopo.control.activity.CalibrationActivity,java.lang.String)>[]--><org.hwyl.sexytopo.control.activity.CalibrationActivity: void loadCalibration(java.lang.String)>[]--><org.hwyl.sexytopo.control.activity.CalibrationActivity: void syncWithReadings()>[]--><org.hwyl.sexytopo.control.activity.CalibrationActivity: void updateFields()>[]--><org.hwyl.sexytopo.control.activity.CalibrationActivity: boolean useNonLinearAlgorithm()>[]--><org.hwyl.sexytopo.control.activity.SexyTopoActivity: org.hwyl.sexytopo.comms.DistoXCommunicator requestComms()>[]--><org.hwyl.sexytopo.control.activity.SexyTopoActivity: org.hwyl.sexytopo.comms.DistoXCommunicator requestComms(org.hwyl.sexytopo.comms.DistoXCommunicator$Protocol)>[]--><org.hwyl.sexytopo.comms.DistoXCommunicator: void requestStart(org.hwyl.sexytopo.comms.DistoXCommunicator$Protocol)>[]--><org.hwyl.sexytopo.comms.DistoXCommunicator: void start()>[]--><org.hwyl.sexytopo.comms.DistoXCommunicator: void run()>[]--><org.hwyl.sexytopo.comms.DistoXCommunicator: void tryToConnectUntilConnected()>[]--><org.hwyl.sexytopo.comms.DistoXCommunicator: void tryToConnectIfNotConnected()>[[try]]--><org.hwyl.sexytopo.comms.SerialSocket: void <init>(android.bluetooth.BluetoothDevice)>[]--><org.hwyl.sexytopo.comms.SerialSocket: void BLEConnect()>[]--><org.hwyl.sexytopo.comms.BLESocket: void connect(android.content.Context,org.hwyl.sexytopo.comms.BLEListener,android.bluetooth.BluetoothDevice)>[[$i0 >= 23]]--><android.bluetooth.BluetoothDevice: android.bluetooth.BluetoothGatt connectGatt(android.content.Context,boolean,android.bluetooth.BluetoothGattCallback,int)>
+One road protect good!
+try
+Good road with try: <org.hwyl.sexytopo.control.activity.CalibrationActivity$WriteCalibrationTask: java.lang.Boolean doInBackground(java.lang.Byte[])>[]--><org.hwyl.sexytopo.control.activity.SexyTopoActivity: org.hwyl.sexytopo.comms.DistoXCommunicator requestComms()>[]--><org.hwyl.sexytopo.control.activity.SexyTopoActivity: org.hwyl.sexytopo.comms.DistoXCommunicator requestComms(org.hwyl.sexytopo.comms.DistoXCommunicator$Protocol)>[]--><org.hwyl.sexytopo.comms.DistoXCommunicator: void requestStart(org.hwyl.sexytopo.comms.DistoXCommunicator$Protocol)>[]--><org.hwyl.sexytopo.comms.DistoXCommunicator: void start()>[]--><org.hwyl.sexytopo.comms.DistoXCommunicator: void run()>[]--><org.hwyl.sexytopo.comms.DistoXCommunicator: void tryToConnectUntilConnected()>[]--><org.hwyl.sexytopo.comms.DistoXCommunicator: void tryToConnectIfNotConnected()>[[try]]--><org.hwyl.sexytopo.comms.SerialSocket: void <init>(android.bluetooth.BluetoothDevice)>[]--><org.hwyl.sexytopo.comms.SerialSocket: void BLEConnect()>[]--><org.hwyl.sexytopo.comms.BLESocket: void connect(android.content.Context,org.hwyl.sexytopo.comms.BLEListener,android.bluetooth.BluetoothDevice)>[[$i0 >= 23]]--><android.bluetooth.BluetoothDevice: android.bluetooth.BluetoothGatt connectGatt(android.content.Context,boolean,android.bluetooth.BluetoothGattCallback,int)>
+One road protect good!
+try
+Good road with try: <android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)>[]--><com.crashlytics.android.core.CrashlyticsBackgroundWorker$1: void run()>[[try]]--><io.fabric.sdk.android.services.concurrency.AsyncTask$SerialExecutor$1: void run()>[[try]]--><org.hwyl.sexytopo.comms.DistoXCommunicator: void run()>[]--><org.hwyl.sexytopo.comms.DistoXCommunicator: void tryToConnectUntilConnected()>[]--><org.hwyl.sexytopo.comms.DistoXCommunicator: void tryToConnectIfNotConnected()>[[try]]--><org.hwyl.sexytopo.comms.SerialSocket: void <init>(android.bluetooth.BluetoothDevice)>[]--><org.hwyl.sexytopo.comms.SerialSocket: void BLEConnect()>[]--><org.hwyl.sexytopo.comms.BLESocket: void connect(android.content.Context,org.hwyl.sexytopo.comms.BLEListener,android.bluetooth.BluetoothDevice)>[[$i0 >= 23]]--><android.bluetooth.BluetoothDevice: android.bluetooth.BluetoothGatt connectGatt(android.content.Context,boolean,android.bluetooth.BluetoothGattCallback,int)>
+One road protect good!
+try
+Good road with try: <android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)>[]--><io.fabric.sdk.android.services.concurrency.AsyncTask$SerialExecutor$1: void run()>[[try]]--><org.hwyl.sexytopo.comms.DistoXCommunicator: void run()>[]--><org.hwyl.sexytopo.comms.DistoXCommunicator: void tryToConnectUntilConnected()>[]--><org.hwyl.sexytopo.comms.DistoXCommunicator: void tryToConnectIfNotConnected()>[[try]]--><org.hwyl.sexytopo.comms.SerialSocket: void <init>(android.bluetooth.BluetoothDevice)>[]--><org.hwyl.sexytopo.comms.SerialSocket: void BLEConnect()>[]--><org.hwyl.sexytopo.comms.BLESocket: void connect(android.content.Context,org.hwyl.sexytopo.comms.BLEListener,android.bluetooth.BluetoothDevice)>[[$i0 >= 23]]--><android.bluetooth.BluetoothDevice: android.bluetooth.BluetoothGatt connectGatt(android.content.Context,boolean,android.bluetooth.BluetoothGattCallback,int)>
+One road protect good!
+try
+Good road with try: <android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)>[]--><org.hwyl.sexytopo.comms.DistoXCommunicator: void run()>[]--><org.hwyl.sexytopo.comms.DistoXCommunicator: void tryToConnectUntilConnected()>[]--><org.hwyl.sexytopo.comms.DistoXCommunicator: void tryToConnectIfNotConnected()>[[try]]--><org.hwyl.sexytopo.comms.SerialSocket: void <init>(android.bluetooth.BluetoothDevice)>[]--><org.hwyl.sexytopo.comms.SerialSocket: void BLEConnect()>[]--><org.hwyl.sexytopo.comms.BLESocket: void connect(android.content.Context,org.hwyl.sexytopo.comms.BLEListener,android.bluetooth.BluetoothDevice)>[[$i0 >= 23]]--><android.bluetooth.BluetoothDevice: android.bluetooth.BluetoothGatt connectGatt(android.content.Context,boolean,android.bluetooth.BluetoothGattCallback,int)>
+One road protect good!
+try
+Good road with try: <org.hwyl.sexytopo.control.activity.DeviceActivity: void access$400(org.hwyl.sexytopo.control.activity.DeviceActivity)>[]--><org.hwyl.sexytopo.control.activity.DeviceActivity: void updatePairedStatus()>[]--><org.hwyl.sexytopo.control.activity.DeviceActivity: void stopConnection()>[[try]]--><org.hwyl.sexytopo.control.activity.SexyTopoActivity: org.hwyl.sexytopo.comms.DistoXCommunicator requestComms()>[]--><org.hwyl.sexytopo.control.activity.SexyTopoActivity: org.hwyl.sexytopo.comms.DistoXCommunicator requestComms(org.hwyl.sexytopo.comms.DistoXCommunicator$Protocol)>[]--><org.hwyl.sexytopo.comms.DistoXCommunicator: void requestStart(org.hwyl.sexytopo.comms.DistoXCommunicator$Protocol)>[]--><org.hwyl.sexytopo.comms.DistoXCommunicator: void start()>[]--><org.hwyl.sexytopo.comms.DistoXCommunicator: void run()>[]--><org.hwyl.sexytopo.comms.DistoXCommunicator: void tryToConnectUntilConnected()>[]--><org.hwyl.sexytopo.comms.DistoXCommunicator: void tryToConnectIfNotConnected()>[[try]]--><org.hwyl.sexytopo.comms.SerialSocket: void <init>(android.bluetooth.BluetoothDevice)>[]--><org.hwyl.sexytopo.comms.SerialSocket: void BLEConnect()>[]--><org.hwyl.sexytopo.comms.BLESocket: void connect(android.content.Context,org.hwyl.sexytopo.comms.BLEListener,android.bluetooth.BluetoothDevice)>[[$i0 >= 23]]--><android.bluetooth.BluetoothDevice: android.bluetooth.BluetoothGatt connectGatt(android.content.Context,boolean,android.bluetooth.BluetoothGattCallback,int)>
+One road protect good!
+try
+Good road with try: <org.hwyl.sexytopo.control.activity.CalibrationActivity: void access$000(org.hwyl.sexytopo.control.activity.CalibrationActivity)>[]--><org.hwyl.sexytopo.control.activity.CalibrationActivity: void syncWithReadings()>[]--><org.hwyl.sexytopo.control.activity.CalibrationActivity: void updateFields()>[]--><org.hwyl.sexytopo.control.activity.CalibrationActivity: boolean useNonLinearAlgorithm()>[]--><org.hwyl.sexytopo.control.activity.SexyTopoActivity: org.hwyl.sexytopo.comms.DistoXCommunicator requestComms()>[]--><org.hwyl.sexytopo.control.activity.SexyTopoActivity: org.hwyl.sexytopo.comms.DistoXCommunicator requestComms(org.hwyl.sexytopo.comms.DistoXCommunicator$Protocol)>[]--><org.hwyl.sexytopo.comms.DistoXCommunicator: void requestStart(org.hwyl.sexytopo.comms.DistoXCommunicator$Protocol)>[]--><org.hwyl.sexytopo.comms.DistoXCommunicator: void start()>[]--><org.hwyl.sexytopo.comms.DistoXCommunicator: void run()>[]--><org.hwyl.sexytopo.comms.DistoXCommunicator: void tryToConnectUntilConnected()>[]--><org.hwyl.sexytopo.comms.DistoXCommunicator: void tryToConnectIfNotConnected()>[[try]]--><org.hwyl.sexytopo.comms.SerialSocket: void <init>(android.bluetooth.BluetoothDevice)>[]--><org.hwyl.sexytopo.comms.SerialSocket: void BLEConnect()>[]--><org.hwyl.sexytopo.comms.BLESocket: void connect(android.content.Context,org.hwyl.sexytopo.comms.BLEListener,android.bluetooth.BluetoothDevice)>[[$i0 >= 23]]--><android.bluetooth.BluetoothDevice: android.bluetooth.BluetoothGatt connectGatt(android.content.Context,boolean,android.bluetooth.BluetoothGattCallback,int)>
+One road protect good!
+containsStatic:false
+containsTry:true
+7call by main package
+-----------------------------------------
+#################################################
+N 11 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.util.Set keySet()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+try
+Good road with try: <com.crashlytics.android.core.DefaultAppMeasurementEventListenerRegistrar: void access$100(com.crashlytics.android.core.CrashlyticsCore,java.lang.String,android.os.Bundle)>[]--><com.crashlytics.android.core.DefaultAppMeasurementEventListenerRegistrar: void writeEventToUserLog(com.crashlytics.android.core.CrashlyticsCore,java.lang.String,android.os.Bundle)>[[try]]--><com.crashlytics.android.core.DefaultAppMeasurementEventListenerRegistrar: java.lang.String serializeEvent(java.lang.String,android.os.Bundle)>[]--><android.os.BaseBundle: java.util.Set keySet()>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+crashApis numbers:6
+crashApis numbers in main road:2
+On Android Version 16 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 17 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 18 this app may have error api use(at least): 4 and error api roads: 9
+On Android Version 19 this app may have error api use(at least): 4 and error api roads: 9
+On Android Version 20 this app may have error api use(at least): 4 and error api roads: 9
+On Android Version 21 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 22 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 23 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 24 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 25 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 31 this app may have error api use(at least): 2 and error api roads: 4

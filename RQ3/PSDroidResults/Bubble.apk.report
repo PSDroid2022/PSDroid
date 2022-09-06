@@ -1,0 +1,415 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/Bubble.apk
+Entry Points[com.nkanaev.comics.activity.ReaderActivity, com.squareup.picasso.Dispatcher$NetworkBroadcastReceiver, com.mikepenz.aboutlibraries.ui.LibsActivity, com.nkanaev.comics.activity.MainActivity]
+FllowDroidcallgraph size:869
+Soot started on Mon Jul 11 01:54:02 CST 2022
+StaticCheck:<com.nkanaev.comics.managers.Utils: boolean isHoneycombMR1orLater()>$yysi0 < 12
+StaticCheck:<com.nkanaev.comics.managers.Utils: boolean isHoneycombOrLater()>$yysi0 < 11
+StaticCheck:<com.nkanaev.comics.managers.Utils: boolean isIceCreamSandwitchOrLater()>$yysi0 < 14
+StaticCheck:<com.nkanaev.comics.managers.Utils: boolean isJellyBeanMR1orLater()>$yysi0 < 17
+StaticCheck:<com.nkanaev.comics.managers.Utils: boolean isKitKatOrLater()>$yysi0 < 19
+StaticCheck:<com.nkanaev.comics.managers.Utils: boolean isLollipopOrLater()>$yysi0 < 21
+Soot finished on Mon Jul 11 01:54:20 CST 2022
+Soot has run for 0 min. 17 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 19
+Declared Target Sdk version is: 22
+Declared Max Sdk version is: -1
+Collected 473 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <java.awt.Component: void setVisible(boolean)> is checking!!!
+The life time of api is [1,8]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <org.apache.regexp.REDemo: void main(java.lang.String[])>[]--><java.awt.Component: void setVisible(boolean)>
+#1.the call statck between class <org.apache.regexp.REDemo: void main(java.lang.String[])> to <java.awt.Component: void setVisible(boolean)>has compatibility isssues！
+-----------------------------------------
+crashApis:1
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.os.BaseBundle: int getInt(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+3call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.nkanaev.comics.activity.ReaderActivity dummyMainMethod_com_nkanaev_comics_activity_ReaderActivity(android.content.Intent)>[]--><com.nkanaev.comics.activity.ReaderActivity: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+$yysi0 < 21
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.nkanaev.comics.activity.MainActivity dummyMainMethod_com_nkanaev_comics_activity_MainActivity(android.content.Intent)>[]--><com.nkanaev.comics.activity.MainActivity: void onCreate(android.os.Bundle)>[[$yysi0 < 21]]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+2 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <com.nkanaev.comics.fragment.ReaderFragment: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#1.the call statck between class <com.nkanaev.comics.fragment.ReaderFragment: void onCreate(android.os.Bundle)> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <com.nkanaev.comics.fragment.ReaderFragment: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#2.the call statck between class <com.nkanaev.comics.fragment.ReaderFragment: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:2
+crashApisInMain:1
+containsStatic:true
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.net.NetworkInfo: int getType()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <com.squareup.picasso.Dispatcher$DispatcherHandler: void handleMessage(android.os.Message)>[]--><com.squareup.picasso.Dispatcher: void performNetworkStateChange(android.net.NetworkInfo)>[]--><com.squareup.picasso.PicassoExecutorService: void adjustThreadCount(android.net.NetworkInfo)>[]--><android.net.NetworkInfo: int getType()>
+#1.the call statck between class <com.squareup.picasso.Dispatcher$DispatcherHandler: void handleMessage(android.os.Message)> to <android.net.NetworkInfo: int getType()>has compatibility isssues！
+-----------------------------------------
+crashApis:3
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()> is checking!!!
+The life time of api is [1,30]
+2call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.squareup.picasso.Dispatcher$NetworkBroadcastReceiver dummyMainMethod_com_squareup_picasso_Dispatcher$NetworkBroadcastReceiver(android.content.Intent)>[]--><com.squareup.picasso.Dispatcher$NetworkBroadcastReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>has compatibility isssues！
+-----------------------------------------
+1 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <com.squareup.picasso.Dispatcher$DispatcherHandler: void handleMessage(android.os.Message)>[]--><com.squareup.picasso.Dispatcher: void performRetry(com.squareup.picasso.BitmapHunter)>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>
+#1.the call statck between class <com.squareup.picasso.Dispatcher$DispatcherHandler: void handleMessage(android.os.Message)> to <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>has compatibility isssues！
+-----------------------------------------
+crashApis:4
+crashApisInMain:2
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.net.NetworkInfo: boolean isConnected()> is checking!!!
+The life time of api is [1,30]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <com.squareup.picasso.NetworkRequestHandler: boolean shouldRetry(boolean,android.net.NetworkInfo)>[]--><android.net.NetworkInfo: boolean isConnected()>
+#1.the call statck between class <com.squareup.picasso.NetworkRequestHandler: boolean shouldRetry(boolean,android.net.NetworkInfo)> to <android.net.NetworkInfo: boolean isConnected()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <com.squareup.picasso.Dispatcher$DispatcherHandler: void handleMessage(android.os.Message)>[]--><com.squareup.picasso.Dispatcher: void performNetworkStateChange(android.net.NetworkInfo)>[]--><android.net.NetworkInfo: boolean isConnected()>
+!!!this api will crash on sdk 31 
+Error road: <com.squareup.picasso.Dispatcher$DispatcherHandler: void handleMessage(android.os.Message)>[]--><com.squareup.picasso.Dispatcher: void performRetry(com.squareup.picasso.BitmapHunter)>[]--><android.net.NetworkInfo: boolean isConnected()>
+#2.the call statck between class <com.squareup.picasso.Dispatcher$DispatcherHandler: void handleMessage(android.os.Message)> to <android.net.NetworkInfo: boolean isConnected()>has compatibility isssues！
+-----------------------------------------
+crashApis:5
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 5 Potential Issue API: SDKCheck of <android.os.BaseBundle: boolean containsKey(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.mikepenz.aboutlibraries.ui.LibsActivity dummyMainMethod_com_mikepenz_aboutlibraries_ui_LibsActivity(android.content.Intent)>[]--><com.mikepenz.aboutlibraries.ui.LibsActivity: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: boolean containsKey(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: boolean containsKey(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:6
+crashApisInMain:3
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 6 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <com.nkanaev.comics.fragment.LibraryFragment: void onItemClick(android.widget.AdapterView,android.view.View,int,long)>[]--><com.nkanaev.comics.fragment.LibraryBrowserFragment: com.nkanaev.comics.fragment.LibraryBrowserFragment create(java.lang.String)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#1.the call statck between class <com.nkanaev.comics.fragment.LibraryFragment: void onItemClick(android.widget.AdapterView,android.view.View,int,long)> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:7
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 7 Potential Issue API: SDKCheck of <android.provider.MediaStore.Images.Thumbnails: android.graphics.Bitmap getThumbnail(android.content.ContentResolver,long,int,android.graphics.BitmapFactory.Options)> is checking!!!
+The life time of api is [5,29]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 30 31 
+Error road: <com.squareup.picasso.MediaStoreRequestHandler: com.squareup.picasso.RequestHandler$Result load(com.squareup.picasso.Request,int)>[]--><android.provider.MediaStore.Images.Thumbnails: android.graphics.Bitmap getThumbnail(android.content.ContentResolver,long,int,android.graphics.BitmapFactory.Options)>
+#1.the call statck between class <com.squareup.picasso.MediaStoreRequestHandler: com.squareup.picasso.RequestHandler$Result load(com.squareup.picasso.Request,int)> to <android.provider.MediaStore.Images.Thumbnails: android.graphics.Bitmap getThumbnail(android.content.ContentResolver,long,int,android.graphics.BitmapFactory.Options)>has compatibility isssues！
+-----------------------------------------
+crashApis:8
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 8 Potential Issue API: SDKCheck of <android.content.res.Resources: android.graphics.drawable.Drawable getDrawable(int,android.content.res.Resources.Theme)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+###Multi invoking in one method, need manual check!!!--><com.mikepenz.aboutlibraries.util.UIUtils: android.graphics.drawable.Drawable getCompatDrawable(android.content.Context,int)>[[$i1 >= 21], [try]]
+###Multi invoking in one method, need manual check!!!--><com.mikepenz.aboutlibraries.util.UIUtils: android.graphics.drawable.Drawable getCompatDrawable(android.content.Context,int)>[[$i1 >= 21]][[try]]
+$i1 >= 21
+try
+Good road with try: <com.mikepenz.aboutlibraries.util.UIUtils: void setBackground(android.view.View,int)>[]--><com.mikepenz.aboutlibraries.util.UIUtils: android.graphics.drawable.Drawable getCompatDrawable(android.content.Context,int)>[[$i1 >= 21], [try]]--><android.content.res.Resources: android.graphics.drawable.Drawable getDrawable(int,android.content.res.Resources.Theme)>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 9 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)> is checking!!!
+The life time of api is [22,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 19 20 21 
+Error road: <com.nkanaev.comics.fragment.ReaderFragment: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+#1.the call statck between class <com.nkanaev.comics.fragment.ReaderFragment: void onSaveInstanceState(android.os.Bundle)> to <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 21 
+Error road: <com.nkanaev.comics.fragment.LibraryFragment: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+#2.the call statck between class <com.nkanaev.comics.fragment.LibraryFragment: void onSaveInstanceState(android.os.Bundle)> to <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+crashApis:9
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 10 Potential Issue API: SDKCheck of <android.net.NetworkInfo: int getSubtype()> is checking!!!
+The life time of api is [3,30]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <com.squareup.picasso.Dispatcher$DispatcherHandler: void handleMessage(android.os.Message)>[]--><com.squareup.picasso.Dispatcher: void performNetworkStateChange(android.net.NetworkInfo)>[]--><com.squareup.picasso.PicassoExecutorService: void adjustThreadCount(android.net.NetworkInfo)>[]--><android.net.NetworkInfo: int getSubtype()>
+#1.the call statck between class <com.squareup.picasso.Dispatcher$DispatcherHandler: void handleMessage(android.os.Message)> to <android.net.NetworkInfo: int getSubtype()>has compatibility isssues！
+-----------------------------------------
+crashApis:10
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 11 Potential Issue API: SDKCheck of <android.view.View: void drawableHotspotChanged(float,float)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i0 < 21
+Good road: <com.mikepenz.aboutlibraries.util.RippleForegroundListener: boolean onTouch(android.view.View,android.view.MotionEvent)>[[-$i0 < 21]]--><android.view.View: void drawableHotspotChanged(float,float)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 12 Potential Issue API: SDKCheck of <android.view.View: void setElevation(float)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+-$yysi0 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.nkanaev.comics.activity.MainActivity dummyMainMethod_com_nkanaev_comics_activity_MainActivity(android.content.Intent)>[]--><com.nkanaev.comics.activity.MainActivity: void onCreate(android.os.Bundle)>[[-$yysi0 < 21]]--><android.view.View: void setElevation(float)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:true
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 13 Potential Issue API: SDKCheck of <android.os.BaseBundle: boolean getBoolean(java.lang.String)> is checking!!!
+The life time of api is [22,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 21 
+Error road: <com.nkanaev.comics.fragment.ReaderFragment: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+#1.the call statck between class <com.nkanaev.comics.fragment.ReaderFragment: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)> to <android.os.BaseBundle: boolean getBoolean(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:11
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 14 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.lang.String getString(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+3call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.mikepenz.aboutlibraries.ui.LibsActivity dummyMainMethod_com_mikepenz_aboutlibraries_ui_LibsActivity(android.content.Intent)>[]--><com.mikepenz.aboutlibraries.ui.LibsActivity: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+2 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <com.nkanaev.comics.fragment.LibraryBrowserFragment: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#1.the call statck between class <com.nkanaev.comics.fragment.LibraryBrowserFragment: void onCreate(android.os.Bundle)> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <com.nkanaev.comics.fragment.LibraryBrowserFragment: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#2.the call statck between class <com.nkanaev.comics.fragment.LibraryBrowserFragment: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:12
+crashApisInMain:4
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 15 Potential Issue API: SDKCheck of <android.provider.MediaStore.Video.Thumbnails: android.graphics.Bitmap getThumbnail(android.content.ContentResolver,long,int,android.graphics.BitmapFactory.Options)> is checking!!!
+The life time of api is [5,29]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 30 31 
+Error road: <com.squareup.picasso.MediaStoreRequestHandler: com.squareup.picasso.RequestHandler$Result load(com.squareup.picasso.Request,int)>[]--><android.provider.MediaStore.Video.Thumbnails: android.graphics.Bitmap getThumbnail(android.content.ContentResolver,long,int,android.graphics.BitmapFactory.Options)>
+#1.the call statck between class <com.squareup.picasso.MediaStoreRequestHandler: com.squareup.picasso.RequestHandler$Result load(com.squareup.picasso.Request,int)> to <android.provider.MediaStore.Video.Thumbnails: android.graphics.Bitmap getThumbnail(android.content.ContentResolver,long,int,android.graphics.BitmapFactory.Options)>has compatibility isssues！
+-----------------------------------------
+crashApis:13
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 16 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putInt(java.lang.String,int)> is checking!!!
+The life time of api is [21,31]
+3call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.nkanaev.comics.activity.ReaderActivity dummyMainMethod_com_nkanaev_comics_activity_ReaderActivity(android.content.Intent)>[]--><com.nkanaev.comics.activity.ReaderActivity: void onCreate(android.os.Bundle)>[]--><com.nkanaev.comics.fragment.ReaderFragment: com.nkanaev.comics.fragment.ReaderFragment create(int)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.nkanaev.comics.activity.MainActivity dummyMainMethod_com_nkanaev_comics_activity_MainActivity(android.content.Intent)>[]--><com.nkanaev.comics.activity.MainActivity: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+2 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <com.nkanaev.comics.fragment.ReaderFragment: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#1.the call statck between class <com.nkanaev.comics.fragment.ReaderFragment: void onSaveInstanceState(android.os.Bundle)> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <com.nkanaev.comics.fragment.ReaderFragment$6: void onClick(android.content.DialogInterface,int)>[]--><com.nkanaev.comics.fragment.ReaderFragment: com.nkanaev.comics.fragment.ReaderFragment create(int)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#2.the call statck between class <com.nkanaev.comics.fragment.ReaderFragment$6: void onClick(android.content.DialogInterface,int)> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:14
+crashApisInMain:5
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 17 Potential Issue API: SDKCheck of <android.os.BaseBundle: int getInt(java.lang.String,int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.mikepenz.aboutlibraries.ui.LibsActivity dummyMainMethod_com_mikepenz_aboutlibraries_ui_LibsActivity(android.content.Intent)>[]--><com.mikepenz.aboutlibraries.ui.LibsActivity: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String,int)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: int getInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:15
+crashApisInMain:6
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 18 Potential Issue API: SDKCheck of <android.net.NetworkInfo: boolean isConnectedOrConnecting()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <com.squareup.picasso.Dispatcher$DispatcherHandler: void handleMessage(android.os.Message)>[]--><com.squareup.picasso.Dispatcher: void performNetworkStateChange(android.net.NetworkInfo)>[]--><com.squareup.picasso.PicassoExecutorService: void adjustThreadCount(android.net.NetworkInfo)>[]--><android.net.NetworkInfo: boolean isConnectedOrConnecting()>
+#1.the call statck between class <com.squareup.picasso.Dispatcher$DispatcherHandler: void handleMessage(android.os.Message)> to <android.net.NetworkInfo: boolean isConnectedOrConnecting()>has compatibility isssues！
+-----------------------------------------
+crashApis:16
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 19 Potential Issue API: SDKCheck of <android.view.Window: void setStatusBarColor(int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.mikepenz.aboutlibraries.ui.LibsActivity dummyMainMethod_com_mikepenz_aboutlibraries_ui_LibsActivity(android.content.Intent)>[]--><com.mikepenz.aboutlibraries.ui.LibsActivity: void onCreate(android.os.Bundle)>[[-$i0 < 21]]--><android.view.Window: void setStatusBarColor(int)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 20 Potential Issue API: SDKCheck of <java.awt.Insets: void <init>(int,int,int,int)> is checking!!!
+The life time of api is [1,8]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <org.apache.regexp.REDemo: void main(java.lang.String[])>[]--><org.apache.regexp.REDemo: void init()>[]--><java.awt.Insets: void <init>(int,int,int,int)>
+#1.the call statck between class <org.apache.regexp.REDemo: void main(java.lang.String[])> to <java.awt.Insets: void <init>(int,int,int,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:17
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 21 Potential Issue API: SDKCheck of <java.awt.event.WindowAdapter: void <init>()> is checking!!!
+The life time of api is [1,8]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <org.apache.regexp.REDemo: void main(java.lang.String[])>[[]]--><java.awt.event.WindowAdapter: void <init>()>
+#1.the call statck between class <org.apache.regexp.REDemo: void main(java.lang.String[])> to <java.awt.event.WindowAdapter: void <init>()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <org.apache.regexp.REDemo$1: void <init>()>[]--><java.awt.event.WindowAdapter: void <init>()>
+#2.the call statck between class <org.apache.regexp.REDemo$1: void <init>()> to <java.awt.event.WindowAdapter: void <init>()>has compatibility isssues！
+-----------------------------------------
+crashApis:18
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+crashApis numbers:18
+crashApis numbers in main road:6
+On Android Version 16 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 17 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 18 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 19 this app may have error api use(at least): 11 and error api roads: 21
+On Android Version 20 this app may have error api use(at least): 11 and error api roads: 21
+On Android Version 21 this app may have error api use(at least): 5 and error api roads: 7
+On Android Version 22 this app may have error api use(at least): 3 and error api roads: 4
+On Android Version 23 this app may have error api use(at least): 3 and error api roads: 4
+On Android Version 24 this app may have error api use(at least): 3 and error api roads: 4
+On Android Version 25 this app may have error api use(at least): 3 and error api roads: 4
+On Android Version 26 this app may have error api use(at least): 3 and error api roads: 4
+On Android Version 27 this app may have error api use(at least): 3 and error api roads: 4
+On Android Version 28 this app may have error api use(at least): 3 and error api roads: 4
+On Android Version 29 this app may have error api use(at least): 3 and error api roads: 4
+On Android Version 30 this app may have error api use(at least): 5 and error api roads: 6
+On Android Version 31 this app may have error api use(at least): 10 and error api roads: 14

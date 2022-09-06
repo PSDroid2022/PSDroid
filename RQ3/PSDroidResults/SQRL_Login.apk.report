@@ -1,0 +1,1258 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/SQRL_Login.apk
+Entry Points[org.ea.sqrl.activites.create.SaveIdentityActivity, org.ea.sqrl.activites.LoginActivity, org.ea.sqrl.activites.identity.TextImportActivity, org.ea.sqrl.activites.identity.ImportOptionsActivity, org.ea.sqrl.activites.ClearQuickPassActivity, org.ea.sqrl.activites.create.NewIdentityDoneActivity, org.ea.sqrl.activites.IntroductionActivity, org.ea.sqrl.activites.CPSMissingActivity, org.ea.sqrl.services.ClearIdentityReceiver, org.ea.sqrl.activites.create.CreateIdentityActivity, org.ea.sqrl.activites.identity.ShowIdentityActivity, org.ea.sqrl.activites.MainActivity, com.journeyapps.barcodescanner.CaptureActivity, org.ea.sqrl.activites.identity.ChangePasswordActivity, org.ea.sqrl.services.ClearIdentityService, org.ea.sqrl.activites.create.RekeyIdentityActivity, org.ea.sqrl.activites.create.RescueCodeShowActivity, org.ea.sqrl.activites.create.EntropyGatherActivity, org.ea.sqrl.activites.create.RescueCodeEnterActivity, org.ea.sqrl.activites.identity.ImportActivity, org.ea.sqrl.activites.LanguageActivity, org.ea.sqrl.activites.identity.RenameActivity, org.ea.sqrl.activites.StartActivity, org.ea.sqrl.utils.SqrlApplication, org.ea.sqrl.activites.identity.IdentitySettingsActivity, org.ea.sqrl.activites.identity.ResetPasswordActivity, org.ea.sqrl.activites.identity.ExportOptionsActivity, org.ea.sqrl.activites.create.RekeyVerifyActivity, org.ea.sqrl.activites.EnableQuickPassActivity, org.ea.sqrl.activites.identity.IdentityManagementActivity]
+FllowDroidcallgraph size:4839
+Soot started on Mon Jul 11 12:30:51 CST 2022
+Soot finished on Mon Jul 11 12:31:08 CST 2022
+Soot has run for 0 min. 16 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 19
+Declared Target Sdk version is: 28
+Declared Max Sdk version is: -1
+Collected 667 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.hardware.biometrics.BiometricPrompt.Builder: android.hardware.biometrics.BiometricPrompt.Builder setSubtitle(java.lang.CharSequence)> is checking!!!
+The life time of api is [28,31]
+1call roads:
+1 Mainhead roads:
+i0 >= 28
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.ea.sqrl.activites.LoginActivity dummyMainMethod_org_ea_sqrl_activites_LoginActivity(android.content.Intent)>[]--><org.ea.sqrl.activites.LoginActivity: void onCreate(android.os.Bundle)>[]--><org.ea.sqrl.activites.LoginActivity: void doLoginBiometric()>[[i0 >= 28]]--><android.hardware.biometrics.BiometricPrompt.Builder: android.hardware.biometrics.BiometricPrompt.Builder setSubtitle(java.lang.CharSequence)>
+One road protect good!
+i0 >= 28
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.ea.sqrl.activites.EnableQuickPassActivity dummyMainMethod_org_ea_sqrl_activites_EnableQuickPassActivity(android.content.Intent)>[]--><org.ea.sqrl.activites.EnableQuickPassActivity: void onCreate(android.os.Bundle)>[]--><org.ea.sqrl.activites.LoginActivity: void onCreate(android.os.Bundle)>[]--><org.ea.sqrl.activites.LoginActivity: void doLoginBiometric()>[[i0 >= 28]]--><android.hardware.biometrics.BiometricPrompt.Builder: android.hardware.biometrics.BiometricPrompt.Builder setSubtitle(java.lang.CharSequence)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.hardware.biometrics.BiometricPrompt.AuthenticationResult: android.hardware.biometrics.BiometricPrompt.CryptoObject getCryptoObject()> is checking!!!
+The life time of api is [28,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+try
+Good road with try: <org.ea.sqrl.processors.BioAuthenticationCallback: void onAuthenticationSucceeded(android.hardware.biometrics.BiometricPrompt$AuthenticationResult)>[[try]]--><android.hardware.biometrics.BiometricPrompt.AuthenticationResult: android.hardware.biometrics.BiometricPrompt.CryptoObject getCryptoObject()>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.os.BaseBundle: int getInt(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.ea.sqrl.activites.IntroductionActivity dummyMainMethod_org_ea_sqrl_activites_IntroductionActivity(android.content.Intent)>[]--><dummyMainClass: org.ea.sqrl.activites.IntroductionActivity$PlaceholderFragment dummyMainMethod_org_ea_sqrl_activites_IntroductionActivity$PlaceholderFragment(android.content.Intent,android.app.Activity)>[]--><org.ea.sqrl.activites.IntroductionActivity$PlaceholderFragment: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:1
+crashApisInMain:1
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.graphics.drawable.Icon: android.graphics.drawable.Icon createWithResource(android.content.Context,int)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+1 Mainhead roads:
+-i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><org.ea.sqrl.utils.SqrlApplication: void onCreate()>[]--><org.ea.sqrl.utils.SqrlApplication: void configureShortcuts(android.content.Context)>[[-i0 < 26]]--><android.graphics.drawable.Icon: android.graphics.drawable.Icon createWithResource(android.content.Context,int)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putLongArray(java.lang.String,long[])> is checking!!!
+The life time of api is [21,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 5 Potential Issue API: SDKCheck of <android.hardware.biometrics.BiometricPrompt.AuthenticationCallback: void onAuthenticationError(int,java.lang.CharSequence)> is checking!!!
+The life time of api is [28,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 21 22 23 24 25 26 27 
+Error road: <org.ea.sqrl.processors.BioAuthenticationCallback: void onAuthenticationError(int,java.lang.CharSequence)>[]--><android.hardware.biometrics.BiometricPrompt.AuthenticationCallback: void onAuthenticationError(int,java.lang.CharSequence)>
+#1.the call statck between class <org.ea.sqrl.processors.BioAuthenticationCallback: void onAuthenticationError(int,java.lang.CharSequence)> to <android.hardware.biometrics.BiometricPrompt.AuthenticationCallback: void onAuthenticationError(int,java.lang.CharSequence)>has compatibility isssues！
+-----------------------------------------
+crashApis:2
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 6 Potential Issue API: SDKCheck of <android.content.Context: java.lang.Object getSystemService(java.lang.Class)> is checking!!!
+The life time of api is [23,31]
+7call roads:
+1 Mainhead roads:
+-i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><org.ea.sqrl.utils.SqrlApplication: void onCreate()>[]--><org.ea.sqrl.utils.SqrlApplication: void setApplicationShortcuts(android.content.Context)>[[-i0 < 26]]--><android.content.Context: java.lang.Object getSystemService(java.lang.Class)>
+One road protect good!
+-i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.ea.sqrl.services.ClearIdentityService dummyMainMethod_org_ea_sqrl_services_ClearIdentityService(android.content.Intent)>[]--><org.ea.sqrl.services.ClearIdentityService: boolean onStartJob(android.app.job.JobParameters)>[]--><org.ea.sqrl.processors.SQRLStorage: void clearQuickPass()>[]--><org.ea.sqrl.utils.SqrlApplication: void setApplicationShortcuts(android.content.Context)>[[-i0 < 26]]--><android.content.Context: java.lang.Object getSystemService(java.lang.Class)>
+One road protect good!
+-i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.ea.sqrl.activites.EnableQuickPassActivity dummyMainMethod_org_ea_sqrl_activites_EnableQuickPassActivity(android.content.Intent)>[]--><org.ea.sqrl.utils.'-$$Lambda$IdentitySelector$1$rfaA-eK3-vX_Q1MDqhSuHppFLHY': void onClick(android.content.DialogInterface,int)>[]--><org.ea.sqrl.utils.IdentitySelector$1: void lambda$onClick$0$IdentitySelector$1(android.content.DialogInterface,int)>[]--><org.ea.sqrl.utils.IdentitySelector: void access$400(org.ea.sqrl.utils.IdentitySelector,int)>[]--><org.ea.sqrl.utils.IdentitySelector: void selectIdentityInternal(int)>[]--><org.ea.sqrl.utils.SqrlApplication: void setCurrentId(android.content.Context,long)>[]--><org.ea.sqrl.processors.SQRLStorage: void clearQuickPass()>[]--><org.ea.sqrl.utils.SqrlApplication: void setApplicationShortcuts(android.content.Context)>[[-i0 < 26]]--><android.content.Context: java.lang.Object getSystemService(java.lang.Class)>
+One road protect good!
+-i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.ea.sqrl.activites.MainActivity dummyMainMethod_org_ea_sqrl_activites_MainActivity(android.content.Intent)>[]--><org.ea.sqrl.utils.'-$$Lambda$IdentitySelector$1$rfaA-eK3-vX_Q1MDqhSuHppFLHY': void onClick(android.content.DialogInterface,int)>[]--><org.ea.sqrl.utils.IdentitySelector$1: void lambda$onClick$0$IdentitySelector$1(android.content.DialogInterface,int)>[]--><org.ea.sqrl.utils.IdentitySelector: void access$400(org.ea.sqrl.utils.IdentitySelector,int)>[]--><org.ea.sqrl.utils.IdentitySelector: void selectIdentityInternal(int)>[]--><org.ea.sqrl.utils.SqrlApplication: void setCurrentId(android.content.Context,long)>[]--><org.ea.sqrl.processors.SQRLStorage: void clearQuickPass()>[]--><org.ea.sqrl.utils.SqrlApplication: void setApplicationShortcuts(android.content.Context)>[[-i0 < 26]]--><android.content.Context: java.lang.Object getSystemService(java.lang.Class)>
+One road protect good!
+-i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.ea.sqrl.activites.ClearQuickPassActivity dummyMainMethod_org_ea_sqrl_activites_ClearQuickPassActivity(android.content.Intent)>[]--><org.ea.sqrl.activites.ClearQuickPassActivity: void onCreate(android.os.Bundle)>[]--><org.ea.sqrl.processors.SQRLStorage: void clearQuickPass()>[]--><org.ea.sqrl.utils.SqrlApplication: void setApplicationShortcuts(android.content.Context)>[[-i0 < 26]]--><android.content.Context: java.lang.Object getSystemService(java.lang.Class)>
+One road protect good!
+-i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.ea.sqrl.services.ClearIdentityReceiver dummyMainMethod_org_ea_sqrl_services_ClearIdentityReceiver(android.content.Intent)>[]--><org.ea.sqrl.services.ClearIdentityReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><org.ea.sqrl.processors.SQRLStorage: void clearQuickPass()>[]--><org.ea.sqrl.utils.SqrlApplication: void setApplicationShortcuts(android.content.Context)>[[-i0 < 26]]--><android.content.Context: java.lang.Object getSystemService(java.lang.Class)>
+One road protect good!
+-i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.ea.sqrl.activites.identity.IdentityManagementActivity dummyMainMethod_org_ea_sqrl_activites_identity_IdentityManagementActivity(android.content.Intent)>[]--><org.ea.sqrl.utils.'-$$Lambda$IdentitySelector$1$rfaA-eK3-vX_Q1MDqhSuHppFLHY': void onClick(android.content.DialogInterface,int)>[]--><org.ea.sqrl.utils.IdentitySelector$1: void lambda$onClick$0$IdentitySelector$1(android.content.DialogInterface,int)>[]--><org.ea.sqrl.utils.IdentitySelector: void access$400(org.ea.sqrl.utils.IdentitySelector,int)>[]--><org.ea.sqrl.utils.IdentitySelector: void selectIdentityInternal(int)>[]--><org.ea.sqrl.utils.SqrlApplication: void setCurrentId(android.content.Context,long)>[]--><org.ea.sqrl.processors.SQRLStorage: void clearQuickPass()>[]--><org.ea.sqrl.utils.SqrlApplication: void setApplicationShortcuts(android.content.Context)>[[-i0 < 26]]--><android.content.Context: java.lang.Object getSystemService(java.lang.Class)>
+One road protect good!
+6 Packageshead roads:
+-i0 < 26
+Good road: <org.ea.sqrl.utils.IdentitySelector: void lambda$removeIdentity$0$IdentitySelector(android.content.DialogInterface,int)>[]--><org.ea.sqrl.utils.SqrlApplication: void setCurrentId(android.content.Context,long)>[]--><org.ea.sqrl.processors.SQRLStorage: void clearQuickPass()>[]--><org.ea.sqrl.utils.SqrlApplication: void setApplicationShortcuts(android.content.Context)>[[-i0 < 26]]--><android.content.Context: java.lang.Object getSystemService(java.lang.Class)>
+One road protect good!
+containsStatic:false
+containsTry:true
+7call by main package
+-----------------------------------------
+#################################################
+N 7 Potential Issue API: SDKCheck of <android.hardware.biometrics.BiometricPrompt.Builder: android.hardware.biometrics.BiometricPrompt.Builder setDescription(java.lang.CharSequence)> is checking!!!
+The life time of api is [28,31]
+1call roads:
+1 Mainhead roads:
+i0 >= 28
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.ea.sqrl.activites.LoginActivity dummyMainMethod_org_ea_sqrl_activites_LoginActivity(android.content.Intent)>[]--><org.ea.sqrl.activites.LoginActivity: void onCreate(android.os.Bundle)>[]--><org.ea.sqrl.activites.LoginActivity: void doLoginBiometric()>[[i0 >= 28]]--><android.hardware.biometrics.BiometricPrompt.Builder: android.hardware.biometrics.BiometricPrompt.Builder setDescription(java.lang.CharSequence)>
+One road protect good!
+i0 >= 28
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.ea.sqrl.activites.EnableQuickPassActivity dummyMainMethod_org_ea_sqrl_activites_EnableQuickPassActivity(android.content.Intent)>[]--><org.ea.sqrl.activites.EnableQuickPassActivity: void onCreate(android.os.Bundle)>[]--><org.ea.sqrl.activites.LoginActivity: void onCreate(android.os.Bundle)>[]--><org.ea.sqrl.activites.LoginActivity: void doLoginBiometric()>[[i0 >= 28]]--><android.hardware.biometrics.BiometricPrompt.Builder: android.hardware.biometrics.BiometricPrompt.Builder setDescription(java.lang.CharSequence)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 8 Potential Issue API: SDKCheck of <android.content.pm.ShortcutInfo.Builder: void <init>(android.content.Context,java.lang.String)> is checking!!!
+The life time of api is [25,31]
+1call roads:
+1 Mainhead roads:
+-i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><org.ea.sqrl.utils.SqrlApplication: void onCreate()>[]--><org.ea.sqrl.utils.SqrlApplication: void configureShortcuts(android.content.Context)>[[-i0 < 26]]--><android.content.pm.ShortcutInfo.Builder: void <init>(android.content.Context,java.lang.String)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 9 Potential Issue API: SDKCheck of <android.content.pm.ShortcutInfo.Builder: android.content.pm.ShortcutInfo.Builder setShortLabel(java.lang.CharSequence)> is checking!!!
+The life time of api is [25,31]
+1call roads:
+1 Mainhead roads:
+-i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><org.ea.sqrl.utils.SqrlApplication: void onCreate()>[]--><org.ea.sqrl.utils.SqrlApplication: void configureShortcuts(android.content.Context)>[[-i0 < 26]]--><android.content.pm.ShortcutInfo.Builder: android.content.pm.ShortcutInfo.Builder setShortLabel(java.lang.CharSequence)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 10 Potential Issue API: SDKCheck of <android.app.job.JobInfo.Builder: void <init>(int,android.content.ComponentName)> is checking!!!
+The life time of api is [21,31]
+6call roads:
+1 Mainhead roads:
+5 Packageshead roads:
+containsStatic:false
+containsTry:true
+6call by main package
+-----------------------------------------
+#################################################
+N 11 Potential Issue API: SDKCheck of <android.content.pm.ShortcutManager: boolean setDynamicShortcuts(java.util.List)> is checking!!!
+The life time of api is [25,31]
+7call roads:
+1 Mainhead roads:
+-i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><org.ea.sqrl.utils.SqrlApplication: void onCreate()>[]--><org.ea.sqrl.utils.SqrlApplication: void setApplicationShortcuts(android.content.Context)>[[-i0 < 26]]--><android.content.pm.ShortcutManager: boolean setDynamicShortcuts(java.util.List)>
+One road protect good!
+-i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.ea.sqrl.services.ClearIdentityService dummyMainMethod_org_ea_sqrl_services_ClearIdentityService(android.content.Intent)>[]--><org.ea.sqrl.services.ClearIdentityService: boolean onStartJob(android.app.job.JobParameters)>[]--><org.ea.sqrl.processors.SQRLStorage: void clearQuickPass()>[]--><org.ea.sqrl.utils.SqrlApplication: void setApplicationShortcuts(android.content.Context)>[[-i0 < 26]]--><android.content.pm.ShortcutManager: boolean setDynamicShortcuts(java.util.List)>
+One road protect good!
+-i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.ea.sqrl.activites.EnableQuickPassActivity dummyMainMethod_org_ea_sqrl_activites_EnableQuickPassActivity(android.content.Intent)>[]--><org.ea.sqrl.utils.'-$$Lambda$IdentitySelector$1$rfaA-eK3-vX_Q1MDqhSuHppFLHY': void onClick(android.content.DialogInterface,int)>[]--><org.ea.sqrl.utils.IdentitySelector$1: void lambda$onClick$0$IdentitySelector$1(android.content.DialogInterface,int)>[]--><org.ea.sqrl.utils.IdentitySelector: void access$400(org.ea.sqrl.utils.IdentitySelector,int)>[]--><org.ea.sqrl.utils.IdentitySelector: void selectIdentityInternal(int)>[]--><org.ea.sqrl.utils.SqrlApplication: void setCurrentId(android.content.Context,long)>[]--><org.ea.sqrl.processors.SQRLStorage: void clearQuickPass()>[]--><org.ea.sqrl.utils.SqrlApplication: void setApplicationShortcuts(android.content.Context)>[[-i0 < 26]]--><android.content.pm.ShortcutManager: boolean setDynamicShortcuts(java.util.List)>
+One road protect good!
+-i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.ea.sqrl.activites.MainActivity dummyMainMethod_org_ea_sqrl_activites_MainActivity(android.content.Intent)>[]--><org.ea.sqrl.utils.'-$$Lambda$IdentitySelector$1$rfaA-eK3-vX_Q1MDqhSuHppFLHY': void onClick(android.content.DialogInterface,int)>[]--><org.ea.sqrl.utils.IdentitySelector$1: void lambda$onClick$0$IdentitySelector$1(android.content.DialogInterface,int)>[]--><org.ea.sqrl.utils.IdentitySelector: void access$400(org.ea.sqrl.utils.IdentitySelector,int)>[]--><org.ea.sqrl.utils.IdentitySelector: void selectIdentityInternal(int)>[]--><org.ea.sqrl.utils.SqrlApplication: void setCurrentId(android.content.Context,long)>[]--><org.ea.sqrl.processors.SQRLStorage: void clearQuickPass()>[]--><org.ea.sqrl.utils.SqrlApplication: void setApplicationShortcuts(android.content.Context)>[[-i0 < 26]]--><android.content.pm.ShortcutManager: boolean setDynamicShortcuts(java.util.List)>
+One road protect good!
+-i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.ea.sqrl.activites.ClearQuickPassActivity dummyMainMethod_org_ea_sqrl_activites_ClearQuickPassActivity(android.content.Intent)>[]--><org.ea.sqrl.activites.ClearQuickPassActivity: void onCreate(android.os.Bundle)>[]--><org.ea.sqrl.processors.SQRLStorage: void clearQuickPass()>[]--><org.ea.sqrl.utils.SqrlApplication: void setApplicationShortcuts(android.content.Context)>[[-i0 < 26]]--><android.content.pm.ShortcutManager: boolean setDynamicShortcuts(java.util.List)>
+One road protect good!
+-i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.ea.sqrl.services.ClearIdentityReceiver dummyMainMethod_org_ea_sqrl_services_ClearIdentityReceiver(android.content.Intent)>[]--><org.ea.sqrl.services.ClearIdentityReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><org.ea.sqrl.processors.SQRLStorage: void clearQuickPass()>[]--><org.ea.sqrl.utils.SqrlApplication: void setApplicationShortcuts(android.content.Context)>[[-i0 < 26]]--><android.content.pm.ShortcutManager: boolean setDynamicShortcuts(java.util.List)>
+One road protect good!
+-i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.ea.sqrl.activites.identity.IdentityManagementActivity dummyMainMethod_org_ea_sqrl_activites_identity_IdentityManagementActivity(android.content.Intent)>[]--><org.ea.sqrl.utils.'-$$Lambda$IdentitySelector$1$rfaA-eK3-vX_Q1MDqhSuHppFLHY': void onClick(android.content.DialogInterface,int)>[]--><org.ea.sqrl.utils.IdentitySelector$1: void lambda$onClick$0$IdentitySelector$1(android.content.DialogInterface,int)>[]--><org.ea.sqrl.utils.IdentitySelector: void access$400(org.ea.sqrl.utils.IdentitySelector,int)>[]--><org.ea.sqrl.utils.IdentitySelector: void selectIdentityInternal(int)>[]--><org.ea.sqrl.utils.SqrlApplication: void setCurrentId(android.content.Context,long)>[]--><org.ea.sqrl.processors.SQRLStorage: void clearQuickPass()>[]--><org.ea.sqrl.utils.SqrlApplication: void setApplicationShortcuts(android.content.Context)>[[-i0 < 26]]--><android.content.pm.ShortcutManager: boolean setDynamicShortcuts(java.util.List)>
+One road protect good!
+6 Packageshead roads:
+-i0 < 26
+Good road: <org.ea.sqrl.utils.IdentitySelector: void lambda$removeIdentity$0$IdentitySelector(android.content.DialogInterface,int)>[]--><org.ea.sqrl.utils.SqrlApplication: void setCurrentId(android.content.Context,long)>[]--><org.ea.sqrl.processors.SQRLStorage: void clearQuickPass()>[]--><org.ea.sqrl.utils.SqrlApplication: void setApplicationShortcuts(android.content.Context)>[[-i0 < 26]]--><android.content.pm.ShortcutManager: boolean setDynamicShortcuts(java.util.List)>
+One road protect good!
+containsStatic:false
+containsTry:true
+7call by main package
+-----------------------------------------
+#################################################
+N 12 Potential Issue API: SDKCheck of <android.util.Size: int getWidth()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <androidx.versionedparcelable.VersionedParcel: void writeSize(android.util.Size,int)>[]--><android.util.Size: int getWidth()>
+#1.the call statck between class <androidx.versionedparcelable.VersionedParcel: void writeSize(android.util.Size,int)> to <android.util.Size: int getWidth()>has compatibility isssues！
+-----------------------------------------
+crashApis:3
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 13 Potential Issue API: SDKCheck of <android.os.BaseBundle: boolean containsKey(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.journeyapps.barcodescanner.CaptureActivity dummyMainMethod_com_journeyapps_barcodescanner_CaptureActivity(android.content.Intent)>[]--><com.journeyapps.barcodescanner.CaptureActivity: void onCreate(android.os.Bundle)>[]--><com.journeyapps.barcodescanner.CaptureManager: void initializeFromIntent(android.content.Intent,android.os.Bundle)>[]--><com.journeyapps.barcodescanner.CompoundBarcodeView: void initializeFromIntent(android.content.Intent)>[]--><com.google.zxing.client.android.DecodeHintManager: java.util.Map parseDecodeHints(android.content.Intent)>[]--><android.os.BaseBundle: boolean containsKey(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: boolean containsKey(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:4
+crashApisInMain:2
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 14 Potential Issue API: SDKCheck of <android.app.job.JobInfo.Builder: android.app.job.JobInfo build()> is checking!!!
+The life time of api is [21,31]
+6call roads:
+1 Mainhead roads:
+5 Packageshead roads:
+containsStatic:false
+containsTry:true
+6call by main package
+-----------------------------------------
+#################################################
+N 15 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)> is checking!!!
+The life time of api is [21,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 16 Potential Issue API: SDKCheck of <android.security.keystore.KeyGenParameterSpec.Builder: android.security.keystore.KeyGenParameterSpec.Builder setEncryptionPaddings(java.lang.String[])> is checking!!!
+The life time of api is [23,31]
+7call roads:
+1 Mainhead roads:
+6 Packageshead roads:
+###Multi invoking in one method, need manual check!!!)>[[try]]--><org.ea.sqrl.processors.SQRLStorage: boolean decryptIdentityKey(java.lang.String,org.ea.sqrl.processors.EntropyHarvester,boolean)>[[try]]--><org.ea.sqrl.processors.SQRLStorage: void encryptIdentityKeyBiometric(byte[])>[[try], [-i0 < 28]]
+###Multi invoking in one method, need manual check!!!)>[[try]]--><org.ea.sqrl.processors.SQRLStorage: boolean decryptIdentityKey(java.lang.String,org.ea.sqrl.processors.EntropyHarvester,boolean)>[[try]]--><org.ea.sqrl.processors.SQRLStorage: void encryptIdentityKeyBiometric(byte[])>[[try]][[-i0 < 28]]
+try
+Good road with try: <org.ea.sqrl.processors.CommunicationHandler: void main(java.lang.String[])>[[try]]--><org.ea.sqrl.processors.SQRLStorage: boolean decryptIdentityKey(java.lang.String,org.ea.sqrl.processors.EntropyHarvester,boolean)>[[try]]--><org.ea.sqrl.processors.SQRLStorage: void encryptIdentityKeyBiometric(byte[])>[[try], [-i0 < 28]]--><android.security.keystore.KeyGenParameterSpec.Builder: android.security.keystore.KeyGenParameterSpec.Builder setEncryptionPaddings(java.lang.String[])>
+One road protect good!
+containsStatic:false
+containsTry:true
+7call by main package
+-----------------------------------------
+#################################################
+N 17 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putBooleanArray(java.lang.String,boolean[])> is checking!!!
+The life time of api is [22,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 18 Potential Issue API: SDKCheck of <android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)> is checking!!!
+The life time of api is [22,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.ea.sqrl.activites.LoginActivity dummyMainMethod_org_ea_sqrl_activites_LoginActivity(android.content.Intent)>[]--><org.ea.sqrl.activites.base.BaseActivity: void onRestoreInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>
+!!!this api will crash on sdk 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.ea.sqrl.activites.identity.ShowIdentityActivity dummyMainMethod_org_ea_sqrl_activites_identity_ShowIdentityActivity(android.content.Intent)>[]--><org.ea.sqrl.activites.base.BaseActivity: void onRestoreInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>
+!!!this api will crash on sdk 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.ea.sqrl.activites.StartActivity dummyMainMethod_org_ea_sqrl_activites_StartActivity(android.content.Intent)>[]--><org.ea.sqrl.activites.base.BaseActivity: void onRestoreInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>
+!!!this api will crash on sdk 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.ea.sqrl.activites.identity.RenameActivity dummyMainMethod_org_ea_sqrl_activites_identity_RenameActivity(android.content.Intent)>[]--><org.ea.sqrl.activites.base.BaseActivity: void onRestoreInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>
+!!!this api will crash on sdk 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.ea.sqrl.activites.create.NewIdentityDoneActivity dummyMainMethod_org_ea_sqrl_activites_create_NewIdentityDoneActivity(android.content.Intent)>[]--><org.ea.sqrl.activites.base.BaseActivity: void onRestoreInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>
+!!!this api will crash on sdk 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.ea.sqrl.activites.create.RekeyVerifyActivity dummyMainMethod_org_ea_sqrl_activites_create_RekeyVerifyActivity(android.content.Intent)>[]--><org.ea.sqrl.activites.base.BaseActivity: void onRestoreInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>
+!!!this api will crash on sdk 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.ea.sqrl.activites.identity.IdentitySettingsActivity dummyMainMethod_org_ea_sqrl_activites_identity_IdentitySettingsActivity(android.content.Intent)>[]--><org.ea.sqrl.activites.base.BaseActivity: void onRestoreInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>
+!!!this api will crash on sdk 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.ea.sqrl.activites.identity.ChangePasswordActivity dummyMainMethod_org_ea_sqrl_activites_identity_ChangePasswordActivity(android.content.Intent)>[]--><org.ea.sqrl.activites.base.BaseActivity: void onRestoreInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>
+!!!this api will crash on sdk 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.ea.sqrl.activites.identity.ImportActivity dummyMainMethod_org_ea_sqrl_activites_identity_ImportActivity(android.content.Intent)>[]--><org.ea.sqrl.activites.base.BaseActivity: void onRestoreInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>
+!!!this api will crash on sdk 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.ea.sqrl.activites.identity.TextImportActivity dummyMainMethod_org_ea_sqrl_activites_identity_TextImportActivity(android.content.Intent)>[]--><org.ea.sqrl.activites.base.BaseActivity: void onRestoreInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>
+!!!this api will crash on sdk 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.ea.sqrl.activites.identity.ImportOptionsActivity dummyMainMethod_org_ea_sqrl_activites_identity_ImportOptionsActivity(android.content.Intent)>[]--><org.ea.sqrl.activites.base.BaseActivity: void onRestoreInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>
+!!!this api will crash on sdk 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.ea.sqrl.activites.CPSMissingActivity dummyMainMethod_org_ea_sqrl_activites_CPSMissingActivity(android.content.Intent)>[]--><org.ea.sqrl.activites.base.BaseActivity: void onRestoreInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>
+!!!this api will crash on sdk 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.ea.sqrl.activites.identity.IdentityManagementActivity dummyMainMethod_org_ea_sqrl_activites_identity_IdentityManagementActivity(android.content.Intent)>[]--><org.ea.sqrl.activites.base.BaseActivity: void onRestoreInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>
+!!!this api will crash on sdk 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.ea.sqrl.activites.identity.ResetPasswordActivity dummyMainMethod_org_ea_sqrl_activites_identity_ResetPasswordActivity(android.content.Intent)>[]--><org.ea.sqrl.activites.base.BaseActivity: void onRestoreInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>
+!!!this api will crash on sdk 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.ea.sqrl.activites.MainActivity dummyMainMethod_org_ea_sqrl_activites_MainActivity(android.content.Intent)>[]--><org.ea.sqrl.activites.base.BaseActivity: void onRestoreInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>
+!!!this api will crash on sdk 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.ea.sqrl.activites.identity.ExportOptionsActivity dummyMainMethod_org_ea_sqrl_activites_identity_ExportOptionsActivity(android.content.Intent)>[]--><org.ea.sqrl.activites.base.BaseActivity: void onRestoreInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>
+!!!this api will crash on sdk 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.ea.sqrl.activites.create.SaveIdentityActivity dummyMainMethod_org_ea_sqrl_activites_create_SaveIdentityActivity(android.content.Intent)>[]--><org.ea.sqrl.activites.base.BaseActivity: void onRestoreInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>
+!!!this api will crash on sdk 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.ea.sqrl.activites.EnableQuickPassActivity dummyMainMethod_org_ea_sqrl_activites_EnableQuickPassActivity(android.content.Intent)>[]--><org.ea.sqrl.activites.base.BaseActivity: void onRestoreInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>
+!!!this api will crash on sdk 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.ea.sqrl.activites.ClearQuickPassActivity dummyMainMethod_org_ea_sqrl_activites_ClearQuickPassActivity(android.content.Intent)>[]--><org.ea.sqrl.activites.base.BaseActivity: void onRestoreInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:5
+crashApisInMain:3
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 19 Potential Issue API: SDKCheck of <android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-i0 < 26
+Good road: <org.ea.sqrl.activites.base.BaseActivity: void showClearNotification()>[[-i0 < 26]]--><android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 20 Potential Issue API: SDKCheck of <android.hardware.biometrics.BiometricPrompt.Builder: android.hardware.biometrics.BiometricPrompt.Builder setTitle(java.lang.CharSequence)> is checking!!!
+The life time of api is [28,31]
+1call roads:
+1 Mainhead roads:
+i0 >= 28
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.ea.sqrl.activites.LoginActivity dummyMainMethod_org_ea_sqrl_activites_LoginActivity(android.content.Intent)>[]--><org.ea.sqrl.activites.LoginActivity: void onCreate(android.os.Bundle)>[]--><org.ea.sqrl.activites.LoginActivity: void doLoginBiometric()>[[i0 >= 28]]--><android.hardware.biometrics.BiometricPrompt.Builder: android.hardware.biometrics.BiometricPrompt.Builder setTitle(java.lang.CharSequence)>
+One road protect good!
+i0 >= 28
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.ea.sqrl.activites.EnableQuickPassActivity dummyMainMethod_org_ea_sqrl_activites_EnableQuickPassActivity(android.content.Intent)>[]--><org.ea.sqrl.activites.EnableQuickPassActivity: void onCreate(android.os.Bundle)>[]--><org.ea.sqrl.activites.LoginActivity: void onCreate(android.os.Bundle)>[]--><org.ea.sqrl.activites.LoginActivity: void doLoginBiometric()>[[i0 >= 28]]--><android.hardware.biometrics.BiometricPrompt.Builder: android.hardware.biometrics.BiometricPrompt.Builder setTitle(java.lang.CharSequence)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 21 Potential Issue API: SDKCheck of <android.util.Size: void <init>(int,int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <androidx.versionedparcelable.VersionedParcel: android.util.Size readSize(android.util.Size,int)>[]--><android.util.Size: void <init>(int,int)>
+#1.the call statck between class <androidx.versionedparcelable.VersionedParcel: android.util.Size readSize(android.util.Size,int)> to <android.util.Size: void <init>(int,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:6
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 22 Potential Issue API: SDKCheck of <android.hardware.biometrics.BiometricPrompt.CryptoObject: void <init>(javax.crypto.Cipher)> is checking!!!
+The life time of api is [28,31]
+1call roads:
+1 Mainhead roads:
+###Multi invoking in one method, need manual check!!!--><org.ea.sqrl.activites.LoginActivity: void doLoginBiometric()>[[try], [i0 >= 28]]
+###Multi invoking in one method, need manual check!!!--><org.ea.sqrl.activites.LoginActivity: void doLoginBiometric()>[[try]][[i0 >= 28]]
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.ea.sqrl.activites.LoginActivity dummyMainMethod_org_ea_sqrl_activites_LoginActivity(android.content.Intent)>[]--><org.ea.sqrl.activites.LoginActivity: void onCreate(android.os.Bundle)>[]--><org.ea.sqrl.activites.LoginActivity: void doLoginBiometric()>[[try], [i0 >= 28]]--><android.hardware.biometrics.BiometricPrompt.CryptoObject: void <init>(javax.crypto.Cipher)>
+One road protect good!
+###Multi invoking in one method, need manual check!!!--><org.ea.sqrl.activites.LoginActivity: void doLoginBiometric()>[[try], [i0 >= 28]]
+###Multi invoking in one method, need manual check!!!--><org.ea.sqrl.activites.LoginActivity: void doLoginBiometric()>[[try]][[i0 >= 28]]
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.ea.sqrl.activites.EnableQuickPassActivity dummyMainMethod_org_ea_sqrl_activites_EnableQuickPassActivity(android.content.Intent)>[]--><org.ea.sqrl.activites.EnableQuickPassActivity: void onCreate(android.os.Bundle)>[]--><org.ea.sqrl.activites.LoginActivity: void onCreate(android.os.Bundle)>[]--><org.ea.sqrl.activites.LoginActivity: void doLoginBiometric()>[[try], [i0 >= 28]]--><android.hardware.biometrics.BiometricPrompt.CryptoObject: void <init>(javax.crypto.Cipher)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:true
+1call by main package
+-----------------------------------------
+#################################################
+N 23 Potential Issue API: SDKCheck of <android.content.pm.ShortcutInfo.Builder: android.content.pm.ShortcutInfo.Builder setLongLabel(java.lang.CharSequence)> is checking!!!
+The life time of api is [25,31]
+1call roads:
+1 Mainhead roads:
+-i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><org.ea.sqrl.utils.SqrlApplication: void onCreate()>[]--><org.ea.sqrl.utils.SqrlApplication: void configureShortcuts(android.content.Context)>[[-i0 < 26]]--><android.content.pm.ShortcutInfo.Builder: android.content.pm.ShortcutInfo.Builder setLongLabel(java.lang.CharSequence)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 24 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)> is checking!!!
+The life time of api is [22,31]
+2call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.ea.sqrl.activites.identity.ShowIdentityActivity dummyMainMethod_org_ea_sqrl_activites_identity_ShowIdentityActivity(android.content.Intent)>[]--><org.ea.sqrl.activites.base.BaseActivity: void onRestoreInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+!!!this api will crash on sdk 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.ea.sqrl.activites.identity.RenameActivity dummyMainMethod_org_ea_sqrl_activites_identity_RenameActivity(android.content.Intent)>[]--><org.ea.sqrl.activites.base.BaseActivity: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+!!!this api will crash on sdk 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.ea.sqrl.activites.create.RekeyVerifyActivity dummyMainMethod_org_ea_sqrl_activites_create_RekeyVerifyActivity(android.content.Intent)>[]--><org.ea.sqrl.activites.base.BaseActivity: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+!!!this api will crash on sdk 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.ea.sqrl.activites.identity.IdentitySettingsActivity dummyMainMethod_org_ea_sqrl_activites_identity_IdentitySettingsActivity(android.content.Intent)>[]--><org.ea.sqrl.activites.base.BaseActivity: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+!!!this api will crash on sdk 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.ea.sqrl.activites.identity.ChangePasswordActivity dummyMainMethod_org_ea_sqrl_activites_identity_ChangePasswordActivity(android.content.Intent)>[]--><org.ea.sqrl.activites.base.BaseActivity: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+!!!this api will crash on sdk 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.ea.sqrl.activites.identity.ImportActivity dummyMainMethod_org_ea_sqrl_activites_identity_ImportActivity(android.content.Intent)>[]--><org.ea.sqrl.activites.base.BaseActivity: void onRestoreInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+!!!this api will crash on sdk 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.ea.sqrl.activites.identity.ImportOptionsActivity dummyMainMethod_org_ea_sqrl_activites_identity_ImportOptionsActivity(android.content.Intent)>[]--><org.ea.sqrl.activites.base.BaseActivity: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+!!!this api will crash on sdk 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.ea.sqrl.activites.CPSMissingActivity dummyMainMethod_org_ea_sqrl_activites_CPSMissingActivity(android.content.Intent)>[]--><org.ea.sqrl.activites.base.BaseActivity: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+!!!this api will crash on sdk 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.ea.sqrl.activites.identity.ResetPasswordActivity dummyMainMethod_org_ea_sqrl_activites_identity_ResetPasswordActivity(android.content.Intent)>[]--><org.ea.sqrl.activites.base.BaseActivity: void onRestoreInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+!!!this api will crash on sdk 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.ea.sqrl.activites.identity.ExportOptionsActivity dummyMainMethod_org_ea_sqrl_activites_identity_ExportOptionsActivity(android.content.Intent)>[]--><org.ea.sqrl.activites.base.BaseActivity: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+!!!this api will crash on sdk 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.ea.sqrl.activites.EnableQuickPassActivity dummyMainMethod_org_ea_sqrl_activites_EnableQuickPassActivity(android.content.Intent)>[]--><org.ea.sqrl.activites.base.BaseActivity: void onRestoreInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+!!!this api will crash on sdk 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.ea.sqrl.activites.ClearQuickPassActivity dummyMainMethod_org_ea_sqrl_activites_ClearQuickPassActivity(android.content.Intent)>[]--><org.ea.sqrl.activites.base.BaseActivity: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+!!!this api will crash on sdk 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.ea.sqrl.activites.LoginActivity dummyMainMethod_org_ea_sqrl_activites_LoginActivity(android.content.Intent)>[]--><org.ea.sqrl.activites.base.BaseActivity: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+!!!this api will crash on sdk 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.ea.sqrl.activites.StartActivity dummyMainMethod_org_ea_sqrl_activites_StartActivity(android.content.Intent)>[]--><org.ea.sqrl.activites.base.BaseActivity: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+!!!this api will crash on sdk 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.ea.sqrl.activites.create.NewIdentityDoneActivity dummyMainMethod_org_ea_sqrl_activites_create_NewIdentityDoneActivity(android.content.Intent)>[]--><org.ea.sqrl.activites.base.BaseActivity: void onRestoreInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+!!!this api will crash on sdk 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.ea.sqrl.activites.identity.TextImportActivity dummyMainMethod_org_ea_sqrl_activites_identity_TextImportActivity(android.content.Intent)>[]--><org.ea.sqrl.activites.base.BaseActivity: void onRestoreInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+!!!this api will crash on sdk 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.ea.sqrl.activites.identity.IdentityManagementActivity dummyMainMethod_org_ea_sqrl_activites_identity_IdentityManagementActivity(android.content.Intent)>[]--><org.ea.sqrl.activites.base.BaseActivity: void onRestoreInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+!!!this api will crash on sdk 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.ea.sqrl.activites.MainActivity dummyMainMethod_org_ea_sqrl_activites_MainActivity(android.content.Intent)>[]--><org.ea.sqrl.activites.base.BaseActivity: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+!!!this api will crash on sdk 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.ea.sqrl.activites.create.SaveIdentityActivity dummyMainMethod_org_ea_sqrl_activites_create_SaveIdentityActivity(android.content.Intent)>[]--><org.ea.sqrl.activites.base.BaseActivity: void onRestoreInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 21 
+Error road: <com.journeyapps.barcodescanner.CameraPreview: android.os.Parcelable onSaveInstanceState()>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+#1.the call statck between class <com.journeyapps.barcodescanner.CameraPreview: android.os.Parcelable onSaveInstanceState()> to <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+crashApis:7
+crashApisInMain:4
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 25 Potential Issue API: SDKCheck of <android.security.keystore.KeyGenParameterSpec.Builder: android.security.keystore.KeyGenParameterSpec.Builder setAlgorithmParameterSpec(java.security.spec.AlgorithmParameterSpec)> is checking!!!
+The life time of api is [23,31]
+7call roads:
+1 Mainhead roads:
+6 Packageshead roads:
+###Multi invoking in one method, need manual check!!!)>[[try]]--><org.ea.sqrl.processors.SQRLStorage: boolean decryptIdentityKey(java.lang.String,org.ea.sqrl.processors.EntropyHarvester,boolean)>[[try]]--><org.ea.sqrl.processors.SQRLStorage: void encryptIdentityKeyBiometric(byte[])>[[try], [-i0 < 28]]
+###Multi invoking in one method, need manual check!!!)>[[try]]--><org.ea.sqrl.processors.SQRLStorage: boolean decryptIdentityKey(java.lang.String,org.ea.sqrl.processors.EntropyHarvester,boolean)>[[try]]--><org.ea.sqrl.processors.SQRLStorage: void encryptIdentityKeyBiometric(byte[])>[[try]][[-i0 < 28]]
+try
+Good road with try: <org.ea.sqrl.processors.CommunicationHandler: void main(java.lang.String[])>[[try]]--><org.ea.sqrl.processors.SQRLStorage: boolean decryptIdentityKey(java.lang.String,org.ea.sqrl.processors.EntropyHarvester,boolean)>[[try]]--><org.ea.sqrl.processors.SQRLStorage: void encryptIdentityKeyBiometric(byte[])>[[try], [-i0 < 28]]--><android.security.keystore.KeyGenParameterSpec.Builder: android.security.keystore.KeyGenParameterSpec.Builder setAlgorithmParameterSpec(java.security.spec.AlgorithmParameterSpec)>
+One road protect good!
+containsStatic:false
+containsTry:true
+7call by main package
+-----------------------------------------
+#################################################
+N 26 Potential Issue API: SDKCheck of <android.app.NotificationChannel: void enableLights(boolean)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-i0 < 26
+Good road: <org.ea.sqrl.activites.base.BaseActivity: void showClearNotification()>[[-i0 < 26]]--><android.app.NotificationChannel: void enableLights(boolean)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 27 Potential Issue API: SDKCheck of <android.security.keystore.KeyGenParameterSpec.Builder: android.security.keystore.KeyGenParameterSpec build()> is checking!!!
+The life time of api is [23,31]
+7call roads:
+1 Mainhead roads:
+6 Packageshead roads:
+###Multi invoking in one method, need manual check!!!)>[[try]]--><org.ea.sqrl.processors.SQRLStorage: boolean decryptIdentityKey(java.lang.String,org.ea.sqrl.processors.EntropyHarvester,boolean)>[[try]]--><org.ea.sqrl.processors.SQRLStorage: void encryptIdentityKeyBiometric(byte[])>[[try], [-i0 < 28]]
+###Multi invoking in one method, need manual check!!!)>[[try]]--><org.ea.sqrl.processors.SQRLStorage: boolean decryptIdentityKey(java.lang.String,org.ea.sqrl.processors.EntropyHarvester,boolean)>[[try]]--><org.ea.sqrl.processors.SQRLStorage: void encryptIdentityKeyBiometric(byte[])>[[try]][[-i0 < 28]]
+try
+Good road with try: <org.ea.sqrl.processors.CommunicationHandler: void main(java.lang.String[])>[[try]]--><org.ea.sqrl.processors.SQRLStorage: boolean decryptIdentityKey(java.lang.String,org.ea.sqrl.processors.EntropyHarvester,boolean)>[[try]]--><org.ea.sqrl.processors.SQRLStorage: void encryptIdentityKeyBiometric(byte[])>[[try], [-i0 < 28]]--><android.security.keystore.KeyGenParameterSpec.Builder: android.security.keystore.KeyGenParameterSpec build()>
+One road protect good!
+containsStatic:false
+containsTry:true
+7call by main package
+-----------------------------------------
+#################################################
+N 28 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putDouble(java.lang.String,double)> is checking!!!
+The life time of api is [21,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 29 Potential Issue API: SDKCheck of <android.content.pm.ShortcutInfo.Builder: android.content.pm.ShortcutInfo build()> is checking!!!
+The life time of api is [24,31]
+1call roads:
+1 Mainhead roads:
+-i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><org.ea.sqrl.utils.SqrlApplication: void onCreate()>[]--><org.ea.sqrl.utils.SqrlApplication: void configureShortcuts(android.content.Context)>[[-i0 < 26]]--><android.content.pm.ShortcutInfo.Builder: android.content.pm.ShortcutInfo build()>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 30 Potential Issue API: SDKCheck of <android.security.keystore.KeyGenParameterSpec.Builder: android.security.keystore.KeyGenParameterSpec.Builder setBlockModes(java.lang.String[])> is checking!!!
+The life time of api is [23,31]
+7call roads:
+1 Mainhead roads:
+6 Packageshead roads:
+###Multi invoking in one method, need manual check!!!)>[[try]]--><org.ea.sqrl.processors.SQRLStorage: boolean decryptIdentityKey(java.lang.String,org.ea.sqrl.processors.EntropyHarvester,boolean)>[[try]]--><org.ea.sqrl.processors.SQRLStorage: void encryptIdentityKeyBiometric(byte[])>[[try], [-i0 < 28]]
+###Multi invoking in one method, need manual check!!!)>[[try]]--><org.ea.sqrl.processors.SQRLStorage: boolean decryptIdentityKey(java.lang.String,org.ea.sqrl.processors.EntropyHarvester,boolean)>[[try]]--><org.ea.sqrl.processors.SQRLStorage: void encryptIdentityKeyBiometric(byte[])>[[try]][[-i0 < 28]]
+try
+Good road with try: <org.ea.sqrl.processors.CommunicationHandler: void main(java.lang.String[])>[[try]]--><org.ea.sqrl.processors.SQRLStorage: boolean decryptIdentityKey(java.lang.String,org.ea.sqrl.processors.EntropyHarvester,boolean)>[[try]]--><org.ea.sqrl.processors.SQRLStorage: void encryptIdentityKeyBiometric(byte[])>[[try], [-i0 < 28]]--><android.security.keystore.KeyGenParameterSpec.Builder: android.security.keystore.KeyGenParameterSpec.Builder setBlockModes(java.lang.String[])>
+One road protect good!
+containsStatic:false
+containsTry:true
+7call by main package
+-----------------------------------------
+#################################################
+N 31 Potential Issue API: SDKCheck of <android.hardware.biometrics.BiometricPrompt.Builder: void <init>(android.content.Context)> is checking!!!
+The life time of api is [28,31]
+1call roads:
+1 Mainhead roads:
+i0 >= 28
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.ea.sqrl.activites.LoginActivity dummyMainMethod_org_ea_sqrl_activites_LoginActivity(android.content.Intent)>[]--><org.ea.sqrl.activites.LoginActivity: void onCreate(android.os.Bundle)>[]--><org.ea.sqrl.activites.LoginActivity: void doLoginBiometric()>[[i0 >= 28]]--><android.hardware.biometrics.BiometricPrompt.Builder: void <init>(android.content.Context)>
+One road protect good!
+i0 >= 28
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.ea.sqrl.activites.EnableQuickPassActivity dummyMainMethod_org_ea_sqrl_activites_EnableQuickPassActivity(android.content.Intent)>[]--><org.ea.sqrl.activites.EnableQuickPassActivity: void onCreate(android.os.Bundle)>[]--><org.ea.sqrl.activites.LoginActivity: void onCreate(android.os.Bundle)>[]--><org.ea.sqrl.activites.LoginActivity: void doLoginBiometric()>[[i0 >= 28]]--><android.hardware.biometrics.BiometricPrompt.Builder: void <init>(android.content.Context)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 32 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putIntArray(java.lang.String,int[])> is checking!!!
+The life time of api is [21,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 33 Potential Issue API: SDKCheck of <android.util.SizeF: float getHeight()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <androidx.versionedparcelable.VersionedParcel: void writeSizeF(android.util.SizeF,int)>[]--><android.util.SizeF: float getHeight()>
+#1.the call statck between class <androidx.versionedparcelable.VersionedParcel: void writeSizeF(android.util.SizeF,int)> to <android.util.SizeF: float getHeight()>has compatibility isssues！
+-----------------------------------------
+crashApis:8
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 34 Potential Issue API: SDKCheck of <android.app.job.JobInfo.Builder: android.app.job.JobInfo.Builder setMinimumLatency(long)> is checking!!!
+The life time of api is [21,31]
+6call roads:
+1 Mainhead roads:
+5 Packageshead roads:
+containsStatic:false
+containsTry:true
+6call by main package
+-----------------------------------------
+#################################################
+N 35 Potential Issue API: SDKCheck of <android.app.NotificationChannel: void setSound(android.net.Uri,android.media.AudioAttributes)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-i0 < 26
+Good road: <org.ea.sqrl.activites.base.BaseActivity: void showClearNotification()>[[-i0 < 26]]--><android.app.NotificationChannel: void setSound(android.net.Uri,android.media.AudioAttributes)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 36 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.lang.Object get(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.journeyapps.barcodescanner.CaptureActivity dummyMainMethod_com_journeyapps_barcodescanner_CaptureActivity(android.content.Intent)>[]--><com.journeyapps.barcodescanner.CaptureActivity: void onCreate(android.os.Bundle)>[]--><com.journeyapps.barcodescanner.CaptureManager: void initializeFromIntent(android.content.Intent,android.os.Bundle)>[]--><com.journeyapps.barcodescanner.CompoundBarcodeView: void initializeFromIntent(android.content.Intent)>[]--><com.google.zxing.client.android.DecodeHintManager: java.util.Map parseDecodeHints(android.content.Intent)>[]--><android.os.BaseBundle: java.lang.Object get(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: java.lang.Object get(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:9
+crashApisInMain:5
+containsStatic:false
+containsTry:true
+1call by main package
+-----------------------------------------
+#################################################
+N 37 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putDoubleArray(java.lang.String,double[])> is checking!!!
+The life time of api is [21,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 38 Potential Issue API: SDKCheck of <android.view.inputmethod.InputMethodManager: void toggleSoftInput(int,int)> is checking!!!
+The life time of api is [28,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 21 22 23 24 25 26 27 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.ea.sqrl.activites.identity.RenameActivity dummyMainMethod_org_ea_sqrl_activites_identity_RenameActivity(android.content.Intent)>[]--><org.ea.sqrl.activites.identity.RenameActivity: void onCreate(android.os.Bundle)>[]--><android.view.inputmethod.InputMethodManager: void toggleSoftInput(int,int)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.view.inputmethod.InputMethodManager: void toggleSoftInput(int,int)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:10
+crashApisInMain:6
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 39 Potential Issue API: SDKCheck of <android.security.keystore.KeyGenParameterSpec.Builder: android.security.keystore.KeyGenParameterSpec.Builder setDigests(java.lang.String[])> is checking!!!
+The life time of api is [23,31]
+7call roads:
+1 Mainhead roads:
+6 Packageshead roads:
+###Multi invoking in one method, need manual check!!!)>[[try]]--><org.ea.sqrl.processors.SQRLStorage: boolean decryptIdentityKey(java.lang.String,org.ea.sqrl.processors.EntropyHarvester,boolean)>[[try]]--><org.ea.sqrl.processors.SQRLStorage: void encryptIdentityKeyBiometric(byte[])>[[try], [-i0 < 28]]
+###Multi invoking in one method, need manual check!!!)>[[try]]--><org.ea.sqrl.processors.SQRLStorage: boolean decryptIdentityKey(java.lang.String,org.ea.sqrl.processors.EntropyHarvester,boolean)>[[try]]--><org.ea.sqrl.processors.SQRLStorage: void encryptIdentityKeyBiometric(byte[])>[[try]][[-i0 < 28]]
+try
+Good road with try: <org.ea.sqrl.processors.CommunicationHandler: void main(java.lang.String[])>[[try]]--><org.ea.sqrl.processors.SQRLStorage: boolean decryptIdentityKey(java.lang.String,org.ea.sqrl.processors.EntropyHarvester,boolean)>[[try]]--><org.ea.sqrl.processors.SQRLStorage: void encryptIdentityKeyBiometric(byte[])>[[try], [-i0 < 28]]--><android.security.keystore.KeyGenParameterSpec.Builder: android.security.keystore.KeyGenParameterSpec.Builder setDigests(java.lang.String[])>
+One road protect good!
+containsStatic:false
+containsTry:true
+7call by main package
+-----------------------------------------
+#################################################
+N 40 Potential Issue API: SDKCheck of <android.content.pm.ShortcutInfo.Builder: android.content.pm.ShortcutInfo.Builder setIntents(android.content.Intent[])> is checking!!!
+The life time of api is [25,31]
+1call roads:
+1 Mainhead roads:
+-i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><org.ea.sqrl.utils.SqrlApplication: void onCreate()>[]--><org.ea.sqrl.utils.SqrlApplication: void configureShortcuts(android.content.Context)>[[-i0 < 26]]--><android.content.pm.ShortcutInfo.Builder: android.content.pm.ShortcutInfo.Builder setIntents(android.content.Intent[])>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 41 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putLong(java.lang.String,long)> is checking!!!
+The life time of api is [21,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 42 Potential Issue API: SDKCheck of <android.app.job.JobScheduler: int schedule(android.app.job.JobInfo)> is checking!!!
+The life time of api is [21,31]
+6call roads:
+1 Mainhead roads:
+5 Packageshead roads:
+containsStatic:false
+containsTry:true
+6call by main package
+-----------------------------------------
+#################################################
+N 43 Potential Issue API: SDKCheck of <android.os.BaseBundle: boolean getBoolean(java.lang.String)> is checking!!!
+The life time of api is [22,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 21 
+Error road: <com.journeyapps.barcodescanner.CameraPreview: void onRestoreInstanceState(android.os.Parcelable)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+#1.the call statck between class <com.journeyapps.barcodescanner.CameraPreview: void onRestoreInstanceState(android.os.Parcelable)> to <android.os.BaseBundle: boolean getBoolean(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:11
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 44 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putStringArray(java.lang.String,java.lang.String[])> is checking!!!
+The life time of api is [21,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 45 Potential Issue API: SDKCheck of <android.security.keystore.KeyGenParameterSpec.Builder: android.security.keystore.KeyGenParameterSpec.Builder setUserAuthenticationRequired(boolean)> is checking!!!
+The life time of api is [23,31]
+7call roads:
+1 Mainhead roads:
+6 Packageshead roads:
+###Multi invoking in one method, need manual check!!!)>[[try]]--><org.ea.sqrl.processors.SQRLStorage: boolean decryptIdentityKey(java.lang.String,org.ea.sqrl.processors.EntropyHarvester,boolean)>[[try]]--><org.ea.sqrl.processors.SQRLStorage: void encryptIdentityKeyBiometric(byte[])>[[try], [-i0 < 28]]
+###Multi invoking in one method, need manual check!!!)>[[try]]--><org.ea.sqrl.processors.SQRLStorage: boolean decryptIdentityKey(java.lang.String,org.ea.sqrl.processors.EntropyHarvester,boolean)>[[try]]--><org.ea.sqrl.processors.SQRLStorage: void encryptIdentityKeyBiometric(byte[])>[[try]][[-i0 < 28]]
+try
+Good road with try: <org.ea.sqrl.processors.CommunicationHandler: void main(java.lang.String[])>[[try]]--><org.ea.sqrl.processors.SQRLStorage: boolean decryptIdentityKey(java.lang.String,org.ea.sqrl.processors.EntropyHarvester,boolean)>[[try]]--><org.ea.sqrl.processors.SQRLStorage: void encryptIdentityKeyBiometric(byte[])>[[try], [-i0 < 28]]--><android.security.keystore.KeyGenParameterSpec.Builder: android.security.keystore.KeyGenParameterSpec.Builder setUserAuthenticationRequired(boolean)>
+One road protect good!
+containsStatic:false
+containsTry:true
+7call by main package
+-----------------------------------------
+#################################################
+N 46 Potential Issue API: SDKCheck of <android.media.MediaPlayer: void setVolume(float,float)> is checking!!!
+The life time of api is [1,17]
+2call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.journeyapps.barcodescanner.CaptureActivity dummyMainMethod_com_journeyapps_barcodescanner_CaptureActivity(android.content.Intent)>[]--><com.journeyapps.barcodescanner.CaptureManager: void <init>(android.app.Activity,com.journeyapps.barcodescanner.CompoundBarcodeView)>[]--><com.google.zxing.client.android.BeepManager: void <init>(android.app.Activity)>[]--><com.google.zxing.client.android.BeepManager: void updatePrefs()>[[try]]--><com.google.zxing.client.android.BeepManager: android.media.MediaPlayer buildMediaPlayer(android.content.Context)>[[try]]--><android.media.MediaPlayer: void setVolume(float,float)>
+One road protect good!
+1 Packageshead roads:
+try
+Good road with try: <com.google.zxing.client.android.BeepManager: boolean onError(android.media.MediaPlayer,int,int)>[[try]]--><com.google.zxing.client.android.BeepManager: void updatePrefs()>[[try]]--><com.google.zxing.client.android.BeepManager: android.media.MediaPlayer buildMediaPlayer(android.content.Context)>[[try]]--><android.media.MediaPlayer: void setVolume(float,float)>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 47 Potential Issue API: SDKCheck of <android.hardware.biometrics.BiometricPrompt.AuthenticationCallback: void onAuthenticationSucceeded(android.hardware.biometrics.BiometricPrompt.AuthenticationResult)> is checking!!!
+The life time of api is [28,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 21 22 23 24 25 26 27 
+Error road: <org.ea.sqrl.processors.BioAuthenticationCallback: void onAuthenticationSucceeded(android.hardware.biometrics.BiometricPrompt$AuthenticationResult)>[]--><android.hardware.biometrics.BiometricPrompt.AuthenticationCallback: void onAuthenticationSucceeded(android.hardware.biometrics.BiometricPrompt.AuthenticationResult)>
+#1.the call statck between class <org.ea.sqrl.processors.BioAuthenticationCallback: void onAuthenticationSucceeded(android.hardware.biometrics.BiometricPrompt$AuthenticationResult)> to <android.hardware.biometrics.BiometricPrompt.AuthenticationCallback: void onAuthenticationSucceeded(android.hardware.biometrics.BiometricPrompt.AuthenticationResult)>has compatibility isssues！
+-----------------------------------------
+crashApis:12
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 48 Potential Issue API: SDKCheck of <android.app.Activity: void finishAndRemoveTask()> is checking!!!
+The life time of api is [21,31]
+29call roads:
+1 Mainhead roads:
+-$i0 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.ea.sqrl.activites.identity.ChangePasswordActivity dummyMainMethod_org_ea_sqrl_activites_identity_ChangePasswordActivity(android.content.Intent)>[]--><org.ea.sqrl.activites.identity.'-$$Lambda$ChangePasswordActivity$u8PEop-oXbZElt_2kG4YhKCYXuo': void onClick(android.view.View)>[]--><org.ea.sqrl.activites.identity.ChangePasswordActivity: void lambda$onCreate$4$ChangePasswordActivity(android.widget.EditText,android.widget.EditText,android.widget.EditText,org.ea.sqrl.processors.SQRLStorage,android.view.View)>[]--><java.lang.Thread: void run()>[]--><org.ea.sqrl.activites.'-$$Lambda$LoginActivity$WnGbGsg7w9sS5GYOsSfVqBunqig': void run()>[]--><org.ea.sqrl.activites.LoginActivity: void lambda$configureCommFlowHandlerDisableAccount$27$LoginActivity(org.ea.sqrl.processors.SQRLStorage)>[]--><android.os.Handler: boolean post(java.lang.Runnable)>[]--><org.ea.sqrl.activites.'-$$Lambda$LoginActivity$yrIChgWNeRF-9x9B4hUEKQ2jPPI': void run()>[]--><org.ea.sqrl.activites.LoginActivity: void lambda$null$16$LoginActivity()>[]--><org.ea.sqrl.activites.LoginActivity: void closeActivity()>[[-$i0 < 21]]--><android.app.Activity: void finishAndRemoveTask()>
+One road protect good!
+-$i0 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.ea.sqrl.activites.StartActivity dummyMainMethod_org_ea_sqrl_activites_StartActivity(android.content.Intent)>[]--><org.ea.sqrl.activites.StartActivity: void onBackPressed()>[[-$i0 < 21]]--><android.app.Activity: void finishAndRemoveTask()>
+One road protect good!
+-$i0 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.ea.sqrl.activites.create.NewIdentityDoneActivity dummyMainMethod_org_ea_sqrl_activites_create_NewIdentityDoneActivity(android.content.Intent)>[]--><org.ea.sqrl.activites.create.NewIdentityDoneActivity: void onBackPressed()>[[-$i0 < 21]]--><android.app.Activity: void finishAndRemoveTask()>
+One road protect good!
+-$i0 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.ea.sqrl.activites.IntroductionActivity dummyMainMethod_org_ea_sqrl_activites_IntroductionActivity(android.content.Intent)>[]--><org.ea.sqrl.activites.'-$$Lambda$IntroductionActivity$7CwIk5uuE7SSt0s-cbBx92gQlqg': void onClick(android.view.View)>[]--><org.ea.sqrl.activites.IntroductionActivity: void lambda$onCreate$1$IntroductionActivity(android.view.View)>[]--><java.lang.Thread: void run()>[]--><org.ea.sqrl.activites.'-$$Lambda$LoginActivity$WnGbGsg7w9sS5GYOsSfVqBunqig': void run()>[]--><org.ea.sqrl.activites.LoginActivity: void lambda$configureCommFlowHandlerDisableAccount$27$LoginActivity(org.ea.sqrl.processors.SQRLStorage)>[]--><android.os.Handler: boolean post(java.lang.Runnable)>[]--><org.ea.sqrl.activites.'-$$Lambda$LoginActivity$yrIChgWNeRF-9x9B4hUEKQ2jPPI': void run()>[]--><org.ea.sqrl.activites.LoginActivity: void lambda$null$16$LoginActivity()>[]--><org.ea.sqrl.activites.LoginActivity: void closeActivity()>[[-$i0 < 21]]--><android.app.Activity: void finishAndRemoveTask()>
+One road protect good!
+-$i0 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.ea.sqrl.activites.create.RekeyVerifyActivity dummyMainMethod_org_ea_sqrl_activites_create_RekeyVerifyActivity(android.content.Intent)>[]--><org.ea.sqrl.activites.create.'-$$Lambda$RekeyVerifyActivity$ZTdSs12GdSLTfs4UWHqeBchjMX4': void onClick(android.view.View)>[]--><org.ea.sqrl.activites.create.RekeyVerifyActivity: void lambda$onCreate$4$RekeyVerifyActivity(org.ea.sqrl.utils.RescueCodeInputHelper,org.ea.sqrl.processors.SQRLStorage,android.view.View)>[]--><java.lang.Thread: void run()>[]--><org.ea.sqrl.activites.'-$$Lambda$LoginActivity$WnGbGsg7w9sS5GYOsSfVqBunqig': void run()>[]--><org.ea.sqrl.activites.LoginActivity: void lambda$configureCommFlowHandlerDisableAccount$27$LoginActivity(org.ea.sqrl.processors.SQRLStorage)>[]--><android.os.Handler: boolean post(java.lang.Runnable)>[]--><org.ea.sqrl.activites.'-$$Lambda$LoginActivity$yrIChgWNeRF-9x9B4hUEKQ2jPPI': void run()>[]--><org.ea.sqrl.activites.LoginActivity: void lambda$null$16$LoginActivity()>[]--><org.ea.sqrl.activites.LoginActivity: void closeActivity()>[[-$i0 < 21]]--><android.app.Activity: void finishAndRemoveTask()>
+One road protect good!
+-$i0 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.ea.sqrl.activites.identity.ResetPasswordActivity dummyMainMethod_org_ea_sqrl_activites_identity_ResetPasswordActivity(android.content.Intent)>[]--><org.ea.sqrl.activites.identity.'-$$Lambda$ResetPasswordActivity$qVFdDf0cYPvzPFgeZzbcJ_8NmWo': void onClick(android.view.View)>[]--><org.ea.sqrl.activites.identity.ResetPasswordActivity: void lambda$onCreate$9$ResetPasswordActivity(org.ea.sqrl.utils.RescueCodeInputHelper,android.widget.EditText,boolean,android.view.View)>[]--><java.lang.Thread: void run()>[]--><org.ea.sqrl.activites.'-$$Lambda$LoginActivity$WnGbGsg7w9sS5GYOsSfVqBunqig': void run()>[]--><org.ea.sqrl.activites.LoginActivity: void lambda$configureCommFlowHandlerDisableAccount$27$LoginActivity(org.ea.sqrl.processors.SQRLStorage)>[]--><android.os.Handler: boolean post(java.lang.Runnable)>[]--><org.ea.sqrl.activites.'-$$Lambda$LoginActivity$yrIChgWNeRF-9x9B4hUEKQ2jPPI': void run()>[]--><org.ea.sqrl.activites.LoginActivity: void lambda$null$16$LoginActivity()>[]--><org.ea.sqrl.activites.LoginActivity: void closeActivity()>[[-$i0 < 21]]--><android.app.Activity: void finishAndRemoveTask()>
+One road protect good!
+-$i0 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.ea.sqrl.activites.identity.TextImportActivity dummyMainMethod_org_ea_sqrl_activites_identity_TextImportActivity(android.content.Intent)>[]--><org.ea.sqrl.activites.identity.'-$$Lambda$TextImportActivity$LMpm8AGgi7-4TIA2MMeDnuYXB8U': void onClick(android.view.View)>[]--><org.ea.sqrl.activites.identity.TextImportActivity: void lambda$onCreate$4$TextImportActivity(android.widget.EditText,android.widget.TextView,android.view.View)>[]--><java.lang.Thread: void run()>[]--><org.ea.sqrl.activites.'-$$Lambda$LoginActivity$WnGbGsg7w9sS5GYOsSfVqBunqig': void run()>[]--><org.ea.sqrl.activites.LoginActivity: void lambda$configureCommFlowHandlerDisableAccount$27$LoginActivity(org.ea.sqrl.processors.SQRLStorage)>[]--><android.os.Handler: boolean post(java.lang.Runnable)>[]--><org.ea.sqrl.activites.'-$$Lambda$LoginActivity$yrIChgWNeRF-9x9B4hUEKQ2jPPI': void run()>[]--><org.ea.sqrl.activites.LoginActivity: void lambda$null$16$LoginActivity()>[]--><org.ea.sqrl.activites.LoginActivity: void closeActivity()>[[-$i0 < 21]]--><android.app.Activity: void finishAndRemoveTask()>
+One road protect good!
+-$i0 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.ea.sqrl.activites.identity.IdentitySettingsActivity dummyMainMethod_org_ea_sqrl_activites_identity_IdentitySettingsActivity(android.content.Intent)>[]--><org.ea.sqrl.activites.identity.'-$$Lambda$IdentitySettingsActivity$2bysobUEiLnpaTgVisCkzfN2UfY': void onClick(android.view.View)>[]--><org.ea.sqrl.activites.identity.IdentitySettingsActivity: void lambda$setupSavePopupWindow$15$IdentitySettingsActivity(org.ea.sqrl.processors.SQRLStorage,android.widget.EditText,android.view.View)>[]--><java.lang.Thread: void run()>[]--><org.ea.sqrl.activites.'-$$Lambda$LoginActivity$WnGbGsg7w9sS5GYOsSfVqBunqig': void run()>[]--><org.ea.sqrl.activites.LoginActivity: void lambda$configureCommFlowHandlerDisableAccount$27$LoginActivity(org.ea.sqrl.processors.SQRLStorage)>[]--><android.os.Handler: boolean post(java.lang.Runnable)>[]--><org.ea.sqrl.activites.'-$$Lambda$LoginActivity$yrIChgWNeRF-9x9B4hUEKQ2jPPI': void run()>[]--><org.ea.sqrl.activites.LoginActivity: void lambda$null$16$LoginActivity()>[]--><org.ea.sqrl.activites.LoginActivity: void closeActivity()>[[-$i0 < 21]]--><android.app.Activity: void finishAndRemoveTask()>
+One road protect good!
+-i0 < 21
+-$i0 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.ea.sqrl.activites.identity.ImportActivity dummyMainMethod_org_ea_sqrl_activites_identity_ImportActivity(android.content.Intent)>[]--><org.ea.sqrl.activites.identity.ImportActivity: void onCreate(android.os.Bundle)>[]--><org.ea.sqrl.activites.base.BaseActivity: void showErrorMessage(java.lang.String)>[]--><org.ea.sqrl.activites.base.BaseActivity: void showErrorMessageInternal(java.lang.String)>[]--><org.ea.sqrl.activites.base.BaseActivity: void showErrorMessageInternal(java.lang.String,java.lang.Runnable)>[]--><org.ea.sqrl.activites.base.BaseActivity: void showErrorMessageInternal(java.lang.String,java.lang.Runnable,java.lang.String)>[[-i0 < 21]]--><android.os.Handler: boolean post(java.lang.Runnable)>[]--><org.ea.sqrl.activites.'-$$Lambda$LoginActivity$yrIChgWNeRF-9x9B4hUEKQ2jPPI': void run()>[]--><org.ea.sqrl.activites.LoginActivity: void lambda$null$16$LoginActivity()>[]--><org.ea.sqrl.activites.LoginActivity: void closeActivity()>[[-$i0 < 21]]--><android.app.Activity: void finishAndRemoveTask()>
+One road protect good!
+-i0 < 21
+-$i0 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.ea.sqrl.activites.identity.ExportOptionsActivity dummyMainMethod_org_ea_sqrl_activites_identity_ExportOptionsActivity(android.content.Intent)>[]--><org.ea.sqrl.activites.identity.'-$$Lambda$ExportOptionsActivity$3b-plRme6YIno8S8YTnWj2PZ6iI': void onClick(android.view.View)>[]--><org.ea.sqrl.activites.identity.ExportOptionsActivity: void lambda$onCreate$1$ExportOptionsActivity(android.widget.CheckBox,android.view.View)>[]--><org.ea.sqrl.activites.base.BaseActivity: void showErrorMessage(int)>[]--><org.ea.sqrl.activites.base.BaseActivity: void showErrorMessageInternal(java.lang.String)>[]--><org.ea.sqrl.activites.base.BaseActivity: void showErrorMessageInternal(java.lang.String,java.lang.Runnable)>[]--><org.ea.sqrl.activites.base.BaseActivity: void showErrorMessageInternal(java.lang.String,java.lang.Runnable,java.lang.String)>[[-i0 < 21]]--><android.os.Handler: boolean post(java.lang.Runnable)>[]--><org.ea.sqrl.activites.'-$$Lambda$LoginActivity$yrIChgWNeRF-9x9B4hUEKQ2jPPI': void run()>[]--><org.ea.sqrl.activites.LoginActivity: void lambda$null$16$LoginActivity()>[]--><org.ea.sqrl.activites.LoginActivity: void closeActivity()>[[-$i0 < 21]]--><android.app.Activity: void finishAndRemoveTask()>
+One road protect good!
+-i0 < 21
+-$i0 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.ea.sqrl.activites.EnableQuickPassActivity dummyMainMethod_org_ea_sqrl_activites_EnableQuickPassActivity(android.content.Intent)>[]--><org.ea.sqrl.activites.EnableQuickPassActivity: void onCreate(android.os.Bundle)>[]--><org.ea.sqrl.activites.LoginActivity: void onCreate(android.os.Bundle)>[]--><org.ea.sqrl.activites.base.BaseActivity: void showErrorMessage(java.lang.String)>[]--><org.ea.sqrl.activites.base.BaseActivity: void showErrorMessageInternal(java.lang.String)>[]--><org.ea.sqrl.activites.base.BaseActivity: void showErrorMessageInternal(java.lang.String,java.lang.Runnable)>[]--><org.ea.sqrl.activites.base.BaseActivity: void showErrorMessageInternal(java.lang.String,java.lang.Runnable,java.lang.String)>[[-i0 < 21]]--><android.os.Handler: boolean post(java.lang.Runnable)>[]--><org.ea.sqrl.activites.'-$$Lambda$LoginActivity$yrIChgWNeRF-9x9B4hUEKQ2jPPI': void run()>[]--><org.ea.sqrl.activites.LoginActivity: void lambda$null$16$LoginActivity()>[]--><org.ea.sqrl.activites.LoginActivity: void closeActivity()>[[-$i0 < 21]]--><android.app.Activity: void finishAndRemoveTask()>
+One road protect good!
+-i0 < 21
+-$i0 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.ea.sqrl.activites.MainActivity dummyMainMethod_org_ea_sqrl_activites_MainActivity(android.content.Intent)>[]--><org.ea.sqrl.activites.MainActivity: void onActivityResult(int,int,android.content.Intent)>[]--><org.ea.sqrl.activites.base.BaseActivity: void showErrorMessage(int)>[]--><org.ea.sqrl.activites.base.BaseActivity: void showErrorMessageInternal(java.lang.String)>[]--><org.ea.sqrl.activites.base.BaseActivity: void showErrorMessageInternal(java.lang.String,java.lang.Runnable)>[]--><org.ea.sqrl.activites.base.BaseActivity: void showErrorMessageInternal(java.lang.String,java.lang.Runnable,java.lang.String)>[[-i0 < 21]]--><android.os.Handler: boolean post(java.lang.Runnable)>[]--><org.ea.sqrl.activites.'-$$Lambda$LoginActivity$yrIChgWNeRF-9x9B4hUEKQ2jPPI': void run()>[]--><org.ea.sqrl.activites.LoginActivity: void lambda$null$16$LoginActivity()>[]--><org.ea.sqrl.activites.LoginActivity: void closeActivity()>[[-$i0 < 21]]--><android.app.Activity: void finishAndRemoveTask()>
+One road protect good!
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.journeyapps.barcodescanner.CaptureActivity dummyMainMethod_com_journeyapps_barcodescanner_CaptureActivity(android.content.Intent)>[]--><com.journeyapps.barcodescanner.CaptureActivity: boolean onKeyDown(int,android.view.KeyEvent)>[]--><com.journeyapps.barcodescanner.CompoundBarcodeView: boolean onKeyDown(int,android.view.KeyEvent)>[]--><com.journeyapps.barcodescanner.CompoundBarcodeView: void setTorchOn()>[]--><com.journeyapps.barcodescanner.CameraPreview: void setTorch(boolean)>[]--><com.journeyapps.barcodescanner.camera.CameraInstance: void setTorch(boolean)>[]--><com.journeyapps.barcodescanner.camera.CameraThread: void enqueue(java.lang.Runnable)>[[try]]--><android.os.Handler: boolean post(java.lang.Runnable)>[]--><org.ea.sqrl.activites.'-$$Lambda$LoginActivity$yrIChgWNeRF-9x9B4hUEKQ2jPPI': void run()>[]--><org.ea.sqrl.activites.LoginActivity: void lambda$null$16$LoginActivity()>[]--><org.ea.sqrl.activites.LoginActivity: void closeActivity()>[[-$i0 < 21]]--><android.app.Activity: void finishAndRemoveTask()>
+One road protect good!
+-$i0 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.ea.sqrl.activites.CPSMissingActivity dummyMainMethod_org_ea_sqrl_activites_CPSMissingActivity(android.content.Intent)>[]--><org.ea.sqrl.activites.'-$$Lambda$CPSMissingActivity$xC5qz37wuqQmS3GAHRb4_KYAJwc': void onClick(android.view.View)>[]--><org.ea.sqrl.activites.CPSMissingActivity: void lambda$onCreate$5$CPSMissingActivity(android.view.View)>[]--><java.lang.Thread: void run()>[]--><org.ea.sqrl.activites.'-$$Lambda$LoginActivity$WnGbGsg7w9sS5GYOsSfVqBunqig': void run()>[]--><org.ea.sqrl.activites.LoginActivity: void lambda$configureCommFlowHandlerDisableAccount$27$LoginActivity(org.ea.sqrl.processors.SQRLStorage)>[]--><android.os.Handler: boolean post(java.lang.Runnable)>[]--><org.ea.sqrl.activites.'-$$Lambda$LoginActivity$yrIChgWNeRF-9x9B4hUEKQ2jPPI': void run()>[]--><org.ea.sqrl.activites.LoginActivity: void lambda$null$16$LoginActivity()>[]--><org.ea.sqrl.activites.LoginActivity: void closeActivity()>[[-$i0 < 21]]--><android.app.Activity: void finishAndRemoveTask()>
+One road protect good!
+-$i0 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.ea.sqrl.activites.ClearQuickPassActivity dummyMainMethod_org_ea_sqrl_activites_ClearQuickPassActivity(android.content.Intent)>[]--><org.ea.sqrl.activites.ClearQuickPassActivity: void onDestroy()>[[-$i0 < 21]]--><android.app.Activity: void finishAndRemoveTask()>
+One road protect good!
+-$i0 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.ea.sqrl.activites.LoginActivity dummyMainMethod_org_ea_sqrl_activites_LoginActivity(android.content.Intent)>[]--><org.ea.sqrl.activites.'-$$Lambda$LoginActivity$Sh2jt1Bd61ole6YyJri_4oSdLOk': void onClick(android.view.View)>[]--><org.ea.sqrl.activites.LoginActivity: void lambda$onCreate$1$LoginActivity(android.view.View)>[]--><org.ea.sqrl.activites.LoginActivity: void doLogin(boolean,boolean,boolean)>[]--><java.lang.Thread: void run()>[]--><org.ea.sqrl.activites.'-$$Lambda$LoginActivity$WnGbGsg7w9sS5GYOsSfVqBunqig': void run()>[]--><org.ea.sqrl.activites.LoginActivity: void lambda$configureCommFlowHandlerDisableAccount$27$LoginActivity(org.ea.sqrl.processors.SQRLStorage)>[]--><android.os.Handler: boolean post(java.lang.Runnable)>[]--><org.ea.sqrl.activites.'-$$Lambda$LoginActivity$yrIChgWNeRF-9x9B4hUEKQ2jPPI': void run()>[]--><org.ea.sqrl.activites.LoginActivity: void lambda$null$16$LoginActivity()>[]--><org.ea.sqrl.activites.LoginActivity: void closeActivity()>[[-$i0 < 21]]--><android.app.Activity: void finishAndRemoveTask()>
+One road protect good!
+-$i0 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.ea.sqrl.activites.create.SaveIdentityActivity dummyMainMethod_org_ea_sqrl_activites_create_SaveIdentityActivity(android.content.Intent)>[]--><org.ea.sqrl.activites.create.'-$$Lambda$SaveIdentityActivity$lvafYKkZA4vzJeg-hahyVD-DUyk': void onClick(android.view.View)>[]--><org.ea.sqrl.activites.create.SaveIdentityActivity: void lambda$onCreate$4$SaveIdentityActivity(android.widget.EditText,android.widget.EditText,org.ea.sqrl.processors.SQRLStorage,android.view.View)>[]--><java.lang.Thread: void run()>[]--><org.ea.sqrl.activites.'-$$Lambda$LoginActivity$WnGbGsg7w9sS5GYOsSfVqBunqig': void run()>[]--><org.ea.sqrl.activites.LoginActivity: void lambda$configureCommFlowHandlerDisableAccount$27$LoginActivity(org.ea.sqrl.processors.SQRLStorage)>[]--><android.os.Handler: boolean post(java.lang.Runnable)>[]--><org.ea.sqrl.activites.'-$$Lambda$LoginActivity$yrIChgWNeRF-9x9B4hUEKQ2jPPI': void run()>[]--><org.ea.sqrl.activites.LoginActivity: void lambda$null$16$LoginActivity()>[]--><org.ea.sqrl.activites.LoginActivity: void closeActivity()>[[-$i0 < 21]]--><android.app.Activity: void finishAndRemoveTask()>
+One road protect good!
+28 Packageshead roads:
+-$i0 < 21
+Good road: <org.ea.sqrl.activites.LoginActivity$1: void onTextChanged(java.lang.CharSequence,int,int,int)>[]--><org.ea.sqrl.activites.LoginActivity: void doLogin(boolean,boolean,boolean)>[]--><java.lang.Thread: void run()>[]--><org.ea.sqrl.activites.'-$$Lambda$LoginActivity$WnGbGsg7w9sS5GYOsSfVqBunqig': void run()>[]--><org.ea.sqrl.activites.LoginActivity: void lambda$configureCommFlowHandlerDisableAccount$27$LoginActivity(org.ea.sqrl.processors.SQRLStorage)>[]--><android.os.Handler: boolean post(java.lang.Runnable)>[]--><org.ea.sqrl.activites.'-$$Lambda$LoginActivity$yrIChgWNeRF-9x9B4hUEKQ2jPPI': void run()>[]--><org.ea.sqrl.activites.LoginActivity: void lambda$null$16$LoginActivity()>[]--><org.ea.sqrl.activites.LoginActivity: void closeActivity()>[[-$i0 < 21]]--><android.app.Activity: void finishAndRemoveTask()>
+One road protect good!
+-$i0 < 21
+Good road: <org.ea.sqrl.activites.LoginActivity: void lambda$null$25$LoginActivity()>[]--><org.ea.sqrl.activites.LoginActivity: void closeActivity()>[[-$i0 < 21]]--><android.app.Activity: void finishAndRemoveTask()>
+One road protect good!
+try
+Good road with try: <com.journeyapps.barcodescanner.CameraPreview: void access$500(com.journeyapps.barcodescanner.CameraPreview)>[]--><com.journeyapps.barcodescanner.CameraPreview: void rotationChanged()>[]--><com.journeyapps.barcodescanner.CameraPreview: void pause()>[]--><com.journeyapps.barcodescanner.camera.CameraInstance: void close()>[]--><com.journeyapps.barcodescanner.camera.CameraThread: void enqueue(java.lang.Runnable)>[[try]]--><android.os.Handler: boolean post(java.lang.Runnable)>[]--><org.ea.sqrl.activites.'-$$Lambda$LoginActivity$yrIChgWNeRF-9x9B4hUEKQ2jPPI': void run()>[]--><org.ea.sqrl.activites.LoginActivity: void lambda$null$16$LoginActivity()>[]--><org.ea.sqrl.activites.LoginActivity: void closeActivity()>[[-$i0 < 21]]--><android.app.Activity: void finishAndRemoveTask()>
+One road protect good!
+try
+Good road with try: <com.journeyapps.barcodescanner.CameraPreview: void onRestoreInstanceState(android.os.Parcelable)>[]--><com.journeyapps.barcodescanner.CameraPreview: void setTorch(boolean)>[]--><com.journeyapps.barcodescanner.camera.CameraInstance: void setTorch(boolean)>[]--><com.journeyapps.barcodescanner.camera.CameraThread: void enqueue(java.lang.Runnable)>[[try]]--><android.os.Handler: boolean post(java.lang.Runnable)>[]--><org.ea.sqrl.activites.'-$$Lambda$LoginActivity$yrIChgWNeRF-9x9B4hUEKQ2jPPI': void run()>[]--><org.ea.sqrl.activites.LoginActivity: void lambda$null$16$LoginActivity()>[]--><org.ea.sqrl.activites.LoginActivity: void closeActivity()>[[-$i0 < 21]]--><android.app.Activity: void finishAndRemoveTask()>
+One road protect good!
+try
+Good road with try: <com.journeyapps.barcodescanner.CompoundBarcodeView: void decodeContinuous(com.journeyapps.barcodescanner.BarcodeCallback)>[]--><com.journeyapps.barcodescanner.BarcodeView: void decodeContinuous(com.journeyapps.barcodescanner.BarcodeCallback)>[]--><com.journeyapps.barcodescanner.BarcodeView: void startDecoderThread()>[]--><com.journeyapps.barcodescanner.DecoderThread: void start()>[]--><com.journeyapps.barcodescanner.DecoderThread: void requestNextPreview()>[]--><com.journeyapps.barcodescanner.camera.CameraInstance: void requestPreview(com.journeyapps.barcodescanner.camera.PreviewCallback)>[]--><com.journeyapps.barcodescanner.camera.CameraThread: void enqueue(java.lang.Runnable)>[[try]]--><android.os.Handler: boolean post(java.lang.Runnable)>[]--><org.ea.sqrl.activites.'-$$Lambda$LoginActivity$yrIChgWNeRF-9x9B4hUEKQ2jPPI': void run()>[]--><org.ea.sqrl.activites.LoginActivity: void lambda$null$16$LoginActivity()>[]--><org.ea.sqrl.activites.LoginActivity: void closeActivity()>[[-$i0 < 21]]--><android.app.Activity: void finishAndRemoveTask()>
+One road protect good!
+-$i0 < 21
+Good road: <com.google.zxing.client.android.InactivityTimer$PowerStatusReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><android.os.Handler: boolean post(java.lang.Runnable)>[]--><org.ea.sqrl.activites.'-$$Lambda$LoginActivity$yrIChgWNeRF-9x9B4hUEKQ2jPPI': void run()>[]--><org.ea.sqrl.activites.LoginActivity: void lambda$null$16$LoginActivity()>[]--><org.ea.sqrl.activites.LoginActivity: void closeActivity()>[[-$i0 < 21]]--><android.app.Activity: void finishAndRemoveTask()>
+One road protect good!
+-$i0 < 21
+Good road: <android.arch.core.executor.DefaultTaskExecutor: void postToMainThread(java.lang.Runnable)>[]--><android.os.Handler: boolean post(java.lang.Runnable)>[]--><org.ea.sqrl.activites.'-$$Lambda$LoginActivity$yrIChgWNeRF-9x9B4hUEKQ2jPPI': void run()>[]--><org.ea.sqrl.activites.LoginActivity: void lambda$null$16$LoginActivity()>[]--><org.ea.sqrl.activites.LoginActivity: void closeActivity()>[[-$i0 < 21]]--><android.app.Activity: void finishAndRemoveTask()>
+One road protect good!
+-$i0 < 21
+Good road: <com.journeyapps.barcodescanner.camera.AutoFocusManager$2: void onAutoFocus(boolean,android.hardware.Camera)>[]--><android.os.Handler: boolean post(java.lang.Runnable)>[]--><org.ea.sqrl.activites.'-$$Lambda$LoginActivity$yrIChgWNeRF-9x9B4hUEKQ2jPPI': void run()>[]--><org.ea.sqrl.activites.LoginActivity: void lambda$null$16$LoginActivity()>[]--><org.ea.sqrl.activites.LoginActivity: void closeActivity()>[[-$i0 < 21]]--><android.app.Activity: void finishAndRemoveTask()>
+One road protect good!
+try
+Good road with try: <com.journeyapps.barcodescanner.DecoderThread: void access$000(com.journeyapps.barcodescanner.DecoderThread,com.journeyapps.barcodescanner.SourceData)>[]--><com.journeyapps.barcodescanner.DecoderThread: void decode(com.journeyapps.barcodescanner.SourceData)>[]--><com.journeyapps.barcodescanner.DecoderThread: void requestNextPreview()>[]--><com.journeyapps.barcodescanner.camera.CameraInstance: void requestPreview(com.journeyapps.barcodescanner.camera.PreviewCallback)>[]--><com.journeyapps.barcodescanner.camera.CameraThread: void enqueue(java.lang.Runnable)>[[try]]--><android.os.Handler: boolean post(java.lang.Runnable)>[]--><org.ea.sqrl.activites.'-$$Lambda$LoginActivity$yrIChgWNeRF-9x9B4hUEKQ2jPPI': void run()>[]--><org.ea.sqrl.activites.LoginActivity: void lambda$null$16$LoginActivity()>[]--><org.ea.sqrl.activites.LoginActivity: void closeActivity()>[[-$i0 < 21]]--><android.app.Activity: void finishAndRemoveTask()>
+One road protect good!
+try
+Good road with try: <com.journeyapps.barcodescanner.BarcodeView: void previewStarted()>[]--><com.journeyapps.barcodescanner.BarcodeView: void startDecoderThread()>[]--><com.journeyapps.barcodescanner.DecoderThread: void start()>[]--><com.journeyapps.barcodescanner.DecoderThread: void requestNextPreview()>[]--><com.journeyapps.barcodescanner.camera.CameraInstance: void requestPreview(com.journeyapps.barcodescanner.camera.PreviewCallback)>[]--><com.journeyapps.barcodescanner.camera.CameraThread: void enqueue(java.lang.Runnable)>[[try]]--><android.os.Handler: boolean post(java.lang.Runnable)>[]--><org.ea.sqrl.activites.'-$$Lambda$LoginActivity$yrIChgWNeRF-9x9B4hUEKQ2jPPI': void run()>[]--><org.ea.sqrl.activites.LoginActivity: void lambda$null$16$LoginActivity()>[]--><org.ea.sqrl.activites.LoginActivity: void closeActivity()>[[-$i0 < 21]]--><android.app.Activity: void finishAndRemoveTask()>
+One road protect good!
+-i0 < 21
+-$i0 < 21
+Good road: <org.ea.sqrl.activites.identity.IdentitySettingsActivity$1: void afterTextChanged(android.text.Editable)>[]--><org.ea.sqrl.activites.base.BaseActivity: void showErrorMessageInternal(java.lang.String,java.lang.Runnable,java.lang.String)>[[-i0 < 21]]--><android.os.Handler: boolean post(java.lang.Runnable)>[]--><org.ea.sqrl.activites.'-$$Lambda$LoginActivity$yrIChgWNeRF-9x9B4hUEKQ2jPPI': void run()>[]--><org.ea.sqrl.activites.LoginActivity: void lambda$null$16$LoginActivity()>[]--><org.ea.sqrl.activites.LoginActivity: void closeActivity()>[[-$i0 < 21]]--><android.app.Activity: void finishAndRemoveTask()>
+One road protect good!
+-$i0 < 21
+Good road: <org.ea.sqrl.processors.CommunicationFlowHandler: void lambda$setupAskPopupWindow$2$CommunicationFlowHandler(android.view.View)>[]--><org.ea.sqrl.processors.CommunicationHandler: void setAskButton(java.lang.String)>[]--><org.ea.sqrl.services.AskDialogService: void activateAskButton()>[]--><android.os.Handler: boolean post(java.lang.Runnable)>[]--><org.ea.sqrl.activites.'-$$Lambda$LoginActivity$yrIChgWNeRF-9x9B4hUEKQ2jPPI': void run()>[]--><org.ea.sqrl.activites.LoginActivity: void lambda$null$16$LoginActivity()>[]--><org.ea.sqrl.activites.LoginActivity: void closeActivity()>[[-$i0 < 21]]--><android.app.Activity: void finishAndRemoveTask()>
+One road protect good!
+-$i0 < 14
+try
+Good road with try: <com.journeyapps.barcodescanner.CameraPreview: void access$300(com.journeyapps.barcodescanner.CameraPreview,com.journeyapps.barcodescanner.Size)>[]--><com.journeyapps.barcodescanner.CameraPreview: void previewSized(com.journeyapps.barcodescanner.Size)>[]--><com.journeyapps.barcodescanner.CameraPreview: void startPreviewIfReady()>[[-$i0 < 14]]--><com.journeyapps.barcodescanner.CameraPreview: void startCameraPreview(com.journeyapps.barcodescanner.camera.CameraSurface)>[]--><com.journeyapps.barcodescanner.camera.CameraInstance: void startPreview()>[]--><com.journeyapps.barcodescanner.camera.CameraThread: void enqueue(java.lang.Runnable)>[[try]]--><android.os.Handler: boolean post(java.lang.Runnable)>[]--><org.ea.sqrl.activites.'-$$Lambda$LoginActivity$yrIChgWNeRF-9x9B4hUEKQ2jPPI': void run()>[]--><org.ea.sqrl.activites.LoginActivity: void lambda$null$16$LoginActivity()>[]--><org.ea.sqrl.activites.LoginActivity: void closeActivity()>[[-$i0 < 21]]--><android.app.Activity: void finishAndRemoveTask()>
+One road protect good!
+-$i0 < 21
+Good road: <com.google.zxing.client.android.AmbientLightManager: void onSensorChanged(android.hardware.SensorEvent)>[]--><com.google.zxing.client.android.AmbientLightManager: void setTorch(boolean)>[]--><android.os.Handler: boolean post(java.lang.Runnable)>[]--><org.ea.sqrl.activites.'-$$Lambda$LoginActivity$yrIChgWNeRF-9x9B4hUEKQ2jPPI': void run()>[]--><org.ea.sqrl.activites.LoginActivity: void lambda$null$16$LoginActivity()>[]--><org.ea.sqrl.activites.LoginActivity: void closeActivity()>[[-$i0 < 21]]--><android.app.Activity: void finishAndRemoveTask()>
+One road protect good!
+-$i0 < 21
+Good road: <org.ea.sqrl.activites.LoginActivity: void lambda$doLoginBiometric$12$LoginActivity()>[]--><android.os.Handler: boolean post(java.lang.Runnable)>[]--><org.ea.sqrl.activites.'-$$Lambda$LoginActivity$yrIChgWNeRF-9x9B4hUEKQ2jPPI': void run()>[]--><org.ea.sqrl.activites.LoginActivity: void lambda$null$16$LoginActivity()>[]--><org.ea.sqrl.activites.LoginActivity: void closeActivity()>[[-$i0 < 21]]--><android.app.Activity: void finishAndRemoveTask()>
+One road protect good!
+-$i0 < 21
+Good road: <org.ea.sqrl.activites.LoginActivity: void lambda$null$31$LoginActivity()>[]--><org.ea.sqrl.activites.LoginActivity: void closeActivity()>[[-$i0 < 21]]--><android.app.Activity: void finishAndRemoveTask()>
+One road protect good!
+-$i0 < 21
+Good road: <org.ea.sqrl.processors.CommunicationFlowHandler: void lambda$setupAskPopupWindow$4$CommunicationFlowHandler(android.view.View)>[]--><org.ea.sqrl.processors.CommunicationHandler: void setAskButton(java.lang.String)>[]--><org.ea.sqrl.services.AskDialogService: void activateAskButton()>[]--><android.os.Handler: boolean post(java.lang.Runnable)>[]--><org.ea.sqrl.activites.'-$$Lambda$LoginActivity$yrIChgWNeRF-9x9B4hUEKQ2jPPI': void run()>[]--><org.ea.sqrl.activites.LoginActivity: void lambda$null$16$LoginActivity()>[]--><org.ea.sqrl.activites.LoginActivity: void closeActivity()>[[-$i0 < 21]]--><android.app.Activity: void finishAndRemoveTask()>
+One road protect good!
+-$i0 < 14
+try
+Good road with try: <com.journeyapps.barcodescanner.CameraPreview: void access$100(com.journeyapps.barcodescanner.CameraPreview)>[]--><com.journeyapps.barcodescanner.CameraPreview: void startPreviewIfReady()>[[-$i0 < 14]]--><com.journeyapps.barcodescanner.CameraPreview: void startCameraPreview(com.journeyapps.barcodescanner.camera.CameraSurface)>[]--><com.journeyapps.barcodescanner.camera.CameraInstance: void startPreview()>[]--><com.journeyapps.barcodescanner.camera.CameraThread: void enqueue(java.lang.Runnable)>[[try]]--><android.os.Handler: boolean post(java.lang.Runnable)>[]--><org.ea.sqrl.activites.'-$$Lambda$LoginActivity$yrIChgWNeRF-9x9B4hUEKQ2jPPI': void run()>[]--><org.ea.sqrl.activites.LoginActivity: void lambda$null$16$LoginActivity()>[]--><org.ea.sqrl.activites.LoginActivity: void closeActivity()>[[-$i0 < 21]]--><android.app.Activity: void finishAndRemoveTask()>
+One road protect good!
+try
+Good road with try: <org.ea.sqrl.processors.CommunicationHandler: void main(java.lang.String[])>[[try]]--><org.ea.sqrl.processors.CommunicationHandler: void postRequest(java.lang.String,java.lang.String)>[]--><org.ea.sqrl.processors.SQRLStorage: void setProgressState(int)>[]--><org.ea.sqrl.processors.ProgressionUpdater: void setState(int)>[]--><android.os.Handler: boolean post(java.lang.Runnable)>[]--><org.ea.sqrl.activites.'-$$Lambda$LoginActivity$yrIChgWNeRF-9x9B4hUEKQ2jPPI': void run()>[]--><org.ea.sqrl.activites.LoginActivity: void lambda$null$16$LoginActivity()>[]--><org.ea.sqrl.activites.LoginActivity: void closeActivity()>[[-$i0 < 21]]--><android.app.Activity: void finishAndRemoveTask()>
+One road protect good!
+try
+Good road with try: <org.ea.sqrl.processors.CommunicationHandler: void main(java.lang.String[])>[[try]]--><org.ea.sqrl.processors.CommunicationHandler: java.lang.String createPostParams(java.lang.String,java.lang.String,boolean)>[]--><org.ea.sqrl.processors.SQRLStorage: void setProgressState(int)>[]--><org.ea.sqrl.processors.ProgressionUpdater: void setState(int)>[]--><android.os.Handler: boolean post(java.lang.Runnable)>[]--><org.ea.sqrl.activites.'-$$Lambda$LoginActivity$yrIChgWNeRF-9x9B4hUEKQ2jPPI': void run()>[]--><org.ea.sqrl.activites.LoginActivity: void lambda$null$16$LoginActivity()>[]--><org.ea.sqrl.activites.LoginActivity: void closeActivity()>[[-$i0 < 21]]--><android.app.Activity: void finishAndRemoveTask()>
+One road protect good!
+try
+Good road with try: <org.ea.sqrl.processors.CommunicationHandler: void main(java.lang.String[])>[[try]]--><org.ea.sqrl.processors.SQRLStorage: boolean decryptUnlockKey(java.lang.String)>[]--><org.ea.sqrl.processors.ProgressionUpdater: void setState(int)>[]--><android.os.Handler: boolean post(java.lang.Runnable)>[]--><org.ea.sqrl.activites.'-$$Lambda$LoginActivity$yrIChgWNeRF-9x9B4hUEKQ2jPPI': void run()>[]--><org.ea.sqrl.activites.LoginActivity: void lambda$null$16$LoginActivity()>[]--><org.ea.sqrl.activites.LoginActivity: void closeActivity()>[[-$i0 < 21]]--><android.app.Activity: void finishAndRemoveTask()>
+One road protect good!
+try
+Good road with try: <org.ea.sqrl.processors.CommunicationHandler: void main(java.lang.String[])>[[try]]--><org.ea.sqrl.processors.SQRLStorage: boolean decryptIdentityKey(java.lang.String,org.ea.sqrl.processors.EntropyHarvester,boolean)>[[try]]--><org.ea.sqrl.processors.SQRLStorage: boolean decryptIdentityKeyInternal(byte[])>[]--><org.ea.sqrl.processors.SQRLStorage: boolean decryptPreviousBlock()>[]--><org.ea.sqrl.processors.ProgressionUpdater: void setState(int)>[]--><android.os.Handler: boolean post(java.lang.Runnable)>[]--><org.ea.sqrl.activites.'-$$Lambda$LoginActivity$yrIChgWNeRF-9x9B4hUEKQ2jPPI': void run()>[]--><org.ea.sqrl.activites.LoginActivity: void lambda$null$16$LoginActivity()>[]--><org.ea.sqrl.activites.LoginActivity: void closeActivity()>[[-$i0 < 21]]--><android.app.Activity: void finishAndRemoveTask()>
+One road protect good!
+try
+Good road with try: <org.ea.sqrl.processors.CommunicationHandler: void main(java.lang.String[])>[[try]]--><org.ea.sqrl.processors.CommunicationHandler: java.lang.String createPostParams(java.lang.String,java.lang.String)>[]--><org.ea.sqrl.processors.CommunicationHandler: java.lang.String createPostParams(java.lang.String,java.lang.String,boolean)>[]--><org.ea.sqrl.processors.SQRLStorage: void setProgressState(int)>[]--><org.ea.sqrl.processors.ProgressionUpdater: void setState(int)>[]--><android.os.Handler: boolean post(java.lang.Runnable)>[]--><org.ea.sqrl.activites.'-$$Lambda$LoginActivity$yrIChgWNeRF-9x9B4hUEKQ2jPPI': void run()>[]--><org.ea.sqrl.activites.LoginActivity: void lambda$null$16$LoginActivity()>[]--><org.ea.sqrl.activites.LoginActivity: void closeActivity()>[[-$i0 < 21]]--><android.app.Activity: void finishAndRemoveTask()>
+One road protect good!
+try
+Good road with try: <com.journeyapps.barcodescanner.BarcodeView$1: boolean handleMessage(android.os.Message)>[]--><com.journeyapps.barcodescanner.CaptureManager$1: void barcodeResult(com.journeyapps.barcodescanner.BarcodeResult)>[]--><com.journeyapps.barcodescanner.CompoundBarcodeView: void pause()>[]--><com.journeyapps.barcodescanner.BarcodeView: void pause()>[]--><com.journeyapps.barcodescanner.CameraPreview: void pause()>[]--><com.journeyapps.barcodescanner.camera.CameraInstance: void close()>[]--><com.journeyapps.barcodescanner.camera.CameraThread: void enqueue(java.lang.Runnable)>[[try]]--><android.os.Handler: boolean post(java.lang.Runnable)>[]--><org.ea.sqrl.activites.'-$$Lambda$LoginActivity$yrIChgWNeRF-9x9B4hUEKQ2jPPI': void run()>[]--><org.ea.sqrl.activites.LoginActivity: void lambda$null$16$LoginActivity()>[]--><org.ea.sqrl.activites.LoginActivity: void closeActivity()>[[-$i0 < 21]]--><android.app.Activity: void finishAndRemoveTask()>
+One road protect good!
+try
+Good road with try: <com.journeyapps.barcodescanner.BarcodeView$1: boolean handleMessage(android.os.Message)>[]--><com.journeyapps.barcodescanner.CompoundBarcodeView$WrappedCallback: void barcodeResult(com.journeyapps.barcodescanner.BarcodeResult)>[]--><com.journeyapps.barcodescanner.CaptureManager$1: void barcodeResult(com.journeyapps.barcodescanner.BarcodeResult)>[]--><com.journeyapps.barcodescanner.CompoundBarcodeView: void pause()>[]--><com.journeyapps.barcodescanner.BarcodeView: void pause()>[]--><com.journeyapps.barcodescanner.CameraPreview: void pause()>[]--><com.journeyapps.barcodescanner.camera.CameraInstance: void close()>[]--><com.journeyapps.barcodescanner.camera.CameraThread: void enqueue(java.lang.Runnable)>[[try]]--><android.os.Handler: boolean post(java.lang.Runnable)>[]--><org.ea.sqrl.activites.'-$$Lambda$LoginActivity$yrIChgWNeRF-9x9B4hUEKQ2jPPI': void run()>[]--><org.ea.sqrl.activites.LoginActivity: void lambda$null$16$LoginActivity()>[]--><org.ea.sqrl.activites.LoginActivity: void closeActivity()>[[-$i0 < 21]]--><android.app.Activity: void finishAndRemoveTask()>
+One road protect good!
+try
+Good road with try: <org.ea.sqrl.processors.BioAuthenticationCallback: void onAuthenticationSucceeded(android.hardware.biometrics.BiometricPrompt$AuthenticationResult)>[[try]]--><org.ea.sqrl.processors.SQRLStorage: boolean decryptIdentityKeyBiometric(javax.crypto.Cipher)>[]--><org.ea.sqrl.processors.SQRLStorage: boolean decryptIdentityKeyInternal(byte[])>[]--><org.ea.sqrl.processors.SQRLStorage: boolean decryptPreviousBlock()>[]--><org.ea.sqrl.processors.ProgressionUpdater: void setState(int)>[]--><android.os.Handler: boolean post(java.lang.Runnable)>[]--><org.ea.sqrl.activites.'-$$Lambda$LoginActivity$yrIChgWNeRF-9x9B4hUEKQ2jPPI': void run()>[]--><org.ea.sqrl.activites.LoginActivity: void lambda$null$16$LoginActivity()>[]--><org.ea.sqrl.activites.LoginActivity: void closeActivity()>[[-$i0 < 21]]--><android.app.Activity: void finishAndRemoveTask()>
+One road protect good!
+-$i0 < 21
+Good road: <org.ea.sqrl.processors.CommunicationFlowHandler: void lambda$setupAskPopupWindow$3$CommunicationFlowHandler(android.view.View)>[]--><org.ea.sqrl.processors.CommunicationHandler: void setAskButton(java.lang.String)>[]--><org.ea.sqrl.services.AskDialogService: void activateAskButton()>[]--><android.os.Handler: boolean post(java.lang.Runnable)>[]--><org.ea.sqrl.activites.'-$$Lambda$LoginActivity$yrIChgWNeRF-9x9B4hUEKQ2jPPI': void run()>[]--><org.ea.sqrl.activites.LoginActivity: void lambda$null$16$LoginActivity()>[]--><org.ea.sqrl.activites.LoginActivity: void closeActivity()>[[-$i0 < 21]]--><android.app.Activity: void finishAndRemoveTask()>
+One road protect good!
+try
+Good road with try: <com.journeyapps.barcodescanner.CameraPreview: void onLayout(boolean,int,int,int,int)>[]--><com.journeyapps.barcodescanner.CameraPreview: void containerSized(com.journeyapps.barcodescanner.Size)>[]--><com.journeyapps.barcodescanner.camera.CameraInstance: void configureCamera()>[]--><com.journeyapps.barcodescanner.camera.CameraThread: void enqueue(java.lang.Runnable)>[[try]]--><android.os.Handler: boolean post(java.lang.Runnable)>[]--><org.ea.sqrl.activites.'-$$Lambda$LoginActivity$yrIChgWNeRF-9x9B4hUEKQ2jPPI': void run()>[]--><org.ea.sqrl.activites.LoginActivity: void lambda$null$16$LoginActivity()>[]--><org.ea.sqrl.activites.LoginActivity: void closeActivity()>[[-$i0 < 21]]--><android.app.Activity: void finishAndRemoveTask()>
+One road protect good!
+-i0 < 21
+-$i0 < 21
+Good road: <org.ea.sqrl.activites.base.BaseActivity: void showErrorMessage(int,java.lang.Runnable)>[]--><org.ea.sqrl.activites.base.BaseActivity: void showErrorMessageInternal(java.lang.String,java.lang.Runnable)>[]--><org.ea.sqrl.activites.base.BaseActivity: void showErrorMessageInternal(java.lang.String,java.lang.Runnable,java.lang.String)>[[-i0 < 21]]--><android.os.Handler: boolean post(java.lang.Runnable)>[]--><org.ea.sqrl.activites.'-$$Lambda$LoginActivity$yrIChgWNeRF-9x9B4hUEKQ2jPPI': void run()>[]--><org.ea.sqrl.activites.LoginActivity: void lambda$null$16$LoginActivity()>[]--><org.ea.sqrl.activites.LoginActivity: void closeActivity()>[[-$i0 < 21]]--><android.app.Activity: void finishAndRemoveTask()>
+One road protect good!
+-$i0 < 21
+Good road: <org.ea.sqrl.activites.EnableQuickPassActivity: void closeActivity()>[]--><org.ea.sqrl.activites.LoginActivity: void closeActivity()>[[-$i0 < 21]]--><android.app.Activity: void finishAndRemoveTask()>
+One road protect good!
+-$i0 < 21
+Good road: <org.ea.sqrl.activites.LoginActivity: void lambda$null$28$LoginActivity()>[]--><org.ea.sqrl.activites.LoginActivity: void closeActivity()>[[-$i0 < 21]]--><android.app.Activity: void finishAndRemoveTask()>
+One road protect good!
+try
+Good road with try: <com.journeyapps.barcodescanner.CameraPreview$3: boolean handleMessage(android.os.Message)>[]--><com.journeyapps.barcodescanner.CameraPreview: void pause()>[]--><com.journeyapps.barcodescanner.camera.CameraInstance: void close()>[]--><com.journeyapps.barcodescanner.camera.CameraThread: void enqueue(java.lang.Runnable)>[[try]]--><android.os.Handler: boolean post(java.lang.Runnable)>[]--><org.ea.sqrl.activites.'-$$Lambda$LoginActivity$yrIChgWNeRF-9x9B4hUEKQ2jPPI': void run()>[]--><org.ea.sqrl.activites.LoginActivity: void lambda$null$16$LoginActivity()>[]--><org.ea.sqrl.activites.LoginActivity: void closeActivity()>[[-$i0 < 21]]--><android.app.Activity: void finishAndRemoveTask()>
+One road protect good!
+-$i0 < 21
+Good road: <org.ea.sqrl.activites.LoginActivity: void lambda$null$11$LoginActivity()>[]--><org.ea.sqrl.activites.LoginActivity: void doLogin(boolean,boolean,boolean)>[]--><java.lang.Thread: void run()>[]--><org.ea.sqrl.activites.'-$$Lambda$LoginActivity$WnGbGsg7w9sS5GYOsSfVqBunqig': void run()>[]--><org.ea.sqrl.activites.LoginActivity: void lambda$configureCommFlowHandlerDisableAccount$27$LoginActivity(org.ea.sqrl.processors.SQRLStorage)>[]--><android.os.Handler: boolean post(java.lang.Runnable)>[]--><org.ea.sqrl.activites.'-$$Lambda$LoginActivity$yrIChgWNeRF-9x9B4hUEKQ2jPPI': void run()>[]--><org.ea.sqrl.activites.LoginActivity: void lambda$null$16$LoginActivity()>[]--><org.ea.sqrl.activites.LoginActivity: void closeActivity()>[[-$i0 < 21]]--><android.app.Activity: void finishAndRemoveTask()>
+One road protect good!
+containsStatic:false
+containsTry:true
+29call by main package
+-----------------------------------------
+#################################################
+N 49 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putInt(java.lang.String,int)> is checking!!!
+The life time of api is [21,31]
+2call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.journeyapps.barcodescanner.CaptureActivity dummyMainMethod_com_journeyapps_barcodescanner_CaptureActivity(android.content.Intent)>[]--><com.journeyapps.barcodescanner.CaptureActivity: void onSaveInstanceState(android.os.Bundle)>[]--><com.journeyapps.barcodescanner.CaptureManager: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <org.ea.sqrl.activites.IntroductionActivity$PlaceholderFragment: org.ea.sqrl.activites.IntroductionActivity$PlaceholderFragment newInstance(int)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#1.the call statck between class <org.ea.sqrl.activites.IntroductionActivity$PlaceholderFragment: org.ea.sqrl.activites.IntroductionActivity$PlaceholderFragment newInstance(int)> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:13
+crashApisInMain:7
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 50 Potential Issue API: SDKCheck of <android.hardware.biometrics.BiometricPrompt.Builder: android.hardware.biometrics.BiometricPrompt.Builder setNegativeButton(java.lang.CharSequence,java.util.concurrent.Executor,android.content.DialogInterface.OnClickListener)> is checking!!!
+The life time of api is [28,31]
+1call roads:
+1 Mainhead roads:
+i0 >= 28
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.ea.sqrl.activites.LoginActivity dummyMainMethod_org_ea_sqrl_activites_LoginActivity(android.content.Intent)>[]--><org.ea.sqrl.activites.LoginActivity: void onCreate(android.os.Bundle)>[]--><org.ea.sqrl.activites.LoginActivity: void doLoginBiometric()>[[i0 >= 28]]--><android.hardware.biometrics.BiometricPrompt.Builder: android.hardware.biometrics.BiometricPrompt.Builder setNegativeButton(java.lang.CharSequence,java.util.concurrent.Executor,android.content.DialogInterface.OnClickListener)>
+One road protect good!
+i0 >= 28
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.ea.sqrl.activites.EnableQuickPassActivity dummyMainMethod_org_ea_sqrl_activites_EnableQuickPassActivity(android.content.Intent)>[]--><org.ea.sqrl.activites.EnableQuickPassActivity: void onCreate(android.os.Bundle)>[]--><org.ea.sqrl.activites.LoginActivity: void onCreate(android.os.Bundle)>[]--><org.ea.sqrl.activites.LoginActivity: void doLoginBiometric()>[[i0 >= 28]]--><android.hardware.biometrics.BiometricPrompt.Builder: android.hardware.biometrics.BiometricPrompt.Builder setNegativeButton(java.lang.CharSequence,java.util.concurrent.Executor,android.content.DialogInterface.OnClickListener)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 51 Potential Issue API: SDKCheck of <android.content.pm.ShortcutInfo.Builder: android.content.pm.ShortcutInfo.Builder setIntent(android.content.Intent)> is checking!!!
+The life time of api is [24,31]
+1call roads:
+1 Mainhead roads:
+-i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><org.ea.sqrl.utils.SqrlApplication: void onCreate()>[]--><org.ea.sqrl.utils.SqrlApplication: void configureShortcuts(android.content.Context)>[[-i0 < 26]]--><android.content.pm.ShortcutInfo.Builder: android.content.pm.ShortcutInfo.Builder setIntent(android.content.Intent)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 52 Potential Issue API: SDKCheck of <android.util.SizeF: float getWidth()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <androidx.versionedparcelable.VersionedParcel: void writeSizeF(android.util.SizeF,int)>[]--><android.util.SizeF: float getWidth()>
+#1.the call statck between class <androidx.versionedparcelable.VersionedParcel: void writeSizeF(android.util.SizeF,int)> to <android.util.SizeF: float getWidth()>has compatibility isssues！
+-----------------------------------------
+crashApis:14
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 53 Potential Issue API: SDKCheck of <android.os.BaseBundle: int getInt(java.lang.String,int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.journeyapps.barcodescanner.CaptureActivity dummyMainMethod_com_journeyapps_barcodescanner_CaptureActivity(android.content.Intent)>[]--><com.journeyapps.barcodescanner.CaptureActivity: void onCreate(android.os.Bundle)>[]--><com.journeyapps.barcodescanner.CaptureManager: void initializeFromIntent(android.content.Intent,android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String,int)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: int getInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:15
+crashApisInMain:8
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 54 Potential Issue API: SDKCheck of <android.hardware.biometrics.BiometricPrompt.CryptoObject: javax.crypto.Cipher getCipher()> is checking!!!
+The life time of api is [28,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+try
+Good road with try: <org.ea.sqrl.processors.BioAuthenticationCallback: void onAuthenticationSucceeded(android.hardware.biometrics.BiometricPrompt$AuthenticationResult)>[[try]]--><android.hardware.biometrics.BiometricPrompt.CryptoObject: javax.crypto.Cipher getCipher()>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 55 Potential Issue API: SDKCheck of <android.os.BaseBundle: boolean isEmpty()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.journeyapps.barcodescanner.CaptureActivity dummyMainMethod_com_journeyapps_barcodescanner_CaptureActivity(android.content.Intent)>[]--><com.journeyapps.barcodescanner.CaptureActivity: void onCreate(android.os.Bundle)>[]--><com.journeyapps.barcodescanner.CaptureManager: void initializeFromIntent(android.content.Intent,android.os.Bundle)>[]--><com.journeyapps.barcodescanner.CompoundBarcodeView: void initializeFromIntent(android.content.Intent)>[]--><com.google.zxing.client.android.DecodeHintManager: java.util.Map parseDecodeHints(android.content.Intent)>[]--><android.os.BaseBundle: boolean isEmpty()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: boolean isEmpty()>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:16
+crashApisInMain:9
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 56 Potential Issue API: SDKCheck of <android.util.SizeF: void <init>(float,float)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <androidx.versionedparcelable.VersionedParcel: android.util.SizeF readSizeF(android.util.SizeF,int)>[]--><android.util.SizeF: void <init>(float,float)>
+#1.the call statck between class <androidx.versionedparcelable.VersionedParcel: android.util.SizeF readSizeF(android.util.SizeF,int)> to <android.util.SizeF: void <init>(float,float)>has compatibility isssues！
+-----------------------------------------
+crashApis:17
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 57 Potential Issue API: SDKCheck of <android.hardware.biometrics.BiometricPrompt.Builder: android.hardware.biometrics.BiometricPrompt build()> is checking!!!
+The life time of api is [28,31]
+1call roads:
+1 Mainhead roads:
+i0 >= 28
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.ea.sqrl.activites.LoginActivity dummyMainMethod_org_ea_sqrl_activites_LoginActivity(android.content.Intent)>[]--><org.ea.sqrl.activites.LoginActivity: void onCreate(android.os.Bundle)>[]--><org.ea.sqrl.activites.LoginActivity: void doLoginBiometric()>[[i0 >= 28]]--><android.hardware.biometrics.BiometricPrompt.Builder: android.hardware.biometrics.BiometricPrompt build()>
+One road protect good!
+i0 >= 28
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.ea.sqrl.activites.EnableQuickPassActivity dummyMainMethod_org_ea_sqrl_activites_EnableQuickPassActivity(android.content.Intent)>[]--><org.ea.sqrl.activites.EnableQuickPassActivity: void onCreate(android.os.Bundle)>[]--><org.ea.sqrl.activites.LoginActivity: void onCreate(android.os.Bundle)>[]--><org.ea.sqrl.activites.LoginActivity: void doLoginBiometric()>[[i0 >= 28]]--><android.hardware.biometrics.BiometricPrompt.Builder: android.hardware.biometrics.BiometricPrompt build()>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 58 Potential Issue API: SDKCheck of <android.security.keystore.KeyGenParameterSpec.Builder: void <init>(java.lang.String,int)> is checking!!!
+The life time of api is [23,31]
+7call roads:
+1 Mainhead roads:
+6 Packageshead roads:
+###Multi invoking in one method, need manual check!!!)>[[try]]--><org.ea.sqrl.processors.SQRLStorage: boolean decryptIdentityKey(java.lang.String,org.ea.sqrl.processors.EntropyHarvester,boolean)>[[try]]--><org.ea.sqrl.processors.SQRLStorage: void encryptIdentityKeyBiometric(byte[])>[[try], [-i0 < 28]]
+###Multi invoking in one method, need manual check!!!)>[[try]]--><org.ea.sqrl.processors.SQRLStorage: boolean decryptIdentityKey(java.lang.String,org.ea.sqrl.processors.EntropyHarvester,boolean)>[[try]]--><org.ea.sqrl.processors.SQRLStorage: void encryptIdentityKeyBiometric(byte[])>[[try]][[-i0 < 28]]
+try
+Good road with try: <org.ea.sqrl.processors.CommunicationHandler: void main(java.lang.String[])>[[try]]--><org.ea.sqrl.processors.SQRLStorage: boolean decryptIdentityKey(java.lang.String,org.ea.sqrl.processors.EntropyHarvester,boolean)>[[try]]--><org.ea.sqrl.processors.SQRLStorage: void encryptIdentityKeyBiometric(byte[])>[[try], [-i0 < 28]]--><android.security.keystore.KeyGenParameterSpec.Builder: void <init>(java.lang.String,int)>
+One road protect good!
+containsStatic:false
+containsTry:true
+7call by main package
+-----------------------------------------
+#################################################
+N 59 Potential Issue API: SDKCheck of <android.content.pm.ShortcutInfo.Builder: android.content.pm.ShortcutInfo.Builder setIcon(android.graphics.drawable.Icon)> is checking!!!
+The life time of api is [24,31]
+1call roads:
+1 Mainhead roads:
+-i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><org.ea.sqrl.utils.SqrlApplication: void onCreate()>[]--><org.ea.sqrl.utils.SqrlApplication: void configureShortcuts(android.content.Context)>[[-i0 < 26]]--><android.content.pm.ShortcutInfo.Builder: android.content.pm.ShortcutInfo.Builder setIcon(android.graphics.drawable.Icon)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 60 Potential Issue API: SDKCheck of <android.hardware.biometrics.BiometricPrompt.AuthenticationCallback: void onAuthenticationHelp(int,java.lang.CharSequence)> is checking!!!
+The life time of api is [28,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 21 22 23 24 25 26 27 
+Error road: <org.ea.sqrl.processors.BioAuthenticationCallback: void onAuthenticationHelp(int,java.lang.CharSequence)>[]--><android.hardware.biometrics.BiometricPrompt.AuthenticationCallback: void onAuthenticationHelp(int,java.lang.CharSequence)>
+#1.the call statck between class <org.ea.sqrl.processors.BioAuthenticationCallback: void onAuthenticationHelp(int,java.lang.CharSequence)> to <android.hardware.biometrics.BiometricPrompt.AuthenticationCallback: void onAuthenticationHelp(int,java.lang.CharSequence)>has compatibility isssues！
+-----------------------------------------
+crashApis:18
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 61 Potential Issue API: SDKCheck of <android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-i0 < 26
+Good road: <org.ea.sqrl.activites.base.BaseActivity: void showClearNotification()>[[-i0 < 26]]--><android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 62 Potential Issue API: SDKCheck of <android.hardware.biometrics.BiometricPrompt: void authenticate(android.hardware.biometrics.BiometricPrompt.CryptoObject,android.os.CancellationSignal,java.util.concurrent.Executor,android.hardware.biometrics.BiometricPrompt.AuthenticationCallback)> is checking!!!
+The life time of api is [28,31]
+1call roads:
+1 Mainhead roads:
+###Multi invoking in one method, need manual check!!!--><org.ea.sqrl.activites.LoginActivity: void doLoginBiometric()>[[try], [i0 >= 28]]
+###Multi invoking in one method, need manual check!!!--><org.ea.sqrl.activites.LoginActivity: void doLoginBiometric()>[[try]][[i0 >= 28]]
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.ea.sqrl.activites.LoginActivity dummyMainMethod_org_ea_sqrl_activites_LoginActivity(android.content.Intent)>[]--><org.ea.sqrl.activites.LoginActivity: void onCreate(android.os.Bundle)>[]--><org.ea.sqrl.activites.LoginActivity: void doLoginBiometric()>[[try], [i0 >= 28]]--><android.hardware.biometrics.BiometricPrompt: void authenticate(android.hardware.biometrics.BiometricPrompt.CryptoObject,android.os.CancellationSignal,java.util.concurrent.Executor,android.hardware.biometrics.BiometricPrompt.AuthenticationCallback)>
+One road protect good!
+###Multi invoking in one method, need manual check!!!--><org.ea.sqrl.activites.LoginActivity: void doLoginBiometric()>[[try], [i0 >= 28]]
+###Multi invoking in one method, need manual check!!!--><org.ea.sqrl.activites.LoginActivity: void doLoginBiometric()>[[try]][[i0 >= 28]]
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.ea.sqrl.activites.EnableQuickPassActivity dummyMainMethod_org_ea_sqrl_activites_EnableQuickPassActivity(android.content.Intent)>[]--><org.ea.sqrl.activites.EnableQuickPassActivity: void onCreate(android.os.Bundle)>[]--><org.ea.sqrl.activites.LoginActivity: void onCreate(android.os.Bundle)>[]--><org.ea.sqrl.activites.LoginActivity: void doLoginBiometric()>[[try], [i0 >= 28]]--><android.hardware.biometrics.BiometricPrompt: void authenticate(android.hardware.biometrics.BiometricPrompt.CryptoObject,android.os.CancellationSignal,java.util.concurrent.Executor,android.hardware.biometrics.BiometricPrompt.AuthenticationCallback)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:true
+1call by main package
+-----------------------------------------
+#################################################
+N 63 Potential Issue API: SDKCheck of <android.content.ContextWrapper: java.util.concurrent.Executor getMainExecutor()> is checking!!!
+The life time of api is [28,31]
+1call roads:
+1 Mainhead roads:
+###Multi invoking in one method, need manual check!!!--><org.ea.sqrl.activites.LoginActivity: void doLoginBiometric()>[[try], [i0 >= 28]]
+###Multi invoking in one method, need manual check!!!--><org.ea.sqrl.activites.LoginActivity: void doLoginBiometric()>[[try]][[i0 >= 28]]
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.ea.sqrl.activites.LoginActivity dummyMainMethod_org_ea_sqrl_activites_LoginActivity(android.content.Intent)>[]--><org.ea.sqrl.activites.LoginActivity: void onCreate(android.os.Bundle)>[]--><org.ea.sqrl.activites.LoginActivity: void doLoginBiometric()>[[try], [i0 >= 28]]--><android.content.ContextWrapper: java.util.concurrent.Executor getMainExecutor()>
+One road protect good!
+###Multi invoking in one method, need manual check!!!--><org.ea.sqrl.activites.LoginActivity: void doLoginBiometric()>[[try], [i0 >= 28]]
+###Multi invoking in one method, need manual check!!!--><org.ea.sqrl.activites.LoginActivity: void doLoginBiometric()>[[try]][[i0 >= 28]]
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.ea.sqrl.activites.EnableQuickPassActivity dummyMainMethod_org_ea_sqrl_activites_EnableQuickPassActivity(android.content.Intent)>[]--><org.ea.sqrl.activites.EnableQuickPassActivity: void onCreate(android.os.Bundle)>[]--><org.ea.sqrl.activites.LoginActivity: void onCreate(android.os.Bundle)>[]--><org.ea.sqrl.activites.LoginActivity: void doLoginBiometric()>[[try], [i0 >= 28]]--><android.content.ContextWrapper: java.util.concurrent.Executor getMainExecutor()>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:true
+1call by main package
+-----------------------------------------
+#################################################
+N 64 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.util.Set keySet()> is checking!!!
+The life time of api is [21,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:true
+1call by main package
+-----------------------------------------
+#################################################
+N 65 Potential Issue API: SDKCheck of <android.util.Size: int getHeight()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <androidx.versionedparcelable.VersionedParcel: void writeSize(android.util.Size,int)>[]--><android.util.Size: int getHeight()>
+#1.the call statck between class <androidx.versionedparcelable.VersionedParcel: void writeSize(android.util.Size,int)> to <android.util.Size: int getHeight()>has compatibility isssues！
+-----------------------------------------
+crashApis:19
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 66 Potential Issue API: SDKCheck of <android.hardware.biometrics.BiometricPrompt.AuthenticationCallback: void onAuthenticationFailed()> is checking!!!
+The life time of api is [28,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 21 22 23 24 25 26 27 
+Error road: <org.ea.sqrl.processors.BioAuthenticationCallback: void onAuthenticationFailed()>[]--><android.hardware.biometrics.BiometricPrompt.AuthenticationCallback: void onAuthenticationFailed()>
+#1.the call statck between class <org.ea.sqrl.processors.BioAuthenticationCallback: void onAuthenticationFailed()> to <android.hardware.biometrics.BiometricPrompt.AuthenticationCallback: void onAuthenticationFailed()>has compatibility isssues！
+-----------------------------------------
+crashApis:20
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 67 Potential Issue API: SDKCheck of <android.app.NotificationChannel: void enableVibration(boolean)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-i0 < 26
+Good road: <org.ea.sqrl.activites.base.BaseActivity: void showClearNotification()>[[-i0 < 26]]--><android.app.NotificationChannel: void enableVibration(boolean)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+crashApis numbers:20
+crashApis numbers in main road:9
+On Android Version 16 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 17 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 18 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 19 this app may have error api use(at least): 20 and error api roads: 58
+On Android Version 20 this app may have error api use(at least): 20 and error api roads: 58
+On Android Version 21 this app may have error api use(at least): 8 and error api roads: 45
+On Android Version 22 this app may have error api use(at least): 5 and error api roads: 5
+On Android Version 23 this app may have error api use(at least): 5 and error api roads: 5
+On Android Version 24 this app may have error api use(at least): 5 and error api roads: 5
+On Android Version 25 this app may have error api use(at least): 5 and error api roads: 5
+On Android Version 26 this app may have error api use(at least): 5 and error api roads: 5
+On Android Version 27 this app may have error api use(at least): 5 and error api roads: 5
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 31 this app may have error api use(at least): 0 and error api roads: 0

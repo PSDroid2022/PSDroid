@@ -1,0 +1,171 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/XPrivacyLua.apk
+Entry Points[eu.faircode.xlua.ActivityHelp, eu.faircode.xlua.ActivityMain, eu.faircode.xlua.ApplicationEx]
+FllowDroidcallgraph size:446
+Soot started on Mon Jul 11 15:38:15 CST 2022
+StaticCheck:<com.bumptech.glide.load.engine.cache.MemorySizeCalculator: boolean isLowMemoryDevice(android.app.ActivityManager)>$yysi0 < 19
+Soot finished on Mon Jul 11 15:38:32 CST 2022
+Soot has run for 0 min. 16 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 23
+Declared Target Sdk version is: 27
+Declared Max Sdk version is: -1
+Collected 531 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()> is checking!!!
+The life time of api is [1,30]
+6call roads:
+0 Mainhead roads:
+6 Packageshead roads:
+try
+Good road with try: <com.bumptech.glide.manager.SupportRequestManagerFragment: void onStart()>[]--><com.bumptech.glide.manager.ActivityFragmentLifecycle: void onStart()>[]--><com.bumptech.glide.manager.DefaultConnectivityMonitor: void onStart()>[]--><com.bumptech.glide.manager.DefaultConnectivityMonitor: void register()>[]--><com.bumptech.glide.manager.DefaultConnectivityMonitor: boolean isConnected(android.content.Context)>[[try]]--><android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>
+One road protect good!
+try
+Good road with try: <com.bumptech.glide.manager.DefaultConnectivityMonitor$1: void onReceive(android.content.Context,android.content.Intent)>[]--><com.bumptech.glide.manager.DefaultConnectivityMonitor: boolean isConnected(android.content.Context)>[[try]]--><android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>
+One road protect good!
+try
+Good road with try: <com.bumptech.glide.manager.RequestManagerFragment: void onStart()>[]--><com.bumptech.glide.manager.ActivityFragmentLifecycle: void onStart()>[]--><com.bumptech.glide.manager.DefaultConnectivityMonitor: void onStart()>[]--><com.bumptech.glide.manager.DefaultConnectivityMonitor: void register()>[]--><com.bumptech.glide.manager.DefaultConnectivityMonitor: boolean isConnected(android.content.Context)>[[try]]--><android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>
+One road protect good!
+containsStatic:false
+containsTry:true
+7call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.net.NetworkInfo: boolean isConnected()> is checking!!!
+The life time of api is [1,30]
+6call roads:
+0 Mainhead roads:
+6 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <com.bumptech.glide.manager.SupportRequestManagerFragment: void onStart()>[]--><com.bumptech.glide.manager.ActivityFragmentLifecycle: void onStart()>[]--><com.bumptech.glide.manager.DefaultConnectivityMonitor: void onStart()>[]--><com.bumptech.glide.manager.DefaultConnectivityMonitor: void register()>[]--><com.bumptech.glide.manager.DefaultConnectivityMonitor: boolean isConnected(android.content.Context)>[]--><android.net.NetworkInfo: boolean isConnected()>
+#1.the call statck between class <com.bumptech.glide.manager.SupportRequestManagerFragment: void onStart()> to <android.net.NetworkInfo: boolean isConnected()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <com.bumptech.glide.manager.DefaultConnectivityMonitor$1: void onReceive(android.content.Context,android.content.Intent)>[]--><com.bumptech.glide.manager.DefaultConnectivityMonitor: boolean isConnected(android.content.Context)>[]--><android.net.NetworkInfo: boolean isConnected()>
+#2.the call statck between class <com.bumptech.glide.manager.DefaultConnectivityMonitor$1: void onReceive(android.content.Context,android.content.Intent)> to <android.net.NetworkInfo: boolean isConnected()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <com.bumptech.glide.manager.RequestManagerFragment: void onStart()>[]--><com.bumptech.glide.manager.ActivityFragmentLifecycle: void onStart()>[]--><com.bumptech.glide.manager.DefaultConnectivityMonitor: void onStart()>[]--><com.bumptech.glide.manager.DefaultConnectivityMonitor: void register()>[]--><com.bumptech.glide.manager.DefaultConnectivityMonitor: boolean isConnected(android.content.Context)>[]--><android.net.NetworkInfo: boolean isConnected()>
+#3.the call statck between class <com.bumptech.glide.manager.RequestManagerFragment: void onStart()> to <android.net.NetworkInfo: boolean isConnected()>has compatibility isssues！
+-----------------------------------------
+crashApis:1
+containsStatic:false
+containsTry:false
+7call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.media.MediaMetadataRetriever: android.graphics.Bitmap getScaledFrameAtTime(long,int,int,int)> is checking!!!
+The life time of api is [27,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+try
+Good road with try: <com.bumptech.glide.load.engine.DecodePath: com.bumptech.glide.load.engine.Resource decode(com.bumptech.glide.load.data.DataRewinder,int,int,com.bumptech.glide.load.Options,com.bumptech.glide.load.engine.DecodePath$DecodeCallback)>[]--><com.bumptech.glide.load.engine.DecodePath: com.bumptech.glide.load.engine.Resource decodeResource(com.bumptech.glide.load.data.DataRewinder,int,int,com.bumptech.glide.load.Options)>[[try]]--><com.bumptech.glide.load.engine.DecodePath: com.bumptech.glide.load.engine.Resource decodeResourceWithList(com.bumptech.glide.load.data.DataRewinder,int,int,com.bumptech.glide.load.Options,java.util.List)>[[try]]--><com.bumptech.glide.load.resource.bitmap.BitmapDrawableDecoder: com.bumptech.glide.load.engine.Resource decode(java.lang.Object,int,int,com.bumptech.glide.load.Options)>[]--><com.bumptech.glide.load.resource.bitmap.VideoDecoder: com.bumptech.glide.load.engine.Resource decode(java.lang.Object,int,int,com.bumptech.glide.load.Options)>[[try]]--><com.bumptech.glide.load.resource.bitmap.VideoDecoder: android.graphics.Bitmap decodeFrame(android.media.MediaMetadataRetriever,long,int,int,int)>[[-$i4 < 27]]--><android.media.MediaMetadataRetriever: android.graphics.Bitmap getScaledFrameAtTime(long,int,int,int)>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)> is checking!!!
+The life time of api is [26,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+###Multi invoking in one method, need manual check!!!<eu.faircode.xlua.XLua$2: void beforeHookedMethod(de.robv.android.xposed.XC_MethodHook$MethodHookParam)>[[try]]--><eu.faircode.xlua.XProvider: android.os.Bundle call(android.content.Context,java.lang.String,android.os.Bundle)>[[try]]--><eu.faircode.xlua.XProvider: android.os.Bundle report(android.content.Context,android.os.Bundle)>[[$i2 < 26], [try]]--><eu.faircode.xlua.Util: void notifyAsUser(android.content.Context,java.lang.String,int,android.app.Notification,int)>[[-$i2 < 26]]
+###Multi invoking in one method, need manual check!!!<eu.faircode.xlua.XLua$2: void beforeHookedMethod(de.robv.android.xposed.XC_MethodHook$MethodHookParam)>[[try]]--><eu.faircode.xlua.XProvider: android.os.Bundle call(android.content.Context,java.lang.String,android.os.Bundle)>[[try]]--><eu.faircode.xlua.XProvider: android.os.Bundle report(android.content.Context,android.os.Bundle)>[[$i2 < 26]][[try]]--><eu.faircode.xlua.Util: void notifyAsUser(android.content.Context,java.lang.String,int,android.app.Notification,int)>[[-$i2 < 26]]
+try
+Good road with try: <eu.faircode.xlua.XLua$2: void beforeHookedMethod(de.robv.android.xposed.XC_MethodHook$MethodHookParam)>[[try]]--><eu.faircode.xlua.XProvider: android.os.Bundle call(android.content.Context,java.lang.String,android.os.Bundle)>[[try]]--><eu.faircode.xlua.XProvider: android.os.Bundle report(android.content.Context,android.os.Bundle)>[[$i2 < 26], [try]]--><eu.faircode.xlua.Util: void notifyAsUser(android.content.Context,java.lang.String,int,android.app.Notification,int)>[[-$i2 < 26]]--><android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)>
+One road protect good!
+try
+Good road with try: <eu.faircode.xlua.ReceiverPackage: void onReceive(android.content.Context,android.content.Intent)>[[try]]--><eu.faircode.xlua.Util: void notifyAsUser(android.content.Context,java.lang.String,int,android.app.Notification,int)>[[-$i2 < 26]]--><android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)>
+One road protect good!
+containsStatic:false
+containsTry:true
+3call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.app.NotificationChannel: void setSound(android.net.Uri,android.media.AudioAttributes)> is checking!!!
+The life time of api is [26,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+###Multi invoking in one method, need manual check!!!<eu.faircode.xlua.XLua$2: void beforeHookedMethod(de.robv.android.xposed.XC_MethodHook$MethodHookParam)>[[try]]--><eu.faircode.xlua.XProvider: android.os.Bundle call(android.content.Context,java.lang.String,android.os.Bundle)>[[try]]--><eu.faircode.xlua.XProvider: android.os.Bundle report(android.content.Context,android.os.Bundle)>[[$i2 < 26], [try]]--><eu.faircode.xlua.Util: void notifyAsUser(android.content.Context,java.lang.String,int,android.app.Notification,int)>[[-$i2 < 26]]
+###Multi invoking in one method, need manual check!!!<eu.faircode.xlua.XLua$2: void beforeHookedMethod(de.robv.android.xposed.XC_MethodHook$MethodHookParam)>[[try]]--><eu.faircode.xlua.XProvider: android.os.Bundle call(android.content.Context,java.lang.String,android.os.Bundle)>[[try]]--><eu.faircode.xlua.XProvider: android.os.Bundle report(android.content.Context,android.os.Bundle)>[[$i2 < 26]][[try]]--><eu.faircode.xlua.Util: void notifyAsUser(android.content.Context,java.lang.String,int,android.app.Notification,int)>[[-$i2 < 26]]
+try
+Good road with try: <eu.faircode.xlua.XLua$2: void beforeHookedMethod(de.robv.android.xposed.XC_MethodHook$MethodHookParam)>[[try]]--><eu.faircode.xlua.XProvider: android.os.Bundle call(android.content.Context,java.lang.String,android.os.Bundle)>[[try]]--><eu.faircode.xlua.XProvider: android.os.Bundle report(android.content.Context,android.os.Bundle)>[[$i2 < 26], [try]]--><eu.faircode.xlua.Util: void notifyAsUser(android.content.Context,java.lang.String,int,android.app.Notification,int)>[[-$i2 < 26]]--><android.app.NotificationChannel: void setSound(android.net.Uri,android.media.AudioAttributes)>
+One road protect good!
+try
+Good road with try: <eu.faircode.xlua.ReceiverPackage: void onReceive(android.content.Context,android.content.Intent)>[[try]]--><eu.faircode.xlua.Util: void notifyAsUser(android.content.Context,java.lang.String,int,android.app.Notification,int)>[[-$i2 < 26]]--><android.app.NotificationChannel: void setSound(android.net.Uri,android.media.AudioAttributes)>
+One road protect good!
+containsStatic:false
+containsTry:true
+3call by main package
+-----------------------------------------
+#################################################
+N 5 Potential Issue API: SDKCheck of <android.app.FragmentManager: java.util.List getFragments()> is checking!!!
+The life time of api is [26,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 6 Potential Issue API: SDKCheck of <android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)> is checking!!!
+The life time of api is [26,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+###Multi invoking in one method, need manual check!!!<eu.faircode.xlua.XLua$2: void beforeHookedMethod(de.robv.android.xposed.XC_MethodHook$MethodHookParam)>[[try]]--><eu.faircode.xlua.XProvider: android.os.Bundle call(android.content.Context,java.lang.String,android.os.Bundle)>[[try]]--><eu.faircode.xlua.XProvider: android.os.Bundle report(android.content.Context,android.os.Bundle)>[[$i2 < 26], [try]]--><eu.faircode.xlua.Util: void notifyAsUser(android.content.Context,java.lang.String,int,android.app.Notification,int)>[[-$i2 < 26]]
+###Multi invoking in one method, need manual check!!!<eu.faircode.xlua.XLua$2: void beforeHookedMethod(de.robv.android.xposed.XC_MethodHook$MethodHookParam)>[[try]]--><eu.faircode.xlua.XProvider: android.os.Bundle call(android.content.Context,java.lang.String,android.os.Bundle)>[[try]]--><eu.faircode.xlua.XProvider: android.os.Bundle report(android.content.Context,android.os.Bundle)>[[$i2 < 26]][[try]]--><eu.faircode.xlua.Util: void notifyAsUser(android.content.Context,java.lang.String,int,android.app.Notification,int)>[[-$i2 < 26]]
+try
+Good road with try: <eu.faircode.xlua.XLua$2: void beforeHookedMethod(de.robv.android.xposed.XC_MethodHook$MethodHookParam)>[[try]]--><eu.faircode.xlua.XProvider: android.os.Bundle call(android.content.Context,java.lang.String,android.os.Bundle)>[[try]]--><eu.faircode.xlua.XProvider: android.os.Bundle report(android.content.Context,android.os.Bundle)>[[$i2 < 26], [try]]--><eu.faircode.xlua.Util: void notifyAsUser(android.content.Context,java.lang.String,int,android.app.Notification,int)>[[-$i2 < 26]]--><android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)>
+One road protect good!
+try
+Good road with try: <eu.faircode.xlua.ReceiverPackage: void onReceive(android.content.Context,android.content.Intent)>[[try]]--><eu.faircode.xlua.Util: void notifyAsUser(android.content.Context,java.lang.String,int,android.app.Notification,int)>[[-$i2 < 26]]--><android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)>
+One road protect good!
+containsStatic:false
+containsTry:true
+3call by main package
+-----------------------------------------
+#################################################
+N 7 Potential Issue API: SDKCheck of <android.app.Notification.Builder: android.app.Notification.Builder setChannelId(java.lang.String)> is checking!!!
+The life time of api is [26,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+###Multi invoking in one method, need manual check!!!<eu.faircode.xlua.XLua$2: void beforeHookedMethod(de.robv.android.xposed.XC_MethodHook$MethodHookParam)>[[try]]--><eu.faircode.xlua.XProvider: android.os.Bundle call(android.content.Context,java.lang.String,android.os.Bundle)>[[try]]--><eu.faircode.xlua.XProvider: android.os.Bundle report(android.content.Context,android.os.Bundle)>[[try], [-$i2 < 26]]
+###Multi invoking in one method, need manual check!!!<eu.faircode.xlua.XLua$2: void beforeHookedMethod(de.robv.android.xposed.XC_MethodHook$MethodHookParam)>[[try]]--><eu.faircode.xlua.XProvider: android.os.Bundle call(android.content.Context,java.lang.String,android.os.Bundle)>[[try]]--><eu.faircode.xlua.XProvider: android.os.Bundle report(android.content.Context,android.os.Bundle)>[[try]][[-$i2 < 26]]
+try
+Good road with try: <eu.faircode.xlua.XLua$2: void beforeHookedMethod(de.robv.android.xposed.XC_MethodHook$MethodHookParam)>[[try]]--><eu.faircode.xlua.XProvider: android.os.Bundle call(android.content.Context,java.lang.String,android.os.Bundle)>[[try]]--><eu.faircode.xlua.XProvider: android.os.Bundle report(android.content.Context,android.os.Bundle)>[[try], [-$i2 < 26]]--><android.app.Notification.Builder: android.app.Notification.Builder setChannelId(java.lang.String)>
+One road protect good!
+###Multi invoking in one method, need manual check!!!<eu.faircode.xlua.ReceiverPackage: void onReceive(android.content.Context,android.content.Intent)>[[try], [-$i2 < 26]]
+###Multi invoking in one method, need manual check!!!<eu.faircode.xlua.ReceiverPackage: void onReceive(android.content.Context,android.content.Intent)>[[try]][[-$i2 < 26]]
+try
+Good road with try: <eu.faircode.xlua.ReceiverPackage: void onReceive(android.content.Context,android.content.Intent)>[[try], [-$i2 < 26]]--><android.app.Notification.Builder: android.app.Notification.Builder setChannelId(java.lang.String)>
+One road protect good!
+containsStatic:false
+containsTry:true
+3call by main package
+-----------------------------------------
+crashApis numbers:1
+crashApis numbers in main road:0
+On Android Version 16 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 17 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 18 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 19 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 20 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 21 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 22 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 23 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 24 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 25 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 31 this app may have error api use(at least): 1 and error api roads: 3

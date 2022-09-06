@@ -1,0 +1,305 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/WallETH.apk
+Entry Points[org.walleth.core.GethLightEthereumService, org.walleth.activities.MainActivity, org.walleth.core.GethTransactionSigner, org.walleth.activities.SelectTokenActivity, org.walleth.activities.PreferenceActivity, org.walleth.activities.InfoActivity, org.walleth.activities.CreateTokenDefinitionActivity, org.walleth.activities.OfflineTransactionActivity, org.walleth.App, com.jakewharton.processphoenix.ProcessPhoenix, org.walleth.activities.qrscan.QRScanActivity, org.walleth.activities.CreateTransactionActivity, org.walleth.activities.ExportKeyActivity, org.walleth.activities.ImportActivity, org.walleth.activities.EditAccountActivity, org.walleth.activities.SelectReferenceActivity, org.walleth.activities.RequestActivity, org.walleth.activities.AddressBookActivity, org.walleth.activities.SwitchNetworkActivity, org.walleth.DebugTrampolin, org.walleth.core.TransactionNotificationService, org.walleth.activities.SwitchAccountActivity, org.walleth.activities.ViewTransactionActivity, org.walleth.activities.trezor.TrezorGetAddress, org.walleth.activities.trezor.TrezorSignTX, org.walleth.activities.CreateAccountActivity, org.walleth.activities.DebugWallethActivity, org.walleth.core.EtherScanService]
+FllowDroidcallgraph size:8472
+Soot started on Mon Jul 11 15:04:52 CST 2022
+Soot finished on Mon Jul 11 15:06:27 CST 2022
+Soot has run for 1 min. 35 sec.
+Found 1 additional DEX files. Now visiting them one by one.
+Soot started on Mon Jul 11 15:06:27 CST 2022
+Soot finished on Mon Jul 11 15:06:35 CST 2022
+Soot has run for 0 min. 8 sec.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 15
+Declared Target Sdk version is: 26
+Declared Max Sdk version is: -1
+Collected 411 Android APIs in the primary DEX file
+Collected 98 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.webkit.WebView: android.print.PrintDocumentAdapter createPrintDocumentAdapter()> is checking!!!
+The life time of api is [19,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+$i0 < 21
+!!!this api will crash on sdk 16 17 18 
+Error road: <org.ligi.compat.WebViewCompat: android.print.PrintDocumentAdapter createPrintDocumentAdapter(android.webkit.WebView,java.lang.String)>[[$i0 < 21]]--><android.webkit.WebView: android.print.PrintDocumentAdapter createPrintDocumentAdapter()>
+#1.the call statck between class <org.ligi.compat.WebViewCompat: android.print.PrintDocumentAdapter createPrintDocumentAdapter(android.webkit.WebView,java.lang.String)> to <android.webkit.WebView: android.print.PrintDocumentAdapter createPrintDocumentAdapter()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 
+Error road: <org.walleth.activities.ExportKeyActivity: void access$createWebPrintJob(org.walleth.activities.ExportKeyActivity,android.webkit.WebView)>[]--><org.walleth.activities.ExportKeyActivity: void createWebPrintJob(android.webkit.WebView)>[]--><android.webkit.WebView: android.print.PrintDocumentAdapter createPrintDocumentAdapter()>
+#2.the call statck between class <org.walleth.activities.ExportKeyActivity: void access$createWebPrintJob(org.walleth.activities.ExportKeyActivity,android.webkit.WebView)> to <android.webkit.WebView: android.print.PrintDocumentAdapter createPrintDocumentAdapter()>has compatibility isssues！
+-----------------------------------------
+crashApis:1
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.text.Html: android.text.Spanned fromHtml(java.lang.String,int)> is checking!!!
+The life time of api is [24,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 24
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.walleth.activities.trezor.TrezorGetAddress dummyMainMethod_org_walleth_activities_trezor_TrezorGetAddress(android.content.Intent)>[]--><org.walleth.activities.trezor.TrezorGetAddress: void onCreate(android.os.Bundle)>[]--><org.walleth.activities.trezor.BaseTrezorActivity: void onCreate(android.os.Bundle)>[]--><org.ligi.compat.HtmlCompat: android.text.Spanned fromHtml(java.lang.String)>[[-$i0 < 24]]--><android.text.Html: android.text.Spanned fromHtml(java.lang.String,int)>
+One road protect good!
+-$i0 < 24
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.walleth.activities.InfoActivity dummyMainMethod_org_walleth_activities_InfoActivity(android.content.Intent)>[]--><org.walleth.activities.InfoActivity: void onCreate(android.os.Bundle)>[]--><org.ligi.compat.HtmlCompat: android.text.Spanned fromHtml(java.lang.String)>[[-$i0 < 24]]--><android.text.Html: android.text.Spanned fromHtml(java.lang.String,int)>
+One road protect good!
+-$i0 < 24
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.walleth.activities.trezor.TrezorSignTX dummyMainMethod_org_walleth_activities_trezor_TrezorSignTX(android.content.Intent)>[]--><org.walleth.activities.trezor.TrezorSignTX: void onCreate(android.os.Bundle)>[]--><org.walleth.activities.trezor.BaseTrezorActivity: void onCreate(android.os.Bundle)>[]--><org.ligi.compat.HtmlCompat: android.text.Spanned fromHtml(java.lang.String)>[[-$i0 < 24]]--><android.text.Html: android.text.Spanned fromHtml(java.lang.String,int)>
+One road protect good!
+-$i0 < 24
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.walleth.activities.RequestActivity dummyMainMethod_org_walleth_activities_RequestActivity(android.content.Intent)>[]--><org.walleth.activities.RequestActivity: void onCreate(android.os.Bundle)>[]--><org.ligi.compat.HtmlCompat: android.text.Spanned fromHtml(java.lang.String)>[[-$i0 < 24]]--><android.text.Html: android.text.Spanned fromHtml(java.lang.String,int)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.print.PrintAttributes.Builder: android.print.PrintAttributes build()> is checking!!!
+The life time of api is [19,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 
+Error road: <org.walleth.activities.ExportKeyActivity: void access$createWebPrintJob(org.walleth.activities.ExportKeyActivity,android.webkit.WebView)>[]--><org.walleth.activities.ExportKeyActivity: void createWebPrintJob(android.webkit.WebView)>[]--><android.print.PrintAttributes.Builder: android.print.PrintAttributes build()>
+#1.the call statck between class <org.walleth.activities.ExportKeyActivity: void access$createWebPrintJob(org.walleth.activities.ExportKeyActivity,android.webkit.WebView)> to <android.print.PrintAttributes.Builder: android.print.PrintAttributes build()>has compatibility isssues！
+-----------------------------------------
+crashApis:2
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <com.satoshilabs.trezor.lib.BaseBroadcastReceivers$OnMinuteChangeOrConnectedReceiver: void onReceiveRegistered(android.content.Context,android.content.Intent)>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>
+#1.the call statck between class <com.satoshilabs.trezor.lib.BaseBroadcastReceivers$OnMinuteChangeOrConnectedReceiver: void onReceiveRegistered(android.content.Context,android.content.Intent)> to <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>has compatibility isssues！
+-----------------------------------------
+crashApis:3
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.app.AlarmManager: void setExactAndAllowWhileIdle(int,long,android.app.PendingIntent)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i2 < 23
+Good road: <org.ligi.kaxt.AlarmManagerExtensionsKt: void setExactAndAllowWhileIdleCompat(android.app.AlarmManager,int,long,android.app.PendingIntent)>[[-$i2 < 23]]--><android.app.AlarmManager: void setExactAndAllowWhileIdle(int,long,android.app.PendingIntent)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 5 Potential Issue API: SDKCheck of <android.webkit.WebView: android.print.PrintDocumentAdapter createPrintDocumentAdapter(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i0 < 21
+Good road: <org.ligi.compat.WebViewCompat: android.print.PrintDocumentAdapter createPrintDocumentAdapter(android.webkit.WebView,java.lang.String)>[[-$i0 < 21]]--><android.webkit.WebView: android.print.PrintDocumentAdapter createPrintDocumentAdapter(java.lang.String)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 6 Potential Issue API: SDKCheck of <android.net.NetworkInfo: boolean isConnected()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <com.satoshilabs.trezor.lib.BaseBroadcastReceivers$OnMinuteChangeOrConnectedReceiver: void onReceiveRegistered(android.content.Context,android.content.Intent)>[]--><android.net.NetworkInfo: boolean isConnected()>
+#1.the call statck between class <com.satoshilabs.trezor.lib.BaseBroadcastReceivers$OnMinuteChangeOrConnectedReceiver: void onReceiveRegistered(android.content.Context,android.content.Intent)> to <android.net.NetworkInfo: boolean isConnected()>has compatibility isssues！
+-----------------------------------------
+crashApis:4
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 7 Potential Issue API: SDKCheck of <android.os.BaseBundle: boolean containsKey(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.walleth.activities.CreateTransactionActivity dummyMainMethod_org_walleth_activities_CreateTransactionActivity(android.content.Intent)>[]--><org.walleth.activities.CreateTransactionActivity: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: boolean containsKey(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: boolean containsKey(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:5
+crashApisInMain:1
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 8 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.walleth.activities.CreateTransactionActivity dummyMainMethod_org_walleth_activities_CreateTransactionActivity(android.content.Intent)>[]--><org.walleth.activities.CreateTransactionActivity: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:6
+crashApisInMain:2
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 9 Potential Issue API: SDKCheck of <android.app.Fragment: android.app.Fragment getParentFragment()> is checking!!!
+The life time of api is [17,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i0 < 17
+Good road: <com.github.salomonbrys.kodein.android.FragmentInjector$DefaultImpls: void initializeInjector(com.github.salomonbrys.kodein.android.FragmentInjector)>[[-$i0 < 17]]--><android.app.Fragment: android.app.Fragment getParentFragment()>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 10 Potential Issue API: SDKCheck of <android.os.LocaleList: java.util.Locale get(int)> is checking!!!
+The life time of api is [24,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i0 < 24
+Good road: <org.ligi.compat.LocaleCompat: java.util.Locale fromHtml(android.content.res.Configuration)>[[-$i0 < 24]]--><android.os.LocaleList: java.util.Locale get(int)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 11 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.lang.String getString(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.walleth.activities.CreateTransactionActivity dummyMainMethod_org_walleth_activities_CreateTransactionActivity(android.content.Intent)>[]--><org.walleth.activities.CreateTransactionActivity: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:7
+crashApisInMain:3
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 12 Potential Issue API: SDKCheck of <android.app.AlarmManager: void setExact(int,long,android.app.PendingIntent)> is checking!!!
+The life time of api is [19,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+###Multi invoking in one method, need manual check!!!<org.ligi.kaxt.AlarmManagerExtensionsKt: void setExactAndAllowWhileIdleCompat(android.app.AlarmManager,int,long,android.app.PendingIntent)>[[-$i2 < 19], [$i2 < 23]]
+###Multi invoking in one method, need manual check!!!<org.ligi.kaxt.AlarmManagerExtensionsKt: void setExactAndAllowWhileIdleCompat(android.app.AlarmManager,int,long,android.app.PendingIntent)>[[-$i2 < 19]][[$i2 < 23]]
+-$i2 < 19
+$i2 < 23
+Good road: <org.ligi.kaxt.AlarmManagerExtensionsKt: void setExactAndAllowWhileIdleCompat(android.app.AlarmManager,int,long,android.app.PendingIntent)>[[-$i2 < 19], [$i2 < 23]]--><android.app.AlarmManager: void setExact(int,long,android.app.PendingIntent)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 13 Potential Issue API: SDKCheck of <android.provider.DocumentsContract: boolean isDocumentUri(android.content.Context,android.net.Uri)> is checking!!!
+The life time of api is [19,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i0 < 19
+Good road: <org.ligi.kaxt.UriExtensionsKt: java.io.File loadImage(android.net.Uri,android.content.Context)>[]--><org.ligi.kaxt.converter.ImageFromIntentUriToFileConverter: java.lang.String extract(android.net.Uri)>[[-$i0 < 19]]--><org.ligi.kaxt.converter.ImageFromIntentUriToFileConverter: java.lang.String handleKitKat(android.content.Context,android.net.Uri)>[]--><android.provider.DocumentsContract: boolean isDocumentUri(android.content.Context,android.net.Uri)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 14 Potential Issue API: SDKCheck of <android.content.res.Configuration: android.os.LocaleList getLocales()> is checking!!!
+The life time of api is [24,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i0 < 24
+Good road: <org.ligi.compat.LocaleCompat: java.util.Locale fromHtml(android.content.res.Configuration)>[[-$i0 < 24]]--><android.content.res.Configuration: android.os.LocaleList getLocales()>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 15 Potential Issue API: SDKCheck of <android.print.PrintManager: android.print.PrintJob print(java.lang.String,android.print.PrintDocumentAdapter,android.print.PrintAttributes)> is checking!!!
+The life time of api is [19,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 
+Error road: <org.walleth.activities.ExportKeyActivity: void access$createWebPrintJob(org.walleth.activities.ExportKeyActivity,android.webkit.WebView)>[]--><org.walleth.activities.ExportKeyActivity: void createWebPrintJob(android.webkit.WebView)>[]--><android.print.PrintManager: android.print.PrintJob print(java.lang.String,android.print.PrintDocumentAdapter,android.print.PrintAttributes)>
+#1.the call statck between class <org.walleth.activities.ExportKeyActivity: void access$createWebPrintJob(org.walleth.activities.ExportKeyActivity,android.webkit.WebView)> to <android.print.PrintManager: android.print.PrintJob print(java.lang.String,android.print.PrintDocumentAdapter,android.print.PrintAttributes)>has compatibility isssues！
+-----------------------------------------
+crashApis:8
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 16 Potential Issue API: SDKCheck of <android.text.Html: android.text.Spanned fromHtml(java.lang.String,int,android.text.Html.ImageGetter,android.text.Html.TagHandler)> is checking!!!
+The life time of api is [24,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i0 < 24
+Good road: <org.ligi.compat.HtmlCompat: android.text.Spanned fromHtml(java.lang.String,android.text.Html$ImageGetter,android.text.Html$TagHandler)>[[-$i0 < 24]]--><android.text.Html: android.text.Spanned fromHtml(java.lang.String,int,android.text.Html.ImageGetter,android.text.Html.TagHandler)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 17 Potential Issue API: SDKCheck of <android.provider.DocumentsContract: java.lang.String getDocumentId(android.net.Uri)> is checking!!!
+The life time of api is [19,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+$i0 < 19
+-$i0 < 19
+Good road: <org.ligi.kaxt.UriExtensionsKt: java.io.File loadImage(android.net.Uri,android.content.Context)>[]--><org.ligi.kaxt.converter.ImageFromIntentUriToFileConverter: java.lang.String extract(android.net.Uri)>[[$i0 < 19]]--><org.ligi.kaxt.converter.ImageFromIntentUriToFileConverter: java.io.File extractFile(android.net.Uri)>[[-$i0 < 19]]--><org.ligi.kaxt.converter.ImageFromIntentUriToFileConverter: java.lang.String getFilePathForKITKAT(android.net.Uri)>[]--><android.provider.DocumentsContract: java.lang.String getDocumentId(android.net.Uri)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+crashApis numbers:8
+crashApis numbers in main road:3
+On Android Version 16 this app may have error api use(at least): 6 and error api roads: 7
+On Android Version 17 this app may have error api use(at least): 6 and error api roads: 7
+On Android Version 18 this app may have error api use(at least): 6 and error api roads: 7
+On Android Version 19 this app may have error api use(at least): 3 and error api roads: 3
+On Android Version 20 this app may have error api use(at least): 3 and error api roads: 3
+On Android Version 21 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 22 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 23 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 24 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 25 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 31 this app may have error api use(at least): 2 and error api roads: 2

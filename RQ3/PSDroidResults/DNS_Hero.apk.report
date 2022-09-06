@@ -1,0 +1,346 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/DNS_Hero.apk
+Entry Points[com.yarolegovich.materialprefsample.FillTheFormActivity, com.yarolegovich.materialprefsample.MainActivity, com.yarolegovich.materialprefsample.AppConfigsActivity]
+FllowDroidcallgraph size:388
+Soot started on Mon Jul 11 02:59:26 CST 2022
+Soot finished on Mon Jul 11 02:59:31 CST 2022
+Soot has run for 0 min. 5 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 16
+Declared Target Sdk version is: 23
+Declared Max Sdk version is: -1
+Collected 214 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.os.BaseBundle: boolean getBoolean(java.lang.String)> is checking!!!
+The life time of api is [22,31]
+2call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.yarolegovich.materialprefsample.FillTheFormActivity dummyMainMethod_com_yarolegovich_materialprefsample_FillTheFormActivity(android.content.Intent)>[]--><com.yarolegovich.materialprefsample.FillTheFormActivity: void onCreate(android.os.Bundle)>[]--><com.yarolegovich.materialprefsample.FormInitializer: void onRestoreInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: boolean getBoolean(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 
+Error road: <com.yarolegovich.lovelydialog.LovelyInfoDialog: void restoreState(android.os.Bundle)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+#1.the call statck between class <com.yarolegovich.lovelydialog.LovelyInfoDialog: void restoreState(android.os.Bundle)> to <android.os.BaseBundle: boolean getBoolean(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:1
+crashApisInMain:1
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.lang.String getString(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.yarolegovich.lovelydialog.LovelyTextInputDialog: void restoreState(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#1.the call statck between class <com.yarolegovich.lovelydialog.LovelyTextInputDialog: void restoreState(android.os.Bundle)> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:2
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.widget.ScrollView: void <init>(android.content.Context,android.util.AttributeSet,int,int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.yarolegovich.mp.MaterialPreferenceScreen: void <init>(android.content.Context,android.util.AttributeSet,int,int)>[]--><android.widget.ScrollView: void <init>(android.content.Context,android.util.AttributeSet,int,int)>
+#1.the call statck between class <com.yarolegovich.mp.MaterialPreferenceScreen: void <init>(android.content.Context,android.util.AttributeSet,int,int)> to <android.widget.ScrollView: void <init>(android.content.Context,android.util.AttributeSet,int,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:3
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.os.BaseBundle: boolean[] getBooleanArray(java.lang.String)> is checking!!!
+The life time of api is [22,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 
+Error road: <com.yarolegovich.lovelydialog.LovelyChoiceDialog: void restoreState(android.os.Bundle)>[]--><android.os.BaseBundle: boolean[] getBooleanArray(java.lang.String)>
+#1.the call statck between class <com.yarolegovich.lovelydialog.LovelyChoiceDialog: void restoreState(android.os.Bundle)> to <android.os.BaseBundle: boolean[] getBooleanArray(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:4
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.os.BaseBundle: int getInt(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+2call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.yarolegovich.materialprefsample.FillTheFormActivity dummyMainMethod_com_yarolegovich_materialprefsample_FillTheFormActivity(android.content.Intent)>[]--><com.yarolegovich.materialprefsample.FillTheFormActivity: void onCreate(android.os.Bundle)>[]--><com.yarolegovich.materialprefsample.FormInitializer: void onRestoreInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.pavelsikun.vintagechroma.ChromaDialog: android.app.Dialog onCreateDialog(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#1.the call statck between class <com.pavelsikun.vintagechroma.ChromaDialog: android.app.Dialog onCreateDialog(android.os.Bundle)> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:5
+crashApisInMain:2
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 5 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putInt(java.lang.String,int)> is checking!!!
+The life time of api is [21,31]
+4call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.yarolegovich.materialprefsample.FillTheFormActivity dummyMainMethod_com_yarolegovich_materialprefsample_FillTheFormActivity(android.content.Intent)>[]--><com.yarolegovich.materialprefsample.FillTheFormActivity: void onSaveInstanceState(android.os.Bundle)>[]--><com.yarolegovich.materialprefsample.FormInitializer: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+3 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.pavelsikun.vintagechroma.ChromaDialog: com.pavelsikun.vintagechroma.ChromaDialog access$000(int,com.pavelsikun.vintagechroma.colormode.ColorMode,com.pavelsikun.vintagechroma.IndicatorMode)>[]--><com.pavelsikun.vintagechroma.ChromaDialog: com.pavelsikun.vintagechroma.ChromaDialog newInstance(int,com.pavelsikun.vintagechroma.colormode.ColorMode,com.pavelsikun.vintagechroma.IndicatorMode)>[]--><com.pavelsikun.vintagechroma.ChromaDialog: android.os.Bundle makeArgs(int,com.pavelsikun.vintagechroma.colormode.ColorMode,com.pavelsikun.vintagechroma.IndicatorMode)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#1.the call statck between class <com.pavelsikun.vintagechroma.ChromaDialog: com.pavelsikun.vintagechroma.ChromaDialog access$000(int,com.pavelsikun.vintagechroma.colormode.ColorMode,com.pavelsikun.vintagechroma.IndicatorMode)> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.pavelsikun.vintagechroma.ChromaDialog: void onSaveInstanceState(android.os.Bundle)>[]--><com.pavelsikun.vintagechroma.ChromaDialog: android.os.Bundle makeArgs(int,com.pavelsikun.vintagechroma.colormode.ColorMode,com.pavelsikun.vintagechroma.IndicatorMode)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#2.the call statck between class <com.pavelsikun.vintagechroma.ChromaDialog: void onSaveInstanceState(android.os.Bundle)> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.yarolegovich.lovelydialog.LovelySaveStateHandler: void saveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#3.the call statck between class <com.yarolegovich.lovelydialog.LovelySaveStateHandler: void saveInstanceState(android.os.Bundle)> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:6
+crashApisInMain:3
+containsStatic:false
+containsTry:false
+4call by main package
+-----------------------------------------
+#################################################
+N 6 Potential Issue API: SDKCheck of <android.view.View: void <init>(android.content.Context,android.util.AttributeSet,int,int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.yarolegovich.mp.view.ColorView: void <init>(android.content.Context,android.util.AttributeSet,int,int)>[]--><android.view.View: void <init>(android.content.Context,android.util.AttributeSet,int,int)>
+#1.the call statck between class <com.yarolegovich.mp.view.ColorView: void <init>(android.content.Context,android.util.AttributeSet,int,int)> to <android.view.View: void <init>(android.content.Context,android.util.AttributeSet,int,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:7
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 7 Potential Issue API: SDKCheck of <android.preference.Preference: void <init>(android.content.Context,android.util.AttributeSet,int,int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.pavelsikun.vintagechroma.ChromaPreference: void <init>(android.content.Context,android.util.AttributeSet,int,int)>[]--><android.preference.Preference: void <init>(android.content.Context,android.util.AttributeSet,int,int)>
+#1.the call statck between class <com.pavelsikun.vintagechroma.ChromaPreference: void <init>(android.content.Context,android.util.AttributeSet,int,int)> to <android.preference.Preference: void <init>(android.content.Context,android.util.AttributeSet,int,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:8
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 8 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.yarolegovich.lovelydialog.LovelyTextInputDialog: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#1.the call statck between class <com.yarolegovich.lovelydialog.LovelyTextInputDialog: void onSaveInstanceState(android.os.Bundle)> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:9
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 9 Potential Issue API: SDKCheck of <android.os.BaseBundle: int getInt(java.lang.String,int)> is checking!!!
+The life time of api is [21,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.yarolegovich.lovelydialog.LovelySaveStateHandler: int getSavedDialogId(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String,int)>
+#1.the call statck between class <com.yarolegovich.lovelydialog.LovelySaveStateHandler: int getSavedDialogId(android.os.Bundle)> to <android.os.BaseBundle: int getInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.pavelsikun.vintagechroma.ChromaDialog: android.app.Dialog onCreateDialog(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String,int)>
+#2.the call statck between class <com.pavelsikun.vintagechroma.ChromaDialog: android.app.Dialog onCreateDialog(android.os.Bundle)> to <android.os.BaseBundle: int getInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:10
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 10 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putBooleanArray(java.lang.String,boolean[])> is checking!!!
+The life time of api is [22,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 
+Error road: <com.yarolegovich.lovelydialog.LovelyChoiceDialog: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putBooleanArray(java.lang.String,boolean[])>
+#1.the call statck between class <com.yarolegovich.lovelydialog.LovelyChoiceDialog: void onSaveInstanceState(android.os.Bundle)> to <android.os.BaseBundle: void putBooleanArray(java.lang.String,boolean[])>has compatibility isssues！
+-----------------------------------------
+crashApis:11
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 11 Potential Issue API: SDKCheck of <android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)> is checking!!!
+The life time of api is [22,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 
+Error road: <com.yarolegovich.lovelydialog.LovelyTextInputDialog: void restoreState(android.os.Bundle)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>
+#1.the call statck between class <com.yarolegovich.lovelydialog.LovelyTextInputDialog: void restoreState(android.os.Bundle)> to <android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+crashApis:12
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 12 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)> is checking!!!
+The life time of api is [22,31]
+3call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.yarolegovich.materialprefsample.FillTheFormActivity dummyMainMethod_com_yarolegovich_materialprefsample_FillTheFormActivity(android.content.Intent)>[]--><com.yarolegovich.materialprefsample.FillTheFormActivity: void onSaveInstanceState(android.os.Bundle)>[]--><com.yarolegovich.materialprefsample.FormInitializer: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+2 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 
+Error road: <com.yarolegovich.lovelydialog.LovelyInfoDialog: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+#1.the call statck between class <com.yarolegovich.lovelydialog.LovelyInfoDialog: void onSaveInstanceState(android.os.Bundle)> to <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 
+Error road: <com.yarolegovich.lovelydialog.LovelyTextInputDialog: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+#2.the call statck between class <com.yarolegovich.lovelydialog.LovelyTextInputDialog: void onSaveInstanceState(android.os.Bundle)> to <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+crashApis:13
+crashApisInMain:4
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 13 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.util.Set keySet()> is checking!!!
+The life time of api is [21,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.yarolegovich.lovelydialog.AbsLovelyDialog: com.yarolegovich.lovelydialog.AbsLovelyDialog setSavedInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: java.util.Set keySet()>
+#1.the call statck between class <com.yarolegovich.lovelydialog.AbsLovelyDialog: com.yarolegovich.lovelydialog.AbsLovelyDialog setSavedInstanceState(android.os.Bundle)> to <android.os.BaseBundle: java.util.Set keySet()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.yarolegovich.lovelydialog.LovelySaveStateHandler: boolean wasDialogOnScreen(android.os.Bundle)>[]--><android.os.BaseBundle: java.util.Set keySet()>
+#2.the call statck between class <com.yarolegovich.lovelydialog.LovelySaveStateHandler: boolean wasDialogOnScreen(android.os.Bundle)> to <android.os.BaseBundle: java.util.Set keySet()>has compatibility isssues！
+-----------------------------------------
+crashApis:14
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 14 Potential Issue API: SDKCheck of <android.widget.LinearLayout: void <init>(android.content.Context,android.util.AttributeSet,int,int)> is checking!!!
+The life time of api is [21,31]
+9call roads:
+0 Mainhead roads:
+9 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.yarolegovich.mp.MaterialChoicePreference: void <init>(android.content.Context,android.util.AttributeSet,int,int)>[[]]--><android.widget.LinearLayout: void <init>(android.content.Context,android.util.AttributeSet,int,int)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.yarolegovich.mp.MaterialChoicePreference: void <init>(android.content.Context,android.util.AttributeSet,int,int)>[]--><com.yarolegovich.mp.AbsMaterialListPreference: void <init>(android.content.Context,android.util.AttributeSet,int,int)>[[]]--><android.widget.LinearLayout: void <init>(android.content.Context,android.util.AttributeSet,int,int)>
+#1.the call statck between class <com.yarolegovich.mp.MaterialChoicePreference: void <init>(android.content.Context,android.util.AttributeSet,int,int)> to <android.widget.LinearLayout: void <init>(android.content.Context,android.util.AttributeSet,int,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.yarolegovich.mp.MaterialCheckboxPreference: void <init>(android.content.Context,android.util.AttributeSet,int,int)>[[]]--><android.widget.LinearLayout: void <init>(android.content.Context,android.util.AttributeSet,int,int)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.yarolegovich.mp.MaterialCheckboxPreference: void <init>(android.content.Context,android.util.AttributeSet,int,int)>[]--><com.yarolegovich.mp.AbsMaterialCheckablePreference: void <init>(android.content.Context,android.util.AttributeSet,int,int)>[[]]--><android.widget.LinearLayout: void <init>(android.content.Context,android.util.AttributeSet,int,int)>
+#2.the call statck between class <com.yarolegovich.mp.MaterialCheckboxPreference: void <init>(android.content.Context,android.util.AttributeSet,int,int)> to <android.widget.LinearLayout: void <init>(android.content.Context,android.util.AttributeSet,int,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.yarolegovich.mp.MaterialEditTextPreference: void <init>(android.content.Context,android.util.AttributeSet,int,int)>[]--><com.yarolegovich.mp.AbsMaterialTextValuePreference: void <init>(android.content.Context,android.util.AttributeSet,int,int)>[]--><com.yarolegovich.mp.AbsMaterialPreference: void <init>(android.content.Context,android.util.AttributeSet,int,int)>[]--><android.widget.LinearLayout: void <init>(android.content.Context,android.util.AttributeSet,int,int)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.yarolegovich.mp.MaterialEditTextPreference: void <init>(android.content.Context,android.util.AttributeSet,int,int)>[[]]--><android.widget.LinearLayout: void <init>(android.content.Context,android.util.AttributeSet,int,int)>
+#3.the call statck between class <com.yarolegovich.mp.MaterialEditTextPreference: void <init>(android.content.Context,android.util.AttributeSet,int,int)> to <android.widget.LinearLayout: void <init>(android.content.Context,android.util.AttributeSet,int,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.yarolegovich.mp.MaterialSeekBarPreference: void <init>(android.content.Context,android.util.AttributeSet,int,int)>[[]]--><android.widget.LinearLayout: void <init>(android.content.Context,android.util.AttributeSet,int,int)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.yarolegovich.mp.MaterialSeekBarPreference: void <init>(android.content.Context,android.util.AttributeSet,int,int)>[]--><com.yarolegovich.mp.AbsMaterialPreference: void <init>(android.content.Context,android.util.AttributeSet,int,int)>[]--><android.widget.LinearLayout: void <init>(android.content.Context,android.util.AttributeSet,int,int)>
+#4.the call statck between class <com.yarolegovich.mp.MaterialSeekBarPreference: void <init>(android.content.Context,android.util.AttributeSet,int,int)> to <android.widget.LinearLayout: void <init>(android.content.Context,android.util.AttributeSet,int,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.yarolegovich.mp.MaterialSwitchPreference: void <init>(android.content.Context,android.util.AttributeSet,int,int)>[]--><com.yarolegovich.mp.AbsMaterialCheckablePreference: void <init>(android.content.Context,android.util.AttributeSet,int,int)>[[]]--><android.widget.LinearLayout: void <init>(android.content.Context,android.util.AttributeSet,int,int)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.yarolegovich.mp.MaterialSwitchPreference: void <init>(android.content.Context,android.util.AttributeSet,int,int)>[[]]--><android.widget.LinearLayout: void <init>(android.content.Context,android.util.AttributeSet,int,int)>
+#5.the call statck between class <com.yarolegovich.mp.MaterialSwitchPreference: void <init>(android.content.Context,android.util.AttributeSet,int,int)> to <android.widget.LinearLayout: void <init>(android.content.Context,android.util.AttributeSet,int,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.yarolegovich.mp.MaterialStandardPreference: void <init>(android.content.Context,android.util.AttributeSet,int,int)>[]--><com.yarolegovich.mp.AbsMaterialPreference: void <init>(android.content.Context,android.util.AttributeSet,int,int)>[]--><android.widget.LinearLayout: void <init>(android.content.Context,android.util.AttributeSet,int,int)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.yarolegovich.mp.MaterialStandardPreference: void <init>(android.content.Context,android.util.AttributeSet,int,int)>[[]]--><android.widget.LinearLayout: void <init>(android.content.Context,android.util.AttributeSet,int,int)>
+#6.the call statck between class <com.yarolegovich.mp.MaterialStandardPreference: void <init>(android.content.Context,android.util.AttributeSet,int,int)> to <android.widget.LinearLayout: void <init>(android.content.Context,android.util.AttributeSet,int,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.yarolegovich.mp.MaterialRightIconPreference: void <init>(android.content.Context,android.util.AttributeSet,int,int)>[]--><com.yarolegovich.mp.AbsMaterialPreference: void <init>(android.content.Context,android.util.AttributeSet,int,int)>[]--><android.widget.LinearLayout: void <init>(android.content.Context,android.util.AttributeSet,int,int)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.yarolegovich.mp.MaterialRightIconPreference: void <init>(android.content.Context,android.util.AttributeSet,int,int)>[[]]--><android.widget.LinearLayout: void <init>(android.content.Context,android.util.AttributeSet,int,int)>
+#7.the call statck between class <com.yarolegovich.mp.MaterialRightIconPreference: void <init>(android.content.Context,android.util.AttributeSet,int,int)> to <android.widget.LinearLayout: void <init>(android.content.Context,android.util.AttributeSet,int,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.yarolegovich.mp.MaterialMultiChoicePreference: void <init>(android.content.Context,android.util.AttributeSet,int,int)>[]--><com.yarolegovich.mp.AbsMaterialListPreference: void <init>(android.content.Context,android.util.AttributeSet,int,int)>[[]]--><android.widget.LinearLayout: void <init>(android.content.Context,android.util.AttributeSet,int,int)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.yarolegovich.mp.MaterialMultiChoicePreference: void <init>(android.content.Context,android.util.AttributeSet,int,int)>[[]]--><android.widget.LinearLayout: void <init>(android.content.Context,android.util.AttributeSet,int,int)>
+#8.the call statck between class <com.yarolegovich.mp.MaterialMultiChoicePreference: void <init>(android.content.Context,android.util.AttributeSet,int,int)> to <android.widget.LinearLayout: void <init>(android.content.Context,android.util.AttributeSet,int,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.yarolegovich.mp.MaterialColorPreference: void <init>(android.content.Context,android.util.AttributeSet,int,int)>[]--><com.yarolegovich.mp.AbsMaterialPreference: void <init>(android.content.Context,android.util.AttributeSet,int,int)>[]--><android.widget.LinearLayout: void <init>(android.content.Context,android.util.AttributeSet,int,int)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.yarolegovich.mp.MaterialColorPreference: void <init>(android.content.Context,android.util.AttributeSet,int,int)>[[]]--><android.widget.LinearLayout: void <init>(android.content.Context,android.util.AttributeSet,int,int)>
+#9.the call statck between class <com.yarolegovich.mp.MaterialColorPreference: void <init>(android.content.Context,android.util.AttributeSet,int,int)> to <android.widget.LinearLayout: void <init>(android.content.Context,android.util.AttributeSet,int,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:15
+containsStatic:false
+containsTry:false
+10call by main package
+-----------------------------------------
+crashApis numbers:15
+crashApis numbers in main road:4
+On Android Version 16 this app may have error api use(at least): 15 and error api roads: 41
+On Android Version 17 this app may have error api use(at least): 15 and error api roads: 41
+On Android Version 18 this app may have error api use(at least): 15 and error api roads: 41
+On Android Version 19 this app may have error api use(at least): 15 and error api roads: 41
+On Android Version 20 this app may have error api use(at least): 15 and error api roads: 41
+On Android Version 21 this app may have error api use(at least): 5 and error api roads: 8
+On Android Version 22 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 23 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 24 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 25 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 31 this app may have error api use(at least): 0 and error api roads: 0

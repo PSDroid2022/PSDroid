@@ -1,0 +1,1611 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/Kernel_Adiutor.apk
+Entry Points[com.grarak.kerneladiutor.activities.BannerResizerActivity, com.grarak.kerneladiutor.services.DashClock, com.grarak.kerneladiutor.services.boot.JobService, com.grarak.kerneladiutor.services.profile.Tile, com.grarak.kerneladiutor.services.boot.Service, com.grarak.kerneladiutor.services.profile.Tasker, com.grarak.kerneladiutor.activities.tools.profile.ProfileActivity, com.grarak.kerneladiutor.services.profile.Widget, com.grarak.kerneladiutor.activities.tools.profile.ProfileEditActivity, com.grarak.kerneladiutor.activities.tools.CustomControlsActivity, com.grarak.kerneladiutor.services.boot.Receiver, com.grarak.kerneladiutor.activities.TextActivity, com.grarak.kerneladiutor.activities.StartActivity, com.grarak.kerneladiutor.activities.tools.profile.ProfileTaskerActivity, com.grarak.kerneladiutor.activities.NavigationActivity, com.grarak.kerneladiutor.services.profile.Widget$WidgetService, com.grarak.kerneladiutor.activities.MainActivity, com.grarak.kerneladiutor.activities.tools.DownloadsActivity, com.grarak.kerneladiutor.views.NavHeaderView$MainHeaderActivity, com.grarak.kerneladiutor.services.boot.ApplyOnBoot$CancelReceiver, com.grarak.kerneladiutor.activities.SecurityActivity, com.grarak.kerneladiutor.activities.FilePickerActivity, com.grarak.kerneladiutor.activities.EditorActivity]
+FllowDroidcallgraph size:4171
+Soot started on Mon Jul 11 06:05:59 CST 2022
+StaticCheck:<org.adw.library.widgets.discreteseekbar.internal.compat.SeekBarCompat: boolean isHardwareAccelerated(android.view.View)>$yysi0 < 11
+StaticCheck:<org.adw.library.widgets.discreteseekbar.internal.compat.SeekBarCompat: boolean isInScrollingContainer(android.view.ViewParent)>$yysi0 < 14
+StaticCheck:<com.grarak.kerneladiutor.services.boot.ApplyOnBoot: boolean apply(android.content.Context,com.grarak.kerneladiutor.services.boot.ApplyOnBoot$ApplyOnBootListener)>$yysi1 < 26
+StaticCheck:<com.grarak.kerneladiutor.utils.Utils: boolean isScreenOn(android.content.Context)>$yysi0 < 20
+Soot finished on Mon Jul 11 06:06:19 CST 2022
+Soot has run for 0 min. 20 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 15
+Declared Target Sdk version is: 27
+Declared Max Sdk version is: -1
+Collected 882 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.util.ArraySet: boolean contains(java.lang.Object)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <cyanogenmod.providers.CMSettings$System: java.lang.String getStringForUser(android.content.ContentResolver,java.lang.String,int)>[]--><android.util.ArraySet: boolean contains(java.lang.Object)>
+#1.the call statck between class <cyanogenmod.providers.CMSettings$System: java.lang.String getStringForUser(android.content.ContentResolver,java.lang.String,int)> to <android.util.ArraySet: boolean contains(java.lang.Object)>has compatibility isssues！
+-----------------------------------------
+crashApis:1
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.app.Activity: boolean isInMultiWindowMode()> is checking!!!
+The life time of api is [24,31]
+20call roads:
+1 Mainhead roads:
+-$i0 < 24
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.grarak.kerneladiutor.activities.MainActivity dummyMainMethod_com_grarak_kerneladiutor_activities_MainActivity(android.content.Intent)>[]--><com.grarak.kerneladiutor.activities.MainActivity: void onCreate(android.os.Bundle)>[]--><com.grarak.kerneladiutor.utils.Utils: int getOrientation(android.app.Activity)>[[-$i0 < 24]]--><android.app.Activity: boolean isInMultiWindowMode()>
+One road protect good!
+-$i0 < 24
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.grarak.kerneladiutor.activities.FilePickerActivity dummyMainMethod_com_grarak_kerneladiutor_activities_FilePickerActivity(android.content.Intent)>[]--><dummyMainClass: com.grarak.kerneladiutor.activities.FilePickerActivity$FilePickerFragment dummyMainMethod_com_grarak_kerneladiutor_activities_FilePickerActivity$FilePickerFragment(android.content.Intent,android.app.Activity)>[]--><com.grarak.kerneladiutor.fragments.RecyclerViewFragment: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)>[]--><com.grarak.kerneladiutor.fragments.RecyclerViewFragment: android.support.v7.widget.RecyclerView$LayoutManager getLayoutManager()>[]--><com.grarak.kerneladiutor.fragments.RecyclerViewFragment: int getSpanCount()>[]--><com.grarak.kerneladiutor.utils.Utils: int getOrientation(android.app.Activity)>[[-$i0 < 24]]--><android.app.Activity: boolean isInMultiWindowMode()>
+One road protect good!
+19 Packageshead roads:
+-$i0 < 24
+Good road: <com.grarak.kerneladiutor.fragments.other.ContributorsFragment: int getSpanCount()>[]--><com.grarak.kerneladiutor.fragments.RecyclerViewFragment: int getSpanCount()>[]--><com.grarak.kerneladiutor.utils.Utils: int getOrientation(android.app.Activity)>[[-$i0 < 24]]--><android.app.Activity: boolean isInMultiWindowMode()>
+One road protect good!
+-$i0 < 24
+Good road: <com.grarak.kerneladiutor.fragments.tools.ProfileFragment: int getSpanCount()>[]--><com.grarak.kerneladiutor.utils.Utils: int getOrientation(android.app.Activity)>[[-$i0 < 24]]--><android.app.Activity: boolean isInMultiWindowMode()>
+One road protect good!
+-$i0 < 24
+Good road: <com.grarak.kerneladiutor.fragments.tools.customcontrols.CustomControlsFragment: void access$700(com.grarak.kerneladiutor.fragments.tools.customcontrols.CustomControlsFragment,com.grarak.kerneladiutor.views.recyclerview.RecyclerViewItem)>[]--><com.grarak.kerneladiutor.fragments.RecyclerViewFragment: void addItem(com.grarak.kerneladiutor.views.recyclerview.RecyclerViewItem)>[]--><com.grarak.kerneladiutor.fragments.RecyclerViewFragment: int getSpanCount()>[]--><com.grarak.kerneladiutor.utils.Utils: int getOrientation(android.app.Activity)>[[-$i0 < 24]]--><android.app.Activity: boolean isInMultiWindowMode()>
+One road protect good!
+-$i0 < 24
+Good road: <com.grarak.kerneladiutor.fragments.tools.downloads.DownloadsFragment: void access$600(com.grarak.kerneladiutor.fragments.tools.downloads.DownloadsFragment,com.grarak.kerneladiutor.views.recyclerview.RecyclerViewItem)>[]--><com.grarak.kerneladiutor.fragments.RecyclerViewFragment: void addItem(com.grarak.kerneladiutor.views.recyclerview.RecyclerViewItem)>[]--><com.grarak.kerneladiutor.fragments.RecyclerViewFragment: int getSpanCount()>[]--><com.grarak.kerneladiutor.utils.Utils: int getOrientation(android.app.Activity)>[[-$i0 < 24]]--><android.app.Activity: boolean isInMultiWindowMode()>
+One road protect good!
+-$i0 < 24
+Good road: <com.grarak.kerneladiutor.fragments.tools.RecoveryFragment: void addAction(com.grarak.kerneladiutor.utils.tools.Recovery$RECOVERY_COMMAND,java.lang.String)>[]--><com.grarak.kerneladiutor.fragments.RecyclerViewFragment: void addItem(com.grarak.kerneladiutor.views.recyclerview.RecyclerViewItem)>[]--><com.grarak.kerneladiutor.fragments.RecyclerViewFragment: int getSpanCount()>[]--><com.grarak.kerneladiutor.utils.Utils: int getOrientation(android.app.Activity)>[[-$i0 < 24]]--><android.app.Activity: boolean isInMultiWindowMode()>
+One road protect good!
+-$i0 < 24
+Good road: <com.grarak.kerneladiutor.activities.FilePickerActivity$FilePickerFragment: void access$600(com.grarak.kerneladiutor.activities.FilePickerActivity$FilePickerFragment,com.grarak.kerneladiutor.views.recyclerview.RecyclerViewItem)>[]--><com.grarak.kerneladiutor.fragments.RecyclerViewFragment: void addItem(com.grarak.kerneladiutor.views.recyclerview.RecyclerViewItem)>[]--><com.grarak.kerneladiutor.fragments.RecyclerViewFragment: int getSpanCount()>[]--><com.grarak.kerneladiutor.utils.Utils: int getOrientation(android.app.Activity)>[[-$i0 < 24]]--><android.app.Activity: boolean isInMultiWindowMode()>
+One road protect good!
+-$i0 < 24
+Good road: <com.grarak.kerneladiutor.fragments.tools.InitdFragment: void access$400(com.grarak.kerneladiutor.fragments.tools.InitdFragment,com.grarak.kerneladiutor.views.recyclerview.RecyclerViewItem)>[]--><com.grarak.kerneladiutor.fragments.RecyclerViewFragment: void addItem(com.grarak.kerneladiutor.views.recyclerview.RecyclerViewItem)>[]--><com.grarak.kerneladiutor.fragments.RecyclerViewFragment: int getSpanCount()>[]--><com.grarak.kerneladiutor.utils.Utils: int getOrientation(android.app.Activity)>[[-$i0 < 24]]--><android.app.Activity: boolean isInMultiWindowMode()>
+One road protect good!
+-$i0 < 24
+Good road: <com.grarak.kerneladiutor.fragments.tools.BackupFragment: int getSpanCount()>[]--><com.grarak.kerneladiutor.utils.Utils: int getOrientation(android.app.Activity)>[[-$i0 < 24]]--><android.app.Activity: boolean isInMultiWindowMode()>
+One road protect good!
+-$i0 < 24
+Good road: <com.grarak.kerneladiutor.activities.tools.profile.ProfileEditActivity$ProfileEditFragment: void access$400(com.grarak.kerneladiutor.activities.tools.profile.ProfileEditActivity$ProfileEditFragment,com.grarak.kerneladiutor.views.recyclerview.RecyclerViewItem)>[]--><com.grarak.kerneladiutor.fragments.RecyclerViewFragment: void addItem(com.grarak.kerneladiutor.views.recyclerview.RecyclerViewItem)>[]--><com.grarak.kerneladiutor.fragments.RecyclerViewFragment: int getSpanCount()>[]--><com.grarak.kerneladiutor.utils.Utils: int getOrientation(android.app.Activity)>[[-$i0 < 24]]--><android.app.Activity: boolean isInMultiWindowMode()>
+One road protect good!
+-$i0 < 24
+Good road: <com.grarak.kerneladiutor.fragments.tools.ProfileFragment: void access$500(com.grarak.kerneladiutor.fragments.tools.ProfileFragment,com.grarak.kerneladiutor.views.recyclerview.RecyclerViewItem)>[]--><com.grarak.kerneladiutor.fragments.RecyclerViewFragment: void addItem(com.grarak.kerneladiutor.views.recyclerview.RecyclerViewItem)>[]--><com.grarak.kerneladiutor.fragments.RecyclerViewFragment: int getSpanCount()>[]--><com.grarak.kerneladiutor.utils.Utils: int getOrientation(android.app.Activity)>[[-$i0 < 24]]--><android.app.Activity: boolean isInMultiWindowMode()>
+One road protect good!
+-$i0 < 24
+Good road: <com.grarak.kerneladiutor.fragments.kernel.CPUVoltageFragment: int getSpanCount()>[]--><com.grarak.kerneladiutor.fragments.RecyclerViewFragment: int getSpanCount()>[]--><com.grarak.kerneladiutor.utils.Utils: int getOrientation(android.app.Activity)>[[-$i0 < 24]]--><android.app.Activity: boolean isInMultiWindowMode()>
+One road protect good!
+-$i0 < 24
+Good road: <com.grarak.kerneladiutor.fragments.statistics.MemoryFragment: int getSpanCount()>[]--><com.grarak.kerneladiutor.utils.Utils: int getOrientation(android.app.Activity)>[[-$i0 < 24]]--><android.app.Activity: boolean isInMultiWindowMode()>
+One road protect good!
+-$i0 < 24
+Good road: <com.grarak.kerneladiutor.fragments.other.ContributorsFragment: void access$100(com.grarak.kerneladiutor.fragments.other.ContributorsFragment,com.grarak.kerneladiutor.views.recyclerview.RecyclerViewItem)>[]--><com.grarak.kerneladiutor.fragments.RecyclerViewFragment: void addItem(com.grarak.kerneladiutor.views.recyclerview.RecyclerViewItem)>[]--><com.grarak.kerneladiutor.fragments.RecyclerViewFragment: int getSpanCount()>[]--><com.grarak.kerneladiutor.utils.Utils: int getOrientation(android.app.Activity)>[[-$i0 < 24]]--><android.app.Activity: boolean isInMultiWindowMode()>
+One road protect good!
+-$i0 < 24
+Good road: <com.grarak.kerneladiutor.fragments.statistics.InputsFragment: int getSpanCount()>[]--><com.grarak.kerneladiutor.fragments.RecyclerViewFragment: int getSpanCount()>[]--><com.grarak.kerneladiutor.utils.Utils: int getOrientation(android.app.Activity)>[[-$i0 < 24]]--><android.app.Activity: boolean isInMultiWindowMode()>
+One road protect good!
+-$i0 < 24
+Good road: <com.grarak.kerneladiutor.fragments.tools.BackupFragment: void access$400(com.grarak.kerneladiutor.fragments.tools.BackupFragment,com.grarak.kerneladiutor.views.recyclerview.RecyclerViewItem)>[]--><com.grarak.kerneladiutor.fragments.RecyclerViewFragment: void addItem(com.grarak.kerneladiutor.views.recyclerview.RecyclerViewItem)>[]--><com.grarak.kerneladiutor.fragments.RecyclerViewFragment: int getSpanCount()>[]--><com.grarak.kerneladiutor.utils.Utils: int getOrientation(android.app.Activity)>[[-$i0 < 24]]--><android.app.Activity: boolean isInMultiWindowMode()>
+One road protect good!
+-$i0 < 24
+Good road: <com.grarak.kerneladiutor.fragments.tools.BuildpropFragment: void access$800(com.grarak.kerneladiutor.fragments.tools.BuildpropFragment,com.grarak.kerneladiutor.views.recyclerview.RecyclerViewItem)>[]--><com.grarak.kerneladiutor.fragments.RecyclerViewFragment: void addItem(com.grarak.kerneladiutor.views.recyclerview.RecyclerViewItem)>[]--><com.grarak.kerneladiutor.fragments.RecyclerViewFragment: int getSpanCount()>[]--><com.grarak.kerneladiutor.utils.Utils: int getOrientation(android.app.Activity)>[[-$i0 < 24]]--><android.app.Activity: boolean isInMultiWindowMode()>
+One road protect good!
+-$i0 < 24
+Good road: <com.grarak.kerneladiutor.fragments.tools.OnBootFragment: void access$400(com.grarak.kerneladiutor.fragments.tools.OnBootFragment,com.grarak.kerneladiutor.views.recyclerview.RecyclerViewItem)>[]--><com.grarak.kerneladiutor.fragments.RecyclerViewFragment: void addItem(com.grarak.kerneladiutor.views.recyclerview.RecyclerViewItem)>[]--><com.grarak.kerneladiutor.fragments.RecyclerViewFragment: int getSpanCount()>[]--><com.grarak.kerneladiutor.utils.Utils: int getOrientation(android.app.Activity)>[[-$i0 < 24]]--><android.app.Activity: boolean isInMultiWindowMode()>
+One road protect good!
+-$i0 < 24
+Good road: <com.grarak.kerneladiutor.fragments.RecyclerViewFragment$7: void onPostExecute(java.util.List)>[]--><com.grarak.kerneladiutor.fragments.RecyclerViewFragment: void addItem(com.grarak.kerneladiutor.views.recyclerview.RecyclerViewItem)>[]--><com.grarak.kerneladiutor.fragments.RecyclerViewFragment: int getSpanCount()>[]--><com.grarak.kerneladiutor.utils.Utils: int getOrientation(android.app.Activity)>[[-$i0 < 24]]--><android.app.Activity: boolean isInMultiWindowMode()>
+One road protect good!
+-$i0 < 24
+Good road: <com.grarak.kerneladiutor.fragments.kernel.PathReaderFragment: void access$400(com.grarak.kerneladiutor.fragments.kernel.PathReaderFragment,com.grarak.kerneladiutor.views.recyclerview.RecyclerViewItem)>[]--><com.grarak.kerneladiutor.fragments.RecyclerViewFragment: void addItem(com.grarak.kerneladiutor.views.recyclerview.RecyclerViewItem)>[]--><com.grarak.kerneladiutor.fragments.RecyclerViewFragment: int getSpanCount()>[]--><com.grarak.kerneladiutor.utils.Utils: int getOrientation(android.app.Activity)>[[-$i0 < 24]]--><android.app.Activity: boolean isInMultiWindowMode()>
+One road protect good!
+containsStatic:false
+containsTry:false
+20call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.provider.Settings.Global: int getInt(android.content.ContentResolver,java.lang.String,int)> is checking!!!
+The life time of api is [17,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 
+Error road: <cyanogenmod.app.Profile: void doSelect(android.content.Context,com.android.internal.policy.IKeyguardService)>[]--><cyanogenmod.profiles.AirplaneModeSettings: void processOverride(android.content.Context)>[]--><android.provider.Settings.Global: int getInt(android.content.ContentResolver,java.lang.String,int)>
+#1.the call statck between class <cyanogenmod.app.Profile: void doSelect(android.content.Context,com.android.internal.policy.IKeyguardService)> to <android.provider.Settings.Global: int getInt(android.content.ContentResolver,java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:2
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.os.BaseBundle: int getInt(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+4call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.grarak.kerneladiutor.activities.tools.profile.ProfileActivity dummyMainMethod_com_grarak_kerneladiutor_activities_tools_profile_ProfileActivity(android.content.Intent)>[]--><com.grarak.kerneladiutor.activities.tools.profile.ProfileActivity: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.grarak.kerneladiutor.activities.NavigationActivity dummyMainMethod_com_grarak_kerneladiutor_activities_NavigationActivity(android.content.Intent)>[]--><com.grarak.kerneladiutor.activities.NavigationActivity: void onCreate(android.os.Bundle)>[]--><com.grarak.kerneladiutor.activities.NavigationActivity: void init(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+3 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.grarak.kerneladiutor.activities.tools.profile.ProfileEditActivity$ProfileEditFragment: void init()>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#1.the call statck between class <com.grarak.kerneladiutor.activities.tools.profile.ProfileEditActivity$ProfileEditFragment: void init()> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+try
+Good road with try: <com.google.android.apps.dashclock.api.DashClockExtension: void onCreate()>[]--><com.google.android.apps.dashclock.api.DashClockExtension: void loadMetaData()>[[try]]--><android.os.BaseBundle: int getInt(java.lang.String)>
+One road protect good!
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.google.android.apps.dashclock.api.ExtensionData: void fromBundle(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#3.the call statck between class <com.google.android.apps.dashclock.api.ExtensionData: void fromBundle(android.os.Bundle)> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:3
+crashApisInMain:1
+containsStatic:false
+containsTry:true
+4call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.graphics.drawable.Icon: android.graphics.drawable.Icon createWithResource(android.content.Context,int)> is checking!!!
+The life time of api is [23,31]
+3call roads:
+1 Mainhead roads:
+$i0 >= 25
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.grarak.kerneladiutor.activities.NavigationActivity dummyMainMethod_com_grarak_kerneladiutor_activities_NavigationActivity(android.content.Intent)>[]--><com.grarak.kerneladiutor.activities.NavigationActivity: void onCreate(android.os.Bundle)>[]--><com.grarak.kerneladiutor.activities.NavigationActivity: void init(android.os.Bundle)>[]--><com.grarak.kerneladiutor.activities.NavigationActivity: void onItemSelected(int,boolean,boolean)>[]--><com.grarak.kerneladiutor.activities.NavigationActivity: void setShortcuts()>[[$i0 >= 25]]--><android.graphics.drawable.Icon: android.graphics.drawable.Icon createWithResource(android.content.Context,int)>
+One road protect good!
+2 Packageshead roads:
+$i0 >= 25
+Good road: <com.grarak.kerneladiutor.activities.NavigationActivity: boolean onNavigationItemSelected(android.view.MenuItem)>[]--><com.grarak.kerneladiutor.activities.NavigationActivity: void onItemSelected(int,boolean,boolean)>[]--><com.grarak.kerneladiutor.activities.NavigationActivity: void setShortcuts()>[[$i0 >= 25]]--><android.graphics.drawable.Icon: android.graphics.drawable.Icon createWithResource(android.content.Context,int)>
+One road protect good!
+$i0 >= 25
+Good road: <com.grarak.kerneladiutor.fragments.other.SettingsFragment: boolean onPreferenceChange(android.support.v7.preference.Preference,java.lang.Object)>[]--><com.grarak.kerneladiutor.activities.NavigationActivity: void appendFragments()>[]--><com.grarak.kerneladiutor.activities.NavigationActivity: void appendFragments(boolean)>[]--><com.grarak.kerneladiutor.activities.NavigationActivity: void setShortcuts()>[[$i0 >= 25]]--><android.graphics.drawable.Icon: android.graphics.drawable.Icon createWithResource(android.content.Context,int)>
+One road protect good!
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 5 Potential Issue API: SDKCheck of <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()> is checking!!!
+The life time of api is [1,30]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <com.squareup.picasso.Dispatcher$DispatcherHandler: void handleMessage(android.os.Message)>[]--><com.squareup.picasso.Dispatcher: void performRetry(com.squareup.picasso.BitmapHunter)>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>
+#1.the call statck between class <com.squareup.picasso.Dispatcher$DispatcherHandler: void handleMessage(android.os.Message)> to <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <com.squareup.picasso.Dispatcher$NetworkBroadcastReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>
+#2.the call statck between class <com.squareup.picasso.Dispatcher$NetworkBroadcastReceiver: void onReceive(android.content.Context,android.content.Intent)> to <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>has compatibility isssues！
+-----------------------------------------
+crashApis:4
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 6 Potential Issue API: SDKCheck of <android.content.pm.ShortcutInfo.Builder: void <init>(android.content.Context,java.lang.String)> is checking!!!
+The life time of api is [25,31]
+3call roads:
+1 Mainhead roads:
+$i0 >= 25
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.grarak.kerneladiutor.activities.NavigationActivity dummyMainMethod_com_grarak_kerneladiutor_activities_NavigationActivity(android.content.Intent)>[]--><com.grarak.kerneladiutor.activities.NavigationActivity: void onCreate(android.os.Bundle)>[]--><com.grarak.kerneladiutor.activities.NavigationActivity: void init(android.os.Bundle)>[]--><com.grarak.kerneladiutor.activities.NavigationActivity: void onItemSelected(int,boolean,boolean)>[]--><com.grarak.kerneladiutor.activities.NavigationActivity: void setShortcuts()>[[$i0 >= 25]]--><android.content.pm.ShortcutInfo.Builder: void <init>(android.content.Context,java.lang.String)>
+One road protect good!
+2 Packageshead roads:
+$i0 >= 25
+Good road: <com.grarak.kerneladiutor.activities.NavigationActivity: boolean onNavigationItemSelected(android.view.MenuItem)>[]--><com.grarak.kerneladiutor.activities.NavigationActivity: void onItemSelected(int,boolean,boolean)>[]--><com.grarak.kerneladiutor.activities.NavigationActivity: void setShortcuts()>[[$i0 >= 25]]--><android.content.pm.ShortcutInfo.Builder: void <init>(android.content.Context,java.lang.String)>
+One road protect good!
+$i0 >= 25
+Good road: <com.grarak.kerneladiutor.fragments.other.SettingsFragment: boolean onPreferenceChange(android.support.v7.preference.Preference,java.lang.Object)>[]--><com.grarak.kerneladiutor.activities.NavigationActivity: void appendFragments()>[]--><com.grarak.kerneladiutor.activities.NavigationActivity: void appendFragments(boolean)>[]--><com.grarak.kerneladiutor.activities.NavigationActivity: void setShortcuts()>[[$i0 >= 25]]--><android.content.pm.ShortcutInfo.Builder: void <init>(android.content.Context,java.lang.String)>
+One road protect good!
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 7 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager: boolean setWifiEnabled(boolean)> is checking!!!
+The life time of api is [1,30]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <cyanogenmod.app.Profile: void doSelect(android.content.Context,com.android.internal.policy.IKeyguardService)>[]--><cyanogenmod.profiles.ConnectionSettings: void processOverride(android.content.Context)>[]--><android.net.wifi.WifiManager: boolean setWifiEnabled(boolean)>
+#1.the call statck between class <cyanogenmod.app.Profile: void doSelect(android.content.Context,com.android.internal.policy.IKeyguardService)> to <android.net.wifi.WifiManager: boolean setWifiEnabled(boolean)>has compatibility isssues！
+-----------------------------------------
+crashApis:5
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 8 Potential Issue API: SDKCheck of <android.os.BaseBundle: boolean containsKey(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.grarak.kerneladiutor.services.profile.Tasker dummyMainMethod_com_grarak_kerneladiutor_services_profile_Tasker(android.content.Intent)>[]--><com.grarak.kerneladiutor.services.profile.Tasker: void onReceive(android.content.Context,android.content.Intent)>[]--><com.grarak.kerneladiutor.services.profile.Tasker: boolean isBundleValid(android.os.Bundle)>[]--><android.os.BaseBundle: boolean containsKey(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: boolean containsKey(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:6
+crashApisInMain:2
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 9 Potential Issue API: SDKCheck of <android.util.ArraySet: boolean removeAll(android.util.ArraySet)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <cyanogenmod.providers.CMSettings$DelimitedListValidator: boolean validate(java.lang.String)>[]--><android.util.ArraySet: boolean removeAll(android.util.ArraySet)>
+#1.the call statck between class <cyanogenmod.providers.CMSettings$DelimitedListValidator: boolean validate(java.lang.String)> to <android.util.ArraySet: boolean removeAll(android.util.ArraySet)>has compatibility isssues！
+-----------------------------------------
+crashApis:7
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 10 Potential Issue API: SDKCheck of <android.os.ServiceManager: android.os.IBinder getService(java.lang.String)> is checking!!!
+The life time of api is [4,26]
+39call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.grarak.kerneladiutor.activities.MainActivity dummyMainMethod_com_grarak_kerneladiutor_activities_MainActivity(android.content.Intent)>[]--><com.grarak.kerneladiutor.activities.MainActivity: void onActivityResult(int,int,android.content.Intent)>[]--><com.grarak.kerneladiutor.activities.MainActivity$CheckingTask: java.lang.Object doInBackground(java.lang.Object[])>[]--><com.grarak.kerneladiutor.activities.MainActivity$CheckingTask: java.lang.Void doInBackground(java.lang.Void[])>[]--><com.grarak.kerneladiutor.activities.MainActivity$CheckingTask: void collectData()>[]--><com.grarak.kerneladiutor.services.profile.Tile: void publishProfileTile(java.util.List,android.content.Context)>[[try]]--><cyanogenmod.app.CMStatusBarManager: cyanogenmod.app.CMStatusBarManager getInstance(android.content.Context)>[]--><cyanogenmod.app.CMStatusBarManager: void <init>(android.content.Context)>[]--><cyanogenmod.app.CMStatusBarManager: cyanogenmod.app.ICMStatusBarManager getService()>[]--><android.os.ServiceManager: android.os.IBinder getService(java.lang.String)>
+One road protect good!
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.grarak.kerneladiutor.services.boot.Service dummyMainMethod_com_grarak_kerneladiutor_services_boot_Service(android.content.Intent)>[]--><com.grarak.kerneladiutor.services.boot.Service: int onStartCommand(android.content.Intent,int,int)>[]--><com.grarak.kerneladiutor.services.boot.ApplyOnBoot: boolean apply(android.content.Context,com.grarak.kerneladiutor.services.boot.ApplyOnBoot$ApplyOnBootListener)>[]--><com.grarak.kerneladiutor.services.profile.Tile: void publishProfileTile(java.util.List,android.content.Context)>[[try]]--><cyanogenmod.app.CMStatusBarManager: cyanogenmod.app.CMStatusBarManager getInstance(android.content.Context)>[]--><cyanogenmod.app.CMStatusBarManager: void <init>(android.content.Context)>[]--><cyanogenmod.app.CMStatusBarManager: cyanogenmod.app.ICMStatusBarManager getService()>[]--><android.os.ServiceManager: android.os.IBinder getService(java.lang.String)>
+One road protect good!
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.grarak.kerneladiutor.services.boot.JobService dummyMainMethod_com_grarak_kerneladiutor_services_boot_JobService(android.content.Intent)>[]--><com.grarak.kerneladiutor.services.boot.JobService: boolean onStartJob(android.app.job.JobParameters)>[]--><com.grarak.kerneladiutor.services.boot.ApplyOnBoot: boolean apply(android.content.Context,com.grarak.kerneladiutor.services.boot.ApplyOnBoot$ApplyOnBootListener)>[]--><com.grarak.kerneladiutor.services.profile.Tile: void publishProfileTile(java.util.List,android.content.Context)>[[try]]--><cyanogenmod.app.CMStatusBarManager: cyanogenmod.app.CMStatusBarManager getInstance(android.content.Context)>[]--><cyanogenmod.app.CMStatusBarManager: void <init>(android.content.Context)>[]--><cyanogenmod.app.CMStatusBarManager: cyanogenmod.app.ICMStatusBarManager getService()>[]--><android.os.ServiceManager: android.os.IBinder getService(java.lang.String)>
+One road protect good!
+38 Packageshead roads:
+try
+Good road with try: <cyanogenmod.app.ProfileManager: java.lang.String[] getProfileNames()>[[try]]--><cyanogenmod.app.ProfileManager: cyanogenmod.app.IProfileManager getService()>[]--><android.os.ServiceManager: android.os.IBinder getService(java.lang.String)>
+One road protect good!
+try
+Good road with try: <cyanogenmod.app.ProfileManager: boolean notificationGroupExists(java.lang.String)>[[try]]--><cyanogenmod.app.ProfileManager: cyanogenmod.app.IProfileManager getService()>[]--><android.os.ServiceManager: android.os.IBinder getService(java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.grarak.kerneladiutor.fragments.tools.ProfileFragment: void addItems(java.util.List)>[]--><com.grarak.kerneladiutor.fragments.tools.ProfileFragment: void load(java.util.List)>[]--><com.grarak.kerneladiutor.services.profile.Tile: void publishProfileTile(java.util.List,android.content.Context)>[[try]]--><cyanogenmod.app.CMStatusBarManager: cyanogenmod.app.CMStatusBarManager getInstance(android.content.Context)>[]--><cyanogenmod.app.CMStatusBarManager: void <init>(android.content.Context)>[]--><cyanogenmod.app.CMStatusBarManager: cyanogenmod.app.ICMStatusBarManager getService()>[]--><android.os.ServiceManager: android.os.IBinder getService(java.lang.String)>
+One road protect good!
+try
+Good road with try: <cyanogenmod.app.ProfileManager: void removeProfile(cyanogenmod.app.Profile)>[[try]]--><cyanogenmod.app.ProfileManager: cyanogenmod.app.IProfileManager getService()>[]--><android.os.ServiceManager: android.os.IBinder getService(java.lang.String)>
+One road protect good!
+try
+Good road with try: <cyanogenmod.app.ProfileManager: cyanogenmod.app.Profile getProfile(java.util.UUID)>[[try]]--><cyanogenmod.app.ProfileManager: cyanogenmod.app.IProfileManager getService()>[]--><android.os.ServiceManager: android.os.IBinder getService(java.lang.String)>
+One road protect good!
+!!!this api will crash on sdk 27 28 29 30 31 
+Error road: <cyanogenmod.app.LiveLockScreenManager: cyanogenmod.app.LiveLockScreenManager getInstance(android.content.Context)>[]--><cyanogenmod.app.LiveLockScreenManager: void <init>(android.content.Context)>[]--><cyanogenmod.app.LiveLockScreenManager: cyanogenmod.app.ILiveLockScreenManager getService()>[]--><android.os.ServiceManager: android.os.IBinder getService(java.lang.String)>
+#6.the call statck between class <cyanogenmod.app.LiveLockScreenManager: cyanogenmod.app.LiveLockScreenManager getInstance(android.content.Context)> to <android.os.ServiceManager: android.os.IBinder getService(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+try
+Good road with try: <cyanogenmod.app.ProfileManager: void addProfile(cyanogenmod.app.Profile)>[[try]]--><cyanogenmod.app.ProfileManager: cyanogenmod.app.IProfileManager getService()>[]--><android.os.ServiceManager: android.os.IBinder getService(java.lang.String)>
+One road protect good!
+try
+Good road with try: <cyanogenmod.app.ProfileManager: cyanogenmod.app.Profile getProfile(java.lang.String)>[[try]]--><cyanogenmod.app.ProfileManager: cyanogenmod.app.IProfileManager getService()>[]--><android.os.ServiceManager: android.os.IBinder getService(java.lang.String)>
+One road protect good!
+try
+Good road with try: <cyanogenmod.app.suggest.AppSuggestManager: cyanogenmod.app.suggest.AppSuggestManager getInstance(android.content.Context)>[[try]]--><cyanogenmod.app.suggest.AppSuggestManager: void <init>(android.content.Context)>[]--><cyanogenmod.app.suggest.AppSuggestManager: cyanogenmod.app.suggest.IAppSuggestManager getService()>[[try]]--><android.os.ServiceManager: android.os.IBinder getService(java.lang.String)>
+One road protect good!
+!!!this api will crash on sdk 27 28 29 30 31 
+Error road: <cyanogenmod.power.PerformanceManager: cyanogenmod.power.PerformanceManager getInstance(android.content.Context)>[]--><cyanogenmod.power.PerformanceManager: void <init>(android.content.Context)>[]--><cyanogenmod.power.PerformanceManager: cyanogenmod.power.IPerformanceManager getService()>[]--><android.os.ServiceManager: android.os.IBinder getService(java.lang.String)>
+#10.the call statck between class <cyanogenmod.power.PerformanceManager: cyanogenmod.power.PerformanceManager getInstance(android.content.Context)> to <android.os.ServiceManager: android.os.IBinder getService(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:8
+containsStatic:false
+containsTry:true
+11call by main package
+-----------------------------------------
+#################################################
+N 11 Potential Issue API: SDKCheck of <android.app.job.JobInfo.Builder: android.app.job.JobInfo build()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.grarak.kerneladiutor.services.boot.Receiver dummyMainMethod_com_grarak_kerneladiutor_services_boot_Receiver(android.content.Intent)>[]--><com.grarak.kerneladiutor.services.boot.Receiver: void onReceive(android.content.Context,android.content.Intent)>[[-$i0 < 26]]--><com.grarak.kerneladiutor.services.boot.JobService: void start(android.content.Context)>[]--><android.app.job.JobInfo.Builder: android.app.job.JobInfo build()>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 12 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)> is checking!!!
+The life time of api is [21,31]
+20call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.grarak.kerneladiutor.activities.FilePickerActivity dummyMainMethod_com_grarak_kerneladiutor_activities_FilePickerActivity(android.content.Intent)>[]--><com.grarak.kerneladiutor.activities.FilePickerActivity: void onCreate(android.os.Bundle)>[]--><com.grarak.kerneladiutor.activities.FilePickerActivity: android.support.v4.app.Fragment getFragment()>[]--><com.grarak.kerneladiutor.activities.FilePickerActivity$FilePickerFragment: com.grarak.kerneladiutor.activities.FilePickerActivity$FilePickerFragment newInstance(java.lang.String,java.lang.String)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+19 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.grarak.kerneladiutor.fragments.kernel.MiscFragment: void init()>[]--><com.grarak.kerneladiutor.fragments.ApplyOnBootFragment: com.grarak.kerneladiutor.fragments.ApplyOnBootFragment newInstance(com.grarak.kerneladiutor.fragments.RecyclerViewFragment)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#1.the call statck between class <com.grarak.kerneladiutor.fragments.kernel.MiscFragment: void init()> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.grarak.kerneladiutor.fragments.kernel.GPUFragment: void init()>[]--><com.grarak.kerneladiutor.fragments.ApplyOnBootFragment: com.grarak.kerneladiutor.fragments.ApplyOnBootFragment newInstance(com.grarak.kerneladiutor.fragments.RecyclerViewFragment)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#2.the call statck between class <com.grarak.kerneladiutor.fragments.kernel.GPUFragment: void init()> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.grarak.kerneladiutor.fragments.kernel.KSMFragment: void init()>[]--><com.grarak.kerneladiutor.fragments.ApplyOnBootFragment: com.grarak.kerneladiutor.fragments.ApplyOnBootFragment newInstance(com.grarak.kerneladiutor.fragments.RecyclerViewFragment)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#3.the call statck between class <com.grarak.kerneladiutor.fragments.kernel.KSMFragment: void init()> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.grarak.kerneladiutor.fragments.kernel.LMKFragment: void init()>[]--><com.grarak.kerneladiutor.fragments.ApplyOnBootFragment: com.grarak.kerneladiutor.fragments.ApplyOnBootFragment newInstance(com.grarak.kerneladiutor.fragments.RecyclerViewFragment)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#4.the call statck between class <com.grarak.kerneladiutor.fragments.kernel.LMKFragment: void init()> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.grarak.kerneladiutor.fragments.kernel.ThermalFragment: void init()>[]--><com.grarak.kerneladiutor.fragments.ApplyOnBootFragment: com.grarak.kerneladiutor.fragments.ApplyOnBootFragment newInstance(com.grarak.kerneladiutor.fragments.RecyclerViewFragment)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#5.the call statck between class <com.grarak.kerneladiutor.fragments.kernel.ThermalFragment: void init()> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.grarak.kerneladiutor.fragments.kernel.WakeFragment: void init()>[]--><com.grarak.kerneladiutor.fragments.ApplyOnBootFragment: com.grarak.kerneladiutor.fragments.ApplyOnBootFragment newInstance(com.grarak.kerneladiutor.fragments.RecyclerViewFragment)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#6.the call statck between class <com.grarak.kerneladiutor.fragments.kernel.WakeFragment: void init()> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.grarak.kerneladiutor.fragments.kernel.CPUFragment: void init()>[]--><com.grarak.kerneladiutor.fragments.ApplyOnBootFragment: com.grarak.kerneladiutor.fragments.ApplyOnBootFragment newInstance(com.grarak.kerneladiutor.fragments.RecyclerViewFragment)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#7.the call statck between class <com.grarak.kerneladiutor.fragments.kernel.CPUFragment: void init()> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.grarak.kerneladiutor.fragments.kernel.IOFragment: void init()>[]--><com.grarak.kerneladiutor.fragments.ApplyOnBootFragment: com.grarak.kerneladiutor.fragments.ApplyOnBootFragment newInstance(com.grarak.kerneladiutor.fragments.RecyclerViewFragment)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#8.the call statck between class <com.grarak.kerneladiutor.fragments.kernel.IOFragment: void init()> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.grarak.kerneladiutor.fragments.kernel.LEDFragment: void init()>[]--><com.grarak.kerneladiutor.fragments.ApplyOnBootFragment: com.grarak.kerneladiutor.fragments.ApplyOnBootFragment newInstance(com.grarak.kerneladiutor.fragments.RecyclerViewFragment)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#9.the call statck between class <com.grarak.kerneladiutor.fragments.kernel.LEDFragment: void init()> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.grarak.kerneladiutor.fragments.kernel.CPUVoltageFragment: void init()>[]--><com.grarak.kerneladiutor.fragments.ApplyOnBootFragment: com.grarak.kerneladiutor.fragments.ApplyOnBootFragment newInstance(com.grarak.kerneladiutor.fragments.RecyclerViewFragment)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#10.the call statck between class <com.grarak.kerneladiutor.fragments.kernel.CPUVoltageFragment: void init()> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:9
+crashApisInMain:3
+containsStatic:false
+containsTry:true
+11call by main package
+-----------------------------------------
+#################################################
+N 13 Potential Issue API: SDKCheck of <android.content.pm.ShortcutInfo.Builder: android.content.pm.ShortcutInfo.Builder setLongLabel(java.lang.CharSequence)> is checking!!!
+The life time of api is [25,31]
+3call roads:
+1 Mainhead roads:
+$i0 >= 25
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.grarak.kerneladiutor.activities.NavigationActivity dummyMainMethod_com_grarak_kerneladiutor_activities_NavigationActivity(android.content.Intent)>[]--><com.grarak.kerneladiutor.activities.NavigationActivity: void onCreate(android.os.Bundle)>[]--><com.grarak.kerneladiutor.activities.NavigationActivity: void init(android.os.Bundle)>[]--><com.grarak.kerneladiutor.activities.NavigationActivity: void onItemSelected(int,boolean,boolean)>[]--><com.grarak.kerneladiutor.activities.NavigationActivity: void setShortcuts()>[[$i0 >= 25]]--><android.content.pm.ShortcutInfo.Builder: android.content.pm.ShortcutInfo.Builder setLongLabel(java.lang.CharSequence)>
+One road protect good!
+2 Packageshead roads:
+$i0 >= 25
+Good road: <com.grarak.kerneladiutor.activities.NavigationActivity: boolean onNavigationItemSelected(android.view.MenuItem)>[]--><com.grarak.kerneladiutor.activities.NavigationActivity: void onItemSelected(int,boolean,boolean)>[]--><com.grarak.kerneladiutor.activities.NavigationActivity: void setShortcuts()>[[$i0 >= 25]]--><android.content.pm.ShortcutInfo.Builder: android.content.pm.ShortcutInfo.Builder setLongLabel(java.lang.CharSequence)>
+One road protect good!
+$i0 >= 25
+Good road: <com.grarak.kerneladiutor.fragments.other.SettingsFragment: boolean onPreferenceChange(android.support.v7.preference.Preference,java.lang.Object)>[]--><com.grarak.kerneladiutor.activities.NavigationActivity: void appendFragments()>[]--><com.grarak.kerneladiutor.activities.NavigationActivity: void appendFragments(boolean)>[]--><com.grarak.kerneladiutor.activities.NavigationActivity: void setShortcuts()>[[$i0 >= 25]]--><android.content.pm.ShortcutInfo.Builder: android.content.pm.ShortcutInfo.Builder setLongLabel(java.lang.CharSequence)>
+One road protect good!
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 14 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)> is checking!!!
+The life time of api is [22,31]
+2call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.grarak.kerneladiutor.activities.tools.profile.ProfileActivity dummyMainMethod_com_grarak_kerneladiutor_activities_tools_profile_ProfileActivity(android.content.Intent)>[]--><com.grarak.kerneladiutor.activities.tools.profile.ProfileActivity: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+!!!this api will crash on sdk 16 17 18 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.grarak.kerneladiutor.activities.NavigationActivity dummyMainMethod_com_grarak_kerneladiutor_activities_NavigationActivity(android.content.Intent)>[]--><com.grarak.kerneladiutor.activities.NavigationActivity: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 
+Error road: <com.google.android.apps.dashclock.api.ExtensionData: android.os.Bundle toBundle()>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+#1.the call statck between class <com.google.android.apps.dashclock.api.ExtensionData: android.os.Bundle toBundle()> to <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+crashApis:10
+crashApisInMain:4
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 15 Potential Issue API: SDKCheck of <android.content.pm.ShortcutInfo.Builder: android.content.pm.ShortcutInfo build()> is checking!!!
+The life time of api is [24,31]
+3call roads:
+1 Mainhead roads:
+$i0 >= 25
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.grarak.kerneladiutor.activities.NavigationActivity dummyMainMethod_com_grarak_kerneladiutor_activities_NavigationActivity(android.content.Intent)>[]--><com.grarak.kerneladiutor.activities.NavigationActivity: void onCreate(android.os.Bundle)>[]--><com.grarak.kerneladiutor.activities.NavigationActivity: void init(android.os.Bundle)>[]--><com.grarak.kerneladiutor.activities.NavigationActivity: void onItemSelected(int,boolean,boolean)>[]--><com.grarak.kerneladiutor.activities.NavigationActivity: void setShortcuts()>[[$i0 >= 25]]--><android.content.pm.ShortcutInfo.Builder: android.content.pm.ShortcutInfo build()>
+One road protect good!
+2 Packageshead roads:
+$i0 >= 25
+Good road: <com.grarak.kerneladiutor.activities.NavigationActivity: boolean onNavigationItemSelected(android.view.MenuItem)>[]--><com.grarak.kerneladiutor.activities.NavigationActivity: void onItemSelected(int,boolean,boolean)>[]--><com.grarak.kerneladiutor.activities.NavigationActivity: void setShortcuts()>[[$i0 >= 25]]--><android.content.pm.ShortcutInfo.Builder: android.content.pm.ShortcutInfo build()>
+One road protect good!
+$i0 >= 25
+Good road: <com.grarak.kerneladiutor.fragments.other.SettingsFragment: boolean onPreferenceChange(android.support.v7.preference.Preference,java.lang.Object)>[]--><com.grarak.kerneladiutor.activities.NavigationActivity: void appendFragments()>[]--><com.grarak.kerneladiutor.activities.NavigationActivity: void appendFragments(boolean)>[]--><com.grarak.kerneladiutor.activities.NavigationActivity: void setShortcuts()>[[$i0 >= 25]]--><android.content.pm.ShortcutInfo.Builder: android.content.pm.ShortcutInfo build()>
+One road protect good!
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 16 Potential Issue API: SDKCheck of <android.net.NetworkInfo: int getSubtype()> is checking!!!
+The life time of api is [3,30]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <com.squareup.picasso.Dispatcher$DispatcherHandler: void handleMessage(android.os.Message)>[]--><com.squareup.picasso.Dispatcher: void performNetworkStateChange(android.net.NetworkInfo)>[]--><com.squareup.picasso.PicassoExecutorService: void adjustThreadCount(android.net.NetworkInfo)>[]--><android.net.NetworkInfo: int getSubtype()>
+#1.the call statck between class <com.squareup.picasso.Dispatcher$DispatcherHandler: void handleMessage(android.os.Message)> to <android.net.NetworkInfo: int getSubtype()>has compatibility isssues！
+-----------------------------------------
+crashApis:11
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 17 Potential Issue API: SDKCheck of <android.util.ArrayMap: void <init>()> is checking!!!
+The life time of api is [19,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 
+Error road: <cyanogenmod.providers.CMSettings$System: void <clinit>()>[]--><android.util.ArrayMap: void <init>()>
+#1.the call statck between class <cyanogenmod.providers.CMSettings$System: void <clinit>()> to <android.util.ArrayMap: void <init>()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 
+Error road: <cyanogenmod.providers.CMSettings$Secure: void <clinit>()>[]--><android.util.ArrayMap: void <init>()>
+#2.the call statck between class <cyanogenmod.providers.CMSettings$Secure: void <clinit>()> to <android.util.ArrayMap: void <init>()>has compatibility isssues！
+-----------------------------------------
+crashApis:12
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 18 Potential Issue API: SDKCheck of <android.os.PowerManager: boolean isInteractive()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i0 < 20
+Good road: <com.grarak.kerneladiutor.utils.Utils: boolean isScreenOn(android.content.Context)>[[-$i0 < 20]]--><android.os.PowerManager: boolean isInteractive()>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 19 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.lang.Object get(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.grarak.kerneladiutor.services.boot.Service dummyMainMethod_com_grarak_kerneladiutor_services_boot_Service(android.content.Intent)>[]--><com.grarak.kerneladiutor.services.boot.Service: int onStartCommand(android.content.Intent,int,int)>[]--><android.os.BaseBundle: java.lang.Object get(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: java.lang.Object get(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:13
+crashApisInMain:5
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 20 Potential Issue API: SDKCheck of <android.app.job.JobScheduler: int schedule(android.app.job.JobInfo)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.grarak.kerneladiutor.services.boot.Receiver dummyMainMethod_com_grarak_kerneladiutor_services_boot_Receiver(android.content.Intent)>[]--><com.grarak.kerneladiutor.services.boot.Receiver: void onReceive(android.content.Context,android.content.Intent)>[[-$i0 < 26]]--><com.grarak.kerneladiutor.services.boot.JobService: void start(android.content.Context)>[]--><android.app.job.JobScheduler: int schedule(android.app.job.JobInfo)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 21 Potential Issue API: SDKCheck of <android.os.BaseBundle: boolean getBoolean(java.lang.String)> is checking!!!
+The life time of api is [22,31]
+2call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.grarak.kerneladiutor.activities.tools.profile.ProfileActivity dummyMainMethod_com_grarak_kerneladiutor_activities_tools_profile_ProfileActivity(android.content.Intent)>[]--><com.grarak.kerneladiutor.activities.tools.profile.ProfileActivity: void onCreate(android.os.Bundle)>[]--><com.grarak.kerneladiutor.activities.tools.profile.ProfileActivity: void initNewMode(android.os.Bundle)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+!!!this api will crash on sdk 16 17 18 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.grarak.kerneladiutor.activities.NavigationActivity dummyMainMethod_com_grarak_kerneladiutor_activities_NavigationActivity(android.content.Intent)>[]--><com.grarak.kerneladiutor.activities.NavigationActivity: void onCreate(android.os.Bundle)>[]--><com.grarak.kerneladiutor.activities.NavigationActivity: void init(android.os.Bundle)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: boolean getBoolean(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+1 Packageshead roads:
+try
+Good road with try: <com.google.android.apps.dashclock.api.DashClockExtension: void onCreate()>[]--><com.google.android.apps.dashclock.api.DashClockExtension: void loadMetaData()>[[try]]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+One road protect good!
+crashApis:14
+crashApisInMain:6
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 22 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.lang.String getString(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+4call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.grarak.kerneladiutor.services.profile.Tasker dummyMainMethod_com_grarak_kerneladiutor_services_profile_Tasker(android.content.Intent)>[]--><com.grarak.kerneladiutor.services.profile.Tasker: void onReceive(android.content.Context,android.content.Intent)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+3 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.grarak.kerneladiutor.activities.FilePickerActivity$FilePickerFragment: void init()>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#1.the call statck between class <com.grarak.kerneladiutor.activities.FilePickerActivity$FilePickerFragment: void init()> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.grarak.kerneladiutor.fragments.ApplyOnBootFragment: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#2.the call statck between class <com.grarak.kerneladiutor.fragments.ApplyOnBootFragment: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+try
+Good road with try: <com.google.android.apps.dashclock.api.ExtensionData: void fromBundle(android.os.Bundle)>[[try]]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+One road protect good!
+crashApis:15
+crashApisInMain:7
+containsStatic:false
+containsTry:true
+4call by main package
+-----------------------------------------
+#################################################
+N 23 Potential Issue API: SDKCheck of <android.provider.MediaStore.Video.Thumbnails: android.graphics.Bitmap getThumbnail(android.content.ContentResolver,long,int,android.graphics.BitmapFactory.Options)> is checking!!!
+The life time of api is [5,29]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 30 31 
+Error road: <com.squareup.picasso.MediaStoreRequestHandler: com.squareup.picasso.RequestHandler$Result load(com.squareup.picasso.Request,int)>[]--><android.provider.MediaStore.Video.Thumbnails: android.graphics.Bitmap getThumbnail(android.content.ContentResolver,long,int,android.graphics.BitmapFactory.Options)>
+#1.the call statck between class <com.squareup.picasso.MediaStoreRequestHandler: com.squareup.picasso.RequestHandler$Result load(com.squareup.picasso.Request,int)> to <android.provider.MediaStore.Video.Thumbnails: android.graphics.Bitmap getThumbnail(android.content.ContentResolver,long,int,android.graphics.BitmapFactory.Options)>has compatibility isssues！
+-----------------------------------------
+crashApis:16
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 24 Potential Issue API: SDKCheck of <android.provider.Settings.Global: boolean putInt(android.content.ContentResolver,java.lang.String,int)> is checking!!!
+The life time of api is [17,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 
+Error road: <cyanogenmod.app.Profile: void doSelect(android.content.Context,com.android.internal.policy.IKeyguardService)>[]--><cyanogenmod.profiles.ConnectionSettings: void processOverride(android.content.Context)>[]--><android.provider.Settings.Global: boolean putInt(android.content.ContentResolver,java.lang.String,int)>
+!!!this api will crash on sdk 16 
+Error road: <cyanogenmod.app.Profile: void doSelect(android.content.Context,com.android.internal.policy.IKeyguardService)>[]--><cyanogenmod.profiles.AirplaneModeSettings: void processOverride(android.content.Context)>[]--><android.provider.Settings.Global: boolean putInt(android.content.ContentResolver,java.lang.String,int)>
+#1.the call statck between class <cyanogenmod.app.Profile: void doSelect(android.content.Context,com.android.internal.policy.IKeyguardService)> to <android.provider.Settings.Global: boolean putInt(android.content.ContentResolver,java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:17
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 25 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putInt(java.lang.String,int)> is checking!!!
+The life time of api is [21,31]
+6call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.grarak.kerneladiutor.activities.tools.profile.ProfileActivity dummyMainMethod_com_grarak_kerneladiutor_activities_tools_profile_ProfileActivity(android.content.Intent)>[]--><com.grarak.kerneladiutor.activities.tools.profile.ProfileActivity: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.grarak.kerneladiutor.activities.NavigationActivity dummyMainMethod_com_grarak_kerneladiutor_activities_NavigationActivity(android.content.Intent)>[]--><com.grarak.kerneladiutor.activities.NavigationActivity: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.grarak.kerneladiutor.activities.tools.profile.ProfileEditActivity dummyMainMethod_com_grarak_kerneladiutor_activities_tools_profile_ProfileEditActivity(android.content.Intent)>[]--><com.grarak.kerneladiutor.activities.tools.profile.ProfileEditActivity: void onCreate(android.os.Bundle)>[]--><com.grarak.kerneladiutor.activities.tools.profile.ProfileEditActivity: android.support.v4.app.Fragment getFragment()>[]--><com.grarak.kerneladiutor.activities.tools.profile.ProfileEditActivity$ProfileEditFragment: com.grarak.kerneladiutor.activities.tools.profile.ProfileEditActivity$ProfileEditFragment newInstance(int)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+5 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.grarak.kerneladiutor.fragments.tools.ProfileFragment$4$2: void onClick(android.content.DialogInterface,int)>[]--><com.grarak.kerneladiutor.activities.tools.profile.ProfileTaskerActivity: void finish(java.lang.String,java.util.List)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#1.the call statck between class <com.grarak.kerneladiutor.fragments.tools.ProfileFragment$4$2: void onClick(android.content.DialogInterface,int)> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+try
+Good road with try: <cyanogenmod.providers.CMSettings$NameValueCache: boolean putStringForUser(android.content.ContentResolver,java.lang.String,java.lang.String,int)>[[try]]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+One road protect good!
+try
+Good road with try: <cyanogenmod.providers.CMSettings$NameValueCache: java.lang.String getStringForUser(android.content.ContentResolver,java.lang.String,int)>[[try]]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+One road protect good!
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.google.android.apps.dashclock.api.ExtensionData: android.os.Bundle toBundle()>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#4.the call statck between class <com.google.android.apps.dashclock.api.ExtensionData: android.os.Bundle toBundle()> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.grarak.kerneladiutor.services.profile.Widget$ListViewFactory: android.widget.RemoteViews getViewAt(int)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#5.the call statck between class <com.grarak.kerneladiutor.services.profile.Widget$ListViewFactory: android.widget.RemoteViews getViewAt(int)> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:18
+crashApisInMain:8
+containsStatic:false
+containsTry:true
+6call by main package
+-----------------------------------------
+#################################################
+N 26 Potential Issue API: SDKCheck of <android.os.BaseBundle: int getInt(java.lang.String,int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.grarak.kerneladiutor.services.profile.Tasker dummyMainMethod_com_grarak_kerneladiutor_services_profile_Tasker(android.content.Intent)>[]--><com.grarak.kerneladiutor.services.profile.Tasker: void onReceive(android.content.Context,android.content.Intent)>[]--><com.grarak.kerneladiutor.services.profile.Tasker: boolean isBundleValid(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String,int)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: int getInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:19
+crashApisInMain:9
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 27 Potential Issue API: SDKCheck of <android.view.Display: void getRealSize(android.graphics.Point)> is checking!!!
+The life time of api is [17,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 16 
+Error road: <cyanogenmod.externalviews.KeyguardExternalView: void <init>(android.content.Context,android.util.AttributeSet,int,int)>[]--><cyanogenmod.externalviews.KeyguardExternalView: void <init>(android.content.Context,android.util.AttributeSet)>[]--><cyanogenmod.externalviews.KeyguardExternalView: void <init>(android.content.Context,android.util.AttributeSet,android.content.ComponentName)>[]--><android.view.Display: void getRealSize(android.graphics.Point)>
+#1.the call statck between class <cyanogenmod.externalviews.KeyguardExternalView: void <init>(android.content.Context,android.util.AttributeSet,int,int)> to <android.view.Display: void getRealSize(android.graphics.Point)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 
+Error road: <cyanogenmod.externalviews.KeyguardExternalView: void <init>(android.content.Context,android.util.AttributeSet,int)>[]--><cyanogenmod.externalviews.KeyguardExternalView: void <init>(android.content.Context,android.util.AttributeSet)>[]--><cyanogenmod.externalviews.KeyguardExternalView: void <init>(android.content.Context,android.util.AttributeSet,android.content.ComponentName)>[]--><android.view.Display: void getRealSize(android.graphics.Point)>
+#2.the call statck between class <cyanogenmod.externalviews.KeyguardExternalView: void <init>(android.content.Context,android.util.AttributeSet,int)> to <android.view.Display: void getRealSize(android.graphics.Point)>has compatibility isssues！
+-----------------------------------------
+crashApis:20
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 28 Potential Issue API: SDKCheck of <android.net.NetworkInfo: boolean isConnectedOrConnecting()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <com.squareup.picasso.Dispatcher$DispatcherHandler: void handleMessage(android.os.Message)>[]--><com.squareup.picasso.Dispatcher: void performNetworkStateChange(android.net.NetworkInfo)>[]--><com.squareup.picasso.PicassoExecutorService: void adjustThreadCount(android.net.NetworkInfo)>[]--><android.net.NetworkInfo: boolean isConnectedOrConnecting()>
+#1.the call statck between class <com.squareup.picasso.Dispatcher$DispatcherHandler: void handleMessage(android.os.Message)> to <android.net.NetworkInfo: boolean isConnectedOrConnecting()>has compatibility isssues！
+-----------------------------------------
+crashApis:21
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 29 Potential Issue API: SDKCheck of <android.view.Window: void setStatusBarColor(int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.grarak.kerneladiutor.activities.MainActivity dummyMainMethod_com_grarak_kerneladiutor_activities_MainActivity(android.content.Intent)>[]--><com.grarak.kerneladiutor.activities.MainActivity: void onCreate(android.os.Bundle)>[]--><com.grarak.kerneladiutor.activities.BaseActivity: void onCreate(android.os.Bundle)>[[-$i0 < 21]]--><android.view.Window: void setStatusBarColor(int)>
+One road protect good!
+-$i0 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.grarak.kerneladiutor.activities.BannerResizerActivity dummyMainMethod_com_grarak_kerneladiutor_activities_BannerResizerActivity(android.content.Intent)>[]--><com.grarak.kerneladiutor.activities.BannerResizerActivity: void onCreate(android.os.Bundle)>[]--><com.grarak.kerneladiutor.activities.BaseActivity: void onCreate(android.os.Bundle)>[[-$i0 < 21]]--><android.view.Window: void setStatusBarColor(int)>
+One road protect good!
+-$i0 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.grarak.kerneladiutor.activities.tools.profile.ProfileTaskerActivity dummyMainMethod_com_grarak_kerneladiutor_activities_tools_profile_ProfileTaskerActivity(android.content.Intent)>[]--><com.grarak.kerneladiutor.activities.tools.profile.ProfileTaskerActivity: void onCreate(android.os.Bundle)>[]--><com.grarak.kerneladiutor.activities.BaseActivity: void onCreate(android.os.Bundle)>[[-$i0 < 21]]--><android.view.Window: void setStatusBarColor(int)>
+One road protect good!
+-$i0 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.grarak.kerneladiutor.activities.EditorActivity dummyMainMethod_com_grarak_kerneladiutor_activities_EditorActivity(android.content.Intent)>[]--><com.grarak.kerneladiutor.activities.EditorActivity: void onCreate(android.os.Bundle)>[]--><com.grarak.kerneladiutor.activities.BaseActivity: void onCreate(android.os.Bundle)>[[-$i0 < 21]]--><android.view.Window: void setStatusBarColor(int)>
+One road protect good!
+-$i0 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.grarak.kerneladiutor.activities.tools.profile.ProfileEditActivity dummyMainMethod_com_grarak_kerneladiutor_activities_tools_profile_ProfileEditActivity(android.content.Intent)>[]--><com.grarak.kerneladiutor.activities.tools.profile.ProfileEditActivity: void onCreate(android.os.Bundle)>[]--><com.grarak.kerneladiutor.activities.BaseActivity: void onCreate(android.os.Bundle)>[[-$i0 < 21]]--><android.view.Window: void setStatusBarColor(int)>
+One road protect good!
+-$i0 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.grarak.kerneladiutor.activities.TextActivity dummyMainMethod_com_grarak_kerneladiutor_activities_TextActivity(android.content.Intent)>[]--><com.grarak.kerneladiutor.activities.TextActivity: void onCreate(android.os.Bundle)>[]--><com.grarak.kerneladiutor.activities.BaseActivity: void onCreate(android.os.Bundle)>[[-$i0 < 21]]--><android.view.Window: void setStatusBarColor(int)>
+One road protect good!
+-$i0 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.grarak.kerneladiutor.activities.SecurityActivity dummyMainMethod_com_grarak_kerneladiutor_activities_SecurityActivity(android.content.Intent)>[]--><com.grarak.kerneladiutor.activities.SecurityActivity: void onCreate(android.os.Bundle)>[]--><com.grarak.kerneladiutor.activities.BaseActivity: void onCreate(android.os.Bundle)>[[-$i0 < 21]]--><android.view.Window: void setStatusBarColor(int)>
+One road protect good!
+-$i0 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.grarak.kerneladiutor.activities.tools.DownloadsActivity dummyMainMethod_com_grarak_kerneladiutor_activities_tools_DownloadsActivity(android.content.Intent)>[]--><com.grarak.kerneladiutor.activities.tools.DownloadsActivity: void onCreate(android.os.Bundle)>[]--><com.grarak.kerneladiutor.activities.BaseActivity: void onCreate(android.os.Bundle)>[[-$i0 < 21]]--><android.view.Window: void setStatusBarColor(int)>
+One road protect good!
+-$i0 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.grarak.kerneladiutor.activities.tools.profile.ProfileActivity dummyMainMethod_com_grarak_kerneladiutor_activities_tools_profile_ProfileActivity(android.content.Intent)>[]--><com.grarak.kerneladiutor.activities.tools.profile.ProfileActivity: void onCreate(android.os.Bundle)>[]--><com.grarak.kerneladiutor.activities.BaseActivity: void onCreate(android.os.Bundle)>[[-$i0 < 21]]--><android.view.Window: void setStatusBarColor(int)>
+One road protect good!
+-$i0 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.grarak.kerneladiutor.activities.tools.CustomControlsActivity dummyMainMethod_com_grarak_kerneladiutor_activities_tools_CustomControlsActivity(android.content.Intent)>[]--><com.grarak.kerneladiutor.activities.tools.CustomControlsActivity: void onCreate(android.os.Bundle)>[]--><com.grarak.kerneladiutor.activities.BaseActivity: void onCreate(android.os.Bundle)>[[-$i0 < 21]]--><android.view.Window: void setStatusBarColor(int)>
+One road protect good!
+-$i0 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.grarak.kerneladiutor.activities.FilePickerActivity dummyMainMethod_com_grarak_kerneladiutor_activities_FilePickerActivity(android.content.Intent)>[]--><com.grarak.kerneladiutor.activities.FilePickerActivity: void onCreate(android.os.Bundle)>[]--><com.grarak.kerneladiutor.activities.BaseActivity: void onCreate(android.os.Bundle)>[[-$i0 < 21]]--><android.view.Window: void setStatusBarColor(int)>
+One road protect good!
+-$i0 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.grarak.kerneladiutor.activities.NavigationActivity dummyMainMethod_com_grarak_kerneladiutor_activities_NavigationActivity(android.content.Intent)>[]--><com.grarak.kerneladiutor.activities.NavigationActivity: void onCreate(android.os.Bundle)>[]--><com.grarak.kerneladiutor.activities.BaseActivity: void onCreate(android.os.Bundle)>[[-$i0 < 21]]--><android.view.Window: void setStatusBarColor(int)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 30 Potential Issue API: SDKCheck of <android.security.keystore.KeyGenParameterSpec.Builder: void <init>(java.lang.String,int)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 23
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.grarak.kerneladiutor.activities.SecurityActivity dummyMainMethod_com_grarak_kerneladiutor_activities_SecurityActivity(android.content.Intent)>[]--><com.grarak.kerneladiutor.activities.SecurityActivity: void onCreate(android.os.Bundle)>[[-$i0 < 23]]--><com.grarak.kerneladiutor.activities.SecurityActivity: void loadFingerprint()>[[try]]--><android.security.keystore.KeyGenParameterSpec.Builder: void <init>(java.lang.String,int)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:true
+1call by main package
+-----------------------------------------
+#################################################
+N 31 Potential Issue API: SDKCheck of <android.graphics.Outline: void setConvexPath(android.graphics.Path)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <org.adw.library.widgets.discreteseekbar.internal.compat.SeekBarCompatDontCrash$1: void getOutline(android.view.View,android.graphics.Outline)>[]--><android.graphics.Outline: void setConvexPath(android.graphics.Path)>
+#1.the call statck between class <org.adw.library.widgets.discreteseekbar.internal.compat.SeekBarCompatDontCrash$1: void getOutline(android.view.View,android.graphics.Outline)> to <android.graphics.Outline: void setConvexPath(android.graphics.Path)>has compatibility isssues！
+-----------------------------------------
+crashApis:22
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 32 Potential Issue API: SDKCheck of <android.util.ArraySet: void <init>()> is checking!!!
+The life time of api is [23,31]
+3call roads:
+0 Mainhead roads:
+3 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <cyanogenmod.themes.ThemeManager: cyanogenmod.themes.ThemeManager getInstance(android.content.Context)>[]--><cyanogenmod.themes.ThemeManager: void <init>(android.content.Context)>[]--><android.util.ArraySet: void <init>()>
+#1.the call statck between class <cyanogenmod.themes.ThemeManager: cyanogenmod.themes.ThemeManager getInstance(android.content.Context)> to <android.util.ArraySet: void <init>()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <cyanogenmod.weather.CMWeatherManager: cyanogenmod.weather.CMWeatherManager getInstance(android.content.Context)>[]--><cyanogenmod.weather.CMWeatherManager: void <init>(android.content.Context)>[]--><android.util.ArraySet: void <init>()>
+#2.the call statck between class <cyanogenmod.weather.CMWeatherManager: cyanogenmod.weather.CMWeatherManager getInstance(android.content.Context)> to <android.util.ArraySet: void <init>()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <cyanogenmod.providers.CMSettings$DelimitedListValidator: boolean validate(java.lang.String)>[]--><android.util.ArraySet: void <init>()>
+#3.the call statck between class <cyanogenmod.providers.CMSettings$DelimitedListValidator: boolean validate(java.lang.String)> to <android.util.ArraySet: void <init>()>has compatibility isssues！
+-----------------------------------------
+crashApis:23
+containsStatic:false
+containsTry:false
+4call by main package
+-----------------------------------------
+#################################################
+N 33 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.util.Set keySet()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.grarak.kerneladiutor.services.profile.Tasker dummyMainMethod_com_grarak_kerneladiutor_services_profile_Tasker(android.content.Intent)>[]--><com.grarak.kerneladiutor.services.profile.Tasker: void onReceive(android.content.Context,android.content.Intent)>[]--><com.grarak.kerneladiutor.services.profile.Tasker: boolean isBundleValid(android.os.Bundle)>[]--><android.os.BaseBundle: java.util.Set keySet()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: java.util.Set keySet()>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:24
+crashApisInMain:10
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 34 Potential Issue API: SDKCheck of <android.content.Context: java.lang.String getOpPackageName()> is checking!!!
+The life time of api is [29,31]
+5call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.grarak.kerneladiutor.activities.MainActivity dummyMainMethod_com_grarak_kerneladiutor_activities_MainActivity(android.content.Intent)>[]--><com.grarak.kerneladiutor.activities.MainActivity: void onActivityResult(int,int,android.content.Intent)>[]--><com.grarak.kerneladiutor.activities.MainActivity$CheckingTask: java.lang.Object doInBackground(java.lang.Object[])>[]--><com.grarak.kerneladiutor.activities.MainActivity$CheckingTask: java.lang.Void doInBackground(java.lang.Void[])>[]--><com.grarak.kerneladiutor.activities.MainActivity$CheckingTask: void collectData()>[]--><com.grarak.kerneladiutor.services.profile.Tile: void publishProfileTile(java.util.List,android.content.Context)>[[try]]--><cyanogenmod.app.CMStatusBarManager: void publishTile(int,cyanogenmod.app.CustomTile)>[]--><cyanogenmod.app.CMStatusBarManager: void publishTile(java.lang.String,int,cyanogenmod.app.CustomTile)>[[try]]--><android.content.Context: java.lang.String getOpPackageName()>
+One road protect good!
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.grarak.kerneladiutor.services.boot.Service dummyMainMethod_com_grarak_kerneladiutor_services_boot_Service(android.content.Intent)>[]--><com.grarak.kerneladiutor.services.boot.Service: int onStartCommand(android.content.Intent,int,int)>[]--><com.grarak.kerneladiutor.services.boot.ApplyOnBoot: boolean apply(android.content.Context,com.grarak.kerneladiutor.services.boot.ApplyOnBoot$ApplyOnBootListener)>[]--><com.grarak.kerneladiutor.services.profile.Tile: void publishProfileTile(java.util.List,android.content.Context)>[[try]]--><cyanogenmod.app.CMStatusBarManager: void publishTile(int,cyanogenmod.app.CustomTile)>[]--><cyanogenmod.app.CMStatusBarManager: void publishTile(java.lang.String,int,cyanogenmod.app.CustomTile)>[[try]]--><android.content.Context: java.lang.String getOpPackageName()>
+One road protect good!
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.grarak.kerneladiutor.services.boot.JobService dummyMainMethod_com_grarak_kerneladiutor_services_boot_JobService(android.content.Intent)>[]--><com.grarak.kerneladiutor.services.boot.JobService: boolean onStartJob(android.app.job.JobParameters)>[]--><com.grarak.kerneladiutor.services.boot.ApplyOnBoot: boolean apply(android.content.Context,com.grarak.kerneladiutor.services.boot.ApplyOnBoot$ApplyOnBootListener)>[]--><com.grarak.kerneladiutor.services.profile.Tile: void publishProfileTile(java.util.List,android.content.Context)>[[try]]--><cyanogenmod.app.CMStatusBarManager: void publishTile(int,cyanogenmod.app.CustomTile)>[]--><cyanogenmod.app.CMStatusBarManager: void publishTile(java.lang.String,int,cyanogenmod.app.CustomTile)>[[try]]--><android.content.Context: java.lang.String getOpPackageName()>
+One road protect good!
+4 Packageshead roads:
+try
+Good road with try: <com.grarak.kerneladiutor.fragments.tools.ProfileFragment: void access$400(com.grarak.kerneladiutor.fragments.tools.ProfileFragment,java.util.List)>[]--><com.grarak.kerneladiutor.fragments.tools.ProfileFragment: void load(java.util.List)>[]--><com.grarak.kerneladiutor.services.profile.Tile: void publishProfileTile(java.util.List,android.content.Context)>[[try]]--><cyanogenmod.app.CMStatusBarManager: void publishTile(int,cyanogenmod.app.CustomTile)>[]--><cyanogenmod.app.CMStatusBarManager: void publishTile(java.lang.String,int,cyanogenmod.app.CustomTile)>[[try]]--><android.content.Context: java.lang.String getOpPackageName()>
+One road protect good!
+try
+Good road with try: <com.grarak.kerneladiutor.fragments.tools.ProfileFragment$1: void onCheckedChanged(android.widget.CompoundButton,boolean)>[]--><com.grarak.kerneladiutor.services.profile.Tile: void publishProfileTile(java.util.List,android.content.Context)>[[try]]--><cyanogenmod.app.CMStatusBarManager: void publishTile(int,cyanogenmod.app.CustomTile)>[]--><cyanogenmod.app.CMStatusBarManager: void publishTile(java.lang.String,int,cyanogenmod.app.CustomTile)>[[try]]--><android.content.Context: java.lang.String getOpPackageName()>
+One road protect good!
+try
+Good road with try: <com.grarak.kerneladiutor.fragments.tools.ProfileFragment: void addItems(java.util.List)>[]--><com.grarak.kerneladiutor.fragments.tools.ProfileFragment: void load(java.util.List)>[]--><com.grarak.kerneladiutor.services.profile.Tile: void publishProfileTile(java.util.List,android.content.Context)>[[try]]--><cyanogenmod.app.CMStatusBarManager: void publishTile(int,cyanogenmod.app.CustomTile)>[]--><cyanogenmod.app.CMStatusBarManager: void publishTile(java.lang.String,int,cyanogenmod.app.CustomTile)>[[try]]--><android.content.Context: java.lang.String getOpPackageName()>
+One road protect good!
+try
+Good road with try: <cyanogenmod.app.CMStatusBarManager: void publishTileAsUser(java.lang.String,int,cyanogenmod.app.CustomTile,android.os.UserHandle)>[[try]]--><android.content.Context: java.lang.String getOpPackageName()>
+One road protect good!
+containsStatic:false
+containsTry:true
+5call by main package
+-----------------------------------------
+#################################################
+N 35 Potential Issue API: SDKCheck of <android.text.Html: android.text.Spanned fromHtml(java.lang.String,int)> is checking!!!
+The life time of api is [24,31]
+26call roads:
+1 Mainhead roads:
+-$i0 < 24
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.grarak.kerneladiutor.activities.tools.DownloadsActivity dummyMainMethod_com_grarak_kerneladiutor_activities_tools_DownloadsActivity(android.content.Intent)>[]--><com.grarak.kerneladiutor.activities.tools.DownloadsActivity: void onCreate(android.os.Bundle)>[]--><com.grarak.kerneladiutor.utils.Utils: java.lang.CharSequence htmlFrom(java.lang.String)>[[-$i0 < 24]]--><android.text.Html: android.text.Spanned fromHtml(java.lang.String,int)>
+One road protect good!
+25 Packageshead roads:
+-$i0 < 24
+Good road: <cyanogenmod.externalviews.KeyguardExternalView: boolean onPreDraw()>[]--><cyanogenmod.externalviews.KeyguardExternalView: void performAction(java.lang.Runnable)>[]--><com.grarak.kerneladiutor.utils.WebpageReader$2: void run()>[]--><com.grarak.kerneladiutor.utils.Utils: java.lang.CharSequence htmlFrom(java.lang.String)>[[-$i0 < 24]]--><android.text.Html: android.text.Spanned fromHtml(java.lang.String,int)>
+One road protect good!
+-$i0 < 24
+Good road: <cyanogenmod.externalviews.ExternalView: void onAttachedToWindow()>[]--><cyanogenmod.externalviews.ExternalView: void performAction(java.lang.Runnable)>[]--><com.grarak.kerneladiutor.utils.WebpageReader$2: void run()>[]--><com.grarak.kerneladiutor.utils.Utils: java.lang.CharSequence htmlFrom(java.lang.String)>[[-$i0 < 24]]--><android.text.Html: android.text.Spanned fromHtml(java.lang.String,int)>
+One road protect good!
+-$i0 < 24
+Good road: <cyanogenmod.externalviews.ExternalView: boolean onPreDraw()>[]--><cyanogenmod.externalviews.ExternalView: void performAction(java.lang.Runnable)>[]--><com.grarak.kerneladiutor.utils.WebpageReader$2: void run()>[]--><com.grarak.kerneladiutor.utils.Utils: java.lang.CharSequence htmlFrom(java.lang.String)>[[-$i0 < 24]]--><android.text.Html: android.text.Spanned fromHtml(java.lang.String,int)>
+One road protect good!
+-$i0 < 24
+Good road: <cyanogenmod.externalviews.KeyguardExternalView: void onBouncerShowing(boolean)>[]--><cyanogenmod.externalviews.KeyguardExternalView: void performAction(java.lang.Runnable)>[]--><com.grarak.kerneladiutor.utils.WebpageReader$2: void run()>[]--><com.grarak.kerneladiutor.utils.Utils: java.lang.CharSequence htmlFrom(java.lang.String)>[[-$i0 < 24]]--><android.text.Html: android.text.Spanned fromHtml(java.lang.String,int)>
+One road protect good!
+-$i0 < 24
+Good road: <com.grarak.kerneladiutor.fragments.tools.customcontrols.CustomControlsFragment: void init()>[]--><com.grarak.kerneladiutor.utils.Utils: java.lang.CharSequence htmlFrom(java.lang.String)>[[-$i0 < 24]]--><android.text.Html: android.text.Spanned fromHtml(java.lang.String,int)>
+One road protect good!
+-$i0 < 24
+Good road: <cyanogenmod.externalviews.ExternalView: void onActivityResumed(android.app.Activity)>[]--><cyanogenmod.externalviews.ExternalView: void performAction(java.lang.Runnable)>[]--><com.grarak.kerneladiutor.utils.WebpageReader$2: void run()>[]--><com.grarak.kerneladiutor.utils.Utils: java.lang.CharSequence htmlFrom(java.lang.String)>[[-$i0 < 24]]--><android.text.Html: android.text.Spanned fromHtml(java.lang.String,int)>
+One road protect good!
+-$i0 < 24
+Good road: <cyanogenmod.externalviews.ExternalView: void onActivityPaused(android.app.Activity)>[]--><cyanogenmod.externalviews.ExternalView: void performAction(java.lang.Runnable)>[]--><com.grarak.kerneladiutor.utils.WebpageReader$2: void run()>[]--><com.grarak.kerneladiutor.utils.Utils: java.lang.CharSequence htmlFrom(java.lang.String)>[[-$i0 < 24]]--><android.text.Html: android.text.Spanned fromHtml(java.lang.String,int)>
+One road protect good!
+-$i0 < 24
+Good road: <com.grarak.kerneladiutor.fragments.tools.BuildpropFragment: void addItems(java.util.List)>[]--><com.grarak.kerneladiutor.fragments.tools.BuildpropFragment: void load(java.util.List)>[]--><com.grarak.kerneladiutor.utils.Utils: java.lang.CharSequence htmlFrom(java.lang.String)>[[-$i0 < 24]]--><android.text.Html: android.text.Spanned fromHtml(java.lang.String,int)>
+One road protect good!
+-$i0 < 24
+Good road: <cyanogenmod.externalviews.ExternalView: void onDetachedFromWindow()>[]--><cyanogenmod.externalviews.ExternalView: void performAction(java.lang.Runnable)>[]--><com.grarak.kerneladiutor.utils.WebpageReader$2: void run()>[]--><com.grarak.kerneladiutor.utils.Utils: java.lang.CharSequence htmlFrom(java.lang.String)>[[-$i0 < 24]]--><android.text.Html: android.text.Spanned fromHtml(java.lang.String,int)>
+One road protect good!
+-$i0 < 24
+Good road: <cyanogenmod.externalviews.KeyguardExternalView: void onDetachedFromWindow()>[]--><cyanogenmod.externalviews.KeyguardExternalView: void performAction(java.lang.Runnable)>[]--><com.grarak.kerneladiutor.utils.WebpageReader$2: void run()>[]--><com.grarak.kerneladiutor.utils.Utils: java.lang.CharSequence htmlFrom(java.lang.String)>[[-$i0 < 24]]--><android.text.Html: android.text.Spanned fromHtml(java.lang.String,int)>
+One road protect good!
+-$i0 < 24
+Good road: <cyanogenmod.externalviews.KeyguardExternalView: void onScreenTurnedOff()>[]--><cyanogenmod.externalviews.KeyguardExternalView: void performAction(java.lang.Runnable)>[]--><com.grarak.kerneladiutor.utils.WebpageReader$2: void run()>[]--><com.grarak.kerneladiutor.utils.Utils: java.lang.CharSequence htmlFrom(java.lang.String)>[[-$i0 < 24]]--><android.text.Html: android.text.Spanned fromHtml(java.lang.String,int)>
+One road protect good!
+-$i0 < 24
+Good road: <cyanogenmod.externalviews.KeyguardExternalView: void access$300(cyanogenmod.externalviews.KeyguardExternalView)>[]--><cyanogenmod.externalviews.KeyguardExternalView: void executeQueue()>[]--><com.grarak.kerneladiutor.utils.WebpageReader$2: void run()>[]--><com.grarak.kerneladiutor.utils.Utils: java.lang.CharSequence htmlFrom(java.lang.String)>[[-$i0 < 24]]--><android.text.Html: android.text.Spanned fromHtml(java.lang.String,int)>
+One road protect good!
+-$i0 < 24
+Good road: <com.grarak.kerneladiutor.fragments.tools.downloads.FeaturesFragment: void addItems(java.util.List)>[]--><com.grarak.kerneladiutor.utils.Utils: java.lang.CharSequence htmlFrom(java.lang.String)>[[-$i0 < 24]]--><android.text.Html: android.text.Spanned fromHtml(java.lang.String,int)>
+One road protect good!
+-$i0 < 24
+Good road: <cyanogenmod.externalviews.ExternalView: void access$000(cyanogenmod.externalviews.ExternalView)>[]--><cyanogenmod.externalviews.ExternalView: void executeQueue()>[]--><com.grarak.kerneladiutor.utils.WebpageReader$2: void run()>[]--><com.grarak.kerneladiutor.utils.Utils: java.lang.CharSequence htmlFrom(java.lang.String)>[[-$i0 < 24]]--><android.text.Html: android.text.Spanned fromHtml(java.lang.String,int)>
+One road protect good!
+-$i0 < 24
+Good road: <cyanogenmod.externalviews.KeyguardExternalView: void onLockscreenSlideOffsetChanged(float)>[]--><cyanogenmod.externalviews.KeyguardExternalView: void performAction(java.lang.Runnable)>[]--><com.grarak.kerneladiutor.utils.WebpageReader$2: void run()>[]--><com.grarak.kerneladiutor.utils.Utils: java.lang.CharSequence htmlFrom(java.lang.String)>[[-$i0 < 24]]--><android.text.Html: android.text.Spanned fromHtml(java.lang.String,int)>
+One road protect good!
+-$i0 < 24
+Good road: <cyanogenmod.externalviews.KeyguardExternalView: void onAttachedToWindow()>[]--><cyanogenmod.externalviews.KeyguardExternalView: void performAction(java.lang.Runnable)>[]--><com.grarak.kerneladiutor.utils.WebpageReader$2: void run()>[]--><com.grarak.kerneladiutor.utils.Utils: java.lang.CharSequence htmlFrom(java.lang.String)>[[-$i0 < 24]]--><android.text.Html: android.text.Spanned fromHtml(java.lang.String,int)>
+One road protect good!
+-$i0 < 24
+Good road: <cyanogenmod.externalviews.ExternalView: void onActivityStarted(android.app.Activity)>[]--><cyanogenmod.externalviews.ExternalView: void performAction(java.lang.Runnable)>[]--><com.grarak.kerneladiutor.utils.WebpageReader$2: void run()>[]--><com.grarak.kerneladiutor.utils.Utils: java.lang.CharSequence htmlFrom(java.lang.String)>[[-$i0 < 24]]--><android.text.Html: android.text.Spanned fromHtml(java.lang.String,int)>
+One road protect good!
+-$i0 < 24
+Good road: <cyanogenmod.externalviews.KeyguardExternalView: void onKeyguardShowing(boolean)>[]--><cyanogenmod.externalviews.KeyguardExternalView: void performAction(java.lang.Runnable)>[]--><com.grarak.kerneladiutor.utils.WebpageReader$2: void run()>[]--><com.grarak.kerneladiutor.utils.Utils: java.lang.CharSequence htmlFrom(java.lang.String)>[[-$i0 < 24]]--><android.text.Html: android.text.Spanned fromHtml(java.lang.String,int)>
+One road protect good!
+-$i0 < 24
+Good road: <cyanogenmod.externalviews.KeyguardExternalView: void onKeyguardDismissed()>[]--><cyanogenmod.externalviews.KeyguardExternalView: void performAction(java.lang.Runnable)>[]--><com.grarak.kerneladiutor.utils.WebpageReader$2: void run()>[]--><com.grarak.kerneladiutor.utils.Utils: java.lang.CharSequence htmlFrom(java.lang.String)>[[-$i0 < 24]]--><android.text.Html: android.text.Spanned fromHtml(java.lang.String,int)>
+One road protect good!
+-$i0 < 24
+Good road: <cyanogenmod.externalviews.KeyguardExternalView: void onScreenTurnedOn()>[]--><cyanogenmod.externalviews.KeyguardExternalView: void performAction(java.lang.Runnable)>[]--><com.grarak.kerneladiutor.utils.WebpageReader$2: void run()>[]--><com.grarak.kerneladiutor.utils.Utils: java.lang.CharSequence htmlFrom(java.lang.String)>[[-$i0 < 24]]--><android.text.Html: android.text.Spanned fromHtml(java.lang.String,int)>
+One road protect good!
+-$i0 < 24
+Good road: <cyanogenmod.externalviews.ExternalView: void onActivityStopped(android.app.Activity)>[]--><cyanogenmod.externalviews.ExternalView: void performAction(java.lang.Runnable)>[]--><com.grarak.kerneladiutor.utils.WebpageReader$2: void run()>[]--><com.grarak.kerneladiutor.utils.Utils: java.lang.CharSequence htmlFrom(java.lang.String)>[[-$i0 < 24]]--><android.text.Html: android.text.Spanned fromHtml(java.lang.String,int)>
+One road protect good!
+-$i0 < 24
+Good road: <com.grarak.kerneladiutor.views.recyclerview.downloads.DownloadKernelView: void onCreateView(android.view.View)>[]--><com.grarak.kerneladiutor.utils.Utils: java.lang.CharSequence htmlFrom(java.lang.String)>[[-$i0 < 24]]--><android.text.Html: android.text.Spanned fromHtml(java.lang.String,int)>
+One road protect good!
+-$i0 < 24
+Good road: <com.grarak.kerneladiutor.views.recyclerview.downloads.KernelItemView: void onCreateView(android.view.View)>[]--><com.grarak.kerneladiutor.utils.Utils: java.lang.CharSequence htmlFrom(java.lang.String)>[[-$i0 < 24]]--><android.text.Html: android.text.Spanned fromHtml(java.lang.String,int)>
+One road protect good!
+-$i0 < 24
+Good road: <com.grarak.kerneladiutor.fragments.tools.BuildpropFragment: void access$700(com.grarak.kerneladiutor.fragments.tools.BuildpropFragment,java.util.List)>[]--><com.grarak.kerneladiutor.fragments.tools.BuildpropFragment: void load(java.util.List)>[]--><com.grarak.kerneladiutor.utils.Utils: java.lang.CharSequence htmlFrom(java.lang.String)>[[-$i0 < 24]]--><android.text.Html: android.text.Spanned fromHtml(java.lang.String,int)>
+One road protect good!
+-$i0 < 24
+Good road: <com.grarak.kerneladiutor.views.recyclerview.downloads.DownloadAboutView: void onCreateView(android.view.View)>[]--><com.grarak.kerneladiutor.utils.Utils: java.lang.CharSequence htmlFrom(java.lang.String)>[[-$i0 < 24]]--><android.text.Html: android.text.Spanned fromHtml(java.lang.String,int)>
+One road protect good!
+containsStatic:false
+containsTry:false
+26call by main package
+-----------------------------------------
+#################################################
+N 36 Potential Issue API: SDKCheck of <android.app.KeyguardManager: boolean isDeviceSecure()> is checking!!!
+The life time of api is [23,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 23
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.grarak.kerneladiutor.activities.SecurityActivity dummyMainMethod_com_grarak_kerneladiutor_activities_SecurityActivity(android.content.Intent)>[]--><com.grarak.kerneladiutor.activities.SecurityActivity: void onCreate(android.os.Bundle)>[[-$i0 < 23]]--><android.app.KeyguardManager: boolean isDeviceSecure()>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 37 Potential Issue API: SDKCheck of <android.net.NetworkInfo: int getType()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <com.squareup.picasso.Dispatcher$DispatcherHandler: void handleMessage(android.os.Message)>[]--><com.squareup.picasso.Dispatcher: void performNetworkStateChange(android.net.NetworkInfo)>[]--><com.squareup.picasso.PicassoExecutorService: void adjustThreadCount(android.net.NetworkInfo)>[]--><android.net.NetworkInfo: int getType()>
+#1.the call statck between class <com.squareup.picasso.Dispatcher$DispatcherHandler: void handleMessage(android.os.Message)> to <android.net.NetworkInfo: int getType()>has compatibility isssues！
+-----------------------------------------
+crashApis:25
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 38 Potential Issue API: SDKCheck of <android.content.Context: android.graphics.drawable.Drawable getDrawable(int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 23
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.grarak.kerneladiutor.activities.SecurityActivity dummyMainMethod_com_grarak_kerneladiutor_activities_SecurityActivity(android.content.Intent)>[]--><com.grarak.kerneladiutor.activities.SecurityActivity: void onCreate(android.os.Bundle)>[[-$i0 < 23]]--><com.grarak.kerneladiutor.activities.SecurityActivity: void loadFingerprint()>[]--><com.grarak.kerneladiutor.utils.FingerprintUiHelper: void startListening(android.support.v4.hardware.fingerprint.FingerprintManagerCompat$CryptoObject)>[]--><com.mattprecious.swirl.SwirlView: void setState(com.mattprecious.swirl.SwirlView$State)>[]--><com.mattprecious.swirl.SwirlView: void setState(com.mattprecious.swirl.SwirlView$State,boolean)>[]--><android.content.Context: android.graphics.drawable.Drawable getDrawable(int)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 39 Potential Issue API: SDKCheck of <android.content.Context: java.lang.Object getSystemService(java.lang.Class)> is checking!!!
+The life time of api is [23,31]
+3call roads:
+1 Mainhead roads:
+-$i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.grarak.kerneladiutor.services.boot.Receiver dummyMainMethod_com_grarak_kerneladiutor_services_boot_Receiver(android.content.Intent)>[]--><com.grarak.kerneladiutor.services.boot.Receiver: void onReceive(android.content.Context,android.content.Intent)>[[-$i0 < 26]]--><com.grarak.kerneladiutor.services.boot.JobService: void start(android.content.Context)>[]--><android.content.Context: java.lang.Object getSystemService(java.lang.Class)>
+One road protect good!
+$i0 >= 25
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.grarak.kerneladiutor.activities.NavigationActivity dummyMainMethod_com_grarak_kerneladiutor_activities_NavigationActivity(android.content.Intent)>[]--><com.grarak.kerneladiutor.activities.NavigationActivity: void onCreate(android.os.Bundle)>[]--><com.grarak.kerneladiutor.activities.NavigationActivity: void init(android.os.Bundle)>[]--><com.grarak.kerneladiutor.activities.NavigationActivity: void onItemSelected(int,boolean,boolean)>[]--><com.grarak.kerneladiutor.activities.NavigationActivity: void setShortcuts()>[[$i0 >= 25]]--><android.content.Context: java.lang.Object getSystemService(java.lang.Class)>
+One road protect good!
+-$i0 < 23
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.grarak.kerneladiutor.activities.SecurityActivity dummyMainMethod_com_grarak_kerneladiutor_activities_SecurityActivity(android.content.Intent)>[]--><com.grarak.kerneladiutor.activities.SecurityActivity: void onCreate(android.os.Bundle)>[[-$i0 < 23]]--><android.content.Context: java.lang.Object getSystemService(java.lang.Class)>
+One road protect good!
+2 Packageshead roads:
+$i0 >= 25
+Good road: <com.grarak.kerneladiutor.activities.NavigationActivity: boolean onNavigationItemSelected(android.view.MenuItem)>[]--><com.grarak.kerneladiutor.activities.NavigationActivity: void onItemSelected(int,boolean,boolean)>[]--><com.grarak.kerneladiutor.activities.NavigationActivity: void setShortcuts()>[[$i0 >= 25]]--><android.content.Context: java.lang.Object getSystemService(java.lang.Class)>
+One road protect good!
+$i0 >= 25
+Good road: <com.grarak.kerneladiutor.fragments.other.SettingsFragment: boolean onPreferenceChange(android.support.v7.preference.Preference,java.lang.Object)>[]--><com.grarak.kerneladiutor.activities.NavigationActivity: void appendFragments()>[]--><com.grarak.kerneladiutor.activities.NavigationActivity: void appendFragments(boolean)>[]--><com.grarak.kerneladiutor.activities.NavigationActivity: void setShortcuts()>[[$i0 >= 25]]--><android.content.Context: java.lang.Object getSystemService(java.lang.Class)>
+One road protect good!
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 40 Potential Issue API: SDKCheck of <android.graphics.drawable.RippleDrawable: void setColor(android.content.res.ColorStateList)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i0 < 21
+Good road: <org.adw.library.widgets.discreteseekbar.DiscreteSeekBar: void setRippleColor(int)>[]--><org.adw.library.widgets.discreteseekbar.DiscreteSeekBar: void setRippleColor(android.content.res.ColorStateList)>[]--><org.adw.library.widgets.discreteseekbar.internal.compat.SeekBarCompat: void setRippleColor(android.graphics.drawable.Drawable,android.content.res.ColorStateList)>[[-$i0 < 21]]--><android.graphics.drawable.RippleDrawable: void setColor(android.content.res.ColorStateList)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 41 Potential Issue API: SDKCheck of <android.content.pm.ShortcutInfo.Builder: android.content.pm.ShortcutInfo.Builder setShortLabel(java.lang.CharSequence)> is checking!!!
+The life time of api is [25,31]
+3call roads:
+1 Mainhead roads:
+$i0 >= 25
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.grarak.kerneladiutor.activities.NavigationActivity dummyMainMethod_com_grarak_kerneladiutor_activities_NavigationActivity(android.content.Intent)>[]--><com.grarak.kerneladiutor.activities.NavigationActivity: void onCreate(android.os.Bundle)>[]--><com.grarak.kerneladiutor.activities.NavigationActivity: void init(android.os.Bundle)>[]--><com.grarak.kerneladiutor.activities.NavigationActivity: void onItemSelected(int,boolean,boolean)>[]--><com.grarak.kerneladiutor.activities.NavigationActivity: void setShortcuts()>[[$i0 >= 25]]--><android.content.pm.ShortcutInfo.Builder: android.content.pm.ShortcutInfo.Builder setShortLabel(java.lang.CharSequence)>
+One road protect good!
+2 Packageshead roads:
+$i0 >= 25
+Good road: <com.grarak.kerneladiutor.activities.NavigationActivity: boolean onNavigationItemSelected(android.view.MenuItem)>[]--><com.grarak.kerneladiutor.activities.NavigationActivity: void onItemSelected(int,boolean,boolean)>[]--><com.grarak.kerneladiutor.activities.NavigationActivity: void setShortcuts()>[[$i0 >= 25]]--><android.content.pm.ShortcutInfo.Builder: android.content.pm.ShortcutInfo.Builder setShortLabel(java.lang.CharSequence)>
+One road protect good!
+$i0 >= 25
+Good road: <com.grarak.kerneladiutor.fragments.other.SettingsFragment: boolean onPreferenceChange(android.support.v7.preference.Preference,java.lang.Object)>[]--><com.grarak.kerneladiutor.activities.NavigationActivity: void appendFragments()>[]--><com.grarak.kerneladiutor.activities.NavigationActivity: void appendFragments(boolean)>[]--><com.grarak.kerneladiutor.activities.NavigationActivity: void setShortcuts()>[[$i0 >= 25]]--><android.content.pm.ShortcutInfo.Builder: android.content.pm.ShortcutInfo.Builder setShortLabel(java.lang.CharSequence)>
+One road protect good!
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 42 Potential Issue API: SDKCheck of <android.app.job.JobInfo.Builder: void <init>(int,android.content.ComponentName)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.grarak.kerneladiutor.services.boot.Receiver dummyMainMethod_com_grarak_kerneladiutor_services_boot_Receiver(android.content.Intent)>[]--><com.grarak.kerneladiutor.services.boot.Receiver: void onReceive(android.content.Context,android.content.Intent)>[[-$i0 < 26]]--><com.grarak.kerneladiutor.services.boot.JobService: void start(android.content.Context)>[]--><android.app.job.JobInfo.Builder: void <init>(int,android.content.ComponentName)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 43 Potential Issue API: SDKCheck of <android.content.pm.ShortcutManager: boolean setDynamicShortcuts(java.util.List)> is checking!!!
+The life time of api is [25,31]
+3call roads:
+1 Mainhead roads:
+$i0 >= 25
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.grarak.kerneladiutor.activities.NavigationActivity dummyMainMethod_com_grarak_kerneladiutor_activities_NavigationActivity(android.content.Intent)>[]--><com.grarak.kerneladiutor.activities.NavigationActivity: void onCreate(android.os.Bundle)>[]--><com.grarak.kerneladiutor.activities.NavigationActivity: void init(android.os.Bundle)>[]--><com.grarak.kerneladiutor.activities.NavigationActivity: void onItemSelected(int,boolean,boolean)>[]--><com.grarak.kerneladiutor.activities.NavigationActivity: void setShortcuts()>[[$i0 >= 25]]--><android.content.pm.ShortcutManager: boolean setDynamicShortcuts(java.util.List)>
+One road protect good!
+2 Packageshead roads:
+$i0 >= 25
+Good road: <com.grarak.kerneladiutor.activities.NavigationActivity: boolean onNavigationItemSelected(android.view.MenuItem)>[]--><com.grarak.kerneladiutor.activities.NavigationActivity: void onItemSelected(int,boolean,boolean)>[]--><com.grarak.kerneladiutor.activities.NavigationActivity: void setShortcuts()>[[$i0 >= 25]]--><android.content.pm.ShortcutManager: boolean setDynamicShortcuts(java.util.List)>
+One road protect good!
+$i0 >= 25
+Good road: <com.grarak.kerneladiutor.fragments.other.SettingsFragment: boolean onPreferenceChange(android.support.v7.preference.Preference,java.lang.Object)>[]--><com.grarak.kerneladiutor.activities.NavigationActivity: void appendFragments()>[]--><com.grarak.kerneladiutor.activities.NavigationActivity: void appendFragments(boolean)>[]--><com.grarak.kerneladiutor.activities.NavigationActivity: void setShortcuts()>[[$i0 >= 25]]--><android.content.pm.ShortcutManager: boolean setDynamicShortcuts(java.util.List)>
+One road protect good!
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 44 Potential Issue API: SDKCheck of <android.view.View: void setOutlineProvider(android.view.ViewOutlineProvider)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i0 < 21
+-$i0 < 21
+Good road: <org.adw.library.widgets.discreteseekbar.internal.PopupIndicator$Floater: void <init>(org.adw.library.widgets.discreteseekbar.internal.PopupIndicator,android.content.Context,android.util.AttributeSet,int,java.lang.String,int,int)>[]--><org.adw.library.widgets.discreteseekbar.internal.Marker: void <init>(android.content.Context,android.util.AttributeSet,int,java.lang.String,int,int)>[[-$i0 < 21]]--><org.adw.library.widgets.discreteseekbar.internal.compat.SeekBarCompat: void setOutlineProvider(android.view.View,org.adw.library.widgets.discreteseekbar.internal.drawable.MarkerDrawable)>[[-$i0 < 21]]--><org.adw.library.widgets.discreteseekbar.internal.compat.SeekBarCompatDontCrash: void setOutlineProvider(android.view.View,org.adw.library.widgets.discreteseekbar.internal.drawable.MarkerDrawable)>[]--><android.view.View: void setOutlineProvider(android.view.ViewOutlineProvider)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 45 Potential Issue API: SDKCheck of <android.util.ArraySet: void <init>(java.util.Collection)> is checking!!!
+The life time of api is [29,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 24 25 26 27 28 
+Error road: <cyanogenmod.providers.CMSettings$DelimitedListValidator: void <init>(java.lang.String[],java.lang.String,boolean)>[]--><android.util.ArraySet: void <init>(java.util.Collection)>
+#1.the call statck between class <cyanogenmod.providers.CMSettings$DelimitedListValidator: void <init>(java.lang.String[],java.lang.String,boolean)> to <android.util.ArraySet: void <init>(java.util.Collection)>has compatibility isssues！
+-----------------------------------------
+crashApis:26
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 46 Potential Issue API: SDKCheck of <android.net.NetworkInfo: boolean isConnected()> is checking!!!
+The life time of api is [1,30]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <com.squareup.picasso.NetworkRequestHandler: boolean shouldRetry(boolean,android.net.NetworkInfo)>[]--><android.net.NetworkInfo: boolean isConnected()>
+#1.the call statck between class <com.squareup.picasso.NetworkRequestHandler: boolean shouldRetry(boolean,android.net.NetworkInfo)> to <android.net.NetworkInfo: boolean isConnected()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <com.squareup.picasso.Dispatcher$DispatcherHandler: void handleMessage(android.os.Message)>[]--><com.squareup.picasso.Dispatcher: void performRetry(com.squareup.picasso.BitmapHunter)>[]--><android.net.NetworkInfo: boolean isConnected()>
+!!!this api will crash on sdk 31 
+Error road: <com.squareup.picasso.Dispatcher$DispatcherHandler: void handleMessage(android.os.Message)>[]--><com.squareup.picasso.Dispatcher: void performNetworkStateChange(android.net.NetworkInfo)>[]--><android.net.NetworkInfo: boolean isConnected()>
+#2.the call statck between class <com.squareup.picasso.Dispatcher$DispatcherHandler: void handleMessage(android.os.Message)> to <android.net.NetworkInfo: boolean isConnected()>has compatibility isssues！
+-----------------------------------------
+crashApis:27
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 47 Potential Issue API: SDKCheck of <android.graphics.drawable.RippleDrawable: void <init>(android.content.res.ColorStateList,android.graphics.drawable.Drawable,android.graphics.drawable.Drawable)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i0 < 21
+Good road: <org.adw.library.widgets.discreteseekbar.DiscreteSeekBar: void <init>(android.content.Context)>[]--><org.adw.library.widgets.discreteseekbar.DiscreteSeekBar: void <init>(android.content.Context,android.util.AttributeSet)>[]--><org.adw.library.widgets.discreteseekbar.DiscreteSeekBar: void <init>(android.content.Context,android.util.AttributeSet,int)>[]--><org.adw.library.widgets.discreteseekbar.internal.compat.SeekBarCompat: android.graphics.drawable.Drawable getRipple(android.content.res.ColorStateList)>[[-$i0 < 21]]--><org.adw.library.widgets.discreteseekbar.internal.compat.SeekBarCompatDontCrash: android.graphics.drawable.Drawable getRipple(android.content.res.ColorStateList)>[]--><android.graphics.drawable.RippleDrawable: void <init>(android.content.res.ColorStateList,android.graphics.drawable.Drawable,android.graphics.drawable.Drawable)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 48 Potential Issue API: SDKCheck of <android.provider.MediaStore.Images.Thumbnails: android.graphics.Bitmap getThumbnail(android.content.ContentResolver,long,int,android.graphics.BitmapFactory.Options)> is checking!!!
+The life time of api is [5,29]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 30 31 
+Error road: <com.squareup.picasso.MediaStoreRequestHandler: com.squareup.picasso.RequestHandler$Result load(com.squareup.picasso.Request,int)>[]--><android.provider.MediaStore.Images.Thumbnails: android.graphics.Bitmap getThumbnail(android.content.ContentResolver,long,int,android.graphics.BitmapFactory.Options)>
+#1.the call statck between class <com.squareup.picasso.MediaStoreRequestHandler: com.squareup.picasso.RequestHandler$Result load(com.squareup.picasso.Request,int)> to <android.provider.MediaStore.Images.Thumbnails: android.graphics.Bitmap getThumbnail(android.content.ContentResolver,long,int,android.graphics.BitmapFactory.Options)>has compatibility isssues！
+-----------------------------------------
+crashApis:28
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 49 Potential Issue API: SDKCheck of <android.security.keystore.KeyGenParameterSpec.Builder: android.security.keystore.KeyGenParameterSpec.Builder setEncryptionPaddings(java.lang.String[])> is checking!!!
+The life time of api is [23,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 23
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.grarak.kerneladiutor.activities.SecurityActivity dummyMainMethod_com_grarak_kerneladiutor_activities_SecurityActivity(android.content.Intent)>[]--><com.grarak.kerneladiutor.activities.SecurityActivity: void onCreate(android.os.Bundle)>[[-$i0 < 23]]--><com.grarak.kerneladiutor.activities.SecurityActivity: void loadFingerprint()>[[try]]--><android.security.keystore.KeyGenParameterSpec.Builder: android.security.keystore.KeyGenParameterSpec.Builder setEncryptionPaddings(java.lang.String[])>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:true
+1call by main package
+-----------------------------------------
+#################################################
+N 50 Potential Issue API: SDKCheck of <android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)> is checking!!!
+The life time of api is [22,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 
+Error road: <com.google.android.apps.dashclock.api.ExtensionData: void fromBundle(android.os.Bundle)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>
+#1.the call statck between class <com.google.android.apps.dashclock.api.ExtensionData: void fromBundle(android.os.Bundle)> to <android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+crashApis:29
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 51 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager: int getWifiState()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <cyanogenmod.app.Profile: void doSelect(android.content.Context,com.android.internal.policy.IKeyguardService)>[]--><cyanogenmod.profiles.ConnectionSettings: void processOverride(android.content.Context)>[]--><android.net.wifi.WifiManager: int getWifiState()>
+#1.the call statck between class <cyanogenmod.app.Profile: void doSelect(android.content.Context,com.android.internal.policy.IKeyguardService)> to <android.net.wifi.WifiManager: int getWifiState()>has compatibility isssues！
+-----------------------------------------
+crashApis:30
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 52 Potential Issue API: SDKCheck of <android.view.View: void setClipBounds(android.graphics.Rect)> is checking!!!
+The life time of api is [18,31]
+18call roads:
+0 Mainhead roads:
+18 Packageshead roads:
+!!!this api will crash on sdk 16 17 
+Error road: <cyanogenmod.externalviews.ExternalView: void access$000(cyanogenmod.externalviews.ExternalView)>[]--><cyanogenmod.externalviews.ExternalView: void executeQueue()>[]--><cyanogenmod.externalviews.KeyguardExternalViewProviderService$Provider$ProviderImpl$9: void run()>[]--><android.view.View: void setClipBounds(android.graphics.Rect)>
+#1.the call statck between class <cyanogenmod.externalviews.ExternalView: void access$000(cyanogenmod.externalviews.ExternalView)> to <android.view.View: void setClipBounds(android.graphics.Rect)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 
+Error road: <cyanogenmod.externalviews.KeyguardExternalView: void onLockscreenSlideOffsetChanged(float)>[]--><cyanogenmod.externalviews.KeyguardExternalView: void performAction(java.lang.Runnable)>[]--><cyanogenmod.externalviews.KeyguardExternalViewProviderService$Provider$ProviderImpl$9: void run()>[]--><android.view.View: void setClipBounds(android.graphics.Rect)>
+#2.the call statck between class <cyanogenmod.externalviews.KeyguardExternalView: void onLockscreenSlideOffsetChanged(float)> to <android.view.View: void setClipBounds(android.graphics.Rect)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 
+Error road: <cyanogenmod.externalviews.KeyguardExternalView: void onAttachedToWindow()>[]--><cyanogenmod.externalviews.KeyguardExternalView: void performAction(java.lang.Runnable)>[]--><cyanogenmod.externalviews.KeyguardExternalViewProviderService$Provider$ProviderImpl$9: void run()>[]--><android.view.View: void setClipBounds(android.graphics.Rect)>
+#3.the call statck between class <cyanogenmod.externalviews.KeyguardExternalView: void onAttachedToWindow()> to <android.view.View: void setClipBounds(android.graphics.Rect)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 
+Error road: <cyanogenmod.externalviews.ExternalView: void onActivityStarted(android.app.Activity)>[]--><cyanogenmod.externalviews.ExternalView: void performAction(java.lang.Runnable)>[]--><cyanogenmod.externalviews.ExternalViewProviderService$Provider$ProviderImpl$7: void run()>[]--><android.view.View: void setClipBounds(android.graphics.Rect)>
+#4.the call statck between class <cyanogenmod.externalviews.ExternalView: void onActivityStarted(android.app.Activity)> to <android.view.View: void setClipBounds(android.graphics.Rect)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 
+Error road: <cyanogenmod.externalviews.KeyguardExternalView: boolean onPreDraw()>[]--><cyanogenmod.externalviews.KeyguardExternalView: void performAction(java.lang.Runnable)>[]--><cyanogenmod.externalviews.KeyguardExternalViewProviderService$Provider$ProviderImpl$9: void run()>[]--><android.view.View: void setClipBounds(android.graphics.Rect)>
+#5.the call statck between class <cyanogenmod.externalviews.KeyguardExternalView: boolean onPreDraw()> to <android.view.View: void setClipBounds(android.graphics.Rect)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 
+Error road: <cyanogenmod.externalviews.KeyguardExternalView: void onKeyguardShowing(boolean)>[]--><cyanogenmod.externalviews.KeyguardExternalView: void performAction(java.lang.Runnable)>[]--><cyanogenmod.externalviews.KeyguardExternalViewProviderService$Provider$ProviderImpl$9: void run()>[]--><android.view.View: void setClipBounds(android.graphics.Rect)>
+#6.the call statck between class <cyanogenmod.externalviews.KeyguardExternalView: void onKeyguardShowing(boolean)> to <android.view.View: void setClipBounds(android.graphics.Rect)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 
+Error road: <cyanogenmod.externalviews.ExternalView: void onAttachedToWindow()>[]--><cyanogenmod.externalviews.ExternalView: void performAction(java.lang.Runnable)>[]--><cyanogenmod.externalviews.ExternalViewProviderService$Provider$ProviderImpl$7: void run()>[]--><android.view.View: void setClipBounds(android.graphics.Rect)>
+#7.the call statck between class <cyanogenmod.externalviews.ExternalView: void onAttachedToWindow()> to <android.view.View: void setClipBounds(android.graphics.Rect)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 
+Error road: <cyanogenmod.externalviews.KeyguardExternalView: void onKeyguardDismissed()>[]--><cyanogenmod.externalviews.KeyguardExternalView: void performAction(java.lang.Runnable)>[]--><cyanogenmod.externalviews.KeyguardExternalViewProviderService$Provider$ProviderImpl$9: void run()>[]--><android.view.View: void setClipBounds(android.graphics.Rect)>
+#8.the call statck between class <cyanogenmod.externalviews.KeyguardExternalView: void onKeyguardDismissed()> to <android.view.View: void setClipBounds(android.graphics.Rect)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 
+Error road: <cyanogenmod.externalviews.ExternalView: boolean onPreDraw()>[]--><cyanogenmod.externalviews.ExternalView: void performAction(java.lang.Runnable)>[]--><cyanogenmod.externalviews.ExternalViewProviderService$Provider$ProviderImpl$7: void run()>[]--><android.view.View: void setClipBounds(android.graphics.Rect)>
+#9.the call statck between class <cyanogenmod.externalviews.ExternalView: boolean onPreDraw()> to <android.view.View: void setClipBounds(android.graphics.Rect)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 
+Error road: <cyanogenmod.externalviews.KeyguardExternalView: void onScreenTurnedOn()>[]--><cyanogenmod.externalviews.KeyguardExternalView: void performAction(java.lang.Runnable)>[]--><cyanogenmod.externalviews.KeyguardExternalViewProviderService$Provider$ProviderImpl$9: void run()>[]--><android.view.View: void setClipBounds(android.graphics.Rect)>
+#10.the call statck between class <cyanogenmod.externalviews.KeyguardExternalView: void onScreenTurnedOn()> to <android.view.View: void setClipBounds(android.graphics.Rect)>has compatibility isssues！
+-----------------------------------------
+crashApis:31
+containsStatic:false
+containsTry:false
+11call by main package
+-----------------------------------------
+#################################################
+N 53 Potential Issue API: SDKCheck of <android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+1 Mainhead roads:
+-$i1 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.grarak.kerneladiutor.services.boot.Service dummyMainMethod_com_grarak_kerneladiutor_services_boot_Service(android.content.Intent)>[]--><com.grarak.kerneladiutor.services.boot.Service: int onStartCommand(android.content.Intent,int,int)>[]--><com.grarak.kerneladiutor.services.boot.ApplyOnBoot: boolean apply(android.content.Context,com.grarak.kerneladiutor.services.boot.ApplyOnBoot$ApplyOnBootListener)>[[-$i1 < 26]]--><android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)>
+One road protect good!
+-$i1 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.grarak.kerneladiutor.services.boot.JobService dummyMainMethod_com_grarak_kerneladiutor_services_boot_JobService(android.content.Intent)>[]--><com.grarak.kerneladiutor.services.boot.JobService: boolean onStartJob(android.app.job.JobParameters)>[]--><com.grarak.kerneladiutor.services.boot.ApplyOnBoot: boolean apply(android.content.Context,com.grarak.kerneladiutor.services.boot.ApplyOnBoot$ApplyOnBootListener)>[[-$i1 < 26]]--><android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 54 Potential Issue API: SDKCheck of <android.util.ArraySet: boolean add(java.lang.Object)> is checking!!!
+The life time of api is [23,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <cyanogenmod.providers.CMSettings$DelimitedListValidator: boolean validate(java.lang.String)>[]--><android.util.ArraySet: boolean add(java.lang.Object)>
+#1.the call statck between class <cyanogenmod.providers.CMSettings$DelimitedListValidator: boolean validate(java.lang.String)> to <android.util.ArraySet: boolean add(java.lang.Object)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <cyanogenmod.providers.CMSettings$System: void <clinit>()>[]--><android.util.ArraySet: boolean add(java.lang.Object)>
+#2.the call statck between class <cyanogenmod.providers.CMSettings$System: void <clinit>()> to <android.util.ArraySet: boolean add(java.lang.Object)>has compatibility isssues！
+-----------------------------------------
+crashApis:32
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 55 Potential Issue API: SDKCheck of <android.view.View: void setForeground(android.graphics.drawable.Drawable)> is checking!!!
+The life time of api is [23,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <com.grarak.kerneladiutor.fragments.other.SettingsFragment: void onResume()>[]--><com.grarak.kerneladiutor.fragments.other.SettingsFragment: void colorDialog(int)>[]--><com.grarak.kerneladiutor.views.BorderCircleView: void <init>(android.content.Context)>[]--><com.grarak.kerneladiutor.views.BorderCircleView: void <init>(android.content.Context,android.util.AttributeSet)>[]--><com.grarak.kerneladiutor.views.BorderCircleView: void <init>(android.content.Context,android.util.AttributeSet,int)>[]--><android.view.View: void setForeground(android.graphics.drawable.Drawable)>
+#1.the call statck between class <com.grarak.kerneladiutor.fragments.other.SettingsFragment: void onResume()> to <android.view.View: void setForeground(android.graphics.drawable.Drawable)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <com.grarak.kerneladiutor.fragments.other.SettingsFragment: boolean onPreferenceClick(android.support.v7.preference.Preference)>[]--><com.grarak.kerneladiutor.fragments.other.SettingsFragment: void colorDialog(int)>[]--><com.grarak.kerneladiutor.views.BorderCircleView: void <init>(android.content.Context)>[]--><com.grarak.kerneladiutor.views.BorderCircleView: void <init>(android.content.Context,android.util.AttributeSet)>[]--><com.grarak.kerneladiutor.views.BorderCircleView: void <init>(android.content.Context,android.util.AttributeSet,int)>[]--><android.view.View: void setForeground(android.graphics.drawable.Drawable)>
+#2.the call statck between class <com.grarak.kerneladiutor.fragments.other.SettingsFragment: boolean onPreferenceClick(android.support.v7.preference.Preference)> to <android.view.View: void setForeground(android.graphics.drawable.Drawable)>has compatibility isssues！
+-----------------------------------------
+crashApis:33
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 56 Potential Issue API: SDKCheck of <android.view.View: void setTextDirection(int)> is checking!!!
+The life time of api is [17,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i1 < 17
+Good road: <org.adw.library.widgets.discreteseekbar.internal.PopupIndicator$Floater: void <init>(org.adw.library.widgets.discreteseekbar.internal.PopupIndicator,android.content.Context,android.util.AttributeSet,int,java.lang.String,int,int)>[]--><org.adw.library.widgets.discreteseekbar.internal.Marker: void <init>(android.content.Context,android.util.AttributeSet,int,java.lang.String,int,int)>[]--><org.adw.library.widgets.discreteseekbar.internal.compat.SeekBarCompat: void setTextDirection(android.widget.TextView,int)>[[-$i1 < 17]]--><org.adw.library.widgets.discreteseekbar.internal.compat.SeekBarCompatDontCrash: void setTextDirection(android.widget.TextView,int)>[]--><android.view.View: void setTextDirection(int)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 57 Potential Issue API: SDKCheck of <android.security.keystore.KeyGenParameterSpec.Builder: android.security.keystore.KeyGenParameterSpec build()> is checking!!!
+The life time of api is [23,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 23
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.grarak.kerneladiutor.activities.SecurityActivity dummyMainMethod_com_grarak_kerneladiutor_activities_SecurityActivity(android.content.Intent)>[]--><com.grarak.kerneladiutor.activities.SecurityActivity: void onCreate(android.os.Bundle)>[[-$i0 < 23]]--><com.grarak.kerneladiutor.activities.SecurityActivity: void loadFingerprint()>[[try]]--><android.security.keystore.KeyGenParameterSpec.Builder: android.security.keystore.KeyGenParameterSpec build()>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:true
+1call by main package
+-----------------------------------------
+#################################################
+N 58 Potential Issue API: SDKCheck of <android.security.keystore.KeyGenParameterSpec.Builder: android.security.keystore.KeyGenParameterSpec.Builder setBlockModes(java.lang.String[])> is checking!!!
+The life time of api is [23,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 23
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.grarak.kerneladiutor.activities.SecurityActivity dummyMainMethod_com_grarak_kerneladiutor_activities_SecurityActivity(android.content.Intent)>[]--><com.grarak.kerneladiutor.activities.SecurityActivity: void onCreate(android.os.Bundle)>[[-$i0 < 23]]--><com.grarak.kerneladiutor.activities.SecurityActivity: void loadFingerprint()>[[try]]--><android.security.keystore.KeyGenParameterSpec.Builder: android.security.keystore.KeyGenParameterSpec.Builder setBlockModes(java.lang.String[])>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:true
+1call by main package
+-----------------------------------------
+#################################################
+N 59 Potential Issue API: SDKCheck of <android.nfc.NfcAdapter: boolean disable()> is checking!!!
+The life time of api is [16,19]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <cyanogenmod.app.Profile: void doSelect(android.content.Context,com.android.internal.policy.IKeyguardService)>[]--><cyanogenmod.profiles.ConnectionSettings: void processOverride(android.content.Context)>[]--><android.nfc.NfcAdapter: boolean disable()>
+#1.the call statck between class <cyanogenmod.app.Profile: void doSelect(android.content.Context,com.android.internal.policy.IKeyguardService)> to <android.nfc.NfcAdapter: boolean disable()>has compatibility isssues！
+-----------------------------------------
+crashApis:34
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 60 Potential Issue API: SDKCheck of <android.app.job.JobInfo.Builder: android.app.job.JobInfo.Builder setMinimumLatency(long)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.grarak.kerneladiutor.services.boot.Receiver dummyMainMethod_com_grarak_kerneladiutor_services_boot_Receiver(android.content.Intent)>[]--><com.grarak.kerneladiutor.services.boot.Receiver: void onReceive(android.content.Context,android.content.Intent)>[[-$i0 < 26]]--><com.grarak.kerneladiutor.services.boot.JobService: void start(android.content.Context)>[]--><android.app.job.JobInfo.Builder: android.app.job.JobInfo.Builder setMinimumLatency(long)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 61 Potential Issue API: SDKCheck of <android.util.ArraySet: int size()> is checking!!!
+The life time of api is [23,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <cyanogenmod.providers.CMSettings$DelimitedListValidator: boolean validate(java.lang.String)>[]--><android.util.ArraySet: int size()>
+#1.the call statck between class <cyanogenmod.providers.CMSettings$DelimitedListValidator: boolean validate(java.lang.String)> to <android.util.ArraySet: int size()>has compatibility isssues！
+-----------------------------------------
+crashApis:35
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 62 Potential Issue API: SDKCheck of <android.view.ViewAnimationUtils: android.animation.Animator createCircularReveal(android.view.View,int,int,float,float)> is checking!!!
+The life time of api is [21,31]
+21call roads:
+0 Mainhead roads:
+21 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.grarak.kerneladiutor.views.NavHeaderView$2$1: void onClick(android.content.DialogInterface,int)>[]--><com.grarak.kerneladiutor.views.NavHeaderView: void animateBg()>[]--><io.codetail.animation.ViewAnimationUtils: io.codetail.animation.SupportAnimator createCircularReveal(android.view.View,int,int,float,float)>[]--><io.codetail.animation.ViewAnimationUtils: io.codetail.animation.SupportAnimator createCircularReveal(android.view.View,int,int,float,float,int)>[]--><android.view.ViewAnimationUtils: android.animation.Animator createCircularReveal(android.view.View,int,int,float,float)>
+#1.the call statck between class <com.grarak.kerneladiutor.views.NavHeaderView$2$1: void onClick(android.content.DialogInterface,int)> to <android.view.ViewAnimationUtils: android.animation.Animator createCircularReveal(android.view.View,int,int,float,float)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <cyanogenmod.externalviews.ExternalView: void access$000(cyanogenmod.externalviews.ExternalView)>[]--><cyanogenmod.externalviews.ExternalView: void executeQueue()>[]--><com.grarak.kerneladiutor.fragments.RecyclerViewFragment$7$2: void run()>[]--><io.codetail.animation.ViewAnimationUtils: io.codetail.animation.SupportAnimator createCircularReveal(android.view.View,int,int,float,float)>[]--><io.codetail.animation.ViewAnimationUtils: io.codetail.animation.SupportAnimator createCircularReveal(android.view.View,int,int,float,float,int)>[]--><android.view.ViewAnimationUtils: android.animation.Animator createCircularReveal(android.view.View,int,int,float,float)>
+#2.the call statck between class <cyanogenmod.externalviews.ExternalView: void access$000(cyanogenmod.externalviews.ExternalView)> to <android.view.ViewAnimationUtils: android.animation.Animator createCircularReveal(android.view.View,int,int,float,float)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <cyanogenmod.externalviews.KeyguardExternalView: void onLockscreenSlideOffsetChanged(float)>[]--><cyanogenmod.externalviews.KeyguardExternalView: void performAction(java.lang.Runnable)>[]--><com.grarak.kerneladiutor.fragments.RecyclerViewFragment$7$2: void run()>[]--><io.codetail.animation.ViewAnimationUtils: io.codetail.animation.SupportAnimator createCircularReveal(android.view.View,int,int,float,float)>[]--><io.codetail.animation.ViewAnimationUtils: io.codetail.animation.SupportAnimator createCircularReveal(android.view.View,int,int,float,float,int)>[]--><android.view.ViewAnimationUtils: android.animation.Animator createCircularReveal(android.view.View,int,int,float,float)>
+#3.the call statck between class <cyanogenmod.externalviews.KeyguardExternalView: void onLockscreenSlideOffsetChanged(float)> to <android.view.ViewAnimationUtils: android.animation.Animator createCircularReveal(android.view.View,int,int,float,float)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <cyanogenmod.externalviews.KeyguardExternalView: void onAttachedToWindow()>[]--><cyanogenmod.externalviews.KeyguardExternalView: void performAction(java.lang.Runnable)>[]--><com.grarak.kerneladiutor.fragments.RecyclerViewFragment$7$2: void run()>[]--><io.codetail.animation.ViewAnimationUtils: io.codetail.animation.SupportAnimator createCircularReveal(android.view.View,int,int,float,float)>[]--><io.codetail.animation.ViewAnimationUtils: io.codetail.animation.SupportAnimator createCircularReveal(android.view.View,int,int,float,float,int)>[]--><android.view.ViewAnimationUtils: android.animation.Animator createCircularReveal(android.view.View,int,int,float,float)>
+#4.the call statck between class <cyanogenmod.externalviews.KeyguardExternalView: void onAttachedToWindow()> to <android.view.ViewAnimationUtils: android.animation.Animator createCircularReveal(android.view.View,int,int,float,float)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <cyanogenmod.externalviews.KeyguardExternalView: boolean onPreDraw()>[]--><cyanogenmod.externalviews.KeyguardExternalView: void performAction(java.lang.Runnable)>[]--><com.grarak.kerneladiutor.fragments.RecyclerViewFragment$7$2: void run()>[]--><io.codetail.animation.ViewAnimationUtils: io.codetail.animation.SupportAnimator createCircularReveal(android.view.View,int,int,float,float)>[]--><io.codetail.animation.ViewAnimationUtils: io.codetail.animation.SupportAnimator createCircularReveal(android.view.View,int,int,float,float,int)>[]--><android.view.ViewAnimationUtils: android.animation.Animator createCircularReveal(android.view.View,int,int,float,float)>
+#5.the call statck between class <cyanogenmod.externalviews.KeyguardExternalView: boolean onPreDraw()> to <android.view.ViewAnimationUtils: android.animation.Animator createCircularReveal(android.view.View,int,int,float,float)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <cyanogenmod.externalviews.ExternalView: void onActivityStarted(android.app.Activity)>[]--><cyanogenmod.externalviews.ExternalView: void performAction(java.lang.Runnable)>[]--><com.grarak.kerneladiutor.fragments.RecyclerViewFragment$7$2: void run()>[]--><io.codetail.animation.ViewAnimationUtils: io.codetail.animation.SupportAnimator createCircularReveal(android.view.View,int,int,float,float)>[]--><io.codetail.animation.ViewAnimationUtils: io.codetail.animation.SupportAnimator createCircularReveal(android.view.View,int,int,float,float,int)>[]--><android.view.ViewAnimationUtils: android.animation.Animator createCircularReveal(android.view.View,int,int,float,float)>
+#6.the call statck between class <cyanogenmod.externalviews.ExternalView: void onActivityStarted(android.app.Activity)> to <android.view.ViewAnimationUtils: android.animation.Animator createCircularReveal(android.view.View,int,int,float,float)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <cyanogenmod.externalviews.KeyguardExternalView: void onKeyguardShowing(boolean)>[]--><cyanogenmod.externalviews.KeyguardExternalView: void performAction(java.lang.Runnable)>[]--><com.grarak.kerneladiutor.fragments.RecyclerViewFragment$7$2: void run()>[]--><io.codetail.animation.ViewAnimationUtils: io.codetail.animation.SupportAnimator createCircularReveal(android.view.View,int,int,float,float)>[]--><io.codetail.animation.ViewAnimationUtils: io.codetail.animation.SupportAnimator createCircularReveal(android.view.View,int,int,float,float,int)>[]--><android.view.ViewAnimationUtils: android.animation.Animator createCircularReveal(android.view.View,int,int,float,float)>
+#7.the call statck between class <cyanogenmod.externalviews.KeyguardExternalView: void onKeyguardShowing(boolean)> to <android.view.ViewAnimationUtils: android.animation.Animator createCircularReveal(android.view.View,int,int,float,float)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <cyanogenmod.externalviews.ExternalView: void onAttachedToWindow()>[]--><cyanogenmod.externalviews.ExternalView: void performAction(java.lang.Runnable)>[]--><com.grarak.kerneladiutor.fragments.RecyclerViewFragment$7$2: void run()>[]--><io.codetail.animation.ViewAnimationUtils: io.codetail.animation.SupportAnimator createCircularReveal(android.view.View,int,int,float,float)>[]--><io.codetail.animation.ViewAnimationUtils: io.codetail.animation.SupportAnimator createCircularReveal(android.view.View,int,int,float,float,int)>[]--><android.view.ViewAnimationUtils: android.animation.Animator createCircularReveal(android.view.View,int,int,float,float)>
+#8.the call statck between class <cyanogenmod.externalviews.ExternalView: void onAttachedToWindow()> to <android.view.ViewAnimationUtils: android.animation.Animator createCircularReveal(android.view.View,int,int,float,float)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <cyanogenmod.externalviews.KeyguardExternalView: void onKeyguardDismissed()>[]--><cyanogenmod.externalviews.KeyguardExternalView: void performAction(java.lang.Runnable)>[]--><com.grarak.kerneladiutor.fragments.RecyclerViewFragment$7$2: void run()>[]--><io.codetail.animation.ViewAnimationUtils: io.codetail.animation.SupportAnimator createCircularReveal(android.view.View,int,int,float,float)>[]--><io.codetail.animation.ViewAnimationUtils: io.codetail.animation.SupportAnimator createCircularReveal(android.view.View,int,int,float,float,int)>[]--><android.view.ViewAnimationUtils: android.animation.Animator createCircularReveal(android.view.View,int,int,float,float)>
+#9.the call statck between class <cyanogenmod.externalviews.KeyguardExternalView: void onKeyguardDismissed()> to <android.view.ViewAnimationUtils: android.animation.Animator createCircularReveal(android.view.View,int,int,float,float)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.grarak.kerneladiutor.views.NavHeaderView$1: void animate()>[]--><com.grarak.kerneladiutor.views.NavHeaderView: void animateBg()>[]--><io.codetail.animation.ViewAnimationUtils: io.codetail.animation.SupportAnimator createCircularReveal(android.view.View,int,int,float,float)>[]--><io.codetail.animation.ViewAnimationUtils: io.codetail.animation.SupportAnimator createCircularReveal(android.view.View,int,int,float,float,int)>[]--><android.view.ViewAnimationUtils: android.animation.Animator createCircularReveal(android.view.View,int,int,float,float)>
+#10.the call statck between class <com.grarak.kerneladiutor.views.NavHeaderView$1: void animate()> to <android.view.ViewAnimationUtils: android.animation.Animator createCircularReveal(android.view.View,int,int,float,float)>has compatibility isssues！
+-----------------------------------------
+crashApis:36
+containsStatic:false
+containsTry:false
+11call by main package
+-----------------------------------------
+#################################################
+N 63 Potential Issue API: SDKCheck of <android.util.ArraySet: void <init>(int)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <cyanogenmod.providers.CMSettings$System: void <clinit>()>[]--><android.util.ArraySet: void <init>(int)>
+#1.the call statck between class <cyanogenmod.providers.CMSettings$System: void <clinit>()> to <android.util.ArraySet: void <init>(int)>has compatibility isssues！
+-----------------------------------------
+crashApis:37
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 64 Potential Issue API: SDKCheck of <android.content.ContentResolver: void takePersistableUriPermission(android.net.Uri,int)> is checking!!!
+The life time of api is [19,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+-$i0 < 19
+Good road: <com.grarak.kerneladiutor.views.NavHeaderView$1: void setImage(android.net.Uri)>[]--><com.grarak.kerneladiutor.views.NavHeaderView: void setImage(android.net.Uri)>[]--><com.grarak.kerneladiutor.views.NavHeaderView: android.graphics.Bitmap uriToBitmap(android.net.Uri,android.content.Context)>[[-$i0 < 19]]--><android.content.ContentResolver: void takePersistableUriPermission(android.net.Uri,int)>
+One road protect good!
+try
+Good road with try: <com.grarak.kerneladiutor.views.NavHeaderView: void <init>(android.content.Context)>[]--><com.grarak.kerneladiutor.views.NavHeaderView: void <init>(android.content.Context,android.util.AttributeSet)>[]--><com.grarak.kerneladiutor.views.NavHeaderView: void <init>(android.content.Context,android.util.AttributeSet,int)>[[try]]--><com.grarak.kerneladiutor.views.NavHeaderView: void setImage(android.net.Uri)>[]--><com.grarak.kerneladiutor.views.NavHeaderView: android.graphics.Bitmap uriToBitmap(android.net.Uri,android.content.Context)>[[-$i0 < 19]]--><android.content.ContentResolver: void takePersistableUriPermission(android.net.Uri,int)>
+One road protect good!
+containsStatic:false
+containsTry:true
+3call by main package
+-----------------------------------------
+#################################################
+N 65 Potential Issue API: SDKCheck of <android.security.keystore.KeyGenParameterSpec.Builder: android.security.keystore.KeyGenParameterSpec.Builder setUserAuthenticationRequired(boolean)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 23
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.grarak.kerneladiutor.activities.SecurityActivity dummyMainMethod_com_grarak_kerneladiutor_activities_SecurityActivity(android.content.Intent)>[]--><com.grarak.kerneladiutor.activities.SecurityActivity: void onCreate(android.os.Bundle)>[[-$i0 < 23]]--><com.grarak.kerneladiutor.activities.SecurityActivity: void loadFingerprint()>[[try]]--><android.security.keystore.KeyGenParameterSpec.Builder: android.security.keystore.KeyGenParameterSpec.Builder setUserAuthenticationRequired(boolean)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:true
+1call by main package
+-----------------------------------------
+#################################################
+N 66 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager: boolean isWifiEnabled()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <cyanogenmod.app.Profile: void doSelect(android.content.Context,com.android.internal.policy.IKeyguardService)>[]--><cyanogenmod.profiles.ConnectionSettings: void processOverride(android.content.Context)>[]--><android.net.wifi.WifiManager: boolean isWifiEnabled()>
+#1.the call statck between class <cyanogenmod.app.Profile: void doSelect(android.content.Context,com.android.internal.policy.IKeyguardService)> to <android.net.wifi.WifiManager: boolean isWifiEnabled()>has compatibility isssues！
+-----------------------------------------
+crashApis:38
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 67 Potential Issue API: SDKCheck of <android.app.AlertDialog.Builder: android.app.AlertDialog.Builder setView(int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.grarak.kerneladiutor.views.dialog.Dialog: android.app.AlertDialog$Builder setView(int)>[]--><com.grarak.kerneladiutor.views.dialog.Dialog: com.grarak.kerneladiutor.views.dialog.Dialog setView(int)>[]--><android.app.AlertDialog.Builder: android.app.AlertDialog.Builder setView(int)>
+#1.the call statck between class <com.grarak.kerneladiutor.views.dialog.Dialog: android.app.AlertDialog$Builder setView(int)> to <android.app.AlertDialog.Builder: android.app.AlertDialog.Builder setView(int)>has compatibility isssues！
+-----------------------------------------
+crashApis:39
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 68 Potential Issue API: SDKCheck of <android.content.pm.ShortcutManager: void removeAllDynamicShortcuts()> is checking!!!
+The life time of api is [25,31]
+3call roads:
+1 Mainhead roads:
+$i0 >= 25
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.grarak.kerneladiutor.activities.NavigationActivity dummyMainMethod_com_grarak_kerneladiutor_activities_NavigationActivity(android.content.Intent)>[]--><com.grarak.kerneladiutor.activities.NavigationActivity: void onCreate(android.os.Bundle)>[]--><com.grarak.kerneladiutor.activities.NavigationActivity: void init(android.os.Bundle)>[]--><com.grarak.kerneladiutor.activities.NavigationActivity: void onItemSelected(int,boolean,boolean)>[]--><com.grarak.kerneladiutor.activities.NavigationActivity: void setShortcuts()>[[$i0 >= 25]]--><android.content.pm.ShortcutManager: void removeAllDynamicShortcuts()>
+One road protect good!
+2 Packageshead roads:
+$i0 >= 25
+Good road: <com.grarak.kerneladiutor.activities.NavigationActivity: boolean onNavigationItemSelected(android.view.MenuItem)>[]--><com.grarak.kerneladiutor.activities.NavigationActivity: void onItemSelected(int,boolean,boolean)>[]--><com.grarak.kerneladiutor.activities.NavigationActivity: void setShortcuts()>[[$i0 >= 25]]--><android.content.pm.ShortcutManager: void removeAllDynamicShortcuts()>
+One road protect good!
+$i0 >= 25
+Good road: <com.grarak.kerneladiutor.fragments.other.SettingsFragment: boolean onPreferenceChange(android.support.v7.preference.Preference,java.lang.Object)>[]--><com.grarak.kerneladiutor.activities.NavigationActivity: void appendFragments()>[]--><com.grarak.kerneladiutor.activities.NavigationActivity: void appendFragments(boolean)>[]--><com.grarak.kerneladiutor.activities.NavigationActivity: void setShortcuts()>[[$i0 >= 25]]--><android.content.pm.ShortcutManager: void removeAllDynamicShortcuts()>
+One road protect good!
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 69 Potential Issue API: SDKCheck of <android.content.pm.ShortcutInfo.Builder: android.content.pm.ShortcutInfo.Builder setIntent(android.content.Intent)> is checking!!!
+The life time of api is [24,31]
+3call roads:
+1 Mainhead roads:
+$i0 >= 25
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.grarak.kerneladiutor.activities.NavigationActivity dummyMainMethod_com_grarak_kerneladiutor_activities_NavigationActivity(android.content.Intent)>[]--><com.grarak.kerneladiutor.activities.NavigationActivity: void onCreate(android.os.Bundle)>[]--><com.grarak.kerneladiutor.activities.NavigationActivity: void init(android.os.Bundle)>[]--><com.grarak.kerneladiutor.activities.NavigationActivity: void onItemSelected(int,boolean,boolean)>[]--><com.grarak.kerneladiutor.activities.NavigationActivity: void setShortcuts()>[[$i0 >= 25]]--><android.content.pm.ShortcutInfo.Builder: android.content.pm.ShortcutInfo.Builder setIntent(android.content.Intent)>
+One road protect good!
+2 Packageshead roads:
+$i0 >= 25
+Good road: <com.grarak.kerneladiutor.activities.NavigationActivity: boolean onNavigationItemSelected(android.view.MenuItem)>[]--><com.grarak.kerneladiutor.activities.NavigationActivity: void onItemSelected(int,boolean,boolean)>[]--><com.grarak.kerneladiutor.activities.NavigationActivity: void setShortcuts()>[[$i0 >= 25]]--><android.content.pm.ShortcutInfo.Builder: android.content.pm.ShortcutInfo.Builder setIntent(android.content.Intent)>
+One road protect good!
+$i0 >= 25
+Good road: <com.grarak.kerneladiutor.fragments.other.SettingsFragment: boolean onPreferenceChange(android.support.v7.preference.Preference,java.lang.Object)>[]--><com.grarak.kerneladiutor.activities.NavigationActivity: void appendFragments()>[]--><com.grarak.kerneladiutor.activities.NavigationActivity: void appendFragments(boolean)>[]--><com.grarak.kerneladiutor.activities.NavigationActivity: void setShortcuts()>[[$i0 >= 25]]--><android.content.pm.ShortcutInfo.Builder: android.content.pm.ShortcutInfo.Builder setIntent(android.content.Intent)>
+One road protect good!
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 70 Potential Issue API: SDKCheck of <android.os.UserHandle: android.os.UserHandle readFromParcel(android.os.Parcel)> is checking!!!
+The life time of api is [17,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 
+Error road: <cyanogenmod.app.StatusBarPanelCustomTile$1: cyanogenmod.app.StatusBarPanelCustomTile createFromParcel(android.os.Parcel)>[]--><cyanogenmod.app.StatusBarPanelCustomTile: void <init>(android.os.Parcel)>[]--><android.os.UserHandle: android.os.UserHandle readFromParcel(android.os.Parcel)>
+#1.the call statck between class <cyanogenmod.app.StatusBarPanelCustomTile$1: cyanogenmod.app.StatusBarPanelCustomTile createFromParcel(android.os.Parcel)> to <android.os.UserHandle: android.os.UserHandle readFromParcel(android.os.Parcel)>has compatibility isssues！
+-----------------------------------------
+crashApis:40
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 71 Potential Issue API: SDKCheck of <android.telephony.TelephonyManager: int getPhoneCount()> is checking!!!
+The life time of api is [23,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <cyanogenmod.app.Profile: void doSelect(android.content.Context,com.android.internal.policy.IKeyguardService)>[]--><cyanogenmod.profiles.ConnectionSettings: void processOverride(android.content.Context)>[]--><android.telephony.TelephonyManager: int getPhoneCount()>
+#1.the call statck between class <cyanogenmod.app.Profile: void doSelect(android.content.Context,com.android.internal.policy.IKeyguardService)> to <android.telephony.TelephonyManager: int getPhoneCount()>has compatibility isssues！
+-----------------------------------------
+crashApis:41
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 72 Potential Issue API: SDKCheck of <android.content.pm.ShortcutInfo.Builder: android.content.pm.ShortcutInfo.Builder setIcon(android.graphics.drawable.Icon)> is checking!!!
+The life time of api is [24,31]
+3call roads:
+1 Mainhead roads:
+$i0 >= 25
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.grarak.kerneladiutor.activities.NavigationActivity dummyMainMethod_com_grarak_kerneladiutor_activities_NavigationActivity(android.content.Intent)>[]--><com.grarak.kerneladiutor.activities.NavigationActivity: void onCreate(android.os.Bundle)>[]--><com.grarak.kerneladiutor.activities.NavigationActivity: void init(android.os.Bundle)>[]--><com.grarak.kerneladiutor.activities.NavigationActivity: void onItemSelected(int,boolean,boolean)>[]--><com.grarak.kerneladiutor.activities.NavigationActivity: void setShortcuts()>[[$i0 >= 25]]--><android.content.pm.ShortcutInfo.Builder: android.content.pm.ShortcutInfo.Builder setIcon(android.graphics.drawable.Icon)>
+One road protect good!
+2 Packageshead roads:
+$i0 >= 25
+Good road: <com.grarak.kerneladiutor.activities.NavigationActivity: boolean onNavigationItemSelected(android.view.MenuItem)>[]--><com.grarak.kerneladiutor.activities.NavigationActivity: void onItemSelected(int,boolean,boolean)>[]--><com.grarak.kerneladiutor.activities.NavigationActivity: void setShortcuts()>[[$i0 >= 25]]--><android.content.pm.ShortcutInfo.Builder: android.content.pm.ShortcutInfo.Builder setIcon(android.graphics.drawable.Icon)>
+One road protect good!
+$i0 >= 25
+Good road: <com.grarak.kerneladiutor.fragments.other.SettingsFragment: boolean onPreferenceChange(android.support.v7.preference.Preference,java.lang.Object)>[]--><com.grarak.kerneladiutor.activities.NavigationActivity: void appendFragments()>[]--><com.grarak.kerneladiutor.activities.NavigationActivity: void appendFragments(boolean)>[]--><com.grarak.kerneladiutor.activities.NavigationActivity: void setShortcuts()>[[$i0 >= 25]]--><android.content.pm.ShortcutInfo.Builder: android.content.pm.ShortcutInfo.Builder setIcon(android.graphics.drawable.Icon)>
+One road protect good!
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 73 Potential Issue API: SDKCheck of <android.app.job.JobInfo.Builder: android.app.job.JobInfo.Builder setOverrideDeadline(long)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.grarak.kerneladiutor.services.boot.Receiver dummyMainMethod_com_grarak_kerneladiutor_services_boot_Receiver(android.content.Intent)>[]--><com.grarak.kerneladiutor.services.boot.Receiver: void onReceive(android.content.Context,android.content.Intent)>[[-$i0 < 26]]--><com.grarak.kerneladiutor.services.boot.JobService: void start(android.content.Context)>[]--><android.app.job.JobInfo.Builder: android.app.job.JobInfo.Builder setOverrideDeadline(long)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 74 Potential Issue API: SDKCheck of <android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+1 Mainhead roads:
+-$i1 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.grarak.kerneladiutor.services.boot.Service dummyMainMethod_com_grarak_kerneladiutor_services_boot_Service(android.content.Intent)>[]--><com.grarak.kerneladiutor.services.boot.Service: int onStartCommand(android.content.Intent,int,int)>[]--><com.grarak.kerneladiutor.services.boot.ApplyOnBoot: boolean apply(android.content.Context,com.grarak.kerneladiutor.services.boot.ApplyOnBoot$ApplyOnBootListener)>[[-$i1 < 26]]--><android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)>
+One road protect good!
+-$i1 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.grarak.kerneladiutor.services.boot.JobService dummyMainMethod_com_grarak_kerneladiutor_services_boot_JobService(android.content.Intent)>[]--><com.grarak.kerneladiutor.services.boot.JobService: boolean onStartJob(android.app.job.JobParameters)>[]--><com.grarak.kerneladiutor.services.boot.ApplyOnBoot: boolean apply(android.content.Context,com.grarak.kerneladiutor.services.boot.ApplyOnBoot$ApplyOnBootListener)>[[-$i1 < 26]]--><android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+crashApis numbers:41
+crashApis numbers in main road:10
+On Android Version 16 this app may have error api use(at least): 29 and error api roads: 77
+On Android Version 17 this app may have error api use(at least): 25 and error api roads: 71
+On Android Version 18 this app may have error api use(at least): 24 and error api roads: 61
+On Android Version 19 this app may have error api use(at least): 23 and error api roads: 59
+On Android Version 20 this app may have error api use(at least): 23 and error api roads: 59
+On Android Version 21 this app may have error api use(at least): 13 and error api roads: 20
+On Android Version 22 this app may have error api use(at least): 10 and error api roads: 14
+On Android Version 23 this app may have error api use(at least): 2 and error api roads: 2
+On Android Version 24 this app may have error api use(at least): 2 and error api roads: 2
+On Android Version 25 this app may have error api use(at least): 2 and error api roads: 2
+On Android Version 26 this app may have error api use(at least): 2 and error api roads: 2
+On Android Version 27 this app may have error api use(at least): 3 and error api roads: 4
+On Android Version 28 this app may have error api use(at least): 3 and error api roads: 4
+On Android Version 29 this app may have error api use(at least): 2 and error api roads: 3
+On Android Version 30 this app may have error api use(at least): 4 and error api roads: 5
+On Android Version 31 this app may have error api use(at least): 12 and error api roads: 16

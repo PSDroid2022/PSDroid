@@ -1,0 +1,648 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/WiFi_Automatic.apk
+Entry Points[de.j4velin.wifiAutoOff.UnlockReceiver, de.j4velin.wifiAutoOff.LogDeleteService, de.j4velin.wifiAutoOff.Receiver, de.j4velin.wifiAutoOff.Preferences, de.j4velin.wifiAutoOff.QSTileService, de.j4velin.wifiAutoOff.ScreenChangeDetector$ScreenOffReceiver, de.j4velin.wifiAutoOff.ScreenChangeDetector, de.j4velin.wifiAutoOff.StartReceiver, de.j4velin.wifiAutoOff.APILevel26ForegroundService]
+FllowDroidcallgraph size:1074
+Soot started on Mon Jul 11 15:23:10 CST 2022
+StaticCheck:<de.j4velin.wifiAutoOff.Preferences: boolean keepWiFiOn(android.content.Context)>$yysi0 < 17
+Soot finished on Mon Jul 11 15:23:16 CST 2022
+Soot has run for 0 min. 5 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 14
+Declared Target Sdk version is: 29
+Declared Max Sdk version is: -1
+Collected 246 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.service.quicksettings.Tile: void updateTile()> is checking!!!
+The life time of api is [24,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.j4velin.wifiAutoOff.QSTileService dummyMainMethod_de_j4velin_wifiAutoOff_QSTileService(android.content.Intent)>[]--><de.j4velin.wifiAutoOff.QSTileService: void onStartListening()>[]--><android.service.quicksettings.Tile: void updateTile()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.service.quicksettings.Tile: void updateTile()>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:1
+crashApisInMain:1
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.service.quicksettings.TileService: android.service.quicksettings.Tile getQsTile()> is checking!!!
+The life time of api is [24,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.j4velin.wifiAutoOff.QSTileService dummyMainMethod_de_j4velin_wifiAutoOff_QSTileService(android.content.Intent)>[]--><de.j4velin.wifiAutoOff.QSTileService: void onStartListening()>[]--><android.service.quicksettings.TileService: android.service.quicksettings.Tile getQsTile()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.service.quicksettings.TileService: android.service.quicksettings.Tile getQsTile()>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:2
+crashApisInMain:2
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.content.Context: android.content.ComponentName startForegroundService(android.content.Intent)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+1 Mainhead roads:
+$i0 >= 26
+-$i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.j4velin.wifiAutoOff.StartReceiver dummyMainMethod_de_j4velin_wifiAutoOff_StartReceiver(android.content.Intent)>[]--><de.j4velin.wifiAutoOff.StartReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><de.j4velin.wifiAutoOff.Start: void start(android.content.Context)>[[$i0 >= 26]]--><de.j4velin.wifiAutoOff.APILevel26ForegroundService: void start(android.content.Context)>[[-$i0 < 26]]--><android.content.Context: android.content.ComponentName startForegroundService(android.content.Intent)>
+One road protect good!
+$i0 >= 26
+-$i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.j4velin.wifiAutoOff.Preferences dummyMainMethod_de_j4velin_wifiAutoOff_Preferences(android.content.Intent)>[]--><de.j4velin.wifiAutoOff.Preferences: void onPause()>[]--><de.j4velin.wifiAutoOff.Start: void start(android.content.Context)>[[$i0 >= 26]]--><de.j4velin.wifiAutoOff.APILevel26ForegroundService: void start(android.content.Context)>[[-$i0 < 26]]--><android.content.Context: android.content.ComponentName startForegroundService(android.content.Intent)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.app.Activity: void requestPermissions(java.lang.String[],int)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 23
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.j4velin.wifiAutoOff.Preferences dummyMainMethod_de_j4velin_wifiAutoOff_Preferences(android.content.Intent)>[]--><de.j4velin.wifiAutoOff.Preferences: void onCreate(android.os.Bundle)>[[-$i0 < 23]]--><android.app.Activity: void requestPermissions(java.lang.String[],int)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.net.wifi.WifiInfo: int getIpAddress()> is checking!!!
+The life time of api is [1,30]
+3call roads:
+0 Mainhead roads:
+3 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <de.j4velin.wifiAutoOff.Preferences$2: void onReceive(android.content.Context,android.content.Intent)>[]--><de.j4velin.wifiAutoOff.StatusPreference: void update()>[]--><android.net.wifi.WifiInfo: int getIpAddress()>
+#1.the call statck between class <de.j4velin.wifiAutoOff.Preferences$2: void onReceive(android.content.Context,android.content.Intent)> to <android.net.wifi.WifiInfo: int getIpAddress()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)>[]--><de.j4velin.wifiAutoOff.Preferences$2$1: void run()>[]--><de.j4velin.wifiAutoOff.StatusPreference: void update()>[]--><android.net.wifi.WifiInfo: int getIpAddress()>
+#2.the call statck between class <android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)> to <android.net.wifi.WifiInfo: int getIpAddress()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <de.j4velin.wifiAutoOff.StatusPreference: android.view.View onCreateView(android.view.ViewGroup)>[]--><de.j4velin.wifiAutoOff.StatusPreference: void update()>[]--><android.net.wifi.WifiInfo: int getIpAddress()>
+#3.the call statck between class <de.j4velin.wifiAutoOff.StatusPreference: android.view.View onCreateView(android.view.ViewGroup)> to <android.net.wifi.WifiInfo: int getIpAddress()>has compatibility isssues！
+-----------------------------------------
+crashApis:3
+containsStatic:false
+containsTry:false
+4call by main package
+-----------------------------------------
+#################################################
+N 5 Potential Issue API: SDKCheck of <android.app.AlarmManager: void setExact(int,long,android.app.PendingIntent)> is checking!!!
+The life time of api is [19,31]
+1call roads:
+1 Mainhead roads:
+###Multi invoking in one method, need manual check!!!--><de.j4velin.wifiAutoOff.Util: void setTimer(android.content.Context,int,long,android.app.PendingIntent)>[[-$i2 < 19], [$i2 < 23]]--><de.j4velin.wifiAutoOff.APILevel19Wrapper: void setExactTimer(android.app.AlarmManager,int,long,android.app.PendingIntent)>[]
+###Multi invoking in one method, need manual check!!!--><de.j4velin.wifiAutoOff.Util: void setTimer(android.content.Context,int,long,android.app.PendingIntent)>[[-$i2 < 19]][[$i2 < 23]]--><de.j4velin.wifiAutoOff.APILevel19Wrapper: void setExactTimer(android.app.AlarmManager,int,long,android.app.PendingIntent)>[]
+-$i2 < 19
+$i2 < 23
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.j4velin.wifiAutoOff.StartReceiver dummyMainMethod_de_j4velin_wifiAutoOff_StartReceiver(android.content.Intent)>[]--><de.j4velin.wifiAutoOff.StartReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><de.j4velin.wifiAutoOff.Start: void start(android.content.Context)>[]--><de.j4velin.wifiAutoOff.Start: void createTimers(android.content.Context)>[]--><de.j4velin.wifiAutoOff.Util: void setTimer(android.content.Context,int,long,android.app.PendingIntent)>[[-$i2 < 19], [$i2 < 23]]--><de.j4velin.wifiAutoOff.APILevel19Wrapper: void setExactTimer(android.app.AlarmManager,int,long,android.app.PendingIntent)>[]--><android.app.AlarmManager: void setExact(int,long,android.app.PendingIntent)>
+One road protect good!
+###Multi invoking in one method, need manual check!!!--><de.j4velin.wifiAutoOff.Util: void setTimer(android.content.Context,int,long,android.app.PendingIntent)>[[-$i2 < 19], [$i2 < 23]]--><de.j4velin.wifiAutoOff.APILevel19Wrapper: void setExactTimer(android.app.AlarmManager,int,long,android.app.PendingIntent)>[]
+###Multi invoking in one method, need manual check!!!--><de.j4velin.wifiAutoOff.Util: void setTimer(android.content.Context,int,long,android.app.PendingIntent)>[[-$i2 < 19]][[$i2 < 23]]--><de.j4velin.wifiAutoOff.APILevel19Wrapper: void setExactTimer(android.app.AlarmManager,int,long,android.app.PendingIntent)>[]
+-$i2 < 19
+$i2 < 23
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.j4velin.wifiAutoOff.Preferences dummyMainMethod_de_j4velin_wifiAutoOff_Preferences(android.content.Intent)>[]--><de.j4velin.wifiAutoOff.Preferences: void onPause()>[]--><de.j4velin.wifiAutoOff.Start: void start(android.content.Context)>[]--><de.j4velin.wifiAutoOff.Start: void createTimers(android.content.Context)>[]--><de.j4velin.wifiAutoOff.Util: void setTimer(android.content.Context,int,long,android.app.PendingIntent)>[[-$i2 < 19], [$i2 < 23]]--><de.j4velin.wifiAutoOff.APILevel19Wrapper: void setExactTimer(android.app.AlarmManager,int,long,android.app.PendingIntent)>[]--><android.app.AlarmManager: void setExact(int,long,android.app.PendingIntent)>
+One road protect good!
+###Multi invoking in one method, need manual check!!!--><de.j4velin.wifiAutoOff.Util: void setTimer(android.content.Context,int,long,android.app.PendingIntent)>[[-$i2 < 19], [$i2 < 23]]--><de.j4velin.wifiAutoOff.APILevel19Wrapper: void setExactTimer(android.app.AlarmManager,int,long,android.app.PendingIntent)>[]
+###Multi invoking in one method, need manual check!!!--><de.j4velin.wifiAutoOff.Util: void setTimer(android.content.Context,int,long,android.app.PendingIntent)>[[-$i2 < 19]][[$i2 < 23]]--><de.j4velin.wifiAutoOff.APILevel19Wrapper: void setExactTimer(android.app.AlarmManager,int,long,android.app.PendingIntent)>[]
+-$i2 < 19
+$i2 < 23
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.j4velin.wifiAutoOff.Receiver dummyMainMethod_de_j4velin_wifiAutoOff_Receiver(android.content.Intent)>[]--><de.j4velin.wifiAutoOff.Receiver: void onReceive(android.content.Context,android.content.Intent)>[]--><de.j4velin.wifiAutoOff.Start: void createTimers(android.content.Context)>[]--><de.j4velin.wifiAutoOff.Util: void setTimer(android.content.Context,int,long,android.app.PendingIntent)>[[-$i2 < 19], [$i2 < 23]]--><de.j4velin.wifiAutoOff.APILevel19Wrapper: void setExactTimer(android.app.AlarmManager,int,long,android.app.PendingIntent)>[]--><android.app.AlarmManager: void setExact(int,long,android.app.PendingIntent)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 6 Potential Issue API: SDKCheck of <android.app.NotificationChannel: void setLockscreenVisibility(int)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+1 Mainhead roads:
+$i0 >= 26
+-$i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.j4velin.wifiAutoOff.StartReceiver dummyMainMethod_de_j4velin_wifiAutoOff_StartReceiver(android.content.Intent)>[]--><de.j4velin.wifiAutoOff.StartReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><de.j4velin.wifiAutoOff.Start: void start(android.content.Context)>[[$i0 >= 26]]--><de.j4velin.wifiAutoOff.APILevel26ForegroundService: void start(android.content.Context)>[[-$i0 < 26]]--><de.j4velin.wifiAutoOff.APILevel26ForegroundService: void createNotificationChannel(android.content.Context)>[]--><android.app.NotificationChannel: void setLockscreenVisibility(int)>
+One road protect good!
+$i0 >= 26
+-$i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.j4velin.wifiAutoOff.Preferences dummyMainMethod_de_j4velin_wifiAutoOff_Preferences(android.content.Intent)>[]--><de.j4velin.wifiAutoOff.Preferences: void onPause()>[]--><de.j4velin.wifiAutoOff.Start: void start(android.content.Context)>[[$i0 >= 26]]--><de.j4velin.wifiAutoOff.APILevel26ForegroundService: void start(android.content.Context)>[[-$i0 < 26]]--><de.j4velin.wifiAutoOff.APILevel26ForegroundService: void createNotificationChannel(android.content.Context)>[]--><android.app.NotificationChannel: void setLockscreenVisibility(int)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 7 Potential Issue API: SDKCheck of <android.net.NetworkInfo: android.net.NetworkInfo.State getState()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+1 Mainhead roads:
+$i0 < 14
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.j4velin.wifiAutoOff.Receiver dummyMainMethod_de_j4velin_wifiAutoOff_Receiver(android.content.Intent)>[]--><de.j4velin.wifiAutoOff.Receiver: void onReceive(android.content.Context,android.content.Intent)>[[$i0 < 14]]--><android.net.NetworkInfo: android.net.NetworkInfo.State getState()>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 8 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager: boolean isWifiEnabled()> is checking!!!
+The life time of api is [1,30]
+4call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.j4velin.wifiAutoOff.Receiver dummyMainMethod_de_j4velin_wifiAutoOff_Receiver(android.content.Intent)>[]--><de.j4velin.wifiAutoOff.Receiver: void onReceive(android.content.Context,android.content.Intent)>[]--><android.net.wifi.WifiManager: boolean isWifiEnabled()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.wifi.WifiManager: boolean isWifiEnabled()>has compatibility isssues！
+-----------------------------------------
+3 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <de.j4velin.wifiAutoOff.Preferences$2: void onReceive(android.content.Context,android.content.Intent)>[]--><de.j4velin.wifiAutoOff.StatusPreference: void update()>[]--><android.net.wifi.WifiManager: boolean isWifiEnabled()>
+#1.the call statck between class <de.j4velin.wifiAutoOff.Preferences$2: void onReceive(android.content.Context,android.content.Intent)> to <android.net.wifi.WifiManager: boolean isWifiEnabled()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)>[]--><de.j4velin.wifiAutoOff.Preferences$2$1: void run()>[]--><de.j4velin.wifiAutoOff.StatusPreference: void update()>[]--><android.net.wifi.WifiManager: boolean isWifiEnabled()>
+#2.the call statck between class <android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)> to <android.net.wifi.WifiManager: boolean isWifiEnabled()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <de.j4velin.wifiAutoOff.StatusPreference: android.view.View onCreateView(android.view.ViewGroup)>[]--><de.j4velin.wifiAutoOff.StatusPreference: void update()>[]--><android.net.wifi.WifiManager: boolean isWifiEnabled()>
+#3.the call statck between class <de.j4velin.wifiAutoOff.StatusPreference: android.view.View onCreateView(android.view.ViewGroup)> to <android.net.wifi.WifiManager: boolean isWifiEnabled()>has compatibility isssues！
+-----------------------------------------
+crashApis:4
+crashApisInMain:3
+containsStatic:false
+containsTry:true
+4call by main package
+-----------------------------------------
+#################################################
+N 9 Potential Issue API: SDKCheck of <android.view.Display: int getState()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+###Multi invoking in one method, need manual check!!!--><de.j4velin.wifiAutoOff.ScreenChangeDetector: int onStartCommand(android.content.Intent,int,int)>[[-$i0 < 20], [$i0 >= 20]]--><de.j4velin.wifiAutoOff.APILevel20Wrapper: boolean isScreenOn(android.content.Context)>[]
+###Multi invoking in one method, need manual check!!!--><de.j4velin.wifiAutoOff.ScreenChangeDetector: int onStartCommand(android.content.Intent,int,int)>[[-$i0 < 20]][[$i0 >= 20]]--><de.j4velin.wifiAutoOff.APILevel20Wrapper: boolean isScreenOn(android.content.Context)>[]
+-$i0 < 20
+$i0 >= 20
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.j4velin.wifiAutoOff.ScreenChangeDetector dummyMainMethod_de_j4velin_wifiAutoOff_ScreenChangeDetector(android.content.Intent)>[]--><de.j4velin.wifiAutoOff.ScreenChangeDetector: int onStartCommand(android.content.Intent,int,int)>[[-$i0 < 20], [$i0 >= 20]]--><de.j4velin.wifiAutoOff.APILevel20Wrapper: boolean isScreenOn(android.content.Context)>[]--><android.view.Display: int getState()>
+One road protect good!
+###Multi invoking in one method, need manual check!!!--><de.j4velin.wifiAutoOff.Receiver: void onReceive(android.content.Context,android.content.Intent)>[[-$i0 < 20], [$i0 >= 20]]--><de.j4velin.wifiAutoOff.APILevel20Wrapper: boolean isScreenOn(android.content.Context)>[]
+###Multi invoking in one method, need manual check!!!--><de.j4velin.wifiAutoOff.Receiver: void onReceive(android.content.Context,android.content.Intent)>[[-$i0 < 20]][[$i0 >= 20]]--><de.j4velin.wifiAutoOff.APILevel20Wrapper: boolean isScreenOn(android.content.Context)>[]
+-$i0 < 20
+$i0 >= 20
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.j4velin.wifiAutoOff.Receiver dummyMainMethod_de_j4velin_wifiAutoOff_Receiver(android.content.Intent)>[]--><de.j4velin.wifiAutoOff.Receiver: void onReceive(android.content.Context,android.content.Intent)>[[-$i0 < 20], [$i0 >= 20]]--><de.j4velin.wifiAutoOff.APILevel20Wrapper: boolean isScreenOn(android.content.Context)>[]--><android.view.Display: int getState()>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 10 Potential Issue API: SDKCheck of <android.net.NetworkInfo: boolean isConnected()> is checking!!!
+The life time of api is [1,30]
+4call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.j4velin.wifiAutoOff.Receiver dummyMainMethod_de_j4velin_wifiAutoOff_Receiver(android.content.Intent)>[]--><de.j4velin.wifiAutoOff.Receiver: void onReceive(android.content.Context,android.content.Intent)>[]--><android.net.NetworkInfo: boolean isConnected()>
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.j4velin.wifiAutoOff.Preferences dummyMainMethod_de_j4velin_wifiAutoOff_Preferences(android.content.Intent)>[]--><de.j4velin.wifiAutoOff.Preferences$4: boolean onPreferenceClick(android.preference.Preference)>[]--><android.net.NetworkInfo: boolean isConnected()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.NetworkInfo: boolean isConnected()>has compatibility isssues！
+-----------------------------------------
+3 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <de.j4velin.wifiAutoOff.Preferences$2: void onReceive(android.content.Context,android.content.Intent)>[]--><android.net.NetworkInfo: boolean isConnected()>
+!!!this api will crash on sdk 31 
+Error road: <de.j4velin.wifiAutoOff.Preferences$2: void onReceive(android.content.Context,android.content.Intent)>[]--><de.j4velin.wifiAutoOff.StatusPreference: void update()>[]--><android.net.NetworkInfo: boolean isConnected()>
+#1.the call statck between class <de.j4velin.wifiAutoOff.Preferences$2: void onReceive(android.content.Context,android.content.Intent)> to <android.net.NetworkInfo: boolean isConnected()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)>[]--><de.j4velin.wifiAutoOff.Preferences$2$1: void run()>[]--><de.j4velin.wifiAutoOff.StatusPreference: void update()>[]--><android.net.NetworkInfo: boolean isConnected()>
+#2.the call statck between class <android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)> to <android.net.NetworkInfo: boolean isConnected()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <de.j4velin.wifiAutoOff.StatusPreference: android.view.View onCreateView(android.view.ViewGroup)>[]--><de.j4velin.wifiAutoOff.StatusPreference: void update()>[]--><android.net.NetworkInfo: boolean isConnected()>
+#3.the call statck between class <de.j4velin.wifiAutoOff.StatusPreference: android.view.View onCreateView(android.view.ViewGroup)> to <android.net.NetworkInfo: boolean isConnected()>has compatibility isssues！
+-----------------------------------------
+crashApis:5
+crashApisInMain:4
+containsStatic:false
+containsTry:false
+4call by main package
+-----------------------------------------
+#################################################
+N 11 Potential Issue API: SDKCheck of <android.app.NotificationChannel: void setDescription(java.lang.String)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+1 Mainhead roads:
+$i0 >= 26
+-$i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.j4velin.wifiAutoOff.StartReceiver dummyMainMethod_de_j4velin_wifiAutoOff_StartReceiver(android.content.Intent)>[]--><de.j4velin.wifiAutoOff.StartReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><de.j4velin.wifiAutoOff.Start: void start(android.content.Context)>[[$i0 >= 26]]--><de.j4velin.wifiAutoOff.APILevel26ForegroundService: void start(android.content.Context)>[[-$i0 < 26]]--><de.j4velin.wifiAutoOff.APILevel26ForegroundService: void createNotificationChannel(android.content.Context)>[]--><android.app.NotificationChannel: void setDescription(java.lang.String)>
+One road protect good!
+$i0 >= 26
+-$i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.j4velin.wifiAutoOff.Preferences dummyMainMethod_de_j4velin_wifiAutoOff_Preferences(android.content.Intent)>[]--><de.j4velin.wifiAutoOff.Preferences: void onPause()>[]--><de.j4velin.wifiAutoOff.Start: void start(android.content.Context)>[[$i0 >= 26]]--><de.j4velin.wifiAutoOff.APILevel26ForegroundService: void start(android.content.Context)>[[-$i0 < 26]]--><de.j4velin.wifiAutoOff.APILevel26ForegroundService: void createNotificationChannel(android.content.Context)>[]--><android.app.NotificationChannel: void setDescription(java.lang.String)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 12 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager: boolean setWifiEnabled(boolean)> is checking!!!
+The life time of api is [1,30]
+1call roads:
+1 Mainhead roads:
+###Multi invoking in one method, need manual check!!!--><de.j4velin.wifiAutoOff.Receiver: void changeWiFi(android.content.Context,boolean)>[[try], [$i0 == 1], [$i0 < 17], [$i0 < 27]]
+###Multi invoking in one method, need manual check!!!--><de.j4velin.wifiAutoOff.Receiver: void changeWiFi(android.content.Context,boolean)>[[try]][[$i0 == 1]][[$i0 < 17]][[$i0 < 27]]
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.j4velin.wifiAutoOff.Receiver dummyMainMethod_de_j4velin_wifiAutoOff_Receiver(android.content.Intent)>[]--><de.j4velin.wifiAutoOff.Receiver: void onReceive(android.content.Context,android.content.Intent)>[]--><de.j4velin.wifiAutoOff.Receiver: void changeWiFi(android.content.Context,boolean)>[[try], [$i0 == 1], [$i0 < 17], [$i0 < 27]]--><android.net.wifi.WifiManager: boolean setWifiEnabled(boolean)>
+One road protect good!
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.j4velin.wifiAutoOff.Preferences dummyMainMethod_de_j4velin_wifiAutoOff_Preferences(android.content.Intent)>[]--><de.j4velin.wifiAutoOff.Preferences$4: boolean onPreferenceClick(android.preference.Preference)>[[try]]--><android.net.wifi.WifiManager: boolean setWifiEnabled(boolean)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:true
+1call by main package
+-----------------------------------------
+#################################################
+N 13 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager: android.net.wifi.WifiInfo getConnectionInfo()> is checking!!!
+The life time of api is [1,30]
+4call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.j4velin.wifiAutoOff.Receiver dummyMainMethod_de_j4velin_wifiAutoOff_Receiver(android.content.Intent)>[]--><de.j4velin.wifiAutoOff.Receiver: void onReceive(android.content.Context,android.content.Intent)>[]--><de.j4velin.wifiAutoOff.Receiver: boolean isWiFiConnected(android.content.Context)>[]--><android.net.wifi.WifiManager: android.net.wifi.WifiInfo getConnectionInfo()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.wifi.WifiManager: android.net.wifi.WifiInfo getConnectionInfo()>has compatibility isssues！
+-----------------------------------------
+3 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <de.j4velin.wifiAutoOff.Preferences$2: void onReceive(android.content.Context,android.content.Intent)>[]--><de.j4velin.wifiAutoOff.StatusPreference: void update()>[]--><android.net.wifi.WifiManager: android.net.wifi.WifiInfo getConnectionInfo()>
+#1.the call statck between class <de.j4velin.wifiAutoOff.Preferences$2: void onReceive(android.content.Context,android.content.Intent)> to <android.net.wifi.WifiManager: android.net.wifi.WifiInfo getConnectionInfo()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)>[]--><de.j4velin.wifiAutoOff.Preferences$2$1: void run()>[]--><de.j4velin.wifiAutoOff.StatusPreference: void update()>[]--><android.net.wifi.WifiManager: android.net.wifi.WifiInfo getConnectionInfo()>
+#2.the call statck between class <android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)> to <android.net.wifi.WifiManager: android.net.wifi.WifiInfo getConnectionInfo()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <de.j4velin.wifiAutoOff.StatusPreference: android.view.View onCreateView(android.view.ViewGroup)>[]--><de.j4velin.wifiAutoOff.StatusPreference: void update()>[]--><android.net.wifi.WifiManager: android.net.wifi.WifiInfo getConnectionInfo()>
+#3.the call statck between class <de.j4velin.wifiAutoOff.StatusPreference: android.view.View onCreateView(android.view.ViewGroup)> to <android.net.wifi.WifiManager: android.net.wifi.WifiInfo getConnectionInfo()>has compatibility isssues！
+-----------------------------------------
+crashApis:6
+crashApisInMain:5
+containsStatic:false
+containsTry:false
+4call by main package
+-----------------------------------------
+#################################################
+N 14 Potential Issue API: SDKCheck of <android.net.ConnectivityManager: android.net.NetworkInfo getNetworkInfo(int)> is checking!!!
+The life time of api is [1,30]
+4call roads:
+1 Mainhead roads:
+3 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <de.j4velin.wifiAutoOff.Preferences$2: void onReceive(android.content.Context,android.content.Intent)>[]--><de.j4velin.wifiAutoOff.StatusPreference: void update()>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getNetworkInfo(int)>
+#1.the call statck between class <de.j4velin.wifiAutoOff.Preferences$2: void onReceive(android.content.Context,android.content.Intent)> to <android.net.ConnectivityManager: android.net.NetworkInfo getNetworkInfo(int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)>[]--><de.j4velin.wifiAutoOff.Preferences$2$1: void run()>[]--><de.j4velin.wifiAutoOff.StatusPreference: void update()>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getNetworkInfo(int)>
+#2.the call statck between class <android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)> to <android.net.ConnectivityManager: android.net.NetworkInfo getNetworkInfo(int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <de.j4velin.wifiAutoOff.StatusPreference: android.view.View onCreateView(android.view.ViewGroup)>[]--><de.j4velin.wifiAutoOff.StatusPreference: void update()>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getNetworkInfo(int)>
+#3.the call statck between class <de.j4velin.wifiAutoOff.StatusPreference: android.view.View onCreateView(android.view.ViewGroup)> to <android.net.ConnectivityManager: android.net.NetworkInfo getNetworkInfo(int)>has compatibility isssues！
+-----------------------------------------
+crashApis:7
+containsStatic:false
+containsTry:false
+4call by main package
+-----------------------------------------
+#################################################
+N 15 Potential Issue API: SDKCheck of <android.net.NetworkInfo: boolean isConnectedOrConnecting()> is checking!!!
+The life time of api is [1,30]
+4call roads:
+1 Mainhead roads:
+3 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <de.j4velin.wifiAutoOff.Preferences$2: void onReceive(android.content.Context,android.content.Intent)>[]--><de.j4velin.wifiAutoOff.StatusPreference: void update()>[]--><de.j4velin.wifiAutoOff.StatusPreference: boolean updateSignal()>[]--><android.net.NetworkInfo: boolean isConnectedOrConnecting()>
+#1.the call statck between class <de.j4velin.wifiAutoOff.Preferences$2: void onReceive(android.content.Context,android.content.Intent)> to <android.net.NetworkInfo: boolean isConnectedOrConnecting()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)>[]--><de.j4velin.wifiAutoOff.Preferences$2$1: void run()>[]--><de.j4velin.wifiAutoOff.StatusPreference: void update()>[]--><de.j4velin.wifiAutoOff.StatusPreference: boolean updateSignal()>[]--><android.net.NetworkInfo: boolean isConnectedOrConnecting()>
+#2.the call statck between class <android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)> to <android.net.NetworkInfo: boolean isConnectedOrConnecting()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <de.j4velin.wifiAutoOff.StatusPreference: android.view.View onCreateView(android.view.ViewGroup)>[]--><de.j4velin.wifiAutoOff.StatusPreference: void update()>[]--><de.j4velin.wifiAutoOff.StatusPreference: boolean updateSignal()>[]--><android.net.NetworkInfo: boolean isConnectedOrConnecting()>
+#3.the call statck between class <de.j4velin.wifiAutoOff.StatusPreference: android.view.View onCreateView(android.view.ViewGroup)> to <android.net.NetworkInfo: boolean isConnectedOrConnecting()>has compatibility isssues！
+-----------------------------------------
+crashApis:8
+containsStatic:false
+containsTry:false
+4call by main package
+-----------------------------------------
+#################################################
+N 16 Potential Issue API: SDKCheck of <android.net.wifi.WifiInfo: android.net.wifi.SupplicantState getSupplicantState()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.j4velin.wifiAutoOff.Receiver dummyMainMethod_de_j4velin_wifiAutoOff_Receiver(android.content.Intent)>[]--><de.j4velin.wifiAutoOff.Receiver: void onReceive(android.content.Context,android.content.Intent)>[]--><de.j4velin.wifiAutoOff.Receiver: boolean isWiFiConnected(android.content.Context)>[]--><android.net.wifi.WifiInfo: android.net.wifi.SupplicantState getSupplicantState()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.wifi.WifiInfo: android.net.wifi.SupplicantState getSupplicantState()>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:9
+crashApisInMain:6
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 17 Potential Issue API: SDKCheck of <android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+1 Mainhead roads:
+$i0 >= 26
+-$i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.j4velin.wifiAutoOff.StartReceiver dummyMainMethod_de_j4velin_wifiAutoOff_StartReceiver(android.content.Intent)>[]--><de.j4velin.wifiAutoOff.StartReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><de.j4velin.wifiAutoOff.Start: void start(android.content.Context)>[[$i0 >= 26]]--><de.j4velin.wifiAutoOff.APILevel26ForegroundService: void start(android.content.Context)>[[-$i0 < 26]]--><de.j4velin.wifiAutoOff.APILevel26ForegroundService: void createNotificationChannel(android.content.Context)>[]--><android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)>
+One road protect good!
+$i0 >= 26
+-$i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.j4velin.wifiAutoOff.Preferences dummyMainMethod_de_j4velin_wifiAutoOff_Preferences(android.content.Intent)>[]--><de.j4velin.wifiAutoOff.Preferences: void onPause()>[]--><de.j4velin.wifiAutoOff.Start: void start(android.content.Context)>[[$i0 >= 26]]--><de.j4velin.wifiAutoOff.APILevel26ForegroundService: void start(android.content.Context)>[[-$i0 < 26]]--><de.j4velin.wifiAutoOff.APILevel26ForegroundService: void createNotificationChannel(android.content.Context)>[]--><android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 18 Potential Issue API: SDKCheck of <android.service.quicksettings.Tile: void setState(int)> is checking!!!
+The life time of api is [24,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.j4velin.wifiAutoOff.QSTileService dummyMainMethod_de_j4velin_wifiAutoOff_QSTileService(android.content.Intent)>[]--><de.j4velin.wifiAutoOff.QSTileService: void onStartListening()>[]--><android.service.quicksettings.Tile: void setState(int)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.service.quicksettings.Tile: void setState(int)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:10
+crashApisInMain:7
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 19 Potential Issue API: SDKCheck of <android.service.quicksettings.TileService: void requestListeningState(android.content.Context,android.content.ComponentName)> is checking!!!
+The life time of api is [24,31]
+1call roads:
+1 Mainhead roads:
+###Multi invoking in one method, need manual check!!!--><de.j4velin.wifiAutoOff.Preferences: void changeEnableState(android.content.Context,boolean)>[[$i1 < 26], [-$i1 < 24]]--><de.j4velin.wifiAutoOff.APILevel24Wrapper: void updateTile(android.content.Context)>[]
+###Multi invoking in one method, need manual check!!!--><de.j4velin.wifiAutoOff.Preferences: void changeEnableState(android.content.Context,boolean)>[[$i1 < 26]][[-$i1 < 24]]--><de.j4velin.wifiAutoOff.APILevel24Wrapper: void updateTile(android.content.Context)>[]
+$i1 < 26
+-$i1 < 24
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.j4velin.wifiAutoOff.QSTileService dummyMainMethod_de_j4velin_wifiAutoOff_QSTileService(android.content.Intent)>[]--><de.j4velin.wifiAutoOff.QSTileService: void onClick()>[]--><de.j4velin.wifiAutoOff.Preferences: void changeEnableState(android.content.Context,boolean)>[[$i1 < 26], [-$i1 < 24]]--><de.j4velin.wifiAutoOff.APILevel24Wrapper: void updateTile(android.content.Context)>[]--><android.service.quicksettings.TileService: void requestListeningState(android.content.Context,android.content.ComponentName)>
+One road protect good!
+###Multi invoking in one method, need manual check!!!--><de.j4velin.wifiAutoOff.Preferences: void changeEnableState(android.content.Context,boolean)>[[$i1 < 26], [-$i1 < 24]]--><de.j4velin.wifiAutoOff.APILevel24Wrapper: void updateTile(android.content.Context)>[]
+###Multi invoking in one method, need manual check!!!--><de.j4velin.wifiAutoOff.Preferences: void changeEnableState(android.content.Context,boolean)>[[$i1 < 26]][[-$i1 < 24]]--><de.j4velin.wifiAutoOff.APILevel24Wrapper: void updateTile(android.content.Context)>[]
+$i1 < 26
+-$i1 < 24
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.j4velin.wifiAutoOff.Preferences dummyMainMethod_de_j4velin_wifiAutoOff_Preferences(android.content.Intent)>[]--><de.j4velin.wifiAutoOff.Preferences$3: void onCheckedChanged(android.widget.CompoundButton,boolean)>[]--><de.j4velin.wifiAutoOff.Preferences: void changeEnableState(android.content.Context,boolean)>[[$i1 < 26], [-$i1 < 24]]--><de.j4velin.wifiAutoOff.APILevel24Wrapper: void updateTile(android.content.Context)>[]--><android.service.quicksettings.TileService: void requestListeningState(android.content.Context,android.content.ComponentName)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 20 Potential Issue API: SDKCheck of <android.provider.Settings.Global: int getInt(android.content.ContentResolver,java.lang.String)> is checking!!!
+The life time of api is [17,31]
+1call roads:
+1 Mainhead roads:
+###Multi invoking in one method, need manual check!!!--><de.j4velin.wifiAutoOff.Preferences: boolean keepWiFiOn(android.content.Context)>[[try], [-$i0 < 17]]--><de.j4velin.wifiAutoOff.APILevel17Wrapper: boolean sleepPolicySetToNever(android.content.Context)>[]
+###Multi invoking in one method, need manual check!!!--><de.j4velin.wifiAutoOff.Preferences: boolean keepWiFiOn(android.content.Context)>[[try]][[-$i0 < 17]]--><de.j4velin.wifiAutoOff.APILevel17Wrapper: boolean sleepPolicySetToNever(android.content.Context)>[]
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.j4velin.wifiAutoOff.Preferences dummyMainMethod_de_j4velin_wifiAutoOff_Preferences(android.content.Intent)>[]--><de.j4velin.wifiAutoOff.Preferences$5: boolean onPreferenceChange(android.preference.Preference,java.lang.Object)>[]--><de.j4velin.wifiAutoOff.Preferences: boolean access$400(android.content.Context)>[]--><de.j4velin.wifiAutoOff.Preferences: boolean keepWiFiOn(android.content.Context)>[[try], [-$i0 < 17]]--><de.j4velin.wifiAutoOff.APILevel17Wrapper: boolean sleepPolicySetToNever(android.content.Context)>[]--><android.provider.Settings.Global: int getInt(android.content.ContentResolver,java.lang.String)>
+One road protect good!
+###Multi invoking in one method, need manual check!!!--><de.j4velin.wifiAutoOff.Receiver: void changeWiFi(android.content.Context,boolean)>[[try], [-$i0 < 17]]--><de.j4velin.wifiAutoOff.APILevel17Wrapper: boolean isAirplaneModeOn(android.content.Context)>[]
+###Multi invoking in one method, need manual check!!!--><de.j4velin.wifiAutoOff.Receiver: void changeWiFi(android.content.Context,boolean)>[[try]][[-$i0 < 17]]--><de.j4velin.wifiAutoOff.APILevel17Wrapper: boolean isAirplaneModeOn(android.content.Context)>[]
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.j4velin.wifiAutoOff.Receiver dummyMainMethod_de_j4velin_wifiAutoOff_Receiver(android.content.Intent)>[]--><de.j4velin.wifiAutoOff.Receiver: void onReceive(android.content.Context,android.content.Intent)>[]--><de.j4velin.wifiAutoOff.Receiver: void changeWiFi(android.content.Context,boolean)>[[try], [-$i0 < 17]]--><de.j4velin.wifiAutoOff.APILevel17Wrapper: boolean isAirplaneModeOn(android.content.Context)>[]--><android.provider.Settings.Global: int getInt(android.content.ContentResolver,java.lang.String)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:true
+1call by main package
+-----------------------------------------
+#################################################
+N 21 Potential Issue API: SDKCheck of <android.preference.PreferenceActivity: boolean onOptionsItemSelected(android.view.MenuItem)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 24 25 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.j4velin.wifiAutoOff.Preferences dummyMainMethod_de_j4velin_wifiAutoOff_Preferences(android.content.Intent)>[]--><de.j4velin.wifiAutoOff.Preferences: boolean onOptionsItemSelected(android.view.MenuItem)>[]--><android.preference.PreferenceActivity: boolean onOptionsItemSelected(android.view.MenuItem)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.preference.PreferenceActivity: boolean onOptionsItemSelected(android.view.MenuItem)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:11
+crashApisInMain:8
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 22 Potential Issue API: SDKCheck of <android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+1 Mainhead roads:
+$i0 >= 26
+-$i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.j4velin.wifiAutoOff.StartReceiver dummyMainMethod_de_j4velin_wifiAutoOff_StartReceiver(android.content.Intent)>[]--><de.j4velin.wifiAutoOff.StartReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><de.j4velin.wifiAutoOff.Start: void start(android.content.Context)>[[$i0 >= 26]]--><de.j4velin.wifiAutoOff.APILevel26ForegroundService: void start(android.content.Context)>[[-$i0 < 26]]--><de.j4velin.wifiAutoOff.APILevel26ForegroundService: void createNotificationChannel(android.content.Context)>[]--><android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)>
+One road protect good!
+$i0 >= 26
+-$i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.j4velin.wifiAutoOff.Preferences dummyMainMethod_de_j4velin_wifiAutoOff_Preferences(android.content.Intent)>[]--><de.j4velin.wifiAutoOff.Preferences: void onPause()>[]--><de.j4velin.wifiAutoOff.Start: void start(android.content.Context)>[[$i0 >= 26]]--><de.j4velin.wifiAutoOff.APILevel26ForegroundService: void start(android.content.Context)>[[-$i0 < 26]]--><de.j4velin.wifiAutoOff.APILevel26ForegroundService: void createNotificationChannel(android.content.Context)>[]--><android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 23 Potential Issue API: SDKCheck of <android.hardware.display.DisplayManager: android.view.Display[] getDisplays()> is checking!!!
+The life time of api is [17,31]
+1call roads:
+1 Mainhead roads:
+###Multi invoking in one method, need manual check!!!--><de.j4velin.wifiAutoOff.ScreenChangeDetector: int onStartCommand(android.content.Intent,int,int)>[[-$i0 < 20], [$i0 >= 20]]--><de.j4velin.wifiAutoOff.APILevel20Wrapper: boolean isScreenOn(android.content.Context)>[]
+###Multi invoking in one method, need manual check!!!--><de.j4velin.wifiAutoOff.ScreenChangeDetector: int onStartCommand(android.content.Intent,int,int)>[[-$i0 < 20]][[$i0 >= 20]]--><de.j4velin.wifiAutoOff.APILevel20Wrapper: boolean isScreenOn(android.content.Context)>[]
+-$i0 < 20
+$i0 >= 20
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.j4velin.wifiAutoOff.ScreenChangeDetector dummyMainMethod_de_j4velin_wifiAutoOff_ScreenChangeDetector(android.content.Intent)>[]--><de.j4velin.wifiAutoOff.ScreenChangeDetector: int onStartCommand(android.content.Intent,int,int)>[[-$i0 < 20], [$i0 >= 20]]--><de.j4velin.wifiAutoOff.APILevel20Wrapper: boolean isScreenOn(android.content.Context)>[]--><android.hardware.display.DisplayManager: android.view.Display[] getDisplays()>
+One road protect good!
+###Multi invoking in one method, need manual check!!!--><de.j4velin.wifiAutoOff.Receiver: void onReceive(android.content.Context,android.content.Intent)>[[-$i0 < 20], [$i0 >= 20]]--><de.j4velin.wifiAutoOff.APILevel20Wrapper: boolean isScreenOn(android.content.Context)>[]
+###Multi invoking in one method, need manual check!!!--><de.j4velin.wifiAutoOff.Receiver: void onReceive(android.content.Context,android.content.Intent)>[[-$i0 < 20]][[$i0 >= 20]]--><de.j4velin.wifiAutoOff.APILevel20Wrapper: boolean isScreenOn(android.content.Context)>[]
+-$i0 < 20
+$i0 >= 20
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.j4velin.wifiAutoOff.Receiver dummyMainMethod_de_j4velin_wifiAutoOff_Receiver(android.content.Intent)>[]--><de.j4velin.wifiAutoOff.Receiver: void onReceive(android.content.Context,android.content.Intent)>[[-$i0 < 20], [$i0 >= 20]]--><de.j4velin.wifiAutoOff.APILevel20Wrapper: boolean isScreenOn(android.content.Context)>[]--><android.hardware.display.DisplayManager: android.view.Display[] getDisplays()>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 24 Potential Issue API: SDKCheck of <android.service.quicksettings.TileService: void onStartListening()> is checking!!!
+The life time of api is [24,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.j4velin.wifiAutoOff.QSTileService dummyMainMethod_de_j4velin_wifiAutoOff_QSTileService(android.content.Intent)>[]--><de.j4velin.wifiAutoOff.QSTileService: void onStartListening()>[]--><android.service.quicksettings.TileService: void onStartListening()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.service.quicksettings.TileService: void onStartListening()>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:12
+crashApisInMain:9
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 25 Potential Issue API: SDKCheck of <android.app.AlarmManager: void setAndAllowWhileIdle(int,long,android.app.PendingIntent)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+1 Mainhead roads:
+-$i2 < 23
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.j4velin.wifiAutoOff.StartReceiver dummyMainMethod_de_j4velin_wifiAutoOff_StartReceiver(android.content.Intent)>[]--><de.j4velin.wifiAutoOff.StartReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><de.j4velin.wifiAutoOff.Start: void start(android.content.Context)>[]--><de.j4velin.wifiAutoOff.Start: void createTimers(android.content.Context)>[]--><de.j4velin.wifiAutoOff.Util: void setTimer(android.content.Context,int,long,android.app.PendingIntent)>[[-$i2 < 23]]--><de.j4velin.wifiAutoOff.APILevel23Wrapper: void setAlarmWhileIdle(android.app.AlarmManager,int,long,android.app.PendingIntent)>[]--><android.app.AlarmManager: void setAndAllowWhileIdle(int,long,android.app.PendingIntent)>
+One road protect good!
+-$i2 < 23
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.j4velin.wifiAutoOff.Preferences dummyMainMethod_de_j4velin_wifiAutoOff_Preferences(android.content.Intent)>[]--><de.j4velin.wifiAutoOff.Preferences: void onPause()>[]--><de.j4velin.wifiAutoOff.Start: void start(android.content.Context)>[]--><de.j4velin.wifiAutoOff.Start: void createTimers(android.content.Context)>[]--><de.j4velin.wifiAutoOff.Util: void setTimer(android.content.Context,int,long,android.app.PendingIntent)>[[-$i2 < 23]]--><de.j4velin.wifiAutoOff.APILevel23Wrapper: void setAlarmWhileIdle(android.app.AlarmManager,int,long,android.app.PendingIntent)>[]--><android.app.AlarmManager: void setAndAllowWhileIdle(int,long,android.app.PendingIntent)>
+One road protect good!
+-$i2 < 23
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.j4velin.wifiAutoOff.Receiver dummyMainMethod_de_j4velin_wifiAutoOff_Receiver(android.content.Intent)>[]--><de.j4velin.wifiAutoOff.Receiver: void onReceive(android.content.Context,android.content.Intent)>[]--><de.j4velin.wifiAutoOff.Start: void createTimers(android.content.Context)>[]--><de.j4velin.wifiAutoOff.Util: void setTimer(android.content.Context,int,long,android.app.PendingIntent)>[[-$i2 < 23]]--><de.j4velin.wifiAutoOff.APILevel23Wrapper: void setAlarmWhileIdle(android.app.AlarmManager,int,long,android.app.PendingIntent)>[]--><android.app.AlarmManager: void setAndAllowWhileIdle(int,long,android.app.PendingIntent)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 26 Potential Issue API: SDKCheck of <android.net.wifi.WifiInfo: int getRssi()> is checking!!!
+The life time of api is [1,30]
+4call roads:
+1 Mainhead roads:
+3 Packageshead roads:
+try
+Good road with try: <de.j4velin.wifiAutoOff.Preferences$2: void onReceive(android.content.Context,android.content.Intent)>[]--><de.j4velin.wifiAutoOff.StatusPreference: void update()>[]--><de.j4velin.wifiAutoOff.StatusPreference: boolean updateSignal()>[[try]]--><android.net.wifi.WifiInfo: int getRssi()>
+One road protect good!
+try
+Good road with try: <android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)>[]--><de.j4velin.wifiAutoOff.Preferences$2$1: void run()>[]--><de.j4velin.wifiAutoOff.StatusPreference: void update()>[]--><de.j4velin.wifiAutoOff.StatusPreference: boolean updateSignal()>[[try]]--><android.net.wifi.WifiInfo: int getRssi()>
+One road protect good!
+try
+Good road with try: <de.j4velin.wifiAutoOff.StatusPreference: android.view.View onCreateView(android.view.ViewGroup)>[]--><de.j4velin.wifiAutoOff.StatusPreference: void update()>[]--><de.j4velin.wifiAutoOff.StatusPreference: boolean updateSignal()>[[try]]--><android.net.wifi.WifiInfo: int getRssi()>
+One road protect good!
+containsStatic:false
+containsTry:true
+4call by main package
+-----------------------------------------
+#################################################
+N 27 Potential Issue API: SDKCheck of <android.net.wifi.WifiInfo: java.lang.String getSSID()> is checking!!!
+The life time of api is [1,30]
+3call roads:
+0 Mainhead roads:
+3 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <de.j4velin.wifiAutoOff.Preferences$2: void onReceive(android.content.Context,android.content.Intent)>[]--><de.j4velin.wifiAutoOff.StatusPreference: void update()>[]--><android.net.wifi.WifiInfo: java.lang.String getSSID()>
+#1.the call statck between class <de.j4velin.wifiAutoOff.Preferences$2: void onReceive(android.content.Context,android.content.Intent)> to <android.net.wifi.WifiInfo: java.lang.String getSSID()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)>[]--><de.j4velin.wifiAutoOff.Preferences$2$1: void run()>[]--><de.j4velin.wifiAutoOff.StatusPreference: void update()>[]--><android.net.wifi.WifiInfo: java.lang.String getSSID()>
+#2.the call statck between class <android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)> to <android.net.wifi.WifiInfo: java.lang.String getSSID()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <de.j4velin.wifiAutoOff.StatusPreference: android.view.View onCreateView(android.view.ViewGroup)>[]--><de.j4velin.wifiAutoOff.StatusPreference: void update()>[]--><android.net.wifi.WifiInfo: java.lang.String getSSID()>
+#3.the call statck between class <de.j4velin.wifiAutoOff.StatusPreference: android.view.View onCreateView(android.view.ViewGroup)> to <android.net.wifi.WifiInfo: java.lang.String getSSID()>has compatibility isssues！
+-----------------------------------------
+crashApis:13
+containsStatic:false
+containsTry:false
+4call by main package
+-----------------------------------------
+#################################################
+N 28 Potential Issue API: SDKCheck of <android.net.wifi.WifiInfo: int getLinkSpeed()> is checking!!!
+The life time of api is [1,30]
+4call roads:
+1 Mainhead roads:
+3 Packageshead roads:
+try
+Good road with try: <de.j4velin.wifiAutoOff.Preferences$2: void onReceive(android.content.Context,android.content.Intent)>[]--><de.j4velin.wifiAutoOff.StatusPreference: void update()>[]--><de.j4velin.wifiAutoOff.StatusPreference: boolean updateSignal()>[[try]]--><android.net.wifi.WifiInfo: int getLinkSpeed()>
+One road protect good!
+try
+Good road with try: <android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)>[]--><de.j4velin.wifiAutoOff.Preferences$2$1: void run()>[]--><de.j4velin.wifiAutoOff.StatusPreference: void update()>[]--><de.j4velin.wifiAutoOff.StatusPreference: boolean updateSignal()>[[try]]--><android.net.wifi.WifiInfo: int getLinkSpeed()>
+One road protect good!
+try
+Good road with try: <de.j4velin.wifiAutoOff.StatusPreference: android.view.View onCreateView(android.view.ViewGroup)>[]--><de.j4velin.wifiAutoOff.StatusPreference: void update()>[]--><de.j4velin.wifiAutoOff.StatusPreference: boolean updateSignal()>[[try]]--><android.net.wifi.WifiInfo: int getLinkSpeed()>
+One road protect good!
+containsStatic:false
+containsTry:true
+4call by main package
+-----------------------------------------
+#################################################
+N 29 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager: int calculateSignalLevel(int,int)> is checking!!!
+The life time of api is [1,30]
+4call roads:
+1 Mainhead roads:
+3 Packageshead roads:
+try
+Good road with try: <de.j4velin.wifiAutoOff.Preferences$2: void onReceive(android.content.Context,android.content.Intent)>[]--><de.j4velin.wifiAutoOff.StatusPreference: void update()>[]--><de.j4velin.wifiAutoOff.StatusPreference: boolean updateSignal()>[[try]]--><android.net.wifi.WifiManager: int calculateSignalLevel(int,int)>
+One road protect good!
+try
+Good road with try: <android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)>[]--><de.j4velin.wifiAutoOff.Preferences$2$1: void run()>[]--><de.j4velin.wifiAutoOff.StatusPreference: void update()>[]--><de.j4velin.wifiAutoOff.StatusPreference: boolean updateSignal()>[[try]]--><android.net.wifi.WifiManager: int calculateSignalLevel(int,int)>
+One road protect good!
+try
+Good road with try: <de.j4velin.wifiAutoOff.StatusPreference: android.view.View onCreateView(android.view.ViewGroup)>[]--><de.j4velin.wifiAutoOff.StatusPreference: void update()>[]--><de.j4velin.wifiAutoOff.StatusPreference: boolean updateSignal()>[[try]]--><android.net.wifi.WifiManager: int calculateSignalLevel(int,int)>
+One road protect good!
+containsStatic:false
+containsTry:true
+4call by main package
+-----------------------------------------
+#################################################
+N 30 Potential Issue API: SDKCheck of <android.app.TimePickerDialog: void show()> is checking!!!
+The life time of api is [26,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 24 25 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.j4velin.wifiAutoOff.Preferences dummyMainMethod_de_j4velin_wifiAutoOff_Preferences(android.content.Intent)>[]--><de.j4velin.wifiAutoOff.Preferences$8: boolean onPreferenceChange(android.preference.Preference,java.lang.Object)>[]--><android.app.TimePickerDialog: void show()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.app.TimePickerDialog: void show()>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:14
+crashApisInMain:10
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+crashApis numbers:14
+crashApis numbers in main road:10
+On Android Version 16 this app may have error api use(at least): 6 and error api roads: 6
+On Android Version 17 this app may have error api use(at least): 6 and error api roads: 6
+On Android Version 18 this app may have error api use(at least): 6 and error api roads: 6
+On Android Version 19 this app may have error api use(at least): 6 and error api roads: 6
+On Android Version 20 this app may have error api use(at least): 6 and error api roads: 6
+On Android Version 21 this app may have error api use(at least): 6 and error api roads: 6
+On Android Version 22 this app may have error api use(at least): 6 and error api roads: 6
+On Android Version 23 this app may have error api use(at least): 6 and error api roads: 6
+On Android Version 24 this app may have error api use(at least): 2 and error api roads: 2
+On Android Version 25 this app may have error api use(at least): 2 and error api roads: 2
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 31 this app may have error api use(at least): 8 and error api roads: 27

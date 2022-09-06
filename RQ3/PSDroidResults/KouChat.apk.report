@@ -1,0 +1,408 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/KouChat.apk
+Entry Points[net.usikkert.kouchat.android.controller.SendFileController, net.usikkert.kouchat.android.controller.SettingsController, net.usikkert.kouchat.android.controller.PrivateChatController, net.usikkert.kouchat.android.app.KouChatApp, net.usikkert.kouchat.android.controller.MainChatController, net.usikkert.kouchat.android.controller.ReceiveFileController, net.usikkert.kouchat.android.service.ChatService, net.usikkert.kouchat.android.service.CancelFileTransferService]
+FllowDroidcallgraph size:2015
+Soot started on Mon Jul 11 06:18:14 CST 2022
+Soot finished on Mon Jul 11 06:18:47 CST 2022
+Soot has run for 0 min. 33 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 16
+Declared Target Sdk version is: 27
+Declared Max Sdk version is: -1
+Collected 404 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.os.BaseBundle: int getInt(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.larswerkman.holocolorpicker.OpacityBar: void onRestoreInstanceState(android.os.Parcelable)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#1.the call statck between class <com.larswerkman.holocolorpicker.OpacityBar: void onRestoreInstanceState(android.os.Parcelable)> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.larswerkman.holocolorpicker.ColorPicker: void onRestoreInstanceState(android.os.Parcelable)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#2.the call statck between class <com.larswerkman.holocolorpicker.ColorPicker: void onRestoreInstanceState(android.os.Parcelable)> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:1
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager.MulticastLock: void acquire()> is checking!!!
+The life time of api is [4,30]
+4call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: net.usikkert.kouchat.android.service.ChatService dummyMainMethod_net_usikkert_kouchat_android_service_ChatService(android.content.Intent)>[]--><net.usikkert.kouchat.android.service.ChatService: int onStartCommand(android.content.Intent,int,int)>[]--><net.usikkert.kouchat.android.chatwindow.AndroidUserInterface: void logOn()>[]--><net.usikkert.kouchat.misc.Controller: void logOn()>[]--><net.usikkert.kouchat.net.NetworkService: void connect()>[]--><net.usikkert.kouchat.net.ConnectionWorker: void run()>[]--><net.usikkert.kouchat.net.ConnectionWorker: boolean updateNetwork()>[[try]]--><net.usikkert.kouchat.net.ConnectionWorker: void notifyNetworkUp(boolean)>[[try]]--><net.usikkert.kouchat.net.ConnectionWorker: void notifyBeforeNetworkUp()>[[try]]--><net.usikkert.kouchat.android.service.LockHandler: void beforeNetworkCameUp()>[]--><net.usikkert.kouchat.android.service.LockHandler: void acquireEnabledLocks()>[]--><net.usikkert.kouchat.android.service.LockHandler: void acquireMulticastLock()>[]--><android.net.wifi.WifiManager.MulticastLock: void acquire()>
+One road protect good!
+3 Packageshead roads:
+try
+Good road with try: <android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)>[]--><net.usikkert.kouchat.net.ConnectionWorker: void run()>[]--><net.usikkert.kouchat.net.ConnectionWorker: boolean updateNetwork()>[[try]]--><net.usikkert.kouchat.net.ConnectionWorker: void notifyNetworkUp(boolean)>[[try]]--><net.usikkert.kouchat.net.ConnectionWorker: void notifyBeforeNetworkUp()>[[try]]--><net.usikkert.kouchat.android.service.LockHandler: void beforeNetworkCameUp()>[]--><net.usikkert.kouchat.android.service.LockHandler: void acquireEnabledLocks()>[]--><net.usikkert.kouchat.android.service.LockHandler: void acquireMulticastLock()>[]--><android.net.wifi.WifiManager.MulticastLock: void acquire()>
+One road protect good!
+try
+Good road with try: <org.apache.commons.collections4.map.StaticBucketMap: void atomic(java.lang.Runnable)>[]--><org.apache.commons.collections4.map.StaticBucketMap: void atomic(java.lang.Runnable,int)>[]--><net.usikkert.kouchat.net.ConnectionWorker: void run()>[]--><net.usikkert.kouchat.net.ConnectionWorker: boolean updateNetwork()>[[try]]--><net.usikkert.kouchat.net.ConnectionWorker: void notifyNetworkUp(boolean)>[[try]]--><net.usikkert.kouchat.net.ConnectionWorker: void notifyBeforeNetworkUp()>[[try]]--><net.usikkert.kouchat.android.service.LockHandler: void beforeNetworkCameUp()>[]--><net.usikkert.kouchat.android.service.LockHandler: void acquireEnabledLocks()>[]--><net.usikkert.kouchat.android.service.LockHandler: void acquireMulticastLock()>[]--><android.net.wifi.WifiManager.MulticastLock: void acquire()>
+One road protect good!
+try
+Good road with try: <net.usikkert.kouchat.jmx.ControllerInformation: void logOn()>[]--><net.usikkert.kouchat.misc.Controller: void logOn()>[]--><net.usikkert.kouchat.net.NetworkService: void connect()>[]--><net.usikkert.kouchat.net.ConnectionWorker: void run()>[]--><net.usikkert.kouchat.net.ConnectionWorker: boolean updateNetwork()>[[try]]--><net.usikkert.kouchat.net.ConnectionWorker: void notifyNetworkUp(boolean)>[[try]]--><net.usikkert.kouchat.net.ConnectionWorker: void notifyBeforeNetworkUp()>[[try]]--><net.usikkert.kouchat.android.service.LockHandler: void beforeNetworkCameUp()>[]--><net.usikkert.kouchat.android.service.LockHandler: void acquireEnabledLocks()>[]--><net.usikkert.kouchat.android.service.LockHandler: void acquireMulticastLock()>[]--><android.net.wifi.WifiManager.MulticastLock: void acquire()>
+One road protect good!
+containsStatic:false
+containsTry:true
+4call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.app.NotificationManager: void createNotificationChannels(java.util.List)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><net.usikkert.kouchat.android.app.KouChatApp: void onCreate()>[[-$i0 < 26]]--><net.usikkert.kouchat.android.notification.NotificationChannelSettings: void setupNotificationChannels()>[]--><android.app.NotificationManager: void createNotificationChannels(java.util.List)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.app.NotificationChannel: void setLockscreenVisibility(int)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><net.usikkert.kouchat.android.app.KouChatApp: void onCreate()>[[-$i0 < 26]]--><net.usikkert.kouchat.android.notification.NotificationChannelSettings: void setupNotificationChannels()>[]--><net.usikkert.kouchat.android.notification.NotificationChannelSettings: android.app.NotificationChannel createMainChatMessagesChannel()>[]--><net.usikkert.kouchat.android.notification.NotificationChannelSettings: android.app.NotificationChannel createChannel(int,int,int,int,boolean,boolean,boolean,int)>[]--><android.app.NotificationChannel: void setLockscreenVisibility(int)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.app.NotificationChannel: void setDescription(java.lang.String)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><net.usikkert.kouchat.android.app.KouChatApp: void onCreate()>[[-$i0 < 26]]--><net.usikkert.kouchat.android.notification.NotificationChannelSettings: void setupNotificationChannels()>[]--><net.usikkert.kouchat.android.notification.NotificationChannelSettings: android.app.NotificationChannel createMainChatMessagesChannel()>[]--><net.usikkert.kouchat.android.notification.NotificationChannelSettings: android.app.NotificationChannel createChannel(int,int,int,int,boolean,boolean,boolean,int)>[]--><android.app.NotificationChannel: void setDescription(java.lang.String)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 5 Potential Issue API: SDKCheck of <android.os.BaseBundle: boolean containsKey(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.larswerkman.holocolorpicker.SVBar: void onRestoreInstanceState(android.os.Parcelable)>[]--><android.os.BaseBundle: boolean containsKey(java.lang.String)>
+#1.the call statck between class <com.larswerkman.holocolorpicker.SVBar: void onRestoreInstanceState(android.os.Parcelable)> to <android.os.BaseBundle: boolean containsKey(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:2
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 6 Potential Issue API: SDKCheck of <android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><net.usikkert.kouchat.android.app.KouChatApp: void onCreate()>[[-$i0 < 26]]--><net.usikkert.kouchat.android.notification.NotificationChannelSettings: void setupNotificationChannels()>[]--><net.usikkert.kouchat.android.notification.NotificationChannelSettings: android.app.NotificationChannel createMainChatMessagesChannel()>[]--><net.usikkert.kouchat.android.notification.NotificationChannelSettings: android.app.NotificationChannel createChannel(int,int,int,int,boolean,boolean,boolean,int)>[]--><android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 7 Potential Issue API: SDKCheck of <android.app.NotificationChannel: void setLightColor(int)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><net.usikkert.kouchat.android.app.KouChatApp: void onCreate()>[[-$i0 < 26]]--><net.usikkert.kouchat.android.notification.NotificationChannelSettings: void setupNotificationChannels()>[]--><net.usikkert.kouchat.android.notification.NotificationChannelSettings: android.app.NotificationChannel createMainChatMessagesChannel()>[]--><net.usikkert.kouchat.android.notification.NotificationChannelSettings: android.app.NotificationChannel createChannel(int,int,int,int,boolean,boolean,boolean,int)>[]--><android.app.NotificationChannel: void setLightColor(int)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 8 Potential Issue API: SDKCheck of <android.app.NotificationChannel: void setVibrationPattern(long[])> is checking!!!
+The life time of api is [26,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><net.usikkert.kouchat.android.app.KouChatApp: void onCreate()>[[-$i0 < 26]]--><net.usikkert.kouchat.android.notification.NotificationChannelSettings: void setupNotificationChannels()>[]--><net.usikkert.kouchat.android.notification.NotificationChannelSettings: android.app.NotificationChannel createMainChatMessagesChannel()>[]--><net.usikkert.kouchat.android.notification.NotificationChannelSettings: android.app.NotificationChannel createChannel(int,int,int,int,boolean,boolean,boolean,int)>[]--><android.app.NotificationChannel: void setVibrationPattern(long[])>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 9 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)> is checking!!!
+The life time of api is [22,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 
+Error road: <com.larswerkman.holocolorpicker.ColorPicker: android.os.Parcelable onSaveInstanceState()>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+#1.the call statck between class <com.larswerkman.holocolorpicker.ColorPicker: android.os.Parcelable onSaveInstanceState()> to <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+crashApis:3
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 10 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager.MulticastLock: void release()> is checking!!!
+The life time of api is [4,30]
+4call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: net.usikkert.kouchat.android.service.ChatService dummyMainMethod_net_usikkert_kouchat_android_service_ChatService(android.content.Intent)>[]--><net.usikkert.kouchat.android.service.ChatService: void onDestroy()>[]--><net.usikkert.kouchat.android.service.LockHandler: void releaseAllLocks()>[[try]]--><net.usikkert.kouchat.android.service.LockHandler: void releaseMulticastLock()>[]--><android.net.wifi.WifiManager.MulticastLock: void release()>
+One road protect good!
+3 Packageshead roads:
+try
+Good road with try: <android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)>[]--><net.usikkert.kouchat.net.ConnectionWorker: void run()>[]--><net.usikkert.kouchat.net.ConnectionWorker: void notifyNetworkDown(boolean)>[[try]]--><net.usikkert.kouchat.android.service.LockHandler: void networkWentDown(boolean)>[]--><net.usikkert.kouchat.android.service.LockHandler: void releaseAllLocks()>[[try]]--><net.usikkert.kouchat.android.service.LockHandler: void releaseMulticastLock()>[]--><android.net.wifi.WifiManager.MulticastLock: void release()>
+One road protect good!
+try
+Good road with try: <org.apache.commons.collections4.map.StaticBucketMap: void atomic(java.lang.Runnable)>[]--><org.apache.commons.collections4.map.StaticBucketMap: void atomic(java.lang.Runnable,int)>[]--><net.usikkert.kouchat.net.ConnectionWorker: void run()>[]--><net.usikkert.kouchat.net.ConnectionWorker: void notifyNetworkDown(boolean)>[[try]]--><net.usikkert.kouchat.android.service.LockHandler: void networkWentDown(boolean)>[]--><net.usikkert.kouchat.android.service.LockHandler: void releaseAllLocks()>[[try]]--><net.usikkert.kouchat.android.service.LockHandler: void releaseMulticastLock()>[]--><android.net.wifi.WifiManager.MulticastLock: void release()>
+One road protect good!
+try
+Good road with try: <net.usikkert.kouchat.jmx.ControllerInformation: void logOn()>[]--><net.usikkert.kouchat.misc.Controller: void logOn()>[]--><net.usikkert.kouchat.net.NetworkService: void connect()>[]--><net.usikkert.kouchat.net.ConnectionWorker: void run()>[]--><net.usikkert.kouchat.net.ConnectionWorker: void notifyNetworkDown(boolean)>[[try]]--><net.usikkert.kouchat.android.service.LockHandler: void networkWentDown(boolean)>[]--><net.usikkert.kouchat.android.service.LockHandler: void releaseAllLocks()>[[try]]--><net.usikkert.kouchat.android.service.LockHandler: void releaseMulticastLock()>[]--><android.net.wifi.WifiManager.MulticastLock: void release()>
+One road protect good!
+containsStatic:false
+containsTry:true
+4call by main package
+-----------------------------------------
+#################################################
+N 11 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager: android.net.wifi.WifiManager.WifiLock createWifiLock(int,java.lang.String)> is checking!!!
+The life time of api is [3,30]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: net.usikkert.kouchat.android.service.ChatService dummyMainMethod_net_usikkert_kouchat_android_service_ChatService(android.content.Intent)>[]--><net.usikkert.kouchat.android.service.ChatService: void onCreate()>[]--><net.usikkert.kouchat.android.service.LockHandler: void <init>(net.usikkert.kouchat.android.chatwindow.AndroidUserInterface,net.usikkert.kouchat.android.settings.AndroidSettings,android.net.wifi.WifiManager,android.os.PowerManager)>[]--><android.net.wifi.WifiManager: android.net.wifi.WifiManager.WifiLock createWifiLock(int,java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.wifi.WifiManager: android.net.wifi.WifiManager.WifiLock createWifiLock(int,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:4
+crashApisInMain:1
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 12 Potential Issue API: SDKCheck of <android.app.NotificationChannel: void enableLights(boolean)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><net.usikkert.kouchat.android.app.KouChatApp: void onCreate()>[[-$i0 < 26]]--><net.usikkert.kouchat.android.notification.NotificationChannelSettings: void setupNotificationChannels()>[]--><net.usikkert.kouchat.android.notification.NotificationChannelSettings: android.app.NotificationChannel createMainChatMessagesChannel()>[]--><net.usikkert.kouchat.android.notification.NotificationChannelSettings: android.app.NotificationChannel createChannel(int,int,int,int,boolean,boolean,boolean,int)>[]--><android.app.NotificationChannel: void enableLights(boolean)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 13 Potential Issue API: SDKCheck of <android.app.NotificationChannel: void setSound(android.net.Uri,android.media.AudioAttributes)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><net.usikkert.kouchat.android.app.KouChatApp: void onCreate()>[[-$i0 < 26]]--><net.usikkert.kouchat.android.notification.NotificationChannelSettings: void setupNotificationChannels()>[]--><net.usikkert.kouchat.android.notification.NotificationChannelSettings: android.app.NotificationChannel createMainChatMessagesChannel()>[]--><net.usikkert.kouchat.android.notification.NotificationChannelSettings: android.app.NotificationChannel createChannel(int,int,int,int,boolean,boolean,boolean,int)>[]--><android.app.NotificationChannel: void setSound(android.net.Uri,android.media.AudioAttributes)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 14 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager.WifiLock: void release()> is checking!!!
+The life time of api is [1,30]
+4call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: net.usikkert.kouchat.android.service.ChatService dummyMainMethod_net_usikkert_kouchat_android_service_ChatService(android.content.Intent)>[]--><net.usikkert.kouchat.android.service.ChatService: void onDestroy()>[]--><net.usikkert.kouchat.android.service.LockHandler: void releaseAllLocks()>[[try]]--><net.usikkert.kouchat.android.service.LockHandler: void releaseWifiLock()>[]--><android.net.wifi.WifiManager.WifiLock: void release()>
+One road protect good!
+3 Packageshead roads:
+try
+Good road with try: <android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)>[]--><net.usikkert.kouchat.net.ConnectionWorker: void run()>[]--><net.usikkert.kouchat.net.ConnectionWorker: void notifyNetworkDown(boolean)>[[try]]--><net.usikkert.kouchat.android.service.LockHandler: void networkWentDown(boolean)>[]--><net.usikkert.kouchat.android.service.LockHandler: void releaseAllLocks()>[[try]]--><net.usikkert.kouchat.android.service.LockHandler: void releaseWifiLock()>[]--><android.net.wifi.WifiManager.WifiLock: void release()>
+One road protect good!
+try
+Good road with try: <org.apache.commons.collections4.map.StaticBucketMap: void atomic(java.lang.Runnable)>[]--><org.apache.commons.collections4.map.StaticBucketMap: void atomic(java.lang.Runnable,int)>[]--><net.usikkert.kouchat.net.ConnectionWorker: void run()>[]--><net.usikkert.kouchat.net.ConnectionWorker: void notifyNetworkDown(boolean)>[[try]]--><net.usikkert.kouchat.android.service.LockHandler: void networkWentDown(boolean)>[]--><net.usikkert.kouchat.android.service.LockHandler: void releaseAllLocks()>[[try]]--><net.usikkert.kouchat.android.service.LockHandler: void releaseWifiLock()>[]--><android.net.wifi.WifiManager.WifiLock: void release()>
+One road protect good!
+try
+Good road with try: <net.usikkert.kouchat.jmx.ControllerInformation: void logOn()>[]--><net.usikkert.kouchat.misc.Controller: void logOn()>[]--><net.usikkert.kouchat.net.NetworkService: void connect()>[]--><net.usikkert.kouchat.net.ConnectionWorker: void run()>[]--><net.usikkert.kouchat.net.ConnectionWorker: void notifyNetworkDown(boolean)>[[try]]--><net.usikkert.kouchat.android.service.LockHandler: void networkWentDown(boolean)>[]--><net.usikkert.kouchat.android.service.LockHandler: void releaseAllLocks()>[[try]]--><net.usikkert.kouchat.android.service.LockHandler: void releaseWifiLock()>[]--><android.net.wifi.WifiManager.WifiLock: void release()>
+One road protect good!
+containsStatic:false
+containsTry:true
+4call by main package
+-----------------------------------------
+#################################################
+N 15 Potential Issue API: SDKCheck of <android.os.BaseBundle: boolean getBoolean(java.lang.String)> is checking!!!
+The life time of api is [22,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 
+Error road: <com.larswerkman.holocolorpicker.ColorPicker: void onRestoreInstanceState(android.os.Parcelable)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+#1.the call statck between class <com.larswerkman.holocolorpicker.ColorPicker: void onRestoreInstanceState(android.os.Parcelable)> to <android.os.BaseBundle: boolean getBoolean(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:5
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 16 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putInt(java.lang.String,int)> is checking!!!
+The life time of api is [21,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.larswerkman.holocolorpicker.ColorPicker: android.os.Parcelable onSaveInstanceState()>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#1.the call statck between class <com.larswerkman.holocolorpicker.ColorPicker: android.os.Parcelable onSaveInstanceState()> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.larswerkman.holocolorpicker.OpacityBar: android.os.Parcelable onSaveInstanceState()>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#2.the call statck between class <com.larswerkman.holocolorpicker.OpacityBar: android.os.Parcelable onSaveInstanceState()> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:6
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 17 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager.MulticastLock: boolean isHeld()> is checking!!!
+The life time of api is [4,30]
+4call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: net.usikkert.kouchat.android.service.ChatService dummyMainMethod_net_usikkert_kouchat_android_service_ChatService(android.content.Intent)>[]--><net.usikkert.kouchat.android.service.ChatService: void onDestroy()>[]--><net.usikkert.kouchat.android.service.LockHandler: void releaseAllLocks()>[[try]]--><net.usikkert.kouchat.android.service.LockHandler: void releaseMulticastLock()>[]--><net.usikkert.kouchat.android.service.LockHandler: boolean multicastLockIsHeld()>[]--><android.net.wifi.WifiManager.MulticastLock: boolean isHeld()>
+One road protect good!
+3 Packageshead roads:
+try
+Good road with try: <android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)>[]--><net.usikkert.kouchat.net.ConnectionWorker: void run()>[]--><net.usikkert.kouchat.net.ConnectionWorker: boolean updateNetwork()>[[try]]--><net.usikkert.kouchat.net.ConnectionWorker: void notifyNetworkUp(boolean)>[[try]]--><net.usikkert.kouchat.net.ConnectionWorker: void notifyBeforeNetworkUp()>[[try]]--><net.usikkert.kouchat.android.service.LockHandler: void beforeNetworkCameUp()>[]--><net.usikkert.kouchat.android.service.LockHandler: void acquireEnabledLocks()>[]--><net.usikkert.kouchat.android.service.LockHandler: void acquireMulticastLock()>[]--><net.usikkert.kouchat.android.service.LockHandler: boolean multicastLockIsHeld()>[]--><android.net.wifi.WifiManager.MulticastLock: boolean isHeld()>
+One road protect good!
+try
+Good road with try: <org.apache.commons.collections4.map.StaticBucketMap: void atomic(java.lang.Runnable)>[]--><org.apache.commons.collections4.map.StaticBucketMap: void atomic(java.lang.Runnable,int)>[]--><net.usikkert.kouchat.net.ConnectionWorker: void run()>[]--><net.usikkert.kouchat.net.ConnectionWorker: boolean updateNetwork()>[[try]]--><net.usikkert.kouchat.net.ConnectionWorker: void notifyNetworkUp(boolean)>[[try]]--><net.usikkert.kouchat.net.ConnectionWorker: void notifyBeforeNetworkUp()>[[try]]--><net.usikkert.kouchat.android.service.LockHandler: void beforeNetworkCameUp()>[]--><net.usikkert.kouchat.android.service.LockHandler: void acquireEnabledLocks()>[]--><net.usikkert.kouchat.android.service.LockHandler: void acquireMulticastLock()>[]--><net.usikkert.kouchat.android.service.LockHandler: boolean multicastLockIsHeld()>[]--><android.net.wifi.WifiManager.MulticastLock: boolean isHeld()>
+One road protect good!
+try
+Good road with try: <net.usikkert.kouchat.jmx.ControllerInformation: void logOn()>[]--><net.usikkert.kouchat.misc.Controller: void logOn()>[]--><net.usikkert.kouchat.net.NetworkService: void connect()>[]--><net.usikkert.kouchat.net.ConnectionWorker: void run()>[]--><net.usikkert.kouchat.net.ConnectionWorker: boolean updateNetwork()>[[try]]--><net.usikkert.kouchat.net.ConnectionWorker: void notifyNetworkUp(boolean)>[[try]]--><net.usikkert.kouchat.net.ConnectionWorker: void notifyBeforeNetworkUp()>[[try]]--><net.usikkert.kouchat.android.service.LockHandler: void beforeNetworkCameUp()>[]--><net.usikkert.kouchat.android.service.LockHandler: void acquireEnabledLocks()>[]--><net.usikkert.kouchat.android.service.LockHandler: void acquireMulticastLock()>[]--><net.usikkert.kouchat.android.service.LockHandler: boolean multicastLockIsHeld()>[]--><android.net.wifi.WifiManager.MulticastLock: boolean isHeld()>
+One road protect good!
+containsStatic:false
+containsTry:true
+4call by main package
+-----------------------------------------
+#################################################
+N 18 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager.WifiLock: boolean isHeld()> is checking!!!
+The life time of api is [1,30]
+4call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: net.usikkert.kouchat.android.service.ChatService dummyMainMethod_net_usikkert_kouchat_android_service_ChatService(android.content.Intent)>[]--><net.usikkert.kouchat.android.service.ChatService: void onDestroy()>[]--><net.usikkert.kouchat.android.service.LockHandler: void releaseAllLocks()>[[try]]--><net.usikkert.kouchat.android.service.LockHandler: void releaseWifiLock()>[]--><net.usikkert.kouchat.android.service.LockHandler: boolean wifiLockIsHeld()>[]--><android.net.wifi.WifiManager.WifiLock: boolean isHeld()>
+One road protect good!
+3 Packageshead roads:
+try
+Good road with try: <android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)>[]--><net.usikkert.kouchat.net.ConnectionWorker: void run()>[]--><net.usikkert.kouchat.net.ConnectionWorker: boolean updateNetwork()>[[try]]--><net.usikkert.kouchat.net.ConnectionWorker: void notifyNetworkUp(boolean)>[[try]]--><net.usikkert.kouchat.net.ConnectionWorker: void notifyBeforeNetworkUp()>[[try]]--><net.usikkert.kouchat.android.service.LockHandler: void beforeNetworkCameUp()>[]--><net.usikkert.kouchat.android.service.LockHandler: void acquireEnabledLocks()>[]--><net.usikkert.kouchat.android.service.LockHandler: void acquireWifiLock()>[]--><net.usikkert.kouchat.android.service.LockHandler: boolean wifiLockIsHeld()>[]--><android.net.wifi.WifiManager.WifiLock: boolean isHeld()>
+One road protect good!
+try
+Good road with try: <org.apache.commons.collections4.map.StaticBucketMap: void atomic(java.lang.Runnable)>[]--><org.apache.commons.collections4.map.StaticBucketMap: void atomic(java.lang.Runnable,int)>[]--><net.usikkert.kouchat.net.ConnectionWorker: void run()>[]--><net.usikkert.kouchat.net.ConnectionWorker: boolean updateNetwork()>[[try]]--><net.usikkert.kouchat.net.ConnectionWorker: void notifyNetworkUp(boolean)>[[try]]--><net.usikkert.kouchat.net.ConnectionWorker: void notifyBeforeNetworkUp()>[[try]]--><net.usikkert.kouchat.android.service.LockHandler: void beforeNetworkCameUp()>[]--><net.usikkert.kouchat.android.service.LockHandler: void acquireEnabledLocks()>[]--><net.usikkert.kouchat.android.service.LockHandler: void acquireWifiLock()>[]--><net.usikkert.kouchat.android.service.LockHandler: boolean wifiLockIsHeld()>[]--><android.net.wifi.WifiManager.WifiLock: boolean isHeld()>
+One road protect good!
+try
+Good road with try: <net.usikkert.kouchat.jmx.ControllerInformation: void logOn()>[]--><net.usikkert.kouchat.misc.Controller: void logOn()>[]--><net.usikkert.kouchat.net.NetworkService: void connect()>[]--><net.usikkert.kouchat.net.ConnectionWorker: void run()>[]--><net.usikkert.kouchat.net.ConnectionWorker: boolean updateNetwork()>[[try]]--><net.usikkert.kouchat.net.ConnectionWorker: void notifyNetworkUp(boolean)>[[try]]--><net.usikkert.kouchat.net.ConnectionWorker: void notifyBeforeNetworkUp()>[[try]]--><net.usikkert.kouchat.android.service.LockHandler: void beforeNetworkCameUp()>[]--><net.usikkert.kouchat.android.service.LockHandler: void acquireEnabledLocks()>[]--><net.usikkert.kouchat.android.service.LockHandler: void acquireWifiLock()>[]--><net.usikkert.kouchat.android.service.LockHandler: boolean wifiLockIsHeld()>[]--><android.net.wifi.WifiManager.WifiLock: boolean isHeld()>
+One road protect good!
+containsStatic:false
+containsTry:true
+4call by main package
+-----------------------------------------
+#################################################
+N 19 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager.WifiLock: void acquire()> is checking!!!
+The life time of api is [1,30]
+4call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: net.usikkert.kouchat.android.service.ChatService dummyMainMethod_net_usikkert_kouchat_android_service_ChatService(android.content.Intent)>[]--><net.usikkert.kouchat.android.service.ChatService: int onStartCommand(android.content.Intent,int,int)>[]--><net.usikkert.kouchat.android.chatwindow.AndroidUserInterface: void logOn()>[]--><net.usikkert.kouchat.misc.Controller: void logOn()>[]--><net.usikkert.kouchat.net.NetworkService: void connect()>[]--><net.usikkert.kouchat.net.ConnectionWorker: void run()>[]--><net.usikkert.kouchat.net.ConnectionWorker: boolean updateNetwork()>[[try]]--><net.usikkert.kouchat.net.ConnectionWorker: void notifyNetworkUp(boolean)>[[try]]--><net.usikkert.kouchat.net.ConnectionWorker: void notifyBeforeNetworkUp()>[[try]]--><net.usikkert.kouchat.android.service.LockHandler: void beforeNetworkCameUp()>[]--><net.usikkert.kouchat.android.service.LockHandler: void acquireEnabledLocks()>[]--><net.usikkert.kouchat.android.service.LockHandler: void acquireWifiLock()>[]--><android.net.wifi.WifiManager.WifiLock: void acquire()>
+One road protect good!
+3 Packageshead roads:
+try
+Good road with try: <android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)>[]--><net.usikkert.kouchat.net.ConnectionWorker: void run()>[]--><net.usikkert.kouchat.net.ConnectionWorker: boolean updateNetwork()>[[try]]--><net.usikkert.kouchat.net.ConnectionWorker: void notifyNetworkUp(boolean)>[[try]]--><net.usikkert.kouchat.net.ConnectionWorker: void notifyBeforeNetworkUp()>[[try]]--><net.usikkert.kouchat.android.service.LockHandler: void beforeNetworkCameUp()>[]--><net.usikkert.kouchat.android.service.LockHandler: void acquireEnabledLocks()>[]--><net.usikkert.kouchat.android.service.LockHandler: void acquireWifiLock()>[]--><android.net.wifi.WifiManager.WifiLock: void acquire()>
+One road protect good!
+try
+Good road with try: <org.apache.commons.collections4.map.StaticBucketMap: void atomic(java.lang.Runnable)>[]--><org.apache.commons.collections4.map.StaticBucketMap: void atomic(java.lang.Runnable,int)>[]--><net.usikkert.kouchat.net.ConnectionWorker: void run()>[]--><net.usikkert.kouchat.net.ConnectionWorker: boolean updateNetwork()>[[try]]--><net.usikkert.kouchat.net.ConnectionWorker: void notifyNetworkUp(boolean)>[[try]]--><net.usikkert.kouchat.net.ConnectionWorker: void notifyBeforeNetworkUp()>[[try]]--><net.usikkert.kouchat.android.service.LockHandler: void beforeNetworkCameUp()>[]--><net.usikkert.kouchat.android.service.LockHandler: void acquireEnabledLocks()>[]--><net.usikkert.kouchat.android.service.LockHandler: void acquireWifiLock()>[]--><android.net.wifi.WifiManager.WifiLock: void acquire()>
+One road protect good!
+try
+Good road with try: <net.usikkert.kouchat.jmx.ControllerInformation: void logOn()>[]--><net.usikkert.kouchat.misc.Controller: void logOn()>[]--><net.usikkert.kouchat.net.NetworkService: void connect()>[]--><net.usikkert.kouchat.net.ConnectionWorker: void run()>[]--><net.usikkert.kouchat.net.ConnectionWorker: boolean updateNetwork()>[[try]]--><net.usikkert.kouchat.net.ConnectionWorker: void notifyNetworkUp(boolean)>[[try]]--><net.usikkert.kouchat.net.ConnectionWorker: void notifyBeforeNetworkUp()>[[try]]--><net.usikkert.kouchat.android.service.LockHandler: void beforeNetworkCameUp()>[]--><net.usikkert.kouchat.android.service.LockHandler: void acquireEnabledLocks()>[]--><net.usikkert.kouchat.android.service.LockHandler: void acquireWifiLock()>[]--><android.net.wifi.WifiManager.WifiLock: void acquire()>
+One road protect good!
+containsStatic:false
+containsTry:true
+4call by main package
+-----------------------------------------
+#################################################
+N 20 Potential Issue API: SDKCheck of <android.app.NotificationChannel: void setShowBadge(boolean)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><net.usikkert.kouchat.android.app.KouChatApp: void onCreate()>[[-$i0 < 26]]--><net.usikkert.kouchat.android.notification.NotificationChannelSettings: void setupNotificationChannels()>[]--><net.usikkert.kouchat.android.notification.NotificationChannelSettings: android.app.NotificationChannel createMainChatMessagesChannel()>[]--><net.usikkert.kouchat.android.notification.NotificationChannelSettings: android.app.NotificationChannel createChannel(int,int,int,int,boolean,boolean,boolean,int)>[]--><android.app.NotificationChannel: void setShowBadge(boolean)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 21 Potential Issue API: SDKCheck of <android.app.NotificationChannel: void enableVibration(boolean)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><net.usikkert.kouchat.android.app.KouChatApp: void onCreate()>[[-$i0 < 26]]--><net.usikkert.kouchat.android.notification.NotificationChannelSettings: void setupNotificationChannels()>[]--><net.usikkert.kouchat.android.notification.NotificationChannelSettings: android.app.NotificationChannel createMainChatMessagesChannel()>[]--><net.usikkert.kouchat.android.notification.NotificationChannelSettings: android.app.NotificationChannel createChannel(int,int,int,int,boolean,boolean,boolean,int)>[]--><android.app.NotificationChannel: void enableVibration(boolean)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 22 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager: android.net.wifi.WifiManager.MulticastLock createMulticastLock(java.lang.String)> is checking!!!
+The life time of api is [4,30]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: net.usikkert.kouchat.android.service.ChatService dummyMainMethod_net_usikkert_kouchat_android_service_ChatService(android.content.Intent)>[]--><net.usikkert.kouchat.android.service.ChatService: void onCreate()>[]--><net.usikkert.kouchat.android.service.LockHandler: void <init>(net.usikkert.kouchat.android.chatwindow.AndroidUserInterface,net.usikkert.kouchat.android.settings.AndroidSettings,android.net.wifi.WifiManager,android.os.PowerManager)>[]--><android.net.wifi.WifiManager: android.net.wifi.WifiManager.MulticastLock createMulticastLock(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.wifi.WifiManager: android.net.wifi.WifiManager.MulticastLock createMulticastLock(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:7
+crashApisInMain:2
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+crashApis numbers:7
+crashApis numbers in main road:2
+On Android Version 16 this app may have error api use(at least): 5 and error api roads: 7
+On Android Version 17 this app may have error api use(at least): 5 and error api roads: 7
+On Android Version 18 this app may have error api use(at least): 5 and error api roads: 7
+On Android Version 19 this app may have error api use(at least): 5 and error api roads: 7
+On Android Version 20 this app may have error api use(at least): 5 and error api roads: 7
+On Android Version 21 this app may have error api use(at least): 2 and error api roads: 2
+On Android Version 22 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 23 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 24 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 25 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 31 this app may have error api use(at least): 2 and error api roads: 2

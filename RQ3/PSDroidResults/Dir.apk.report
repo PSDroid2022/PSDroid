@@ -1,0 +1,241 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/Dir.apk
+Entry Points[com.veniosg.dir.android.provider.BookmarkProvider, com.veniosg.dir.android.activity.AboutActivity, com.veniosg.dir.android.activity.IntentFilterActivity, com.veniosg.dir.android.FileManagerApplication, com.veniosg.dir.android.activity.SearchActivity, com.veniosg.dir.android.service.CopyService, com.veniosg.dir.android.activity.SafPromptActivity, com.veniosg.dir.android.provider.FileManagerProvider, com.veniosg.dir.android.activity.PreferenceActivity, com.veniosg.dir.android.activity.FileManagerActivity, com.veniosg.dir.android.service.ZipService]
+FllowDroidcallgraph size:2774
+Soot started on Mon Jul 11 02:56:21 CST 2022
+StaticCheck:<com.nostra13.universalimageloader.core.DefaultConfigurationFactory: boolean hasHoneycomb()>$yysi0 < 11
+Soot finished on Mon Jul 11 02:56:54 CST 2022
+Soot has run for 0 min. 33 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 21
+Declared Target Sdk version is: 27
+Declared Max Sdk version is: -1
+Collected 686 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)> is checking!!!
+The life time of api is [22,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 21 
+Error road: <com.veniosg.dir.android.fragment.PickFileListFragment$1: void pickRequested(java.lang.String)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>
+#1.the call statck between class <com.veniosg.dir.android.fragment.PickFileListFragment$1: void pickRequested(java.lang.String)> to <android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+crashApis:1
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><com.veniosg.dir.android.FileManagerApplication: void onCreate()>[]--><com.veniosg.dir.mvvm.model.storage.operation.ui.NotificationOperationStatusDisplayer: void initChannels()>[[-$i0 < 26]]--><android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)> is checking!!!
+The life time of api is [22,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.veniosg.dir.android.activity.IntentFilterActivity dummyMainMethod_com_veniosg_dir_android_activity_IntentFilterActivity(android.content.Intent)>[]--><com.veniosg.dir.android.activity.IntentFilterActivity: void onCreate(android.os.Bundle)>[]--><com.veniosg.dir.android.activity.IntentFilterActivity: void bindData(android.content.Intent,android.os.Bundle)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+!!!this api will crash on sdk 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.veniosg.dir.android.activity.FileManagerActivity dummyMainMethod_com_veniosg_dir_android_activity_FileManagerActivity(android.content.Intent)>[]--><dummyMainClass: com.veniosg.dir.android.fragment.SimpleFileListFragment dummyMainMethod_com_veniosg_dir_android_fragment_SimpleFileListFragment(android.content.Intent,android.app.Activity)>[]--><com.veniosg.dir.android.fragment.SimpleFileListFragment: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:2
+crashApisInMain:1
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.os.BaseBundle: boolean getBoolean(java.lang.String)> is checking!!!
+The life time of api is [22,31]
+2009call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.veniosg.dir.android.activity.FileManagerActivity dummyMainMethod_com_veniosg_dir_android_activity_FileManagerActivity(android.content.Intent)>[]--><com.veniosg.dir.android.activity.FileManagerActivity: void onNewIntent(android.content.Intent)>[]--><com.veniosg.dir.android.fragment.SimpleFileListFragment: void openInformingPathBar(com.veniosg.dir.mvvm.model.FileHolder,boolean)>[]--><com.veniosg.dir.android.fragment.SimpleFileListFragment: void open(com.veniosg.dir.mvvm.model.FileHolder)>[]--><com.veniosg.dir.android.fragment.SimpleFileListFragment: void openDir(com.veniosg.dir.mvvm.model.FileHolder)>[]--><com.veniosg.dir.android.fragment.FileListFragment: void refresh()>[]--><com.veniosg.dir.android.fragment.FileListFragment: com.veniosg.dir.android.misc.DirectoryScanner renewScanner()>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: boolean getBoolean(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+2008 Packageshead roads:
+Roads number exceed, exit!2008
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.provider.MediaStore.Video.Thumbnails: android.graphics.Bitmap getThumbnail(android.content.ContentResolver,long,int,android.graphics.BitmapFactory.Options)> is checking!!!
+The life time of api is [5,29]
+2004call roads:
+1 Mainhead roads:
+2003 Packageshead roads:
+Roads number exceed, exit!2003
+#################################################
+N 5 Potential Issue API: SDKCheck of <android.animation.AnimatorSet: void <init>()> is checking!!!
+The life time of api is [24,31]
+12call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 21 22 23 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.veniosg.dir.android.activity.IntentFilterActivity dummyMainMethod_com_veniosg_dir_android_activity_IntentFilterActivity(android.content.Intent)>[]--><com.veniosg.dir.android.activity.IntentFilterActivity: void onBackPressed()>[]--><com.veniosg.dir.android.fragment.SimpleFileListFragment: boolean pressBack()>[]--><com.veniosg.dir.android.ui.widget.PathView: boolean onBackPressed()>[]--><com.veniosg.dir.android.ui.widget.PathView: void switchToStandardInput()>[]--><com.veniosg.dir.android.ui.widget.PathView: android.animation.Animator switchToStandardInputAnimator()>[]--><android.animation.AnimatorSet: void <init>()>
+!!!this api will crash on sdk 21 22 23 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.veniosg.dir.android.activity.FileManagerActivity dummyMainMethod_com_veniosg_dir_android_activity_FileManagerActivity(android.content.Intent)>[]--><dummyMainClass: com.veniosg.dir.android.fragment.SimpleFileListFragment dummyMainMethod_com_veniosg_dir_android_fragment_SimpleFileListFragment(android.content.Intent,android.app.Activity)>[]--><com.veniosg.dir.android.fragment.SimpleFileListFragment: void onViewCreated(android.view.View,android.os.Bundle)>[]--><com.veniosg.dir.android.ui.widget.PathView: void switchToManualInput()>[]--><com.veniosg.dir.android.ui.widget.PathView: android.animation.Animator switchToManualAnimator()>[]--><android.animation.AnimatorSet: void <init>()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.animation.AnimatorSet: void <init>()>has compatibility isssues！
+-----------------------------------------
+11 Packageshead roads:
+!!!this api will crash on sdk 21 22 23 
+Error road: <com.veniosg.dir.android.ui.widget.PathHorizontalScrollView: android.animation.Animator access$500(com.veniosg.dir.android.ui.widget.PathHorizontalScrollView,java.util.List)>[]--><com.veniosg.dir.android.ui.widget.PathHorizontalScrollView: android.animation.Animator addedViewsAnimator(java.util.List)>[]--><android.animation.AnimatorSet: void <init>()>
+#1.the call statck between class <com.veniosg.dir.android.ui.widget.PathHorizontalScrollView: android.animation.Animator access$500(com.veniosg.dir.android.ui.widget.PathHorizontalScrollView,java.util.List)> to <android.animation.AnimatorSet: void <init>()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 21 22 23 
+Error road: <com.veniosg.dir.android.ui.widget.PathHorizontalScrollView: android.animation.Animator access$1100(com.veniosg.dir.android.ui.widget.PathHorizontalScrollView,java.util.List)>[]--><com.veniosg.dir.android.ui.widget.PathHorizontalScrollView: android.animation.Animator transformToPrimaryAnimator(java.util.List)>[]--><com.veniosg.dir.android.ui.widget.PathItemView: android.animation.Animator transformToPrimaryAnimator()>[]--><android.animation.AnimatorSet: void <init>()>
+#2.the call statck between class <com.veniosg.dir.android.ui.widget.PathHorizontalScrollView: android.animation.Animator access$1100(com.veniosg.dir.android.ui.widget.PathHorizontalScrollView,java.util.List)> to <android.animation.AnimatorSet: void <init>()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 21 22 23 
+Error road: <com.veniosg.dir.android.fragment.SimpleFileListFragment: void onListVisibilityChanged(boolean)>[]--><com.veniosg.dir.android.ui.widget.AnimatedFileListContainer: void animateBwd()>[]--><com.veniosg.dir.android.ui.widget.AnimatedFileListContainer: android.animation.AnimatorSet backwardHeroAnimator(android.view.View)>[]--><android.animation.AnimatorSet: void <init>()>
+!!!this api will crash on sdk 21 22 23 
+Error road: <com.veniosg.dir.android.fragment.SimpleFileListFragment: void onListVisibilityChanged(boolean)>[]--><com.veniosg.dir.android.ui.widget.AnimatedFileListContainer: void animateFwd()>[]--><com.veniosg.dir.android.ui.widget.AnimatedFileListContainer: android.animation.AnimatorSet forwardHeroAnimator(android.view.View)>[]--><android.animation.AnimatorSet: void <init>()>
+#3.the call statck between class <com.veniosg.dir.android.fragment.SimpleFileListFragment: void onListVisibilityChanged(boolean)> to <android.animation.AnimatorSet: void <init>()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 21 22 23 
+Error road: <com.veniosg.dir.android.ui.widget.PathView$1: void onClick(android.view.View)>[]--><com.veniosg.dir.android.ui.widget.PathView: void switchToManualInput()>[]--><com.veniosg.dir.android.ui.widget.PathView: android.animation.Animator switchToManualAnimator()>[]--><android.animation.AnimatorSet: void <init>()>
+#4.the call statck between class <com.veniosg.dir.android.ui.widget.PathView$1: void onClick(android.view.View)> to <android.animation.AnimatorSet: void <init>()>has compatibility isssues！
+-----------------------------------------
+try
+Good road with try: <com.veniosg.dir.android.ui.widget.PathHorizontalScrollView$4: void childrenRemoved(java.util.List)>[]--><com.veniosg.dir.android.FileManagerApplication: void enqueueAnimator(android.animation.Animator)>[]--><com.veniosg.dir.android.ui.AnimatorSynchroniser: void addWaitingAnimation(android.animation.Animator)>[[try]]--><android.animation.AnimatorSet: void <init>()>
+One road protect good!
+!!!this api will crash on sdk 21 22 23 
+Error road: <com.veniosg.dir.android.ui.widget.PathHorizontalScrollView$4: void childrenRemoved(java.util.List)>[]--><android.animation.AnimatorSet: void <init>()>
+#5.the call statck between class <com.veniosg.dir.android.ui.widget.PathHorizontalScrollView$4: void childrenRemoved(java.util.List)> to <android.animation.AnimatorSet: void <init>()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 21 22 23 
+Error road: <com.veniosg.dir.android.ui.widget.PathHorizontalScrollView: android.animation.Animator access$600(com.veniosg.dir.android.ui.widget.PathHorizontalScrollView)>[]--><com.veniosg.dir.android.ui.widget.PathHorizontalScrollView: android.animation.Animator transformToSecondaryAsNeededAnimator()>[]--><com.veniosg.dir.android.ui.widget.PathItemView: android.animation.Animator transformToSecondaryAnimator()>[]--><android.animation.AnimatorSet: void <init>()>
+#6.the call statck between class <com.veniosg.dir.android.ui.widget.PathHorizontalScrollView: android.animation.Animator access$600(com.veniosg.dir.android.ui.widget.PathHorizontalScrollView)> to <android.animation.AnimatorSet: void <init>()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 21 22 23 
+Error road: <com.veniosg.dir.android.fragment.PickFileListFragment: void onViewCreated(android.view.View,android.os.Bundle)>[]--><com.veniosg.dir.android.fragment.SimpleFileListFragment: void onViewCreated(android.view.View,android.os.Bundle)>[]--><com.veniosg.dir.android.ui.widget.PathView: void switchToManualInput()>[]--><com.veniosg.dir.android.ui.widget.PathView: android.animation.Animator switchToManualAnimator()>[]--><android.animation.AnimatorSet: void <init>()>
+#7.the call statck between class <com.veniosg.dir.android.fragment.PickFileListFragment: void onViewCreated(android.view.View,android.os.Bundle)> to <android.animation.AnimatorSet: void <init>()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 21 22 23 
+Error road: <com.veniosg.dir.android.ui.widget.PathHorizontalScrollView$4: void childrenAdded(java.util.List)>[]--><android.animation.AnimatorSet: void <init>()>
+try
+Good road with try: <com.veniosg.dir.android.ui.widget.PathHorizontalScrollView$4: void childrenAdded(java.util.List)>[]--><com.veniosg.dir.android.FileManagerApplication: void enqueueAnimator(android.animation.Animator)>[]--><com.veniosg.dir.android.ui.AnimatorSynchroniser: void addWaitingAnimation(android.animation.Animator)>[[try]]--><android.animation.AnimatorSet: void <init>()>
+One road protect good!
+#8.the call statck between class <com.veniosg.dir.android.ui.widget.PathHorizontalScrollView$4: void childrenAdded(java.util.List)> to <android.animation.AnimatorSet: void <init>()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 21 22 23 
+Error road: <com.veniosg.dir.android.ui.widget.PathHorizontalScrollView: android.animation.Animator access$1000(com.veniosg.dir.android.ui.widget.PathHorizontalScrollView,java.util.List)>[]--><com.veniosg.dir.android.ui.widget.PathHorizontalScrollView: android.animation.Animator removedViewsAnimator(java.util.List)>[]--><android.animation.AnimatorSet: void <init>()>
+#9.the call statck between class <com.veniosg.dir.android.ui.widget.PathHorizontalScrollView: android.animation.Animator access$1000(com.veniosg.dir.android.ui.widget.PathHorizontalScrollView,java.util.List)> to <android.animation.AnimatorSet: void <init>()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 21 22 23 
+Error road: <com.veniosg.dir.android.ui.widget.PathView$2: void onClick(android.view.View)>[]--><com.veniosg.dir.android.ui.widget.PathView: void switchToStandardInput()>[]--><com.veniosg.dir.android.ui.widget.PathView: android.animation.Animator switchToStandardInputAnimator()>[]--><android.animation.AnimatorSet: void <init>()>
+#10.the call statck between class <com.veniosg.dir.android.ui.widget.PathView$2: void onClick(android.view.View)> to <android.animation.AnimatorSet: void <init>()>has compatibility isssues！
+-----------------------------------------
+crashApis:4
+crashApisInMain:3
+containsStatic:false
+containsTry:true
+11call by main package
+-----------------------------------------
+#################################################
+N 6 Potential Issue API: SDKCheck of <android.provider.MediaStore.Files: android.net.Uri getContentUri(java.lang.String,long)> is checking!!!
+The life time of api is [11,29]
+4call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.veniosg.dir.android.activity.FileManagerActivity dummyMainMethod_com_veniosg_dir_android_activity_FileManagerActivity(android.content.Intent)>[]--><dummyMainClass: com.veniosg.dir.android.fragment.SimpleFileListFragment dummyMainMethod_com_veniosg_dir_android_fragment_SimpleFileListFragment(android.content.Intent,android.app.Activity)>[]--><com.veniosg.dir.android.fragment.SimpleFileListFragment: boolean onOptionsItemSelected(android.view.MenuItem)>[]--><com.veniosg.dir.android.fragment.SimpleFileListFragment: void excludeFromMediaScan()>[[try]]--><com.veniosg.dir.android.util.MediaScannerUtils: void informFolderDeleted(android.content.Context,java.io.File)>[]--><com.veniosg.dir.android.util.MediaScannerUtils: void informPathsDeleted(android.content.Context,java.util.List)>[]--><com.veniosg.dir.android.util.MediaScannerUtils$DeleteFromMediaStoreAsyncTask: java.lang.Object doInBackground(java.lang.Object[])>[]--><com.veniosg.dir.android.util.MediaScannerUtils$DeleteFromMediaStoreAsyncTask: java.lang.Void doInBackground(com.veniosg.dir.android.util.MediaScannerUtils$DeleteTaskParams[])>[]--><com.veniosg.dir.android.util.MediaScannerUtils$DeleteFromMediaStoreAsyncTask: void safeDelete(android.content.Context,java.io.File)>[]--><com.veniosg.dir.android.util.MediaScannerUtils: android.net.Uri access$200(android.content.Context,java.io.File)>[]--><com.veniosg.dir.android.util.MediaScannerUtils: android.net.Uri getFileContentUri(android.content.Context,java.io.File)>[]--><android.provider.MediaStore.Files: android.net.Uri getContentUri(java.lang.String,long)>
+One road protect good!
+!!!this api will crash on sdk 30 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.veniosg.dir.android.service.CopyService dummyMainMethod_com_veniosg_dir_android_service_CopyService(android.content.Intent)>[]--><com.veniosg.dir.android.service.CopyService: void onHandleIntent(android.content.Intent)>[]--><com.veniosg.dir.android.service.CopyService: void move(java.util.List,java.io.File)>[]--><com.veniosg.dir.mvvm.model.storage.operation.FileOperationRunner: void run(com.veniosg.dir.mvvm.model.storage.operation.FileOperation,com.veniosg.dir.mvvm.model.storage.operation.FileOperation$Arguments)>[]--><com.veniosg.dir.mvvm.model.storage.operation.MoveOperation: boolean operateSaf(com.veniosg.dir.mvvm.model.storage.operation.FileOperation$Arguments)>[]--><com.veniosg.dir.mvvm.model.storage.operation.MoveOperation: boolean operateSaf(com.veniosg.dir.mvvm.model.storage.operation.argument.MoveArguments)>[]--><com.veniosg.dir.mvvm.model.storage.operation.MoveOperation$Mover: boolean move(com.veniosg.dir.mvvm.model.storage.operation.argument.MoveArguments)>[]--><com.veniosg.dir.android.util.MediaScannerUtils: void informPathsDeleted(android.content.Context,java.util.List)>[]--><com.veniosg.dir.android.util.MediaScannerUtils$DeleteFromMediaStoreAsyncTask: java.lang.Object doInBackground(java.lang.Object[])>[]--><com.veniosg.dir.android.util.MediaScannerUtils$DeleteFromMediaStoreAsyncTask: java.lang.Void doInBackground(com.veniosg.dir.android.util.MediaScannerUtils$DeleteTaskParams[])>[]--><com.veniosg.dir.android.util.MediaScannerUtils$DeleteFromMediaStoreAsyncTask: void safeDelete(android.content.Context,java.io.File)>[]--><com.veniosg.dir.android.util.MediaScannerUtils: android.net.Uri access$200(android.content.Context,java.io.File)>[]--><com.veniosg.dir.android.util.MediaScannerUtils: android.net.Uri getFileContentUri(android.content.Context,java.io.File)>[]--><android.provider.MediaStore.Files: android.net.Uri getContentUri(java.lang.String,long)>
+!!!this api will crash on sdk 30 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.veniosg.dir.android.service.ZipService dummyMainMethod_com_veniosg_dir_android_service_ZipService(android.content.Intent)>[]--><com.veniosg.dir.android.service.ZipService: void onHandleIntent(android.content.Intent)>[]--><com.veniosg.dir.mvvm.model.storage.operation.FileOperationRunner: void run(com.veniosg.dir.mvvm.model.storage.operation.FileOperation,com.veniosg.dir.mvvm.model.storage.operation.FileOperation$Arguments)>[]--><com.veniosg.dir.mvvm.model.storage.operation.MoveOperation: boolean operateSaf(com.veniosg.dir.mvvm.model.storage.operation.FileOperation$Arguments)>[]--><com.veniosg.dir.mvvm.model.storage.operation.MoveOperation: boolean operateSaf(com.veniosg.dir.mvvm.model.storage.operation.argument.MoveArguments)>[]--><com.veniosg.dir.mvvm.model.storage.operation.MoveOperation$Mover: boolean move(com.veniosg.dir.mvvm.model.storage.operation.argument.MoveArguments)>[]--><com.veniosg.dir.android.util.MediaScannerUtils: void informPathsDeleted(android.content.Context,java.util.List)>[]--><com.veniosg.dir.android.util.MediaScannerUtils$DeleteFromMediaStoreAsyncTask: java.lang.Object doInBackground(java.lang.Object[])>[]--><com.veniosg.dir.android.util.MediaScannerUtils$DeleteFromMediaStoreAsyncTask: java.lang.Void doInBackground(com.veniosg.dir.android.util.MediaScannerUtils$DeleteTaskParams[])>[]--><com.veniosg.dir.android.util.MediaScannerUtils$DeleteFromMediaStoreAsyncTask: void safeDelete(android.content.Context,java.io.File)>[]--><com.veniosg.dir.android.util.MediaScannerUtils: android.net.Uri access$200(android.content.Context,java.io.File)>[]--><com.veniosg.dir.android.util.MediaScannerUtils: android.net.Uri getFileContentUri(android.content.Context,java.io.File)>[]--><android.provider.MediaStore.Files: android.net.Uri getContentUri(java.lang.String,long)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.provider.MediaStore.Files: android.net.Uri getContentUri(java.lang.String,long)>has compatibility isssues！
+-----------------------------------------
+3 Packageshead roads:
+!!!this api will crash on sdk 30 31 
+Error road: <com.veniosg.dir.mvvm.model.storage.operation.DeleteOperation: boolean operate(com.veniosg.dir.mvvm.model.storage.operation.FileOperation$Arguments)>[]--><com.veniosg.dir.mvvm.model.storage.operation.DeleteOperation: boolean operate(com.veniosg.dir.mvvm.model.storage.operation.argument.DeleteArguments)>[]--><com.veniosg.dir.android.util.MediaScannerUtils: void informPathsDeleted(android.content.Context,java.util.List)>[]--><com.veniosg.dir.android.util.MediaScannerUtils$DeleteFromMediaStoreAsyncTask: java.lang.Object doInBackground(java.lang.Object[])>[]--><com.veniosg.dir.android.util.MediaScannerUtils$DeleteFromMediaStoreAsyncTask: java.lang.Void doInBackground(com.veniosg.dir.android.util.MediaScannerUtils$DeleteTaskParams[])>[]--><com.veniosg.dir.android.util.MediaScannerUtils$DeleteFromMediaStoreAsyncTask: void safeDelete(android.content.Context,java.io.File)>[]--><com.veniosg.dir.android.util.MediaScannerUtils: android.net.Uri access$200(android.content.Context,java.io.File)>[]--><com.veniosg.dir.android.util.MediaScannerUtils: android.net.Uri getFileContentUri(android.content.Context,java.io.File)>[]--><android.provider.MediaStore.Files: android.net.Uri getContentUri(java.lang.String,long)>
+#1.the call statck between class <com.veniosg.dir.mvvm.model.storage.operation.DeleteOperation: boolean operate(com.veniosg.dir.mvvm.model.storage.operation.FileOperation$Arguments)> to <android.provider.MediaStore.Files: android.net.Uri getContentUri(java.lang.String,long)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 30 31 
+Error road: <com.veniosg.dir.mvvm.model.storage.operation.DeleteOperation: boolean operateSaf(com.veniosg.dir.mvvm.model.storage.operation.FileOperation$Arguments)>[]--><com.veniosg.dir.mvvm.model.storage.operation.DeleteOperation: boolean operateSaf(com.veniosg.dir.mvvm.model.storage.operation.argument.DeleteArguments)>[]--><com.veniosg.dir.android.util.MediaScannerUtils: void informPathsDeleted(android.content.Context,java.util.List)>[]--><com.veniosg.dir.android.util.MediaScannerUtils$DeleteFromMediaStoreAsyncTask: java.lang.Object doInBackground(java.lang.Object[])>[]--><com.veniosg.dir.android.util.MediaScannerUtils$DeleteFromMediaStoreAsyncTask: java.lang.Void doInBackground(com.veniosg.dir.android.util.MediaScannerUtils$DeleteTaskParams[])>[]--><com.veniosg.dir.android.util.MediaScannerUtils$DeleteFromMediaStoreAsyncTask: void safeDelete(android.content.Context,java.io.File)>[]--><com.veniosg.dir.android.util.MediaScannerUtils: android.net.Uri access$200(android.content.Context,java.io.File)>[]--><com.veniosg.dir.android.util.MediaScannerUtils: android.net.Uri getFileContentUri(android.content.Context,java.io.File)>[]--><android.provider.MediaStore.Files: android.net.Uri getContentUri(java.lang.String,long)>
+#2.the call statck between class <com.veniosg.dir.mvvm.model.storage.operation.DeleteOperation: boolean operateSaf(com.veniosg.dir.mvvm.model.storage.operation.FileOperation$Arguments)> to <android.provider.MediaStore.Files: android.net.Uri getContentUri(java.lang.String,long)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 30 31 
+Error road: <com.veniosg.dir.mvvm.model.storage.operation.RenameOperation: void onResult(boolean,com.veniosg.dir.mvvm.model.storage.operation.FileOperation$Arguments)>[]--><com.veniosg.dir.mvvm.model.storage.operation.RenameOperation: void onResult(boolean,com.veniosg.dir.mvvm.model.storage.operation.argument.RenameArguments)>[]--><com.veniosg.dir.android.util.MediaScannerUtils: void informPathsDeleted(android.content.Context,java.util.List)>[]--><com.veniosg.dir.android.util.MediaScannerUtils$DeleteFromMediaStoreAsyncTask: java.lang.Object doInBackground(java.lang.Object[])>[]--><com.veniosg.dir.android.util.MediaScannerUtils$DeleteFromMediaStoreAsyncTask: java.lang.Void doInBackground(com.veniosg.dir.android.util.MediaScannerUtils$DeleteTaskParams[])>[]--><com.veniosg.dir.android.util.MediaScannerUtils$DeleteFromMediaStoreAsyncTask: void safeDelete(android.content.Context,java.io.File)>[]--><com.veniosg.dir.android.util.MediaScannerUtils: android.net.Uri access$200(android.content.Context,java.io.File)>[]--><com.veniosg.dir.android.util.MediaScannerUtils: android.net.Uri getFileContentUri(android.content.Context,java.io.File)>[]--><android.provider.MediaStore.Files: android.net.Uri getContentUri(java.lang.String,long)>
+#3.the call statck between class <com.veniosg.dir.mvvm.model.storage.operation.RenameOperation: void onResult(boolean,com.veniosg.dir.mvvm.model.storage.operation.FileOperation$Arguments)> to <android.provider.MediaStore.Files: android.net.Uri getContentUri(java.lang.String,long)>has compatibility isssues！
+-----------------------------------------
+crashApis:5
+crashApisInMain:4
+containsStatic:false
+containsTry:true
+4call by main package
+-----------------------------------------
+#################################################
+N 7 Potential Issue API: SDKCheck of <android.provider.MediaStore.Files: android.net.Uri getContentUri(java.lang.String)> is checking!!!
+The life time of api is [11,29]
+4call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.veniosg.dir.android.activity.FileManagerActivity dummyMainMethod_com_veniosg_dir_android_activity_FileManagerActivity(android.content.Intent)>[]--><dummyMainClass: com.veniosg.dir.android.fragment.SimpleFileListFragment dummyMainMethod_com_veniosg_dir_android_fragment_SimpleFileListFragment(android.content.Intent,android.app.Activity)>[]--><com.veniosg.dir.android.fragment.SimpleFileListFragment: boolean onOptionsItemSelected(android.view.MenuItem)>[]--><com.veniosg.dir.android.fragment.SimpleFileListFragment: void excludeFromMediaScan()>[[try]]--><com.veniosg.dir.android.util.MediaScannerUtils: void informFolderDeleted(android.content.Context,java.io.File)>[]--><com.veniosg.dir.android.util.MediaScannerUtils: void informPathsDeleted(android.content.Context,java.util.List)>[]--><com.veniosg.dir.android.util.MediaScannerUtils$DeleteFromMediaStoreAsyncTask: java.lang.Object doInBackground(java.lang.Object[])>[]--><com.veniosg.dir.android.util.MediaScannerUtils$DeleteFromMediaStoreAsyncTask: java.lang.Void doInBackground(com.veniosg.dir.android.util.MediaScannerUtils$DeleteTaskParams[])>[]--><com.veniosg.dir.android.util.MediaScannerUtils$DeleteFromMediaStoreAsyncTask: void safeDelete(android.content.Context,java.io.File)>[]--><com.veniosg.dir.android.util.MediaScannerUtils: android.net.Uri access$200(android.content.Context,java.io.File)>[]--><com.veniosg.dir.android.util.MediaScannerUtils: android.net.Uri getFileContentUri(android.content.Context,java.io.File)>[]--><android.provider.MediaStore.Files: android.net.Uri getContentUri(java.lang.String)>
+One road protect good!
+!!!this api will crash on sdk 30 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.veniosg.dir.android.service.CopyService dummyMainMethod_com_veniosg_dir_android_service_CopyService(android.content.Intent)>[]--><com.veniosg.dir.android.service.CopyService: void onHandleIntent(android.content.Intent)>[]--><com.veniosg.dir.android.service.CopyService: void move(java.util.List,java.io.File)>[]--><com.veniosg.dir.mvvm.model.storage.operation.FileOperationRunner: void run(com.veniosg.dir.mvvm.model.storage.operation.FileOperation,com.veniosg.dir.mvvm.model.storage.operation.FileOperation$Arguments)>[]--><com.veniosg.dir.mvvm.model.storage.operation.MoveOperation: boolean operateSaf(com.veniosg.dir.mvvm.model.storage.operation.FileOperation$Arguments)>[]--><com.veniosg.dir.mvvm.model.storage.operation.MoveOperation: boolean operateSaf(com.veniosg.dir.mvvm.model.storage.operation.argument.MoveArguments)>[]--><com.veniosg.dir.mvvm.model.storage.operation.MoveOperation$Mover: boolean move(com.veniosg.dir.mvvm.model.storage.operation.argument.MoveArguments)>[]--><com.veniosg.dir.android.util.MediaScannerUtils: void informPathsDeleted(android.content.Context,java.util.List)>[]--><com.veniosg.dir.android.util.MediaScannerUtils$DeleteFromMediaStoreAsyncTask: java.lang.Object doInBackground(java.lang.Object[])>[]--><com.veniosg.dir.android.util.MediaScannerUtils$DeleteFromMediaStoreAsyncTask: java.lang.Void doInBackground(com.veniosg.dir.android.util.MediaScannerUtils$DeleteTaskParams[])>[]--><com.veniosg.dir.android.util.MediaScannerUtils$DeleteFromMediaStoreAsyncTask: void safeDelete(android.content.Context,java.io.File)>[]--><com.veniosg.dir.android.util.MediaScannerUtils: android.net.Uri access$200(android.content.Context,java.io.File)>[]--><com.veniosg.dir.android.util.MediaScannerUtils: android.net.Uri getFileContentUri(android.content.Context,java.io.File)>[]--><android.provider.MediaStore.Files: android.net.Uri getContentUri(java.lang.String)>
+!!!this api will crash on sdk 30 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.veniosg.dir.android.service.ZipService dummyMainMethod_com_veniosg_dir_android_service_ZipService(android.content.Intent)>[]--><com.veniosg.dir.android.service.ZipService: void onHandleIntent(android.content.Intent)>[]--><com.veniosg.dir.mvvm.model.storage.operation.FileOperationRunner: void run(com.veniosg.dir.mvvm.model.storage.operation.FileOperation,com.veniosg.dir.mvvm.model.storage.operation.FileOperation$Arguments)>[]--><com.veniosg.dir.mvvm.model.storage.operation.MoveOperation: boolean operateSaf(com.veniosg.dir.mvvm.model.storage.operation.FileOperation$Arguments)>[]--><com.veniosg.dir.mvvm.model.storage.operation.MoveOperation: boolean operateSaf(com.veniosg.dir.mvvm.model.storage.operation.argument.MoveArguments)>[]--><com.veniosg.dir.mvvm.model.storage.operation.MoveOperation$Mover: boolean move(com.veniosg.dir.mvvm.model.storage.operation.argument.MoveArguments)>[]--><com.veniosg.dir.android.util.MediaScannerUtils: void informPathsDeleted(android.content.Context,java.util.List)>[]--><com.veniosg.dir.android.util.MediaScannerUtils$DeleteFromMediaStoreAsyncTask: java.lang.Object doInBackground(java.lang.Object[])>[]--><com.veniosg.dir.android.util.MediaScannerUtils$DeleteFromMediaStoreAsyncTask: java.lang.Void doInBackground(com.veniosg.dir.android.util.MediaScannerUtils$DeleteTaskParams[])>[]--><com.veniosg.dir.android.util.MediaScannerUtils$DeleteFromMediaStoreAsyncTask: void safeDelete(android.content.Context,java.io.File)>[]--><com.veniosg.dir.android.util.MediaScannerUtils: android.net.Uri access$200(android.content.Context,java.io.File)>[]--><com.veniosg.dir.android.util.MediaScannerUtils: android.net.Uri getFileContentUri(android.content.Context,java.io.File)>[]--><android.provider.MediaStore.Files: android.net.Uri getContentUri(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.provider.MediaStore.Files: android.net.Uri getContentUri(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+3 Packageshead roads:
+!!!this api will crash on sdk 30 31 
+Error road: <com.veniosg.dir.mvvm.model.storage.operation.DeleteOperation: boolean operate(com.veniosg.dir.mvvm.model.storage.operation.FileOperation$Arguments)>[]--><com.veniosg.dir.mvvm.model.storage.operation.DeleteOperation: boolean operate(com.veniosg.dir.mvvm.model.storage.operation.argument.DeleteArguments)>[]--><com.veniosg.dir.android.util.MediaScannerUtils: void informPathsDeleted(android.content.Context,java.util.List)>[]--><com.veniosg.dir.android.util.MediaScannerUtils$DeleteFromMediaStoreAsyncTask: java.lang.Object doInBackground(java.lang.Object[])>[]--><com.veniosg.dir.android.util.MediaScannerUtils$DeleteFromMediaStoreAsyncTask: java.lang.Void doInBackground(com.veniosg.dir.android.util.MediaScannerUtils$DeleteTaskParams[])>[]--><com.veniosg.dir.android.util.MediaScannerUtils$DeleteFromMediaStoreAsyncTask: void safeDelete(android.content.Context,java.io.File)>[]--><com.veniosg.dir.android.util.MediaScannerUtils: android.net.Uri access$200(android.content.Context,java.io.File)>[]--><com.veniosg.dir.android.util.MediaScannerUtils: android.net.Uri getFileContentUri(android.content.Context,java.io.File)>[]--><android.provider.MediaStore.Files: android.net.Uri getContentUri(java.lang.String)>
+#1.the call statck between class <com.veniosg.dir.mvvm.model.storage.operation.DeleteOperation: boolean operate(com.veniosg.dir.mvvm.model.storage.operation.FileOperation$Arguments)> to <android.provider.MediaStore.Files: android.net.Uri getContentUri(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 30 31 
+Error road: <com.veniosg.dir.mvvm.model.storage.operation.DeleteOperation: boolean operateSaf(com.veniosg.dir.mvvm.model.storage.operation.FileOperation$Arguments)>[]--><com.veniosg.dir.mvvm.model.storage.operation.DeleteOperation: boolean operateSaf(com.veniosg.dir.mvvm.model.storage.operation.argument.DeleteArguments)>[]--><com.veniosg.dir.android.util.MediaScannerUtils: void informPathsDeleted(android.content.Context,java.util.List)>[]--><com.veniosg.dir.android.util.MediaScannerUtils$DeleteFromMediaStoreAsyncTask: java.lang.Object doInBackground(java.lang.Object[])>[]--><com.veniosg.dir.android.util.MediaScannerUtils$DeleteFromMediaStoreAsyncTask: java.lang.Void doInBackground(com.veniosg.dir.android.util.MediaScannerUtils$DeleteTaskParams[])>[]--><com.veniosg.dir.android.util.MediaScannerUtils$DeleteFromMediaStoreAsyncTask: void safeDelete(android.content.Context,java.io.File)>[]--><com.veniosg.dir.android.util.MediaScannerUtils: android.net.Uri access$200(android.content.Context,java.io.File)>[]--><com.veniosg.dir.android.util.MediaScannerUtils: android.net.Uri getFileContentUri(android.content.Context,java.io.File)>[]--><android.provider.MediaStore.Files: android.net.Uri getContentUri(java.lang.String)>
+#2.the call statck between class <com.veniosg.dir.mvvm.model.storage.operation.DeleteOperation: boolean operateSaf(com.veniosg.dir.mvvm.model.storage.operation.FileOperation$Arguments)> to <android.provider.MediaStore.Files: android.net.Uri getContentUri(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 30 31 
+Error road: <com.veniosg.dir.mvvm.model.storage.operation.RenameOperation: void onResult(boolean,com.veniosg.dir.mvvm.model.storage.operation.FileOperation$Arguments)>[]--><com.veniosg.dir.mvvm.model.storage.operation.RenameOperation: void onResult(boolean,com.veniosg.dir.mvvm.model.storage.operation.argument.RenameArguments)>[]--><com.veniosg.dir.android.util.MediaScannerUtils: void informPathsDeleted(android.content.Context,java.util.List)>[]--><com.veniosg.dir.android.util.MediaScannerUtils$DeleteFromMediaStoreAsyncTask: java.lang.Object doInBackground(java.lang.Object[])>[]--><com.veniosg.dir.android.util.MediaScannerUtils$DeleteFromMediaStoreAsyncTask: java.lang.Void doInBackground(com.veniosg.dir.android.util.MediaScannerUtils$DeleteTaskParams[])>[]--><com.veniosg.dir.android.util.MediaScannerUtils$DeleteFromMediaStoreAsyncTask: void safeDelete(android.content.Context,java.io.File)>[]--><com.veniosg.dir.android.util.MediaScannerUtils: android.net.Uri access$200(android.content.Context,java.io.File)>[]--><com.veniosg.dir.android.util.MediaScannerUtils: android.net.Uri getFileContentUri(android.content.Context,java.io.File)>[]--><android.provider.MediaStore.Files: android.net.Uri getContentUri(java.lang.String)>
+#3.the call statck between class <com.veniosg.dir.mvvm.model.storage.operation.RenameOperation: void onResult(boolean,com.veniosg.dir.mvvm.model.storage.operation.FileOperation$Arguments)> to <android.provider.MediaStore.Files: android.net.Uri getContentUri(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:6
+crashApisInMain:5
+containsStatic:false
+containsTry:true
+4call by main package
+-----------------------------------------
+#################################################
+N 8 Potential Issue API: SDKCheck of <android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><com.veniosg.dir.android.FileManagerApplication: void onCreate()>[]--><com.veniosg.dir.mvvm.model.storage.operation.ui.NotificationOperationStatusDisplayer: void initChannels()>[[-$i0 < 26]]--><android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+crashApis numbers:6
+crashApis numbers in main road:5
+On Android Version 16 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 17 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 18 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 19 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 20 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 21 this app may have error api use(at least): 4 and error api roads: 17
+On Android Version 22 this app may have error api use(at least): 1 and error api roads: 13
+On Android Version 23 this app may have error api use(at least): 1 and error api roads: 13
+On Android Version 24 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 25 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 2 and error api roads: 10
+On Android Version 31 this app may have error api use(at least): 2 and error api roads: 10

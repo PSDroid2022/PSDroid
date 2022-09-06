@@ -1,0 +1,407 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/AdGuard_Content_Blocker.apk
+Entry Points[com.adguard.android.contentblocker.ui.NoBrowsersFoundActivity, com.adguard.android.contentblocker.ui.MainActivity, com.adguard.android.contentblocker.onboarding.OnboardingActivity$PackageReceiver, com.adguard.android.contentblocker.ui.WhitelistActivity, com.adguard.android.contentblocker.ui.SettingsActivity, com.adguard.android.contentblocker.ui.FiltersActivity, com.adguard.android.contentblocker.onboarding.OnboardingActivity, com.adguard.android.contentblocker.ui.AboutActivity, com.adguard.android.contentblocker.receiver.AlarmReceiver, com.adguard.android.contentblocker.ui.UserFilterActivity, com.adguard.android.contentblocker.FiltersContentProvider, com.adguard.android.contentblocker.FilterUpdateJobService, com.adguard.android.contentblocker.receiver.BootUpReceiver]
+FllowDroidcallgraph size:10456
+Soot started on Mon Jul 11 00:17:52 CST 2022
+Soot finished on Mon Jul 11 00:18:31 CST 2022
+Soot has run for 0 min. 38 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 19
+Declared Target Sdk version is: 27
+Declared Max Sdk version is: -1
+Collected 400 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.app.job.JobScheduler: java.util.List getAllPendingJobs()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+-i0 <= 21
+i1 <= 24
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.adguard.android.contentblocker.receiver.BootUpReceiver dummyMainMethod_com_adguard_android_contentblocker_receiver_BootUpReceiver(android.content.Intent)>[]--><com.adguard.android.contentblocker.receiver.BootUpReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><com.adguard.android.contentblocker.service.FilterServiceImpl: void scheduleFiltersUpdate()>[[-i0 <= 21]]--><com.adguard.android.contentblocker.service.FilterServiceImpl: boolean isJobCreated(android.app.job.JobScheduler,int)>[[i1 <= 24]]--><android.app.job.JobScheduler: java.util.List getAllPendingJobs()>
+One road protect good!
+-i0 <= 21
+i1 <= 24
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.adguard.android.contentblocker.ui.MainActivity dummyMainMethod_com_adguard_android_contentblocker_ui_MainActivity(android.content.Intent)>[]--><com.adguard.android.contentblocker.ui.MainActivity: void onCreate(android.os.Bundle)>[]--><com.adguard.android.contentblocker.service.FilterServiceImpl: void scheduleFiltersUpdate()>[[-i0 <= 21]]--><com.adguard.android.contentblocker.service.FilterServiceImpl: boolean isJobCreated(android.app.job.JobScheduler,int)>[[i1 <= 24]]--><android.app.job.JobScheduler: java.util.List getAllPendingJobs()>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.app.job.JobInfo.Builder: android.app.job.JobInfo.Builder setRequiredNetworkType(int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+-i0 <= 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.adguard.android.contentblocker.receiver.BootUpReceiver dummyMainMethod_com_adguard_android_contentblocker_receiver_BootUpReceiver(android.content.Intent)>[]--><com.adguard.android.contentblocker.receiver.BootUpReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><com.adguard.android.contentblocker.service.FilterServiceImpl: void scheduleFiltersUpdate()>[[-i0 <= 21]]--><android.app.job.JobInfo.Builder: android.app.job.JobInfo.Builder setRequiredNetworkType(int)>
+One road protect good!
+-i0 <= 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.adguard.android.contentblocker.ui.MainActivity dummyMainMethod_com_adguard_android_contentblocker_ui_MainActivity(android.content.Intent)>[]--><com.adguard.android.contentblocker.ui.MainActivity: void onCreate(android.os.Bundle)>[]--><com.adguard.android.contentblocker.service.FilterServiceImpl: void scheduleFiltersUpdate()>[[-i0 <= 21]]--><android.app.job.JobInfo.Builder: android.app.job.JobInfo.Builder setRequiredNetworkType(int)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.os.BaseBundle: int getInt(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+3call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.adguard.android.contentblocker.onboarding.OnboardingActivity dummyMainMethod_com_adguard_android_contentblocker_onboarding_OnboardingActivity(android.content.Intent)>[]--><dummyMainClass: com.adguard.android.contentblocker.onboarding.OnboardingActivity$PlaceholderFragment dummyMainMethod_com_adguard_android_contentblocker_onboarding_OnboardingActivity$PlaceholderFragment(android.content.Intent,android.app.Activity)>[]--><com.adguard.android.contentblocker.onboarding.OnboardingActivity$PlaceholderFragment: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+2 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <androidx.browser.browseractions.BrowserActionsIntent: void openBrowserAction(android.content.Context,android.net.Uri)>[]--><androidx.browser.browseractions.BrowserActionsIntent: void launchIntent(android.content.Context,android.content.Intent)>[]--><androidx.browser.browseractions.BrowserActionsIntent: void launchIntent(android.content.Context,android.content.Intent,java.util.List)>[]--><androidx.browser.browseractions.BrowserActionsIntent: void openFallbackBrowserActionsMenu(android.content.Context,android.content.Intent)>[]--><androidx.browser.browseractions.BrowserActionsIntent: java.util.List parseBrowserActionItems(java.util.ArrayList)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#1.the call statck between class <androidx.browser.browseractions.BrowserActionsIntent: void openBrowserAction(android.content.Context,android.net.Uri)> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <androidx.browser.browseractions.BrowserActionsIntent: void openBrowserAction(android.content.Context,android.net.Uri,int,java.util.ArrayList,android.app.PendingIntent)>[]--><androidx.browser.browseractions.BrowserActionsIntent: void launchIntent(android.content.Context,android.content.Intent)>[]--><androidx.browser.browseractions.BrowserActionsIntent: void launchIntent(android.content.Context,android.content.Intent,java.util.List)>[]--><androidx.browser.browseractions.BrowserActionsIntent: void openFallbackBrowserActionsMenu(android.content.Context,android.content.Intent)>[]--><androidx.browser.browseractions.BrowserActionsIntent: java.util.List parseBrowserActionItems(java.util.ArrayList)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#2.the call statck between class <androidx.browser.browseractions.BrowserActionsIntent: void openBrowserAction(android.content.Context,android.net.Uri,int,java.util.ArrayList,android.app.PendingIntent)> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:1
+crashApisInMain:1
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.net.NetworkInfo: int getType()> is checking!!!
+The life time of api is [1,30]
+5call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.adguard.android.contentblocker.FilterUpdateJobService dummyMainMethod_com_adguard_android_contentblocker_FilterUpdateJobService(android.content.Intent)>[]--><com.adguard.android.contentblocker.FilterUpdateJobService: boolean onStartJob(android.app.job.JobParameters)>[]--><com.adguard.android.contentblocker.FilterUpdateJobService$FilterUpdateTask: java.lang.Object doInBackground(java.lang.Object[])>[]--><com.adguard.android.contentblocker.FilterUpdateJobService$FilterUpdateTask: java.lang.Void doInBackground(android.app.job.JobParameters[])>[]--><com.adguard.android.contentblocker.service.FilterServiceImpl: void tryUpdateFilters()>[]--><com.adguard.android.contentblocker.service.FilterServiceImpl: java.util.List checkFilterUpdates(boolean)>[]--><com.adguard.android.contentblocker.service.FilterServiceImpl: java.util.List checkOutdatedFilterUpdates(boolean)>[]--><com.adguard.android.contentblocker.commons.network.NetworkUtils: boolean isConnectionWifi(android.content.Context)>[]--><com.adguard.android.contentblocker.commons.network.NetworkUtils: java.lang.Integer getConnectionType(android.content.Context)>[]--><android.net.NetworkInfo: int getType()>
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.adguard.android.contentblocker.receiver.AlarmReceiver dummyMainMethod_com_adguard_android_contentblocker_receiver_AlarmReceiver(android.content.Intent)>[]--><com.adguard.android.contentblocker.receiver.AlarmReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><com.adguard.android.contentblocker.receiver.AlarmReceiver$1: void run()>[]--><com.adguard.android.contentblocker.service.FilterServiceImpl: void tryUpdateFilters()>[]--><com.adguard.android.contentblocker.service.FilterServiceImpl: java.util.List checkFilterUpdates(boolean)>[]--><com.adguard.android.contentblocker.service.FilterServiceImpl: java.util.List checkOutdatedFilterUpdates(boolean)>[]--><com.adguard.android.contentblocker.commons.network.NetworkUtils: boolean isConnectionWifi(android.content.Context)>[]--><com.adguard.android.contentblocker.commons.network.NetworkUtils: java.lang.Integer getConnectionType(android.content.Context)>[]--><android.net.NetworkInfo: int getType()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.NetworkInfo: int getType()>has compatibility isssues！
+-----------------------------------------
+4 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <com.adguard.android.contentblocker.service.FilterServiceImpl$CheckUpdatesTask: void processTask()>[]--><com.adguard.android.contentblocker.service.FilterServiceImpl: java.util.List checkFilterUpdates(boolean)>[]--><com.adguard.android.contentblocker.service.FilterServiceImpl: java.util.List checkOutdatedFilterUpdates(boolean)>[]--><com.adguard.android.contentblocker.commons.network.NetworkUtils: boolean isConnectionWifi(android.content.Context)>[]--><com.adguard.android.contentblocker.commons.network.NetworkUtils: java.lang.Integer getConnectionType(android.content.Context)>[]--><android.net.NetworkInfo: int getType()>
+#1.the call statck between class <com.adguard.android.contentblocker.service.FilterServiceImpl$CheckUpdatesTask: void processTask()> to <android.net.NetworkInfo: int getType()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)>[]--><com.adguard.android.contentblocker.receiver.AlarmReceiver$1: void run()>[]--><com.adguard.android.contentblocker.service.FilterServiceImpl: void tryUpdateFilters()>[]--><com.adguard.android.contentblocker.service.FilterServiceImpl: java.util.List checkFilterUpdates(boolean)>[]--><com.adguard.android.contentblocker.service.FilterServiceImpl: java.util.List checkOutdatedFilterUpdates(boolean)>[]--><com.adguard.android.contentblocker.commons.network.NetworkUtils: boolean isConnectionWifi(android.content.Context)>[]--><com.adguard.android.contentblocker.commons.network.NetworkUtils: java.lang.Integer getConnectionType(android.content.Context)>[]--><android.net.NetworkInfo: int getType()>
+#2.the call statck between class <android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)> to <android.net.NetworkInfo: int getType()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <com.adguard.android.contentblocker.service.FilterServiceImpl$ClearFilterCacheTask: void processTask()>[]--><com.adguard.android.contentblocker.service.FilterServiceImpl: java.util.List checkFilterUpdates(boolean)>[]--><com.adguard.android.contentblocker.service.FilterServiceImpl: java.util.List checkOutdatedFilterUpdates(boolean)>[]--><com.adguard.android.contentblocker.commons.network.NetworkUtils: boolean isConnectionWifi(android.content.Context)>[]--><com.adguard.android.contentblocker.commons.network.NetworkUtils: java.lang.Integer getConnectionType(android.content.Context)>[]--><android.net.NetworkInfo: int getType()>
+#3.the call statck between class <com.adguard.android.contentblocker.service.FilterServiceImpl$ClearFilterCacheTask: void processTask()> to <android.net.NetworkInfo: int getType()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <org.apache.commons.collections4.map.StaticBucketMap: void atomic(java.lang.Runnable)>[]--><org.apache.commons.collections4.map.StaticBucketMap: void atomic(java.lang.Runnable,int)>[]--><com.adguard.android.contentblocker.receiver.AlarmReceiver$1: void run()>[]--><com.adguard.android.contentblocker.service.FilterServiceImpl: void tryUpdateFilters()>[]--><com.adguard.android.contentblocker.service.FilterServiceImpl: java.util.List checkFilterUpdates(boolean)>[]--><com.adguard.android.contentblocker.service.FilterServiceImpl: java.util.List checkOutdatedFilterUpdates(boolean)>[]--><com.adguard.android.contentblocker.commons.network.NetworkUtils: boolean isConnectionWifi(android.content.Context)>[]--><com.adguard.android.contentblocker.commons.network.NetworkUtils: java.lang.Integer getConnectionType(android.content.Context)>[]--><android.net.NetworkInfo: int getType()>
+#4.the call statck between class <org.apache.commons.collections4.map.StaticBucketMap: void atomic(java.lang.Runnable)> to <android.net.NetworkInfo: int getType()>has compatibility isssues！
+-----------------------------------------
+crashApis:2
+crashApisInMain:2
+containsStatic:false
+containsTry:false
+5call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()> is checking!!!
+The life time of api is [1,30]
+5call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.adguard.android.contentblocker.FilterUpdateJobService dummyMainMethod_com_adguard_android_contentblocker_FilterUpdateJobService(android.content.Intent)>[]--><com.adguard.android.contentblocker.FilterUpdateJobService: boolean onStartJob(android.app.job.JobParameters)>[]--><com.adguard.android.contentblocker.FilterUpdateJobService$FilterUpdateTask: java.lang.Object doInBackground(java.lang.Object[])>[]--><com.adguard.android.contentblocker.FilterUpdateJobService$FilterUpdateTask: java.lang.Void doInBackground(android.app.job.JobParameters[])>[]--><com.adguard.android.contentblocker.service.FilterServiceImpl: void tryUpdateFilters()>[]--><com.adguard.android.contentblocker.service.FilterServiceImpl: java.util.List checkFilterUpdates(boolean)>[]--><com.adguard.android.contentblocker.service.FilterServiceImpl: java.util.List checkOutdatedFilterUpdates(boolean)>[]--><com.adguard.android.contentblocker.commons.network.NetworkUtils: boolean isConnectionWifi(android.content.Context)>[]--><com.adguard.android.contentblocker.commons.network.NetworkUtils: java.lang.Integer getConnectionType(android.content.Context)>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.adguard.android.contentblocker.receiver.AlarmReceiver dummyMainMethod_com_adguard_android_contentblocker_receiver_AlarmReceiver(android.content.Intent)>[]--><com.adguard.android.contentblocker.receiver.AlarmReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><com.adguard.android.contentblocker.receiver.AlarmReceiver$1: void run()>[]--><com.adguard.android.contentblocker.service.FilterServiceImpl: void tryUpdateFilters()>[]--><com.adguard.android.contentblocker.service.FilterServiceImpl: java.util.List checkFilterUpdates(boolean)>[]--><com.adguard.android.contentblocker.service.FilterServiceImpl: java.util.List checkOutdatedFilterUpdates(boolean)>[]--><com.adguard.android.contentblocker.commons.network.NetworkUtils: boolean isConnectionWifi(android.content.Context)>[]--><com.adguard.android.contentblocker.commons.network.NetworkUtils: java.lang.Integer getConnectionType(android.content.Context)>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>has compatibility isssues！
+-----------------------------------------
+4 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <com.adguard.android.contentblocker.service.FilterServiceImpl$CheckUpdatesTask: void processTask()>[]--><com.adguard.android.contentblocker.service.FilterServiceImpl: java.util.List checkFilterUpdates(boolean)>[]--><com.adguard.android.contentblocker.service.FilterServiceImpl: java.util.List checkOutdatedFilterUpdates(boolean)>[]--><com.adguard.android.contentblocker.commons.network.NetworkUtils: boolean isConnectionWifi(android.content.Context)>[]--><com.adguard.android.contentblocker.commons.network.NetworkUtils: java.lang.Integer getConnectionType(android.content.Context)>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>
+#1.the call statck between class <com.adguard.android.contentblocker.service.FilterServiceImpl$CheckUpdatesTask: void processTask()> to <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)>[]--><com.adguard.android.contentblocker.receiver.AlarmReceiver$1: void run()>[]--><com.adguard.android.contentblocker.service.FilterServiceImpl: void tryUpdateFilters()>[]--><com.adguard.android.contentblocker.service.FilterServiceImpl: java.util.List checkFilterUpdates(boolean)>[]--><com.adguard.android.contentblocker.service.FilterServiceImpl: java.util.List checkOutdatedFilterUpdates(boolean)>[]--><com.adguard.android.contentblocker.commons.network.NetworkUtils: boolean isConnectionWifi(android.content.Context)>[]--><com.adguard.android.contentblocker.commons.network.NetworkUtils: java.lang.Integer getConnectionType(android.content.Context)>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>
+#2.the call statck between class <android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)> to <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <com.adguard.android.contentblocker.service.FilterServiceImpl$ClearFilterCacheTask: void processTask()>[]--><com.adguard.android.contentblocker.service.FilterServiceImpl: java.util.List checkFilterUpdates(boolean)>[]--><com.adguard.android.contentblocker.service.FilterServiceImpl: java.util.List checkOutdatedFilterUpdates(boolean)>[]--><com.adguard.android.contentblocker.commons.network.NetworkUtils: boolean isConnectionWifi(android.content.Context)>[]--><com.adguard.android.contentblocker.commons.network.NetworkUtils: java.lang.Integer getConnectionType(android.content.Context)>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>
+#3.the call statck between class <com.adguard.android.contentblocker.service.FilterServiceImpl$ClearFilterCacheTask: void processTask()> to <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <org.apache.commons.collections4.map.StaticBucketMap: void atomic(java.lang.Runnable)>[]--><org.apache.commons.collections4.map.StaticBucketMap: void atomic(java.lang.Runnable,int)>[]--><com.adguard.android.contentblocker.receiver.AlarmReceiver$1: void run()>[]--><com.adguard.android.contentblocker.service.FilterServiceImpl: void tryUpdateFilters()>[]--><com.adguard.android.contentblocker.service.FilterServiceImpl: java.util.List checkFilterUpdates(boolean)>[]--><com.adguard.android.contentblocker.service.FilterServiceImpl: java.util.List checkOutdatedFilterUpdates(boolean)>[]--><com.adguard.android.contentblocker.commons.network.NetworkUtils: boolean isConnectionWifi(android.content.Context)>[]--><com.adguard.android.contentblocker.commons.network.NetworkUtils: java.lang.Integer getConnectionType(android.content.Context)>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>
+#4.the call statck between class <org.apache.commons.collections4.map.StaticBucketMap: void atomic(java.lang.Runnable)> to <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>has compatibility isssues！
+-----------------------------------------
+crashApis:3
+crashApisInMain:3
+containsStatic:false
+containsTry:false
+5call by main package
+-----------------------------------------
+#################################################
+N 5 Potential Issue API: SDKCheck of <android.app.job.JobInfo.Builder: void <init>(int,android.content.ComponentName)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+-i0 <= 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.adguard.android.contentblocker.receiver.BootUpReceiver dummyMainMethod_com_adguard_android_contentblocker_receiver_BootUpReceiver(android.content.Intent)>[]--><com.adguard.android.contentblocker.receiver.BootUpReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><com.adguard.android.contentblocker.service.FilterServiceImpl: void scheduleFiltersUpdate()>[[-i0 <= 21]]--><android.app.job.JobInfo.Builder: void <init>(int,android.content.ComponentName)>
+One road protect good!
+-i0 <= 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.adguard.android.contentblocker.ui.MainActivity dummyMainMethod_com_adguard_android_contentblocker_ui_MainActivity(android.content.Intent)>[]--><com.adguard.android.contentblocker.ui.MainActivity: void onCreate(android.os.Bundle)>[]--><com.adguard.android.contentblocker.service.FilterServiceImpl: void scheduleFiltersUpdate()>[[-i0 <= 21]]--><android.app.job.JobInfo.Builder: void <init>(int,android.content.ComponentName)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 6 Potential Issue API: SDKCheck of <android.app.job.JobInfo.Builder: android.app.job.JobInfo.Builder setPersisted(boolean)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+-i0 <= 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.adguard.android.contentblocker.receiver.BootUpReceiver dummyMainMethod_com_adguard_android_contentblocker_receiver_BootUpReceiver(android.content.Intent)>[]--><com.adguard.android.contentblocker.receiver.BootUpReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><com.adguard.android.contentblocker.service.FilterServiceImpl: void scheduleFiltersUpdate()>[[-i0 <= 21]]--><android.app.job.JobInfo.Builder: android.app.job.JobInfo.Builder setPersisted(boolean)>
+One road protect good!
+-i0 <= 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.adguard.android.contentblocker.ui.MainActivity dummyMainMethod_com_adguard_android_contentblocker_ui_MainActivity(android.content.Intent)>[]--><com.adguard.android.contentblocker.ui.MainActivity: void onCreate(android.os.Bundle)>[]--><com.adguard.android.contentblocker.service.FilterServiceImpl: void scheduleFiltersUpdate()>[[-i0 <= 21]]--><android.app.job.JobInfo.Builder: android.app.job.JobInfo.Builder setPersisted(boolean)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 7 Potential Issue API: SDKCheck of <android.net.NetworkInfo: boolean isConnected()> is checking!!!
+The life time of api is [1,30]
+5call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.adguard.android.contentblocker.FilterUpdateJobService dummyMainMethod_com_adguard_android_contentblocker_FilterUpdateJobService(android.content.Intent)>[]--><com.adguard.android.contentblocker.FilterUpdateJobService: boolean onStartJob(android.app.job.JobParameters)>[]--><com.adguard.android.contentblocker.FilterUpdateJobService$FilterUpdateTask: java.lang.Object doInBackground(java.lang.Object[])>[]--><com.adguard.android.contentblocker.FilterUpdateJobService$FilterUpdateTask: java.lang.Void doInBackground(android.app.job.JobParameters[])>[]--><com.adguard.android.contentblocker.service.FilterServiceImpl: void tryUpdateFilters()>[]--><com.adguard.android.contentblocker.service.FilterServiceImpl: java.util.List checkFilterUpdates(boolean)>[]--><com.adguard.android.contentblocker.service.FilterServiceImpl: java.util.List checkOutdatedFilterUpdates(boolean)>[]--><com.adguard.android.contentblocker.commons.network.NetworkUtils: boolean isNetworkAvailable(android.content.Context)>[]--><android.net.NetworkInfo: boolean isConnected()>
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.adguard.android.contentblocker.receiver.AlarmReceiver dummyMainMethod_com_adguard_android_contentblocker_receiver_AlarmReceiver(android.content.Intent)>[]--><com.adguard.android.contentblocker.receiver.AlarmReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><com.adguard.android.contentblocker.receiver.AlarmReceiver$1: void run()>[]--><com.adguard.android.contentblocker.service.FilterServiceImpl: void tryUpdateFilters()>[]--><com.adguard.android.contentblocker.service.FilterServiceImpl: java.util.List checkFilterUpdates(boolean)>[]--><com.adguard.android.contentblocker.service.FilterServiceImpl: java.util.List checkOutdatedFilterUpdates(boolean)>[]--><com.adguard.android.contentblocker.commons.network.NetworkUtils: boolean isNetworkAvailable(android.content.Context)>[]--><android.net.NetworkInfo: boolean isConnected()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.NetworkInfo: boolean isConnected()>has compatibility isssues！
+-----------------------------------------
+4 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <com.adguard.android.contentblocker.service.FilterServiceImpl$CheckUpdatesTask: void processTask()>[]--><com.adguard.android.contentblocker.service.FilterServiceImpl: java.util.List checkFilterUpdates(boolean)>[]--><com.adguard.android.contentblocker.service.FilterServiceImpl: java.util.List checkOutdatedFilterUpdates(boolean)>[]--><com.adguard.android.contentblocker.commons.network.NetworkUtils: boolean isNetworkAvailable(android.content.Context)>[]--><android.net.NetworkInfo: boolean isConnected()>
+#1.the call statck between class <com.adguard.android.contentblocker.service.FilterServiceImpl$CheckUpdatesTask: void processTask()> to <android.net.NetworkInfo: boolean isConnected()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)>[]--><com.adguard.android.contentblocker.receiver.AlarmReceiver$1: void run()>[]--><com.adguard.android.contentblocker.service.FilterServiceImpl: void tryUpdateFilters()>[]--><com.adguard.android.contentblocker.service.FilterServiceImpl: java.util.List checkFilterUpdates(boolean)>[]--><com.adguard.android.contentblocker.service.FilterServiceImpl: java.util.List checkOutdatedFilterUpdates(boolean)>[]--><com.adguard.android.contentblocker.commons.network.NetworkUtils: boolean isNetworkAvailable(android.content.Context)>[]--><android.net.NetworkInfo: boolean isConnected()>
+#2.the call statck between class <android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)> to <android.net.NetworkInfo: boolean isConnected()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <com.adguard.android.contentblocker.service.FilterServiceImpl$ClearFilterCacheTask: void processTask()>[]--><com.adguard.android.contentblocker.service.FilterServiceImpl: java.util.List checkFilterUpdates(boolean)>[]--><com.adguard.android.contentblocker.service.FilterServiceImpl: java.util.List checkOutdatedFilterUpdates(boolean)>[]--><com.adguard.android.contentblocker.commons.network.NetworkUtils: boolean isNetworkAvailable(android.content.Context)>[]--><android.net.NetworkInfo: boolean isConnected()>
+#3.the call statck between class <com.adguard.android.contentblocker.service.FilterServiceImpl$ClearFilterCacheTask: void processTask()> to <android.net.NetworkInfo: boolean isConnected()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <org.apache.commons.collections4.map.StaticBucketMap: void atomic(java.lang.Runnable)>[]--><org.apache.commons.collections4.map.StaticBucketMap: void atomic(java.lang.Runnable,int)>[]--><com.adguard.android.contentblocker.receiver.AlarmReceiver$1: void run()>[]--><com.adguard.android.contentblocker.service.FilterServiceImpl: void tryUpdateFilters()>[]--><com.adguard.android.contentblocker.service.FilterServiceImpl: java.util.List checkFilterUpdates(boolean)>[]--><com.adguard.android.contentblocker.service.FilterServiceImpl: java.util.List checkOutdatedFilterUpdates(boolean)>[]--><com.adguard.android.contentblocker.commons.network.NetworkUtils: boolean isNetworkAvailable(android.content.Context)>[]--><android.net.NetworkInfo: boolean isConnected()>
+#4.the call statck between class <org.apache.commons.collections4.map.StaticBucketMap: void atomic(java.lang.Runnable)> to <android.net.NetworkInfo: boolean isConnected()>has compatibility isssues！
+-----------------------------------------
+crashApis:4
+crashApisInMain:4
+containsStatic:false
+containsTry:false
+5call by main package
+-----------------------------------------
+#################################################
+N 8 Potential Issue API: SDKCheck of <android.app.job.JobInfo.Builder: android.app.job.JobInfo build()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+-i0 <= 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.adguard.android.contentblocker.receiver.BootUpReceiver dummyMainMethod_com_adguard_android_contentblocker_receiver_BootUpReceiver(android.content.Intent)>[]--><com.adguard.android.contentblocker.receiver.BootUpReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><com.adguard.android.contentblocker.service.FilterServiceImpl: void scheduleFiltersUpdate()>[[-i0 <= 21]]--><android.app.job.JobInfo.Builder: android.app.job.JobInfo build()>
+One road protect good!
+-i0 <= 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.adguard.android.contentblocker.ui.MainActivity dummyMainMethod_com_adguard_android_contentblocker_ui_MainActivity(android.content.Intent)>[]--><com.adguard.android.contentblocker.ui.MainActivity: void onCreate(android.os.Bundle)>[]--><com.adguard.android.contentblocker.service.FilterServiceImpl: void scheduleFiltersUpdate()>[[-i0 <= 21]]--><android.app.job.JobInfo.Builder: android.app.job.JobInfo build()>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 9 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <androidx.browser.browseractions.BrowserActionsIntent$Builder: android.os.Bundle getBundleFromItem(androidx.browser.browseractions.BrowserActionItem)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#1.the call statck between class <androidx.browser.browseractions.BrowserActionsIntent$Builder: android.os.Bundle getBundleFromItem(androidx.browser.browseractions.BrowserActionItem)> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:5
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 10 Potential Issue API: SDKCheck of <android.app.job.JobInfo.Builder: android.app.job.JobInfo.Builder setPeriodic(long)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+-i0 <= 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.adguard.android.contentblocker.receiver.BootUpReceiver dummyMainMethod_com_adguard_android_contentblocker_receiver_BootUpReceiver(android.content.Intent)>[]--><com.adguard.android.contentblocker.receiver.BootUpReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><com.adguard.android.contentblocker.service.FilterServiceImpl: void scheduleFiltersUpdate()>[[-i0 <= 21]]--><android.app.job.JobInfo.Builder: android.app.job.JobInfo.Builder setPeriodic(long)>
+One road protect good!
+-i0 <= 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.adguard.android.contentblocker.ui.MainActivity dummyMainMethod_com_adguard_android_contentblocker_ui_MainActivity(android.content.Intent)>[]--><com.adguard.android.contentblocker.ui.MainActivity: void onCreate(android.os.Bundle)>[]--><com.adguard.android.contentblocker.service.FilterServiceImpl: void scheduleFiltersUpdate()>[[-i0 <= 21]]--><android.app.job.JobInfo.Builder: android.app.job.JobInfo.Builder setPeriodic(long)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 11 Potential Issue API: SDKCheck of <android.app.job.JobService: void jobFinished(android.app.job.JobParameters,boolean)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.adguard.android.contentblocker.FilterUpdateJobService dummyMainMethod_com_adguard_android_contentblocker_FilterUpdateJobService(android.content.Intent)>[]--><com.adguard.android.contentblocker.FilterUpdateJobService: boolean onStartJob(android.app.job.JobParameters)>[]--><com.adguard.android.contentblocker.FilterUpdateJobService$FilterUpdateTask: void onPostExecute(java.lang.Object)>[]--><com.adguard.android.contentblocker.FilterUpdateJobService$FilterUpdateTask: void onPostExecute(java.lang.Void)>[]--><android.app.job.JobService: void jobFinished(android.app.job.JobParameters,boolean)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.app.job.JobService: void jobFinished(android.app.job.JobParameters,boolean)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:6
+crashApisInMain:5
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 12 Potential Issue API: SDKCheck of <android.app.job.JobScheduler: int schedule(android.app.job.JobInfo)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+-i0 <= 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.adguard.android.contentblocker.receiver.BootUpReceiver dummyMainMethod_com_adguard_android_contentblocker_receiver_BootUpReceiver(android.content.Intent)>[]--><com.adguard.android.contentblocker.receiver.BootUpReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><com.adguard.android.contentblocker.service.FilterServiceImpl: void scheduleFiltersUpdate()>[[-i0 <= 21]]--><android.app.job.JobScheduler: int schedule(android.app.job.JobInfo)>
+One road protect good!
+-i0 <= 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.adguard.android.contentblocker.ui.MainActivity dummyMainMethod_com_adguard_android_contentblocker_ui_MainActivity(android.content.Intent)>[]--><com.adguard.android.contentblocker.ui.MainActivity: void onCreate(android.os.Bundle)>[]--><com.adguard.android.contentblocker.service.FilterServiceImpl: void scheduleFiltersUpdate()>[[-i0 <= 21]]--><android.app.job.JobScheduler: int schedule(android.app.job.JobInfo)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 13 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.lang.String getString(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <androidx.browser.browseractions.BrowserActionsIntent: void openBrowserAction(android.content.Context,android.net.Uri)>[]--><androidx.browser.browseractions.BrowserActionsIntent: void launchIntent(android.content.Context,android.content.Intent)>[]--><androidx.browser.browseractions.BrowserActionsIntent: void launchIntent(android.content.Context,android.content.Intent,java.util.List)>[]--><androidx.browser.browseractions.BrowserActionsIntent: void openFallbackBrowserActionsMenu(android.content.Context,android.content.Intent)>[]--><androidx.browser.browseractions.BrowserActionsIntent: java.util.List parseBrowserActionItems(java.util.ArrayList)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#1.the call statck between class <androidx.browser.browseractions.BrowserActionsIntent: void openBrowserAction(android.content.Context,android.net.Uri)> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <androidx.browser.browseractions.BrowserActionsIntent: void openBrowserAction(android.content.Context,android.net.Uri,int,java.util.ArrayList,android.app.PendingIntent)>[]--><androidx.browser.browseractions.BrowserActionsIntent: void launchIntent(android.content.Context,android.content.Intent)>[]--><androidx.browser.browseractions.BrowserActionsIntent: void launchIntent(android.content.Context,android.content.Intent,java.util.List)>[]--><androidx.browser.browseractions.BrowserActionsIntent: void openFallbackBrowserActionsMenu(android.content.Context,android.content.Intent)>[]--><androidx.browser.browseractions.BrowserActionsIntent: java.util.List parseBrowserActionItems(java.util.ArrayList)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#2.the call statck between class <androidx.browser.browseractions.BrowserActionsIntent: void openBrowserAction(android.content.Context,android.net.Uri,int,java.util.ArrayList,android.app.PendingIntent)> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:7
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 14 Potential Issue API: SDKCheck of <android.app.job.JobInfo: int getId()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <com.adguard.android.contentblocker.service.FilterServiceImpl$1: boolean evaluate(android.app.job.JobInfo)>[]--><android.app.job.JobInfo: int getId()>
+#1.the call statck between class <com.adguard.android.contentblocker.service.FilterServiceImpl$1: boolean evaluate(android.app.job.JobInfo)> to <android.app.job.JobInfo: int getId()>has compatibility isssues！
+-----------------------------------------
+crashApis:8
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 15 Potential Issue API: SDKCheck of <android.app.job.JobScheduler: android.app.job.JobInfo getPendingJob(int)> is checking!!!
+The life time of api is [24,31]
+1call roads:
+1 Mainhead roads:
+-i0 <= 21
+-i1 <= 24
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.adguard.android.contentblocker.receiver.BootUpReceiver dummyMainMethod_com_adguard_android_contentblocker_receiver_BootUpReceiver(android.content.Intent)>[]--><com.adguard.android.contentblocker.receiver.BootUpReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><com.adguard.android.contentblocker.service.FilterServiceImpl: void scheduleFiltersUpdate()>[[-i0 <= 21]]--><com.adguard.android.contentblocker.service.FilterServiceImpl: boolean isJobCreated(android.app.job.JobScheduler,int)>[[-i1 <= 24]]--><android.app.job.JobScheduler: android.app.job.JobInfo getPendingJob(int)>
+One road protect good!
+-i0 <= 21
+-i1 <= 24
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.adguard.android.contentblocker.ui.MainActivity dummyMainMethod_com_adguard_android_contentblocker_ui_MainActivity(android.content.Intent)>[]--><com.adguard.android.contentblocker.ui.MainActivity: void onCreate(android.os.Bundle)>[]--><com.adguard.android.contentblocker.service.FilterServiceImpl: void scheduleFiltersUpdate()>[[-i0 <= 21]]--><com.adguard.android.contentblocker.service.FilterServiceImpl: boolean isJobCreated(android.app.job.JobScheduler,int)>[[-i1 <= 24]]--><android.app.job.JobScheduler: android.app.job.JobInfo getPendingJob(int)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 16 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putInt(java.lang.String,int)> is checking!!!
+The life time of api is [21,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <com.adguard.android.contentblocker.onboarding.OnboardingActivity$PlaceholderFragment: com.adguard.android.contentblocker.onboarding.OnboardingActivity$PlaceholderFragment newInstance(android.view.View$OnClickListener,int)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#1.the call statck between class <com.adguard.android.contentblocker.onboarding.OnboardingActivity$PlaceholderFragment: com.adguard.android.contentblocker.onboarding.OnboardingActivity$PlaceholderFragment newInstance(android.view.View$OnClickListener,int)> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <androidx.browser.browseractions.BrowserActionsIntent$Builder: android.os.Bundle getBundleFromItem(androidx.browser.browseractions.BrowserActionItem)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#2.the call statck between class <androidx.browser.browseractions.BrowserActionsIntent$Builder: android.os.Bundle getBundleFromItem(androidx.browser.browseractions.BrowserActionItem)> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:9
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 17 Potential Issue API: SDKCheck of <android.net.NetworkInfo: boolean isConnectedOrConnecting()> is checking!!!
+The life time of api is [1,30]
+5call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.adguard.android.contentblocker.FilterUpdateJobService dummyMainMethod_com_adguard_android_contentblocker_FilterUpdateJobService(android.content.Intent)>[]--><com.adguard.android.contentblocker.FilterUpdateJobService: boolean onStartJob(android.app.job.JobParameters)>[]--><com.adguard.android.contentblocker.FilterUpdateJobService$FilterUpdateTask: java.lang.Object doInBackground(java.lang.Object[])>[]--><com.adguard.android.contentblocker.FilterUpdateJobService$FilterUpdateTask: java.lang.Void doInBackground(android.app.job.JobParameters[])>[]--><com.adguard.android.contentblocker.service.FilterServiceImpl: void tryUpdateFilters()>[]--><com.adguard.android.contentblocker.service.FilterServiceImpl: java.util.List checkFilterUpdates(boolean)>[]--><com.adguard.android.contentblocker.service.FilterServiceImpl: java.util.List checkOutdatedFilterUpdates(boolean)>[]--><com.adguard.android.contentblocker.commons.network.NetworkUtils: boolean isConnectionWifi(android.content.Context)>[]--><com.adguard.android.contentblocker.commons.network.NetworkUtils: java.lang.Integer getConnectionType(android.content.Context)>[]--><android.net.NetworkInfo: boolean isConnectedOrConnecting()>
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.adguard.android.contentblocker.receiver.AlarmReceiver dummyMainMethod_com_adguard_android_contentblocker_receiver_AlarmReceiver(android.content.Intent)>[]--><com.adguard.android.contentblocker.receiver.AlarmReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><com.adguard.android.contentblocker.receiver.AlarmReceiver$1: void run()>[]--><com.adguard.android.contentblocker.service.FilterServiceImpl: void tryUpdateFilters()>[]--><com.adguard.android.contentblocker.service.FilterServiceImpl: java.util.List checkFilterUpdates(boolean)>[]--><com.adguard.android.contentblocker.service.FilterServiceImpl: java.util.List checkOutdatedFilterUpdates(boolean)>[]--><com.adguard.android.contentblocker.commons.network.NetworkUtils: boolean isConnectionWifi(android.content.Context)>[]--><com.adguard.android.contentblocker.commons.network.NetworkUtils: java.lang.Integer getConnectionType(android.content.Context)>[]--><android.net.NetworkInfo: boolean isConnectedOrConnecting()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.NetworkInfo: boolean isConnectedOrConnecting()>has compatibility isssues！
+-----------------------------------------
+4 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <com.adguard.android.contentblocker.service.FilterServiceImpl$CheckUpdatesTask: void processTask()>[]--><com.adguard.android.contentblocker.service.FilterServiceImpl: java.util.List checkFilterUpdates(boolean)>[]--><com.adguard.android.contentblocker.service.FilterServiceImpl: java.util.List checkOutdatedFilterUpdates(boolean)>[]--><com.adguard.android.contentblocker.commons.network.NetworkUtils: boolean isConnectionWifi(android.content.Context)>[]--><com.adguard.android.contentblocker.commons.network.NetworkUtils: java.lang.Integer getConnectionType(android.content.Context)>[]--><android.net.NetworkInfo: boolean isConnectedOrConnecting()>
+#1.the call statck between class <com.adguard.android.contentblocker.service.FilterServiceImpl$CheckUpdatesTask: void processTask()> to <android.net.NetworkInfo: boolean isConnectedOrConnecting()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)>[]--><com.adguard.android.contentblocker.receiver.AlarmReceiver$1: void run()>[]--><com.adguard.android.contentblocker.service.FilterServiceImpl: void tryUpdateFilters()>[]--><com.adguard.android.contentblocker.service.FilterServiceImpl: java.util.List checkFilterUpdates(boolean)>[]--><com.adguard.android.contentblocker.service.FilterServiceImpl: java.util.List checkOutdatedFilterUpdates(boolean)>[]--><com.adguard.android.contentblocker.commons.network.NetworkUtils: boolean isConnectionWifi(android.content.Context)>[]--><com.adguard.android.contentblocker.commons.network.NetworkUtils: java.lang.Integer getConnectionType(android.content.Context)>[]--><android.net.NetworkInfo: boolean isConnectedOrConnecting()>
+#2.the call statck between class <android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)> to <android.net.NetworkInfo: boolean isConnectedOrConnecting()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <com.adguard.android.contentblocker.service.FilterServiceImpl$ClearFilterCacheTask: void processTask()>[]--><com.adguard.android.contentblocker.service.FilterServiceImpl: java.util.List checkFilterUpdates(boolean)>[]--><com.adguard.android.contentblocker.service.FilterServiceImpl: java.util.List checkOutdatedFilterUpdates(boolean)>[]--><com.adguard.android.contentblocker.commons.network.NetworkUtils: boolean isConnectionWifi(android.content.Context)>[]--><com.adguard.android.contentblocker.commons.network.NetworkUtils: java.lang.Integer getConnectionType(android.content.Context)>[]--><android.net.NetworkInfo: boolean isConnectedOrConnecting()>
+#3.the call statck between class <com.adguard.android.contentblocker.service.FilterServiceImpl$ClearFilterCacheTask: void processTask()> to <android.net.NetworkInfo: boolean isConnectedOrConnecting()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <org.apache.commons.collections4.map.StaticBucketMap: void atomic(java.lang.Runnable)>[]--><org.apache.commons.collections4.map.StaticBucketMap: void atomic(java.lang.Runnable,int)>[]--><com.adguard.android.contentblocker.receiver.AlarmReceiver$1: void run()>[]--><com.adguard.android.contentblocker.service.FilterServiceImpl: void tryUpdateFilters()>[]--><com.adguard.android.contentblocker.service.FilterServiceImpl: java.util.List checkFilterUpdates(boolean)>[]--><com.adguard.android.contentblocker.service.FilterServiceImpl: java.util.List checkOutdatedFilterUpdates(boolean)>[]--><com.adguard.android.contentblocker.commons.network.NetworkUtils: boolean isConnectionWifi(android.content.Context)>[]--><com.adguard.android.contentblocker.commons.network.NetworkUtils: java.lang.Integer getConnectionType(android.content.Context)>[]--><android.net.NetworkInfo: boolean isConnectedOrConnecting()>
+#4.the call statck between class <org.apache.commons.collections4.map.StaticBucketMap: void atomic(java.lang.Runnable)> to <android.net.NetworkInfo: boolean isConnectedOrConnecting()>has compatibility isssues！
+-----------------------------------------
+crashApis:10
+crashApisInMain:6
+containsStatic:false
+containsTry:false
+5call by main package
+-----------------------------------------
+crashApis numbers:10
+crashApis numbers in main road:6
+On Android Version 16 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 17 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 18 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 19 this app may have error api use(at least): 6 and error api roads: 10
+On Android Version 20 this app may have error api use(at least): 6 and error api roads: 10
+On Android Version 21 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 22 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 23 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 24 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 25 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 31 this app may have error api use(at least): 4 and error api roads: 24

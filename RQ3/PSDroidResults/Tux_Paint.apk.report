@@ -1,0 +1,307 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/Tux_Paint.apk
+Entry Points[org.tuxpaint.reqpermsActivity, org.tuxpaint.tuxpaintActivity, org.tuxpaint.ConfigActivity]
+FllowDroidcallgraph size:847
+Soot started on Mon Jul 11 14:26:30 CST 2022
+StaticCheck:<org.libsdl.app.SDLActivity: boolean mHasMultiWindow>$yysi0 < 24
+StaticCheck:<org.libsdl.app.SDLActivity: boolean isDeXMode()>i0 >= 24
+StaticCheck:<org.libsdl.app.SDLActivity: boolean setCustomCursor(int)>i1 < 24
+StaticCheck:<org.libsdl.app.SDLActivity: boolean setSystemCursor(int)>$yysi0 < 24
+StaticCheck:<org.libsdl.app.SDLActivity: boolean supportsRelativeMouse()>$yysi0 >= 27
+Soot finished on Mon Jul 11 14:26:34 CST 2022
+Soot has run for 0 min. 3 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 21
+Declared Target Sdk version is: 29
+Declared Max Sdk version is: -1
+Collected 330 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.app.Activity: boolean isInMultiWindowMode()> is checking!!!
+The life time of api is [24,31]
+1call roads:
+1 Mainhead roads:
+###Multi invoking in one method, need manual check!!!--><org.libsdl.app.SDLSurface: void surfaceChanged(android.view.SurfaceHolder,int,int,int)>[[-$i0 < 24], [i5 < 17]]
+###Multi invoking in one method, need manual check!!!--><org.libsdl.app.SDLSurface: void surfaceChanged(android.view.SurfaceHolder,int,int,int)>[[-$i0 < 24]][[i5 < 17]]
+-$i0 < 24
+i5 < 17
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.tuxpaint.tuxpaintActivity dummyMainMethod_org_tuxpaint_tuxpaintActivity(android.content.Intent)>[]--><org.libsdl.app.SDLSurface: void surfaceChanged(android.view.SurfaceHolder,int,int,int)>[[-$i0 < 24], [i5 < 17]]--><android.app.Activity: boolean isInMultiWindowMode()>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.media.AudioRecord: int read(byte[],int,int,int)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+$i1 >= 23
+Good road: <org.libsdl.app.SDLAudioManager: int captureReadByteBuffer(byte[],boolean)>[[$i1 >= 23]]--><android.media.AudioRecord: int read(byte[],int,int,int)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.view.PointerIcon: android.view.PointerIcon create(android.graphics.Bitmap,float,float)> is checking!!!
+The life time of api is [24,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+###Multi invoking in one method, need manual check!!!,int,int,int,int)>[[-$i0 < 24], [try]]
+###Multi invoking in one method, need manual check!!!,int,int,int,int)>[[-$i0 < 24]][[try]]
+-$i0 < 24
+try
+Good road with try: <org.libsdl.app.SDLActivity: int createCustomCursor(int[],int,int,int,int)>[[-$i0 < 24], [try]]--><android.view.PointerIcon: android.view.PointerIcon create(android.graphics.Bitmap,float,float)>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.view.View: void setPointerIcon(android.view.PointerIcon)> is checking!!!
+The life time of api is [24,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+###Multi invoking in one method, need manual check!!!<org.libsdl.app.SDLActivity: boolean setSystemCursor(int)>[[-$i0 < 24], [try]]
+###Multi invoking in one method, need manual check!!!<org.libsdl.app.SDLActivity: boolean setSystemCursor(int)>[[-$i0 < 24]][[try]]
+-$i0 < 24
+try
+Good road with try: <org.libsdl.app.SDLActivity: boolean setSystemCursor(int)>[[-$i0 < 24], [try]]--><android.view.View: void setPointerIcon(android.view.PointerIcon)>
+One road protect good!
+###Multi invoking in one method, need manual check!!!<org.libsdl.app.SDLActivity: boolean setCustomCursor(int)>[[try], [-i1 < 24]]
+###Multi invoking in one method, need manual check!!!<org.libsdl.app.SDLActivity: boolean setCustomCursor(int)>[[try]][[-i1 < 24]]
+try
+Good road with try: <org.libsdl.app.SDLActivity: boolean setCustomCursor(int)>[[try], [-i1 < 24]]--><android.view.View: void setPointerIcon(android.view.PointerIcon)>
+One road protect good!
+containsStatic:false
+containsTry:true
+3call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.app.Activity: void requestPermissions(java.lang.String[],int)> is checking!!!
+The life time of api is [23,31]
+2call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 21 22 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.tuxpaint.reqpermsActivity dummyMainMethod_org_tuxpaint_reqpermsActivity(android.content.Intent)>[]--><org.tuxpaint.reqpermsActivity: void onCreate(android.os.Bundle)>[]--><android.app.Activity: void requestPermissions(java.lang.String[],int)>
+!!!this api will crash on sdk 21 22 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.tuxpaint.ConfigActivity dummyMainMethod_org_tuxpaint_ConfigActivity(android.content.Intent)>[]--><org.tuxpaint.ConfigActivity: void onCreate(android.os.Bundle)>[]--><android.app.Activity: void requestPermissions(java.lang.String[],int)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.app.Activity: void requestPermissions(java.lang.String[],int)>has compatibility isssues！
+-----------------------------------------
+1 Packageshead roads:
+i1 >= 23
+Good road: <org.libsdl.app.SDLActivity: void requestPermission(java.lang.String,int)>[[i1 >= 23]]--><android.app.Activity: void requestPermissions(java.lang.String[],int)>
+One road protect good!
+crashApis:1
+crashApisInMain:1
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 5 Potential Issue API: SDKCheck of <android.media.AudioRecord: int read(float[],int,int,int)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 21 22 
+Error road: <org.libsdl.app.SDLAudioManager: int captureReadFloatBuffer(float[],boolean)>[]--><android.media.AudioRecord: int read(float[],int,int,int)>
+#1.the call statck between class <org.libsdl.app.SDLAudioManager: int captureReadFloatBuffer(float[],boolean)> to <android.media.AudioRecord: int read(float[],int,int,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:2
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 6 Potential Issue API: SDKCheck of <android.view.View: void releasePointerCapture()> is checking!!!
+The life time of api is [26,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i0 < 27
+Good road: <org.libsdl.app.SDLGenericMotionListener_API26: boolean setRelativeMouseEnabled(boolean)>[[-$i0 < 27]]--><android.view.View: void releasePointerCapture()>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 7 Potential Issue API: SDKCheck of <android.view.View: void requestPointerCapture()> is checking!!!
+The life time of api is [26,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+i0 >= 24
+!!!this api will crash on sdk 24 25 
+Error road: <org.libsdl.app.SDLGenericMotionListener_API26: void reclaimRelativeMouseModeIfNeeded()>[[i0 >= 24]]--><android.view.View: void requestPointerCapture()>
+#1.the call statck between class <org.libsdl.app.SDLGenericMotionListener_API26: void reclaimRelativeMouseModeIfNeeded()> to <android.view.View: void requestPointerCapture()>has compatibility isssues！
+-----------------------------------------
+-$i0 < 27
+Good road: <org.libsdl.app.SDLGenericMotionListener_API26: boolean setRelativeMouseEnabled(boolean)>[[-$i0 < 27]]--><android.view.View: void requestPointerCapture()>
+One road protect good!
+crashApis:3
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 8 Potential Issue API: SDKCheck of <android.view.PointerIcon: android.view.PointerIcon getSystemIcon(android.content.Context,int)> is checking!!!
+The life time of api is [24,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+###Multi invoking in one method, need manual check!!!<org.libsdl.app.SDLActivity: boolean setSystemCursor(int)>[[-$i0 < 24], [try]]
+###Multi invoking in one method, need manual check!!!<org.libsdl.app.SDLActivity: boolean setSystemCursor(int)>[[-$i0 < 24]][[try]]
+-$i0 < 24
+try
+Good road with try: <org.libsdl.app.SDLActivity: boolean setSystemCursor(int)>[[-$i0 < 24], [try]]--><android.view.PointerIcon: android.view.PointerIcon getSystemIcon(android.content.Context,int)>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 9 Potential Issue API: SDKCheck of <android.os.VibrationEffect: android.os.VibrationEffect createOneShot(long,int)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+try
+Good road with try: <org.libsdl.app.SDLHapticHandler_API26: void run(int,float,int)>[[try]]--><android.os.VibrationEffect: android.os.VibrationEffect createOneShot(long,int)>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 10 Potential Issue API: SDKCheck of <android.bluetooth.BluetoothDevice: android.bluetooth.BluetoothGatt connectGatt(android.content.Context,boolean,android.bluetooth.BluetoothGattCallback,int)> is checking!!!
+The life time of api is [23,31]
+8call roads:
+1 Mainhead roads:
+###Multi invoking in one method, need manual check!!!--><org.libsdl.app.HIDDeviceManager: boolean connectBluetoothDevice(android.bluetooth.BluetoothDevice)>[[try]]--><org.libsdl.app.HIDDeviceBLESteamController: void <init>(org.libsdl.app.HIDDeviceManager,android.bluetooth.BluetoothDevice)>[]--><org.libsdl.app.HIDDeviceBLESteamController: android.bluetooth.BluetoothGatt connectGatt()>[]--><org.libsdl.app.HIDDeviceBLESteamController: android.bluetooth.BluetoothGatt connectGatt(boolean)>[[-i0 < 23], [try]]
+###Multi invoking in one method, need manual check!!!--><org.libsdl.app.HIDDeviceManager: boolean connectBluetoothDevice(android.bluetooth.BluetoothDevice)>[[try]]--><org.libsdl.app.HIDDeviceBLESteamController: void <init>(org.libsdl.app.HIDDeviceManager,android.bluetooth.BluetoothDevice)>[]--><org.libsdl.app.HIDDeviceBLESteamController: android.bluetooth.BluetoothGatt connectGatt()>[]--><org.libsdl.app.HIDDeviceBLESteamController: android.bluetooth.BluetoothGatt connectGatt(boolean)>[[-i0 < 23]][[try]]
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.tuxpaint.tuxpaintActivity dummyMainMethod_org_tuxpaint_tuxpaintActivity(android.content.Intent)>[]--><org.tuxpaint.tuxpaintActivity: void onCreate(android.os.Bundle)>[]--><org.libsdl.app.SDLActivity: void onCreate(android.os.Bundle)>[]--><org.libsdl.app.HIDDeviceManager: org.libsdl.app.HIDDeviceManager acquire(android.content.Context)>[]--><org.libsdl.app.HIDDeviceManager: void <init>(android.content.Context)>[]--><org.libsdl.app.HIDDeviceManager: void initializeBluetooth()>[]--><org.libsdl.app.HIDDeviceManager: boolean connectBluetoothDevice(android.bluetooth.BluetoothDevice)>[[try]]--><org.libsdl.app.HIDDeviceBLESteamController: void <init>(org.libsdl.app.HIDDeviceManager,android.bluetooth.BluetoothDevice)>[]--><org.libsdl.app.HIDDeviceBLESteamController: android.bluetooth.BluetoothGatt connectGatt()>[]--><org.libsdl.app.HIDDeviceBLESteamController: android.bluetooth.BluetoothGatt connectGatt(boolean)>[[-i0 < 23], [try]]--><android.bluetooth.BluetoothDevice: android.bluetooth.BluetoothGatt connectGatt(android.content.Context,boolean,android.bluetooth.BluetoothGattCallback,int)>
+One road protect good!
+7 Packageshead roads:
+###Multi invoking in one method, need manual check!!!)>[[try]]--><org.libsdl.app.HIDDeviceBLESteamController: int sendOutputReport(byte[])>[]--><org.libsdl.app.HIDDeviceBLESteamController: boolean probeService(org.libsdl.app.HIDDeviceBLESteamController)>[]--><org.libsdl.app.HIDDeviceBLESteamController: android.bluetooth.BluetoothGatt connectGatt(boolean)>[[-i0 < 23], [try]]
+###Multi invoking in one method, need manual check!!!)>[[try]]--><org.libsdl.app.HIDDeviceBLESteamController: int sendOutputReport(byte[])>[]--><org.libsdl.app.HIDDeviceBLESteamController: boolean probeService(org.libsdl.app.HIDDeviceBLESteamController)>[]--><org.libsdl.app.HIDDeviceBLESteamController: android.bluetooth.BluetoothGatt connectGatt(boolean)>[[-i0 < 23]][[try]]
+try
+Good road with try: <org.libsdl.app.HIDDeviceManager: int sendOutputReport(int,byte[])>[[try]]--><org.libsdl.app.HIDDeviceBLESteamController: int sendOutputReport(byte[])>[]--><org.libsdl.app.HIDDeviceBLESteamController: boolean probeService(org.libsdl.app.HIDDeviceBLESteamController)>[]--><org.libsdl.app.HIDDeviceBLESteamController: android.bluetooth.BluetoothGatt connectGatt(boolean)>[[-i0 < 23], [try]]--><android.bluetooth.BluetoothDevice: android.bluetooth.BluetoothGatt connectGatt(android.content.Context,boolean,android.bluetooth.BluetoothGattCallback,int)>
+One road protect good!
+###Multi invoking in one method, need manual check!!!--><org.libsdl.app.HIDDeviceBLESteamController: android.bluetooth.BluetoothGatt connectGatt(boolean)>[[-i0 < 23], [try]]
+###Multi invoking in one method, need manual check!!!--><org.libsdl.app.HIDDeviceBLESteamController: android.bluetooth.BluetoothGatt connectGatt(boolean)>[[-i0 < 23]][[try]]
+-i0 < 23
+try
+Good road with try: <org.libsdl.app.HIDDeviceBLESteamController$1: void run()>[]--><org.libsdl.app.HIDDeviceBLESteamController: void checkConnectionForChromebookIssue()>[]--><org.libsdl.app.HIDDeviceBLESteamController: android.bluetooth.BluetoothGatt connectGatt(boolean)>[[-i0 < 23], [try]]--><android.bluetooth.BluetoothDevice: android.bluetooth.BluetoothGatt connectGatt(android.content.Context,boolean,android.bluetooth.BluetoothGattCallback,int)>
+One road protect good!
+###Multi invoking in one method, need manual check!!!--><org.libsdl.app.HIDDeviceManager: boolean connectBluetoothDevice(android.bluetooth.BluetoothDevice)>[[try]]--><org.libsdl.app.HIDDeviceBLESteamController: void <init>(org.libsdl.app.HIDDeviceManager,android.bluetooth.BluetoothDevice)>[]--><org.libsdl.app.HIDDeviceBLESteamController: android.bluetooth.BluetoothGatt connectGatt()>[]--><org.libsdl.app.HIDDeviceBLESteamController: android.bluetooth.BluetoothGatt connectGatt(boolean)>[[-i0 < 23], [try]]
+###Multi invoking in one method, need manual check!!!--><org.libsdl.app.HIDDeviceManager: boolean connectBluetoothDevice(android.bluetooth.BluetoothDevice)>[[try]]--><org.libsdl.app.HIDDeviceBLESteamController: void <init>(org.libsdl.app.HIDDeviceManager,android.bluetooth.BluetoothDevice)>[]--><org.libsdl.app.HIDDeviceBLESteamController: android.bluetooth.BluetoothGatt connectGatt()>[]--><org.libsdl.app.HIDDeviceBLESteamController: android.bluetooth.BluetoothGatt connectGatt(boolean)>[[-i0 < 23]][[try]]
+try
+Good road with try: <org.libsdl.app.HIDDeviceManager$2: void onReceive(android.content.Context,android.content.Intent)>[]--><org.libsdl.app.HIDDeviceManager: boolean connectBluetoothDevice(android.bluetooth.BluetoothDevice)>[[try]]--><org.libsdl.app.HIDDeviceBLESteamController: void <init>(org.libsdl.app.HIDDeviceManager,android.bluetooth.BluetoothDevice)>[]--><org.libsdl.app.HIDDeviceBLESteamController: android.bluetooth.BluetoothGatt connectGatt()>[]--><org.libsdl.app.HIDDeviceBLESteamController: android.bluetooth.BluetoothGatt connectGatt(boolean)>[[-i0 < 23], [try]]--><android.bluetooth.BluetoothDevice: android.bluetooth.BluetoothGatt connectGatt(android.content.Context,boolean,android.bluetooth.BluetoothGattCallback,int)>
+One road protect good!
+###Multi invoking in one method, need manual check!!!)>[[try]]--><org.libsdl.app.HIDDeviceBLESteamController: int sendFeatureReport(byte[])>[]--><org.libsdl.app.HIDDeviceBLESteamController: boolean probeService(org.libsdl.app.HIDDeviceBLESteamController)>[]--><org.libsdl.app.HIDDeviceBLESteamController: android.bluetooth.BluetoothGatt connectGatt(boolean)>[[-i0 < 23], [try]]
+###Multi invoking in one method, need manual check!!!)>[[try]]--><org.libsdl.app.HIDDeviceBLESteamController: int sendFeatureReport(byte[])>[]--><org.libsdl.app.HIDDeviceBLESteamController: boolean probeService(org.libsdl.app.HIDDeviceBLESteamController)>[]--><org.libsdl.app.HIDDeviceBLESteamController: android.bluetooth.BluetoothGatt connectGatt(boolean)>[[-i0 < 23]][[try]]
+try
+Good road with try: <org.libsdl.app.HIDDeviceManager: int sendFeatureReport(int,byte[])>[[try]]--><org.libsdl.app.HIDDeviceBLESteamController: int sendFeatureReport(byte[])>[]--><org.libsdl.app.HIDDeviceBLESteamController: boolean probeService(org.libsdl.app.HIDDeviceBLESteamController)>[]--><org.libsdl.app.HIDDeviceBLESteamController: android.bluetooth.BluetoothGatt connectGatt(boolean)>[[-i0 < 23], [try]]--><android.bluetooth.BluetoothDevice: android.bluetooth.BluetoothGatt connectGatt(android.content.Context,boolean,android.bluetooth.BluetoothGattCallback,int)>
+One road protect good!
+###Multi invoking in one method, need manual check!!!--><org.libsdl.app.HIDDeviceManager: boolean connectBluetoothDevice(android.bluetooth.BluetoothDevice)>[[try]]--><org.libsdl.app.HIDDeviceBLESteamController: void <init>(org.libsdl.app.HIDDeviceManager,android.bluetooth.BluetoothDevice)>[]--><org.libsdl.app.HIDDeviceBLESteamController: android.bluetooth.BluetoothGatt connectGatt()>[]--><org.libsdl.app.HIDDeviceBLESteamController: android.bluetooth.BluetoothGatt connectGatt(boolean)>[[-i0 < 23], [try]]
+###Multi invoking in one method, need manual check!!!--><org.libsdl.app.HIDDeviceManager: boolean connectBluetoothDevice(android.bluetooth.BluetoothDevice)>[[try]]--><org.libsdl.app.HIDDeviceBLESteamController: void <init>(org.libsdl.app.HIDDeviceManager,android.bluetooth.BluetoothDevice)>[]--><org.libsdl.app.HIDDeviceBLESteamController: android.bluetooth.BluetoothGatt connectGatt()>[]--><org.libsdl.app.HIDDeviceBLESteamController: android.bluetooth.BluetoothGatt connectGatt(boolean)>[[-i0 < 23]][[try]]
+try
+Good road with try: <org.libsdl.app.HIDDeviceManager$4: void run()>[]--><org.libsdl.app.HIDDeviceManager: void chromebookConnectionHandler()>[]--><org.libsdl.app.HIDDeviceManager: boolean connectBluetoothDevice(android.bluetooth.BluetoothDevice)>[[try]]--><org.libsdl.app.HIDDeviceBLESteamController: void <init>(org.libsdl.app.HIDDeviceManager,android.bluetooth.BluetoothDevice)>[]--><org.libsdl.app.HIDDeviceBLESteamController: android.bluetooth.BluetoothGatt connectGatt()>[]--><org.libsdl.app.HIDDeviceBLESteamController: android.bluetooth.BluetoothGatt connectGatt(boolean)>[[-i0 < 23], [try]]--><android.bluetooth.BluetoothDevice: android.bluetooth.BluetoothGatt connectGatt(android.content.Context,boolean,android.bluetooth.BluetoothGattCallback,int)>
+One road protect good!
+###Multi invoking in one method, need manual check!!!--><org.libsdl.app.HIDDeviceBLESteamController: android.bluetooth.BluetoothGatt connectGatt(boolean)>[[-i0 < 23], [try]]
+###Multi invoking in one method, need manual check!!!--><org.libsdl.app.HIDDeviceBLESteamController: android.bluetooth.BluetoothGatt connectGatt(boolean)>[[-i0 < 23]][[try]]
+-i0 < 23
+try
+Good road with try: <org.libsdl.app.HIDDeviceBLESteamController: void onServicesDiscovered(android.bluetooth.BluetoothGatt,int)>[]--><org.libsdl.app.HIDDeviceBLESteamController: android.bluetooth.BluetoothGatt connectGatt(boolean)>[[-i0 < 23], [try]]--><android.bluetooth.BluetoothDevice: android.bluetooth.BluetoothGatt connectGatt(android.content.Context,boolean,android.bluetooth.BluetoothGattCallback,int)>
+One road protect good!
+###Multi invoking in one method, need manual check!!!--><org.libsdl.app.HIDDeviceBLESteamController: android.bluetooth.BluetoothGatt connectGatt(boolean)>[[-i0 < 23], [try]]
+###Multi invoking in one method, need manual check!!!--><org.libsdl.app.HIDDeviceBLESteamController: android.bluetooth.BluetoothGatt connectGatt(boolean)>[[-i0 < 23]][[try]]
+-i0 < 23
+try
+Good road with try: <org.libsdl.app.HIDDeviceBLESteamController: void onServicesDiscovered(android.bluetooth.BluetoothGatt,int)>[]--><org.libsdl.app.HIDDeviceBLESteamController: boolean probeService(org.libsdl.app.HIDDeviceBLESteamController)>[]--><org.libsdl.app.HIDDeviceBLESteamController: android.bluetooth.BluetoothGatt connectGatt(boolean)>[[-i0 < 23], [try]]--><android.bluetooth.BluetoothDevice: android.bluetooth.BluetoothGatt connectGatt(android.content.Context,boolean,android.bluetooth.BluetoothGattCallback,int)>
+One road protect good!
+###Multi invoking in one method, need manual check!!!)>[[try]]--><org.libsdl.app.HIDDeviceBLESteamController: boolean getFeatureReport(byte[])>[]--><org.libsdl.app.HIDDeviceBLESteamController: boolean probeService(org.libsdl.app.HIDDeviceBLESteamController)>[]--><org.libsdl.app.HIDDeviceBLESteamController: android.bluetooth.BluetoothGatt connectGatt(boolean)>[[-i0 < 23], [try]]
+###Multi invoking in one method, need manual check!!!)>[[try]]--><org.libsdl.app.HIDDeviceBLESteamController: boolean getFeatureReport(byte[])>[]--><org.libsdl.app.HIDDeviceBLESteamController: boolean probeService(org.libsdl.app.HIDDeviceBLESteamController)>[]--><org.libsdl.app.HIDDeviceBLESteamController: android.bluetooth.BluetoothGatt connectGatt(boolean)>[[-i0 < 23]][[try]]
+try
+Good road with try: <org.libsdl.app.HIDDeviceManager: boolean getFeatureReport(int,byte[])>[[try]]--><org.libsdl.app.HIDDeviceBLESteamController: boolean getFeatureReport(byte[])>[]--><org.libsdl.app.HIDDeviceBLESteamController: boolean probeService(org.libsdl.app.HIDDeviceBLESteamController)>[]--><org.libsdl.app.HIDDeviceBLESteamController: android.bluetooth.BluetoothGatt connectGatt(boolean)>[[-i0 < 23], [try]]--><android.bluetooth.BluetoothDevice: android.bluetooth.BluetoothGatt connectGatt(android.content.Context,boolean,android.bluetooth.BluetoothGattCallback,int)>
+One road protect good!
+containsStatic:false
+containsTry:true
+8call by main package
+-----------------------------------------
+#################################################
+N 11 Potential Issue API: SDKCheck of <android.content.ContextWrapper: int checkSelfPermission(java.lang.String)> is checking!!!
+The life time of api is [23,31]
+2call roads:
+1 Mainhead roads:
+-i0 <= 22
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.tuxpaint.tuxpaintActivity dummyMainMethod_org_tuxpaint_tuxpaintActivity(android.content.Intent)>[]--><org.tuxpaint.tuxpaintActivity: void onCreate(android.os.Bundle)>[[-i0 <= 22]]--><android.content.ContextWrapper: int checkSelfPermission(java.lang.String)>
+One road protect good!
+!!!this api will crash on sdk 21 22 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.tuxpaint.reqpermsActivity dummyMainMethod_org_tuxpaint_reqpermsActivity(android.content.Intent)>[]--><org.tuxpaint.reqpermsActivity: void onRequestPermissionsResult(int,java.lang.String[],int[])>[]--><android.content.ContextWrapper: int checkSelfPermission(java.lang.String)>
+!!!this api will crash on sdk 21 22 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.tuxpaint.ConfigActivity dummyMainMethod_org_tuxpaint_ConfigActivity(android.content.Intent)>[]--><org.tuxpaint.ConfigActivity: void onCreate(android.os.Bundle)>[]--><android.content.ContextWrapper: int checkSelfPermission(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.content.ContextWrapper: int checkSelfPermission(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+1 Packageshead roads:
+i1 >= 23
+Good road: <org.libsdl.app.SDLActivity: void requestPermission(java.lang.String,int)>[[i1 >= 23]]--><android.content.ContextWrapper: int checkSelfPermission(java.lang.String)>
+One road protect good!
+crashApis:4
+crashApisInMain:2
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 12 Potential Issue API: SDKCheck of <android.os.Vibrator: void vibrate(android.os.VibrationEffect)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+try
+Good road with try: <org.libsdl.app.SDLHapticHandler_API26: void run(int,float,int)>[[try]]--><android.os.Vibrator: void vibrate(android.os.VibrationEffect)>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 13 Potential Issue API: SDKCheck of <android.media.AudioRecord: int read(short[],int,int,int)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+$i1 >= 23
+Good road: <org.libsdl.app.SDLAudioManager: int captureReadShortBuffer(short[],boolean)>[[$i1 >= 23]]--><android.media.AudioRecord: int read(short[],int,int,int)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+crashApis numbers:4
+crashApis numbers in main road:2
+On Android Version 16 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 17 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 18 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 19 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 20 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 21 this app may have error api use(at least): 3 and error api roads: 5
+On Android Version 22 this app may have error api use(at least): 3 and error api roads: 5
+On Android Version 23 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 24 this app may have error api use(at least): 1 and error api roads: 1
+On Android Version 25 this app may have error api use(at least): 1 and error api roads: 1
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 31 this app may have error api use(at least): 0 and error api roads: 0

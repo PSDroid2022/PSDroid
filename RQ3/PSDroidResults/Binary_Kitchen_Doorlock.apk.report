@@ -1,0 +1,264 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/Binary_Kitchen_Doorlock.apk
+Entry Points[de.binary_kitchen.doorlock_app.SettingsActivity, de.binary_kitchen.doorlock_app.MainActivity$ScanReceiver, de.binary_kitchen.doorlock_app.MainActivity$WifiReceiver, de.binary_kitchen.doorlock_app.MainActivity, de.binary_kitchen.doorlock_app.SpaceWidget]
+FllowDroidcallgraph size:1430
+Soot started on Mon Jul 11 01:39:43 CST 2022
+Soot finished on Mon Jul 11 01:39:56 CST 2022
+Soot has run for 0 min. 12 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 21
+Declared Target Sdk version is: 28
+Declared Max Sdk version is: -1
+Collected 205 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager: boolean disconnect()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.binary_kitchen.doorlock_app.MainActivity$ScanReceiver dummyMainMethod_de_binary__kitchen_doorlock__app_MainActivity$ScanReceiver(android.content.Intent)>[]--><de.binary_kitchen.doorlock_app.MainActivity$ScanReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><de.binary_kitchen.doorlock_app.MainActivity: void access$200(de.binary_kitchen.doorlock_app.MainActivity)>[]--><de.binary_kitchen.doorlock_app.MainActivity: void switch_wifi()>[]--><android.net.wifi.WifiManager: boolean disconnect()>
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.binary_kitchen.doorlock_app.MainActivity dummyMainMethod_de_binary__kitchen_doorlock__app_MainActivity(android.content.Intent)>[]--><de.binary_kitchen.doorlock_app.MainActivity: void onResume()>[]--><de.binary_kitchen.doorlock_app.MainActivity: void switch_wifi()>[]--><android.net.wifi.WifiManager: boolean disconnect()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.wifi.WifiManager: boolean disconnect()>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:1
+crashApisInMain:1
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.app.Activity: void requestPermissions(java.lang.String[],int)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+1 Mainhead roads:
+$i0 >= 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.binary_kitchen.doorlock_app.MainActivity dummyMainMethod_de_binary__kitchen_doorlock__app_MainActivity(android.content.Intent)>[]--><de.binary_kitchen.doorlock_app.MainActivity$2: void onClick(android.content.DialogInterface,int)>[[$i0 >= 26]]--><android.app.Activity: void requestPermissions(java.lang.String[],int)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager: boolean enableNetwork(int,boolean)> is checking!!!
+The life time of api is [1,30]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.binary_kitchen.doorlock_app.MainActivity$ScanReceiver dummyMainMethod_de_binary__kitchen_doorlock__app_MainActivity$ScanReceiver(android.content.Intent)>[]--><de.binary_kitchen.doorlock_app.MainActivity$ScanReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><de.binary_kitchen.doorlock_app.MainActivity: void access$200(de.binary_kitchen.doorlock_app.MainActivity)>[]--><de.binary_kitchen.doorlock_app.MainActivity: void switch_wifi()>[]--><android.net.wifi.WifiManager: boolean enableNetwork(int,boolean)>
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.binary_kitchen.doorlock_app.MainActivity dummyMainMethod_de_binary__kitchen_doorlock__app_MainActivity(android.content.Intent)>[]--><de.binary_kitchen.doorlock_app.MainActivity: void onResume()>[]--><de.binary_kitchen.doorlock_app.MainActivity: void switch_wifi()>[]--><android.net.wifi.WifiManager: boolean enableNetwork(int,boolean)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.wifi.WifiManager: boolean enableNetwork(int,boolean)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:2
+crashApisInMain:2
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager: boolean reconnect()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.binary_kitchen.doorlock_app.MainActivity$ScanReceiver dummyMainMethod_de_binary__kitchen_doorlock__app_MainActivity$ScanReceiver(android.content.Intent)>[]--><de.binary_kitchen.doorlock_app.MainActivity$ScanReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><de.binary_kitchen.doorlock_app.MainActivity: void access$200(de.binary_kitchen.doorlock_app.MainActivity)>[]--><de.binary_kitchen.doorlock_app.MainActivity: void switch_wifi()>[]--><android.net.wifi.WifiManager: boolean reconnect()>
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.binary_kitchen.doorlock_app.MainActivity dummyMainMethod_de_binary__kitchen_doorlock__app_MainActivity(android.content.Intent)>[]--><de.binary_kitchen.doorlock_app.MainActivity: void onResume()>[]--><de.binary_kitchen.doorlock_app.MainActivity: void switch_wifi()>[]--><android.net.wifi.WifiManager: boolean reconnect()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.wifi.WifiManager: boolean reconnect()>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:3
+crashApisInMain:3
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.net.NetworkInfo: boolean isConnected()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.binary_kitchen.doorlock_app.MainActivity$WifiReceiver dummyMainMethod_de_binary__kitchen_doorlock__app_MainActivity$WifiReceiver(android.content.Intent)>[]--><de.binary_kitchen.doorlock_app.MainActivity$WifiReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><android.net.NetworkInfo: boolean isConnected()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.NetworkInfo: boolean isConnected()>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:4
+crashApisInMain:4
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 5 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager: boolean setWifiEnabled(boolean)> is checking!!!
+The life time of api is [1,30]
+1call roads:
+1 Mainhead roads:
+i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.binary_kitchen.doorlock_app.MainActivity dummyMainMethod_de_binary__kitchen_doorlock__app_MainActivity(android.content.Intent)>[]--><de.binary_kitchen.doorlock_app.MainActivity: void onResume()>[[i0 < 26]]--><android.net.wifi.WifiManager: boolean setWifiEnabled(boolean)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 6 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager: android.net.wifi.WifiInfo getConnectionInfo()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.binary_kitchen.doorlock_app.MainActivity$ScanReceiver dummyMainMethod_de_binary__kitchen_doorlock__app_MainActivity$ScanReceiver(android.content.Intent)>[]--><de.binary_kitchen.doorlock_app.MainActivity$ScanReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><de.binary_kitchen.doorlock_app.MainActivity: void access$200(de.binary_kitchen.doorlock_app.MainActivity)>[]--><de.binary_kitchen.doorlock_app.MainActivity: void switch_wifi()>[]--><android.net.wifi.WifiManager: android.net.wifi.WifiInfo getConnectionInfo()>
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.binary_kitchen.doorlock_app.MainActivity$WifiReceiver dummyMainMethod_de_binary__kitchen_doorlock__app_MainActivity$WifiReceiver(android.content.Intent)>[]--><de.binary_kitchen.doorlock_app.MainActivity$WifiReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><android.net.wifi.WifiManager: android.net.wifi.WifiInfo getConnectionInfo()>
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.binary_kitchen.doorlock_app.MainActivity dummyMainMethod_de_binary__kitchen_doorlock__app_MainActivity(android.content.Intent)>[]--><de.binary_kitchen.doorlock_app.MainActivity: void onResume()>[]--><de.binary_kitchen.doorlock_app.MainActivity: void switch_wifi()>[]--><android.net.wifi.WifiManager: android.net.wifi.WifiInfo getConnectionInfo()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.wifi.WifiManager: android.net.wifi.WifiInfo getConnectionInfo()>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:5
+crashApisInMain:5
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 7 Potential Issue API: SDKCheck of <android.net.ConnectivityManager: android.net.NetworkInfo getNetworkInfo(int)> is checking!!!
+The life time of api is [1,30]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.binary_kitchen.doorlock_app.MainActivity$WifiReceiver dummyMainMethod_de_binary__kitchen_doorlock__app_MainActivity$WifiReceiver(android.content.Intent)>[]--><de.binary_kitchen.doorlock_app.MainActivity$WifiReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getNetworkInfo(int)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.ConnectivityManager: android.net.NetworkInfo getNetworkInfo(int)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:6
+crashApisInMain:6
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 8 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager: int getWifiState()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.binary_kitchen.doorlock_app.MainActivity dummyMainMethod_de_binary__kitchen_doorlock__app_MainActivity(android.content.Intent)>[]--><de.binary_kitchen.doorlock_app.MainActivity: void onResume()>[]--><android.net.wifi.WifiManager: int getWifiState()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.wifi.WifiManager: int getWifiState()>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:7
+crashApisInMain:7
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 9 Potential Issue API: SDKCheck of <android.content.Context: int getColor(int)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+i1 >= 23
+Good road: <com.takisoft.fix.support.v7.preference.PreferenceCategory: void setColorResource(int)>[[i1 >= 23]]--><android.content.Context: int getColor(int)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 10 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager: java.util.List getConfiguredNetworks()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.binary_kitchen.doorlock_app.MainActivity$ScanReceiver dummyMainMethod_de_binary__kitchen_doorlock__app_MainActivity$ScanReceiver(android.content.Intent)>[]--><de.binary_kitchen.doorlock_app.MainActivity$ScanReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><de.binary_kitchen.doorlock_app.MainActivity: void access$200(de.binary_kitchen.doorlock_app.MainActivity)>[]--><de.binary_kitchen.doorlock_app.MainActivity: void switch_wifi()>[]--><android.net.wifi.WifiManager: java.util.List getConfiguredNetworks()>
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.binary_kitchen.doorlock_app.MainActivity dummyMainMethod_de_binary__kitchen_doorlock__app_MainActivity(android.content.Intent)>[]--><de.binary_kitchen.doorlock_app.MainActivity: void onResume()>[]--><de.binary_kitchen.doorlock_app.MainActivity: void switch_wifi()>[]--><android.net.wifi.WifiManager: java.util.List getConfiguredNetworks()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.wifi.WifiManager: java.util.List getConfiguredNetworks()>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:8
+crashApisInMain:8
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 11 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager: java.util.List getScanResults()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.binary_kitchen.doorlock_app.MainActivity$ScanReceiver dummyMainMethod_de_binary__kitchen_doorlock__app_MainActivity$ScanReceiver(android.content.Intent)>[]--><de.binary_kitchen.doorlock_app.MainActivity$ScanReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><de.binary_kitchen.doorlock_app.MainActivity: void access$200(de.binary_kitchen.doorlock_app.MainActivity)>[]--><de.binary_kitchen.doorlock_app.MainActivity: void switch_wifi()>[]--><android.net.wifi.WifiManager: java.util.List getScanResults()>
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.binary_kitchen.doorlock_app.MainActivity dummyMainMethod_de_binary__kitchen_doorlock__app_MainActivity(android.content.Intent)>[]--><de.binary_kitchen.doorlock_app.MainActivity: void onResume()>[]--><de.binary_kitchen.doorlock_app.MainActivity: void switch_wifi()>[]--><android.net.wifi.WifiManager: java.util.List getScanResults()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.wifi.WifiManager: java.util.List getScanResults()>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:9
+crashApisInMain:9
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 12 Potential Issue API: SDKCheck of <android.net.wifi.WifiInfo: java.lang.String getSSID()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.binary_kitchen.doorlock_app.MainActivity$ScanReceiver dummyMainMethod_de_binary__kitchen_doorlock__app_MainActivity$ScanReceiver(android.content.Intent)>[]--><de.binary_kitchen.doorlock_app.MainActivity$ScanReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><de.binary_kitchen.doorlock_app.MainActivity: void access$200(de.binary_kitchen.doorlock_app.MainActivity)>[]--><de.binary_kitchen.doorlock_app.MainActivity: void switch_wifi()>[]--><android.net.wifi.WifiInfo: java.lang.String getSSID()>
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.binary_kitchen.doorlock_app.MainActivity$WifiReceiver dummyMainMethod_de_binary__kitchen_doorlock__app_MainActivity$WifiReceiver(android.content.Intent)>[]--><de.binary_kitchen.doorlock_app.MainActivity$WifiReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><android.net.wifi.WifiInfo: java.lang.String getSSID()>
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.binary_kitchen.doorlock_app.MainActivity dummyMainMethod_de_binary__kitchen_doorlock__app_MainActivity(android.content.Intent)>[]--><de.binary_kitchen.doorlock_app.MainActivity: void onResume()>[]--><de.binary_kitchen.doorlock_app.MainActivity: void switch_wifi()>[]--><android.net.wifi.WifiInfo: java.lang.String getSSID()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.wifi.WifiInfo: java.lang.String getSSID()>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:10
+crashApisInMain:10
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 13 Potential Issue API: SDKCheck of <android.app.Activity: void onRequestPermissionsResult(int,java.lang.String[],int[])> is checking!!!
+The life time of api is [23,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 21 22 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.binary_kitchen.doorlock_app.MainActivity dummyMainMethod_de_binary__kitchen_doorlock__app_MainActivity(android.content.Intent)>[]--><de.binary_kitchen.doorlock_app.MainActivity: void onRequestPermissionsResult(int,java.lang.String[],int[])>[[]]--><android.app.Activity: void onRequestPermissionsResult(int,java.lang.String[],int[])>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.app.Activity: void onRequestPermissionsResult(int,java.lang.String[],int[])>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:11
+crashApisInMain:11
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+crashApis numbers:11
+crashApis numbers in main road:11
+On Android Version 16 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 17 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 18 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 19 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 20 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 21 this app may have error api use(at least): 1 and error api roads: 1
+On Android Version 22 this app may have error api use(at least): 1 and error api roads: 1
+On Android Version 23 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 24 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 25 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 31 this app may have error api use(at least): 10 and error api roads: 19

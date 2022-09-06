@@ -1,0 +1,425 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/HU_Berlin_Wi-Fi_Installer.apk
+Entry Points[de.hu_berlin.eduroam.WiFiEduroam]
+FllowDroidcallgraph size:390
+Soot started on Mon Jul 11 05:25:22 CST 2022
+Soot finished on Mon Jul 11 05:25:24 CST 2022
+Soot has run for 0 min. 2 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 14
+Declared Target Sdk version is: 23
+Declared Max Sdk version is: -1
+Collected 84 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager: android.net.wifi.WifiInfo getConnectionInfo()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.hu_berlin.eduroam.WiFiEduroam dummyMainMethod_de_hu__berlin_eduroam_WiFiEduroam(android.content.Intent)>[]--><de.hu_berlin.eduroam.WiFiEduroam: boolean onOptionsItemSelected(android.view.MenuItem)>[]--><de.hu_berlin.eduroam.WiFiEduroam: java.lang.String getTroubleshootingInfo()>[]--><android.net.wifi.WifiManager: android.net.wifi.WifiInfo getConnectionInfo()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.wifi.WifiManager: android.net.wifi.WifiInfo getConnectionInfo()>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:1
+crashApisInMain:1
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.net.wifi.WifiEnterpriseConfig: void setCaCertificate(java.security.cert.X509Certificate)> is checking!!!
+The life time of api is [18,30]
+1call roads:
+1 Mainhead roads:
+###Multi invoking in one method, need manual check!!!--><de.hu_berlin.eduroam.WiFiEduroam: void saveWifiConfig()>[[i0 < 14], [-i0 < 18]]--><de.hu_berlin.eduroam.WiFiEduroam: void applyAndroid43EnterpriseSettings(android.net.wifi.WifiConfiguration,java.util.HashMap)>[[try]]
+###Multi invoking in one method, need manual check!!!--><de.hu_berlin.eduroam.WiFiEduroam: void saveWifiConfig()>[[i0 < 14]][[-i0 < 18]]--><de.hu_berlin.eduroam.WiFiEduroam: void applyAndroid43EnterpriseSettings(android.net.wifi.WifiConfiguration,java.util.HashMap)>[[try]]
+i0 < 14
+-i0 < 18
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.hu_berlin.eduroam.WiFiEduroam dummyMainMethod_de_hu__berlin_eduroam_WiFiEduroam(android.content.Intent)>[]--><de.hu_berlin.eduroam.WiFiEduroam: void onActivityResult(int,int,android.content.Intent)>[]--><java.lang.Thread: void run()>[]--><de.hu_berlin.eduroam.WiFiEduroam$2: void run()>[]--><de.hu_berlin.eduroam.WiFiEduroam: void access$500(de.hu_berlin.eduroam.WiFiEduroam)>[]--><de.hu_berlin.eduroam.WiFiEduroam: void saveWifiConfig()>[[i0 < 14], [-i0 < 18]]--><de.hu_berlin.eduroam.WiFiEduroam: void applyAndroid43EnterpriseSettings(android.net.wifi.WifiConfiguration,java.util.HashMap)>[[try]]--><android.net.wifi.WifiEnterpriseConfig: void setCaCertificate(java.security.cert.X509Certificate)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:true
+1call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.net.wifi.WifiEnterpriseConfig: void setPassword(java.lang.String)> is checking!!!
+The life time of api is [18,30]
+1call roads:
+1 Mainhead roads:
+###Multi invoking in one method, need manual check!!!--><de.hu_berlin.eduroam.WiFiEduroam: void saveWifiConfig()>[[i0 < 14], [-i0 < 18]]--><de.hu_berlin.eduroam.WiFiEduroam: void applyAndroid43EnterpriseSettings(android.net.wifi.WifiConfiguration,java.util.HashMap)>[[try]]
+###Multi invoking in one method, need manual check!!!--><de.hu_berlin.eduroam.WiFiEduroam: void saveWifiConfig()>[[i0 < 14]][[-i0 < 18]]--><de.hu_berlin.eduroam.WiFiEduroam: void applyAndroid43EnterpriseSettings(android.net.wifi.WifiConfiguration,java.util.HashMap)>[[try]]
+i0 < 14
+-i0 < 18
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.hu_berlin.eduroam.WiFiEduroam dummyMainMethod_de_hu__berlin_eduroam_WiFiEduroam(android.content.Intent)>[]--><de.hu_berlin.eduroam.WiFiEduroam: void onActivityResult(int,int,android.content.Intent)>[]--><java.lang.Thread: void run()>[]--><de.hu_berlin.eduroam.WiFiEduroam$2: void run()>[]--><de.hu_berlin.eduroam.WiFiEduroam: void access$500(de.hu_berlin.eduroam.WiFiEduroam)>[]--><de.hu_berlin.eduroam.WiFiEduroam: void saveWifiConfig()>[[i0 < 14], [-i0 < 18]]--><de.hu_berlin.eduroam.WiFiEduroam: void applyAndroid43EnterpriseSettings(android.net.wifi.WifiConfiguration,java.util.HashMap)>[[try]]--><android.net.wifi.WifiEnterpriseConfig: void setPassword(java.lang.String)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:true
+1call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager: int addNetwork(android.net.wifi.WifiConfiguration)> is checking!!!
+The life time of api is [1,30]
+1call roads:
+1 Mainhead roads:
+###Multi invoking in one method, need manual check!!!--><de.hu_berlin.eduroam.WiFiEduroam: void saveWifiConfig()>[[i0 < 14], [-i0 < 18]]
+###Multi invoking in one method, need manual check!!!--><de.hu_berlin.eduroam.WiFiEduroam: void saveWifiConfig()>[[i0 < 14]][[-i0 < 18]]
+i0 < 14
+-i0 < 18
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.hu_berlin.eduroam.WiFiEduroam dummyMainMethod_de_hu__berlin_eduroam_WiFiEduroam(android.content.Intent)>[]--><de.hu_berlin.eduroam.WiFiEduroam: void onActivityResult(int,int,android.content.Intent)>[]--><java.lang.Thread: void run()>[]--><de.hu_berlin.eduroam.WiFiEduroam$2: void run()>[]--><de.hu_berlin.eduroam.WiFiEduroam: void access$500(de.hu_berlin.eduroam.WiFiEduroam)>[]--><de.hu_berlin.eduroam.WiFiEduroam: void saveWifiConfig()>[[i0 < 14], [-i0 < 18]]--><android.net.wifi.WifiManager: int addNetwork(android.net.wifi.WifiConfiguration)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.net.wifi.WifiEnterpriseConfig: void setPhase2Method(int)> is checking!!!
+The life time of api is [18,30]
+1call roads:
+1 Mainhead roads:
+###Multi invoking in one method, need manual check!!!--><de.hu_berlin.eduroam.WiFiEduroam: void saveWifiConfig()>[[i0 < 14], [-i0 < 18]]--><de.hu_berlin.eduroam.WiFiEduroam: void applyAndroid43EnterpriseSettings(android.net.wifi.WifiConfiguration,java.util.HashMap)>[[try]]
+###Multi invoking in one method, need manual check!!!--><de.hu_berlin.eduroam.WiFiEduroam: void saveWifiConfig()>[[i0 < 14]][[-i0 < 18]]--><de.hu_berlin.eduroam.WiFiEduroam: void applyAndroid43EnterpriseSettings(android.net.wifi.WifiConfiguration,java.util.HashMap)>[[try]]
+i0 < 14
+-i0 < 18
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.hu_berlin.eduroam.WiFiEduroam dummyMainMethod_de_hu__berlin_eduroam_WiFiEduroam(android.content.Intent)>[]--><de.hu_berlin.eduroam.WiFiEduroam: void onActivityResult(int,int,android.content.Intent)>[]--><java.lang.Thread: void run()>[]--><de.hu_berlin.eduroam.WiFiEduroam$2: void run()>[]--><de.hu_berlin.eduroam.WiFiEduroam: void access$500(de.hu_berlin.eduroam.WiFiEduroam)>[]--><de.hu_berlin.eduroam.WiFiEduroam: void saveWifiConfig()>[[i0 < 14], [-i0 < 18]]--><de.hu_berlin.eduroam.WiFiEduroam: void applyAndroid43EnterpriseSettings(android.net.wifi.WifiConfiguration,java.util.HashMap)>[[try]]--><android.net.wifi.WifiEnterpriseConfig: void setPhase2Method(int)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:true
+1call by main package
+-----------------------------------------
+#################################################
+N 5 Potential Issue API: SDKCheck of <android.net.wifi.WifiInfo: int getIpAddress()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+1 Mainhead roads:
+i1 < 18
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.hu_berlin.eduroam.WiFiEduroam dummyMainMethod_de_hu__berlin_eduroam_WiFiEduroam(android.content.Intent)>[]--><de.hu_berlin.eduroam.WiFiEduroam: boolean onOptionsItemSelected(android.view.MenuItem)>[]--><de.hu_berlin.eduroam.WiFiEduroam: java.lang.String getTroubleshootingInfo()>[[i1 < 18]]--><android.net.wifi.WifiInfo: int getIpAddress()>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 6 Potential Issue API: SDKCheck of <android.net.wifi.WifiEnterpriseConfig: void setAltSubjectMatch(java.lang.String)> is checking!!!
+The life time of api is [23,30]
+1call roads:
+1 Mainhead roads:
+###Multi invoking in one method, need manual check!!!--><de.hu_berlin.eduroam.WiFiEduroam: void saveWifiConfig()>[[i0 < 14], [-i0 < 18]]--><de.hu_berlin.eduroam.WiFiEduroam: void applyAndroid43EnterpriseSettings(android.net.wifi.WifiConfiguration,java.util.HashMap)>[[-$i0 < 23], [try]]
+###Multi invoking in one method, need manual check!!!--><de.hu_berlin.eduroam.WiFiEduroam: void saveWifiConfig()>[[i0 < 14]][[-i0 < 18]]--><de.hu_berlin.eduroam.WiFiEduroam: void applyAndroid43EnterpriseSettings(android.net.wifi.WifiConfiguration,java.util.HashMap)>[[-$i0 < 23]][[try]]
+i0 < 14
+-i0 < 18
+-$i0 < 23
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.hu_berlin.eduroam.WiFiEduroam dummyMainMethod_de_hu__berlin_eduroam_WiFiEduroam(android.content.Intent)>[]--><de.hu_berlin.eduroam.WiFiEduroam: void onActivityResult(int,int,android.content.Intent)>[]--><java.lang.Thread: void run()>[]--><de.hu_berlin.eduroam.WiFiEduroam$2: void run()>[]--><de.hu_berlin.eduroam.WiFiEduroam: void access$500(de.hu_berlin.eduroam.WiFiEduroam)>[]--><de.hu_berlin.eduroam.WiFiEduroam: void saveWifiConfig()>[[i0 < 14], [-i0 < 18]]--><de.hu_berlin.eduroam.WiFiEduroam: void applyAndroid43EnterpriseSettings(android.net.wifi.WifiConfiguration,java.util.HashMap)>[[-$i0 < 23], [try]]--><android.net.wifi.WifiEnterpriseConfig: void setAltSubjectMatch(java.lang.String)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:true
+1call by main package
+-----------------------------------------
+#################################################
+N 7 Potential Issue API: SDKCheck of <android.net.wifi.WifiEnterpriseConfig: java.lang.String getIdentity()> is checking!!!
+The life time of api is [18,30]
+1call roads:
+1 Mainhead roads:
+-i1 < 18
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.hu_berlin.eduroam.WiFiEduroam dummyMainMethod_de_hu__berlin_eduroam_WiFiEduroam(android.content.Intent)>[]--><de.hu_berlin.eduroam.WiFiEduroam: boolean onOptionsItemSelected(android.view.MenuItem)>[]--><de.hu_berlin.eduroam.WiFiEduroam: java.lang.String getTroubleshootingInfo()>[[-i1 < 18]]--><android.net.wifi.WifiEnterpriseConfig: java.lang.String getIdentity()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.wifi.WifiEnterpriseConfig: java.lang.String getIdentity()>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:2
+crashApisInMain:2
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 8 Potential Issue API: SDKCheck of <android.net.wifi.WifiEnterpriseConfig: void <init>()> is checking!!!
+The life time of api is [18,30]
+1call roads:
+1 Mainhead roads:
+###Multi invoking in one method, need manual check!!!--><de.hu_berlin.eduroam.WiFiEduroam: void saveWifiConfig()>[[i0 < 14], [-i0 < 18]]--><de.hu_berlin.eduroam.WiFiEduroam: void applyAndroid43EnterpriseSettings(android.net.wifi.WifiConfiguration,java.util.HashMap)>[[try]]
+###Multi invoking in one method, need manual check!!!--><de.hu_berlin.eduroam.WiFiEduroam: void saveWifiConfig()>[[i0 < 14]][[-i0 < 18]]--><de.hu_berlin.eduroam.WiFiEduroam: void applyAndroid43EnterpriseSettings(android.net.wifi.WifiConfiguration,java.util.HashMap)>[[try]]
+i0 < 14
+-i0 < 18
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.hu_berlin.eduroam.WiFiEduroam dummyMainMethod_de_hu__berlin_eduroam_WiFiEduroam(android.content.Intent)>[]--><de.hu_berlin.eduroam.WiFiEduroam: void onActivityResult(int,int,android.content.Intent)>[]--><java.lang.Thread: void run()>[]--><de.hu_berlin.eduroam.WiFiEduroam$2: void run()>[]--><de.hu_berlin.eduroam.WiFiEduroam: void access$500(de.hu_berlin.eduroam.WiFiEduroam)>[]--><de.hu_berlin.eduroam.WiFiEduroam: void saveWifiConfig()>[[i0 < 14], [-i0 < 18]]--><de.hu_berlin.eduroam.WiFiEduroam: void applyAndroid43EnterpriseSettings(android.net.wifi.WifiConfiguration,java.util.HashMap)>[[try]]--><android.net.wifi.WifiEnterpriseConfig: void <init>()>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:true
+1call by main package
+-----------------------------------------
+#################################################
+N 9 Potential Issue API: SDKCheck of <android.net.wifi.WifiInfo: java.lang.String getMacAddress()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+1 Mainhead roads:
+###Multi invoking in one method, need manual check!!!--><de.hu_berlin.eduroam.WiFiEduroam: java.lang.String getTroubleshootingInfo()>[[i1 < 18], [-i0 >= 23]]
+###Multi invoking in one method, need manual check!!!--><de.hu_berlin.eduroam.WiFiEduroam: java.lang.String getTroubleshootingInfo()>[[i1 < 18]][[-i0 >= 23]]
+i1 < 18
+-i0 >= 23
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.hu_berlin.eduroam.WiFiEduroam dummyMainMethod_de_hu__berlin_eduroam_WiFiEduroam(android.content.Intent)>[]--><de.hu_berlin.eduroam.WiFiEduroam: boolean onOptionsItemSelected(android.view.MenuItem)>[]--><de.hu_berlin.eduroam.WiFiEduroam: java.lang.String getTroubleshootingInfo()>[[i1 < 18], [-i0 >= 23]]--><android.net.wifi.WifiInfo: java.lang.String getMacAddress()>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 10 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager: boolean enableNetwork(int,boolean)> is checking!!!
+The life time of api is [1,30]
+1call roads:
+1 Mainhead roads:
+###Multi invoking in one method, need manual check!!!--><de.hu_berlin.eduroam.WiFiEduroam: void saveWifiConfig()>[[i0 < 14], [-i0 < 18]]
+###Multi invoking in one method, need manual check!!!--><de.hu_berlin.eduroam.WiFiEduroam: void saveWifiConfig()>[[i0 < 14]][[-i0 < 18]]
+i0 < 14
+-i0 < 18
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.hu_berlin.eduroam.WiFiEduroam dummyMainMethod_de_hu__berlin_eduroam_WiFiEduroam(android.content.Intent)>[]--><de.hu_berlin.eduroam.WiFiEduroam: void onActivityResult(int,int,android.content.Intent)>[]--><java.lang.Thread: void run()>[]--><de.hu_berlin.eduroam.WiFiEduroam$2: void run()>[]--><de.hu_berlin.eduroam.WiFiEduroam: void access$500(de.hu_berlin.eduroam.WiFiEduroam)>[]--><de.hu_berlin.eduroam.WiFiEduroam: void saveWifiConfig()>[[i0 < 14], [-i0 < 18]]--><android.net.wifi.WifiManager: boolean enableNetwork(int,boolean)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 11 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager: boolean removeNetwork(int)> is checking!!!
+The life time of api is [1,30]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.hu_berlin.eduroam.WiFiEduroam dummyMainMethod_de_hu__berlin_eduroam_WiFiEduroam(android.content.Intent)>[]--><de.hu_berlin.eduroam.WiFiEduroam: void onActivityResult(int,int,android.content.Intent)>[]--><java.lang.Thread: void run()>[]--><de.hu_berlin.eduroam.WiFiEduroam$2: void run()>[]--><de.hu_berlin.eduroam.WiFiEduroam: void access$500(de.hu_berlin.eduroam.WiFiEduroam)>[]--><de.hu_berlin.eduroam.WiFiEduroam: void saveWifiConfig()>[]--><android.net.wifi.WifiManager: boolean removeNetwork(int)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.wifi.WifiManager: boolean removeNetwork(int)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:3
+crashApisInMain:3
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 12 Potential Issue API: SDKCheck of <android.net.wifi.WifiEnterpriseConfig: void setEapMethod(int)> is checking!!!
+The life time of api is [18,30]
+1call roads:
+1 Mainhead roads:
+###Multi invoking in one method, need manual check!!!--><de.hu_berlin.eduroam.WiFiEduroam: void saveWifiConfig()>[[i0 < 14], [-i0 < 18]]--><de.hu_berlin.eduroam.WiFiEduroam: void applyAndroid43EnterpriseSettings(android.net.wifi.WifiConfiguration,java.util.HashMap)>[[try]]
+###Multi invoking in one method, need manual check!!!--><de.hu_berlin.eduroam.WiFiEduroam: void saveWifiConfig()>[[i0 < 14]][[-i0 < 18]]--><de.hu_berlin.eduroam.WiFiEduroam: void applyAndroid43EnterpriseSettings(android.net.wifi.WifiConfiguration,java.util.HashMap)>[[try]]
+i0 < 14
+-i0 < 18
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.hu_berlin.eduroam.WiFiEduroam dummyMainMethod_de_hu__berlin_eduroam_WiFiEduroam(android.content.Intent)>[]--><de.hu_berlin.eduroam.WiFiEduroam: void onActivityResult(int,int,android.content.Intent)>[]--><java.lang.Thread: void run()>[]--><de.hu_berlin.eduroam.WiFiEduroam$2: void run()>[]--><de.hu_berlin.eduroam.WiFiEduroam: void access$500(de.hu_berlin.eduroam.WiFiEduroam)>[]--><de.hu_berlin.eduroam.WiFiEduroam: void saveWifiConfig()>[[i0 < 14], [-i0 < 18]]--><de.hu_berlin.eduroam.WiFiEduroam: void applyAndroid43EnterpriseSettings(android.net.wifi.WifiConfiguration,java.util.HashMap)>[[try]]--><android.net.wifi.WifiEnterpriseConfig: void setEapMethod(int)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:true
+1call by main package
+-----------------------------------------
+#################################################
+N 13 Potential Issue API: SDKCheck of <android.net.wifi.WifiInfo: java.lang.String getBSSID()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+1 Mainhead roads:
+###Multi invoking in one method, need manual check!!!--><de.hu_berlin.eduroam.WiFiEduroam: java.lang.String getTroubleshootingInfo()>[[i0 >= 23], [i1 < 18]]
+###Multi invoking in one method, need manual check!!!--><de.hu_berlin.eduroam.WiFiEduroam: java.lang.String getTroubleshootingInfo()>[[i0 >= 23]][[i1 < 18]]
+i0 >= 23
+i1 < 18
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.hu_berlin.eduroam.WiFiEduroam dummyMainMethod_de_hu__berlin_eduroam_WiFiEduroam(android.content.Intent)>[]--><de.hu_berlin.eduroam.WiFiEduroam: boolean onOptionsItemSelected(android.view.MenuItem)>[]--><de.hu_berlin.eduroam.WiFiEduroam: java.lang.String getTroubleshootingInfo()>[[i0 >= 23], [i1 < 18]]--><android.net.wifi.WifiInfo: java.lang.String getBSSID()>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 14 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager: boolean isWifiEnabled()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.hu_berlin.eduroam.WiFiEduroam dummyMainMethod_de_hu__berlin_eduroam_WiFiEduroam(android.content.Intent)>[]--><de.hu_berlin.eduroam.WiFiEduroam: boolean onOptionsItemSelected(android.view.MenuItem)>[]--><de.hu_berlin.eduroam.WiFiEduroam: java.lang.String getTroubleshootingInfo()>[]--><android.net.wifi.WifiManager: boolean isWifiEnabled()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.wifi.WifiManager: boolean isWifiEnabled()>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:4
+crashApisInMain:4
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 15 Potential Issue API: SDKCheck of <android.net.wifi.WifiEnterpriseConfig: void setSubjectMatch(java.lang.String)> is checking!!!
+The life time of api is [18,30]
+1call roads:
+1 Mainhead roads:
+###Multi invoking in one method, need manual check!!!--><de.hu_berlin.eduroam.WiFiEduroam: void saveWifiConfig()>[[i0 < 14], [-i0 < 18]]--><de.hu_berlin.eduroam.WiFiEduroam: void applyAndroid43EnterpriseSettings(android.net.wifi.WifiConfiguration,java.util.HashMap)>[[$i0 < 23], [try]]
+###Multi invoking in one method, need manual check!!!--><de.hu_berlin.eduroam.WiFiEduroam: void saveWifiConfig()>[[i0 < 14]][[-i0 < 18]]--><de.hu_berlin.eduroam.WiFiEduroam: void applyAndroid43EnterpriseSettings(android.net.wifi.WifiConfiguration,java.util.HashMap)>[[$i0 < 23]][[try]]
+i0 < 14
+-i0 < 18
+$i0 < 23
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.hu_berlin.eduroam.WiFiEduroam dummyMainMethod_de_hu__berlin_eduroam_WiFiEduroam(android.content.Intent)>[]--><de.hu_berlin.eduroam.WiFiEduroam: void onActivityResult(int,int,android.content.Intent)>[]--><java.lang.Thread: void run()>[]--><de.hu_berlin.eduroam.WiFiEduroam$2: void run()>[]--><de.hu_berlin.eduroam.WiFiEduroam: void access$500(de.hu_berlin.eduroam.WiFiEduroam)>[]--><de.hu_berlin.eduroam.WiFiEduroam: void saveWifiConfig()>[[i0 < 14], [-i0 < 18]]--><de.hu_berlin.eduroam.WiFiEduroam: void applyAndroid43EnterpriseSettings(android.net.wifi.WifiConfiguration,java.util.HashMap)>[[$i0 < 23], [try]]--><android.net.wifi.WifiEnterpriseConfig: void setSubjectMatch(java.lang.String)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:true
+1call by main package
+-----------------------------------------
+#################################################
+N 16 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager: java.util.List getConfiguredNetworks()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.hu_berlin.eduroam.WiFiEduroam dummyMainMethod_de_hu__berlin_eduroam_WiFiEduroam(android.content.Intent)>[]--><de.hu_berlin.eduroam.WiFiEduroam: void onCreate(android.os.Bundle)>[]--><de.hu_berlin.eduroam.WiFiEduroam: boolean eduroamExists()>[]--><android.net.wifi.WifiManager: java.util.List getConfiguredNetworks()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.wifi.WifiManager: java.util.List getConfiguredNetworks()>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:5
+crashApisInMain:5
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 17 Potential Issue API: SDKCheck of <android.net.wifi.WifiInfo: java.lang.String getSSID()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+1 Mainhead roads:
+###Multi invoking in one method, need manual check!!!--><de.hu_berlin.eduroam.WiFiEduroam: java.lang.String getTroubleshootingInfo()>[[i0 >= 23], [i1 < 18]]
+###Multi invoking in one method, need manual check!!!--><de.hu_berlin.eduroam.WiFiEduroam: java.lang.String getTroubleshootingInfo()>[[i0 >= 23]][[i1 < 18]]
+i0 >= 23
+i1 < 18
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.hu_berlin.eduroam.WiFiEduroam dummyMainMethod_de_hu__berlin_eduroam_WiFiEduroam(android.content.Intent)>[]--><de.hu_berlin.eduroam.WiFiEduroam: boolean onOptionsItemSelected(android.view.MenuItem)>[]--><de.hu_berlin.eduroam.WiFiEduroam: java.lang.String getTroubleshootingInfo()>[[i0 >= 23], [i1 < 18]]--><android.net.wifi.WifiInfo: java.lang.String getSSID()>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 18 Potential Issue API: SDKCheck of <android.net.wifi.WifiInfo: int getNetworkId()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+1 Mainhead roads:
+-i1 < 18
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.hu_berlin.eduroam.WiFiEduroam dummyMainMethod_de_hu__berlin_eduroam_WiFiEduroam(android.content.Intent)>[]--><de.hu_berlin.eduroam.WiFiEduroam: boolean onOptionsItemSelected(android.view.MenuItem)>[]--><de.hu_berlin.eduroam.WiFiEduroam: java.lang.String getTroubleshootingInfo()>[[-i1 < 18]]--><android.net.wifi.WifiInfo: int getNetworkId()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.wifi.WifiInfo: int getNetworkId()>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:6
+crashApisInMain:6
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 19 Potential Issue API: SDKCheck of <android.net.wifi.WifiEnterpriseConfig: void setIdentity(java.lang.String)> is checking!!!
+The life time of api is [18,30]
+1call roads:
+1 Mainhead roads:
+###Multi invoking in one method, need manual check!!!--><de.hu_berlin.eduroam.WiFiEduroam: void saveWifiConfig()>[[i0 < 14], [-i0 < 18]]--><de.hu_berlin.eduroam.WiFiEduroam: void applyAndroid43EnterpriseSettings(android.net.wifi.WifiConfiguration,java.util.HashMap)>[[try]]
+###Multi invoking in one method, need manual check!!!--><de.hu_berlin.eduroam.WiFiEduroam: void saveWifiConfig()>[[i0 < 14]][[-i0 < 18]]--><de.hu_berlin.eduroam.WiFiEduroam: void applyAndroid43EnterpriseSettings(android.net.wifi.WifiConfiguration,java.util.HashMap)>[[try]]
+i0 < 14
+-i0 < 18
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.hu_berlin.eduroam.WiFiEduroam dummyMainMethod_de_hu__berlin_eduroam_WiFiEduroam(android.content.Intent)>[]--><de.hu_berlin.eduroam.WiFiEduroam: void onActivityResult(int,int,android.content.Intent)>[]--><java.lang.Thread: void run()>[]--><de.hu_berlin.eduroam.WiFiEduroam$2: void run()>[]--><de.hu_berlin.eduroam.WiFiEduroam: void access$500(de.hu_berlin.eduroam.WiFiEduroam)>[]--><de.hu_berlin.eduroam.WiFiEduroam: void saveWifiConfig()>[[i0 < 14], [-i0 < 18]]--><de.hu_berlin.eduroam.WiFiEduroam: void applyAndroid43EnterpriseSettings(android.net.wifi.WifiConfiguration,java.util.HashMap)>[[try]]--><android.net.wifi.WifiEnterpriseConfig: void setIdentity(java.lang.String)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:true
+1call by main package
+-----------------------------------------
+#################################################
+N 20 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager: boolean setWifiEnabled(boolean)> is checking!!!
+The life time of api is [1,30]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.hu_berlin.eduroam.WiFiEduroam dummyMainMethod_de_hu__berlin_eduroam_WiFiEduroam(android.content.Intent)>[]--><de.hu_berlin.eduroam.WiFiEduroam: boolean onOptionsItemSelected(android.view.MenuItem)>[]--><de.hu_berlin.eduroam.WiFiEduroam: java.lang.String getTroubleshootingInfo()>[]--><android.net.wifi.WifiManager: boolean setWifiEnabled(boolean)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.wifi.WifiManager: boolean setWifiEnabled(boolean)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:7
+crashApisInMain:7
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 21 Potential Issue API: SDKCheck of <android.net.wifi.WifiConfiguration: void <init>()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.hu_berlin.eduroam.WiFiEduroam dummyMainMethod_de_hu__berlin_eduroam_WiFiEduroam(android.content.Intent)>[]--><de.hu_berlin.eduroam.WiFiEduroam: void onActivityResult(int,int,android.content.Intent)>[]--><java.lang.Thread: void run()>[]--><de.hu_berlin.eduroam.WiFiEduroam$2: void run()>[]--><de.hu_berlin.eduroam.WiFiEduroam: void access$500(de.hu_berlin.eduroam.WiFiEduroam)>[]--><de.hu_berlin.eduroam.WiFiEduroam: void saveWifiConfig()>[]--><android.net.wifi.WifiConfiguration: void <init>()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.wifi.WifiConfiguration: void <init>()>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:8
+crashApisInMain:8
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 22 Potential Issue API: SDKCheck of <android.net.wifi.WifiEnterpriseConfig: void setAnonymousIdentity(java.lang.String)> is checking!!!
+The life time of api is [18,30]
+1call roads:
+1 Mainhead roads:
+###Multi invoking in one method, need manual check!!!--><de.hu_berlin.eduroam.WiFiEduroam: void saveWifiConfig()>[[i0 < 14], [-i0 < 18]]--><de.hu_berlin.eduroam.WiFiEduroam: void applyAndroid43EnterpriseSettings(android.net.wifi.WifiConfiguration,java.util.HashMap)>[[try]]
+###Multi invoking in one method, need manual check!!!--><de.hu_berlin.eduroam.WiFiEduroam: void saveWifiConfig()>[[i0 < 14]][[-i0 < 18]]--><de.hu_berlin.eduroam.WiFiEduroam: void applyAndroid43EnterpriseSettings(android.net.wifi.WifiConfiguration,java.util.HashMap)>[[try]]
+i0 < 14
+-i0 < 18
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.hu_berlin.eduroam.WiFiEduroam dummyMainMethod_de_hu__berlin_eduroam_WiFiEduroam(android.content.Intent)>[]--><de.hu_berlin.eduroam.WiFiEduroam: void onActivityResult(int,int,android.content.Intent)>[]--><java.lang.Thread: void run()>[]--><de.hu_berlin.eduroam.WiFiEduroam$2: void run()>[]--><de.hu_berlin.eduroam.WiFiEduroam: void access$500(de.hu_berlin.eduroam.WiFiEduroam)>[]--><de.hu_berlin.eduroam.WiFiEduroam: void saveWifiConfig()>[[i0 < 14], [-i0 < 18]]--><de.hu_berlin.eduroam.WiFiEduroam: void applyAndroid43EnterpriseSettings(android.net.wifi.WifiConfiguration,java.util.HashMap)>[[try]]--><android.net.wifi.WifiEnterpriseConfig: void setAnonymousIdentity(java.lang.String)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:true
+1call by main package
+-----------------------------------------
+#################################################
+N 23 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager: boolean saveConfiguration()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+1 Mainhead roads:
+###Multi invoking in one method, need manual check!!!--><de.hu_berlin.eduroam.WiFiEduroam: void saveWifiConfig()>[[i0 < 14], [-i0 < 18]]
+###Multi invoking in one method, need manual check!!!--><de.hu_berlin.eduroam.WiFiEduroam: void saveWifiConfig()>[[i0 < 14]][[-i0 < 18]]
+i0 < 14
+-i0 < 18
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.hu_berlin.eduroam.WiFiEduroam dummyMainMethod_de_hu__berlin_eduroam_WiFiEduroam(android.content.Intent)>[]--><de.hu_berlin.eduroam.WiFiEduroam: void onActivityResult(int,int,android.content.Intent)>[]--><java.lang.Thread: void run()>[]--><de.hu_berlin.eduroam.WiFiEduroam$2: void run()>[]--><de.hu_berlin.eduroam.WiFiEduroam: void access$500(de.hu_berlin.eduroam.WiFiEduroam)>[]--><de.hu_berlin.eduroam.WiFiEduroam: void saveWifiConfig()>[[i0 < 14], [-i0 < 18]]--><android.net.wifi.WifiManager: boolean saveConfiguration()>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+crashApis numbers:8
+crashApis numbers in main road:8
+On Android Version 16 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 17 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 18 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 19 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 20 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 21 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 22 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 23 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 24 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 25 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 31 this app may have error api use(at least): 8 and error api roads: 8

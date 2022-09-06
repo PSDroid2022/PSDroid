@@ -1,0 +1,766 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/OCReader.apk
+Entry Points[email.schaal.ocreader.ManageFeedsActivity, com.mikepenz.aboutlibraries.ui.LibsActivity, email.schaal.ocreader.OCReaderApplication, email.schaal.ocreader.LoginActivity, email.schaal.ocreader.CustomCrashReportDialog, email.schaal.ocreader.ItemPagerActivity, email.schaal.ocreader.SettingsActivity, email.schaal.ocreader.ListActivity, email.schaal.ocreader.service.SyncService]
+FllowDroidcallgraph size:10433
+Soot started on Mon Jul 11 09:02:45 CST 2022
+leftOp<android.databinding.ViewDataBinding: int SDK_INT>
+StaticCheck:<com.bumptech.glide.load.engine.cache.MemorySizeCalculator: boolean isLowMemoryDevice(android.app.ActivityManager)>$yysi0 < 19
+Soot finished on Mon Jul 11 09:04:12 CST 2022
+Soot has run for 1 min. 27 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 17
+Declared Target Sdk version is: 26
+Declared Max Sdk version is: -1
+Collected 1121 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.graphics.Bitmap: void reconfigure(int,int,android.graphics.Bitmap.Config)> is checking!!!
+The life time of api is [19,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 17 18 
+Error road: <com.bumptech.glide.load.engine.bitmap_recycle.SizeStrategy: android.graphics.Bitmap get(int,int,android.graphics.Bitmap$Config)>[]--><android.graphics.Bitmap: void reconfigure(int,int,android.graphics.Bitmap.Config)>
+#1.the call statck between class <com.bumptech.glide.load.engine.bitmap_recycle.SizeStrategy: android.graphics.Bitmap get(int,int,android.graphics.Bitmap$Config)> to <android.graphics.Bitmap: void reconfigure(int,int,android.graphics.Bitmap.Config)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 17 18 
+Error road: <com.bumptech.glide.load.engine.bitmap_recycle.SizeConfigStrategy: android.graphics.Bitmap get(int,int,android.graphics.Bitmap$Config)>[]--><android.graphics.Bitmap: void reconfigure(int,int,android.graphics.Bitmap.Config)>
+#2.the call statck between class <com.bumptech.glide.load.engine.bitmap_recycle.SizeConfigStrategy: android.graphics.Bitmap get(int,int,android.graphics.Bitmap$Config)> to <android.graphics.Bitmap: void reconfigure(int,int,android.graphics.Bitmap.Config)>has compatibility isssues！
+-----------------------------------------
+crashApis:1
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.widget.TimePicker: int getMinute()> is checking!!!
+The life time of api is [23,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+-$i1 < 23
+Good road: <android.databinding.adapters.TimePickerBindingAdapter: void setMinute(android.widget.TimePicker,int)>[[-$i1 < 23]]--><android.widget.TimePicker: int getMinute()>
+One road protect good!
+-$i0 < 23
+Good road: <android.databinding.adapters.TimePickerBindingAdapter: int getMinute(android.widget.TimePicker)>[[-$i0 < 23]]--><android.widget.TimePicker: int getMinute()>
+One road protect good!
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.widget.TimePicker: int getHour()> is checking!!!
+The life time of api is [23,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+-$i0 < 23
+Good road: <android.databinding.adapters.TimePickerBindingAdapter: int getHour(android.widget.TimePicker)>[[-$i0 < 23]]--><android.widget.TimePicker: int getHour()>
+One road protect good!
+-$i1 < 23
+Good road: <android.databinding.adapters.TimePickerBindingAdapter: void setHour(android.widget.TimePicker,int)>[[-$i1 < 23]]--><android.widget.TimePicker: int getHour()>
+One road protect good!
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.graphics.Bitmap: int getAllocationByteCount()> is checking!!!
+The life time of api is [19,31]
+2329call roads:
+1 Mainhead roads:
+2328 Packageshead roads:
+Roads number exceed, exit!2328
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()> is checking!!!
+The life time of api is [1,30]
+2325call roads:
+1 Mainhead roads:
+2324 Packageshead roads:
+Roads number exceed, exit!2324
+#################################################
+N 5 Potential Issue API: SDKCheck of <android.os.BaseBundle: boolean containsKey(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.mikepenz.aboutlibraries.ui.LibsActivity dummyMainMethod_com_mikepenz_aboutlibraries_ui_LibsActivity(android.content.Intent)>[]--><com.mikepenz.aboutlibraries.ui.LibsActivity: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: boolean containsKey(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: boolean containsKey(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:2
+crashApisInMain:1
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 6 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)> is checking!!!
+The life time of api is [21,31]
+2call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: email.schaal.ocreader.ManageFeedsActivity dummyMainMethod_email_schaal_ocreader_ManageFeedsActivity(android.content.Intent)>[]--><email.schaal.ocreader.ManageFeedsActivity$$Lambda$0: void onClick(android.view.View)>[]--><email.schaal.ocreader.ManageFeedsActivity: void lambda$onCreate$0$ManageFeedsActivity(android.view.View)>[]--><email.schaal.ocreader.view.AddNewFeedDialogFragment: void show(android.app.Activity,email.schaal.ocreader.database.model.Feed,boolean)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+1 Packageshead roads:
+!!!this api will crash on sdk 17 18 19 20 
+Error road: <email.schaal.ocreader.view.FeedsAdapter$FeedViewHolder: void lambda$bindFeed$1$FeedsAdapter$FeedViewHolder(email.schaal.ocreader.database.model.Feed,android.view.View)>[]--><email.schaal.ocreader.ManageFeedsActivity: void showFeedDialog(email.schaal.ocreader.database.model.Feed)>[]--><email.schaal.ocreader.view.AddNewFeedDialogFragment: void show(android.app.Activity,email.schaal.ocreader.database.model.Feed,boolean)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#1.the call statck between class <email.schaal.ocreader.view.FeedsAdapter$FeedViewHolder: void lambda$bindFeed$1$FeedsAdapter$FeedViewHolder(email.schaal.ocreader.database.model.Feed,android.view.View)> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:3
+crashApisInMain:2
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 7 Potential Issue API: SDKCheck of <android.util.SparseLongArray: long get(int)> is checking!!!
+The life time of api is [18,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 17 
+Error road: <android.databinding.ViewDataBinding: long getFromList(android.util.SparseLongArray,int)>[]--><android.util.SparseLongArray: long get(int)>
+#1.the call statck between class <android.databinding.ViewDataBinding: long getFromList(android.util.SparseLongArray,int)> to <android.util.SparseLongArray: long get(int)>has compatibility isssues！
+-----------------------------------------
+crashApis:4
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 8 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)> is checking!!!
+The life time of api is [22,31]
+3call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 17 18 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: email.schaal.ocreader.SettingsActivity dummyMainMethod_email_schaal_ocreader_SettingsActivity(android.content.Intent)>[]--><email.schaal.ocreader.SettingsActivity: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+!!!this api will crash on sdk 17 18 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: email.schaal.ocreader.ManageFeedsActivity dummyMainMethod_email_schaal_ocreader_ManageFeedsActivity(android.content.Intent)>[]--><email.schaal.ocreader.ManageFeedsActivity: void onCreate(android.os.Bundle)>[]--><email.schaal.ocreader.view.AddNewFeedDialogFragment: void show(android.app.Activity,email.schaal.ocreader.database.model.Feed,boolean)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+2 Packageshead roads:
+!!!this api will crash on sdk 17 18 19 20 21 
+Error road: <email.schaal.ocreader.view.FeedsAdapter$FeedViewHolder: void lambda$bindFeed$1$FeedsAdapter$FeedViewHolder(email.schaal.ocreader.database.model.Feed,android.view.View)>[]--><email.schaal.ocreader.ManageFeedsActivity: void showFeedDialog(email.schaal.ocreader.database.model.Feed)>[]--><email.schaal.ocreader.view.AddNewFeedDialogFragment: void show(android.app.Activity,email.schaal.ocreader.database.model.Feed,boolean)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+#1.the call statck between class <email.schaal.ocreader.view.FeedsAdapter$FeedViewHolder: void lambda$bindFeed$1$FeedsAdapter$FeedViewHolder(email.schaal.ocreader.database.model.Feed,android.view.View)> to <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 17 18 19 20 21 
+Error road: <com.mikepenz.materialdrawer.Drawer: android.os.Bundle saveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+#2.the call statck between class <com.mikepenz.materialdrawer.Drawer: android.os.Bundle saveInstanceState(android.os.Bundle)> to <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+crashApis:5
+crashApisInMain:3
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 9 Potential Issue API: SDKCheck of <android.view.View: void drawableHotspotChanged(float,float)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i0 < 21
+Good road: <com.mikepenz.aboutlibraries.util.RippleForegroundListener: boolean onTouch(android.view.View,android.view.MotionEvent)>[[-$i0 < 21]]--><android.view.View: void drawableHotspotChanged(float,float)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 10 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.lang.Object get(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+2324call roads:
+1 Mainhead roads:
+2323 Packageshead roads:
+Roads number exceed, exit!2323
+#################################################
+N 11 Potential Issue API: SDKCheck of <android.view.View: void setElevation(float)> is checking!!!
+The life time of api is [21,31]
+2call roads:
+1 Mainhead roads:
+###Multi invoking in one method, need manual check!!!--><com.mikepenz.materialdrawer.DrawerBuilder: void createContent()>[[$i2 >= 21], [$i4 < 21]]--><com.mikepenz.materialdrawer.DrawerUtils: void handleHeaderView(com.mikepenz.materialdrawer.DrawerBuilder)>[[-$i0 < 21]]
+###Multi invoking in one method, need manual check!!!--><com.mikepenz.materialdrawer.DrawerBuilder: void createContent()>[[$i2 >= 21]][[$i4 < 21]]--><com.mikepenz.materialdrawer.DrawerUtils: void handleHeaderView(com.mikepenz.materialdrawer.DrawerBuilder)>[[-$i0 < 21]]
+$i2 >= 21
+$i4 < 21
+-$i0 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: email.schaal.ocreader.ListActivity dummyMainMethod_email_schaal_ocreader_ListActivity(android.content.Intent)>[]--><email.schaal.ocreader.ListActivity: void onCreate(android.os.Bundle)>[]--><com.mikepenz.materialdrawer.DrawerBuilder: com.mikepenz.materialdrawer.Drawer append(com.mikepenz.materialdrawer.Drawer)>[]--><com.mikepenz.materialdrawer.DrawerBuilder: void createContent()>[[$i2 >= 21], [$i4 < 21]]--><com.mikepenz.materialdrawer.DrawerUtils: void handleHeaderView(com.mikepenz.materialdrawer.DrawerBuilder)>[[-$i0 < 21]]--><android.view.View: void setElevation(float)>
+One road protect good!
+1 Packageshead roads:
+###Multi invoking in one method, need manual check!!!--><com.mikepenz.materialdrawer.DrawerBuilder: void createContent()>[[$i2 >= 21], [$i4 < 21]]--><com.mikepenz.materialdrawer.DrawerUtils: void handleHeaderView(com.mikepenz.materialdrawer.DrawerBuilder)>[[-$i0 < 21]]
+###Multi invoking in one method, need manual check!!!--><com.mikepenz.materialdrawer.DrawerBuilder: void createContent()>[[$i2 >= 21]][[$i4 < 21]]--><com.mikepenz.materialdrawer.DrawerUtils: void handleHeaderView(com.mikepenz.materialdrawer.DrawerBuilder)>[[-$i0 < 21]]
+$i2 >= 21
+$i4 < 21
+-$i0 < 21
+Good road: <com.mikepenz.materialdrawer.DrawerBuilder: com.mikepenz.materialdrawer.Drawer buildForFragment()>[]--><com.mikepenz.materialdrawer.DrawerBuilder: com.mikepenz.materialdrawer.Drawer buildView()>[]--><com.mikepenz.materialdrawer.DrawerBuilder: void createContent()>[[$i2 >= 21], [$i4 < 21]]--><com.mikepenz.materialdrawer.DrawerUtils: void handleHeaderView(com.mikepenz.materialdrawer.DrawerBuilder)>[[-$i0 < 21]]--><android.view.View: void setElevation(float)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 12 Potential Issue API: SDKCheck of <android.os.BaseBundle: boolean getBoolean(java.lang.String)> is checking!!!
+The life time of api is [22,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 17 18 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: email.schaal.ocreader.SettingsActivity dummyMainMethod_email_schaal_ocreader_SettingsActivity(android.content.Intent)>[]--><email.schaal.ocreader.SettingsActivity: void onRestoreInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: boolean getBoolean(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:6
+crashApisInMain:4
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 13 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.lang.String getString(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+2call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.mikepenz.aboutlibraries.ui.LibsActivity dummyMainMethod_com_mikepenz_aboutlibraries_ui_LibsActivity(android.content.Intent)>[]--><com.mikepenz.aboutlibraries.ui.LibsActivity: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+1 Packageshead roads:
+!!!this api will crash on sdk 17 18 19 20 
+Error road: <email.schaal.ocreader.view.AddNewFeedDialogFragment: android.app.Dialog onCreateDialog(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#1.the call statck between class <email.schaal.ocreader.view.AddNewFeedDialogFragment: android.app.Dialog onCreateDialog(android.os.Bundle)> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:7
+crashApisInMain:5
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 14 Potential Issue API: SDKCheck of <android.animation.AnimatorSet: void <init>()> is checking!!!
+The life time of api is [24,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 17 18 19 20 21 22 23 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: email.schaal.ocreader.ItemPagerActivity dummyMainMethod_email_schaal_ocreader_ItemPagerActivity(android.content.Intent)>[]--><email.schaal.ocreader.ItemPagerActivity: void onCreate(android.os.Bundle)>[]--><email.schaal.ocreader.ItemPagerActivity$MyOnPageChangeListener: void onPageSelected(int)>[]--><email.schaal.ocreader.util.FaviconLoader: void load(android.content.Context,email.schaal.ocreader.database.model.Feed,email.schaal.ocreader.util.FaviconLoader$FeedColorsListener)>[]--><email.schaal.ocreader.ItemPagerActivity$MyOnPageChangeListener$1: void onGenerated(email.schaal.ocreader.util.FeedColors)>[]--><android.animation.AnimatorSet: void <init>()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.animation.AnimatorSet: void <init>()>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:8
+crashApisInMain:6
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 15 Potential Issue API: SDKCheck of <android.view.View: void setBackgroundTintList(android.content.res.ColorStateList)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+-$i1 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: email.schaal.ocreader.ItemPagerActivity dummyMainMethod_email_schaal_ocreader_ItemPagerActivity(android.content.Intent)>[]--><email.schaal.ocreader.ItemPagerActivity: void onCreate(android.os.Bundle)>[]--><email.schaal.ocreader.ItemPagerActivity$MyOnPageChangeListener: void onPageSelected(int)>[]--><email.schaal.ocreader.util.FaviconLoader: void load(android.content.Context,email.schaal.ocreader.database.model.Feed,email.schaal.ocreader.util.FaviconLoader$FeedColorsListener)>[]--><email.schaal.ocreader.ItemPagerActivity$MyOnPageChangeListener$1: void onGenerated(email.schaal.ocreader.util.FeedColors)>[]--><email.schaal.ocreader.view.FABLayout: void setFabBackgroundColor(int)>[[-$i1 < 21]]--><android.view.View: void setBackgroundTintList(android.content.res.ColorStateList)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 16 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putInt(java.lang.String,int)> is checking!!!
+The life time of api is [21,31]
+4call roads:
+0 Mainhead roads:
+4 Packageshead roads:
+!!!this api will crash on sdk 17 18 19 20 
+Error road: <com.mikepenz.materialdrawer.AccountHeader: android.os.Bundle saveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#1.the call statck between class <com.mikepenz.materialdrawer.AccountHeader: android.os.Bundle saveInstanceState(android.os.Bundle)> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 17 18 19 20 
+Error road: <com.mikepenz.materialdrawer.Drawer: android.os.Bundle saveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#2.the call statck between class <com.mikepenz.materialdrawer.Drawer: android.os.Bundle saveInstanceState(android.os.Bundle)> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 17 18 19 20 
+Error road: <email.schaal.ocreader.ItemPageFragment: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#4.the call statck between class <email.schaal.ocreader.ItemPageFragment: void onSaveInstanceState(android.os.Bundle)> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:9
+containsStatic:false
+containsTry:false
+5call by main package
+-----------------------------------------
+#################################################
+N 17 Potential Issue API: SDKCheck of <android.util.SparseLongArray: void put(int,long)> is checking!!!
+The life time of api is [18,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 17 
+Error road: <android.databinding.ViewDataBinding: void setTo(android.util.SparseLongArray,int,long)>[]--><android.util.SparseLongArray: void put(int,long)>
+#1.the call statck between class <android.databinding.ViewDataBinding: void setTo(android.util.SparseLongArray,int,long)> to <android.util.SparseLongArray: void put(int,long)>has compatibility isssues！
+-----------------------------------------
+crashApis:10
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 18 Potential Issue API: SDKCheck of <android.os.BaseBundle: int getInt(java.lang.String,int)> is checking!!!
+The life time of api is [21,31]
+3call roads:
+1 Mainhead roads:
+###Multi invoking in one method, need manual check!!!--><com.mikepenz.materialdrawer.DrawerBuilder: void createContent()>[[$i2 >= 21], [$i4 < 21]]
+###Multi invoking in one method, need manual check!!!--><com.mikepenz.materialdrawer.DrawerBuilder: void createContent()>[[$i2 >= 21]][[$i4 < 21]]
+$i2 >= 21
+$i4 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: email.schaal.ocreader.ListActivity dummyMainMethod_email_schaal_ocreader_ListActivity(android.content.Intent)>[]--><email.schaal.ocreader.ListActivity: void onCreate(android.os.Bundle)>[]--><com.mikepenz.materialdrawer.DrawerBuilder: com.mikepenz.materialdrawer.Drawer append(com.mikepenz.materialdrawer.Drawer)>[]--><com.mikepenz.materialdrawer.DrawerBuilder: void createContent()>[[$i2 >= 21], [$i4 < 21]]--><android.os.BaseBundle: int getInt(java.lang.String,int)>
+One road protect good!
+!!!this api will crash on sdk 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.mikepenz.aboutlibraries.ui.LibsActivity dummyMainMethod_com_mikepenz_aboutlibraries_ui_LibsActivity(android.content.Intent)>[]--><com.mikepenz.aboutlibraries.ui.LibsActivity: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String,int)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: int getInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+2 Packageshead roads:
+###Multi invoking in one method, need manual check!!!--><com.mikepenz.materialdrawer.DrawerBuilder: void createContent()>[[$i2 >= 21], [$i4 < 21]]
+###Multi invoking in one method, need manual check!!!--><com.mikepenz.materialdrawer.DrawerBuilder: void createContent()>[[$i2 >= 21]][[$i4 < 21]]
+$i2 >= 21
+$i4 < 21
+Good road: <com.mikepenz.materialdrawer.DrawerBuilder: com.mikepenz.materialdrawer.Drawer buildForFragment()>[]--><com.mikepenz.materialdrawer.DrawerBuilder: com.mikepenz.materialdrawer.Drawer buildView()>[]--><com.mikepenz.materialdrawer.DrawerBuilder: void createContent()>[[$i2 >= 21], [$i4 < 21]]--><android.os.BaseBundle: int getInt(java.lang.String,int)>
+One road protect good!
+!!!this api will crash on sdk 17 18 19 20 
+Error road: <email.schaal.ocreader.ItemPageFragment: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String,int)>
+#2.the call statck between class <email.schaal.ocreader.ItemPageFragment: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)> to <android.os.BaseBundle: int getInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:11
+crashApisInMain:7
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 19 Potential Issue API: SDKCheck of <android.webkit.WebView: void <init>(android.content.Context,android.util.AttributeSet,int,int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 17 18 19 20 
+Error road: <email.schaal.ocreader.view.NestedScrollWebView: void <init>(android.content.Context,android.util.AttributeSet,int,int)>[]--><android.webkit.WebView: void <init>(android.content.Context,android.util.AttributeSet,int,int)>
+#1.the call statck between class <email.schaal.ocreader.view.NestedScrollWebView: void <init>(android.content.Context,android.util.AttributeSet,int,int)> to <android.webkit.WebView: void <init>(android.content.Context,android.util.AttributeSet,int,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:12
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 20 Potential Issue API: SDKCheck of <android.view.Window: void setStatusBarColor(int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: email.schaal.ocreader.ItemPagerActivity dummyMainMethod_email_schaal_ocreader_ItemPagerActivity(android.content.Intent)>[]--><email.schaal.ocreader.ItemPagerActivity: void onCreate(android.os.Bundle)>[]--><email.schaal.ocreader.ItemPagerActivity$MyOnPageChangeListener: void onPageSelected(int)>[]--><email.schaal.ocreader.util.FaviconLoader: void load(android.content.Context,email.schaal.ocreader.database.model.Feed,email.schaal.ocreader.util.FaviconLoader$FeedColorsListener)>[]--><email.schaal.ocreader.ItemPagerActivity$MyOnPageChangeListener$1: void onGenerated(email.schaal.ocreader.util.FeedColors)>[]--><email.schaal.ocreader.ItemPagerActivity$StatusBarChangerLollipop: void setStatusBarColor(int)>[]--><android.view.Window: void setStatusBarColor(int)>
+$i0 < 16
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: email.schaal.ocreader.ListActivity dummyMainMethod_email_schaal_ocreader_ListActivity(android.content.Intent)>[]--><email.schaal.ocreader.ListActivity: void onCreate(android.os.Bundle)>[]--><com.mikepenz.materialdrawer.DrawerBuilder: com.mikepenz.materialdrawer.Drawer build()>[]--><com.mikepenz.materialize.MaterializeBuilder: com.mikepenz.materialize.Materialize build()>[[$i0 < 16]]--><android.view.Window: void setStatusBarColor(int)>
+One road protect good!
+-$i0 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.mikepenz.aboutlibraries.ui.LibsActivity dummyMainMethod_com_mikepenz_aboutlibraries_ui_LibsActivity(android.content.Intent)>[]--><com.mikepenz.aboutlibraries.ui.LibsActivity: void onCreate(android.os.Bundle)>[[-$i0 < 21]]--><android.view.Window: void setStatusBarColor(int)>
+One road protect good!
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.view.Window: void setStatusBarColor(int)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:13
+crashApisInMain:8
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 21 Potential Issue API: SDKCheck of <android.content.Context: android.content.res.ColorStateList getColorStateList(int)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i1 < 23
+Good road: <android.databinding.ViewDataBinding: android.content.res.ColorStateList getColorStateListFromResource(android.view.View,int)>[[-$i1 < 23]]--><android.content.Context: android.content.res.ColorStateList getColorStateList(int)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 22 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.util.Set keySet()> is checking!!!
+The life time of api is [21,31]
+2324call roads:
+1 Mainhead roads:
+2323 Packageshead roads:
+Roads number exceed, exit!2323
+#################################################
+N 23 Potential Issue API: SDKCheck of <android.widget.LinearLayout: void <init>(android.content.Context,android.util.AttributeSet,int,int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 17 18 19 20 
+Error road: <email.schaal.ocreader.view.FABLayout: void <init>(android.content.Context,android.util.AttributeSet,int,int)>[]--><android.widget.LinearLayout: void <init>(android.content.Context,android.util.AttributeSet,int,int)>
+#1.the call statck between class <email.schaal.ocreader.view.FABLayout: void <init>(android.content.Context,android.util.AttributeSet,int,int)> to <android.widget.LinearLayout: void <init>(android.content.Context,android.util.AttributeSet,int,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:14
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 24 Potential Issue API: SDKCheck of <android.graphics.drawable.Drawable: int getAlpha()> is checking!!!
+The life time of api is [19,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 17 18 
+Error road: <com.bumptech.glide.request.target.FixedSizeDrawable: int getAlpha()>[]--><android.graphics.drawable.Drawable: int getAlpha()>
+#1.the call statck between class <com.bumptech.glide.request.target.FixedSizeDrawable: int getAlpha()> to <android.graphics.drawable.Drawable: int getAlpha()>has compatibility isssues！
+-----------------------------------------
+crashApis:15
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 25 Potential Issue API: SDKCheck of <android.graphics.Bitmap: void setPremultiplied(boolean)> is checking!!!
+The life time of api is [19,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+try
+Good road with try: <com.bumptech.glide.load.engine.bitmap_recycle.LruBitmapPool: android.graphics.Bitmap getDirtyOrNull(int,int,android.graphics.Bitmap$Config)>[[try]]--><com.bumptech.glide.load.engine.bitmap_recycle.LruBitmapPool: void normalize(android.graphics.Bitmap)>[]--><com.bumptech.glide.load.engine.bitmap_recycle.LruBitmapPool: void maybeSetPreMultiplied(android.graphics.Bitmap)>[[-$i0 < 19]]--><android.graphics.Bitmap: void setPremultiplied(boolean)>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 26 Potential Issue API: SDKCheck of <android.util.SparseLongArray: int size()> is checking!!!
+The life time of api is [18,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 17 
+Error road: <android.databinding.ViewDataBinding: void setTo(android.util.SparseLongArray,int,long)>[]--><android.util.SparseLongArray: int size()>
+#1.the call statck between class <android.databinding.ViewDataBinding: void setTo(android.util.SparseLongArray,int,long)> to <android.util.SparseLongArray: int size()>has compatibility isssues！
+-----------------------------------------
+crashApis:16
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 27 Potential Issue API: SDKCheck of <android.content.Context: android.graphics.drawable.Drawable getDrawable(int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i1 < 21
+Good road: <android.databinding.ViewDataBinding: android.graphics.drawable.Drawable getDrawableFromResource(android.view.View,int)>[[-$i1 < 21]]--><android.content.Context: android.graphics.drawable.Drawable getDrawable(int)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 28 Potential Issue API: SDKCheck of <android.view.View: void setOutlineProvider(android.view.ViewOutlineProvider)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i2 < 21
+Good road: <com.mikepenz.materialdrawer.view.BezelImageView: void onSizeChanged(int,int,int,int)>[[-$i2 < 21]]--><android.view.View: void setOutlineProvider(android.view.ViewOutlineProvider)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 29 Potential Issue API: SDKCheck of <android.graphics.Outline: void setOval(int,int,int,int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 17 18 19 20 
+Error road: <com.mikepenz.materialdrawer.view.BezelImageView$CustomOutline: void getOutline(android.view.View,android.graphics.Outline)>[]--><android.graphics.Outline: void setOval(int,int,int,int)>
+#1.the call statck between class <com.mikepenz.materialdrawer.view.BezelImageView$CustomOutline: void getOutline(android.view.View,android.graphics.Outline)> to <android.graphics.Outline: void setOval(int,int,int,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:17
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 30 Potential Issue API: SDKCheck of <android.net.NetworkInfo: boolean isConnected()> is checking!!!
+The life time of api is [1,30]
+2325call roads:
+1 Mainhead roads:
+2324 Packageshead roads:
+Roads number exceed, exit!2324
+#################################################
+N 31 Potential Issue API: SDKCheck of <android.view.Window: void setNavigationBarColor(int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+$i0 < 16
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: email.schaal.ocreader.ListActivity dummyMainMethod_email_schaal_ocreader_ListActivity(android.content.Intent)>[]--><email.schaal.ocreader.ListActivity: void onCreate(android.os.Bundle)>[]--><com.mikepenz.materialdrawer.DrawerBuilder: com.mikepenz.materialdrawer.Drawer build()>[]--><com.mikepenz.materialize.MaterializeBuilder: com.mikepenz.materialize.Materialize build()>[[$i0 < 16]]--><android.view.Window: void setNavigationBarColor(int)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 32 Potential Issue API: SDKCheck of <android.os.BaseBundle: long getLong(java.lang.String,long)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 17 18 19 20 
+Error road: <email.schaal.ocreader.view.AddNewFeedDialogFragment: android.app.Dialog onCreateDialog(android.os.Bundle)>[]--><android.os.BaseBundle: long getLong(java.lang.String,long)>
+#1.the call statck between class <email.schaal.ocreader.view.AddNewFeedDialogFragment: android.app.Dialog onCreateDialog(android.os.Bundle)> to <android.os.BaseBundle: long getLong(java.lang.String,long)>has compatibility isssues！
+-----------------------------------------
+crashApis:18
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 33 Potential Issue API: SDKCheck of <android.text.InputFilter.LengthFilter: int getMax()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i2 < 21
+Good road: <android.databinding.adapters.TextViewBindingAdapter: void setMaxLength(android.widget.TextView,int)>[[-$i2 < 21]]--><android.text.InputFilter.LengthFilter: int getMax()>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 34 Potential Issue API: SDKCheck of <android.app.ActivityManager: boolean isLowRamDevice()> is checking!!!
+The life time of api is [19,31]
+2324call roads:
+1 Mainhead roads:
+2323 Packageshead roads:
+Roads number exceed, exit!2323
+#################################################
+N 35 Potential Issue API: SDKCheck of <android.view.View: boolean isAttachedToWindow()> is checking!!!
+The life time of api is [19,31]
+2324call roads:
+1 Mainhead roads:
+2323 Packageshead roads:
+Roads number exceed, exit!2323
+#################################################
+N 36 Potential Issue API: SDKCheck of <android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)> is checking!!!
+The life time of api is [22,31]
+3call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 17 18 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: email.schaal.ocreader.ListActivity dummyMainMethod_email_schaal_ocreader_ListActivity(android.content.Intent)>[]--><email.schaal.ocreader.ListActivity: void onCreate(android.os.Bundle)>[]--><com.mikepenz.materialdrawer.DrawerBuilder: com.mikepenz.materialdrawer.Drawer append(com.mikepenz.materialdrawer.Drawer)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+2 Packageshead roads:
+!!!this api will crash on sdk 17 18 19 20 21 
+Error road: <email.schaal.ocreader.view.AddNewFeedDialogFragment: android.app.Dialog onCreateDialog(android.os.Bundle)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>
+#1.the call statck between class <email.schaal.ocreader.view.AddNewFeedDialogFragment: android.app.Dialog onCreateDialog(android.os.Bundle)> to <android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 17 18 19 20 21 
+Error road: <com.mikepenz.materialdrawer.DrawerBuilder: com.mikepenz.materialdrawer.Drawer buildForFragment()>[]--><com.mikepenz.materialdrawer.DrawerBuilder: com.mikepenz.materialdrawer.Drawer buildView()>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>
+#2.the call statck between class <com.mikepenz.materialdrawer.DrawerBuilder: com.mikepenz.materialdrawer.Drawer buildForFragment()> to <android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+crashApis:19
+crashApisInMain:9
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 37 Potential Issue API: SDKCheck of <android.view.View: void setForeground(android.graphics.drawable.Drawable)> is checking!!!
+The life time of api is [23,31]
+2324call roads:
+1 Mainhead roads:
+2323 Packageshead roads:
+Roads number exceed, exit!2323
+#################################################
+N 38 Potential Issue API: SDKCheck of <android.content.Context: int getColor(int)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i1 < 23
+Good road: <android.databinding.ViewDataBinding: int getColorFromResource(android.view.View,int)>[[-$i1 < 23]]--><android.content.Context: int getColor(int)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 39 Potential Issue API: SDKCheck of <android.widget.TimePicker: void setHour(int)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i1 < 23
+Good road: <android.databinding.adapters.TimePickerBindingAdapter: void setHour(android.widget.TimePicker,int)>[[-$i1 < 23]]--><android.widget.TimePicker: void setHour(int)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 40 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putIntArray(java.lang.String,int[])> is checking!!!
+The life time of api is [21,31]
+15call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: email.schaal.ocreader.ListActivity dummyMainMethod_email_schaal_ocreader_ListActivity(android.content.Intent)>[]--><email.schaal.ocreader.ListActivity: void onResume()>[]--><email.schaal.ocreader.ListActivity: void updateSyncStatus()>[]--><email.schaal.ocreader.ListActivity: void updateUserProfile()>[]--><com.mikepenz.materialdrawer.AccountHeader: void updateProfile(com.mikepenz.materialdrawer.model.interfaces.IProfile)>[]--><com.mikepenz.materialdrawer.AccountHeader: void updateProfileByIdentifier(com.mikepenz.materialdrawer.model.interfaces.IProfile)>[]--><com.mikepenz.materialdrawer.AccountHeaderBuilder: void updateHeaderAndList()>[]--><com.mikepenz.materialdrawer.AccountHeaderBuilder: void buildDrawerSelectionList()>[]--><com.mikepenz.materialdrawer.Drawer: void switchDrawerContent(com.mikepenz.materialdrawer.Drawer$OnDrawerItemClickListener,com.mikepenz.materialdrawer.Drawer$OnDrawerItemLongClickListener,java.util.List,int)>[]--><com.mikepenz.fastadapter.FastAdapter: android.os.Bundle saveInstanceState(android.os.Bundle)>[]--><com.mikepenz.fastadapter.FastAdapter: android.os.Bundle saveInstanceState(android.os.Bundle,java.lang.String)>[]--><android.os.BaseBundle: void putIntArray(java.lang.String,int[])>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: void putIntArray(java.lang.String,int[])>has compatibility isssues！
+-----------------------------------------
+14 Packageshead roads:
+!!!this api will crash on sdk 17 18 19 20 
+Error road: <com.mikepenz.materialdrawer.AccountHeaderBuilder$6: void onClick(android.view.View)>[]--><com.mikepenz.materialdrawer.AccountHeaderBuilder: void toggleSelectionList(android.content.Context)>[]--><com.mikepenz.materialdrawer.AccountHeaderBuilder: void buildDrawerSelectionList()>[]--><com.mikepenz.materialdrawer.Drawer: void switchDrawerContent(com.mikepenz.materialdrawer.Drawer$OnDrawerItemClickListener,com.mikepenz.materialdrawer.Drawer$OnDrawerItemLongClickListener,java.util.List,int)>[]--><com.mikepenz.fastadapter.FastAdapter: android.os.Bundle saveInstanceState(android.os.Bundle)>[]--><com.mikepenz.fastadapter.FastAdapter: android.os.Bundle saveInstanceState(android.os.Bundle,java.lang.String)>[]--><android.os.BaseBundle: void putIntArray(java.lang.String,int[])>
+#1.the call statck between class <com.mikepenz.materialdrawer.AccountHeaderBuilder$6: void onClick(android.view.View)> to <android.os.BaseBundle: void putIntArray(java.lang.String,int[])>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 17 18 19 20 
+Error road: <com.mikepenz.materialdrawer.AccountHeader: void setProfiles(java.util.List)>[]--><com.mikepenz.materialdrawer.AccountHeaderBuilder: void updateHeaderAndList()>[]--><com.mikepenz.materialdrawer.AccountHeaderBuilder: void buildDrawerSelectionList()>[]--><com.mikepenz.materialdrawer.Drawer: void switchDrawerContent(com.mikepenz.materialdrawer.Drawer$OnDrawerItemClickListener,com.mikepenz.materialdrawer.Drawer$OnDrawerItemLongClickListener,java.util.List,int)>[]--><com.mikepenz.fastadapter.FastAdapter: android.os.Bundle saveInstanceState(android.os.Bundle)>[]--><com.mikepenz.fastadapter.FastAdapter: android.os.Bundle saveInstanceState(android.os.Bundle,java.lang.String)>[]--><android.os.BaseBundle: void putIntArray(java.lang.String,int[])>
+#2.the call statck between class <com.mikepenz.materialdrawer.AccountHeader: void setProfiles(java.util.List)> to <android.os.BaseBundle: void putIntArray(java.lang.String,int[])>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 17 18 19 20 
+Error road: <com.mikepenz.materialdrawer.AccountHeader: void setSelectionFirstLine(java.lang.String)>[]--><com.mikepenz.materialdrawer.AccountHeaderBuilder: void updateHeaderAndList()>[]--><com.mikepenz.materialdrawer.AccountHeaderBuilder: void buildDrawerSelectionList()>[]--><com.mikepenz.materialdrawer.Drawer: void switchDrawerContent(com.mikepenz.materialdrawer.Drawer$OnDrawerItemClickListener,com.mikepenz.materialdrawer.Drawer$OnDrawerItemLongClickListener,java.util.List,int)>[]--><com.mikepenz.fastadapter.FastAdapter: android.os.Bundle saveInstanceState(android.os.Bundle)>[]--><com.mikepenz.fastadapter.FastAdapter: android.os.Bundle saveInstanceState(android.os.Bundle,java.lang.String)>[]--><android.os.BaseBundle: void putIntArray(java.lang.String,int[])>
+#3.the call statck between class <com.mikepenz.materialdrawer.AccountHeader: void setSelectionFirstLine(java.lang.String)> to <android.os.BaseBundle: void putIntArray(java.lang.String,int[])>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 17 18 19 20 
+Error road: <com.mikepenz.materialdrawer.DrawerBuilder: com.mikepenz.materialdrawer.Drawer buildForFragment()>[]--><com.mikepenz.materialdrawer.DrawerBuilder: com.mikepenz.materialdrawer.Drawer buildView()>[]--><com.mikepenz.materialdrawer.AccountHeader: void toggleSelectionList(android.content.Context)>[]--><com.mikepenz.materialdrawer.AccountHeaderBuilder: void toggleSelectionList(android.content.Context)>[]--><com.mikepenz.materialdrawer.AccountHeaderBuilder: void buildDrawerSelectionList()>[]--><com.mikepenz.materialdrawer.Drawer: void switchDrawerContent(com.mikepenz.materialdrawer.Drawer$OnDrawerItemClickListener,com.mikepenz.materialdrawer.Drawer$OnDrawerItemLongClickListener,java.util.List,int)>[]--><com.mikepenz.fastadapter.FastAdapter: android.os.Bundle saveInstanceState(android.os.Bundle)>[]--><com.mikepenz.fastadapter.FastAdapter: android.os.Bundle saveInstanceState(android.os.Bundle,java.lang.String)>[]--><android.os.BaseBundle: void putIntArray(java.lang.String,int[])>
+#4.the call statck between class <com.mikepenz.materialdrawer.DrawerBuilder: com.mikepenz.materialdrawer.Drawer buildForFragment()> to <android.os.BaseBundle: void putIntArray(java.lang.String,int[])>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 17 18 19 20 
+Error road: <com.mikepenz.materialdrawer.AccountHeader: void addProfiles(com.mikepenz.materialdrawer.model.interfaces.IProfile[])>[]--><com.mikepenz.materialdrawer.AccountHeaderBuilder: void updateHeaderAndList()>[]--><com.mikepenz.materialdrawer.AccountHeaderBuilder: void buildDrawerSelectionList()>[]--><com.mikepenz.materialdrawer.Drawer: void switchDrawerContent(com.mikepenz.materialdrawer.Drawer$OnDrawerItemClickListener,com.mikepenz.materialdrawer.Drawer$OnDrawerItemLongClickListener,java.util.List,int)>[]--><com.mikepenz.fastadapter.FastAdapter: android.os.Bundle saveInstanceState(android.os.Bundle)>[]--><com.mikepenz.fastadapter.FastAdapter: android.os.Bundle saveInstanceState(android.os.Bundle,java.lang.String)>[]--><android.os.BaseBundle: void putIntArray(java.lang.String,int[])>
+#5.the call statck between class <com.mikepenz.materialdrawer.AccountHeader: void addProfiles(com.mikepenz.materialdrawer.model.interfaces.IProfile[])> to <android.os.BaseBundle: void putIntArray(java.lang.String,int[])>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 17 18 19 20 
+Error road: <com.mikepenz.materialdrawer.Drawer: android.os.Bundle saveInstanceState(android.os.Bundle)>[]--><com.mikepenz.fastadapter.FastAdapter: android.os.Bundle saveInstanceState(android.os.Bundle,java.lang.String)>[]--><android.os.BaseBundle: void putIntArray(java.lang.String,int[])>
+#6.the call statck between class <com.mikepenz.materialdrawer.Drawer: android.os.Bundle saveInstanceState(android.os.Bundle)> to <android.os.BaseBundle: void putIntArray(java.lang.String,int[])>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 17 18 19 20 
+Error road: <com.mikepenz.materialdrawer.AccountHeader: void setSelectionSecondLine(java.lang.String)>[]--><com.mikepenz.materialdrawer.AccountHeaderBuilder: void updateHeaderAndList()>[]--><com.mikepenz.materialdrawer.AccountHeaderBuilder: void buildDrawerSelectionList()>[]--><com.mikepenz.materialdrawer.Drawer: void switchDrawerContent(com.mikepenz.materialdrawer.Drawer$OnDrawerItemClickListener,com.mikepenz.materialdrawer.Drawer$OnDrawerItemLongClickListener,java.util.List,int)>[]--><com.mikepenz.fastadapter.FastAdapter: android.os.Bundle saveInstanceState(android.os.Bundle)>[]--><com.mikepenz.fastadapter.FastAdapter: android.os.Bundle saveInstanceState(android.os.Bundle,java.lang.String)>[]--><android.os.BaseBundle: void putIntArray(java.lang.String,int[])>
+#7.the call statck between class <com.mikepenz.materialdrawer.AccountHeader: void setSelectionSecondLine(java.lang.String)> to <android.os.BaseBundle: void putIntArray(java.lang.String,int[])>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 17 18 19 20 
+Error road: <com.mikepenz.materialdrawer.AccountHeader: void removeProfile(int)>[]--><com.mikepenz.materialdrawer.AccountHeaderBuilder: void updateHeaderAndList()>[]--><com.mikepenz.materialdrawer.AccountHeaderBuilder: void buildDrawerSelectionList()>[]--><com.mikepenz.materialdrawer.Drawer: void switchDrawerContent(com.mikepenz.materialdrawer.Drawer$OnDrawerItemClickListener,com.mikepenz.materialdrawer.Drawer$OnDrawerItemLongClickListener,java.util.List,int)>[]--><com.mikepenz.fastadapter.FastAdapter: android.os.Bundle saveInstanceState(android.os.Bundle)>[]--><com.mikepenz.fastadapter.FastAdapter: android.os.Bundle saveInstanceState(android.os.Bundle,java.lang.String)>[]--><android.os.BaseBundle: void putIntArray(java.lang.String,int[])>
+#8.the call statck between class <com.mikepenz.materialdrawer.AccountHeader: void removeProfile(int)> to <android.os.BaseBundle: void putIntArray(java.lang.String,int[])>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 17 18 19 20 
+Error road: <com.mikepenz.materialdrawer.AccountHeader: void setSelectionSecondLineShown(boolean)>[]--><com.mikepenz.materialdrawer.AccountHeaderBuilder: void updateHeaderAndList()>[]--><com.mikepenz.materialdrawer.AccountHeaderBuilder: void buildDrawerSelectionList()>[]--><com.mikepenz.materialdrawer.Drawer: void switchDrawerContent(com.mikepenz.materialdrawer.Drawer$OnDrawerItemClickListener,com.mikepenz.materialdrawer.Drawer$OnDrawerItemLongClickListener,java.util.List,int)>[]--><com.mikepenz.fastadapter.FastAdapter: android.os.Bundle saveInstanceState(android.os.Bundle)>[]--><com.mikepenz.fastadapter.FastAdapter: android.os.Bundle saveInstanceState(android.os.Bundle,java.lang.String)>[]--><android.os.BaseBundle: void putIntArray(java.lang.String,int[])>
+#9.the call statck between class <com.mikepenz.materialdrawer.AccountHeader: void setSelectionSecondLineShown(boolean)> to <android.os.BaseBundle: void putIntArray(java.lang.String,int[])>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 17 18 19 20 
+Error road: <com.mikepenz.materialdrawer.AccountHeader: void setSelectionFirstLineShown(boolean)>[]--><com.mikepenz.materialdrawer.AccountHeaderBuilder: void updateHeaderAndList()>[]--><com.mikepenz.materialdrawer.AccountHeaderBuilder: void buildDrawerSelectionList()>[]--><com.mikepenz.materialdrawer.Drawer: void switchDrawerContent(com.mikepenz.materialdrawer.Drawer$OnDrawerItemClickListener,com.mikepenz.materialdrawer.Drawer$OnDrawerItemLongClickListener,java.util.List,int)>[]--><com.mikepenz.fastadapter.FastAdapter: android.os.Bundle saveInstanceState(android.os.Bundle)>[]--><com.mikepenz.fastadapter.FastAdapter: android.os.Bundle saveInstanceState(android.os.Bundle,java.lang.String)>[]--><android.os.BaseBundle: void putIntArray(java.lang.String,int[])>
+#10.the call statck between class <com.mikepenz.materialdrawer.AccountHeader: void setSelectionFirstLineShown(boolean)> to <android.os.BaseBundle: void putIntArray(java.lang.String,int[])>has compatibility isssues！
+-----------------------------------------
+crashApis:20
+crashApisInMain:10
+containsStatic:false
+containsTry:false
+11call by main package
+-----------------------------------------
+#################################################
+N 41 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putLong(java.lang.String,long)> is checking!!!
+The life time of api is [21,31]
+2call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: email.schaal.ocreader.ManageFeedsActivity dummyMainMethod_email_schaal_ocreader_ManageFeedsActivity(android.content.Intent)>[]--><email.schaal.ocreader.ManageFeedsActivity$$Lambda$0: void onClick(android.view.View)>[]--><email.schaal.ocreader.ManageFeedsActivity: void lambda$onCreate$0$ManageFeedsActivity(android.view.View)>[]--><email.schaal.ocreader.view.AddNewFeedDialogFragment: void show(android.app.Activity,email.schaal.ocreader.database.model.Feed,boolean)>[]--><android.os.BaseBundle: void putLong(java.lang.String,long)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: void putLong(java.lang.String,long)>has compatibility isssues！
+-----------------------------------------
+1 Packageshead roads:
+!!!this api will crash on sdk 17 18 19 20 
+Error road: <email.schaal.ocreader.view.FeedsAdapter$FeedViewHolder: void lambda$bindFeed$1$FeedsAdapter$FeedViewHolder(email.schaal.ocreader.database.model.Feed,android.view.View)>[]--><email.schaal.ocreader.ManageFeedsActivity: void showFeedDialog(email.schaal.ocreader.database.model.Feed)>[]--><email.schaal.ocreader.view.AddNewFeedDialogFragment: void show(android.app.Activity,email.schaal.ocreader.database.model.Feed,boolean)>[]--><android.os.BaseBundle: void putLong(java.lang.String,long)>
+#1.the call statck between class <email.schaal.ocreader.view.FeedsAdapter$FeedViewHolder: void lambda$bindFeed$1$FeedsAdapter$FeedViewHolder(email.schaal.ocreader.database.model.Feed,android.view.View)> to <android.os.BaseBundle: void putLong(java.lang.String,long)>has compatibility isssues！
+-----------------------------------------
+crashApis:21
+crashApisInMain:11
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 42 Potential Issue API: SDKCheck of <android.app.FragmentManager: java.util.List getFragments()> is checking!!!
+The life time of api is [26,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 43 Potential Issue API: SDKCheck of <android.app.DialogFragment: void onAttach(android.content.Context)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 17 18 19 20 21 22 
+Error road: <email.schaal.ocreader.view.AddNewFeedDialogFragment: void onAttach(android.content.Context)>[]--><android.app.DialogFragment: void onAttach(android.content.Context)>
+#1.the call statck between class <email.schaal.ocreader.view.AddNewFeedDialogFragment: void onAttach(android.content.Context)> to <android.app.DialogFragment: void onAttach(android.content.Context)>has compatibility isssues！
+-----------------------------------------
+crashApis:22
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 44 Potential Issue API: SDKCheck of <android.os.BaseBundle: int[] getIntArray(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+2324call roads:
+1 Mainhead roads:
+2323 Packageshead roads:
+Roads number exceed, exit!2323
+#################################################
+N 45 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.lang.String getString(java.lang.String,java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.mikepenz.aboutlibraries.ui.LibsActivity dummyMainMethod_com_mikepenz_aboutlibraries_ui_LibsActivity(android.content.Intent)>[]--><com.mikepenz.aboutlibraries.ui.LibsActivity: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String,java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: java.lang.String getString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:23
+crashApisInMain:12
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 46 Potential Issue API: SDKCheck of <android.widget.TimePicker: void setMinute(int)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i1 < 23
+Good road: <android.databinding.adapters.TimePickerBindingAdapter: void setMinute(android.widget.TimePicker,int)>[[-$i1 < 23]]--><android.widget.TimePicker: void setMinute(int)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+crashApis numbers:23
+crashApis numbers in main road:12
+On Android Version 16 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 17 this app may have error api use(at least): 23 and error api roads: 45
+On Android Version 18 this app may have error api use(at least): 20 and error api roads: 42
+On Android Version 19 this app may have error api use(at least): 18 and error api roads: 39
+On Android Version 20 this app may have error api use(at least): 18 and error api roads: 39
+On Android Version 21 this app may have error api use(at least): 5 and error api roads: 10
+On Android Version 22 this app may have error api use(at least): 2 and error api roads: 2
+On Android Version 23 this app may have error api use(at least): 1 and error api roads: 1
+On Android Version 24 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 25 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 31 this app may have error api use(at least): 0 and error api roads: 0

@@ -1,0 +1,90 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/SIP_Switch.apk
+Entry Points[eu.siebeck.sipswitch.SipSwitchActivity]
+FllowDroidcallgraph size:183
+Soot started on Mon Jul 11 12:16:55 CST 2022
+Soot finished on Mon Jul 11 12:16:58 CST 2022
+Soot has run for 0 min. 2 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 19
+Declared Target Sdk version is: 22
+Declared Max Sdk version is: -1
+Collected 93 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.os.ServiceManager: android.os.IBinder getService(java.lang.String)> is checking!!!
+The life time of api is [4,26]
+4call roads:
+1 Mainhead roads:
+i0 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: eu.siebeck.sipswitch.SipSwitchActivity dummyMainMethod_eu_siebeck_sipswitch_SipSwitchActivity(android.content.Intent)>[]--><eu.siebeck.sipswitch.SipSwitchActivity: void onReceive(android.content.Context,android.content.Intent)>[]--><eu.siebeck.sipswitch.SipSwitchActivity: void updateWidget(android.content.Context,android.appwidget.AppWidgetManager,int,android.widget.RemoteViews)>[]--><eu.siebeck.sipswitch.SipSwitchActivity: void onUpdate(android.content.Context,android.appwidget.AppWidgetManager,int[])>[[i0 < 21]]--><cyanogenmod.app.CMStatusBarManager: cyanogenmod.app.CMStatusBarManager getInstance(android.content.Context)>[]--><cyanogenmod.app.CMStatusBarManager: void <init>(android.content.Context)>[]--><cyanogenmod.app.CMStatusBarManager: cyanogenmod.app.ICMStatusBarManager getService()>[]--><android.os.ServiceManager: android.os.IBinder getService(java.lang.String)>
+One road protect good!
+3 Packageshead roads:
+!!!this api will crash on sdk 27 28 29 30 31 
+Error road: <cyanogenmod.app.CustomTileListenerService: void removeCustomTile(java.lang.String,java.lang.String,int)>[]--><cyanogenmod.app.CustomTileListenerService: boolean isBound()>[]--><cyanogenmod.app.CustomTileListenerService: cyanogenmod.app.ICMStatusBarManager getStatusBarInterface()>[]--><android.os.ServiceManager: android.os.IBinder getService(java.lang.String)>
+#1.the call statck between class <cyanogenmod.app.CustomTileListenerService: void removeCustomTile(java.lang.String,java.lang.String,int)> to <android.os.ServiceManager: android.os.IBinder getService(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 27 28 29 30 31 
+Error road: <cyanogenmod.app.CustomTileListenerService: void registerAsSystemService(android.content.Context,android.content.ComponentName,int)>[]--><cyanogenmod.app.CustomTileListenerService: boolean isBound()>[]--><cyanogenmod.app.CustomTileListenerService: cyanogenmod.app.ICMStatusBarManager getStatusBarInterface()>[]--><android.os.ServiceManager: android.os.IBinder getService(java.lang.String)>
+#2.the call statck between class <cyanogenmod.app.CustomTileListenerService: void registerAsSystemService(android.content.Context,android.content.ComponentName,int)> to <android.os.ServiceManager: android.os.IBinder getService(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 27 28 29 30 31 
+Error road: <cyanogenmod.app.CustomTileListenerService: void unregisterAsSystemService()>[]--><cyanogenmod.app.CustomTileListenerService: boolean isBound()>[]--><cyanogenmod.app.CustomTileListenerService: cyanogenmod.app.ICMStatusBarManager getStatusBarInterface()>[]--><android.os.ServiceManager: android.os.IBinder getService(java.lang.String)>
+#3.the call statck between class <cyanogenmod.app.CustomTileListenerService: void unregisterAsSystemService()> to <android.os.ServiceManager: android.os.IBinder getService(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:1
+containsStatic:false
+containsTry:false
+4call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.os.BaseBundle: int getInt(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: eu.siebeck.sipswitch.SipSwitchActivity dummyMainMethod_eu_siebeck_sipswitch_SipSwitchActivity(android.content.Intent)>[]--><eu.siebeck.sipswitch.SipSwitchActivity: void onReceive(android.content.Context,android.content.Intent)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:2
+crashApisInMain:1
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.content.Context: java.lang.String getOpPackageName()> is checking!!!
+The life time of api is [29,31]
+2call roads:
+1 Mainhead roads:
+i0 < 21
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: eu.siebeck.sipswitch.SipSwitchActivity dummyMainMethod_eu_siebeck_sipswitch_SipSwitchActivity(android.content.Intent)>[]--><eu.siebeck.sipswitch.SipSwitchActivity: void onReceive(android.content.Context,android.content.Intent)>[]--><eu.siebeck.sipswitch.SipSwitchActivity: void updateWidget(android.content.Context,android.appwidget.AppWidgetManager,int,android.widget.RemoteViews)>[]--><eu.siebeck.sipswitch.SipSwitchActivity: void onUpdate(android.content.Context,android.appwidget.AppWidgetManager,int[])>[[i0 < 21]]--><cyanogenmod.app.CMStatusBarManager: void publishTile(int,cyanogenmod.app.CustomTile)>[]--><cyanogenmod.app.CMStatusBarManager: void publishTile(java.lang.String,int,cyanogenmod.app.CustomTile)>[[try]]--><android.content.Context: java.lang.String getOpPackageName()>
+One road protect good!
+1 Packageshead roads:
+try
+Good road with try: <cyanogenmod.app.CMStatusBarManager: void publishTileAsUser(java.lang.String,int,cyanogenmod.app.CustomTile,android.os.UserHandle)>[[try]]--><android.content.Context: java.lang.String getOpPackageName()>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+crashApis numbers:2
+crashApis numbers in main road:1
+On Android Version 16 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 17 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 18 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 19 this app may have error api use(at least): 1 and error api roads: 1
+On Android Version 20 this app may have error api use(at least): 1 and error api roads: 1
+On Android Version 21 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 22 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 23 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 24 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 25 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 1 and error api roads: 3
+On Android Version 28 this app may have error api use(at least): 1 and error api roads: 3
+On Android Version 29 this app may have error api use(at least): 1 and error api roads: 3
+On Android Version 30 this app may have error api use(at least): 1 and error api roads: 3
+On Android Version 31 this app may have error api use(at least): 1 and error api roads: 3

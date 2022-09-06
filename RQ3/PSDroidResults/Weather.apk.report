@@ -1,0 +1,107 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/Weather.apk
+Entry Points[org.secuso.privacyfriendlyweather.services.CreateDatabaseService, org.secuso.privacyfriendlyweather.activities.AboutActivity, org.secuso.privacyfriendlyweather.firststart.TutorialActivity, org.secuso.privacyfriendlyweather.activities.ForecastCityActivity, org.secuso.privacyfriendlyweather.activities.RadiusSearchResultActivity, org.secuso.privacyfriendlyweather.activities.SplashActivity, org.secuso.privacyfriendlyweather.widget.WeatherWidget, org.secuso.privacyfriendlyweather.activities.RadiusSearchActivity, org.secuso.privacyfriendlyweather.services.UpdateDataService, org.secuso.privacyfriendlyweather.activities.HelpActivity, org.secuso.privacyfriendlyweather.activities.ForecastActivity, org.secuso.privacyfriendlyweather.widget.WeatherWidgetConfigureActivity, org.secuso.privacyfriendlyweather.activities.MainActivity, org.secuso.privacyfriendlyweather.activities.SettingsActivity]
+FllowDroidcallgraph size:3921
+Soot started on Mon Jul 11 15:06:54 CST 2022
+Soot finished on Mon Jul 11 15:07:05 CST 2022
+Soot has run for 0 min. 11 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 17
+Declared Target Sdk version is: 25
+Declared Max Sdk version is: -1
+Collected 367 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <org.apache.http.params.HttpConnectionParams: void setSoTimeout(org.apache.http.params.HttpParams,int)> is checking!!!
+The life time of api is [23,31]
+3call roads:
+1 Mainhead roads:
+2 Packageshead roads:
+containsStatic:false
+containsTry:true
+3call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.lang.String getString(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 17 18 19 20 
+Error road: <com.android.volley.toolbox.AndroidAuthenticator: java.lang.String getAuthToken()>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#1.the call statck between class <com.android.volley.toolbox.AndroidAuthenticator: java.lang.String getAuthToken()> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:1
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <org.apache.http.params.HttpConnectionParams: void setConnectionTimeout(org.apache.http.params.HttpParams,int)> is checking!!!
+The life time of api is [23,31]
+3call roads:
+1 Mainhead roads:
+2 Packageshead roads:
+containsStatic:false
+containsTry:true
+3call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.os.BaseBundle: boolean containsKey(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 17 18 19 20 
+Error road: <com.android.volley.toolbox.AndroidAuthenticator: java.lang.String getAuthToken()>[]--><android.os.BaseBundle: boolean containsKey(java.lang.String)>
+#1.the call statck between class <com.android.volley.toolbox.AndroidAuthenticator: java.lang.String getAuthToken()> to <android.os.BaseBundle: boolean containsKey(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:2
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.os.BaseBundle: int getInt(java.lang.String,int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.secuso.privacyfriendlyweather.widget.WeatherWidgetConfigureActivity dummyMainMethod_org_secuso_privacyfriendlyweather_widget_WeatherWidgetConfigureActivity(android.content.Intent)>[]--><org.secuso.privacyfriendlyweather.widget.WeatherWidgetConfigureActivity: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String,int)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: int getInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:3
+crashApisInMain:1
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 5 Potential Issue API: SDKCheck of <android.net.http.AndroidHttpClient: android.net.http.AndroidHttpClient newInstance(java.lang.String)> is checking!!!
+The life time of api is [8,22]
+3call roads:
+1 Mainhead roads:
+2 Packageshead roads:
+containsStatic:false
+containsTry:true
+3call by main package
+-----------------------------------------
+crashApis numbers:3
+crashApis numbers in main road:1
+On Android Version 16 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 17 this app may have error api use(at least): 3 and error api roads: 3
+On Android Version 18 this app may have error api use(at least): 3 and error api roads: 3
+On Android Version 19 this app may have error api use(at least): 3 and error api roads: 3
+On Android Version 20 this app may have error api use(at least): 3 and error api roads: 3
+On Android Version 21 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 22 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 23 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 24 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 25 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 31 this app may have error api use(at least): 0 and error api roads: 0

@@ -1,0 +1,336 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/Clock+.apk
+Entry Points[com.philliphsu.clock2.timers.TimerNotificationService, com.philliphsu.clock2.ringtone.playback.TimerRingtoneService, com.philliphsu.clock2.alarms.background.PendingAlarmScheduler, com.philliphsu.clock2.settings.SettingsActivity, com.philliphsu.clock2.MainActivity, com.philliphsu.clock2.alarms.background.OnBootUpReceiver, com.philliphsu.clock2.timers.EditTimerActivity, com.philliphsu.clock2.ringtone.AlarmActivity, com.philliphsu.clock2.ringtone.playback.AlarmRingtoneService, com.philliphsu.clock2.stopwatch.StopwatchNotificationService, com.philliphsu.clock2.alarms.background.UpcomingAlarmReceiver, com.philliphsu.clock2.ringtone.TimesUpActivity, com.philliphsu.clock2.alarms.background.OnBootUpAlarmScheduler]
+FllowDroidcallgraph size:1183
+Soot started on Mon Jul 11 02:20:25 CST 2022
+StaticCheck:<com.philliphsu.clock2.timepickers.Utils: boolean isJellybeanOrLater()>$yysi0 < 16
+Soot finished on Mon Jul 11 02:20:33 CST 2022
+Soot has run for 0 min. 7 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 19
+Declared Target Sdk version is: 24
+Declared Max Sdk version is: -1
+Collected 404 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.os.BaseBundle: int getInt(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+3call roads:
+0 Mainhead roads:
+3 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <com.philliphsu.clock2.timepickers.NumberGridTimePickerDialog: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#1.the call statck between class <com.philliphsu.clock2.timepickers.NumberGridTimePickerDialog: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <com.philliphsu.clock2.timepickers.NumpadTimePickerDialog: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#2.the call statck between class <com.philliphsu.clock2.timepickers.NumpadTimePickerDialog: void onCreate(android.os.Bundle)> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <com.philliphsu.clock2.timepickers.NumberGridTimePickerDialog: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#3.the call statck between class <com.philliphsu.clock2.timepickers.NumberGridTimePickerDialog: void onCreate(android.os.Bundle)> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:1
+containsStatic:false
+containsTry:false
+4call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.graphics.drawable.RippleDrawable: void setColor(android.content.res.ColorStateList)> is checking!!!
+The life time of api is [21,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+-$i1 < 21
+Good road: <com.philliphsu.clock2.timepickers.NumberGridTimePickerDialog: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)>[]--><com.philliphsu.clock2.timepickers.GridSelectorLayout: void setTheme(android.content.Context,boolean)>[]--><com.philliphsu.clock2.timepickers.TwentyFourHoursGrid: void setTheme(android.content.Context,boolean)>[]--><com.philliphsu.clock2.timepickers.Utils: void setColorControlHighlight(android.view.View,int)>[[-$i1 < 21]]--><android.graphics.drawable.RippleDrawable: void setColor(android.content.res.ColorStateList)>
+One road protect good!
+-$i1 < 21
+Good road: <com.philliphsu.clock2.timepickers.NumberGridTimePickerDialog: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)>[]--><com.philliphsu.clock2.timepickers.Utils: void setColorControlHighlight(android.view.View,int)>[[-$i1 < 21]]--><android.graphics.drawable.RippleDrawable: void setColor(android.content.res.ColorStateList)>
+One road protect good!
+-$i1 < 21
+Good road: <com.philliphsu.clock2.timepickers.NumpadTimePickerDialog: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)>[]--><com.philliphsu.clock2.timepickers.NumpadTimePicker: void setTheme(android.content.Context,boolean)>[]--><com.philliphsu.clock2.timepickers.Utils: void setColorControlHighlight(android.view.View,int)>[[-$i1 < 21]]--><android.graphics.drawable.RippleDrawable: void setColor(android.content.res.ColorStateList)>
+One road protect good!
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.preference.RingtonePreference: void <init>(android.content.Context,android.util.AttributeSet,int,int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <com.philliphsu.clock2.settings.ThemedRingtonePreference: void <init>(android.content.Context,android.util.AttributeSet,int,int)>[]--><android.preference.RingtonePreference: void <init>(android.content.Context,android.util.AttributeSet,int,int)>
+#1.the call statck between class <com.philliphsu.clock2.settings.ThemedRingtonePreference: void <init>(android.content.Context,android.util.AttributeSet,int,int)> to <android.preference.RingtonePreference: void <init>(android.content.Context,android.util.AttributeSet,int,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:2
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.os.BaseBundle: boolean containsKey(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <com.philliphsu.clock2.timepickers.NumberGridTimePickerDialog: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)>[]--><android.os.BaseBundle: boolean containsKey(java.lang.String)>
+#1.the call statck between class <com.philliphsu.clock2.timepickers.NumberGridTimePickerDialog: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)> to <android.os.BaseBundle: boolean containsKey(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <com.philliphsu.clock2.timepickers.NumberGridTimePickerDialog: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: boolean containsKey(java.lang.String)>
+#2.the call statck between class <com.philliphsu.clock2.timepickers.NumberGridTimePickerDialog: void onCreate(android.os.Bundle)> to <android.os.BaseBundle: boolean containsKey(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:3
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.widget.TextView: void <init>(android.content.Context,android.util.AttributeSet,int,int)> is checking!!!
+The life time of api is [21,31]
+3call roads:
+0 Mainhead roads:
+3 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <com.philliphsu.clock2.stopwatch.ui.ChronometerWithMillis: void <init>(android.content.Context,android.util.AttributeSet,int,int)>[[]]--><android.widget.TextView: void <init>(android.content.Context,android.util.AttributeSet,int,int)>
+!!!this api will crash on sdk 19 20 
+Error road: <com.philliphsu.clock2.stopwatch.ui.ChronometerWithMillis: void <init>(android.content.Context,android.util.AttributeSet,int,int)>[]--><com.philliphsu.clock2.chronometer.BaseChronometer: void <init>(android.content.Context,android.util.AttributeSet,int,int)>[]--><android.widget.TextView: void <init>(android.content.Context,android.util.AttributeSet,int,int)>
+#1.the call statck between class <com.philliphsu.clock2.stopwatch.ui.ChronometerWithMillis: void <init>(android.content.Context,android.util.AttributeSet,int,int)> to <android.widget.TextView: void <init>(android.content.Context,android.util.AttributeSet,int,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <com.philliphsu.clock2.alarms.ui.AlarmCountdown: void <init>(android.content.Context,android.util.AttributeSet,int,int)>[]--><android.widget.TextView: void <init>(android.content.Context,android.util.AttributeSet,int,int)>
+#2.the call statck between class <com.philliphsu.clock2.alarms.ui.AlarmCountdown: void <init>(android.content.Context,android.util.AttributeSet,int,int)> to <android.widget.TextView: void <init>(android.content.Context,android.util.AttributeSet,int,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <com.philliphsu.clock2.timers.ui.CountdownChronometer: void <init>(android.content.Context,android.util.AttributeSet,int,int)>[]--><com.philliphsu.clock2.chronometer.BaseChronometer: void <init>(android.content.Context,android.util.AttributeSet,int,int)>[]--><android.widget.TextView: void <init>(android.content.Context,android.util.AttributeSet,int,int)>
+!!!this api will crash on sdk 19 20 
+Error road: <com.philliphsu.clock2.timers.ui.CountdownChronometer: void <init>(android.content.Context,android.util.AttributeSet,int,int)>[[]]--><android.widget.TextView: void <init>(android.content.Context,android.util.AttributeSet,int,int)>
+#3.the call statck between class <com.philliphsu.clock2.timers.ui.CountdownChronometer: void <init>(android.content.Context,android.util.AttributeSet,int,int)> to <android.widget.TextView: void <init>(android.content.Context,android.util.AttributeSet,int,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:4
+containsStatic:false
+containsTry:false
+4call by main package
+-----------------------------------------
+#################################################
+N 5 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)> is checking!!!
+The life time of api is [22,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 19 20 21 
+Error road: <com.philliphsu.clock2.timepickers.NumpadTimePickerDialog: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+#1.the call statck between class <com.philliphsu.clock2.timepickers.NumpadTimePickerDialog: void onSaveInstanceState(android.os.Bundle)> to <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 21 
+Error road: <com.philliphsu.clock2.timepickers.NumberGridTimePickerDialog: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+#2.the call statck between class <com.philliphsu.clock2.timepickers.NumberGridTimePickerDialog: void onSaveInstanceState(android.os.Bundle)> to <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+crashApis:5
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 6 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putIntArray(java.lang.String,int[])> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <com.philliphsu.clock2.timepickers.NumpadTimePickerDialog: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putIntArray(java.lang.String,int[])>
+#1.the call statck between class <com.philliphsu.clock2.timepickers.NumpadTimePickerDialog: void onSaveInstanceState(android.os.Bundle)> to <android.os.BaseBundle: void putIntArray(java.lang.String,int[])>has compatibility isssues！
+-----------------------------------------
+crashApis:6
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 7 Potential Issue API: SDKCheck of <android.view.View: void setElevation(float)> is checking!!!
+The life time of api is [21,31]
+9call roads:
+0 Mainhead roads:
+9 Packageshead roads:
+-$i1 < 21
+Good road: <com.philliphsu.clock2.timepickers.NumpadTimePicker: void setTime(int,int)>[]--><com.philliphsu.clock2.timepickers.NumpadTimePicker: void onAltButtonClick(android.widget.TextView)>[]--><com.philliphsu.clock2.timepickers.NumpadTimePicker: void updateNumpadStates()>[]--><com.philliphsu.clock2.timepickers.NumpadTimePicker: void updateFabState()>[[-$i1 < 21]]--><android.view.View: void setElevation(float)>
+One road protect good!
+-$i1 < 21
+Good road: <com.philliphsu.clock2.timepickers.NumpadTimePicker$$ViewBinder$3: void doClick(android.view.View)>[]--><com.philliphsu.clock2.timepickers.NumpadTimePicker: void onAltButtonClick(android.widget.TextView)>[]--><com.philliphsu.clock2.timepickers.NumpadTimePicker: void updateNumpadStates()>[]--><com.philliphsu.clock2.timepickers.NumpadTimePicker: void updateFabState()>[[-$i1 < 21]]--><android.view.View: void setElevation(float)>
+One road protect good!
+-$i1 < 21
+Good road: <com.philliphsu.clock2.timepickers.NumpadTimePicker: void onDigitsCleared()>[]--><com.philliphsu.clock2.timepickers.NumpadTimePicker: void updateNumpadStates()>[]--><com.philliphsu.clock2.timepickers.NumpadTimePicker: void updateFabState()>[[-$i1 < 21]]--><android.view.View: void setElevation(float)>
+One road protect good!
+-$i1 < 21
+Good road: <com.philliphsu.clock2.timepickers.NumpadTimePicker$$ViewBinder$1: void doClick(android.view.View)>[]--><com.philliphsu.clock2.timepickers.NumpadTimePicker: void delete()>[]--><com.philliphsu.clock2.timepickers.NumpadTimePicker: void updateNumpadStates()>[]--><com.philliphsu.clock2.timepickers.NumpadTimePicker: void updateFabState()>[[-$i1 < 21]]--><android.view.View: void setElevation(float)>
+One road protect good!
+-$i1 < 21
+Good road: <com.philliphsu.clock2.timepickers.NumpadTimePickerDialog: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)>[]--><com.philliphsu.clock2.timepickers.NumpadTimePicker: void setTheme(android.content.Context,boolean)>[]--><com.philliphsu.clock2.timepickers.NumpadTimePicker: void updateFabState()>[[-$i1 < 21]]--><android.view.View: void setElevation(float)>
+One road protect good!
+-$i1 < 21
+Good road: <com.philliphsu.clock2.timepickers.NumpadTimePickerDialog: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)>[]--><com.philliphsu.clock2.timepickers.NumpadTimePicker: void setAmPmState(int)>[]--><com.philliphsu.clock2.timepickers.NumpadTimePicker: void onAltButtonClick(android.widget.TextView)>[]--><com.philliphsu.clock2.timepickers.NumpadTimePicker: void updateNumpadStates()>[]--><com.philliphsu.clock2.timepickers.NumpadTimePicker: void updateFabState()>[[-$i1 < 21]]--><android.view.View: void setElevation(float)>
+One road protect good!
+-$i1 < 21
+Good road: <com.philliphsu.clock2.timepickers.NumpadTimePicker: void onDigitInserted(java.lang.String)>[]--><com.philliphsu.clock2.timepickers.NumpadTimePicker: void updateNumpadStates()>[]--><com.philliphsu.clock2.timepickers.NumpadTimePicker: void updateFabState()>[[-$i1 < 21]]--><android.view.View: void setElevation(float)>
+One road protect good!
+-$i1 < 21
+Good road: <com.philliphsu.clock2.timepickers.NumpadTimePicker: void <init>(android.content.Context)>[]--><com.philliphsu.clock2.timepickers.NumpadTimePicker: void <init>(android.content.Context,android.util.AttributeSet)>[]--><com.philliphsu.clock2.timepickers.NumpadTimePicker: void init()>[]--><com.philliphsu.clock2.timepickers.NumpadTimePicker: void updateNumpadStates()>[]--><com.philliphsu.clock2.timepickers.NumpadTimePicker: void updateFabState()>[[-$i1 < 21]]--><android.view.View: void setElevation(float)>
+One road protect good!
+-$i1 < 21
+Good road: <com.philliphsu.clock2.timepickers.NumpadTimePicker$$ViewBinder$4: void doClick(android.view.View)>[]--><com.philliphsu.clock2.timepickers.NumpadTimePicker: void onAltButtonClick(android.widget.TextView)>[]--><com.philliphsu.clock2.timepickers.NumpadTimePicker: void updateNumpadStates()>[]--><com.philliphsu.clock2.timepickers.NumpadTimePicker: void updateFabState()>[[-$i1 < 21]]--><android.view.View: void setElevation(float)>
+One road protect good!
+-$i1 < 21
+Good road: <com.philliphsu.clock2.timepickers.NumpadTimePicker: void onDigitDeleted(java.lang.String)>[]--><com.philliphsu.clock2.timepickers.NumpadTimePicker: void updateNumpadStates()>[]--><com.philliphsu.clock2.timepickers.NumpadTimePicker: void updateFabState()>[[-$i1 < 21]]--><android.view.View: void setElevation(float)>
+One road protect good!
+containsStatic:false
+containsTry:false
+10call by main package
+-----------------------------------------
+#################################################
+N 8 Potential Issue API: SDKCheck of <android.os.BaseBundle: boolean getBoolean(java.lang.String)> is checking!!!
+The life time of api is [22,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 19 20 21 
+Error road: <com.philliphsu.clock2.timepickers.NumpadTimePickerDialog: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+#1.the call statck between class <com.philliphsu.clock2.timepickers.NumpadTimePickerDialog: void onCreate(android.os.Bundle)> to <android.os.BaseBundle: boolean getBoolean(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 21 
+Error road: <com.philliphsu.clock2.timepickers.NumberGridTimePickerDialog: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+#2.the call statck between class <com.philliphsu.clock2.timepickers.NumberGridTimePickerDialog: void onCreate(android.os.Bundle)> to <android.os.BaseBundle: boolean getBoolean(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:7
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 9 Potential Issue API: SDKCheck of <android.view.View: void setBackgroundTintList(android.content.res.ColorStateList)> is checking!!!
+The life time of api is [21,31]
+10call roads:
+0 Mainhead roads:
+10 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <com.philliphsu.clock2.timepickers.NumberGridTimePickerDialog: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)>[[]]--><android.view.View: void setBackgroundTintList(android.content.res.ColorStateList)>
+#1.the call statck between class <com.philliphsu.clock2.timepickers.NumberGridTimePickerDialog: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)> to <android.view.View: void setBackgroundTintList(android.content.res.ColorStateList)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <com.philliphsu.clock2.timepickers.NumpadTimePicker: void setTime(int,int)>[]--><com.philliphsu.clock2.timepickers.NumpadTimePicker: void onAltButtonClick(android.widget.TextView)>[]--><com.philliphsu.clock2.timepickers.NumpadTimePicker: void updateNumpadStates()>[]--><com.philliphsu.clock2.timepickers.NumpadTimePicker: void updateFabState()>[[]]--><android.view.View: void setBackgroundTintList(android.content.res.ColorStateList)>
+#2.the call statck between class <com.philliphsu.clock2.timepickers.NumpadTimePicker: void setTime(int,int)> to <android.view.View: void setBackgroundTintList(android.content.res.ColorStateList)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <com.philliphsu.clock2.timepickers.NumpadTimePicker$$ViewBinder$3: void doClick(android.view.View)>[]--><com.philliphsu.clock2.timepickers.NumpadTimePicker: void onAltButtonClick(android.widget.TextView)>[]--><com.philliphsu.clock2.timepickers.NumpadTimePicker: void updateNumpadStates()>[]--><com.philliphsu.clock2.timepickers.NumpadTimePicker: void updateFabState()>[[]]--><android.view.View: void setBackgroundTintList(android.content.res.ColorStateList)>
+#3.the call statck between class <com.philliphsu.clock2.timepickers.NumpadTimePicker$$ViewBinder$3: void doClick(android.view.View)> to <android.view.View: void setBackgroundTintList(android.content.res.ColorStateList)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <com.philliphsu.clock2.timepickers.NumpadTimePicker: void onDigitsCleared()>[]--><com.philliphsu.clock2.timepickers.NumpadTimePicker: void updateNumpadStates()>[]--><com.philliphsu.clock2.timepickers.NumpadTimePicker: void updateFabState()>[[]]--><android.view.View: void setBackgroundTintList(android.content.res.ColorStateList)>
+#4.the call statck between class <com.philliphsu.clock2.timepickers.NumpadTimePicker: void onDigitsCleared()> to <android.view.View: void setBackgroundTintList(android.content.res.ColorStateList)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <com.philliphsu.clock2.timepickers.NumpadTimePicker$$ViewBinder$1: void doClick(android.view.View)>[]--><com.philliphsu.clock2.timepickers.NumpadTimePicker: void delete()>[]--><com.philliphsu.clock2.timepickers.NumpadTimePicker: void updateNumpadStates()>[]--><com.philliphsu.clock2.timepickers.NumpadTimePicker: void updateFabState()>[[]]--><android.view.View: void setBackgroundTintList(android.content.res.ColorStateList)>
+#5.the call statck between class <com.philliphsu.clock2.timepickers.NumpadTimePicker$$ViewBinder$1: void doClick(android.view.View)> to <android.view.View: void setBackgroundTintList(android.content.res.ColorStateList)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <com.philliphsu.clock2.timepickers.NumpadTimePickerDialog: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)>[]--><com.philliphsu.clock2.timepickers.NumpadTimePicker: void setTheme(android.content.Context,boolean)>[]--><com.philliphsu.clock2.timepickers.NumpadTimePicker: void updateFabState()>[[]]--><android.view.View: void setBackgroundTintList(android.content.res.ColorStateList)>
+!!!this api will crash on sdk 19 20 
+Error road: <com.philliphsu.clock2.timepickers.NumpadTimePickerDialog: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)>[]--><com.philliphsu.clock2.timepickers.NumpadTimePicker: void setAmPmState(int)>[]--><com.philliphsu.clock2.timepickers.NumpadTimePicker: void onAltButtonClick(android.widget.TextView)>[]--><com.philliphsu.clock2.timepickers.NumpadTimePicker: void updateNumpadStates()>[]--><com.philliphsu.clock2.timepickers.NumpadTimePicker: void updateFabState()>[[]]--><android.view.View: void setBackgroundTintList(android.content.res.ColorStateList)>
+#6.the call statck between class <com.philliphsu.clock2.timepickers.NumpadTimePickerDialog: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)> to <android.view.View: void setBackgroundTintList(android.content.res.ColorStateList)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <com.philliphsu.clock2.timepickers.NumpadTimePicker: void onDigitInserted(java.lang.String)>[]--><com.philliphsu.clock2.timepickers.NumpadTimePicker: void updateNumpadStates()>[]--><com.philliphsu.clock2.timepickers.NumpadTimePicker: void updateFabState()>[[]]--><android.view.View: void setBackgroundTintList(android.content.res.ColorStateList)>
+#7.the call statck between class <com.philliphsu.clock2.timepickers.NumpadTimePicker: void onDigitInserted(java.lang.String)> to <android.view.View: void setBackgroundTintList(android.content.res.ColorStateList)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <com.philliphsu.clock2.timepickers.NumpadTimePicker: void <init>(android.content.Context)>[]--><com.philliphsu.clock2.timepickers.NumpadTimePicker: void <init>(android.content.Context,android.util.AttributeSet)>[]--><com.philliphsu.clock2.timepickers.NumpadTimePicker: void init()>[]--><com.philliphsu.clock2.timepickers.NumpadTimePicker: void updateNumpadStates()>[]--><com.philliphsu.clock2.timepickers.NumpadTimePicker: void updateFabState()>[[]]--><android.view.View: void setBackgroundTintList(android.content.res.ColorStateList)>
+#8.the call statck between class <com.philliphsu.clock2.timepickers.NumpadTimePicker: void <init>(android.content.Context)> to <android.view.View: void setBackgroundTintList(android.content.res.ColorStateList)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <com.philliphsu.clock2.timepickers.NumpadTimePicker$$ViewBinder$4: void doClick(android.view.View)>[]--><com.philliphsu.clock2.timepickers.NumpadTimePicker: void onAltButtonClick(android.widget.TextView)>[]--><com.philliphsu.clock2.timepickers.NumpadTimePicker: void updateNumpadStates()>[]--><com.philliphsu.clock2.timepickers.NumpadTimePicker: void updateFabState()>[[]]--><android.view.View: void setBackgroundTintList(android.content.res.ColorStateList)>
+#9.the call statck between class <com.philliphsu.clock2.timepickers.NumpadTimePicker$$ViewBinder$4: void doClick(android.view.View)> to <android.view.View: void setBackgroundTintList(android.content.res.ColorStateList)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <com.philliphsu.clock2.timepickers.NumpadTimePicker: void onDigitDeleted(java.lang.String)>[]--><com.philliphsu.clock2.timepickers.NumpadTimePicker: void updateNumpadStates()>[]--><com.philliphsu.clock2.timepickers.NumpadTimePicker: void updateFabState()>[[]]--><android.view.View: void setBackgroundTintList(android.content.res.ColorStateList)>
+#10.the call statck between class <com.philliphsu.clock2.timepickers.NumpadTimePicker: void onDigitDeleted(java.lang.String)> to <android.view.View: void setBackgroundTintList(android.content.res.ColorStateList)>has compatibility isssues！
+-----------------------------------------
+crashApis:8
+containsStatic:false
+containsTry:false
+11call by main package
+-----------------------------------------
+#################################################
+N 10 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putInt(java.lang.String,int)> is checking!!!
+The life time of api is [21,31]
+3call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.philliphsu.clock2.MainActivity dummyMainMethod_com_philliphsu_clock2_MainActivity(android.content.Intent)>[]--><dummyMainClass: com.philliphsu.clock2.alarms.ui.AlarmsFragment dummyMainMethod_com_philliphsu_clock2_alarms_ui_AlarmsFragment(android.content.Intent,android.app.Activity)>[]--><com.philliphsu.clock2.alarms.ui.AlarmsFragment: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+2 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <com.philliphsu.clock2.timepickers.NumpadTimePickerDialog: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#1.the call statck between class <com.philliphsu.clock2.timepickers.NumpadTimePickerDialog: void onSaveInstanceState(android.os.Bundle)> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <com.philliphsu.clock2.timepickers.NumberGridTimePickerDialog: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#2.the call statck between class <com.philliphsu.clock2.timepickers.NumberGridTimePickerDialog: void onSaveInstanceState(android.os.Bundle)> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:9
+crashApisInMain:1
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 11 Potential Issue API: SDKCheck of <android.os.BaseBundle: int[] getIntArray(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <com.philliphsu.clock2.timepickers.NumpadTimePickerDialog: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: int[] getIntArray(java.lang.String)>
+#1.the call statck between class <com.philliphsu.clock2.timepickers.NumpadTimePickerDialog: void onCreate(android.os.Bundle)> to <android.os.BaseBundle: int[] getIntArray(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:10
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 12 Potential Issue API: SDKCheck of <android.os.BaseBundle: int getInt(java.lang.String,int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.philliphsu.clock2.MainActivity dummyMainMethod_com_philliphsu_clock2_MainActivity(android.content.Intent)>[]--><dummyMainClass: com.philliphsu.clock2.alarms.ui.AlarmsFragment dummyMainMethod_com_philliphsu_clock2_alarms_ui_AlarmsFragment(android.content.Intent,android.app.Activity)>[]--><com.philliphsu.clock2.alarms.ui.AlarmsFragment: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String,int)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: int getInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:11
+crashApisInMain:2
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+crashApis numbers:11
+crashApis numbers in main road:2
+On Android Version 16 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 17 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 18 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 19 this app may have error api use(at least): 11 and error api roads: 32
+On Android Version 20 this app may have error api use(at least): 11 and error api roads: 32
+On Android Version 21 this app may have error api use(at least): 2 and error api roads: 4
+On Android Version 22 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 23 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 24 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 25 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 31 this app may have error api use(at least): 0 and error api roads: 0

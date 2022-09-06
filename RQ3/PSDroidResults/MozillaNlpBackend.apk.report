@@ -1,0 +1,535 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/MozillaNlpBackend.apk
+Entry Points[org.microg.nlp.backend.ichnaea.BackendService, org.microg.nlp.backend.ichnaea.SettingsActivity]
+FllowDroidcallgraph size:33
+Soot started on Mon Jul 11 07:36:33 CST 2022
+Soot finished on Mon Jul 11 07:36:37 CST 2022
+Soot has run for 0 min. 4 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 10
+Declared Target Sdk version is: 22
+Declared Max Sdk version is: -1
+Collected 123 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.telephony.CellInfoWcdma: android.telephony.CellSignalStrengthWcdma getCellSignalStrength()> is checking!!!
+The life time of api is [18,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+$i0 >= 18
+Good road: <org.microg.nlp.api.CellBackendHelper: org.microg.nlp.api.CellBackendHelper$Cell parceCellInfo18(android.telephony.CellInfo)>[[$i0 >= 18]]--><android.telephony.CellInfoWcdma: android.telephony.CellSignalStrengthWcdma getCellSignalStrength()>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.telephony.CellIdentityGsm: int getLac()> is checking!!!
+The life time of api is [17,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+try
+Good road with try: <org.microg.nlp.api.CellBackendHelper: org.microg.nlp.api.CellBackendHelper$Cell parseCellInfo(android.telephony.CellInfo)>[[try]]--><android.telephony.CellIdentityGsm: int getLac()>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.telephony.CellIdentityLte: int getTac()> is checking!!!
+The life time of api is [17,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+$i0 >= 18
+Good road: <org.microg.nlp.api.CellBackendHelper: org.microg.nlp.api.CellBackendHelper$Cell parceCellInfo18(android.telephony.CellInfo)>[[$i0 >= 18]]--><android.telephony.CellIdentityLte: int getTac()>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.telephony.CellIdentityCdma: int getNetworkId()> is checking!!!
+The life time of api is [17,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+try
+Good road with try: <org.microg.nlp.api.CellBackendHelper: org.microg.nlp.api.CellBackendHelper$Cell parseCellInfo(android.telephony.CellInfo)>[[try]]--><android.telephony.CellIdentityCdma: int getNetworkId()>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.telephony.CellInfo: boolean isRegistered()> is checking!!!
+The life time of api is [17,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+try
+Good road with try: <org.microg.nlp.api.CellBackendHelper: void access$100(org.microg.nlp.api.CellBackendHelper,java.util.List)>[]--><org.microg.nlp.api.CellBackendHelper: void onCellsChanged(java.util.List)>[]--><org.microg.nlp.api.CellBackendHelper: boolean loadCells(java.util.List)>[[try]]--><org.microg.nlp.api.CellBackendHelper: void fixAllCellInfo(java.util.List)>[]--><android.telephony.CellInfo: boolean isRegistered()>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 5 Potential Issue API: SDKCheck of <android.telephony.CellSignalStrengthLte: int getDbm()> is checking!!!
+The life time of api is [17,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+$i0 >= 18
+Good road: <org.microg.nlp.api.CellBackendHelper: org.microg.nlp.api.CellBackendHelper$Cell parceCellInfo18(android.telephony.CellInfo)>[[$i0 >= 18]]--><android.telephony.CellSignalStrengthLte: int getDbm()>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 6 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.lang.String getString(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <org.microg.nlp.api.AbstractBackendService: java.lang.String getSelfApiVersion()>[]--><org.microg.nlp.api.VersionUtil: java.lang.String getSelfApiVersion(android.content.Context)>[]--><org.microg.nlp.api.VersionUtil: java.lang.String getPackageApiVersion(android.content.Context,java.lang.String)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#1.the call statck between class <org.microg.nlp.api.AbstractBackendService: java.lang.String getSelfApiVersion()> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <org.microg.nlp.api.AbstractBackendService: java.lang.String getServiceApiVersion()>[]--><org.microg.nlp.api.VersionUtil: java.lang.String getServiceApiVersion(android.content.Context)>[]--><org.microg.nlp.api.VersionUtil: java.lang.String getPackageApiVersion(android.content.Context,java.lang.String)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#2.the call statck between class <org.microg.nlp.api.AbstractBackendService: java.lang.String getServiceApiVersion()> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:1
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 7 Potential Issue API: SDKCheck of <android.telephony.CellInfoWcdma: android.telephony.CellIdentityWcdma getCellIdentity()> is checking!!!
+The life time of api is [18,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+$i0 >= 18
+Good road: <org.microg.nlp.api.CellBackendHelper: org.microg.nlp.api.CellBackendHelper$Cell parceCellInfo18(android.telephony.CellInfo)>[[$i0 >= 18]]--><android.telephony.CellInfoWcdma: android.telephony.CellIdentityWcdma getCellIdentity()>
+One road protect good!
+try
+Good road with try: <org.microg.nlp.api.CellBackendHelper: void access$100(org.microg.nlp.api.CellBackendHelper,java.util.List)>[]--><org.microg.nlp.api.CellBackendHelper: void onCellsChanged(java.util.List)>[]--><org.microg.nlp.api.CellBackendHelper: boolean loadCells(java.util.List)>[[try]]--><org.microg.nlp.api.CellBackendHelper: void fixAllCellInfo(java.util.List)>[[-$i0 < 18]]--><android.telephony.CellInfoWcdma: android.telephony.CellIdentityWcdma getCellIdentity()>
+One road protect good!
+containsStatic:false
+containsTry:true
+3call by main package
+-----------------------------------------
+#################################################
+N 8 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager: boolean startScan()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+try
+Good road with try: <org.microg.nlp.api.WiFiBackendHelper: void onUpdate()>[[try]]--><org.microg.nlp.api.WiFiBackendHelper: boolean scanWiFis()>[[try]]--><android.net.wifi.WifiManager: boolean startScan()>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 9 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager: boolean isScanAlwaysAvailable()> is checking!!!
+The life time of api is [18,30]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+try
+Good road with try: <org.microg.nlp.api.WiFiBackendHelper: void onUpdate()>[[try]]--><org.microg.nlp.api.WiFiBackendHelper: boolean scanWiFis()>[[try]]--><org.microg.nlp.api.WiFiBackendHelper: boolean isScanAlawaysAvailable()>[[-$i0 < 18]]--><android.net.wifi.WifiManager: boolean isScanAlwaysAvailable()>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 10 Potential Issue API: SDKCheck of <android.telephony.CellInfoLte: android.telephony.CellSignalStrengthLte getCellSignalStrength()> is checking!!!
+The life time of api is [17,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+$i0 >= 18
+Good road: <org.microg.nlp.api.CellBackendHelper: org.microg.nlp.api.CellBackendHelper$Cell parceCellInfo18(android.telephony.CellInfo)>[[$i0 >= 18]]--><android.telephony.CellInfoLte: android.telephony.CellSignalStrengthLte getCellSignalStrength()>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 11 Potential Issue API: SDKCheck of <android.telephony.CellSignalStrengthCdma: int getDbm()> is checking!!!
+The life time of api is [17,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+try
+Good road with try: <org.microg.nlp.api.CellBackendHelper: org.microg.nlp.api.CellBackendHelper$Cell parseCellInfo(android.telephony.CellInfo)>[[try]]--><android.telephony.CellSignalStrengthCdma: int getDbm()>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 12 Potential Issue API: SDKCheck of <android.telephony.CellIdentityGsm: int getMcc()> is checking!!!
+The life time of api is [17,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+try
+Good road with try: <org.microg.nlp.api.CellBackendHelper: org.microg.nlp.api.CellBackendHelper$Cell parseCellInfo(android.telephony.CellInfo)>[[try]]--><android.telephony.CellIdentityGsm: int getMcc()>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 13 Potential Issue API: SDKCheck of <android.telephony.CellIdentityCdma: int getBasestationId()> is checking!!!
+The life time of api is [17,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+try
+Good road with try: <org.microg.nlp.api.CellBackendHelper: org.microg.nlp.api.CellBackendHelper$Cell parseCellInfo(android.telephony.CellInfo)>[[try]]--><android.telephony.CellIdentityCdma: int getBasestationId()>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 14 Potential Issue API: SDKCheck of <android.telephony.TelephonyManager: java.util.List getAllCellInfo()> is checking!!!
+The life time of api is [17,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 16 
+Error road: <org.microg.nlp.api.CellBackendHelper$1$1: void onSignalStrengthsChanged(android.telephony.SignalStrength)>[]--><android.telephony.TelephonyManager: java.util.List getAllCellInfo()>
+#1.the call statck between class <org.microg.nlp.api.CellBackendHelper$1$1: void onSignalStrengthsChanged(android.telephony.SignalStrength)> to <android.telephony.TelephonyManager: java.util.List getAllCellInfo()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 
+Error road: <org.microg.nlp.api.CellBackendHelper$1$1: void onCellInfoChanged(java.util.List)>[]--><android.telephony.TelephonyManager: java.util.List getAllCellInfo()>
+#2.the call statck between class <org.microg.nlp.api.CellBackendHelper$1$1: void onCellInfoChanged(java.util.List)> to <android.telephony.TelephonyManager: java.util.List getAllCellInfo()>has compatibility isssues！
+-----------------------------------------
+crashApis:2
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 15 Potential Issue API: SDKCheck of <android.telephony.CellIdentityGsm: int getMnc()> is checking!!!
+The life time of api is [17,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+try
+Good road with try: <org.microg.nlp.api.CellBackendHelper: org.microg.nlp.api.CellBackendHelper$Cell parseCellInfo(android.telephony.CellInfo)>[[try]]--><android.telephony.CellIdentityGsm: int getMnc()>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 16 Potential Issue API: SDKCheck of <android.telephony.CellInfoGsm: android.telephony.CellSignalStrengthGsm getCellSignalStrength()> is checking!!!
+The life time of api is [17,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+try
+Good road with try: <org.microg.nlp.api.CellBackendHelper: org.microg.nlp.api.CellBackendHelper$Cell parseCellInfo(android.telephony.CellInfo)>[[try]]--><android.telephony.CellInfoGsm: android.telephony.CellSignalStrengthGsm getCellSignalStrength()>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 17 Potential Issue API: SDKCheck of <android.telephony.CellIdentityLte: int getPci()> is checking!!!
+The life time of api is [17,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+$i0 >= 18
+Good road: <org.microg.nlp.api.CellBackendHelper: org.microg.nlp.api.CellBackendHelper$Cell parceCellInfo18(android.telephony.CellInfo)>[[$i0 >= 18]]--><android.telephony.CellIdentityLte: int getPci()>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 18 Potential Issue API: SDKCheck of <android.telephony.CellInfoCdma: android.telephony.CellSignalStrengthCdma getCellSignalStrength()> is checking!!!
+The life time of api is [17,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+try
+Good road with try: <org.microg.nlp.api.CellBackendHelper: org.microg.nlp.api.CellBackendHelper$Cell parseCellInfo(android.telephony.CellInfo)>[[try]]--><android.telephony.CellInfoCdma: android.telephony.CellSignalStrengthCdma getCellSignalStrength()>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 19 Potential Issue API: SDKCheck of <android.telephony.CellIdentityLte: int getCi()> is checking!!!
+The life time of api is [17,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+$i0 >= 18
+Good road: <org.microg.nlp.api.CellBackendHelper: org.microg.nlp.api.CellBackendHelper$Cell parceCellInfo18(android.telephony.CellInfo)>[[$i0 >= 18]]--><android.telephony.CellIdentityLte: int getCi()>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 20 Potential Issue API: SDKCheck of <android.telephony.CellIdentityLte: int getMnc()> is checking!!!
+The life time of api is [17,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+$i0 >= 18
+Good road: <org.microg.nlp.api.CellBackendHelper: org.microg.nlp.api.CellBackendHelper$Cell parceCellInfo18(android.telephony.CellInfo)>[[$i0 >= 18]]--><android.telephony.CellIdentityLte: int getMnc()>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 21 Potential Issue API: SDKCheck of <android.telephony.CellSignalStrengthWcdma: int getDbm()> is checking!!!
+The life time of api is [17,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+$i0 >= 18
+Good road: <org.microg.nlp.api.CellBackendHelper: org.microg.nlp.api.CellBackendHelper$Cell parceCellInfo18(android.telephony.CellInfo)>[[$i0 >= 18]]--><android.telephony.CellSignalStrengthWcdma: int getDbm()>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 22 Potential Issue API: SDKCheck of <android.telephony.CellIdentityWcdma: int getMnc()> is checking!!!
+The life time of api is [18,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+$i0 >= 18
+Good road: <org.microg.nlp.api.CellBackendHelper: org.microg.nlp.api.CellBackendHelper$Cell parceCellInfo18(android.telephony.CellInfo)>[[$i0 >= 18]]--><android.telephony.CellIdentityWcdma: int getMnc()>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 23 Potential Issue API: SDKCheck of <android.telephony.CellIdentityWcdma: int getLac()> is checking!!!
+The life time of api is [18,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+$i0 >= 18
+Good road: <org.microg.nlp.api.CellBackendHelper: org.microg.nlp.api.CellBackendHelper$Cell parceCellInfo18(android.telephony.CellInfo)>[[$i0 >= 18]]--><android.telephony.CellIdentityWcdma: int getLac()>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 24 Potential Issue API: SDKCheck of <android.telephony.CellIdentityWcdma: int getPsc()> is checking!!!
+The life time of api is [18,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+$i0 >= 18
+Good road: <org.microg.nlp.api.CellBackendHelper: org.microg.nlp.api.CellBackendHelper$Cell parceCellInfo18(android.telephony.CellInfo)>[[$i0 >= 18]]--><android.telephony.CellIdentityWcdma: int getPsc()>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 25 Potential Issue API: SDKCheck of <android.telephony.CellIdentityWcdma: int getCid()> is checking!!!
+The life time of api is [18,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+$i0 >= 18
+Good road: <org.microg.nlp.api.CellBackendHelper: org.microg.nlp.api.CellBackendHelper$Cell parceCellInfo18(android.telephony.CellInfo)>[[$i0 >= 18]]--><android.telephony.CellIdentityWcdma: int getCid()>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 26 Potential Issue API: SDKCheck of <android.telephony.CellSignalStrengthGsm: int getDbm()> is checking!!!
+The life time of api is [17,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+try
+Good road with try: <org.microg.nlp.api.CellBackendHelper: org.microg.nlp.api.CellBackendHelper$Cell parseCellInfo(android.telephony.CellInfo)>[[try]]--><android.telephony.CellSignalStrengthGsm: int getDbm()>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 27 Potential Issue API: SDKCheck of <android.telephony.CellIdentityWcdma: int getMcc()> is checking!!!
+The life time of api is [18,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+$i0 >= 18
+Good road: <org.microg.nlp.api.CellBackendHelper: org.microg.nlp.api.CellBackendHelper$Cell parceCellInfo18(android.telephony.CellInfo)>[[$i0 >= 18]]--><android.telephony.CellIdentityWcdma: int getMcc()>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 28 Potential Issue API: SDKCheck of <android.telephony.CellIdentityCdma: int getSystemId()> is checking!!!
+The life time of api is [17,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+try
+Good road with try: <org.microg.nlp.api.CellBackendHelper: org.microg.nlp.api.CellBackendHelper$Cell parseCellInfo(android.telephony.CellInfo)>[[try]]--><android.telephony.CellIdentityCdma: int getSystemId()>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 29 Potential Issue API: SDKCheck of <android.telephony.CellIdentityGsm: int getCid()> is checking!!!
+The life time of api is [17,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+try
+Good road with try: <org.microg.nlp.api.CellBackendHelper: org.microg.nlp.api.CellBackendHelper$Cell parseCellInfo(android.telephony.CellInfo)>[[try]]--><android.telephony.CellIdentityGsm: int getCid()>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 30 Potential Issue API: SDKCheck of <android.telephony.CellInfoGsm: android.telephony.CellIdentityGsm getCellIdentity()> is checking!!!
+The life time of api is [17,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+try
+Good road with try: <org.microg.nlp.api.CellBackendHelper: org.microg.nlp.api.CellBackendHelper$Cell parseCellInfo(android.telephony.CellInfo)>[[try]]--><android.telephony.CellInfoGsm: android.telephony.CellIdentityGsm getCellIdentity()>
+One road protect good!
+try
+Good road with try: <org.microg.nlp.api.CellBackendHelper: void access$100(org.microg.nlp.api.CellBackendHelper,java.util.List)>[]--><org.microg.nlp.api.CellBackendHelper: void onCellsChanged(java.util.List)>[]--><org.microg.nlp.api.CellBackendHelper: boolean loadCells(java.util.List)>[[try]]--><org.microg.nlp.api.CellBackendHelper: void fixAllCellInfo(java.util.List)>[]--><android.telephony.CellInfoGsm: android.telephony.CellIdentityGsm getCellIdentity()>
+One road protect good!
+containsStatic:false
+containsTry:true
+3call by main package
+-----------------------------------------
+#################################################
+N 31 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager: boolean isWifiEnabled()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+try
+Good road with try: <org.microg.nlp.api.WiFiBackendHelper: void onUpdate()>[[try]]--><org.microg.nlp.api.WiFiBackendHelper: boolean scanWiFis()>[[try]]--><android.net.wifi.WifiManager: boolean isWifiEnabled()>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 32 Potential Issue API: SDKCheck of <android.telephony.CellInfoCdma: android.telephony.CellIdentityCdma getCellIdentity()> is checking!!!
+The life time of api is [17,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+try
+Good road with try: <org.microg.nlp.api.CellBackendHelper: org.microg.nlp.api.CellBackendHelper$Cell parseCellInfo(android.telephony.CellInfo)>[[try]]--><android.telephony.CellInfoCdma: android.telephony.CellIdentityCdma getCellIdentity()>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 33 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager: java.util.List getScanResults()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+try
+Good road with try: <org.microg.nlp.api.WiFiBackendHelper: void access$000(org.microg.nlp.api.WiFiBackendHelper)>[]--><org.microg.nlp.api.WiFiBackendHelper: void onWiFisChanged()>[]--><org.microg.nlp.api.WiFiBackendHelper: boolean loadWiFis()>[[try]]--><android.net.wifi.WifiManager: java.util.List getScanResults()>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 34 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putInt(java.lang.String,int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <org.microg.nlp.api.LocationHelper: android.location.Location average(java.lang.String,java.util.Collection)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#1.the call statck between class <org.microg.nlp.api.LocationHelper: android.location.Location average(java.lang.String,java.util.Collection)> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:3
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 35 Potential Issue API: SDKCheck of <android.telephony.CellInfoLte: android.telephony.CellIdentityLte getCellIdentity()> is checking!!!
+The life time of api is [17,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+$i0 >= 18
+Good road: <org.microg.nlp.api.CellBackendHelper: org.microg.nlp.api.CellBackendHelper$Cell parceCellInfo18(android.telephony.CellInfo)>[[$i0 >= 18]]--><android.telephony.CellInfoLte: android.telephony.CellIdentityLte getCellIdentity()>
+One road protect good!
+try
+Good road with try: <org.microg.nlp.api.CellBackendHelper: void access$100(org.microg.nlp.api.CellBackendHelper,java.util.List)>[]--><org.microg.nlp.api.CellBackendHelper: void onCellsChanged(java.util.List)>[]--><org.microg.nlp.api.CellBackendHelper: boolean loadCells(java.util.List)>[[try]]--><org.microg.nlp.api.CellBackendHelper: void fixAllCellInfo(java.util.List)>[]--><android.telephony.CellInfoLte: android.telephony.CellIdentityLte getCellIdentity()>
+One road protect good!
+containsStatic:false
+containsTry:true
+3call by main package
+-----------------------------------------
+#################################################
+N 36 Potential Issue API: SDKCheck of <android.telephony.CellIdentityLte: int getMcc()> is checking!!!
+The life time of api is [17,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+$i0 >= 18
+Good road: <org.microg.nlp.api.CellBackendHelper: org.microg.nlp.api.CellBackendHelper$Cell parceCellInfo18(android.telephony.CellInfo)>[[$i0 >= 18]]--><android.telephony.CellIdentityLte: int getMcc()>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+crashApis numbers:3
+crashApis numbers in main road:0
+On Android Version 16 this app may have error api use(at least): 3 and error api roads: 5
+On Android Version 17 this app may have error api use(at least): 2 and error api roads: 3
+On Android Version 18 this app may have error api use(at least): 2 and error api roads: 3
+On Android Version 19 this app may have error api use(at least): 2 and error api roads: 3
+On Android Version 20 this app may have error api use(at least): 2 and error api roads: 3
+On Android Version 21 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 22 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 23 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 24 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 25 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 31 this app may have error api use(at least): 0 and error api roads: 0

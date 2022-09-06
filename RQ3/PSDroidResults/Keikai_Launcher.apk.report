@@ -1,0 +1,193 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/Keikai_Launcher.apk
+Entry Points[com.anpmech.launcher.activities.AboutActivity, com.anpmech.launcher.activities.SearchActivity, com.anpmech.launcher.activities.SettingsActivity]
+FllowDroidcallgraph size:513
+Soot started on Mon Jul 11 06:05:47 CST 2022
+Soot finished on Mon Jul 11 06:05:50 CST 2022
+Soot has run for 0 min. 2 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 15
+Declared Target Sdk version is: 28
+Declared Max Sdk version is: -1
+Collected 229 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.hardware.display.DisplayManager: void registerDisplayListener(android.hardware.display.DisplayManager.DisplayListener,android.os.Handler)> is checking!!!
+The life time of api is [17,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 19
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.anpmech.launcher.activities.SearchActivity dummyMainMethod_com_anpmech_launcher_activities_SearchActivity(android.content.Intent)>[]--><com.anpmech.launcher.activities.SearchActivity: void onResume()>[[-$i0 < 19]]--><com.anpmech.launcher.activities.SearchActivity: void registerDisplayListener()>[]--><android.hardware.display.DisplayManager: void registerDisplayListener(android.hardware.display.DisplayManager.DisplayListener,android.os.Handler)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.text.Html: android.text.Spanned fromHtml(java.lang.String,int)> is checking!!!
+The life time of api is [24,31]
+1call roads:
+1 Mainhead roads:
+-i0 <= 23
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.anpmech.launcher.activities.AboutActivity dummyMainMethod_com_anpmech_launcher_activities_AboutActivity(android.content.Intent)>[]--><com.anpmech.launcher.activities.AboutActivity: void onCreate(android.os.Bundle)>[]--><com.anpmech.launcher.activities.AboutActivity: java.lang.CharSequence getUrl(java.lang.CharSequence,java.lang.CharSequence)>[[-i0 <= 23]]--><android.text.Html: android.text.Spanned fromHtml(java.lang.String,int)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.app.Activity: boolean isInMultiWindowMode()> is checking!!!
+The life time of api is [24,31]
+1call roads:
+1 Mainhead roads:
+-i1 < 24
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.anpmech.launcher.activities.SearchActivity dummyMainMethod_com_anpmech_launcher_activities_SearchActivity(android.content.Intent)>[]--><com.anpmech.launcher.activities.SearchActivity$DisplayChangeListener: void onDisplayChanged(int)>[]--><com.anpmech.launcher.activities.SearchActivity: void access$500(com.anpmech.launcher.activities.SearchActivity)>[]--><com.anpmech.launcher.activities.SearchActivity: void setupPadding()>[[-i1 < 24]]--><android.app.Activity: boolean isInMultiWindowMode()>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.app.usage.UsageStatsManager: java.util.Map queryAndAggregateUsageStats(long,long)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+###Multi invoking in one method, need manual check!!!--><com.anpmech.launcher.LaunchableAdapter: java.util.Map getUsageStats(android.content.Context)>[[-i0 <= 21], [try]]
+###Multi invoking in one method, need manual check!!!--><com.anpmech.launcher.LaunchableAdapter: java.util.Map getUsageStats(android.content.Context)>[[-i0 <= 21]][[try]]
+-i0 <= 21
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.anpmech.launcher.activities.SearchActivity dummyMainMethod_com_anpmech_launcher_activities_SearchActivity(android.content.Intent)>[]--><com.anpmech.launcher.activities.SearchActivity: void onResume()>[]--><com.anpmech.launcher.LaunchableAdapter: void updateUsageMap(android.content.Context)>[]--><com.anpmech.launcher.LaunchableAdapter: java.util.Map getUsageStats(android.content.Context)>[[-i0 <= 21], [try]]--><android.app.usage.UsageStatsManager: java.util.Map queryAndAggregateUsageStats(long,long)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:true
+1call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.hardware.display.DisplayManager: void unregisterDisplayListener(android.hardware.display.DisplayManager.DisplayListener)> is checking!!!
+The life time of api is [17,31]
+1call roads:
+1 Mainhead roads:
+-i0 < 17
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.anpmech.launcher.activities.SearchActivity dummyMainMethod_com_anpmech_launcher_activities_SearchActivity(android.content.Intent)>[]--><com.anpmech.launcher.activities.SearchActivity: void onPause()>[[-i0 < 17]]--><android.hardware.display.DisplayManager: void unregisterDisplayListener(android.hardware.display.DisplayManager.DisplayListener)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 5 Potential Issue API: SDKCheck of <android.app.Notification.Builder: void <init>(android.content.Context,java.lang.String)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+1 Mainhead roads:
+-i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.anpmech.launcher.activities.SearchActivity dummyMainMethod_com_anpmech_launcher_activities_SearchActivity(android.content.Intent)>[]--><com.anpmech.launcher.activities.SearchActivity: void onStart()>[]--><com.anpmech.launcher.activities.SearchActivity: void setupPreferences()>[]--><com.anpmech.launcher.ShortcutNotificationManager: void showNotification(android.content.Context)>[[-i0 < 26]]--><android.app.Notification.Builder: void <init>(android.content.Context,java.lang.String)>
+One road protect good!
+-i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.anpmech.launcher.activities.SettingsActivity dummyMainMethod_com_anpmech_launcher_activities_SettingsActivity(android.content.Intent)>[]--><com.anpmech.launcher.fragments.SettingsFragment: void onSharedPreferenceChanged(android.content.SharedPreferences,java.lang.String)>[]--><com.anpmech.launcher.ShortcutNotificationManager: void showNotification(android.content.Context)>[[-i0 < 26]]--><android.app.Notification.Builder: void <init>(android.content.Context,java.lang.String)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 6 Potential Issue API: SDKCheck of <android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+1 Mainhead roads:
+-i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.anpmech.launcher.activities.SearchActivity dummyMainMethod_com_anpmech_launcher_activities_SearchActivity(android.content.Intent)>[]--><com.anpmech.launcher.activities.SearchActivity: void onStart()>[]--><com.anpmech.launcher.activities.SearchActivity: void setupPreferences()>[]--><com.anpmech.launcher.ShortcutNotificationManager: void showNotification(android.content.Context)>[[-i0 < 26]]--><android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)>
+One road protect good!
+-i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.anpmech.launcher.activities.SettingsActivity dummyMainMethod_com_anpmech_launcher_activities_SettingsActivity(android.content.Intent)>[]--><com.anpmech.launcher.fragments.SettingsFragment: void onSharedPreferenceChanged(android.content.SharedPreferences,java.lang.String)>[]--><com.anpmech.launcher.ShortcutNotificationManager: void showNotification(android.content.Context)>[[-i0 < 26]]--><android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 7 Potential Issue API: SDKCheck of <android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+1 Mainhead roads:
+-i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.anpmech.launcher.activities.SearchActivity dummyMainMethod_com_anpmech_launcher_activities_SearchActivity(android.content.Intent)>[]--><com.anpmech.launcher.activities.SearchActivity: void onStart()>[]--><com.anpmech.launcher.activities.SearchActivity: void setupPreferences()>[]--><com.anpmech.launcher.ShortcutNotificationManager: void showNotification(android.content.Context)>[[-i0 < 26]]--><android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)>
+One road protect good!
+-i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.anpmech.launcher.activities.SettingsActivity dummyMainMethod_com_anpmech_launcher_activities_SettingsActivity(android.content.Intent)>[]--><com.anpmech.launcher.fragments.SettingsFragment: void onSharedPreferenceChanged(android.content.SharedPreferences,java.lang.String)>[]--><com.anpmech.launcher.ShortcutNotificationManager: void showNotification(android.content.Context)>[[-i0 < 26]]--><android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 8 Potential Issue API: SDKCheck of <android.app.usage.UsageStats: long getTotalTimeInForeground()> is checking!!!
+The life time of api is [21,31]
+3call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.anpmech.launcher.activities.SearchActivity dummyMainMethod_com_anpmech_launcher_activities_SearchActivity(android.content.Intent)>[]--><com.anpmech.launcher.activities.SearchActivity: void onSharedPreferenceChanged(android.content.SharedPreferences,java.lang.String)>[]--><com.anpmech.launcher.LaunchableAdapter: void sortApps(android.content.Context)>[]--><com.anpmech.launcher.LaunchableAdapter: void updateLaunchableStats(com.anpmech.launcher.LaunchableActivity)>[]--><com.anpmech.launcher.LaunchableAdapter: long getUsageTime(com.anpmech.launcher.LaunchableActivity)>[]--><android.app.usage.UsageStats: long getTotalTimeInForeground()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.app.usage.UsageStats: long getTotalTimeInForeground()>has compatibility isssues！
+-----------------------------------------
+2 Packageshead roads:
+try
+Good road with try: <com.anpmech.launcher.monitor.PackageChangedReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><com.anpmech.launcher.monitor.PackageChangedReceiver: void actOnIntent(android.content.Intent)>[]--><com.anpmech.launcher.monitor.PackageChangedReceiver: void sendPackageName(int,java.lang.String[])>[]--><com.anpmech.launcher.activities.SearchActivity: void onPackageModified(java.lang.String)>[[try]]--><com.anpmech.launcher.activities.SearchActivity: void onPackageAppeared(java.lang.String)>[[try]]--><com.anpmech.launcher.LaunchableAdapter: void sortApps(android.content.Context)>[]--><com.anpmech.launcher.LaunchableAdapter: void updateLaunchableStats(com.anpmech.launcher.LaunchableActivity)>[]--><com.anpmech.launcher.LaunchableAdapter: long getUsageTime(com.anpmech.launcher.LaunchableActivity)>[]--><android.app.usage.UsageStats: long getTotalTimeInForeground()>
+One road protect good!
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.anpmech.launcher.activities.SearchActivity: void pinToTop(android.view.MenuItem)>[]--><com.anpmech.launcher.LaunchableAdapter: void sortApps(android.content.Context)>[]--><com.anpmech.launcher.LaunchableAdapter: void updateLaunchableStats(com.anpmech.launcher.LaunchableActivity)>[]--><com.anpmech.launcher.LaunchableAdapter: long getUsageTime(com.anpmech.launcher.LaunchableActivity)>[]--><android.app.usage.UsageStats: long getTotalTimeInForeground()>
+#2.the call statck between class <com.anpmech.launcher.activities.SearchActivity: void pinToTop(android.view.MenuItem)> to <android.app.usage.UsageStats: long getTotalTimeInForeground()>has compatibility isssues！
+-----------------------------------------
+crashApis:1
+crashApisInMain:1
+containsStatic:false
+containsTry:true
+3call by main package
+-----------------------------------------
+#################################################
+N 9 Potential Issue API: SDKCheck of <android.app.usage.UsageStats: long getLastTimeUsed()> is checking!!!
+The life time of api is [21,31]
+3call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.anpmech.launcher.activities.SearchActivity dummyMainMethod_com_anpmech_launcher_activities_SearchActivity(android.content.Intent)>[]--><com.anpmech.launcher.activities.SearchActivity: void onSharedPreferenceChanged(android.content.SharedPreferences,java.lang.String)>[]--><com.anpmech.launcher.LaunchableAdapter: void sortApps(android.content.Context)>[]--><com.anpmech.launcher.LaunchableAdapter: void updateLaunchableStats(com.anpmech.launcher.LaunchableActivity)>[]--><com.anpmech.launcher.LaunchableAdapter: long getActualLastUsed(com.anpmech.launcher.LaunchableActivity)>[]--><android.app.usage.UsageStats: long getLastTimeUsed()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.app.usage.UsageStats: long getLastTimeUsed()>has compatibility isssues！
+-----------------------------------------
+2 Packageshead roads:
+try
+Good road with try: <com.anpmech.launcher.monitor.PackageChangedReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><com.anpmech.launcher.monitor.PackageChangedReceiver: void actOnIntent(android.content.Intent)>[]--><com.anpmech.launcher.monitor.PackageChangedReceiver: void sendPackageName(int,java.lang.String[])>[]--><com.anpmech.launcher.activities.SearchActivity: void onPackageModified(java.lang.String)>[[try]]--><com.anpmech.launcher.activities.SearchActivity: void onPackageAppeared(java.lang.String)>[[try]]--><com.anpmech.launcher.LaunchableAdapter: void sortApps(android.content.Context)>[]--><com.anpmech.launcher.LaunchableAdapter: void updateLaunchableStats(com.anpmech.launcher.LaunchableActivity)>[]--><com.anpmech.launcher.LaunchableAdapter: long getActualLastUsed(com.anpmech.launcher.LaunchableActivity)>[]--><android.app.usage.UsageStats: long getLastTimeUsed()>
+One road protect good!
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.anpmech.launcher.activities.SearchActivity: void pinToTop(android.view.MenuItem)>[]--><com.anpmech.launcher.LaunchableAdapter: void sortApps(android.content.Context)>[]--><com.anpmech.launcher.LaunchableAdapter: void updateLaunchableStats(com.anpmech.launcher.LaunchableActivity)>[]--><com.anpmech.launcher.LaunchableAdapter: long getActualLastUsed(com.anpmech.launcher.LaunchableActivity)>[]--><android.app.usage.UsageStats: long getLastTimeUsed()>
+#2.the call statck between class <com.anpmech.launcher.activities.SearchActivity: void pinToTop(android.view.MenuItem)> to <android.app.usage.UsageStats: long getLastTimeUsed()>has compatibility isssues！
+-----------------------------------------
+crashApis:2
+crashApisInMain:2
+containsStatic:false
+containsTry:true
+3call by main package
+-----------------------------------------
+crashApis numbers:2
+crashApis numbers in main road:2
+On Android Version 16 this app may have error api use(at least): 2 and error api roads: 4
+On Android Version 17 this app may have error api use(at least): 2 and error api roads: 4
+On Android Version 18 this app may have error api use(at least): 2 and error api roads: 4
+On Android Version 19 this app may have error api use(at least): 2 and error api roads: 4
+On Android Version 20 this app may have error api use(at least): 2 and error api roads: 4
+On Android Version 21 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 22 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 23 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 24 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 25 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 31 this app may have error api use(at least): 0 and error api roads: 0

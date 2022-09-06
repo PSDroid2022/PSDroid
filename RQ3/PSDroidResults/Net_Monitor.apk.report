@@ -1,0 +1,400 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/Net_Monitor.apk
+Entry Points[org.secuso.privacyfriendlynetmonitor.Activities.AppConnections_Chart, org.secuso.privacyfriendlynetmonitor.Activities.SplashActivity, org.secuso.privacyfriendlynetmonitor.Activities.AboutActivity, org.secuso.privacyfriendlynetmonitor.Activities.ReportDetailActivity, org.secuso.privacyfriendlynetmonitor.Activities.HelpActivity, org.secuso.privacyfriendlynetmonitor.ConnectionAnalysis.PassiveService, org.secuso.privacyfriendlynetmonitor.Activities.SettingsActivity, org.secuso.privacyfriendlynetmonitor.Activities.SelectHistoryAppsActivity, org.secuso.privacyfriendlynetmonitor.Activities.MainActivity, org.secuso.privacyfriendlynetmonitor.Activities.HistoryActivity, org.secuso.privacyfriendlynetmonitor.DatabaseUtil.DBApp, org.secuso.privacyfriendlynetmonitor.Activities.HistoryDetailActivity, org.secuso.privacyfriendlynetmonitor.Activities.TutorialActivity]
+FllowDroidcallgraph size:3381
+Soot started on Mon Jul 11 08:02:05 CST 2022
+Soot finished on Mon Jul 11 08:02:21 CST 2022
+Soot has run for 0 min. 16 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 17
+Declared Target Sdk version is: 28
+Declared Max Sdk version is: -1
+Collected 642 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putLongArray(java.lang.String,long[])> is checking!!!
+The life time of api is [21,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.content.Context: android.graphics.drawable.Drawable getDrawable(int)> is checking!!!
+The life time of api is [21,31]
+2call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.secuso.privacyfriendlynetmonitor.Activities.ReportDetailActivity dummyMainMethod_org_secuso_privacyfriendlynetmonitor_Activities_ReportDetailActivity(android.content.Intent)>[]--><org.secuso.privacyfriendlynetmonitor.Activities.ReportDetailActivity: void onCreate(android.os.Bundle)>[]--><org.secuso.privacyfriendlynetmonitor.ConnectionAnalysis.Collector: android.graphics.drawable.Drawable getIcon(int)>[[try]]--><org.secuso.privacyfriendlynetmonitor.ConnectionAnalysis.Collector: android.graphics.drawable.Drawable getDefaultIcon()>[[-$i0 < 21]]--><org.secuso.privacyfriendlynetmonitor.ConnectionAnalysis.Collector: android.graphics.drawable.Drawable getIconNew(int)>[]--><android.content.Context: android.graphics.drawable.Drawable getDrawable(int)>
+One road protect good!
+1 Packageshead roads:
+try
+Good road with try: <org.secuso.privacyfriendlynetmonitor.Activities.Adapter.ExpandableReportAdapter: android.view.View getGroupView(int,boolean,android.view.View,android.view.ViewGroup)>[]--><org.secuso.privacyfriendlynetmonitor.ConnectionAnalysis.Collector: android.graphics.drawable.Drawable getIcon(int)>[[try]]--><org.secuso.privacyfriendlynetmonitor.ConnectionAnalysis.Collector: android.graphics.drawable.Drawable getDefaultIcon()>[[-$i0 < 21]]--><org.secuso.privacyfriendlynetmonitor.ConnectionAnalysis.Collector: android.graphics.drawable.Drawable getIconNew(int)>[]--><android.content.Context: android.graphics.drawable.Drawable getDrawable(int)>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.content.Context: java.lang.Object getSystemService(java.lang.Class)> is checking!!!
+The life time of api is [23,31]
+2call roads:
+1 Mainhead roads:
+-i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.secuso.privacyfriendlynetmonitor.ConnectionAnalysis.PassiveService dummyMainMethod_org_secuso_privacyfriendlynetmonitor_ConnectionAnalysis_PassiveService(android.content.Intent)>[]--><org.secuso.privacyfriendlynetmonitor.ConnectionAnalysis.PassiveService: void onCreate()>[]--><org.secuso.privacyfriendlynetmonitor.ConnectionAnalysis.PassiveService: void showAppNotification()>[]--><org.secuso.privacyfriendlynetmonitor.ConnectionAnalysis.PassiveService: void createNotificationChannel()>[[-i0 < 26]]--><android.content.Context: java.lang.Object getSystemService(java.lang.Class)>
+One road protect good!
+1 Packageshead roads:
+-i0 < 26
+Good road: <org.secuso.privacyfriendlynetmonitor.ConnectionAnalysis.PassiveService: void showWarningNotification()>[]--><org.secuso.privacyfriendlynetmonitor.ConnectionAnalysis.PassiveService: void createNotificationChannel()>[[-i0 < 26]]--><android.content.Context: java.lang.Object getSystemService(java.lang.Class)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.util.Size: int getWidth()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 17 18 19 20 
+Error road: <androidx.versionedparcelable.VersionedParcel: void writeSize(android.util.Size,int)>[]--><android.util.Size: int getWidth()>
+#1.the call statck between class <androidx.versionedparcelable.VersionedParcel: void writeSize(android.util.Size,int)> to <android.util.Size: int getWidth()>has compatibility isssues！
+-----------------------------------------
+crashApis:1
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.text.StaticLayout: void <init>(java.lang.CharSequence,int,int,android.text.TextPaint,int,android.text.Layout.Alignment,float,float,boolean)> is checking!!!
+The life time of api is [1,30]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <com.github.mikephil.charting.renderer.PieChartRenderer: void drawExtras(android.graphics.Canvas)>[]--><com.github.mikephil.charting.renderer.PieChartRenderer: void drawCenterText(android.graphics.Canvas)>[]--><android.text.StaticLayout: void <init>(java.lang.CharSequence,int,int,android.text.TextPaint,int,android.text.Layout.Alignment,float,float,boolean)>
+#1.the call statck between class <com.github.mikephil.charting.renderer.PieChartRenderer: void drawExtras(android.graphics.Canvas)> to <android.text.StaticLayout: void <init>(java.lang.CharSequence,int,int,android.text.TextPaint,int,android.text.Layout.Alignment,float,float,boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <com.github.mikephil.charting.utils.Utils: void drawMultilineText(android.graphics.Canvas,java.lang.String,float,float,android.text.TextPaint,com.github.mikephil.charting.utils.FSize,com.github.mikephil.charting.utils.MPPointF,float)>[]--><android.text.StaticLayout: void <init>(java.lang.CharSequence,int,int,android.text.TextPaint,int,android.text.Layout.Alignment,float,float,boolean)>
+#2.the call statck between class <com.github.mikephil.charting.utils.Utils: void drawMultilineText(android.graphics.Canvas,java.lang.String,float,float,android.text.TextPaint,com.github.mikephil.charting.utils.FSize,com.github.mikephil.charting.utils.MPPointF,float)> to <android.text.StaticLayout: void <init>(java.lang.CharSequence,int,int,android.text.TextPaint,int,android.text.Layout.Alignment,float,float,boolean)>has compatibility isssues！
+-----------------------------------------
+crashApis:2
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 5 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.secuso.privacyfriendlynetmonitor.Activities.AppConnections_Chart dummyMainMethod_org_secuso_privacyfriendlynetmonitor_Activities_AppConnections__Chart(android.content.Intent)>[]--><org.secuso.privacyfriendlynetmonitor.Activities.AppConnections_Chart: void onCreate(android.os.Bundle)>[]--><org.secuso.privacyfriendlynetmonitor.Activities.Adapter.PagerAdapter: void <init>(android.support.v4.app.FragmentManager,int,java.lang.String)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:3
+crashApisInMain:1
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 6 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putBooleanArray(java.lang.String,boolean[])> is checking!!!
+The life time of api is [22,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 7 Potential Issue API: SDKCheck of <android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)> is checking!!!
+The life time of api is [26,31]
+2call roads:
+1 Mainhead roads:
+-i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.secuso.privacyfriendlynetmonitor.ConnectionAnalysis.PassiveService dummyMainMethod_org_secuso_privacyfriendlynetmonitor_ConnectionAnalysis_PassiveService(android.content.Intent)>[]--><org.secuso.privacyfriendlynetmonitor.ConnectionAnalysis.PassiveService: void onCreate()>[]--><org.secuso.privacyfriendlynetmonitor.ConnectionAnalysis.PassiveService: void showAppNotification()>[]--><org.secuso.privacyfriendlynetmonitor.ConnectionAnalysis.PassiveService: void createNotificationChannel()>[[-i0 < 26]]--><android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)>
+One road protect good!
+1 Packageshead roads:
+-i0 < 26
+Good road: <org.secuso.privacyfriendlynetmonitor.ConnectionAnalysis.PassiveService: void showWarningNotification()>[]--><org.secuso.privacyfriendlynetmonitor.ConnectionAnalysis.PassiveService: void createNotificationChannel()>[[-i0 < 26]]--><android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 8 Potential Issue API: SDKCheck of <android.util.Size: void <init>(int,int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 17 18 19 20 
+Error road: <androidx.versionedparcelable.VersionedParcel: android.util.Size readSize(android.util.Size,int)>[]--><android.util.Size: void <init>(int,int)>
+#1.the call statck between class <androidx.versionedparcelable.VersionedParcel: android.util.Size readSize(android.util.Size,int)> to <android.util.Size: void <init>(int,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:4
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 9 Potential Issue API: SDKCheck of <android.content.res.Resources: android.graphics.drawable.Drawable getDrawable(int,android.content.res.Resources.Theme)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i1 < 21
+Good road: <com.github.mikephil.charting.components.MarkerImage: void <init>(android.content.Context,int)>[[-$i1 < 21]]--><android.content.res.Resources: android.graphics.drawable.Drawable getDrawable(int,android.content.res.Resources.Theme)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 10 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)> is checking!!!
+The life time of api is [22,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 11 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putDouble(java.lang.String,double)> is checking!!!
+The life time of api is [21,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 12 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putIntArray(java.lang.String,int[])> is checking!!!
+The life time of api is [21,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 13 Potential Issue API: SDKCheck of <android.util.SizeF: float getHeight()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 17 18 19 20 
+Error road: <androidx.versionedparcelable.VersionedParcel: void writeSizeF(android.util.SizeF,int)>[]--><android.util.SizeF: float getHeight()>
+#1.the call statck between class <androidx.versionedparcelable.VersionedParcel: void writeSizeF(android.util.SizeF,int)> to <android.util.SizeF: float getHeight()>has compatibility isssues！
+-----------------------------------------
+crashApis:5
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 14 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.lang.Object get(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:true
+1call by main package
+-----------------------------------------
+#################################################
+N 15 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putDoubleArray(java.lang.String,double[])> is checking!!!
+The life time of api is [21,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 16 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putLong(java.lang.String,long)> is checking!!!
+The life time of api is [21,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 17 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.lang.String getString(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.secuso.privacyfriendlynetmonitor.Activities.AppConnections_Chart dummyMainMethod_org_secuso_privacyfriendlynetmonitor_Activities_AppConnections__Chart(android.content.Intent)>[]--><dummyMainClass: org.secuso.privacyfriendlynetmonitor.fragment.Fragment_month dummyMainMethod_org_secuso_privacyfriendlynetmonitor_fragment_Fragment__month(android.content.Intent,android.app.Activity)>[]--><org.secuso.privacyfriendlynetmonitor.fragment.Fragment_month: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:6
+crashApisInMain:2
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 18 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putStringArray(java.lang.String,java.lang.String[])> is checking!!!
+The life time of api is [21,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 19 Potential Issue API: SDKCheck of <android.view.View: void setNestedScrollingEnabled(boolean)> is checking!!!
+The life time of api is [21,31]
+4call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.secuso.privacyfriendlynetmonitor.Activities.AppConnections_Chart dummyMainMethod_org_secuso_privacyfriendlynetmonitor_Activities_AppConnections__Chart(android.content.Intent)>[]--><dummyMainClass: org.secuso.privacyfriendlynetmonitor.fragment.Fragment_month dummyMainMethod_org_secuso_privacyfriendlynetmonitor_fragment_Fragment__month(android.content.Intent,android.app.Activity)>[]--><org.secuso.privacyfriendlynetmonitor.fragment.Fragment_month: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)>[]--><org.secuso.privacyfriendlynetmonitor.fragment.Fragment_month: void fillRecyclerList(android.view.View,java.util.List)>[[]]--><android.view.View: void setNestedScrollingEnabled(boolean)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.view.View: void setNestedScrollingEnabled(boolean)>has compatibility isssues！
+-----------------------------------------
+3 Packageshead roads:
+!!!this api will crash on sdk 17 18 19 20 
+Error road: <org.secuso.privacyfriendlynetmonitor.fragment.Fragment_week: void access$400(org.secuso.privacyfriendlynetmonitor.fragment.Fragment_week,android.view.View,java.util.List)>[]--><org.secuso.privacyfriendlynetmonitor.fragment.Fragment_week: void fillRecyclerList(android.view.View,java.util.List)>[[]]--><android.view.View: void setNestedScrollingEnabled(boolean)>
+#1.the call statck between class <org.secuso.privacyfriendlynetmonitor.fragment.Fragment_week: void access$400(org.secuso.privacyfriendlynetmonitor.fragment.Fragment_week,android.view.View,java.util.List)> to <android.view.View: void setNestedScrollingEnabled(boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 17 18 19 20 
+Error road: <org.secuso.privacyfriendlynetmonitor.fragment.Fragment_month: void access$300(org.secuso.privacyfriendlynetmonitor.fragment.Fragment_month,android.view.View,java.util.List)>[]--><org.secuso.privacyfriendlynetmonitor.fragment.Fragment_month: void fillRecyclerList(android.view.View,java.util.List)>[[]]--><android.view.View: void setNestedScrollingEnabled(boolean)>
+#2.the call statck between class <org.secuso.privacyfriendlynetmonitor.fragment.Fragment_month: void access$300(org.secuso.privacyfriendlynetmonitor.fragment.Fragment_month,android.view.View,java.util.List)> to <android.view.View: void setNestedScrollingEnabled(boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 17 18 19 20 
+Error road: <org.secuso.privacyfriendlynetmonitor.fragment.Fragment_day: void access$200(org.secuso.privacyfriendlynetmonitor.fragment.Fragment_day,android.view.View,java.util.List)>[]--><org.secuso.privacyfriendlynetmonitor.fragment.Fragment_day: void fillRecyclerList(android.view.View,java.util.List)>[[]]--><android.view.View: void setNestedScrollingEnabled(boolean)>
+#3.the call statck between class <org.secuso.privacyfriendlynetmonitor.fragment.Fragment_day: void access$200(org.secuso.privacyfriendlynetmonitor.fragment.Fragment_day,android.view.View,java.util.List)> to <android.view.View: void setNestedScrollingEnabled(boolean)>has compatibility isssues！
+-----------------------------------------
+crashApis:7
+crashApisInMain:3
+containsStatic:false
+containsTry:false
+4call by main package
+-----------------------------------------
+#################################################
+N 20 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putInt(java.lang.String,int)> is checking!!!
+The life time of api is [21,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 21 Potential Issue API: SDKCheck of <android.util.SizeF: float getWidth()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 17 18 19 20 
+Error road: <androidx.versionedparcelable.VersionedParcel: void writeSizeF(android.util.SizeF,int)>[]--><android.util.SizeF: float getWidth()>
+#1.the call statck between class <androidx.versionedparcelable.VersionedParcel: void writeSizeF(android.util.SizeF,int)> to <android.util.SizeF: float getWidth()>has compatibility isssues！
+-----------------------------------------
+crashApis:8
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 22 Potential Issue API: SDKCheck of <android.view.Window: void setStatusBarColor(int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+-i0 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.secuso.privacyfriendlynetmonitor.Activities.TutorialActivity dummyMainMethod_org_secuso_privacyfriendlynetmonitor_Activities_TutorialActivity(android.content.Intent)>[]--><org.secuso.privacyfriendlynetmonitor.Activities.TutorialActivity: void onCreate(android.os.Bundle)>[]--><org.secuso.privacyfriendlynetmonitor.Activities.TutorialActivity: void changeStatusBarColor()>[[-i0 < 21]]--><android.view.Window: void setStatusBarColor(int)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 23 Potential Issue API: SDKCheck of <android.util.SizeF: void <init>(float,float)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 17 18 19 20 
+Error road: <androidx.versionedparcelable.VersionedParcel: android.util.SizeF readSizeF(android.util.SizeF,int)>[]--><android.util.SizeF: void <init>(float,float)>
+#1.the call statck between class <androidx.versionedparcelable.VersionedParcel: android.util.SizeF readSizeF(android.util.SizeF,int)> to <android.util.SizeF: void <init>(float,float)>has compatibility isssues！
+-----------------------------------------
+crashApis:9
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 24 Potential Issue API: SDKCheck of <android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)> is checking!!!
+The life time of api is [26,31]
+2call roads:
+1 Mainhead roads:
+-i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.secuso.privacyfriendlynetmonitor.ConnectionAnalysis.PassiveService dummyMainMethod_org_secuso_privacyfriendlynetmonitor_ConnectionAnalysis_PassiveService(android.content.Intent)>[]--><org.secuso.privacyfriendlynetmonitor.ConnectionAnalysis.PassiveService: void onCreate()>[]--><org.secuso.privacyfriendlynetmonitor.ConnectionAnalysis.PassiveService: void showAppNotification()>[]--><org.secuso.privacyfriendlynetmonitor.ConnectionAnalysis.PassiveService: void createNotificationChannel()>[[-i0 < 26]]--><android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)>
+One road protect good!
+1 Packageshead roads:
+-i0 < 26
+Good road: <org.secuso.privacyfriendlynetmonitor.ConnectionAnalysis.PassiveService: void showWarningNotification()>[]--><org.secuso.privacyfriendlynetmonitor.ConnectionAnalysis.PassiveService: void createNotificationChannel()>[[-i0 < 26]]--><android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 25 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.util.Set keySet()> is checking!!!
+The life time of api is [21,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:true
+1call by main package
+-----------------------------------------
+#################################################
+N 26 Potential Issue API: SDKCheck of <android.util.Size: int getHeight()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 17 18 19 20 
+Error road: <androidx.versionedparcelable.VersionedParcel: void writeSize(android.util.Size,int)>[]--><android.util.Size: int getHeight()>
+#1.the call statck between class <androidx.versionedparcelable.VersionedParcel: void writeSize(android.util.Size,int)> to <android.util.Size: int getHeight()>has compatibility isssues！
+-----------------------------------------
+crashApis:10
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+crashApis numbers:10
+crashApis numbers in main road:3
+On Android Version 16 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 17 this app may have error api use(at least): 9 and error api roads: 12
+On Android Version 18 this app may have error api use(at least): 9 and error api roads: 12
+On Android Version 19 this app may have error api use(at least): 9 and error api roads: 12
+On Android Version 20 this app may have error api use(at least): 9 and error api roads: 12
+On Android Version 21 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 22 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 23 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 24 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 25 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 31 this app may have error api use(at least): 1 and error api roads: 2

@@ -1,0 +1,269 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/PhotoBackup.apk
+Entry Points[fr.s13d.photobackup.PBService, fr.s13d.photobackup.PBBootBroadcastReceiver, fr.s13d.photobackup.PBJournalActivity, fr.s13d.photobackup.PBActivity, fr.s13d.photobackup.PBApplication, fr.s13d.photobackup.PBAboutActivity]
+FllowDroidcallgraph size:1680
+Soot started on Mon Jul 11 10:47:12 CST 2022
+Soot finished on Mon Jul 11 10:47:21 CST 2022
+Soot has run for 0 min. 8 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 19
+Declared Target Sdk version is: 23
+Declared Max Sdk version is: -1
+Collected 214 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.lang.String getString(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <fr.s13d.photobackup.preferences.PBServerPreferenceFragment: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#1.the call statck between class <fr.s13d.photobackup.preferences.PBServerPreferenceFragment: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:1
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.app.Notification.Action.Builder: android.app.Notification.Action build()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+$i0 >= 23
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: fr.s13d.photobackup.PBJournalActivity dummyMainMethod_fr_s13d_photobackup_PBJournalActivity(android.content.Intent)>[]--><fr.s13d.photobackup.PBJournalActivity: void onCreate(android.os.Bundle)>[]--><fr.s13d.photobackup.PBMediaSender: void <init>(android.content.Context)>[[$i0 >= 23]]--><android.app.Notification.Action.Builder: android.app.Notification.Action build()>
+One road protect good!
+$i0 == 0
+$i0 >= 23
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: fr.s13d.photobackup.PBActivity dummyMainMethod_fr_s13d_photobackup_PBActivity(android.content.Intent)>[]--><fr.s13d.photobackup.preferences.PBPreferenceFragment: void onSharedPreferenceChanged(android.content.SharedPreferences,java.lang.String)>[]--><fr.s13d.photobackup.preferences.PBPreferenceFragment: void startOrStopService(android.content.SharedPreferences)>[]--><fr.s13d.photobackup.preferences.PBPreferenceFragment: void checkPermissions()>[[$i0 == 0]]--><fr.s13d.photobackup.preferences.PBPreferenceFragment: void testMediaSender()>[]--><fr.s13d.photobackup.PBMediaSender: void <init>(android.content.Context)>[[$i0 >= 23]]--><android.app.Notification.Action.Builder: android.app.Notification.Action build()>
+One road protect good!
+$i0 >= 23
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: fr.s13d.photobackup.PBService dummyMainMethod_fr_s13d_photobackup_PBService(android.content.Intent)>[]--><fr.s13d.photobackup.PBService: void onCreate()>[]--><fr.s13d.photobackup.PBMediaSender: void <init>(android.content.Context)>[[$i0 >= 23]]--><android.app.Notification.Action.Builder: android.app.Notification.Action build()>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.net.NetworkInfo: int getType()> is checking!!!
+The life time of api is [1,30]
+3call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: fr.s13d.photobackup.PBJournalActivity dummyMainMethod_fr_s13d_photobackup_PBJournalActivity(android.content.Intent)>[]--><fr.s13d.photobackup.PBJournalActivity$1$1: void onClick(android.content.DialogInterface,int)>[]--><fr.s13d.photobackup.PBMediaSender: void send(fr.s13d.photobackup.PBMedia,boolean)>[]--><android.net.NetworkInfo: int getType()>
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: fr.s13d.photobackup.PBService dummyMainMethod_fr_s13d_photobackup_PBService(android.content.Intent)>[]--><fr.s13d.photobackup.PBService: void onCreate()>[]--><fr.s13d.photobackup.PBMediaStore: void sync()>[]--><fr.s13d.photobackup.PBMediaStore: void setSyncTask()>[]--><fr.s13d.photobackup.PBMediaStore$SyncMediaStoreTask: void onPostExecute(java.lang.Object)>[]--><fr.s13d.photobackup.PBMediaStore$SyncMediaStoreTask: void onPostExecute(java.lang.Void)>[]--><fr.s13d.photobackup.PBService: void onSyncMediaStoreTaskPostExecute()>[]--><fr.s13d.photobackup.PBService: void sendNextMedia()>[]--><fr.s13d.photobackup.PBMediaSender: void send(fr.s13d.photobackup.PBMedia,boolean)>[]--><android.net.NetworkInfo: int getType()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.NetworkInfo: int getType()>has compatibility isssues！
+-----------------------------------------
+2 Packageshead roads:
+try
+Good road with try: <fr.s13d.photobackup.PBService$MediaContentObserver: void onChange(boolean,android.net.Uri)>[[try]]--><fr.s13d.photobackup.PBMediaSender: void send(fr.s13d.photobackup.PBMedia,boolean)>[]--><android.net.NetworkInfo: int getType()>
+One road protect good!
+!!!this api will crash on sdk 31 
+Error road: <fr.s13d.photobackup.PBMediaSender: void access$000(fr.s13d.photobackup.PBMediaSender,fr.s13d.photobackup.PBMedia)>[]--><fr.s13d.photobackup.PBMediaSender: void sendDidSucceed(fr.s13d.photobackup.PBMedia)>[]--><fr.s13d.photobackup.PBService: void onSendSuccess()>[]--><fr.s13d.photobackup.PBService: void sendNextMedia()>[]--><fr.s13d.photobackup.PBMediaSender: void send(fr.s13d.photobackup.PBMedia,boolean)>[]--><android.net.NetworkInfo: int getType()>
+#2.the call statck between class <fr.s13d.photobackup.PBMediaSender: void access$000(fr.s13d.photobackup.PBMediaSender,fr.s13d.photobackup.PBMedia)> to <android.net.NetworkInfo: int getType()>has compatibility isssues！
+-----------------------------------------
+crashApis:2
+crashApisInMain:1
+containsStatic:false
+containsTry:true
+3call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()> is checking!!!
+The life time of api is [1,30]
+3call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: fr.s13d.photobackup.PBJournalActivity dummyMainMethod_fr_s13d_photobackup_PBJournalActivity(android.content.Intent)>[]--><fr.s13d.photobackup.PBJournalActivity$1$1: void onClick(android.content.DialogInterface,int)>[]--><fr.s13d.photobackup.PBMediaSender: void send(fr.s13d.photobackup.PBMedia,boolean)>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: fr.s13d.photobackup.PBService dummyMainMethod_fr_s13d_photobackup_PBService(android.content.Intent)>[]--><fr.s13d.photobackup.PBService: void onCreate()>[]--><fr.s13d.photobackup.PBMediaStore: void sync()>[]--><fr.s13d.photobackup.PBMediaStore: void setSyncTask()>[]--><fr.s13d.photobackup.PBMediaStore$SyncMediaStoreTask: void onPostExecute(java.lang.Object)>[]--><fr.s13d.photobackup.PBMediaStore$SyncMediaStoreTask: void onPostExecute(java.lang.Void)>[]--><fr.s13d.photobackup.PBService: void onSyncMediaStoreTaskPostExecute()>[]--><fr.s13d.photobackup.PBService: void sendNextMedia()>[]--><fr.s13d.photobackup.PBMediaSender: void send(fr.s13d.photobackup.PBMedia,boolean)>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>has compatibility isssues！
+-----------------------------------------
+2 Packageshead roads:
+try
+Good road with try: <fr.s13d.photobackup.PBService$MediaContentObserver: void onChange(boolean,android.net.Uri)>[[try]]--><fr.s13d.photobackup.PBMediaSender: void send(fr.s13d.photobackup.PBMedia,boolean)>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>
+One road protect good!
+!!!this api will crash on sdk 31 
+Error road: <fr.s13d.photobackup.PBMediaSender: void access$000(fr.s13d.photobackup.PBMediaSender,fr.s13d.photobackup.PBMedia)>[]--><fr.s13d.photobackup.PBMediaSender: void sendDidSucceed(fr.s13d.photobackup.PBMedia)>[]--><fr.s13d.photobackup.PBService: void onSendSuccess()>[]--><fr.s13d.photobackup.PBService: void sendNextMedia()>[]--><fr.s13d.photobackup.PBMediaSender: void send(fr.s13d.photobackup.PBMedia,boolean)>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>
+#2.the call statck between class <fr.s13d.photobackup.PBMediaSender: void access$000(fr.s13d.photobackup.PBMediaSender,fr.s13d.photobackup.PBMedia)> to <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>has compatibility isssues！
+-----------------------------------------
+crashApis:3
+crashApisInMain:2
+containsStatic:false
+containsTry:true
+3call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.net.NetworkInfo: boolean isConnected()> is checking!!!
+The life time of api is [1,30]
+3call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: fr.s13d.photobackup.PBJournalActivity dummyMainMethod_fr_s13d_photobackup_PBJournalActivity(android.content.Intent)>[]--><fr.s13d.photobackup.PBJournalActivity$1$1: void onClick(android.content.DialogInterface,int)>[]--><fr.s13d.photobackup.PBMediaSender: void send(fr.s13d.photobackup.PBMedia,boolean)>[]--><android.net.NetworkInfo: boolean isConnected()>
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: fr.s13d.photobackup.PBService dummyMainMethod_fr_s13d_photobackup_PBService(android.content.Intent)>[]--><fr.s13d.photobackup.PBService: void onCreate()>[]--><fr.s13d.photobackup.PBMediaStore: void sync()>[]--><fr.s13d.photobackup.PBMediaStore: void setSyncTask()>[]--><fr.s13d.photobackup.PBMediaStore$SyncMediaStoreTask: void onPostExecute(java.lang.Object)>[]--><fr.s13d.photobackup.PBMediaStore$SyncMediaStoreTask: void onPostExecute(java.lang.Void)>[]--><fr.s13d.photobackup.PBService: void onSyncMediaStoreTaskPostExecute()>[]--><fr.s13d.photobackup.PBService: void sendNextMedia()>[]--><fr.s13d.photobackup.PBMediaSender: void send(fr.s13d.photobackup.PBMedia,boolean)>[]--><android.net.NetworkInfo: boolean isConnected()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.NetworkInfo: boolean isConnected()>has compatibility isssues！
+-----------------------------------------
+2 Packageshead roads:
+try
+Good road with try: <fr.s13d.photobackup.PBService$MediaContentObserver: void onChange(boolean,android.net.Uri)>[[try]]--><fr.s13d.photobackup.PBMediaSender: void send(fr.s13d.photobackup.PBMedia,boolean)>[]--><android.net.NetworkInfo: boolean isConnected()>
+One road protect good!
+!!!this api will crash on sdk 31 
+Error road: <fr.s13d.photobackup.PBMediaSender: void access$000(fr.s13d.photobackup.PBMediaSender,fr.s13d.photobackup.PBMedia)>[]--><fr.s13d.photobackup.PBMediaSender: void sendDidSucceed(fr.s13d.photobackup.PBMedia)>[]--><fr.s13d.photobackup.PBService: void onSendSuccess()>[]--><fr.s13d.photobackup.PBService: void sendNextMedia()>[]--><fr.s13d.photobackup.PBMediaSender: void send(fr.s13d.photobackup.PBMedia,boolean)>[]--><android.net.NetworkInfo: boolean isConnected()>
+#2.the call statck between class <fr.s13d.photobackup.PBMediaSender: void access$000(fr.s13d.photobackup.PBMediaSender,fr.s13d.photobackup.PBMedia)> to <android.net.NetworkInfo: boolean isConnected()>has compatibility isssues！
+-----------------------------------------
+crashApis:4
+crashApisInMain:3
+containsStatic:false
+containsTry:true
+3call by main package
+-----------------------------------------
+#################################################
+N 5 Potential Issue API: SDKCheck of <android.os.BaseBundle: boolean containsKey(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <fr.s13d.photobackup.preferences.PBServerPreferenceFragment: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)>[]--><android.os.BaseBundle: boolean containsKey(java.lang.String)>
+#1.the call statck between class <fr.s13d.photobackup.preferences.PBServerPreferenceFragment: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)> to <android.os.BaseBundle: boolean containsKey(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:5
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 6 Potential Issue API: SDKCheck of <android.app.Fragment: android.content.Context getContext()> is checking!!!
+The life time of api is [23,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 23
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: fr.s13d.photobackup.PBActivity dummyMainMethod_fr_s13d_photobackup_PBActivity(android.content.Intent)>[]--><fr.s13d.photobackup.preferences.PBPreferenceFragment: void onSharedPreferenceChanged(android.content.SharedPreferences,java.lang.String)>[]--><fr.s13d.photobackup.preferences.PBPreferenceFragment: void startOrStopService(android.content.SharedPreferences)>[]--><fr.s13d.photobackup.preferences.PBPreferenceFragment: void checkPermissions()>[[-$i0 < 23]]--><android.app.Fragment: android.content.Context getContext()>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 7 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <fr.s13d.photobackup.preferences.PBServerListPreference$ListPreferenceAdapter: void clickedAtPosition(int)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#1.the call statck between class <fr.s13d.photobackup.preferences.PBServerListPreference$ListPreferenceAdapter: void clickedAtPosition(int)> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:6
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 8 Potential Issue API: SDKCheck of <android.provider.MediaStore.Images.Thumbnails: android.graphics.Bitmap getThumbnail(android.content.ContentResolver,long,int,android.graphics.BitmapFactory.Options)> is checking!!!
+The life time of api is [5,29]
+4call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 30 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: fr.s13d.photobackup.PBJournalActivity dummyMainMethod_fr_s13d_photobackup_PBJournalActivity(android.content.Intent)>[]--><fr.s13d.photobackup.PBJournalActivity$1$1: void onClick(android.content.DialogInterface,int)>[]--><fr.s13d.photobackup.PBMediaSender: void send(fr.s13d.photobackup.PBMedia,boolean)>[]--><fr.s13d.photobackup.PBMediaSender: void sendMedia(fr.s13d.photobackup.PBMedia)>[]--><android.provider.MediaStore.Images.Thumbnails: android.graphics.Bitmap getThumbnail(android.content.ContentResolver,long,int,android.graphics.BitmapFactory.Options)>
+!!!this api will crash on sdk 30 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: fr.s13d.photobackup.PBService dummyMainMethod_fr_s13d_photobackup_PBService(android.content.Intent)>[]--><fr.s13d.photobackup.PBService: void onCreate()>[]--><fr.s13d.photobackup.PBMediaStore: void sync()>[]--><fr.s13d.photobackup.PBMediaStore: void setSyncTask()>[]--><fr.s13d.photobackup.PBMediaStore$SyncMediaStoreTask: void onPostExecute(java.lang.Object)>[]--><fr.s13d.photobackup.PBMediaStore$SyncMediaStoreTask: void onPostExecute(java.lang.Void)>[]--><fr.s13d.photobackup.PBService: void onSyncMediaStoreTaskPostExecute()>[]--><fr.s13d.photobackup.PBService: void sendNextMedia()>[]--><fr.s13d.photobackup.PBMediaSender: void send(fr.s13d.photobackup.PBMedia,boolean)>[]--><fr.s13d.photobackup.PBMediaSender: void sendMedia(fr.s13d.photobackup.PBMedia)>[]--><android.provider.MediaStore.Images.Thumbnails: android.graphics.Bitmap getThumbnail(android.content.ContentResolver,long,int,android.graphics.BitmapFactory.Options)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.provider.MediaStore.Images.Thumbnails: android.graphics.Bitmap getThumbnail(android.content.ContentResolver,long,int,android.graphics.BitmapFactory.Options)>has compatibility isssues！
+-----------------------------------------
+3 Packageshead roads:
+try
+Good road with try: <fr.s13d.photobackup.PBService$MediaContentObserver: void onChange(boolean,android.net.Uri)>[[try]]--><fr.s13d.photobackup.PBMediaSender: void send(fr.s13d.photobackup.PBMedia,boolean)>[]--><fr.s13d.photobackup.PBMediaSender: void sendMedia(fr.s13d.photobackup.PBMedia)>[]--><android.provider.MediaStore.Images.Thumbnails: android.graphics.Bitmap getThumbnail(android.content.ContentResolver,long,int,android.graphics.BitmapFactory.Options)>
+One road protect good!
+!!!this api will crash on sdk 30 31 
+Error road: <fr.s13d.photobackup.PBJournalAdapter: boolean handleMessage(android.os.Message)>[]--><android.provider.MediaStore.Images.Thumbnails: android.graphics.Bitmap getThumbnail(android.content.ContentResolver,long,int,android.graphics.BitmapFactory.Options)>
+#2.the call statck between class <fr.s13d.photobackup.PBJournalAdapter: boolean handleMessage(android.os.Message)> to <android.provider.MediaStore.Images.Thumbnails: android.graphics.Bitmap getThumbnail(android.content.ContentResolver,long,int,android.graphics.BitmapFactory.Options)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 30 31 
+Error road: <fr.s13d.photobackup.PBMediaSender: void access$000(fr.s13d.photobackup.PBMediaSender,fr.s13d.photobackup.PBMedia)>[]--><fr.s13d.photobackup.PBMediaSender: void sendDidSucceed(fr.s13d.photobackup.PBMedia)>[]--><fr.s13d.photobackup.PBService: void onSendSuccess()>[]--><fr.s13d.photobackup.PBService: void sendNextMedia()>[]--><fr.s13d.photobackup.PBMediaSender: void send(fr.s13d.photobackup.PBMedia,boolean)>[]--><fr.s13d.photobackup.PBMediaSender: void sendMedia(fr.s13d.photobackup.PBMedia)>[]--><android.provider.MediaStore.Images.Thumbnails: android.graphics.Bitmap getThumbnail(android.content.ContentResolver,long,int,android.graphics.BitmapFactory.Options)>
+#3.the call statck between class <fr.s13d.photobackup.PBMediaSender: void access$000(fr.s13d.photobackup.PBMediaSender,fr.s13d.photobackup.PBMedia)> to <android.provider.MediaStore.Images.Thumbnails: android.graphics.Bitmap getThumbnail(android.content.ContentResolver,long,int,android.graphics.BitmapFactory.Options)>has compatibility isssues！
+-----------------------------------------
+crashApis:7
+crashApisInMain:4
+containsStatic:false
+containsTry:true
+4call by main package
+-----------------------------------------
+#################################################
+N 9 Potential Issue API: SDKCheck of <android.app.Notification.Builder: android.app.Notification.Builder addAction(android.app.Notification.Action)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+$i0 >= 23
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: fr.s13d.photobackup.PBJournalActivity dummyMainMethod_fr_s13d_photobackup_PBJournalActivity(android.content.Intent)>[]--><fr.s13d.photobackup.PBJournalActivity: void onCreate(android.os.Bundle)>[]--><fr.s13d.photobackup.PBMediaSender: void <init>(android.content.Context)>[[$i0 >= 23]]--><android.app.Notification.Builder: android.app.Notification.Builder addAction(android.app.Notification.Action)>
+One road protect good!
+$i0 == 0
+$i0 >= 23
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: fr.s13d.photobackup.PBActivity dummyMainMethod_fr_s13d_photobackup_PBActivity(android.content.Intent)>[]--><fr.s13d.photobackup.preferences.PBPreferenceFragment: void onSharedPreferenceChanged(android.content.SharedPreferences,java.lang.String)>[]--><fr.s13d.photobackup.preferences.PBPreferenceFragment: void startOrStopService(android.content.SharedPreferences)>[]--><fr.s13d.photobackup.preferences.PBPreferenceFragment: void checkPermissions()>[[$i0 == 0]]--><fr.s13d.photobackup.preferences.PBPreferenceFragment: void testMediaSender()>[]--><fr.s13d.photobackup.PBMediaSender: void <init>(android.content.Context)>[[$i0 >= 23]]--><android.app.Notification.Builder: android.app.Notification.Builder addAction(android.app.Notification.Action)>
+One road protect good!
+$i0 >= 23
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: fr.s13d.photobackup.PBService dummyMainMethod_fr_s13d_photobackup_PBService(android.content.Intent)>[]--><fr.s13d.photobackup.PBService: void onCreate()>[]--><fr.s13d.photobackup.PBMediaSender: void <init>(android.content.Context)>[[$i0 >= 23]]--><android.app.Notification.Builder: android.app.Notification.Builder addAction(android.app.Notification.Action)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 10 Potential Issue API: SDKCheck of <android.app.Activity: void onRequestPermissionsResult(int,java.lang.String[],int[])> is checking!!!
+The life time of api is [23,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 21 22 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: fr.s13d.photobackup.PBActivity dummyMainMethod_fr_s13d_photobackup_PBActivity(android.content.Intent)>[]--><fr.s13d.photobackup.PBActivity: void onRequestPermissionsResult(int,java.lang.String[],int[])>[]--><android.app.Activity: void onRequestPermissionsResult(int,java.lang.String[],int[])>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.app.Activity: void onRequestPermissionsResult(int,java.lang.String[],int[])>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:8
+crashApisInMain:5
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 11 Potential Issue API: SDKCheck of <android.app.Notification.Action.Builder: void <init>(int,java.lang.CharSequence,android.app.PendingIntent)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+$i0 >= 23
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: fr.s13d.photobackup.PBJournalActivity dummyMainMethod_fr_s13d_photobackup_PBJournalActivity(android.content.Intent)>[]--><fr.s13d.photobackup.PBJournalActivity: void onCreate(android.os.Bundle)>[]--><fr.s13d.photobackup.PBMediaSender: void <init>(android.content.Context)>[[$i0 >= 23]]--><android.app.Notification.Action.Builder: void <init>(int,java.lang.CharSequence,android.app.PendingIntent)>
+One road protect good!
+$i0 == 0
+$i0 >= 23
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: fr.s13d.photobackup.PBActivity dummyMainMethod_fr_s13d_photobackup_PBActivity(android.content.Intent)>[]--><fr.s13d.photobackup.preferences.PBPreferenceFragment: void onSharedPreferenceChanged(android.content.SharedPreferences,java.lang.String)>[]--><fr.s13d.photobackup.preferences.PBPreferenceFragment: void startOrStopService(android.content.SharedPreferences)>[]--><fr.s13d.photobackup.preferences.PBPreferenceFragment: void checkPermissions()>[[$i0 == 0]]--><fr.s13d.photobackup.preferences.PBPreferenceFragment: void testMediaSender()>[]--><fr.s13d.photobackup.PBMediaSender: void <init>(android.content.Context)>[[$i0 >= 23]]--><android.app.Notification.Action.Builder: void <init>(int,java.lang.CharSequence,android.app.PendingIntent)>
+One road protect good!
+$i0 >= 23
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: fr.s13d.photobackup.PBService dummyMainMethod_fr_s13d_photobackup_PBService(android.content.Intent)>[]--><fr.s13d.photobackup.PBService: void onCreate()>[]--><fr.s13d.photobackup.PBMediaSender: void <init>(android.content.Context)>[[$i0 >= 23]]--><android.app.Notification.Action.Builder: void <init>(int,java.lang.CharSequence,android.app.PendingIntent)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+crashApis numbers:8
+crashApis numbers in main road:5
+On Android Version 16 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 17 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 18 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 19 this app may have error api use(at least): 4 and error api roads: 4
+On Android Version 20 this app may have error api use(at least): 4 and error api roads: 4
+On Android Version 21 this app may have error api use(at least): 1 and error api roads: 1
+On Android Version 22 this app may have error api use(at least): 1 and error api roads: 1
+On Android Version 23 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 24 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 25 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 1 and error api roads: 4
+On Android Version 31 this app may have error api use(at least): 4 and error api roads: 13

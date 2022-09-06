@@ -1,0 +1,897 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/sg_for_SteamGifts.apk
+Entry Points[net.mabako.steamgifts.activities.WebViewActivity, net.mabako.steamgifts.receivers.CheckForNewMessages, net.mabako.sgtools.SGToolsLoginActivity, net.mabako.steamgifts.activities.DetailActivity, net.mabako.steamgifts.activities.LoginActivity, net.mabako.steamgifts.activities.SettingsActivity, net.mabako.steamgifts.activities.UrlHandlingActivity, net.mabako.steamgifts.activities.WriteCommentActivity, net.mabako.steamgifts.receivers.BootReceiver, net.mabako.steamgifts.intro.IntroActivity, net.mabako.steamgifts.receivers.CheckForWonGiveaways, net.mabako.steamgifts.Application, net.mabako.steamgifts.activities.MainActivity, net.mabako.steamgifts.activities.AboutActivity, net.mabako.steamgifts.activities.SyncActivity]
+FllowDroidcallgraph size:5995
+Soot started on Mon Jul 11 12:02:33 CST 2022
+StaticCheck:<com.wefika.flowlayout.FlowLayout: boolean isIcs()>$yysi0 < 14
+StaticCheck:<pl.droidsonroids.gif.GifViewUtils: boolean setResource(android.widget.ImageView,boolean,int)>$yysi0 < 16
+Soot finished on Mon Jul 11 12:03:00 CST 2022
+Soot has run for 0 min. 27 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 19
+Declared Target Sdk version is: 25
+Declared Max Sdk version is: -1
+Collected 928 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.app.Activity: void requestPermissions(java.lang.String[],int)> is checking!!!
+The life time of api is [23,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+-$i1 < 23
+Good road: <com.github.paolorotolo.appintro.AppIntro2$1: void onClick(android.view.View)>[[-$i1 < 23]]--><android.app.Activity: void requestPermissions(java.lang.String[],int)>
+One road protect good!
+-$i1 < 23
+Good road: <com.github.paolorotolo.appintro.AppIntro$2: void onClick(android.view.View)>[[-$i1 < 23]]--><android.app.Activity: void requestPermissions(java.lang.String[],int)>
+One road protect good!
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.os.BaseBundle: int getInt(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+3call roads:
+0 Mainhead roads:
+3 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <com.github.paolorotolo.appintro.AppIntro: void onCreate(android.os.Bundle)>[]--><com.github.paolorotolo.appintro.AppIntro: void restoreLockingState(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#1.the call statck between class <com.github.paolorotolo.appintro.AppIntro: void onCreate(android.os.Bundle)> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <com.github.paolorotolo.appintro.AppIntroFragment: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#2.the call statck between class <com.github.paolorotolo.appintro.AppIntroFragment: void onCreate(android.os.Bundle)> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: net.mabako.steamgifts.intro.IntroActivity dummyMainMethod_net_mabako_steamgifts_intro_IntroActivity(android.content.Intent)>[]--><com.github.paolorotolo.appintro.AppIntro2: void onCreate(android.os.Bundle)>[]--><com.github.paolorotolo.appintro.AppIntro2: void restoreLockingState(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#3.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:1
+containsStatic:false
+containsTry:false
+4call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()> is checking!!!
+The life time of api is [1,30]
+3call roads:
+0 Mainhead roads:
+3 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <com.squareup.picasso.Dispatcher$DispatcherHandler: void handleMessage(android.os.Message)>[]--><com.squareup.picasso.Dispatcher: void performRetry(com.squareup.picasso.BitmapHunter)>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>
+#1.the call statck between class <com.squareup.picasso.Dispatcher$DispatcherHandler: void handleMessage(android.os.Message)> to <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: net.mabako.steamgifts.receivers.CheckForNewMessages dummyMainMethod_net_mabako_steamgifts_receivers_CheckForNewMessages(android.content.Intent)>[]--><net.mabako.steamgifts.receivers.CheckForNewMessages: void onReceive(android.content.Context,android.content.Intent)>[]--><net.mabako.steamgifts.receivers.AbstractNotificationCheckReceiver: boolean shouldRunNetworkTask(java.lang.String,android.content.Context)>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: net.mabako.steamgifts.receivers.CheckForWonGiveaways dummyMainMethod_net_mabako_steamgifts_receivers_CheckForWonGiveaways(android.content.Intent)>[]--><net.mabako.steamgifts.receivers.CheckForWonGiveaways: void onReceive(android.content.Context,android.content.Intent)>[]--><net.mabako.steamgifts.receivers.AbstractNotificationCheckReceiver: boolean shouldRunNetworkTask(java.lang.String,android.content.Context)>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>
+#2.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <com.squareup.picasso.Dispatcher$NetworkBroadcastReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>
+#3.the call statck between class <com.squareup.picasso.Dispatcher$NetworkBroadcastReceiver: void onReceive(android.content.Context,android.content.Intent)> to <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>has compatibility isssues！
+-----------------------------------------
+crashApis:2
+containsStatic:false
+containsTry:false
+4call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.os.BaseBundle: boolean containsKey(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <com.github.paolorotolo.appintro.AppIntroFragment: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: boolean containsKey(java.lang.String)>
+#1.the call statck between class <com.github.paolorotolo.appintro.AppIntroFragment: void onCreate(android.os.Bundle)> to <android.os.BaseBundle: boolean containsKey(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <net.mabako.steamgifts.fragments.ListFragment$BundleEquality: boolean equalBundles(android.os.Bundle,android.os.Bundle)>[]--><android.os.BaseBundle: boolean containsKey(java.lang.String)>
+#2.the call statck between class <net.mabako.steamgifts.fragments.ListFragment$BundleEquality: boolean equalBundles(android.os.Bundle,android.os.Bundle)> to <android.os.BaseBundle: boolean containsKey(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:3
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)> is checking!!!
+The life time of api is [21,31]
+49call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <net.mabako.steamgifts.activities.MainActivity: void onActivityResult(int,int,android.content.Intent)>[]--><net.mabako.steamgifts.activities.MainActivity: void onAccountChange()>[]--><net.mabako.steamgifts.activities.Navbar: void reconfigure()>[]--><com.mikepenz.materialdrawer.AccountHeader: void addProfile(com.mikepenz.materialdrawer.model.interfaces.IProfile,int)>[]--><com.mikepenz.materialdrawer.AccountHeaderBuilder: void updateHeaderAndList()>[]--><com.mikepenz.materialdrawer.AccountHeaderBuilder: void buildDrawerSelectionList()>[]--><com.mikepenz.materialdrawer.Drawer: void switchDrawerContent(com.mikepenz.materialdrawer.Drawer$OnDrawerItemClickListener,com.mikepenz.materialdrawer.Drawer$OnDrawerItemLongClickListener,java.util.List,int)>[]--><com.mikepenz.materialdrawer.Drawer: boolean setSelectionAtPosition(int,boolean)>[]--><com.mikepenz.fastadapter.FastAdapter: void select(int,boolean)>[]--><com.mikepenz.fastadapter.FastAdapter: void select(int,boolean,boolean)>[]--><com.mikepenz.materialdrawer.DrawerBuilder$5: boolean onClick(android.view.View,com.mikepenz.fastadapter.IAdapter,com.mikepenz.fastadapter.IItem,int)>[]--><com.mikepenz.materialdrawer.DrawerBuilder$5: boolean onClick(android.view.View,com.mikepenz.fastadapter.IAdapter,com.mikepenz.materialdrawer.model.interfaces.IDrawerItem,int)>[]--><net.mabako.steamgifts.activities.Navbar$5: boolean onItemClick(android.view.View,int,com.mikepenz.materialdrawer.model.interfaces.IDrawerItem)>[]--><net.mabako.steamgifts.fragments.GiveawayListFragment: net.mabako.steamgifts.fragments.GiveawayListFragment newInstance(net.mabako.steamgifts.fragments.GiveawayListFragment$Type,java.lang.String,boolean)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+!!!this api will crash on sdk 19 20 
+Error road: <net.mabako.steamgifts.activities.MainActivity: void onActivityResult(int,int,android.content.Intent)>[]--><net.mabako.steamgifts.activities.Navbar: void reconfigure()>[]--><com.mikepenz.materialdrawer.AccountHeader: void addProfile(com.mikepenz.materialdrawer.model.interfaces.IProfile,int)>[]--><com.mikepenz.materialdrawer.AccountHeaderBuilder: void updateHeaderAndList()>[]--><com.mikepenz.materialdrawer.AccountHeaderBuilder: void buildDrawerSelectionList()>[]--><com.mikepenz.materialdrawer.Drawer: void switchDrawerContent(com.mikepenz.materialdrawer.Drawer$OnDrawerItemClickListener,com.mikepenz.materialdrawer.Drawer$OnDrawerItemLongClickListener,java.util.List,int)>[]--><com.mikepenz.materialdrawer.Drawer: boolean setSelectionAtPosition(int,boolean)>[]--><com.mikepenz.fastadapter.FastAdapter: void select(int,boolean)>[]--><com.mikepenz.fastadapter.FastAdapter: void select(int,boolean,boolean)>[]--><com.mikepenz.materialdrawer.DrawerBuilder$5: boolean onClick(android.view.View,com.mikepenz.fastadapter.IAdapter,com.mikepenz.fastadapter.IItem,int)>[]--><com.mikepenz.materialdrawer.DrawerBuilder$5: boolean onClick(android.view.View,com.mikepenz.fastadapter.IAdapter,com.mikepenz.materialdrawer.model.interfaces.IDrawerItem,int)>[]--><net.mabako.steamgifts.activities.Navbar$5: boolean onItemClick(android.view.View,int,com.mikepenz.materialdrawer.model.interfaces.IDrawerItem)>[]--><net.mabako.steamgifts.fragments.GiveawayListFragment: net.mabako.steamgifts.fragments.GiveawayListFragment newInstance(net.mabako.steamgifts.fragments.GiveawayListFragment$Type,java.lang.String,boolean)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+!!!this api will crash on sdk 19 20 
+Error road: <net.mabako.steamgifts.activities.MainActivity: void onActivityResult(int,int,android.content.Intent)>[]--><net.mabako.steamgifts.activities.Navbar: void setSelection(int)>[]--><com.mikepenz.materialdrawer.Drawer: boolean setSelection(long,boolean)>[]--><com.mikepenz.materialdrawer.Drawer: boolean setSelectionAtPosition(int,boolean)>[]--><com.mikepenz.fastadapter.FastAdapter: void select(int,boolean)>[]--><com.mikepenz.fastadapter.FastAdapter: void select(int,boolean,boolean)>[]--><com.mikepenz.materialdrawer.DrawerBuilder$5: boolean onClick(android.view.View,com.mikepenz.fastadapter.IAdapter,com.mikepenz.fastadapter.IItem,int)>[]--><com.mikepenz.materialdrawer.DrawerBuilder$5: boolean onClick(android.view.View,com.mikepenz.fastadapter.IAdapter,com.mikepenz.materialdrawer.model.interfaces.IDrawerItem,int)>[]--><net.mabako.steamgifts.activities.Navbar$5: boolean onItemClick(android.view.View,int,com.mikepenz.materialdrawer.model.interfaces.IDrawerItem)>[]--><net.mabako.steamgifts.fragments.GiveawayListFragment: net.mabako.steamgifts.fragments.GiveawayListFragment newInstance(net.mabako.steamgifts.fragments.GiveawayListFragment$Type,java.lang.String,boolean)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#1.the call statck between class <net.mabako.steamgifts.activities.MainActivity: void onActivityResult(int,int,android.content.Intent)> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+48 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <com.mikepenz.materialdrawer.AccountHeaderBuilder$6: void onClick(android.view.View)>[]--><com.mikepenz.materialdrawer.AccountHeaderBuilder: void toggleSelectionList(android.content.Context)>[]--><com.mikepenz.materialdrawer.AccountHeaderBuilder: void resetDrawerContent(android.content.Context)>[]--><com.mikepenz.materialdrawer.Drawer: void resetDrawerContent()>[]--><com.mikepenz.fastadapter.FastAdapter: com.mikepenz.fastadapter.FastAdapter withSavedInstanceState(android.os.Bundle)>[]--><com.mikepenz.fastadapter.FastAdapter: com.mikepenz.fastadapter.FastAdapter withSavedInstanceState(android.os.Bundle,java.lang.String)>[]--><com.mikepenz.fastadapter.FastAdapter: void select(int)>[]--><com.mikepenz.fastadapter.FastAdapter: void select(int,boolean)>[]--><com.mikepenz.fastadapter.FastAdapter: void select(int,boolean,boolean)>[]--><com.mikepenz.materialdrawer.DrawerBuilder$5: boolean onClick(android.view.View,com.mikepenz.fastadapter.IAdapter,com.mikepenz.fastadapter.IItem,int)>[]--><com.mikepenz.materialdrawer.DrawerBuilder$5: boolean onClick(android.view.View,com.mikepenz.fastadapter.IAdapter,com.mikepenz.materialdrawer.model.interfaces.IDrawerItem,int)>[]--><net.mabako.steamgifts.activities.Navbar$5: boolean onItemClick(android.view.View,int,com.mikepenz.materialdrawer.model.interfaces.IDrawerItem)>[]--><net.mabako.steamgifts.fragments.GiveawayListFragment: net.mabako.steamgifts.fragments.GiveawayListFragment newInstance(net.mabako.steamgifts.fragments.GiveawayListFragment$Type,java.lang.String,boolean)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#1.the call statck between class <com.mikepenz.materialdrawer.AccountHeaderBuilder$6: void onClick(android.view.View)> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <com.mikepenz.materialdrawer.Drawer: boolean setSelection(long)>[]--><com.mikepenz.materialdrawer.Drawer: boolean setSelectionAtPosition(int,boolean)>[]--><com.mikepenz.fastadapter.FastAdapter: void select(int,boolean)>[]--><com.mikepenz.fastadapter.FastAdapter: void select(int,boolean,boolean)>[]--><com.mikepenz.materialdrawer.DrawerBuilder$5: boolean onClick(android.view.View,com.mikepenz.fastadapter.IAdapter,com.mikepenz.fastadapter.IItem,int)>[]--><com.mikepenz.materialdrawer.DrawerBuilder$5: boolean onClick(android.view.View,com.mikepenz.fastadapter.IAdapter,com.mikepenz.materialdrawer.model.interfaces.IDrawerItem,int)>[]--><net.mabako.steamgifts.activities.Navbar$5: boolean onItemClick(android.view.View,int,com.mikepenz.materialdrawer.model.interfaces.IDrawerItem)>[]--><net.mabako.steamgifts.fragments.GiveawayListFragment: net.mabako.steamgifts.fragments.GiveawayListFragment newInstance(net.mabako.steamgifts.fragments.GiveawayListFragment$Type,java.lang.String,boolean)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#2.the call statck between class <com.mikepenz.materialdrawer.Drawer: boolean setSelection(long)> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <net.mabako.steamgifts.fragments.UserDetailFragment$UserTradeFeedbackListFragment: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#5.the call statck between class <net.mabako.steamgifts.fragments.UserDetailFragment$UserTradeFeedbackListFragment: void onSaveInstanceState(android.os.Bundle)> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <net.mabako.steamgifts.fragments.GiveawayDetailFragment: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)>[]--><net.mabako.steamgifts.fragments.GiveawayDetailFragment: void onPostGiveawayLoaded(net.mabako.steamgifts.data.Giveaway,boolean)>[]--><net.mabako.steam.store.StoreAppFragment: net.mabako.steam.store.StoreAppFragment newInstance(int,boolean)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#6.the call statck between class <net.mabako.steamgifts.fragments.GiveawayDetailFragment: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <net.mabako.steamgifts.activities.Navbar$4: void onDrawerSlide(android.view.View,float)>[]--><com.mikepenz.materialdrawer.AccountHeader: void updateProfile(com.mikepenz.materialdrawer.model.interfaces.IProfile)>[]--><com.mikepenz.materialdrawer.AccountHeader: void updateProfileByIdentifier(com.mikepenz.materialdrawer.model.interfaces.IProfile)>[]--><com.mikepenz.materialdrawer.AccountHeaderBuilder: void updateHeaderAndList()>[]--><com.mikepenz.materialdrawer.AccountHeaderBuilder: void buildDrawerSelectionList()>[]--><com.mikepenz.materialdrawer.Drawer: void switchDrawerContent(com.mikepenz.materialdrawer.Drawer$OnDrawerItemClickListener,com.mikepenz.materialdrawer.Drawer$OnDrawerItemLongClickListener,java.util.List,int)>[]--><com.mikepenz.materialdrawer.Drawer: boolean setSelectionAtPosition(int,boolean)>[]--><com.mikepenz.fastadapter.FastAdapter: void select(int,boolean)>[]--><com.mikepenz.fastadapter.FastAdapter: void select(int,boolean,boolean)>[]--><com.mikepenz.materialdrawer.DrawerBuilder$5: boolean onClick(android.view.View,com.mikepenz.fastadapter.IAdapter,com.mikepenz.fastadapter.IItem,int)>[]--><com.mikepenz.materialdrawer.DrawerBuilder$5: boolean onClick(android.view.View,com.mikepenz.fastadapter.IAdapter,com.mikepenz.materialdrawer.model.interfaces.IDrawerItem,int)>[]--><net.mabako.steamgifts.activities.Navbar$5: boolean onItemClick(android.view.View,int,com.mikepenz.materialdrawer.model.interfaces.IDrawerItem)>[]--><net.mabako.steamgifts.fragments.GiveawayListFragment: net.mabako.steamgifts.fragments.GiveawayListFragment newInstance(net.mabako.steamgifts.fragments.GiveawayListFragment$Type,java.lang.String,boolean)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#7.the call statck between class <net.mabako.steamgifts.activities.Navbar$4: void onDrawerSlide(android.view.View,float)> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <net.mabako.steamgifts.fragments.WhitelistBlacklistFragment: void onSaveInstanceState(android.os.Bundle)>[]--><net.mabako.steamgifts.fragments.SearchableListFragment: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#8.the call statck between class <net.mabako.steamgifts.fragments.WhitelistBlacklistFragment: void onSaveInstanceState(android.os.Bundle)> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <net.mabako.steamgifts.fragments.HiddenGamesFragment: void onSaveInstanceState(android.os.Bundle)>[]--><net.mabako.steamgifts.fragments.SearchableListFragment: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#9.the call statck between class <net.mabako.steamgifts.fragments.HiddenGamesFragment: void onSaveInstanceState(android.os.Bundle)> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <com.mikepenz.materialdrawer.AccountHeader: void addProfiles(com.mikepenz.materialdrawer.model.interfaces.IProfile[])>[]--><com.mikepenz.materialdrawer.AccountHeaderBuilder: void updateHeaderAndList()>[]--><com.mikepenz.materialdrawer.AccountHeaderBuilder: void buildDrawerSelectionList()>[]--><com.mikepenz.materialdrawer.Drawer: void switchDrawerContent(com.mikepenz.materialdrawer.Drawer$OnDrawerItemClickListener,com.mikepenz.materialdrawer.Drawer$OnDrawerItemLongClickListener,java.util.List,int)>[]--><com.mikepenz.materialdrawer.Drawer: boolean setSelectionAtPosition(int,boolean)>[]--><com.mikepenz.fastadapter.FastAdapter: void select(int,boolean)>[]--><com.mikepenz.fastadapter.FastAdapter: void select(int,boolean,boolean)>[]--><com.mikepenz.materialdrawer.DrawerBuilder$5: boolean onClick(android.view.View,com.mikepenz.fastadapter.IAdapter,com.mikepenz.fastadapter.IItem,int)>[]--><com.mikepenz.materialdrawer.DrawerBuilder$5: boolean onClick(android.view.View,com.mikepenz.fastadapter.IAdapter,com.mikepenz.materialdrawer.model.interfaces.IDrawerItem,int)>[]--><net.mabako.steamgifts.activities.Navbar$5: boolean onItemClick(android.view.View,int,com.mikepenz.materialdrawer.model.interfaces.IDrawerItem)>[]--><net.mabako.steamgifts.fragments.GiveawayListFragment: net.mabako.steamgifts.fragments.GiveawayListFragment newInstance(net.mabako.steamgifts.fragments.GiveawayListFragment$Type,java.lang.String,boolean)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#10.the call statck between class <com.mikepenz.materialdrawer.AccountHeader: void addProfiles(com.mikepenz.materialdrawer.model.interfaces.IProfile[])> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:4
+crashApisInMain:1
+containsStatic:false
+containsTry:false
+11call by main package
+-----------------------------------------
+#################################################
+N 5 Potential Issue API: SDKCheck of <android.content.res.Resources: android.graphics.drawable.Drawable getDrawable(int,android.content.res.Resources.Theme)> is checking!!!
+The life time of api is [21,31]
+6call roads:
+0 Mainhead roads:
+6 Packageshead roads:
+-$i1 < 21
+Good road: <pl.droidsonroids.gif.GifTextView: void <init>(android.content.Context,android.util.AttributeSet,int,int)>[]--><pl.droidsonroids.gif.GifTextView: void init(android.util.AttributeSet,int,int)>[]--><pl.droidsonroids.gif.GifTextView: android.graphics.drawable.Drawable getGifOrDefaultDrawable(int)>[[-$i1 < 21]]--><android.content.res.Resources: android.graphics.drawable.Drawable getDrawable(int,android.content.res.Resources.Theme)>
+One road protect good!
+-$i1 < 21
+Good road: <pl.droidsonroids.gif.GifTextView: void setCompoundDrawablesWithIntrinsicBounds(int,int,int,int)>[]--><pl.droidsonroids.gif.GifTextView: android.graphics.drawable.Drawable getGifOrDefaultDrawable(int)>[[-$i1 < 21]]--><android.content.res.Resources: android.graphics.drawable.Drawable getDrawable(int,android.content.res.Resources.Theme)>
+One road protect good!
+-$i1 < 21
+Good road: <pl.droidsonroids.gif.GifTextView: void setCompoundDrawablesRelativeWithIntrinsicBounds(int,int,int,int)>[]--><pl.droidsonroids.gif.GifTextView: android.graphics.drawable.Drawable getGifOrDefaultDrawable(int)>[[-$i1 < 21]]--><android.content.res.Resources: android.graphics.drawable.Drawable getDrawable(int,android.content.res.Resources.Theme)>
+One road protect good!
+-$i1 < 21
+Good road: <pl.droidsonroids.gif.GifTextView: void setBackgroundResource(int)>[]--><pl.droidsonroids.gif.GifTextView: android.graphics.drawable.Drawable getGifOrDefaultDrawable(int)>[[-$i1 < 21]]--><android.content.res.Resources: android.graphics.drawable.Drawable getDrawable(int,android.content.res.Resources.Theme)>
+One road protect good!
+-$i1 < 21
+Good road: <pl.droidsonroids.gif.GifTextView: void <init>(android.content.Context,android.util.AttributeSet,int)>[]--><pl.droidsonroids.gif.GifTextView: void init(android.util.AttributeSet,int,int)>[]--><pl.droidsonroids.gif.GifTextView: android.graphics.drawable.Drawable getGifOrDefaultDrawable(int)>[[-$i1 < 21]]--><android.content.res.Resources: android.graphics.drawable.Drawable getDrawable(int,android.content.res.Resources.Theme)>
+One road protect good!
+-$i1 < 21
+Good road: <pl.droidsonroids.gif.GifTextView: void <init>(android.content.Context,android.util.AttributeSet)>[]--><pl.droidsonroids.gif.GifTextView: void init(android.util.AttributeSet,int,int)>[]--><pl.droidsonroids.gif.GifTextView: android.graphics.drawable.Drawable getGifOrDefaultDrawable(int)>[[-$i1 < 21]]--><android.content.res.Resources: android.graphics.drawable.Drawable getDrawable(int,android.content.res.Resources.Theme)>
+One road protect good!
+containsStatic:false
+containsTry:false
+7call by main package
+-----------------------------------------
+#################################################
+N 6 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)> is checking!!!
+The life time of api is [22,31]
+46call roads:
+2 Mainhead roads:
+!!!this api will crash on sdk 19 20 21 
+Error road: <net.mabako.steamgifts.activities.MainActivity: void onActivityResult(int,int,android.content.Intent)>[]--><net.mabako.steamgifts.activities.MainActivity: void onAccountChange()>[]--><net.mabako.steamgifts.activities.Navbar: void reconfigure()>[]--><com.mikepenz.materialdrawer.AccountHeader: void addProfile(com.mikepenz.materialdrawer.model.interfaces.IProfile,int)>[]--><com.mikepenz.materialdrawer.AccountHeaderBuilder: void updateHeaderAndList()>[]--><com.mikepenz.materialdrawer.AccountHeaderBuilder: void buildDrawerSelectionList()>[]--><com.mikepenz.materialdrawer.Drawer: void switchDrawerContent(com.mikepenz.materialdrawer.Drawer$OnDrawerItemClickListener,com.mikepenz.materialdrawer.Drawer$OnDrawerItemLongClickListener,java.util.List,int)>[]--><com.mikepenz.materialdrawer.Drawer: boolean setSelectionAtPosition(int,boolean)>[]--><com.mikepenz.fastadapter.FastAdapter: void select(int,boolean)>[]--><com.mikepenz.fastadapter.FastAdapter: void select(int,boolean,boolean)>[]--><com.mikepenz.materialdrawer.DrawerBuilder$5: boolean onClick(android.view.View,com.mikepenz.fastadapter.IAdapter,com.mikepenz.fastadapter.IItem,int)>[]--><com.mikepenz.materialdrawer.DrawerBuilder$5: boolean onClick(android.view.View,com.mikepenz.fastadapter.IAdapter,com.mikepenz.materialdrawer.model.interfaces.IDrawerItem,int)>[]--><net.mabako.steamgifts.activities.Navbar$5: boolean onItemClick(android.view.View,int,com.mikepenz.materialdrawer.model.interfaces.IDrawerItem)>[]--><net.mabako.steamgifts.fragments.GiveawayListFragment: net.mabako.steamgifts.fragments.GiveawayListFragment newInstance(net.mabako.steamgifts.fragments.GiveawayListFragment$Type,java.lang.String,boolean)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+!!!this api will crash on sdk 19 20 21 
+Error road: <net.mabako.steamgifts.activities.MainActivity: void onActivityResult(int,int,android.content.Intent)>[]--><net.mabako.steamgifts.activities.Navbar: void reconfigure()>[]--><com.mikepenz.materialdrawer.AccountHeader: void addProfile(com.mikepenz.materialdrawer.model.interfaces.IProfile,int)>[]--><com.mikepenz.materialdrawer.AccountHeaderBuilder: void updateHeaderAndList()>[]--><com.mikepenz.materialdrawer.AccountHeaderBuilder: void buildDrawerSelectionList()>[]--><com.mikepenz.materialdrawer.Drawer: void switchDrawerContent(com.mikepenz.materialdrawer.Drawer$OnDrawerItemClickListener,com.mikepenz.materialdrawer.Drawer$OnDrawerItemLongClickListener,java.util.List,int)>[]--><com.mikepenz.materialdrawer.Drawer: boolean setSelectionAtPosition(int,boolean)>[]--><com.mikepenz.fastadapter.FastAdapter: void select(int,boolean)>[]--><com.mikepenz.fastadapter.FastAdapter: void select(int,boolean,boolean)>[]--><com.mikepenz.materialdrawer.DrawerBuilder$5: boolean onClick(android.view.View,com.mikepenz.fastadapter.IAdapter,com.mikepenz.fastadapter.IItem,int)>[]--><com.mikepenz.materialdrawer.DrawerBuilder$5: boolean onClick(android.view.View,com.mikepenz.fastadapter.IAdapter,com.mikepenz.materialdrawer.model.interfaces.IDrawerItem,int)>[]--><net.mabako.steamgifts.activities.Navbar$5: boolean onItemClick(android.view.View,int,com.mikepenz.materialdrawer.model.interfaces.IDrawerItem)>[]--><net.mabako.steamgifts.fragments.GiveawayListFragment: net.mabako.steamgifts.fragments.GiveawayListFragment newInstance(net.mabako.steamgifts.fragments.GiveawayListFragment$Type,java.lang.String,boolean)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+!!!this api will crash on sdk 19 20 21 
+Error road: <net.mabako.steamgifts.activities.MainActivity: void onActivityResult(int,int,android.content.Intent)>[]--><net.mabako.steamgifts.activities.Navbar: void setSelection(int)>[]--><com.mikepenz.materialdrawer.Drawer: boolean setSelection(long,boolean)>[]--><com.mikepenz.materialdrawer.Drawer: boolean setSelectionAtPosition(int,boolean)>[]--><com.mikepenz.fastadapter.FastAdapter: void select(int,boolean)>[]--><com.mikepenz.fastadapter.FastAdapter: void select(int,boolean,boolean)>[]--><com.mikepenz.materialdrawer.DrawerBuilder$5: boolean onClick(android.view.View,com.mikepenz.fastadapter.IAdapter,com.mikepenz.fastadapter.IItem,int)>[]--><com.mikepenz.materialdrawer.DrawerBuilder$5: boolean onClick(android.view.View,com.mikepenz.fastadapter.IAdapter,com.mikepenz.materialdrawer.model.interfaces.IDrawerItem,int)>[]--><net.mabako.steamgifts.activities.Navbar$5: boolean onItemClick(android.view.View,int,com.mikepenz.materialdrawer.model.interfaces.IDrawerItem)>[]--><net.mabako.steamgifts.fragments.GiveawayListFragment: net.mabako.steamgifts.fragments.GiveawayListFragment newInstance(net.mabako.steamgifts.fragments.GiveawayListFragment$Type,java.lang.String,boolean)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+#1.the call statck between class <net.mabako.steamgifts.activities.MainActivity: void onActivityResult(int,int,android.content.Intent)> to <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 21 
+Error road: <net.mabako.steamgifts.activities.WriteCommentActivity: void onSaveInstanceState(android.os.Bundle,android.os.PersistableBundle)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+#2.the call statck between class <net.mabako.steamgifts.activities.WriteCommentActivity: void onSaveInstanceState(android.os.Bundle,android.os.PersistableBundle)> to <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+44 Packageshead roads:
+!!!this api will crash on sdk 19 20 21 
+Error road: <com.mikepenz.materialdrawer.AccountHeaderBuilder$6: void onClick(android.view.View)>[]--><com.mikepenz.materialdrawer.AccountHeaderBuilder: void toggleSelectionList(android.content.Context)>[]--><com.mikepenz.materialdrawer.AccountHeaderBuilder: void resetDrawerContent(android.content.Context)>[]--><com.mikepenz.materialdrawer.Drawer: void resetDrawerContent()>[]--><com.mikepenz.fastadapter.FastAdapter: com.mikepenz.fastadapter.FastAdapter withSavedInstanceState(android.os.Bundle)>[]--><com.mikepenz.fastadapter.FastAdapter: com.mikepenz.fastadapter.FastAdapter withSavedInstanceState(android.os.Bundle,java.lang.String)>[]--><com.mikepenz.fastadapter.FastAdapter: void select(int)>[]--><com.mikepenz.fastadapter.FastAdapter: void select(int,boolean)>[]--><com.mikepenz.fastadapter.FastAdapter: void select(int,boolean,boolean)>[]--><com.mikepenz.materialdrawer.DrawerBuilder$5: boolean onClick(android.view.View,com.mikepenz.fastadapter.IAdapter,com.mikepenz.fastadapter.IItem,int)>[]--><com.mikepenz.materialdrawer.DrawerBuilder$5: boolean onClick(android.view.View,com.mikepenz.fastadapter.IAdapter,com.mikepenz.materialdrawer.model.interfaces.IDrawerItem,int)>[]--><net.mabako.steamgifts.activities.Navbar$5: boolean onItemClick(android.view.View,int,com.mikepenz.materialdrawer.model.interfaces.IDrawerItem)>[]--><net.mabako.steamgifts.fragments.GiveawayListFragment: net.mabako.steamgifts.fragments.GiveawayListFragment newInstance(net.mabako.steamgifts.fragments.GiveawayListFragment$Type,java.lang.String,boolean)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+#1.the call statck between class <com.mikepenz.materialdrawer.AccountHeaderBuilder$6: void onClick(android.view.View)> to <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 21 
+Error road: <com.mikepenz.materialdrawer.Drawer: boolean setSelection(long)>[]--><com.mikepenz.materialdrawer.Drawer: boolean setSelectionAtPosition(int,boolean)>[]--><com.mikepenz.fastadapter.FastAdapter: void select(int,boolean)>[]--><com.mikepenz.fastadapter.FastAdapter: void select(int,boolean,boolean)>[]--><com.mikepenz.materialdrawer.DrawerBuilder$5: boolean onClick(android.view.View,com.mikepenz.fastadapter.IAdapter,com.mikepenz.fastadapter.IItem,int)>[]--><com.mikepenz.materialdrawer.DrawerBuilder$5: boolean onClick(android.view.View,com.mikepenz.fastadapter.IAdapter,com.mikepenz.materialdrawer.model.interfaces.IDrawerItem,int)>[]--><net.mabako.steamgifts.activities.Navbar$5: boolean onItemClick(android.view.View,int,com.mikepenz.materialdrawer.model.interfaces.IDrawerItem)>[]--><net.mabako.steamgifts.fragments.GiveawayListFragment: net.mabako.steamgifts.fragments.GiveawayListFragment newInstance(net.mabako.steamgifts.fragments.GiveawayListFragment$Type,java.lang.String,boolean)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+#2.the call statck between class <com.mikepenz.materialdrawer.Drawer: boolean setSelection(long)> to <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 21 
+Error road: <net.mabako.steamgifts.fragments.GiveawayDetailFragment: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)>[]--><net.mabako.steamgifts.fragments.GiveawayDetailFragment: void onPostGiveawayLoaded(net.mabako.steamgifts.data.Giveaway,boolean)>[]--><net.mabako.steam.store.StoreAppFragment: net.mabako.steam.store.StoreAppFragment newInstance(int,boolean)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+#5.the call statck between class <net.mabako.steamgifts.fragments.GiveawayDetailFragment: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)> to <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 21 
+Error road: <net.mabako.steamgifts.activities.Navbar$4: void onDrawerSlide(android.view.View,float)>[]--><com.mikepenz.materialdrawer.AccountHeader: void updateProfile(com.mikepenz.materialdrawer.model.interfaces.IProfile)>[]--><com.mikepenz.materialdrawer.AccountHeader: void updateProfileByIdentifier(com.mikepenz.materialdrawer.model.interfaces.IProfile)>[]--><com.mikepenz.materialdrawer.AccountHeaderBuilder: void updateHeaderAndList()>[]--><com.mikepenz.materialdrawer.AccountHeaderBuilder: void buildDrawerSelectionList()>[]--><com.mikepenz.materialdrawer.Drawer: void switchDrawerContent(com.mikepenz.materialdrawer.Drawer$OnDrawerItemClickListener,com.mikepenz.materialdrawer.Drawer$OnDrawerItemLongClickListener,java.util.List,int)>[]--><com.mikepenz.materialdrawer.Drawer: boolean setSelectionAtPosition(int,boolean)>[]--><com.mikepenz.fastadapter.FastAdapter: void select(int,boolean)>[]--><com.mikepenz.fastadapter.FastAdapter: void select(int,boolean,boolean)>[]--><com.mikepenz.materialdrawer.DrawerBuilder$5: boolean onClick(android.view.View,com.mikepenz.fastadapter.IAdapter,com.mikepenz.fastadapter.IItem,int)>[]--><com.mikepenz.materialdrawer.DrawerBuilder$5: boolean onClick(android.view.View,com.mikepenz.fastadapter.IAdapter,com.mikepenz.materialdrawer.model.interfaces.IDrawerItem,int)>[]--><net.mabako.steamgifts.activities.Navbar$5: boolean onItemClick(android.view.View,int,com.mikepenz.materialdrawer.model.interfaces.IDrawerItem)>[]--><net.mabako.steamgifts.fragments.GiveawayListFragment: net.mabako.steamgifts.fragments.GiveawayListFragment newInstance(net.mabako.steamgifts.fragments.GiveawayListFragment$Type,java.lang.String,boolean)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+#6.the call statck between class <net.mabako.steamgifts.activities.Navbar$4: void onDrawerSlide(android.view.View,float)> to <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 21 
+Error road: <net.mabako.steamgifts.fragments.WhitelistBlacklistFragment: void onSaveInstanceState(android.os.Bundle)>[]--><net.mabako.steamgifts.fragments.SearchableListFragment: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+#7.the call statck between class <net.mabako.steamgifts.fragments.WhitelistBlacklistFragment: void onSaveInstanceState(android.os.Bundle)> to <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 21 
+Error road: <net.mabako.steamgifts.fragments.HiddenGamesFragment: void onSaveInstanceState(android.os.Bundle)>[]--><net.mabako.steamgifts.fragments.SearchableListFragment: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+#8.the call statck between class <net.mabako.steamgifts.fragments.HiddenGamesFragment: void onSaveInstanceState(android.os.Bundle)> to <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 21 
+Error road: <com.mikepenz.materialdrawer.AccountHeader: void addProfiles(com.mikepenz.materialdrawer.model.interfaces.IProfile[])>[]--><com.mikepenz.materialdrawer.AccountHeaderBuilder: void updateHeaderAndList()>[]--><com.mikepenz.materialdrawer.AccountHeaderBuilder: void buildDrawerSelectionList()>[]--><com.mikepenz.materialdrawer.Drawer: void switchDrawerContent(com.mikepenz.materialdrawer.Drawer$OnDrawerItemClickListener,com.mikepenz.materialdrawer.Drawer$OnDrawerItemLongClickListener,java.util.List,int)>[]--><com.mikepenz.materialdrawer.Drawer: boolean setSelectionAtPosition(int,boolean)>[]--><com.mikepenz.fastadapter.FastAdapter: void select(int,boolean)>[]--><com.mikepenz.fastadapter.FastAdapter: void select(int,boolean,boolean)>[]--><com.mikepenz.materialdrawer.DrawerBuilder$5: boolean onClick(android.view.View,com.mikepenz.fastadapter.IAdapter,com.mikepenz.fastadapter.IItem,int)>[]--><com.mikepenz.materialdrawer.DrawerBuilder$5: boolean onClick(android.view.View,com.mikepenz.fastadapter.IAdapter,com.mikepenz.materialdrawer.model.interfaces.IDrawerItem,int)>[]--><net.mabako.steamgifts.activities.Navbar$5: boolean onItemClick(android.view.View,int,com.mikepenz.materialdrawer.model.interfaces.IDrawerItem)>[]--><net.mabako.steamgifts.fragments.GiveawayListFragment: net.mabako.steamgifts.fragments.GiveawayListFragment newInstance(net.mabako.steamgifts.fragments.GiveawayListFragment$Type,java.lang.String,boolean)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+#9.the call statck between class <com.mikepenz.materialdrawer.AccountHeader: void addProfiles(com.mikepenz.materialdrawer.model.interfaces.IProfile[])> to <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 21 
+Error road: <com.mikepenz.materialdrawer.AccountHeader: void setSelectionSecondLine(java.lang.String)>[]--><com.mikepenz.materialdrawer.AccountHeaderBuilder: void updateHeaderAndList()>[]--><com.mikepenz.materialdrawer.AccountHeaderBuilder: void buildDrawerSelectionList()>[]--><com.mikepenz.materialdrawer.Drawer: void switchDrawerContent(com.mikepenz.materialdrawer.Drawer$OnDrawerItemClickListener,com.mikepenz.materialdrawer.Drawer$OnDrawerItemLongClickListener,java.util.List,int)>[]--><com.mikepenz.materialdrawer.Drawer: boolean setSelectionAtPosition(int,boolean)>[]--><com.mikepenz.fastadapter.FastAdapter: void select(int,boolean)>[]--><com.mikepenz.fastadapter.FastAdapter: void select(int,boolean,boolean)>[]--><com.mikepenz.materialdrawer.DrawerBuilder$5: boolean onClick(android.view.View,com.mikepenz.fastadapter.IAdapter,com.mikepenz.fastadapter.IItem,int)>[]--><com.mikepenz.materialdrawer.DrawerBuilder$5: boolean onClick(android.view.View,com.mikepenz.fastadapter.IAdapter,com.mikepenz.materialdrawer.model.interfaces.IDrawerItem,int)>[]--><net.mabako.steamgifts.activities.Navbar$5: boolean onItemClick(android.view.View,int,com.mikepenz.materialdrawer.model.interfaces.IDrawerItem)>[]--><net.mabako.steamgifts.fragments.GiveawayListFragment: net.mabako.steamgifts.fragments.GiveawayListFragment newInstance(net.mabako.steamgifts.fragments.GiveawayListFragment$Type,java.lang.String,boolean)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+#10.the call statck between class <com.mikepenz.materialdrawer.AccountHeader: void setSelectionSecondLine(java.lang.String)> to <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+crashApis:5
+crashApisInMain:2
+containsStatic:false
+containsTry:false
+11call by main package
+-----------------------------------------
+#################################################
+N 7 Potential Issue API: SDKCheck of <android.net.NetworkInfo: int getSubtype()> is checking!!!
+The life time of api is [3,30]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <com.squareup.picasso.Dispatcher$DispatcherHandler: void handleMessage(android.os.Message)>[]--><com.squareup.picasso.Dispatcher: void performNetworkStateChange(android.net.NetworkInfo)>[]--><com.squareup.picasso.PicassoExecutorService: void adjustThreadCount(android.net.NetworkInfo)>[]--><android.net.NetworkInfo: int getSubtype()>
+#1.the call statck between class <com.squareup.picasso.Dispatcher$DispatcherHandler: void handleMessage(android.os.Message)> to <android.net.NetworkInfo: int getSubtype()>has compatibility isssues！
+-----------------------------------------
+crashApis:6
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 8 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.lang.Object get(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <net.mabako.steamgifts.fragments.ListFragment$BundleEquality: boolean equalBundles(android.os.Bundle,android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.Object get(java.lang.String)>
+#1.the call statck between class <net.mabako.steamgifts.fragments.ListFragment$BundleEquality: boolean equalBundles(android.os.Bundle,android.os.Bundle)> to <android.os.BaseBundle: java.lang.Object get(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:7
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 9 Potential Issue API: SDKCheck of <android.view.View: void setElevation(float)> is checking!!!
+The life time of api is [21,31]
+3call roads:
+0 Mainhead roads:
+3 Packageshead roads:
+###Multi invoking in one method, need manual check!!!--><com.mikepenz.materialdrawer.DrawerBuilder: void createContent()>[[$i2 >= 21], [$i4 < 21]]--><com.mikepenz.materialdrawer.DrawerUtils: void handleHeaderView(com.mikepenz.materialdrawer.DrawerBuilder)>[[-$i0 < 21]]
+###Multi invoking in one method, need manual check!!!--><com.mikepenz.materialdrawer.DrawerBuilder: void createContent()>[[$i2 >= 21]][[$i4 < 21]]--><com.mikepenz.materialdrawer.DrawerUtils: void handleHeaderView(com.mikepenz.materialdrawer.DrawerBuilder)>[[-$i0 < 21]]
+$i2 >= 21
+$i4 < 21
+-$i0 < 21
+Good road: <com.mikepenz.materialdrawer.DrawerBuilder: com.mikepenz.materialdrawer.Drawer buildForFragment()>[]--><com.mikepenz.materialdrawer.DrawerBuilder: com.mikepenz.materialdrawer.Drawer buildView()>[]--><com.mikepenz.materialdrawer.DrawerBuilder: void createContent()>[[$i2 >= 21], [$i4 < 21]]--><com.mikepenz.materialdrawer.DrawerUtils: void handleHeaderView(com.mikepenz.materialdrawer.DrawerBuilder)>[[-$i0 < 21]]--><android.view.View: void setElevation(float)>
+One road protect good!
+###Multi invoking in one method, need manual check!!!--><com.mikepenz.materialdrawer.DrawerBuilder: void createContent()>[[$i2 >= 21], [$i4 < 21]]--><com.mikepenz.materialdrawer.DrawerUtils: void handleHeaderView(com.mikepenz.materialdrawer.DrawerBuilder)>[[-$i0 < 21]]
+###Multi invoking in one method, need manual check!!!--><com.mikepenz.materialdrawer.DrawerBuilder: void createContent()>[[$i2 >= 21]][[$i4 < 21]]--><com.mikepenz.materialdrawer.DrawerUtils: void handleHeaderView(com.mikepenz.materialdrawer.DrawerBuilder)>[[-$i0 < 21]]
+$i2 >= 21
+$i4 < 21
+-$i0 < 21
+Good road: <com.mikepenz.materialdrawer.DrawerBuilder: com.mikepenz.materialdrawer.Drawer append(com.mikepenz.materialdrawer.Drawer)>[]--><com.mikepenz.materialdrawer.DrawerBuilder: void createContent()>[[$i2 >= 21], [$i4 < 21]]--><com.mikepenz.materialdrawer.DrawerUtils: void handleHeaderView(com.mikepenz.materialdrawer.DrawerBuilder)>[[-$i0 < 21]]--><android.view.View: void setElevation(float)>
+One road protect good!
+###Multi invoking in one method, need manual check!!!--><com.mikepenz.materialdrawer.DrawerBuilder: void createContent()>[[$i2 >= 21], [$i4 < 21]]--><com.mikepenz.materialdrawer.DrawerUtils: void handleHeaderView(com.mikepenz.materialdrawer.DrawerBuilder)>[[-$i0 < 21]]
+###Multi invoking in one method, need manual check!!!--><com.mikepenz.materialdrawer.DrawerBuilder: void createContent()>[[$i2 >= 21]][[$i4 < 21]]--><com.mikepenz.materialdrawer.DrawerUtils: void handleHeaderView(com.mikepenz.materialdrawer.DrawerBuilder)>[[-$i0 < 21]]
+$i2 >= 21
+$i4 < 21
+-$i0 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: net.mabako.steamgifts.activities.MainActivity dummyMainMethod_net_mabako_steamgifts_activities_MainActivity(android.content.Intent)>[]--><net.mabako.steamgifts.activities.MainActivity: void onCreate(android.os.Bundle)>[]--><net.mabako.steamgifts.activities.Navbar: void <init>(net.mabako.steamgifts.activities.CommonActivity)>[]--><com.mikepenz.materialdrawer.DrawerBuilder: com.mikepenz.materialdrawer.Drawer build()>[]--><com.mikepenz.materialdrawer.DrawerBuilder: com.mikepenz.materialdrawer.Drawer buildView()>[]--><com.mikepenz.materialdrawer.DrawerBuilder: void createContent()>[[$i2 >= 21], [$i4 < 21]]--><com.mikepenz.materialdrawer.DrawerUtils: void handleHeaderView(com.mikepenz.materialdrawer.DrawerBuilder)>[[-$i0 < 21]]--><android.view.View: void setElevation(float)>
+One road protect good!
+containsStatic:false
+containsTry:false
+4call by main package
+-----------------------------------------
+#################################################
+N 10 Potential Issue API: SDKCheck of <android.os.BaseBundle: boolean getBoolean(java.lang.String)> is checking!!!
+The life time of api is [22,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 19 20 21 
+Error road: <com.github.paolorotolo.appintro.AppIntro: void onCreate(android.os.Bundle)>[]--><com.github.paolorotolo.appintro.AppIntro: void restoreLockingState(android.os.Bundle)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+#1.the call statck between class <com.github.paolorotolo.appintro.AppIntro: void onCreate(android.os.Bundle)> to <android.os.BaseBundle: boolean getBoolean(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: net.mabako.steamgifts.intro.IntroActivity dummyMainMethod_net_mabako_steamgifts_intro_IntroActivity(android.content.Intent)>[]--><com.github.paolorotolo.appintro.AppIntro2: void onCreate(android.os.Bundle)>[]--><com.github.paolorotolo.appintro.AppIntro2: void restoreLockingState(android.os.Bundle)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+#2.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: boolean getBoolean(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:8
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 11 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.lang.String getString(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+14call roads:
+0 Mainhead roads:
+14 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <net.mabako.steamgifts.fragments.HiddenGamesFragment: void onCreate(android.os.Bundle)>[]--><net.mabako.steamgifts.fragments.SearchableListFragment: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#1.the call statck between class <net.mabako.steamgifts.fragments.HiddenGamesFragment: void onCreate(android.os.Bundle)> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+try
+Good road with try: <net.mabako.steam.store.StoreSubFragment$LoadSubTask: void onPostExecute(org.json.JSONObject)>[[try]]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+One road protect good!
+!!!this api will crash on sdk 19 20 
+Error road: <net.mabako.steamgifts.fragments.images.ImageFragment: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#3.the call statck between class <net.mabako.steamgifts.fragments.images.ImageFragment: void onCreate(android.os.Bundle)> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+try
+Good road with try: <net.mabako.steam.store.StoreAppFragment$LoadAppTask: void onPostExecute(org.json.JSONObject)>[[try]]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+One road protect good!
+!!!this api will crash on sdk 19 20 
+Error road: <net.mabako.steamgifts.fragments.DiscussionListFragment: void onCreate(android.os.Bundle)>[]--><net.mabako.steamgifts.fragments.SearchableListFragment: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#5.the call statck between class <net.mabako.steamgifts.fragments.DiscussionListFragment: void onCreate(android.os.Bundle)> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <net.mabako.steamgifts.fragments.WhitelistBlacklistFragment: void onCreate(android.os.Bundle)>[]--><net.mabako.steamgifts.fragments.SearchableListFragment: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#6.the call statck between class <net.mabako.steamgifts.fragments.WhitelistBlacklistFragment: void onCreate(android.os.Bundle)> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <net.mabako.steamgifts.fragments.SyncFragment: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#7.the call statck between class <net.mabako.steamgifts.fragments.SyncFragment: void onCreate(android.os.Bundle)> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <net.mabako.steam.store.StoreAppFragment$LoadAppTask: org.jsoup.Connection getConnection()>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#8.the call statck between class <net.mabako.steam.store.StoreAppFragment$LoadAppTask: org.jsoup.Connection getConnection()> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <net.mabako.steamgifts.fragments.UserDetailFragment$UserTradeFeedbackListFragment: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#9.the call statck between class <net.mabako.steamgifts.fragments.UserDetailFragment$UserTradeFeedbackListFragment: void onCreate(android.os.Bundle)> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <net.mabako.steam.store.StoreSubFragment$LoadSubTask: org.jsoup.Connection getConnection()>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#10.the call statck between class <net.mabako.steam.store.StoreSubFragment$LoadSubTask: org.jsoup.Connection getConnection()> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:9
+containsStatic:false
+containsTry:true
+11call by main package
+-----------------------------------------
+#################################################
+N 12 Potential Issue API: SDKCheck of <android.provider.MediaStore.Video.Thumbnails: android.graphics.Bitmap getThumbnail(android.content.ContentResolver,long,int,android.graphics.BitmapFactory.Options)> is checking!!!
+The life time of api is [5,29]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 30 31 
+Error road: <com.squareup.picasso.MediaStoreRequestHandler: com.squareup.picasso.RequestHandler$Result load(com.squareup.picasso.Request,int)>[]--><android.provider.MediaStore.Video.Thumbnails: android.graphics.Bitmap getThumbnail(android.content.ContentResolver,long,int,android.graphics.BitmapFactory.Options)>
+#1.the call statck between class <com.squareup.picasso.MediaStoreRequestHandler: com.squareup.picasso.RequestHandler$Result load(com.squareup.picasso.Request,int)> to <android.provider.MediaStore.Video.Thumbnails: android.graphics.Bitmap getThumbnail(android.content.ContentResolver,long,int,android.graphics.BitmapFactory.Options)>has compatibility isssues！
+-----------------------------------------
+crashApis:10
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 13 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putInt(java.lang.String,int)> is checking!!!
+The life time of api is [21,31]
+5call roads:
+0 Mainhead roads:
+5 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <com.github.paolorotolo.appintro.AppIntroFragment: com.github.paolorotolo.appintro.AppIntroFragment newInstance(java.lang.CharSequence,java.lang.CharSequence,int,int)>[]--><com.github.paolorotolo.appintro.AppIntroFragment: com.github.paolorotolo.appintro.AppIntroFragment newInstance(java.lang.CharSequence,java.lang.CharSequence,int,int,int,int)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#1.the call statck between class <com.github.paolorotolo.appintro.AppIntroFragment: com.github.paolorotolo.appintro.AppIntroFragment newInstance(java.lang.CharSequence,java.lang.CharSequence,int,int)> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <com.github.paolorotolo.appintro.AppIntro: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#2.the call statck between class <com.github.paolorotolo.appintro.AppIntro: void onSaveInstanceState(android.os.Bundle)> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <com.mikepenz.materialdrawer.AccountHeader: android.os.Bundle saveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#3.the call statck between class <com.mikepenz.materialdrawer.AccountHeader: android.os.Bundle saveInstanceState(android.os.Bundle)> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <com.mikepenz.materialdrawer.Drawer: android.os.Bundle saveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#4.the call statck between class <com.mikepenz.materialdrawer.Drawer: android.os.Bundle saveInstanceState(android.os.Bundle)> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: net.mabako.steamgifts.intro.IntroActivity dummyMainMethod_net_mabako_steamgifts_intro_IntroActivity(android.content.Intent)>[]--><com.github.paolorotolo.appintro.AppIntro2: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#5.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:11
+containsStatic:false
+containsTry:false
+6call by main package
+-----------------------------------------
+#################################################
+N 14 Potential Issue API: SDKCheck of <android.app.Activity: void onSaveInstanceState(android.os.Bundle,android.os.PersistableBundle)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <net.mabako.steamgifts.activities.WriteCommentActivity: void onSaveInstanceState(android.os.Bundle,android.os.PersistableBundle)>[]--><android.app.Activity: void onSaveInstanceState(android.os.Bundle,android.os.PersistableBundle)>
+#1.the call statck between class <net.mabako.steamgifts.activities.WriteCommentActivity: void onSaveInstanceState(android.os.Bundle,android.os.PersistableBundle)> to <android.app.Activity: void onSaveInstanceState(android.os.Bundle,android.os.PersistableBundle)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:12
+crashApisInMain:3
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 15 Potential Issue API: SDKCheck of <android.os.BaseBundle: int getInt(java.lang.String,int)> is checking!!!
+The life time of api is [21,31]
+3call roads:
+0 Mainhead roads:
+3 Packageshead roads:
+###Multi invoking in one method, need manual check!!!--><com.mikepenz.materialdrawer.DrawerBuilder: void createContent()>[[$i2 >= 21], [$i4 < 21]]
+###Multi invoking in one method, need manual check!!!--><com.mikepenz.materialdrawer.DrawerBuilder: void createContent()>[[$i2 >= 21]][[$i4 < 21]]
+$i2 >= 21
+$i4 < 21
+Good road: <com.mikepenz.materialdrawer.DrawerBuilder: com.mikepenz.materialdrawer.Drawer buildForFragment()>[]--><com.mikepenz.materialdrawer.DrawerBuilder: com.mikepenz.materialdrawer.Drawer buildView()>[]--><com.mikepenz.materialdrawer.DrawerBuilder: void createContent()>[[$i2 >= 21], [$i4 < 21]]--><android.os.BaseBundle: int getInt(java.lang.String,int)>
+One road protect good!
+###Multi invoking in one method, need manual check!!!--><com.mikepenz.materialdrawer.DrawerBuilder: void createContent()>[[$i2 >= 21], [$i4 < 21]]
+###Multi invoking in one method, need manual check!!!--><com.mikepenz.materialdrawer.DrawerBuilder: void createContent()>[[$i2 >= 21]][[$i4 < 21]]
+$i2 >= 21
+$i4 < 21
+Good road: <com.mikepenz.materialdrawer.DrawerBuilder: com.mikepenz.materialdrawer.Drawer append(com.mikepenz.materialdrawer.Drawer)>[]--><com.mikepenz.materialdrawer.DrawerBuilder: void createContent()>[[$i2 >= 21], [$i4 < 21]]--><android.os.BaseBundle: int getInt(java.lang.String,int)>
+One road protect good!
+i0 < 21
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: net.mabako.steamgifts.activities.MainActivity dummyMainMethod_net_mabako_steamgifts_activities_MainActivity(android.content.Intent)>[]--><net.mabako.steamgifts.activities.MainActivity: void onCreate(android.os.Bundle)>[]--><net.mabako.steamgifts.activities.Navbar: void <init>(net.mabako.steamgifts.activities.CommonActivity)>[]--><com.mikepenz.materialdrawer.AccountHeaderBuilder: com.mikepenz.materialdrawer.AccountHeader build()>[[i0 < 21]]--><android.os.BaseBundle: int getInt(java.lang.String,int)>
+#3.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: int getInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:13
+containsStatic:false
+containsTry:false
+4call by main package
+-----------------------------------------
+#################################################
+N 16 Potential Issue API: SDKCheck of <android.net.NetworkInfo: boolean isConnectedOrConnecting()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <com.squareup.picasso.Dispatcher$DispatcherHandler: void handleMessage(android.os.Message)>[]--><com.squareup.picasso.Dispatcher: void performNetworkStateChange(android.net.NetworkInfo)>[]--><com.squareup.picasso.PicassoExecutorService: void adjustThreadCount(android.net.NetworkInfo)>[]--><android.net.NetworkInfo: boolean isConnectedOrConnecting()>
+#1.the call statck between class <com.squareup.picasso.Dispatcher$DispatcherHandler: void handleMessage(android.os.Message)> to <android.net.NetworkInfo: boolean isConnectedOrConnecting()>has compatibility isssues！
+-----------------------------------------
+crashApis:14
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 17 Potential Issue API: SDKCheck of <android.view.Window: void setStatusBarColor(int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+$i0 < 16
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: net.mabako.steamgifts.activities.MainActivity dummyMainMethod_net_mabako_steamgifts_activities_MainActivity(android.content.Intent)>[]--><net.mabako.steamgifts.activities.MainActivity: void onCreate(android.os.Bundle)>[]--><net.mabako.steamgifts.activities.Navbar: void <init>(net.mabako.steamgifts.activities.CommonActivity)>[]--><com.mikepenz.materialdrawer.DrawerBuilder: com.mikepenz.materialdrawer.Drawer build()>[]--><com.mikepenz.materialize.MaterializeBuilder: com.mikepenz.materialize.Materialize build()>[[$i0 < 16]]--><android.view.Window: void setStatusBarColor(int)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 18 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.util.Set keySet()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <net.mabako.steamgifts.fragments.ListFragment$BundleEquality: boolean equalBundles(android.os.Bundle,android.os.Bundle)>[]--><android.os.BaseBundle: java.util.Set keySet()>
+#1.the call statck between class <net.mabako.steamgifts.fragments.ListFragment$BundleEquality: boolean equalBundles(android.os.Bundle,android.os.Bundle)> to <android.os.BaseBundle: java.util.Set keySet()>has compatibility isssues！
+-----------------------------------------
+crashApis:15
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 19 Potential Issue API: SDKCheck of <android.app.Activity: void onRequestPermissionsResult(int,java.lang.String[],int[])> is checking!!!
+The life time of api is [23,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 19 20 21 22 
+Error road: <com.github.paolorotolo.appintro.AppIntro2: void onRequestPermissionsResult(int,java.lang.String[],int[])>[[]]--><android.app.Activity: void onRequestPermissionsResult(int,java.lang.String[],int[])>
+#1.the call statck between class <com.github.paolorotolo.appintro.AppIntro2: void onRequestPermissionsResult(int,java.lang.String[],int[])> to <android.app.Activity: void onRequestPermissionsResult(int,java.lang.String[],int[])>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 21 22 
+Error road: <com.github.paolorotolo.appintro.AppIntro: void onRequestPermissionsResult(int,java.lang.String[],int[])>[[]]--><android.app.Activity: void onRequestPermissionsResult(int,java.lang.String[],int[])>
+#2.the call statck between class <com.github.paolorotolo.appintro.AppIntro: void onRequestPermissionsResult(int,java.lang.String[],int[])> to <android.app.Activity: void onRequestPermissionsResult(int,java.lang.String[],int[])>has compatibility isssues！
+-----------------------------------------
+crashApis:16
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 20 Potential Issue API: SDKCheck of <android.net.NetworkInfo: int getType()> is checking!!!
+The life time of api is [1,30]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <com.squareup.picasso.Dispatcher$DispatcherHandler: void handleMessage(android.os.Message)>[]--><com.squareup.picasso.Dispatcher: void performNetworkStateChange(android.net.NetworkInfo)>[]--><com.squareup.picasso.PicassoExecutorService: void adjustThreadCount(android.net.NetworkInfo)>[]--><android.net.NetworkInfo: int getType()>
+#1.the call statck between class <com.squareup.picasso.Dispatcher$DispatcherHandler: void handleMessage(android.os.Message)> to <android.net.NetworkInfo: int getType()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: net.mabako.steamgifts.receivers.CheckForNewMessages dummyMainMethod_net_mabako_steamgifts_receivers_CheckForNewMessages(android.content.Intent)>[]--><net.mabako.steamgifts.receivers.CheckForNewMessages: void onReceive(android.content.Context,android.content.Intent)>[]--><net.mabako.steamgifts.receivers.AbstractNotificationCheckReceiver: boolean shouldRunNetworkTask(java.lang.String,android.content.Context)>[]--><android.net.NetworkInfo: int getType()>
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: net.mabako.steamgifts.receivers.CheckForWonGiveaways dummyMainMethod_net_mabako_steamgifts_receivers_CheckForWonGiveaways(android.content.Intent)>[]--><net.mabako.steamgifts.receivers.CheckForWonGiveaways: void onReceive(android.content.Context,android.content.Intent)>[]--><net.mabako.steamgifts.receivers.AbstractNotificationCheckReceiver: boolean shouldRunNetworkTask(java.lang.String,android.content.Context)>[]--><android.net.NetworkInfo: int getType()>
+#2.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.NetworkInfo: int getType()>has compatibility isssues！
+-----------------------------------------
+crashApis:17
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 21 Potential Issue API: SDKCheck of <android.widget.ImageButton: void <init>(android.content.Context,android.util.AttributeSet,int,int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <pl.droidsonroids.gif.GifImageButton: void <init>(android.content.Context,android.util.AttributeSet,int,int)>[]--><android.widget.ImageButton: void <init>(android.content.Context,android.util.AttributeSet,int,int)>
+#1.the call statck between class <pl.droidsonroids.gif.GifImageButton: void <init>(android.content.Context,android.util.AttributeSet,int,int)> to <android.widget.ImageButton: void <init>(android.content.Context,android.util.AttributeSet,int,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:18
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 22 Potential Issue API: SDKCheck of <android.view.View: void setOutlineProvider(android.view.ViewOutlineProvider)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i2 < 21
+Good road: <com.mikepenz.materialdrawer.view.BezelImageView: void onSizeChanged(int,int,int,int)>[[-$i2 < 21]]--><android.view.View: void setOutlineProvider(android.view.ViewOutlineProvider)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 23 Potential Issue API: SDKCheck of <android.graphics.Outline: void setOval(int,int,int,int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <com.mikepenz.materialdrawer.view.BezelImageView$CustomOutline: void getOutline(android.view.View,android.graphics.Outline)>[]--><android.graphics.Outline: void setOval(int,int,int,int)>
+#1.the call statck between class <com.mikepenz.materialdrawer.view.BezelImageView$CustomOutline: void getOutline(android.view.View,android.graphics.Outline)> to <android.graphics.Outline: void setOval(int,int,int,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:19
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 24 Potential Issue API: SDKCheck of <android.net.NetworkInfo: boolean isConnected()> is checking!!!
+The life time of api is [1,30]
+3call roads:
+0 Mainhead roads:
+3 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <com.squareup.picasso.NetworkRequestHandler: boolean shouldRetry(boolean,android.net.NetworkInfo)>[]--><android.net.NetworkInfo: boolean isConnected()>
+#1.the call statck between class <com.squareup.picasso.NetworkRequestHandler: boolean shouldRetry(boolean,android.net.NetworkInfo)> to <android.net.NetworkInfo: boolean isConnected()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <com.squareup.picasso.Dispatcher$DispatcherHandler: void handleMessage(android.os.Message)>[]--><com.squareup.picasso.Dispatcher: void performNetworkStateChange(android.net.NetworkInfo)>[]--><android.net.NetworkInfo: boolean isConnected()>
+!!!this api will crash on sdk 31 
+Error road: <com.squareup.picasso.Dispatcher$DispatcherHandler: void handleMessage(android.os.Message)>[]--><com.squareup.picasso.Dispatcher: void performRetry(com.squareup.picasso.BitmapHunter)>[]--><android.net.NetworkInfo: boolean isConnected()>
+#2.the call statck between class <com.squareup.picasso.Dispatcher$DispatcherHandler: void handleMessage(android.os.Message)> to <android.net.NetworkInfo: boolean isConnected()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: net.mabako.steamgifts.receivers.CheckForNewMessages dummyMainMethod_net_mabako_steamgifts_receivers_CheckForNewMessages(android.content.Intent)>[]--><net.mabako.steamgifts.receivers.CheckForNewMessages: void onReceive(android.content.Context,android.content.Intent)>[]--><net.mabako.steamgifts.receivers.AbstractNotificationCheckReceiver: boolean shouldRunNetworkTask(java.lang.String,android.content.Context)>[]--><android.net.NetworkInfo: boolean isConnected()>
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: net.mabako.steamgifts.receivers.CheckForWonGiveaways dummyMainMethod_net_mabako_steamgifts_receivers_CheckForWonGiveaways(android.content.Intent)>[]--><net.mabako.steamgifts.receivers.CheckForWonGiveaways: void onReceive(android.content.Context,android.content.Intent)>[]--><net.mabako.steamgifts.receivers.AbstractNotificationCheckReceiver: boolean shouldRunNetworkTask(java.lang.String,android.content.Context)>[]--><android.net.NetworkInfo: boolean isConnected()>
+#3.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.NetworkInfo: boolean isConnected()>has compatibility isssues！
+-----------------------------------------
+crashApis:20
+containsStatic:false
+containsTry:false
+4call by main package
+-----------------------------------------
+#################################################
+N 25 Potential Issue API: SDKCheck of <android.view.Window: void setNavigationBarColor(int)> is checking!!!
+The life time of api is [21,31]
+4call roads:
+0 Mainhead roads:
+4 Packageshead roads:
+-$i0 < 21
+Good road: <com.github.paolorotolo.appintro.AppIntro2: void setNavBarColor(java.lang.String)>[[-$i0 < 21]]--><android.view.Window: void setNavigationBarColor(int)>
+One road protect good!
+-$i1 < 21
+Good road: <com.github.paolorotolo.appintro.AppIntro: void setNavBarColor(int)>[[-$i1 < 21]]--><android.view.Window: void setNavigationBarColor(int)>
+One road protect good!
+-$i0 < 21
+Good road: <com.github.paolorotolo.appintro.AppIntro: void setNavBarColor(java.lang.String)>[[-$i0 < 21]]--><android.view.Window: void setNavigationBarColor(int)>
+One road protect good!
+$i0 < 16
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: net.mabako.steamgifts.activities.MainActivity dummyMainMethod_net_mabako_steamgifts_activities_MainActivity(android.content.Intent)>[]--><net.mabako.steamgifts.activities.MainActivity: void onCreate(android.os.Bundle)>[]--><net.mabako.steamgifts.activities.Navbar: void <init>(net.mabako.steamgifts.activities.CommonActivity)>[]--><com.mikepenz.materialdrawer.DrawerBuilder: com.mikepenz.materialdrawer.Drawer build()>[]--><com.mikepenz.materialize.MaterializeBuilder: com.mikepenz.materialize.Materialize build()>[[$i0 < 16]]--><android.view.Window: void setNavigationBarColor(int)>
+One road protect good!
+containsStatic:false
+containsTry:false
+5call by main package
+-----------------------------------------
+#################################################
+N 26 Potential Issue API: SDKCheck of <android.provider.MediaStore.Images.Thumbnails: android.graphics.Bitmap getThumbnail(android.content.ContentResolver,long,int,android.graphics.BitmapFactory.Options)> is checking!!!
+The life time of api is [5,29]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 30 31 
+Error road: <com.squareup.picasso.MediaStoreRequestHandler: com.squareup.picasso.RequestHandler$Result load(com.squareup.picasso.Request,int)>[]--><android.provider.MediaStore.Images.Thumbnails: android.graphics.Bitmap getThumbnail(android.content.ContentResolver,long,int,android.graphics.BitmapFactory.Options)>
+#1.the call statck between class <com.squareup.picasso.MediaStoreRequestHandler: com.squareup.picasso.RequestHandler$Result load(com.squareup.picasso.Request,int)> to <android.provider.MediaStore.Images.Thumbnails: android.graphics.Bitmap getThumbnail(android.content.ContentResolver,long,int,android.graphics.BitmapFactory.Options)>has compatibility isssues！
+-----------------------------------------
+crashApis:21
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 27 Potential Issue API: SDKCheck of <android.view.TextureView: void <init>(android.content.Context,android.util.AttributeSet,int,int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <pl.droidsonroids.gif.GifTextureView: void <init>(android.content.Context,android.util.AttributeSet,int,int)>[]--><android.view.TextureView: void <init>(android.content.Context,android.util.AttributeSet,int,int)>
+#1.the call statck between class <pl.droidsonroids.gif.GifTextureView: void <init>(android.content.Context,android.util.AttributeSet,int,int)> to <android.view.TextureView: void <init>(android.content.Context,android.util.AttributeSet,int,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:22
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 28 Potential Issue API: SDKCheck of <android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)> is checking!!!
+The life time of api is [22,31]
+8call roads:
+0 Mainhead roads:
+8 Packageshead roads:
+!!!this api will crash on sdk 19 20 21 
+Error road: <net.mabako.steamgifts.fragments.HiddenGamesFragment: void onCreate(android.os.Bundle)>[]--><net.mabako.steamgifts.fragments.SearchableListFragment: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>
+#1.the call statck between class <net.mabako.steamgifts.fragments.HiddenGamesFragment: void onCreate(android.os.Bundle)> to <android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 21 
+Error road: <com.mikepenz.materialdrawer.DrawerBuilder: com.mikepenz.materialdrawer.Drawer buildForFragment()>[]--><com.mikepenz.materialdrawer.DrawerBuilder: com.mikepenz.materialdrawer.Drawer buildView()>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>
+#2.the call statck between class <com.mikepenz.materialdrawer.DrawerBuilder: com.mikepenz.materialdrawer.Drawer buildForFragment()> to <android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 21 
+Error road: <net.mabako.steamgifts.fragments.DiscussionListFragment: void onCreate(android.os.Bundle)>[]--><net.mabako.steamgifts.fragments.SearchableListFragment: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>
+#3.the call statck between class <net.mabako.steamgifts.fragments.DiscussionListFragment: void onCreate(android.os.Bundle)> to <android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 21 
+Error road: <net.mabako.steamgifts.fragments.WhitelistBlacklistFragment: void onCreate(android.os.Bundle)>[]--><net.mabako.steamgifts.fragments.SearchableListFragment: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>
+#4.the call statck between class <net.mabako.steamgifts.fragments.WhitelistBlacklistFragment: void onCreate(android.os.Bundle)> to <android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 21 
+Error road: <net.mabako.steam.store.StoreAppFragment: void onResume()>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>
+#5.the call statck between class <net.mabako.steam.store.StoreAppFragment: void onResume()> to <android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 21 
+Error road: <com.mikepenz.materialdrawer.DrawerBuilder: com.mikepenz.materialdrawer.Drawer append(com.mikepenz.materialdrawer.Drawer)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>
+#6.the call statck between class <com.mikepenz.materialdrawer.DrawerBuilder: com.mikepenz.materialdrawer.Drawer append(com.mikepenz.materialdrawer.Drawer)> to <android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: net.mabako.steamgifts.activities.MainActivity dummyMainMethod_net_mabako_steamgifts_activities_MainActivity(android.content.Intent)>[]--><net.mabako.steamgifts.activities.MainActivity: void onCreate(android.os.Bundle)>[]--><net.mabako.steamgifts.activities.Navbar: void <init>(net.mabako.steamgifts.activities.CommonActivity)>[]--><com.mikepenz.materialdrawer.DrawerBuilder: com.mikepenz.materialdrawer.Drawer build()>[]--><com.mikepenz.materialdrawer.DrawerBuilder: com.mikepenz.materialdrawer.Drawer buildView()>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>
+!!!this api will crash on sdk 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: net.mabako.steamgifts.activities.WriteCommentActivity dummyMainMethod_net_mabako_steamgifts_activities_WriteCommentActivity(android.content.Intent)>[]--><net.mabako.steamgifts.activities.WriteCommentActivity: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>
+#7.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 21 
+Error road: <net.mabako.steamgifts.fragments.GiveawayListFragment: void onCreate(android.os.Bundle)>[]--><net.mabako.steamgifts.fragments.SearchableListFragment: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>
+#8.the call statck between class <net.mabako.steamgifts.fragments.GiveawayListFragment: void onCreate(android.os.Bundle)> to <android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+crashApis:23
+containsStatic:false
+containsTry:false
+9call by main package
+-----------------------------------------
+#################################################
+N 29 Potential Issue API: SDKCheck of <android.widget.TextView: void <init>(android.content.Context,android.util.AttributeSet,int,int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <pl.droidsonroids.gif.GifTextView: void <init>(android.content.Context,android.util.AttributeSet,int,int)>[]--><android.widget.TextView: void <init>(android.content.Context,android.util.AttributeSet,int,int)>
+#1.the call statck between class <pl.droidsonroids.gif.GifTextView: void <init>(android.content.Context,android.util.AttributeSet,int,int)> to <android.widget.TextView: void <init>(android.content.Context,android.util.AttributeSet,int,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:24
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 30 Potential Issue API: SDKCheck of <android.view.View: void setForeground(android.graphics.drawable.Drawable)> is checking!!!
+The life time of api is [23,31]
+36call roads:
+1 Mainhead roads:
+-$i0 < 21
+!!!this api will crash on sdk 21 22 
+Error road: <net.mabako.steamgifts.activities.MainActivity: void onActivityResult(int,int,android.content.Intent)>[]--><net.mabako.steamgifts.activities.MainActivity: void onAccountChange()>[]--><net.mabako.steamgifts.activities.Navbar: void reconfigure()>[]--><com.mikepenz.materialdrawer.AccountHeader: void addProfile(com.mikepenz.materialdrawer.model.interfaces.IProfile,int)>[]--><com.mikepenz.materialdrawer.AccountHeaderBuilder: void updateHeaderAndList()>[]--><com.mikepenz.materialdrawer.AccountHeaderBuilder: void buildProfiles()>[]--><com.mikepenz.materialdrawer.AccountHeaderBuilder: void handleSelectionView(com.mikepenz.materialdrawer.model.interfaces.IProfile,boolean)>[[-$i0 < 21]]--><android.view.View: void setForeground(android.graphics.drawable.Drawable)>
+-$i0 < 21
+!!!this api will crash on sdk 21 22 
+Error road: <net.mabako.steamgifts.activities.MainActivity: void onActivityResult(int,int,android.content.Intent)>[]--><net.mabako.steamgifts.activities.Navbar: void reconfigure()>[]--><com.mikepenz.materialdrawer.AccountHeader: void addProfile(com.mikepenz.materialdrawer.model.interfaces.IProfile,int)>[]--><com.mikepenz.materialdrawer.AccountHeaderBuilder: void updateHeaderAndList()>[]--><com.mikepenz.materialdrawer.AccountHeaderBuilder: void buildProfiles()>[]--><com.mikepenz.materialdrawer.AccountHeaderBuilder: void handleSelectionView(com.mikepenz.materialdrawer.model.interfaces.IProfile,boolean)>[[-$i0 < 21]]--><android.view.View: void setForeground(android.graphics.drawable.Drawable)>
+#1.the call statck between class <net.mabako.steamgifts.activities.MainActivity: void onActivityResult(int,int,android.content.Intent)> to <android.view.View: void setForeground(android.graphics.drawable.Drawable)>has compatibility isssues！
+-----------------------------------------
+35 Packageshead roads:
+-$i0 < 21
+!!!this api will crash on sdk 21 22 
+Error road: <net.mabako.steamgifts.activities.Navbar$4: void onDrawerSlide(android.view.View,float)>[]--><com.mikepenz.materialdrawer.AccountHeader: void updateProfile(com.mikepenz.materialdrawer.model.interfaces.IProfile)>[]--><com.mikepenz.materialdrawer.AccountHeader: void updateProfileByIdentifier(com.mikepenz.materialdrawer.model.interfaces.IProfile)>[]--><com.mikepenz.materialdrawer.AccountHeaderBuilder: void updateHeaderAndList()>[]--><com.mikepenz.materialdrawer.AccountHeaderBuilder: void buildProfiles()>[]--><com.mikepenz.materialdrawer.AccountHeaderBuilder: void handleSelectionView(com.mikepenz.materialdrawer.model.interfaces.IProfile,boolean)>[[-$i0 < 21]]--><android.view.View: void setForeground(android.graphics.drawable.Drawable)>
+#5.the call statck between class <net.mabako.steamgifts.activities.Navbar$4: void onDrawerSlide(android.view.View,float)> to <android.view.View: void setForeground(android.graphics.drawable.Drawable)>has compatibility isssues！
+-----------------------------------------
+-$i0 < 21
+!!!this api will crash on sdk 21 22 
+Error road: <com.mikepenz.materialdrawer.AccountHeader: void addProfiles(com.mikepenz.materialdrawer.model.interfaces.IProfile[])>[]--><com.mikepenz.materialdrawer.AccountHeaderBuilder: void updateHeaderAndList()>[]--><com.mikepenz.materialdrawer.AccountHeaderBuilder: void buildProfiles()>[]--><com.mikepenz.materialdrawer.AccountHeaderBuilder: void handleSelectionView(com.mikepenz.materialdrawer.model.interfaces.IProfile,boolean)>[[-$i0 < 21]]--><android.view.View: void setForeground(android.graphics.drawable.Drawable)>
+#6.the call statck between class <com.mikepenz.materialdrawer.AccountHeader: void addProfiles(com.mikepenz.materialdrawer.model.interfaces.IProfile[])> to <android.view.View: void setForeground(android.graphics.drawable.Drawable)>has compatibility isssues！
+-----------------------------------------
+-$i0 < 21
+!!!this api will crash on sdk 21 22 
+Error road: <com.mikepenz.materialdrawer.AccountHeader: void setSelectionSecondLine(java.lang.String)>[]--><com.mikepenz.materialdrawer.AccountHeaderBuilder: void updateHeaderAndList()>[]--><com.mikepenz.materialdrawer.AccountHeaderBuilder: void buildProfiles()>[]--><com.mikepenz.materialdrawer.AccountHeaderBuilder: void handleSelectionView(com.mikepenz.materialdrawer.model.interfaces.IProfile,boolean)>[[-$i0 < 21]]--><android.view.View: void setForeground(android.graphics.drawable.Drawable)>
+#7.the call statck between class <com.mikepenz.materialdrawer.AccountHeader: void setSelectionSecondLine(java.lang.String)> to <android.view.View: void setForeground(android.graphics.drawable.Drawable)>has compatibility isssues！
+-----------------------------------------
+-$i0 < 21
+!!!this api will crash on sdk 21 22 
+Error road: <com.mikepenz.materialdrawer.AccountHeader: void removeProfile(int)>[]--><com.mikepenz.materialdrawer.AccountHeaderBuilder: void updateHeaderAndList()>[]--><com.mikepenz.materialdrawer.AccountHeaderBuilder: void buildProfiles()>[]--><com.mikepenz.materialdrawer.AccountHeaderBuilder: void handleSelectionView(com.mikepenz.materialdrawer.model.interfaces.IProfile,boolean)>[[-$i0 < 21]]--><android.view.View: void setForeground(android.graphics.drawable.Drawable)>
+#8.the call statck between class <com.mikepenz.materialdrawer.AccountHeader: void removeProfile(int)> to <android.view.View: void setForeground(android.graphics.drawable.Drawable)>has compatibility isssues！
+-----------------------------------------
+crashApis:25
+crashApisInMain:4
+containsStatic:false
+containsTry:false
+11call by main package
+-----------------------------------------
+#################################################
+N 31 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putIntArray(java.lang.String,int[])> is checking!!!
+The life time of api is [21,31]
+16call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <net.mabako.steamgifts.activities.MainActivity: void onActivityResult(int,int,android.content.Intent)>[]--><net.mabako.steamgifts.activities.Navbar: void reconfigure()>[]--><com.mikepenz.materialdrawer.AccountHeader: void addProfile(com.mikepenz.materialdrawer.model.interfaces.IProfile,int)>[]--><com.mikepenz.materialdrawer.AccountHeaderBuilder: void updateHeaderAndList()>[]--><com.mikepenz.materialdrawer.AccountHeaderBuilder: void buildDrawerSelectionList()>[]--><com.mikepenz.materialdrawer.Drawer: void switchDrawerContent(com.mikepenz.materialdrawer.Drawer$OnDrawerItemClickListener,com.mikepenz.materialdrawer.Drawer$OnDrawerItemLongClickListener,java.util.List,int)>[]--><com.mikepenz.fastadapter.FastAdapter: android.os.Bundle saveInstanceState(android.os.Bundle)>[]--><com.mikepenz.fastadapter.FastAdapter: android.os.Bundle saveInstanceState(android.os.Bundle,java.lang.String)>[]--><android.os.BaseBundle: void putIntArray(java.lang.String,int[])>
+!!!this api will crash on sdk 19 20 
+Error road: <net.mabako.steamgifts.activities.MainActivity: void onActivityResult(int,int,android.content.Intent)>[]--><net.mabako.steamgifts.activities.MainActivity: void onAccountChange()>[]--><net.mabako.steamgifts.activities.Navbar: void reconfigure()>[]--><com.mikepenz.materialdrawer.AccountHeader: void addProfile(com.mikepenz.materialdrawer.model.interfaces.IProfile,int)>[]--><com.mikepenz.materialdrawer.AccountHeaderBuilder: void updateHeaderAndList()>[]--><com.mikepenz.materialdrawer.AccountHeaderBuilder: void buildDrawerSelectionList()>[]--><com.mikepenz.materialdrawer.Drawer: void switchDrawerContent(com.mikepenz.materialdrawer.Drawer$OnDrawerItemClickListener,com.mikepenz.materialdrawer.Drawer$OnDrawerItemLongClickListener,java.util.List,int)>[]--><com.mikepenz.fastadapter.FastAdapter: android.os.Bundle saveInstanceState(android.os.Bundle)>[]--><com.mikepenz.fastadapter.FastAdapter: android.os.Bundle saveInstanceState(android.os.Bundle,java.lang.String)>[]--><android.os.BaseBundle: void putIntArray(java.lang.String,int[])>
+#1.the call statck between class <net.mabako.steamgifts.activities.MainActivity: void onActivityResult(int,int,android.content.Intent)> to <android.os.BaseBundle: void putIntArray(java.lang.String,int[])>has compatibility isssues！
+-----------------------------------------
+15 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <com.mikepenz.materialdrawer.AccountHeaderBuilder$6: void onClick(android.view.View)>[]--><com.mikepenz.materialdrawer.AccountHeaderBuilder: void toggleSelectionList(android.content.Context)>[]--><com.mikepenz.materialdrawer.AccountHeaderBuilder: void buildDrawerSelectionList()>[]--><com.mikepenz.materialdrawer.Drawer: void switchDrawerContent(com.mikepenz.materialdrawer.Drawer$OnDrawerItemClickListener,com.mikepenz.materialdrawer.Drawer$OnDrawerItemLongClickListener,java.util.List,int)>[]--><com.mikepenz.fastadapter.FastAdapter: android.os.Bundle saveInstanceState(android.os.Bundle)>[]--><com.mikepenz.fastadapter.FastAdapter: android.os.Bundle saveInstanceState(android.os.Bundle,java.lang.String)>[]--><android.os.BaseBundle: void putIntArray(java.lang.String,int[])>
+#1.the call statck between class <com.mikepenz.materialdrawer.AccountHeaderBuilder$6: void onClick(android.view.View)> to <android.os.BaseBundle: void putIntArray(java.lang.String,int[])>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <com.mikepenz.materialdrawer.AccountHeader: void setProfiles(java.util.List)>[]--><com.mikepenz.materialdrawer.AccountHeaderBuilder: void updateHeaderAndList()>[]--><com.mikepenz.materialdrawer.AccountHeaderBuilder: void buildDrawerSelectionList()>[]--><com.mikepenz.materialdrawer.Drawer: void switchDrawerContent(com.mikepenz.materialdrawer.Drawer$OnDrawerItemClickListener,com.mikepenz.materialdrawer.Drawer$OnDrawerItemLongClickListener,java.util.List,int)>[]--><com.mikepenz.fastadapter.FastAdapter: android.os.Bundle saveInstanceState(android.os.Bundle)>[]--><com.mikepenz.fastadapter.FastAdapter: android.os.Bundle saveInstanceState(android.os.Bundle,java.lang.String)>[]--><android.os.BaseBundle: void putIntArray(java.lang.String,int[])>
+#2.the call statck between class <com.mikepenz.materialdrawer.AccountHeader: void setProfiles(java.util.List)> to <android.os.BaseBundle: void putIntArray(java.lang.String,int[])>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <net.mabako.steamgifts.activities.Navbar$4: void onDrawerSlide(android.view.View,float)>[]--><com.mikepenz.materialdrawer.AccountHeader: void updateProfile(com.mikepenz.materialdrawer.model.interfaces.IProfile)>[]--><com.mikepenz.materialdrawer.AccountHeader: void updateProfileByIdentifier(com.mikepenz.materialdrawer.model.interfaces.IProfile)>[]--><com.mikepenz.materialdrawer.AccountHeaderBuilder: void updateHeaderAndList()>[]--><com.mikepenz.materialdrawer.AccountHeaderBuilder: void buildDrawerSelectionList()>[]--><com.mikepenz.materialdrawer.Drawer: void switchDrawerContent(com.mikepenz.materialdrawer.Drawer$OnDrawerItemClickListener,com.mikepenz.materialdrawer.Drawer$OnDrawerItemLongClickListener,java.util.List,int)>[]--><com.mikepenz.fastadapter.FastAdapter: android.os.Bundle saveInstanceState(android.os.Bundle)>[]--><com.mikepenz.fastadapter.FastAdapter: android.os.Bundle saveInstanceState(android.os.Bundle,java.lang.String)>[]--><android.os.BaseBundle: void putIntArray(java.lang.String,int[])>
+#3.the call statck between class <net.mabako.steamgifts.activities.Navbar$4: void onDrawerSlide(android.view.View,float)> to <android.os.BaseBundle: void putIntArray(java.lang.String,int[])>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <com.mikepenz.materialdrawer.AccountHeader: void setSelectionFirstLine(java.lang.String)>[]--><com.mikepenz.materialdrawer.AccountHeaderBuilder: void updateHeaderAndList()>[]--><com.mikepenz.materialdrawer.AccountHeaderBuilder: void buildDrawerSelectionList()>[]--><com.mikepenz.materialdrawer.Drawer: void switchDrawerContent(com.mikepenz.materialdrawer.Drawer$OnDrawerItemClickListener,com.mikepenz.materialdrawer.Drawer$OnDrawerItemLongClickListener,java.util.List,int)>[]--><com.mikepenz.fastadapter.FastAdapter: android.os.Bundle saveInstanceState(android.os.Bundle)>[]--><com.mikepenz.fastadapter.FastAdapter: android.os.Bundle saveInstanceState(android.os.Bundle,java.lang.String)>[]--><android.os.BaseBundle: void putIntArray(java.lang.String,int[])>
+#4.the call statck between class <com.mikepenz.materialdrawer.AccountHeader: void setSelectionFirstLine(java.lang.String)> to <android.os.BaseBundle: void putIntArray(java.lang.String,int[])>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <com.mikepenz.materialdrawer.DrawerBuilder: com.mikepenz.materialdrawer.Drawer buildForFragment()>[]--><com.mikepenz.materialdrawer.DrawerBuilder: com.mikepenz.materialdrawer.Drawer buildView()>[]--><com.mikepenz.materialdrawer.AccountHeader: void toggleSelectionList(android.content.Context)>[]--><com.mikepenz.materialdrawer.AccountHeaderBuilder: void toggleSelectionList(android.content.Context)>[]--><com.mikepenz.materialdrawer.AccountHeaderBuilder: void buildDrawerSelectionList()>[]--><com.mikepenz.materialdrawer.Drawer: void switchDrawerContent(com.mikepenz.materialdrawer.Drawer$OnDrawerItemClickListener,com.mikepenz.materialdrawer.Drawer$OnDrawerItemLongClickListener,java.util.List,int)>[]--><com.mikepenz.fastadapter.FastAdapter: android.os.Bundle saveInstanceState(android.os.Bundle)>[]--><com.mikepenz.fastadapter.FastAdapter: android.os.Bundle saveInstanceState(android.os.Bundle,java.lang.String)>[]--><android.os.BaseBundle: void putIntArray(java.lang.String,int[])>
+#5.the call statck between class <com.mikepenz.materialdrawer.DrawerBuilder: com.mikepenz.materialdrawer.Drawer buildForFragment()> to <android.os.BaseBundle: void putIntArray(java.lang.String,int[])>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <com.mikepenz.materialdrawer.Drawer: android.os.Bundle saveInstanceState(android.os.Bundle)>[]--><com.mikepenz.fastadapter.FastAdapter: android.os.Bundle saveInstanceState(android.os.Bundle,java.lang.String)>[]--><android.os.BaseBundle: void putIntArray(java.lang.String,int[])>
+#6.the call statck between class <com.mikepenz.materialdrawer.Drawer: android.os.Bundle saveInstanceState(android.os.Bundle)> to <android.os.BaseBundle: void putIntArray(java.lang.String,int[])>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <com.mikepenz.materialdrawer.AccountHeader: void addProfiles(com.mikepenz.materialdrawer.model.interfaces.IProfile[])>[]--><com.mikepenz.materialdrawer.AccountHeaderBuilder: void updateHeaderAndList()>[]--><com.mikepenz.materialdrawer.AccountHeaderBuilder: void buildDrawerSelectionList()>[]--><com.mikepenz.materialdrawer.Drawer: void switchDrawerContent(com.mikepenz.materialdrawer.Drawer$OnDrawerItemClickListener,com.mikepenz.materialdrawer.Drawer$OnDrawerItemLongClickListener,java.util.List,int)>[]--><com.mikepenz.fastadapter.FastAdapter: android.os.Bundle saveInstanceState(android.os.Bundle)>[]--><com.mikepenz.fastadapter.FastAdapter: android.os.Bundle saveInstanceState(android.os.Bundle,java.lang.String)>[]--><android.os.BaseBundle: void putIntArray(java.lang.String,int[])>
+#7.the call statck between class <com.mikepenz.materialdrawer.AccountHeader: void addProfiles(com.mikepenz.materialdrawer.model.interfaces.IProfile[])> to <android.os.BaseBundle: void putIntArray(java.lang.String,int[])>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <com.mikepenz.materialdrawer.AccountHeader: void setSelectionSecondLine(java.lang.String)>[]--><com.mikepenz.materialdrawer.AccountHeaderBuilder: void updateHeaderAndList()>[]--><com.mikepenz.materialdrawer.AccountHeaderBuilder: void buildDrawerSelectionList()>[]--><com.mikepenz.materialdrawer.Drawer: void switchDrawerContent(com.mikepenz.materialdrawer.Drawer$OnDrawerItemClickListener,com.mikepenz.materialdrawer.Drawer$OnDrawerItemLongClickListener,java.util.List,int)>[]--><com.mikepenz.fastadapter.FastAdapter: android.os.Bundle saveInstanceState(android.os.Bundle)>[]--><com.mikepenz.fastadapter.FastAdapter: android.os.Bundle saveInstanceState(android.os.Bundle,java.lang.String)>[]--><android.os.BaseBundle: void putIntArray(java.lang.String,int[])>
+#8.the call statck between class <com.mikepenz.materialdrawer.AccountHeader: void setSelectionSecondLine(java.lang.String)> to <android.os.BaseBundle: void putIntArray(java.lang.String,int[])>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <com.mikepenz.materialdrawer.AccountHeader: void removeProfile(int)>[]--><com.mikepenz.materialdrawer.AccountHeaderBuilder: void updateHeaderAndList()>[]--><com.mikepenz.materialdrawer.AccountHeaderBuilder: void buildDrawerSelectionList()>[]--><com.mikepenz.materialdrawer.Drawer: void switchDrawerContent(com.mikepenz.materialdrawer.Drawer$OnDrawerItemClickListener,com.mikepenz.materialdrawer.Drawer$OnDrawerItemLongClickListener,java.util.List,int)>[]--><com.mikepenz.fastadapter.FastAdapter: android.os.Bundle saveInstanceState(android.os.Bundle)>[]--><com.mikepenz.fastadapter.FastAdapter: android.os.Bundle saveInstanceState(android.os.Bundle,java.lang.String)>[]--><android.os.BaseBundle: void putIntArray(java.lang.String,int[])>
+#9.the call statck between class <com.mikepenz.materialdrawer.AccountHeader: void removeProfile(int)> to <android.os.BaseBundle: void putIntArray(java.lang.String,int[])>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <com.mikepenz.materialdrawer.DrawerBuilder: com.mikepenz.materialdrawer.Drawer append(com.mikepenz.materialdrawer.Drawer)>[]--><com.mikepenz.materialdrawer.AccountHeader: void toggleSelectionList(android.content.Context)>[]--><com.mikepenz.materialdrawer.AccountHeaderBuilder: void toggleSelectionList(android.content.Context)>[]--><com.mikepenz.materialdrawer.AccountHeaderBuilder: void buildDrawerSelectionList()>[]--><com.mikepenz.materialdrawer.Drawer: void switchDrawerContent(com.mikepenz.materialdrawer.Drawer$OnDrawerItemClickListener,com.mikepenz.materialdrawer.Drawer$OnDrawerItemLongClickListener,java.util.List,int)>[]--><com.mikepenz.fastadapter.FastAdapter: android.os.Bundle saveInstanceState(android.os.Bundle)>[]--><com.mikepenz.fastadapter.FastAdapter: android.os.Bundle saveInstanceState(android.os.Bundle,java.lang.String)>[]--><android.os.BaseBundle: void putIntArray(java.lang.String,int[])>
+#10.the call statck between class <com.mikepenz.materialdrawer.DrawerBuilder: com.mikepenz.materialdrawer.Drawer append(com.mikepenz.materialdrawer.Drawer)> to <android.os.BaseBundle: void putIntArray(java.lang.String,int[])>has compatibility isssues！
+-----------------------------------------
+crashApis:26
+crashApisInMain:5
+containsStatic:false
+containsTry:false
+11call by main package
+-----------------------------------------
+#################################################
+N 32 Potential Issue API: SDKCheck of <android.os.BaseBundle: int size()> is checking!!!
+The life time of api is [21,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <com.github.paolorotolo.appintro.AppIntroFragment: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: int size()>
+#1.the call statck between class <com.github.paolorotolo.appintro.AppIntroFragment: void onCreate(android.os.Bundle)> to <android.os.BaseBundle: int size()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <net.mabako.steamgifts.fragments.ListFragment$BundleEquality: boolean equalBundles(android.os.Bundle,android.os.Bundle)>[]--><android.os.BaseBundle: int size()>
+#2.the call statck between class <net.mabako.steamgifts.fragments.ListFragment$BundleEquality: boolean equalBundles(android.os.Bundle,android.os.Bundle)> to <android.os.BaseBundle: int size()>has compatibility isssues！
+-----------------------------------------
+crashApis:27
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 33 Potential Issue API: SDKCheck of <android.widget.ImageView: void <init>(android.content.Context,android.util.AttributeSet,int,int)> is checking!!!
+The life time of api is [21,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <pl.droidsonroids.gif.GifImageView: void <init>(android.content.Context,android.util.AttributeSet,int,int)>[]--><android.widget.ImageView: void <init>(android.content.Context,android.util.AttributeSet,int,int)>
+#1.the call statck between class <pl.droidsonroids.gif.GifImageView: void <init>(android.content.Context,android.util.AttributeSet,int,int)> to <android.widget.ImageView: void <init>(android.content.Context,android.util.AttributeSet,int,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <pl.droidsonroids.gif.GifImageButton: void <init>(android.content.Context,android.util.AttributeSet,int,int)>[[]]--><android.widget.ImageView: void <init>(android.content.Context,android.util.AttributeSet,int,int)>
+#2.the call statck between class <pl.droidsonroids.gif.GifImageButton: void <init>(android.content.Context,android.util.AttributeSet,int,int)> to <android.widget.ImageView: void <init>(android.content.Context,android.util.AttributeSet,int,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:28
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 34 Potential Issue API: SDKCheck of <android.os.BaseBundle: int[] getIntArray(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+36call roads:
+1 Mainhead roads:
+35 Packageshead roads:
+containsStatic:false
+containsTry:false
+36call by main package
+-----------------------------------------
+#################################################
+N 35 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.lang.String getString(java.lang.String,java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <net.mabako.steamgifts.fragments.WriteCommentFragment: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String,java.lang.String)>
+#1.the call statck between class <net.mabako.steamgifts.fragments.WriteCommentFragment: void onCreate(android.os.Bundle)> to <android.os.BaseBundle: java.lang.String getString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:29
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+crashApis numbers:29
+crashApis numbers in main road:5
+On Android Version 16 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 17 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 18 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 19 this app may have error api use(at least): 21 and error api roads: 79
+On Android Version 20 this app may have error api use(at least): 21 and error api roads: 79
+On Android Version 21 this app may have error api use(at least): 5 and error api roads: 31
+On Android Version 22 this app may have error api use(at least): 2 and error api roads: 8
+On Android Version 23 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 24 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 25 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 2 and error api roads: 2
+On Android Version 31 this app may have error api use(at least): 7 and error api roads: 16

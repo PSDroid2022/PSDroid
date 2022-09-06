@@ -1,0 +1,403 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/Night_Light.apk
+Entry Points[com.corphish.nightlight.MainActivity, com.corphish.nightlight.receivers.BootCompleteReceiver, com.corphish.nightlight.receivers.StopNLReceiver, com.corphish.nightlight.services.QuickSettingsService, com.corphish.nightlight.services.BootCompleteJobService, com.corphish.nightlight.receivers.StartNLReceiver, com.corphish.nightlight.StartActivity, com.corphish.nightlight.AboutActivity, com.crashlytics.android.CrashlyticsInitProvider]
+FllowDroidcallgraph size:1715
+Soot started on Mon Jul 11 08:48:43 CST 2022
+StaticCheck:<eu.chainfire.libsuperuser.Shell$SU: boolean isSELinuxEnforcing()>$yysi0 < 17
+Soot finished on Mon Jul 11 08:48:53 CST 2022
+Soot has run for 0 min. 10 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 19
+Declared Target Sdk version is: 27
+Declared Max Sdk version is: -1
+Collected 317 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.service.quicksettings.Tile: void setLabel(java.lang.CharSequence)> is checking!!!
+The life time of api is [24,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 21 22 23 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.corphish.nightlight.services.QuickSettingsService dummyMainMethod_com_corphish_nightlight_services_QuickSettingsService(android.content.Intent)>[]--><com.corphish.nightlight.services.QuickSettingsService: void onTileAdded()>[]--><com.corphish.nightlight.services.QuickSettingsService: void syncTile()>[]--><com.corphish.nightlight.services.QuickSettingsService: void updateTileUI(boolean)>[]--><android.service.quicksettings.Tile: void setLabel(java.lang.CharSequence)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.service.quicksettings.Tile: void setLabel(java.lang.CharSequence)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:1
+crashApisInMain:1
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putLong(java.lang.String,long)> is checking!!!
+The life time of api is [21,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+try
+Good road with try: <com.crashlytics.android.answers.EnabledSessionAnalyticsManagerStrategy: void processEvent(com.crashlytics.android.answers.SessionEvent$Builder)>[[try]]--><com.crashlytics.android.answers.FirebaseAnalyticsApiAdapter: void processEvent(com.crashlytics.android.answers.SessionEvent)>[]--><com.crashlytics.android.answers.FirebaseAnalyticsEventMapper: com.crashlytics.android.answers.FirebaseAnalyticsEvent mapEvent(com.crashlytics.android.answers.SessionEvent)>[]--><com.crashlytics.android.answers.FirebaseAnalyticsEventMapper: void mapCustomEventAttributes(android.os.Bundle,java.util.Map)>[]--><android.os.BaseBundle: void putLong(java.lang.String,long)>
+One road protect good!
+try
+Good road with try: <com.crashlytics.android.core.CrashlyticsController: void access$400(com.crashlytics.android.core.CrashlyticsController,java.util.Date,java.lang.Thread,java.lang.Throwable)>[]--><com.crashlytics.android.core.CrashlyticsController: void writeFatal(java.util.Date,java.lang.Thread,java.lang.Throwable)>[[try]]--><com.crashlytics.android.core.CrashlyticsController: void recordFatalFirebaseEvent(long)>[]--><android.os.BaseBundle: void putLong(java.lang.String,long)>
+One road protect good!
+containsStatic:false
+containsTry:true
+3call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.app.job.JobScheduler: int schedule(android.app.job.JobInfo)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.corphish.nightlight.receivers.BootCompleteReceiver dummyMainMethod_com_corphish_nightlight_receivers_BootCompleteReceiver(android.content.Intent)>[]--><com.corphish.nightlight.receivers.BootCompleteReceiver: void onReceive(android.content.Context,android.content.Intent)>[[-$i0 < 21]]--><com.corphish.nightlight.services.BootCompleteJobService: void schedule(android.content.Context)>[]--><android.app.job.JobScheduler: int schedule(android.app.job.JobInfo)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.lang.String getString(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+9call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><com.crashlytics.android.CrashlyticsInitProvider: boolean onCreate()>[]--><com.crashlytics.android.CrashlyticsInitProvider: boolean shouldInitializeFabric(android.content.Context,io.fabric.sdk.android.services.common.FirebaseInfo,com.crashlytics.android.CrashlyticsInitProvider$EnabledCheckStrategy)>[]--><io.fabric.sdk.android.services.common.FirebaseInfo: boolean isFirebaseCrashlyticsEnabled(android.content.Context)>[]--><io.fabric.sdk.android.services.common.ApiKey: java.lang.String getApiKeyFromManifest(android.content.Context)>[[try]]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+One road protect good!
+8 Packageshead roads:
+try
+Good road with try: <io.fabric.sdk.android.services.common.ApiKey: java.lang.String getApiKey(android.content.Context)>[]--><io.fabric.sdk.android.services.common.ApiKey: java.lang.String getValue(android.content.Context)>[]--><io.fabric.sdk.android.services.common.ApiKey: java.lang.String getApiKeyFromManifest(android.content.Context)>[[try]]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.crashlytics.android.beta.Beta: java.lang.Object doInBackground()>[]--><com.crashlytics.android.beta.Beta: java.lang.Boolean doInBackground()>[]--><com.crashlytics.android.beta.AbstractCheckForUpdatesController: void initialize(android.content.Context,com.crashlytics.android.beta.Beta,io.fabric.sdk.android.services.common.IdManager,io.fabric.sdk.android.services.settings.BetaSettingsData,com.crashlytics.android.beta.BuildProperties,io.fabric.sdk.android.services.persistence.PreferenceStore,io.fabric.sdk.android.services.common.CurrentTimeProvider,io.fabric.sdk.android.services.network.HttpRequestFactory)>[]--><com.crashlytics.android.beta.AbstractCheckForUpdatesController: void checkForUpdates()>[[try]]--><com.crashlytics.android.beta.AbstractCheckForUpdatesController: void performUpdateCheck()>[]--><io.fabric.sdk.android.services.common.ApiKey: java.lang.String getValue(android.content.Context)>[]--><io.fabric.sdk.android.services.common.ApiKey: java.lang.String getApiKeyFromManifest(android.content.Context)>[[try]]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+One road protect good!
+try
+Good road with try: <io.fabric.sdk.android.services.common.ExecutorUtils$1$1: void onRun()>[]--><com.crashlytics.android.beta.ActivityLifecycleCheckForUpdatesController$1$1: void run()>[]--><com.crashlytics.android.beta.AbstractCheckForUpdatesController: void checkForUpdates()>[[try]]--><com.crashlytics.android.beta.AbstractCheckForUpdatesController: void performUpdateCheck()>[]--><io.fabric.sdk.android.services.common.ApiKey: java.lang.String getValue(android.content.Context)>[]--><io.fabric.sdk.android.services.common.ApiKey: java.lang.String getApiKeyFromManifest(android.content.Context)>[[try]]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+One road protect good!
+try
+Good road with try: <io.fabric.sdk.android.services.common.ExecutorUtils$1$1: void onRun()>[]--><com.crashlytics.android.answers.AnswersEventsHandler$1: void run()>[[try]]--><com.crashlytics.android.answers.EnabledSessionAnalyticsManagerStrategy: void setAnalyticsSettingsData(io.fabric.sdk.android.services.settings.AnalyticsSettingsData,java.lang.String)>[]--><io.fabric.sdk.android.services.common.ApiKey: java.lang.String getValue(android.content.Context)>[]--><io.fabric.sdk.android.services.common.ApiKey: java.lang.String getApiKeyFromManifest(android.content.Context)>[[try]]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+One road protect good!
+try
+Good road with try: <io.fabric.sdk.android.services.common.ExecutorUtils$1$1: void onRun()>[]--><com.crashlytics.android.answers.AnswersEventsHandler$4: void run()>[[try]]--><com.crashlytics.android.answers.SessionMetadataCollector: com.crashlytics.android.answers.SessionEventMetadata getMetadata()>[]--><io.fabric.sdk.android.services.common.IdManager: java.util.Map getDeviceIdentifiers()>[]--><io.fabric.sdk.android.services.common.IdManager: java.lang.String getAndroidId()>[]--><io.fabric.sdk.android.services.common.IdManager: boolean shouldCollectHardwareIds()>[]--><io.fabric.sdk.android.services.common.FirebaseInfo: boolean isFirebaseCrashlyticsEnabled(android.content.Context)>[]--><io.fabric.sdk.android.services.common.ApiKey: java.lang.String getApiKeyFromManifest(android.content.Context)>[[try]]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+One road protect good!
+try
+Good road with try: <io.fabric.sdk.android.services.common.ExecutorUtils$1$1: void onRun()>[]--><io.fabric.sdk.android.services.concurrency.AsyncTask$SerialExecutor$1: void run()>[[try]]--><com.crashlytics.android.answers.AnswersEventsHandler$1: void run()>[[try]]--><com.crashlytics.android.answers.EnabledSessionAnalyticsManagerStrategy: void setAnalyticsSettingsData(io.fabric.sdk.android.services.settings.AnalyticsSettingsData,java.lang.String)>[]--><io.fabric.sdk.android.services.common.ApiKey: java.lang.String getValue(android.content.Context)>[]--><io.fabric.sdk.android.services.common.ApiKey: java.lang.String getApiKeyFromManifest(android.content.Context)>[[try]]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+One road protect good!
+try
+Good road with try: <io.fabric.sdk.android.services.common.ExecutorUtils$1$1: void onRun()>[]--><com.crashlytics.android.core.CrashlyticsBackgroundWorker$1: void run()>[[try]]--><com.crashlytics.android.answers.AnswersEventsHandler$4: void run()>[[try]]--><com.crashlytics.android.answers.SessionMetadataCollector: com.crashlytics.android.answers.SessionEventMetadata getMetadata()>[]--><io.fabric.sdk.android.services.common.IdManager: java.util.Map getDeviceIdentifiers()>[]--><io.fabric.sdk.android.services.common.IdManager: java.lang.String getAndroidId()>[]--><io.fabric.sdk.android.services.common.IdManager: boolean shouldCollectHardwareIds()>[]--><io.fabric.sdk.android.services.common.FirebaseInfo: boolean isFirebaseCrashlyticsEnabled(android.content.Context)>[]--><io.fabric.sdk.android.services.common.ApiKey: java.lang.String getApiKeyFromManifest(android.content.Context)>[[try]]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.crashlytics.android.answers.Answers: boolean onPreExecute()>[[try]]--><io.fabric.sdk.android.services.common.FirebaseInfo: boolean isFirebaseCrashlyticsEnabled(android.content.Context)>[]--><io.fabric.sdk.android.services.common.ApiKey: java.lang.String getApiKeyFromManifest(android.content.Context)>[[try]]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+One road protect good!
+try
+Good road with try: <io.fabric.sdk.android.Onboarding: java.lang.Object doInBackground()>[]--><io.fabric.sdk.android.Onboarding: java.lang.Boolean doInBackground()>[[try]]--><io.fabric.sdk.android.Onboarding: boolean performAutoConfigure(java.lang.String,io.fabric.sdk.android.services.settings.AppSettingsData,java.util.Collection)>[]--><io.fabric.sdk.android.Onboarding: boolean performUpdateApp(java.lang.String,io.fabric.sdk.android.services.settings.AppSettingsData,java.util.Collection)>[]--><io.fabric.sdk.android.Onboarding: boolean performUpdateApp(io.fabric.sdk.android.services.settings.AppSettingsData,io.fabric.sdk.android.services.settings.IconRequest,java.util.Collection)>[]--><io.fabric.sdk.android.Onboarding: io.fabric.sdk.android.services.settings.AppRequestData buildAppRequest(io.fabric.sdk.android.services.settings.IconRequest,java.util.Collection)>[]--><io.fabric.sdk.android.services.common.ApiKey: java.lang.String getValue(android.content.Context)>[]--><io.fabric.sdk.android.services.common.ApiKey: java.lang.String getApiKeyFromManifest(android.content.Context)>[[try]]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.crashlytics.android.core.CrashlyticsCore: boolean onPreExecute()>[]--><com.crashlytics.android.core.CrashlyticsCore: boolean onPreExecute(android.content.Context)>[[try]]--><io.fabric.sdk.android.services.common.FirebaseInfo: boolean isFirebaseCrashlyticsEnabled(android.content.Context)>[]--><io.fabric.sdk.android.services.common.ApiKey: java.lang.String getApiKeyFromManifest(android.content.Context)>[[try]]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.crashlytics.android.core.CrashlyticsController: void access$500(com.crashlytics.android.core.CrashlyticsController)>[]--><com.crashlytics.android.core.CrashlyticsController: void doOpenSession()>[]--><com.crashlytics.android.core.CrashlyticsController: void writeSessionDevice(java.lang.String)>[]--><io.fabric.sdk.android.services.common.IdManager: java.util.Map getDeviceIdentifiers()>[]--><io.fabric.sdk.android.services.common.IdManager: java.lang.String getAndroidId()>[]--><io.fabric.sdk.android.services.common.IdManager: boolean shouldCollectHardwareIds()>[]--><io.fabric.sdk.android.services.common.FirebaseInfo: boolean isFirebaseCrashlyticsEnabled(android.content.Context)>[]--><io.fabric.sdk.android.services.common.ApiKey: java.lang.String getApiKeyFromManifest(android.content.Context)>[[try]]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+One road protect good!
+try
+Good road with try: <io.fabric.sdk.android.services.common.ApiKey: java.lang.String getApiKey(android.content.Context,boolean)>[]--><io.fabric.sdk.android.services.common.ApiKey: java.lang.String getValue(android.content.Context)>[]--><io.fabric.sdk.android.services.common.ApiKey: java.lang.String getApiKeyFromManifest(android.content.Context)>[[try]]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+One road protect good!
+containsStatic:false
+containsTry:true
+9call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.service.quicksettings.Tile: void updateTile()> is checking!!!
+The life time of api is [24,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 21 22 23 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.corphish.nightlight.services.QuickSettingsService dummyMainMethod_com_corphish_nightlight_services_QuickSettingsService(android.content.Intent)>[]--><com.corphish.nightlight.services.QuickSettingsService: void onTileAdded()>[]--><com.corphish.nightlight.services.QuickSettingsService: void syncTile()>[]--><com.corphish.nightlight.services.QuickSettingsService: void updateTileUI(boolean)>[]--><android.service.quicksettings.Tile: void updateTile()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.service.quicksettings.Tile: void updateTile()>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:2
+crashApisInMain:2
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 5 Potential Issue API: SDKCheck of <android.service.quicksettings.TileService: android.service.quicksettings.Tile getQsTile()> is checking!!!
+The life time of api is [24,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 21 22 23 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.corphish.nightlight.services.QuickSettingsService dummyMainMethod_com_corphish_nightlight_services_QuickSettingsService(android.content.Intent)>[]--><com.corphish.nightlight.services.QuickSettingsService: void onTileAdded()>[]--><com.corphish.nightlight.services.QuickSettingsService: void syncTile()>[]--><com.corphish.nightlight.services.QuickSettingsService: void updateTileUI(boolean)>[]--><android.service.quicksettings.TileService: android.service.quicksettings.Tile getQsTile()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.service.quicksettings.TileService: android.service.quicksettings.Tile getQsTile()>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:3
+crashApisInMain:3
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 6 Potential Issue API: SDKCheck of <android.graphics.drawable.Icon: android.graphics.drawable.Icon createWithResource(android.content.Context,int)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 21 22 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.corphish.nightlight.services.QuickSettingsService dummyMainMethod_com_corphish_nightlight_services_QuickSettingsService(android.content.Intent)>[]--><com.corphish.nightlight.services.QuickSettingsService: void onTileAdded()>[]--><com.corphish.nightlight.services.QuickSettingsService: void syncTile()>[]--><com.corphish.nightlight.services.QuickSettingsService: void updateTileUI(boolean)>[]--><android.graphics.drawable.Icon: android.graphics.drawable.Icon createWithResource(android.content.Context,int)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.graphics.drawable.Icon: android.graphics.drawable.Icon createWithResource(android.content.Context,int)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:4
+crashApisInMain:4
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 7 Potential Issue API: SDKCheck of <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()> is checking!!!
+The life time of api is [1,30]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+try
+Good road with try: <io.fabric.sdk.android.services.common.ExecutorUtils$1$1: void onRun()>[]--><io.fabric.sdk.android.services.concurrency.AsyncTask$SerialExecutor$1: void run()>[[try]]--><com.crashlytics.android.core.CrashlyticsController$SendReportRunnable: void run()>[]--><io.fabric.sdk.android.services.common.CommonUtils: boolean canTryConnection(android.content.Context)>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>
+One road protect good!
+try
+Good road with try: <io.fabric.sdk.android.services.common.ExecutorUtils$1$1: void onRun()>[]--><com.crashlytics.android.core.CrashlyticsBackgroundWorker$1: void run()>[[try]]--><io.fabric.sdk.android.services.concurrency.AsyncTask$SerialExecutor$1: void run()>[[try]]--><com.crashlytics.android.core.CrashlyticsController$SendReportRunnable: void run()>[]--><io.fabric.sdk.android.services.common.CommonUtils: boolean canTryConnection(android.content.Context)>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>
+One road protect good!
+!!!this api will crash on sdk 31 
+Error road: <io.fabric.sdk.android.services.common.ExecutorUtils$1$1: void onRun()>[]--><com.crashlytics.android.core.CrashlyticsController$SendReportRunnable: void run()>[]--><io.fabric.sdk.android.services.common.CommonUtils: boolean canTryConnection(android.content.Context)>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>
+#1.the call statck between class <io.fabric.sdk.android.services.common.ExecutorUtils$1$1: void onRun()> to <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>has compatibility isssues！
+-----------------------------------------
+try
+Good road with try: <com.crashlytics.android.core.CrashlyticsCore: boolean onPreExecute()>[]--><com.crashlytics.android.core.CrashlyticsCore: boolean onPreExecute(android.content.Context)>[[try]]--><io.fabric.sdk.android.services.common.CommonUtils: boolean canTryConnection(android.content.Context)>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>
+One road protect good!
+crashApis:5
+containsStatic:false
+containsTry:true
+3call by main package
+-----------------------------------------
+#################################################
+N 8 Potential Issue API: SDKCheck of <android.content.Context: java.lang.Object getSystemService(java.lang.Class)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+1 Mainhead roads:
+$i0 >= 25
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.corphish.nightlight.StartActivity dummyMainMethod_com_corphish_nightlight_StartActivity(android.content.Intent)>[]--><com.corphish.nightlight.StartActivity: void onCreate(android.os.Bundle)>[]--><com.corphish.nightlight.StartActivity: boolean handleIntent()>[[$i0 >= 25]]--><android.content.Context: java.lang.Object getSystemService(java.lang.Class)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 9 Potential Issue API: SDKCheck of <android.app.job.JobInfo.Builder: void <init>(int,android.content.ComponentName)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.corphish.nightlight.receivers.BootCompleteReceiver dummyMainMethod_com_corphish_nightlight_receivers_BootCompleteReceiver(android.content.Intent)>[]--><com.corphish.nightlight.receivers.BootCompleteReceiver: void onReceive(android.content.Context,android.content.Intent)>[[-$i0 < 21]]--><com.corphish.nightlight.services.BootCompleteJobService: void schedule(android.content.Context)>[]--><android.app.job.JobInfo.Builder: void <init>(int,android.content.ComponentName)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 10 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putInt(java.lang.String,int)> is checking!!!
+The life time of api is [21,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+try
+Good road with try: <com.crashlytics.android.answers.EnabledSessionAnalyticsManagerStrategy: void processEvent(com.crashlytics.android.answers.SessionEvent$Builder)>[[try]]--><com.crashlytics.android.answers.FirebaseAnalyticsApiAdapter: void processEvent(com.crashlytics.android.answers.SessionEvent)>[]--><com.crashlytics.android.answers.FirebaseAnalyticsEventMapper: com.crashlytics.android.answers.FirebaseAnalyticsEvent mapEvent(com.crashlytics.android.answers.SessionEvent)>[]--><com.crashlytics.android.answers.FirebaseAnalyticsEventMapper: void mapCustomEventAttributes(android.os.Bundle,java.util.Map)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+One road protect good!
+try
+Good road with try: <com.crashlytics.android.core.CrashlyticsController: void access$400(com.crashlytics.android.core.CrashlyticsController,java.util.Date,java.lang.Thread,java.lang.Throwable)>[]--><com.crashlytics.android.core.CrashlyticsController: void writeFatal(java.util.Date,java.lang.Thread,java.lang.Throwable)>[[try]]--><com.crashlytics.android.core.CrashlyticsController: void recordFatalFirebaseEvent(long)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+One road protect good!
+containsStatic:false
+containsTry:true
+3call by main package
+-----------------------------------------
+#################################################
+N 11 Potential Issue API: SDKCheck of <android.app.job.JobInfo.Builder: android.app.job.JobInfo build()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.corphish.nightlight.receivers.BootCompleteReceiver dummyMainMethod_com_corphish_nightlight_receivers_BootCompleteReceiver(android.content.Intent)>[]--><com.corphish.nightlight.receivers.BootCompleteReceiver: void onReceive(android.content.Context,android.content.Intent)>[[-$i0 < 21]]--><com.corphish.nightlight.services.BootCompleteJobService: void schedule(android.content.Context)>[]--><android.app.job.JobInfo.Builder: android.app.job.JobInfo build()>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 12 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+try
+Good road with try: <com.crashlytics.android.answers.EnabledSessionAnalyticsManagerStrategy: void processEvent(com.crashlytics.android.answers.SessionEvent$Builder)>[[try]]--><com.crashlytics.android.answers.FirebaseAnalyticsApiAdapter: void processEvent(com.crashlytics.android.answers.SessionEvent)>[]--><com.crashlytics.android.answers.FirebaseAnalyticsEventMapper: com.crashlytics.android.answers.FirebaseAnalyticsEvent mapEvent(com.crashlytics.android.answers.SessionEvent)>[]--><com.crashlytics.android.answers.FirebaseAnalyticsEventMapper: void mapCustomEventAttributes(android.os.Bundle,java.util.Map)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 13 Potential Issue API: SDKCheck of <android.net.NetworkInfo: boolean isConnectedOrConnecting()> is checking!!!
+The life time of api is [1,30]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+try
+Good road with try: <io.fabric.sdk.android.services.common.ExecutorUtils$1$1: void onRun()>[]--><io.fabric.sdk.android.services.concurrency.AsyncTask$SerialExecutor$1: void run()>[[try]]--><com.crashlytics.android.core.CrashlyticsController$SendReportRunnable: void run()>[]--><io.fabric.sdk.android.services.common.CommonUtils: boolean canTryConnection(android.content.Context)>[]--><android.net.NetworkInfo: boolean isConnectedOrConnecting()>
+One road protect good!
+try
+Good road with try: <io.fabric.sdk.android.services.common.ExecutorUtils$1$1: void onRun()>[]--><com.crashlytics.android.core.CrashlyticsBackgroundWorker$1: void run()>[[try]]--><io.fabric.sdk.android.services.concurrency.AsyncTask$SerialExecutor$1: void run()>[[try]]--><com.crashlytics.android.core.CrashlyticsController$SendReportRunnable: void run()>[]--><io.fabric.sdk.android.services.common.CommonUtils: boolean canTryConnection(android.content.Context)>[]--><android.net.NetworkInfo: boolean isConnectedOrConnecting()>
+One road protect good!
+!!!this api will crash on sdk 31 
+Error road: <io.fabric.sdk.android.services.common.ExecutorUtils$1$1: void onRun()>[]--><com.crashlytics.android.core.CrashlyticsController$SendReportRunnable: void run()>[]--><io.fabric.sdk.android.services.common.CommonUtils: boolean canTryConnection(android.content.Context)>[]--><android.net.NetworkInfo: boolean isConnectedOrConnecting()>
+#1.the call statck between class <io.fabric.sdk.android.services.common.ExecutorUtils$1$1: void onRun()> to <android.net.NetworkInfo: boolean isConnectedOrConnecting()>has compatibility isssues！
+-----------------------------------------
+try
+Good road with try: <com.crashlytics.android.core.CrashlyticsCore: boolean onPreExecute()>[]--><com.crashlytics.android.core.CrashlyticsCore: boolean onPreExecute(android.content.Context)>[[try]]--><io.fabric.sdk.android.services.common.CommonUtils: boolean canTryConnection(android.content.Context)>[]--><android.net.NetworkInfo: boolean isConnectedOrConnecting()>
+One road protect good!
+crashApis:6
+containsStatic:false
+containsTry:true
+3call by main package
+-----------------------------------------
+#################################################
+N 14 Potential Issue API: SDKCheck of <android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)> is checking!!!
+The life time of api is [22,31]
+1call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><com.crashlytics.android.CrashlyticsInitProvider: boolean onCreate()>[]--><com.crashlytics.android.CrashlyticsInitProvider: boolean shouldInitializeFabric(android.content.Context,io.fabric.sdk.android.services.common.FirebaseInfo,com.crashlytics.android.CrashlyticsInitProvider$EnabledCheckStrategy)>[]--><com.crashlytics.android.ManifestEnabledCheckStrategy: boolean isCrashlyticsEnabled(android.content.Context)>[[try]]--><android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:true
+1call by main package
+-----------------------------------------
+#################################################
+N 15 Potential Issue API: SDKCheck of <android.content.pm.ShortcutManager: void reportShortcutUsed(java.lang.String)> is checking!!!
+The life time of api is [25,31]
+1call roads:
+1 Mainhead roads:
+$i0 >= 25
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.corphish.nightlight.StartActivity dummyMainMethod_com_corphish_nightlight_StartActivity(android.content.Intent)>[]--><com.corphish.nightlight.StartActivity: void onCreate(android.os.Bundle)>[]--><com.corphish.nightlight.StartActivity: boolean handleIntent()>[[$i0 >= 25]]--><android.content.pm.ShortcutManager: void reportShortcutUsed(java.lang.String)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 16 Potential Issue API: SDKCheck of <android.service.quicksettings.Tile: void setState(int)> is checking!!!
+The life time of api is [24,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 21 22 23 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.corphish.nightlight.services.QuickSettingsService dummyMainMethod_com_corphish_nightlight_services_QuickSettingsService(android.content.Intent)>[]--><com.corphish.nightlight.services.QuickSettingsService: void onTileAdded()>[]--><com.corphish.nightlight.services.QuickSettingsService: void syncTile()>[]--><com.corphish.nightlight.services.QuickSettingsService: void updateTileUI(boolean)>[]--><android.service.quicksettings.Tile: void setState(int)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.service.quicksettings.Tile: void setState(int)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:7
+crashApisInMain:5
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 17 Potential Issue API: SDKCheck of <android.app.job.JobInfo.Builder: android.app.job.JobInfo.Builder setOverrideDeadline(long)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.corphish.nightlight.receivers.BootCompleteReceiver dummyMainMethod_com_corphish_nightlight_receivers_BootCompleteReceiver(android.content.Intent)>[]--><com.corphish.nightlight.receivers.BootCompleteReceiver: void onReceive(android.content.Context,android.content.Intent)>[[-$i0 < 21]]--><com.corphish.nightlight.services.BootCompleteJobService: void schedule(android.content.Context)>[]--><android.app.job.JobInfo.Builder: android.app.job.JobInfo.Builder setOverrideDeadline(long)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 18 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putDouble(java.lang.String,double)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+try
+Good road with try: <com.crashlytics.android.answers.EnabledSessionAnalyticsManagerStrategy: void processEvent(com.crashlytics.android.answers.SessionEvent$Builder)>[[try]]--><com.crashlytics.android.answers.FirebaseAnalyticsApiAdapter: void processEvent(com.crashlytics.android.answers.SessionEvent)>[]--><com.crashlytics.android.answers.FirebaseAnalyticsEventMapper: com.crashlytics.android.answers.FirebaseAnalyticsEvent mapEvent(com.crashlytics.android.answers.SessionEvent)>[]--><com.crashlytics.android.answers.FirebaseAnalyticsEventMapper: void mapCustomEventAttributes(android.os.Bundle,java.util.Map)>[]--><android.os.BaseBundle: void putDouble(java.lang.String,double)>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 19 Potential Issue API: SDKCheck of <android.service.quicksettings.Tile: void setIcon(android.graphics.drawable.Icon)> is checking!!!
+The life time of api is [24,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 21 22 23 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.corphish.nightlight.services.QuickSettingsService dummyMainMethod_com_corphish_nightlight_services_QuickSettingsService(android.content.Intent)>[]--><com.corphish.nightlight.services.QuickSettingsService: void onTileAdded()>[]--><com.corphish.nightlight.services.QuickSettingsService: void syncTile()>[]--><com.corphish.nightlight.services.QuickSettingsService: void updateTileUI(boolean)>[]--><android.service.quicksettings.Tile: void setIcon(android.graphics.drawable.Icon)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.service.quicksettings.Tile: void setIcon(android.graphics.drawable.Icon)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:8
+crashApisInMain:6
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 20 Potential Issue API: SDKCheck of <android.app.job.JobInfo.Builder: android.app.job.JobInfo.Builder setMinimumLatency(long)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.corphish.nightlight.receivers.BootCompleteReceiver dummyMainMethod_com_corphish_nightlight_receivers_BootCompleteReceiver(android.content.Intent)>[]--><com.corphish.nightlight.receivers.BootCompleteReceiver: void onReceive(android.content.Context,android.content.Intent)>[[-$i0 < 21]]--><com.corphish.nightlight.services.BootCompleteJobService: void schedule(android.content.Context)>[]--><android.app.job.JobInfo.Builder: android.app.job.JobInfo.Builder setMinimumLatency(long)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 21 Potential Issue API: SDKCheck of <android.app.TimePickerDialog: void show()> is checking!!!
+The life time of api is [26,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 21 22 23 24 25 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.corphish.nightlight.MainActivity dummyMainMethod_com_corphish_nightlight_MainActivity(android.content.Intent)>[]--><dummyMainClass: com.corphish.nightlight.design.fragments.AutoFragment dummyMainMethod_com_corphish_nightlight_design_fragments_AutoFragment(android.content.Intent,android.app.Activity)>[]--><com.corphish.nightlight.design.fragments.AutoFragment$3: void onClick(android.view.View)>[]--><com.corphish.nightlight.design.fragments.AutoFragment: void access$800(com.corphish.nightlight.design.fragments.AutoFragment,com.corphish.nightlight.design.widgets.KeyValueView,java.lang.String)>[]--><com.corphish.nightlight.design.fragments.AutoFragment: void showTimePickerDialog(com.corphish.nightlight.design.widgets.KeyValueView,java.lang.String)>[]--><android.app.TimePickerDialog: void show()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.app.TimePickerDialog: void show()>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:9
+crashApisInMain:7
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+crashApis numbers:9
+crashApis numbers in main road:7
+On Android Version 16 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 17 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 18 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 19 this app may have error api use(at least): 7 and error api roads: 7
+On Android Version 20 this app may have error api use(at least): 7 and error api roads: 7
+On Android Version 21 this app may have error api use(at least): 7 and error api roads: 7
+On Android Version 22 this app may have error api use(at least): 7 and error api roads: 7
+On Android Version 23 this app may have error api use(at least): 6 and error api roads: 6
+On Android Version 24 this app may have error api use(at least): 1 and error api roads: 1
+On Android Version 25 this app may have error api use(at least): 1 and error api roads: 1
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 31 this app may have error api use(at least): 2 and error api roads: 2

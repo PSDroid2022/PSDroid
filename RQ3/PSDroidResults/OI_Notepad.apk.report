@@ -1,0 +1,257 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/OI_Notepad.apk
+Entry Points[org.openintents.distribution.EulaActivity, org.openintents.notepad.backup.MyBackupPro, org.openintents.notepad.noteslist.NotesList, org.openintents.notepad.search.SearchQueryResultsActivity, org.openintents.notepad.search.SearchSuggestionProvider, org.openintents.distribution.NewVersionActivity, org.openintents.notepad.NoteEditor, org.openintents.notepad.box.TextPlainBoxOneCloudReceiver, org.openintents.notepad.crypto.EncryptActivity, org.openintents.notepad.activity.SaveFileActivity, org.openintents.notepad.NotePadProvider, org.openintents.notepad.PreferenceActivity, org.openintents.notepad.filename.DialogHostingActivity]
+FllowDroidcallgraph size:2421
+Soot started on Mon Jul 11 09:15:51 CST 2022
+Soot finished on Mon Jul 11 09:15:56 CST 2022
+Soot has run for 0 min. 4 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 19
+Declared Target Sdk version is: 22
+Declared Max Sdk version is: -1
+Collected 453 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.os.BaseBundle: int getInt(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.openintents.notepad.noteslist.NotesList dummyMainMethod_org_openintents_notepad_noteslist_NotesList(android.content.Intent)>[]--><org.openintents.notepad.noteslist.NotesList: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.openintents.notepad.NoteEditor dummyMainMethod_org_openintents_notepad_NoteEditor(android.content.Intent)>[]--><org.openintents.notepad.NoteEditor: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:1
+crashApisInMain:1
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.os.BaseBundle: boolean containsKey(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+2call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.openintents.notepad.activity.SaveFileActivity dummyMainMethod_org_openintents_notepad_activity_SaveFileActivity(android.content.Intent)>[]--><org.openintents.notepad.activity.SaveFileActivity: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: boolean containsKey(java.lang.String)>
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.openintents.notepad.NoteEditor dummyMainMethod_org_openintents_notepad_NoteEditor(android.content.Intent)>[]--><org.openintents.notepad.NoteEditor: android.app.Dialog onCreateDialog(int)>[]--><org.openintents.notepad.dialog.ThemeDialog: void <init>(android.content.Context,org.openintents.notepad.dialog.ThemeDialog$ThemeDialogListener)>[]--><org.openintents.notepad.dialog.ThemeDialog: void init()>[]--><org.openintents.notepad.dialog.ThemeDialog: void prepareDialog()>[]--><org.openintents.notepad.dialog.ThemeDialog: void fillThemes()>[]--><org.openintents.notepad.theme.ThemeUtils: java.util.List getThemeInfos(android.content.Context,java.lang.String)>[]--><org.openintents.notepad.theme.ThemeUtils: java.util.List getThemePackages(android.content.pm.PackageManager,java.lang.String)>[]--><android.os.BaseBundle: boolean containsKey(java.lang.String)>
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.openintents.notepad.noteslist.NotesList dummyMainMethod_org_openintents_notepad_noteslist_NotesList(android.content.Intent)>[]--><org.openintents.notepad.noteslist.NotesList: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: boolean containsKey(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: boolean containsKey(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <org.openintents.notepad.dialog.ThemeDialog: void onRestoreInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: boolean containsKey(java.lang.String)>
+#1.the call statck between class <org.openintents.notepad.dialog.ThemeDialog: void onRestoreInstanceState(android.os.Bundle)> to <android.os.BaseBundle: boolean containsKey(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:2
+crashApisInMain:2
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)> is checking!!!
+The life time of api is [21,31]
+4call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.openintents.notepad.activity.SaveFileActivity dummyMainMethod_org_openintents_notepad_activity_SaveFileActivity(android.content.Intent)>[]--><org.openintents.notepad.activity.SaveFileActivity: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.openintents.notepad.noteslist.NotesList dummyMainMethod_org_openintents_notepad_noteslist_NotesList(android.content.Intent)>[]--><org.openintents.notepad.noteslist.NotesList: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.openintents.notepad.NoteEditor dummyMainMethod_org_openintents_notepad_NoteEditor(android.content.Intent)>[]--><org.openintents.notepad.NoteEditor: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+3 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <org.openintents.notepad.filename.FilenameDialog: android.os.Bundle onSaveInstanceState()>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#1.the call statck between class <org.openintents.notepad.filename.FilenameDialog: android.os.Bundle onSaveInstanceState()> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <org.openintents.notepad.dialog.ThemeDialog: android.os.Bundle onSaveInstanceState()>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#2.the call statck between class <org.openintents.notepad.dialog.ThemeDialog: android.os.Bundle onSaveInstanceState()> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <org.openintents.notepad.noteslist.TagsDialog: android.os.Bundle onSaveInstanceState()>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#3.the call statck between class <org.openintents.notepad.noteslist.TagsDialog: android.os.Bundle onSaveInstanceState()> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:3
+crashApisInMain:3
+containsStatic:false
+containsTry:false
+4call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.os.BaseBundle: long getLong(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+2call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.openintents.notepad.noteslist.NotesList dummyMainMethod_org_openintents_notepad_noteslist_NotesList(android.content.Intent)>[]--><org.openintents.notepad.noteslist.NotesList: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: long getLong(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: long getLong(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <org.openintents.notepad.noteslist.TagsDialog: void onRestoreInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: long getLong(java.lang.String)>
+#1.the call statck between class <org.openintents.notepad.noteslist.TagsDialog: void onRestoreInstanceState(android.os.Bundle)> to <android.os.BaseBundle: long getLong(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:4
+crashApisInMain:4
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putLong(java.lang.String,long)> is checking!!!
+The life time of api is [21,31]
+2call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.openintents.notepad.noteslist.NotesList dummyMainMethod_org_openintents_notepad_noteslist_NotesList(android.content.Intent)>[]--><org.openintents.notepad.noteslist.NotesList: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putLong(java.lang.String,long)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: void putLong(java.lang.String,long)>has compatibility isssues！
+-----------------------------------------
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <org.openintents.notepad.noteslist.TagsDialog: android.os.Bundle onSaveInstanceState()>[]--><android.os.BaseBundle: void putLong(java.lang.String,long)>
+#1.the call statck between class <org.openintents.notepad.noteslist.TagsDialog: android.os.Bundle onSaveInstanceState()> to <android.os.BaseBundle: void putLong(java.lang.String,long)>has compatibility isssues！
+-----------------------------------------
+crashApis:5
+crashApisInMain:5
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 5 Potential Issue API: SDKCheck of <android.os.BaseBundle: boolean getBoolean(java.lang.String)> is checking!!!
+The life time of api is [22,31]
+3call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.openintents.notepad.filename.DialogHostingActivity dummyMainMethod_org_openintents_notepad_filename_DialogHostingActivity(android.content.Intent)>[]--><org.openintents.notepad.filename.DialogHostingActivity: android.app.Dialog onCreateDialog(int)>[]--><org.openintents.distribution.DownloadOIAppDialog: void <init>(android.content.Context,int)>[]--><org.openintents.distribution.DownloadAppDialog: void set(int,int,int,int)>[]--><org.openintents.distribution.DownloadAppDialog: void set(java.lang.String,java.lang.String,java.lang.String,java.lang.String)>[]--><org.openintents.distribution.MarketUtils: boolean hideMarketLink(android.content.Context)>[[try]]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+One road protect good!
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.openintents.notepad.crypto.EncryptActivity dummyMainMethod_org_openintents_notepad_crypto_EncryptActivity(android.content.Intent)>[]--><org.openintents.notepad.crypto.EncryptActivity: android.app.Dialog onCreateDialog(int)>[]--><org.openintents.distribution.DownloadOIAppDialog: void <init>(android.content.Context,int)>[]--><org.openintents.distribution.DownloadAppDialog: void set(int,int,int,int)>[]--><org.openintents.distribution.DownloadAppDialog: void set(java.lang.String,java.lang.String,java.lang.String,java.lang.String)>[]--><org.openintents.distribution.MarketUtils: boolean hideMarketLink(android.content.Context)>[[try]]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+One road protect good!
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.openintents.notepad.noteslist.NotesList dummyMainMethod_org_openintents_notepad_noteslist_NotesList(android.content.Intent)>[]--><org.openintents.distribution.UpdateDialog: void <init>(android.content.Context)>[]--><org.openintents.distribution.DownloadAppDialog: void <init>(android.content.Context,int,int,int,int)>[]--><org.openintents.distribution.DownloadAppDialog: void set(int,int,int,int)>[]--><org.openintents.distribution.DownloadAppDialog: void set(java.lang.String,java.lang.String,java.lang.String,java.lang.String)>[]--><org.openintents.distribution.MarketUtils: boolean hideMarketLink(android.content.Context)>[[try]]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+One road protect good!
+2 Packageshead roads:
+try
+Good road with try: <org.openintents.distribution.DistributionLibraryActivity: android.app.Dialog onCreateDialog(int)>[]--><org.openintents.distribution.DistributionLibrary: android.app.Dialog onCreateDialog(int)>[]--><org.openintents.distribution.UpdateDialog: void <init>(android.content.Context)>[]--><org.openintents.distribution.DownloadAppDialog: void <init>(android.content.Context,int,int,int,int)>[]--><org.openintents.distribution.DownloadAppDialog: void set(int,int,int,int)>[]--><org.openintents.distribution.DownloadAppDialog: void set(java.lang.String,java.lang.String,java.lang.String,java.lang.String)>[]--><org.openintents.distribution.MarketUtils: boolean hideMarketLink(android.content.Context)>[[try]]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+One road protect good!
+try
+Good road with try: <org.openintents.distribution.InfoActivity: android.app.Dialog onCreateDialog(int)>[]--><org.openintents.distribution.InfoActivity: android.app.AlertDialog buildGetFromMarketDialog(int)>[]--><org.openintents.distribution.DownloadAppDialog: void <init>(android.content.Context,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>[]--><org.openintents.distribution.DownloadAppDialog: void set(java.lang.String,java.lang.String,java.lang.String,java.lang.String)>[]--><org.openintents.distribution.MarketUtils: boolean hideMarketLink(android.content.Context)>[[try]]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+One road protect good!
+try
+Good road with try: <org.openintents.distribution.InfoActivity: android.app.Dialog onCreateDialog(int)>[]--><org.openintents.distribution.DistributionLibraryListActivity: android.app.Dialog onCreateDialog(int)>[]--><org.openintents.distribution.DistributionLibrary: android.app.Dialog onCreateDialog(int)>[]--><org.openintents.distribution.UpdateDialog: void <init>(android.content.Context)>[]--><org.openintents.distribution.DownloadAppDialog: void <init>(android.content.Context,int,int,int,int)>[]--><org.openintents.distribution.DownloadAppDialog: void set(int,int,int,int)>[]--><org.openintents.distribution.DownloadAppDialog: void set(java.lang.String,java.lang.String,java.lang.String,java.lang.String)>[]--><org.openintents.distribution.MarketUtils: boolean hideMarketLink(android.content.Context)>[[try]]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+One road protect good!
+containsStatic:false
+containsTry:true
+3call by main package
+-----------------------------------------
+#################################################
+N 6 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.lang.String getString(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+4call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.openintents.distribution.NewVersionActivity dummyMainMethod_org_openintents_distribution_NewVersionActivity(android.content.Intent)>[]--><org.openintents.distribution.NewVersionActivity: void onCreate(android.os.Bundle)>[]--><org.openintents.distribution.EulaActivity: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.openintents.distribution.EulaActivity dummyMainMethod_org_openintents_distribution_EulaActivity(android.content.Intent)>[]--><org.openintents.distribution.EulaActivity: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.openintents.notepad.activity.SaveFileActivity dummyMainMethod_org_openintents_notepad_activity_SaveFileActivity(android.content.Intent)>[]--><org.openintents.notepad.activity.SaveFileActivity: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.openintents.notepad.NoteEditor dummyMainMethod_org_openintents_notepad_NoteEditor(android.content.Intent)>[]--><org.openintents.notepad.NoteEditor: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.openintents.notepad.noteslist.NotesList dummyMainMethod_org_openintents_notepad_noteslist_NotesList(android.content.Intent)>[]--><org.openintents.notepad.noteslist.NotesList: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+3 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <org.openintents.notepad.noteslist.TagsDialog: void onRestoreInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#1.the call statck between class <org.openintents.notepad.noteslist.TagsDialog: void onRestoreInstanceState(android.os.Bundle)> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <org.openintents.notepad.filename.FilenameDialog: void onRestoreInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#2.the call statck between class <org.openintents.notepad.filename.FilenameDialog: void onRestoreInstanceState(android.os.Bundle)> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <org.openintents.notepad.dialog.ThemeDialog: void onRestoreInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#3.the call statck between class <org.openintents.notepad.dialog.ThemeDialog: void onRestoreInstanceState(android.os.Bundle)> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:6
+crashApisInMain:6
+containsStatic:false
+containsTry:false
+4call by main package
+-----------------------------------------
+#################################################
+N 7 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putStringArray(java.lang.String,java.lang.String[])> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <org.openintents.notepad.noteslist.TagsDialog: android.os.Bundle onSaveInstanceState()>[]--><android.os.BaseBundle: void putStringArray(java.lang.String,java.lang.String[])>
+#1.the call statck between class <org.openintents.notepad.noteslist.TagsDialog: android.os.Bundle onSaveInstanceState()> to <android.os.BaseBundle: void putStringArray(java.lang.String,java.lang.String[])>has compatibility isssues！
+-----------------------------------------
+crashApis:7
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 8 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putInt(java.lang.String,int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.openintents.notepad.noteslist.NotesList dummyMainMethod_org_openintents_notepad_noteslist_NotesList(android.content.Intent)>[]--><org.openintents.notepad.noteslist.NotesList: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.openintents.notepad.NoteEditor dummyMainMethod_org_openintents_notepad_NoteEditor(android.content.Intent)>[]--><org.openintents.notepad.NoteEditor: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:8
+crashApisInMain:7
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 9 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.lang.String[] getStringArray(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <org.openintents.notepad.noteslist.TagsDialog: void onRestoreInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String[] getStringArray(java.lang.String)>
+#1.the call statck between class <org.openintents.notepad.noteslist.TagsDialog: void onRestoreInstanceState(android.os.Bundle)> to <android.os.BaseBundle: java.lang.String[] getStringArray(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:9
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+crashApis numbers:9
+crashApis numbers in main road:7
+On Android Version 16 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 17 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 18 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 19 this app may have error api use(at least): 9 and error api roads: 28
+On Android Version 20 this app may have error api use(at least): 9 and error api roads: 28
+On Android Version 21 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 22 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 23 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 24 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 25 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 31 this app may have error api use(at least): 0 and error api roads: 0

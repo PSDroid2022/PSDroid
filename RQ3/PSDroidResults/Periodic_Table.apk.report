@@ -1,0 +1,92 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/Periodic_Table.apk
+Entry Points[com.frozendevs.periodictable.activity.PropertiesActivity, com.frozendevs.periodictable.activity.MainActivity, com.frozendevs.periodictable.activity.AboutActivity]
+FllowDroidcallgraph size:1062
+Soot started on Mon Jul 11 10:37:21 CST 2022
+StaticCheck:<com.h6ah4i.android.widget.advrecyclerview.draggable.BaseDraggableItemDecorator: boolean supportsViewPropertyAnimation()>$yysi0 < 11
+StaticCheck:<com.h6ah4i.android.widget.advrecyclerview.swipeable.ItemSlidingAnimator: boolean supportsViewPropertyAnimator()>$yysi0 < 11
+StaticCheck:<com.h6ah4i.android.widget.advrecyclerview.draggable.RecyclerViewDragDropManager: boolean supportsEdgeEffect()>$yysi0 < 14
+StaticCheck:<com.h6ah4i.android.widget.advrecyclerview.draggable.RecyclerViewDragDropManager: boolean supportsViewTranslation()>$yysi0 < 11
+StaticCheck:<com.h6ah4i.android.widget.advrecyclerview.swipeable.RecyclerViewSwipeManager: boolean supportsViewPropertyAnimator()>$yysi0 < 11
+Soot finished on Mon Jul 11 10:37:30 CST 2022
+Soot has run for 0 min. 8 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 19
+Declared Target Sdk version is: 23
+Declared Max Sdk version is: -1
+Collected 298 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.graphics.drawable.Drawable: void setTint(int)> is checking!!!
+The life time of api is [21,31]
+4call roads:
+0 Mainhead roads:
+4 Packageshead roads:
+-$i0 < 21
+Good road: <com.frozendevs.periodictable.view.ExpandableIndicatorView: void <init>(android.content.Context)>[]--><com.frozendevs.periodictable.view.ExpandableIndicatorView: void initExpandableIndicatorView(android.content.Context)>[[-$i0 < 21]]--><android.graphics.drawable.Drawable: void setTint(int)>
+One road protect good!
+-$i0 < 21
+Good road: <com.frozendevs.periodictable.view.ExpandableIndicatorView: void <init>(android.content.Context,android.util.AttributeSet,int,int)>[]--><com.frozendevs.periodictable.view.ExpandableIndicatorView: void initExpandableIndicatorView(android.content.Context)>[[-$i0 < 21]]--><android.graphics.drawable.Drawable: void setTint(int)>
+One road protect good!
+-$i0 < 21
+Good road: <com.frozendevs.periodictable.view.ExpandableIndicatorView: void <init>(android.content.Context,android.util.AttributeSet,int)>[]--><com.frozendevs.periodictable.view.ExpandableIndicatorView: void initExpandableIndicatorView(android.content.Context)>[[-$i0 < 21]]--><android.graphics.drawable.Drawable: void setTint(int)>
+One road protect good!
+-$i0 < 21
+Good road: <com.frozendevs.periodictable.view.ExpandableIndicatorView: void <init>(android.content.Context,android.util.AttributeSet)>[]--><com.frozendevs.periodictable.view.ExpandableIndicatorView: void initExpandableIndicatorView(android.content.Context)>[[-$i0 < 21]]--><android.graphics.drawable.Drawable: void setTint(int)>
+One road protect good!
+containsStatic:false
+containsTry:false
+5call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.widget.ImageView: void <init>(android.content.Context,android.util.AttributeSet,int,int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <com.frozendevs.periodictable.view.ExpandableIndicatorView: void <init>(android.content.Context,android.util.AttributeSet,int,int)>[]--><android.widget.ImageView: void <init>(android.content.Context,android.util.AttributeSet,int,int)>
+#1.the call statck between class <com.frozendevs.periodictable.view.ExpandableIndicatorView: void <init>(android.content.Context,android.util.AttributeSet,int,int)> to <android.widget.ImageView: void <init>(android.content.Context,android.util.AttributeSet,int,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:1
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.lang.Object get(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <com.frozendevs.periodictable.fragment.IsotopesFragment: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.Object get(java.lang.String)>
+#1.the call statck between class <com.frozendevs.periodictable.fragment.IsotopesFragment: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)> to <android.os.BaseBundle: java.lang.Object get(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <com.frozendevs.periodictable.fragment.PropertiesFragment: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.Object get(java.lang.String)>
+#2.the call statck between class <com.frozendevs.periodictable.fragment.PropertiesFragment: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)> to <android.os.BaseBundle: java.lang.Object get(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:2
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+crashApis numbers:2
+crashApis numbers in main road:0
+On Android Version 16 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 17 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 18 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 19 this app may have error api use(at least): 2 and error api roads: 3
+On Android Version 20 this app may have error api use(at least): 2 and error api roads: 3
+On Android Version 21 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 22 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 23 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 24 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 25 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 31 this app may have error api use(at least): 0 and error api roads: 0

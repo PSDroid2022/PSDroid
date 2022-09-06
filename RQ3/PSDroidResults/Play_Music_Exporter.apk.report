@@ -1,0 +1,180 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/Play_Music_Exporter.apk
+Entry Points[de.arcus.playmusicexporter2.activities.MusicContainerListActivity, de.arcus.framework.activities.DirectoryBrowserActivity, de.arcus.playmusicexporter2.activities.SettingsActivity, de.arcus.playmusicexporter2.services.ExportService, de.arcus.playmusicexporter2.activities.MusicTrackListActivity, de.arcus.framework.activities.CrashActivity]
+FllowDroidcallgraph size:1902
+Soot started on Mon Jul 11 10:58:24 CST 2022
+Soot finished on Mon Jul 11 10:58:30 CST 2022
+Soot has run for 0 min. 6 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 8
+Declared Target Sdk version is: 23
+Declared Max Sdk version is: -1
+Collected 170 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)> is checking!!!
+The life time of api is [21,31]
+2call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.arcus.playmusicexporter2.activities.MusicTrackListActivity dummyMainMethod_de_arcus_playmusicexporter2_activities_MusicTrackListActivity(android.content.Intent)>[]--><de.arcus.playmusicexporter2.activities.MusicTrackListActivity: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <de.arcus.playmusicexporter2.activities.MusicContainerListActivity: void onItemSelected(de.arcus.playmusiclib.items.MusicTrackList)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#1.the call statck between class <de.arcus.playmusicexporter2.activities.MusicContainerListActivity: void onItemSelected(de.arcus.playmusiclib.items.MusicTrackList)> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:1
+crashApisInMain:1
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putLong(java.lang.String,long)> is checking!!!
+The life time of api is [21,31]
+2call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.arcus.playmusicexporter2.activities.MusicTrackListActivity dummyMainMethod_de_arcus_playmusicexporter2_activities_MusicTrackListActivity(android.content.Intent)>[]--><de.arcus.playmusicexporter2.activities.MusicTrackListActivity: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: void putLong(java.lang.String,long)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: void putLong(java.lang.String,long)>has compatibility isssues！
+-----------------------------------------
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <de.arcus.playmusicexporter2.activities.MusicContainerListActivity: void onItemSelected(de.arcus.playmusiclib.items.MusicTrackList)>[]--><android.os.BaseBundle: void putLong(java.lang.String,long)>
+#1.the call statck between class <de.arcus.playmusicexporter2.activities.MusicContainerListActivity: void onItemSelected(de.arcus.playmusiclib.items.MusicTrackList)> to <android.os.BaseBundle: void putLong(java.lang.String,long)>has compatibility isssues！
+-----------------------------------------
+crashApis:2
+crashApisInMain:2
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.lang.String getString(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.arcus.framework.activities.CrashActivity dummyMainMethod_de_arcus_framework_activities_CrashActivity(android.content.Intent)>[]--><de.arcus.framework.activities.CrashActivity: void onCreate(android.os.Bundle)>[[try]]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+One road protect good!
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.arcus.framework.activities.DirectoryBrowserActivity dummyMainMethod_de_arcus_framework_activities_DirectoryBrowserActivity(android.content.Intent)>[]--><de.arcus.framework.activities.DirectoryBrowserActivity: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.arcus.playmusicexporter2.activities.MusicTrackListActivity dummyMainMethod_de_arcus_playmusicexporter2_activities_MusicTrackListActivity(android.content.Intent)>[]--><dummyMainClass: de.arcus.playmusicexporter2.fragments.MusicTrackListFragment dummyMainMethod_de_arcus_playmusicexporter2_fragments_MusicTrackListFragment(android.content.Intent,android.app.Activity)>[]--><de.arcus.playmusicexporter2.fragments.MusicTrackListFragment: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.arcus.playmusicexporter2.services.ExportService dummyMainMethod_de_arcus_playmusicexporter2_services_ExportService(android.content.Intent)>[]--><de.arcus.playmusicexporter2.services.ExportService: void onHandleIntent(android.content.Intent)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:3
+crashApisInMain:3
+containsStatic:false
+containsTry:true
+1call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.content.ContentResolver: void takePersistableUriPermission(android.net.Uri,int)> is checking!!!
+The life time of api is [19,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.arcus.playmusicexporter2.activities.SettingsActivity dummyMainMethod_de_arcus_playmusicexporter2_activities_SettingsActivity(android.content.Intent)>[]--><de.arcus.playmusicexporter2.activities.SettingsActivity: void onActivityResult(int,int,android.content.Intent)>[[-$i0 < 21]]--><android.content.ContentResolver: void takePersistableUriPermission(android.net.Uri,int)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.os.BaseBundle: long getLong(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.arcus.playmusicexporter2.activities.MusicTrackListActivity dummyMainMethod_de_arcus_playmusicexporter2_activities_MusicTrackListActivity(android.content.Intent)>[]--><dummyMainClass: de.arcus.playmusicexporter2.fragments.MusicTrackListFragment dummyMainMethod_de_arcus_playmusicexporter2_fragments_MusicTrackListFragment(android.content.Intent,android.app.Activity)>[]--><de.arcus.playmusicexporter2.fragments.MusicTrackListFragment: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: long getLong(java.lang.String)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.arcus.playmusicexporter2.services.ExportService dummyMainMethod_de_arcus_playmusicexporter2_services_ExportService(android.content.Intent)>[]--><de.arcus.playmusicexporter2.services.ExportService: void onHandleIntent(android.content.Intent)>[]--><android.os.BaseBundle: long getLong(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: long getLong(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:4
+crashApisInMain:4
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 5 Potential Issue API: SDKCheck of <android.os.BaseBundle: int getInt(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.arcus.playmusicexporter2.activities.MusicContainerListActivity dummyMainMethod_de_arcus_playmusicexporter2_activities_MusicContainerListActivity(android.content.Intent)>[]--><dummyMainClass: de.arcus.playmusicexporter2.fragments.MusicContainerListFragment dummyMainMethod_de_arcus_playmusicexporter2_fragments_MusicContainerListFragment(android.content.Intent,android.app.Activity)>[]--><de.arcus.playmusicexporter2.fragments.MusicContainerListFragment: void onViewCreated(android.view.View,android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:5
+crashApisInMain:5
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 6 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putInt(java.lang.String,int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.arcus.playmusicexporter2.activities.MusicContainerListActivity dummyMainMethod_de_arcus_playmusicexporter2_activities_MusicContainerListActivity(android.content.Intent)>[]--><dummyMainClass: de.arcus.playmusicexporter2.fragments.MusicContainerListFragment dummyMainMethod_de_arcus_playmusicexporter2_fragments_MusicContainerListFragment(android.content.Intent,android.app.Activity)>[]--><de.arcus.playmusicexporter2.fragments.MusicContainerListFragment: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:6
+crashApisInMain:6
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 7 Potential Issue API: SDKCheck of <android.os.BaseBundle: boolean containsKey(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.arcus.framework.activities.CrashActivity dummyMainMethod_de_arcus_framework_activities_CrashActivity(android.content.Intent)>[]--><de.arcus.framework.activities.CrashActivity: void onCreate(android.os.Bundle)>[[try]]--><android.os.BaseBundle: boolean containsKey(java.lang.String)>
+One road protect good!
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.arcus.framework.activities.DirectoryBrowserActivity dummyMainMethod_de_arcus_framework_activities_DirectoryBrowserActivity(android.content.Intent)>[]--><de.arcus.framework.activities.DirectoryBrowserActivity: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: boolean containsKey(java.lang.String)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.arcus.playmusicexporter2.activities.MusicTrackListActivity dummyMainMethod_de_arcus_playmusicexporter2_activities_MusicTrackListActivity(android.content.Intent)>[]--><dummyMainClass: de.arcus.playmusicexporter2.fragments.MusicTrackListFragment dummyMainMethod_de_arcus_playmusicexporter2_fragments_MusicTrackListFragment(android.content.Intent,android.app.Activity)>[]--><de.arcus.playmusicexporter2.fragments.MusicTrackListFragment: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: boolean containsKey(java.lang.String)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.arcus.playmusicexporter2.activities.MusicContainerListActivity dummyMainMethod_de_arcus_playmusicexporter2_activities_MusicContainerListActivity(android.content.Intent)>[]--><dummyMainClass: de.arcus.playmusicexporter2.fragments.MusicContainerListFragment dummyMainMethod_de_arcus_playmusicexporter2_fragments_MusicContainerListFragment(android.content.Intent,android.app.Activity)>[]--><de.arcus.playmusicexporter2.fragments.MusicContainerListFragment: void onViewCreated(android.view.View,android.os.Bundle)>[]--><android.os.BaseBundle: boolean containsKey(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: boolean containsKey(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:7
+crashApisInMain:7
+containsStatic:false
+containsTry:true
+1call by main package
+-----------------------------------------
+crashApis numbers:7
+crashApis numbers in main road:7
+On Android Version 16 this app may have error api use(at least): 7 and error api roads: 14
+On Android Version 17 this app may have error api use(at least): 7 and error api roads: 14
+On Android Version 18 this app may have error api use(at least): 7 and error api roads: 14
+On Android Version 19 this app may have error api use(at least): 7 and error api roads: 14
+On Android Version 20 this app may have error api use(at least): 7 and error api roads: 14
+On Android Version 21 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 22 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 23 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 24 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 25 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 31 this app may have error api use(at least): 0 and error api roads: 0

@@ -1,0 +1,975 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/Déjà_Vu_Location_Service.apk
+Entry Points[org.fitchfamily.android.dejavu.GpsMonitor, org.microg.nlp.api.MPermissionHelperActivity, org.fitchfamily.android.dejavu.BackendService]
+FllowDroidcallgraph size:84
+Soot started on Mon Jul 11 02:48:32 CST 2022
+StaticCheck:<a.a.c.b.a.a: boolean a(android.graphics.drawable.Drawable)>$yysi0 < 21
+StaticCheck:<a.a.c.b.a.a: boolean e(android.graphics.drawable.Drawable)>$yysi0 < 19
+StaticCheck:$z0$yysi0 < 26
+StaticCheck:<a.a.c.d.a: boolean a()>$yysi0 < 27
+Soot finished on Mon Jul 11 02:48:38 CST 2022
+Soot has run for 0 min. 5 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 18
+Declared Target Sdk version is: 27
+Declared Max Sdk version is: -1
+Collected 562 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.graphics.drawable.Drawable: int getAlpha()> is checking!!!
+The life time of api is [19,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i0 < 19
+Good road: <a.a.b.a.d: int getAlpha()>[]--><a.a.b.a.k: int getAlpha()>[]--><a.a.c.b.a.a: int b(android.graphics.drawable.Drawable)>[[-$i0 < 19]]--><android.graphics.drawable.Drawable: int getAlpha()>
+One road protect good!
+-$i0 < 19
+Good road: <a.a.b.a.d: int getAlpha()>[]--><a.a.c.b.a.a: int b(android.graphics.drawable.Drawable)>[[-$i0 < 19]]--><android.graphics.drawable.Drawable: int getAlpha()>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.view.ViewParent: void onNestedScrollAccepted(android.view.View,android.view.View,int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+try
+Good road with try: <a.a.c.g.t$b: void a(android.view.ViewParent,android.view.View,android.view.View,int)>[[try]]--><android.view.ViewParent: void onNestedScrollAccepted(android.view.View,android.view.View,int)>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.graphics.drawable.Drawable: android.graphics.ColorFilter getColorFilter()> is checking!!!
+The life time of api is [21,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+-$i0 < 21
+Good road: <a.a.b.a.k: android.graphics.ColorFilter getColorFilter()>[]--><a.a.b.a.j: android.graphics.ColorFilter getColorFilter()>[]--><a.a.c.b.a.a: android.graphics.ColorFilter c(android.graphics.drawable.Drawable)>[[-$i0 < 21]]--><android.graphics.drawable.Drawable: android.graphics.ColorFilter getColorFilter()>
+One road protect good!
+-$i0 < 21
+Good road: <a.a.b.a.d: android.graphics.ColorFilter getColorFilter()>[]--><a.a.b.a.j: android.graphics.ColorFilter getColorFilter()>[]--><a.a.c.b.a.a: android.graphics.ColorFilter c(android.graphics.drawable.Drawable)>[[-$i0 < 21]]--><android.graphics.drawable.Drawable: android.graphics.ColorFilter getColorFilter()>
+One road protect good!
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.graphics.drawable.Drawable.ConstantState: boolean canApplyTheme()> is checking!!!
+The life time of api is [21,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 18 19 20 
+Error road: <a.a.b.a.d$b: boolean canApplyTheme()>[]--><android.graphics.drawable.Drawable.ConstantState: boolean canApplyTheme()>
+#1.the call statck between class <a.a.b.a.d$b: boolean canApplyTheme()> to <android.graphics.drawable.Drawable.ConstantState: boolean canApplyTheme()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 18 19 20 
+Error road: <a.a.b.a.k$g: boolean canApplyTheme()>[]--><android.graphics.drawable.Drawable.ConstantState: boolean canApplyTheme()>
+#2.the call statck between class <a.a.b.a.k$g: boolean canApplyTheme()> to <android.graphics.drawable.Drawable.ConstantState: boolean canApplyTheme()>has compatibility isssues！
+-----------------------------------------
+crashApis:1
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.view.ViewParent: boolean onNestedFling(android.view.View,float,float,boolean)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+try
+Good road with try: <a.a.c.g.t$b: boolean a(android.view.ViewParent,android.view.View,float,float,boolean)>[[try]]--><android.view.ViewParent: boolean onNestedFling(android.view.View,float,float,boolean)>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 5 Potential Issue API: SDKCheck of <android.view.MenuItem: android.view.MenuItem setAlphabeticShortcut(char,int)> is checking!!!
+The life time of api is [26,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 18 19 20 21 22 23 24 25 
+Error road: <a.a.c.g.j$a: void a(android.view.MenuItem,char,int)>[]--><android.view.MenuItem: android.view.MenuItem setAlphabeticShortcut(char,int)>
+#1.the call statck between class <a.a.c.g.j$a: void a(android.view.MenuItem,char,int)> to <android.view.MenuItem: android.view.MenuItem setAlphabeticShortcut(char,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 18 19 20 21 22 23 24 25 
+Error road: <a.a.d.d.d$b: void a(android.view.MenuItem)>[]--><a.a.c.g.j: void a(android.view.MenuItem,char,int)>[[]]--><android.view.MenuItem: android.view.MenuItem setAlphabeticShortcut(char,int)>
+#2.the call statck between class <a.a.d.d.d$b: void a(android.view.MenuItem)> to <android.view.MenuItem: android.view.MenuItem setAlphabeticShortcut(char,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:2
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 6 Potential Issue API: SDKCheck of <android.graphics.Typeface.Builder: android.graphics.Typeface.Builder setItalic(boolean)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+try
+Good road with try: <a.a.c.b.f: android.graphics.Typeface a(android.content.Context,android.os.CancellationSignal,a.a.c.e.f$b[],int)>[[try]]--><android.graphics.Typeface.Builder: android.graphics.Typeface.Builder setItalic(boolean)>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 7 Potential Issue API: SDKCheck of <android.view.ViewParent: boolean onNestedPreFling(android.view.View,float,float)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+try
+Good road with try: <a.a.c.g.t$b: boolean a(android.view.ViewParent,android.view.View,float,float)>[[try]]--><android.view.ViewParent: boolean onNestedPreFling(android.view.View,float,float)>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 8 Potential Issue API: SDKCheck of <android.graphics.drawable.Drawable: void setAutoMirrored(boolean)> is checking!!!
+The life time of api is [19,31]
+3call roads:
+0 Mainhead roads:
+3 Packageshead roads:
+!!!this api will crash on sdk 18 
+Error road: <a.a.c.b.a.e: void setAutoMirrored(boolean)>[]--><android.graphics.drawable.Drawable: void setAutoMirrored(boolean)>
+#1.the call statck between class <a.a.c.b.a.e: void setAutoMirrored(boolean)> to <android.graphics.drawable.Drawable: void setAutoMirrored(boolean)>has compatibility isssues！
+-----------------------------------------
+-$i0 < 19
+Good road: <a.a.d.c.a.a: void setAutoMirrored(boolean)>[]--><a.a.c.b.a.a: void a(android.graphics.drawable.Drawable,boolean)>[[-$i0 < 19]]--><android.graphics.drawable.Drawable: void setAutoMirrored(boolean)>
+One road protect good!
+-$i0 < 19
+Good road: <a.a.b.a.d: void setAutoMirrored(boolean)>[]--><a.a.b.a.k: void setAutoMirrored(boolean)>[]--><a.a.c.b.a.a: void a(android.graphics.drawable.Drawable,boolean)>[[-$i0 < 19]]--><android.graphics.drawable.Drawable: void setAutoMirrored(boolean)>
+One road protect good!
+-$i0 < 19
+Good road: <a.a.b.a.d: void setAutoMirrored(boolean)>[]--><a.a.c.b.a.a: void a(android.graphics.drawable.Drawable,boolean)>[[-$i0 < 19]]--><android.graphics.drawable.Drawable: void setAutoMirrored(boolean)>
+One road protect good!
+crashApis:3
+containsStatic:false
+containsTry:false
+4call by main package
+-----------------------------------------
+#################################################
+N 9 Potential Issue API: SDKCheck of <android.graphics.drawable.Drawable: void setHotspotBounds(int,int,int,int)> is checking!!!
+The life time of api is [21,31]
+4call roads:
+0 Mainhead roads:
+4 Packageshead roads:
+-$i4 < 21
+Good road: <a.a.d.c.a.a: void setHotspotBounds(int,int,int,int)>[]--><a.a.c.b.a.a: void a(android.graphics.drawable.Drawable,int,int,int,int)>[[-$i4 < 21]]--><android.graphics.drawable.Drawable: void setHotspotBounds(int,int,int,int)>
+One road protect good!
+-$i4 < 21
+Good road: <a.a.b.a.k: void setHotspotBounds(int,int,int,int)>[]--><a.a.b.a.j: void setHotspotBounds(int,int,int,int)>[]--><a.a.c.b.a.a: void a(android.graphics.drawable.Drawable,int,int,int,int)>[[-$i4 < 21]]--><android.graphics.drawable.Drawable: void setHotspotBounds(int,int,int,int)>
+One road protect good!
+!!!this api will crash on sdk 18 19 20 
+Error road: <a.a.c.b.a.f: void setHotspotBounds(int,int,int,int)>[]--><android.graphics.drawable.Drawable: void setHotspotBounds(int,int,int,int)>
+#3.the call statck between class <a.a.c.b.a.f: void setHotspotBounds(int,int,int,int)> to <android.graphics.drawable.Drawable: void setHotspotBounds(int,int,int,int)>has compatibility isssues！
+-----------------------------------------
+-$i4 < 21
+Good road: <a.a.b.a.d: void setHotspotBounds(int,int,int,int)>[]--><a.a.b.a.j: void setHotspotBounds(int,int,int,int)>[]--><a.a.c.b.a.a: void a(android.graphics.drawable.Drawable,int,int,int,int)>[[-$i4 < 21]]--><android.graphics.drawable.Drawable: void setHotspotBounds(int,int,int,int)>
+One road protect good!
+crashApis:4
+containsStatic:false
+containsTry:false
+5call by main package
+-----------------------------------------
+#################################################
+N 10 Potential Issue API: SDKCheck of <android.app.Activity: void requestPermissions(java.lang.String[],int)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 18 19 20 21 22 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.microg.nlp.api.MPermissionHelperActivity dummyMainMethod_org_microg_nlp_api_MPermissionHelperActivity(android.content.Intent)>[]--><org.microg.nlp.api.MPermissionHelperActivity: void onCreate(android.os.Bundle)>[]--><android.app.Activity: void requestPermissions(java.lang.String[],int)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.app.Activity: void requestPermissions(java.lang.String[],int)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:5
+crashApisInMain:1
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 11 Potential Issue API: SDKCheck of <android.graphics.drawable.Drawable: void setTint(int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i1 < 21
+Good road: <a.a.d.c.a.a: void setTint(int)>[]--><a.a.c.b.a.a: void a(android.graphics.drawable.Drawable,int)>[[-$i1 < 21]]--><android.graphics.drawable.Drawable: void setTint(int)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 12 Potential Issue API: SDKCheck of <android.os.BaseBundle: int getInt(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+try
+Good road with try: <org.fitchfamily.android.dejavu.BackendService: void a(org.fitchfamily.android.dejavu.BackendService$a)>[[try]]--><org.fitchfamily.android.dejavu.BackendService: void j()>[]--><org.fitchfamily.android.dejavu.BackendService: android.location.Location a(java.util.Collection)>[]--><org.fitchfamily.android.dejavu.o: void a(android.location.Location)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 13 Potential Issue API: SDKCheck of <android.content.Context: android.graphics.drawable.Drawable getDrawable(int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i1 < 21
+Good road: <a.a.c.a.a: android.graphics.drawable.Drawable b(android.content.Context,int)>[[-$i1 < 21]]--><android.content.Context: android.graphics.drawable.Drawable getDrawable(int)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 14 Potential Issue API: SDKCheck of <android.graphics.drawable.Drawable: android.graphics.Rect getDirtyBounds()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 18 19 20 
+Error road: <a.a.c.b.a.f: android.graphics.Rect getDirtyBounds()>[]--><android.graphics.drawable.Drawable: android.graphics.Rect getDirtyBounds()>
+#1.the call statck between class <a.a.c.b.a.f: android.graphics.Rect getDirtyBounds()> to <android.graphics.drawable.Drawable: android.graphics.Rect getDirtyBounds()>has compatibility isssues！
+-----------------------------------------
+crashApis:6
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 15 Potential Issue API: SDKCheck of <android.view.ViewParent: void onNestedPreScroll(android.view.View,int,int,int[])> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+try
+Good road with try: <a.a.c.g.t$b: void a(android.view.ViewParent,android.view.View,int,int,int[])>[[try]]--><android.view.ViewParent: void onNestedPreScroll(android.view.View,int,int,int[])>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 16 Potential Issue API: SDKCheck of <android.graphics.drawable.Drawable: int getLayoutDirection()> is checking!!!
+The life time of api is [23,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i0 < 17
+-$i0 < 23
+Good road: <a.a.b.a.d: void draw(android.graphics.Canvas)>[]--><a.a.b.a.k: void draw(android.graphics.Canvas)>[]--><a.a.b.a.k: boolean a()>[[-$i0 < 17]]--><a.a.c.b.a.a: int d(android.graphics.drawable.Drawable)>[[-$i0 < 23]]--><android.graphics.drawable.Drawable: int getLayoutDirection()>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 17 Potential Issue API: SDKCheck of <android.view.View: android.content.res.ColorStateList getBackgroundTintList()> is checking!!!
+The life time of api is [21,31]
+3call roads:
+0 Mainhead roads:
+3 Packageshead roads:
+-$i0 != 21
+Good road: <a.a.c.g.s$f: void a(android.view.View,android.graphics.PorterDuff$Mode)>[[-$i0 != 21]]--><android.view.View: android.content.res.ColorStateList getBackgroundTintList()>
+One road protect good!
+!!!this api will crash on sdk 18 19 20 
+Error road: <a.a.c.g.s$f: android.content.res.ColorStateList a(android.view.View)>[]--><android.view.View: android.content.res.ColorStateList getBackgroundTintList()>
+#2.the call statck between class <a.a.c.g.s$f: android.content.res.ColorStateList a(android.view.View)> to <android.view.View: android.content.res.ColorStateList getBackgroundTintList()>has compatibility isssues！
+-----------------------------------------
+-$i0 != 21
+Good road: <a.a.c.g.s$f: void a(android.view.View,android.content.res.ColorStateList)>[[-$i0 != 21]]--><android.view.View: android.content.res.ColorStateList getBackgroundTintList()>
+One road protect good!
+crashApis:7
+containsStatic:false
+containsTry:false
+4call by main package
+-----------------------------------------
+#################################################
+N 18 Potential Issue API: SDKCheck of <android.os.BaseBundle: long getLong(java.lang.String,long)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+try
+Good road with try: <org.fitchfamily.android.dejavu.BackendService: void a(org.fitchfamily.android.dejavu.BackendService$a)>[[try]]--><org.fitchfamily.android.dejavu.BackendService: void j()>[]--><org.fitchfamily.android.dejavu.BackendService: java.util.Set b(java.util.Collection)>[]--><android.os.BaseBundle: long getLong(java.lang.String,long)>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 19 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+try
+Good road with try: <org.fitchfamily.android.dejavu.BackendService: void a(org.fitchfamily.android.dejavu.BackendService$a)>[[try]]--><org.fitchfamily.android.dejavu.BackendService: void j()>[]--><org.fitchfamily.android.dejavu.BackendService: java.util.List d(java.util.Collection)>[]--><org.fitchfamily.android.dejavu.m: android.location.Location e()>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 20 Potential Issue API: SDKCheck of <android.graphics.drawable.Drawable: void getOutline(android.graphics.Outline)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 18 19 20 
+Error road: <a.a.c.b.a.f: void getOutline(android.graphics.Outline)>[]--><android.graphics.drawable.Drawable: void getOutline(android.graphics.Outline)>
+#1.the call statck between class <a.a.c.b.a.f: void getOutline(android.graphics.Outline)> to <android.graphics.drawable.Drawable: void getOutline(android.graphics.Outline)>has compatibility isssues！
+-----------------------------------------
+crashApis:8
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 21 Potential Issue API: SDKCheck of <android.graphics.drawable.Drawable: void setHotspot(float,float)> is checking!!!
+The life time of api is [21,31]
+4call roads:
+0 Mainhead roads:
+4 Packageshead roads:
+-$i0 < 21
+Good road: <a.a.d.c.a.a: void setHotspot(float,float)>[]--><a.a.c.b.a.a: void a(android.graphics.drawable.Drawable,float,float)>[[-$i0 < 21]]--><android.graphics.drawable.Drawable: void setHotspot(float,float)>
+One road protect good!
+-$i0 < 21
+Good road: <a.a.b.a.k: void setHotspot(float,float)>[]--><a.a.b.a.j: void setHotspot(float,float)>[]--><a.a.c.b.a.a: void a(android.graphics.drawable.Drawable,float,float)>[[-$i0 < 21]]--><android.graphics.drawable.Drawable: void setHotspot(float,float)>
+One road protect good!
+!!!this api will crash on sdk 18 19 20 
+Error road: <a.a.c.b.a.f: void setHotspot(float,float)>[]--><android.graphics.drawable.Drawable: void setHotspot(float,float)>
+#3.the call statck between class <a.a.c.b.a.f: void setHotspot(float,float)> to <android.graphics.drawable.Drawable: void setHotspot(float,float)>has compatibility isssues！
+-----------------------------------------
+-$i0 < 21
+Good road: <a.a.b.a.d: void setHotspot(float,float)>[]--><a.a.b.a.j: void setHotspot(float,float)>[]--><a.a.c.b.a.a: void a(android.graphics.drawable.Drawable,float,float)>[[-$i0 < 21]]--><android.graphics.drawable.Drawable: void setHotspot(float,float)>
+One road protect good!
+crashApis:9
+containsStatic:false
+containsTry:false
+5call by main package
+-----------------------------------------
+#################################################
+N 22 Potential Issue API: SDKCheck of <android.view.View: boolean isAttachedToWindow()> is checking!!!
+The life time of api is [19,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 18 
+Error road: <a.a.c.g.s$e: boolean f(android.view.View)>[]--><android.view.View: boolean isAttachedToWindow()>
+#1.the call statck between class <a.a.c.g.s$e: boolean f(android.view.View)> to <android.view.View: boolean isAttachedToWindow()>has compatibility isssues！
+-----------------------------------------
+crashApis:10
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 23 Potential Issue API: SDKCheck of <android.graphics.drawable.Drawable: void inflate(android.content.res.Resources,org.xmlpull.v1.XmlPullParser,android.util.AttributeSet,android.content.res.Resources.Theme)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i0 < 21
+Good road: <a.a.c.b.a.a: void a(android.graphics.drawable.Drawable,android.content.res.Resources,org.xmlpull.v1.XmlPullParser,android.util.AttributeSet,android.content.res.Resources$Theme)>[[-$i0 < 21]]--><android.graphics.drawable.Drawable: void inflate(android.content.res.Resources,org.xmlpull.v1.XmlPullParser,android.util.AttributeSet,android.content.res.Resources.Theme)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 24 Potential Issue API: SDKCheck of <android.view.MenuItem: android.view.MenuItem setIconTintMode(android.graphics.PorterDuff.Mode)> is checking!!!
+The life time of api is [26,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 18 19 20 21 22 23 24 25 
+Error road: <a.a.c.g.j: void a(android.view.MenuItem,android.graphics.PorterDuff$Mode)>[[]]--><android.view.MenuItem: android.view.MenuItem setIconTintMode(android.graphics.PorterDuff.Mode)>
+#1.the call statck between class <a.a.c.g.j: void a(android.view.MenuItem,android.graphics.PorterDuff$Mode)> to <android.view.MenuItem: android.view.MenuItem setIconTintMode(android.graphics.PorterDuff.Mode)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 18 19 20 21 22 23 24 25 
+Error road: <a.a.c.g.j$a: void a(android.view.MenuItem,android.graphics.PorterDuff$Mode)>[]--><android.view.MenuItem: android.view.MenuItem setIconTintMode(android.graphics.PorterDuff.Mode)>
+#2.the call statck between class <a.a.c.g.j$a: void a(android.view.MenuItem,android.graphics.PorterDuff$Mode)> to <android.view.MenuItem: android.view.MenuItem setIconTintMode(android.graphics.PorterDuff.Mode)>has compatibility isssues！
+-----------------------------------------
+crashApis:11
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 25 Potential Issue API: SDKCheck of <android.graphics.Typeface.Builder: android.graphics.Typeface build()> is checking!!!
+The life time of api is [26,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+try
+Good road with try: <a.a.c.b.f: android.graphics.Typeface a(android.content.Context,android.os.CancellationSignal,a.a.c.e.f$b[],int)>[[try]]--><android.graphics.Typeface.Builder: android.graphics.Typeface build()>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 26 Potential Issue API: SDKCheck of <android.view.MenuItem: android.view.MenuItem setTooltipText(java.lang.CharSequence)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 18 19 20 21 22 23 24 25 
+Error road: <a.a.c.g.j$a: void b(android.view.MenuItem,java.lang.CharSequence)>[]--><android.view.MenuItem: android.view.MenuItem setTooltipText(java.lang.CharSequence)>
+#1.the call statck between class <a.a.c.g.j$a: void b(android.view.MenuItem,java.lang.CharSequence)> to <android.view.MenuItem: android.view.MenuItem setTooltipText(java.lang.CharSequence)>has compatibility isssues！
+-----------------------------------------
+crashApis:12
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 27 Potential Issue API: SDKCheck of <android.content.res.Resources: android.graphics.drawable.Drawable getDrawable(int,android.content.res.Resources.Theme)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i1 < 21
+Good road: <a.a.c.a.a.d: android.graphics.drawable.Drawable a(android.content.res.Resources,int,android.content.res.Resources$Theme)>[[-$i1 < 21]]--><android.content.res.Resources: android.graphics.drawable.Drawable getDrawable(int,android.content.res.Resources.Theme)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 28 Potential Issue API: SDKCheck of <android.content.ContentResolver: android.os.ParcelFileDescriptor openFileDescriptor(android.net.Uri,java.lang.String,android.os.CancellationSignal)> is checking!!!
+The life time of api is [19,31]
+4call roads:
+0 Mainhead roads:
+4 Packageshead roads:
+try
+Good road with try: <a.a.c.e.f: java.util.Map a(android.content.Context,a.a.c.e.f$b[],android.os.CancellationSignal)>[]--><a.a.c.b.j: java.nio.ByteBuffer a(android.content.Context,android.os.CancellationSignal,android.net.Uri)>[[try]]--><android.content.ContentResolver: android.os.ParcelFileDescriptor openFileDescriptor(android.net.Uri,java.lang.String,android.os.CancellationSignal)>
+One road protect good!
+try
+Good road with try: <a.a.c.b.e: android.graphics.Typeface a(android.content.Context,android.os.CancellationSignal,a.a.c.e.f$b[],int)>[]--><a.a.c.b.j: java.nio.ByteBuffer a(android.content.Context,android.os.CancellationSignal,android.net.Uri)>[[try]]--><android.content.ContentResolver: android.os.ParcelFileDescriptor openFileDescriptor(android.net.Uri,java.lang.String,android.os.CancellationSignal)>
+One road protect good!
+try
+Good road with try: <a.a.c.b.d: android.graphics.Typeface a(android.content.Context,android.os.CancellationSignal,a.a.c.e.f$b[],int)>[[try]]--><android.content.ContentResolver: android.os.ParcelFileDescriptor openFileDescriptor(android.net.Uri,java.lang.String,android.os.CancellationSignal)>
+One road protect good!
+try
+Good road with try: <a.a.c.b.f: android.graphics.Typeface a(android.content.Context,android.os.CancellationSignal,a.a.c.e.f$b[],int)>[[try]]--><android.content.ContentResolver: android.os.ParcelFileDescriptor openFileDescriptor(android.net.Uri,java.lang.String,android.os.CancellationSignal)>
+One road protect good!
+containsStatic:false
+containsTry:true
+5call by main package
+-----------------------------------------
+#################################################
+N 29 Potential Issue API: SDKCheck of <android.view.MenuItem: android.view.MenuItem setNumericShortcut(char,int)> is checking!!!
+The life time of api is [26,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 18 19 20 21 22 23 24 25 
+Error road: <a.a.c.g.j$a: void b(android.view.MenuItem,char,int)>[]--><android.view.MenuItem: android.view.MenuItem setNumericShortcut(char,int)>
+#1.the call statck between class <a.a.c.g.j$a: void b(android.view.MenuItem,char,int)> to <android.view.MenuItem: android.view.MenuItem setNumericShortcut(char,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 18 19 20 21 22 23 24 25 
+Error road: <a.a.d.d.d$b: void a(android.view.MenuItem)>[]--><a.a.c.g.j: void b(android.view.MenuItem,char,int)>[[]]--><android.view.MenuItem: android.view.MenuItem setNumericShortcut(char,int)>
+#2.the call statck between class <a.a.d.d.d$b: void a(android.view.MenuItem)> to <android.view.MenuItem: android.view.MenuItem setNumericShortcut(char,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:13
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 30 Potential Issue API: SDKCheck of <android.graphics.drawable.Drawable: void applyTheme(android.content.res.Resources.Theme)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i0 < 21
+Good road: <a.a.c.b.a.a: void a(android.graphics.drawable.Drawable,android.content.res.Resources$Theme)>[[-$i0 < 21]]--><android.graphics.drawable.Drawable: void applyTheme(android.content.res.Resources.Theme)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 31 Potential Issue API: SDKCheck of <android.view.View: void setBackgroundTintMode(android.graphics.PorterDuff.Mode)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 18 19 20 
+Error road: <a.a.c.g.s$f: void a(android.view.View,android.graphics.PorterDuff$Mode)>[]--><android.view.View: void setBackgroundTintMode(android.graphics.PorterDuff.Mode)>
+#1.the call statck between class <a.a.c.g.s$f: void a(android.view.View,android.graphics.PorterDuff$Mode)> to <android.view.View: void setBackgroundTintMode(android.graphics.PorterDuff.Mode)>has compatibility isssues！
+-----------------------------------------
+crashApis:14
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 32 Potential Issue API: SDKCheck of <android.view.View: void stopNestedScroll()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 18 19 20 
+Error road: <a.a.c.g.s$f: void i(android.view.View)>[]--><android.view.View: void stopNestedScroll()>
+#1.the call statck between class <a.a.c.g.s$f: void i(android.view.View)> to <android.view.View: void stopNestedScroll()>has compatibility isssues！
+-----------------------------------------
+crashApis:15
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 33 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager: java.util.List getScanResults()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+try
+Good road with try: <org.fitchfamily.android.dejavu.a: void onReceive(android.content.Context,android.content.Intent)>[]--><org.fitchfamily.android.dejavu.BackendService: void a(org.fitchfamily.android.dejavu.BackendService)>[]--><org.fitchfamily.android.dejavu.BackendService: void l()>[[try]]--><android.net.wifi.WifiManager: java.util.List getScanResults()>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 34 Potential Issue API: SDKCheck of <android.graphics.Typeface.Builder: android.graphics.Typeface.Builder setWeight(int)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+try
+Good road with try: <a.a.c.b.f: android.graphics.Typeface a(android.content.Context,android.os.CancellationSignal,a.a.c.e.f$b[],int)>[[try]]--><android.graphics.Typeface.Builder: android.graphics.Typeface.Builder setWeight(int)>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 35 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putLong(java.lang.String,long)> is checking!!!
+The life time of api is [21,31]
+3call roads:
+0 Mainhead roads:
+3 Packageshead roads:
+try
+Good road with try: <org.fitchfamily.android.dejavu.a: void onReceive(android.content.Context,android.content.Intent)>[]--><org.fitchfamily.android.dejavu.BackendService: void a(org.fitchfamily.android.dejavu.BackendService)>[]--><org.fitchfamily.android.dejavu.BackendService: void l()>[[try]]--><org.fitchfamily.android.dejavu.BackendService: void a(java.util.Collection,long)>[[try]]--><org.fitchfamily.android.dejavu.j: android.location.Location a()>[[try]]--><android.os.BaseBundle: void putLong(java.lang.String,long)>
+One road protect good!
+try
+Good road with try: <a.a.c.e.g: boolean handleMessage(android.os.Message)>[]--><a.a.c.e.k: void a(a.a.c.e.k,java.lang.Runnable)>[]--><a.a.c.e.k: void a(java.lang.Runnable)>[]--><org.fitchfamily.android.dejavu.b: void run()>[]--><org.fitchfamily.android.dejavu.BackendService: void b(org.fitchfamily.android.dejavu.BackendService)>[]--><org.fitchfamily.android.dejavu.BackendService: void n()>[]--><org.fitchfamily.android.dejavu.BackendService: void a(java.util.Collection,long)>[[try]]--><org.fitchfamily.android.dejavu.j: android.location.Location a()>[[try]]--><android.os.BaseBundle: void putLong(java.lang.String,long)>
+One road protect good!
+try
+Good road with try: <org.fitchfamily.android.dejavu.BackendService: void a(org.fitchfamily.android.dejavu.BackendService$a)>[[try]]--><org.fitchfamily.android.dejavu.BackendService: void j()>[]--><org.fitchfamily.android.dejavu.BackendService: android.location.Location a(java.util.Collection)>[]--><org.fitchfamily.android.dejavu.o: android.location.Location a()>[]--><android.os.BaseBundle: void putLong(java.lang.String,long)>
+One road protect good!
+containsStatic:false
+containsTry:true
+4call by main package
+-----------------------------------------
+#################################################
+N 36 Potential Issue API: SDKCheck of <android.view.ViewParent: void onNestedScroll(android.view.View,int,int,int,int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+try
+Good road with try: <a.a.c.g.t$b: void a(android.view.ViewParent,android.view.View,int,int,int,int)>[[try]]--><android.view.ViewParent: void onNestedScroll(android.view.View,int,int,int,int)>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 37 Potential Issue API: SDKCheck of <android.graphics.drawable.Drawable: boolean isAutoMirrored()> is checking!!!
+The life time of api is [19,31]
+4call roads:
+0 Mainhead roads:
+4 Packageshead roads:
+!!!this api will crash on sdk 18 
+Error road: <a.a.c.b.a.e: boolean isAutoMirrored()>[]--><android.graphics.drawable.Drawable: boolean isAutoMirrored()>
+#1.the call statck between class <a.a.c.b.a.e: boolean isAutoMirrored()> to <android.graphics.drawable.Drawable: boolean isAutoMirrored()>has compatibility isssues！
+-----------------------------------------
+-$i0 < 19
+Good road: <a.a.d.c.a.a: boolean isAutoMirrored()>[]--><a.a.c.b.a.a: boolean e(android.graphics.drawable.Drawable)>[[-$i0 < 19]]--><android.graphics.drawable.Drawable: boolean isAutoMirrored()>
+One road protect good!
+-$i0 < 19
+Good road: <a.a.b.a.d: boolean isAutoMirrored()>[]--><a.a.c.b.a.a: boolean e(android.graphics.drawable.Drawable)>[[-$i0 < 19]]--><android.graphics.drawable.Drawable: boolean isAutoMirrored()>
+One road protect good!
+-$i0 < 19
+Good road: <a.a.b.a.d: boolean isAutoMirrored()>[]--><a.a.b.a.k: boolean isAutoMirrored()>[]--><a.a.c.b.a.a: boolean e(android.graphics.drawable.Drawable)>[[-$i0 < 19]]--><android.graphics.drawable.Drawable: boolean isAutoMirrored()>
+One road protect good!
+-$i0 < 17
+-$i0 < 19
+Good road: <a.a.b.a.d: void draw(android.graphics.Canvas)>[]--><a.a.b.a.k: void draw(android.graphics.Canvas)>[]--><a.a.b.a.k: boolean a()>[[-$i0 < 17]]--><a.a.b.a.k: boolean isAutoMirrored()>[]--><a.a.c.b.a.a: boolean e(android.graphics.drawable.Drawable)>[[-$i0 < 19]]--><android.graphics.drawable.Drawable: boolean isAutoMirrored()>
+One road protect good!
+crashApis:16
+containsStatic:false
+containsTry:false
+5call by main package
+-----------------------------------------
+#################################################
+N 38 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager: boolean isScanAlwaysAvailable()> is checking!!!
+The life time of api is [18,30]
+2call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.fitchfamily.android.dejavu.GpsMonitor dummyMainMethod_org_fitchfamily_android_dejavu_GpsMonitor(android.content.Intent)>[]--><org.fitchfamily.android.dejavu.GpsMonitor: void onLocationChanged(android.location.Location)>[]--><org.fitchfamily.android.dejavu.BackendService: void b(android.location.Location)>[]--><org.fitchfamily.android.dejavu.BackendService: void d(android.location.Location)>[[try]]--><org.fitchfamily.android.dejavu.BackendService: void m()>[[try]]--><org.fitchfamily.android.dejavu.BackendService: void p()>[[-$i3 < 18]]--><android.net.wifi.WifiManager: boolean isScanAlwaysAvailable()>
+One road protect good!
+1 Packageshead roads:
+try
+Good road with try: <org.fitchfamily.android.dejavu.BackendService: android.location.Location h()>[]--><org.fitchfamily.android.dejavu.BackendService: void m()>[[try]]--><org.fitchfamily.android.dejavu.BackendService: void p()>[[-$i3 < 18]]--><android.net.wifi.WifiManager: boolean isScanAlwaysAvailable()>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 39 Potential Issue API: SDKCheck of <android.view.MenuItem: android.view.MenuItem setIconTintList(android.content.res.ColorStateList)> is checking!!!
+The life time of api is [26,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 18 19 20 21 22 23 24 25 
+Error road: <a.a.c.g.j$a: void a(android.view.MenuItem,android.content.res.ColorStateList)>[]--><android.view.MenuItem: android.view.MenuItem setIconTintList(android.content.res.ColorStateList)>
+#1.the call statck between class <a.a.c.g.j$a: void a(android.view.MenuItem,android.content.res.ColorStateList)> to <android.view.MenuItem: android.view.MenuItem setIconTintList(android.content.res.ColorStateList)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 18 19 20 21 22 23 24 25 
+Error road: <a.a.d.d.d$b: void a(android.view.MenuItem)>[]--><a.a.c.g.j: void a(android.view.MenuItem,android.content.res.ColorStateList)>[[]]--><android.view.MenuItem: android.view.MenuItem setIconTintList(android.content.res.ColorStateList)>
+#2.the call statck between class <a.a.d.d.d$b: void a(android.view.MenuItem)> to <android.view.MenuItem: android.view.MenuItem setIconTintList(android.content.res.ColorStateList)>has compatibility isssues！
+-----------------------------------------
+crashApis:17
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 40 Potential Issue API: SDKCheck of <android.graphics.drawable.Drawable: void setTintList(android.content.res.ColorStateList)> is checking!!!
+The life time of api is [21,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 41 Potential Issue API: SDKCheck of <android.view.MenuItem: android.view.MenuItem setContentDescription(java.lang.CharSequence)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 18 19 20 21 22 23 24 25 
+Error road: <a.a.c.g.j$a: void a(android.view.MenuItem,java.lang.CharSequence)>[]--><android.view.MenuItem: android.view.MenuItem setContentDescription(java.lang.CharSequence)>
+#1.the call statck between class <a.a.c.g.j$a: void a(android.view.MenuItem,java.lang.CharSequence)> to <android.view.MenuItem: android.view.MenuItem setContentDescription(java.lang.CharSequence)>has compatibility isssues！
+-----------------------------------------
+crashApis:18
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 42 Potential Issue API: SDKCheck of <android.animation.AnimatorSet: void <init>()> is checking!!!
+The life time of api is [24,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 18 19 20 21 22 23 
+Error road: <a.a.b.a.d$a: void a()>[]--><android.animation.AnimatorSet: void <init>()>
+#1.the call statck between class <a.a.b.a.d$a: void a()> to <android.animation.AnimatorSet: void <init>()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 18 19 20 21 22 23 
+Error road: <a.a.b.a.g: android.animation.Animator a(android.content.Context,android.content.res.Resources,android.content.res.Resources$Theme,org.xmlpull.v1.XmlPullParser,android.util.AttributeSet,android.animation.AnimatorSet,int,float)>[]--><android.animation.AnimatorSet: void <init>()>
+#2.the call statck between class <a.a.b.a.g: android.animation.Animator a(android.content.Context,android.content.res.Resources,android.content.res.Resources$Theme,org.xmlpull.v1.XmlPullParser,android.util.AttributeSet,android.animation.AnimatorSet,int,float)> to <android.animation.AnimatorSet: void <init>()>has compatibility isssues！
+-----------------------------------------
+crashApis:19
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 43 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager: boolean isWifiEnabled()> is checking!!!
+The life time of api is [1,30]
+2call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.fitchfamily.android.dejavu.GpsMonitor dummyMainMethod_org_fitchfamily_android_dejavu_GpsMonitor(android.content.Intent)>[]--><org.fitchfamily.android.dejavu.GpsMonitor: void onLocationChanged(android.location.Location)>[]--><org.fitchfamily.android.dejavu.BackendService: void b(android.location.Location)>[]--><org.fitchfamily.android.dejavu.BackendService: void d(android.location.Location)>[[try]]--><org.fitchfamily.android.dejavu.BackendService: void m()>[[try]]--><org.fitchfamily.android.dejavu.BackendService: void p()>[]--><android.net.wifi.WifiManager: boolean isWifiEnabled()>
+One road protect good!
+1 Packageshead roads:
+try
+Good road with try: <org.fitchfamily.android.dejavu.BackendService: android.location.Location h()>[]--><org.fitchfamily.android.dejavu.BackendService: void m()>[[try]]--><org.fitchfamily.android.dejavu.BackendService: void p()>[]--><android.net.wifi.WifiManager: boolean isWifiEnabled()>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 44 Potential Issue API: SDKCheck of <android.view.View: void setBackgroundTintList(android.content.res.ColorStateList)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 18 19 20 
+Error road: <a.a.c.g.s$f: void a(android.view.View,android.content.res.ColorStateList)>[]--><android.view.View: void setBackgroundTintList(android.content.res.ColorStateList)>
+#1.the call statck between class <a.a.c.g.s$f: void a(android.view.View,android.content.res.ColorStateList)> to <android.view.View: void setBackgroundTintList(android.content.res.ColorStateList)>has compatibility isssues！
+-----------------------------------------
+crashApis:20
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 45 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putInt(java.lang.String,int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+try
+Good road with try: <org.fitchfamily.android.dejavu.BackendService: void a(org.fitchfamily.android.dejavu.BackendService$a)>[[try]]--><org.fitchfamily.android.dejavu.BackendService: void j()>[]--><org.fitchfamily.android.dejavu.BackendService: java.util.List d(java.util.Collection)>[]--><org.fitchfamily.android.dejavu.m: android.location.Location e()>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 46 Potential Issue API: SDKCheck of <android.view.ViewParent: boolean onStartNestedScroll(android.view.View,android.view.View,int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+try
+Good road with try: <a.a.c.g.t$b: boolean b(android.view.ViewParent,android.view.View,android.view.View,int)>[[try]]--><android.view.ViewParent: boolean onStartNestedScroll(android.view.View,android.view.View,int)>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 47 Potential Issue API: SDKCheck of <android.view.View: android.graphics.PorterDuff.Mode getBackgroundTintMode()> is checking!!!
+The life time of api is [21,31]
+3call roads:
+0 Mainhead roads:
+3 Packageshead roads:
+!!!this api will crash on sdk 18 19 20 
+Error road: <a.a.c.g.s$f: android.graphics.PorterDuff$Mode b(android.view.View)>[]--><android.view.View: android.graphics.PorterDuff.Mode getBackgroundTintMode()>
+#1.the call statck between class <a.a.c.g.s$f: android.graphics.PorterDuff$Mode b(android.view.View)> to <android.view.View: android.graphics.PorterDuff.Mode getBackgroundTintMode()>has compatibility isssues！
+-----------------------------------------
+-$i0 != 21
+Good road: <a.a.c.g.s$f: void a(android.view.View,android.graphics.PorterDuff$Mode)>[[-$i0 != 21]]--><android.view.View: android.graphics.PorterDuff.Mode getBackgroundTintMode()>
+One road protect good!
+-$i0 != 21
+Good road: <a.a.c.g.s$f: void a(android.view.View,android.content.res.ColorStateList)>[[-$i0 != 21]]--><android.view.View: android.graphics.PorterDuff.Mode getBackgroundTintMode()>
+One road protect good!
+crashApis:21
+containsStatic:false
+containsTry:false
+4call by main package
+-----------------------------------------
+#################################################
+N 48 Potential Issue API: SDKCheck of <android.view.ViewParent: void onStopNestedScroll(android.view.View)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+try
+Good road with try: <a.a.c.g.t$b: void a(android.view.ViewParent,android.view.View)>[[try]]--><android.view.ViewParent: void onStopNestedScroll(android.view.View)>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 49 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager: boolean startScan()> is checking!!!
+The life time of api is [1,30]
+2call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.fitchfamily.android.dejavu.GpsMonitor dummyMainMethod_org_fitchfamily_android_dejavu_GpsMonitor(android.content.Intent)>[]--><org.fitchfamily.android.dejavu.GpsMonitor: void onLocationChanged(android.location.Location)>[]--><org.fitchfamily.android.dejavu.BackendService: void b(android.location.Location)>[]--><org.fitchfamily.android.dejavu.BackendService: void d(android.location.Location)>[[try]]--><org.fitchfamily.android.dejavu.BackendService: void m()>[[try]]--><org.fitchfamily.android.dejavu.BackendService: void p()>[[-$i3 < 18]]--><android.net.wifi.WifiManager: boolean startScan()>
+One road protect good!
+1 Packageshead roads:
+try
+Good road with try: <org.fitchfamily.android.dejavu.BackendService: android.location.Location h()>[]--><org.fitchfamily.android.dejavu.BackendService: void m()>[[try]]--><org.fitchfamily.android.dejavu.BackendService: void p()>[[-$i3 < 18]]--><android.net.wifi.WifiManager: boolean startScan()>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 50 Potential Issue API: SDKCheck of <android.view.View: void requestApplyInsets()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 18 19 20 
+Error road: <a.a.c.g.s$f: void h(android.view.View)>[]--><android.view.View: void requestApplyInsets()>
+#1.the call statck between class <a.a.c.g.s$f: void h(android.view.View)> to <android.view.View: void requestApplyInsets()>has compatibility isssues！
+-----------------------------------------
+crashApis:22
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 51 Potential Issue API: SDKCheck of <android.content.ContextWrapper: int checkSelfPermission(java.lang.String)> is checking!!!
+The life time of api is [23,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+-$i0 < 23
+Good road: <org.fitchfamily.android.dejavu.BackendService: android.content.Intent d()>[[-$i0 < 23]]--><android.content.ContextWrapper: int checkSelfPermission(java.lang.String)>
+One road protect good!
+-$i0 < 23
+Good road: <org.fitchfamily.android.dejavu.BackendService: void g()>[[-$i0 < 23]]--><android.content.ContextWrapper: int checkSelfPermission(java.lang.String)>
+One road protect good!
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 52 Potential Issue API: SDKCheck of <android.graphics.Typeface.Builder: void <init>(java.io.FileDescriptor)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+try
+Good road with try: <a.a.c.b.f: android.graphics.Typeface a(android.content.Context,android.os.CancellationSignal,a.a.c.e.f$b[],int)>[[try]]--><android.graphics.Typeface.Builder: void <init>(java.io.FileDescriptor)>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 53 Potential Issue API: SDKCheck of <android.graphics.drawable.Drawable: void setTintMode(android.graphics.PorterDuff.Mode)> is checking!!!
+The life time of api is [21,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+-$i0 < 21
+Good road: <a.a.c.b.a.a: void a(android.graphics.drawable.Drawable,android.graphics.PorterDuff$Mode)>[[-$i0 < 21]]--><android.graphics.drawable.Drawable: void setTintMode(android.graphics.PorterDuff.Mode)>
+One road protect good!
+!!!this api will crash on sdk 18 19 20 
+Error road: <a.a.c.b.a.f: void setTintMode(android.graphics.PorterDuff$Mode)>[]--><android.graphics.drawable.Drawable: void setTintMode(android.graphics.PorterDuff.Mode)>
+#2.the call statck between class <a.a.c.b.a.f: void setTintMode(android.graphics.PorterDuff$Mode)> to <android.graphics.drawable.Drawable: void setTintMode(android.graphics.PorterDuff.Mode)>has compatibility isssues！
+-----------------------------------------
+crashApis:23
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 54 Potential Issue API: SDKCheck of <android.content.Context: android.content.res.ColorStateList getColorStateList(int)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+$i1 < 23
+-$i1 < 23
+Good road: <a.a.d.b.a.b: android.content.res.ColorStateList a(android.content.Context,int)>[[$i1 < 23]]--><a.a.c.a.a: android.content.res.ColorStateList a(android.content.Context,int)>[[-$i1 < 23]]--><android.content.Context: android.content.res.ColorStateList getColorStateList(int)>
+One road protect good!
+-$i1 < 23
+Good road: <a.a.d.b.a.b: android.content.res.ColorStateList a(android.content.Context,int)>[[-$i1 < 23]]--><android.content.Context: android.content.res.ColorStateList getColorStateList(int)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 55 Potential Issue API: SDKCheck of <android.graphics.drawable.Drawable: boolean canApplyTheme()> is checking!!!
+The life time of api is [21,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+-$i0 < 21
+Good road: <a.a.b.a.k: boolean canApplyTheme()>[]--><a.a.c.b.a.a: boolean a(android.graphics.drawable.Drawable)>[[-$i0 < 21]]--><android.graphics.drawable.Drawable: boolean canApplyTheme()>
+One road protect good!
+-$i0 < 21
+Good road: <a.a.b.a.d: boolean canApplyTheme()>[]--><a.a.c.b.a.a: boolean a(android.graphics.drawable.Drawable)>[[-$i0 < 21]]--><android.graphics.drawable.Drawable: boolean canApplyTheme()>
+One road protect good!
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 56 Potential Issue API: SDKCheck of <android.graphics.drawable.Drawable.ConstantState: android.graphics.drawable.Drawable newDrawable(android.content.res.Resources,android.content.res.Resources.Theme)> is checking!!!
+The life time of api is [21,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 18 19 20 
+Error road: <a.a.b.a.k$g: android.graphics.drawable.Drawable newDrawable(android.content.res.Resources,android.content.res.Resources$Theme)>[]--><android.graphics.drawable.Drawable.ConstantState: android.graphics.drawable.Drawable newDrawable(android.content.res.Resources,android.content.res.Resources.Theme)>
+#1.the call statck between class <a.a.b.a.k$g: android.graphics.drawable.Drawable newDrawable(android.content.res.Resources,android.content.res.Resources$Theme)> to <android.graphics.drawable.Drawable.ConstantState: android.graphics.drawable.Drawable newDrawable(android.content.res.Resources,android.content.res.Resources.Theme)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 18 19 20 
+Error road: <a.a.b.a.d$b: android.graphics.drawable.Drawable newDrawable(android.content.res.Resources,android.content.res.Resources$Theme)>[]--><android.graphics.drawable.Drawable.ConstantState: android.graphics.drawable.Drawable newDrawable(android.content.res.Resources,android.content.res.Resources.Theme)>
+#2.the call statck between class <a.a.b.a.d$b: android.graphics.drawable.Drawable newDrawable(android.content.res.Resources,android.content.res.Resources$Theme)> to <android.graphics.drawable.Drawable.ConstantState: android.graphics.drawable.Drawable newDrawable(android.content.res.Resources,android.content.res.Resources.Theme)>has compatibility isssues！
+-----------------------------------------
+crashApis:24
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 57 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager: int calculateSignalLevel(int,int)> is checking!!!
+The life time of api is [1,30]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+try
+Good road with try: <org.fitchfamily.android.dejavu.a: void onReceive(android.content.Context,android.content.Intent)>[]--><org.fitchfamily.android.dejavu.BackendService: void a(org.fitchfamily.android.dejavu.BackendService)>[]--><org.fitchfamily.android.dejavu.BackendService: void l()>[[try]]--><android.net.wifi.WifiManager: int calculateSignalLevel(int,int)>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 58 Potential Issue API: SDKCheck of <android.app.Activity: void onRequestPermissionsResult(int,java.lang.String[],int[])> is checking!!!
+The life time of api is [23,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 18 19 20 21 22 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.microg.nlp.api.MPermissionHelperActivity dummyMainMethod_org_microg_nlp_api_MPermissionHelperActivity(android.content.Intent)>[]--><org.microg.nlp.api.MPermissionHelperActivity: void onRequestPermissionsResult(int,java.lang.String[],int[])>[]--><android.app.Activity: void onRequestPermissionsResult(int,java.lang.String[],int[])>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.app.Activity: void onRequestPermissionsResult(int,java.lang.String[],int[])>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:25
+crashApisInMain:2
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+crashApis numbers:25
+crashApis numbers in main road:2
+On Android Version 16 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 17 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 18 this app may have error api use(at least): 25 and error api roads: 32
+On Android Version 19 this app may have error api use(at least): 22 and error api roads: 29
+On Android Version 20 this app may have error api use(at least): 22 and error api roads: 29
+On Android Version 21 this app may have error api use(at least): 9 and error api roads: 14
+On Android Version 22 this app may have error api use(at least): 9 and error api roads: 14
+On Android Version 23 this app may have error api use(at least): 7 and error api roads: 12
+On Android Version 24 this app may have error api use(at least): 6 and error api roads: 10
+On Android Version 25 this app may have error api use(at least): 6 and error api roads: 10
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 31 this app may have error api use(at least): 0 and error api roads: 0

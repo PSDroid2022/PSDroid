@@ -1,0 +1,140 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/Hacker_s_Keyboard.apk
+Entry Points[org.pocketworkstation.pckeyboard.PrefScreenFeedback, org.pocketworkstation.pckeyboard.InputLanguageSelection, org.pocketworkstation.pckeyboard.PrefScreenView, org.pocketworkstation.pckeyboard.PluginManager, org.pocketworkstation.pckeyboard.Main, org.pocketworkstation.pckeyboard.PrefScreenActions, org.pocketworkstation.pckeyboard.LatinIMESettings, org.pocketworkstation.pckeyboard.NotificationReceiver, org.pocketworkstation.pckeyboard.LatinIME]
+FllowDroidcallgraph size:3899
+Soot started on Mon Jul 11 05:11:45 CST 2022
+StaticCheck:<com.google.android.voiceime.ImeTrigger: boolean isInstalled(android.inputmethodservice.InputMethodService)>i0 >= 14
+Soot finished on Mon Jul 11 05:11:53 CST 2022
+Soot has run for 0 min. 7 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 19
+Declared Target Sdk version is: 26
+Declared Max Sdk version is: -1
+Collected 532 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.text.StaticLayout: void <init>(java.lang.CharSequence,android.text.TextPaint,int,android.text.Layout.Alignment,float,float,boolean)> is checking!!!
+The life time of api is [1,30]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <org.pocketworkstation.pckeyboard.Tutorial$Bubble: int chooseSize(android.widget.PopupWindow,android.view.View,java.lang.CharSequence,android.widget.TextView)>[]--><android.text.StaticLayout: void <init>(java.lang.CharSequence,android.text.TextPaint,int,android.text.Layout.Alignment,float,float,boolean)>
+#1.the call statck between class <org.pocketworkstation.pckeyboard.Tutorial$Bubble: int chooseSize(android.widget.PopupWindow,android.view.View,java.lang.CharSequence,android.widget.TextView)> to <android.text.StaticLayout: void <init>(java.lang.CharSequence,android.text.TextPaint,int,android.text.Layout.Alignment,float,float,boolean)>has compatibility isssues！
+-----------------------------------------
+crashApis:1
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+try
+Good road with try: <com.google.android.voiceime.VoiceRecognitionTrigger: boolean isEnabled()>[]--><com.google.android.voiceime.VoiceRecognitionTrigger: boolean isNetworkAvailable()>[[try]]--><android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.content.Context: java.lang.Object getSystemService(java.lang.Class)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+1 Mainhead roads:
+-i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.pocketworkstation.pckeyboard.LatinIME dummyMainMethod_org_pocketworkstation_pckeyboard_LatinIME(android.content.Intent)>[]--><org.pocketworkstation.pckeyboard.LatinIME: void onCreate()>[]--><org.pocketworkstation.pckeyboard.LatinIME: void setNotification(boolean)>[]--><org.pocketworkstation.pckeyboard.LatinIME: void createNotificationChannel()>[[-i0 < 26]]--><android.content.Context: java.lang.Object getSystemService(java.lang.Class)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.net.NetworkInfo: boolean isConnected()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+try
+Good road with try: <com.google.android.voiceime.VoiceRecognitionTrigger: boolean isEnabled()>[]--><com.google.android.voiceime.VoiceRecognitionTrigger: boolean isNetworkAvailable()>[[try]]--><android.net.NetworkInfo: boolean isConnected()>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.app.NotificationChannel: void setDescription(java.lang.String)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+1 Mainhead roads:
+-i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.pocketworkstation.pckeyboard.LatinIME dummyMainMethod_org_pocketworkstation_pckeyboard_LatinIME(android.content.Intent)>[]--><org.pocketworkstation.pckeyboard.LatinIME: void onCreate()>[]--><org.pocketworkstation.pckeyboard.LatinIME: void setNotification(boolean)>[]--><org.pocketworkstation.pckeyboard.LatinIME: void createNotificationChannel()>[[-i0 < 26]]--><android.app.NotificationChannel: void setDescription(java.lang.String)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 5 Potential Issue API: SDKCheck of <android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+1 Mainhead roads:
+-i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.pocketworkstation.pckeyboard.LatinIME dummyMainMethod_org_pocketworkstation_pckeyboard_LatinIME(android.content.Intent)>[]--><org.pocketworkstation.pckeyboard.LatinIME: void onCreate()>[]--><org.pocketworkstation.pckeyboard.LatinIME: void setNotification(boolean)>[]--><org.pocketworkstation.pckeyboard.LatinIME: void createNotificationChannel()>[[-i0 < 26]]--><android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 6 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.lang.String getString(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <com.google.android.voiceime.ActivityHelper: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#1.the call statck between class <com.google.android.voiceime.ActivityHelper: void onCreate(android.os.Bundle)> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:2
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 7 Potential Issue API: SDKCheck of <android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+1 Mainhead roads:
+-i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.pocketworkstation.pckeyboard.LatinIME dummyMainMethod_org_pocketworkstation_pckeyboard_LatinIME(android.content.Intent)>[]--><org.pocketworkstation.pckeyboard.LatinIME: void onCreate()>[]--><org.pocketworkstation.pckeyboard.LatinIME: void setNotification(boolean)>[]--><org.pocketworkstation.pckeyboard.LatinIME: void createNotificationChannel()>[[-i0 < 26]]--><android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+crashApis numbers:2
+crashApis numbers in main road:0
+On Android Version 16 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 17 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 18 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 19 this app may have error api use(at least): 1 and error api roads: 1
+On Android Version 20 this app may have error api use(at least): 1 and error api roads: 1
+On Android Version 21 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 22 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 23 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 24 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 25 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 31 this app may have error api use(at least): 1 and error api roads: 1

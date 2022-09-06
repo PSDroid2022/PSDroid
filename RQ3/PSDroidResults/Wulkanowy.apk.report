@@ -1,0 +1,1548 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/Wulkanowy.apk
+Entry Points[com.amitshekhar.DebugDBInitProvider, io.github.wulkanowy.ui.main.MainActivity, com.crashlytics.android.CrashlyticsInitProvider, io.github.wulkanowy.WulkanowyApp, io.github.wulkanowy.ui.login.LoginActivity, com.firebase.jobdispatcher.GooglePlayReceiver, io.github.wulkanowy.services.SyncJob, io.github.wulkanowy.ui.splash.SplashActivity]
+FllowDroidcallgraph size:6155
+Soot started on Mon Jul 11 15:36:11 CST 2022
+StaticCheck:<eu.davidea.flexibleadapter.utils.FlexibleUtils: boolean hasJellyBean()>$yysi0 < 16
+StaticCheck:<eu.davidea.flexibleadapter.utils.FlexibleUtils: boolean hasLollipop()>$yysi0 < 21
+StaticCheck:<eu.davidea.flexibleadapter.utils.FlexibleUtils: boolean hasMarshmallow()>$yysi0 < 23
+StaticCheck:<eu.davidea.flexibleadapter.utils.FlexibleUtils: boolean hasNougat()>$yysi0 < 24
+StaticCheck:<eu.davidea.flexibleadapter.utils.FlexibleUtils: boolean hasOreo()>$yysi0 < 26
+Soot finished on Mon Jul 11 15:37:20 CST 2022
+Soot has run for 1 min. 8 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 15
+Declared Target Sdk version is: 26
+Declared Max Sdk version is: -1
+Collected 906 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <junit.framework.TestCase: void <init>()> is checking!!!
+The life time of api is [26,27]
+4call roads:
+0 Mainhead roads:
+4 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 24 25 
+Error road: <org.greenrobot.greendao.test.AbstractDaoSessionTest: void <init>(java.lang.Class)>[]--><org.greenrobot.greendao.test.AbstractDaoSessionTest: void <init>(java.lang.Class,boolean)>[]--><org.greenrobot.greendao.test.DbTest: void <init>(boolean)>[[]]--><junit.framework.TestCase: void <init>()>
+!!!this api will crash on sdk 28 29 30 31 
+Error road: <org.greenrobot.greendao.test.AbstractDaoSessionTest: void <init>(java.lang.Class)>[]--><org.greenrobot.greendao.test.AbstractDaoSessionTest: void <init>(java.lang.Class,boolean)>[]--><org.greenrobot.greendao.test.DbTest: void <init>(boolean)>[[]]--><junit.framework.TestCase: void <init>()>
+#1.the call statck between class <org.greenrobot.greendao.test.AbstractDaoSessionTest: void <init>(java.lang.Class)> to <junit.framework.TestCase: void <init>()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 24 25 
+Error road: <org.greenrobot.greendao.test.DbTest: void <init>()>[]--><org.greenrobot.greendao.test.DbTest: void <init>(boolean)>[[]]--><junit.framework.TestCase: void <init>()>
+!!!this api will crash on sdk 28 29 30 31 
+Error road: <org.greenrobot.greendao.test.DbTest: void <init>()>[]--><org.greenrobot.greendao.test.DbTest: void <init>(boolean)>[[]]--><junit.framework.TestCase: void <init>()>
+#2.the call statck between class <org.greenrobot.greendao.test.DbTest: void <init>()> to <junit.framework.TestCase: void <init>()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 24 25 
+Error road: <org.greenrobot.greendao.test.AbstractDaoTestLongPk: void <init>(java.lang.Class)>[]--><org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void <init>(java.lang.Class)>[]--><org.greenrobot.greendao.test.AbstractDaoTest: void <init>(java.lang.Class)>[]--><org.greenrobot.greendao.test.AbstractDaoTest: void <init>(java.lang.Class,boolean)>[]--><org.greenrobot.greendao.test.DbTest: void <init>(boolean)>[[]]--><junit.framework.TestCase: void <init>()>
+!!!this api will crash on sdk 28 29 30 31 
+Error road: <org.greenrobot.greendao.test.AbstractDaoTestLongPk: void <init>(java.lang.Class)>[]--><org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void <init>(java.lang.Class)>[]--><org.greenrobot.greendao.test.AbstractDaoTest: void <init>(java.lang.Class)>[]--><org.greenrobot.greendao.test.AbstractDaoTest: void <init>(java.lang.Class,boolean)>[]--><org.greenrobot.greendao.test.DbTest: void <init>(boolean)>[[]]--><junit.framework.TestCase: void <init>()>
+#3.the call statck between class <org.greenrobot.greendao.test.AbstractDaoTestLongPk: void <init>(java.lang.Class)> to <junit.framework.TestCase: void <init>()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 24 25 
+Error road: <org.greenrobot.greendao.test.AbstractDaoTestStringPk: void <init>(java.lang.Class)>[]--><org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void <init>(java.lang.Class)>[]--><org.greenrobot.greendao.test.AbstractDaoTest: void <init>(java.lang.Class)>[]--><org.greenrobot.greendao.test.AbstractDaoTest: void <init>(java.lang.Class,boolean)>[]--><org.greenrobot.greendao.test.DbTest: void <init>(boolean)>[[]]--><junit.framework.TestCase: void <init>()>
+!!!this api will crash on sdk 28 29 30 31 
+Error road: <org.greenrobot.greendao.test.AbstractDaoTestStringPk: void <init>(java.lang.Class)>[]--><org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void <init>(java.lang.Class)>[]--><org.greenrobot.greendao.test.AbstractDaoTest: void <init>(java.lang.Class)>[]--><org.greenrobot.greendao.test.AbstractDaoTest: void <init>(java.lang.Class,boolean)>[]--><org.greenrobot.greendao.test.DbTest: void <init>(boolean)>[[]]--><junit.framework.TestCase: void <init>()>
+#4.the call statck between class <org.greenrobot.greendao.test.AbstractDaoTestStringPk: void <init>(java.lang.Class)> to <junit.framework.TestCase: void <init>()>has compatibility isssues！
+-----------------------------------------
+crashApis:1
+containsStatic:false
+containsTry:false
+5call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.view.ViewGroup: boolean getClipToPadding()> is checking!!!
+The life time of api is [21,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <eu.davidea.flexibleadapter.common.FlexibleItemDecoration: void onDrawOver(android.graphics.Canvas,android.support.v7.widget.RecyclerView,android.support.v7.widget.RecyclerView$State)>[]--><eu.davidea.flexibleadapter.common.FlexibleItemDecoration: void draw(android.graphics.Canvas,android.support.v7.widget.RecyclerView)>[]--><eu.davidea.flexibleadapter.common.FlexibleItemDecoration: void drawVertical(android.graphics.Canvas,android.support.v7.widget.RecyclerView)>[[]]--><android.view.ViewGroup: boolean getClipToPadding()>
+#1.the call statck between class <eu.davidea.flexibleadapter.common.FlexibleItemDecoration: void onDrawOver(android.graphics.Canvas,android.support.v7.widget.RecyclerView,android.support.v7.widget.RecyclerView$State)> to <android.view.ViewGroup: boolean getClipToPadding()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <eu.davidea.flexibleadapter.common.FlexibleItemDecoration: void onDraw(android.graphics.Canvas,android.support.v7.widget.RecyclerView,android.support.v7.widget.RecyclerView$State)>[]--><eu.davidea.flexibleadapter.common.FlexibleItemDecoration: void draw(android.graphics.Canvas,android.support.v7.widget.RecyclerView)>[]--><eu.davidea.flexibleadapter.common.FlexibleItemDecoration: void drawVertical(android.graphics.Canvas,android.support.v7.widget.RecyclerView)>[[]]--><android.view.ViewGroup: boolean getClipToPadding()>
+#2.the call statck between class <eu.davidea.flexibleadapter.common.FlexibleItemDecoration: void onDraw(android.graphics.Canvas,android.support.v7.widget.RecyclerView,android.support.v7.widget.RecyclerView$State)> to <android.view.ViewGroup: boolean getClipToPadding()>has compatibility isssues！
+-----------------------------------------
+crashApis:2
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <junit.framework.Assert: void assertEquals(java.lang.Object,java.lang.Object)> is checking!!!
+The life time of api is [26,27]
+5call roads:
+0 Mainhead roads:
+5 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 24 25 
+Error road: <org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void testInsertAndLoad()>[]--><junit.framework.Assert: void assertEquals(java.lang.Object,java.lang.Object)>
+!!!this api will crash on sdk 28 29 30 31 
+Error road: <org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void testInsertAndLoad()>[]--><junit.framework.Assert: void assertEquals(java.lang.Object,java.lang.Object)>
+#1.the call statck between class <org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void testInsertAndLoad()> to <junit.framework.Assert: void assertEquals(java.lang.Object,java.lang.Object)>has compatibility isssues！
+-----------------------------------------
+try
+Good road with try: <org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void testReadWithOffset()>[[try]]--><junit.framework.Assert: void assertEquals(java.lang.Object,java.lang.Object)>
+One road protect good!
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 24 25 
+Error road: <org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void testQuery()>[]--><junit.framework.Assert: void assertEquals(java.lang.Object,java.lang.Object)>
+!!!this api will crash on sdk 28 29 30 31 
+Error road: <org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void testQuery()>[]--><junit.framework.Assert: void assertEquals(java.lang.Object,java.lang.Object)>
+#3.the call statck between class <org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void testQuery()> to <junit.framework.Assert: void assertEquals(java.lang.Object,java.lang.Object)>has compatibility isssues！
+-----------------------------------------
+try
+Good road with try: <org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void testLoadPk()>[]--><org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void runLoadPkTest(int)>[[try]]--><junit.framework.Assert: void assertEquals(java.lang.Object,java.lang.Object)>
+One road protect good!
+try
+Good road with try: <org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void testLoadPkWithOffset()>[]--><org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void runLoadPkTest(int)>[[try]]--><junit.framework.Assert: void assertEquals(java.lang.Object,java.lang.Object)>
+One road protect good!
+crashApis:3
+containsStatic:false
+containsTry:true
+6call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.os.BaseBundle: int getInt(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+5call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: io.github.wulkanowy.ui.main.MainActivity dummyMainMethod_io_github_wulkanowy_ui_main_MainActivity(android.content.Intent)>[]--><com.aurelhubert.ahbottomnavigation.AHBottomNavigation: void onRestoreInstanceState(android.os.Parcelable)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.firebase.jobdispatcher.GooglePlayReceiver dummyMainMethod_com_firebase_jobdispatcher_GooglePlayReceiver(android.content.Intent)>[]--><com.firebase.jobdispatcher.GooglePlayReceiver: int onStartCommand(android.content.Intent,int,int)>[[try]]--><com.firebase.jobdispatcher.GooglePlayReceiver: com.firebase.jobdispatcher.JobInvocation prepareJob(android.content.Intent)>[]--><com.firebase.jobdispatcher.GooglePlayReceiver: com.firebase.jobdispatcher.JobInvocation prepareJob(com.firebase.jobdispatcher.JobCallback,android.os.Bundle)>[]--><com.firebase.jobdispatcher.JobCoder: com.firebase.jobdispatcher.JobInvocation decodeIntentBundle(android.os.Bundle)>[]--><com.firebase.jobdispatcher.JobCoder: com.firebase.jobdispatcher.JobInvocation$Builder decode(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+One road protect good!
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+4 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.firebase.jobdispatcher.GooglePlayMessageHandler: void handleMessage(android.os.Message)>[]--><com.firebase.jobdispatcher.GooglePlayMessageHandler: void handleStartMessage(android.os.Message)>[]--><com.firebase.jobdispatcher.GooglePlayReceiver: com.firebase.jobdispatcher.JobInvocation prepareJob(com.firebase.jobdispatcher.JobCallback,android.os.Bundle)>[]--><com.firebase.jobdispatcher.JobCoder: com.firebase.jobdispatcher.JobInvocation decodeIntentBundle(android.os.Bundle)>[]--><com.firebase.jobdispatcher.JobCoder: com.firebase.jobdispatcher.JobInvocation$Builder decode(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#1.the call statck between class <com.firebase.jobdispatcher.GooglePlayMessageHandler: void handleMessage(android.os.Message)> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <io.github.wulkanowy.ui.main.timetable.TimetableFragment: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#2.the call statck between class <io.github.wulkanowy.ui.main.timetable.TimetableFragment: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <eu.davidea.flexibleadapter.FlexibleAdapter: void onRestoreInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#3.the call statck between class <eu.davidea.flexibleadapter.FlexibleAdapter: void onRestoreInstanceState(android.os.Bundle)> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <io.github.wulkanowy.ui.main.attendance.AttendanceFragment: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#4.the call statck between class <io.github.wulkanowy.ui.main.attendance.AttendanceFragment: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:4
+crashApisInMain:1
+containsStatic:false
+containsTry:true
+5call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()> is checking!!!
+The life time of api is [1,30]
+2281call roads:
+1 Mainhead roads:
+2280 Packageshead roads:
+Roads number exceed, exit!2280
+#################################################
+N 5 Potential Issue API: SDKCheck of <junit.framework.TestCase: void setUp()> is checking!!!
+The life time of api is [26,27]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 24 25 
+Error road: <org.greenrobot.greendao.test.AbstractDaoSessionTest: void setUp()>[]--><org.greenrobot.greendao.test.DbTest: void setUp()>[[]]--><junit.framework.TestCase: void setUp()>
+!!!this api will crash on sdk 28 29 30 31 
+Error road: <org.greenrobot.greendao.test.AbstractDaoSessionTest: void setUp()>[]--><org.greenrobot.greendao.test.DbTest: void setUp()>[[]]--><junit.framework.TestCase: void setUp()>
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 24 25 
+Error road: <org.greenrobot.greendao.test.AbstractDaoSessionTest: void setUp()>[[]]--><junit.framework.TestCase: void setUp()>
+!!!this api will crash on sdk 28 29 30 31 
+Error road: <org.greenrobot.greendao.test.AbstractDaoSessionTest: void setUp()>[[]]--><junit.framework.TestCase: void setUp()>
+#1.the call statck between class <org.greenrobot.greendao.test.AbstractDaoSessionTest: void setUp()> to <junit.framework.TestCase: void setUp()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 24 25 
+Error road: <org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void setUp()>[[]]--><junit.framework.TestCase: void setUp()>
+!!!this api will crash on sdk 28 29 30 31 
+Error road: <org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void setUp()>[[]]--><junit.framework.TestCase: void setUp()>
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 24 25 
+Error road: <org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void setUp()>[]--><org.greenrobot.greendao.test.AbstractDaoTest: void setUp()>[]--><org.greenrobot.greendao.test.DbTest: void setUp()>[[]]--><junit.framework.TestCase: void setUp()>
+!!!this api will crash on sdk 28 29 30 31 
+Error road: <org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void setUp()>[]--><org.greenrobot.greendao.test.AbstractDaoTest: void setUp()>[]--><org.greenrobot.greendao.test.DbTest: void setUp()>[[]]--><junit.framework.TestCase: void setUp()>
+#2.the call statck between class <org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void setUp()> to <junit.framework.TestCase: void setUp()>has compatibility isssues！
+-----------------------------------------
+crashApis:5
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 6 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)> is checking!!!
+The life time of api is [21,31]
+9call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.firebase.jobdispatcher.GooglePlayReceiver dummyMainMethod_com_firebase_jobdispatcher_GooglePlayReceiver(android.content.Intent)>[]--><com.firebase.jobdispatcher.GooglePlayReceiver: int onStartCommand(android.content.Intent,int,int)>[[try]]--><com.firebase.jobdispatcher.ExecutionDelegator: void executeJob(com.firebase.jobdispatcher.JobInvocation)>[[try]]--><com.firebase.jobdispatcher.JobServiceConnection: boolean startJob(com.firebase.jobdispatcher.JobInvocation)>[[try]]--><com.firebase.jobdispatcher.JobServiceConnection: void stopJob(boolean,com.firebase.jobdispatcher.JobInvocation)>[[try]]--><com.firebase.jobdispatcher.JobServiceConnection: android.os.Bundle encodeJob(com.firebase.jobdispatcher.JobParameters)>[]--><com.firebase.jobdispatcher.JobCoder: android.os.Bundle encode(com.firebase.jobdispatcher.JobParameters,android.os.Bundle)>[]--><com.firebase.jobdispatcher.JobCoder: void encodeTrigger(com.firebase.jobdispatcher.JobTrigger,android.os.Bundle)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+One road protect good!
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: io.github.wulkanowy.ui.splash.SplashActivity dummyMainMethod_io_github_wulkanowy_ui_splash_SplashActivity(android.content.Intent)>[]--><io.github.wulkanowy.ui.splash.SplashActivity: void onCreate(android.os.Bundle)>[]--><io.github.wulkanowy.ui.splash.SplashPresenter: void onStart(io.github.wulkanowy.ui.base.BaseContract$View)>[]--><io.github.wulkanowy.ui.splash.SplashPresenter: void onStart(io.github.wulkanowy.ui.splash.SplashContract$View)>[]--><io.github.wulkanowy.ui.splash.SplashActivity: void startSyncService(int,boolean)>[]--><io.github.wulkanowy.services.SyncJob: void start(android.content.Context,int,boolean)>[]--><com.firebase.jobdispatcher.FirebaseJobDispatcher: void mustSchedule(com.firebase.jobdispatcher.Job)>[]--><com.firebase.jobdispatcher.FirebaseJobDispatcher: int schedule(com.firebase.jobdispatcher.Job)>[]--><com.firebase.jobdispatcher.GooglePlayDriver: int schedule(com.firebase.jobdispatcher.Job)>[]--><com.firebase.jobdispatcher.GooglePlayDriver: android.content.Intent createScheduleRequest(com.firebase.jobdispatcher.JobParameters)>[]--><com.firebase.jobdispatcher.GooglePlayJobWriter: android.os.Bundle writeToBundle(com.firebase.jobdispatcher.JobParameters,android.os.Bundle)>[]--><com.firebase.jobdispatcher.JobCoder: android.os.Bundle encode(com.firebase.jobdispatcher.JobParameters,android.os.Bundle)>[]--><com.firebase.jobdispatcher.JobCoder: void encodeTrigger(com.firebase.jobdispatcher.JobTrigger,android.os.Bundle)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+8 Packageshead roads:
+try
+Good road with try: <com.firebase.jobdispatcher.GooglePlayMessageHandler: void handleMessage(android.os.Message)>[]--><com.firebase.jobdispatcher.GooglePlayMessageHandler: void handleStartMessage(android.os.Message)>[]--><com.firebase.jobdispatcher.GooglePlayReceiver: com.firebase.jobdispatcher.JobInvocation prepareJob(com.firebase.jobdispatcher.JobCallback,android.os.Bundle)>[]--><com.firebase.jobdispatcher.GooglePlayReceiver: void sendResultSafely(com.firebase.jobdispatcher.JobCallback,int)>[[try]]--><com.firebase.jobdispatcher.GooglePlayMessengerCallback: void jobFinished(int)>[[try]]--><com.firebase.jobdispatcher.GooglePlayMessengerCallback: android.os.Message createResultMessage(int)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.firebase.jobdispatcher.GooglePlayMessageHandler: void handleMessage(android.os.Message)>[]--><com.firebase.jobdispatcher.GooglePlayMessageHandler: void handleStopMessage(android.os.Message)>[]--><com.firebase.jobdispatcher.ExecutionDelegator: void stopJob(com.firebase.jobdispatcher.JobInvocation,boolean)>[[try]]--><com.firebase.jobdispatcher.JobServiceConnection: void onStop(com.firebase.jobdispatcher.JobInvocation,boolean)>[[try]]--><com.firebase.jobdispatcher.JobServiceConnection: void stopJob(boolean,com.firebase.jobdispatcher.JobInvocation)>[[try]]--><com.firebase.jobdispatcher.JobServiceConnection: android.os.Bundle encodeJob(com.firebase.jobdispatcher.JobParameters)>[]--><com.firebase.jobdispatcher.JobCoder: android.os.Bundle encode(com.firebase.jobdispatcher.JobParameters,android.os.Bundle)>[]--><com.firebase.jobdispatcher.JobCoder: void encodeTrigger(com.firebase.jobdispatcher.JobTrigger,android.os.Bundle)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.firebase.jobdispatcher.JobService$JobCallback: void sendResult(int)>[[try]]--><com.firebase.jobdispatcher.JobCoder: android.os.Bundle encode(com.firebase.jobdispatcher.JobParameters,android.os.Bundle)>[]--><com.firebase.jobdispatcher.JobCoder: void encodeTrigger(com.firebase.jobdispatcher.JobTrigger,android.os.Bundle)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.crashlytics.android.answers.EnabledSessionAnalyticsManagerStrategy: void processEvent(com.crashlytics.android.answers.SessionEvent$Builder)>[[try]]--><com.crashlytics.android.answers.FirebaseAnalyticsApiAdapter: void processEvent(com.crashlytics.android.answers.SessionEvent)>[]--><com.crashlytics.android.answers.FirebaseAnalyticsEventMapper: com.crashlytics.android.answers.FirebaseAnalyticsEvent mapEvent(com.crashlytics.android.answers.SessionEvent)>[]--><com.crashlytics.android.answers.FirebaseAnalyticsEventMapper: void mapCustomEventAttributes(android.os.Bundle,java.util.Map)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.firebase.jobdispatcher.JobServiceConnection: void onServiceConnected(android.content.ComponentName,android.os.IBinder)>[[try]]--><com.firebase.jobdispatcher.JobServiceConnection: android.os.Bundle encodeJob(com.firebase.jobdispatcher.JobParameters)>[]--><com.firebase.jobdispatcher.JobCoder: android.os.Bundle encode(com.firebase.jobdispatcher.JobParameters,android.os.Bundle)>[]--><com.firebase.jobdispatcher.JobCoder: void encodeTrigger(com.firebase.jobdispatcher.JobTrigger,android.os.Bundle)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+One road protect good!
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <io.github.wulkanowy.ui.main.attendance.AttendancePresenter: void onDoInBackgroundLoading()>[]--><io.github.wulkanowy.ui.main.attendance.AttendanceTabFragment: io.github.wulkanowy.ui.main.attendance.AttendanceTabFragment newInstance(java.lang.String)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#5.the call statck between class <io.github.wulkanowy.ui.main.attendance.AttendancePresenter: void onDoInBackgroundLoading()> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <io.github.wulkanowy.ui.main.timetable.TimetablePresenter: void onDoInBackgroundLoading()>[]--><io.github.wulkanowy.ui.main.timetable.TimetableTabFragment: io.github.wulkanowy.ui.main.timetable.TimetableTabFragment newInstance(java.lang.String)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#6.the call statck between class <io.github.wulkanowy.ui.main.timetable.TimetablePresenter: void onDoInBackgroundLoading()> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <io.github.wulkanowy.ui.main.settings.SettingsFragment: void onSharedPreferenceChanged(android.content.SharedPreferences,java.lang.String)>[]--><io.github.wulkanowy.ui.main.settings.SettingsFragment: void launchServices(boolean,android.content.SharedPreferences)>[]--><io.github.wulkanowy.services.SyncJob: void start(android.content.Context,int,boolean)>[]--><com.firebase.jobdispatcher.FirebaseJobDispatcher: void mustSchedule(com.firebase.jobdispatcher.Job)>[]--><com.firebase.jobdispatcher.FirebaseJobDispatcher: int schedule(com.firebase.jobdispatcher.Job)>[]--><com.firebase.jobdispatcher.GooglePlayDriver: int schedule(com.firebase.jobdispatcher.Job)>[]--><com.firebase.jobdispatcher.GooglePlayDriver: android.content.Intent createScheduleRequest(com.firebase.jobdispatcher.JobParameters)>[]--><com.firebase.jobdispatcher.GooglePlayJobWriter: android.os.Bundle writeToBundle(com.firebase.jobdispatcher.JobParameters,android.os.Bundle)>[]--><com.firebase.jobdispatcher.JobCoder: android.os.Bundle encode(com.firebase.jobdispatcher.JobParameters,android.os.Bundle)>[]--><com.firebase.jobdispatcher.JobCoder: void encodeTrigger(com.firebase.jobdispatcher.JobTrigger,android.os.Bundle)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#7.the call statck between class <io.github.wulkanowy.ui.main.settings.SettingsFragment: void onSharedPreferenceChanged(android.content.SharedPreferences,java.lang.String)> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+try
+Good road with try: <com.firebase.jobdispatcher.GooglePlayReceiver: void onJobFinished(com.firebase.jobdispatcher.JobInvocation,int)>[[try]]--><com.firebase.jobdispatcher.GooglePlayReceiver: void sendResultSafely(com.firebase.jobdispatcher.JobCallback,int)>[[try]]--><com.firebase.jobdispatcher.GooglePlayMessengerCallback: void jobFinished(int)>[[try]]--><com.firebase.jobdispatcher.GooglePlayMessengerCallback: android.os.Message createResultMessage(int)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.firebase.jobdispatcher.GooglePlayReceiver: void onJobFinished(com.firebase.jobdispatcher.JobInvocation,int)>[[try]]--><com.firebase.jobdispatcher.GooglePlayReceiver: void reschedule(com.firebase.jobdispatcher.JobInvocation)>[]--><com.firebase.jobdispatcher.GooglePlayDriver: int schedule(com.firebase.jobdispatcher.Job)>[]--><com.firebase.jobdispatcher.GooglePlayDriver: android.content.Intent createScheduleRequest(com.firebase.jobdispatcher.JobParameters)>[]--><com.firebase.jobdispatcher.GooglePlayJobWriter: android.os.Bundle writeToBundle(com.firebase.jobdispatcher.JobParameters,android.os.Bundle)>[]--><com.firebase.jobdispatcher.JobCoder: android.os.Bundle encode(com.firebase.jobdispatcher.JobParameters,android.os.Bundle)>[]--><com.firebase.jobdispatcher.JobCoder: void encodeTrigger(com.firebase.jobdispatcher.JobTrigger,android.os.Bundle)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+One road protect good!
+crashApis:6
+crashApisInMain:2
+containsStatic:false
+containsTry:true
+9call by main package
+-----------------------------------------
+#################################################
+N 7 Potential Issue API: SDKCheck of <junit.framework.TestCase: void tearDown()> is checking!!!
+The life time of api is [26,27]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 24 25 
+Error road: <org.greenrobot.greendao.test.DbTest: void tearDown()>[[]]--><junit.framework.TestCase: void tearDown()>
+!!!this api will crash on sdk 28 29 30 31 
+Error road: <org.greenrobot.greendao.test.DbTest: void tearDown()>[[]]--><junit.framework.TestCase: void tearDown()>
+#1.the call statck between class <org.greenrobot.greendao.test.DbTest: void tearDown()> to <junit.framework.TestCase: void tearDown()>has compatibility isssues！
+-----------------------------------------
+crashApis:7
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 8 Potential Issue API: SDKCheck of <android.content.res.Resources: android.graphics.drawable.Drawable getDrawable(int,android.content.res.Resources.Theme)> is checking!!!
+The life time of api is [21,31]
+3call roads:
+0 Mainhead roads:
+3 Packageshead roads:
+###Multi invoking in one method, need manual check!!!--><eu.davidea.fastscroller.FastScroller: void setBubbleAndHandleColor(int)>[[-i1 < 21], [try]]
+###Multi invoking in one method, need manual check!!!--><eu.davidea.fastscroller.FastScroller: void setBubbleAndHandleColor(int)>[[-i1 < 21]][[try]]
+-i1 < 21
+try
+Good road with try: <eu.davidea.fastscroller.FastScroller$Delegate: void setFastScroller(eu.davidea.fastscroller.FastScroller)>[]--><eu.davidea.fastscroller.FastScroller: void setViewsToUse(int,int,int)>[]--><eu.davidea.fastscroller.FastScroller: void setBubbleAndHandleColor(int)>[[-i1 < 21], [try]]--><android.content.res.Resources: android.graphics.drawable.Drawable getDrawable(int,android.content.res.Resources.Theme)>
+One road protect good!
+###Multi invoking in one method, need manual check!!!--><eu.davidea.flexibleadapter.utils.DrawableUtils: android.graphics.drawable.Drawable getDrawableCompat(android.content.Context,int)>[[-$z0 == 0], [try]]
+###Multi invoking in one method, need manual check!!!--><eu.davidea.flexibleadapter.utils.DrawableUtils: android.graphics.drawable.Drawable getDrawableCompat(android.content.Context,int)>[[-$z0 == 0]][[try]]
+-$z0 == 0
+try
+Good road with try: <eu.davidea.flexibleadapter.utils.DrawableUtils: void setBackgroundCompat(android.view.View,int)>[]--><eu.davidea.flexibleadapter.utils.DrawableUtils: android.graphics.drawable.Drawable getDrawableCompat(android.content.Context,int)>[[-$z0 == 0], [try]]--><android.content.res.Resources: android.graphics.drawable.Drawable getDrawable(int,android.content.res.Resources.Theme)>
+One road protect good!
+###Multi invoking in one method, need manual check!!!--><eu.davidea.flexibleadapter.utils.DrawableUtils: android.graphics.drawable.Drawable getDrawableCompat(android.content.Context,int)>[[-$z0 == 0], [try]]
+###Multi invoking in one method, need manual check!!!--><eu.davidea.flexibleadapter.utils.DrawableUtils: android.graphics.drawable.Drawable getDrawableCompat(android.content.Context,int)>[[-$z0 == 0]][[try]]
+-$z0 == 0
+try
+Good road with try: <eu.davidea.flexibleadapter.utils.DrawableUtils: android.graphics.drawable.Drawable getSelectableItemBackground(android.content.Context)>[]--><eu.davidea.flexibleadapter.utils.DrawableUtils: android.graphics.drawable.Drawable getDrawableCompat(android.content.Context,int)>[[-$z0 == 0], [try]]--><android.content.res.Resources: android.graphics.drawable.Drawable getDrawable(int,android.content.res.Resources.Theme)>
+One road protect good!
+containsStatic:false
+containsTry:true
+4call by main package
+-----------------------------------------
+#################################################
+N 9 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)> is checking!!!
+The life time of api is [22,31]
+7call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: io.github.wulkanowy.ui.splash.SplashActivity dummyMainMethod_io_github_wulkanowy_ui_splash_SplashActivity(android.content.Intent)>[]--><io.github.wulkanowy.ui.splash.SplashActivity: void onCreate(android.os.Bundle)>[]--><io.github.wulkanowy.ui.splash.SplashPresenter: void onStart(io.github.wulkanowy.ui.base.BaseContract$View)>[]--><io.github.wulkanowy.ui.splash.SplashPresenter: void onStart(io.github.wulkanowy.ui.splash.SplashContract$View)>[]--><io.github.wulkanowy.ui.splash.SplashActivity: void startSyncService(int,boolean)>[]--><io.github.wulkanowy.services.SyncJob: void start(android.content.Context,int,boolean)>[]--><com.firebase.jobdispatcher.FirebaseJobDispatcher: void mustSchedule(com.firebase.jobdispatcher.Job)>[]--><com.firebase.jobdispatcher.FirebaseJobDispatcher: int schedule(com.firebase.jobdispatcher.Job)>[]--><com.firebase.jobdispatcher.GooglePlayDriver: int schedule(com.firebase.jobdispatcher.Job)>[]--><com.firebase.jobdispatcher.GooglePlayDriver: android.content.Intent createScheduleRequest(com.firebase.jobdispatcher.JobParameters)>[]--><com.firebase.jobdispatcher.GooglePlayJobWriter: android.os.Bundle writeToBundle(com.firebase.jobdispatcher.JobParameters,android.os.Bundle)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.firebase.jobdispatcher.GooglePlayReceiver dummyMainMethod_com_firebase_jobdispatcher_GooglePlayReceiver(android.content.Intent)>[]--><com.firebase.jobdispatcher.GooglePlayReceiver: int onStartCommand(android.content.Intent,int,int)>[[try]]--><com.firebase.jobdispatcher.ExecutionDelegator: void executeJob(com.firebase.jobdispatcher.JobInvocation)>[[try]]--><com.firebase.jobdispatcher.JobServiceConnection: boolean startJob(com.firebase.jobdispatcher.JobInvocation)>[[try]]--><com.firebase.jobdispatcher.JobServiceConnection: void stopJob(boolean,com.firebase.jobdispatcher.JobInvocation)>[[try]]--><com.firebase.jobdispatcher.JobServiceConnection: android.os.Bundle encodeJob(com.firebase.jobdispatcher.JobParameters)>[]--><com.firebase.jobdispatcher.JobCoder: android.os.Bundle encode(com.firebase.jobdispatcher.JobParameters,android.os.Bundle)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+One road protect good!
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+6 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 
+Error road: <eu.davidea.flexibleadapter.FlexibleAdapter: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+#1.the call statck between class <eu.davidea.flexibleadapter.FlexibleAdapter: void onSaveInstanceState(android.os.Bundle)> to <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+try
+Good road with try: <com.firebase.jobdispatcher.GooglePlayMessageHandler: void handleMessage(android.os.Message)>[]--><com.firebase.jobdispatcher.GooglePlayMessageHandler: void handleStopMessage(android.os.Message)>[]--><com.firebase.jobdispatcher.ExecutionDelegator: void stopJob(com.firebase.jobdispatcher.JobInvocation,boolean)>[[try]]--><com.firebase.jobdispatcher.JobServiceConnection: void onStop(com.firebase.jobdispatcher.JobInvocation,boolean)>[[try]]--><com.firebase.jobdispatcher.JobServiceConnection: void stopJob(boolean,com.firebase.jobdispatcher.JobInvocation)>[[try]]--><com.firebase.jobdispatcher.JobServiceConnection: android.os.Bundle encodeJob(com.firebase.jobdispatcher.JobParameters)>[]--><com.firebase.jobdispatcher.JobCoder: android.os.Bundle encode(com.firebase.jobdispatcher.JobParameters,android.os.Bundle)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+One road protect good!
+try
+Good road with try: <com.firebase.jobdispatcher.GooglePlayMessageHandler: void handleMessage(android.os.Message)>[]--><com.firebase.jobdispatcher.GooglePlayMessageHandler: void handleStartMessage(android.os.Message)>[]--><com.firebase.jobdispatcher.ExecutionDelegator: void executeJob(com.firebase.jobdispatcher.JobInvocation)>[[try]]--><com.firebase.jobdispatcher.JobServiceConnection: boolean startJob(com.firebase.jobdispatcher.JobInvocation)>[[try]]--><com.firebase.jobdispatcher.JobServiceConnection: void stopJob(boolean,com.firebase.jobdispatcher.JobInvocation)>[[try]]--><com.firebase.jobdispatcher.JobServiceConnection: android.os.Bundle encodeJob(com.firebase.jobdispatcher.JobParameters)>[]--><com.firebase.jobdispatcher.JobCoder: android.os.Bundle encode(com.firebase.jobdispatcher.JobParameters,android.os.Bundle)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+One road protect good!
+try
+Good road with try: <com.firebase.jobdispatcher.JobService$JobCallback: void sendResult(int)>[[try]]--><com.firebase.jobdispatcher.JobCoder: android.os.Bundle encode(com.firebase.jobdispatcher.JobParameters,android.os.Bundle)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+One road protect good!
+try
+Good road with try: <com.firebase.jobdispatcher.JobServiceConnection: void onServiceConnected(android.content.ComponentName,android.os.IBinder)>[[try]]--><com.firebase.jobdispatcher.JobServiceConnection: android.os.Bundle encodeJob(com.firebase.jobdispatcher.JobParameters)>[]--><com.firebase.jobdispatcher.JobCoder: android.os.Bundle encode(com.firebase.jobdispatcher.JobParameters,android.os.Bundle)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+One road protect good!
+!!!this api will crash on sdk 16 17 18 19 20 21 
+Error road: <io.github.wulkanowy.ui.main.settings.SettingsFragment: void onSharedPreferenceChanged(android.content.SharedPreferences,java.lang.String)>[]--><io.github.wulkanowy.ui.main.settings.SettingsFragment: void launchServices(boolean,android.content.SharedPreferences)>[]--><io.github.wulkanowy.services.SyncJob: void start(android.content.Context,int,boolean)>[]--><com.firebase.jobdispatcher.FirebaseJobDispatcher: void mustSchedule(com.firebase.jobdispatcher.Job)>[]--><com.firebase.jobdispatcher.FirebaseJobDispatcher: int schedule(com.firebase.jobdispatcher.Job)>[]--><com.firebase.jobdispatcher.GooglePlayDriver: int schedule(com.firebase.jobdispatcher.Job)>[]--><com.firebase.jobdispatcher.GooglePlayDriver: android.content.Intent createScheduleRequest(com.firebase.jobdispatcher.JobParameters)>[]--><com.firebase.jobdispatcher.GooglePlayJobWriter: android.os.Bundle writeToBundle(com.firebase.jobdispatcher.JobParameters,android.os.Bundle)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+#5.the call statck between class <io.github.wulkanowy.ui.main.settings.SettingsFragment: void onSharedPreferenceChanged(android.content.SharedPreferences,java.lang.String)> to <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+try
+Good road with try: <com.firebase.jobdispatcher.GooglePlayReceiver: void onJobFinished(com.firebase.jobdispatcher.JobInvocation,int)>[[try]]--><com.firebase.jobdispatcher.GooglePlayReceiver: void reschedule(com.firebase.jobdispatcher.JobInvocation)>[]--><com.firebase.jobdispatcher.GooglePlayDriver: int schedule(com.firebase.jobdispatcher.Job)>[]--><com.firebase.jobdispatcher.GooglePlayDriver: android.content.Intent createScheduleRequest(com.firebase.jobdispatcher.JobParameters)>[]--><com.firebase.jobdispatcher.GooglePlayJobWriter: android.os.Bundle writeToBundle(com.firebase.jobdispatcher.JobParameters,android.os.Bundle)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+One road protect good!
+crashApis:8
+crashApisInMain:3
+containsStatic:false
+containsTry:true
+7call by main package
+-----------------------------------------
+#################################################
+N 10 Potential Issue API: SDKCheck of <android.app.NotificationChannel: void enableLights(boolean)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+try
+Good road with try: <io.github.wulkanowy.services.SyncJob: int onRunJob(com.firebase.jobdispatcher.JobParameters)>[[try]]--><io.github.wulkanowy.services.SyncJob: void showNotification()>[]--><io.github.wulkanowy.services.NotificationService: void <init>(android.content.Context)>[[$i0 >= 26]]--><io.github.wulkanowy.services.NotificationService: void createChannel()>[]--><android.app.NotificationChannel: void enableLights(boolean)>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 11 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.lang.Object get(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+4call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: io.github.wulkanowy.ui.splash.SplashActivity dummyMainMethod_io_github_wulkanowy_ui_splash_SplashActivity(android.content.Intent)>[]--><io.github.wulkanowy.ui.splash.SplashActivity: void onCreate(android.os.Bundle)>[]--><io.github.wulkanowy.ui.splash.SplashPresenter: void onStart(io.github.wulkanowy.ui.base.BaseContract$View)>[]--><io.github.wulkanowy.ui.splash.SplashPresenter: void onStart(io.github.wulkanowy.ui.splash.SplashContract$View)>[]--><io.github.wulkanowy.ui.splash.SplashActivity: void startSyncService(int,boolean)>[]--><io.github.wulkanowy.services.SyncJob: void start(android.content.Context,int,boolean)>[]--><com.firebase.jobdispatcher.Job$Builder: com.firebase.jobdispatcher.Job build()>[]--><com.firebase.jobdispatcher.ValidationEnforcer: void ensureValid(com.firebase.jobdispatcher.JobParameters)>[]--><com.firebase.jobdispatcher.ValidationEnforcer: java.util.List validate(com.firebase.jobdispatcher.JobParameters)>[]--><com.firebase.jobdispatcher.DefaultJobValidator: java.util.List validate(com.firebase.jobdispatcher.JobParameters)>[]--><com.firebase.jobdispatcher.DefaultJobValidator: java.util.List validateForPersistence(android.os.Bundle)>[]--><com.firebase.jobdispatcher.DefaultJobValidator: java.lang.String validateExtrasType(android.os.Bundle,java.lang.String)>[]--><android.os.BaseBundle: java.lang.Object get(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: java.lang.Object get(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+3 Packageshead roads:
+try
+Good road with try: <com.crashlytics.android.core.DefaultAppMeasurementEventListenerRegistrar: void access$100(com.crashlytics.android.core.CrashlyticsCore,java.lang.String,android.os.Bundle)>[]--><com.crashlytics.android.core.DefaultAppMeasurementEventListenerRegistrar: void writeEventToUserLog(com.crashlytics.android.core.CrashlyticsCore,java.lang.String,android.os.Bundle)>[[try]]--><com.crashlytics.android.core.DefaultAppMeasurementEventListenerRegistrar: java.lang.String serializeEvent(java.lang.String,android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.Object get(java.lang.String)>
+One road protect good!
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.firebase.jobdispatcher.ValidationEnforcer: boolean isValid(com.firebase.jobdispatcher.JobParameters)>[]--><com.firebase.jobdispatcher.ValidationEnforcer: java.util.List validate(com.firebase.jobdispatcher.JobParameters)>[]--><com.firebase.jobdispatcher.DefaultJobValidator: java.util.List validate(com.firebase.jobdispatcher.JobParameters)>[]--><com.firebase.jobdispatcher.DefaultJobValidator: java.util.List validateForPersistence(android.os.Bundle)>[]--><com.firebase.jobdispatcher.DefaultJobValidator: java.lang.String validateExtrasType(android.os.Bundle,java.lang.String)>[]--><android.os.BaseBundle: java.lang.Object get(java.lang.String)>
+#2.the call statck between class <com.firebase.jobdispatcher.ValidationEnforcer: boolean isValid(com.firebase.jobdispatcher.JobParameters)> to <android.os.BaseBundle: java.lang.Object get(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <io.github.wulkanowy.ui.main.settings.SettingsFragment: void onSharedPreferenceChanged(android.content.SharedPreferences,java.lang.String)>[]--><io.github.wulkanowy.ui.main.settings.SettingsFragment: void launchServices(boolean,android.content.SharedPreferences)>[]--><io.github.wulkanowy.services.SyncJob: void start(android.content.Context,int,boolean)>[]--><com.firebase.jobdispatcher.Job$Builder: com.firebase.jobdispatcher.Job build()>[]--><com.firebase.jobdispatcher.ValidationEnforcer: void ensureValid(com.firebase.jobdispatcher.JobParameters)>[]--><com.firebase.jobdispatcher.ValidationEnforcer: java.util.List validate(com.firebase.jobdispatcher.JobParameters)>[]--><com.firebase.jobdispatcher.DefaultJobValidator: java.util.List validate(com.firebase.jobdispatcher.JobParameters)>[]--><com.firebase.jobdispatcher.DefaultJobValidator: java.util.List validateForPersistence(android.os.Bundle)>[]--><com.firebase.jobdispatcher.DefaultJobValidator: java.lang.String validateExtrasType(android.os.Bundle,java.lang.String)>[]--><android.os.BaseBundle: java.lang.Object get(java.lang.String)>
+#3.the call statck between class <io.github.wulkanowy.ui.main.settings.SettingsFragment: void onSharedPreferenceChanged(android.content.SharedPreferences,java.lang.String)> to <android.os.BaseBundle: java.lang.Object get(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:9
+crashApisInMain:4
+containsStatic:false
+containsTry:true
+4call by main package
+-----------------------------------------
+#################################################
+N 12 Potential Issue API: SDKCheck of <android.security.keystore.KeyGenParameterSpec.Builder: android.security.keystore.KeyGenParameterSpec.Builder setDigests(java.lang.String[])> is checking!!!
+The life time of api is [23,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+###Multi invoking in one method, need manual check!!!--><io.github.wulkanowy.utils.security.Scrambler: java.lang.String encrypt(java.lang.String,java.lang.String,android.content.Context)>[[-$i0 < 18]]--><io.github.wulkanowy.utils.security.Scrambler: void generateNewKey(java.lang.String,android.content.Context)>[[-i0 < 23], [try]]
+###Multi invoking in one method, need manual check!!!--><io.github.wulkanowy.utils.security.Scrambler: java.lang.String encrypt(java.lang.String,java.lang.String,android.content.Context)>[[-$i0 < 18]]--><io.github.wulkanowy.utils.security.Scrambler: void generateNewKey(java.lang.String,android.content.Context)>[[-i0 < 23]][[try]]
+-$i0 < 18
+-i0 < 23
+try
+Good road with try: <io.github.wulkanowy.ui.login.LoginPresenter: void onDoInBackground(int)>[]--><io.github.wulkanowy.data.sync.account.AccountSync: void registerUser(java.lang.String,java.lang.String,java.lang.String)>[]--><io.github.wulkanowy.utils.security.Scrambler: java.lang.String encrypt(java.lang.String,java.lang.String,android.content.Context)>[[-$i0 < 18]]--><io.github.wulkanowy.utils.security.Scrambler: void generateNewKey(java.lang.String,android.content.Context)>[[-i0 < 23], [try]]--><android.security.keystore.KeyGenParameterSpec.Builder: android.security.keystore.KeyGenParameterSpec.Builder setDigests(java.lang.String[])>
+One road protect good!
+###Multi invoking in one method, need manual check!!!--><io.github.wulkanowy.utils.security.Scrambler: java.lang.String encrypt(java.lang.String,java.lang.String,android.content.Context)>[[-$i0 < 18]]--><io.github.wulkanowy.utils.security.Scrambler: void generateNewKey(java.lang.String,android.content.Context)>[[-i0 < 23], [try]]
+###Multi invoking in one method, need manual check!!!--><io.github.wulkanowy.utils.security.Scrambler: java.lang.String encrypt(java.lang.String,java.lang.String,android.content.Context)>[[-$i0 < 18]]--><io.github.wulkanowy.utils.security.Scrambler: void generateNewKey(java.lang.String,android.content.Context)>[[-i0 < 23]][[try]]
+-$i0 < 18
+-i0 < 23
+try
+Good road with try: <io.github.wulkanowy.ui.login.LoginPresenter: void onDoInBackground(int)>[]--><io.github.wulkanowy.data.Repository: void registerUser(java.lang.String,java.lang.String,java.lang.String)>[]--><io.github.wulkanowy.data.sync.account.AccountSync: void registerUser(java.lang.String,java.lang.String,java.lang.String)>[]--><io.github.wulkanowy.utils.security.Scrambler: java.lang.String encrypt(java.lang.String,java.lang.String,android.content.Context)>[[-$i0 < 18]]--><io.github.wulkanowy.utils.security.Scrambler: void generateNewKey(java.lang.String,android.content.Context)>[[-i0 < 23], [try]]--><android.security.keystore.KeyGenParameterSpec.Builder: android.security.keystore.KeyGenParameterSpec.Builder setDigests(java.lang.String[])>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 13 Potential Issue API: SDKCheck of <junit.framework.Assert: void fail(java.lang.String)> is checking!!!
+The life time of api is [26,27]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+try
+Good road with try: <org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void testInsertTwice()>[[try]]--><junit.framework.Assert: void fail(java.lang.String)>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 14 Potential Issue API: SDKCheck of <android.os.BaseBundle: boolean getBoolean(java.lang.String)> is checking!!!
+The life time of api is [22,31]
+3call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.firebase.jobdispatcher.GooglePlayReceiver dummyMainMethod_com_firebase_jobdispatcher_GooglePlayReceiver(android.content.Intent)>[]--><com.firebase.jobdispatcher.GooglePlayReceiver: int onStartCommand(android.content.Intent,int,int)>[[try]]--><com.firebase.jobdispatcher.GooglePlayReceiver: com.firebase.jobdispatcher.JobInvocation prepareJob(android.content.Intent)>[]--><com.firebase.jobdispatcher.GooglePlayReceiver: com.firebase.jobdispatcher.JobInvocation prepareJob(com.firebase.jobdispatcher.JobCallback,android.os.Bundle)>[]--><com.firebase.jobdispatcher.JobCoder: com.firebase.jobdispatcher.JobInvocation decodeIntentBundle(android.os.Bundle)>[]--><com.firebase.jobdispatcher.JobCoder: com.firebase.jobdispatcher.JobInvocation$Builder decode(android.os.Bundle)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+One road protect good!
+2 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 
+Error road: <com.firebase.jobdispatcher.GooglePlayMessageHandler: void handleMessage(android.os.Message)>[]--><com.firebase.jobdispatcher.GooglePlayMessageHandler: void handleStartMessage(android.os.Message)>[]--><com.firebase.jobdispatcher.GooglePlayReceiver: com.firebase.jobdispatcher.JobInvocation prepareJob(com.firebase.jobdispatcher.JobCallback,android.os.Bundle)>[]--><com.firebase.jobdispatcher.JobCoder: com.firebase.jobdispatcher.JobInvocation decodeIntentBundle(android.os.Bundle)>[]--><com.firebase.jobdispatcher.JobCoder: com.firebase.jobdispatcher.JobInvocation$Builder decode(android.os.Bundle)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+#1.the call statck between class <com.firebase.jobdispatcher.GooglePlayMessageHandler: void handleMessage(android.os.Message)> to <android.os.BaseBundle: boolean getBoolean(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 
+Error road: <eu.davidea.flexibleadapter.FlexibleAdapter: void onRestoreInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+#2.the call statck between class <eu.davidea.flexibleadapter.FlexibleAdapter: void onRestoreInstanceState(android.os.Bundle)> to <android.os.BaseBundle: boolean getBoolean(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:10
+containsStatic:false
+containsTry:true
+3call by main package
+-----------------------------------------
+#################################################
+N 15 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.lang.String getString(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+2283call roads:
+1 Mainhead roads:
+2282 Packageshead roads:
+Roads number exceed, exit!2282
+#################################################
+N 16 Potential Issue API: SDKCheck of <android.animation.AnimatorSet: void <init>()> is checking!!!
+The life time of api is [24,31]
+8call roads:
+0 Mainhead roads:
+8 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 
+Error road: <eu.davidea.fastscroller.FastScroller$Delegate: void setFastScroller(eu.davidea.fastscroller.FastScroller)>[]--><eu.davidea.fastscroller.FastScroller: void setEnabled(boolean)>[]--><eu.davidea.fastscroller.FastScroller: void hideScrollbar()>[]--><eu.davidea.fastscroller.ScrollbarAnimator: void hideScrollbar()>[]--><eu.davidea.fastscroller.ScrollbarAnimator: android.animation.AnimatorSet createAnimator(android.view.View,android.view.View,boolean)>[]--><android.animation.AnimatorSet: void <init>()>
+#1.the call statck between class <eu.davidea.fastscroller.FastScroller$Delegate: void setFastScroller(eu.davidea.fastscroller.FastScroller)> to <android.animation.AnimatorSet: void <init>()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 
+Error road: <eu.davidea.fastscroller.FastScroller$1: void onScrolled(android.support.v7.widget.RecyclerView,int,int)>[]--><eu.davidea.fastscroller.FastScroller: void showScrollbar()>[]--><eu.davidea.fastscroller.ScrollbarAnimator: void showScrollbar()>[]--><eu.davidea.fastscroller.ScrollbarAnimator: android.animation.AnimatorSet createAnimator(android.view.View,android.view.View,boolean)>[]--><android.animation.AnimatorSet: void <init>()>
+#2.the call statck between class <eu.davidea.fastscroller.FastScroller$1: void onScrolled(android.support.v7.widget.RecyclerView,int,int)> to <android.animation.AnimatorSet: void <init>()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 
+Error road: <eu.davidea.fastscroller.FastScroller$Delegate: void toggleFastScroller()>[]--><eu.davidea.fastscroller.FastScroller: void toggleFastScroller()>[]--><eu.davidea.fastscroller.FastScroller: void setEnabled(boolean)>[]--><eu.davidea.fastscroller.FastScroller: void hideScrollbar()>[]--><eu.davidea.fastscroller.ScrollbarAnimator: void hideScrollbar()>[]--><eu.davidea.fastscroller.ScrollbarAnimator: android.animation.AnimatorSet createAnimator(android.view.View,android.view.View,boolean)>[]--><android.animation.AnimatorSet: void <init>()>
+#3.the call statck between class <eu.davidea.fastscroller.FastScroller$Delegate: void toggleFastScroller()> to <android.animation.AnimatorSet: void <init>()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 
+Error road: <eu.davidea.flexibleadapter.helpers.EmptyViewHelper: void onUpdateFilterView(int)>[]--><eu.davidea.fastscroller.FastScroller: void hideScrollbar()>[]--><eu.davidea.fastscroller.ScrollbarAnimator: void hideScrollbar()>[]--><eu.davidea.fastscroller.ScrollbarAnimator: android.animation.AnimatorSet createAnimator(android.view.View,android.view.View,boolean)>[]--><android.animation.AnimatorSet: void <init>()>
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 
+Error road: <eu.davidea.flexibleadapter.helpers.EmptyViewHelper: void onUpdateFilterView(int)>[]--><eu.davidea.fastscroller.FastScroller: void showScrollbar()>[]--><eu.davidea.fastscroller.ScrollbarAnimator: void showScrollbar()>[]--><eu.davidea.fastscroller.ScrollbarAnimator: android.animation.AnimatorSet createAnimator(android.view.View,android.view.View,boolean)>[]--><android.animation.AnimatorSet: void <init>()>
+#4.the call statck between class <eu.davidea.flexibleadapter.helpers.EmptyViewHelper: void onUpdateFilterView(int)> to <android.animation.AnimatorSet: void <init>()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 
+Error road: <eu.davidea.fastscroller.FastScroller: void access$000(eu.davidea.fastscroller.FastScroller)>[]--><eu.davidea.fastscroller.FastScroller: void autoHideScrollbar()>[]--><eu.davidea.fastscroller.FastScroller: void hideScrollbar()>[]--><eu.davidea.fastscroller.ScrollbarAnimator: void hideScrollbar()>[]--><eu.davidea.fastscroller.ScrollbarAnimator: android.animation.AnimatorSet createAnimator(android.view.View,android.view.View,boolean)>[]--><android.animation.AnimatorSet: void <init>()>
+#5.the call statck between class <eu.davidea.fastscroller.FastScroller: void access$000(eu.davidea.fastscroller.FastScroller)> to <android.animation.AnimatorSet: void <init>()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 
+Error road: <eu.davidea.fastscroller.FastScroller: boolean onTouchEvent(android.view.MotionEvent)>[]--><eu.davidea.fastscroller.FastScroller: void showScrollbar()>[]--><eu.davidea.fastscroller.ScrollbarAnimator: void showScrollbar()>[]--><eu.davidea.fastscroller.ScrollbarAnimator: android.animation.AnimatorSet createAnimator(android.view.View,android.view.View,boolean)>[]--><android.animation.AnimatorSet: void <init>()>
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 
+Error road: <eu.davidea.fastscroller.FastScroller: boolean onTouchEvent(android.view.MotionEvent)>[]--><eu.davidea.fastscroller.FastScroller: void autoHideScrollbar()>[]--><eu.davidea.fastscroller.FastScroller: void hideScrollbar()>[]--><eu.davidea.fastscroller.ScrollbarAnimator: void hideScrollbar()>[]--><eu.davidea.fastscroller.ScrollbarAnimator: android.animation.AnimatorSet createAnimator(android.view.View,android.view.View,boolean)>[]--><android.animation.AnimatorSet: void <init>()>
+#6.the call statck between class <eu.davidea.fastscroller.FastScroller: boolean onTouchEvent(android.view.MotionEvent)> to <android.animation.AnimatorSet: void <init>()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 
+Error road: <eu.davidea.flexibleadapter.AnimatorAdapter: void animateView(android.support.v7.widget.RecyclerView$ViewHolder,int)>[]--><android.animation.AnimatorSet: void <init>()>
+#7.the call statck between class <eu.davidea.flexibleadapter.AnimatorAdapter: void animateView(android.support.v7.widget.RecyclerView$ViewHolder,int)> to <android.animation.AnimatorSet: void <init>()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 
+Error road: <eu.davidea.flexibleadapter.helpers.EmptyViewHelper: void onUpdateEmptyView(int)>[]--><eu.davidea.fastscroller.FastScroller: void showScrollbar()>[]--><eu.davidea.fastscroller.ScrollbarAnimator: void showScrollbar()>[]--><eu.davidea.fastscroller.ScrollbarAnimator: android.animation.AnimatorSet createAnimator(android.view.View,android.view.View,boolean)>[]--><android.animation.AnimatorSet: void <init>()>
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 
+Error road: <eu.davidea.flexibleadapter.helpers.EmptyViewHelper: void onUpdateEmptyView(int)>[]--><eu.davidea.fastscroller.FastScroller: void hideScrollbar()>[]--><eu.davidea.fastscroller.ScrollbarAnimator: void hideScrollbar()>[]--><eu.davidea.fastscroller.ScrollbarAnimator: android.animation.AnimatorSet createAnimator(android.view.View,android.view.View,boolean)>[]--><android.animation.AnimatorSet: void <init>()>
+#8.the call statck between class <eu.davidea.flexibleadapter.helpers.EmptyViewHelper: void onUpdateEmptyView(int)> to <android.animation.AnimatorSet: void <init>()>has compatibility isssues！
+-----------------------------------------
+crashApis:11
+containsStatic:false
+containsTry:false
+9call by main package
+-----------------------------------------
+#################################################
+N 17 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putInt(java.lang.String,int)> is checking!!!
+The life time of api is [21,31]
+11call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.firebase.jobdispatcher.GooglePlayReceiver dummyMainMethod_com_firebase_jobdispatcher_GooglePlayReceiver(android.content.Intent)>[]--><com.firebase.jobdispatcher.GooglePlayReceiver: int onStartCommand(android.content.Intent,int,int)>[[try]]--><com.firebase.jobdispatcher.ExecutionDelegator: void executeJob(com.firebase.jobdispatcher.JobInvocation)>[[try]]--><com.firebase.jobdispatcher.JobServiceConnection: boolean startJob(com.firebase.jobdispatcher.JobInvocation)>[[try]]--><com.firebase.jobdispatcher.JobServiceConnection: void stopJob(boolean,com.firebase.jobdispatcher.JobInvocation)>[[try]]--><com.firebase.jobdispatcher.JobServiceConnection: android.os.Bundle encodeJob(com.firebase.jobdispatcher.JobParameters)>[]--><com.firebase.jobdispatcher.JobCoder: android.os.Bundle encode(com.firebase.jobdispatcher.JobParameters,android.os.Bundle)>[]--><com.firebase.jobdispatcher.JobCoder: void encodeTrigger(com.firebase.jobdispatcher.JobTrigger,android.os.Bundle)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+One road protect good!
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: io.github.wulkanowy.ui.main.MainActivity dummyMainMethod_io_github_wulkanowy_ui_main_MainActivity(android.content.Intent)>[]--><com.aurelhubert.ahbottomnavigation.AHBottomNavigation: android.os.Parcelable onSaveInstanceState()>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: io.github.wulkanowy.ui.splash.SplashActivity dummyMainMethod_io_github_wulkanowy_ui_splash_SplashActivity(android.content.Intent)>[]--><io.github.wulkanowy.ui.splash.SplashActivity: void onCreate(android.os.Bundle)>[]--><io.github.wulkanowy.ui.splash.SplashPresenter: void onStart(io.github.wulkanowy.ui.base.BaseContract$View)>[]--><io.github.wulkanowy.ui.splash.SplashPresenter: void onStart(io.github.wulkanowy.ui.splash.SplashContract$View)>[]--><io.github.wulkanowy.ui.splash.SplashActivity: void startSyncService(int,boolean)>[]--><io.github.wulkanowy.services.SyncJob: void start(android.content.Context,int,boolean)>[]--><com.firebase.jobdispatcher.FirebaseJobDispatcher: void mustSchedule(com.firebase.jobdispatcher.Job)>[]--><com.firebase.jobdispatcher.FirebaseJobDispatcher: int schedule(com.firebase.jobdispatcher.Job)>[]--><com.firebase.jobdispatcher.GooglePlayDriver: int schedule(com.firebase.jobdispatcher.Job)>[]--><com.firebase.jobdispatcher.GooglePlayDriver: android.content.Intent createScheduleRequest(com.firebase.jobdispatcher.JobParameters)>[]--><com.firebase.jobdispatcher.GooglePlayJobWriter: android.os.Bundle writeToBundle(com.firebase.jobdispatcher.JobParameters,android.os.Bundle)>[]--><com.firebase.jobdispatcher.GooglePlayJobWriter: void writeTriggerToBundle(com.firebase.jobdispatcher.JobParameters,android.os.Bundle)>[]--><com.firebase.jobdispatcher.GooglePlayJobWriter: void writeExecutionWindowTriggerToBundle(com.firebase.jobdispatcher.JobParameters,android.os.Bundle,com.firebase.jobdispatcher.JobTrigger$ExecutionWindowTrigger)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+10 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.crashlytics.android.core.CrashlyticsController: void access$600(com.crashlytics.android.core.CrashlyticsController,long)>[]--><com.crashlytics.android.core.CrashlyticsController: void recordFatalFirebaseEvent(long)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#1.the call statck between class <com.crashlytics.android.core.CrashlyticsController: void access$600(com.crashlytics.android.core.CrashlyticsController,long)> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <eu.davidea.flexibleadapter.FlexibleAdapter: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#2.the call statck between class <eu.davidea.flexibleadapter.FlexibleAdapter: void onSaveInstanceState(android.os.Bundle)> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+try
+Good road with try: <com.firebase.jobdispatcher.GooglePlayMessageHandler: void handleMessage(android.os.Message)>[]--><com.firebase.jobdispatcher.GooglePlayMessageHandler: void handleStartMessage(android.os.Message)>[]--><com.firebase.jobdispatcher.ExecutionDelegator: void executeJob(com.firebase.jobdispatcher.JobInvocation)>[[try]]--><com.firebase.jobdispatcher.JobServiceConnection: boolean startJob(com.firebase.jobdispatcher.JobInvocation)>[[try]]--><com.firebase.jobdispatcher.JobServiceConnection: void stopJob(boolean,com.firebase.jobdispatcher.JobInvocation)>[[try]]--><com.firebase.jobdispatcher.JobServiceConnection: android.os.Bundle encodeJob(com.firebase.jobdispatcher.JobParameters)>[]--><com.firebase.jobdispatcher.JobCoder: android.os.Bundle encode(com.firebase.jobdispatcher.JobParameters,android.os.Bundle)>[]--><com.firebase.jobdispatcher.JobCoder: void encodeTrigger(com.firebase.jobdispatcher.JobTrigger,android.os.Bundle)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+One road protect good!
+try
+Good road with try: <com.firebase.jobdispatcher.GooglePlayMessageHandler: void handleMessage(android.os.Message)>[]--><com.firebase.jobdispatcher.GooglePlayMessageHandler: void handleStopMessage(android.os.Message)>[]--><com.firebase.jobdispatcher.ExecutionDelegator: void stopJob(com.firebase.jobdispatcher.JobInvocation,boolean)>[[try]]--><com.firebase.jobdispatcher.JobServiceConnection: void onStop(com.firebase.jobdispatcher.JobInvocation,boolean)>[[try]]--><com.firebase.jobdispatcher.JobServiceConnection: void stopJob(boolean,com.firebase.jobdispatcher.JobInvocation)>[[try]]--><com.firebase.jobdispatcher.JobServiceConnection: android.os.Bundle encodeJob(com.firebase.jobdispatcher.JobParameters)>[]--><com.firebase.jobdispatcher.JobCoder: android.os.Bundle encode(com.firebase.jobdispatcher.JobParameters,android.os.Bundle)>[]--><com.firebase.jobdispatcher.JobCoder: void encodeTrigger(com.firebase.jobdispatcher.JobTrigger,android.os.Bundle)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+One road protect good!
+try
+Good road with try: <com.crashlytics.android.answers.EnabledSessionAnalyticsManagerStrategy: void processEvent(com.crashlytics.android.answers.SessionEvent$Builder)>[[try]]--><com.crashlytics.android.answers.FirebaseAnalyticsApiAdapter: void processEvent(com.crashlytics.android.answers.SessionEvent)>[]--><com.crashlytics.android.answers.FirebaseAnalyticsEventMapper: com.crashlytics.android.answers.FirebaseAnalyticsEvent mapEvent(com.crashlytics.android.answers.SessionEvent)>[]--><com.crashlytics.android.answers.FirebaseAnalyticsEventMapper: void mapCustomEventAttributes(android.os.Bundle,java.util.Map)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+One road protect good!
+try
+Good road with try: <com.firebase.jobdispatcher.JobService$JobCallback: void sendResult(int)>[[try]]--><com.firebase.jobdispatcher.JobCoder: android.os.Bundle encode(com.firebase.jobdispatcher.JobParameters,android.os.Bundle)>[]--><com.firebase.jobdispatcher.JobCoder: void encodeTrigger(com.firebase.jobdispatcher.JobTrigger,android.os.Bundle)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+One road protect good!
+try
+Good road with try: <com.firebase.jobdispatcher.JobServiceConnection: void onServiceConnected(android.content.ComponentName,android.os.IBinder)>[[try]]--><com.firebase.jobdispatcher.JobServiceConnection: android.os.Bundle encodeJob(com.firebase.jobdispatcher.JobParameters)>[]--><com.firebase.jobdispatcher.JobCoder: android.os.Bundle encode(com.firebase.jobdispatcher.JobParameters,android.os.Bundle)>[]--><com.firebase.jobdispatcher.JobCoder: void encodeTrigger(com.firebase.jobdispatcher.JobTrigger,android.os.Bundle)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+One road protect good!
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <io.github.wulkanowy.ui.main.timetable.TimetableFragment: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#7.the call statck between class <io.github.wulkanowy.ui.main.timetable.TimetableFragment: void onSaveInstanceState(android.os.Bundle)> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <io.github.wulkanowy.ui.main.settings.SettingsFragment: void onSharedPreferenceChanged(android.content.SharedPreferences,java.lang.String)>[]--><io.github.wulkanowy.ui.main.settings.SettingsFragment: void launchServices(boolean,android.content.SharedPreferences)>[]--><io.github.wulkanowy.services.SyncJob: void start(android.content.Context,int,boolean)>[]--><com.firebase.jobdispatcher.FirebaseJobDispatcher: void mustSchedule(com.firebase.jobdispatcher.Job)>[]--><com.firebase.jobdispatcher.FirebaseJobDispatcher: int schedule(com.firebase.jobdispatcher.Job)>[]--><com.firebase.jobdispatcher.GooglePlayDriver: int schedule(com.firebase.jobdispatcher.Job)>[]--><com.firebase.jobdispatcher.GooglePlayDriver: android.content.Intent createScheduleRequest(com.firebase.jobdispatcher.JobParameters)>[]--><com.firebase.jobdispatcher.GooglePlayJobWriter: android.os.Bundle writeToBundle(com.firebase.jobdispatcher.JobParameters,android.os.Bundle)>[]--><com.firebase.jobdispatcher.GooglePlayJobWriter: void writeTriggerToBundle(com.firebase.jobdispatcher.JobParameters,android.os.Bundle)>[]--><com.firebase.jobdispatcher.GooglePlayJobWriter: void writeExecutionWindowTriggerToBundle(com.firebase.jobdispatcher.JobParameters,android.os.Bundle,com.firebase.jobdispatcher.JobTrigger$ExecutionWindowTrigger)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#8.the call statck between class <io.github.wulkanowy.ui.main.settings.SettingsFragment: void onSharedPreferenceChanged(android.content.SharedPreferences,java.lang.String)> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+try
+Good road with try: <com.firebase.jobdispatcher.GooglePlayReceiver: void onJobFinished(com.firebase.jobdispatcher.JobInvocation,int)>[[try]]--><com.firebase.jobdispatcher.GooglePlayReceiver: void reschedule(com.firebase.jobdispatcher.JobInvocation)>[]--><com.firebase.jobdispatcher.GooglePlayDriver: int schedule(com.firebase.jobdispatcher.Job)>[]--><com.firebase.jobdispatcher.GooglePlayDriver: android.content.Intent createScheduleRequest(com.firebase.jobdispatcher.JobParameters)>[]--><com.firebase.jobdispatcher.GooglePlayJobWriter: android.os.Bundle writeToBundle(com.firebase.jobdispatcher.JobParameters,android.os.Bundle)>[]--><com.firebase.jobdispatcher.GooglePlayJobWriter: void writeTriggerToBundle(com.firebase.jobdispatcher.JobParameters,android.os.Bundle)>[]--><com.firebase.jobdispatcher.GooglePlayJobWriter: void writeExecutionWindowTriggerToBundle(com.firebase.jobdispatcher.JobParameters,android.os.Bundle,com.firebase.jobdispatcher.JobTrigger$ExecutionWindowTrigger)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+One road protect good!
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <io.github.wulkanowy.ui.main.attendance.AttendanceFragment: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#10.the call statck between class <io.github.wulkanowy.ui.main.attendance.AttendanceFragment: void onSaveInstanceState(android.os.Bundle)> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:12
+crashApisInMain:5
+containsStatic:false
+containsTry:true
+11call by main package
+-----------------------------------------
+#################################################
+N 18 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager: android.net.wifi.WifiInfo getConnectionInfo()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><com.amitshekhar.DebugDBInitProvider: boolean onCreate()>[]--><com.amitshekhar.DebugDB: void initialize(android.content.Context)>[]--><com.amitshekhar.utils.NetworkUtils: java.lang.String getAddressLog(android.content.Context,int)>[]--><android.net.wifi.WifiManager: android.net.wifi.WifiInfo getConnectionInfo()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.wifi.WifiManager: android.net.wifi.WifiInfo getConnectionInfo()>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:13
+crashApisInMain:6
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 19 Potential Issue API: SDKCheck of <junit.framework.Assert: void assertTrue(boolean)> is checking!!!
+The life time of api is [26,27]
+4call roads:
+0 Mainhead roads:
+4 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 24 25 
+Error road: <org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void testReadWithOffset()>[]--><org.greenrobot.greendao.test.AbstractDaoTestSinglePk: android.database.Cursor queryWithDummyColumnsInFront(int,java.lang.String,java.lang.Object)>[]--><junit.framework.Assert: void assertTrue(boolean)>
+!!!this api will crash on sdk 28 29 30 31 
+Error road: <org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void testReadWithOffset()>[]--><org.greenrobot.greendao.test.AbstractDaoTestSinglePk: android.database.Cursor queryWithDummyColumnsInFront(int,java.lang.String,java.lang.Object)>[]--><junit.framework.Assert: void assertTrue(boolean)>
+#1.the call statck between class <org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void testReadWithOffset()> to <junit.framework.Assert: void assertTrue(boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 24 25 
+Error road: <org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void testLoadPk()>[]--><org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void runLoadPkTest(int)>[]--><org.greenrobot.greendao.test.AbstractDaoTestSinglePk: android.database.Cursor queryWithDummyColumnsInFront(int,java.lang.String,java.lang.Object)>[]--><junit.framework.Assert: void assertTrue(boolean)>
+!!!this api will crash on sdk 28 29 30 31 
+Error road: <org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void testLoadPk()>[]--><org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void runLoadPkTest(int)>[]--><org.greenrobot.greendao.test.AbstractDaoTestSinglePk: android.database.Cursor queryWithDummyColumnsInFront(int,java.lang.String,java.lang.Object)>[]--><junit.framework.Assert: void assertTrue(boolean)>
+#2.the call statck between class <org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void testLoadPk()> to <junit.framework.Assert: void assertTrue(boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 24 25 
+Error road: <org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void testRowId()>[]--><junit.framework.Assert: void assertTrue(boolean)>
+!!!this api will crash on sdk 28 29 30 31 
+Error road: <org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void testRowId()>[]--><junit.framework.Assert: void assertTrue(boolean)>
+#3.the call statck between class <org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void testRowId()> to <junit.framework.Assert: void assertTrue(boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 24 25 
+Error road: <org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void testLoadPkWithOffset()>[]--><org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void runLoadPkTest(int)>[]--><org.greenrobot.greendao.test.AbstractDaoTestSinglePk: android.database.Cursor queryWithDummyColumnsInFront(int,java.lang.String,java.lang.Object)>[]--><junit.framework.Assert: void assertTrue(boolean)>
+!!!this api will crash on sdk 28 29 30 31 
+Error road: <org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void testLoadPkWithOffset()>[]--><org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void runLoadPkTest(int)>[]--><org.greenrobot.greendao.test.AbstractDaoTestSinglePk: android.database.Cursor queryWithDummyColumnsInFront(int,java.lang.String,java.lang.Object)>[]--><junit.framework.Assert: void assertTrue(boolean)>
+#4.the call statck between class <org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void testLoadPkWithOffset()> to <junit.framework.Assert: void assertTrue(boolean)>has compatibility isssues！
+-----------------------------------------
+crashApis:14
+containsStatic:false
+containsTry:false
+5call by main package
+-----------------------------------------
+#################################################
+N 20 Potential Issue API: SDKCheck of <android.net.NetworkInfo: boolean isConnectedOrConnecting()> is checking!!!
+The life time of api is [1,30]
+2281call roads:
+1 Mainhead roads:
+2280 Packageshead roads:
+Roads number exceed, exit!2280
+#################################################
+N 21 Potential Issue API: SDKCheck of <android.security.keystore.KeyGenParameterSpec.Builder: android.security.keystore.KeyGenParameterSpec.Builder setCertificateNotBefore(java.util.Date)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+###Multi invoking in one method, need manual check!!!--><io.github.wulkanowy.utils.security.Scrambler: java.lang.String encrypt(java.lang.String,java.lang.String,android.content.Context)>[[-$i0 < 18]]--><io.github.wulkanowy.utils.security.Scrambler: void generateNewKey(java.lang.String,android.content.Context)>[[-i0 < 23], [try]]
+###Multi invoking in one method, need manual check!!!--><io.github.wulkanowy.utils.security.Scrambler: java.lang.String encrypt(java.lang.String,java.lang.String,android.content.Context)>[[-$i0 < 18]]--><io.github.wulkanowy.utils.security.Scrambler: void generateNewKey(java.lang.String,android.content.Context)>[[-i0 < 23]][[try]]
+-$i0 < 18
+-i0 < 23
+try
+Good road with try: <io.github.wulkanowy.ui.login.LoginPresenter: void onDoInBackground(int)>[]--><io.github.wulkanowy.data.sync.account.AccountSync: void registerUser(java.lang.String,java.lang.String,java.lang.String)>[]--><io.github.wulkanowy.utils.security.Scrambler: java.lang.String encrypt(java.lang.String,java.lang.String,android.content.Context)>[[-$i0 < 18]]--><io.github.wulkanowy.utils.security.Scrambler: void generateNewKey(java.lang.String,android.content.Context)>[[-i0 < 23], [try]]--><android.security.keystore.KeyGenParameterSpec.Builder: android.security.keystore.KeyGenParameterSpec.Builder setCertificateNotBefore(java.util.Date)>
+One road protect good!
+###Multi invoking in one method, need manual check!!!--><io.github.wulkanowy.utils.security.Scrambler: java.lang.String encrypt(java.lang.String,java.lang.String,android.content.Context)>[[-$i0 < 18]]--><io.github.wulkanowy.utils.security.Scrambler: void generateNewKey(java.lang.String,android.content.Context)>[[-i0 < 23], [try]]
+###Multi invoking in one method, need manual check!!!--><io.github.wulkanowy.utils.security.Scrambler: java.lang.String encrypt(java.lang.String,java.lang.String,android.content.Context)>[[-$i0 < 18]]--><io.github.wulkanowy.utils.security.Scrambler: void generateNewKey(java.lang.String,android.content.Context)>[[-i0 < 23]][[try]]
+-$i0 < 18
+-i0 < 23
+try
+Good road with try: <io.github.wulkanowy.ui.login.LoginPresenter: void onDoInBackground(int)>[]--><io.github.wulkanowy.data.Repository: void registerUser(java.lang.String,java.lang.String,java.lang.String)>[]--><io.github.wulkanowy.data.sync.account.AccountSync: void registerUser(java.lang.String,java.lang.String,java.lang.String)>[]--><io.github.wulkanowy.utils.security.Scrambler: java.lang.String encrypt(java.lang.String,java.lang.String,android.content.Context)>[[-$i0 < 18]]--><io.github.wulkanowy.utils.security.Scrambler: void generateNewKey(java.lang.String,android.content.Context)>[[-i0 < 23], [try]]--><android.security.keystore.KeyGenParameterSpec.Builder: android.security.keystore.KeyGenParameterSpec.Builder setCertificateNotBefore(java.util.Date)>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 22 Potential Issue API: SDKCheck of <android.app.AppOpsManager: void checkPackage(int,java.lang.String)> is checking!!!
+The life time of api is [19,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+try
+Good road with try: <com.firebase.jobdispatcher.GooglePlayMessageHandler: void handleMessage(android.os.Message)>[[try]]--><android.app.AppOpsManager: void checkPackage(int,java.lang.String)>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 23 Potential Issue API: SDKCheck of <android.security.keystore.KeyGenParameterSpec.Builder: void <init>(java.lang.String,int)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+###Multi invoking in one method, need manual check!!!--><io.github.wulkanowy.utils.security.Scrambler: java.lang.String encrypt(java.lang.String,java.lang.String,android.content.Context)>[[-$i0 < 18]]--><io.github.wulkanowy.utils.security.Scrambler: void generateNewKey(java.lang.String,android.content.Context)>[[-i0 < 23], [try]]
+###Multi invoking in one method, need manual check!!!--><io.github.wulkanowy.utils.security.Scrambler: java.lang.String encrypt(java.lang.String,java.lang.String,android.content.Context)>[[-$i0 < 18]]--><io.github.wulkanowy.utils.security.Scrambler: void generateNewKey(java.lang.String,android.content.Context)>[[-i0 < 23]][[try]]
+-$i0 < 18
+-i0 < 23
+try
+Good road with try: <io.github.wulkanowy.ui.login.LoginPresenter: void onDoInBackground(int)>[]--><io.github.wulkanowy.data.sync.account.AccountSync: void registerUser(java.lang.String,java.lang.String,java.lang.String)>[]--><io.github.wulkanowy.utils.security.Scrambler: java.lang.String encrypt(java.lang.String,java.lang.String,android.content.Context)>[[-$i0 < 18]]--><io.github.wulkanowy.utils.security.Scrambler: void generateNewKey(java.lang.String,android.content.Context)>[[-i0 < 23], [try]]--><android.security.keystore.KeyGenParameterSpec.Builder: void <init>(java.lang.String,int)>
+One road protect good!
+###Multi invoking in one method, need manual check!!!--><io.github.wulkanowy.utils.security.Scrambler: java.lang.String encrypt(java.lang.String,java.lang.String,android.content.Context)>[[-$i0 < 18]]--><io.github.wulkanowy.utils.security.Scrambler: void generateNewKey(java.lang.String,android.content.Context)>[[-i0 < 23], [try]]
+###Multi invoking in one method, need manual check!!!--><io.github.wulkanowy.utils.security.Scrambler: java.lang.String encrypt(java.lang.String,java.lang.String,android.content.Context)>[[-$i0 < 18]]--><io.github.wulkanowy.utils.security.Scrambler: void generateNewKey(java.lang.String,android.content.Context)>[[-i0 < 23]][[try]]
+-$i0 < 18
+-i0 < 23
+try
+Good road with try: <io.github.wulkanowy.ui.login.LoginPresenter: void onDoInBackground(int)>[]--><io.github.wulkanowy.data.Repository: void registerUser(java.lang.String,java.lang.String,java.lang.String)>[]--><io.github.wulkanowy.data.sync.account.AccountSync: void registerUser(java.lang.String,java.lang.String,java.lang.String)>[]--><io.github.wulkanowy.utils.security.Scrambler: java.lang.String encrypt(java.lang.String,java.lang.String,android.content.Context)>[[-$i0 < 18]]--><io.github.wulkanowy.utils.security.Scrambler: void generateNewKey(java.lang.String,android.content.Context)>[[-i0 < 23], [try]]--><android.security.keystore.KeyGenParameterSpec.Builder: void <init>(java.lang.String,int)>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 24 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.util.Set keySet()> is checking!!!
+The life time of api is [21,31]
+5call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: io.github.wulkanowy.ui.splash.SplashActivity dummyMainMethod_io_github_wulkanowy_ui_splash_SplashActivity(android.content.Intent)>[]--><io.github.wulkanowy.ui.splash.SplashActivity: void onCreate(android.os.Bundle)>[]--><io.github.wulkanowy.ui.splash.SplashPresenter: void onStart(io.github.wulkanowy.ui.base.BaseContract$View)>[]--><io.github.wulkanowy.ui.splash.SplashPresenter: void onStart(io.github.wulkanowy.ui.splash.SplashContract$View)>[]--><io.github.wulkanowy.ui.splash.SplashActivity: void startSyncService(int,boolean)>[]--><io.github.wulkanowy.services.SyncJob: void start(android.content.Context,int,boolean)>[]--><com.firebase.jobdispatcher.Job$Builder: com.firebase.jobdispatcher.Job build()>[]--><com.firebase.jobdispatcher.ValidationEnforcer: void ensureValid(com.firebase.jobdispatcher.JobParameters)>[]--><com.firebase.jobdispatcher.ValidationEnforcer: java.util.List validate(com.firebase.jobdispatcher.JobParameters)>[]--><com.firebase.jobdispatcher.DefaultJobValidator: java.util.List validate(com.firebase.jobdispatcher.JobParameters)>[]--><com.firebase.jobdispatcher.DefaultJobValidator: java.util.List validateForPersistence(android.os.Bundle)>[]--><android.os.BaseBundle: java.util.Set keySet()>
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.firebase.jobdispatcher.GooglePlayReceiver dummyMainMethod_com_firebase_jobdispatcher_GooglePlayReceiver(android.content.Intent)>[]--><com.firebase.jobdispatcher.GooglePlayReceiver: int onStartCommand(android.content.Intent,int,int)>[[try]]--><com.firebase.jobdispatcher.GooglePlayReceiver: com.firebase.jobdispatcher.JobInvocation prepareJob(android.content.Intent)>[]--><com.firebase.jobdispatcher.GooglePlayReceiver: com.firebase.jobdispatcher.JobInvocation prepareJob(com.firebase.jobdispatcher.JobCallback,android.os.Bundle)>[]--><com.firebase.jobdispatcher.JobCoder: com.firebase.jobdispatcher.JobInvocation decodeIntentBundle(android.os.Bundle)>[]--><com.firebase.jobdispatcher.JobCoder: com.firebase.jobdispatcher.JobInvocation$Builder decode(android.os.Bundle)>[]--><android.os.BaseBundle: java.util.Set keySet()>
+One road protect good!
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: java.util.Set keySet()>has compatibility isssues！
+-----------------------------------------
+4 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.firebase.jobdispatcher.GooglePlayMessageHandler: void handleMessage(android.os.Message)>[]--><com.firebase.jobdispatcher.GooglePlayMessageHandler: void handleStartMessage(android.os.Message)>[]--><com.firebase.jobdispatcher.GooglePlayReceiver: com.firebase.jobdispatcher.JobInvocation prepareJob(com.firebase.jobdispatcher.JobCallback,android.os.Bundle)>[]--><com.firebase.jobdispatcher.JobCoder: com.firebase.jobdispatcher.JobInvocation decodeIntentBundle(android.os.Bundle)>[]--><com.firebase.jobdispatcher.JobCoder: com.firebase.jobdispatcher.JobInvocation$Builder decode(android.os.Bundle)>[]--><android.os.BaseBundle: java.util.Set keySet()>
+#1.the call statck between class <com.firebase.jobdispatcher.GooglePlayMessageHandler: void handleMessage(android.os.Message)> to <android.os.BaseBundle: java.util.Set keySet()>has compatibility isssues！
+-----------------------------------------
+try
+Good road with try: <com.crashlytics.android.core.DefaultAppMeasurementEventListenerRegistrar: void access$100(com.crashlytics.android.core.CrashlyticsCore,java.lang.String,android.os.Bundle)>[]--><com.crashlytics.android.core.DefaultAppMeasurementEventListenerRegistrar: void writeEventToUserLog(com.crashlytics.android.core.CrashlyticsCore,java.lang.String,android.os.Bundle)>[[try]]--><com.crashlytics.android.core.DefaultAppMeasurementEventListenerRegistrar: java.lang.String serializeEvent(java.lang.String,android.os.Bundle)>[]--><android.os.BaseBundle: java.util.Set keySet()>
+One road protect good!
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.firebase.jobdispatcher.ValidationEnforcer: boolean isValid(com.firebase.jobdispatcher.JobParameters)>[]--><com.firebase.jobdispatcher.ValidationEnforcer: java.util.List validate(com.firebase.jobdispatcher.JobParameters)>[]--><com.firebase.jobdispatcher.DefaultJobValidator: java.util.List validate(com.firebase.jobdispatcher.JobParameters)>[]--><com.firebase.jobdispatcher.DefaultJobValidator: java.util.List validateForPersistence(android.os.Bundle)>[]--><android.os.BaseBundle: java.util.Set keySet()>
+#3.the call statck between class <com.firebase.jobdispatcher.ValidationEnforcer: boolean isValid(com.firebase.jobdispatcher.JobParameters)> to <android.os.BaseBundle: java.util.Set keySet()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <io.github.wulkanowy.ui.main.settings.SettingsFragment: void onSharedPreferenceChanged(android.content.SharedPreferences,java.lang.String)>[]--><io.github.wulkanowy.ui.main.settings.SettingsFragment: void launchServices(boolean,android.content.SharedPreferences)>[]--><io.github.wulkanowy.services.SyncJob: void start(android.content.Context,int,boolean)>[]--><com.firebase.jobdispatcher.Job$Builder: com.firebase.jobdispatcher.Job build()>[]--><com.firebase.jobdispatcher.ValidationEnforcer: void ensureValid(com.firebase.jobdispatcher.JobParameters)>[]--><com.firebase.jobdispatcher.ValidationEnforcer: java.util.List validate(com.firebase.jobdispatcher.JobParameters)>[]--><com.firebase.jobdispatcher.DefaultJobValidator: java.util.List validate(com.firebase.jobdispatcher.JobParameters)>[]--><com.firebase.jobdispatcher.DefaultJobValidator: java.util.List validateForPersistence(android.os.Bundle)>[]--><android.os.BaseBundle: java.util.Set keySet()>
+#4.the call statck between class <io.github.wulkanowy.ui.main.settings.SettingsFragment: void onSharedPreferenceChanged(android.content.SharedPreferences,java.lang.String)> to <android.os.BaseBundle: java.util.Set keySet()>has compatibility isssues！
+-----------------------------------------
+crashApis:15
+crashApisInMain:7
+containsStatic:false
+containsTry:true
+5call by main package
+-----------------------------------------
+#################################################
+N 25 Potential Issue API: SDKCheck of <android.app.NotificationChannel: void enableVibration(boolean)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+try
+Good road with try: <io.github.wulkanowy.services.SyncJob: int onRunJob(com.firebase.jobdispatcher.JobParameters)>[[try]]--><io.github.wulkanowy.services.SyncJob: void showNotification()>[]--><io.github.wulkanowy.services.NotificationService: void <init>(android.content.Context)>[[$i0 >= 26]]--><io.github.wulkanowy.services.NotificationService: void createChannel()>[]--><android.app.NotificationChannel: void enableVibration(boolean)>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 26 Potential Issue API: SDKCheck of <android.security.KeyPairGeneratorSpec.Builder: android.security.KeyPairGeneratorSpec.Builder setSerialNumber(java.math.BigInteger)> is checking!!!
+The life time of api is [18,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+###Multi invoking in one method, need manual check!!!--><io.github.wulkanowy.utils.security.Scrambler: java.lang.String encrypt(java.lang.String,java.lang.String,android.content.Context)>[[-$i0 < 18]]--><io.github.wulkanowy.utils.security.Scrambler: void generateNewKey(java.lang.String,android.content.Context)>[[try], [i0 < 23]]
+###Multi invoking in one method, need manual check!!!--><io.github.wulkanowy.utils.security.Scrambler: java.lang.String encrypt(java.lang.String,java.lang.String,android.content.Context)>[[-$i0 < 18]]--><io.github.wulkanowy.utils.security.Scrambler: void generateNewKey(java.lang.String,android.content.Context)>[[try]][[i0 < 23]]
+-$i0 < 18
+try
+Good road with try: <io.github.wulkanowy.ui.login.LoginPresenter: void onDoInBackground(int)>[]--><io.github.wulkanowy.data.sync.account.AccountSync: void registerUser(java.lang.String,java.lang.String,java.lang.String)>[]--><io.github.wulkanowy.utils.security.Scrambler: java.lang.String encrypt(java.lang.String,java.lang.String,android.content.Context)>[[-$i0 < 18]]--><io.github.wulkanowy.utils.security.Scrambler: void generateNewKey(java.lang.String,android.content.Context)>[[try], [i0 < 23]]--><android.security.KeyPairGeneratorSpec.Builder: android.security.KeyPairGeneratorSpec.Builder setSerialNumber(java.math.BigInteger)>
+One road protect good!
+###Multi invoking in one method, need manual check!!!--><io.github.wulkanowy.utils.security.Scrambler: java.lang.String encrypt(java.lang.String,java.lang.String,android.content.Context)>[[-$i0 < 18]]--><io.github.wulkanowy.utils.security.Scrambler: void generateNewKey(java.lang.String,android.content.Context)>[[try], [i0 < 23]]
+###Multi invoking in one method, need manual check!!!--><io.github.wulkanowy.utils.security.Scrambler: java.lang.String encrypt(java.lang.String,java.lang.String,android.content.Context)>[[-$i0 < 18]]--><io.github.wulkanowy.utils.security.Scrambler: void generateNewKey(java.lang.String,android.content.Context)>[[try]][[i0 < 23]]
+-$i0 < 18
+try
+Good road with try: <io.github.wulkanowy.ui.login.LoginPresenter: void onDoInBackground(int)>[]--><io.github.wulkanowy.data.Repository: void registerUser(java.lang.String,java.lang.String,java.lang.String)>[]--><io.github.wulkanowy.data.sync.account.AccountSync: void registerUser(java.lang.String,java.lang.String,java.lang.String)>[]--><io.github.wulkanowy.utils.security.Scrambler: java.lang.String encrypt(java.lang.String,java.lang.String,android.content.Context)>[[-$i0 < 18]]--><io.github.wulkanowy.utils.security.Scrambler: void generateNewKey(java.lang.String,android.content.Context)>[[try], [i0 < 23]]--><android.security.KeyPairGeneratorSpec.Builder: android.security.KeyPairGeneratorSpec.Builder setSerialNumber(java.math.BigInteger)>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 27 Potential Issue API: SDKCheck of <android.net.wifi.WifiInfo: int getIpAddress()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><com.amitshekhar.DebugDBInitProvider: boolean onCreate()>[]--><com.amitshekhar.DebugDB: void initialize(android.content.Context)>[]--><com.amitshekhar.utils.NetworkUtils: java.lang.String getAddressLog(android.content.Context,int)>[]--><android.net.wifi.WifiInfo: int getIpAddress()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.wifi.WifiInfo: int getIpAddress()>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:16
+crashApisInMain:8
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 28 Potential Issue API: SDKCheck of <junit.framework.Assert: void assertEquals(java.lang.String,java.lang.String)> is checking!!!
+The life time of api is [26,27]
+3call roads:
+0 Mainhead roads:
+3 Packageshead roads:
+try
+Good road with try: <org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void testReadWithOffset()>[]--><org.greenrobot.greendao.test.AbstractDaoTestSinglePk: android.database.Cursor queryWithDummyColumnsInFront(int,java.lang.String,java.lang.Object)>[[try]]--><junit.framework.Assert: void assertEquals(java.lang.String,java.lang.String)>
+One road protect good!
+try
+Good road with try: <org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void testLoadPk()>[]--><org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void runLoadPkTest(int)>[]--><org.greenrobot.greendao.test.AbstractDaoTestSinglePk: android.database.Cursor queryWithDummyColumnsInFront(int,java.lang.String,java.lang.Object)>[[try]]--><junit.framework.Assert: void assertEquals(java.lang.String,java.lang.String)>
+One road protect good!
+try
+Good road with try: <org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void testLoadPkWithOffset()>[]--><org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void runLoadPkTest(int)>[]--><org.greenrobot.greendao.test.AbstractDaoTestSinglePk: android.database.Cursor queryWithDummyColumnsInFront(int,java.lang.String,java.lang.Object)>[[try]]--><junit.framework.Assert: void assertEquals(java.lang.String,java.lang.String)>
+One road protect good!
+containsStatic:false
+containsTry:true
+4call by main package
+-----------------------------------------
+#################################################
+N 29 Potential Issue API: SDKCheck of <android.app.NotificationChannel: void setLockscreenVisibility(int)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+try
+Good road with try: <io.github.wulkanowy.services.SyncJob: int onRunJob(com.firebase.jobdispatcher.JobParameters)>[[try]]--><io.github.wulkanowy.services.SyncJob: void showNotification()>[]--><io.github.wulkanowy.services.NotificationService: void <init>(android.content.Context)>[[$i0 >= 26]]--><io.github.wulkanowy.services.NotificationService: void createChannel()>[]--><android.app.NotificationChannel: void setLockscreenVisibility(int)>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 30 Potential Issue API: SDKCheck of <junit.framework.Assert: void assertEquals(long,long)> is checking!!!
+The life time of api is [26,27]
+10call roads:
+0 Mainhead roads:
+10 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 24 25 
+Error road: <org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void testCount()>[]--><junit.framework.Assert: void assertEquals(long,long)>
+!!!this api will crash on sdk 28 29 30 31 
+Error road: <org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void testCount()>[]--><junit.framework.Assert: void assertEquals(long,long)>
+#1.the call statck between class <org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void testCount()> to <junit.framework.Assert: void assertEquals(long,long)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 24 25 
+Error road: <org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void testDeleteAll()>[]--><junit.framework.Assert: void assertEquals(long,long)>
+!!!this api will crash on sdk 28 29 30 31 
+Error road: <org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void testDeleteAll()>[]--><junit.framework.Assert: void assertEquals(long,long)>
+#2.the call statck between class <org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void testDeleteAll()> to <junit.framework.Assert: void assertEquals(long,long)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 24 25 
+Error road: <org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void testDeleteInTx()>[]--><junit.framework.Assert: void assertEquals(long,long)>
+!!!this api will crash on sdk 28 29 30 31 
+Error road: <org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void testDeleteInTx()>[]--><junit.framework.Assert: void assertEquals(long,long)>
+#3.the call statck between class <org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void testDeleteInTx()> to <junit.framework.Assert: void assertEquals(long,long)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 24 25 
+Error road: <org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void testInsertOrReplaceInTx()>[]--><junit.framework.Assert: void assertEquals(long,long)>
+!!!this api will crash on sdk 28 29 30 31 
+Error road: <org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void testInsertOrReplaceInTx()>[]--><junit.framework.Assert: void assertEquals(long,long)>
+#4.the call statck between class <org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void testInsertOrReplaceInTx()> to <junit.framework.Assert: void assertEquals(long,long)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 24 25 
+Error road: <org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void testInsertOrReplaceTwice()>[]--><junit.framework.Assert: void assertEquals(long,long)>
+!!!this api will crash on sdk 28 29 30 31 
+Error road: <org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void testInsertOrReplaceTwice()>[]--><junit.framework.Assert: void assertEquals(long,long)>
+#5.the call statck between class <org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void testInsertOrReplaceTwice()> to <junit.framework.Assert: void assertEquals(long,long)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 24 25 
+Error road: <org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void testUpdate()>[]--><junit.framework.Assert: void assertEquals(long,long)>
+!!!this api will crash on sdk 28 29 30 31 
+Error road: <org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void testUpdate()>[]--><junit.framework.Assert: void assertEquals(long,long)>
+#6.the call statck between class <org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void testUpdate()> to <junit.framework.Assert: void assertEquals(long,long)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 24 25 
+Error road: <org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void testDeleteByKeyInTx()>[]--><junit.framework.Assert: void assertEquals(long,long)>
+!!!this api will crash on sdk 28 29 30 31 
+Error road: <org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void testDeleteByKeyInTx()>[]--><junit.framework.Assert: void assertEquals(long,long)>
+#7.the call statck between class <org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void testDeleteByKeyInTx()> to <junit.framework.Assert: void assertEquals(long,long)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 24 25 
+Error road: <org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void testSave()>[]--><junit.framework.Assert: void assertEquals(long,long)>
+!!!this api will crash on sdk 28 29 30 31 
+Error road: <org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void testSave()>[]--><junit.framework.Assert: void assertEquals(long,long)>
+#8.the call statck between class <org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void testSave()> to <junit.framework.Assert: void assertEquals(long,long)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 24 25 
+Error road: <org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void testInsertInTx()>[]--><junit.framework.Assert: void assertEquals(long,long)>
+!!!this api will crash on sdk 28 29 30 31 
+Error road: <org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void testInsertInTx()>[]--><junit.framework.Assert: void assertEquals(long,long)>
+#9.the call statck between class <org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void testInsertInTx()> to <junit.framework.Assert: void assertEquals(long,long)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 24 25 
+Error road: <org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void testSaveInTx()>[]--><junit.framework.Assert: void assertEquals(long,long)>
+!!!this api will crash on sdk 28 29 30 31 
+Error road: <org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void testSaveInTx()>[]--><junit.framework.Assert: void assertEquals(long,long)>
+#10.the call statck between class <org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void testSaveInTx()> to <junit.framework.Assert: void assertEquals(long,long)>has compatibility isssues！
+-----------------------------------------
+crashApis:17
+containsStatic:false
+containsTry:false
+11call by main package
+-----------------------------------------
+#################################################
+N 31 Potential Issue API: SDKCheck of <junit.framework.Assert: void assertFalse(boolean)> is checking!!!
+The life time of api is [26,27]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 24 25 
+Error road: <org.greenrobot.greendao.test.AbstractDaoTestLongPk: void testAssignPk()>[]--><junit.framework.Assert: void assertFalse(boolean)>
+!!!this api will crash on sdk 28 29 30 31 
+Error road: <org.greenrobot.greendao.test.AbstractDaoTestLongPk: void testAssignPk()>[]--><junit.framework.Assert: void assertFalse(boolean)>
+#1.the call statck between class <org.greenrobot.greendao.test.AbstractDaoTestLongPk: void testAssignPk()> to <junit.framework.Assert: void assertFalse(boolean)>has compatibility isssues！
+-----------------------------------------
+crashApis:18
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 32 Potential Issue API: SDKCheck of <android.security.KeyPairGeneratorSpec.Builder: android.security.KeyPairGeneratorSpec.Builder setAlias(java.lang.String)> is checking!!!
+The life time of api is [18,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+###Multi invoking in one method, need manual check!!!--><io.github.wulkanowy.utils.security.Scrambler: java.lang.String encrypt(java.lang.String,java.lang.String,android.content.Context)>[[-$i0 < 18]]--><io.github.wulkanowy.utils.security.Scrambler: void generateNewKey(java.lang.String,android.content.Context)>[[try], [i0 < 23]]
+###Multi invoking in one method, need manual check!!!--><io.github.wulkanowy.utils.security.Scrambler: java.lang.String encrypt(java.lang.String,java.lang.String,android.content.Context)>[[-$i0 < 18]]--><io.github.wulkanowy.utils.security.Scrambler: void generateNewKey(java.lang.String,android.content.Context)>[[try]][[i0 < 23]]
+-$i0 < 18
+try
+Good road with try: <io.github.wulkanowy.ui.login.LoginPresenter: void onDoInBackground(int)>[]--><io.github.wulkanowy.data.sync.account.AccountSync: void registerUser(java.lang.String,java.lang.String,java.lang.String)>[]--><io.github.wulkanowy.utils.security.Scrambler: java.lang.String encrypt(java.lang.String,java.lang.String,android.content.Context)>[[-$i0 < 18]]--><io.github.wulkanowy.utils.security.Scrambler: void generateNewKey(java.lang.String,android.content.Context)>[[try], [i0 < 23]]--><android.security.KeyPairGeneratorSpec.Builder: android.security.KeyPairGeneratorSpec.Builder setAlias(java.lang.String)>
+One road protect good!
+###Multi invoking in one method, need manual check!!!--><io.github.wulkanowy.utils.security.Scrambler: java.lang.String encrypt(java.lang.String,java.lang.String,android.content.Context)>[[-$i0 < 18]]--><io.github.wulkanowy.utils.security.Scrambler: void generateNewKey(java.lang.String,android.content.Context)>[[try], [i0 < 23]]
+###Multi invoking in one method, need manual check!!!--><io.github.wulkanowy.utils.security.Scrambler: java.lang.String encrypt(java.lang.String,java.lang.String,android.content.Context)>[[-$i0 < 18]]--><io.github.wulkanowy.utils.security.Scrambler: void generateNewKey(java.lang.String,android.content.Context)>[[try]][[i0 < 23]]
+-$i0 < 18
+try
+Good road with try: <io.github.wulkanowy.ui.login.LoginPresenter: void onDoInBackground(int)>[]--><io.github.wulkanowy.data.Repository: void registerUser(java.lang.String,java.lang.String,java.lang.String)>[]--><io.github.wulkanowy.data.sync.account.AccountSync: void registerUser(java.lang.String,java.lang.String,java.lang.String)>[]--><io.github.wulkanowy.utils.security.Scrambler: java.lang.String encrypt(java.lang.String,java.lang.String,android.content.Context)>[[-$i0 < 18]]--><io.github.wulkanowy.utils.security.Scrambler: void generateNewKey(java.lang.String,android.content.Context)>[[try], [i0 < 23]]--><android.security.KeyPairGeneratorSpec.Builder: android.security.KeyPairGeneratorSpec.Builder setAlias(java.lang.String)>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 33 Potential Issue API: SDKCheck of <android.graphics.drawable.RippleDrawable: void <init>(android.content.res.ColorStateList,android.graphics.drawable.Drawable,android.graphics.drawable.Drawable)> is checking!!!
+The life time of api is [21,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+-$yysi0 < 21
+Good road: <eu.davidea.flexibleadapter.utils.DrawableUtils: android.graphics.drawable.Drawable getSelectableBackgroundCompat(int,int,int)>[[-$yysi0 < 21]]--><android.graphics.drawable.RippleDrawable: void <init>(android.content.res.ColorStateList,android.graphics.drawable.Drawable,android.graphics.drawable.Drawable)>
+One road protect good!
+-$yysi0 < 21
+Good road: <eu.davidea.flexibleadapter.utils.DrawableUtils: android.graphics.drawable.Drawable getRippleDrawable(android.graphics.drawable.Drawable,int)>[[-$yysi0 < 21]]--><android.graphics.drawable.RippleDrawable: void <init>(android.content.res.ColorStateList,android.graphics.drawable.Drawable,android.graphics.drawable.Drawable)>
+One road protect good!
+containsStatic:true
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 34 Potential Issue API: SDKCheck of <android.security.keystore.KeyGenParameterSpec.Builder: android.security.keystore.KeyGenParameterSpec.Builder setEncryptionPaddings(java.lang.String[])> is checking!!!
+The life time of api is [23,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+###Multi invoking in one method, need manual check!!!--><io.github.wulkanowy.utils.security.Scrambler: java.lang.String encrypt(java.lang.String,java.lang.String,android.content.Context)>[[-$i0 < 18]]--><io.github.wulkanowy.utils.security.Scrambler: void generateNewKey(java.lang.String,android.content.Context)>[[-i0 < 23], [try]]
+###Multi invoking in one method, need manual check!!!--><io.github.wulkanowy.utils.security.Scrambler: java.lang.String encrypt(java.lang.String,java.lang.String,android.content.Context)>[[-$i0 < 18]]--><io.github.wulkanowy.utils.security.Scrambler: void generateNewKey(java.lang.String,android.content.Context)>[[-i0 < 23]][[try]]
+-$i0 < 18
+-i0 < 23
+try
+Good road with try: <io.github.wulkanowy.ui.login.LoginPresenter: void onDoInBackground(int)>[]--><io.github.wulkanowy.data.sync.account.AccountSync: void registerUser(java.lang.String,java.lang.String,java.lang.String)>[]--><io.github.wulkanowy.utils.security.Scrambler: java.lang.String encrypt(java.lang.String,java.lang.String,android.content.Context)>[[-$i0 < 18]]--><io.github.wulkanowy.utils.security.Scrambler: void generateNewKey(java.lang.String,android.content.Context)>[[-i0 < 23], [try]]--><android.security.keystore.KeyGenParameterSpec.Builder: android.security.keystore.KeyGenParameterSpec.Builder setEncryptionPaddings(java.lang.String[])>
+One road protect good!
+###Multi invoking in one method, need manual check!!!--><io.github.wulkanowy.utils.security.Scrambler: java.lang.String encrypt(java.lang.String,java.lang.String,android.content.Context)>[[-$i0 < 18]]--><io.github.wulkanowy.utils.security.Scrambler: void generateNewKey(java.lang.String,android.content.Context)>[[-i0 < 23], [try]]
+###Multi invoking in one method, need manual check!!!--><io.github.wulkanowy.utils.security.Scrambler: java.lang.String encrypt(java.lang.String,java.lang.String,android.content.Context)>[[-$i0 < 18]]--><io.github.wulkanowy.utils.security.Scrambler: void generateNewKey(java.lang.String,android.content.Context)>[[-i0 < 23]][[try]]
+-$i0 < 18
+-i0 < 23
+try
+Good road with try: <io.github.wulkanowy.ui.login.LoginPresenter: void onDoInBackground(int)>[]--><io.github.wulkanowy.data.Repository: void registerUser(java.lang.String,java.lang.String,java.lang.String)>[]--><io.github.wulkanowy.data.sync.account.AccountSync: void registerUser(java.lang.String,java.lang.String,java.lang.String)>[]--><io.github.wulkanowy.utils.security.Scrambler: java.lang.String encrypt(java.lang.String,java.lang.String,android.content.Context)>[[-$i0 < 18]]--><io.github.wulkanowy.utils.security.Scrambler: void generateNewKey(java.lang.String,android.content.Context)>[[-i0 < 23], [try]]--><android.security.keystore.KeyGenParameterSpec.Builder: android.security.keystore.KeyGenParameterSpec.Builder setEncryptionPaddings(java.lang.String[])>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 35 Potential Issue API: SDKCheck of <android.app.Fragment: android.app.Fragment getParentFragment()> is checking!!!
+The life time of api is [17,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 16 
+Error road: <dagger.android.DaggerDialogFragment: void onAttach(android.content.Context)>[]--><dagger.android.AndroidInjection: void inject(android.app.Fragment)>[]--><dagger.android.AndroidInjection: dagger.android.HasFragmentInjector findHasFragmentInjector(android.app.Fragment)>[]--><android.app.Fragment: android.app.Fragment getParentFragment()>
+#1.the call statck between class <dagger.android.DaggerDialogFragment: void onAttach(android.content.Context)> to <android.app.Fragment: android.app.Fragment getParentFragment()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 
+Error road: <dagger.android.DaggerFragment: void onAttach(android.content.Context)>[]--><dagger.android.AndroidInjection: void inject(android.app.Fragment)>[]--><dagger.android.AndroidInjection: dagger.android.HasFragmentInjector findHasFragmentInjector(android.app.Fragment)>[]--><android.app.Fragment: android.app.Fragment getParentFragment()>
+#2.the call statck between class <dagger.android.DaggerFragment: void onAttach(android.content.Context)> to <android.app.Fragment: android.app.Fragment getParentFragment()>has compatibility isssues！
+-----------------------------------------
+crashApis:19
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 36 Potential Issue API: SDKCheck of <android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)> is checking!!!
+The life time of api is [22,31]
+1call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><com.crashlytics.android.CrashlyticsInitProvider: boolean onCreate()>[]--><com.crashlytics.android.CrashlyticsInitProvider: boolean shouldInitializeFabric(android.content.Context,io.fabric.sdk.android.services.common.FirebaseInfo,com.crashlytics.android.CrashlyticsInitProvider$EnabledCheckStrategy)>[]--><com.crashlytics.android.ManifestEnabledCheckStrategy: boolean isCrashlyticsEnabled(android.content.Context)>[[try]]--><android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:true
+1call by main package
+-----------------------------------------
+#################################################
+N 37 Potential Issue API: SDKCheck of <junit.framework.Assert: void assertNull(java.lang.Object)> is checking!!!
+The life time of api is [26,27]
+4call roads:
+0 Mainhead roads:
+4 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 24 25 
+Error road: <org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void testDeleteAll()>[]--><junit.framework.Assert: void assertNull(java.lang.Object)>
+!!!this api will crash on sdk 28 29 30 31 
+Error road: <org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void testDeleteAll()>[]--><junit.framework.Assert: void assertNull(java.lang.Object)>
+#1.the call statck between class <org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void testDeleteAll()> to <junit.framework.Assert: void assertNull(java.lang.Object)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 24 25 
+Error road: <org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void testDeleteInTx()>[]--><junit.framework.Assert: void assertNull(java.lang.Object)>
+!!!this api will crash on sdk 28 29 30 31 
+Error road: <org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void testDeleteInTx()>[]--><junit.framework.Assert: void assertNull(java.lang.Object)>
+#2.the call statck between class <org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void testDeleteInTx()> to <junit.framework.Assert: void assertNull(java.lang.Object)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 24 25 
+Error road: <org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void testDelete()>[]--><junit.framework.Assert: void assertNull(java.lang.Object)>
+!!!this api will crash on sdk 28 29 30 31 
+Error road: <org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void testDelete()>[]--><junit.framework.Assert: void assertNull(java.lang.Object)>
+#3.the call statck between class <org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void testDelete()> to <junit.framework.Assert: void assertNull(java.lang.Object)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 24 25 
+Error road: <org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void testDeleteByKeyInTx()>[]--><junit.framework.Assert: void assertNull(java.lang.Object)>
+!!!this api will crash on sdk 28 29 30 31 
+Error road: <org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void testDeleteByKeyInTx()>[]--><junit.framework.Assert: void assertNull(java.lang.Object)>
+#4.the call statck between class <org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void testDeleteByKeyInTx()> to <junit.framework.Assert: void assertNull(java.lang.Object)>has compatibility isssues！
+-----------------------------------------
+crashApis:20
+containsStatic:false
+containsTry:false
+5call by main package
+-----------------------------------------
+#################################################
+N 38 Potential Issue API: SDKCheck of <android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+try
+Good road with try: <io.github.wulkanowy.services.SyncJob: int onRunJob(com.firebase.jobdispatcher.JobParameters)>[[try]]--><io.github.wulkanowy.services.SyncJob: void showNotification()>[]--><io.github.wulkanowy.services.NotificationService: void <init>(android.content.Context)>[[$i0 >= 26]]--><io.github.wulkanowy.services.NotificationService: void createChannel()>[]--><android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 39 Potential Issue API: SDKCheck of <android.security.keystore.KeyGenParameterSpec.Builder: android.security.keystore.KeyGenParameterSpec.Builder setSignaturePaddings(java.lang.String[])> is checking!!!
+The life time of api is [23,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+###Multi invoking in one method, need manual check!!!--><io.github.wulkanowy.utils.security.Scrambler: java.lang.String encrypt(java.lang.String,java.lang.String,android.content.Context)>[[-$i0 < 18]]--><io.github.wulkanowy.utils.security.Scrambler: void generateNewKey(java.lang.String,android.content.Context)>[[-i0 < 23], [try]]
+###Multi invoking in one method, need manual check!!!--><io.github.wulkanowy.utils.security.Scrambler: java.lang.String encrypt(java.lang.String,java.lang.String,android.content.Context)>[[-$i0 < 18]]--><io.github.wulkanowy.utils.security.Scrambler: void generateNewKey(java.lang.String,android.content.Context)>[[-i0 < 23]][[try]]
+-$i0 < 18
+-i0 < 23
+try
+Good road with try: <io.github.wulkanowy.ui.login.LoginPresenter: void onDoInBackground(int)>[]--><io.github.wulkanowy.data.sync.account.AccountSync: void registerUser(java.lang.String,java.lang.String,java.lang.String)>[]--><io.github.wulkanowy.utils.security.Scrambler: java.lang.String encrypt(java.lang.String,java.lang.String,android.content.Context)>[[-$i0 < 18]]--><io.github.wulkanowy.utils.security.Scrambler: void generateNewKey(java.lang.String,android.content.Context)>[[-i0 < 23], [try]]--><android.security.keystore.KeyGenParameterSpec.Builder: android.security.keystore.KeyGenParameterSpec.Builder setSignaturePaddings(java.lang.String[])>
+One road protect good!
+###Multi invoking in one method, need manual check!!!--><io.github.wulkanowy.utils.security.Scrambler: java.lang.String encrypt(java.lang.String,java.lang.String,android.content.Context)>[[-$i0 < 18]]--><io.github.wulkanowy.utils.security.Scrambler: void generateNewKey(java.lang.String,android.content.Context)>[[-i0 < 23], [try]]
+###Multi invoking in one method, need manual check!!!--><io.github.wulkanowy.utils.security.Scrambler: java.lang.String encrypt(java.lang.String,java.lang.String,android.content.Context)>[[-$i0 < 18]]--><io.github.wulkanowy.utils.security.Scrambler: void generateNewKey(java.lang.String,android.content.Context)>[[-i0 < 23]][[try]]
+-$i0 < 18
+-i0 < 23
+try
+Good road with try: <io.github.wulkanowy.ui.login.LoginPresenter: void onDoInBackground(int)>[]--><io.github.wulkanowy.data.Repository: void registerUser(java.lang.String,java.lang.String,java.lang.String)>[]--><io.github.wulkanowy.data.sync.account.AccountSync: void registerUser(java.lang.String,java.lang.String,java.lang.String)>[]--><io.github.wulkanowy.utils.security.Scrambler: java.lang.String encrypt(java.lang.String,java.lang.String,android.content.Context)>[[-$i0 < 18]]--><io.github.wulkanowy.utils.security.Scrambler: void generateNewKey(java.lang.String,android.content.Context)>[[-i0 < 23], [try]]--><android.security.keystore.KeyGenParameterSpec.Builder: android.security.keystore.KeyGenParameterSpec.Builder setSignaturePaddings(java.lang.String[])>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 40 Potential Issue API: SDKCheck of <junit.framework.Assert: void assertNull(java.lang.String,java.lang.Object)> is checking!!!
+The life time of api is [26,27]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 24 25 
+Error road: <org.greenrobot.greendao.test.DbTest: android.app.Application createApplication(java.lang.Class)>[]--><junit.framework.Assert: void assertNull(java.lang.String,java.lang.Object)>
+!!!this api will crash on sdk 28 29 30 31 
+Error road: <org.greenrobot.greendao.test.DbTest: android.app.Application createApplication(java.lang.Class)>[]--><junit.framework.Assert: void assertNull(java.lang.String,java.lang.Object)>
+#1.the call statck between class <org.greenrobot.greendao.test.DbTest: android.app.Application createApplication(java.lang.Class)> to <junit.framework.Assert: void assertNull(java.lang.String,java.lang.Object)>has compatibility isssues！
+-----------------------------------------
+crashApis:21
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 41 Potential Issue API: SDKCheck of <android.view.View: void setForeground(android.graphics.drawable.Drawable)> is checking!!!
+The life time of api is [23,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <io.github.wulkanowy.ui.main.attendance.AttendanceHeaderItem$HeaderViewHolder: void setInactiveHeader(boolean)>[]--><android.view.View: void setForeground(android.graphics.drawable.Drawable)>
+#1.the call statck between class <io.github.wulkanowy.ui.main.attendance.AttendanceHeaderItem$HeaderViewHolder: void setInactiveHeader(boolean)> to <android.view.View: void setForeground(android.graphics.drawable.Drawable)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <io.github.wulkanowy.ui.main.timetable.TimetableHeaderItem$HeaderViewHolder: void setInactiveHeader(boolean)>[]--><android.view.View: void setForeground(android.graphics.drawable.Drawable)>
+#2.the call statck between class <io.github.wulkanowy.ui.main.timetable.TimetableHeaderItem$HeaderViewHolder: void setInactiveHeader(boolean)> to <android.view.View: void setForeground(android.graphics.drawable.Drawable)>has compatibility isssues！
+-----------------------------------------
+crashApis:22
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 42 Potential Issue API: SDKCheck of <android.content.Context: int getColor(int)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$yysi0 < 23
+Good road: <eu.davidea.flexibleadapter.utils.DrawableUtils: int getColorControlHighlight(android.content.Context)>[[-$yysi0 < 23]]--><android.content.Context: int getColor(int)>
+One road protect good!
+containsStatic:true
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 43 Potential Issue API: SDKCheck of <android.security.keystore.KeyGenParameterSpec.Builder: android.security.keystore.KeyGenParameterSpec build()> is checking!!!
+The life time of api is [23,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+###Multi invoking in one method, need manual check!!!--><io.github.wulkanowy.utils.security.Scrambler: java.lang.String encrypt(java.lang.String,java.lang.String,android.content.Context)>[[-$i0 < 18]]--><io.github.wulkanowy.utils.security.Scrambler: void generateNewKey(java.lang.String,android.content.Context)>[[-i0 < 23], [try]]
+###Multi invoking in one method, need manual check!!!--><io.github.wulkanowy.utils.security.Scrambler: java.lang.String encrypt(java.lang.String,java.lang.String,android.content.Context)>[[-$i0 < 18]]--><io.github.wulkanowy.utils.security.Scrambler: void generateNewKey(java.lang.String,android.content.Context)>[[-i0 < 23]][[try]]
+-$i0 < 18
+-i0 < 23
+try
+Good road with try: <io.github.wulkanowy.ui.login.LoginPresenter: void onDoInBackground(int)>[]--><io.github.wulkanowy.data.sync.account.AccountSync: void registerUser(java.lang.String,java.lang.String,java.lang.String)>[]--><io.github.wulkanowy.utils.security.Scrambler: java.lang.String encrypt(java.lang.String,java.lang.String,android.content.Context)>[[-$i0 < 18]]--><io.github.wulkanowy.utils.security.Scrambler: void generateNewKey(java.lang.String,android.content.Context)>[[-i0 < 23], [try]]--><android.security.keystore.KeyGenParameterSpec.Builder: android.security.keystore.KeyGenParameterSpec build()>
+One road protect good!
+###Multi invoking in one method, need manual check!!!--><io.github.wulkanowy.utils.security.Scrambler: java.lang.String encrypt(java.lang.String,java.lang.String,android.content.Context)>[[-$i0 < 18]]--><io.github.wulkanowy.utils.security.Scrambler: void generateNewKey(java.lang.String,android.content.Context)>[[-i0 < 23], [try]]
+###Multi invoking in one method, need manual check!!!--><io.github.wulkanowy.utils.security.Scrambler: java.lang.String encrypt(java.lang.String,java.lang.String,android.content.Context)>[[-$i0 < 18]]--><io.github.wulkanowy.utils.security.Scrambler: void generateNewKey(java.lang.String,android.content.Context)>[[-i0 < 23]][[try]]
+-$i0 < 18
+-i0 < 23
+try
+Good road with try: <io.github.wulkanowy.ui.login.LoginPresenter: void onDoInBackground(int)>[]--><io.github.wulkanowy.data.Repository: void registerUser(java.lang.String,java.lang.String,java.lang.String)>[]--><io.github.wulkanowy.data.sync.account.AccountSync: void registerUser(java.lang.String,java.lang.String,java.lang.String)>[]--><io.github.wulkanowy.utils.security.Scrambler: java.lang.String encrypt(java.lang.String,java.lang.String,android.content.Context)>[[-$i0 < 18]]--><io.github.wulkanowy.utils.security.Scrambler: void generateNewKey(java.lang.String,android.content.Context)>[[-i0 < 23], [try]]--><android.security.keystore.KeyGenParameterSpec.Builder: android.security.keystore.KeyGenParameterSpec build()>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 44 Potential Issue API: SDKCheck of <android.security.KeyPairGeneratorSpec.Builder: android.security.KeyPairGeneratorSpec.Builder setStartDate(java.util.Date)> is checking!!!
+The life time of api is [18,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+###Multi invoking in one method, need manual check!!!--><io.github.wulkanowy.utils.security.Scrambler: java.lang.String encrypt(java.lang.String,java.lang.String,android.content.Context)>[[-$i0 < 18]]--><io.github.wulkanowy.utils.security.Scrambler: void generateNewKey(java.lang.String,android.content.Context)>[[try], [i0 < 23]]
+###Multi invoking in one method, need manual check!!!--><io.github.wulkanowy.utils.security.Scrambler: java.lang.String encrypt(java.lang.String,java.lang.String,android.content.Context)>[[-$i0 < 18]]--><io.github.wulkanowy.utils.security.Scrambler: void generateNewKey(java.lang.String,android.content.Context)>[[try]][[i0 < 23]]
+-$i0 < 18
+try
+Good road with try: <io.github.wulkanowy.ui.login.LoginPresenter: void onDoInBackground(int)>[]--><io.github.wulkanowy.data.sync.account.AccountSync: void registerUser(java.lang.String,java.lang.String,java.lang.String)>[]--><io.github.wulkanowy.utils.security.Scrambler: java.lang.String encrypt(java.lang.String,java.lang.String,android.content.Context)>[[-$i0 < 18]]--><io.github.wulkanowy.utils.security.Scrambler: void generateNewKey(java.lang.String,android.content.Context)>[[try], [i0 < 23]]--><android.security.KeyPairGeneratorSpec.Builder: android.security.KeyPairGeneratorSpec.Builder setStartDate(java.util.Date)>
+One road protect good!
+###Multi invoking in one method, need manual check!!!--><io.github.wulkanowy.utils.security.Scrambler: java.lang.String encrypt(java.lang.String,java.lang.String,android.content.Context)>[[-$i0 < 18]]--><io.github.wulkanowy.utils.security.Scrambler: void generateNewKey(java.lang.String,android.content.Context)>[[try], [i0 < 23]]
+###Multi invoking in one method, need manual check!!!--><io.github.wulkanowy.utils.security.Scrambler: java.lang.String encrypt(java.lang.String,java.lang.String,android.content.Context)>[[-$i0 < 18]]--><io.github.wulkanowy.utils.security.Scrambler: void generateNewKey(java.lang.String,android.content.Context)>[[try]][[i0 < 23]]
+-$i0 < 18
+try
+Good road with try: <io.github.wulkanowy.ui.login.LoginPresenter: void onDoInBackground(int)>[]--><io.github.wulkanowy.data.Repository: void registerUser(java.lang.String,java.lang.String,java.lang.String)>[]--><io.github.wulkanowy.data.sync.account.AccountSync: void registerUser(java.lang.String,java.lang.String,java.lang.String)>[]--><io.github.wulkanowy.utils.security.Scrambler: java.lang.String encrypt(java.lang.String,java.lang.String,android.content.Context)>[[-$i0 < 18]]--><io.github.wulkanowy.utils.security.Scrambler: void generateNewKey(java.lang.String,android.content.Context)>[[try], [i0 < 23]]--><android.security.KeyPairGeneratorSpec.Builder: android.security.KeyPairGeneratorSpec.Builder setStartDate(java.util.Date)>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 45 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putDouble(java.lang.String,double)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+try
+Good road with try: <com.crashlytics.android.answers.EnabledSessionAnalyticsManagerStrategy: void processEvent(com.crashlytics.android.answers.SessionEvent$Builder)>[[try]]--><com.crashlytics.android.answers.FirebaseAnalyticsApiAdapter: void processEvent(com.crashlytics.android.answers.SessionEvent)>[]--><com.crashlytics.android.answers.FirebaseAnalyticsEventMapper: com.crashlytics.android.answers.FirebaseAnalyticsEvent mapEvent(com.crashlytics.android.answers.SessionEvent)>[]--><com.crashlytics.android.answers.FirebaseAnalyticsEventMapper: void mapCustomEventAttributes(android.os.Bundle,java.util.Map)>[]--><android.os.BaseBundle: void putDouble(java.lang.String,double)>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 46 Potential Issue API: SDKCheck of <android.view.Display: void getRealMetrics(android.util.DisplayMetrics)> is checking!!!
+The life time of api is [17,31]
+18call roads:
+1 Mainhead roads:
+-i1 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: io.github.wulkanowy.ui.main.MainActivity dummyMainMethod_io_github_wulkanowy_ui_main_MainActivity(android.content.Intent)>[]--><io.github.wulkanowy.ui.main.MainActivity: void onCreate(android.os.Bundle)>[]--><io.github.wulkanowy.ui.main.MainPresenter: void onStart(io.github.wulkanowy.ui.main.MainContract$View,int)>[]--><io.github.wulkanowy.ui.main.MainActivity: void initiationBottomNav(int)>[]--><com.aurelhubert.ahbottomnavigation.AHBottomNavigation: void setInactiveColor(int)>[]--><com.aurelhubert.ahbottomnavigation.AHBottomNavigation: void createItems()>[[-i1 < 21]]--><com.aurelhubert.ahbottomnavigation.AHBottomNavigation: int calculateHeight(int)>[]--><com.aurelhubert.ahbottomnavigation.AHBottomNavigation: boolean hasImmersive()>[]--><android.view.Display: void getRealMetrics(android.util.DisplayMetrics)>
+One road protect good!
+17 Packageshead roads:
+-i1 < 21
+Good road: <com.aurelhubert.ahbottomnavigation.AHBottomNavigation: void setColored(boolean)>[]--><com.aurelhubert.ahbottomnavigation.AHBottomNavigation: void createItems()>[[-i1 < 21]]--><com.aurelhubert.ahbottomnavigation.AHBottomNavigation: int calculateHeight(int)>[]--><com.aurelhubert.ahbottomnavigation.AHBottomNavigation: boolean hasImmersive()>[]--><android.view.Display: void getRealMetrics(android.util.DisplayMetrics)>
+One road protect good!
+-i1 < 21
+Good road: <com.aurelhubert.ahbottomnavigation.AHBottomNavigation: void refresh()>[]--><com.aurelhubert.ahbottomnavigation.AHBottomNavigation: void createItems()>[[-i1 < 21]]--><com.aurelhubert.ahbottomnavigation.AHBottomNavigation: int calculateHeight(int)>[]--><com.aurelhubert.ahbottomnavigation.AHBottomNavigation: boolean hasImmersive()>[]--><android.view.Display: void getRealMetrics(android.util.DisplayMetrics)>
+One road protect good!
+-i1 < 21
+Good road: <com.aurelhubert.ahbottomnavigation.AHBottomNavigation: void setDefaultBackgroundColor(int)>[]--><com.aurelhubert.ahbottomnavigation.AHBottomNavigation: void createItems()>[[-i1 < 21]]--><com.aurelhubert.ahbottomnavigation.AHBottomNavigation: int calculateHeight(int)>[]--><com.aurelhubert.ahbottomnavigation.AHBottomNavigation: boolean hasImmersive()>[]--><android.view.Display: void getRealMetrics(android.util.DisplayMetrics)>
+One road protect good!
+-i1 < 21
+Good road: <com.aurelhubert.ahbottomnavigation.AHBottomNavigation: void setTitleTypeface(android.graphics.Typeface)>[]--><com.aurelhubert.ahbottomnavigation.AHBottomNavigation: void createItems()>[[-i1 < 21]]--><com.aurelhubert.ahbottomnavigation.AHBottomNavigation: int calculateHeight(int)>[]--><com.aurelhubert.ahbottomnavigation.AHBottomNavigation: boolean hasImmersive()>[]--><android.view.Display: void getRealMetrics(android.util.DisplayMetrics)>
+One road protect good!
+-i1 < 21
+Good road: <com.aurelhubert.ahbottomnavigation.AHBottomNavigation: void enableItemAtPosition(int)>[]--><com.aurelhubert.ahbottomnavigation.AHBottomNavigation: void createItems()>[[-i1 < 21]]--><com.aurelhubert.ahbottomnavigation.AHBottomNavigation: int calculateHeight(int)>[]--><com.aurelhubert.ahbottomnavigation.AHBottomNavigation: boolean hasImmersive()>[]--><android.view.Display: void getRealMetrics(android.util.DisplayMetrics)>
+One road protect good!
+-i1 < 21
+Good road: <com.aurelhubert.ahbottomnavigation.AHBottomNavigation: void setForceTint(boolean)>[]--><com.aurelhubert.ahbottomnavigation.AHBottomNavigation: void createItems()>[[-i1 < 21]]--><com.aurelhubert.ahbottomnavigation.AHBottomNavigation: int calculateHeight(int)>[]--><com.aurelhubert.ahbottomnavigation.AHBottomNavigation: boolean hasImmersive()>[]--><android.view.Display: void getRealMetrics(android.util.DisplayMetrics)>
+One road protect good!
+-i1 < 21
+Good road: <com.aurelhubert.ahbottomnavigation.AHBottomNavigation: void setTitleState(com.aurelhubert.ahbottomnavigation.AHBottomNavigation$TitleState)>[]--><com.aurelhubert.ahbottomnavigation.AHBottomNavigation: void createItems()>[[-i1 < 21]]--><com.aurelhubert.ahbottomnavigation.AHBottomNavigation: int calculateHeight(int)>[]--><com.aurelhubert.ahbottomnavigation.AHBottomNavigation: boolean hasImmersive()>[]--><android.view.Display: void getRealMetrics(android.util.DisplayMetrics)>
+One road protect good!
+-i1 < 21
+Good road: <com.aurelhubert.ahbottomnavigation.AHBottomNavigation: void setTitleTextSize(float,float)>[]--><com.aurelhubert.ahbottomnavigation.AHBottomNavigation: void createItems()>[[-i1 < 21]]--><com.aurelhubert.ahbottomnavigation.AHBottomNavigation: int calculateHeight(int)>[]--><com.aurelhubert.ahbottomnavigation.AHBottomNavigation: boolean hasImmersive()>[]--><android.view.Display: void getRealMetrics(android.util.DisplayMetrics)>
+One road protect good!
+-i0 < 17
+Good road: <com.aurelhubert.ahbottomnavigation.AHHelper: int getSoftButtonsBarSizePort(android.content.Context)>[[-i0 < 17]]--><android.view.Display: void getRealMetrics(android.util.DisplayMetrics)>
+One road protect good!
+-i1 < 21
+Good road: <com.aurelhubert.ahbottomnavigation.AHBottomNavigation: void removeItemAtIndex(int)>[]--><com.aurelhubert.ahbottomnavigation.AHBottomNavigation: void createItems()>[[-i1 < 21]]--><com.aurelhubert.ahbottomnavigation.AHBottomNavigation: int calculateHeight(int)>[]--><com.aurelhubert.ahbottomnavigation.AHBottomNavigation: boolean hasImmersive()>[]--><android.view.Display: void getRealMetrics(android.util.DisplayMetrics)>
+One road protect good!
+-i1 < 21
+Good road: <com.aurelhubert.ahbottomnavigation.AHBottomNavigation: void setSelectedBackgroundVisible(boolean)>[]--><com.aurelhubert.ahbottomnavigation.AHBottomNavigation: void createItems()>[[-i1 < 21]]--><com.aurelhubert.ahbottomnavigation.AHBottomNavigation: int calculateHeight(int)>[]--><com.aurelhubert.ahbottomnavigation.AHBottomNavigation: boolean hasImmersive()>[]--><android.view.Display: void getRealMetrics(android.util.DisplayMetrics)>
+One road protect good!
+-i1 < 21
+Good road: <com.aurelhubert.ahbottomnavigation.AHBottomNavigation: void setTitleTextSizeInSp(float,float)>[]--><com.aurelhubert.ahbottomnavigation.AHBottomNavigation: void createItems()>[[-i1 < 21]]--><com.aurelhubert.ahbottomnavigation.AHBottomNavigation: int calculateHeight(int)>[]--><com.aurelhubert.ahbottomnavigation.AHBottomNavigation: boolean hasImmersive()>[]--><android.view.Display: void getRealMetrics(android.util.DisplayMetrics)>
+One road protect good!
+-i1 < 21
+Good road: <com.aurelhubert.ahbottomnavigation.AHBottomNavigationAdapter: void setupWithBottomNavigation(com.aurelhubert.ahbottomnavigation.AHBottomNavigation)>[]--><com.aurelhubert.ahbottomnavigation.AHBottomNavigationAdapter: void setupWithBottomNavigation(com.aurelhubert.ahbottomnavigation.AHBottomNavigation,int[])>[]--><com.aurelhubert.ahbottomnavigation.AHBottomNavigation: void removeAllItems()>[]--><com.aurelhubert.ahbottomnavigation.AHBottomNavigation: void createItems()>[[-i1 < 21]]--><com.aurelhubert.ahbottomnavigation.AHBottomNavigation: int calculateHeight(int)>[]--><com.aurelhubert.ahbottomnavigation.AHBottomNavigation: boolean hasImmersive()>[]--><android.view.Display: void getRealMetrics(android.util.DisplayMetrics)>
+One road protect good!
+-i1 < 21
+Good road: <com.aurelhubert.ahbottomnavigation.AHBottomNavigation: void disableItemAtPosition(int)>[]--><com.aurelhubert.ahbottomnavigation.AHBottomNavigation: void createItems()>[[-i1 < 21]]--><com.aurelhubert.ahbottomnavigation.AHBottomNavigation: int calculateHeight(int)>[]--><com.aurelhubert.ahbottomnavigation.AHBottomNavigation: boolean hasImmersive()>[]--><android.view.Display: void getRealMetrics(android.util.DisplayMetrics)>
+One road protect good!
+-i1 < 21
+Good road: <com.aurelhubert.ahbottomnavigation.AHBottomNavigation: void setNotificationMarginLeft(int,int)>[]--><com.aurelhubert.ahbottomnavigation.AHBottomNavigation: void createItems()>[[-i1 < 21]]--><com.aurelhubert.ahbottomnavigation.AHBottomNavigation: int calculateHeight(int)>[]--><com.aurelhubert.ahbottomnavigation.AHBottomNavigation: boolean hasImmersive()>[]--><android.view.Display: void getRealMetrics(android.util.DisplayMetrics)>
+One road protect good!
+-i1 < 21
+Good road: <com.aurelhubert.ahbottomnavigation.AHBottomNavigation: void setDefaultBackgroundResource(int)>[]--><com.aurelhubert.ahbottomnavigation.AHBottomNavigation: void createItems()>[[-i1 < 21]]--><com.aurelhubert.ahbottomnavigation.AHBottomNavigation: int calculateHeight(int)>[]--><com.aurelhubert.ahbottomnavigation.AHBottomNavigation: boolean hasImmersive()>[]--><android.view.Display: void getRealMetrics(android.util.DisplayMetrics)>
+One road protect good!
+-i1 < 21
+Good road: <com.aurelhubert.ahbottomnavigation.AHBottomNavigation: void setColoredModeColors(int,int)>[]--><com.aurelhubert.ahbottomnavigation.AHBottomNavigation: void createItems()>[[-i1 < 21]]--><com.aurelhubert.ahbottomnavigation.AHBottomNavigation: int calculateHeight(int)>[]--><com.aurelhubert.ahbottomnavigation.AHBottomNavigation: boolean hasImmersive()>[]--><android.view.Display: void getRealMetrics(android.util.DisplayMetrics)>
+One road protect good!
+containsStatic:false
+containsTry:false
+18call by main package
+-----------------------------------------
+#################################################
+N 47 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putIntArray(java.lang.String,int[])> is checking!!!
+The life time of api is [21,31]
+3call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: io.github.wulkanowy.ui.splash.SplashActivity dummyMainMethod_io_github_wulkanowy_ui_splash_SplashActivity(android.content.Intent)>[]--><io.github.wulkanowy.ui.splash.SplashActivity: void onCreate(android.os.Bundle)>[]--><io.github.wulkanowy.ui.splash.SplashPresenter: void onStart(io.github.wulkanowy.ui.base.BaseContract$View)>[]--><io.github.wulkanowy.ui.splash.SplashPresenter: void onStart(io.github.wulkanowy.ui.splash.SplashContract$View)>[]--><io.github.wulkanowy.ui.splash.SplashActivity: void startSyncService(int,boolean)>[]--><io.github.wulkanowy.services.SyncJob: void start(android.content.Context,int,boolean)>[]--><com.firebase.jobdispatcher.FirebaseJobDispatcher: void mustSchedule(com.firebase.jobdispatcher.Job)>[]--><com.firebase.jobdispatcher.FirebaseJobDispatcher: int schedule(com.firebase.jobdispatcher.Job)>[]--><com.firebase.jobdispatcher.GooglePlayDriver: int schedule(com.firebase.jobdispatcher.Job)>[]--><com.firebase.jobdispatcher.GooglePlayDriver: android.content.Intent createScheduleRequest(com.firebase.jobdispatcher.JobParameters)>[]--><com.firebase.jobdispatcher.GooglePlayJobWriter: android.os.Bundle writeToBundle(com.firebase.jobdispatcher.JobParameters,android.os.Bundle)>[]--><com.firebase.jobdispatcher.GooglePlayJobWriter: void writeTriggerToBundle(com.firebase.jobdispatcher.JobParameters,android.os.Bundle)>[]--><com.firebase.jobdispatcher.GooglePlayJobWriter: void writeContentUriTriggerToBundle(android.os.Bundle,com.firebase.jobdispatcher.JobTrigger$ContentUriTrigger)>[]--><android.os.BaseBundle: void putIntArray(java.lang.String,int[])>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: void putIntArray(java.lang.String,int[])>has compatibility isssues！
+-----------------------------------------
+2 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <io.github.wulkanowy.ui.main.settings.SettingsFragment: void onSharedPreferenceChanged(android.content.SharedPreferences,java.lang.String)>[]--><io.github.wulkanowy.ui.main.settings.SettingsFragment: void launchServices(boolean,android.content.SharedPreferences)>[]--><io.github.wulkanowy.services.SyncJob: void start(android.content.Context,int,boolean)>[]--><com.firebase.jobdispatcher.FirebaseJobDispatcher: void mustSchedule(com.firebase.jobdispatcher.Job)>[]--><com.firebase.jobdispatcher.FirebaseJobDispatcher: int schedule(com.firebase.jobdispatcher.Job)>[]--><com.firebase.jobdispatcher.GooglePlayDriver: int schedule(com.firebase.jobdispatcher.Job)>[]--><com.firebase.jobdispatcher.GooglePlayDriver: android.content.Intent createScheduleRequest(com.firebase.jobdispatcher.JobParameters)>[]--><com.firebase.jobdispatcher.GooglePlayJobWriter: android.os.Bundle writeToBundle(com.firebase.jobdispatcher.JobParameters,android.os.Bundle)>[]--><com.firebase.jobdispatcher.GooglePlayJobWriter: void writeTriggerToBundle(com.firebase.jobdispatcher.JobParameters,android.os.Bundle)>[]--><com.firebase.jobdispatcher.GooglePlayJobWriter: void writeContentUriTriggerToBundle(android.os.Bundle,com.firebase.jobdispatcher.JobTrigger$ContentUriTrigger)>[]--><android.os.BaseBundle: void putIntArray(java.lang.String,int[])>
+#1.the call statck between class <io.github.wulkanowy.ui.main.settings.SettingsFragment: void onSharedPreferenceChanged(android.content.SharedPreferences,java.lang.String)> to <android.os.BaseBundle: void putIntArray(java.lang.String,int[])>has compatibility isssues！
+-----------------------------------------
+try
+Good road with try: <com.firebase.jobdispatcher.GooglePlayReceiver: void onJobFinished(com.firebase.jobdispatcher.JobInvocation,int)>[[try]]--><com.firebase.jobdispatcher.GooglePlayReceiver: void reschedule(com.firebase.jobdispatcher.JobInvocation)>[]--><com.firebase.jobdispatcher.GooglePlayDriver: int schedule(com.firebase.jobdispatcher.Job)>[]--><com.firebase.jobdispatcher.GooglePlayDriver: android.content.Intent createScheduleRequest(com.firebase.jobdispatcher.JobParameters)>[]--><com.firebase.jobdispatcher.GooglePlayJobWriter: android.os.Bundle writeToBundle(com.firebase.jobdispatcher.JobParameters,android.os.Bundle)>[]--><com.firebase.jobdispatcher.GooglePlayJobWriter: void writeTriggerToBundle(com.firebase.jobdispatcher.JobParameters,android.os.Bundle)>[]--><com.firebase.jobdispatcher.GooglePlayJobWriter: void writeContentUriTriggerToBundle(android.os.Bundle,com.firebase.jobdispatcher.JobTrigger$ContentUriTrigger)>[]--><android.os.BaseBundle: void putIntArray(java.lang.String,int[])>
+One road protect good!
+crashApis:23
+crashApisInMain:9
+containsStatic:false
+containsTry:true
+3call by main package
+-----------------------------------------
+#################################################
+N 48 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putLong(java.lang.String,long)> is checking!!!
+The life time of api is [21,31]
+5call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: io.github.wulkanowy.ui.splash.SplashActivity dummyMainMethod_io_github_wulkanowy_ui_splash_SplashActivity(android.content.Intent)>[]--><io.github.wulkanowy.ui.splash.SplashActivity: void onCreate(android.os.Bundle)>[]--><io.github.wulkanowy.ui.splash.SplashPresenter: void onStart(io.github.wulkanowy.ui.base.BaseContract$View)>[]--><io.github.wulkanowy.ui.splash.SplashPresenter: void onStart(io.github.wulkanowy.ui.splash.SplashContract$View)>[]--><io.github.wulkanowy.ui.splash.SplashActivity: void startSyncService(int,boolean)>[]--><io.github.wulkanowy.services.SyncJob: void start(android.content.Context,int,boolean)>[]--><com.firebase.jobdispatcher.FirebaseJobDispatcher: void mustSchedule(com.firebase.jobdispatcher.Job)>[]--><com.firebase.jobdispatcher.FirebaseJobDispatcher: int schedule(com.firebase.jobdispatcher.Job)>[]--><com.firebase.jobdispatcher.GooglePlayDriver: int schedule(com.firebase.jobdispatcher.Job)>[]--><com.firebase.jobdispatcher.GooglePlayDriver: android.content.Intent createScheduleRequest(com.firebase.jobdispatcher.JobParameters)>[]--><com.firebase.jobdispatcher.GooglePlayJobWriter: android.os.Bundle writeToBundle(com.firebase.jobdispatcher.JobParameters,android.os.Bundle)>[]--><com.firebase.jobdispatcher.GooglePlayJobWriter: void writeTriggerToBundle(com.firebase.jobdispatcher.JobParameters,android.os.Bundle)>[]--><com.firebase.jobdispatcher.GooglePlayJobWriter: void writeImmediateTriggerToBundle(android.os.Bundle)>[]--><android.os.BaseBundle: void putLong(java.lang.String,long)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: void putLong(java.lang.String,long)>has compatibility isssues！
+-----------------------------------------
+4 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.crashlytics.android.core.CrashlyticsController: void access$600(com.crashlytics.android.core.CrashlyticsController,long)>[]--><com.crashlytics.android.core.CrashlyticsController: void recordFatalFirebaseEvent(long)>[]--><android.os.BaseBundle: void putLong(java.lang.String,long)>
+#1.the call statck between class <com.crashlytics.android.core.CrashlyticsController: void access$600(com.crashlytics.android.core.CrashlyticsController,long)> to <android.os.BaseBundle: void putLong(java.lang.String,long)>has compatibility isssues！
+-----------------------------------------
+try
+Good road with try: <com.crashlytics.android.answers.EnabledSessionAnalyticsManagerStrategy: void processEvent(com.crashlytics.android.answers.SessionEvent$Builder)>[[try]]--><com.crashlytics.android.answers.FirebaseAnalyticsApiAdapter: void processEvent(com.crashlytics.android.answers.SessionEvent)>[]--><com.crashlytics.android.answers.FirebaseAnalyticsEventMapper: com.crashlytics.android.answers.FirebaseAnalyticsEvent mapEvent(com.crashlytics.android.answers.SessionEvent)>[]--><com.crashlytics.android.answers.FirebaseAnalyticsEventMapper: void mapCustomEventAttributes(android.os.Bundle,java.util.Map)>[]--><android.os.BaseBundle: void putLong(java.lang.String,long)>
+One road protect good!
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <io.github.wulkanowy.ui.main.settings.SettingsFragment: void onSharedPreferenceChanged(android.content.SharedPreferences,java.lang.String)>[]--><io.github.wulkanowy.ui.main.settings.SettingsFragment: void launchServices(boolean,android.content.SharedPreferences)>[]--><io.github.wulkanowy.services.SyncJob: void start(android.content.Context,int,boolean)>[]--><com.firebase.jobdispatcher.FirebaseJobDispatcher: void mustSchedule(com.firebase.jobdispatcher.Job)>[]--><com.firebase.jobdispatcher.FirebaseJobDispatcher: int schedule(com.firebase.jobdispatcher.Job)>[]--><com.firebase.jobdispatcher.GooglePlayDriver: int schedule(com.firebase.jobdispatcher.Job)>[]--><com.firebase.jobdispatcher.GooglePlayDriver: android.content.Intent createScheduleRequest(com.firebase.jobdispatcher.JobParameters)>[]--><com.firebase.jobdispatcher.GooglePlayJobWriter: android.os.Bundle writeToBundle(com.firebase.jobdispatcher.JobParameters,android.os.Bundle)>[]--><com.firebase.jobdispatcher.GooglePlayJobWriter: void writeTriggerToBundle(com.firebase.jobdispatcher.JobParameters,android.os.Bundle)>[]--><com.firebase.jobdispatcher.GooglePlayJobWriter: void writeImmediateTriggerToBundle(android.os.Bundle)>[]--><android.os.BaseBundle: void putLong(java.lang.String,long)>
+#3.the call statck between class <io.github.wulkanowy.ui.main.settings.SettingsFragment: void onSharedPreferenceChanged(android.content.SharedPreferences,java.lang.String)> to <android.os.BaseBundle: void putLong(java.lang.String,long)>has compatibility isssues！
+-----------------------------------------
+try
+Good road with try: <com.firebase.jobdispatcher.GooglePlayReceiver: void onJobFinished(com.firebase.jobdispatcher.JobInvocation,int)>[[try]]--><com.firebase.jobdispatcher.GooglePlayReceiver: void reschedule(com.firebase.jobdispatcher.JobInvocation)>[]--><com.firebase.jobdispatcher.GooglePlayDriver: int schedule(com.firebase.jobdispatcher.Job)>[]--><com.firebase.jobdispatcher.GooglePlayDriver: android.content.Intent createScheduleRequest(com.firebase.jobdispatcher.JobParameters)>[]--><com.firebase.jobdispatcher.GooglePlayJobWriter: android.os.Bundle writeToBundle(com.firebase.jobdispatcher.JobParameters,android.os.Bundle)>[]--><com.firebase.jobdispatcher.GooglePlayJobWriter: void writeTriggerToBundle(com.firebase.jobdispatcher.JobParameters,android.os.Bundle)>[]--><com.firebase.jobdispatcher.GooglePlayJobWriter: void writeImmediateTriggerToBundle(android.os.Bundle)>[]--><android.os.BaseBundle: void putLong(java.lang.String,long)>
+One road protect good!
+crashApis:24
+crashApisInMain:10
+containsStatic:false
+containsTry:true
+5call by main package
+-----------------------------------------
+#################################################
+N 49 Potential Issue API: SDKCheck of <android.view.ViewAnimationUtils: android.animation.Animator createCircularReveal(android.view.View,int,int,float,float)> is checking!!!
+The life time of api is [21,31]
+3call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: io.github.wulkanowy.ui.main.MainActivity dummyMainMethod_io_github_wulkanowy_ui_main_MainActivity(android.content.Intent)>[]--><io.github.wulkanowy.ui.main.MainActivity: void onCreate(android.os.Bundle)>[]--><io.github.wulkanowy.ui.main.MainPresenter: void onStart(io.github.wulkanowy.ui.main.MainContract$View,int)>[]--><io.github.wulkanowy.ui.main.MainActivity: void initiationBottomNav(int)>[]--><com.aurelhubert.ahbottomnavigation.AHBottomNavigation: void setCurrentItem(int)>[]--><com.aurelhubert.ahbottomnavigation.AHBottomNavigation: void setCurrentItem(int,boolean)>[]--><com.aurelhubert.ahbottomnavigation.AHBottomNavigation: void updateItems(int,boolean)>[]--><android.view.ViewAnimationUtils: android.animation.Animator createCircularReveal(android.view.View,int,int,float,float)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.view.ViewAnimationUtils: android.animation.Animator createCircularReveal(android.view.View,int,int,float,float)>has compatibility isssues！
+-----------------------------------------
+2 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.aurelhubert.ahbottomnavigation.AHBottomNavigation: void access$000(com.aurelhubert.ahbottomnavigation.AHBottomNavigation,int,boolean)>[]--><com.aurelhubert.ahbottomnavigation.AHBottomNavigation: void updateItems(int,boolean)>[]--><android.view.ViewAnimationUtils: android.animation.Animator createCircularReveal(android.view.View,int,int,float,float)>
+#1.the call statck between class <com.aurelhubert.ahbottomnavigation.AHBottomNavigation: void access$000(com.aurelhubert.ahbottomnavigation.AHBottomNavigation,int,boolean)> to <android.view.ViewAnimationUtils: android.animation.Animator createCircularReveal(android.view.View,int,int,float,float)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.aurelhubert.ahbottomnavigation.AHBottomNavigation: void access$100(com.aurelhubert.ahbottomnavigation.AHBottomNavigation,int,boolean)>[]--><com.aurelhubert.ahbottomnavigation.AHBottomNavigation: void updateSmallItems(int,boolean)>[]--><android.view.ViewAnimationUtils: android.animation.Animator createCircularReveal(android.view.View,int,int,float,float)>
+#2.the call statck between class <com.aurelhubert.ahbottomnavigation.AHBottomNavigation: void access$100(com.aurelhubert.ahbottomnavigation.AHBottomNavigation,int,boolean)> to <android.view.ViewAnimationUtils: android.animation.Animator createCircularReveal(android.view.View,int,int,float,float)>has compatibility isssues！
+-----------------------------------------
+crashApis:25
+crashApisInMain:11
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 50 Potential Issue API: SDKCheck of <android.security.KeyPairGeneratorSpec.Builder: android.security.KeyPairGeneratorSpec.Builder setSubject(javax.security.auth.x500.X500Principal)> is checking!!!
+The life time of api is [18,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+###Multi invoking in one method, need manual check!!!--><io.github.wulkanowy.utils.security.Scrambler: java.lang.String encrypt(java.lang.String,java.lang.String,android.content.Context)>[[-$i0 < 18]]--><io.github.wulkanowy.utils.security.Scrambler: void generateNewKey(java.lang.String,android.content.Context)>[[try], [i0 < 23]]
+###Multi invoking in one method, need manual check!!!--><io.github.wulkanowy.utils.security.Scrambler: java.lang.String encrypt(java.lang.String,java.lang.String,android.content.Context)>[[-$i0 < 18]]--><io.github.wulkanowy.utils.security.Scrambler: void generateNewKey(java.lang.String,android.content.Context)>[[try]][[i0 < 23]]
+-$i0 < 18
+try
+Good road with try: <io.github.wulkanowy.ui.login.LoginPresenter: void onDoInBackground(int)>[]--><io.github.wulkanowy.data.sync.account.AccountSync: void registerUser(java.lang.String,java.lang.String,java.lang.String)>[]--><io.github.wulkanowy.utils.security.Scrambler: java.lang.String encrypt(java.lang.String,java.lang.String,android.content.Context)>[[-$i0 < 18]]--><io.github.wulkanowy.utils.security.Scrambler: void generateNewKey(java.lang.String,android.content.Context)>[[try], [i0 < 23]]--><android.security.KeyPairGeneratorSpec.Builder: android.security.KeyPairGeneratorSpec.Builder setSubject(javax.security.auth.x500.X500Principal)>
+One road protect good!
+###Multi invoking in one method, need manual check!!!--><io.github.wulkanowy.utils.security.Scrambler: java.lang.String encrypt(java.lang.String,java.lang.String,android.content.Context)>[[-$i0 < 18]]--><io.github.wulkanowy.utils.security.Scrambler: void generateNewKey(java.lang.String,android.content.Context)>[[try], [i0 < 23]]
+###Multi invoking in one method, need manual check!!!--><io.github.wulkanowy.utils.security.Scrambler: java.lang.String encrypt(java.lang.String,java.lang.String,android.content.Context)>[[-$i0 < 18]]--><io.github.wulkanowy.utils.security.Scrambler: void generateNewKey(java.lang.String,android.content.Context)>[[try]][[i0 < 23]]
+-$i0 < 18
+try
+Good road with try: <io.github.wulkanowy.ui.login.LoginPresenter: void onDoInBackground(int)>[]--><io.github.wulkanowy.data.Repository: void registerUser(java.lang.String,java.lang.String,java.lang.String)>[]--><io.github.wulkanowy.data.sync.account.AccountSync: void registerUser(java.lang.String,java.lang.String,java.lang.String)>[]--><io.github.wulkanowy.utils.security.Scrambler: java.lang.String encrypt(java.lang.String,java.lang.String,android.content.Context)>[[-$i0 < 18]]--><io.github.wulkanowy.utils.security.Scrambler: void generateNewKey(java.lang.String,android.content.Context)>[[try], [i0 < 23]]--><android.security.KeyPairGeneratorSpec.Builder: android.security.KeyPairGeneratorSpec.Builder setSubject(javax.security.auth.x500.X500Principal)>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 51 Potential Issue API: SDKCheck of <android.app.Fragment: void onAttach(android.content.Context)> is checking!!!
+The life time of api is [23,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <dagger.android.DaggerDialogFragment: void onAttach(android.content.Context)>[[]]--><android.app.Fragment: void onAttach(android.content.Context)>
+#1.the call statck between class <dagger.android.DaggerDialogFragment: void onAttach(android.content.Context)> to <android.app.Fragment: void onAttach(android.content.Context)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <dagger.android.DaggerFragment: void onAttach(android.content.Context)>[]--><android.app.Fragment: void onAttach(android.content.Context)>
+#2.the call statck between class <dagger.android.DaggerFragment: void onAttach(android.content.Context)> to <android.app.Fragment: void onAttach(android.content.Context)>has compatibility isssues！
+-----------------------------------------
+crashApis:26
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 52 Potential Issue API: SDKCheck of <android.app.DialogFragment: void onAttach(android.content.Context)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <dagger.android.DaggerDialogFragment: void onAttach(android.content.Context)>[]--><android.app.DialogFragment: void onAttach(android.content.Context)>
+#1.the call statck between class <dagger.android.DaggerDialogFragment: void onAttach(android.content.Context)> to <android.app.DialogFragment: void onAttach(android.content.Context)>has compatibility isssues！
+-----------------------------------------
+crashApis:27
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 53 Potential Issue API: SDKCheck of <android.security.KeyPairGeneratorSpec.Builder: android.security.KeyPairGeneratorSpec build()> is checking!!!
+The life time of api is [18,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+###Multi invoking in one method, need manual check!!!--><io.github.wulkanowy.utils.security.Scrambler: java.lang.String encrypt(java.lang.String,java.lang.String,android.content.Context)>[[-$i0 < 18]]--><io.github.wulkanowy.utils.security.Scrambler: void generateNewKey(java.lang.String,android.content.Context)>[[try], [i0 < 23]]
+###Multi invoking in one method, need manual check!!!--><io.github.wulkanowy.utils.security.Scrambler: java.lang.String encrypt(java.lang.String,java.lang.String,android.content.Context)>[[-$i0 < 18]]--><io.github.wulkanowy.utils.security.Scrambler: void generateNewKey(java.lang.String,android.content.Context)>[[try]][[i0 < 23]]
+-$i0 < 18
+try
+Good road with try: <io.github.wulkanowy.ui.login.LoginPresenter: void onDoInBackground(int)>[]--><io.github.wulkanowy.data.sync.account.AccountSync: void registerUser(java.lang.String,java.lang.String,java.lang.String)>[]--><io.github.wulkanowy.utils.security.Scrambler: java.lang.String encrypt(java.lang.String,java.lang.String,android.content.Context)>[[-$i0 < 18]]--><io.github.wulkanowy.utils.security.Scrambler: void generateNewKey(java.lang.String,android.content.Context)>[[try], [i0 < 23]]--><android.security.KeyPairGeneratorSpec.Builder: android.security.KeyPairGeneratorSpec build()>
+One road protect good!
+###Multi invoking in one method, need manual check!!!--><io.github.wulkanowy.utils.security.Scrambler: java.lang.String encrypt(java.lang.String,java.lang.String,android.content.Context)>[[-$i0 < 18]]--><io.github.wulkanowy.utils.security.Scrambler: void generateNewKey(java.lang.String,android.content.Context)>[[try], [i0 < 23]]
+###Multi invoking in one method, need manual check!!!--><io.github.wulkanowy.utils.security.Scrambler: java.lang.String encrypt(java.lang.String,java.lang.String,android.content.Context)>[[-$i0 < 18]]--><io.github.wulkanowy.utils.security.Scrambler: void generateNewKey(java.lang.String,android.content.Context)>[[try]][[i0 < 23]]
+-$i0 < 18
+try
+Good road with try: <io.github.wulkanowy.ui.login.LoginPresenter: void onDoInBackground(int)>[]--><io.github.wulkanowy.data.Repository: void registerUser(java.lang.String,java.lang.String,java.lang.String)>[]--><io.github.wulkanowy.data.sync.account.AccountSync: void registerUser(java.lang.String,java.lang.String,java.lang.String)>[]--><io.github.wulkanowy.utils.security.Scrambler: java.lang.String encrypt(java.lang.String,java.lang.String,android.content.Context)>[[-$i0 < 18]]--><io.github.wulkanowy.utils.security.Scrambler: void generateNewKey(java.lang.String,android.content.Context)>[[try], [i0 < 23]]--><android.security.KeyPairGeneratorSpec.Builder: android.security.KeyPairGeneratorSpec build()>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 54 Potential Issue API: SDKCheck of <junit.framework.Assert: void assertEquals(int,int)> is checking!!!
+The life time of api is [26,27]
+5call roads:
+0 Mainhead roads:
+5 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 24 25 
+Error road: <org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void testLoadAll()>[]--><junit.framework.Assert: void assertEquals(int,int)>
+!!!this api will crash on sdk 28 29 30 31 
+Error road: <org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void testLoadAll()>[]--><junit.framework.Assert: void assertEquals(int,int)>
+#1.the call statck between class <org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void testLoadAll()> to <junit.framework.Assert: void assertEquals(int,int)>has compatibility isssues！
+-----------------------------------------
+try
+Good road with try: <org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void testReadWithOffset()>[]--><org.greenrobot.greendao.test.AbstractDaoTestSinglePk: android.database.Cursor queryWithDummyColumnsInFront(int,java.lang.String,java.lang.Object)>[[try]]--><junit.framework.Assert: void assertEquals(int,int)>
+One road protect good!
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 24 25 
+Error road: <org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void testQuery()>[]--><junit.framework.Assert: void assertEquals(int,int)>
+!!!this api will crash on sdk 28 29 30 31 
+Error road: <org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void testQuery()>[]--><junit.framework.Assert: void assertEquals(int,int)>
+#3.the call statck between class <org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void testQuery()> to <junit.framework.Assert: void assertEquals(int,int)>has compatibility isssues！
+-----------------------------------------
+try
+Good road with try: <org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void testLoadPk()>[]--><org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void runLoadPkTest(int)>[]--><org.greenrobot.greendao.test.AbstractDaoTestSinglePk: android.database.Cursor queryWithDummyColumnsInFront(int,java.lang.String,java.lang.Object)>[[try]]--><junit.framework.Assert: void assertEquals(int,int)>
+One road protect good!
+try
+Good road with try: <org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void testLoadPkWithOffset()>[]--><org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void runLoadPkTest(int)>[]--><org.greenrobot.greendao.test.AbstractDaoTestSinglePk: android.database.Cursor queryWithDummyColumnsInFront(int,java.lang.String,java.lang.Object)>[[try]]--><junit.framework.Assert: void assertEquals(int,int)>
+One road protect good!
+crashApis:28
+containsStatic:false
+containsTry:true
+6call by main package
+-----------------------------------------
+#################################################
+N 55 Potential Issue API: SDKCheck of <junit.framework.Assert: void assertNotNull(java.lang.Object)> is checking!!!
+The life time of api is [26,27]
+6call roads:
+0 Mainhead roads:
+6 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 24 25 
+Error road: <org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void testDeleteAll()>[]--><junit.framework.Assert: void assertNotNull(java.lang.Object)>
+!!!this api will crash on sdk 28 29 30 31 
+Error road: <org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void testDeleteAll()>[]--><junit.framework.Assert: void assertNotNull(java.lang.Object)>
+#1.the call statck between class <org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void testDeleteAll()> to <junit.framework.Assert: void assertNotNull(java.lang.Object)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 24 25 
+Error road: <org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void testInsertAndLoad()>[]--><junit.framework.Assert: void assertNotNull(java.lang.Object)>
+!!!this api will crash on sdk 28 29 30 31 
+Error road: <org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void testInsertAndLoad()>[]--><junit.framework.Assert: void assertNotNull(java.lang.Object)>
+#2.the call statck between class <org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void testInsertAndLoad()> to <junit.framework.Assert: void assertNotNull(java.lang.Object)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 24 25 
+Error road: <org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void testDeleteInTx()>[]--><junit.framework.Assert: void assertNotNull(java.lang.Object)>
+!!!this api will crash on sdk 28 29 30 31 
+Error road: <org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void testDeleteInTx()>[]--><junit.framework.Assert: void assertNotNull(java.lang.Object)>
+#3.the call statck between class <org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void testDeleteInTx()> to <junit.framework.Assert: void assertNotNull(java.lang.Object)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 24 25 
+Error road: <org.greenrobot.greendao.test.AbstractDaoTestLongPk: void testAssignPk()>[]--><junit.framework.Assert: void assertNotNull(java.lang.Object)>
+!!!this api will crash on sdk 28 29 30 31 
+Error road: <org.greenrobot.greendao.test.AbstractDaoTestLongPk: void testAssignPk()>[]--><junit.framework.Assert: void assertNotNull(java.lang.Object)>
+#4.the call statck between class <org.greenrobot.greendao.test.AbstractDaoTestLongPk: void testAssignPk()> to <junit.framework.Assert: void assertNotNull(java.lang.Object)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 24 25 
+Error road: <org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void testDelete()>[]--><junit.framework.Assert: void assertNotNull(java.lang.Object)>
+!!!this api will crash on sdk 28 29 30 31 
+Error road: <org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void testDelete()>[]--><junit.framework.Assert: void assertNotNull(java.lang.Object)>
+#5.the call statck between class <org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void testDelete()> to <junit.framework.Assert: void assertNotNull(java.lang.Object)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 24 25 
+Error road: <org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void testDeleteByKeyInTx()>[]--><junit.framework.Assert: void assertNotNull(java.lang.Object)>
+!!!this api will crash on sdk 28 29 30 31 
+Error road: <org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void testDeleteByKeyInTx()>[]--><junit.framework.Assert: void assertNotNull(java.lang.Object)>
+#6.the call statck between class <org.greenrobot.greendao.test.AbstractDaoTestSinglePk: void testDeleteByKeyInTx()> to <junit.framework.Assert: void assertNotNull(java.lang.Object)>has compatibility isssues！
+-----------------------------------------
+crashApis:29
+containsStatic:false
+containsTry:false
+7call by main package
+-----------------------------------------
+#################################################
+N 56 Potential Issue API: SDKCheck of <android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+try
+Good road with try: <io.github.wulkanowy.services.SyncJob: int onRunJob(com.firebase.jobdispatcher.JobParameters)>[[try]]--><io.github.wulkanowy.services.SyncJob: void showNotification()>[]--><io.github.wulkanowy.services.NotificationService: void <init>(android.content.Context)>[[$i0 >= 26]]--><io.github.wulkanowy.services.NotificationService: void createChannel()>[]--><android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 57 Potential Issue API: SDKCheck of <android.security.KeyPairGeneratorSpec.Builder: void <init>(android.content.Context)> is checking!!!
+The life time of api is [18,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+###Multi invoking in one method, need manual check!!!--><io.github.wulkanowy.utils.security.Scrambler: java.lang.String encrypt(java.lang.String,java.lang.String,android.content.Context)>[[-$i0 < 18]]--><io.github.wulkanowy.utils.security.Scrambler: void generateNewKey(java.lang.String,android.content.Context)>[[try], [i0 < 23]]
+###Multi invoking in one method, need manual check!!!--><io.github.wulkanowy.utils.security.Scrambler: java.lang.String encrypt(java.lang.String,java.lang.String,android.content.Context)>[[-$i0 < 18]]--><io.github.wulkanowy.utils.security.Scrambler: void generateNewKey(java.lang.String,android.content.Context)>[[try]][[i0 < 23]]
+-$i0 < 18
+try
+Good road with try: <io.github.wulkanowy.ui.login.LoginPresenter: void onDoInBackground(int)>[]--><io.github.wulkanowy.data.sync.account.AccountSync: void registerUser(java.lang.String,java.lang.String,java.lang.String)>[]--><io.github.wulkanowy.utils.security.Scrambler: java.lang.String encrypt(java.lang.String,java.lang.String,android.content.Context)>[[-$i0 < 18]]--><io.github.wulkanowy.utils.security.Scrambler: void generateNewKey(java.lang.String,android.content.Context)>[[try], [i0 < 23]]--><android.security.KeyPairGeneratorSpec.Builder: void <init>(android.content.Context)>
+One road protect good!
+###Multi invoking in one method, need manual check!!!--><io.github.wulkanowy.utils.security.Scrambler: java.lang.String encrypt(java.lang.String,java.lang.String,android.content.Context)>[[-$i0 < 18]]--><io.github.wulkanowy.utils.security.Scrambler: void generateNewKey(java.lang.String,android.content.Context)>[[try], [i0 < 23]]
+###Multi invoking in one method, need manual check!!!--><io.github.wulkanowy.utils.security.Scrambler: java.lang.String encrypt(java.lang.String,java.lang.String,android.content.Context)>[[-$i0 < 18]]--><io.github.wulkanowy.utils.security.Scrambler: void generateNewKey(java.lang.String,android.content.Context)>[[try]][[i0 < 23]]
+-$i0 < 18
+try
+Good road with try: <io.github.wulkanowy.ui.login.LoginPresenter: void onDoInBackground(int)>[]--><io.github.wulkanowy.data.Repository: void registerUser(java.lang.String,java.lang.String,java.lang.String)>[]--><io.github.wulkanowy.data.sync.account.AccountSync: void registerUser(java.lang.String,java.lang.String,java.lang.String)>[]--><io.github.wulkanowy.utils.security.Scrambler: java.lang.String encrypt(java.lang.String,java.lang.String,android.content.Context)>[[-$i0 < 18]]--><io.github.wulkanowy.utils.security.Scrambler: void generateNewKey(java.lang.String,android.content.Context)>[[try], [i0 < 23]]--><android.security.KeyPairGeneratorSpec.Builder: void <init>(android.content.Context)>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 58 Potential Issue API: SDKCheck of <junit.framework.Assert: void assertNotNull(java.lang.String,java.lang.Object)> is checking!!!
+The life time of api is [26,27]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 24 25 
+Error road: <org.greenrobot.greendao.test.DbTest: android.app.Application getApplication()>[]--><junit.framework.Assert: void assertNotNull(java.lang.String,java.lang.Object)>
+!!!this api will crash on sdk 28 29 30 31 
+Error road: <org.greenrobot.greendao.test.DbTest: android.app.Application getApplication()>[]--><junit.framework.Assert: void assertNotNull(java.lang.String,java.lang.Object)>
+#1.the call statck between class <org.greenrobot.greendao.test.DbTest: android.app.Application getApplication()> to <junit.framework.Assert: void assertNotNull(java.lang.String,java.lang.Object)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 24 25 
+Error road: <org.greenrobot.greendao.test.DbTest: void tearDown()>[]--><org.greenrobot.greendao.test.DbTest: void terminateApplication()>[]--><junit.framework.Assert: void assertNotNull(java.lang.String,java.lang.Object)>
+!!!this api will crash on sdk 28 29 30 31 
+Error road: <org.greenrobot.greendao.test.DbTest: void tearDown()>[]--><org.greenrobot.greendao.test.DbTest: void terminateApplication()>[]--><junit.framework.Assert: void assertNotNull(java.lang.String,java.lang.Object)>
+#2.the call statck between class <org.greenrobot.greendao.test.DbTest: void tearDown()> to <junit.framework.Assert: void assertNotNull(java.lang.String,java.lang.Object)>has compatibility isssues！
+-----------------------------------------
+crashApis:30
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 59 Potential Issue API: SDKCheck of <android.security.keystore.KeyGenParameterSpec.Builder: android.security.keystore.KeyGenParameterSpec.Builder setCertificateNotAfter(java.util.Date)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+###Multi invoking in one method, need manual check!!!--><io.github.wulkanowy.utils.security.Scrambler: java.lang.String encrypt(java.lang.String,java.lang.String,android.content.Context)>[[-$i0 < 18]]--><io.github.wulkanowy.utils.security.Scrambler: void generateNewKey(java.lang.String,android.content.Context)>[[-i0 < 23], [try]]
+###Multi invoking in one method, need manual check!!!--><io.github.wulkanowy.utils.security.Scrambler: java.lang.String encrypt(java.lang.String,java.lang.String,android.content.Context)>[[-$i0 < 18]]--><io.github.wulkanowy.utils.security.Scrambler: void generateNewKey(java.lang.String,android.content.Context)>[[-i0 < 23]][[try]]
+-$i0 < 18
+-i0 < 23
+try
+Good road with try: <io.github.wulkanowy.ui.login.LoginPresenter: void onDoInBackground(int)>[]--><io.github.wulkanowy.data.sync.account.AccountSync: void registerUser(java.lang.String,java.lang.String,java.lang.String)>[]--><io.github.wulkanowy.utils.security.Scrambler: java.lang.String encrypt(java.lang.String,java.lang.String,android.content.Context)>[[-$i0 < 18]]--><io.github.wulkanowy.utils.security.Scrambler: void generateNewKey(java.lang.String,android.content.Context)>[[-i0 < 23], [try]]--><android.security.keystore.KeyGenParameterSpec.Builder: android.security.keystore.KeyGenParameterSpec.Builder setCertificateNotAfter(java.util.Date)>
+One road protect good!
+###Multi invoking in one method, need manual check!!!--><io.github.wulkanowy.utils.security.Scrambler: java.lang.String encrypt(java.lang.String,java.lang.String,android.content.Context)>[[-$i0 < 18]]--><io.github.wulkanowy.utils.security.Scrambler: void generateNewKey(java.lang.String,android.content.Context)>[[-i0 < 23], [try]]
+###Multi invoking in one method, need manual check!!!--><io.github.wulkanowy.utils.security.Scrambler: java.lang.String encrypt(java.lang.String,java.lang.String,android.content.Context)>[[-$i0 < 18]]--><io.github.wulkanowy.utils.security.Scrambler: void generateNewKey(java.lang.String,android.content.Context)>[[-i0 < 23]][[try]]
+-$i0 < 18
+-i0 < 23
+try
+Good road with try: <io.github.wulkanowy.ui.login.LoginPresenter: void onDoInBackground(int)>[]--><io.github.wulkanowy.data.Repository: void registerUser(java.lang.String,java.lang.String,java.lang.String)>[]--><io.github.wulkanowy.data.sync.account.AccountSync: void registerUser(java.lang.String,java.lang.String,java.lang.String)>[]--><io.github.wulkanowy.utils.security.Scrambler: java.lang.String encrypt(java.lang.String,java.lang.String,android.content.Context)>[[-$i0 < 18]]--><io.github.wulkanowy.utils.security.Scrambler: void generateNewKey(java.lang.String,android.content.Context)>[[-i0 < 23], [try]]--><android.security.keystore.KeyGenParameterSpec.Builder: android.security.keystore.KeyGenParameterSpec.Builder setCertificateNotAfter(java.util.Date)>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 60 Potential Issue API: SDKCheck of <android.security.KeyPairGeneratorSpec.Builder: android.security.KeyPairGeneratorSpec.Builder setEndDate(java.util.Date)> is checking!!!
+The life time of api is [18,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+###Multi invoking in one method, need manual check!!!--><io.github.wulkanowy.utils.security.Scrambler: java.lang.String encrypt(java.lang.String,java.lang.String,android.content.Context)>[[-$i0 < 18]]--><io.github.wulkanowy.utils.security.Scrambler: void generateNewKey(java.lang.String,android.content.Context)>[[try], [i0 < 23]]
+###Multi invoking in one method, need manual check!!!--><io.github.wulkanowy.utils.security.Scrambler: java.lang.String encrypt(java.lang.String,java.lang.String,android.content.Context)>[[-$i0 < 18]]--><io.github.wulkanowy.utils.security.Scrambler: void generateNewKey(java.lang.String,android.content.Context)>[[try]][[i0 < 23]]
+-$i0 < 18
+try
+Good road with try: <io.github.wulkanowy.ui.login.LoginPresenter: void onDoInBackground(int)>[]--><io.github.wulkanowy.data.sync.account.AccountSync: void registerUser(java.lang.String,java.lang.String,java.lang.String)>[]--><io.github.wulkanowy.utils.security.Scrambler: java.lang.String encrypt(java.lang.String,java.lang.String,android.content.Context)>[[-$i0 < 18]]--><io.github.wulkanowy.utils.security.Scrambler: void generateNewKey(java.lang.String,android.content.Context)>[[try], [i0 < 23]]--><android.security.KeyPairGeneratorSpec.Builder: android.security.KeyPairGeneratorSpec.Builder setEndDate(java.util.Date)>
+One road protect good!
+###Multi invoking in one method, need manual check!!!--><io.github.wulkanowy.utils.security.Scrambler: java.lang.String encrypt(java.lang.String,java.lang.String,android.content.Context)>[[-$i0 < 18]]--><io.github.wulkanowy.utils.security.Scrambler: void generateNewKey(java.lang.String,android.content.Context)>[[try], [i0 < 23]]
+###Multi invoking in one method, need manual check!!!--><io.github.wulkanowy.utils.security.Scrambler: java.lang.String encrypt(java.lang.String,java.lang.String,android.content.Context)>[[-$i0 < 18]]--><io.github.wulkanowy.utils.security.Scrambler: void generateNewKey(java.lang.String,android.content.Context)>[[try]][[i0 < 23]]
+-$i0 < 18
+try
+Good road with try: <io.github.wulkanowy.ui.login.LoginPresenter: void onDoInBackground(int)>[]--><io.github.wulkanowy.data.Repository: void registerUser(java.lang.String,java.lang.String,java.lang.String)>[]--><io.github.wulkanowy.data.sync.account.AccountSync: void registerUser(java.lang.String,java.lang.String,java.lang.String)>[]--><io.github.wulkanowy.utils.security.Scrambler: java.lang.String encrypt(java.lang.String,java.lang.String,android.content.Context)>[[-$i0 < 18]]--><io.github.wulkanowy.utils.security.Scrambler: void generateNewKey(java.lang.String,android.content.Context)>[[try], [i0 < 23]]--><android.security.KeyPairGeneratorSpec.Builder: android.security.KeyPairGeneratorSpec.Builder setEndDate(java.util.Date)>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+crashApis numbers:30
+crashApis numbers in main road:11
+On Android Version 16 this app may have error api use(at least): 28 and error api roads: 97
+On Android Version 17 this app may have error api use(at least): 27 and error api roads: 95
+On Android Version 18 this app may have error api use(at least): 27 and error api roads: 95
+On Android Version 19 this app may have error api use(at least): 27 and error api roads: 95
+On Android Version 20 this app may have error api use(at least): 27 and error api roads: 95
+On Android Version 21 this app may have error api use(at least): 18 and error api roads: 62
+On Android Version 22 this app may have error api use(at least): 16 and error api roads: 57
+On Android Version 23 this app may have error api use(at least): 13 and error api roads: 52
+On Android Version 24 this app may have error api use(at least): 12 and error api roads: 41
+On Android Version 25 this app may have error api use(at least): 12 and error api roads: 41
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 12 and error api roads: 41
+On Android Version 29 this app may have error api use(at least): 12 and error api roads: 41
+On Android Version 30 this app may have error api use(at least): 12 and error api roads: 41
+On Android Version 31 this app may have error api use(at least): 14 and error api roads: 43

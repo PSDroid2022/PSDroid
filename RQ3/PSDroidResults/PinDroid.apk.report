@@ -1,0 +1,413 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/PinDroid.apk
+Entry Points[com.pindroid.dashclock.PinDroidExtension, com.pindroid.activity.ChooseTagShortcut, com.pindroid.widget.SearchWidgetProvider, com.pindroid.activity.SaveReadLaterBookmark, com.pindroid.activity.Settings, com.pindroid.activity.AboutActivity, com.pindroid.activity.GlobalSearchRecieverActivity, com.pindroid.syncadapter.BookmarkSyncService, com.pindroid.service.SaveBookmarkService, com.pindroid.activity.LargeWidgetConfigure, com.pindroid.activity.SmallWidgetConfigure, com.pindroid.authenticator.AuthenticationService, com.pindroid.widget.SmallWidgetProvider, com.pindroid.activity.Main, com.pindroid.activity.AddBookmark, com.pindroid.activity.StandaloneSaveReadLaterBookmark, com.pindroid.authenticator.AuthenticatorActivity, com.pindroid.providers.BookmarkContentProvider, com.pindroid.application.PindroidApplication, com.pindroid.receiver.PackageReceiver]
+FllowDroidcallgraph size:1987
+Soot started on Mon Jul 11 10:50:05 CST 2022
+Soot finished on Mon Jul 11 10:50:10 CST 2022
+Soot has run for 0 min. 5 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 19
+Declared Target Sdk version is: 21
+Declared Max Sdk version is: -1
+Collected 429 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <org.apache.http.params.HttpConnectionParams: void setConnectionTimeout(org.apache.http.params.HttpParams,int)> is checking!!!
+The life time of api is [23,31]
+12call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.pindroid.activity.AddBookmark dummyMainMethod_com_pindroid_activity_AddBookmark(android.content.Intent)>[]--><dummyMainClass: com.pindroid.fragment.AddBookmarkFragment dummyMainMethod_com_pindroid_fragment_AddBookmarkFragment(android.content.Intent,android.app.Activity)>[]--><com.pindroid.fragment.AddBookmarkFragment: void onStart()>[]--><com.pindroid.fragment.AddBookmarkFragment: void refreshView()>[]--><com.pindroid.fragment.AddBookmarkFragment$GetTagSuggestionsTask: java.lang.Object doInBackground(java.lang.Object[])>[]--><com.pindroid.fragment.AddBookmarkFragment$GetTagSuggestionsTask: java.util.ArrayList doInBackground(java.lang.String[])>[[try]]--><com.pindroid.client.PinboardApi: java.util.ArrayList getSuggestedTags(java.lang.String,android.accounts.Account,android.content.Context)>[]--><com.pindroid.client.PinboardApi: java.io.InputStream PinboardApiCall(java.lang.String,java.util.TreeMap,android.accounts.Account,android.content.Context)>[]--><com.pindroid.client.HttpClientFactory: org.apache.http.client.HttpClient getThreadSafeClient()>[]--><org.apache.http.params.HttpConnectionParams: void setConnectionTimeout(org.apache.http.params.HttpParams,int)>
+One road protect good!
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.pindroid.service.SaveBookmarkService dummyMainMethod_com_pindroid_service_SaveBookmarkService(android.content.Intent)>[]--><com.pindroid.service.SaveBookmarkService: void onHandleIntent(android.content.Intent)>[]--><com.pindroid.client.NetworkUtilities: java.lang.String getWebpageTitle(java.lang.String)>[[try]]--><com.pindroid.client.HttpClientFactory: org.apache.http.client.HttpClient getThreadSafeClient()>[]--><org.apache.http.params.HttpConnectionParams: void setConnectionTimeout(org.apache.http.params.HttpParams,int)>
+One road protect good!
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.pindroid.authenticator.AuthenticatorActivity dummyMainMethod_com_pindroid_authenticator_AuthenticatorActivity(android.content.Intent)>[]--><com.pindroid.authenticator.AuthenticatorActivity: void handleLogin(android.view.View)>[]--><com.pindroid.authenticator.AuthenticatorActivity$UserLoginTask: java.lang.Object doInBackground(java.lang.Object[])>[]--><com.pindroid.authenticator.AuthenticatorActivity$UserLoginTask: java.lang.String doInBackground(java.lang.Void[])>[[try]]--><com.pindroid.client.PinboardApi: java.lang.String pinboardAuthenticate(java.lang.String,java.lang.String)>[]--><com.pindroid.client.HttpClientFactory: org.apache.http.client.HttpClient getThreadSafeClient()>[]--><org.apache.http.params.HttpConnectionParams: void setConnectionTimeout(org.apache.http.params.HttpParams,int)>
+One road protect good!
+11 Packageshead roads:
+try
+Good road with try: <com.pindroid.client.NetworkUtilities: com.pindroid.providers.ArticleContent$Article getArticleText(java.lang.String)>[[try]]--><com.pindroid.client.HttpClientFactory: org.apache.http.client.HttpClient getThreadSafeClient()>[]--><org.apache.http.params.HttpConnectionParams: void setConnectionTimeout(org.apache.http.params.HttpParams,int)>
+One road protect good!
+!!!this api will crash on sdk 19 20 21 22 
+Error road: <com.pindroid.client.PinboardApi: java.lang.Boolean deleteBookmark(com.pindroid.providers.BookmarkContent$Bookmark,android.accounts.Account,android.content.Context)>[]--><com.pindroid.client.PinboardApi: java.io.InputStream PinboardApiCall(java.lang.String,java.util.TreeMap,android.accounts.Account,android.content.Context)>[]--><com.pindroid.client.HttpClientFactory: org.apache.http.client.HttpClient getThreadSafeClient()>[]--><org.apache.http.params.HttpConnectionParams: void setConnectionTimeout(org.apache.http.params.HttpParams,int)>
+#2.the call statck between class <com.pindroid.client.PinboardApi: java.lang.Boolean deleteBookmark(com.pindroid.providers.BookmarkContent$Bookmark,android.accounts.Account,android.content.Context)> to <org.apache.http.params.HttpConnectionParams: void setConnectionTimeout(org.apache.http.params.HttpParams,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 21 22 
+Error road: <com.pindroid.client.NetworkUtilities: boolean pinboardAuthenticate(java.lang.String,java.lang.String)>[]--><com.pindroid.client.HttpClientFactory: org.apache.http.client.HttpClient getThreadSafeClient()>[]--><org.apache.http.params.HttpConnectionParams: void setConnectionTimeout(org.apache.http.params.HttpParams,int)>
+#3.the call statck between class <com.pindroid.client.NetworkUtilities: boolean pinboardAuthenticate(java.lang.String,java.lang.String)> to <org.apache.http.params.HttpConnectionParams: void setConnectionTimeout(org.apache.http.params.HttpParams,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 21 22 
+Error road: <com.pindroid.client.PinboardApi: java.util.ArrayList getAllBookmarks(java.lang.String,android.accounts.Account,android.content.Context)>[]--><com.pindroid.client.PinboardApi: java.util.ArrayList getAllBookmarks(java.lang.String,int,int,android.accounts.Account,android.content.Context)>[]--><com.pindroid.client.PinboardApi: java.io.InputStream PinboardApiCall(java.lang.String,java.util.TreeMap,android.accounts.Account,android.content.Context)>[]--><com.pindroid.client.HttpClientFactory: org.apache.http.client.HttpClient getThreadSafeClient()>[]--><org.apache.http.params.HttpConnectionParams: void setConnectionTimeout(org.apache.http.params.HttpParams,int)>
+#4.the call statck between class <com.pindroid.client.PinboardApi: java.util.ArrayList getAllBookmarks(java.lang.String,android.accounts.Account,android.content.Context)> to <org.apache.http.params.HttpConnectionParams: void setConnectionTimeout(org.apache.http.params.HttpParams,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 21 22 
+Error road: <com.pindroid.authenticator.Authenticator: android.os.Bundle confirmCredentials(android.accounts.AccountAuthenticatorResponse,android.accounts.Account,android.os.Bundle)>[]--><com.pindroid.authenticator.Authenticator: java.lang.String onlineConfirmPassword(android.accounts.Account,java.lang.String)>[]--><com.pindroid.client.PinboardApi: java.lang.String pinboardAuthenticate(java.lang.String,java.lang.String)>[]--><com.pindroid.client.HttpClientFactory: org.apache.http.client.HttpClient getThreadSafeClient()>[]--><org.apache.http.params.HttpConnectionParams: void setConnectionTimeout(org.apache.http.params.HttpParams,int)>
+#5.the call statck between class <com.pindroid.authenticator.Authenticator: android.os.Bundle confirmCredentials(android.accounts.AccountAuthenticatorResponse,android.accounts.Account,android.os.Bundle)> to <org.apache.http.params.HttpConnectionParams: void setConnectionTimeout(org.apache.http.params.HttpParams,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 21 22 
+Error road: <com.pindroid.authenticator.Authenticator: android.os.Bundle getAuthToken(android.accounts.AccountAuthenticatorResponse,android.accounts.Account,java.lang.String,android.os.Bundle)>[]--><com.pindroid.authenticator.Authenticator: java.lang.String onlineConfirmPassword(android.accounts.Account,java.lang.String)>[]--><com.pindroid.client.PinboardApi: java.lang.String pinboardAuthenticate(java.lang.String,java.lang.String)>[]--><com.pindroid.client.HttpClientFactory: org.apache.http.client.HttpClient getThreadSafeClient()>[]--><org.apache.http.params.HttpConnectionParams: void setConnectionTimeout(org.apache.http.params.HttpParams,int)>
+#6.the call statck between class <com.pindroid.authenticator.Authenticator: android.os.Bundle getAuthToken(android.accounts.AccountAuthenticatorResponse,android.accounts.Account,java.lang.String,android.os.Bundle)> to <org.apache.http.params.HttpConnectionParams: void setConnectionTimeout(org.apache.http.params.HttpParams,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 21 22 
+Error road: <com.pindroid.client.PinboardApi: com.pindroid.providers.NoteContent$Note getNote(java.lang.String,android.accounts.Account,android.content.Context)>[]--><com.pindroid.client.PinboardApi: java.io.InputStream PinboardApiCall(java.lang.String,java.util.TreeMap,android.accounts.Account,android.content.Context)>[]--><com.pindroid.client.HttpClientFactory: org.apache.http.client.HttpClient getThreadSafeClient()>[]--><org.apache.http.params.HttpConnectionParams: void setConnectionTimeout(org.apache.http.params.HttpParams,int)>
+#7.the call statck between class <com.pindroid.client.PinboardApi: com.pindroid.providers.NoteContent$Note getNote(java.lang.String,android.accounts.Account,android.content.Context)> to <org.apache.http.params.HttpConnectionParams: void setConnectionTimeout(org.apache.http.params.HttpParams,int)>has compatibility isssues！
+-----------------------------------------
+try
+Good road with try: <com.pindroid.syncadapter.BookmarkSyncAdapter: void onPerformSync(android.accounts.Account,android.os.Bundle,java.lang.String,android.content.ContentProviderClient,android.content.SyncResult)>[[try]]--><com.pindroid.syncadapter.BookmarkSyncAdapter: void InsertBookmarks(android.accounts.Account,android.content.SyncResult)>[]--><com.pindroid.syncadapter.BookmarkSyncAdapter: java.util.ArrayList getBookmarkList()>[]--><com.pindroid.client.PinboardApi: java.util.ArrayList getAllBookmarks(java.lang.String,int,int,android.accounts.Account,android.content.Context)>[]--><com.pindroid.client.PinboardApi: java.io.InputStream PinboardApiCall(java.lang.String,java.util.TreeMap,android.accounts.Account,android.content.Context)>[]--><com.pindroid.client.HttpClientFactory: org.apache.http.client.HttpClient getThreadSafeClient()>[]--><org.apache.http.params.HttpConnectionParams: void setConnectionTimeout(org.apache.http.params.HttpParams,int)>
+One road protect good!
+try
+Good road with try: <com.pindroid.syncadapter.BookmarkSyncAdapter: void onPerformSync(android.accounts.Account,android.os.Bundle,java.lang.String,android.content.ContentProviderClient,android.content.SyncResult)>[[try]]--><com.pindroid.syncadapter.BookmarkSyncAdapter: void checkSecretToken(android.accounts.Account)>[]--><com.pindroid.client.PinboardApi: java.lang.String getSecretToken(android.accounts.Account,android.content.Context)>[]--><com.pindroid.client.PinboardApi: java.io.InputStream PinboardApiCall(java.lang.String,java.util.TreeMap,android.accounts.Account,android.content.Context)>[]--><com.pindroid.client.HttpClientFactory: org.apache.http.client.HttpClient getThreadSafeClient()>[]--><org.apache.http.params.HttpConnectionParams: void setConnectionTimeout(org.apache.http.params.HttpParams,int)>
+One road protect good!
+!!!this api will crash on sdk 19 20 21 22 
+Error road: <com.pindroid.client.PinboardApi: java.util.ArrayList getBookmark(java.util.ArrayList,android.accounts.Account,android.content.Context)>[]--><com.pindroid.client.PinboardApi: java.io.InputStream PinboardApiCall(java.lang.String,java.util.TreeMap,android.accounts.Account,android.content.Context)>[]--><com.pindroid.client.HttpClientFactory: org.apache.http.client.HttpClient getThreadSafeClient()>[]--><org.apache.http.params.HttpConnectionParams: void setConnectionTimeout(org.apache.http.params.HttpParams,int)>
+#9.the call statck between class <com.pindroid.client.PinboardApi: java.util.ArrayList getBookmark(java.util.ArrayList,android.accounts.Account,android.content.Context)> to <org.apache.http.params.HttpConnectionParams: void setConnectionTimeout(org.apache.http.params.HttpParams,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 21 22 
+Error road: <com.pindroid.client.PinboardApi: java.lang.Boolean addBookmark(com.pindroid.providers.BookmarkContent$Bookmark,android.accounts.Account,android.content.Context)>[]--><com.pindroid.client.PinboardApi: java.io.InputStream PinboardApiCall(java.lang.String,java.util.TreeMap,android.accounts.Account,android.content.Context)>[]--><com.pindroid.client.HttpClientFactory: org.apache.http.client.HttpClient getThreadSafeClient()>[]--><org.apache.http.params.HttpConnectionParams: void setConnectionTimeout(org.apache.http.params.HttpParams,int)>
+#10.the call statck between class <com.pindroid.client.PinboardApi: java.lang.Boolean addBookmark(com.pindroid.providers.BookmarkContent$Bookmark,android.accounts.Account,android.content.Context)> to <org.apache.http.params.HttpConnectionParams: void setConnectionTimeout(org.apache.http.params.HttpParams,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:1
+containsStatic:false
+containsTry:true
+11call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.os.BaseBundle: int getInt(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+try
+Good road with try: <com.google.android.apps.dashclock.api.DashClockExtension: void onCreate()>[]--><com.google.android.apps.dashclock.api.DashClockExtension: void loadMetaData()>[[try]]--><android.os.BaseBundle: int getInt(java.lang.String)>
+One road protect good!
+!!!this api will crash on sdk 19 20 
+Error road: <com.google.android.apps.dashclock.api.ExtensionData: void fromBundle(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#2.the call statck between class <com.google.android.apps.dashclock.api.ExtensionData: void fromBundle(android.os.Bundle)> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:2
+containsStatic:false
+containsTry:true
+3call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.os.BaseBundle: boolean containsKey(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <com.pindroid.authenticator.Authenticator: android.os.Bundle confirmCredentials(android.accounts.AccountAuthenticatorResponse,android.accounts.Account,android.os.Bundle)>[]--><android.os.BaseBundle: boolean containsKey(java.lang.String)>
+#1.the call statck between class <com.pindroid.authenticator.Authenticator: android.os.Bundle confirmCredentials(android.accounts.AccountAuthenticatorResponse,android.accounts.Account,android.os.Bundle)> to <android.os.BaseBundle: boolean containsKey(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <com.pindroid.syncadapter.BookmarkSyncAdapter: void onPerformSync(android.accounts.Account,android.os.Bundle,java.lang.String,android.content.ContentProviderClient,android.content.SyncResult)>[]--><android.os.BaseBundle: boolean containsKey(java.lang.String)>
+#2.the call statck between class <com.pindroid.syncadapter.BookmarkSyncAdapter: void onPerformSync(android.accounts.Account,android.os.Bundle,java.lang.String,android.content.ContentProviderClient,android.content.SyncResult)> to <android.os.BaseBundle: boolean containsKey(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:3
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)> is checking!!!
+The life time of api is [21,31]
+5call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.pindroid.activity.StandaloneSaveReadLaterBookmark dummyMainMethod_com_pindroid_activity_StandaloneSaveReadLaterBookmark(android.content.Intent)>[]--><com.pindroid.activity.FragmentBaseActivity: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.pindroid.activity.Main dummyMainMethod_com_pindroid_activity_Main(android.content.Intent)>[]--><com.pindroid.activity.FragmentBaseActivity: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.pindroid.activity.AboutActivity dummyMainMethod_com_pindroid_activity_AboutActivity(android.content.Intent)>[]--><com.pindroid.activity.FragmentBaseActivity: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.pindroid.activity.SaveReadLaterBookmark dummyMainMethod_com_pindroid_activity_SaveReadLaterBookmark(android.content.Intent)>[]--><com.pindroid.activity.FragmentBaseActivity: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+4 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <com.pindroid.fragment.BrowseBookmarkFeedFragment: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#1.the call statck between class <com.pindroid.fragment.BrowseBookmarkFeedFragment: void onSaveInstanceState(android.os.Bundle)> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <com.pindroid.authenticator.Authenticator: android.os.Bundle getAuthToken(android.accounts.AccountAuthenticatorResponse,android.accounts.Account,java.lang.String,android.os.Bundle)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#2.the call statck between class <com.pindroid.authenticator.Authenticator: android.os.Bundle getAuthToken(android.accounts.AccountAuthenticatorResponse,android.accounts.Account,java.lang.String,android.os.Bundle)> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <com.google.android.apps.dashclock.api.ExtensionData: android.os.Bundle toBundle()>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#3.the call statck between class <com.google.android.apps.dashclock.api.ExtensionData: android.os.Bundle toBundle()> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <com.pindroid.fragment.BrowseBookmarksFragment: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#4.the call statck between class <com.pindroid.fragment.BrowseBookmarksFragment: void onSaveInstanceState(android.os.Bundle)> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:4
+crashApisInMain:1
+containsStatic:false
+containsTry:false
+5call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.widget.FrameLayout: void setVisibility(int)> is checking!!!
+The life time of api is [21,22]
+3call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.pindroid.activity.Main dummyMainMethod_com_pindroid_activity_Main(android.content.Intent)>[]--><com.pindroid.activity.Main: void onNewIntent(android.content.Intent)>[]--><com.pindroid.activity.Main: void processIntent(android.content.Intent)>[]--><com.pindroid.activity.Main: void onBookmarkSelected(com.pindroid.providers.BookmarkContent$Bookmark,com.pindroid.Constants$BookmarkViewType)>[]--><com.pindroid.fragment.ViewBookmarkFragment: void refresh()>[]--><com.pindroid.fragment.ViewBookmarkFragment: void setViews()>[]--><android.widget.FrameLayout: void setVisibility(int)>
+!!!this api will crash on sdk 23 24 25 26 27 28 29 30 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.pindroid.activity.Main dummyMainMethod_com_pindroid_activity_Main(android.content.Intent)>[]--><com.pindroid.activity.Main: void onNewIntent(android.content.Intent)>[]--><com.pindroid.activity.Main: void processIntent(android.content.Intent)>[]--><com.pindroid.activity.Main: void onBookmarkSelected(com.pindroid.providers.BookmarkContent$Bookmark,com.pindroid.Constants$BookmarkViewType)>[]--><com.pindroid.fragment.ViewBookmarkFragment: void refresh()>[]--><com.pindroid.fragment.ViewBookmarkFragment: void setViews()>[]--><android.widget.FrameLayout: void setVisibility(int)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.widget.FrameLayout: void setVisibility(int)>has compatibility isssues！
+-----------------------------------------
+2 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <com.pindroid.activity.Main: void changeAccount()>[]--><com.pindroid.fragment.ViewBookmarkFragment: void refresh()>[]--><com.pindroid.fragment.ViewBookmarkFragment: void setViews()>[]--><android.widget.FrameLayout: void setVisibility(int)>
+!!!this api will crash on sdk 23 24 25 26 27 28 29 30 31 
+Error road: <com.pindroid.activity.Main: void changeAccount()>[]--><com.pindroid.fragment.ViewBookmarkFragment: void refresh()>[]--><com.pindroid.fragment.ViewBookmarkFragment: void setViews()>[]--><android.widget.FrameLayout: void setVisibility(int)>
+#1.the call statck between class <com.pindroid.activity.Main: void changeAccount()> to <android.widget.FrameLayout: void setVisibility(int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <com.pindroid.fragment.ViewBookmarkFragment$MyObserver: void onChange(boolean)>[]--><com.pindroid.fragment.ViewBookmarkFragment: void refresh()>[]--><com.pindroid.fragment.ViewBookmarkFragment: void setViews()>[]--><android.widget.FrameLayout: void setVisibility(int)>
+!!!this api will crash on sdk 23 24 25 26 27 28 29 30 31 
+Error road: <com.pindroid.fragment.ViewBookmarkFragment$MyObserver: void onChange(boolean)>[]--><com.pindroid.fragment.ViewBookmarkFragment: void refresh()>[]--><com.pindroid.fragment.ViewBookmarkFragment: void setViews()>[]--><android.widget.FrameLayout: void setVisibility(int)>
+#2.the call statck between class <com.pindroid.fragment.ViewBookmarkFragment$MyObserver: void onChange(boolean)> to <android.widget.FrameLayout: void setVisibility(int)>has compatibility isssues！
+-----------------------------------------
+crashApis:5
+crashApisInMain:2
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 5 Potential Issue API: SDKCheck of <org.apache.http.conn.ssl.SSLSocketFactory: org.apache.http.conn.ssl.SSLSocketFactory getSocketFactory()> is checking!!!
+The life time of api is [23,31]
+12call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.pindroid.activity.AddBookmark dummyMainMethod_com_pindroid_activity_AddBookmark(android.content.Intent)>[]--><dummyMainClass: com.pindroid.fragment.AddBookmarkFragment dummyMainMethod_com_pindroid_fragment_AddBookmarkFragment(android.content.Intent,android.app.Activity)>[]--><com.pindroid.fragment.AddBookmarkFragment: void onStart()>[]--><com.pindroid.fragment.AddBookmarkFragment: void refreshView()>[]--><com.pindroid.fragment.AddBookmarkFragment$GetTagSuggestionsTask: java.lang.Object doInBackground(java.lang.Object[])>[]--><com.pindroid.fragment.AddBookmarkFragment$GetTagSuggestionsTask: java.util.ArrayList doInBackground(java.lang.String[])>[[try]]--><com.pindroid.client.PinboardApi: java.util.ArrayList getSuggestedTags(java.lang.String,android.accounts.Account,android.content.Context)>[]--><com.pindroid.client.PinboardApi: java.io.InputStream PinboardApiCall(java.lang.String,java.util.TreeMap,android.accounts.Account,android.content.Context)>[]--><com.pindroid.client.HttpClientFactory: org.apache.http.client.HttpClient getThreadSafeClient()>[]--><org.apache.http.conn.ssl.SSLSocketFactory: org.apache.http.conn.ssl.SSLSocketFactory getSocketFactory()>
+One road protect good!
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.pindroid.service.SaveBookmarkService dummyMainMethod_com_pindroid_service_SaveBookmarkService(android.content.Intent)>[]--><com.pindroid.service.SaveBookmarkService: void onHandleIntent(android.content.Intent)>[]--><com.pindroid.client.NetworkUtilities: java.lang.String getWebpageTitle(java.lang.String)>[[try]]--><com.pindroid.client.HttpClientFactory: org.apache.http.client.HttpClient getThreadSafeClient()>[]--><org.apache.http.conn.ssl.SSLSocketFactory: org.apache.http.conn.ssl.SSLSocketFactory getSocketFactory()>
+One road protect good!
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.pindroid.authenticator.AuthenticatorActivity dummyMainMethod_com_pindroid_authenticator_AuthenticatorActivity(android.content.Intent)>[]--><com.pindroid.authenticator.AuthenticatorActivity: void handleLogin(android.view.View)>[]--><com.pindroid.authenticator.AuthenticatorActivity$UserLoginTask: java.lang.Object doInBackground(java.lang.Object[])>[]--><com.pindroid.authenticator.AuthenticatorActivity$UserLoginTask: java.lang.String doInBackground(java.lang.Void[])>[[try]]--><com.pindroid.client.PinboardApi: java.lang.String pinboardAuthenticate(java.lang.String,java.lang.String)>[]--><com.pindroid.client.HttpClientFactory: org.apache.http.client.HttpClient getThreadSafeClient()>[]--><org.apache.http.conn.ssl.SSLSocketFactory: org.apache.http.conn.ssl.SSLSocketFactory getSocketFactory()>
+One road protect good!
+11 Packageshead roads:
+try
+Good road with try: <com.pindroid.client.NetworkUtilities: com.pindroid.providers.ArticleContent$Article getArticleText(java.lang.String)>[[try]]--><com.pindroid.client.HttpClientFactory: org.apache.http.client.HttpClient getThreadSafeClient()>[]--><org.apache.http.conn.ssl.SSLSocketFactory: org.apache.http.conn.ssl.SSLSocketFactory getSocketFactory()>
+One road protect good!
+!!!this api will crash on sdk 19 20 21 22 
+Error road: <com.pindroid.client.PinboardApi: java.lang.Boolean deleteBookmark(com.pindroid.providers.BookmarkContent$Bookmark,android.accounts.Account,android.content.Context)>[]--><com.pindroid.client.PinboardApi: java.io.InputStream PinboardApiCall(java.lang.String,java.util.TreeMap,android.accounts.Account,android.content.Context)>[]--><com.pindroid.client.HttpClientFactory: org.apache.http.client.HttpClient getThreadSafeClient()>[]--><org.apache.http.conn.ssl.SSLSocketFactory: org.apache.http.conn.ssl.SSLSocketFactory getSocketFactory()>
+#2.the call statck between class <com.pindroid.client.PinboardApi: java.lang.Boolean deleteBookmark(com.pindroid.providers.BookmarkContent$Bookmark,android.accounts.Account,android.content.Context)> to <org.apache.http.conn.ssl.SSLSocketFactory: org.apache.http.conn.ssl.SSLSocketFactory getSocketFactory()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 21 22 
+Error road: <com.pindroid.client.NetworkUtilities: boolean pinboardAuthenticate(java.lang.String,java.lang.String)>[]--><com.pindroid.client.HttpClientFactory: org.apache.http.client.HttpClient getThreadSafeClient()>[]--><org.apache.http.conn.ssl.SSLSocketFactory: org.apache.http.conn.ssl.SSLSocketFactory getSocketFactory()>
+#3.the call statck between class <com.pindroid.client.NetworkUtilities: boolean pinboardAuthenticate(java.lang.String,java.lang.String)> to <org.apache.http.conn.ssl.SSLSocketFactory: org.apache.http.conn.ssl.SSLSocketFactory getSocketFactory()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 21 22 
+Error road: <com.pindroid.client.PinboardApi: java.util.ArrayList getAllBookmarks(java.lang.String,android.accounts.Account,android.content.Context)>[]--><com.pindroid.client.PinboardApi: java.util.ArrayList getAllBookmarks(java.lang.String,int,int,android.accounts.Account,android.content.Context)>[]--><com.pindroid.client.PinboardApi: java.io.InputStream PinboardApiCall(java.lang.String,java.util.TreeMap,android.accounts.Account,android.content.Context)>[]--><com.pindroid.client.HttpClientFactory: org.apache.http.client.HttpClient getThreadSafeClient()>[]--><org.apache.http.conn.ssl.SSLSocketFactory: org.apache.http.conn.ssl.SSLSocketFactory getSocketFactory()>
+#4.the call statck between class <com.pindroid.client.PinboardApi: java.util.ArrayList getAllBookmarks(java.lang.String,android.accounts.Account,android.content.Context)> to <org.apache.http.conn.ssl.SSLSocketFactory: org.apache.http.conn.ssl.SSLSocketFactory getSocketFactory()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 21 22 
+Error road: <com.pindroid.authenticator.Authenticator: android.os.Bundle confirmCredentials(android.accounts.AccountAuthenticatorResponse,android.accounts.Account,android.os.Bundle)>[]--><com.pindroid.authenticator.Authenticator: java.lang.String onlineConfirmPassword(android.accounts.Account,java.lang.String)>[]--><com.pindroid.client.PinboardApi: java.lang.String pinboardAuthenticate(java.lang.String,java.lang.String)>[]--><com.pindroid.client.HttpClientFactory: org.apache.http.client.HttpClient getThreadSafeClient()>[]--><org.apache.http.conn.ssl.SSLSocketFactory: org.apache.http.conn.ssl.SSLSocketFactory getSocketFactory()>
+#5.the call statck between class <com.pindroid.authenticator.Authenticator: android.os.Bundle confirmCredentials(android.accounts.AccountAuthenticatorResponse,android.accounts.Account,android.os.Bundle)> to <org.apache.http.conn.ssl.SSLSocketFactory: org.apache.http.conn.ssl.SSLSocketFactory getSocketFactory()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 21 22 
+Error road: <com.pindroid.authenticator.Authenticator: android.os.Bundle getAuthToken(android.accounts.AccountAuthenticatorResponse,android.accounts.Account,java.lang.String,android.os.Bundle)>[]--><com.pindroid.authenticator.Authenticator: java.lang.String onlineConfirmPassword(android.accounts.Account,java.lang.String)>[]--><com.pindroid.client.PinboardApi: java.lang.String pinboardAuthenticate(java.lang.String,java.lang.String)>[]--><com.pindroid.client.HttpClientFactory: org.apache.http.client.HttpClient getThreadSafeClient()>[]--><org.apache.http.conn.ssl.SSLSocketFactory: org.apache.http.conn.ssl.SSLSocketFactory getSocketFactory()>
+#6.the call statck between class <com.pindroid.authenticator.Authenticator: android.os.Bundle getAuthToken(android.accounts.AccountAuthenticatorResponse,android.accounts.Account,java.lang.String,android.os.Bundle)> to <org.apache.http.conn.ssl.SSLSocketFactory: org.apache.http.conn.ssl.SSLSocketFactory getSocketFactory()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 21 22 
+Error road: <com.pindroid.client.PinboardApi: com.pindroid.providers.NoteContent$Note getNote(java.lang.String,android.accounts.Account,android.content.Context)>[]--><com.pindroid.client.PinboardApi: java.io.InputStream PinboardApiCall(java.lang.String,java.util.TreeMap,android.accounts.Account,android.content.Context)>[]--><com.pindroid.client.HttpClientFactory: org.apache.http.client.HttpClient getThreadSafeClient()>[]--><org.apache.http.conn.ssl.SSLSocketFactory: org.apache.http.conn.ssl.SSLSocketFactory getSocketFactory()>
+#7.the call statck between class <com.pindroid.client.PinboardApi: com.pindroid.providers.NoteContent$Note getNote(java.lang.String,android.accounts.Account,android.content.Context)> to <org.apache.http.conn.ssl.SSLSocketFactory: org.apache.http.conn.ssl.SSLSocketFactory getSocketFactory()>has compatibility isssues！
+-----------------------------------------
+try
+Good road with try: <com.pindroid.syncadapter.BookmarkSyncAdapter: void onPerformSync(android.accounts.Account,android.os.Bundle,java.lang.String,android.content.ContentProviderClient,android.content.SyncResult)>[[try]]--><com.pindroid.syncadapter.BookmarkSyncAdapter: void InsertBookmarks(android.accounts.Account,android.content.SyncResult)>[]--><com.pindroid.syncadapter.BookmarkSyncAdapter: java.util.ArrayList getBookmarkList()>[]--><com.pindroid.client.PinboardApi: java.util.ArrayList getAllBookmarks(java.lang.String,int,int,android.accounts.Account,android.content.Context)>[]--><com.pindroid.client.PinboardApi: java.io.InputStream PinboardApiCall(java.lang.String,java.util.TreeMap,android.accounts.Account,android.content.Context)>[]--><com.pindroid.client.HttpClientFactory: org.apache.http.client.HttpClient getThreadSafeClient()>[]--><org.apache.http.conn.ssl.SSLSocketFactory: org.apache.http.conn.ssl.SSLSocketFactory getSocketFactory()>
+One road protect good!
+try
+Good road with try: <com.pindroid.syncadapter.BookmarkSyncAdapter: void onPerformSync(android.accounts.Account,android.os.Bundle,java.lang.String,android.content.ContentProviderClient,android.content.SyncResult)>[[try]]--><com.pindroid.syncadapter.BookmarkSyncAdapter: void checkSecretToken(android.accounts.Account)>[]--><com.pindroid.client.PinboardApi: java.lang.String getSecretToken(android.accounts.Account,android.content.Context)>[]--><com.pindroid.client.PinboardApi: java.io.InputStream PinboardApiCall(java.lang.String,java.util.TreeMap,android.accounts.Account,android.content.Context)>[]--><com.pindroid.client.HttpClientFactory: org.apache.http.client.HttpClient getThreadSafeClient()>[]--><org.apache.http.conn.ssl.SSLSocketFactory: org.apache.http.conn.ssl.SSLSocketFactory getSocketFactory()>
+One road protect good!
+!!!this api will crash on sdk 19 20 21 22 
+Error road: <com.pindroid.client.PinboardApi: java.util.ArrayList getBookmark(java.util.ArrayList,android.accounts.Account,android.content.Context)>[]--><com.pindroid.client.PinboardApi: java.io.InputStream PinboardApiCall(java.lang.String,java.util.TreeMap,android.accounts.Account,android.content.Context)>[]--><com.pindroid.client.HttpClientFactory: org.apache.http.client.HttpClient getThreadSafeClient()>[]--><org.apache.http.conn.ssl.SSLSocketFactory: org.apache.http.conn.ssl.SSLSocketFactory getSocketFactory()>
+#9.the call statck between class <com.pindroid.client.PinboardApi: java.util.ArrayList getBookmark(java.util.ArrayList,android.accounts.Account,android.content.Context)> to <org.apache.http.conn.ssl.SSLSocketFactory: org.apache.http.conn.ssl.SSLSocketFactory getSocketFactory()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 21 22 
+Error road: <com.pindroid.client.PinboardApi: java.lang.Boolean addBookmark(com.pindroid.providers.BookmarkContent$Bookmark,android.accounts.Account,android.content.Context)>[]--><com.pindroid.client.PinboardApi: java.io.InputStream PinboardApiCall(java.lang.String,java.util.TreeMap,android.accounts.Account,android.content.Context)>[]--><com.pindroid.client.HttpClientFactory: org.apache.http.client.HttpClient getThreadSafeClient()>[]--><org.apache.http.conn.ssl.SSLSocketFactory: org.apache.http.conn.ssl.SSLSocketFactory getSocketFactory()>
+#10.the call statck between class <com.pindroid.client.PinboardApi: java.lang.Boolean addBookmark(com.pindroid.providers.BookmarkContent$Bookmark,android.accounts.Account,android.content.Context)> to <org.apache.http.conn.ssl.SSLSocketFactory: org.apache.http.conn.ssl.SSLSocketFactory getSocketFactory()>has compatibility isssues！
+-----------------------------------------
+crashApis:6
+containsStatic:false
+containsTry:true
+11call by main package
+-----------------------------------------
+#################################################
+N 6 Potential Issue API: SDKCheck of <org.apache.http.params.HttpConnectionParams: void setSoTimeout(org.apache.http.params.HttpParams,int)> is checking!!!
+The life time of api is [23,31]
+12call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.pindroid.activity.AddBookmark dummyMainMethod_com_pindroid_activity_AddBookmark(android.content.Intent)>[]--><dummyMainClass: com.pindroid.fragment.AddBookmarkFragment dummyMainMethod_com_pindroid_fragment_AddBookmarkFragment(android.content.Intent,android.app.Activity)>[]--><com.pindroid.fragment.AddBookmarkFragment: void onStart()>[]--><com.pindroid.fragment.AddBookmarkFragment: void refreshView()>[]--><com.pindroid.fragment.AddBookmarkFragment$GetTagSuggestionsTask: java.lang.Object doInBackground(java.lang.Object[])>[]--><com.pindroid.fragment.AddBookmarkFragment$GetTagSuggestionsTask: java.util.ArrayList doInBackground(java.lang.String[])>[[try]]--><com.pindroid.client.PinboardApi: java.util.ArrayList getSuggestedTags(java.lang.String,android.accounts.Account,android.content.Context)>[]--><com.pindroid.client.PinboardApi: java.io.InputStream PinboardApiCall(java.lang.String,java.util.TreeMap,android.accounts.Account,android.content.Context)>[]--><com.pindroid.client.HttpClientFactory: org.apache.http.client.HttpClient getThreadSafeClient()>[]--><org.apache.http.params.HttpConnectionParams: void setSoTimeout(org.apache.http.params.HttpParams,int)>
+One road protect good!
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.pindroid.service.SaveBookmarkService dummyMainMethod_com_pindroid_service_SaveBookmarkService(android.content.Intent)>[]--><com.pindroid.service.SaveBookmarkService: void onHandleIntent(android.content.Intent)>[]--><com.pindroid.client.NetworkUtilities: java.lang.String getWebpageTitle(java.lang.String)>[[try]]--><com.pindroid.client.HttpClientFactory: org.apache.http.client.HttpClient getThreadSafeClient()>[]--><org.apache.http.params.HttpConnectionParams: void setSoTimeout(org.apache.http.params.HttpParams,int)>
+One road protect good!
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.pindroid.authenticator.AuthenticatorActivity dummyMainMethod_com_pindroid_authenticator_AuthenticatorActivity(android.content.Intent)>[]--><com.pindroid.authenticator.AuthenticatorActivity: void handleLogin(android.view.View)>[]--><com.pindroid.authenticator.AuthenticatorActivity$UserLoginTask: java.lang.Object doInBackground(java.lang.Object[])>[]--><com.pindroid.authenticator.AuthenticatorActivity$UserLoginTask: java.lang.String doInBackground(java.lang.Void[])>[[try]]--><com.pindroid.client.PinboardApi: java.lang.String pinboardAuthenticate(java.lang.String,java.lang.String)>[]--><com.pindroid.client.HttpClientFactory: org.apache.http.client.HttpClient getThreadSafeClient()>[]--><org.apache.http.params.HttpConnectionParams: void setSoTimeout(org.apache.http.params.HttpParams,int)>
+One road protect good!
+11 Packageshead roads:
+try
+Good road with try: <com.pindroid.client.NetworkUtilities: com.pindroid.providers.ArticleContent$Article getArticleText(java.lang.String)>[[try]]--><com.pindroid.client.HttpClientFactory: org.apache.http.client.HttpClient getThreadSafeClient()>[]--><org.apache.http.params.HttpConnectionParams: void setSoTimeout(org.apache.http.params.HttpParams,int)>
+One road protect good!
+!!!this api will crash on sdk 19 20 21 22 
+Error road: <com.pindroid.client.PinboardApi: java.lang.Boolean deleteBookmark(com.pindroid.providers.BookmarkContent$Bookmark,android.accounts.Account,android.content.Context)>[]--><com.pindroid.client.PinboardApi: java.io.InputStream PinboardApiCall(java.lang.String,java.util.TreeMap,android.accounts.Account,android.content.Context)>[]--><com.pindroid.client.HttpClientFactory: org.apache.http.client.HttpClient getThreadSafeClient()>[]--><org.apache.http.params.HttpConnectionParams: void setSoTimeout(org.apache.http.params.HttpParams,int)>
+#2.the call statck between class <com.pindroid.client.PinboardApi: java.lang.Boolean deleteBookmark(com.pindroid.providers.BookmarkContent$Bookmark,android.accounts.Account,android.content.Context)> to <org.apache.http.params.HttpConnectionParams: void setSoTimeout(org.apache.http.params.HttpParams,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 21 22 
+Error road: <com.pindroid.client.NetworkUtilities: boolean pinboardAuthenticate(java.lang.String,java.lang.String)>[]--><com.pindroid.client.HttpClientFactory: org.apache.http.client.HttpClient getThreadSafeClient()>[]--><org.apache.http.params.HttpConnectionParams: void setSoTimeout(org.apache.http.params.HttpParams,int)>
+#3.the call statck between class <com.pindroid.client.NetworkUtilities: boolean pinboardAuthenticate(java.lang.String,java.lang.String)> to <org.apache.http.params.HttpConnectionParams: void setSoTimeout(org.apache.http.params.HttpParams,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 21 22 
+Error road: <com.pindroid.client.PinboardApi: java.util.ArrayList getAllBookmarks(java.lang.String,android.accounts.Account,android.content.Context)>[]--><com.pindroid.client.PinboardApi: java.util.ArrayList getAllBookmarks(java.lang.String,int,int,android.accounts.Account,android.content.Context)>[]--><com.pindroid.client.PinboardApi: java.io.InputStream PinboardApiCall(java.lang.String,java.util.TreeMap,android.accounts.Account,android.content.Context)>[]--><com.pindroid.client.HttpClientFactory: org.apache.http.client.HttpClient getThreadSafeClient()>[]--><org.apache.http.params.HttpConnectionParams: void setSoTimeout(org.apache.http.params.HttpParams,int)>
+#4.the call statck between class <com.pindroid.client.PinboardApi: java.util.ArrayList getAllBookmarks(java.lang.String,android.accounts.Account,android.content.Context)> to <org.apache.http.params.HttpConnectionParams: void setSoTimeout(org.apache.http.params.HttpParams,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 21 22 
+Error road: <com.pindroid.authenticator.Authenticator: android.os.Bundle confirmCredentials(android.accounts.AccountAuthenticatorResponse,android.accounts.Account,android.os.Bundle)>[]--><com.pindroid.authenticator.Authenticator: java.lang.String onlineConfirmPassword(android.accounts.Account,java.lang.String)>[]--><com.pindroid.client.PinboardApi: java.lang.String pinboardAuthenticate(java.lang.String,java.lang.String)>[]--><com.pindroid.client.HttpClientFactory: org.apache.http.client.HttpClient getThreadSafeClient()>[]--><org.apache.http.params.HttpConnectionParams: void setSoTimeout(org.apache.http.params.HttpParams,int)>
+#5.the call statck between class <com.pindroid.authenticator.Authenticator: android.os.Bundle confirmCredentials(android.accounts.AccountAuthenticatorResponse,android.accounts.Account,android.os.Bundle)> to <org.apache.http.params.HttpConnectionParams: void setSoTimeout(org.apache.http.params.HttpParams,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 21 22 
+Error road: <com.pindroid.authenticator.Authenticator: android.os.Bundle getAuthToken(android.accounts.AccountAuthenticatorResponse,android.accounts.Account,java.lang.String,android.os.Bundle)>[]--><com.pindroid.authenticator.Authenticator: java.lang.String onlineConfirmPassword(android.accounts.Account,java.lang.String)>[]--><com.pindroid.client.PinboardApi: java.lang.String pinboardAuthenticate(java.lang.String,java.lang.String)>[]--><com.pindroid.client.HttpClientFactory: org.apache.http.client.HttpClient getThreadSafeClient()>[]--><org.apache.http.params.HttpConnectionParams: void setSoTimeout(org.apache.http.params.HttpParams,int)>
+#6.the call statck between class <com.pindroid.authenticator.Authenticator: android.os.Bundle getAuthToken(android.accounts.AccountAuthenticatorResponse,android.accounts.Account,java.lang.String,android.os.Bundle)> to <org.apache.http.params.HttpConnectionParams: void setSoTimeout(org.apache.http.params.HttpParams,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 21 22 
+Error road: <com.pindroid.client.PinboardApi: com.pindroid.providers.NoteContent$Note getNote(java.lang.String,android.accounts.Account,android.content.Context)>[]--><com.pindroid.client.PinboardApi: java.io.InputStream PinboardApiCall(java.lang.String,java.util.TreeMap,android.accounts.Account,android.content.Context)>[]--><com.pindroid.client.HttpClientFactory: org.apache.http.client.HttpClient getThreadSafeClient()>[]--><org.apache.http.params.HttpConnectionParams: void setSoTimeout(org.apache.http.params.HttpParams,int)>
+#7.the call statck between class <com.pindroid.client.PinboardApi: com.pindroid.providers.NoteContent$Note getNote(java.lang.String,android.accounts.Account,android.content.Context)> to <org.apache.http.params.HttpConnectionParams: void setSoTimeout(org.apache.http.params.HttpParams,int)>has compatibility isssues！
+-----------------------------------------
+try
+Good road with try: <com.pindroid.syncadapter.BookmarkSyncAdapter: void onPerformSync(android.accounts.Account,android.os.Bundle,java.lang.String,android.content.ContentProviderClient,android.content.SyncResult)>[[try]]--><com.pindroid.syncadapter.BookmarkSyncAdapter: void InsertBookmarks(android.accounts.Account,android.content.SyncResult)>[]--><com.pindroid.syncadapter.BookmarkSyncAdapter: java.util.ArrayList getBookmarkList()>[]--><com.pindroid.client.PinboardApi: java.util.ArrayList getAllBookmarks(java.lang.String,int,int,android.accounts.Account,android.content.Context)>[]--><com.pindroid.client.PinboardApi: java.io.InputStream PinboardApiCall(java.lang.String,java.util.TreeMap,android.accounts.Account,android.content.Context)>[]--><com.pindroid.client.HttpClientFactory: org.apache.http.client.HttpClient getThreadSafeClient()>[]--><org.apache.http.params.HttpConnectionParams: void setSoTimeout(org.apache.http.params.HttpParams,int)>
+One road protect good!
+try
+Good road with try: <com.pindroid.syncadapter.BookmarkSyncAdapter: void onPerformSync(android.accounts.Account,android.os.Bundle,java.lang.String,android.content.ContentProviderClient,android.content.SyncResult)>[[try]]--><com.pindroid.syncadapter.BookmarkSyncAdapter: void checkSecretToken(android.accounts.Account)>[]--><com.pindroid.client.PinboardApi: java.lang.String getSecretToken(android.accounts.Account,android.content.Context)>[]--><com.pindroid.client.PinboardApi: java.io.InputStream PinboardApiCall(java.lang.String,java.util.TreeMap,android.accounts.Account,android.content.Context)>[]--><com.pindroid.client.HttpClientFactory: org.apache.http.client.HttpClient getThreadSafeClient()>[]--><org.apache.http.params.HttpConnectionParams: void setSoTimeout(org.apache.http.params.HttpParams,int)>
+One road protect good!
+!!!this api will crash on sdk 19 20 21 22 
+Error road: <com.pindroid.client.PinboardApi: java.util.ArrayList getBookmark(java.util.ArrayList,android.accounts.Account,android.content.Context)>[]--><com.pindroid.client.PinboardApi: java.io.InputStream PinboardApiCall(java.lang.String,java.util.TreeMap,android.accounts.Account,android.content.Context)>[]--><com.pindroid.client.HttpClientFactory: org.apache.http.client.HttpClient getThreadSafeClient()>[]--><org.apache.http.params.HttpConnectionParams: void setSoTimeout(org.apache.http.params.HttpParams,int)>
+#9.the call statck between class <com.pindroid.client.PinboardApi: java.util.ArrayList getBookmark(java.util.ArrayList,android.accounts.Account,android.content.Context)> to <org.apache.http.params.HttpConnectionParams: void setSoTimeout(org.apache.http.params.HttpParams,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 21 22 
+Error road: <com.pindroid.client.PinboardApi: java.lang.Boolean addBookmark(com.pindroid.providers.BookmarkContent$Bookmark,android.accounts.Account,android.content.Context)>[]--><com.pindroid.client.PinboardApi: java.io.InputStream PinboardApiCall(java.lang.String,java.util.TreeMap,android.accounts.Account,android.content.Context)>[]--><com.pindroid.client.HttpClientFactory: org.apache.http.client.HttpClient getThreadSafeClient()>[]--><org.apache.http.params.HttpConnectionParams: void setSoTimeout(org.apache.http.params.HttpParams,int)>
+#10.the call statck between class <com.pindroid.client.PinboardApi: java.lang.Boolean addBookmark(com.pindroid.providers.BookmarkContent$Bookmark,android.accounts.Account,android.content.Context)> to <org.apache.http.params.HttpConnectionParams: void setSoTimeout(org.apache.http.params.HttpParams,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:7
+containsStatic:false
+containsTry:true
+11call by main package
+-----------------------------------------
+#################################################
+N 7 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.lang.String getString(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+5call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.pindroid.activity.StandaloneSaveReadLaterBookmark dummyMainMethod_com_pindroid_activity_StandaloneSaveReadLaterBookmark(android.content.Intent)>[]--><com.pindroid.activity.FragmentBaseActivity: void onRestoreInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.pindroid.activity.Main dummyMainMethod_com_pindroid_activity_Main(android.content.Intent)>[]--><com.pindroid.activity.FragmentBaseActivity: void onRestoreInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.pindroid.activity.AboutActivity dummyMainMethod_com_pindroid_activity_AboutActivity(android.content.Intent)>[]--><com.pindroid.activity.FragmentBaseActivity: void onRestoreInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.pindroid.activity.SaveReadLaterBookmark dummyMainMethod_com_pindroid_activity_SaveReadLaterBookmark(android.content.Intent)>[]--><com.pindroid.activity.FragmentBaseActivity: void onRestoreInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+4 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <com.pindroid.fragment.BrowseBookmarkFeedFragment: void onActivityCreated(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#1.the call statck between class <com.pindroid.fragment.BrowseBookmarkFeedFragment: void onActivityCreated(android.os.Bundle)> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <com.pindroid.fragment.BrowseBookmarksFragment: void onActivityCreated(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#2.the call statck between class <com.pindroid.fragment.BrowseBookmarksFragment: void onActivityCreated(android.os.Bundle)> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <com.pindroid.authenticator.Authenticator: android.os.Bundle confirmCredentials(android.accounts.AccountAuthenticatorResponse,android.accounts.Account,android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#3.the call statck between class <com.pindroid.authenticator.Authenticator: android.os.Bundle confirmCredentials(android.accounts.AccountAuthenticatorResponse,android.accounts.Account,android.os.Bundle)> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+try
+Good road with try: <com.google.android.apps.dashclock.api.ExtensionData: void fromBundle(android.os.Bundle)>[[try]]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+One road protect good!
+crashApis:8
+crashApisInMain:3
+containsStatic:false
+containsTry:true
+5call by main package
+-----------------------------------------
+#################################################
+N 8 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putInt(java.lang.String,int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <com.google.android.apps.dashclock.api.ExtensionData: android.os.Bundle toBundle()>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#1.the call statck between class <com.google.android.apps.dashclock.api.ExtensionData: android.os.Bundle toBundle()> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:9
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 9 Potential Issue API: SDKCheck of <android.webkit.CookieSyncManager: void sync()> is checking!!!
+The life time of api is [21,31]
+3call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.pindroid.activity.Main dummyMainMethod_com_pindroid_activity_Main(android.content.Intent)>[]--><com.pindroid.activity.Main: void onNewIntent(android.content.Intent)>[]--><com.pindroid.activity.Main: void processIntent(android.content.Intent)>[]--><com.pindroid.activity.Main: void onBookmarkSelected(com.pindroid.providers.BookmarkContent$Bookmark,com.pindroid.Constants$BookmarkViewType)>[]--><com.pindroid.fragment.ViewBookmarkFragment: void refresh()>[]--><com.pindroid.fragment.ViewBookmarkFragment: void loadBookmark()>[]--><com.pindroid.fragment.ViewBookmarkFragment: void showInWebView(java.lang.String)>[]--><android.webkit.CookieSyncManager: void sync()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.webkit.CookieSyncManager: void sync()>has compatibility isssues！
+-----------------------------------------
+2 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <com.pindroid.activity.Main: void changeAccount()>[]--><com.pindroid.fragment.ViewBookmarkFragment: void refresh()>[]--><com.pindroid.fragment.ViewBookmarkFragment: void loadBookmark()>[]--><com.pindroid.fragment.ViewBookmarkFragment: void showInWebView(java.lang.String)>[]--><android.webkit.CookieSyncManager: void sync()>
+#1.the call statck between class <com.pindroid.activity.Main: void changeAccount()> to <android.webkit.CookieSyncManager: void sync()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <com.pindroid.fragment.ViewBookmarkFragment$MyObserver: void onChange(boolean)>[]--><com.pindroid.fragment.ViewBookmarkFragment: void refresh()>[]--><com.pindroid.fragment.ViewBookmarkFragment: void loadBookmark()>[]--><com.pindroid.fragment.ViewBookmarkFragment: void showInWebView(java.lang.String)>[]--><android.webkit.CookieSyncManager: void sync()>
+#2.the call statck between class <com.pindroid.fragment.ViewBookmarkFragment$MyObserver: void onChange(boolean)> to <android.webkit.CookieSyncManager: void sync()>has compatibility isssues！
+-----------------------------------------
+crashApis:10
+crashApisInMain:4
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 10 Potential Issue API: SDKCheck of <android.os.BaseBundle: int getInt(java.lang.String,int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.pindroid.activity.LargeWidgetConfigure dummyMainMethod_com_pindroid_activity_LargeWidgetConfigure(android.content.Intent)>[]--><com.pindroid.activity.LargeWidgetConfigure: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String,int)>
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.pindroid.activity.SmallWidgetConfigure dummyMainMethod_com_pindroid_activity_SmallWidgetConfigure(android.content.Intent)>[]--><com.pindroid.activity.SmallWidgetConfigure: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String,int)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: int getInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:11
+crashApisInMain:5
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+crashApis numbers:11
+crashApis numbers in main road:5
+On Android Version 16 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 17 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 18 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 19 this app may have error api use(at least): 11 and error api roads: 51
+On Android Version 20 this app may have error api use(at least): 11 and error api roads: 51
+On Android Version 21 this app may have error api use(at least): 3 and error api roads: 24
+On Android Version 22 this app may have error api use(at least): 3 and error api roads: 24
+On Android Version 23 this app may have error api use(at least): 1 and error api roads: 3
+On Android Version 24 this app may have error api use(at least): 1 and error api roads: 3
+On Android Version 25 this app may have error api use(at least): 1 and error api roads: 3
+On Android Version 26 this app may have error api use(at least): 1 and error api roads: 3
+On Android Version 27 this app may have error api use(at least): 1 and error api roads: 3
+On Android Version 28 this app may have error api use(at least): 1 and error api roads: 3
+On Android Version 29 this app may have error api use(at least): 1 and error api roads: 3
+On Android Version 30 this app may have error api use(at least): 1 and error api roads: 3
+On Android Version 31 this app may have error api use(at least): 1 and error api roads: 3

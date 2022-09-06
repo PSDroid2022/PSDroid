@@ -1,0 +1,632 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/Progress_Bars.apk
+Entry Points[org.mattvchandler.progressbars.Progress_bars, org.mattvchandler.progressbars.util.Notification_handler, org.mattvchandler.progressbars.util.Preferences, org.mattvchandler.progressbars.util.Resetting_application, org.mattvchandler.progressbars.settings.Countdown_text, org.mattvchandler.progressbars.settings.Settings]
+FllowDroidcallgraph size:1009
+Soot started on Mon Jul 11 11:22:11 CST 2022
+leftOp<android.databinding.ViewDataBinding: int SDK_INT>
+Soot finished on Mon Jul 11 11:22:34 CST 2022
+Soot has run for 0 min. 23 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 19
+Declared Target Sdk version is: 28
+Declared Max Sdk version is: -1
+Collected 449 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.widget.TimePicker: int getMinute()> is checking!!!
+The life time of api is [23,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+-$i1 < 23
+Good road: <android.databinding.adapters.TimePickerBindingAdapter: void setMinute(android.widget.TimePicker,int)>[[-$i1 < 23]]--><android.widget.TimePicker: int getMinute()>
+One road protect good!
+-i0 < 23
+Good road: <android.databinding.adapters.TimePickerBindingAdapter: int getMinute(android.widget.TimePicker)>[[-i0 < 23]]--><android.widget.TimePicker: int getMinute()>
+One road protect good!
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.widget.TimePicker: int getHour()> is checking!!!
+The life time of api is [23,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+-i0 < 23
+Good road: <android.databinding.adapters.TimePickerBindingAdapter: int getHour(android.widget.TimePicker)>[[-i0 < 23]]--><android.widget.TimePicker: int getHour()>
+One road protect good!
+-$i1 < 23
+Good road: <android.databinding.adapters.TimePickerBindingAdapter: void setHour(android.widget.TimePicker,int)>[[-$i1 < 23]]--><android.widget.TimePicker: int getHour()>
+One road protect good!
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.os.BaseBundle: boolean[] getBooleanArray(java.lang.String)> is checking!!!
+The life time of api is [22,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 21 
+Error road: <org.mattvchandler.progressbars.settings.Checkbox_dialog_frag: android.app.Dialog onCreateDialog(android.os.Bundle)>[]--><android.os.BaseBundle: boolean[] getBooleanArray(java.lang.String)>
+#1.the call statck between class <org.mattvchandler.progressbars.settings.Checkbox_dialog_frag: android.app.Dialog onCreateDialog(android.os.Bundle)> to <android.os.BaseBundle: boolean[] getBooleanArray(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:1
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.os.BaseBundle: int getInt(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+3call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.mattvchandler.progressbars.settings.Settings dummyMainMethod_org_mattvchandler_progressbars_settings_Settings(android.content.Intent)>[]--><org.mattvchandler.progressbars.settings.Settings: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+2 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <org.mattvchandler.progressbars.settings.Checkbox_dialog_frag: android.app.Dialog onCreateDialog(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#1.the call statck between class <org.mattvchandler.progressbars.settings.Checkbox_dialog_frag: android.app.Dialog onCreateDialog(android.os.Bundle)> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <org.mattvchandler.progressbars.settings.Precision_dialog_frag: android.app.Dialog onCreateDialog(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#2.the call statck between class <org.mattvchandler.progressbars.settings.Precision_dialog_frag: android.app.Dialog onCreateDialog(android.os.Bundle)> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:2
+crashApisInMain:1
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putLongArray(java.lang.String,long[])> is checking!!!
+The life time of api is [21,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 5 Potential Issue API: SDKCheck of <android.content.Context: android.graphics.drawable.Drawable getDrawable(int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i1 < 21
+Good road: <android.databinding.ViewDataBinding: android.graphics.drawable.Drawable getDrawableFromResource(android.view.View,int)>[[-$i1 < 21]]--><android.content.Context: android.graphics.drawable.Drawable getDrawable(int)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 6 Potential Issue API: SDKCheck of <android.app.AlarmManager: void setExactAndAllowWhileIdle(int,long,android.app.PendingIntent)> is checking!!!
+The life time of api is [23,31]
+2call roads:
+1 Mainhead roads:
+-$i3 < 23
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.mattvchandler.progressbars.util.Notification_handler dummyMainMethod_org_mattvchandler_progressbars_util_Notification__handler(android.content.Intent)>[]--><org.mattvchandler.progressbars.util.Notification_handler: void onReceive(android.content.Context,android.content.Intent)>[]--><org.mattvchandler.progressbars.db.Data: void update(android.content.Context)>[]--><org.mattvchandler.progressbars.db.Data: void update(android.content.Context,java.lang.String)>[]--><org.mattvchandler.progressbars.util.Notification_handlerKt: void reset_alarm(android.content.Context,org.mattvchandler.progressbars.db.Data)>[]--><org.mattvchandler.progressbars.util.Notification_handlerKt: void reset_alarm_details(android.content.Context,org.mattvchandler.progressbars.db.Data,android.app.AlarmManager,long)>[[-$i3 < 23]]--><android.app.AlarmManager: void setExactAndAllowWhileIdle(int,long,android.app.PendingIntent)>
+One road protect good!
+-$i3 < 23
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.mattvchandler.progressbars.util.Preferences dummyMainMethod_org_mattvchandler_progressbars_util_Preferences(android.content.Intent)>[]--><org.mattvchandler.progressbars.util.Preferences: void onCreate(android.os.Bundle)>[]--><org.mattvchandler.progressbars.util.Dynamic_theme_activity: void onCreate(android.os.Bundle)>[]--><org.mattvchandler.progressbars.util.Notification_handlerKt: void reset_all_alarms(android.content.Context)>[]--><org.mattvchandler.progressbars.util.Notification_handlerKt: void reset_alarm_details(android.content.Context,org.mattvchandler.progressbars.db.Data,android.app.AlarmManager,long)>[[-$i3 < 23]]--><android.app.AlarmManager: void setExactAndAllowWhileIdle(int,long,android.app.PendingIntent)>
+One road protect good!
+-$i3 < 23
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.mattvchandler.progressbars.settings.Countdown_text dummyMainMethod_org_mattvchandler_progressbars_settings_Countdown__text(android.content.Intent)>[]--><org.mattvchandler.progressbars.settings.Countdown_text: void onCreate(android.os.Bundle)>[]--><org.mattvchandler.progressbars.util.Dynamic_theme_activity: void onCreate(android.os.Bundle)>[]--><org.mattvchandler.progressbars.util.Notification_handlerKt: void reset_all_alarms(android.content.Context)>[]--><org.mattvchandler.progressbars.util.Notification_handlerKt: void reset_alarm_details(android.content.Context,org.mattvchandler.progressbars.db.Data,android.app.AlarmManager,long)>[[-$i3 < 23]]--><android.app.AlarmManager: void setExactAndAllowWhileIdle(int,long,android.app.PendingIntent)>
+One road protect good!
+-$i3 < 23
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><org.mattvchandler.progressbars.util.Resetting_application: void onCreate()>[]--><org.mattvchandler.progressbars.db.Data: void insert(android.content.Context)>[]--><org.mattvchandler.progressbars.db.Data: void insert(android.content.Context,java.lang.String)>[]--><org.mattvchandler.progressbars.util.Notification_handlerKt: void reset_alarm(android.content.Context,org.mattvchandler.progressbars.db.Data)>[]--><org.mattvchandler.progressbars.util.Notification_handlerKt: void reset_alarm_details(android.content.Context,org.mattvchandler.progressbars.db.Data,android.app.AlarmManager,long)>[[-$i3 < 23]]--><android.app.AlarmManager: void setExactAndAllowWhileIdle(int,long,android.app.PendingIntent)>
+One road protect good!
+-$i3 < 23
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.mattvchandler.progressbars.settings.Settings dummyMainMethod_org_mattvchandler_progressbars_settings_Settings(android.content.Intent)>[]--><org.mattvchandler.progressbars.settings.Settings: boolean onOptionsItemSelected(android.view.MenuItem)>[]--><org.mattvchandler.progressbars.db.Data: void insert(android.content.Context)>[]--><org.mattvchandler.progressbars.db.Data: void insert(android.content.Context,java.lang.String)>[]--><org.mattvchandler.progressbars.util.Notification_handlerKt: void reset_alarm(android.content.Context,org.mattvchandler.progressbars.db.Data)>[]--><org.mattvchandler.progressbars.util.Notification_handlerKt: void reset_alarm_details(android.content.Context,org.mattvchandler.progressbars.db.Data,android.app.AlarmManager,long)>[[-$i3 < 23]]--><android.app.AlarmManager: void setExactAndAllowWhileIdle(int,long,android.app.PendingIntent)>
+One road protect good!
+-$i3 < 23
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.mattvchandler.progressbars.Progress_bars dummyMainMethod_org_mattvchandler_progressbars_Progress__bars(android.content.Intent)>[]--><org.mattvchandler.progressbars.Progress_bars: void onCreate(android.os.Bundle)>[]--><org.mattvchandler.progressbars.util.Notification_handlerKt: void reset_all_alarms(android.content.Context)>[]--><org.mattvchandler.progressbars.util.Notification_handlerKt: void reset_alarm_details(android.content.Context,org.mattvchandler.progressbars.db.Data,android.app.AlarmManager,long)>[[-$i3 < 23]]--><android.app.AlarmManager: void setExactAndAllowWhileIdle(int,long,android.app.PendingIntent)>
+One road protect good!
+1 Packageshead roads:
+-$i3 < 23
+Good road: <org.mattvchandler.progressbars.util.Preferences$Progress_bar_prefs_frag: void onSharedPreferenceChanged(android.content.SharedPreferences,java.lang.String)>[]--><org.mattvchandler.progressbars.util.Notification_handlerKt: void reset_all_alarms(android.content.Context)>[]--><org.mattvchandler.progressbars.util.Notification_handlerKt: void reset_alarm_details(android.content.Context,org.mattvchandler.progressbars.db.Data,android.app.AlarmManager,long)>[[-$i3 < 23]]--><android.app.AlarmManager: void setExactAndAllowWhileIdle(int,long,android.app.PendingIntent)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 7 Potential Issue API: SDKCheck of <android.util.Size: int getWidth()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <androidx.versionedparcelable.VersionedParcel: void writeSize(android.util.Size,int)>[]--><android.util.Size: int getWidth()>
+#1.the call statck between class <androidx.versionedparcelable.VersionedParcel: void writeSize(android.util.Size,int)> to <android.util.Size: int getWidth()>has compatibility isssues！
+-----------------------------------------
+crashApis:3
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 8 Potential Issue API: SDKCheck of <android.app.NotificationChannel: void setDescription(java.lang.String)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+1 Mainhead roads:
+-i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.mattvchandler.progressbars.util.Notification_handler dummyMainMethod_org_mattvchandler_progressbars_util_Notification__handler(android.content.Intent)>[]--><org.mattvchandler.progressbars.util.Notification_handler: void onReceive(android.content.Context,android.content.Intent)>[]--><org.mattvchandler.progressbars.util.Notification_handlerKt: void setup_notification_channel(android.content.Context)>[[-i0 < 26]]--><android.app.NotificationChannel: void setDescription(java.lang.String)>
+One road protect good!
+-i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><org.mattvchandler.progressbars.util.Resetting_application: void onCreate()>[]--><org.mattvchandler.progressbars.util.Notification_handlerKt: void setup_notification_channel(android.content.Context)>[[-i0 < 26]]--><android.app.NotificationChannel: void setDescription(java.lang.String)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 9 Potential Issue API: SDKCheck of <android.os.BaseBundle: long getLong(java.lang.String,long)> is checking!!!
+The life time of api is [21,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <org.mattvchandler.progressbars.settings.Datepicker_frag: android.app.Dialog onCreateDialog(android.os.Bundle)>[]--><android.os.BaseBundle: long getLong(java.lang.String,long)>
+#1.the call statck between class <org.mattvchandler.progressbars.settings.Datepicker_frag: android.app.Dialog onCreateDialog(android.os.Bundle)> to <android.os.BaseBundle: long getLong(java.lang.String,long)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <org.mattvchandler.progressbars.settings.Timepicker_frag: android.app.Dialog onCreateDialog(android.os.Bundle)>[]--><android.os.BaseBundle: long getLong(java.lang.String,long)>
+#2.the call statck between class <org.mattvchandler.progressbars.settings.Timepicker_frag: android.app.Dialog onCreateDialog(android.os.Bundle)> to <android.os.BaseBundle: long getLong(java.lang.String,long)>has compatibility isssues！
+-----------------------------------------
+crashApis:4
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 10 Potential Issue API: SDKCheck of <android.text.InputFilter.LengthFilter: int getMax()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-i2 < 21
+Good road: <android.databinding.adapters.TextViewBindingAdapter: void setMaxLength(android.widget.TextView,int)>[[-i2 < 21]]--><android.text.InputFilter.LengthFilter: int getMax()>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 11 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)> is checking!!!
+The life time of api is [21,31]
+4call roads:
+0 Mainhead roads:
+4 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <org.mattvchandler.progressbars.settings.Settings: void on_end_cal_butt(android.view.View)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#1.the call statck between class <org.mattvchandler.progressbars.settings.Settings: void on_end_cal_butt(android.view.View)> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <org.mattvchandler.progressbars.settings.Settings: void on_end_clock_butt(android.view.View)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#2.the call statck between class <org.mattvchandler.progressbars.settings.Settings: void on_end_clock_butt(android.view.View)> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <org.mattvchandler.progressbars.settings.Settings: void on_start_clock_butt(android.view.View)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#3.the call statck between class <org.mattvchandler.progressbars.settings.Settings: void on_start_clock_butt(android.view.View)> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <org.mattvchandler.progressbars.settings.Settings: void on_start_cal_butt(android.view.View)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#4.the call statck between class <org.mattvchandler.progressbars.settings.Settings: void on_start_cal_butt(android.view.View)> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:5
+containsStatic:false
+containsTry:false
+5call by main package
+-----------------------------------------
+#################################################
+N 12 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putBooleanArray(java.lang.String,boolean[])> is checking!!!
+The life time of api is [22,31]
+5call roads:
+0 Mainhead roads:
+5 Packageshead roads:
+!!!this api will crash on sdk 19 20 21 
+Error road: <org.mattvchandler.progressbars.settings.Checkbox_dialog_frag: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putBooleanArray(java.lang.String,boolean[])>
+#1.the call statck between class <org.mattvchandler.progressbars.settings.Checkbox_dialog_frag: void onSaveInstanceState(android.os.Bundle)> to <android.os.BaseBundle: void putBooleanArray(java.lang.String,boolean[])>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 21 
+Error road: <org.mattvchandler.progressbars.settings.Settings: void on_days_of_week_butt(android.view.View)>[]--><android.os.BaseBundle: void putBooleanArray(java.lang.String,boolean[])>
+#2.the call statck between class <org.mattvchandler.progressbars.settings.Settings: void on_days_of_week_butt(android.view.View)> to <android.os.BaseBundle: void putBooleanArray(java.lang.String,boolean[])>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 21 
+Error road: <org.mattvchandler.progressbars.settings.Settings: void on_show_elements_butt(android.view.View)>[]--><android.os.BaseBundle: void putBooleanArray(java.lang.String,boolean[])>
+#3.the call statck between class <org.mattvchandler.progressbars.settings.Settings: void on_show_elements_butt(android.view.View)> to <android.os.BaseBundle: void putBooleanArray(java.lang.String,boolean[])>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 21 
+Error road: <org.mattvchandler.progressbars.settings.Settings: void on_timer_opts_butt(android.view.View)>[]--><android.os.BaseBundle: void putBooleanArray(java.lang.String,boolean[])>
+#4.the call statck between class <org.mattvchandler.progressbars.settings.Settings: void on_timer_opts_butt(android.view.View)> to <android.os.BaseBundle: void putBooleanArray(java.lang.String,boolean[])>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 21 
+Error road: <org.mattvchandler.progressbars.settings.Settings: void on_show_units_butt(android.view.View)>[]--><android.os.BaseBundle: void putBooleanArray(java.lang.String,boolean[])>
+#5.the call statck between class <org.mattvchandler.progressbars.settings.Settings: void on_show_units_butt(android.view.View)> to <android.os.BaseBundle: void putBooleanArray(java.lang.String,boolean[])>has compatibility isssues！
+-----------------------------------------
+crashApis:6
+containsStatic:false
+containsTry:false
+6call by main package
+-----------------------------------------
+#################################################
+N 13 Potential Issue API: SDKCheck of <android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+1 Mainhead roads:
+-i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.mattvchandler.progressbars.util.Notification_handler dummyMainMethod_org_mattvchandler_progressbars_util_Notification__handler(android.content.Intent)>[]--><org.mattvchandler.progressbars.util.Notification_handler: void onReceive(android.content.Context,android.content.Intent)>[]--><org.mattvchandler.progressbars.util.Notification_handlerKt: void setup_notification_channel(android.content.Context)>[[-i0 < 26]]--><android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)>
+One road protect good!
+-i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><org.mattvchandler.progressbars.util.Resetting_application: void onCreate()>[]--><org.mattvchandler.progressbars.util.Notification_handlerKt: void setup_notification_channel(android.content.Context)>[[-i0 < 26]]--><android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 14 Potential Issue API: SDKCheck of <android.util.Size: void <init>(int,int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <androidx.versionedparcelable.VersionedParcel: android.util.Size readSize(android.util.Size,int)>[]--><android.util.Size: void <init>(int,int)>
+#1.the call statck between class <androidx.versionedparcelable.VersionedParcel: android.util.Size readSize(android.util.Size,int)> to <android.util.Size: void <init>(int,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:7
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 15 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)> is checking!!!
+The life time of api is [22,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 16 Potential Issue API: SDKCheck of <android.content.Context: int getColor(int)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i1 < 23
+Good road: <android.databinding.ViewDataBinding: int getColorFromResource(android.view.View,int)>[[-$i1 < 23]]--><android.content.Context: int getColor(int)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 17 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putDouble(java.lang.String,double)> is checking!!!
+The life time of api is [21,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 18 Potential Issue API: SDKCheck of <android.widget.TimePicker: void setHour(int)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i1 < 23
+Good road: <android.databinding.adapters.TimePickerBindingAdapter: void setHour(android.widget.TimePicker,int)>[[-$i1 < 23]]--><android.widget.TimePicker: void setHour(int)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 19 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putIntArray(java.lang.String,int[])> is checking!!!
+The life time of api is [21,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 20 Potential Issue API: SDKCheck of <android.util.SizeF: float getHeight()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <androidx.versionedparcelable.VersionedParcel: void writeSizeF(android.util.SizeF,int)>[]--><android.util.SizeF: float getHeight()>
+#1.the call statck between class <androidx.versionedparcelable.VersionedParcel: void writeSizeF(android.util.SizeF,int)> to <android.util.SizeF: float getHeight()>has compatibility isssues！
+-----------------------------------------
+crashApis:8
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 21 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.lang.Object get(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:true
+1call by main package
+-----------------------------------------
+#################################################
+N 22 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putDoubleArray(java.lang.String,double[])> is checking!!!
+The life time of api is [21,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 23 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putLong(java.lang.String,long)> is checking!!!
+The life time of api is [21,31]
+7call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.mattvchandler.progressbars.util.Notification_handler dummyMainMethod_org_mattvchandler_progressbars_util_Notification__handler(android.content.Intent)>[]--><org.mattvchandler.progressbars.util.Notification_handler: void onReceive(android.content.Context,android.content.Intent)>[]--><org.mattvchandler.progressbars.db.Data: void update(android.content.Context)>[]--><org.mattvchandler.progressbars.db.Data: void update(android.content.Context,java.lang.String)>[]--><org.mattvchandler.progressbars.util.Notification_handlerKt: void reset_alarm(android.content.Context,org.mattvchandler.progressbars.db.Data)>[]--><org.mattvchandler.progressbars.util.Notification_handlerKt: void reset_alarm_details(android.content.Context,org.mattvchandler.progressbars.db.Data,android.app.AlarmManager,long)>[]--><org.mattvchandler.progressbars.util.Notification_handlerKt: android.app.PendingIntent get_intent(android.content.Context,org.mattvchandler.progressbars.db.Data,java.lang.String)>[]--><android.os.BaseBundle: void putLong(java.lang.String,long)>
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.mattvchandler.progressbars.util.Preferences dummyMainMethod_org_mattvchandler_progressbars_util_Preferences(android.content.Intent)>[]--><org.mattvchandler.progressbars.util.Preferences: void onCreate(android.os.Bundle)>[]--><org.mattvchandler.progressbars.util.Dynamic_theme_activity: void onCreate(android.os.Bundle)>[]--><org.mattvchandler.progressbars.util.Notification_handlerKt: void reset_all_alarms(android.content.Context)>[]--><org.mattvchandler.progressbars.util.Notification_handlerKt: void reset_alarm_details(android.content.Context,org.mattvchandler.progressbars.db.Data,android.app.AlarmManager,long)>[]--><org.mattvchandler.progressbars.util.Notification_handlerKt: android.app.PendingIntent get_intent(android.content.Context,org.mattvchandler.progressbars.db.Data,java.lang.String)>[]--><android.os.BaseBundle: void putLong(java.lang.String,long)>
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.mattvchandler.progressbars.Progress_bars dummyMainMethod_org_mattvchandler_progressbars_Progress__bars(android.content.Intent)>[]--><org.mattvchandler.progressbars.Progress_bars: void onCreate(android.os.Bundle)>[]--><org.mattvchandler.progressbars.util.Notification_handlerKt: void reset_all_alarms(android.content.Context)>[]--><org.mattvchandler.progressbars.util.Notification_handlerKt: void reset_alarm_details(android.content.Context,org.mattvchandler.progressbars.db.Data,android.app.AlarmManager,long)>[]--><org.mattvchandler.progressbars.util.Notification_handlerKt: android.app.PendingIntent get_intent(android.content.Context,org.mattvchandler.progressbars.db.Data,java.lang.String)>[]--><android.os.BaseBundle: void putLong(java.lang.String,long)>
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.mattvchandler.progressbars.settings.Countdown_text dummyMainMethod_org_mattvchandler_progressbars_settings_Countdown__text(android.content.Intent)>[]--><org.mattvchandler.progressbars.settings.Countdown_text: void onCreate(android.os.Bundle)>[]--><org.mattvchandler.progressbars.util.Dynamic_theme_activity: void onCreate(android.os.Bundle)>[]--><org.mattvchandler.progressbars.util.Notification_handlerKt: void reset_all_alarms(android.content.Context)>[]--><org.mattvchandler.progressbars.util.Notification_handlerKt: void reset_alarm_details(android.content.Context,org.mattvchandler.progressbars.db.Data,android.app.AlarmManager,long)>[]--><org.mattvchandler.progressbars.util.Notification_handlerKt: android.app.PendingIntent get_intent(android.content.Context,org.mattvchandler.progressbars.db.Data,java.lang.String)>[]--><android.os.BaseBundle: void putLong(java.lang.String,long)>
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><org.mattvchandler.progressbars.util.Resetting_application: void onCreate()>[]--><org.mattvchandler.progressbars.db.Data: void insert(android.content.Context)>[]--><org.mattvchandler.progressbars.db.Data: void insert(android.content.Context,java.lang.String)>[]--><org.mattvchandler.progressbars.util.Notification_handlerKt: void reset_alarm(android.content.Context,org.mattvchandler.progressbars.db.Data)>[]--><org.mattvchandler.progressbars.util.Notification_handlerKt: void reset_alarm_details(android.content.Context,org.mattvchandler.progressbars.db.Data,android.app.AlarmManager,long)>[]--><org.mattvchandler.progressbars.util.Notification_handlerKt: android.app.PendingIntent get_intent(android.content.Context,org.mattvchandler.progressbars.db.Data,java.lang.String)>[]--><android.os.BaseBundle: void putLong(java.lang.String,long)>
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.mattvchandler.progressbars.settings.Settings dummyMainMethod_org_mattvchandler_progressbars_settings_Settings(android.content.Intent)>[]--><org.mattvchandler.progressbars.settings.Settings: boolean onOptionsItemSelected(android.view.MenuItem)>[]--><org.mattvchandler.progressbars.db.Data: void insert(android.content.Context)>[]--><org.mattvchandler.progressbars.db.Data: void insert(android.content.Context,java.lang.String)>[]--><org.mattvchandler.progressbars.util.Notification_handlerKt: void reset_alarm(android.content.Context,org.mattvchandler.progressbars.db.Data)>[]--><org.mattvchandler.progressbars.util.Notification_handlerKt: void reset_alarm_details(android.content.Context,org.mattvchandler.progressbars.db.Data,android.app.AlarmManager,long)>[]--><org.mattvchandler.progressbars.util.Notification_handlerKt: android.app.PendingIntent get_intent(android.content.Context,org.mattvchandler.progressbars.db.Data,java.lang.String)>[]--><android.os.BaseBundle: void putLong(java.lang.String,long)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: void putLong(java.lang.String,long)>has compatibility isssues！
+-----------------------------------------
+6 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <org.mattvchandler.progressbars.settings.Settings: void on_end_cal_butt(android.view.View)>[]--><android.os.BaseBundle: void putLong(java.lang.String,long)>
+#1.the call statck between class <org.mattvchandler.progressbars.settings.Settings: void on_end_cal_butt(android.view.View)> to <android.os.BaseBundle: void putLong(java.lang.String,long)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <org.mattvchandler.progressbars.settings.Settings: void on_end_clock_butt(android.view.View)>[]--><android.os.BaseBundle: void putLong(java.lang.String,long)>
+#2.the call statck between class <org.mattvchandler.progressbars.settings.Settings: void on_end_clock_butt(android.view.View)> to <android.os.BaseBundle: void putLong(java.lang.String,long)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <org.mattvchandler.progressbars.settings.Settings: void on_start_clock_butt(android.view.View)>[]--><android.os.BaseBundle: void putLong(java.lang.String,long)>
+#3.the call statck between class <org.mattvchandler.progressbars.settings.Settings: void on_start_clock_butt(android.view.View)> to <android.os.BaseBundle: void putLong(java.lang.String,long)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <org.mattvchandler.progressbars.settings.Settings: void on_start_cal_butt(android.view.View)>[]--><android.os.BaseBundle: void putLong(java.lang.String,long)>
+#4.the call statck between class <org.mattvchandler.progressbars.settings.Settings: void on_start_cal_butt(android.view.View)> to <android.os.BaseBundle: void putLong(java.lang.String,long)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <org.mattvchandler.progressbars.list.Touch_helper_callback: void onSwiped(android.support.v7.widget.RecyclerView$ViewHolder,int)>[]--><org.mattvchandler.progressbars.list.Adapter: void on_item_dismiss(int)>[]--><org.mattvchandler.progressbars.db.Data: void delete(android.content.Context)>[]--><org.mattvchandler.progressbars.db.Data: void delete(android.content.Context,java.lang.String)>[]--><org.mattvchandler.progressbars.util.Notification_handlerKt: void cancel_alarm(android.content.Context,org.mattvchandler.progressbars.db.Data)>[]--><org.mattvchandler.progressbars.util.Notification_handlerKt: android.app.PendingIntent get_intent(android.content.Context,org.mattvchandler.progressbars.db.Data,java.lang.String)>[]--><android.os.BaseBundle: void putLong(java.lang.String,long)>
+#5.the call statck between class <org.mattvchandler.progressbars.list.Touch_helper_callback: void onSwiped(android.support.v7.widget.RecyclerView$ViewHolder,int)> to <android.os.BaseBundle: void putLong(java.lang.String,long)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <org.mattvchandler.progressbars.util.Preferences$Progress_bar_prefs_frag: void onSharedPreferenceChanged(android.content.SharedPreferences,java.lang.String)>[]--><org.mattvchandler.progressbars.util.Notification_handlerKt: void reset_all_alarms(android.content.Context)>[]--><org.mattvchandler.progressbars.util.Notification_handlerKt: void reset_alarm_details(android.content.Context,org.mattvchandler.progressbars.db.Data,android.app.AlarmManager,long)>[]--><org.mattvchandler.progressbars.util.Notification_handlerKt: android.app.PendingIntent get_intent(android.content.Context,org.mattvchandler.progressbars.db.Data,java.lang.String)>[]--><android.os.BaseBundle: void putLong(java.lang.String,long)>
+#6.the call statck between class <org.mattvchandler.progressbars.util.Preferences$Progress_bar_prefs_frag: void onSharedPreferenceChanged(android.content.SharedPreferences,java.lang.String)> to <android.os.BaseBundle: void putLong(java.lang.String,long)>has compatibility isssues！
+-----------------------------------------
+crashApis:9
+crashApisInMain:2
+containsStatic:false
+containsTry:false
+7call by main package
+-----------------------------------------
+#################################################
+N 24 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.lang.String getString(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <org.mattvchandler.progressbars.settings.Datepicker_frag: android.app.Dialog onCreateDialog(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#1.the call statck between class <org.mattvchandler.progressbars.settings.Datepicker_frag: android.app.Dialog onCreateDialog(android.os.Bundle)> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <org.mattvchandler.progressbars.settings.Timepicker_frag: android.app.Dialog onCreateDialog(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#2.the call statck between class <org.mattvchandler.progressbars.settings.Timepicker_frag: android.app.Dialog onCreateDialog(android.os.Bundle)> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:10
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 25 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putStringArray(java.lang.String,java.lang.String[])> is checking!!!
+The life time of api is [21,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 26 Potential Issue API: SDKCheck of <android.app.NotificationManager: android.app.NotificationChannel getNotificationChannel(java.lang.String)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+1 Mainhead roads:
+-i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.mattvchandler.progressbars.util.Notification_handler dummyMainMethod_org_mattvchandler_progressbars_util_Notification__handler(android.content.Intent)>[]--><org.mattvchandler.progressbars.util.Notification_handler: void onReceive(android.content.Context,android.content.Intent)>[]--><org.mattvchandler.progressbars.util.Notification_handlerKt: void setup_notification_channel(android.content.Context)>[[-i0 < 26]]--><android.app.NotificationManager: android.app.NotificationChannel getNotificationChannel(java.lang.String)>
+One road protect good!
+-i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><org.mattvchandler.progressbars.util.Resetting_application: void onCreate()>[]--><org.mattvchandler.progressbars.util.Notification_handlerKt: void setup_notification_channel(android.content.Context)>[[-i0 < 26]]--><android.app.NotificationManager: android.app.NotificationChannel getNotificationChannel(java.lang.String)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 27 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putInt(java.lang.String,int)> is checking!!!
+The life time of api is [21,31]
+7call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.mattvchandler.progressbars.settings.Settings dummyMainMethod_org_mattvchandler_progressbars_settings_Settings(android.content.Intent)>[]--><org.mattvchandler.progressbars.settings.Settings: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+6 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <org.mattvchandler.progressbars.settings.Settings: void on_precision_butt(android.view.View)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#1.the call statck between class <org.mattvchandler.progressbars.settings.Settings: void on_precision_butt(android.view.View)> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <org.mattvchandler.progressbars.settings.Settings: void on_days_of_week_butt(android.view.View)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#2.the call statck between class <org.mattvchandler.progressbars.settings.Settings: void on_days_of_week_butt(android.view.View)> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <org.mattvchandler.progressbars.settings.Precision_dialog_frag: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#3.the call statck between class <org.mattvchandler.progressbars.settings.Precision_dialog_frag: void onSaveInstanceState(android.os.Bundle)> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <org.mattvchandler.progressbars.settings.Settings: void on_show_elements_butt(android.view.View)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#4.the call statck between class <org.mattvchandler.progressbars.settings.Settings: void on_show_elements_butt(android.view.View)> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <org.mattvchandler.progressbars.settings.Settings: void on_timer_opts_butt(android.view.View)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#5.the call statck between class <org.mattvchandler.progressbars.settings.Settings: void on_timer_opts_butt(android.view.View)> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <org.mattvchandler.progressbars.settings.Settings: void on_show_units_butt(android.view.View)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#6.the call statck between class <org.mattvchandler.progressbars.settings.Settings: void on_show_units_butt(android.view.View)> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:11
+crashApisInMain:3
+containsStatic:false
+containsTry:false
+7call by main package
+-----------------------------------------
+#################################################
+N 28 Potential Issue API: SDKCheck of <android.util.SizeF: float getWidth()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <androidx.versionedparcelable.VersionedParcel: void writeSizeF(android.util.SizeF,int)>[]--><android.util.SizeF: float getWidth()>
+#1.the call statck between class <androidx.versionedparcelable.VersionedParcel: void writeSizeF(android.util.SizeF,int)> to <android.util.SizeF: float getWidth()>has compatibility isssues！
+-----------------------------------------
+crashApis:12
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 29 Potential Issue API: SDKCheck of <android.util.SizeF: void <init>(float,float)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <androidx.versionedparcelable.VersionedParcel: android.util.SizeF readSizeF(android.util.SizeF,int)>[]--><android.util.SizeF: void <init>(float,float)>
+#1.the call statck between class <androidx.versionedparcelable.VersionedParcel: android.util.SizeF readSizeF(android.util.SizeF,int)> to <android.util.SizeF: void <init>(float,float)>has compatibility isssues！
+-----------------------------------------
+crashApis:13
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 30 Potential Issue API: SDKCheck of <android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+1 Mainhead roads:
+-i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.mattvchandler.progressbars.util.Notification_handler dummyMainMethod_org_mattvchandler_progressbars_util_Notification__handler(android.content.Intent)>[]--><org.mattvchandler.progressbars.util.Notification_handler: void onReceive(android.content.Context,android.content.Intent)>[]--><org.mattvchandler.progressbars.util.Notification_handlerKt: void setup_notification_channel(android.content.Context)>[[-i0 < 26]]--><android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)>
+One road protect good!
+-i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><org.mattvchandler.progressbars.util.Resetting_application: void onCreate()>[]--><org.mattvchandler.progressbars.util.Notification_handlerKt: void setup_notification_channel(android.content.Context)>[[-i0 < 26]]--><android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 31 Potential Issue API: SDKCheck of <android.content.Context: android.content.res.ColorStateList getColorStateList(int)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i1 < 23
+Good road: <android.databinding.ViewDataBinding: android.content.res.ColorStateList getColorStateListFromResource(android.view.View,int)>[[-$i1 < 23]]--><android.content.Context: android.content.res.ColorStateList getColorStateList(int)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 32 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.util.Set keySet()> is checking!!!
+The life time of api is [21,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:true
+1call by main package
+-----------------------------------------
+#################################################
+N 33 Potential Issue API: SDKCheck of <android.util.Size: int getHeight()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <androidx.versionedparcelable.VersionedParcel: void writeSize(android.util.Size,int)>[]--><android.util.Size: int getHeight()>
+#1.the call statck between class <androidx.versionedparcelable.VersionedParcel: void writeSize(android.util.Size,int)> to <android.util.Size: int getHeight()>has compatibility isssues！
+-----------------------------------------
+crashApis:14
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 34 Potential Issue API: SDKCheck of <android.widget.TimePicker: void setMinute(int)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i1 < 23
+Good road: <android.databinding.adapters.TimePickerBindingAdapter: void setMinute(android.widget.TimePicker,int)>[[-$i1 < 23]]--><android.widget.TimePicker: void setMinute(int)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+crashApis numbers:14
+crashApis numbers in main road:3
+On Android Version 16 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 17 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 18 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 19 this app may have error api use(at least): 14 and error api roads: 42
+On Android Version 20 this app may have error api use(at least): 14 and error api roads: 42
+On Android Version 21 this app may have error api use(at least): 2 and error api roads: 6
+On Android Version 22 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 23 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 24 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 25 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 31 this app may have error api use(at least): 0 and error api roads: 0

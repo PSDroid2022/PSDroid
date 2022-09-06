@@ -1,0 +1,83 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/Updater_for_Spotify.apk
+Entry Points[ru.ra66it.updaterforspotify.notification.PollService, ru.ra66it.updaterforspotify.notification.NotificationDownloadService, ru.ra66it.updaterforspotify.activity.SettingsActivity, ru.ra66it.updaterforspotify.notification.StartupReceiver, ru.ra66it.updaterforspotify.activity.MainActivity, ru.ra66it.updaterforspotify.notification.NotificationReceiver]
+FllowDroidcallgraph size:2289
+Soot started on Mon Jul 11 14:43:03 CST 2022
+Soot finished on Mon Jul 11 14:43:16 CST 2022
+Soot has run for 0 min. 12 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 19
+Declared Target Sdk version is: 26
+Declared Max Sdk version is: -1
+Collected 139 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()> is checking!!!
+The life time of api is [1,30]
+3call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: ru.ra66it.updaterforspotify.notification.PollService dummyMainMethod_ru_ra66it_updaterforspotify_notification_PollService(android.content.Intent)>[]--><ru.ra66it.updaterforspotify.notification.PollService: void onHandleIntent(android.content.Intent)>[]--><ru.ra66it.updaterforspotify.notification.PollService: boolean isNetworkAvailableAndConnected()>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: ru.ra66it.updaterforspotify.activity.MainActivity dummyMainMethod_ru_ra66it_updaterforspotify_activity_MainActivity(android.content.Intent)>[]--><dummyMainClass: ru.ra66it.updaterforspotify.fragment.SpotifyOrigFragment dummyMainMethod_ru_ra66it_updaterforspotify_fragment_SpotifyOrigFragment(android.content.Intent,android.app.Activity)>[]--><ru.ra66it.updaterforspotify.fragment.SpotifyOrigFragment: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)>[]--><ru.ra66it.updaterforspotify.fragment.SpotifyOrigFragment: void fetchData()>[]--><ru.ra66it.updaterforspotify.utils.UtilsNetwork: boolean isNetworkAvailable(android.content.Context)>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>has compatibility isssues！
+-----------------------------------------
+2 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <ru.ra66it.updaterforspotify.fragment.SpotifyDfFragment: void access$000(ru.ra66it.updaterforspotify.fragment.SpotifyDfFragment)>[]--><ru.ra66it.updaterforspotify.fragment.SpotifyDfFragment: void fetchData()>[]--><ru.ra66it.updaterforspotify.utils.UtilsNetwork: boolean isNetworkAvailable(android.content.Context)>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>
+#1.the call statck between class <ru.ra66it.updaterforspotify.fragment.SpotifyDfFragment: void access$000(ru.ra66it.updaterforspotify.fragment.SpotifyDfFragment)> to <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <ru.ra66it.updaterforspotify.fragment.SpotifyOrigFragment: void access$000(ru.ra66it.updaterforspotify.fragment.SpotifyOrigFragment)>[]--><ru.ra66it.updaterforspotify.fragment.SpotifyOrigFragment: void fetchData()>[]--><ru.ra66it.updaterforspotify.utils.UtilsNetwork: boolean isNetworkAvailable(android.content.Context)>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>
+#2.the call statck between class <ru.ra66it.updaterforspotify.fragment.SpotifyOrigFragment: void access$000(ru.ra66it.updaterforspotify.fragment.SpotifyOrigFragment)> to <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>has compatibility isssues！
+-----------------------------------------
+crashApis:1
+crashApisInMain:1
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.net.NetworkInfo: boolean isConnected()> is checking!!!
+The life time of api is [1,30]
+3call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: ru.ra66it.updaterforspotify.notification.PollService dummyMainMethod_ru_ra66it_updaterforspotify_notification_PollService(android.content.Intent)>[]--><ru.ra66it.updaterforspotify.notification.PollService: void onHandleIntent(android.content.Intent)>[]--><ru.ra66it.updaterforspotify.notification.PollService: boolean isNetworkAvailableAndConnected()>[]--><android.net.NetworkInfo: boolean isConnected()>
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: ru.ra66it.updaterforspotify.activity.MainActivity dummyMainMethod_ru_ra66it_updaterforspotify_activity_MainActivity(android.content.Intent)>[]--><dummyMainClass: ru.ra66it.updaterforspotify.fragment.SpotifyOrigFragment dummyMainMethod_ru_ra66it_updaterforspotify_fragment_SpotifyOrigFragment(android.content.Intent,android.app.Activity)>[]--><ru.ra66it.updaterforspotify.fragment.SpotifyOrigFragment: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)>[]--><ru.ra66it.updaterforspotify.fragment.SpotifyOrigFragment: void fetchData()>[]--><ru.ra66it.updaterforspotify.utils.UtilsNetwork: boolean isNetworkAvailable(android.content.Context)>[]--><android.net.NetworkInfo: boolean isConnected()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.NetworkInfo: boolean isConnected()>has compatibility isssues！
+-----------------------------------------
+2 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <ru.ra66it.updaterforspotify.fragment.SpotifyDfFragment: void access$000(ru.ra66it.updaterforspotify.fragment.SpotifyDfFragment)>[]--><ru.ra66it.updaterforspotify.fragment.SpotifyDfFragment: void fetchData()>[]--><ru.ra66it.updaterforspotify.utils.UtilsNetwork: boolean isNetworkAvailable(android.content.Context)>[]--><android.net.NetworkInfo: boolean isConnected()>
+#1.the call statck between class <ru.ra66it.updaterforspotify.fragment.SpotifyDfFragment: void access$000(ru.ra66it.updaterforspotify.fragment.SpotifyDfFragment)> to <android.net.NetworkInfo: boolean isConnected()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <ru.ra66it.updaterforspotify.fragment.SpotifyOrigFragment: void access$000(ru.ra66it.updaterforspotify.fragment.SpotifyOrigFragment)>[]--><ru.ra66it.updaterforspotify.fragment.SpotifyOrigFragment: void fetchData()>[]--><ru.ra66it.updaterforspotify.utils.UtilsNetwork: boolean isNetworkAvailable(android.content.Context)>[]--><android.net.NetworkInfo: boolean isConnected()>
+#2.the call statck between class <ru.ra66it.updaterforspotify.fragment.SpotifyOrigFragment: void access$000(ru.ra66it.updaterforspotify.fragment.SpotifyOrigFragment)> to <android.net.NetworkInfo: boolean isConnected()>has compatibility isssues！
+-----------------------------------------
+crashApis:2
+crashApisInMain:2
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+crashApis numbers:2
+crashApis numbers in main road:2
+On Android Version 16 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 17 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 18 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 19 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 20 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 21 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 22 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 23 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 24 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 25 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 31 this app may have error api use(at least): 2 and error api roads: 8

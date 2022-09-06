@@ -1,0 +1,521 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/TimeLapse.apk
+Entry Points[com.thibaudperso.sonycamera.timelapse.ui.processing.ProcessingActivity, com.thibaudperso.sonycamera.timelapse.ui.settings.SettingsActivity, com.thibaudperso.sonycamera.timelapse.service.IntervalometerService, com.thibaudperso.sonycamera.timelapse.ui.connection.ConnectionActivity, com.thibaudperso.sonycamera.timelapse.ui.adjustments.AdjustmentsActivity, com.thibaudperso.sonycamera.timelapse.TimelapseApplication]
+FllowDroidcallgraph size:1250
+Soot started on Mon Jul 11 13:17:34 CST 2022
+Soot finished on Mon Jul 11 13:17:41 CST 2022
+Soot has run for 0 min. 7 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 14
+Declared Target Sdk version is: 27
+Declared Max Sdk version is: -1
+Collected 289 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <org.apache.http.params.HttpConnectionParams: void setSoTimeout(org.apache.http.params.HttpParams,int)> is checking!!!
+The life time of api is [23,31]
+6call roads:
+1 Mainhead roads:
+5 Packageshead roads:
+containsStatic:false
+containsTry:true
+6call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager.WifiLock: void release()> is checking!!!
+The life time of api is [1,30]
+2call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.thibaudperso.sonycamera.timelapse.service.IntervalometerService dummyMainMethod_com_thibaudperso_sonycamera_timelapse_service_IntervalometerService(android.content.Intent)>[]--><com.thibaudperso.sonycamera.timelapse.service.IntervalometerService: int onStartCommand(android.content.Intent,int,int)>[]--><com.thibaudperso.sonycamera.timelapse.service.IntervalometerService: void taskFinished()>[]--><com.thibaudperso.sonycamera.timelapse.control.connection.StateMachineConnection: void stop()>[]--><android.net.wifi.WifiManager.WifiLock: void release()>
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.thibaudperso.sonycamera.timelapse.ui.settings.SettingsActivity dummyMainMethod_com_thibaudperso_sonycamera_timelapse_ui_settings_SettingsActivity(android.content.Intent)>[]--><com.thibaudperso.sonycamera.timelapse.ui.SingleFragmentActivity: void onPause()>[]--><com.thibaudperso.sonycamera.timelapse.control.connection.StateMachineConnection: void stop()>[]--><android.net.wifi.WifiManager.WifiLock: void release()>
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.thibaudperso.sonycamera.timelapse.ui.processing.ProcessingActivity dummyMainMethod_com_thibaudperso_sonycamera_timelapse_ui_processing_ProcessingActivity(android.content.Intent)>[]--><com.thibaudperso.sonycamera.timelapse.ui.SingleFragmentActivity: void onPause()>[]--><com.thibaudperso.sonycamera.timelapse.control.connection.StateMachineConnection: void stop()>[]--><android.net.wifi.WifiManager.WifiLock: void release()>
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.thibaudperso.sonycamera.timelapse.ui.connection.ConnectionActivity dummyMainMethod_com_thibaudperso_sonycamera_timelapse_ui_connection_ConnectionActivity(android.content.Intent)>[]--><com.thibaudperso.sonycamera.timelapse.ui.SingleFragmentActivity: void onPause()>[]--><com.thibaudperso.sonycamera.timelapse.control.connection.StateMachineConnection: void stop()>[]--><android.net.wifi.WifiManager.WifiLock: void release()>
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.thibaudperso.sonycamera.timelapse.ui.adjustments.AdjustmentsActivity dummyMainMethod_com_thibaudperso_sonycamera_timelapse_ui_adjustments_AdjustmentsActivity(android.content.Intent)>[]--><com.thibaudperso.sonycamera.timelapse.ui.SingleFragmentActivity: void onPause()>[]--><com.thibaudperso.sonycamera.timelapse.control.connection.StateMachineConnection: void stop()>[]--><android.net.wifi.WifiManager.WifiLock: void release()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.wifi.WifiManager.WifiLock: void release()>has compatibility isssues！
+-----------------------------------------
+1 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <com.thibaudperso.sonycamera.timelapse.service.IntervalometerService: void access$900(com.thibaudperso.sonycamera.timelapse.service.IntervalometerService)>[]--><com.thibaudperso.sonycamera.timelapse.service.IntervalometerService: void taskFinished()>[]--><com.thibaudperso.sonycamera.timelapse.control.connection.StateMachineConnection: void stop()>[]--><android.net.wifi.WifiManager.WifiLock: void release()>
+#1.the call statck between class <com.thibaudperso.sonycamera.timelapse.service.IntervalometerService: void access$900(com.thibaudperso.sonycamera.timelapse.service.IntervalometerService)> to <android.net.wifi.WifiManager.WifiLock: void release()>has compatibility isssues！
+-----------------------------------------
+crashApis:1
+crashApisInMain:1
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager: boolean disconnect()> is checking!!!
+The life time of api is [1,30]
+2call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.thibaudperso.sonycamera.timelapse.ui.connection.ConnectionActivity dummyMainMethod_com_thibaudperso_sonycamera_timelapse_ui_connection_ConnectionActivity(android.content.Intent)>[]--><com.thibaudperso.sonycamera.timelapse.ui.connection.ConnectionActivity: void onBackPressed()>[]--><com.thibaudperso.sonycamera.timelapse.control.connection.WifiHandler: void disconnect()>[]--><android.net.wifi.WifiManager: boolean disconnect()>
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.thibaudperso.sonycamera.timelapse.ui.adjustments.AdjustmentsActivity dummyMainMethod_com_thibaudperso_sonycamera_timelapse_ui_adjustments_AdjustmentsActivity(android.content.Intent)>[]--><com.thibaudperso.sonycamera.timelapse.ui.adjustments.AdjustmentsActivity: void onBackPressed()>[]--><com.thibaudperso.sonycamera.timelapse.control.connection.WifiHandler: void disconnect()>[]--><android.net.wifi.WifiManager: boolean disconnect()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.wifi.WifiManager: boolean disconnect()>has compatibility isssues！
+-----------------------------------------
+1 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <com.thibaudperso.sonycamera.timelapse.ui.adjustments.AdjustmentsFragment$11: void onClick(android.content.DialogInterface,int)>[]--><com.thibaudperso.sonycamera.timelapse.control.connection.WifiHandler: void disconnect()>[]--><android.net.wifi.WifiManager: boolean disconnect()>
+#1.the call statck between class <com.thibaudperso.sonycamera.timelapse.ui.adjustments.AdjustmentsFragment$11: void onClick(android.content.DialogInterface,int)> to <android.net.wifi.WifiManager: boolean disconnect()>has compatibility isssues！
+-----------------------------------------
+crashApis:2
+crashApisInMain:2
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.net.ConnectivityManager: android.net.NetworkInfo getNetworkInfo(android.net.Network)> is checking!!!
+The life time of api is [21,30]
+8call roads:
+1 Mainhead roads:
+7 Packageshead roads:
+containsStatic:false
+containsTry:true
+8call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.lang.String getString(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.android.volley.toolbox.AndroidAuthenticator: java.lang.String getAuthToken()>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#1.the call statck between class <com.android.volley.toolbox.AndroidAuthenticator: java.lang.String getAuthToken()> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:3
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 5 Potential Issue API: SDKCheck of <org.apache.http.params.HttpConnectionParams: void setConnectionTimeout(org.apache.http.params.HttpParams,int)> is checking!!!
+The life time of api is [23,31]
+6call roads:
+1 Mainhead roads:
+5 Packageshead roads:
+containsStatic:false
+containsTry:true
+6call by main package
+-----------------------------------------
+#################################################
+N 6 Potential Issue API: SDKCheck of <android.net.NetworkInfo: java.lang.String getExtraInfo()> is checking!!!
+The life time of api is [1,30]
+8call roads:
+1 Mainhead roads:
+7 Packageshead roads:
+containsStatic:false
+containsTry:true
+8call by main package
+-----------------------------------------
+#################################################
+N 7 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager: boolean saveConfiguration()> is checking!!!
+The life time of api is [1,30]
+2call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.thibaudperso.sonycamera.timelapse.ui.processing.ProcessingActivity dummyMainMethod_com_thibaudperso_sonycamera_timelapse_ui_processing_ProcessingActivity(android.content.Intent)>[]--><com.thibaudperso.sonycamera.timelapse.ui.processing.ProcessingActivity: void onNewIntent(android.content.Intent)>[]--><com.thibaudperso.sonycamera.timelapse.ui.SingleFragmentActivity: void onNewIntent(android.content.Intent)>[[try]]--><com.thibaudperso.sonycamera.timelapse.control.connection.WifiHandler: void createIfNeededThenConnectToWifi(java.lang.String,java.lang.String)>[]--><com.thibaudperso.sonycamera.timelapse.control.connection.WifiHandler: int createWPAWifi(java.lang.String,java.lang.String)>[]--><android.net.wifi.WifiManager: boolean saveConfiguration()>
+One road protect good!
+1 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <com.thibaudperso.sonycamera.timelapse.ui.connection.ConnectionFragment$13: void onClick(android.content.DialogInterface,int)>[]--><com.thibaudperso.sonycamera.timelapse.control.connection.StateMachineConnection: void createNetwork(java.lang.String,java.lang.String)>[]--><com.thibaudperso.sonycamera.timelapse.control.connection.WifiHandler: void createIfNeededThenConnectToWifi(java.lang.String,java.lang.String)>[]--><com.thibaudperso.sonycamera.timelapse.control.connection.WifiHandler: int createWPAWifi(java.lang.String,java.lang.String)>[]--><android.net.wifi.WifiManager: boolean saveConfiguration()>
+#1.the call statck between class <com.thibaudperso.sonycamera.timelapse.ui.connection.ConnectionFragment$13: void onClick(android.content.DialogInterface,int)> to <android.net.wifi.WifiManager: boolean saveConfiguration()>has compatibility isssues！
+-----------------------------------------
+crashApis:4
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 8 Potential Issue API: SDKCheck of <android.os.BaseBundle: int getInt(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.thibaudperso.sonycamera.timelapse.ui.processing.ProcessingFragment: void access$200(com.thibaudperso.sonycamera.timelapse.ui.processing.ProcessingFragment,android.os.Bundle)>[]--><com.thibaudperso.sonycamera.timelapse.ui.processing.ProcessingFragment: void onRequestSentToCamera(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#1.the call statck between class <com.thibaudperso.sonycamera.timelapse.ui.processing.ProcessingFragment: void access$200(com.thibaudperso.sonycamera.timelapse.ui.processing.ProcessingFragment,android.os.Bundle)> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:5
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 9 Potential Issue API: SDKCheck of <android.net.NetworkInfo: int getType()> is checking!!!
+The life time of api is [1,30]
+8call roads:
+1 Mainhead roads:
+7 Packageshead roads:
+containsStatic:false
+containsTry:true
+8call by main package
+-----------------------------------------
+#################################################
+N 10 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager: boolean enableNetwork(int,boolean)> is checking!!!
+The life time of api is [1,30]
+5call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.thibaudperso.sonycamera.timelapse.ui.processing.ProcessingActivity dummyMainMethod_com_thibaudperso_sonycamera_timelapse_ui_processing_ProcessingActivity(android.content.Intent)>[]--><com.thibaudperso.sonycamera.timelapse.ui.processing.ProcessingActivity: void onNewIntent(android.content.Intent)>[]--><com.thibaudperso.sonycamera.timelapse.ui.SingleFragmentActivity: void onNewIntent(android.content.Intent)>[[try]]--><com.thibaudperso.sonycamera.timelapse.control.connection.WifiHandler: void createIfNeededThenConnectToWifi(java.lang.String,java.lang.String)>[]--><com.thibaudperso.sonycamera.timelapse.control.connection.WifiHandler: void connectToNetworkId(int)>[]--><android.net.wifi.WifiManager: boolean enableNetwork(int,boolean)>
+One road protect good!
+4 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <com.thibaudperso.sonycamera.timelapse.ui.connection.ConnectionFragment$9: void onItemClick(android.widget.AdapterView,android.view.View,int,long)>[]--><com.thibaudperso.sonycamera.timelapse.control.connection.StateMachineConnection: void tryToConnectToNetworkId(int)>[]--><com.thibaudperso.sonycamera.timelapse.control.connection.WifiHandler: void connectToNetworkId(int)>[]--><android.net.wifi.WifiManager: boolean enableNetwork(int,boolean)>
+#1.the call statck between class <com.thibaudperso.sonycamera.timelapse.ui.connection.ConnectionFragment$9: void onItemClick(android.widget.AdapterView,android.view.View,int,long)> to <android.net.wifi.WifiManager: boolean enableNetwork(int,boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <com.thibaudperso.sonycamera.timelapse.control.connection.StateMachineConnection$State$15: void process(com.thibaudperso.sonycamera.timelapse.control.connection.StateMachineConnection)>[]--><com.thibaudperso.sonycamera.timelapse.control.connection.WifiHandler: void connectToNetworkId(int)>[]--><android.net.wifi.WifiManager: boolean enableNetwork(int,boolean)>
+#2.the call statck between class <com.thibaudperso.sonycamera.timelapse.control.connection.StateMachineConnection$State$15: void process(com.thibaudperso.sonycamera.timelapse.control.connection.StateMachineConnection)> to <android.net.wifi.WifiManager: boolean enableNetwork(int,boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <com.thibaudperso.sonycamera.timelapse.control.connection.StateMachineConnection$State$11: void process(com.thibaudperso.sonycamera.timelapse.control.connection.StateMachineConnection)>[]--><com.thibaudperso.sonycamera.timelapse.control.connection.WifiHandler: void connectToNetworkId(int)>[]--><android.net.wifi.WifiManager: boolean enableNetwork(int,boolean)>
+#3.the call statck between class <com.thibaudperso.sonycamera.timelapse.control.connection.StateMachineConnection$State$11: void process(com.thibaudperso.sonycamera.timelapse.control.connection.StateMachineConnection)> to <android.net.wifi.WifiManager: boolean enableNetwork(int,boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <com.thibaudperso.sonycamera.timelapse.ui.connection.ConnectionFragment$13: void onClick(android.content.DialogInterface,int)>[]--><com.thibaudperso.sonycamera.timelapse.control.connection.StateMachineConnection: void createNetwork(java.lang.String,java.lang.String)>[]--><com.thibaudperso.sonycamera.timelapse.control.connection.WifiHandler: void createIfNeededThenConnectToWifi(java.lang.String,java.lang.String)>[]--><com.thibaudperso.sonycamera.timelapse.control.connection.WifiHandler: void connectToNetworkId(int)>[]--><android.net.wifi.WifiManager: boolean enableNetwork(int,boolean)>
+#4.the call statck between class <com.thibaudperso.sonycamera.timelapse.ui.connection.ConnectionFragment$13: void onClick(android.content.DialogInterface,int)> to <android.net.wifi.WifiManager: boolean enableNetwork(int,boolean)>has compatibility isssues！
+-----------------------------------------
+crashApis:6
+containsStatic:false
+containsTry:true
+5call by main package
+-----------------------------------------
+#################################################
+N 11 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager: boolean isWifiEnabled()> is checking!!!
+The life time of api is [1,30]
+8call roads:
+1 Mainhead roads:
+7 Packageshead roads:
+containsStatic:false
+containsTry:true
+8call by main package
+-----------------------------------------
+#################################################
+N 12 Potential Issue API: SDKCheck of <android.net.NetworkInfo: boolean isConnected()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <com.thibaudperso.sonycamera.timelapse.control.connection.WifiHandler$1: void onReceive(android.content.Context,android.content.Intent)>[]--><android.net.NetworkInfo: boolean isConnected()>
+#1.the call statck between class <com.thibaudperso.sonycamera.timelapse.control.connection.WifiHandler$1: void onReceive(android.content.Context,android.content.Intent)> to <android.net.NetworkInfo: boolean isConnected()>has compatibility isssues！
+-----------------------------------------
+crashApis:7
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 13 Potential Issue API: SDKCheck of <android.net.wifi.WifiInfo: int getNetworkId()> is checking!!!
+The life time of api is [1,30]
+8call roads:
+1 Mainhead roads:
+7 Packageshead roads:
+containsStatic:false
+containsTry:true
+8call by main package
+-----------------------------------------
+#################################################
+N 14 Potential Issue API: SDKCheck of <android.os.BaseBundle: boolean containsKey(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.android.volley.toolbox.AndroidAuthenticator: java.lang.String getAuthToken()>[]--><android.os.BaseBundle: boolean containsKey(java.lang.String)>
+#1.the call statck between class <com.android.volley.toolbox.AndroidAuthenticator: java.lang.String getAuthToken()> to <android.os.BaseBundle: boolean containsKey(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:8
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 15 Potential Issue API: SDKCheck of <android.net.wifi.WifiConfiguration: void <init>()> is checking!!!
+The life time of api is [1,30]
+2call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.thibaudperso.sonycamera.timelapse.ui.processing.ProcessingActivity dummyMainMethod_com_thibaudperso_sonycamera_timelapse_ui_processing_ProcessingActivity(android.content.Intent)>[]--><com.thibaudperso.sonycamera.timelapse.ui.processing.ProcessingActivity: void onNewIntent(android.content.Intent)>[]--><com.thibaudperso.sonycamera.timelapse.ui.SingleFragmentActivity: void onNewIntent(android.content.Intent)>[[try]]--><com.thibaudperso.sonycamera.timelapse.control.connection.WifiHandler: void createIfNeededThenConnectToWifi(java.lang.String,java.lang.String)>[]--><com.thibaudperso.sonycamera.timelapse.control.connection.WifiHandler: int createWPAWifi(java.lang.String,java.lang.String)>[]--><android.net.wifi.WifiConfiguration: void <init>()>
+One road protect good!
+1 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <com.thibaudperso.sonycamera.timelapse.ui.connection.ConnectionFragment$13: void onClick(android.content.DialogInterface,int)>[]--><com.thibaudperso.sonycamera.timelapse.control.connection.StateMachineConnection: void createNetwork(java.lang.String,java.lang.String)>[]--><com.thibaudperso.sonycamera.timelapse.control.connection.WifiHandler: void createIfNeededThenConnectToWifi(java.lang.String,java.lang.String)>[]--><com.thibaudperso.sonycamera.timelapse.control.connection.WifiHandler: int createWPAWifi(java.lang.String,java.lang.String)>[]--><android.net.wifi.WifiConfiguration: void <init>()>
+#1.the call statck between class <com.thibaudperso.sonycamera.timelapse.ui.connection.ConnectionFragment$13: void onClick(android.content.DialogInterface,int)> to <android.net.wifi.WifiConfiguration: void <init>()>has compatibility isssues！
+-----------------------------------------
+crashApis:9
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 16 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager: android.net.wifi.WifiInfo getConnectionInfo()> is checking!!!
+The life time of api is [1,30]
+10call roads:
+1 Mainhead roads:
+9 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <com.thibaudperso.sonycamera.timelapse.control.connection.WifiHandler$1: void onReceive(android.content.Context,android.content.Intent)>[]--><android.net.wifi.WifiManager: android.net.wifi.WifiInfo getConnectionInfo()>
+#4.the call statck between class <com.thibaudperso.sonycamera.timelapse.control.connection.WifiHandler$1: void onReceive(android.content.Context,android.content.Intent)> to <android.net.wifi.WifiManager: android.net.wifi.WifiInfo getConnectionInfo()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <com.thibaudperso.sonycamera.timelapse.control.connection.StateMachineConnection$1: void wifiConnected(android.net.NetworkInfo)>[]--><com.thibaudperso.sonycamera.timelapse.control.connection.WifiHandler: android.net.wifi.WifiInfo getConnectedWifi()>[]--><android.net.wifi.WifiManager: android.net.wifi.WifiInfo getConnectionInfo()>
+#8.the call statck between class <com.thibaudperso.sonycamera.timelapse.control.connection.StateMachineConnection$1: void wifiConnected(android.net.NetworkInfo)> to <android.net.wifi.WifiManager: android.net.wifi.WifiInfo getConnectionInfo()>has compatibility isssues！
+-----------------------------------------
+crashApis:10
+containsStatic:false
+containsTry:true
+10call by main package
+-----------------------------------------
+#################################################
+N 17 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager.WifiLock: boolean isHeld()> is checking!!!
+The life time of api is [1,30]
+2call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.thibaudperso.sonycamera.timelapse.service.IntervalometerService dummyMainMethod_com_thibaudperso_sonycamera_timelapse_service_IntervalometerService(android.content.Intent)>[]--><com.thibaudperso.sonycamera.timelapse.service.IntervalometerService: int onStartCommand(android.content.Intent,int,int)>[]--><com.thibaudperso.sonycamera.timelapse.service.IntervalometerService: void taskFinished()>[]--><com.thibaudperso.sonycamera.timelapse.control.connection.StateMachineConnection: void stop()>[]--><android.net.wifi.WifiManager.WifiLock: boolean isHeld()>
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.thibaudperso.sonycamera.timelapse.ui.settings.SettingsActivity dummyMainMethod_com_thibaudperso_sonycamera_timelapse_ui_settings_SettingsActivity(android.content.Intent)>[]--><com.thibaudperso.sonycamera.timelapse.ui.SingleFragmentActivity: void onPause()>[]--><com.thibaudperso.sonycamera.timelapse.control.connection.StateMachineConnection: void stop()>[]--><android.net.wifi.WifiManager.WifiLock: boolean isHeld()>
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.thibaudperso.sonycamera.timelapse.ui.processing.ProcessingActivity dummyMainMethod_com_thibaudperso_sonycamera_timelapse_ui_processing_ProcessingActivity(android.content.Intent)>[]--><com.thibaudperso.sonycamera.timelapse.ui.SingleFragmentActivity: void onPause()>[]--><com.thibaudperso.sonycamera.timelapse.control.connection.StateMachineConnection: void stop()>[]--><android.net.wifi.WifiManager.WifiLock: boolean isHeld()>
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.thibaudperso.sonycamera.timelapse.ui.connection.ConnectionActivity dummyMainMethod_com_thibaudperso_sonycamera_timelapse_ui_connection_ConnectionActivity(android.content.Intent)>[]--><com.thibaudperso.sonycamera.timelapse.ui.SingleFragmentActivity: void onPause()>[]--><com.thibaudperso.sonycamera.timelapse.control.connection.StateMachineConnection: void stop()>[]--><android.net.wifi.WifiManager.WifiLock: boolean isHeld()>
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.thibaudperso.sonycamera.timelapse.ui.adjustments.AdjustmentsActivity dummyMainMethod_com_thibaudperso_sonycamera_timelapse_ui_adjustments_AdjustmentsActivity(android.content.Intent)>[]--><com.thibaudperso.sonycamera.timelapse.ui.SingleFragmentActivity: void onPause()>[]--><com.thibaudperso.sonycamera.timelapse.control.connection.StateMachineConnection: void stop()>[]--><android.net.wifi.WifiManager.WifiLock: boolean isHeld()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.wifi.WifiManager.WifiLock: boolean isHeld()>has compatibility isssues！
+-----------------------------------------
+1 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <com.thibaudperso.sonycamera.timelapse.service.IntervalometerService: void access$900(com.thibaudperso.sonycamera.timelapse.service.IntervalometerService)>[]--><com.thibaudperso.sonycamera.timelapse.service.IntervalometerService: void taskFinished()>[]--><com.thibaudperso.sonycamera.timelapse.control.connection.StateMachineConnection: void stop()>[]--><android.net.wifi.WifiManager.WifiLock: boolean isHeld()>
+#1.the call statck between class <com.thibaudperso.sonycamera.timelapse.service.IntervalometerService: void access$900(com.thibaudperso.sonycamera.timelapse.service.IntervalometerService)> to <android.net.wifi.WifiManager.WifiLock: boolean isHeld()>has compatibility isssues！
+-----------------------------------------
+crashApis:11
+crashApisInMain:3
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 18 Potential Issue API: SDKCheck of <android.net.http.AndroidHttpClient: android.net.http.AndroidHttpClient newInstance(java.lang.String)> is checking!!!
+The life time of api is [8,22]
+4call roads:
+1 Mainhead roads:
+$i1 < 9
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><com.thibaudperso.sonycamera.timelapse.TimelapseApplication: void onCreate()>[]--><com.thibaudperso.sonycamera.sdk.CameraAPI: void <init>(android.content.Context)>[]--><com.thibaudperso.sonycamera.sdk.CameraWS: void <init>(android.content.Context)>[]--><com.android.volley.toolbox.Volley: com.android.volley.RequestQueue newRequestQueue(android.content.Context)>[]--><com.android.volley.toolbox.Volley: com.android.volley.RequestQueue newRequestQueue(android.content.Context,com.android.volley.toolbox.HttpStack)>[]--><com.android.volley.toolbox.Volley: com.android.volley.RequestQueue newRequestQueue(android.content.Context,com.android.volley.toolbox.HttpStack,int)>[[$i1 < 9]]--><android.net.http.AndroidHttpClient: android.net.http.AndroidHttpClient newInstance(java.lang.String)>
+One road protect good!
+3 Packageshead roads:
+$i1 < 9
+Good road: <com.android.volley.toolbox.Volley: com.android.volley.RequestQueue newRequestQueue(android.content.Context,int)>[]--><com.android.volley.toolbox.Volley: com.android.volley.RequestQueue newRequestQueue(android.content.Context,com.android.volley.toolbox.HttpStack,int)>[[$i1 < 9]]--><android.net.http.AndroidHttpClient: android.net.http.AndroidHttpClient newInstance(java.lang.String)>
+One road protect good!
+$i1 < 9
+Good road: <com.thibaudperso.sonycamera.timelapse.ui.adjustments.AdjustmentsFragment: void access$100(com.thibaudperso.sonycamera.timelapse.ui.adjustments.AdjustmentsFragment,java.lang.String)>[]--><com.thibaudperso.sonycamera.timelapse.ui.adjustments.AdjustmentsFragment: void onResultPicture(java.lang.String)>[]--><com.android.volley.toolbox.Volley: com.android.volley.RequestQueue newRequestQueue(android.content.Context)>[]--><com.android.volley.toolbox.Volley: com.android.volley.RequestQueue newRequestQueue(android.content.Context,com.android.volley.toolbox.HttpStack)>[]--><com.android.volley.toolbox.Volley: com.android.volley.RequestQueue newRequestQueue(android.content.Context,com.android.volley.toolbox.HttpStack,int)>[[$i1 < 9]]--><android.net.http.AndroidHttpClient: android.net.http.AndroidHttpClient newInstance(java.lang.String)>
+One road protect good!
+$i1 < 9
+Good road: <com.thibaudperso.sonycamera.timelapse.ui.processing.ProcessingFragment: void onCreate(android.os.Bundle)>[]--><com.android.volley.toolbox.Volley: com.android.volley.RequestQueue newRequestQueue(android.content.Context)>[]--><com.android.volley.toolbox.Volley: com.android.volley.RequestQueue newRequestQueue(android.content.Context,com.android.volley.toolbox.HttpStack)>[]--><com.android.volley.toolbox.Volley: com.android.volley.RequestQueue newRequestQueue(android.content.Context,com.android.volley.toolbox.HttpStack,int)>[[$i1 < 9]]--><android.net.http.AndroidHttpClient: android.net.http.AndroidHttpClient newInstance(java.lang.String)>
+One road protect good!
+containsStatic:false
+containsTry:false
+4call by main package
+-----------------------------------------
+#################################################
+N 19 Potential Issue API: SDKCheck of <android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)> is checking!!!
+The life time of api is [22,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 
+Error road: <com.thibaudperso.sonycamera.timelapse.ui.connection.ConnectionFragment: void onActivityResult(int,int,android.content.Intent)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>
+#1.the call statck between class <com.thibaudperso.sonycamera.timelapse.ui.connection.ConnectionFragment: void onActivityResult(int,int,android.content.Intent)> to <android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+crashApis:12
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 20 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager: boolean startScan()> is checking!!!
+The life time of api is [1,30]
+8call roads:
+1 Mainhead roads:
+7 Packageshead roads:
+containsStatic:false
+containsTry:true
+8call by main package
+-----------------------------------------
+#################################################
+N 21 Potential Issue API: SDKCheck of <android.net.ConnectivityManager: android.net.Network[] getAllNetworks()> is checking!!!
+The life time of api is [21,30]
+8call roads:
+1 Mainhead roads:
+7 Packageshead roads:
+containsStatic:false
+containsTry:true
+8call by main package
+-----------------------------------------
+#################################################
+N 22 Potential Issue API: SDKCheck of <android.net.ConnectivityManager: boolean bindProcessToNetwork(android.net.Network)> is checking!!!
+The life time of api is [23,30]
+8call roads:
+1 Mainhead roads:
+7 Packageshead roads:
+containsStatic:false
+containsTry:true
+8call by main package
+-----------------------------------------
+#################################################
+N 23 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager.WifiLock: void acquire()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.thibaudperso.sonycamera.timelapse.service.IntervalometerService dummyMainMethod_com_thibaudperso_sonycamera_timelapse_service_IntervalometerService(android.content.Intent)>[]--><com.thibaudperso.sonycamera.timelapse.service.IntervalometerService: int onStartCommand(android.content.Intent,int,int)>[]--><com.thibaudperso.sonycamera.timelapse.control.connection.StateMachineConnection: void start()>[]--><android.net.wifi.WifiManager.WifiLock: void acquire()>
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.thibaudperso.sonycamera.timelapse.ui.settings.SettingsActivity dummyMainMethod_com_thibaudperso_sonycamera_timelapse_ui_settings_SettingsActivity(android.content.Intent)>[]--><com.thibaudperso.sonycamera.timelapse.ui.SingleFragmentActivity: void onResume()>[]--><com.thibaudperso.sonycamera.timelapse.control.connection.StateMachineConnection: void start()>[]--><android.net.wifi.WifiManager.WifiLock: void acquire()>
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.thibaudperso.sonycamera.timelapse.ui.processing.ProcessingActivity dummyMainMethod_com_thibaudperso_sonycamera_timelapse_ui_processing_ProcessingActivity(android.content.Intent)>[]--><com.thibaudperso.sonycamera.timelapse.ui.SingleFragmentActivity: void onResume()>[]--><com.thibaudperso.sonycamera.timelapse.control.connection.StateMachineConnection: void start()>[]--><android.net.wifi.WifiManager.WifiLock: void acquire()>
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.thibaudperso.sonycamera.timelapse.ui.connection.ConnectionActivity dummyMainMethod_com_thibaudperso_sonycamera_timelapse_ui_connection_ConnectionActivity(android.content.Intent)>[]--><com.thibaudperso.sonycamera.timelapse.ui.SingleFragmentActivity: void onResume()>[]--><com.thibaudperso.sonycamera.timelapse.control.connection.StateMachineConnection: void start()>[]--><android.net.wifi.WifiManager.WifiLock: void acquire()>
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.thibaudperso.sonycamera.timelapse.ui.adjustments.AdjustmentsActivity dummyMainMethod_com_thibaudperso_sonycamera_timelapse_ui_adjustments_AdjustmentsActivity(android.content.Intent)>[]--><com.thibaudperso.sonycamera.timelapse.ui.SingleFragmentActivity: void onResume()>[]--><com.thibaudperso.sonycamera.timelapse.control.connection.StateMachineConnection: void start()>[]--><android.net.wifi.WifiManager.WifiLock: void acquire()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.wifi.WifiManager.WifiLock: void acquire()>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:13
+crashApisInMain:4
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 24 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager: android.net.wifi.WifiManager.WifiLock createWifiLock(int,java.lang.String)> is checking!!!
+The life time of api is [3,30]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.thibaudperso.sonycamera.timelapse.service.IntervalometerService dummyMainMethod_com_thibaudperso_sonycamera_timelapse_service_IntervalometerService(android.content.Intent)>[]--><com.thibaudperso.sonycamera.timelapse.service.IntervalometerService: int onStartCommand(android.content.Intent,int,int)>[]--><com.thibaudperso.sonycamera.timelapse.control.connection.StateMachineConnection: void start()>[]--><android.net.wifi.WifiManager: android.net.wifi.WifiManager.WifiLock createWifiLock(int,java.lang.String)>
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.thibaudperso.sonycamera.timelapse.ui.settings.SettingsActivity dummyMainMethod_com_thibaudperso_sonycamera_timelapse_ui_settings_SettingsActivity(android.content.Intent)>[]--><com.thibaudperso.sonycamera.timelapse.ui.SingleFragmentActivity: void onResume()>[]--><com.thibaudperso.sonycamera.timelapse.control.connection.StateMachineConnection: void start()>[]--><android.net.wifi.WifiManager: android.net.wifi.WifiManager.WifiLock createWifiLock(int,java.lang.String)>
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.thibaudperso.sonycamera.timelapse.ui.processing.ProcessingActivity dummyMainMethod_com_thibaudperso_sonycamera_timelapse_ui_processing_ProcessingActivity(android.content.Intent)>[]--><com.thibaudperso.sonycamera.timelapse.ui.SingleFragmentActivity: void onResume()>[]--><com.thibaudperso.sonycamera.timelapse.control.connection.StateMachineConnection: void start()>[]--><android.net.wifi.WifiManager: android.net.wifi.WifiManager.WifiLock createWifiLock(int,java.lang.String)>
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.thibaudperso.sonycamera.timelapse.ui.connection.ConnectionActivity dummyMainMethod_com_thibaudperso_sonycamera_timelapse_ui_connection_ConnectionActivity(android.content.Intent)>[]--><com.thibaudperso.sonycamera.timelapse.ui.SingleFragmentActivity: void onResume()>[]--><com.thibaudperso.sonycamera.timelapse.control.connection.StateMachineConnection: void start()>[]--><android.net.wifi.WifiManager: android.net.wifi.WifiManager.WifiLock createWifiLock(int,java.lang.String)>
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.thibaudperso.sonycamera.timelapse.ui.adjustments.AdjustmentsActivity dummyMainMethod_com_thibaudperso_sonycamera_timelapse_ui_adjustments_AdjustmentsActivity(android.content.Intent)>[]--><com.thibaudperso.sonycamera.timelapse.ui.SingleFragmentActivity: void onResume()>[]--><com.thibaudperso.sonycamera.timelapse.control.connection.StateMachineConnection: void start()>[]--><android.net.wifi.WifiManager: android.net.wifi.WifiManager.WifiLock createWifiLock(int,java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.wifi.WifiManager: android.net.wifi.WifiManager.WifiLock createWifiLock(int,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:14
+crashApisInMain:5
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 25 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager: int addNetwork(android.net.wifi.WifiConfiguration)> is checking!!!
+The life time of api is [1,30]
+2call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.thibaudperso.sonycamera.timelapse.ui.processing.ProcessingActivity dummyMainMethod_com_thibaudperso_sonycamera_timelapse_ui_processing_ProcessingActivity(android.content.Intent)>[]--><com.thibaudperso.sonycamera.timelapse.ui.processing.ProcessingActivity: void onNewIntent(android.content.Intent)>[]--><com.thibaudperso.sonycamera.timelapse.ui.SingleFragmentActivity: void onNewIntent(android.content.Intent)>[[try]]--><com.thibaudperso.sonycamera.timelapse.control.connection.WifiHandler: void createIfNeededThenConnectToWifi(java.lang.String,java.lang.String)>[]--><com.thibaudperso.sonycamera.timelapse.control.connection.WifiHandler: int createWPAWifi(java.lang.String,java.lang.String)>[]--><android.net.wifi.WifiManager: int addNetwork(android.net.wifi.WifiConfiguration)>
+One road protect good!
+1 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <com.thibaudperso.sonycamera.timelapse.ui.connection.ConnectionFragment$13: void onClick(android.content.DialogInterface,int)>[]--><com.thibaudperso.sonycamera.timelapse.control.connection.StateMachineConnection: void createNetwork(java.lang.String,java.lang.String)>[]--><com.thibaudperso.sonycamera.timelapse.control.connection.WifiHandler: void createIfNeededThenConnectToWifi(java.lang.String,java.lang.String)>[]--><com.thibaudperso.sonycamera.timelapse.control.connection.WifiHandler: int createWPAWifi(java.lang.String,java.lang.String)>[]--><android.net.wifi.WifiManager: int addNetwork(android.net.wifi.WifiConfiguration)>
+#1.the call statck between class <com.thibaudperso.sonycamera.timelapse.ui.connection.ConnectionFragment$13: void onClick(android.content.DialogInterface,int)> to <android.net.wifi.WifiManager: int addNetwork(android.net.wifi.WifiConfiguration)>has compatibility isssues！
+-----------------------------------------
+crashApis:15
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 26 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager: java.util.List getConfiguredNetworks()> is checking!!!
+The life time of api is [1,30]
+6call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.thibaudperso.sonycamera.timelapse.ui.processing.ProcessingActivity dummyMainMethod_com_thibaudperso_sonycamera_timelapse_ui_processing_ProcessingActivity(android.content.Intent)>[]--><com.thibaudperso.sonycamera.timelapse.ui.processing.ProcessingActivity: void onNewIntent(android.content.Intent)>[]--><com.thibaudperso.sonycamera.timelapse.ui.SingleFragmentActivity: void onNewIntent(android.content.Intent)>[[try]]--><com.thibaudperso.sonycamera.timelapse.control.connection.WifiHandler: void createIfNeededThenConnectToWifi(java.lang.String,java.lang.String)>[]--><com.thibaudperso.sonycamera.timelapse.control.connection.WifiHandler: void connectToNetworkId(int)>[]--><android.net.wifi.WifiManager: java.util.List getConfiguredNetworks()>
+One road protect good!
+5 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <com.thibaudperso.sonycamera.timelapse.ui.connection.ConnectionFragment$9: void onItemClick(android.widget.AdapterView,android.view.View,int,long)>[]--><com.thibaudperso.sonycamera.timelapse.control.connection.StateMachineConnection: void tryToConnectToNetworkId(int)>[]--><com.thibaudperso.sonycamera.timelapse.control.connection.WifiHandler: void connectToNetworkId(int)>[]--><android.net.wifi.WifiManager: java.util.List getConfiguredNetworks()>
+#1.the call statck between class <com.thibaudperso.sonycamera.timelapse.ui.connection.ConnectionFragment$9: void onItemClick(android.widget.AdapterView,android.view.View,int,long)> to <android.net.wifi.WifiManager: java.util.List getConfiguredNetworks()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <com.thibaudperso.sonycamera.timelapse.control.connection.StateMachineConnection$State$15: void process(com.thibaudperso.sonycamera.timelapse.control.connection.StateMachineConnection)>[]--><com.thibaudperso.sonycamera.timelapse.control.connection.WifiHandler: void connectToNetworkId(int)>[]--><android.net.wifi.WifiManager: java.util.List getConfiguredNetworks()>
+#2.the call statck between class <com.thibaudperso.sonycamera.timelapse.control.connection.StateMachineConnection$State$15: void process(com.thibaudperso.sonycamera.timelapse.control.connection.StateMachineConnection)> to <android.net.wifi.WifiManager: java.util.List getConfiguredNetworks()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <com.thibaudperso.sonycamera.timelapse.control.connection.StateMachineConnection$State$11: void process(com.thibaudperso.sonycamera.timelapse.control.connection.StateMachineConnection)>[]--><com.thibaudperso.sonycamera.timelapse.control.connection.WifiHandler: void connectToNetworkId(int)>[]--><android.net.wifi.WifiManager: java.util.List getConfiguredNetworks()>
+#3.the call statck between class <com.thibaudperso.sonycamera.timelapse.control.connection.StateMachineConnection$State$11: void process(com.thibaudperso.sonycamera.timelapse.control.connection.StateMachineConnection)> to <android.net.wifi.WifiManager: java.util.List getConfiguredNetworks()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <com.thibaudperso.sonycamera.timelapse.ui.connection.ConnectionFragment$13: void onClick(android.content.DialogInterface,int)>[]--><com.thibaudperso.sonycamera.timelapse.control.connection.StateMachineConnection: void createNetwork(java.lang.String,java.lang.String)>[]--><com.thibaudperso.sonycamera.timelapse.control.connection.WifiHandler: void createIfNeededThenConnectToWifi(java.lang.String,java.lang.String)>[]--><com.thibaudperso.sonycamera.timelapse.control.connection.WifiHandler: void connectToNetworkId(int)>[]--><android.net.wifi.WifiManager: java.util.List getConfiguredNetworks()>
+#4.the call statck between class <com.thibaudperso.sonycamera.timelapse.ui.connection.ConnectionFragment$13: void onClick(android.content.DialogInterface,int)> to <android.net.wifi.WifiManager: java.util.List getConfiguredNetworks()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <com.thibaudperso.sonycamera.timelapse.control.connection.WifiHandler: android.net.wifi.WifiConfiguration access$600(com.thibaudperso.sonycamera.timelapse.control.connection.WifiHandler,java.lang.String)>[]--><com.thibaudperso.sonycamera.timelapse.control.connection.WifiHandler: android.net.wifi.WifiConfiguration getWifiConfigurationFromSSID(java.lang.String)>[]--><android.net.wifi.WifiManager: java.util.List getConfiguredNetworks()>
+#5.the call statck between class <com.thibaudperso.sonycamera.timelapse.control.connection.WifiHandler: android.net.wifi.WifiConfiguration access$600(com.thibaudperso.sonycamera.timelapse.control.connection.WifiHandler,java.lang.String)> to <android.net.wifi.WifiManager: java.util.List getConfiguredNetworks()>has compatibility isssues！
+-----------------------------------------
+crashApis:16
+containsStatic:false
+containsTry:true
+6call by main package
+-----------------------------------------
+#################################################
+N 27 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager: java.util.List getScanResults()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <com.thibaudperso.sonycamera.timelapse.control.connection.WifiHandler$1: void onReceive(android.content.Context,android.content.Intent)>[]--><android.net.wifi.WifiManager: java.util.List getScanResults()>
+#1.the call statck between class <com.thibaudperso.sonycamera.timelapse.control.connection.WifiHandler$1: void onReceive(android.content.Context,android.content.Intent)> to <android.net.wifi.WifiManager: java.util.List getScanResults()>has compatibility isssues！
+-----------------------------------------
+crashApis:17
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 28 Potential Issue API: SDKCheck of <android.net.wifi.WifiInfo: java.lang.String getSSID()> is checking!!!
+The life time of api is [1,30]
+9call roads:
+1 Mainhead roads:
+8 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <com.thibaudperso.sonycamera.timelapse.control.connection.WifiHandler$1: void onReceive(android.content.Context,android.content.Intent)>[]--><android.net.wifi.WifiInfo: java.lang.String getSSID()>
+#5.the call statck between class <com.thibaudperso.sonycamera.timelapse.control.connection.WifiHandler$1: void onReceive(android.content.Context,android.content.Intent)> to <android.net.wifi.WifiInfo: java.lang.String getSSID()>has compatibility isssues！
+-----------------------------------------
+crashApis:18
+containsStatic:false
+containsTry:true
+9call by main package
+-----------------------------------------
+crashApis numbers:18
+crashApis numbers in main road:5
+On Android Version 16 this app may have error api use(at least): 4 and error api roads: 4
+On Android Version 17 this app may have error api use(at least): 4 and error api roads: 4
+On Android Version 18 this app may have error api use(at least): 4 and error api roads: 4
+On Android Version 19 this app may have error api use(at least): 4 and error api roads: 4
+On Android Version 20 this app may have error api use(at least): 4 and error api roads: 4
+On Android Version 21 this app may have error api use(at least): 1 and error api roads: 1
+On Android Version 22 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 23 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 24 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 25 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 31 this app may have error api use(at least): 14 and error api roads: 42

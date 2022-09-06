@@ -1,0 +1,101 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/Single-Feed.apk
+Entry Points[de.vibora.viborafeed.Alarm, de.vibora.viborafeed.DeviceBootReceiver, de.vibora.viborafeed.FeedContentProvider, de.vibora.viborafeed.PreferencesActivity, de.vibora.viborafeed.MainActivity, de.vibora.viborafeed.ViboraApp]
+FllowDroidcallgraph size:718
+Soot started on Mon Jul 11 12:16:48 CST 2022
+Soot finished on Mon Jul 11 12:16:53 CST 2022
+Soot has run for 0 min. 4 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 16
+Declared Target Sdk version is: 23
+Declared Max Sdk version is: -1
+Collected 198 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.net.NetworkInfo: int getType()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.vibora.viborafeed.Alarm dummyMainMethod_de_vibora_viborafeed_Alarm(android.content.Intent)>[]--><de.vibora.viborafeed.Alarm: void onReceive(android.content.Context,android.content.Intent)>[]--><de.vibora.viborafeed.Alarm$1: java.lang.Object doInBackground(java.lang.Object[])>[]--><de.vibora.viborafeed.Alarm$1: java.lang.Void doInBackground(android.content.Context[])>[]--><de.vibora.viborafeed.Refresher: boolean isOnline()>[]--><android.net.NetworkInfo: int getType()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.NetworkInfo: int getType()>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:1
+crashApisInMain:1
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.vibora.viborafeed.Alarm dummyMainMethod_de_vibora_viborafeed_Alarm(android.content.Intent)>[]--><de.vibora.viborafeed.Alarm: void onReceive(android.content.Context,android.content.Intent)>[]--><de.vibora.viborafeed.Alarm$1: java.lang.Object doInBackground(java.lang.Object[])>[]--><de.vibora.viborafeed.Alarm$1: java.lang.Void doInBackground(android.content.Context[])>[]--><de.vibora.viborafeed.Refresher: boolean isOnline()>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:2
+crashApisInMain:2
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.net.NetworkInfo: boolean isConnected()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.vibora.viborafeed.Alarm dummyMainMethod_de_vibora_viborafeed_Alarm(android.content.Intent)>[]--><de.vibora.viborafeed.Alarm: void onReceive(android.content.Context,android.content.Intent)>[]--><de.vibora.viborafeed.Alarm$1: java.lang.Object doInBackground(java.lang.Object[])>[]--><de.vibora.viborafeed.Alarm$1: java.lang.Void doInBackground(android.content.Context[])>[]--><de.vibora.viborafeed.Refresher: boolean isOnline()>[]--><android.net.NetworkInfo: boolean isConnected()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.NetworkInfo: boolean isConnected()>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:3
+crashApisInMain:3
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.text.Html: android.text.Spanned fromHtml(java.lang.String,int,android.text.Html.ImageGetter,android.text.Html.TagHandler)> is checking!!!
+The life time of api is [24,31]
+3call roads:
+1 Mainhead roads:
+-$i0 < 24
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.vibora.viborafeed.Alarm dummyMainMethod_de_vibora_viborafeed_Alarm(android.content.Intent)>[]--><de.vibora.viborafeed.Alarm: void onReceive(android.content.Context,android.content.Intent)>[]--><de.vibora.viborafeed.Alarm$1: java.lang.Object doInBackground(java.lang.Object[])>[]--><de.vibora.viborafeed.Alarm$1: java.lang.Void doInBackground(android.content.Context[])>[]--><de.vibora.viborafeed.Refresher: void makeNotify(android.app.PendingIntent)>[]--><de.vibora.viborafeed.Refresher: void notify(android.content.ContentValues,android.app.PendingIntent,android.net.Uri,boolean)>[]--><de.vibora.viborafeed.FeedContract: java.lang.String removeHtml(java.lang.String)>[]--><de.vibora.viborafeed.FeedContract: java.lang.String removeHtml(java.lang.String,boolean)>[]--><de.vibora.viborafeed.FeedContract: android.text.Spanned fromHtml(java.lang.String)>[[-$i0 < 24]]--><android.text.Html: android.text.Spanned fromHtml(java.lang.String,int,android.text.Html.ImageGetter,android.text.Html.TagHandler)>
+One road protect good!
+2 Packageshead roads:
+-$i0 < 24
+Good road: <de.vibora.viborafeed.FeedCursorAdapter: void bindView(android.view.View,android.content.Context,android.database.Cursor)>[]--><de.vibora.viborafeed.FeedContract: java.lang.String removeHtml(java.lang.String)>[]--><de.vibora.viborafeed.FeedContract: java.lang.String removeHtml(java.lang.String,boolean)>[]--><de.vibora.viborafeed.FeedContract: android.text.Spanned fromHtml(java.lang.String)>[[-$i0 < 24]]--><android.text.Html: android.text.Spanned fromHtml(java.lang.String,int,android.text.Html.ImageGetter,android.text.Html.TagHandler)>
+One road protect good!
+-$i0 < 24
+Good road: <de.vibora.viborafeed.FeedCursorAdapter: void bindView(android.view.View,android.content.Context,android.database.Cursor)>[]--><de.vibora.viborafeed.FeedCursorAdapter: android.text.Spanned highlight(java.lang.String,java.lang.String)>[]--><de.vibora.viborafeed.FeedContract: android.text.Spanned fromHtml(java.lang.String)>[[-$i0 < 24]]--><android.text.Html: android.text.Spanned fromHtml(java.lang.String,int,android.text.Html.ImageGetter,android.text.Html.TagHandler)>
+One road protect good!
+-$i0 < 24
+Good road: <de.vibora.viborafeed.FeedListFragment$ContextTask: java.lang.String doInBackground(android.view.MenuItem[])>[]--><de.vibora.viborafeed.FeedContract: java.lang.String removeHtml(java.lang.String)>[]--><de.vibora.viborafeed.FeedContract: java.lang.String removeHtml(java.lang.String,boolean)>[]--><de.vibora.viborafeed.FeedContract: android.text.Spanned fromHtml(java.lang.String)>[[-$i0 < 24]]--><android.text.Html: android.text.Spanned fromHtml(java.lang.String,int,android.text.Html.ImageGetter,android.text.Html.TagHandler)>
+One road protect good!
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+crashApis numbers:3
+crashApis numbers in main road:3
+On Android Version 16 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 17 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 18 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 19 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 20 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 21 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 22 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 23 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 24 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 25 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 31 this app may have error api use(at least): 3 and error api roads: 3

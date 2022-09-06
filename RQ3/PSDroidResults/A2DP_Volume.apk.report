@@ -1,0 +1,504 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/A2DP_Volume.apk
+Entry Points[a2dp.Vol.NotificationCatcher, a2dp.Vol.ConnectWidget, a2dp.Vol.service, a2dp.Vol.EditDevice, a2dp.Vol.Preferences, a2dp.Vol.Connector, a2dp.Vol.CustomIntentMaker, a2dp.Vol.MyApplication, a2dp.Vol.ALauncher, a2dp.Vol.ConnectWidgetConfigureActivity, a2dp.Vol.AppChooser, a2dp.Vol.PackagesChooser, a2dp.Vol.Widget, a2dp.Vol.main, a2dp.Vol.Starter, a2dp.Vol.LocViewer, a2dp.Vol.StoreLoc, a2dp.Vol.ManageData]
+FllowDroidcallgraph size:3316
+Soot started on Mon Jul 11 00:15:21 CST 2022
+Soot finished on Mon Jul 11 00:15:28 CST 2022
+Soot has run for 0 min. 7 sec.
+Found 1 additional DEX files. Now visiting them one by one.
+Soot started on Mon Jul 11 00:15:28 CST 2022
+Soot finished on Mon Jul 11 00:15:32 CST 2022
+Soot has run for 0 min. 3 sec.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 23
+Declared Target Sdk version is: 28
+Declared Max Sdk version is: -1
+Collected 105 Android APIs in the primary DEX file
+Collected 372 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.media.AudioManager: int requestAudioFocus(android.media.AudioFocusRequest)> is checking!!!
+The life time of api is [26,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+$i0 >= 26
+Good road: <a2dp.Vol.service$1: void onReceive(android.content.Context,android.content.Intent)>[]--><a2dp.Vol.service: void TextReader(java.lang.String)>[[$i0 >= 26]]--><android.media.AudioManager: int requestAudioFocus(android.media.AudioFocusRequest)>
+One road protect good!
+-i1 < 26
+Good road: <a2dp.Vol.service$24: void onReceive(android.content.Context,android.content.Intent)>[[-i1 < 26]]--><android.media.AudioManager: int requestAudioFocus(android.media.AudioFocusRequest)>
+One road protect good!
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.app.NotificationChannel: void setDescription(java.lang.String)> is checking!!!
+The life time of api is [26,31]
+14call roads:
+1 Mainhead roads:
+-i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: a2dp.Vol.StoreLoc dummyMainMethod_a2dp_Vol_StoreLoc(android.content.Intent)>[]--><a2dp.Vol.StoreLoc: void onCreate()>[]--><a2dp.Vol.StoreLoc: void createNotificationChannel()>[[-i0 < 26]]--><android.app.NotificationChannel: void setDescription(java.lang.String)>
+One road protect good!
+-i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: a2dp.Vol.Connector dummyMainMethod_a2dp_Vol_Connector(android.content.Intent)>[]--><a2dp.Vol.Connector: int onStartCommand(android.content.Intent,int,int)>[]--><a2dp.Vol.Connector: void updatenot()>[]--><a2dp.Vol.Connector: void createNotificationChannel()>[[-i0 < 26]]--><android.app.NotificationChannel: void setDescription(java.lang.String)>
+One road protect good!
+-i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: a2dp.Vol.service dummyMainMethod_a2dp_Vol_service(android.content.Intent)>[]--><a2dp.Vol.service: int onStartCommand(android.content.Intent,int,int)>[]--><a2dp.Vol.service: void createNotificationChannel()>[[-i0 < 26]]--><android.app.NotificationChannel: void setDescription(java.lang.String)>
+One road protect good!
+13 Packageshead roads:
+-i0 < 26
+Good road: <a2dp.Vol.service$9: void onReceive(android.content.Context,android.content.Intent)>[]--><a2dp.Vol.service: void DoConnected(a2dp.Vol.btDevice)>[]--><a2dp.Vol.service: void updateNot()>[]--><a2dp.Vol.service: void createNotificationChannel()>[[-i0 < 26]]--><android.app.NotificationChannel: void setDescription(java.lang.String)>
+One road protect good!
+-i0 < 26
+Good road: <a2dp.Vol.service$5: void onReceive(android.content.Context,android.content.Intent)>[]--><a2dp.Vol.service: void DoConnected(a2dp.Vol.btDevice)>[]--><a2dp.Vol.service: void updateNot()>[]--><a2dp.Vol.service: void createNotificationChannel()>[[-i0 < 26]]--><android.app.NotificationChannel: void setDescription(java.lang.String)>
+One road protect good!
+$i1 >= 26
+-i0 < 26
+Good road: <a2dp.Vol.service$5: void onReceive(android.content.Context,android.content.Intent)>[]--><a2dp.Vol.service: void DoDisconnected(a2dp.Vol.btDevice)>[[$i1 >= 26]]--><a2dp.Vol.service: void updateNot()>[]--><a2dp.Vol.service: void createNotificationChannel()>[[-i0 < 26]]--><android.app.NotificationChannel: void setDescription(java.lang.String)>
+One road protect good!
+-i0 < 26
+Good road: <a2dp.Vol.service$3: void onReceive(android.content.Context,android.content.Intent)>[]--><a2dp.Vol.service: void updateNot()>[]--><a2dp.Vol.service: void createNotificationChannel()>[[-i0 < 26]]--><android.app.NotificationChannel: void setDescription(java.lang.String)>
+One road protect good!
+$i1 >= 26
+-i0 < 26
+Good road: <a2dp.Vol.service$14: void onReceive(android.content.Context,android.content.Intent)>[]--><a2dp.Vol.service: void DoDisconnected(a2dp.Vol.btDevice)>[[$i1 >= 26]]--><a2dp.Vol.service: void updateNot()>[]--><a2dp.Vol.service: void createNotificationChannel()>[[-i0 < 26]]--><android.app.NotificationChannel: void setDescription(java.lang.String)>
+One road protect good!
+-i0 < 26
+Good road: <a2dp.Vol.service$7: void onReceive(android.content.Context,android.content.Intent)>[]--><a2dp.Vol.service: void DoConnected(a2dp.Vol.btDevice)>[]--><a2dp.Vol.service: void updateNot()>[]--><a2dp.Vol.service: void createNotificationChannel()>[[-i0 < 26]]--><android.app.NotificationChannel: void setDescription(java.lang.String)>
+One road protect good!
+-i0 < 26
+Good road: <a2dp.Vol.service$8: void onReceive(android.content.Context,android.content.Intent)>[]--><a2dp.Vol.service: void DoConnected(a2dp.Vol.btDevice)>[]--><a2dp.Vol.service: void updateNot()>[]--><a2dp.Vol.service: void createNotificationChannel()>[[-i0 < 26]]--><android.app.NotificationChannel: void setDescription(java.lang.String)>
+One road protect good!
+-i0 < 26
+Good road: <a2dp.Vol.service$6: void onReceive(android.content.Context,android.content.Intent)>[]--><a2dp.Vol.service: void DoConnected(a2dp.Vol.btDevice)>[]--><a2dp.Vol.service: void updateNot()>[]--><a2dp.Vol.service: void createNotificationChannel()>[[-i0 < 26]]--><android.app.NotificationChannel: void setDescription(java.lang.String)>
+One road protect good!
+$i1 >= 26
+-i0 < 26
+Good road: <a2dp.Vol.service$4: void onReceive(android.content.Context,android.content.Intent)>[]--><a2dp.Vol.service: void DoDisconnected(a2dp.Vol.btDevice)>[[$i1 >= 26]]--><a2dp.Vol.service: void updateNot()>[]--><a2dp.Vol.service: void createNotificationChannel()>[[-i0 < 26]]--><android.app.NotificationChannel: void setDescription(java.lang.String)>
+One road protect good!
+$i1 >= 26
+-i0 < 26
+Good road: <a2dp.Vol.service$15: void onReceive(android.content.Context,android.content.Intent)>[]--><a2dp.Vol.service: void DoDisconnected(a2dp.Vol.btDevice)>[[$i1 >= 26]]--><a2dp.Vol.service: void updateNot()>[]--><a2dp.Vol.service: void createNotificationChannel()>[[-i0 < 26]]--><android.app.NotificationChannel: void setDescription(java.lang.String)>
+One road protect good!
+$i1 >= 26
+-i0 < 26
+Good road: <a2dp.Vol.service$13: void onReceive(android.content.Context,android.content.Intent)>[]--><a2dp.Vol.service: void DoDisconnected(a2dp.Vol.btDevice)>[[$i1 >= 26]]--><a2dp.Vol.service: void updateNot()>[]--><a2dp.Vol.service: void createNotificationChannel()>[[-i0 < 26]]--><android.app.NotificationChannel: void setDescription(java.lang.String)>
+One road protect good!
+-i0 < 26
+Good road: <a2dp.Vol.service$17: void onFinish()>[]--><a2dp.Vol.service: void updateNot()>[]--><a2dp.Vol.service: void createNotificationChannel()>[[-i0 < 26]]--><android.app.NotificationChannel: void setDescription(java.lang.String)>
+One road protect good!
+$i1 >= 26
+-i0 < 26
+Good road: <a2dp.Vol.service$12: void onReceive(android.content.Context,android.content.Intent)>[]--><a2dp.Vol.service: void DoDisconnected(a2dp.Vol.btDevice)>[[$i1 >= 26]]--><a2dp.Vol.service: void updateNot()>[]--><a2dp.Vol.service: void createNotificationChannel()>[[-i0 < 26]]--><android.app.NotificationChannel: void setDescription(java.lang.String)>
+One road protect good!
+-i0 < 26
+Good road: <a2dp.Vol.service: void onStart()>[]--><a2dp.Vol.service: void updateNot()>[]--><a2dp.Vol.service: void createNotificationChannel()>[[-i0 < 26]]--><android.app.NotificationChannel: void setDescription(java.lang.String)>
+One road protect good!
+containsStatic:false
+containsTry:false
+14call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager: boolean setWifiEnabled(boolean)> is checking!!!
+The life time of api is [1,30]
+10call roads:
+0 Mainhead roads:
+10 Packageshead roads:
+try
+Good road with try: <a2dp.Vol.service$8: void onReceive(android.content.Context,android.content.Intent)>[]--><a2dp.Vol.service: void DoConnected(a2dp.Vol.btDevice)>[[try]]--><a2dp.Vol.service: void dowifi(boolean)>[[try]]--><android.net.wifi.WifiManager: boolean setWifiEnabled(boolean)>
+One road protect good!
+try
+Good road with try: <a2dp.Vol.service$9: void onReceive(android.content.Context,android.content.Intent)>[]--><a2dp.Vol.service: void DoConnected(a2dp.Vol.btDevice)>[[try]]--><a2dp.Vol.service: void dowifi(boolean)>[[try]]--><android.net.wifi.WifiManager: boolean setWifiEnabled(boolean)>
+One road protect good!
+try
+Good road with try: <a2dp.Vol.service$6: void onReceive(android.content.Context,android.content.Intent)>[]--><a2dp.Vol.service: void DoConnected(a2dp.Vol.btDevice)>[[try]]--><a2dp.Vol.service: void dowifi(boolean)>[[try]]--><android.net.wifi.WifiManager: boolean setWifiEnabled(boolean)>
+One road protect good!
+try
+Good road with try: <a2dp.Vol.service$5: void onReceive(android.content.Context,android.content.Intent)>[]--><a2dp.Vol.service: void DoConnected(a2dp.Vol.btDevice)>[[try]]--><a2dp.Vol.service: void dowifi(boolean)>[[try]]--><android.net.wifi.WifiManager: boolean setWifiEnabled(boolean)>
+One road protect good!
+$i1 >= 26
+try
+Good road with try: <a2dp.Vol.service$5: void onReceive(android.content.Context,android.content.Intent)>[]--><a2dp.Vol.service: void DoDisconnected(a2dp.Vol.btDevice)>[[$i1 >= 26]]--><a2dp.Vol.service: void dowifi(boolean)>[[try]]--><android.net.wifi.WifiManager: boolean setWifiEnabled(boolean)>
+One road protect good!
+$i1 >= 26
+try
+Good road with try: <a2dp.Vol.service$4: void onReceive(android.content.Context,android.content.Intent)>[]--><a2dp.Vol.service: void DoDisconnected(a2dp.Vol.btDevice)>[[$i1 >= 26]]--><a2dp.Vol.service: void dowifi(boolean)>[[try]]--><android.net.wifi.WifiManager: boolean setWifiEnabled(boolean)>
+One road protect good!
+$i1 >= 26
+try
+Good road with try: <a2dp.Vol.service$15: void onReceive(android.content.Context,android.content.Intent)>[]--><a2dp.Vol.service: void DoDisconnected(a2dp.Vol.btDevice)>[[$i1 >= 26]]--><a2dp.Vol.service: void dowifi(boolean)>[[try]]--><android.net.wifi.WifiManager: boolean setWifiEnabled(boolean)>
+One road protect good!
+$i1 >= 26
+try
+Good road with try: <a2dp.Vol.service$13: void onReceive(android.content.Context,android.content.Intent)>[]--><a2dp.Vol.service: void DoDisconnected(a2dp.Vol.btDevice)>[[$i1 >= 26]]--><a2dp.Vol.service: void dowifi(boolean)>[[try]]--><android.net.wifi.WifiManager: boolean setWifiEnabled(boolean)>
+One road protect good!
+$i1 >= 26
+try
+Good road with try: <a2dp.Vol.service$14: void onReceive(android.content.Context,android.content.Intent)>[]--><a2dp.Vol.service: void DoDisconnected(a2dp.Vol.btDevice)>[[$i1 >= 26]]--><a2dp.Vol.service: void dowifi(boolean)>[[try]]--><android.net.wifi.WifiManager: boolean setWifiEnabled(boolean)>
+One road protect good!
+$i1 >= 26
+try
+Good road with try: <a2dp.Vol.service$12: void onReceive(android.content.Context,android.content.Intent)>[]--><a2dp.Vol.service: void DoDisconnected(a2dp.Vol.btDevice)>[[$i1 >= 26]]--><a2dp.Vol.service: void dowifi(boolean)>[[try]]--><android.net.wifi.WifiManager: boolean setWifiEnabled(boolean)>
+One road protect good!
+try
+Good road with try: <a2dp.Vol.service$7: void onReceive(android.content.Context,android.content.Intent)>[]--><a2dp.Vol.service: void DoConnected(a2dp.Vol.btDevice)>[[try]]--><a2dp.Vol.service: void dowifi(boolean)>[[try]]--><android.net.wifi.WifiManager: boolean setWifiEnabled(boolean)>
+One road protect good!
+containsStatic:false
+containsTry:true
+11call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)> is checking!!!
+The life time of api is [26,31]
+14call roads:
+1 Mainhead roads:
+-i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: a2dp.Vol.StoreLoc dummyMainMethod_a2dp_Vol_StoreLoc(android.content.Intent)>[]--><a2dp.Vol.StoreLoc: void onCreate()>[]--><a2dp.Vol.StoreLoc: void createNotificationChannel()>[[-i0 < 26]]--><android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)>
+One road protect good!
+-i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: a2dp.Vol.Connector dummyMainMethod_a2dp_Vol_Connector(android.content.Intent)>[]--><a2dp.Vol.Connector: int onStartCommand(android.content.Intent,int,int)>[]--><a2dp.Vol.Connector: void updatenot()>[]--><a2dp.Vol.Connector: void createNotificationChannel()>[[-i0 < 26]]--><android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)>
+One road protect good!
+-i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: a2dp.Vol.service dummyMainMethod_a2dp_Vol_service(android.content.Intent)>[]--><a2dp.Vol.service: int onStartCommand(android.content.Intent,int,int)>[]--><a2dp.Vol.service: void createNotificationChannel()>[[-i0 < 26]]--><android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)>
+One road protect good!
+13 Packageshead roads:
+-i0 < 26
+Good road: <a2dp.Vol.service$9: void onReceive(android.content.Context,android.content.Intent)>[]--><a2dp.Vol.service: void DoConnected(a2dp.Vol.btDevice)>[]--><a2dp.Vol.service: void updateNot()>[]--><a2dp.Vol.service: void createNotificationChannel()>[[-i0 < 26]]--><android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)>
+One road protect good!
+-i0 < 26
+Good road: <a2dp.Vol.service$5: void onReceive(android.content.Context,android.content.Intent)>[]--><a2dp.Vol.service: void DoConnected(a2dp.Vol.btDevice)>[]--><a2dp.Vol.service: void updateNot()>[]--><a2dp.Vol.service: void createNotificationChannel()>[[-i0 < 26]]--><android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)>
+One road protect good!
+$i1 >= 26
+-i0 < 26
+Good road: <a2dp.Vol.service$5: void onReceive(android.content.Context,android.content.Intent)>[]--><a2dp.Vol.service: void DoDisconnected(a2dp.Vol.btDevice)>[[$i1 >= 26]]--><a2dp.Vol.service: void updateNot()>[]--><a2dp.Vol.service: void createNotificationChannel()>[[-i0 < 26]]--><android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)>
+One road protect good!
+-i0 < 26
+Good road: <a2dp.Vol.service$3: void onReceive(android.content.Context,android.content.Intent)>[]--><a2dp.Vol.service: void updateNot()>[]--><a2dp.Vol.service: void createNotificationChannel()>[[-i0 < 26]]--><android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)>
+One road protect good!
+$i1 >= 26
+-i0 < 26
+Good road: <a2dp.Vol.service$14: void onReceive(android.content.Context,android.content.Intent)>[]--><a2dp.Vol.service: void DoDisconnected(a2dp.Vol.btDevice)>[[$i1 >= 26]]--><a2dp.Vol.service: void updateNot()>[]--><a2dp.Vol.service: void createNotificationChannel()>[[-i0 < 26]]--><android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)>
+One road protect good!
+-i0 < 26
+Good road: <a2dp.Vol.service$7: void onReceive(android.content.Context,android.content.Intent)>[]--><a2dp.Vol.service: void DoConnected(a2dp.Vol.btDevice)>[]--><a2dp.Vol.service: void updateNot()>[]--><a2dp.Vol.service: void createNotificationChannel()>[[-i0 < 26]]--><android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)>
+One road protect good!
+-i0 < 26
+Good road: <a2dp.Vol.service$8: void onReceive(android.content.Context,android.content.Intent)>[]--><a2dp.Vol.service: void DoConnected(a2dp.Vol.btDevice)>[]--><a2dp.Vol.service: void updateNot()>[]--><a2dp.Vol.service: void createNotificationChannel()>[[-i0 < 26]]--><android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)>
+One road protect good!
+-i0 < 26
+Good road: <a2dp.Vol.service$6: void onReceive(android.content.Context,android.content.Intent)>[]--><a2dp.Vol.service: void DoConnected(a2dp.Vol.btDevice)>[]--><a2dp.Vol.service: void updateNot()>[]--><a2dp.Vol.service: void createNotificationChannel()>[[-i0 < 26]]--><android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)>
+One road protect good!
+$i1 >= 26
+-i0 < 26
+Good road: <a2dp.Vol.service$4: void onReceive(android.content.Context,android.content.Intent)>[]--><a2dp.Vol.service: void DoDisconnected(a2dp.Vol.btDevice)>[[$i1 >= 26]]--><a2dp.Vol.service: void updateNot()>[]--><a2dp.Vol.service: void createNotificationChannel()>[[-i0 < 26]]--><android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)>
+One road protect good!
+$i1 >= 26
+-i0 < 26
+Good road: <a2dp.Vol.service$15: void onReceive(android.content.Context,android.content.Intent)>[]--><a2dp.Vol.service: void DoDisconnected(a2dp.Vol.btDevice)>[[$i1 >= 26]]--><a2dp.Vol.service: void updateNot()>[]--><a2dp.Vol.service: void createNotificationChannel()>[[-i0 < 26]]--><android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)>
+One road protect good!
+$i1 >= 26
+-i0 < 26
+Good road: <a2dp.Vol.service$13: void onReceive(android.content.Context,android.content.Intent)>[]--><a2dp.Vol.service: void DoDisconnected(a2dp.Vol.btDevice)>[[$i1 >= 26]]--><a2dp.Vol.service: void updateNot()>[]--><a2dp.Vol.service: void createNotificationChannel()>[[-i0 < 26]]--><android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)>
+One road protect good!
+-i0 < 26
+Good road: <a2dp.Vol.service$17: void onFinish()>[]--><a2dp.Vol.service: void updateNot()>[]--><a2dp.Vol.service: void createNotificationChannel()>[[-i0 < 26]]--><android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)>
+One road protect good!
+$i1 >= 26
+-i0 < 26
+Good road: <a2dp.Vol.service$12: void onReceive(android.content.Context,android.content.Intent)>[]--><a2dp.Vol.service: void DoDisconnected(a2dp.Vol.btDevice)>[[$i1 >= 26]]--><a2dp.Vol.service: void updateNot()>[]--><a2dp.Vol.service: void createNotificationChannel()>[[-i0 < 26]]--><android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)>
+One road protect good!
+-i0 < 26
+Good road: <a2dp.Vol.service: void onStart()>[]--><a2dp.Vol.service: void updateNot()>[]--><a2dp.Vol.service: void createNotificationChannel()>[[-i0 < 26]]--><android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)>
+One road protect good!
+containsStatic:false
+containsTry:false
+14call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.app.Service: void stopForeground(int)> is checking!!!
+The life time of api is [24,31]
+2call roads:
+1 Mainhead roads:
+-i0 < 24
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: a2dp.Vol.Connector dummyMainMethod_a2dp_Vol_Connector(android.content.Intent)>[]--><a2dp.Vol.Connector: int onStartCommand(android.content.Intent,int,int)>[]--><a2dp.Vol.Connector: void done()>[[-i0 < 24]]--><android.app.Service: void stopForeground(int)>
+One road protect good!
+1 Packageshead roads:
+-i0 < 24
+Good road: <a2dp.Vol.Connector: void access$700(a2dp.Vol.Connector)>[]--><a2dp.Vol.Connector: void done()>[[-i0 < 24]]--><android.app.Service: void stopForeground(int)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 5 Potential Issue API: SDKCheck of <android.content.Context: android.content.ComponentName startForegroundService(android.content.Intent)> is checking!!!
+The life time of api is [26,31]
+7call roads:
+1 Mainhead roads:
+$i0 >= 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: a2dp.Vol.Starter dummyMainMethod_a2dp_Vol_Starter(android.content.Intent)>[]--><a2dp.Vol.Starter: void onReceive(android.content.Context,android.content.Intent)>[[$i0 >= 26]]--><android.content.Context: android.content.ComponentName startForegroundService(android.content.Intent)>
+One road protect good!
+i0 >= 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: a2dp.Vol.main dummyMainMethod_a2dp_Vol_main(android.content.Intent)>[]--><a2dp.Vol.main: void onCreate(android.os.Bundle)>[[i0 >= 26]]--><android.content.Context: android.content.ComponentName startForegroundService(android.content.Intent)>
+One road protect good!
+i0 >= 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: a2dp.Vol.Preferences dummyMainMethod_a2dp_Vol_Preferences(android.content.Intent)>[]--><a2dp.Vol.Preferences: void onDestroy()>[[i0 >= 26]]--><android.content.Context: android.content.ComponentName startForegroundService(android.content.Intent)>
+One road protect good!
+6 Packageshead roads:
+$i1 >= 26
+Good road: <a2dp.Vol.service$5: void onReceive(android.content.Context,android.content.Intent)>[]--><a2dp.Vol.service: void DoDisconnected(a2dp.Vol.btDevice)>[[$i1 >= 26]]--><android.content.Context: android.content.ComponentName startForegroundService(android.content.Intent)>
+One road protect good!
+$i1 >= 26
+Good road: <a2dp.Vol.service$4: void onReceive(android.content.Context,android.content.Intent)>[]--><a2dp.Vol.service: void DoDisconnected(a2dp.Vol.btDevice)>[[$i1 >= 26]]--><android.content.Context: android.content.ComponentName startForegroundService(android.content.Intent)>
+One road protect good!
+$i1 >= 26
+Good road: <a2dp.Vol.service$15: void onReceive(android.content.Context,android.content.Intent)>[]--><a2dp.Vol.service: void DoDisconnected(a2dp.Vol.btDevice)>[[$i1 >= 26]]--><android.content.Context: android.content.ComponentName startForegroundService(android.content.Intent)>
+One road protect good!
+$i1 >= 26
+Good road: <a2dp.Vol.service$13: void onReceive(android.content.Context,android.content.Intent)>[]--><a2dp.Vol.service: void DoDisconnected(a2dp.Vol.btDevice)>[[$i1 >= 26]]--><android.content.Context: android.content.ComponentName startForegroundService(android.content.Intent)>
+One road protect good!
+$i1 >= 26
+Good road: <a2dp.Vol.service$14: void onReceive(android.content.Context,android.content.Intent)>[]--><a2dp.Vol.service: void DoDisconnected(a2dp.Vol.btDevice)>[[$i1 >= 26]]--><android.content.Context: android.content.ComponentName startForegroundService(android.content.Intent)>
+One road protect good!
+$i1 >= 26
+Good road: <a2dp.Vol.service$12: void onReceive(android.content.Context,android.content.Intent)>[]--><a2dp.Vol.service: void DoDisconnected(a2dp.Vol.btDevice)>[[$i1 >= 26]]--><android.content.Context: android.content.ComponentName startForegroundService(android.content.Intent)>
+One road protect good!
+containsStatic:false
+containsTry:false
+7call by main package
+-----------------------------------------
+#################################################
+N 6 Potential Issue API: SDKCheck of <android.app.PendingIntent: android.app.PendingIntent getForegroundService(android.content.Context,int,android.content.Intent,int)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+1 Mainhead roads:
+i3 >= 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: a2dp.Vol.ConnectWidget dummyMainMethod_a2dp_Vol_ConnectWidget(android.content.Intent)>[]--><a2dp.Vol.ConnectWidget: void onUpdate(android.content.Context,android.appwidget.AppWidgetManager,int[])>[[i3 >= 26]]--><android.app.PendingIntent: android.app.PendingIntent getForegroundService(android.content.Context,int,android.content.Intent,int)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 7 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager: boolean isWifiEnabled()> is checking!!!
+The life time of api is [1,30]
+5call roads:
+0 Mainhead roads:
+5 Packageshead roads:
+try
+Good road with try: <a2dp.Vol.service$8: void onReceive(android.content.Context,android.content.Intent)>[]--><a2dp.Vol.service: void DoConnected(a2dp.Vol.btDevice)>[[try]]--><android.net.wifi.WifiManager: boolean isWifiEnabled()>
+One road protect good!
+try
+Good road with try: <a2dp.Vol.service$9: void onReceive(android.content.Context,android.content.Intent)>[]--><a2dp.Vol.service: void DoConnected(a2dp.Vol.btDevice)>[[try]]--><android.net.wifi.WifiManager: boolean isWifiEnabled()>
+One road protect good!
+try
+Good road with try: <a2dp.Vol.service$6: void onReceive(android.content.Context,android.content.Intent)>[]--><a2dp.Vol.service: void DoConnected(a2dp.Vol.btDevice)>[[try]]--><android.net.wifi.WifiManager: boolean isWifiEnabled()>
+One road protect good!
+try
+Good road with try: <a2dp.Vol.service$5: void onReceive(android.content.Context,android.content.Intent)>[]--><a2dp.Vol.service: void DoConnected(a2dp.Vol.btDevice)>[[try]]--><android.net.wifi.WifiManager: boolean isWifiEnabled()>
+One road protect good!
+try
+Good road with try: <a2dp.Vol.service$7: void onReceive(android.content.Context,android.content.Intent)>[]--><a2dp.Vol.service: void DoConnected(a2dp.Vol.btDevice)>[[try]]--><android.net.wifi.WifiManager: boolean isWifiEnabled()>
+One road protect good!
+containsStatic:false
+containsTry:true
+6call by main package
+-----------------------------------------
+#################################################
+N 8 Potential Issue API: SDKCheck of <android.content.ContextWrapper: android.content.ComponentName startForegroundService(android.content.Intent)> is checking!!!
+The life time of api is [26,31]
+7call roads:
+1 Mainhead roads:
+i0 >= 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: a2dp.Vol.main dummyMainMethod_a2dp_Vol_main(android.content.Intent)>[]--><a2dp.Vol.main: void onCreate(android.os.Bundle)>[[i0 >= 26]]--><android.content.ContextWrapper: android.content.ComponentName startForegroundService(android.content.Intent)>
+One road protect good!
+i0 >= 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: a2dp.Vol.Preferences dummyMainMethod_a2dp_Vol_Preferences(android.content.Intent)>[]--><a2dp.Vol.Preferences: void onDestroy()>[[i0 >= 26]]--><android.content.ContextWrapper: android.content.ComponentName startForegroundService(android.content.Intent)>
+One road protect good!
+6 Packageshead roads:
+###Multi invoking in one method, need manual check!!!--><a2dp.Vol.service: void DoDisconnected(a2dp.Vol.btDevice)>[[try], [$i1 >= 26]]
+###Multi invoking in one method, need manual check!!!--><a2dp.Vol.service: void DoDisconnected(a2dp.Vol.btDevice)>[[try]][[$i1 >= 26]]
+try
+Good road with try: <a2dp.Vol.service$5: void onReceive(android.content.Context,android.content.Intent)>[]--><a2dp.Vol.service: void DoDisconnected(a2dp.Vol.btDevice)>[[try], [$i1 >= 26]]--><android.content.ContextWrapper: android.content.ComponentName startForegroundService(android.content.Intent)>
+One road protect good!
+###Multi invoking in one method, need manual check!!!--><a2dp.Vol.service: void DoDisconnected(a2dp.Vol.btDevice)>[[try], [$i1 >= 26]]
+###Multi invoking in one method, need manual check!!!--><a2dp.Vol.service: void DoDisconnected(a2dp.Vol.btDevice)>[[try]][[$i1 >= 26]]
+try
+Good road with try: <a2dp.Vol.service$4: void onReceive(android.content.Context,android.content.Intent)>[]--><a2dp.Vol.service: void DoDisconnected(a2dp.Vol.btDevice)>[[try], [$i1 >= 26]]--><android.content.ContextWrapper: android.content.ComponentName startForegroundService(android.content.Intent)>
+One road protect good!
+###Multi invoking in one method, need manual check!!!--><a2dp.Vol.service: void DoDisconnected(a2dp.Vol.btDevice)>[[try], [$i1 >= 26]]
+###Multi invoking in one method, need manual check!!!--><a2dp.Vol.service: void DoDisconnected(a2dp.Vol.btDevice)>[[try]][[$i1 >= 26]]
+try
+Good road with try: <a2dp.Vol.service$15: void onReceive(android.content.Context,android.content.Intent)>[]--><a2dp.Vol.service: void DoDisconnected(a2dp.Vol.btDevice)>[[try], [$i1 >= 26]]--><android.content.ContextWrapper: android.content.ComponentName startForegroundService(android.content.Intent)>
+One road protect good!
+###Multi invoking in one method, need manual check!!!--><a2dp.Vol.service: void DoDisconnected(a2dp.Vol.btDevice)>[[try], [$i1 >= 26]]
+###Multi invoking in one method, need manual check!!!--><a2dp.Vol.service: void DoDisconnected(a2dp.Vol.btDevice)>[[try]][[$i1 >= 26]]
+try
+Good road with try: <a2dp.Vol.service$13: void onReceive(android.content.Context,android.content.Intent)>[]--><a2dp.Vol.service: void DoDisconnected(a2dp.Vol.btDevice)>[[try], [$i1 >= 26]]--><android.content.ContextWrapper: android.content.ComponentName startForegroundService(android.content.Intent)>
+One road protect good!
+###Multi invoking in one method, need manual check!!!--><a2dp.Vol.service: void DoDisconnected(a2dp.Vol.btDevice)>[[try], [$i1 >= 26]]
+###Multi invoking in one method, need manual check!!!--><a2dp.Vol.service: void DoDisconnected(a2dp.Vol.btDevice)>[[try]][[$i1 >= 26]]
+try
+Good road with try: <a2dp.Vol.service$14: void onReceive(android.content.Context,android.content.Intent)>[]--><a2dp.Vol.service: void DoDisconnected(a2dp.Vol.btDevice)>[[try], [$i1 >= 26]]--><android.content.ContextWrapper: android.content.ComponentName startForegroundService(android.content.Intent)>
+One road protect good!
+###Multi invoking in one method, need manual check!!!--><a2dp.Vol.service: void DoDisconnected(a2dp.Vol.btDevice)>[[try], [$i1 >= 26]]
+###Multi invoking in one method, need manual check!!!--><a2dp.Vol.service: void DoDisconnected(a2dp.Vol.btDevice)>[[try]][[$i1 >= 26]]
+try
+Good road with try: <a2dp.Vol.service$12: void onReceive(android.content.Context,android.content.Intent)>[]--><a2dp.Vol.service: void DoDisconnected(a2dp.Vol.btDevice)>[[try], [$i1 >= 26]]--><android.content.ContextWrapper: android.content.ComponentName startForegroundService(android.content.Intent)>
+One road protect good!
+containsStatic:false
+containsTry:true
+7call by main package
+-----------------------------------------
+#################################################
+N 9 Potential Issue API: SDKCheck of <android.media.AudioFocusRequest.Builder: android.media.AudioFocusRequest.Builder setAudioAttributes(android.media.AudioAttributes)> is checking!!!
+The life time of api is [26,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+$i0 >= 26
+Good road: <a2dp.Vol.service$1: void onReceive(android.content.Context,android.content.Intent)>[]--><a2dp.Vol.service: void TextReader(java.lang.String)>[[$i0 >= 26]]--><android.media.AudioFocusRequest.Builder: android.media.AudioFocusRequest.Builder setAudioAttributes(android.media.AudioAttributes)>
+One road protect good!
+-i1 < 26
+Good road: <a2dp.Vol.service$24: void onReceive(android.content.Context,android.content.Intent)>[[-i1 < 26]]--><android.media.AudioFocusRequest.Builder: android.media.AudioFocusRequest.Builder setAudioAttributes(android.media.AudioAttributes)>
+One road protect good!
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 10 Potential Issue API: SDKCheck of <android.media.AudioManager: int abandonAudioFocusRequest(android.media.AudioFocusRequest)> is checking!!!
+The life time of api is [26,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+-i0 < 26
+Good road: <a2dp.Vol.service$23: void onDone(java.lang.String)>[[-i0 < 26]]--><android.media.AudioManager: int abandonAudioFocusRequest(android.media.AudioFocusRequest)>
+One road protect good!
+###Multi invoking in one method, need manual check!!!<a2dp.Vol.service$24: void onReceive(android.content.Context,android.content.Intent)>[[$i0 >= 26], [i1 < 26]]
+###Multi invoking in one method, need manual check!!!<a2dp.Vol.service$24: void onReceive(android.content.Context,android.content.Intent)>[[$i0 >= 26]][[i1 < 26]]
+$i0 >= 26
+i1 < 26
+Good road: <a2dp.Vol.service$24: void onReceive(android.content.Context,android.content.Intent)>[[$i0 >= 26], [i1 < 26]]--><android.media.AudioManager: int abandonAudioFocusRequest(android.media.AudioFocusRequest)>
+One road protect good!
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 11 Potential Issue API: SDKCheck of <android.media.AudioFocusRequest.Builder: android.media.AudioFocusRequest build()> is checking!!!
+The life time of api is [26,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+$i0 >= 26
+Good road: <a2dp.Vol.service$1: void onReceive(android.content.Context,android.content.Intent)>[]--><a2dp.Vol.service: void TextReader(java.lang.String)>[[$i0 >= 26]]--><android.media.AudioFocusRequest.Builder: android.media.AudioFocusRequest build()>
+One road protect good!
+-i1 < 26
+Good road: <a2dp.Vol.service$24: void onReceive(android.content.Context,android.content.Intent)>[[-i1 < 26]]--><android.media.AudioFocusRequest.Builder: android.media.AudioFocusRequest build()>
+One road protect good!
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 12 Potential Issue API: SDKCheck of <android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)> is checking!!!
+The life time of api is [26,31]
+14call roads:
+1 Mainhead roads:
+-i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: a2dp.Vol.StoreLoc dummyMainMethod_a2dp_Vol_StoreLoc(android.content.Intent)>[]--><a2dp.Vol.StoreLoc: void onCreate()>[]--><a2dp.Vol.StoreLoc: void createNotificationChannel()>[[-i0 < 26]]--><android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)>
+One road protect good!
+-i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: a2dp.Vol.Connector dummyMainMethod_a2dp_Vol_Connector(android.content.Intent)>[]--><a2dp.Vol.Connector: int onStartCommand(android.content.Intent,int,int)>[]--><a2dp.Vol.Connector: void updatenot()>[]--><a2dp.Vol.Connector: void createNotificationChannel()>[[-i0 < 26]]--><android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)>
+One road protect good!
+-i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: a2dp.Vol.service dummyMainMethod_a2dp_Vol_service(android.content.Intent)>[]--><a2dp.Vol.service: int onStartCommand(android.content.Intent,int,int)>[]--><a2dp.Vol.service: void createNotificationChannel()>[[-i0 < 26]]--><android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)>
+One road protect good!
+13 Packageshead roads:
+-i0 < 26
+Good road: <a2dp.Vol.service$9: void onReceive(android.content.Context,android.content.Intent)>[]--><a2dp.Vol.service: void DoConnected(a2dp.Vol.btDevice)>[]--><a2dp.Vol.service: void updateNot()>[]--><a2dp.Vol.service: void createNotificationChannel()>[[-i0 < 26]]--><android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)>
+One road protect good!
+-i0 < 26
+Good road: <a2dp.Vol.service$5: void onReceive(android.content.Context,android.content.Intent)>[]--><a2dp.Vol.service: void DoConnected(a2dp.Vol.btDevice)>[]--><a2dp.Vol.service: void updateNot()>[]--><a2dp.Vol.service: void createNotificationChannel()>[[-i0 < 26]]--><android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)>
+One road protect good!
+$i1 >= 26
+-i0 < 26
+Good road: <a2dp.Vol.service$5: void onReceive(android.content.Context,android.content.Intent)>[]--><a2dp.Vol.service: void DoDisconnected(a2dp.Vol.btDevice)>[[$i1 >= 26]]--><a2dp.Vol.service: void updateNot()>[]--><a2dp.Vol.service: void createNotificationChannel()>[[-i0 < 26]]--><android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)>
+One road protect good!
+-i0 < 26
+Good road: <a2dp.Vol.service$3: void onReceive(android.content.Context,android.content.Intent)>[]--><a2dp.Vol.service: void updateNot()>[]--><a2dp.Vol.service: void createNotificationChannel()>[[-i0 < 26]]--><android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)>
+One road protect good!
+$i1 >= 26
+-i0 < 26
+Good road: <a2dp.Vol.service$14: void onReceive(android.content.Context,android.content.Intent)>[]--><a2dp.Vol.service: void DoDisconnected(a2dp.Vol.btDevice)>[[$i1 >= 26]]--><a2dp.Vol.service: void updateNot()>[]--><a2dp.Vol.service: void createNotificationChannel()>[[-i0 < 26]]--><android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)>
+One road protect good!
+-i0 < 26
+Good road: <a2dp.Vol.service$7: void onReceive(android.content.Context,android.content.Intent)>[]--><a2dp.Vol.service: void DoConnected(a2dp.Vol.btDevice)>[]--><a2dp.Vol.service: void updateNot()>[]--><a2dp.Vol.service: void createNotificationChannel()>[[-i0 < 26]]--><android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)>
+One road protect good!
+-i0 < 26
+Good road: <a2dp.Vol.service$8: void onReceive(android.content.Context,android.content.Intent)>[]--><a2dp.Vol.service: void DoConnected(a2dp.Vol.btDevice)>[]--><a2dp.Vol.service: void updateNot()>[]--><a2dp.Vol.service: void createNotificationChannel()>[[-i0 < 26]]--><android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)>
+One road protect good!
+-i0 < 26
+Good road: <a2dp.Vol.service$6: void onReceive(android.content.Context,android.content.Intent)>[]--><a2dp.Vol.service: void DoConnected(a2dp.Vol.btDevice)>[]--><a2dp.Vol.service: void updateNot()>[]--><a2dp.Vol.service: void createNotificationChannel()>[[-i0 < 26]]--><android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)>
+One road protect good!
+$i1 >= 26
+-i0 < 26
+Good road: <a2dp.Vol.service$4: void onReceive(android.content.Context,android.content.Intent)>[]--><a2dp.Vol.service: void DoDisconnected(a2dp.Vol.btDevice)>[[$i1 >= 26]]--><a2dp.Vol.service: void updateNot()>[]--><a2dp.Vol.service: void createNotificationChannel()>[[-i0 < 26]]--><android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)>
+One road protect good!
+$i1 >= 26
+-i0 < 26
+Good road: <a2dp.Vol.service$15: void onReceive(android.content.Context,android.content.Intent)>[]--><a2dp.Vol.service: void DoDisconnected(a2dp.Vol.btDevice)>[[$i1 >= 26]]--><a2dp.Vol.service: void updateNot()>[]--><a2dp.Vol.service: void createNotificationChannel()>[[-i0 < 26]]--><android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)>
+One road protect good!
+$i1 >= 26
+-i0 < 26
+Good road: <a2dp.Vol.service$13: void onReceive(android.content.Context,android.content.Intent)>[]--><a2dp.Vol.service: void DoDisconnected(a2dp.Vol.btDevice)>[[$i1 >= 26]]--><a2dp.Vol.service: void updateNot()>[]--><a2dp.Vol.service: void createNotificationChannel()>[[-i0 < 26]]--><android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)>
+One road protect good!
+-i0 < 26
+Good road: <a2dp.Vol.service$17: void onFinish()>[]--><a2dp.Vol.service: void updateNot()>[]--><a2dp.Vol.service: void createNotificationChannel()>[[-i0 < 26]]--><android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)>
+One road protect good!
+$i1 >= 26
+-i0 < 26
+Good road: <a2dp.Vol.service$12: void onReceive(android.content.Context,android.content.Intent)>[]--><a2dp.Vol.service: void DoDisconnected(a2dp.Vol.btDevice)>[[$i1 >= 26]]--><a2dp.Vol.service: void updateNot()>[]--><a2dp.Vol.service: void createNotificationChannel()>[[-i0 < 26]]--><android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)>
+One road protect good!
+-i0 < 26
+Good road: <a2dp.Vol.service: void onStart()>[]--><a2dp.Vol.service: void updateNot()>[]--><a2dp.Vol.service: void createNotificationChannel()>[[-i0 < 26]]--><android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)>
+One road protect good!
+containsStatic:false
+containsTry:false
+14call by main package
+-----------------------------------------
+#################################################
+N 13 Potential Issue API: SDKCheck of <android.media.AudioFocusRequest.Builder: void <init>(int)> is checking!!!
+The life time of api is [26,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+$i0 >= 26
+Good road: <a2dp.Vol.service$1: void onReceive(android.content.Context,android.content.Intent)>[]--><a2dp.Vol.service: void TextReader(java.lang.String)>[[$i0 >= 26]]--><android.media.AudioFocusRequest.Builder: void <init>(int)>
+One road protect good!
+-i1 < 26
+Good road: <a2dp.Vol.service$24: void onReceive(android.content.Context,android.content.Intent)>[[-i1 < 26]]--><android.media.AudioFocusRequest.Builder: void <init>(int)>
+One road protect good!
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+crashApis numbers:0
+crashApis numbers in main road:0
+On Android Version 16 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 17 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 18 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 19 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 20 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 21 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 22 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 23 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 24 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 25 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 31 this app may have error api use(at least): 0 and error api roads: 0

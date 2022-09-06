@@ -1,0 +1,63 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/BatteryBot_Pro.apk
+Entry Points[com.darshancomputing.BatteryIndicatorPro.HelpActivity, com.darshancomputing.BatteryIndicatorPro.SettingsHelpActivity, com.darshancomputing.BatteryIndicatorPro.BatteryInfoActivity, com.darshancomputing.BatteryIndicatorPro.BatteryInfoService, com.darshancomputing.BatteryIndicatorPro.FullAppWidgetProvider, com.darshancomputing.BatteryIndicatorPro.AlarmEditActivity, com.darshancomputing.BatteryIndicatorPro.BatteryInfoAppWidgetProvider, com.darshancomputing.BatteryIndicatorPro.SettingsActivity, com.darshancomputing.BatteryIndicatorPro.BootCompletedReceiver]
+FllowDroidcallgraph size:2258
+Soot started on Mon Jul 11 01:35:39 CST 2022
+Soot finished on Mon Jul 11 01:35:45 CST 2022
+Soot has run for 0 min. 5 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 26
+Declared Target Sdk version is: 28
+Declared Max Sdk version is: -1
+Collected 453 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.app.NotificationManager: android.app.NotificationChannelGroup getNotificationChannelGroup(java.lang.String)> is checking!!!
+The life time of api is [28,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 26 27 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.darshancomputing.BatteryIndicatorPro.BatteryInfoActivity dummyMainMethod_com_darshancomputing_BatteryIndicatorPro_BatteryInfoActivity(android.content.Intent)>[]--><dummyMainClass: com.darshancomputing.BatteryIndicatorPro.AlarmsFragment dummyMainMethod_com_darshancomputing_BatteryIndicatorPro_AlarmsFragment(android.content.Intent,android.app.Activity)>[]--><com.darshancomputing.BatteryIndicatorPro.AlarmsFragment: void onResume()>[]--><android.app.NotificationManager: android.app.NotificationChannelGroup getNotificationChannelGroup(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.app.NotificationManager: android.app.NotificationChannelGroup getNotificationChannelGroup(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:1
+crashApisInMain:1
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.app.NotificationChannelGroup: boolean isBlocked()> is checking!!!
+The life time of api is [28,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 26 27 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.darshancomputing.BatteryIndicatorPro.BatteryInfoActivity dummyMainMethod_com_darshancomputing_BatteryIndicatorPro_BatteryInfoActivity(android.content.Intent)>[]--><dummyMainClass: com.darshancomputing.BatteryIndicatorPro.AlarmsFragment dummyMainMethod_com_darshancomputing_BatteryIndicatorPro_AlarmsFragment(android.content.Intent,android.app.Activity)>[]--><com.darshancomputing.BatteryIndicatorPro.AlarmsFragment: void onResume()>[]--><android.app.NotificationChannelGroup: boolean isBlocked()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.app.NotificationChannelGroup: boolean isBlocked()>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:2
+crashApisInMain:2
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+crashApis numbers:2
+crashApis numbers in main road:2
+On Android Version 16 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 17 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 18 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 19 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 20 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 21 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 22 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 23 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 24 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 25 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 26 this app may have error api use(at least): 2 and error api roads: 2
+On Android Version 27 this app may have error api use(at least): 2 and error api roads: 2
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 31 this app may have error api use(at least): 0 and error api roads: 0

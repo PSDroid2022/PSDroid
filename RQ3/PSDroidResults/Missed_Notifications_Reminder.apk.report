@@ -1,0 +1,1473 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/Missed_Notifications_Reminder.apk
+Entry Points[com.evernote.android.job.v21.PlatformJobService, com.evernote.android.job.v14.PlatformAlarmService, com.app.missednotificationsreminder.ui.activity.ApplicationsSelectionActivity, com.evernote.android.job.v14.PlatformAlarmReceiver, com.app.missednotificationsreminder.service.ReminderNotificationListenerService, com.app.missednotificationsreminder.service.ReminderNotificationListenerService$RingerModeChangedReceiver, com.app.missednotificationsreminder.service.ReminderNotificationListenerService$StopRemindersReceiver, com.evernote.android.job.v14.PlatformAlarmServiceExact, com.app.missednotificationsreminder.ui.activity.SettingsActivity, com.tbruyelle.rxpermissions.ShadowActivity, com.app.missednotificationsreminder.CustomApplication, com.evernote.android.job.JobRescheduleService, com.app.missednotificationsreminder.service.ReminderNotificationListenerService$ScheduledSoundNotificationReceiver, com.evernote.android.job.JobBootReceiver]
+FllowDroidcallgraph size:5444
+Soot started on Tue Jul 12 21:35:32 CST 2022
+leftOp<android.databinding.ViewDataBinding: int SDK_INT>
+StaticCheck:<com.app.missednotificationsreminder.util.BatteryUtils: boolean isBatteryOptimizationSettingsAvailable()>$yysi0 < 23
+StaticCheck:<com.evernote.android.job.JobConfig: boolean isAllowSmallerIntervalsForMarshmallow()>$yysi0 >= 24
+StaticCheck:<com.wdullaer.materialdatetimepicker.Utils: boolean isJellybeanOrLater()>$yysi0 < 16
+StaticCheck:<com.evernote.android.job.util.Device: boolean isIdle(android.content.Context)>$yysi0 < 23
+StaticCheck:<com.jakewharton.u2020.ui.debug.DebugDrawerLayout: boolean CAN_HIDE_DESCENDANTS>$yysi0 < 19
+Soot finished on Tue Jul 12 21:36:15 CST 2022
+Soot has run for 0 min. 43 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 18
+Declared Target Sdk version is: 23
+Declared Max Sdk version is: -1
+Collected 1230 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.widget.TimePicker: int getMinute()> is checking!!!
+The life time of api is [23,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+-$i1 < 23
+Good road: <android.databinding.adapters.TimePickerBindingAdapter: void setMinute(android.widget.TimePicker,int)>[[-$i1 < 23]]--><android.widget.TimePicker: int getMinute()>
+One road protect good!
+-i0 < 23
+Good road: <android.databinding.adapters.TimePickerBindingAdapter: int getMinute(android.widget.TimePicker)>[[-i0 < 23]]--><android.widget.TimePicker: int getMinute()>
+One road protect good!
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.view.accessibility.AccessibilityNodeInfo: void addAction(android.view.accessibility.AccessibilityNodeInfo.AccessibilityAction)> is checking!!!
+The life time of api is [21,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+-$i0 < 21
+Good road: <com.wdullaer.materialdatetimepicker.time.RadialPickerLayout: void onInitializeAccessibilityNodeInfo(android.view.accessibility.AccessibilityNodeInfo)>[[-$i0 < 21]]--><android.view.accessibility.AccessibilityNodeInfo: void addAction(android.view.accessibility.AccessibilityNodeInfo.AccessibilityAction)>
+One road protect good!
+-$i0 < 21
+Good road: <com.wdullaer.materialdatetimepicker.date.DayPickerView: void onInitializeAccessibilityNodeInfo(android.view.accessibility.AccessibilityNodeInfo)>[[-$i0 < 21]]--><android.view.accessibility.AccessibilityNodeInfo: void addAction(android.view.accessibility.AccessibilityNodeInfo.AccessibilityAction)>
+One road protect good!
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.widget.TimePicker: int getHour()> is checking!!!
+The life time of api is [23,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+-i0 < 23
+Good road: <android.databinding.adapters.TimePickerBindingAdapter: int getHour(android.widget.TimePicker)>[[-i0 < 23]]--><android.widget.TimePicker: int getHour()>
+One road protect good!
+-$i1 < 23
+Good road: <android.databinding.adapters.TimePickerBindingAdapter: void setHour(android.widget.TimePicker,int)>[[-$i1 < 23]]--><android.widget.TimePicker: int getHour()>
+One road protect good!
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.app.job.JobScheduler: java.util.List getAllPendingJobs()> is checking!!!
+The life time of api is [21,31]
+802call roads:
+1 Mainhead roads:
+801 Packageshead roads:
+containsStatic:false
+containsTry:true
+802call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.content.res.Resources: int getColor(int,android.content.res.Resources.Theme)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+$i1 >= 23
+Good road: <butterknife.internal.Utils: int getColor(android.content.res.Resources,android.content.res.Resources$Theme,int)>[[$i1 >= 23]]--><android.content.res.Resources: int getColor(int,android.content.res.Resources.Theme)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 5 Potential Issue API: SDKCheck of <android.content.res.Resources: android.content.res.ColorStateList getColorStateList(int,android.content.res.Resources.Theme)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+$i1 >= 23
+Good road: <butterknife.internal.Utils: android.content.res.ColorStateList getColorStateList(android.content.res.Resources,android.content.res.Resources$Theme,int)>[[$i1 >= 23]]--><android.content.res.Resources: android.content.res.ColorStateList getColorStateList(int,android.content.res.Resources.Theme)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 6 Potential Issue API: SDKCheck of <android.app.Activity: void requestPermissions(java.lang.String[],int)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 18 19 20 21 22 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.tbruyelle.rxpermissions.ShadowActivity dummyMainMethod_com_tbruyelle_rxpermissions_ShadowActivity(android.content.Intent)>[]--><com.tbruyelle.rxpermissions.ShadowActivity: void onCreate(android.os.Bundle)>[]--><com.tbruyelle.rxpermissions.ShadowActivity: void handleIntent(android.content.Intent)>[]--><android.app.Activity: void requestPermissions(java.lang.String[],int)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.app.Activity: void requestPermissions(java.lang.String[],int)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:1
+crashApisInMain:1
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 7 Potential Issue API: SDKCheck of <android.os.BaseBundle: int getInt(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+5call roads:
+0 Mainhead roads:
+5 Packageshead roads:
+!!!this api will crash on sdk 18 19 20 
+Error road: <com.wdullaer.materialdatetimepicker.time.TimePickerDialog: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#1.the call statck between class <com.wdullaer.materialdatetimepicker.time.TimePickerDialog: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 18 19 20 
+Error road: <com.wdullaer.materialdatetimepicker.date.DatePickerDialog: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#2.the call statck between class <com.wdullaer.materialdatetimepicker.date.DatePickerDialog: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 18 19 20 
+Error road: <com.wdullaer.materialdatetimepicker.time.TimePickerDialog: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#3.the call statck between class <com.wdullaer.materialdatetimepicker.time.TimePickerDialog: void onCreate(android.os.Bundle)> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 18 19 20 
+Error road: <com.appyvet.rangebar.RangeBar: void onRestoreInstanceState(android.os.Parcelable)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#4.the call statck between class <com.appyvet.rangebar.RangeBar: void onRestoreInstanceState(android.os.Parcelable)> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 18 19 20 
+Error road: <com.wdullaer.materialdatetimepicker.date.DatePickerDialog: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#5.the call statck between class <com.wdullaer.materialdatetimepicker.date.DatePickerDialog: void onCreate(android.os.Bundle)> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:2
+containsStatic:false
+containsTry:false
+6call by main package
+-----------------------------------------
+#################################################
+N 8 Potential Issue API: SDKCheck of <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()> is checking!!!
+The life time of api is [1,30]
+3call roads:
+0 Mainhead roads:
+3 Packageshead roads:
+try
+Good road with try: <com.evernote.android.job.util.Device: com.evernote.android.job.JobRequest$NetworkType getNetworkType(android.content.Context)>[[try]]--><android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>
+One road protect good!
+!!!this api will crash on sdk 31 
+Error road: <com.squareup.picasso.Dispatcher$DispatcherHandler: void handleMessage(android.os.Message)>[]--><com.squareup.picasso.Dispatcher: void performRetry(com.squareup.picasso.BitmapHunter)>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>
+#2.the call statck between class <com.squareup.picasso.Dispatcher$DispatcherHandler: void handleMessage(android.os.Message)> to <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <com.squareup.picasso.Dispatcher$NetworkBroadcastReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>
+#3.the call statck between class <com.squareup.picasso.Dispatcher$NetworkBroadcastReceiver: void onReceive(android.content.Context,android.content.Intent)> to <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>has compatibility isssues！
+-----------------------------------------
+crashApis:3
+containsStatic:false
+containsTry:true
+4call by main package
+-----------------------------------------
+#################################################
+N 9 Potential Issue API: SDKCheck of <android.app.job.JobInfo.Builder: android.app.job.JobInfo.Builder setTransientExtras(android.os.Bundle)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 18 19 20 21 22 23 24 25 
+Error road: <com.evernote.android.job.v26.JobProxy26: android.app.job.JobInfo$Builder setTransientBundle(com.evernote.android.job.JobRequest,android.app.job.JobInfo$Builder)>[]--><android.app.job.JobInfo.Builder: android.app.job.JobInfo.Builder setTransientExtras(android.os.Bundle)>
+#1.the call statck between class <com.evernote.android.job.v26.JobProxy26: android.app.job.JobInfo$Builder setTransientBundle(com.evernote.android.job.JobRequest,android.app.job.JobInfo$Builder)> to <android.app.job.JobInfo.Builder: android.app.job.JobInfo.Builder setTransientExtras(android.os.Bundle)>has compatibility isssues！
+-----------------------------------------
+crashApis:4
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 10 Potential Issue API: SDKCheck of <android.view.View: void setOnApplyWindowInsetsListener(android.view.View.OnApplyWindowInsetsListener)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 18 19 20 
+Error road: <com.jakewharton.u2020.ui.debug.DebugDrawerLayout$DrawerLayoutCompatImplApi21: void configureApplyInsets(android.view.View)>[]--><com.jakewharton.u2020.ui.debug.DrawerLayoutCompatApi21: void configureApplyInsets(android.view.View)>[]--><android.view.View: void setOnApplyWindowInsetsListener(android.view.View.OnApplyWindowInsetsListener)>
+#1.the call statck between class <com.jakewharton.u2020.ui.debug.DebugDrawerLayout$DrawerLayoutCompatImplApi21: void configureApplyInsets(android.view.View)> to <android.view.View: void setOnApplyWindowInsetsListener(android.view.View.OnApplyWindowInsetsListener)>has compatibility isssues！
+-----------------------------------------
+crashApis:5
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 11 Potential Issue API: SDKCheck of <android.os.BaseBundle: boolean containsKey(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 18 19 20 
+Error road: <com.wdullaer.materialdatetimepicker.time.TimePickerDialog: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)>[]--><android.os.BaseBundle: boolean containsKey(java.lang.String)>
+#1.the call statck between class <com.wdullaer.materialdatetimepicker.time.TimePickerDialog: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)> to <android.os.BaseBundle: boolean containsKey(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 18 19 20 
+Error road: <com.wdullaer.materialdatetimepicker.time.TimePickerDialog: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: boolean containsKey(java.lang.String)>
+#2.the call statck between class <com.wdullaer.materialdatetimepicker.time.TimePickerDialog: void onCreate(android.os.Bundle)> to <android.os.BaseBundle: boolean containsKey(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:6
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 12 Potential Issue API: SDKCheck of <android.app.job.JobParameters: android.os.Bundle getTransientExtras()> is checking!!!
+The life time of api is [26,31]
+4call roads:
+1 Mainhead roads:
+-$i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.evernote.android.job.v21.PlatformJobService dummyMainMethod_com_evernote_android_job_v21_PlatformJobService(android.content.Intent)>[]--><com.evernote.android.job.v21.PlatformJobService: boolean onStartJob(android.app.job.JobParameters)>[]--><com.evernote.android.job.v21.PlatformJobService$1: void run()>[]--><com.evernote.android.job.v21.PlatformJobService: android.os.Bundle access$100(com.evernote.android.job.v21.PlatformJobService,android.app.job.JobParameters)>[]--><com.evernote.android.job.v21.PlatformJobService: android.os.Bundle getTransientBundle(android.app.job.JobParameters)>[[-$i0 < 26]]--><android.app.job.JobParameters: android.os.Bundle getTransientExtras()>
+One road protect good!
+3 Packageshead roads:
+-$i0 < 26
+Good road: <android.databinding.ViewDataBinding$6: void onViewAttachedToWindow(android.view.View)>[]--><com.evernote.android.job.v21.PlatformJobService$1: void run()>[]--><com.evernote.android.job.v21.PlatformJobService: android.os.Bundle access$100(com.evernote.android.job.v21.PlatformJobService,android.app.job.JobParameters)>[]--><com.evernote.android.job.v21.PlatformJobService: android.os.Bundle getTransientBundle(android.app.job.JobParameters)>[[-$i0 < 26]]--><android.app.job.JobParameters: android.os.Bundle getTransientExtras()>
+One road protect good!
+-$i0 < 26
+Good road: <android.databinding.ViewDataBinding$8: void doFrame(long)>[]--><com.evernote.android.job.v21.PlatformJobService$1: void run()>[]--><com.evernote.android.job.v21.PlatformJobService: android.os.Bundle access$100(com.evernote.android.job.v21.PlatformJobService,android.app.job.JobParameters)>[]--><com.evernote.android.job.v21.PlatformJobService: android.os.Bundle getTransientBundle(android.app.job.JobParameters)>[[-$i0 < 26]]--><android.app.job.JobParameters: android.os.Bundle getTransientExtras()>
+One road protect good!
+-$i0 < 26
+Good road: <android.arch.lifecycle.ComputableLiveData: void invalidate()>[]--><android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)>[]--><com.evernote.android.job.v21.PlatformJobService$1: void run()>[]--><com.evernote.android.job.v21.PlatformJobService: android.os.Bundle access$100(com.evernote.android.job.v21.PlatformJobService,android.app.job.JobParameters)>[]--><com.evernote.android.job.v21.PlatformJobService: android.os.Bundle getTransientBundle(android.app.job.JobParameters)>[[-$i0 < 26]]--><android.app.job.JobParameters: android.os.Bundle getTransientExtras()>
+One road protect good!
+containsStatic:false
+containsTry:false
+4call by main package
+-----------------------------------------
+#################################################
+N 13 Potential Issue API: SDKCheck of <android.app.job.JobInfo.Builder: android.app.job.JobInfo build()> is checking!!!
+The life time of api is [21,31]
+802call roads:
+1 Mainhead roads:
+801 Packageshead roads:
+containsStatic:false
+containsTry:true
+802call by main package
+-----------------------------------------
+#################################################
+N 14 Potential Issue API: SDKCheck of <android.app.job.JobInfo.Builder: android.app.job.JobInfo.Builder setPeriodic(long,long)> is checking!!!
+The life time of api is [24,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 18 19 20 21 22 23 
+Error road: <com.evernote.android.job.v24.JobProxy24: android.app.job.JobInfo$Builder createBuilderPeriodic(android.app.job.JobInfo$Builder,long,long)>[]--><android.app.job.JobInfo.Builder: android.app.job.JobInfo.Builder setPeriodic(long,long)>
+#1.the call statck between class <com.evernote.android.job.v24.JobProxy24: android.app.job.JobInfo$Builder createBuilderPeriodic(android.app.job.JobInfo$Builder,long,long)> to <android.app.job.JobInfo.Builder: android.app.job.JobInfo.Builder setPeriodic(long,long)>has compatibility isssues！
+-----------------------------------------
+crashApis:7
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 15 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)> is checking!!!
+The life time of api is [21,31]
+3call roads:
+0 Mainhead roads:
+3 Packageshead roads:
+!!!this api will crash on sdk 18 19 20 
+Error road: <com.squareup.leakcanary.internal.DisplayLeakActivity: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#1.the call statck between class <com.squareup.leakcanary.internal.DisplayLeakActivity: void onSaveInstanceState(android.os.Bundle)> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 18 19 20 
+Error road: <com.wdullaer.materialdatetimepicker.date.DatePickerDialog: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#2.the call statck between class <com.wdullaer.materialdatetimepicker.date.DatePickerDialog: void onSaveInstanceState(android.os.Bundle)> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 18 19 20 
+Error road: <com.wdullaer.materialdatetimepicker.time.TimePickerDialog: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#3.the call statck between class <com.wdullaer.materialdatetimepicker.time.TimePickerDialog: void onSaveInstanceState(android.os.Bundle)> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:8
+containsStatic:false
+containsTry:false
+4call by main package
+-----------------------------------------
+#################################################
+N 16 Potential Issue API: SDKCheck of <android.content.Context: int checkSelfPermission(java.lang.String)> is checking!!!
+The life time of api is [23,31]
+4call roads:
+0 Mainhead roads:
+4 Packageshead roads:
+!!!this api will crash on sdk 18 19 20 21 22 
+Error road: <com.app.missednotificationsreminder.binding.model.SettingsViewModel: java.lang.Boolean lambda$checkPermissions$4(com.app.missednotificationsreminder.binding.model.SettingsViewModel,java.lang.String)>[]--><com.tbruyelle.rxpermissions.RxPermissions: boolean isGranted(java.lang.String)>[]--><com.tbruyelle.rxpermissions.RxPermissions: boolean isGranted_(java.lang.String)>[]--><android.content.Context: int checkSelfPermission(java.lang.String)>
+#1.the call statck between class <com.app.missednotificationsreminder.binding.model.SettingsViewModel: java.lang.Boolean lambda$checkPermissions$4(com.app.missednotificationsreminder.binding.model.SettingsViewModel,java.lang.String)> to <android.content.Context: int checkSelfPermission(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 18 19 20 21 22 
+Error road: <com.tbruyelle.rxpermissions.RxPermissions: rx.Observable access$100(com.tbruyelle.rxpermissions.RxPermissions,java.lang.String[])>[]--><com.tbruyelle.rxpermissions.RxPermissions: rx.Observable request_(java.lang.String[])>[]--><com.tbruyelle.rxpermissions.RxPermissions: boolean isGranted(java.lang.String)>[]--><com.tbruyelle.rxpermissions.RxPermissions: boolean isGranted_(java.lang.String)>[]--><android.content.Context: int checkSelfPermission(java.lang.String)>
+#2.the call statck between class <com.tbruyelle.rxpermissions.RxPermissions: rx.Observable access$100(com.tbruyelle.rxpermissions.RxPermissions,java.lang.String[])> to <android.content.Context: int checkSelfPermission(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 18 19 20 21 22 
+Error road: <com.app.missednotificationsreminder.binding.model.SoundViewModel: java.lang.Boolean lambda$init$0(com.app.missednotificationsreminder.binding.model.SoundViewModel,java.lang.String)>[]--><com.tbruyelle.rxpermissions.RxPermissions: boolean isGranted(java.lang.String)>[]--><com.tbruyelle.rxpermissions.RxPermissions: boolean isGranted_(java.lang.String)>[]--><android.content.Context: int checkSelfPermission(java.lang.String)>
+#3.the call statck between class <com.app.missednotificationsreminder.binding.model.SoundViewModel: java.lang.Boolean lambda$init$0(com.app.missednotificationsreminder.binding.model.SoundViewModel,java.lang.String)> to <android.content.Context: int checkSelfPermission(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 18 19 20 21 22 
+Error road: <com.tbruyelle.rxpermissions.RxPermissions: rx.Observable shouldShowRequestPermissionRationale(android.app.Activity,java.lang.String[])>[]--><com.tbruyelle.rxpermissions.RxPermissions: boolean shouldShowRequestPermissionRationale_(android.app.Activity,java.lang.String[])>[]--><com.tbruyelle.rxpermissions.RxPermissions: boolean isGranted(java.lang.String)>[]--><com.tbruyelle.rxpermissions.RxPermissions: boolean isGranted_(java.lang.String)>[]--><android.content.Context: int checkSelfPermission(java.lang.String)>
+#4.the call statck between class <com.tbruyelle.rxpermissions.RxPermissions: rx.Observable shouldShowRequestPermissionRationale(android.app.Activity,java.lang.String[])> to <android.content.Context: int checkSelfPermission(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:9
+containsStatic:false
+containsTry:false
+5call by main package
+-----------------------------------------
+#################################################
+N 17 Potential Issue API: SDKCheck of <android.service.notification.NotificationListenerService: void onListenerConnected()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 18 19 20 
+Error road: <com.app.missednotificationsreminder.service.AbstractReminderNotificationListenerService: void onListenerConnected()>[]--><android.service.notification.NotificationListenerService: void onListenerConnected()>
+#1.the call statck between class <com.app.missednotificationsreminder.service.AbstractReminderNotificationListenerService: void onListenerConnected()> to <android.service.notification.NotificationListenerService: void onListenerConnected()>has compatibility isssues！
+-----------------------------------------
+crashApis:10
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 18 Potential Issue API: SDKCheck of <android.view.WindowInsets: android.view.WindowInsets consumeSystemWindowInsets()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 18 19 20 
+Error road: <com.jakewharton.u2020.ui.debug.DrawerLayoutCompatApi21$InsetsListener: android.view.WindowInsets onApplyWindowInsets(android.view.View,android.view.WindowInsets)>[]--><android.view.WindowInsets: android.view.WindowInsets consumeSystemWindowInsets()>
+#1.the call statck between class <com.jakewharton.u2020.ui.debug.DrawerLayoutCompatApi21$InsetsListener: android.view.WindowInsets onApplyWindowInsets(android.view.View,android.view.WindowInsets)> to <android.view.WindowInsets: android.view.WindowInsets consumeSystemWindowInsets()>has compatibility isssues！
+-----------------------------------------
+crashApis:11
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 19 Potential Issue API: SDKCheck of <android.view.WindowInsets: int getSystemWindowInsetLeft()> is checking!!!
+The life time of api is [21,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 18 19 20 
+Error road: <com.jakewharton.u2020.ui.debug.DrawerLayoutCompatApi21: void applyMarginInsets(android.view.ViewGroup$MarginLayoutParams,java.lang.Object,int)>[]--><android.view.WindowInsets: int getSystemWindowInsetLeft()>
+#1.the call statck between class <com.jakewharton.u2020.ui.debug.DrawerLayoutCompatApi21: void applyMarginInsets(android.view.ViewGroup$MarginLayoutParams,java.lang.Object,int)> to <android.view.WindowInsets: int getSystemWindowInsetLeft()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 18 19 20 
+Error road: <com.jakewharton.u2020.ui.debug.DebugDrawerLayout$DrawerLayoutCompatImplApi21: void dispatchChildInsets(android.view.View,java.lang.Object,int)>[]--><com.jakewharton.u2020.ui.debug.DrawerLayoutCompatApi21: void dispatchChildInsets(android.view.View,java.lang.Object,int)>[]--><android.view.WindowInsets: int getSystemWindowInsetLeft()>
+#2.the call statck between class <com.jakewharton.u2020.ui.debug.DebugDrawerLayout$DrawerLayoutCompatImplApi21: void dispatchChildInsets(android.view.View,java.lang.Object,int)> to <android.view.WindowInsets: int getSystemWindowInsetLeft()>has compatibility isssues！
+-----------------------------------------
+crashApis:12
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 20 Potential Issue API: SDKCheck of <android.view.WindowInsets: android.view.WindowInsets replaceSystemWindowInsets(int,int,int,int)> is checking!!!
+The life time of api is [21,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 18 19 20 
+Error road: <com.jakewharton.u2020.ui.debug.DrawerLayoutCompatApi21: void applyMarginInsets(android.view.ViewGroup$MarginLayoutParams,java.lang.Object,int)>[]--><android.view.WindowInsets: android.view.WindowInsets replaceSystemWindowInsets(int,int,int,int)>
+#1.the call statck between class <com.jakewharton.u2020.ui.debug.DrawerLayoutCompatApi21: void applyMarginInsets(android.view.ViewGroup$MarginLayoutParams,java.lang.Object,int)> to <android.view.WindowInsets: android.view.WindowInsets replaceSystemWindowInsets(int,int,int,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 18 19 20 
+Error road: <com.jakewharton.u2020.ui.debug.DebugDrawerLayout$DrawerLayoutCompatImplApi21: void dispatchChildInsets(android.view.View,java.lang.Object,int)>[]--><com.jakewharton.u2020.ui.debug.DrawerLayoutCompatApi21: void dispatchChildInsets(android.view.View,java.lang.Object,int)>[]--><android.view.WindowInsets: android.view.WindowInsets replaceSystemWindowInsets(int,int,int,int)>
+#2.the call statck between class <com.jakewharton.u2020.ui.debug.DebugDrawerLayout$DrawerLayoutCompatImplApi21: void dispatchChildInsets(android.view.View,java.lang.Object,int)> to <android.view.WindowInsets: android.view.WindowInsets replaceSystemWindowInsets(int,int,int,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:13
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 21 Potential Issue API: SDKCheck of <android.content.pm.PackageManager: boolean isPermissionRevokedByPolicy(java.lang.String,java.lang.String)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 18 19 20 21 22 
+Error road: <com.tbruyelle.rxpermissions.RxPermissions: rx.Observable access$100(com.tbruyelle.rxpermissions.RxPermissions,java.lang.String[])>[]--><com.tbruyelle.rxpermissions.RxPermissions: rx.Observable request_(java.lang.String[])>[]--><com.tbruyelle.rxpermissions.RxPermissions: boolean isRevoked(java.lang.String)>[]--><com.tbruyelle.rxpermissions.RxPermissions: boolean isRevoked_(java.lang.String)>[]--><android.content.pm.PackageManager: boolean isPermissionRevokedByPolicy(java.lang.String,java.lang.String)>
+#1.the call statck between class <com.tbruyelle.rxpermissions.RxPermissions: rx.Observable access$100(com.tbruyelle.rxpermissions.RxPermissions,java.lang.String[])> to <android.content.pm.PackageManager: boolean isPermissionRevokedByPolicy(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:14
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 22 Potential Issue API: SDKCheck of <android.content.res.Resources: android.graphics.drawable.Drawable getDrawable(int,android.content.res.Resources.Theme)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+$i1 >= 21
+Good road: <butterknife.internal.Utils: android.graphics.drawable.Drawable getDrawable(android.content.res.Resources,android.content.res.Resources$Theme,int)>[[$i1 >= 21]]--><android.content.res.Resources: android.graphics.drawable.Drawable getDrawable(int,android.content.res.Resources.Theme)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 23 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)> is checking!!!
+The life time of api is [22,31]
+3call roads:
+0 Mainhead roads:
+3 Packageshead roads:
+!!!this api will crash on sdk 18 19 20 21 
+Error road: <com.appyvet.rangebar.RangeBar: android.os.Parcelable onSaveInstanceState()>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+#1.the call statck between class <com.appyvet.rangebar.RangeBar: android.os.Parcelable onSaveInstanceState()> to <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 18 19 20 21 
+Error road: <com.wdullaer.materialdatetimepicker.date.DatePickerDialog: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+#2.the call statck between class <com.wdullaer.materialdatetimepicker.date.DatePickerDialog: void onSaveInstanceState(android.os.Bundle)> to <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 18 19 20 21 
+Error road: <com.wdullaer.materialdatetimepicker.time.TimePickerDialog: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+#3.the call statck between class <com.wdullaer.materialdatetimepicker.time.TimePickerDialog: void onSaveInstanceState(android.os.Bundle)> to <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+crashApis:15
+containsStatic:false
+containsTry:false
+4call by main package
+-----------------------------------------
+#################################################
+N 24 Potential Issue API: SDKCheck of <android.net.NetworkInfo: int getSubtype()> is checking!!!
+The life time of api is [3,30]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <com.squareup.picasso.Dispatcher$DispatcherHandler: void handleMessage(android.os.Message)>[]--><com.squareup.picasso.Dispatcher: void performNetworkStateChange(android.net.NetworkInfo)>[]--><com.squareup.picasso.PicassoExecutorService: void adjustThreadCount(android.net.NetworkInfo)>[]--><android.net.NetworkInfo: int getSubtype()>
+#1.the call statck between class <com.squareup.picasso.Dispatcher$DispatcherHandler: void handleMessage(android.os.Message)> to <android.net.NetworkInfo: int getSubtype()>has compatibility isssues！
+-----------------------------------------
+crashApis:16
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 25 Potential Issue API: SDKCheck of <android.os.PowerManager: boolean isInteractive()> is checking!!!
+The life time of api is [21,31]
+3call roads:
+0 Mainhead roads:
+3 Packageshead roads:
+-$i0 < 20
+Good road: <com.evernote.android.job.Job: boolean meetsRequirements()>[]--><com.evernote.android.job.Job: boolean meetsRequirements(boolean)>[]--><com.evernote.android.job.Job: boolean isRequirementDeviceIdleMet()>[]--><com.evernote.android.job.util.Device: boolean isIdle(android.content.Context)>[[-$i0 < 20]]--><android.os.PowerManager: boolean isInteractive()>
+One road protect good!
+try
+Good road with try: <com.evernote.android.job.DailyJob: com.evernote.android.job.Job$Result onRunJob(com.evernote.android.job.Job$Params)>[[try]]--><com.evernote.android.job.Job: boolean meetsRequirements(boolean)>[]--><com.evernote.android.job.Job: boolean isRequirementDeviceIdleMet()>[]--><com.evernote.android.job.util.Device: boolean isIdle(android.content.Context)>[[-$i0 < 20]]--><android.os.PowerManager: boolean isInteractive()>
+One road protect good!
+try
+Good road with try: <com.evernote.android.job.Job: com.evernote.android.job.Job$Result runJob()>[[try]]--><com.evernote.android.job.Job: boolean meetsRequirements(boolean)>[]--><com.evernote.android.job.Job: boolean isRequirementDeviceIdleMet()>[]--><com.evernote.android.job.util.Device: boolean isIdle(android.content.Context)>[[-$i0 < 20]]--><android.os.PowerManager: boolean isInteractive()>
+One road protect good!
+containsStatic:false
+containsTry:true
+4call by main package
+-----------------------------------------
+#################################################
+N 26 Potential Issue API: SDKCheck of <android.util.SizeF: float getHeight()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 18 19 20 
+Error road: <androidx.versionedparcelable.VersionedParcel: void writeSizeF(android.util.SizeF,int)>[]--><android.util.SizeF: float getHeight()>
+#1.the call statck between class <androidx.versionedparcelable.VersionedParcel: void writeSizeF(android.util.SizeF,int)> to <android.util.SizeF: float getHeight()>has compatibility isssues！
+-----------------------------------------
+crashApis:17
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 27 Potential Issue API: SDKCheck of <android.app.job.JobService: void jobFinished(android.app.job.JobParameters,boolean)> is checking!!!
+The life time of api is [21,31]
+4call roads:
+1 Mainhead roads:
+-$i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.evernote.android.job.v21.PlatformJobService dummyMainMethod_com_evernote_android_job_v21_PlatformJobService(android.content.Intent)>[]--><com.evernote.android.job.v21.PlatformJobService: boolean onStartJob(android.app.job.JobParameters)>[]--><com.evernote.android.job.v21.PlatformJobService$1: void run()>[[-$i0 < 26]]--><android.app.job.JobService: void jobFinished(android.app.job.JobParameters,boolean)>
+One road protect good!
+3 Packageshead roads:
+-$i0 < 26
+Good road: <android.databinding.ViewDataBinding$6: void onViewAttachedToWindow(android.view.View)>[]--><com.evernote.android.job.v21.PlatformJobService$1: void run()>[[-$i0 < 26]]--><android.app.job.JobService: void jobFinished(android.app.job.JobParameters,boolean)>
+One road protect good!
+-$i0 < 26
+Good road: <android.databinding.ViewDataBinding$8: void doFrame(long)>[]--><com.evernote.android.job.v21.PlatformJobService$1: void run()>[[-$i0 < 26]]--><android.app.job.JobService: void jobFinished(android.app.job.JobParameters,boolean)>
+One road protect good!
+-$i0 < 26
+Good road: <android.arch.lifecycle.ComputableLiveData: void invalidate()>[]--><android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)>[]--><com.evernote.android.job.v21.PlatformJobService$1: void run()>[[-$i0 < 26]]--><android.app.job.JobService: void jobFinished(android.app.job.JobParameters,boolean)>
+One road protect good!
+containsStatic:false
+containsTry:false
+4call by main package
+-----------------------------------------
+#################################################
+N 28 Potential Issue API: SDKCheck of <android.widget.Toolbar: void setOnMenuItemClickListener(android.widget.Toolbar.OnMenuItemClickListener)> is checking!!!
+The life time of api is [21,31]
+803call roads:
+1 Mainhead roads:
+802 Packageshead roads:
+try
+Good road with try: <rx.internal.operators.OperatorPublish$2: void call(rx.Subscriber)>[]--><rx.internal.util.ScalarSynchronousObservable$1: java.lang.Object call(java.lang.Object)>[]--><rx.internal.util.ScalarSynchronousObservable$1: rx.Subscription call(rx.functions.Action0)>[]--><rx.internal.schedulers.EventLoopsScheduler: rx.Subscription scheduleDirect(rx.functions.Action0)>[]--><rx.internal.schedulers.NewThreadWorker: rx.internal.schedulers.ScheduledAction scheduleActual(rx.functions.Action0,long,java.util.concurrent.TimeUnit)>[]--><rx.plugins.RxJavaHooks: rx.functions.Action0 onScheduledAction(rx.functions.Action0)>[]--><rx.internal.operators.OperatorWithLatestFrom: java.lang.Object call(java.lang.Object)>[]--><rx.internal.operators.OperatorWithLatestFrom: rx.Subscriber call(rx.Subscriber)>[]--><rx.Observable: rx.Subscription unsafeSubscribe(rx.Subscriber)>[[try]]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(java.lang.Object)>[]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(rx.Subscriber)>[]--><android.widget.Toolbar: void setOnMenuItemClickListener(android.widget.Toolbar.OnMenuItemClickListener)>
+One road protect good!
+try
+Good road with try: <rx.internal.operators.OperatorPublish$2: void call(rx.Subscriber)>[]--><rx.internal.operators.OperatorWithLatestFrom: java.lang.Object call(java.lang.Object)>[]--><rx.internal.operators.OperatorWithLatestFrom: rx.Subscriber call(rx.Subscriber)>[]--><rx.Observable: rx.Subscription unsafeSubscribe(rx.Subscriber)>[[try]]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(java.lang.Object)>[]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(rx.Subscriber)>[]--><android.widget.Toolbar: void setOnMenuItemClickListener(android.widget.Toolbar.OnMenuItemClickListener)>
+One road protect good!
+try
+Good road with try: <rx.internal.operators.OperatorPublish$2: void call(rx.Subscriber)>[]--><rx.internal.util.ScalarSynchronousObservable$2: java.lang.Object call(java.lang.Object)>[]--><rx.internal.util.ScalarSynchronousObservable$2: rx.Subscription call(rx.functions.Action0)>[]--><rx.internal.schedulers.CachedThreadScheduler$EventLoopWorker: rx.Subscription schedule(rx.functions.Action0)>[]--><rx.internal.schedulers.CachedThreadScheduler$EventLoopWorker: rx.Subscription schedule(rx.functions.Action0,long,java.util.concurrent.TimeUnit)>[]--><rx.internal.schedulers.NewThreadWorker: rx.internal.schedulers.ScheduledAction scheduleActual(rx.functions.Action0,long,java.util.concurrent.TimeUnit)>[]--><rx.plugins.RxJavaHooks: rx.functions.Action0 onScheduledAction(rx.functions.Action0)>[]--><rx.internal.operators.OperatorWithLatestFrom: java.lang.Object call(java.lang.Object)>[]--><rx.internal.operators.OperatorWithLatestFrom: rx.Subscriber call(rx.Subscriber)>[]--><rx.Observable: rx.Subscription unsafeSubscribe(rx.Subscriber)>[[try]]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(java.lang.Object)>[]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(rx.Subscriber)>[]--><android.widget.Toolbar: void setOnMenuItemClickListener(android.widget.Toolbar.OnMenuItemClickListener)>
+One road protect good!
+try
+Good road with try: <rx.internal.operators.OperatorPublish$2: void call(rx.Subscriber)>[]--><rx.internal.operators.OperatorTakeUntil: java.lang.Object call(java.lang.Object)>[]--><rx.internal.operators.OperatorTakeUntil: rx.Subscriber call(rx.Subscriber)>[]--><rx.Observable: rx.Subscription unsafeSubscribe(rx.Subscriber)>[[try]]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(java.lang.Object)>[]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(rx.Subscriber)>[]--><android.widget.Toolbar: void setOnMenuItemClickListener(android.widget.Toolbar.OnMenuItemClickListener)>
+One road protect good!
+try
+Good road with try: <rx.internal.operators.OperatorPublish$2: void call(rx.Subscriber)>[]--><rx.internal.operators.OperatorDelayWithSelector: java.lang.Object call(java.lang.Object)>[]--><rx.internal.operators.OperatorDelayWithSelector: rx.Subscriber call(rx.Subscriber)>[]--><rx.Observable: rx.Subscription unsafeSubscribe(rx.Subscriber)>[[try]]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(java.lang.Object)>[]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(rx.Subscriber)>[]--><android.widget.Toolbar: void setOnMenuItemClickListener(android.widget.Toolbar.OnMenuItemClickListener)>
+One road protect good!
+try
+Good road with try: <rx.internal.operators.OperatorPublish$2: void call(rx.Subscriber)>[]--><rx.internal.operators.OperatorBufferWithStartEndObservable: java.lang.Object call(java.lang.Object)>[]--><rx.internal.operators.OperatorBufferWithStartEndObservable: rx.Subscriber call(rx.Subscriber)>[]--><rx.Observable: rx.Subscription unsafeSubscribe(rx.Subscriber)>[[try]]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(java.lang.Object)>[]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(rx.Subscriber)>[]--><android.widget.Toolbar: void setOnMenuItemClickListener(android.widget.Toolbar.OnMenuItemClickListener)>
+One road protect good!
+try
+Good road with try: <rx.internal.operators.OperatorPublish$2: void call(rx.Subscriber)>[]--><rx.internal.operators.OperatorWindowWithObservable: java.lang.Object call(java.lang.Object)>[]--><rx.internal.operators.OperatorWindowWithObservable: rx.Subscriber call(rx.Subscriber)>[]--><rx.Observable: rx.Subscription unsafeSubscribe(rx.Subscriber)>[[try]]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(java.lang.Object)>[]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(rx.Subscriber)>[]--><android.widget.Toolbar: void setOnMenuItemClickListener(android.widget.Toolbar.OnMenuItemClickListener)>
+One road protect good!
+try
+Good road with try: <rx.internal.operators.OperatorPublish$2: void call(rx.Subscriber)>[]--><rx.Observable: rx.Subscription unsafeSubscribe(rx.Subscriber)>[[try]]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(java.lang.Object)>[]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(rx.Subscriber)>[]--><android.widget.Toolbar: void setOnMenuItemClickListener(android.widget.Toolbar.OnMenuItemClickListener)>
+One road protect good!
+try
+Good road with try: <rx.subjects.SerializedSubject$1: void call(rx.Subscriber)>[]--><rx.Observable: rx.Subscription unsafeSubscribe(rx.Subscriber)>[[try]]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(java.lang.Object)>[]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(rx.Subscriber)>[]--><android.widget.Toolbar: void setOnMenuItemClickListener(android.widget.Toolbar.OnMenuItemClickListener)>
+One road protect good!
+try
+Good road with try: <rx.internal.operators.OnSubscribeRedo$4$1: void setProducer(rx.Producer)>[]--><rx.internal.operators.OperatorTake$1$1: void request(long)>[]--><rx.observables.AsyncOnSubscribe$AsyncOuterManager: void request(long)>[]--><rx.internal.operators.OperatorBufferWithSize$BufferOverlap$BufferOverlapProducer: void request(long)>[]--><rx.internal.operators.BackpressureUtils: boolean postCompleteRequest(java.util.concurrent.atomic.AtomicLong,long,java.util.Queue,rx.Subscriber)>[]--><rx.internal.operators.BackpressureUtils: boolean postCompleteRequest(java.util.concurrent.atomic.AtomicLong,long,java.util.Queue,rx.Subscriber,rx.functions.Func1)>[]--><rx.internal.operators.BackpressureUtils: void postCompleteDrain(java.util.concurrent.atomic.AtomicLong,java.util.Queue,rx.Subscriber,rx.functions.Func1)>[]--><rx.internal.operators.OperatorWindowWithObservable: java.lang.Object call(java.lang.Object)>[]--><rx.internal.operators.OperatorWindowWithObservable: rx.Subscriber call(rx.Subscriber)>[]--><rx.Observable: rx.Subscription unsafeSubscribe(rx.Subscriber)>[[try]]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(java.lang.Object)>[]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(rx.Subscriber)>[]--><android.widget.Toolbar: void setOnMenuItemClickListener(android.widget.Toolbar.OnMenuItemClickListener)>
+One road protect good!
+try
+Good road with try: <rx.internal.operators.OnSubscribeRedo$4$1: void setProducer(rx.Producer)>[]--><rx.observables.AsyncOnSubscribe$AsyncOuterManager: void request(long)>[]--><rx.internal.operators.OperatorBufferWithSize$BufferOverlap$BufferOverlapProducer: void request(long)>[]--><rx.internal.operators.BackpressureUtils: boolean postCompleteRequest(java.util.concurrent.atomic.AtomicLong,long,java.util.Queue,rx.Subscriber)>[]--><rx.internal.operators.BackpressureUtils: boolean postCompleteRequest(java.util.concurrent.atomic.AtomicLong,long,java.util.Queue,rx.Subscriber,rx.functions.Func1)>[]--><rx.internal.operators.BackpressureUtils: void postCompleteDrain(java.util.concurrent.atomic.AtomicLong,java.util.Queue,rx.Subscriber,rx.functions.Func1)>[]--><rx.internal.operators.OperatorWindowWithObservable: java.lang.Object call(java.lang.Object)>[]--><rx.internal.operators.OperatorWindowWithObservable: rx.Subscriber call(rx.Subscriber)>[]--><rx.Observable: rx.Subscription unsafeSubscribe(rx.Subscriber)>[[try]]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(java.lang.Object)>[]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(rx.Subscriber)>[]--><android.widget.Toolbar: void setOnMenuItemClickListener(android.widget.Toolbar.OnMenuItemClickListener)>
+One road protect good!
+try
+Good road with try: <rx.internal.operators.OnSubscribeRedo$4$1: void setProducer(rx.Producer)>[]--><rx.internal.operators.OperatorBufferWithSize$BufferOverlap$BufferOverlapProducer: void request(long)>[]--><rx.internal.operators.BackpressureUtils: boolean postCompleteRequest(java.util.concurrent.atomic.AtomicLong,long,java.util.Queue,rx.Subscriber)>[]--><rx.internal.operators.BackpressureUtils: boolean postCompleteRequest(java.util.concurrent.atomic.AtomicLong,long,java.util.Queue,rx.Subscriber,rx.functions.Func1)>[]--><rx.internal.operators.BackpressureUtils: void postCompleteDrain(java.util.concurrent.atomic.AtomicLong,java.util.Queue,rx.Subscriber,rx.functions.Func1)>[]--><rx.internal.operators.OperatorWindowWithObservable: java.lang.Object call(java.lang.Object)>[]--><rx.internal.operators.OperatorWindowWithObservable: rx.Subscriber call(rx.Subscriber)>[]--><rx.Observable: rx.Subscription unsafeSubscribe(rx.Subscriber)>[[try]]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(java.lang.Object)>[]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(rx.Subscriber)>[]--><android.widget.Toolbar: void setOnMenuItemClickListener(android.widget.Toolbar.OnMenuItemClickListener)>
+One road protect good!
+try
+Good road with try: <rx.internal.operators.OperatorGroupBy$GroupBySubscriber: java.util.Map createMap(rx.functions.Func1,rx.functions.Action1)>[]--><rx.internal.operators.OperatorDelayWithSelector: java.lang.Object call(java.lang.Object)>[]--><rx.internal.operators.OperatorDelayWithSelector: rx.Subscriber call(rx.Subscriber)>[]--><rx.Observable: rx.Subscription unsafeSubscribe(rx.Subscriber)>[[try]]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(java.lang.Object)>[]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(rx.Subscriber)>[]--><android.widget.Toolbar: void setOnMenuItemClickListener(android.widget.Toolbar.OnMenuItemClickListener)>
+One road protect good!
+try
+Good road with try: <rx.internal.operators.OperatorGroupBy$GroupBySubscriber: java.util.Map createMap(rx.functions.Func1,rx.functions.Action1)>[]--><rx.internal.util.ScalarSynchronousObservable$1: java.lang.Object call(java.lang.Object)>[]--><rx.internal.util.ScalarSynchronousObservable$1: rx.Subscription call(rx.functions.Action0)>[]--><rx.internal.schedulers.EventLoopsScheduler: rx.Subscription scheduleDirect(rx.functions.Action0)>[]--><rx.internal.schedulers.NewThreadWorker: rx.internal.schedulers.ScheduledAction scheduleActual(rx.functions.Action0,long,java.util.concurrent.TimeUnit)>[]--><rx.plugins.RxJavaHooks: rx.functions.Action0 onScheduledAction(rx.functions.Action0)>[]--><rx.internal.operators.OperatorWithLatestFrom: java.lang.Object call(java.lang.Object)>[]--><rx.internal.operators.OperatorWithLatestFrom: rx.Subscriber call(rx.Subscriber)>[]--><rx.Observable: rx.Subscription unsafeSubscribe(rx.Subscriber)>[[try]]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(java.lang.Object)>[]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(rx.Subscriber)>[]--><android.widget.Toolbar: void setOnMenuItemClickListener(android.widget.Toolbar.OnMenuItemClickListener)>
+One road protect good!
+try
+Good road with try: <rx.internal.operators.OperatorGroupBy$GroupBySubscriber: java.util.Map createMap(rx.functions.Func1,rx.functions.Action1)>[]--><rx.internal.operators.OperatorTakeUntil: java.lang.Object call(java.lang.Object)>[]--><rx.internal.operators.OperatorTakeUntil: rx.Subscriber call(rx.Subscriber)>[]--><rx.Observable: rx.Subscription unsafeSubscribe(rx.Subscriber)>[[try]]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(java.lang.Object)>[]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(rx.Subscriber)>[]--><android.widget.Toolbar: void setOnMenuItemClickListener(android.widget.Toolbar.OnMenuItemClickListener)>
+One road protect good!
+try
+Good road with try: <rx.internal.operators.OperatorGroupBy$GroupBySubscriber: java.util.Map createMap(rx.functions.Func1,rx.functions.Action1)>[]--><rx.internal.operators.OperatorBufferWithStartEndObservable: java.lang.Object call(java.lang.Object)>[]--><rx.internal.operators.OperatorBufferWithStartEndObservable: rx.Subscriber call(rx.Subscriber)>[]--><rx.Observable: rx.Subscription unsafeSubscribe(rx.Subscriber)>[[try]]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(java.lang.Object)>[]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(rx.Subscriber)>[]--><android.widget.Toolbar: void setOnMenuItemClickListener(android.widget.Toolbar.OnMenuItemClickListener)>
+One road protect good!
+try
+Good road with try: <rx.internal.operators.OperatorGroupBy$GroupBySubscriber: java.util.Map createMap(rx.functions.Func1,rx.functions.Action1)>[]--><rx.internal.operators.OperatorWindowWithObservable: java.lang.Object call(java.lang.Object)>[]--><rx.internal.operators.OperatorWindowWithObservable: rx.Subscriber call(rx.Subscriber)>[]--><rx.Observable: rx.Subscription unsafeSubscribe(rx.Subscriber)>[[try]]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(java.lang.Object)>[]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(rx.Subscriber)>[]--><android.widget.Toolbar: void setOnMenuItemClickListener(android.widget.Toolbar.OnMenuItemClickListener)>
+One road protect good!
+try
+Good road with try: <rx.internal.operators.OperatorGroupBy$GroupBySubscriber: java.util.Map createMap(rx.functions.Func1,rx.functions.Action1)>[]--><rx.internal.operators.OperatorWithLatestFrom: java.lang.Object call(java.lang.Object)>[]--><rx.internal.operators.OperatorWithLatestFrom: rx.Subscriber call(rx.Subscriber)>[]--><rx.Observable: rx.Subscription unsafeSubscribe(rx.Subscriber)>[[try]]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(java.lang.Object)>[]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(rx.Subscriber)>[]--><android.widget.Toolbar: void setOnMenuItemClickListener(android.widget.Toolbar.OnMenuItemClickListener)>
+One road protect good!
+try
+Good road with try: <rx.internal.operators.OperatorGroupBy$GroupBySubscriber: java.util.Map createMap(rx.functions.Func1,rx.functions.Action1)>[]--><rx.internal.util.ScalarSynchronousObservable$2: java.lang.Object call(java.lang.Object)>[]--><rx.internal.util.ScalarSynchronousObservable$2: rx.Subscription call(rx.functions.Action0)>[]--><rx.internal.schedulers.CachedThreadScheduler$EventLoopWorker: rx.Subscription schedule(rx.functions.Action0)>[]--><rx.internal.schedulers.CachedThreadScheduler$EventLoopWorker: rx.Subscription schedule(rx.functions.Action0,long,java.util.concurrent.TimeUnit)>[]--><rx.internal.schedulers.NewThreadWorker: rx.internal.schedulers.ScheduledAction scheduleActual(rx.functions.Action0,long,java.util.concurrent.TimeUnit)>[]--><rx.plugins.RxJavaHooks: rx.functions.Action0 onScheduledAction(rx.functions.Action0)>[]--><rx.internal.operators.OperatorWithLatestFrom: java.lang.Object call(java.lang.Object)>[]--><rx.internal.operators.OperatorWithLatestFrom: rx.Subscriber call(rx.Subscriber)>[]--><rx.Observable: rx.Subscription unsafeSubscribe(rx.Subscriber)>[[try]]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(java.lang.Object)>[]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(rx.Subscriber)>[]--><android.widget.Toolbar: void setOnMenuItemClickListener(android.widget.Toolbar.OnMenuItemClickListener)>
+One road protect good!
+try
+Good road with try: <rx.Observable: java.lang.Object 'to'(rx.functions.Func1)>[]--><rx.internal.util.ScalarSynchronousObservable$2: java.lang.Object call(java.lang.Object)>[]--><rx.internal.util.ScalarSynchronousObservable$2: rx.Subscription call(rx.functions.Action0)>[]--><rx.internal.schedulers.CachedThreadScheduler$EventLoopWorker: rx.Subscription schedule(rx.functions.Action0)>[]--><rx.internal.schedulers.CachedThreadScheduler$EventLoopWorker: rx.Subscription schedule(rx.functions.Action0,long,java.util.concurrent.TimeUnit)>[]--><rx.internal.schedulers.NewThreadWorker: rx.internal.schedulers.ScheduledAction scheduleActual(rx.functions.Action0,long,java.util.concurrent.TimeUnit)>[]--><rx.plugins.RxJavaHooks: rx.functions.Action0 onScheduledAction(rx.functions.Action0)>[]--><rx.internal.operators.OperatorWithLatestFrom: java.lang.Object call(java.lang.Object)>[]--><rx.internal.operators.OperatorWithLatestFrom: rx.Subscriber call(rx.Subscriber)>[]--><rx.Observable: rx.Subscription unsafeSubscribe(rx.Subscriber)>[[try]]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(java.lang.Object)>[]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(rx.Subscriber)>[]--><android.widget.Toolbar: void setOnMenuItemClickListener(android.widget.Toolbar.OnMenuItemClickListener)>
+One road protect good!
+try
+Good road with try: <rx.Observable: java.lang.Object 'to'(rx.functions.Func1)>[]--><rx.internal.util.ScalarSynchronousObservable$1: java.lang.Object call(java.lang.Object)>[]--><rx.internal.util.ScalarSynchronousObservable$1: rx.Subscription call(rx.functions.Action0)>[]--><rx.internal.schedulers.EventLoopsScheduler: rx.Subscription scheduleDirect(rx.functions.Action0)>[]--><rx.internal.schedulers.NewThreadWorker: rx.internal.schedulers.ScheduledAction scheduleActual(rx.functions.Action0,long,java.util.concurrent.TimeUnit)>[]--><rx.plugins.RxJavaHooks: rx.functions.Action0 onScheduledAction(rx.functions.Action0)>[]--><rx.internal.operators.OperatorWithLatestFrom: java.lang.Object call(java.lang.Object)>[]--><rx.internal.operators.OperatorWithLatestFrom: rx.Subscriber call(rx.Subscriber)>[]--><rx.Observable: rx.Subscription unsafeSubscribe(rx.Subscriber)>[[try]]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(java.lang.Object)>[]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(rx.Subscriber)>[]--><android.widget.Toolbar: void setOnMenuItemClickListener(android.widget.Toolbar.OnMenuItemClickListener)>
+One road protect good!
+try
+Good road with try: <rx.Observable: java.lang.Object 'to'(rx.functions.Func1)>[]--><rx.internal.operators.OperatorDelayWithSelector: java.lang.Object call(java.lang.Object)>[]--><rx.internal.operators.OperatorDelayWithSelector: rx.Subscriber call(rx.Subscriber)>[]--><rx.Observable: rx.Subscription unsafeSubscribe(rx.Subscriber)>[[try]]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(java.lang.Object)>[]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(rx.Subscriber)>[]--><android.widget.Toolbar: void setOnMenuItemClickListener(android.widget.Toolbar.OnMenuItemClickListener)>
+One road protect good!
+try
+Good road with try: <rx.Observable: java.lang.Object 'to'(rx.functions.Func1)>[]--><rx.internal.operators.OperatorWithLatestFrom: java.lang.Object call(java.lang.Object)>[]--><rx.internal.operators.OperatorWithLatestFrom: rx.Subscriber call(rx.Subscriber)>[]--><rx.Observable: rx.Subscription unsafeSubscribe(rx.Subscriber)>[[try]]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(java.lang.Object)>[]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(rx.Subscriber)>[]--><android.widget.Toolbar: void setOnMenuItemClickListener(android.widget.Toolbar.OnMenuItemClickListener)>
+One road protect good!
+try
+Good road with try: <rx.Observable: java.lang.Object 'to'(rx.functions.Func1)>[]--><rx.internal.operators.OperatorWindowWithObservable: java.lang.Object call(java.lang.Object)>[]--><rx.internal.operators.OperatorWindowWithObservable: rx.Subscriber call(rx.Subscriber)>[]--><rx.Observable: rx.Subscription unsafeSubscribe(rx.Subscriber)>[[try]]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(java.lang.Object)>[]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(rx.Subscriber)>[]--><android.widget.Toolbar: void setOnMenuItemClickListener(android.widget.Toolbar.OnMenuItemClickListener)>
+One road protect good!
+try
+Good road with try: <rx.Observable: java.lang.Object 'to'(rx.functions.Func1)>[]--><rx.internal.operators.OperatorBufferWithStartEndObservable: java.lang.Object call(java.lang.Object)>[]--><rx.internal.operators.OperatorBufferWithStartEndObservable: rx.Subscriber call(rx.Subscriber)>[]--><rx.Observable: rx.Subscription unsafeSubscribe(rx.Subscriber)>[[try]]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(java.lang.Object)>[]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(rx.Subscriber)>[]--><android.widget.Toolbar: void setOnMenuItemClickListener(android.widget.Toolbar.OnMenuItemClickListener)>
+One road protect good!
+try
+Good road with try: <rx.Observable: java.lang.Object 'to'(rx.functions.Func1)>[]--><rx.internal.operators.OperatorTakeUntil: java.lang.Object call(java.lang.Object)>[]--><rx.internal.operators.OperatorTakeUntil: rx.Subscriber call(rx.Subscriber)>[]--><rx.Observable: rx.Subscription unsafeSubscribe(rx.Subscriber)>[[try]]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(java.lang.Object)>[]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(rx.Subscriber)>[]--><android.widget.Toolbar: void setOnMenuItemClickListener(android.widget.Toolbar.OnMenuItemClickListener)>
+One road protect good!
+try
+Good road with try: <rx.internal.operators.OperatorTakeLast$TakeLastSubscriber: void requestMore(long)>[]--><rx.internal.operators.BackpressureUtils: boolean postCompleteRequest(java.util.concurrent.atomic.AtomicLong,long,java.util.Queue,rx.Subscriber,rx.functions.Func1)>[]--><rx.internal.operators.BackpressureUtils: void postCompleteDrain(java.util.concurrent.atomic.AtomicLong,java.util.Queue,rx.Subscriber,rx.functions.Func1)>[]--><rx.internal.operators.OperatorWindowWithObservable: java.lang.Object call(java.lang.Object)>[]--><rx.internal.operators.OperatorWindowWithObservable: rx.Subscriber call(rx.Subscriber)>[]--><rx.Observable: rx.Subscription unsafeSubscribe(rx.Subscriber)>[[try]]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(java.lang.Object)>[]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(rx.Subscriber)>[]--><android.widget.Toolbar: void setOnMenuItemClickListener(android.widget.Toolbar.OnMenuItemClickListener)>
+One road protect good!
+try
+Good road with try: <rx.Completable$23: void call(rx.CompletableSubscriber)>[[try]]--><rx.internal.operators.OperatorTakeUntil: java.lang.Object call(java.lang.Object)>[]--><rx.internal.operators.OperatorTakeUntil: rx.Subscriber call(rx.Subscriber)>[]--><rx.Observable: rx.Subscription unsafeSubscribe(rx.Subscriber)>[[try]]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(java.lang.Object)>[]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(rx.Subscriber)>[]--><android.widget.Toolbar: void setOnMenuItemClickListener(android.widget.Toolbar.OnMenuItemClickListener)>
+One road protect good!
+try
+Good road with try: <rx.Completable$23: void call(rx.CompletableSubscriber)>[[try]]--><rx.internal.util.ScalarSynchronousObservable$1: java.lang.Object call(java.lang.Object)>[]--><rx.internal.util.ScalarSynchronousObservable$1: rx.Subscription call(rx.functions.Action0)>[]--><rx.internal.schedulers.EventLoopsScheduler: rx.Subscription scheduleDirect(rx.functions.Action0)>[]--><rx.internal.schedulers.NewThreadWorker: rx.internal.schedulers.ScheduledAction scheduleActual(rx.functions.Action0,long,java.util.concurrent.TimeUnit)>[]--><rx.plugins.RxJavaHooks: rx.functions.Action0 onScheduledAction(rx.functions.Action0)>[]--><rx.internal.operators.OperatorWithLatestFrom: java.lang.Object call(java.lang.Object)>[]--><rx.internal.operators.OperatorWithLatestFrom: rx.Subscriber call(rx.Subscriber)>[]--><rx.Observable: rx.Subscription unsafeSubscribe(rx.Subscriber)>[[try]]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(java.lang.Object)>[]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(rx.Subscriber)>[]--><android.widget.Toolbar: void setOnMenuItemClickListener(android.widget.Toolbar.OnMenuItemClickListener)>
+One road protect good!
+try
+Good road with try: <rx.Completable$23: void call(rx.CompletableSubscriber)>[[try]]--><rx.internal.operators.OperatorWindowWithObservable: java.lang.Object call(java.lang.Object)>[]--><rx.internal.operators.OperatorWindowWithObservable: rx.Subscriber call(rx.Subscriber)>[]--><rx.Observable: rx.Subscription unsafeSubscribe(rx.Subscriber)>[[try]]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(java.lang.Object)>[]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(rx.Subscriber)>[]--><android.widget.Toolbar: void setOnMenuItemClickListener(android.widget.Toolbar.OnMenuItemClickListener)>
+One road protect good!
+try
+Good road with try: <rx.Completable$23: void call(rx.CompletableSubscriber)>[[try]]--><rx.internal.operators.OperatorWithLatestFrom: java.lang.Object call(java.lang.Object)>[]--><rx.internal.operators.OperatorWithLatestFrom: rx.Subscriber call(rx.Subscriber)>[]--><rx.Observable: rx.Subscription unsafeSubscribe(rx.Subscriber)>[[try]]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(java.lang.Object)>[]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(rx.Subscriber)>[]--><android.widget.Toolbar: void setOnMenuItemClickListener(android.widget.Toolbar.OnMenuItemClickListener)>
+One road protect good!
+try
+Good road with try: <rx.Completable$23: void call(rx.CompletableSubscriber)>[[try]]--><rx.internal.util.ScalarSynchronousObservable$2: java.lang.Object call(java.lang.Object)>[]--><rx.internal.util.ScalarSynchronousObservable$2: rx.Subscription call(rx.functions.Action0)>[]--><rx.internal.schedulers.CachedThreadScheduler$EventLoopWorker: rx.Subscription schedule(rx.functions.Action0)>[]--><rx.internal.schedulers.CachedThreadScheduler$EventLoopWorker: rx.Subscription schedule(rx.functions.Action0,long,java.util.concurrent.TimeUnit)>[]--><rx.internal.schedulers.NewThreadWorker: rx.internal.schedulers.ScheduledAction scheduleActual(rx.functions.Action0,long,java.util.concurrent.TimeUnit)>[]--><rx.plugins.RxJavaHooks: rx.functions.Action0 onScheduledAction(rx.functions.Action0)>[]--><rx.internal.operators.OperatorWithLatestFrom: java.lang.Object call(java.lang.Object)>[]--><rx.internal.operators.OperatorWithLatestFrom: rx.Subscriber call(rx.Subscriber)>[]--><rx.Observable: rx.Subscription unsafeSubscribe(rx.Subscriber)>[[try]]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(java.lang.Object)>[]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(rx.Subscriber)>[]--><android.widget.Toolbar: void setOnMenuItemClickListener(android.widget.Toolbar.OnMenuItemClickListener)>
+One road protect good!
+try
+Good road with try: <rx.Completable$23: void call(rx.CompletableSubscriber)>[[try]]--><rx.internal.operators.OperatorDelayWithSelector: java.lang.Object call(java.lang.Object)>[]--><rx.internal.operators.OperatorDelayWithSelector: rx.Subscriber call(rx.Subscriber)>[]--><rx.Observable: rx.Subscription unsafeSubscribe(rx.Subscriber)>[[try]]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(java.lang.Object)>[]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(rx.Subscriber)>[]--><android.widget.Toolbar: void setOnMenuItemClickListener(android.widget.Toolbar.OnMenuItemClickListener)>
+One road protect good!
+try
+Good road with try: <rx.Completable$23: void call(rx.CompletableSubscriber)>[[try]]--><rx.internal.operators.OperatorBufferWithStartEndObservable: java.lang.Object call(java.lang.Object)>[]--><rx.internal.operators.OperatorBufferWithStartEndObservable: rx.Subscriber call(rx.Subscriber)>[]--><rx.Observable: rx.Subscription unsafeSubscribe(rx.Subscriber)>[[try]]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(java.lang.Object)>[]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(rx.Subscriber)>[]--><android.widget.Toolbar: void setOnMenuItemClickListener(android.widget.Toolbar.OnMenuItemClickListener)>
+One road protect good!
+try
+Good road with try: <com.jakewharton.rxbinding.view.ViewDragEventOnSubscribe$1: boolean onDrag(android.view.View,android.view.DragEvent)>[]--><rx.internal.operators.OperatorBufferWithStartEndObservable: java.lang.Object call(java.lang.Object)>[]--><rx.internal.operators.OperatorBufferWithStartEndObservable: rx.Subscriber call(rx.Subscriber)>[]--><rx.Observable: rx.Subscription unsafeSubscribe(rx.Subscriber)>[[try]]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(java.lang.Object)>[]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(rx.Subscriber)>[]--><android.widget.Toolbar: void setOnMenuItemClickListener(android.widget.Toolbar.OnMenuItemClickListener)>
+One road protect good!
+try
+Good road with try: <com.jakewharton.rxbinding.view.ViewDragEventOnSubscribe$1: boolean onDrag(android.view.View,android.view.DragEvent)>[]--><rx.internal.operators.OperatorDelayWithSelector: java.lang.Object call(java.lang.Object)>[]--><rx.internal.operators.OperatorDelayWithSelector: rx.Subscriber call(rx.Subscriber)>[]--><rx.Observable: rx.Subscription unsafeSubscribe(rx.Subscriber)>[[try]]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(java.lang.Object)>[]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(rx.Subscriber)>[]--><android.widget.Toolbar: void setOnMenuItemClickListener(android.widget.Toolbar.OnMenuItemClickListener)>
+One road protect good!
+try
+Good road with try: <com.jakewharton.rxbinding.view.ViewDragEventOnSubscribe$1: boolean onDrag(android.view.View,android.view.DragEvent)>[]--><rx.internal.operators.OperatorWithLatestFrom: java.lang.Object call(java.lang.Object)>[]--><rx.internal.operators.OperatorWithLatestFrom: rx.Subscriber call(rx.Subscriber)>[]--><rx.Observable: rx.Subscription unsafeSubscribe(rx.Subscriber)>[[try]]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(java.lang.Object)>[]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(rx.Subscriber)>[]--><android.widget.Toolbar: void setOnMenuItemClickListener(android.widget.Toolbar.OnMenuItemClickListener)>
+One road protect good!
+try
+Good road with try: <com.jakewharton.rxbinding.view.ViewDragEventOnSubscribe$1: boolean onDrag(android.view.View,android.view.DragEvent)>[]--><rx.internal.operators.OperatorTakeUntil: java.lang.Object call(java.lang.Object)>[]--><rx.internal.operators.OperatorTakeUntil: rx.Subscriber call(rx.Subscriber)>[]--><rx.Observable: rx.Subscription unsafeSubscribe(rx.Subscriber)>[[try]]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(java.lang.Object)>[]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(rx.Subscriber)>[]--><android.widget.Toolbar: void setOnMenuItemClickListener(android.widget.Toolbar.OnMenuItemClickListener)>
+One road protect good!
+try
+Good road with try: <com.jakewharton.rxbinding.view.ViewDragEventOnSubscribe$1: boolean onDrag(android.view.View,android.view.DragEvent)>[]--><rx.internal.operators.OperatorWindowWithObservable: java.lang.Object call(java.lang.Object)>[]--><rx.internal.operators.OperatorWindowWithObservable: rx.Subscriber call(rx.Subscriber)>[]--><rx.Observable: rx.Subscription unsafeSubscribe(rx.Subscriber)>[[try]]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(java.lang.Object)>[]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(rx.Subscriber)>[]--><android.widget.Toolbar: void setOnMenuItemClickListener(android.widget.Toolbar.OnMenuItemClickListener)>
+One road protect good!
+try
+Good road with try: <com.jakewharton.rxbinding.view.ViewDragEventOnSubscribe$1: boolean onDrag(android.view.View,android.view.DragEvent)>[]--><rx.internal.util.ScalarSynchronousObservable$1: java.lang.Object call(java.lang.Object)>[]--><rx.internal.util.ScalarSynchronousObservable$1: rx.Subscription call(rx.functions.Action0)>[]--><rx.internal.schedulers.EventLoopsScheduler: rx.Subscription scheduleDirect(rx.functions.Action0)>[]--><rx.internal.schedulers.NewThreadWorker: rx.internal.schedulers.ScheduledAction scheduleActual(rx.functions.Action0,long,java.util.concurrent.TimeUnit)>[]--><rx.plugins.RxJavaHooks: rx.functions.Action0 onScheduledAction(rx.functions.Action0)>[]--><rx.internal.operators.OperatorWithLatestFrom: java.lang.Object call(java.lang.Object)>[]--><rx.internal.operators.OperatorWithLatestFrom: rx.Subscriber call(rx.Subscriber)>[]--><rx.Observable: rx.Subscription unsafeSubscribe(rx.Subscriber)>[[try]]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(java.lang.Object)>[]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(rx.Subscriber)>[]--><android.widget.Toolbar: void setOnMenuItemClickListener(android.widget.Toolbar.OnMenuItemClickListener)>
+One road protect good!
+try
+Good road with try: <com.jakewharton.rxbinding.view.ViewDragEventOnSubscribe$1: boolean onDrag(android.view.View,android.view.DragEvent)>[]--><rx.internal.util.ScalarSynchronousObservable$2: java.lang.Object call(java.lang.Object)>[]--><rx.internal.util.ScalarSynchronousObservable$2: rx.Subscription call(rx.functions.Action0)>[]--><rx.internal.schedulers.CachedThreadScheduler$EventLoopWorker: rx.Subscription schedule(rx.functions.Action0)>[]--><rx.internal.schedulers.CachedThreadScheduler$EventLoopWorker: rx.Subscription schedule(rx.functions.Action0,long,java.util.concurrent.TimeUnit)>[]--><rx.internal.schedulers.NewThreadWorker: rx.internal.schedulers.ScheduledAction scheduleActual(rx.functions.Action0,long,java.util.concurrent.TimeUnit)>[]--><rx.plugins.RxJavaHooks: rx.functions.Action0 onScheduledAction(rx.functions.Action0)>[]--><rx.internal.operators.OperatorWithLatestFrom: java.lang.Object call(java.lang.Object)>[]--><rx.internal.operators.OperatorWithLatestFrom: rx.Subscriber call(rx.Subscriber)>[]--><rx.Observable: rx.Subscription unsafeSubscribe(rx.Subscriber)>[[try]]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(java.lang.Object)>[]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(rx.Subscriber)>[]--><android.widget.Toolbar: void setOnMenuItemClickListener(android.widget.Toolbar.OnMenuItemClickListener)>
+One road protect good!
+try
+Good road with try: <rx.internal.operators.OnSubscribeDetach$DetachSubscriber: void innerRequest(long)>[]--><rx.internal.operators.OperatorBufferWithSize$BufferOverlap$BufferOverlapProducer: void request(long)>[]--><rx.internal.operators.BackpressureUtils: boolean postCompleteRequest(java.util.concurrent.atomic.AtomicLong,long,java.util.Queue,rx.Subscriber)>[]--><rx.internal.operators.BackpressureUtils: boolean postCompleteRequest(java.util.concurrent.atomic.AtomicLong,long,java.util.Queue,rx.Subscriber,rx.functions.Func1)>[]--><rx.internal.operators.BackpressureUtils: void postCompleteDrain(java.util.concurrent.atomic.AtomicLong,java.util.Queue,rx.Subscriber,rx.functions.Func1)>[]--><rx.internal.operators.OperatorWindowWithObservable: java.lang.Object call(java.lang.Object)>[]--><rx.internal.operators.OperatorWindowWithObservable: rx.Subscriber call(rx.Subscriber)>[]--><rx.Observable: rx.Subscription unsafeSubscribe(rx.Subscriber)>[[try]]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(java.lang.Object)>[]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(rx.Subscriber)>[]--><android.widget.Toolbar: void setOnMenuItemClickListener(android.widget.Toolbar.OnMenuItemClickListener)>
+One road protect good!
+try
+Good road with try: <rx.internal.operators.OnSubscribeDetach$DetachSubscriber: void innerRequest(long)>[]--><rx.internal.operators.OperatorTake$1$1: void request(long)>[]--><rx.observables.AsyncOnSubscribe$AsyncOuterManager: void request(long)>[]--><rx.internal.operators.OperatorBufferWithSize$BufferOverlap$BufferOverlapProducer: void request(long)>[]--><rx.internal.operators.BackpressureUtils: boolean postCompleteRequest(java.util.concurrent.atomic.AtomicLong,long,java.util.Queue,rx.Subscriber)>[]--><rx.internal.operators.BackpressureUtils: boolean postCompleteRequest(java.util.concurrent.atomic.AtomicLong,long,java.util.Queue,rx.Subscriber,rx.functions.Func1)>[]--><rx.internal.operators.BackpressureUtils: void postCompleteDrain(java.util.concurrent.atomic.AtomicLong,java.util.Queue,rx.Subscriber,rx.functions.Func1)>[]--><rx.internal.operators.OperatorWindowWithObservable: java.lang.Object call(java.lang.Object)>[]--><rx.internal.operators.OperatorWindowWithObservable: rx.Subscriber call(rx.Subscriber)>[]--><rx.Observable: rx.Subscription unsafeSubscribe(rx.Subscriber)>[[try]]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(java.lang.Object)>[]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(rx.Subscriber)>[]--><android.widget.Toolbar: void setOnMenuItemClickListener(android.widget.Toolbar.OnMenuItemClickListener)>
+One road protect good!
+try
+Good road with try: <rx.internal.operators.OnSubscribeDetach$DetachSubscriber: void innerRequest(long)>[]--><rx.observables.AsyncOnSubscribe$AsyncOuterManager: void request(long)>[]--><rx.internal.operators.OperatorBufferWithSize$BufferOverlap$BufferOverlapProducer: void request(long)>[]--><rx.internal.operators.BackpressureUtils: boolean postCompleteRequest(java.util.concurrent.atomic.AtomicLong,long,java.util.Queue,rx.Subscriber)>[]--><rx.internal.operators.BackpressureUtils: boolean postCompleteRequest(java.util.concurrent.atomic.AtomicLong,long,java.util.Queue,rx.Subscriber,rx.functions.Func1)>[]--><rx.internal.operators.BackpressureUtils: void postCompleteDrain(java.util.concurrent.atomic.AtomicLong,java.util.Queue,rx.Subscriber,rx.functions.Func1)>[]--><rx.internal.operators.OperatorWindowWithObservable: java.lang.Object call(java.lang.Object)>[]--><rx.internal.operators.OperatorWindowWithObservable: rx.Subscriber call(rx.Subscriber)>[]--><rx.Observable: rx.Subscription unsafeSubscribe(rx.Subscriber)>[[try]]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(java.lang.Object)>[]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(rx.Subscriber)>[]--><android.widget.Toolbar: void setOnMenuItemClickListener(android.widget.Toolbar.OnMenuItemClickListener)>
+One road protect good!
+try
+Good road with try: <rx.internal.operators.OperatorWindowWithObservable$SourceSubscriber: void emitValue(java.lang.Object)>[]--><rx.internal.operators.OperatorSkip$1: void onNext(java.lang.Object)>[]--><rx.observers.SafeSubscriber: void onNext(java.lang.Object)>[]--><rx.internal.util.ActionSubscriber: void onNext(java.lang.Object)>[]--><rx.internal.util.ScalarSynchronousObservable$JustOnSubscribe: void call(java.lang.Object)>[]--><rx.internal.util.ScalarSynchronousObservable$JustOnSubscribe: void call(rx.Subscriber)>[]--><rx.internal.operators.OperatorSkip$1: void setProducer(rx.Producer)>[]--><rx.internal.operators.OperatorTake$1$1: void request(long)>[]--><rx.observables.AsyncOnSubscribe$AsyncOuterManager: void request(long)>[]--><rx.internal.operators.OperatorBufferWithSize$BufferOverlap$BufferOverlapProducer: void request(long)>[]--><rx.internal.operators.BackpressureUtils: boolean postCompleteRequest(java.util.concurrent.atomic.AtomicLong,long,java.util.Queue,rx.Subscriber)>[]--><rx.internal.operators.BackpressureUtils: boolean postCompleteRequest(java.util.concurrent.atomic.AtomicLong,long,java.util.Queue,rx.Subscriber,rx.functions.Func1)>[]--><rx.internal.operators.BackpressureUtils: void postCompleteDrain(java.util.concurrent.atomic.AtomicLong,java.util.Queue,rx.Subscriber,rx.functions.Func1)>[]--><rx.internal.operators.OperatorWindowWithObservable: java.lang.Object call(java.lang.Object)>[]--><rx.internal.operators.OperatorWindowWithObservable: rx.Subscriber call(rx.Subscriber)>[]--><rx.Observable: rx.Subscription unsafeSubscribe(rx.Subscriber)>[[try]]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(java.lang.Object)>[]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(rx.Subscriber)>[]--><android.widget.Toolbar: void setOnMenuItemClickListener(android.widget.Toolbar.OnMenuItemClickListener)>
+One road protect good!
+try
+Good road with try: <rx.internal.operators.OperatorWindowWithObservable$SourceSubscriber: void emitValue(java.lang.Object)>[]--><rx.internal.operators.OnSubscribeMap$MapSubscriber: void onNext(java.lang.Object)>[]--><rx.internal.operators.OperatorDelay$1: void onNext(java.lang.Object)>[]--><rx.internal.schedulers.CachedThreadScheduler$EventLoopWorker: rx.Subscription schedule(rx.functions.Action0,long,java.util.concurrent.TimeUnit)>[]--><rx.internal.schedulers.NewThreadWorker: rx.internal.schedulers.ScheduledAction scheduleActual(rx.functions.Action0,long,java.util.concurrent.TimeUnit)>[]--><rx.plugins.RxJavaHooks: rx.functions.Action0 onScheduledAction(rx.functions.Action0)>[]--><rx.internal.operators.OperatorWithLatestFrom: java.lang.Object call(java.lang.Object)>[]--><rx.internal.operators.OperatorWithLatestFrom: rx.Subscriber call(rx.Subscriber)>[]--><rx.Observable: rx.Subscription unsafeSubscribe(rx.Subscriber)>[[try]]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(java.lang.Object)>[]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(rx.Subscriber)>[]--><android.widget.Toolbar: void setOnMenuItemClickListener(android.widget.Toolbar.OnMenuItemClickListener)>
+One road protect good!
+try
+Good road with try: <rx.internal.operators.OperatorWindowWithObservable$SourceSubscriber: void emitValue(java.lang.Object)>[]--><rx.internal.operators.OperatorDelayWithSelector$1: void onNext(java.lang.Object)>[[try]]--><rx.internal.operators.OperatorDelayWithSelector: java.lang.Object call(java.lang.Object)>[]--><rx.internal.operators.OperatorDelayWithSelector: rx.Subscriber call(rx.Subscriber)>[]--><rx.Observable: rx.Subscription unsafeSubscribe(rx.Subscriber)>[[try]]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(java.lang.Object)>[]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(rx.Subscriber)>[]--><android.widget.Toolbar: void setOnMenuItemClickListener(android.widget.Toolbar.OnMenuItemClickListener)>
+One road protect good!
+try
+Good road with try: <rx.internal.operators.OperatorWindowWithObservable$SourceSubscriber: void emitValue(java.lang.Object)>[]--><rx.internal.observers.AssertableSubscriberObservable: void onNext(java.lang.Object)>[]--><rx.observers.TestSubscriber: void onNext(java.lang.Object)>[]--><rx.internal.operators.OperatorDelay$1: void onNext(java.lang.Object)>[]--><rx.internal.schedulers.CachedThreadScheduler$EventLoopWorker: rx.Subscription schedule(rx.functions.Action0,long,java.util.concurrent.TimeUnit)>[]--><rx.internal.schedulers.NewThreadWorker: rx.internal.schedulers.ScheduledAction scheduleActual(rx.functions.Action0,long,java.util.concurrent.TimeUnit)>[]--><rx.plugins.RxJavaHooks: rx.functions.Action0 onScheduledAction(rx.functions.Action0)>[]--><rx.internal.operators.OperatorWithLatestFrom: java.lang.Object call(java.lang.Object)>[]--><rx.internal.operators.OperatorWithLatestFrom: rx.Subscriber call(rx.Subscriber)>[]--><rx.Observable: rx.Subscription unsafeSubscribe(rx.Subscriber)>[[try]]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(java.lang.Object)>[]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(rx.Subscriber)>[]--><android.widget.Toolbar: void setOnMenuItemClickListener(android.widget.Toolbar.OnMenuItemClickListener)>
+One road protect good!
+try
+Good road with try: <rx.internal.operators.OperatorWindowWithObservable$SourceSubscriber: void emitValue(java.lang.Object)>[]--><rx.observers.TestSubscriber: void onNext(java.lang.Object)>[]--><rx.internal.operators.OperatorDelay$1: void onNext(java.lang.Object)>[]--><rx.internal.schedulers.CachedThreadScheduler$EventLoopWorker: rx.Subscription schedule(rx.functions.Action0,long,java.util.concurrent.TimeUnit)>[]--><rx.internal.schedulers.NewThreadWorker: rx.internal.schedulers.ScheduledAction scheduleActual(rx.functions.Action0,long,java.util.concurrent.TimeUnit)>[]--><rx.plugins.RxJavaHooks: rx.functions.Action0 onScheduledAction(rx.functions.Action0)>[]--><rx.internal.operators.OperatorWithLatestFrom: java.lang.Object call(java.lang.Object)>[]--><rx.internal.operators.OperatorWithLatestFrom: rx.Subscriber call(rx.Subscriber)>[]--><rx.Observable: rx.Subscription unsafeSubscribe(rx.Subscriber)>[[try]]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(java.lang.Object)>[]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(rx.Subscriber)>[]--><android.widget.Toolbar: void setOnMenuItemClickListener(android.widget.Toolbar.OnMenuItemClickListener)>
+One road protect good!
+try
+Good road with try: <rx.internal.operators.OperatorWindowWithObservable$SourceSubscriber: void emitValue(java.lang.Object)>[]--><rx.observers.Subscribers$1: void onNext(java.lang.Object)>[]--><rx.internal.operators.OperatorGroupBy$GroupBySubscriber: void onNext(java.lang.Object)>[[try]]--><rx.internal.operators.OperatorDelayWithSelector: java.lang.Object call(java.lang.Object)>[]--><rx.internal.operators.OperatorDelayWithSelector: rx.Subscriber call(rx.Subscriber)>[]--><rx.Observable: rx.Subscription unsafeSubscribe(rx.Subscriber)>[[try]]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(java.lang.Object)>[]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(rx.Subscriber)>[]--><android.widget.Toolbar: void setOnMenuItemClickListener(android.widget.Toolbar.OnMenuItemClickListener)>
+One road protect good!
+try
+Good road with try: <rx.internal.operators.OperatorWindowWithObservable$SourceSubscriber: void emitValue(java.lang.Object)>[]--><rx.internal.operators.OnSubscribeToMultimap$ToMultimapSubscriber: void onNext(java.lang.Object)>[[try]]--><rx.internal.operators.OperatorWithLatestFrom: java.lang.Object call(java.lang.Object)>[]--><rx.internal.operators.OperatorWithLatestFrom: rx.Subscriber call(rx.Subscriber)>[]--><rx.Observable: rx.Subscription unsafeSubscribe(rx.Subscriber)>[[try]]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(java.lang.Object)>[]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(rx.Subscriber)>[]--><android.widget.Toolbar: void setOnMenuItemClickListener(android.widget.Toolbar.OnMenuItemClickListener)>
+One road protect good!
+try
+Good road with try: <rx.internal.operators.OperatorWindowWithObservable$SourceSubscriber: void emitValue(java.lang.Object)>[]--><rx.observers.SafeSubscriber: void onNext(java.lang.Object)>[]--><rx.internal.util.ActionSubscriber: void onNext(java.lang.Object)>[]--><rx.internal.util.ScalarSynchronousObservable$JustOnSubscribe: void call(java.lang.Object)>[]--><rx.internal.util.ScalarSynchronousObservable$JustOnSubscribe: void call(rx.Subscriber)>[]--><rx.internal.operators.OperatorSkip$1: void setProducer(rx.Producer)>[]--><rx.internal.operators.OperatorTake$1$1: void request(long)>[]--><rx.observables.AsyncOnSubscribe$AsyncOuterManager: void request(long)>[]--><rx.internal.operators.OperatorBufferWithSize$BufferOverlap$BufferOverlapProducer: void request(long)>[]--><rx.internal.operators.BackpressureUtils: boolean postCompleteRequest(java.util.concurrent.atomic.AtomicLong,long,java.util.Queue,rx.Subscriber)>[]--><rx.internal.operators.BackpressureUtils: boolean postCompleteRequest(java.util.concurrent.atomic.AtomicLong,long,java.util.Queue,rx.Subscriber,rx.functions.Func1)>[]--><rx.internal.operators.BackpressureUtils: void postCompleteDrain(java.util.concurrent.atomic.AtomicLong,java.util.Queue,rx.Subscriber,rx.functions.Func1)>[]--><rx.internal.operators.OperatorWindowWithObservable: java.lang.Object call(java.lang.Object)>[]--><rx.internal.operators.OperatorWindowWithObservable: rx.Subscriber call(rx.Subscriber)>[]--><rx.Observable: rx.Subscription unsafeSubscribe(rx.Subscriber)>[[try]]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(java.lang.Object)>[]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(rx.Subscriber)>[]--><android.widget.Toolbar: void setOnMenuItemClickListener(android.widget.Toolbar.OnMenuItemClickListener)>
+One road protect good!
+try
+Good road with try: <rx.internal.operators.OperatorWindowWithObservable$SourceSubscriber: void emitValue(java.lang.Object)>[]--><rx.observers.Subscribers$5: void onNext(java.lang.Object)>[]--><rx.internal.operators.OperatorDelay$1: void onNext(java.lang.Object)>[]--><rx.internal.schedulers.CachedThreadScheduler$EventLoopWorker: rx.Subscription schedule(rx.functions.Action0,long,java.util.concurrent.TimeUnit)>[]--><rx.internal.schedulers.NewThreadWorker: rx.internal.schedulers.ScheduledAction scheduleActual(rx.functions.Action0,long,java.util.concurrent.TimeUnit)>[]--><rx.plugins.RxJavaHooks: rx.functions.Action0 onScheduledAction(rx.functions.Action0)>[]--><rx.internal.operators.OperatorWithLatestFrom: java.lang.Object call(java.lang.Object)>[]--><rx.internal.operators.OperatorWithLatestFrom: rx.Subscriber call(rx.Subscriber)>[]--><rx.Observable: rx.Subscription unsafeSubscribe(rx.Subscriber)>[[try]]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(java.lang.Object)>[]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(rx.Subscriber)>[]--><android.widget.Toolbar: void setOnMenuItemClickListener(android.widget.Toolbar.OnMenuItemClickListener)>
+One road protect good!
+try
+Good road with try: <rx.internal.operators.OperatorWindowWithObservable$SourceSubscriber: void emitValue(java.lang.Object)>[]--><rx.internal.util.ActionSubscriber: void onNext(java.lang.Object)>[]--><rx.internal.util.ScalarSynchronousObservable$JustOnSubscribe: void call(java.lang.Object)>[]--><rx.internal.util.ScalarSynchronousObservable$JustOnSubscribe: void call(rx.Subscriber)>[]--><rx.internal.operators.OperatorSkip$1: void setProducer(rx.Producer)>[]--><rx.internal.operators.OperatorTake$1$1: void request(long)>[]--><rx.observables.AsyncOnSubscribe$AsyncOuterManager: void request(long)>[]--><rx.internal.operators.OperatorBufferWithSize$BufferOverlap$BufferOverlapProducer: void request(long)>[]--><rx.internal.operators.BackpressureUtils: boolean postCompleteRequest(java.util.concurrent.atomic.AtomicLong,long,java.util.Queue,rx.Subscriber)>[]--><rx.internal.operators.BackpressureUtils: boolean postCompleteRequest(java.util.concurrent.atomic.AtomicLong,long,java.util.Queue,rx.Subscriber,rx.functions.Func1)>[]--><rx.internal.operators.BackpressureUtils: void postCompleteDrain(java.util.concurrent.atomic.AtomicLong,java.util.Queue,rx.Subscriber,rx.functions.Func1)>[]--><rx.internal.operators.OperatorWindowWithObservable: java.lang.Object call(java.lang.Object)>[]--><rx.internal.operators.OperatorWindowWithObservable: rx.Subscriber call(rx.Subscriber)>[]--><rx.Observable: rx.Subscription unsafeSubscribe(rx.Subscriber)>[[try]]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(java.lang.Object)>[]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(rx.Subscriber)>[]--><android.widget.Toolbar: void setOnMenuItemClickListener(android.widget.Toolbar.OnMenuItemClickListener)>
+One road protect good!
+try
+Good road with try: <rx.internal.operators.OperatorWindowWithObservable$SourceSubscriber: void emitValue(java.lang.Object)>[]--><rx.internal.operators.OperatorGroupBy$GroupBySubscriber: void onNext(java.lang.Object)>[[try]]--><rx.internal.operators.OperatorDelayWithSelector: java.lang.Object call(java.lang.Object)>[]--><rx.internal.operators.OperatorDelayWithSelector: rx.Subscriber call(rx.Subscriber)>[]--><rx.Observable: rx.Subscription unsafeSubscribe(rx.Subscriber)>[[try]]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(java.lang.Object)>[]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(rx.Subscriber)>[]--><android.widget.Toolbar: void setOnMenuItemClickListener(android.widget.Toolbar.OnMenuItemClickListener)>
+One road protect good!
+try
+Good road with try: <rx.internal.operators.OperatorWindowWithObservable$SourceSubscriber: void emitValue(java.lang.Object)>[]--><rx.internal.operators.OperatorDelay$1: void onNext(java.lang.Object)>[]--><rx.internal.schedulers.CachedThreadScheduler$EventLoopWorker: rx.Subscription schedule(rx.functions.Action0,long,java.util.concurrent.TimeUnit)>[]--><rx.internal.schedulers.NewThreadWorker: rx.internal.schedulers.ScheduledAction scheduleActual(rx.functions.Action0,long,java.util.concurrent.TimeUnit)>[]--><rx.plugins.RxJavaHooks: rx.functions.Action0 onScheduledAction(rx.functions.Action0)>[]--><rx.internal.operators.OperatorWithLatestFrom: java.lang.Object call(java.lang.Object)>[]--><rx.internal.operators.OperatorWithLatestFrom: rx.Subscriber call(rx.Subscriber)>[]--><rx.Observable: rx.Subscription unsafeSubscribe(rx.Subscriber)>[[try]]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(java.lang.Object)>[]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(rx.Subscriber)>[]--><android.widget.Toolbar: void setOnMenuItemClickListener(android.widget.Toolbar.OnMenuItemClickListener)>
+One road protect good!
+try
+Good road with try: <rx.observables.AsyncOnSubscribe$AsyncOnSubscribeImpl: void onUnsubscribe(java.lang.Object)>[]--><rx.internal.operators.OnSubscribeDoOnEach: void call(java.lang.Object)>[]--><rx.internal.operators.OnSubscribeDoOnEach: void call(rx.Subscriber)>[]--><rx.Observable: rx.Subscription unsafeSubscribe(rx.Subscriber)>[[try]]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(java.lang.Object)>[]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(rx.Subscriber)>[]--><android.widget.Toolbar: void setOnMenuItemClickListener(android.widget.Toolbar.OnMenuItemClickListener)>
+One road protect good!
+try
+Good road with try: <rx.observables.AsyncOnSubscribe$AsyncOnSubscribeImpl: void onUnsubscribe(java.lang.Object)>[]--><rx.internal.operators.OnSubscribeFilter: void call(java.lang.Object)>[]--><rx.internal.operators.OnSubscribeFilter: void call(rx.Subscriber)>[]--><rx.Observable: rx.Subscription unsafeSubscribe(rx.Subscriber)>[[try]]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(java.lang.Object)>[]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(rx.Subscriber)>[]--><android.widget.Toolbar: void setOnMenuItemClickListener(android.widget.Toolbar.OnMenuItemClickListener)>
+One road protect good!
+try
+Good road with try: <rx.observables.AsyncOnSubscribe$AsyncOnSubscribeImpl: void onUnsubscribe(java.lang.Object)>[]--><rx.internal.operators.OnSubscribeOnAssemblyCompletable: void call(java.lang.Object)>[]--><rx.internal.operators.OnSubscribeOnAssemblyCompletable: void call(rx.CompletableSubscriber)>[]--><com.app.missednotificationsreminder.binding.util.BindableObjectValueChangedOnSubscribe: void call(java.lang.Object)>[]--><com.app.missednotificationsreminder.binding.util.BindableObjectValueChangedOnSubscribe: void call(rx.Subscriber)>[]--><rx.internal.util.ActionSubscriber: void onNext(java.lang.Object)>[]--><rx.internal.util.ScalarSynchronousObservable$JustOnSubscribe: void call(java.lang.Object)>[]--><rx.internal.util.ScalarSynchronousObservable$JustOnSubscribe: void call(rx.Subscriber)>[]--><rx.internal.operators.OperatorSkip$1: void setProducer(rx.Producer)>[]--><rx.internal.operators.OperatorTake$1$1: void request(long)>[]--><rx.observables.AsyncOnSubscribe$AsyncOuterManager: void request(long)>[]--><rx.internal.operators.OperatorBufferWithSize$BufferOverlap$BufferOverlapProducer: void request(long)>[]--><rx.internal.operators.BackpressureUtils: boolean postCompleteRequest(java.util.concurrent.atomic.AtomicLong,long,java.util.Queue,rx.Subscriber)>[]--><rx.internal.operators.BackpressureUtils: boolean postCompleteRequest(java.util.concurrent.atomic.AtomicLong,long,java.util.Queue,rx.Subscriber,rx.functions.Func1)>[]--><rx.internal.operators.BackpressureUtils: void postCompleteDrain(java.util.concurrent.atomic.AtomicLong,java.util.Queue,rx.Subscriber,rx.functions.Func1)>[]--><rx.internal.operators.OperatorWindowWithObservable: java.lang.Object call(java.lang.Object)>[]--><rx.internal.operators.OperatorWindowWithObservable: rx.Subscriber call(rx.Subscriber)>[]--><rx.Observable: rx.Subscription unsafeSubscribe(rx.Subscriber)>[[try]]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(java.lang.Object)>[]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(rx.Subscriber)>[]--><android.widget.Toolbar: void setOnMenuItemClickListener(android.widget.Toolbar.OnMenuItemClickListener)>
+One road protect good!
+try
+Good road with try: <rx.observables.AsyncOnSubscribe$AsyncOnSubscribeImpl: void onUnsubscribe(java.lang.Object)>[]--><rx.internal.operators.OnSubscribeSingle: void call(java.lang.Object)>[]--><rx.internal.operators.OnSubscribeSingle: void call(rx.SingleSubscriber)>[]--><rx.Observable: rx.Subscription unsafeSubscribe(rx.Subscriber)>[[try]]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(java.lang.Object)>[]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(rx.Subscriber)>[]--><android.widget.Toolbar: void setOnMenuItemClickListener(android.widget.Toolbar.OnMenuItemClickListener)>
+One road protect good!
+!!!this api will crash on sdk 18 19 20 
+Error road: <rx.observables.AsyncOnSubscribe$AsyncOnSubscribeImpl: void onUnsubscribe(java.lang.Object)>[]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(java.lang.Object)>[]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(rx.Subscriber)>[]--><android.widget.Toolbar: void setOnMenuItemClickListener(android.widget.Toolbar.OnMenuItemClickListener)>
+try
+Good road with try: <rx.observables.AsyncOnSubscribe$AsyncOnSubscribeImpl: void onUnsubscribe(java.lang.Object)>[]--><rx.internal.util.ScalarSynchronousObservable$JustOnSubscribe: void call(java.lang.Object)>[]--><rx.internal.util.ScalarSynchronousObservable$JustOnSubscribe: void call(rx.Subscriber)>[]--><rx.internal.operators.OperatorSkip$1: void setProducer(rx.Producer)>[]--><rx.internal.operators.OperatorTake$1$1: void request(long)>[]--><rx.observables.AsyncOnSubscribe$AsyncOuterManager: void request(long)>[]--><rx.internal.operators.OperatorBufferWithSize$BufferOverlap$BufferOverlapProducer: void request(long)>[]--><rx.internal.operators.BackpressureUtils: boolean postCompleteRequest(java.util.concurrent.atomic.AtomicLong,long,java.util.Queue,rx.Subscriber)>[]--><rx.internal.operators.BackpressureUtils: boolean postCompleteRequest(java.util.concurrent.atomic.AtomicLong,long,java.util.Queue,rx.Subscriber,rx.functions.Func1)>[]--><rx.internal.operators.BackpressureUtils: void postCompleteDrain(java.util.concurrent.atomic.AtomicLong,java.util.Queue,rx.Subscriber,rx.functions.Func1)>[]--><rx.internal.operators.OperatorWindowWithObservable: java.lang.Object call(java.lang.Object)>[]--><rx.internal.operators.OperatorWindowWithObservable: rx.Subscriber call(rx.Subscriber)>[]--><rx.Observable: rx.Subscription unsafeSubscribe(rx.Subscriber)>[[try]]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(java.lang.Object)>[]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(rx.Subscriber)>[]--><android.widget.Toolbar: void setOnMenuItemClickListener(android.widget.Toolbar.OnMenuItemClickListener)>
+One road protect good!
+try
+Good road with try: <rx.observables.AsyncOnSubscribe$AsyncOnSubscribeImpl: void onUnsubscribe(java.lang.Object)>[]--><rx.internal.operators.OnSubscribeAutoConnect: void call(java.lang.Object)>[]--><rx.internal.operators.OnSubscribeAutoConnect: void call(rx.Subscriber)>[]--><rx.Observable: rx.Subscription unsafeSubscribe(rx.Subscriber)>[[try]]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(java.lang.Object)>[]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(rx.Subscriber)>[]--><android.widget.Toolbar: void setOnMenuItemClickListener(android.widget.Toolbar.OnMenuItemClickListener)>
+One road protect good!
+!!!this api will crash on sdk 18 19 20 
+Error road: <rx.observables.AsyncOnSubscribe$AsyncOnSubscribeImpl: void onUnsubscribe(java.lang.Object)>[]--><rx.internal.operators.OnSubscribeOnAssembly: void call(java.lang.Object)>[]--><rx.internal.operators.OnSubscribeOnAssembly: void call(rx.Subscriber)>[]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(java.lang.Object)>[]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(rx.Subscriber)>[]--><android.widget.Toolbar: void setOnMenuItemClickListener(android.widget.Toolbar.OnMenuItemClickListener)>
+try
+Good road with try: <rx.observables.AsyncOnSubscribe$AsyncOnSubscribeImpl: void onUnsubscribe(java.lang.Object)>[]--><rx.internal.operators.OnSubscribeDetach: void call(java.lang.Object)>[]--><rx.internal.operators.OnSubscribeDetach: void call(rx.Subscriber)>[]--><rx.Observable: rx.Subscription unsafeSubscribe(rx.Subscriber)>[[try]]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(java.lang.Object)>[]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(rx.Subscriber)>[]--><android.widget.Toolbar: void setOnMenuItemClickListener(android.widget.Toolbar.OnMenuItemClickListener)>
+One road protect good!
+try
+Good road with try: <rx.observables.AsyncOnSubscribe$AsyncOnSubscribeImpl: void onUnsubscribe(java.lang.Object)>[]--><rx.internal.operators.OnSubscribeMap: void call(java.lang.Object)>[]--><rx.internal.operators.OnSubscribeMap: void call(rx.Subscriber)>[]--><rx.Observable: rx.Subscription unsafeSubscribe(rx.Subscriber)>[[try]]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(java.lang.Object)>[]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(rx.Subscriber)>[]--><android.widget.Toolbar: void setOnMenuItemClickListener(android.widget.Toolbar.OnMenuItemClickListener)>
+One road protect good!
+try
+Good road with try: <rx.observables.AsyncOnSubscribe$AsyncOnSubscribeImpl: void onUnsubscribe(java.lang.Object)>[]--><com.app.missednotificationsreminder.binding.util.BindableObjectValueChangedOnSubscribe: void call(java.lang.Object)>[]--><com.app.missednotificationsreminder.binding.util.BindableObjectValueChangedOnSubscribe: void call(rx.Subscriber)>[]--><rx.internal.util.ActionSubscriber: void onNext(java.lang.Object)>[]--><rx.internal.util.ScalarSynchronousObservable$JustOnSubscribe: void call(java.lang.Object)>[]--><rx.internal.util.ScalarSynchronousObservable$JustOnSubscribe: void call(rx.Subscriber)>[]--><rx.internal.operators.OperatorSkip$1: void setProducer(rx.Producer)>[]--><rx.internal.operators.OperatorTake$1$1: void request(long)>[]--><rx.observables.AsyncOnSubscribe$AsyncOuterManager: void request(long)>[]--><rx.internal.operators.OperatorBufferWithSize$BufferOverlap$BufferOverlapProducer: void request(long)>[]--><rx.internal.operators.BackpressureUtils: boolean postCompleteRequest(java.util.concurrent.atomic.AtomicLong,long,java.util.Queue,rx.Subscriber)>[]--><rx.internal.operators.BackpressureUtils: boolean postCompleteRequest(java.util.concurrent.atomic.AtomicLong,long,java.util.Queue,rx.Subscriber,rx.functions.Func1)>[]--><rx.internal.operators.BackpressureUtils: void postCompleteDrain(java.util.concurrent.atomic.AtomicLong,java.util.Queue,rx.Subscriber,rx.functions.Func1)>[]--><rx.internal.operators.OperatorWindowWithObservable: java.lang.Object call(java.lang.Object)>[]--><rx.internal.operators.OperatorWindowWithObservable: rx.Subscriber call(rx.Subscriber)>[]--><rx.Observable: rx.Subscription unsafeSubscribe(rx.Subscriber)>[[try]]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(java.lang.Object)>[]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(rx.Subscriber)>[]--><android.widget.Toolbar: void setOnMenuItemClickListener(android.widget.Toolbar.OnMenuItemClickListener)>
+One road protect good!
+try
+Good road with try: <rx.observables.AsyncOnSubscribe$AsyncOnSubscribeImpl: void onUnsubscribe(java.lang.Object)>[]--><rx.internal.operators.SingleFromObservable: void call(java.lang.Object)>[]--><rx.internal.operators.SingleFromObservable: void call(rx.SingleSubscriber)>[]--><rx.internal.operators.OnSubscribeFilter: void call(java.lang.Object)>[]--><rx.internal.operators.OnSubscribeFilter: void call(rx.Subscriber)>[]--><rx.Observable: rx.Subscription unsafeSubscribe(rx.Subscriber)>[[try]]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(java.lang.Object)>[]--><com.jakewharton.rxbinding.widget.ToolbarItemClickOnSubscribe: void call(rx.Subscriber)>[]--><android.widget.Toolbar: void setOnMenuItemClickListener(android.widget.Toolbar.OnMenuItemClickListener)>
+One road protect good!
+#68.the call statck between class <rx.observables.AsyncOnSubscribe$AsyncOnSubscribeImpl: void onUnsubscribe(java.lang.Object)> to <android.widget.Toolbar: void setOnMenuItemClickListener(android.widget.Toolbar.OnMenuItemClickListener)>has compatibility isssues！
+-----------------------------------------
+crashApis:18
+containsStatic:false
+containsTry:true
+69call by main package
+-----------------------------------------
+#################################################
+N 29 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.lang.Object get(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:true
+1call by main package
+-----------------------------------------
+#################################################
+N 30 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putDoubleArray(java.lang.String,double[])> is checking!!!
+The life time of api is [21,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 31 Potential Issue API: SDKCheck of <android.app.job.JobScheduler: int schedule(android.app.job.JobInfo)> is checking!!!
+The life time of api is [21,31]
+802call roads:
+1 Mainhead roads:
+801 Packageshead roads:
+containsStatic:false
+containsTry:true
+802call by main package
+-----------------------------------------
+#################################################
+N 32 Potential Issue API: SDKCheck of <android.os.BaseBundle: boolean getBoolean(java.lang.String)> is checking!!!
+The life time of api is [22,31]
+3call roads:
+0 Mainhead roads:
+3 Packageshead roads:
+!!!this api will crash on sdk 18 19 20 21 
+Error road: <com.wdullaer.materialdatetimepicker.date.DatePickerDialog: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+#1.the call statck between class <com.wdullaer.materialdatetimepicker.date.DatePickerDialog: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)> to <android.os.BaseBundle: boolean getBoolean(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 18 19 20 21 
+Error road: <com.wdullaer.materialdatetimepicker.time.TimePickerDialog: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+#2.the call statck between class <com.wdullaer.materialdatetimepicker.time.TimePickerDialog: void onCreate(android.os.Bundle)> to <android.os.BaseBundle: boolean getBoolean(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 18 19 20 21 
+Error road: <com.appyvet.rangebar.RangeBar: void onRestoreInstanceState(android.os.Parcelable)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+#3.the call statck between class <com.appyvet.rangebar.RangeBar: void onRestoreInstanceState(android.os.Parcelable)> to <android.os.BaseBundle: boolean getBoolean(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:19
+containsStatic:false
+containsTry:false
+4call by main package
+-----------------------------------------
+#################################################
+N 33 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.lang.String getString(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+3call roads:
+0 Mainhead roads:
+3 Packageshead roads:
+!!!this api will crash on sdk 18 19 20 
+Error road: <com.squareup.leakcanary.internal.DisplayLeakActivity: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#1.the call statck between class <com.squareup.leakcanary.internal.DisplayLeakActivity: void onCreate(android.os.Bundle)> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 18 19 20 
+Error road: <com.wdullaer.materialdatetimepicker.date.DatePickerDialog: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#2.the call statck between class <com.wdullaer.materialdatetimepicker.date.DatePickerDialog: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 18 19 20 
+Error road: <com.wdullaer.materialdatetimepicker.time.TimePickerDialog: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#3.the call statck between class <com.wdullaer.materialdatetimepicker.time.TimePickerDialog: void onCreate(android.os.Bundle)> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:20
+containsStatic:false
+containsTry:false
+4call by main package
+-----------------------------------------
+#################################################
+N 34 Potential Issue API: SDKCheck of <android.app.job.JobInfo: int getId()> is checking!!!
+The life time of api is [21,31]
+803call roads:
+1 Mainhead roads:
+802 Packageshead roads:
+!!!this api will crash on sdk 18 19 20 
+Error road: <com.evernote.android.job.v26.JobProxy26: boolean isJobInfoScheduled(android.app.job.JobInfo,com.evernote.android.job.JobRequest)>[]--><android.app.job.JobInfo: int getId()>
+#61.the call statck between class <com.evernote.android.job.v26.JobProxy26: boolean isJobInfoScheduled(android.app.job.JobInfo,com.evernote.android.job.JobRequest)> to <android.app.job.JobInfo: int getId()>has compatibility isssues！
+-----------------------------------------
+crashApis:21
+containsStatic:false
+containsTry:true
+62call by main package
+-----------------------------------------
+#################################################
+N 35 Potential Issue API: SDKCheck of <android.app.job.JobScheduler: android.app.job.JobInfo getPendingJob(int)> is checking!!!
+The life time of api is [24,31]
+802call roads:
+1 Mainhead roads:
+801 Packageshead roads:
+try
+Good road with try: <com.evernote.android.job.DailyJob: com.evernote.android.job.Job$Result onRunJob(com.evernote.android.job.Job$Params)>[]--><com.evernote.android.job.JobManager: com.evernote.android.job.JobRequest getJobRequest(int)>[]--><com.evernote.android.job.v24.JobProxy24: boolean isPlatformJobScheduled(com.evernote.android.job.JobRequest)>[[try]]--><android.app.job.JobScheduler: android.app.job.JobInfo getPendingJob(int)>
+One road protect good!
+containsStatic:false
+containsTry:true
+802call by main package
+-----------------------------------------
+#################################################
+N 36 Potential Issue API: SDKCheck of <android.provider.MediaStore.Video.Thumbnails: android.graphics.Bitmap getThumbnail(android.content.ContentResolver,long,int,android.graphics.BitmapFactory.Options)> is checking!!!
+The life time of api is [5,29]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 30 31 
+Error road: <com.squareup.picasso.MediaStoreRequestHandler: com.squareup.picasso.RequestHandler$Result load(com.squareup.picasso.Request,int)>[]--><android.provider.MediaStore.Video.Thumbnails: android.graphics.Bitmap getThumbnail(android.content.ContentResolver,long,int,android.graphics.BitmapFactory.Options)>
+#1.the call statck between class <com.squareup.picasso.MediaStoreRequestHandler: com.squareup.picasso.RequestHandler$Result load(com.squareup.picasso.Request,int)> to <android.provider.MediaStore.Video.Thumbnails: android.graphics.Bitmap getThumbnail(android.content.ContentResolver,long,int,android.graphics.BitmapFactory.Options)>has compatibility isssues！
+-----------------------------------------
+crashApis:22
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 37 Potential Issue API: SDKCheck of <android.media.MediaPlayer: void setVolume(float,float)> is checking!!!
+The life time of api is [1,17]
+802call roads:
+1 Mainhead roads:
+801 Packageshead roads:
+containsStatic:false
+containsTry:true
+802call by main package
+-----------------------------------------
+#################################################
+N 38 Potential Issue API: SDKCheck of <android.app.AlarmManager: void setExact(int,long,android.app.PendingIntent)> is checking!!!
+The life time of api is [19,31]
+802call roads:
+1 Mainhead roads:
+801 Packageshead roads:
+containsStatic:false
+containsTry:true
+802call by main package
+-----------------------------------------
+#################################################
+N 39 Potential Issue API: SDKCheck of <android.animation.AnimatorSet: void <init>()> is checking!!!
+The life time of api is [24,31]
+6call roads:
+0 Mainhead roads:
+6 Packageshead roads:
+!!!this api will crash on sdk 18 19 20 21 22 23 
+Error road: <com.wdullaer.materialdatetimepicker.time.TimePickerDialog: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)>[]--><com.wdullaer.materialdatetimepicker.time.TimePickerDialog: void setCurrentItemShowing(int,boolean,boolean,boolean)>[]--><com.wdullaer.materialdatetimepicker.time.RadialPickerLayout: void setCurrentItemShowing(int,boolean)>[]--><android.animation.AnimatorSet: void <init>()>
+!!!this api will crash on sdk 18 19 20 21 22 23 
+Error road: <com.wdullaer.materialdatetimepicker.time.TimePickerDialog: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)>[]--><com.wdullaer.materialdatetimepicker.time.TimePickerDialog: void tryStartingKbMode(int)>[]--><com.wdullaer.materialdatetimepicker.time.TimePickerDialog: void updateDisplay(boolean)>[]--><com.wdullaer.materialdatetimepicker.time.TimePickerDialog: void setCurrentItemShowing(int,boolean,boolean,boolean)>[]--><com.wdullaer.materialdatetimepicker.time.RadialPickerLayout: void setCurrentItemShowing(int,boolean)>[]--><android.animation.AnimatorSet: void <init>()>
+#1.the call statck between class <com.wdullaer.materialdatetimepicker.time.TimePickerDialog: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)> to <android.animation.AnimatorSet: void <init>()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 18 19 20 21 22 23 
+Error road: <com.wdullaer.materialdatetimepicker.time.TimePickerDialog: void enablePicker()>[]--><com.wdullaer.materialdatetimepicker.time.TimePickerDialog: void finishKbMode(boolean)>[]--><com.wdullaer.materialdatetimepicker.time.TimePickerDialog: void updateDisplay(boolean)>[]--><com.wdullaer.materialdatetimepicker.time.TimePickerDialog: void setCurrentItemShowing(int,boolean,boolean,boolean)>[]--><com.wdullaer.materialdatetimepicker.time.RadialPickerLayout: void setCurrentItemShowing(int,boolean)>[]--><android.animation.AnimatorSet: void <init>()>
+#2.the call statck between class <com.wdullaer.materialdatetimepicker.time.TimePickerDialog: void enablePicker()> to <android.animation.AnimatorSet: void <init>()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 18 19 20 21 22 23 
+Error road: <com.wdullaer.materialdatetimepicker.time.TimePickerDialog: void advancePicker(int)>[]--><com.wdullaer.materialdatetimepicker.time.TimePickerDialog: void setCurrentItemShowing(int,boolean,boolean,boolean)>[]--><com.wdullaer.materialdatetimepicker.time.RadialPickerLayout: void setCurrentItemShowing(int,boolean)>[]--><android.animation.AnimatorSet: void <init>()>
+#3.the call statck between class <com.wdullaer.materialdatetimepicker.time.TimePickerDialog: void advancePicker(int)> to <android.animation.AnimatorSet: void <init>()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 18 19 20 21 22 23 
+Error road: <com.wdullaer.materialdatetimepicker.time.TimePickerDialog: boolean access$600(com.wdullaer.materialdatetimepicker.time.TimePickerDialog,int)>[]--><com.wdullaer.materialdatetimepicker.time.TimePickerDialog: boolean processKeyUp(int)>[]--><com.wdullaer.materialdatetimepicker.time.TimePickerDialog: void updateDisplay(boolean)>[]--><com.wdullaer.materialdatetimepicker.time.TimePickerDialog: void setCurrentItemShowing(int,boolean,boolean,boolean)>[]--><com.wdullaer.materialdatetimepicker.time.RadialPickerLayout: void setCurrentItemShowing(int,boolean)>[]--><android.animation.AnimatorSet: void <init>()>
+#4.the call statck between class <com.wdullaer.materialdatetimepicker.time.TimePickerDialog: boolean access$600(com.wdullaer.materialdatetimepicker.time.TimePickerDialog,int)> to <android.animation.AnimatorSet: void <init>()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 18 19 20 21 22 23 
+Error road: <com.wdullaer.materialdatetimepicker.time.TimePickerDialog: void access$100(com.wdullaer.materialdatetimepicker.time.TimePickerDialog,int,boolean,boolean,boolean)>[]--><com.wdullaer.materialdatetimepicker.time.TimePickerDialog: void setCurrentItemShowing(int,boolean,boolean,boolean)>[]--><com.wdullaer.materialdatetimepicker.time.RadialPickerLayout: void setCurrentItemShowing(int,boolean)>[]--><android.animation.AnimatorSet: void <init>()>
+#5.the call statck between class <com.wdullaer.materialdatetimepicker.time.TimePickerDialog: void access$100(com.wdullaer.materialdatetimepicker.time.TimePickerDialog,int,boolean,boolean,boolean)> to <android.animation.AnimatorSet: void <init>()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 18 19 20 21 22 23 
+Error road: <com.wdullaer.materialdatetimepicker.time.TimePickerDialog: void access$400(com.wdullaer.materialdatetimepicker.time.TimePickerDialog,boolean)>[]--><com.wdullaer.materialdatetimepicker.time.TimePickerDialog: void finishKbMode(boolean)>[]--><com.wdullaer.materialdatetimepicker.time.TimePickerDialog: void updateDisplay(boolean)>[]--><com.wdullaer.materialdatetimepicker.time.TimePickerDialog: void setCurrentItemShowing(int,boolean,boolean,boolean)>[]--><com.wdullaer.materialdatetimepicker.time.RadialPickerLayout: void setCurrentItemShowing(int,boolean)>[]--><android.animation.AnimatorSet: void <init>()>
+#6.the call statck between class <com.wdullaer.materialdatetimepicker.time.TimePickerDialog: void access$400(com.wdullaer.materialdatetimepicker.time.TimePickerDialog,boolean)> to <android.animation.AnimatorSet: void <init>()>has compatibility isssues！
+-----------------------------------------
+crashApis:23
+containsStatic:false
+containsTry:false
+7call by main package
+-----------------------------------------
+#################################################
+N 40 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putInt(java.lang.String,int)> is checking!!!
+The life time of api is [21,31]
+3call roads:
+0 Mainhead roads:
+3 Packageshead roads:
+!!!this api will crash on sdk 18 19 20 
+Error road: <com.appyvet.rangebar.RangeBar: android.os.Parcelable onSaveInstanceState()>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#1.the call statck between class <com.appyvet.rangebar.RangeBar: android.os.Parcelable onSaveInstanceState()> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 18 19 20 
+Error road: <com.wdullaer.materialdatetimepicker.date.DatePickerDialog: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#2.the call statck between class <com.wdullaer.materialdatetimepicker.date.DatePickerDialog: void onSaveInstanceState(android.os.Bundle)> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 18 19 20 
+Error road: <com.wdullaer.materialdatetimepicker.time.TimePickerDialog: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#3.the call statck between class <com.wdullaer.materialdatetimepicker.time.TimePickerDialog: void onSaveInstanceState(android.os.Bundle)> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:24
+containsStatic:false
+containsTry:false
+4call by main package
+-----------------------------------------
+#################################################
+N 41 Potential Issue API: SDKCheck of <android.util.SizeF: float getWidth()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 18 19 20 
+Error road: <androidx.versionedparcelable.VersionedParcel: void writeSizeF(android.util.SizeF,int)>[]--><android.util.SizeF: float getWidth()>
+#1.the call statck between class <androidx.versionedparcelable.VersionedParcel: void writeSizeF(android.util.SizeF,int)> to <android.util.SizeF: float getWidth()>has compatibility isssues！
+-----------------------------------------
+crashApis:25
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 42 Potential Issue API: SDKCheck of <android.net.NetworkInfo: boolean isConnectedOrConnecting()> is checking!!!
+The life time of api is [1,30]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <com.evernote.android.job.util.Device: com.evernote.android.job.JobRequest$NetworkType getNetworkType(android.content.Context)>[]--><android.net.NetworkInfo: boolean isConnectedOrConnecting()>
+#1.the call statck between class <com.evernote.android.job.util.Device: com.evernote.android.job.JobRequest$NetworkType getNetworkType(android.content.Context)> to <android.net.NetworkInfo: boolean isConnectedOrConnecting()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <com.squareup.picasso.Dispatcher$DispatcherHandler: void handleMessage(android.os.Message)>[]--><com.squareup.picasso.Dispatcher: void performNetworkStateChange(android.net.NetworkInfo)>[]--><com.squareup.picasso.PicassoExecutorService: void adjustThreadCount(android.net.NetworkInfo)>[]--><android.net.NetworkInfo: boolean isConnectedOrConnecting()>
+#2.the call statck between class <com.squareup.picasso.Dispatcher$DispatcherHandler: void handleMessage(android.os.Message)> to <android.net.NetworkInfo: boolean isConnectedOrConnecting()>has compatibility isssues！
+-----------------------------------------
+crashApis:26
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 43 Potential Issue API: SDKCheck of <android.view.WindowInsets: int getSystemWindowInsetTop()> is checking!!!
+The life time of api is [21,31]
+4call roads:
+0 Mainhead roads:
+4 Packageshead roads:
+!!!this api will crash on sdk 18 19 20 
+Error road: <com.jakewharton.u2020.ui.debug.DrawerLayoutCompatApi21$InsetsListener: android.view.WindowInsets onApplyWindowInsets(android.view.View,android.view.WindowInsets)>[]--><android.view.WindowInsets: int getSystemWindowInsetTop()>
+#1.the call statck between class <com.jakewharton.u2020.ui.debug.DrawerLayoutCompatApi21$InsetsListener: android.view.WindowInsets onApplyWindowInsets(android.view.View,android.view.WindowInsets)> to <android.view.WindowInsets: int getSystemWindowInsetTop()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 18 19 20 
+Error road: <com.jakewharton.u2020.ui.debug.DrawerLayoutCompatApi21: void applyMarginInsets(android.view.ViewGroup$MarginLayoutParams,java.lang.Object,int)>[]--><android.view.WindowInsets: int getSystemWindowInsetTop()>
+#2.the call statck between class <com.jakewharton.u2020.ui.debug.DrawerLayoutCompatApi21: void applyMarginInsets(android.view.ViewGroup$MarginLayoutParams,java.lang.Object,int)> to <android.view.WindowInsets: int getSystemWindowInsetTop()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 18 19 20 
+Error road: <com.jakewharton.u2020.ui.debug.DebugDrawerLayout$DrawerLayoutCompatImplApi21: void dispatchChildInsets(android.view.View,java.lang.Object,int)>[]--><com.jakewharton.u2020.ui.debug.DrawerLayoutCompatApi21: void dispatchChildInsets(android.view.View,java.lang.Object,int)>[]--><android.view.WindowInsets: int getSystemWindowInsetTop()>
+#3.the call statck between class <com.jakewharton.u2020.ui.debug.DebugDrawerLayout$DrawerLayoutCompatImplApi21: void dispatchChildInsets(android.view.View,java.lang.Object,int)> to <android.view.WindowInsets: int getSystemWindowInsetTop()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 18 19 20 
+Error road: <com.jakewharton.u2020.ui.debug.DebugDrawerLayout$DrawerLayoutCompatImplApi21: int getTopInset(java.lang.Object)>[]--><com.jakewharton.u2020.ui.debug.DrawerLayoutCompatApi21: int getTopInset(java.lang.Object)>[]--><android.view.WindowInsets: int getSystemWindowInsetTop()>
+#4.the call statck between class <com.jakewharton.u2020.ui.debug.DebugDrawerLayout$DrawerLayoutCompatImplApi21: int getTopInset(java.lang.Object)> to <android.view.WindowInsets: int getSystemWindowInsetTop()>has compatibility isssues！
+-----------------------------------------
+crashApis:27
+containsStatic:false
+containsTry:false
+5call by main package
+-----------------------------------------
+#################################################
+N 44 Potential Issue API: SDKCheck of <android.os.PowerManager: boolean isDeviceIdleMode()> is checking!!!
+The life time of api is [23,31]
+3call roads:
+0 Mainhead roads:
+3 Packageshead roads:
+-$i0 < 23
+Good road: <com.evernote.android.job.Job: boolean meetsRequirements()>[]--><com.evernote.android.job.Job: boolean meetsRequirements(boolean)>[]--><com.evernote.android.job.Job: boolean isRequirementDeviceIdleMet()>[]--><com.evernote.android.job.util.Device: boolean isIdle(android.content.Context)>[[-$i0 < 23]]--><android.os.PowerManager: boolean isDeviceIdleMode()>
+One road protect good!
+try
+Good road with try: <com.evernote.android.job.DailyJob: com.evernote.android.job.Job$Result onRunJob(com.evernote.android.job.Job$Params)>[[try]]--><com.evernote.android.job.Job: boolean meetsRequirements(boolean)>[]--><com.evernote.android.job.Job: boolean isRequirementDeviceIdleMet()>[]--><com.evernote.android.job.util.Device: boolean isIdle(android.content.Context)>[[-$i0 < 23]]--><android.os.PowerManager: boolean isDeviceIdleMode()>
+One road protect good!
+try
+Good road with try: <com.evernote.android.job.Job: com.evernote.android.job.Job$Result runJob()>[[try]]--><com.evernote.android.job.Job: boolean meetsRequirements(boolean)>[]--><com.evernote.android.job.Job: boolean isRequirementDeviceIdleMet()>[]--><com.evernote.android.job.util.Device: boolean isIdle(android.content.Context)>[[-$i0 < 23]]--><android.os.PowerManager: boolean isDeviceIdleMode()>
+One road protect good!
+containsStatic:false
+containsTry:true
+4call by main package
+-----------------------------------------
+#################################################
+N 45 Potential Issue API: SDKCheck of <android.net.NetworkInfo: boolean isRoaming()> is checking!!!
+The life time of api is [3,30]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <com.evernote.android.job.util.Device: com.evernote.android.job.JobRequest$NetworkType getNetworkType(android.content.Context)>[]--><android.net.NetworkInfo: boolean isRoaming()>
+#1.the call statck between class <com.evernote.android.job.util.Device: com.evernote.android.job.JobRequest$NetworkType getNetworkType(android.content.Context)> to <android.net.NetworkInfo: boolean isRoaming()>has compatibility isssues！
+-----------------------------------------
+crashApis:28
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 46 Potential Issue API: SDKCheck of <android.app.job.JobInfo.Builder: android.app.job.JobInfo.Builder setRequiresStorageNotLow(boolean)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 18 19 20 21 22 23 24 25 
+Error road: <com.evernote.android.job.v26.JobProxy26: android.app.job.JobInfo$Builder createBaseBuilder(com.evernote.android.job.JobRequest,boolean)>[]--><android.app.job.JobInfo.Builder: android.app.job.JobInfo.Builder setRequiresStorageNotLow(boolean)>
+#1.the call statck between class <com.evernote.android.job.v26.JobProxy26: android.app.job.JobInfo$Builder createBaseBuilder(com.evernote.android.job.JobRequest,boolean)> to <android.app.job.JobInfo.Builder: android.app.job.JobInfo.Builder setRequiresStorageNotLow(boolean)>has compatibility isssues！
+-----------------------------------------
+crashApis:29
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 47 Potential Issue API: SDKCheck of <android.content.Context: android.content.res.ColorStateList getColorStateList(int)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i1 < 23
+Good road: <android.databinding.ViewDataBinding: android.content.res.ColorStateList getColorStateListFromResource(android.view.View,int)>[[-$i1 < 23]]--><android.content.Context: android.content.res.ColorStateList getColorStateList(int)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 48 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.util.Set keySet()> is checking!!!
+The life time of api is [21,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:true
+1call by main package
+-----------------------------------------
+#################################################
+N 49 Potential Issue API: SDKCheck of <android.util.Size: int getHeight()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 18 19 20 
+Error road: <androidx.versionedparcelable.VersionedParcel: void writeSize(android.util.Size,int)>[]--><android.util.Size: int getHeight()>
+#1.the call statck between class <androidx.versionedparcelable.VersionedParcel: void writeSize(android.util.Size,int)> to <android.util.Size: int getHeight()>has compatibility isssues！
+-----------------------------------------
+crashApis:30
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 50 Potential Issue API: SDKCheck of <android.app.AlarmManager: void setWindow(int,long,long,android.app.PendingIntent)> is checking!!!
+The life time of api is [19,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 18 
+Error road: <com.evernote.android.job.v19.JobProxy19: void plantOneOffFlexSupport(com.evernote.android.job.JobRequest,android.app.AlarmManager,android.app.PendingIntent)>[]--><android.app.AlarmManager: void setWindow(int,long,long,android.app.PendingIntent)>
+#1.the call statck between class <com.evernote.android.job.v19.JobProxy19: void plantOneOffFlexSupport(com.evernote.android.job.JobRequest,android.app.AlarmManager,android.app.PendingIntent)> to <android.app.AlarmManager: void setWindow(int,long,long,android.app.PendingIntent)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 18 
+Error road: <com.evernote.android.job.v19.JobProxy19: void plantOneOffInexact(com.evernote.android.job.JobRequest,android.app.AlarmManager,android.app.PendingIntent)>[]--><android.app.AlarmManager: void setWindow(int,long,long,android.app.PendingIntent)>
+#2.the call statck between class <com.evernote.android.job.v19.JobProxy19: void plantOneOffInexact(com.evernote.android.job.JobRequest,android.app.AlarmManager,android.app.PendingIntent)> to <android.app.AlarmManager: void setWindow(int,long,long,android.app.PendingIntent)>has compatibility isssues！
+-----------------------------------------
+crashApis:31
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 51 Potential Issue API: SDKCheck of <android.app.job.JobInfo.Builder: android.app.job.JobInfo.Builder setRequiredNetworkType(int)> is checking!!!
+The life time of api is [21,31]
+802call roads:
+1 Mainhead roads:
+801 Packageshead roads:
+containsStatic:false
+containsTry:true
+802call by main package
+-----------------------------------------
+#################################################
+N 52 Potential Issue API: SDKCheck of <android.os.PowerManager: boolean isIgnoringBatteryOptimizations(java.lang.String)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 18 19 20 21 22 
+Error road: <com.app.missednotificationsreminder.binding.model.SettingsViewModel: java.lang.Boolean lambda$new$10(com.app.missednotificationsreminder.binding.model.SettingsViewModel,java.lang.Boolean)>[]--><com.app.missednotificationsreminder.util.BatteryUtils: boolean isBatteryOptimizationDisabled(android.content.Context)>[]--><android.os.PowerManager: boolean isIgnoringBatteryOptimizations(java.lang.String)>
+#1.the call statck between class <com.app.missednotificationsreminder.binding.model.SettingsViewModel: java.lang.Boolean lambda$new$10(com.app.missednotificationsreminder.binding.model.SettingsViewModel,java.lang.Boolean)> to <android.os.PowerManager: boolean isIgnoringBatteryOptimizations(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:32
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 53 Potential Issue API: SDKCheck of <android.net.NetworkInfo: int getType()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <com.squareup.picasso.Dispatcher$DispatcherHandler: void handleMessage(android.os.Message)>[]--><com.squareup.picasso.Dispatcher: void performNetworkStateChange(android.net.NetworkInfo)>[]--><com.squareup.picasso.PicassoExecutorService: void adjustThreadCount(android.net.NetworkInfo)>[]--><android.net.NetworkInfo: int getType()>
+#1.the call statck between class <com.squareup.picasso.Dispatcher$DispatcherHandler: void handleMessage(android.os.Message)> to <android.net.NetworkInfo: int getType()>has compatibility isssues！
+-----------------------------------------
+crashApis:33
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 54 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putLongArray(java.lang.String,long[])> is checking!!!
+The life time of api is [21,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 55 Potential Issue API: SDKCheck of <android.app.job.JobScheduler: void cancel(int)> is checking!!!
+The life time of api is [21,31]
+802call roads:
+1 Mainhead roads:
+801 Packageshead roads:
+try
+Good road with try: <com.evernote.android.job.DailyJob: int schedule(com.evernote.android.job.JobRequest$Builder,boolean,long,long,boolean)>[]--><com.evernote.android.job.JobManager: boolean cancel(int)>[]--><com.evernote.android.job.JobManager: boolean cancelInner(com.evernote.android.job.JobRequest)>[]--><com.evernote.android.job.v21.JobProxy21: void cancel(int)>[[try]]--><android.app.job.JobScheduler: void cancel(int)>
+One road protect good!
+try
+Good road with try: <com.evernote.android.job.JobRequest: com.evernote.android.job.JobRequest$Builder cancelAndEdit()>[]--><com.evernote.android.job.JobManager: boolean cancel(int)>[]--><com.evernote.android.job.JobManager: boolean cancelInner(com.evernote.android.job.JobRequest)>[]--><com.evernote.android.job.v21.JobProxy21: void cancel(int)>[[try]]--><android.app.job.JobScheduler: void cancel(int)>
+One road protect good!
+containsStatic:false
+containsTry:true
+802call by main package
+-----------------------------------------
+#################################################
+N 56 Potential Issue API: SDKCheck of <android.content.Context: android.graphics.drawable.Drawable getDrawable(int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i1 < 21
+Good road: <android.databinding.ViewDataBinding: android.graphics.drawable.Drawable getDrawableFromResource(android.view.View,int)>[[-$i1 < 21]]--><android.content.Context: android.graphics.drawable.Drawable getDrawable(int)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 57 Potential Issue API: SDKCheck of <android.app.AlarmManager: void setExactAndAllowWhileIdle(int,long,android.app.PendingIntent)> is checking!!!
+The life time of api is [23,31]
+802call roads:
+1 Mainhead roads:
+801 Packageshead roads:
+containsStatic:false
+containsTry:true
+802call by main package
+-----------------------------------------
+#################################################
+N 58 Potential Issue API: SDKCheck of <android.app.job.JobInfo.Builder: android.app.job.JobInfo.Builder setRequiresDeviceIdle(boolean)> is checking!!!
+The life time of api is [21,31]
+802call roads:
+1 Mainhead roads:
+801 Packageshead roads:
+containsStatic:false
+containsTry:true
+802call by main package
+-----------------------------------------
+#################################################
+N 59 Potential Issue API: SDKCheck of <android.app.job.JobInfo.Builder: void <init>(int,android.content.ComponentName)> is checking!!!
+The life time of api is [21,31]
+802call roads:
+1 Mainhead roads:
+801 Packageshead roads:
+containsStatic:false
+containsTry:true
+802call by main package
+-----------------------------------------
+#################################################
+N 60 Potential Issue API: SDKCheck of <android.util.Size: int getWidth()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 18 19 20 
+Error road: <androidx.versionedparcelable.VersionedParcel: void writeSize(android.util.Size,int)>[]--><android.util.Size: int getWidth()>
+#1.the call statck between class <androidx.versionedparcelable.VersionedParcel: void writeSize(android.util.Size,int)> to <android.util.Size: int getWidth()>has compatibility isssues！
+-----------------------------------------
+crashApis:34
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 61 Potential Issue API: SDKCheck of <android.app.job.JobInfo.Builder: android.app.job.JobInfo.Builder setPersisted(boolean)> is checking!!!
+The life time of api is [21,31]
+802call roads:
+1 Mainhead roads:
+801 Packageshead roads:
+containsStatic:false
+containsTry:true
+802call by main package
+-----------------------------------------
+#################################################
+N 62 Potential Issue API: SDKCheck of <android.net.NetworkInfo: boolean isConnected()> is checking!!!
+The life time of api is [1,30]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <com.squareup.picasso.NetworkRequestHandler: boolean shouldRetry(boolean,android.net.NetworkInfo)>[]--><android.net.NetworkInfo: boolean isConnected()>
+#1.the call statck between class <com.squareup.picasso.NetworkRequestHandler: boolean shouldRetry(boolean,android.net.NetworkInfo)> to <android.net.NetworkInfo: boolean isConnected()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <com.squareup.picasso.Dispatcher$DispatcherHandler: void handleMessage(android.os.Message)>[]--><com.squareup.picasso.Dispatcher: void performRetry(com.squareup.picasso.BitmapHunter)>[]--><android.net.NetworkInfo: boolean isConnected()>
+!!!this api will crash on sdk 31 
+Error road: <com.squareup.picasso.Dispatcher$DispatcherHandler: void handleMessage(android.os.Message)>[]--><com.squareup.picasso.Dispatcher: void performNetworkStateChange(android.net.NetworkInfo)>[]--><android.net.NetworkInfo: boolean isConnected()>
+#2.the call statck between class <com.squareup.picasso.Dispatcher$DispatcherHandler: void handleMessage(android.os.Message)> to <android.net.NetworkInfo: boolean isConnected()>has compatibility isssues！
+-----------------------------------------
+crashApis:35
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 63 Potential Issue API: SDKCheck of <android.view.View: android.view.WindowInsets dispatchApplyWindowInsets(android.view.WindowInsets)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 18 19 20 
+Error road: <com.jakewharton.u2020.ui.debug.DebugDrawerLayout$DrawerLayoutCompatImplApi21: void dispatchChildInsets(android.view.View,java.lang.Object,int)>[]--><com.jakewharton.u2020.ui.debug.DrawerLayoutCompatApi21: void dispatchChildInsets(android.view.View,java.lang.Object,int)>[]--><android.view.View: android.view.WindowInsets dispatchApplyWindowInsets(android.view.WindowInsets)>
+#1.the call statck between class <com.jakewharton.u2020.ui.debug.DebugDrawerLayout$DrawerLayoutCompatImplApi21: void dispatchChildInsets(android.view.View,java.lang.Object,int)> to <android.view.View: android.view.WindowInsets dispatchApplyWindowInsets(android.view.WindowInsets)>has compatibility isssues！
+-----------------------------------------
+crashApis:36
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 64 Potential Issue API: SDKCheck of <android.text.InputFilter.LengthFilter: int getMax()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-i2 < 21
+Good road: <android.databinding.adapters.TextViewBindingAdapter: void setMaxLength(android.widget.TextView,int)>[[-i2 < 21]]--><android.text.InputFilter.LengthFilter: int getMax()>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 65 Potential Issue API: SDKCheck of <android.app.job.JobInfo.Builder: android.app.job.JobInfo.Builder setPeriodic(long)> is checking!!!
+The life time of api is [21,31]
+802call roads:
+1 Mainhead roads:
+801 Packageshead roads:
+containsStatic:false
+containsTry:true
+802call by main package
+-----------------------------------------
+#################################################
+N 66 Potential Issue API: SDKCheck of <android.provider.MediaStore.Images.Thumbnails: android.graphics.Bitmap getThumbnail(android.content.ContentResolver,long,int,android.graphics.BitmapFactory.Options)> is checking!!!
+The life time of api is [5,29]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 30 31 
+Error road: <com.squareup.picasso.MediaStoreRequestHandler: com.squareup.picasso.RequestHandler$Result load(com.squareup.picasso.Request,int)>[]--><android.provider.MediaStore.Images.Thumbnails: android.graphics.Bitmap getThumbnail(android.content.ContentResolver,long,int,android.graphics.BitmapFactory.Options)>
+#1.the call statck between class <com.squareup.picasso.MediaStoreRequestHandler: com.squareup.picasso.RequestHandler$Result load(com.squareup.picasso.Request,int)> to <android.provider.MediaStore.Images.Thumbnails: android.graphics.Bitmap getThumbnail(android.content.ContentResolver,long,int,android.graphics.BitmapFactory.Options)>has compatibility isssues！
+-----------------------------------------
+crashApis:37
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 67 Potential Issue API: SDKCheck of <android.service.notification.StatusBarNotification: android.os.UserHandle getUser()> is checking!!!
+The life time of api is [21,31]
+803call roads:
+1 Mainhead roads:
+802 Packageshead roads:
+$i0 >= 21
+Good road: <com.app.missednotificationsreminder.service.AbstractReminderNotificationListenerService: void onNotificationPosted(android.service.notification.StatusBarNotification)>[]--><com.app.missednotificationsreminder.service.AbstractReminderNotificationListenerService: java.lang.String notificationKey(android.service.notification.StatusBarNotification)>[[$i0 >= 21]]--><android.service.notification.StatusBarNotification: android.os.UserHandle getUser()>
+One road protect good!
+containsStatic:false
+containsTry:true
+803call by main package
+-----------------------------------------
+#################################################
+N 68 Potential Issue API: SDKCheck of <android.app.job.JobParameters: int getJobId()> is checking!!!
+The life time of api is [21,31]
+4call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.evernote.android.job.v21.PlatformJobService dummyMainMethod_com_evernote_android_job_v21_PlatformJobService(android.content.Intent)>[]--><com.evernote.android.job.v21.PlatformJobService: boolean onStopJob(android.app.job.JobParameters)>[]--><android.app.job.JobParameters: int getJobId()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.app.job.JobParameters: int getJobId()>has compatibility isssues！
+-----------------------------------------
+3 Packageshead roads:
+try
+Good road with try: <android.databinding.ViewDataBinding$6: void onViewAttachedToWindow(android.view.View)>[]--><com.evernote.android.job.v21.PlatformJobService$1: void run()>[[try]]--><android.app.job.JobParameters: int getJobId()>
+One road protect good!
+try
+Good road with try: <android.databinding.ViewDataBinding$8: void doFrame(long)>[]--><com.evernote.android.job.v21.PlatformJobService$1: void run()>[[try]]--><android.app.job.JobParameters: int getJobId()>
+One road protect good!
+try
+Good road with try: <android.arch.lifecycle.ComputableLiveData: void invalidate()>[]--><android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)>[]--><com.evernote.android.job.v21.PlatformJobService$1: void run()>[[try]]--><android.app.job.JobParameters: int getJobId()>
+One road protect good!
+crashApis:38
+crashApisInMain:2
+containsStatic:false
+containsTry:true
+4call by main package
+-----------------------------------------
+#################################################
+N 69 Potential Issue API: SDKCheck of <android.view.WindowInsets: int getSystemWindowInsetRight()> is checking!!!
+The life time of api is [21,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 18 19 20 
+Error road: <com.jakewharton.u2020.ui.debug.DrawerLayoutCompatApi21: void applyMarginInsets(android.view.ViewGroup$MarginLayoutParams,java.lang.Object,int)>[]--><android.view.WindowInsets: int getSystemWindowInsetRight()>
+#1.the call statck between class <com.jakewharton.u2020.ui.debug.DrawerLayoutCompatApi21: void applyMarginInsets(android.view.ViewGroup$MarginLayoutParams,java.lang.Object,int)> to <android.view.WindowInsets: int getSystemWindowInsetRight()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 18 19 20 
+Error road: <com.jakewharton.u2020.ui.debug.DebugDrawerLayout$DrawerLayoutCompatImplApi21: void dispatchChildInsets(android.view.View,java.lang.Object,int)>[]--><com.jakewharton.u2020.ui.debug.DrawerLayoutCompatApi21: void dispatchChildInsets(android.view.View,java.lang.Object,int)>[]--><android.view.WindowInsets: int getSystemWindowInsetRight()>
+#2.the call statck between class <com.jakewharton.u2020.ui.debug.DebugDrawerLayout$DrawerLayoutCompatImplApi21: void dispatchChildInsets(android.view.View,java.lang.Object,int)> to <android.view.WindowInsets: int getSystemWindowInsetRight()>has compatibility isssues！
+-----------------------------------------
+crashApis:39
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 70 Potential Issue API: SDKCheck of <android.view.View: boolean isAttachedToWindow()> is checking!!!
+The life time of api is [19,31]
+3call roads:
+0 Mainhead roads:
+3 Packageshead roads:
+-$i0 < 19
+Good road: <android.databinding.ViewDataBinding$6: void onViewAttachedToWindow(android.view.View)>[]--><android.databinding.ViewDataBinding$7: void run()>[[-$i0 < 19]]--><android.view.View: boolean isAttachedToWindow()>
+One road protect good!
+-$i0 < 19
+Good road: <android.databinding.ViewDataBinding$8: void doFrame(long)>[]--><android.databinding.ViewDataBinding$7: void run()>[[-$i0 < 19]]--><android.view.View: boolean isAttachedToWindow()>
+One road protect good!
+-$i0 < 19
+Good road: <android.arch.lifecycle.ComputableLiveData: void invalidate()>[]--><android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)>[]--><android.databinding.ViewDataBinding$7: void run()>[[-$i0 < 19]]--><android.view.View: boolean isAttachedToWindow()>
+One road protect good!
+containsStatic:false
+containsTry:false
+4call by main package
+-----------------------------------------
+#################################################
+N 71 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putBooleanArray(java.lang.String,boolean[])> is checking!!!
+The life time of api is [22,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 72 Potential Issue API: SDKCheck of <android.util.Size: void <init>(int,int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 18 19 20 
+Error road: <androidx.versionedparcelable.VersionedParcel: android.util.Size readSize(android.util.Size,int)>[]--><android.util.Size: void <init>(int,int)>
+#1.the call statck between class <androidx.versionedparcelable.VersionedParcel: android.util.Size readSize(android.util.Size,int)> to <android.util.Size: void <init>(int,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:40
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 73 Potential Issue API: SDKCheck of <android.content.Context: int getColor(int)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i1 < 23
+Good road: <android.databinding.ViewDataBinding: int getColorFromResource(android.view.View,int)>[[-$i1 < 23]]--><android.content.Context: int getColor(int)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 74 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putDouble(java.lang.String,double)> is checking!!!
+The life time of api is [21,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 75 Potential Issue API: SDKCheck of <android.widget.TimePicker: void setHour(int)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i1 < 23
+Good road: <android.databinding.adapters.TimePickerBindingAdapter: void setHour(android.widget.TimePicker,int)>[[-$i1 < 23]]--><android.widget.TimePicker: void setHour(int)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 76 Potential Issue API: SDKCheck of <android.widget.AbsListView: void setSelectionFromTop(int,int)> is checking!!!
+The life time of api is [21,31]
+3call roads:
+0 Mainhead roads:
+3 Packageshead roads:
+!!!this api will crash on sdk 18 19 20 
+Error road: <android.databinding.ViewDataBinding$6: void onViewAttachedToWindow(android.view.View)>[]--><com.wdullaer.materialdatetimepicker.date.YearPickerView$1: void run()>[]--><android.widget.AbsListView: void setSelectionFromTop(int,int)>
+#1.the call statck between class <android.databinding.ViewDataBinding$6: void onViewAttachedToWindow(android.view.View)> to <android.widget.AbsListView: void setSelectionFromTop(int,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 18 19 20 
+Error road: <android.databinding.ViewDataBinding$8: void doFrame(long)>[]--><com.wdullaer.materialdatetimepicker.date.YearPickerView$1: void run()>[]--><android.widget.AbsListView: void setSelectionFromTop(int,int)>
+#2.the call statck between class <android.databinding.ViewDataBinding$8: void doFrame(long)> to <android.widget.AbsListView: void setSelectionFromTop(int,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 18 19 20 
+Error road: <android.arch.lifecycle.ComputableLiveData: void invalidate()>[]--><android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)>[]--><com.wdullaer.materialdatetimepicker.date.YearPickerView$1: void run()>[]--><android.widget.AbsListView: void setSelectionFromTop(int,int)>
+#3.the call statck between class <android.arch.lifecycle.ComputableLiveData: void invalidate()> to <android.widget.AbsListView: void setSelectionFromTop(int,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:41
+containsStatic:false
+containsTry:false
+4call by main package
+-----------------------------------------
+#################################################
+N 77 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putIntArray(java.lang.String,int[])> is checking!!!
+The life time of api is [21,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 78 Potential Issue API: SDKCheck of <android.app.job.JobInfo.Builder: android.app.job.JobInfo.Builder setMinimumLatency(long)> is checking!!!
+The life time of api is [21,31]
+802call roads:
+1 Mainhead roads:
+801 Packageshead roads:

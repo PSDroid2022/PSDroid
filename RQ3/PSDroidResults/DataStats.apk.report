@@ -1,0 +1,112 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/DataStats.apk
+Entry Points[jp.takke.datastats.LayerService, jp.takke.datastats.SwitchButtonReceiver, jp.takke.datastats.BootReceiver, jp.takke.datastats.MainActivity]
+FllowDroidcallgraph size:677
+Soot started on Mon Jul 11 02:47:36 CST 2022
+StaticCheck:<jp.takke.datastats.OverlayUtil: boolean checkOverlayPermission(android.content.Context)>$yysi0 >= 23
+Soot finished on Mon Jul 11 02:47:41 CST 2022
+Soot has run for 0 min. 4 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 14
+Declared Target Sdk version is: 27
+Declared Max Sdk version is: -1
+Collected 175 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.view.Display: void getRealSize(android.graphics.Point)> is checking!!!
+The life time of api is [17,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 17
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: jp.takke.datastats.LayerService dummyMainMethod_jp_takke_datastats_LayerService(android.content.Intent)>[]--><jp.takke.datastats.MyRelativeLayout: void onSizeChanged(int,int,int,int)>[]--><jp.takke.datastats.MyRelativeLayout: android.graphics.Point getRealSize()>[[-$i0 < 17]]--><android.view.Display: void getRealSize(android.graphics.Point)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: jp.takke.datastats.LayerService dummyMainMethod_jp_takke_datastats_LayerService(android.content.Intent)>[]--><jp.takke.datastats.LayerService: int onStartCommand(android.content.Intent,int,int)>[]--><jp.takke.datastats.NotificationPresenter: void createNotificationChannel()>[[-$i0 < 26]]--><android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: jp.takke.datastats.LayerService dummyMainMethod_jp_takke_datastats_LayerService(android.content.Intent)>[]--><jp.takke.datastats.LayerService: int onStartCommand(android.content.Intent,int,int)>[]--><jp.takke.datastats.NotificationPresenter: void createNotificationChannel()>[[-$i0 < 26]]--><android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.provider.Settings: boolean canDrawOverlays(android.content.Context)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+1 Mainhead roads:
+$i0 >= 23
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: jp.takke.datastats.LayerService dummyMainMethod_jp_takke_datastats_LayerService(android.content.Intent)>[]--><jp.takke.datastats.LayerService: void onCreate()>[]--><jp.takke.datastats.OverlayUtil: boolean checkOverlayPermission(android.content.Context)>[[$i0 >= 23]]--><android.provider.Settings: boolean canDrawOverlays(android.content.Context)>
+One road protect good!
+$i0 >= 23
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: jp.takke.datastats.MainActivity dummyMainMethod_jp_takke_datastats_MainActivity(android.content.Intent)>[]--><jp.takke.datastats.MainActivity: void onCreate(android.os.Bundle)>[]--><jp.takke.datastats.OverlayUtil: boolean checkOverlayPermission(android.content.Context)>[[$i0 >= 23]]--><android.provider.Settings: boolean canDrawOverlays(android.content.Context)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.content.ContextWrapper: android.content.ComponentName startForegroundService(android.content.Intent)> is checking!!!
+The life time of api is [26,31]
+4call roads:
+1 Mainhead roads:
+-$i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: jp.takke.datastats.LayerService dummyMainMethod_jp_takke_datastats_LayerService(android.content.Intent)>[]--><jp.takke.datastats.LayerService: int onStartCommand(android.content.Intent,int,int)>[]--><jp.takke.datastats.LayerService: void startGatherThread()>[]--><jp.takke.datastats.LayerService$GatherThread: void run()>[]--><jp.takke.datastats.LayerService: void access$1100(jp.takke.datastats.LayerService,int,java.lang.String)>[]--><jp.takke.datastats.LayerService: void onScreenOff(int,java.lang.String)>[]--><android.os.Handler: boolean postDelayed(java.lang.Runnable,long)>[]--><jp.takke.datastats.MainActivity$$Lambda$10: void run()>[]--><jp.takke.datastats.MainActivity: void lambda$updateTextSize$10$MainActivity()>[]--><jp.takke.datastats.MainActivity: void doRestartService()>[]--><jp.takke.datastats.MainActivity: void doBindService()>[[-$i0 < 26]]--><android.content.ContextWrapper: android.content.ComponentName startForegroundService(android.content.Intent)>
+One road protect good!
+-$i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: jp.takke.datastats.MainActivity dummyMainMethod_jp_takke_datastats_MainActivity(android.content.Intent)>[]--><jp.takke.datastats.MainActivity$$Lambda$7: void onCheckedChanged(android.widget.CompoundButton,boolean)>[]--><jp.takke.datastats.MainActivity: void lambda$prepareConfigArea$7$MainActivity(android.widget.CompoundButton,boolean)>[]--><jp.takke.datastats.MainActivity: void doRestartService()>[]--><jp.takke.datastats.MainActivity: void doBindService()>[[-$i0 < 26]]--><android.content.ContextWrapper: android.content.ComponentName startForegroundService(android.content.Intent)>
+One road protect good!
+3 Packageshead roads:
+-$i0 < 26
+Good road: <jp.takke.datastats.LayerService: void access$600(jp.takke.datastats.LayerService)>[]--><jp.takke.datastats.LayerService: void startGatherThread()>[]--><jp.takke.datastats.LayerService$GatherThread: void run()>[]--><jp.takke.datastats.LayerService: void access$1100(jp.takke.datastats.LayerService,int,java.lang.String)>[]--><jp.takke.datastats.LayerService: void onScreenOff(int,java.lang.String)>[]--><android.os.Handler: boolean postDelayed(java.lang.Runnable,long)>[]--><jp.takke.datastats.MainActivity$$Lambda$10: void run()>[]--><jp.takke.datastats.MainActivity: void lambda$updateTextSize$10$MainActivity()>[]--><jp.takke.datastats.MainActivity: void doRestartService()>[]--><jp.takke.datastats.MainActivity: void doBindService()>[[-$i0 < 26]]--><android.content.ContextWrapper: android.content.ComponentName startForegroundService(android.content.Intent)>
+One road protect good!
+-$i0 < 26
+Good road: <jp.takke.datastats.LayerService: void access$1000(jp.takke.datastats.LayerService,int)>[]--><jp.takke.datastats.LayerService: void onScreenOn(int)>[]--><android.os.Handler: boolean postDelayed(java.lang.Runnable,long)>[]--><jp.takke.datastats.MainActivity$$Lambda$10: void run()>[]--><jp.takke.datastats.MainActivity: void lambda$updateTextSize$10$MainActivity()>[]--><jp.takke.datastats.MainActivity: void doRestartService()>[]--><jp.takke.datastats.MainActivity: void doBindService()>[[-$i0 < 26]]--><android.content.ContextWrapper: android.content.ComponentName startForegroundService(android.content.Intent)>
+One road protect good!
+-$i0 < 26
+Good road: <jp.takke.datastats.LayerService: void lambda$onScreenOn$0$LayerService(int)>[]--><jp.takke.datastats.LayerService: void startGatherThread()>[]--><jp.takke.datastats.LayerService$GatherThread: void run()>[]--><jp.takke.datastats.LayerService: void access$1100(jp.takke.datastats.LayerService,int,java.lang.String)>[]--><jp.takke.datastats.LayerService: void onScreenOff(int,java.lang.String)>[]--><android.os.Handler: boolean postDelayed(java.lang.Runnable,long)>[]--><jp.takke.datastats.MainActivity$$Lambda$10: void run()>[]--><jp.takke.datastats.MainActivity: void lambda$updateTextSize$10$MainActivity()>[]--><jp.takke.datastats.MainActivity: void doRestartService()>[]--><jp.takke.datastats.MainActivity: void doBindService()>[[-$i0 < 26]]--><android.content.ContextWrapper: android.content.ComponentName startForegroundService(android.content.Intent)>
+One road protect good!
+containsStatic:true
+containsTry:false
+4call by main package
+-----------------------------------------
+crashApis numbers:0
+crashApis numbers in main road:0
+On Android Version 16 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 17 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 18 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 19 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 20 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 21 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 22 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 23 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 24 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 25 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 31 this app may have error api use(at least): 0 and error api roads: 0

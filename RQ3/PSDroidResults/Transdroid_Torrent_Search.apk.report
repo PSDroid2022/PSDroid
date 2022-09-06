@@ -1,0 +1,257 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/Transdroid_Torrent_Search.apk
+Entry Points[org.transdroid.search.gui.SettingsActivity, org.transdroid.search.TorrentSitesProvider, org.transdroid.search.TorrentSearchProvider]
+FllowDroidcallgraph size:721
+Soot started on Mon Jul 11 13:40:23 CST 2022
+Soot finished on Mon Jul 11 13:40:31 CST 2022
+Soot has run for 0 min. 8 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 14
+Declared Target Sdk version is: 28
+Declared Max Sdk version is: -1
+Collected 178 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <org.apache.http.params.HttpConnectionParams: void setSoTimeout(org.apache.http.params.HttpParams,int)> is checking!!!
+The life time of api is [23,31]
+6call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.transdroid.search.TorrentSearchProvider dummyMainMethod_org_transdroid_search_TorrentSearchProvider(android.content.Intent)>[]--><org.transdroid.search.TorrentSearchProvider: android.os.ParcelFileDescriptor openFile(android.net.Uri,java.lang.String)>[[try]]--><org.transdroid.search.TorrentSite: java.io.InputStream getTorrentFile(android.content.SharedPreferences,java.lang.String)>[]--><org.transdroid.search.adapters.privatetrackers.RevolutionTTAdapter: java.io.InputStream getTorrentFile(android.content.SharedPreferences,java.lang.String)>[]--><org.transdroid.search.adapters.privatetrackers.RevolutionTTAdapter: org.apache.http.client.HttpClient prepareRequest(android.content.SharedPreferences)>[]--><org.transdroid.util.HttpHelper: org.apache.http.impl.client.DefaultHttpClient buildDefaultSearchHttpClient(boolean)>[]--><org.apache.http.params.HttpConnectionParams: void setSoTimeout(org.apache.http.params.HttpParams,int)>
+One road protect good!
+5 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.transdroid.search.TorrentSite: java.util.List search(android.content.SharedPreferences,java.lang.String,org.transdroid.search.SortOrder,int)>[]--><org.transdroid.search.adapters.privatetrackers.RevolutionTTAdapter: java.util.List search(android.content.SharedPreferences,java.lang.String,org.transdroid.search.SortOrder,int)>[]--><org.transdroid.search.adapters.privatetrackers.RevolutionTTAdapter: org.apache.http.client.HttpClient prepareRequest(android.content.SharedPreferences)>[]--><org.transdroid.util.HttpHelper: org.apache.http.impl.client.DefaultHttpClient buildDefaultSearchHttpClient(boolean)>[]--><org.apache.http.params.HttpConnectionParams: void setSoTimeout(org.apache.http.params.HttpParams,int)>
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.transdroid.search.TorrentSite: java.util.List search(android.content.SharedPreferences,java.lang.String,org.transdroid.search.SortOrder,int)>[]--><org.transdroid.search.adapters.rss.privatetrackers.PretomeAdapter: java.util.List search(android.content.SharedPreferences,java.lang.String,org.transdroid.search.SortOrder,int)>[]--><org.transdroid.search.adapters.rss.RssFeedSearchAdapter: java.util.List search(android.content.SharedPreferences,java.lang.String,org.transdroid.search.SortOrder,int)>[]--><org.ifies.android.sax.RssParser: void parse()>[]--><org.ifies.android.sax.RssParser: org.apache.http.client.HttpClient initialise()>[]--><org.transdroid.util.HttpHelper: org.apache.http.impl.client.DefaultHttpClient buildDefaultSearchHttpClient(boolean)>[]--><org.apache.http.params.HttpConnectionParams: void setSoTimeout(org.apache.http.params.HttpParams,int)>
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.transdroid.search.TorrentSite: java.util.List search(android.content.SharedPreferences,java.lang.String,org.transdroid.search.SortOrder,int)>[]--><org.transdroid.search.adapters.privatetrackers.HdTorrentsAdapter: java.util.List search(android.content.SharedPreferences,java.lang.String,org.transdroid.search.SortOrder,int)>[]--><org.transdroid.search.adapters.privatetrackers.HdTorrentsAdapter: org.apache.http.impl.client.DefaultHttpClient prepareRequest(android.content.SharedPreferences)>[]--><org.apache.http.params.HttpConnectionParams: void setSoTimeout(org.apache.http.params.HttpParams,int)>
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.transdroid.search.TorrentSite: java.util.List search(android.content.SharedPreferences,java.lang.String,org.transdroid.search.SortOrder,int)>[]--><org.transdroid.search.adapters.publictrackers.YtsAdapter: java.util.List search(android.content.SharedPreferences,java.lang.String,org.transdroid.search.SortOrder,int)>[]--><org.transdroid.search.adapters.publictrackers.YtsAdapter: java.util.List performSearch(java.lang.String,org.transdroid.search.SortOrder)>[]--><org.apache.http.params.HttpConnectionParams: void setSoTimeout(org.apache.http.params.HttpParams,int)>
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.transdroid.search.TorrentSite: java.util.List search(android.content.SharedPreferences,java.lang.String,org.transdroid.search.SortOrder,int)>[]--><org.transdroid.search.adapters.publictrackers.RarbgAdapter: java.util.List search(android.content.SharedPreferences,java.lang.String,org.transdroid.search.SortOrder,int)>[]--><org.transdroid.util.HttpHelper: org.apache.http.impl.client.DefaultHttpClient buildDefaultSearchHttpClient(boolean)>[]--><org.apache.http.params.HttpConnectionParams: void setSoTimeout(org.apache.http.params.HttpParams,int)>
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.transdroid.search.TorrentSite: java.util.List search(android.content.SharedPreferences,java.lang.String,org.transdroid.search.SortOrder,int)>[]--><org.transdroid.search.adapters.privatetrackers.HdBitsOrgAdapter: java.util.List search(android.content.SharedPreferences,java.lang.String,org.transdroid.search.SortOrder,int)>[]--><org.transdroid.search.adapters.privatetrackers.HdBitsOrgAdapter: org.apache.http.impl.client.DefaultHttpClient prepareRequest(android.content.SharedPreferences)>[]--><org.apache.http.params.HttpConnectionParams: void setSoTimeout(org.apache.http.params.HttpParams,int)>
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.transdroid.search.TorrentSite: java.util.List search(android.content.SharedPreferences,java.lang.String,org.transdroid.search.SortOrder,int)>[]--><org.transdroid.search.adapters.privatetrackers.AsiaTorrentsAdapter: java.util.List search(android.content.SharedPreferences,java.lang.String,org.transdroid.search.SortOrder,int)>[]--><org.transdroid.search.adapters.privatetrackers.AsiaTorrentsAdapter: org.apache.http.impl.client.DefaultHttpClient prepareRequest(android.content.SharedPreferences)>[]--><org.apache.http.params.HttpConnectionParams: void setSoTimeout(org.apache.http.params.HttpParams,int)>
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.transdroid.search.TorrentSite: java.util.List search(android.content.SharedPreferences,java.lang.String,org.transdroid.search.SortOrder,int)>[]--><org.transdroid.search.adapters.privatetrackers.DanishbitsAdapter: java.util.List search(android.content.SharedPreferences,java.lang.String,org.transdroid.search.SortOrder,int)>[]--><org.transdroid.search.adapters.privatetrackers.DanishbitsAdapter: org.apache.http.client.HttpClient prepareRequest(android.content.SharedPreferences)>[]--><org.transdroid.util.HttpHelper: org.apache.http.impl.client.DefaultHttpClient buildDefaultSearchHttpClient(boolean)>[]--><org.apache.http.params.HttpConnectionParams: void setSoTimeout(org.apache.http.params.HttpParams,int)>
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.transdroid.search.TorrentSite: java.util.List search(android.content.SharedPreferences,java.lang.String,org.transdroid.search.SortOrder,int)>[]--><org.transdroid.search.adapters.html.AbstractHtmlAdapter: java.util.List search(android.content.SharedPreferences,java.lang.String,org.transdroid.search.SortOrder,int)>[]--><org.transdroid.util.HttpHelper: org.apache.http.impl.client.DefaultHttpClient buildDefaultSearchHttpClient(boolean)>[]--><org.apache.http.params.HttpConnectionParams: void setSoTimeout(org.apache.http.params.HttpParams,int)>
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.transdroid.search.TorrentSite: java.util.List search(android.content.SharedPreferences,java.lang.String,org.transdroid.search.SortOrder,int)>[]--><org.transdroid.search.adapters.rss.RssFeedSearchAdapter: java.util.List search(android.content.SharedPreferences,java.lang.String,org.transdroid.search.SortOrder,int)>[]--><org.ifies.android.sax.RssParser: void parse()>[]--><org.ifies.android.sax.RssParser: org.apache.http.client.HttpClient initialise()>[]--><org.transdroid.util.HttpHelper: org.apache.http.impl.client.DefaultHttpClient buildDefaultSearchHttpClient(boolean)>[]--><org.apache.http.params.HttpConnectionParams: void setSoTimeout(org.apache.http.params.HttpParams,int)>
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.transdroid.search.TorrentSite: java.util.List search(android.content.SharedPreferences,java.lang.String,org.transdroid.search.SortOrder,int)>[]--><org.transdroid.search.adapters.privatetrackers.NcoreAdapter: java.util.List search(android.content.SharedPreferences,java.lang.String,org.transdroid.search.SortOrder,int)>[]--><org.transdroid.search.adapters.privatetrackers.NcoreAdapter: org.apache.http.client.HttpClient prepareRequest(android.content.SharedPreferences)>[]--><org.transdroid.util.HttpHelper: org.apache.http.impl.client.DefaultHttpClient buildDefaultSearchHttpClient(boolean)>[]--><org.apache.http.params.HttpConnectionParams: void setSoTimeout(org.apache.http.params.HttpParams,int)>
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.transdroid.search.TorrentSite: java.util.List search(android.content.SharedPreferences,java.lang.String,org.transdroid.search.SortOrder,int)>[]--><org.transdroid.search.adapters.privatetrackers.TorrentLeechAdapter: java.util.List search(android.content.SharedPreferences,java.lang.String,org.transdroid.search.SortOrder,int)>[]--><org.transdroid.search.adapters.privatetrackers.TorrentLeechAdapter: org.apache.http.client.HttpClient prepareRequest(android.content.SharedPreferences)>[]--><org.transdroid.util.HttpHelper: org.apache.http.impl.client.DefaultHttpClient buildDefaultSearchHttpClient(boolean)>[]--><org.apache.http.params.HttpConnectionParams: void setSoTimeout(org.apache.http.params.HttpParams,int)>
+#1.the call statck between class <org.transdroid.search.TorrentSite: java.util.List search(android.content.SharedPreferences,java.lang.String,org.transdroid.search.SortOrder,int)> to <org.apache.http.params.HttpConnectionParams: void setSoTimeout(org.apache.http.params.HttpParams,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.alexd.jsonrpc.JSONRPCThreadedHttpClient: org.json.JSONObject doJSONRequest(org.json.JSONObject)>[]--><org.apache.http.params.HttpConnectionParams: void setSoTimeout(org.apache.http.params.HttpParams,int)>
+#2.the call statck between class <org.alexd.jsonrpc.JSONRPCThreadedHttpClient: org.json.JSONObject doJSONRequest(org.json.JSONObject)> to <org.apache.http.params.HttpConnectionParams: void setSoTimeout(org.apache.http.params.HttpParams,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.transdroid.search.adapters.rss.privatetrackers.PretomeAdapter$1: void parse()>[]--><org.ifies.android.sax.RssParser: org.apache.http.client.HttpClient initialise()>[]--><org.transdroid.util.HttpHelper: org.apache.http.impl.client.DefaultHttpClient buildDefaultSearchHttpClient(boolean)>[]--><org.apache.http.params.HttpConnectionParams: void setSoTimeout(org.apache.http.params.HttpParams,int)>
+#3.the call statck between class <org.transdroid.search.adapters.rss.privatetrackers.PretomeAdapter$1: void parse()> to <org.apache.http.params.HttpConnectionParams: void setSoTimeout(org.apache.http.params.HttpParams,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.alexd.jsonrpc.JSONRPCHttpClient: org.json.JSONObject doJSONRequest(org.json.JSONObject)>[]--><org.apache.http.params.HttpConnectionParams: void setSoTimeout(org.apache.http.params.HttpParams,int)>
+#4.the call statck between class <org.alexd.jsonrpc.JSONRPCHttpClient: org.json.JSONObject doJSONRequest(org.json.JSONObject)> to <org.apache.http.params.HttpConnectionParams: void setSoTimeout(org.apache.http.params.HttpParams,int)>has compatibility isssues！
+-----------------------------------------
+try
+Good road with try: <com.android.volley.toolbox.AdaptedHttpStack: com.android.volley.toolbox.HttpResponse executeRequest(com.android.volley.Request,java.util.Map)>[[try]]--><com.android.volley.toolbox.HttpClientStack: org.apache.http.HttpResponse performRequest(com.android.volley.Request,java.util.Map)>[]--><org.apache.http.params.HttpConnectionParams: void setSoTimeout(org.apache.http.params.HttpParams,int)>
+One road protect good!
+crashApis:1
+containsStatic:false
+containsTry:true
+6call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.net.http.AndroidHttpClient: android.net.http.AndroidHttpClient newInstance(java.lang.String)> is checking!!!
+The life time of api is [8,22]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+i0 < 9
+Good road: <com.android.volley.toolbox.Volley: com.android.volley.RequestQueue newRequestQueue(android.content.Context,com.android.volley.toolbox.HttpStack)>[]--><com.android.volley.toolbox.Volley: com.android.volley.RequestQueue newRequestQueue(android.content.Context,com.android.volley.toolbox.BaseHttpStack)>[[i0 < 9]]--><android.net.http.AndroidHttpClient: android.net.http.AndroidHttpClient newInstance(java.lang.String)>
+One road protect good!
+i0 < 9
+Good road: <com.m4bce.jsonrpc.JsonRpcService: com.m4bce.jsonrpc.JsonRpcService getService(android.content.Context,java.lang.String)>[]--><com.m4bce.jsonrpc.JsonRpcService: void <init>(android.content.Context,java.lang.String)>[]--><com.android.volley.toolbox.Volley: com.android.volley.RequestQueue newRequestQueue(android.content.Context)>[]--><com.android.volley.toolbox.Volley: com.android.volley.RequestQueue newRequestQueue(android.content.Context,com.android.volley.toolbox.BaseHttpStack)>[[i0 < 9]]--><android.net.http.AndroidHttpClient: android.net.http.AndroidHttpClient newInstance(java.lang.String)>
+One road protect good!
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.lang.String getString(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.android.volley.toolbox.AndroidAuthenticator: java.lang.String getAuthToken()>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#1.the call statck between class <com.android.volley.toolbox.AndroidAuthenticator: java.lang.String getAuthToken()> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:2
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <org.apache.http.params.HttpConnectionParams: void setConnectionTimeout(org.apache.http.params.HttpParams,int)> is checking!!!
+The life time of api is [23,31]
+6call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.transdroid.search.TorrentSearchProvider dummyMainMethod_org_transdroid_search_TorrentSearchProvider(android.content.Intent)>[]--><org.transdroid.search.TorrentSearchProvider: android.os.ParcelFileDescriptor openFile(android.net.Uri,java.lang.String)>[[try]]--><org.transdroid.search.TorrentSite: java.io.InputStream getTorrentFile(android.content.SharedPreferences,java.lang.String)>[]--><org.transdroid.search.adapters.privatetrackers.RevolutionTTAdapter: java.io.InputStream getTorrentFile(android.content.SharedPreferences,java.lang.String)>[]--><org.transdroid.search.adapters.privatetrackers.RevolutionTTAdapter: org.apache.http.client.HttpClient prepareRequest(android.content.SharedPreferences)>[]--><org.transdroid.util.HttpHelper: org.apache.http.impl.client.DefaultHttpClient buildDefaultSearchHttpClient(boolean)>[]--><org.apache.http.params.HttpConnectionParams: void setConnectionTimeout(org.apache.http.params.HttpParams,int)>
+One road protect good!
+5 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.transdroid.search.TorrentSite: java.util.List search(android.content.SharedPreferences,java.lang.String,org.transdroid.search.SortOrder,int)>[]--><org.transdroid.search.adapters.privatetrackers.RevolutionTTAdapter: java.util.List search(android.content.SharedPreferences,java.lang.String,org.transdroid.search.SortOrder,int)>[]--><org.transdroid.search.adapters.privatetrackers.RevolutionTTAdapter: org.apache.http.client.HttpClient prepareRequest(android.content.SharedPreferences)>[]--><org.transdroid.util.HttpHelper: org.apache.http.impl.client.DefaultHttpClient buildDefaultSearchHttpClient(boolean)>[]--><org.apache.http.params.HttpConnectionParams: void setConnectionTimeout(org.apache.http.params.HttpParams,int)>
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.transdroid.search.TorrentSite: java.util.List search(android.content.SharedPreferences,java.lang.String,org.transdroid.search.SortOrder,int)>[]--><org.transdroid.search.adapters.rss.privatetrackers.PretomeAdapter: java.util.List search(android.content.SharedPreferences,java.lang.String,org.transdroid.search.SortOrder,int)>[]--><org.transdroid.search.adapters.rss.RssFeedSearchAdapter: java.util.List search(android.content.SharedPreferences,java.lang.String,org.transdroid.search.SortOrder,int)>[]--><org.ifies.android.sax.RssParser: void parse()>[]--><org.ifies.android.sax.RssParser: org.apache.http.client.HttpClient initialise()>[]--><org.transdroid.util.HttpHelper: org.apache.http.impl.client.DefaultHttpClient buildDefaultSearchHttpClient(boolean)>[]--><org.apache.http.params.HttpConnectionParams: void setConnectionTimeout(org.apache.http.params.HttpParams,int)>
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.transdroid.search.TorrentSite: java.util.List search(android.content.SharedPreferences,java.lang.String,org.transdroid.search.SortOrder,int)>[]--><org.transdroid.search.adapters.privatetrackers.HdTorrentsAdapter: java.util.List search(android.content.SharedPreferences,java.lang.String,org.transdroid.search.SortOrder,int)>[]--><org.transdroid.search.adapters.privatetrackers.HdTorrentsAdapter: org.apache.http.impl.client.DefaultHttpClient prepareRequest(android.content.SharedPreferences)>[]--><org.apache.http.params.HttpConnectionParams: void setConnectionTimeout(org.apache.http.params.HttpParams,int)>
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.transdroid.search.TorrentSite: java.util.List search(android.content.SharedPreferences,java.lang.String,org.transdroid.search.SortOrder,int)>[]--><org.transdroid.search.adapters.publictrackers.YtsAdapter: java.util.List search(android.content.SharedPreferences,java.lang.String,org.transdroid.search.SortOrder,int)>[]--><org.transdroid.search.adapters.publictrackers.YtsAdapter: java.util.List performSearch(java.lang.String,org.transdroid.search.SortOrder)>[]--><org.apache.http.params.HttpConnectionParams: void setConnectionTimeout(org.apache.http.params.HttpParams,int)>
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.transdroid.search.TorrentSite: java.util.List search(android.content.SharedPreferences,java.lang.String,org.transdroid.search.SortOrder,int)>[]--><org.transdroid.search.adapters.publictrackers.RarbgAdapter: java.util.List search(android.content.SharedPreferences,java.lang.String,org.transdroid.search.SortOrder,int)>[]--><org.transdroid.util.HttpHelper: org.apache.http.impl.client.DefaultHttpClient buildDefaultSearchHttpClient(boolean)>[]--><org.apache.http.params.HttpConnectionParams: void setConnectionTimeout(org.apache.http.params.HttpParams,int)>
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.transdroid.search.TorrentSite: java.util.List search(android.content.SharedPreferences,java.lang.String,org.transdroid.search.SortOrder,int)>[]--><org.transdroid.search.adapters.privatetrackers.HdBitsOrgAdapter: java.util.List search(android.content.SharedPreferences,java.lang.String,org.transdroid.search.SortOrder,int)>[]--><org.transdroid.search.adapters.privatetrackers.HdBitsOrgAdapter: org.apache.http.impl.client.DefaultHttpClient prepareRequest(android.content.SharedPreferences)>[]--><org.apache.http.params.HttpConnectionParams: void setConnectionTimeout(org.apache.http.params.HttpParams,int)>
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.transdroid.search.TorrentSite: java.util.List search(android.content.SharedPreferences,java.lang.String,org.transdroid.search.SortOrder,int)>[]--><org.transdroid.search.adapters.privatetrackers.AsiaTorrentsAdapter: java.util.List search(android.content.SharedPreferences,java.lang.String,org.transdroid.search.SortOrder,int)>[]--><org.transdroid.search.adapters.privatetrackers.AsiaTorrentsAdapter: org.apache.http.impl.client.DefaultHttpClient prepareRequest(android.content.SharedPreferences)>[]--><org.apache.http.params.HttpConnectionParams: void setConnectionTimeout(org.apache.http.params.HttpParams,int)>
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.transdroid.search.TorrentSite: java.util.List search(android.content.SharedPreferences,java.lang.String,org.transdroid.search.SortOrder,int)>[]--><org.transdroid.search.adapters.privatetrackers.DanishbitsAdapter: java.util.List search(android.content.SharedPreferences,java.lang.String,org.transdroid.search.SortOrder,int)>[]--><org.transdroid.search.adapters.privatetrackers.DanishbitsAdapter: org.apache.http.client.HttpClient prepareRequest(android.content.SharedPreferences)>[]--><org.transdroid.util.HttpHelper: org.apache.http.impl.client.DefaultHttpClient buildDefaultSearchHttpClient(boolean)>[]--><org.apache.http.params.HttpConnectionParams: void setConnectionTimeout(org.apache.http.params.HttpParams,int)>
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.transdroid.search.TorrentSite: java.util.List search(android.content.SharedPreferences,java.lang.String,org.transdroid.search.SortOrder,int)>[]--><org.transdroid.search.adapters.html.AbstractHtmlAdapter: java.util.List search(android.content.SharedPreferences,java.lang.String,org.transdroid.search.SortOrder,int)>[]--><org.transdroid.util.HttpHelper: org.apache.http.impl.client.DefaultHttpClient buildDefaultSearchHttpClient(boolean)>[]--><org.apache.http.params.HttpConnectionParams: void setConnectionTimeout(org.apache.http.params.HttpParams,int)>
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.transdroid.search.TorrentSite: java.util.List search(android.content.SharedPreferences,java.lang.String,org.transdroid.search.SortOrder,int)>[]--><org.transdroid.search.adapters.rss.RssFeedSearchAdapter: java.util.List search(android.content.SharedPreferences,java.lang.String,org.transdroid.search.SortOrder,int)>[]--><org.ifies.android.sax.RssParser: void parse()>[]--><org.ifies.android.sax.RssParser: org.apache.http.client.HttpClient initialise()>[]--><org.transdroid.util.HttpHelper: org.apache.http.impl.client.DefaultHttpClient buildDefaultSearchHttpClient(boolean)>[]--><org.apache.http.params.HttpConnectionParams: void setConnectionTimeout(org.apache.http.params.HttpParams,int)>
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.transdroid.search.TorrentSite: java.util.List search(android.content.SharedPreferences,java.lang.String,org.transdroid.search.SortOrder,int)>[]--><org.transdroid.search.adapters.privatetrackers.NcoreAdapter: java.util.List search(android.content.SharedPreferences,java.lang.String,org.transdroid.search.SortOrder,int)>[]--><org.transdroid.search.adapters.privatetrackers.NcoreAdapter: org.apache.http.client.HttpClient prepareRequest(android.content.SharedPreferences)>[]--><org.transdroid.util.HttpHelper: org.apache.http.impl.client.DefaultHttpClient buildDefaultSearchHttpClient(boolean)>[]--><org.apache.http.params.HttpConnectionParams: void setConnectionTimeout(org.apache.http.params.HttpParams,int)>
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.transdroid.search.TorrentSite: java.util.List search(android.content.SharedPreferences,java.lang.String,org.transdroid.search.SortOrder,int)>[]--><org.transdroid.search.adapters.privatetrackers.TorrentLeechAdapter: java.util.List search(android.content.SharedPreferences,java.lang.String,org.transdroid.search.SortOrder,int)>[]--><org.transdroid.search.adapters.privatetrackers.TorrentLeechAdapter: org.apache.http.client.HttpClient prepareRequest(android.content.SharedPreferences)>[]--><org.transdroid.util.HttpHelper: org.apache.http.impl.client.DefaultHttpClient buildDefaultSearchHttpClient(boolean)>[]--><org.apache.http.params.HttpConnectionParams: void setConnectionTimeout(org.apache.http.params.HttpParams,int)>
+#1.the call statck between class <org.transdroid.search.TorrentSite: java.util.List search(android.content.SharedPreferences,java.lang.String,org.transdroid.search.SortOrder,int)> to <org.apache.http.params.HttpConnectionParams: void setConnectionTimeout(org.apache.http.params.HttpParams,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.alexd.jsonrpc.JSONRPCThreadedHttpClient: org.json.JSONObject doJSONRequest(org.json.JSONObject)>[]--><org.apache.http.params.HttpConnectionParams: void setConnectionTimeout(org.apache.http.params.HttpParams,int)>
+#2.the call statck between class <org.alexd.jsonrpc.JSONRPCThreadedHttpClient: org.json.JSONObject doJSONRequest(org.json.JSONObject)> to <org.apache.http.params.HttpConnectionParams: void setConnectionTimeout(org.apache.http.params.HttpParams,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.transdroid.search.adapters.rss.privatetrackers.PretomeAdapter$1: void parse()>[]--><org.ifies.android.sax.RssParser: org.apache.http.client.HttpClient initialise()>[]--><org.transdroid.util.HttpHelper: org.apache.http.impl.client.DefaultHttpClient buildDefaultSearchHttpClient(boolean)>[]--><org.apache.http.params.HttpConnectionParams: void setConnectionTimeout(org.apache.http.params.HttpParams,int)>
+#3.the call statck between class <org.transdroid.search.adapters.rss.privatetrackers.PretomeAdapter$1: void parse()> to <org.apache.http.params.HttpConnectionParams: void setConnectionTimeout(org.apache.http.params.HttpParams,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.alexd.jsonrpc.JSONRPCHttpClient: org.json.JSONObject doJSONRequest(org.json.JSONObject)>[]--><org.apache.http.params.HttpConnectionParams: void setConnectionTimeout(org.apache.http.params.HttpParams,int)>
+#4.the call statck between class <org.alexd.jsonrpc.JSONRPCHttpClient: org.json.JSONObject doJSONRequest(org.json.JSONObject)> to <org.apache.http.params.HttpConnectionParams: void setConnectionTimeout(org.apache.http.params.HttpParams,int)>has compatibility isssues！
+-----------------------------------------
+try
+Good road with try: <com.android.volley.toolbox.AdaptedHttpStack: com.android.volley.toolbox.HttpResponse executeRequest(com.android.volley.Request,java.util.Map)>[[try]]--><com.android.volley.toolbox.HttpClientStack: org.apache.http.HttpResponse performRequest(com.android.volley.Request,java.util.Map)>[]--><org.apache.http.params.HttpConnectionParams: void setConnectionTimeout(org.apache.http.params.HttpParams,int)>
+One road protect good!
+crashApis:3
+containsStatic:false
+containsTry:true
+6call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <org.apache.http.conn.ssl.AbstractVerifier: void <init>()> is checking!!!
+The life time of api is [23,31]
+3call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.transdroid.search.TorrentSearchProvider dummyMainMethod_org_transdroid_search_TorrentSearchProvider(android.content.Intent)>[]--><org.transdroid.search.TorrentSearchProvider: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>[[try]]--><org.transdroid.search.adapters.privatetrackers.DanishbitsAdapter: java.util.List search(android.content.SharedPreferences,java.lang.String,org.transdroid.search.SortOrder,int)>[]--><org.transdroid.search.adapters.privatetrackers.DanishbitsAdapter: org.apache.http.client.HttpClient prepareRequest(android.content.SharedPreferences)>[]--><org.transdroid.util.HttpHelper: org.apache.http.impl.client.DefaultHttpClient buildDefaultSearchHttpClient(boolean)>[]--><org.transdroid.util.TlsSniSocketFactory: void <clinit>()>[[]]--><org.apache.http.conn.ssl.AbstractVerifier: void <init>()>
+One road protect good!
+2 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.transdroid.search.TorrentSite: java.util.List search(android.content.SharedPreferences,java.lang.String,org.transdroid.search.SortOrder,int)>[]--><org.transdroid.search.adapters.privatetrackers.RevolutionTTAdapter: java.util.List search(android.content.SharedPreferences,java.lang.String,org.transdroid.search.SortOrder,int)>[]--><org.transdroid.search.adapters.privatetrackers.RevolutionTTAdapter: org.apache.http.client.HttpClient prepareRequest(android.content.SharedPreferences)>[]--><org.transdroid.util.HttpHelper: org.apache.http.impl.client.DefaultHttpClient buildDefaultSearchHttpClient(boolean)>[]--><org.transdroid.util.TlsSniSocketFactory: void <clinit>()>[[]]--><org.apache.http.conn.ssl.AbstractVerifier: void <init>()>
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.transdroid.search.TorrentSite: java.util.List search(android.content.SharedPreferences,java.lang.String,org.transdroid.search.SortOrder,int)>[]--><org.transdroid.search.adapters.rss.privatetrackers.PretomeAdapter: java.util.List search(android.content.SharedPreferences,java.lang.String,org.transdroid.search.SortOrder,int)>[]--><org.transdroid.search.adapters.rss.RssFeedSearchAdapter: java.util.List search(android.content.SharedPreferences,java.lang.String,org.transdroid.search.SortOrder,int)>[]--><org.ifies.android.sax.RssParser: void parse()>[]--><org.ifies.android.sax.RssParser: org.apache.http.client.HttpClient initialise()>[]--><org.transdroid.util.HttpHelper: org.apache.http.impl.client.DefaultHttpClient buildDefaultSearchHttpClient(boolean)>[]--><org.transdroid.util.TlsSniSocketFactory: void <clinit>()>[[]]--><org.apache.http.conn.ssl.AbstractVerifier: void <init>()>
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.transdroid.search.TorrentSite: java.util.List search(android.content.SharedPreferences,java.lang.String,org.transdroid.search.SortOrder,int)>[]--><org.transdroid.search.adapters.privatetrackers.DanishbitsAdapter: java.util.List search(android.content.SharedPreferences,java.lang.String,org.transdroid.search.SortOrder,int)>[]--><org.transdroid.search.adapters.privatetrackers.DanishbitsAdapter: org.apache.http.client.HttpClient prepareRequest(android.content.SharedPreferences)>[]--><org.transdroid.util.HttpHelper: org.apache.http.impl.client.DefaultHttpClient buildDefaultSearchHttpClient(boolean)>[]--><org.transdroid.util.TlsSniSocketFactory: void <clinit>()>[[]]--><org.apache.http.conn.ssl.AbstractVerifier: void <init>()>
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.transdroid.search.TorrentSite: java.util.List search(android.content.SharedPreferences,java.lang.String,org.transdroid.search.SortOrder,int)>[]--><org.transdroid.search.adapters.html.AbstractHtmlAdapter: java.util.List search(android.content.SharedPreferences,java.lang.String,org.transdroid.search.SortOrder,int)>[]--><org.transdroid.util.HttpHelper: org.apache.http.impl.client.DefaultHttpClient buildDefaultSearchHttpClient(boolean)>[]--><org.transdroid.util.TlsSniSocketFactory: void <clinit>()>[[]]--><org.apache.http.conn.ssl.AbstractVerifier: void <init>()>
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.transdroid.search.TorrentSite: java.util.List search(android.content.SharedPreferences,java.lang.String,org.transdroid.search.SortOrder,int)>[]--><org.transdroid.search.adapters.rss.RssFeedSearchAdapter: java.util.List search(android.content.SharedPreferences,java.lang.String,org.transdroid.search.SortOrder,int)>[]--><org.ifies.android.sax.RssParser: void parse()>[]--><org.ifies.android.sax.RssParser: org.apache.http.client.HttpClient initialise()>[]--><org.transdroid.util.HttpHelper: org.apache.http.impl.client.DefaultHttpClient buildDefaultSearchHttpClient(boolean)>[]--><org.transdroid.util.TlsSniSocketFactory: void <clinit>()>[[]]--><org.apache.http.conn.ssl.AbstractVerifier: void <init>()>
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.transdroid.search.TorrentSite: java.util.List search(android.content.SharedPreferences,java.lang.String,org.transdroid.search.SortOrder,int)>[]--><org.transdroid.search.adapters.publictrackers.RarbgAdapter: java.util.List search(android.content.SharedPreferences,java.lang.String,org.transdroid.search.SortOrder,int)>[]--><org.transdroid.util.HttpHelper: org.apache.http.impl.client.DefaultHttpClient buildDefaultSearchHttpClient(boolean)>[]--><org.transdroid.util.TlsSniSocketFactory: void <clinit>()>[[]]--><org.apache.http.conn.ssl.AbstractVerifier: void <init>()>
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.transdroid.search.TorrentSite: java.util.List search(android.content.SharedPreferences,java.lang.String,org.transdroid.search.SortOrder,int)>[]--><org.transdroid.search.adapters.privatetrackers.NcoreAdapter: java.util.List search(android.content.SharedPreferences,java.lang.String,org.transdroid.search.SortOrder,int)>[]--><org.transdroid.search.adapters.privatetrackers.NcoreAdapter: org.apache.http.client.HttpClient prepareRequest(android.content.SharedPreferences)>[]--><org.transdroid.util.HttpHelper: org.apache.http.impl.client.DefaultHttpClient buildDefaultSearchHttpClient(boolean)>[]--><org.transdroid.util.TlsSniSocketFactory: void <clinit>()>[[]]--><org.apache.http.conn.ssl.AbstractVerifier: void <init>()>
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.transdroid.search.TorrentSite: java.util.List search(android.content.SharedPreferences,java.lang.String,org.transdroid.search.SortOrder,int)>[]--><org.transdroid.search.adapters.privatetrackers.TorrentLeechAdapter: java.util.List search(android.content.SharedPreferences,java.lang.String,org.transdroid.search.SortOrder,int)>[]--><org.transdroid.search.adapters.privatetrackers.TorrentLeechAdapter: org.apache.http.client.HttpClient prepareRequest(android.content.SharedPreferences)>[]--><org.transdroid.util.HttpHelper: org.apache.http.impl.client.DefaultHttpClient buildDefaultSearchHttpClient(boolean)>[]--><org.transdroid.util.TlsSniSocketFactory: void <clinit>()>[[]]--><org.apache.http.conn.ssl.AbstractVerifier: void <init>()>
+#1.the call statck between class <org.transdroid.search.TorrentSite: java.util.List search(android.content.SharedPreferences,java.lang.String,org.transdroid.search.SortOrder,int)> to <org.apache.http.conn.ssl.AbstractVerifier: void <init>()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.transdroid.search.adapters.rss.privatetrackers.PretomeAdapter$1: void parse()>[]--><org.ifies.android.sax.RssParser: org.apache.http.client.HttpClient initialise()>[]--><org.transdroid.util.HttpHelper: org.apache.http.impl.client.DefaultHttpClient buildDefaultSearchHttpClient(boolean)>[]--><org.transdroid.util.TlsSniSocketFactory: void <clinit>()>[[]]--><org.apache.http.conn.ssl.AbstractVerifier: void <init>()>
+#2.the call statck between class <org.transdroid.search.adapters.rss.privatetrackers.PretomeAdapter$1: void parse()> to <org.apache.http.conn.ssl.AbstractVerifier: void <init>()>has compatibility isssues！
+-----------------------------------------
+crashApis:4
+containsStatic:false
+containsTry:true
+3call by main package
+-----------------------------------------
+#################################################
+N 5 Potential Issue API: SDKCheck of <org.apache.http.params.HttpParams: org.apache.http.params.HttpParams setParameter(java.lang.String,java.lang.Object)> is checking!!!
+The life time of api is [23,31]
+2call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.transdroid.search.TorrentSearchProvider dummyMainMethod_org_transdroid_search_TorrentSearchProvider(android.content.Intent)>[]--><org.transdroid.search.TorrentSearchProvider: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>[[try]]--><org.transdroid.search.adapters.publictrackers.RarbgAdapter: java.util.List search(android.content.SharedPreferences,java.lang.String,org.transdroid.search.SortOrder,int)>[]--><org.apache.http.params.HttpParams: org.apache.http.params.HttpParams setParameter(java.lang.String,java.lang.Object)>
+One road protect good!
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.transdroid.search.TorrentSite: java.util.List search(android.content.SharedPreferences,java.lang.String,org.transdroid.search.SortOrder,int)>[]--><org.transdroid.search.adapters.publictrackers.RarbgAdapter: java.util.List search(android.content.SharedPreferences,java.lang.String,org.transdroid.search.SortOrder,int)>[]--><org.apache.http.params.HttpParams: org.apache.http.params.HttpParams setParameter(java.lang.String,java.lang.Object)>
+#1.the call statck between class <org.transdroid.search.TorrentSite: java.util.List search(android.content.SharedPreferences,java.lang.String,org.transdroid.search.SortOrder,int)> to <org.apache.http.params.HttpParams: org.apache.http.params.HttpParams setParameter(java.lang.String,java.lang.Object)>has compatibility isssues！
+-----------------------------------------
+crashApis:5
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 6 Potential Issue API: SDKCheck of <android.net.SSLCertificateSocketFactory: void setHostname(java.net.Socket,java.lang.String)> is checking!!!
+The life time of api is [17,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+-$i0 < 17
+Good road: <org.transdroid.util.IgnoreTlsSniSocketFactory: java.net.Socket createSocket(java.net.Socket,java.lang.String,int,boolean)>[[-$i0 < 17]]--><android.net.SSLCertificateSocketFactory: void setHostname(java.net.Socket,java.lang.String)>
+One road protect good!
+-$i0 < 17
+Good road: <org.transdroid.util.TlsSniSocketFactory: java.net.Socket createSocket(java.net.Socket,java.lang.String,int,boolean)>[[-$i0 < 17]]--><android.net.SSLCertificateSocketFactory: void setHostname(java.net.Socket,java.lang.String)>
+One road protect good!
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 7 Potential Issue API: SDKCheck of <android.os.BaseBundle: boolean containsKey(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.android.volley.toolbox.AndroidAuthenticator: java.lang.String getAuthToken()>[]--><android.os.BaseBundle: boolean containsKey(java.lang.String)>
+#1.the call statck between class <com.android.volley.toolbox.AndroidAuthenticator: java.lang.String getAuthToken()> to <android.os.BaseBundle: boolean containsKey(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:6
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+crashApis numbers:6
+crashApis numbers in main road:0
+On Android Version 16 this app may have error api use(at least): 6 and error api roads: 42
+On Android Version 17 this app may have error api use(at least): 6 and error api roads: 42
+On Android Version 18 this app may have error api use(at least): 6 and error api roads: 42
+On Android Version 19 this app may have error api use(at least): 6 and error api roads: 42
+On Android Version 20 this app may have error api use(at least): 6 and error api roads: 42
+On Android Version 21 this app may have error api use(at least): 4 and error api roads: 40
+On Android Version 22 this app may have error api use(at least): 4 and error api roads: 40
+On Android Version 23 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 24 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 25 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 31 this app may have error api use(at least): 0 and error api roads: 0

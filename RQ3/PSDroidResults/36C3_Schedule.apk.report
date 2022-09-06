@@ -1,0 +1,662 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/36C3_Schedule.apk
+Entry Points[nerd.tuxmobil.fahrplan.congress.MyApp, nerd.tuxmobil.fahrplan.congress.autoupdate.UpdateService, nerd.tuxmobil.fahrplan.congress.details.EventDetail, nerd.tuxmobil.fahrplan.congress.alarms.AlarmList, nerd.tuxmobil.fahrplan.congress.system.OnBootReceiver, nerd.tuxmobil.fahrplan.congress.changes.ChangeListActivity, nerd.tuxmobil.fahrplan.congress.alarms.AlarmReceiver, nerd.tuxmobil.fahrplan.congress.settings.SettingsActivity, nerd.tuxmobil.fahrplan.congress.schedule.MainActivity, nerd.tuxmobil.fahrplan.congress.favorites.StarredListActivity]
+FllowDroidcallgraph size:4713
+Soot started on Mon Jul 11 00:14:37 CST 2022
+Soot finished on Mon Jul 11 00:15:12 CST 2022
+Soot has run for 0 min. 35 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 14
+Declared Target Sdk version is: 28
+Declared Max Sdk version is: -1
+Collected 487 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.net.ConnectivityManager.NetworkCallback: void onAvailable(android.net.Network)> is checking!!!
+The life time of api is [21,30]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <nerd.tuxmobil.fahrplan.congress.net.ConnectivityObserver$2: void onAvailable(android.net.Network)>[]--><android.net.ConnectivityManager.NetworkCallback: void onAvailable(android.net.Network)>
+!!!this api will crash on sdk 31 
+Error road: <nerd.tuxmobil.fahrplan.congress.net.ConnectivityObserver$2: void onAvailable(android.net.Network)>[]--><android.net.ConnectivityManager.NetworkCallback: void onAvailable(android.net.Network)>
+#1.the call statck between class <nerd.tuxmobil.fahrplan.congress.net.ConnectivityObserver$2: void onAvailable(android.net.Network)> to <android.net.ConnectivityManager.NetworkCallback: void onAvailable(android.net.Network)>has compatibility isssues！
+-----------------------------------------
+crashApis:1
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.os.BaseBundle: int getInt(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <nerd.tuxmobil.fahrplan.congress.changes.ChangesDialog: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#1.the call statck between class <nerd.tuxmobil.fahrplan.congress.changes.ChangesDialog: void onCreate(android.os.Bundle)> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <nerd.tuxmobil.fahrplan.congress.utils.ConfirmationDialog: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#2.the call statck between class <nerd.tuxmobil.fahrplan.congress.utils.ConfirmationDialog: void onCreate(android.os.Bundle)> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:2
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.net.NetworkInfo: int getType()> is checking!!!
+The life time of api is [1,30]
+2call roads:
+1 Mainhead roads:
+$i0 < 16
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: nerd.tuxmobil.fahrplan.congress.schedule.MainActivity dummyMainMethod_nerd_tuxmobil_fahrplan_congress_schedule_MainActivity(android.content.Intent)>[]--><nerd.tuxmobil.fahrplan.congress.schedule.MainActivity: void onCreate(android.os.Bundle)>[]--><nerd.tuxmobil.fahrplan.congress.engagements.Engagements: void initUserEngagement(android.support.v7.app.AppCompatActivity)>[]--><org.ligi.snackengage.SnackEngage: boolean engageWhenAppropriate()>[]--><org.ligi.snackengage.snacks.BaseSnack: boolean opportunity(org.ligi.snackengage.SnackContext)>[]--><org.ligi.snackengage.conditions.connectivity.IsConnectedUnMeteredOrUnknown: boolean isAppropriate(org.ligi.snackengage.SnackContext,org.ligi.snackengage.snacks.Snack)>[]--><org.ligi.snackengage.conditions.connectivity.IsConnectedUnMeteredOrUnknown: boolean checkConnection(android.net.ConnectivityManager,android.net.NetworkInfo)>[[$i0 < 16]]--><android.net.NetworkInfo: int getType()>
+One road protect good!
+1 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <org.ligi.snackengage.conditions.connectivity.IsConnectedViaWiFiOrUnknown: boolean checkConnection(android.net.ConnectivityManager,android.net.NetworkInfo)>[]--><android.net.NetworkInfo: int getType()>
+#1.the call statck between class <org.ligi.snackengage.conditions.connectivity.IsConnectedViaWiFiOrUnknown: boolean checkConnection(android.net.ConnectivityManager,android.net.NetworkInfo)> to <android.net.NetworkInfo: int getType()>has compatibility isssues！
+-----------------------------------------
+crashApis:3
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putLongArray(java.lang.String,long[])> is checking!!!
+The life time of api is [21,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()> is checking!!!
+The life time of api is [1,30]
+2call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: nerd.tuxmobil.fahrplan.congress.schedule.MainActivity dummyMainMethod_nerd_tuxmobil_fahrplan_congress_schedule_MainActivity(android.content.Intent)>[]--><nerd.tuxmobil.fahrplan.congress.schedule.MainActivity: void onCreate(android.os.Bundle)>[]--><nerd.tuxmobil.fahrplan.congress.engagements.Engagements: void initUserEngagement(android.support.v7.app.AppCompatActivity)>[]--><org.ligi.snackengage.SnackEngage: boolean engageWhenAppropriate()>[]--><org.ligi.snackengage.snacks.BaseSnack: boolean opportunity(org.ligi.snackengage.SnackContext)>[]--><org.ligi.snackengage.conditions.connectivity.IsConnectedUnMeteredOrUnknown: boolean isAppropriate(org.ligi.snackengage.SnackContext,org.ligi.snackengage.snacks.Snack)>[]--><org.ligi.snackengage.conditions.connectivity.ConnectivityAwareCondition: void init(android.content.Context)>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>has compatibility isssues！
+-----------------------------------------
+1 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <nerd.tuxmobil.fahrplan.congress.net.ConnectivityObserver$broadCastReceiver$1: void onReceive(android.content.Context,android.content.Intent)>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>
+#1.the call statck between class <nerd.tuxmobil.fahrplan.congress.net.ConnectivityObserver$broadCastReceiver$1: void onReceive(android.content.Context,android.content.Intent)> to <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>has compatibility isssues！
+-----------------------------------------
+crashApis:4
+crashApisInMain:1
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 5 Potential Issue API: SDKCheck of <android.util.Size: int getWidth()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <androidx.versionedparcelable.VersionedParcel: void writeSize(android.util.Size,int)>[]--><android.util.Size: int getWidth()>
+#1.the call statck between class <androidx.versionedparcelable.VersionedParcel: void writeSize(android.util.Size,int)> to <android.util.Size: int getWidth()>has compatibility isssues！
+-----------------------------------------
+crashApis:5
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 6 Potential Issue API: SDKCheck of <android.app.NotificationChannel: void setLockscreenVisibility(int)> is checking!!!
+The life time of api is [26,31]
+2call roads:
+1 Mainhead roads:
+-$i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: nerd.tuxmobil.fahrplan.congress.alarms.AlarmReceiver dummyMainMethod_nerd_tuxmobil_fahrplan_congress_alarms_AlarmReceiver(android.content.Intent)>[]--><nerd.tuxmobil.fahrplan.congress.alarms.AlarmReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><nerd.tuxmobil.fahrplan.congress.notifications.NotificationHelper: void <init>(android.content.Context)>[]--><nerd.tuxmobil.fahrplan.congress.notifications.NotificationHelper: void createNotificationChannel(java.lang.String,java.lang.String,java.lang.String)>[[-$i0 < 26]]--><android.app.NotificationChannel: void setLockscreenVisibility(int)>
+One road protect good!
+1 Packageshead roads:
+-$i0 < 26
+Good road: <nerd.tuxmobil.fahrplan.congress.autoupdate.UpdateService: kotlin.Unit lambda$fetchFahrplan$1$UpdateService(java.lang.Boolean,java.lang.String)>[]--><nerd.tuxmobil.fahrplan.congress.autoupdate.UpdateService: void onParseDone(java.lang.Boolean,java.lang.String)>[]--><nerd.tuxmobil.fahrplan.congress.autoupdate.UpdateService: void showScheduleUpdateNotification(java.lang.String,int)>[]--><nerd.tuxmobil.fahrplan.congress.notifications.NotificationHelper: void <init>(android.content.Context)>[]--><nerd.tuxmobil.fahrplan.congress.notifications.NotificationHelper: void createNotificationChannel(java.lang.String,java.lang.String,java.lang.String)>[[-$i0 < 26]]--><android.app.NotificationChannel: void setLockscreenVisibility(int)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 7 Potential Issue API: SDKCheck of <android.app.NotificationChannel: void setDescription(java.lang.String)> is checking!!!
+The life time of api is [26,31]
+2call roads:
+1 Mainhead roads:
+-$i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: nerd.tuxmobil.fahrplan.congress.alarms.AlarmReceiver dummyMainMethod_nerd_tuxmobil_fahrplan_congress_alarms_AlarmReceiver(android.content.Intent)>[]--><nerd.tuxmobil.fahrplan.congress.alarms.AlarmReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><nerd.tuxmobil.fahrplan.congress.notifications.NotificationHelper: void <init>(android.content.Context)>[]--><nerd.tuxmobil.fahrplan.congress.notifications.NotificationHelper: void createNotificationChannel(java.lang.String,java.lang.String,java.lang.String)>[[-$i0 < 26]]--><android.app.NotificationChannel: void setDescription(java.lang.String)>
+One road protect good!
+1 Packageshead roads:
+-$i0 < 26
+Good road: <nerd.tuxmobil.fahrplan.congress.autoupdate.UpdateService: kotlin.Unit lambda$fetchFahrplan$1$UpdateService(java.lang.Boolean,java.lang.String)>[]--><nerd.tuxmobil.fahrplan.congress.autoupdate.UpdateService: void onParseDone(java.lang.Boolean,java.lang.String)>[]--><nerd.tuxmobil.fahrplan.congress.autoupdate.UpdateService: void showScheduleUpdateNotification(java.lang.String,int)>[]--><nerd.tuxmobil.fahrplan.congress.notifications.NotificationHelper: void <init>(android.content.Context)>[]--><nerd.tuxmobil.fahrplan.congress.notifications.NotificationHelper: void createNotificationChannel(java.lang.String,java.lang.String,java.lang.String)>[[-$i0 < 26]]--><android.app.NotificationChannel: void setDescription(java.lang.String)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 8 Potential Issue API: SDKCheck of <android.graphics.drawable.RippleDrawable: void <init>(android.content.res.ColorStateList,android.graphics.drawable.Drawable,android.graphics.drawable.Drawable)> is checking!!!
+The life time of api is [21,31]
+1546call roads:
+1 Mainhead roads:
+1545 Packageshead roads:
+Roads number exceed, exit!1545
+#################################################
+N 9 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1548call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: nerd.tuxmobil.fahrplan.congress.details.EventDetail dummyMainMethod_nerd_tuxmobil_fahrplan_congress_details_EventDetail(android.content.Intent)>[]--><nerd.tuxmobil.fahrplan.congress.details.EventDetail: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+1547 Packageshead roads:
+Roads number exceed, exit!1547
+#################################################
+N 10 Potential Issue API: SDKCheck of <android.net.ConnectivityManager: boolean isActiveNetworkMetered()> is checking!!!
+The life time of api is [16,30]
+1call roads:
+1 Mainhead roads:
+-$i0 < 16
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: nerd.tuxmobil.fahrplan.congress.schedule.MainActivity dummyMainMethod_nerd_tuxmobil_fahrplan_congress_schedule_MainActivity(android.content.Intent)>[]--><nerd.tuxmobil.fahrplan.congress.schedule.MainActivity: void onCreate(android.os.Bundle)>[]--><nerd.tuxmobil.fahrplan.congress.engagements.Engagements: void initUserEngagement(android.support.v7.app.AppCompatActivity)>[]--><org.ligi.snackengage.SnackEngage: boolean engageWhenAppropriate()>[]--><org.ligi.snackengage.snacks.BaseSnack: boolean opportunity(org.ligi.snackengage.SnackContext)>[]--><org.ligi.snackengage.conditions.connectivity.IsConnectedUnMeteredOrUnknown: boolean isAppropriate(org.ligi.snackengage.SnackContext,org.ligi.snackengage.snacks.Snack)>[]--><org.ligi.snackengage.conditions.connectivity.IsConnectedUnMeteredOrUnknown: boolean checkConnection(android.net.ConnectivityManager,android.net.NetworkInfo)>[[-$i0 < 16]]--><android.net.ConnectivityManager: boolean isActiveNetworkMetered()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.ConnectivityManager: boolean isActiveNetworkMetered()>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:7
+crashApisInMain:3
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 11 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putBooleanArray(java.lang.String,boolean[])> is checking!!!
+The life time of api is [22,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 12 Potential Issue API: SDKCheck of <android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)> is checking!!!
+The life time of api is [22,31]
+4call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: nerd.tuxmobil.fahrplan.congress.details.EventDetail dummyMainMethod_nerd_tuxmobil_fahrplan_congress_details_EventDetail(android.content.Intent)>[]--><nerd.tuxmobil.fahrplan.congress.details.EventDetail: void onCreate(android.os.Bundle)>[]--><nerd.tuxmobil.fahrplan.congress.details.EventDetailFragment: void setArguments(android.os.Bundle)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>
+!!!this api will crash on sdk 16 17 18 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: nerd.tuxmobil.fahrplan.congress.changes.ChangeListActivity dummyMainMethod_nerd_tuxmobil_fahrplan_congress_changes_ChangeListActivity(android.content.Intent)>[]--><nerd.tuxmobil.fahrplan.congress.changes.ChangeListActivity: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+3 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 
+Error road: <nerd.tuxmobil.fahrplan.congress.schedule.FahrplanFragment: void onClick(android.view.View)>[]--><nerd.tuxmobil.fahrplan.congress.schedule.MainActivity: void openLectureDetail(nerd.tuxmobil.fahrplan.congress.models.Lecture,int,boolean)>[]--><nerd.tuxmobil.fahrplan.congress.details.EventDetailFragment: void setArguments(android.os.Bundle)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>
+#1.the call statck between class <nerd.tuxmobil.fahrplan.congress.schedule.FahrplanFragment: void onClick(android.view.View)> to <android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 
+Error road: <nerd.tuxmobil.fahrplan.congress.schedule.FahrplanFragment: void onResume()>[]--><nerd.tuxmobil.fahrplan.congress.schedule.MainActivity: void openLectureDetail(nerd.tuxmobil.fahrplan.congress.models.Lecture,int,boolean)>[]--><nerd.tuxmobil.fahrplan.congress.details.EventDetailFragment: void setArguments(android.os.Bundle)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>
+#2.the call statck between class <nerd.tuxmobil.fahrplan.congress.schedule.FahrplanFragment: void onResume()> to <android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 
+Error road: <nerd.tuxmobil.fahrplan.congress.schedule.MainActivity: void onLectureListClick(nerd.tuxmobil.fahrplan.congress.models.Lecture,boolean)>[]--><nerd.tuxmobil.fahrplan.congress.schedule.MainActivity: void openLectureDetail(nerd.tuxmobil.fahrplan.congress.models.Lecture,int,boolean)>[]--><nerd.tuxmobil.fahrplan.congress.details.EventDetailFragment: void setArguments(android.os.Bundle)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>
+#3.the call statck between class <nerd.tuxmobil.fahrplan.congress.schedule.MainActivity: void onLectureListClick(nerd.tuxmobil.fahrplan.congress.models.Lecture,boolean)> to <android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+crashApis:8
+crashApisInMain:4
+containsStatic:false
+containsTry:false
+4call by main package
+-----------------------------------------
+#################################################
+N 13 Potential Issue API: SDKCheck of <android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)> is checking!!!
+The life time of api is [26,31]
+2call roads:
+1 Mainhead roads:
+-$i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: nerd.tuxmobil.fahrplan.congress.alarms.AlarmReceiver dummyMainMethod_nerd_tuxmobil_fahrplan_congress_alarms_AlarmReceiver(android.content.Intent)>[]--><nerd.tuxmobil.fahrplan.congress.alarms.AlarmReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><nerd.tuxmobil.fahrplan.congress.notifications.NotificationHelper: void <init>(android.content.Context)>[]--><nerd.tuxmobil.fahrplan.congress.notifications.NotificationHelper: void createNotificationChannel(java.lang.String,java.lang.String,java.lang.String)>[[-$i0 < 26]]--><android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)>
+One road protect good!
+1 Packageshead roads:
+-$i0 < 26
+Good road: <nerd.tuxmobil.fahrplan.congress.autoupdate.UpdateService: kotlin.Unit lambda$fetchFahrplan$1$UpdateService(java.lang.Boolean,java.lang.String)>[]--><nerd.tuxmobil.fahrplan.congress.autoupdate.UpdateService: void onParseDone(java.lang.Boolean,java.lang.String)>[]--><nerd.tuxmobil.fahrplan.congress.autoupdate.UpdateService: void showScheduleUpdateNotification(java.lang.String,int)>[]--><nerd.tuxmobil.fahrplan.congress.notifications.NotificationHelper: void <init>(android.content.Context)>[]--><nerd.tuxmobil.fahrplan.congress.notifications.NotificationHelper: void createNotificationChannel(java.lang.String,java.lang.String,java.lang.String)>[[-$i0 < 26]]--><android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 14 Potential Issue API: SDKCheck of <android.app.NotificationChannel: void setLightColor(int)> is checking!!!
+The life time of api is [26,31]
+2call roads:
+1 Mainhead roads:
+-$i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: nerd.tuxmobil.fahrplan.congress.alarms.AlarmReceiver dummyMainMethod_nerd_tuxmobil_fahrplan_congress_alarms_AlarmReceiver(android.content.Intent)>[]--><nerd.tuxmobil.fahrplan.congress.alarms.AlarmReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><nerd.tuxmobil.fahrplan.congress.notifications.NotificationHelper: void <init>(android.content.Context)>[]--><nerd.tuxmobil.fahrplan.congress.notifications.NotificationHelper: void createNotificationChannel(java.lang.String,java.lang.String,java.lang.String)>[[-$i0 < 26]]--><android.app.NotificationChannel: void setLightColor(int)>
+One road protect good!
+1 Packageshead roads:
+-$i0 < 26
+Good road: <nerd.tuxmobil.fahrplan.congress.autoupdate.UpdateService: kotlin.Unit lambda$fetchFahrplan$1$UpdateService(java.lang.Boolean,java.lang.String)>[]--><nerd.tuxmobil.fahrplan.congress.autoupdate.UpdateService: void onParseDone(java.lang.Boolean,java.lang.String)>[]--><nerd.tuxmobil.fahrplan.congress.autoupdate.UpdateService: void showScheduleUpdateNotification(java.lang.String,int)>[]--><nerd.tuxmobil.fahrplan.congress.notifications.NotificationHelper: void <init>(android.content.Context)>[]--><nerd.tuxmobil.fahrplan.congress.notifications.NotificationHelper: void createNotificationChannel(java.lang.String,java.lang.String,java.lang.String)>[[-$i0 < 26]]--><android.app.NotificationChannel: void setLightColor(int)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 15 Potential Issue API: SDKCheck of <android.util.Size: void <init>(int,int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <androidx.versionedparcelable.VersionedParcel: android.util.Size readSize(android.util.Size,int)>[]--><android.util.Size: void <init>(int,int)>
+#1.the call statck between class <androidx.versionedparcelable.VersionedParcel: android.util.Size readSize(android.util.Size,int)> to <android.util.Size: void <init>(int,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:9
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 16 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)> is checking!!!
+The life time of api is [22,31]
+1549call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: nerd.tuxmobil.fahrplan.congress.details.EventDetail dummyMainMethod_nerd_tuxmobil_fahrplan_congress_details_EventDetail(android.content.Intent)>[]--><nerd.tuxmobil.fahrplan.congress.details.EventDetail: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+!!!this api will crash on sdk 16 17 18 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: nerd.tuxmobil.fahrplan.congress.changes.ChangeListActivity dummyMainMethod_nerd_tuxmobil_fahrplan_congress_changes_ChangeListActivity(android.content.Intent)>[]--><nerd.tuxmobil.fahrplan.congress.changes.ChangeListActivity: void onCreate(android.os.Bundle)>[]--><nerd.tuxmobil.fahrplan.congress.changes.ChangeListFragment: nerd.tuxmobil.fahrplan.congress.changes.ChangeListFragment newInstance(boolean,boolean)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+!!!this api will crash on sdk 16 17 18 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: nerd.tuxmobil.fahrplan.congress.schedule.MainActivity dummyMainMethod_nerd_tuxmobil_fahrplan_congress_schedule_MainActivity(android.content.Intent)>[]--><nerd.tuxmobil.fahrplan.congress.schedule.MainActivity: boolean onOptionsItemSelected(android.view.MenuItem)>[]--><nerd.tuxmobil.fahrplan.congress.schedule.MainActivity: void openLectureChanges(boolean)>[]--><nerd.tuxmobil.fahrplan.congress.changes.ChangeListFragment: nerd.tuxmobil.fahrplan.congress.changes.ChangeListFragment newInstance(boolean,boolean)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+1548 Packageshead roads:
+Roads number exceed, exit!1548
+#################################################
+N 17 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putDouble(java.lang.String,double)> is checking!!!
+The life time of api is [21,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 18 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putIntArray(java.lang.String,int[])> is checking!!!
+The life time of api is [21,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 19 Potential Issue API: SDKCheck of <android.util.SizeF: float getHeight()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <androidx.versionedparcelable.VersionedParcel: void writeSizeF(android.util.SizeF,int)>[]--><android.util.SizeF: float getHeight()>
+#1.the call statck between class <androidx.versionedparcelable.VersionedParcel: void writeSizeF(android.util.SizeF,int)> to <android.util.SizeF: float getHeight()>has compatibility isssues！
+-----------------------------------------
+crashApis:11
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 20 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.lang.Object get(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:true
+1call by main package
+-----------------------------------------
+#################################################
+N 21 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putDoubleArray(java.lang.String,double[])> is checking!!!
+The life time of api is [21,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 22 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putLong(java.lang.String,long)> is checking!!!
+The life time of api is [21,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 23 Potential Issue API: SDKCheck of <android.os.BaseBundle: boolean getBoolean(java.lang.String)> is checking!!!
+The life time of api is [22,31]
+3call roads:
+0 Mainhead roads:
+3 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 
+Error road: <nerd.tuxmobil.fahrplan.congress.favorites.StarredListFragment: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+#1.the call statck between class <nerd.tuxmobil.fahrplan.congress.favorites.StarredListFragment: void onCreate(android.os.Bundle)> to <android.os.BaseBundle: boolean getBoolean(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 
+Error road: <nerd.tuxmobil.fahrplan.congress.changes.ChangesDialog: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+#2.the call statck between class <nerd.tuxmobil.fahrplan.congress.changes.ChangesDialog: void onCreate(android.os.Bundle)> to <android.os.BaseBundle: boolean getBoolean(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 
+Error road: <nerd.tuxmobil.fahrplan.congress.changes.ChangeListFragment: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+#3.the call statck between class <nerd.tuxmobil.fahrplan.congress.changes.ChangeListFragment: void onCreate(android.os.Bundle)> to <android.os.BaseBundle: boolean getBoolean(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:12
+containsStatic:false
+containsTry:false
+4call by main package
+-----------------------------------------
+#################################################
+N 24 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.lang.String getString(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+6call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: nerd.tuxmobil.fahrplan.congress.details.EventDetail dummyMainMethod_nerd_tuxmobil_fahrplan_congress_details_EventDetail(android.content.Intent)>[]--><nerd.tuxmobil.fahrplan.congress.details.EventDetail: void onCreate(android.os.Bundle)>[]--><nerd.tuxmobil.fahrplan.congress.details.EventDetailFragment: void setArguments(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+5 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <nerd.tuxmobil.fahrplan.congress.schedule.FahrplanFragment: void onClick(android.view.View)>[]--><nerd.tuxmobil.fahrplan.congress.schedule.MainActivity: void openLectureDetail(nerd.tuxmobil.fahrplan.congress.models.Lecture,int,boolean)>[]--><nerd.tuxmobil.fahrplan.congress.details.EventDetailFragment: void setArguments(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#1.the call statck between class <nerd.tuxmobil.fahrplan.congress.schedule.FahrplanFragment: void onClick(android.view.View)> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <nerd.tuxmobil.fahrplan.congress.net.CertificateDialogFragment: android.app.Dialog onCreateDialog(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#2.the call statck between class <nerd.tuxmobil.fahrplan.congress.net.CertificateDialogFragment: android.app.Dialog onCreateDialog(android.os.Bundle)> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <nerd.tuxmobil.fahrplan.congress.schedule.FahrplanFragment: void onResume()>[]--><nerd.tuxmobil.fahrplan.congress.schedule.MainActivity: void openLectureDetail(nerd.tuxmobil.fahrplan.congress.models.Lecture,int,boolean)>[]--><nerd.tuxmobil.fahrplan.congress.details.EventDetailFragment: void setArguments(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#3.the call statck between class <nerd.tuxmobil.fahrplan.congress.schedule.FahrplanFragment: void onResume()> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <nerd.tuxmobil.fahrplan.congress.changes.ChangesDialog: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#4.the call statck between class <nerd.tuxmobil.fahrplan.congress.changes.ChangesDialog: void onCreate(android.os.Bundle)> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <nerd.tuxmobil.fahrplan.congress.schedule.MainActivity: void onLectureListClick(nerd.tuxmobil.fahrplan.congress.models.Lecture,boolean)>[]--><nerd.tuxmobil.fahrplan.congress.schedule.MainActivity: void openLectureDetail(nerd.tuxmobil.fahrplan.congress.models.Lecture,int,boolean)>[]--><nerd.tuxmobil.fahrplan.congress.details.EventDetailFragment: void setArguments(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#5.the call statck between class <nerd.tuxmobil.fahrplan.congress.schedule.MainActivity: void onLectureListClick(nerd.tuxmobil.fahrplan.congress.models.Lecture,boolean)> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:13
+crashApisInMain:6
+containsStatic:false
+containsTry:false
+6call by main package
+-----------------------------------------
+#################################################
+N 25 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putStringArray(java.lang.String,java.lang.String[])> is checking!!!
+The life time of api is [21,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 26 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putInt(java.lang.String,int)> is checking!!!
+The life time of api is [21,31]
+1549call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: nerd.tuxmobil.fahrplan.congress.details.EventDetail dummyMainMethod_nerd_tuxmobil_fahrplan_congress_details_EventDetail(android.content.Intent)>[]--><nerd.tuxmobil.fahrplan.congress.details.EventDetail: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+1548 Packageshead roads:
+Roads number exceed, exit!1548
+#################################################
+N 27 Potential Issue API: SDKCheck of <android.util.SizeF: float getWidth()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <androidx.versionedparcelable.VersionedParcel: void writeSizeF(android.util.SizeF,int)>[]--><android.util.SizeF: float getWidth()>
+#1.the call statck between class <androidx.versionedparcelable.VersionedParcel: void writeSizeF(android.util.SizeF,int)> to <android.util.SizeF: float getWidth()>has compatibility isssues！
+-----------------------------------------
+crashApis:15
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 28 Potential Issue API: SDKCheck of <android.os.BaseBundle: int getInt(java.lang.String,int)> is checking!!!
+The life time of api is [21,31]
+4call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: nerd.tuxmobil.fahrplan.congress.details.EventDetail dummyMainMethod_nerd_tuxmobil_fahrplan_congress_details_EventDetail(android.content.Intent)>[]--><nerd.tuxmobil.fahrplan.congress.details.EventDetail: void onCreate(android.os.Bundle)>[]--><nerd.tuxmobil.fahrplan.congress.details.EventDetailFragment: void setArguments(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String,int)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: int getInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+3 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <nerd.tuxmobil.fahrplan.congress.schedule.FahrplanFragment: void onClick(android.view.View)>[]--><nerd.tuxmobil.fahrplan.congress.schedule.MainActivity: void openLectureDetail(nerd.tuxmobil.fahrplan.congress.models.Lecture,int,boolean)>[]--><nerd.tuxmobil.fahrplan.congress.details.EventDetailFragment: void setArguments(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String,int)>
+#1.the call statck between class <nerd.tuxmobil.fahrplan.congress.schedule.FahrplanFragment: void onClick(android.view.View)> to <android.os.BaseBundle: int getInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <nerd.tuxmobil.fahrplan.congress.schedule.FahrplanFragment: void onResume()>[]--><nerd.tuxmobil.fahrplan.congress.schedule.MainActivity: void openLectureDetail(nerd.tuxmobil.fahrplan.congress.models.Lecture,int,boolean)>[]--><nerd.tuxmobil.fahrplan.congress.details.EventDetailFragment: void setArguments(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String,int)>
+#2.the call statck between class <nerd.tuxmobil.fahrplan.congress.schedule.FahrplanFragment: void onResume()> to <android.os.BaseBundle: int getInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <nerd.tuxmobil.fahrplan.congress.schedule.MainActivity: void onLectureListClick(nerd.tuxmobil.fahrplan.congress.models.Lecture,boolean)>[]--><nerd.tuxmobil.fahrplan.congress.schedule.MainActivity: void openLectureDetail(nerd.tuxmobil.fahrplan.congress.models.Lecture,int,boolean)>[]--><nerd.tuxmobil.fahrplan.congress.details.EventDetailFragment: void setArguments(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String,int)>
+#3.the call statck between class <nerd.tuxmobil.fahrplan.congress.schedule.MainActivity: void onLectureListClick(nerd.tuxmobil.fahrplan.congress.models.Lecture,boolean)> to <android.os.BaseBundle: int getInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:16
+crashApisInMain:8
+containsStatic:false
+containsTry:false
+4call by main package
+-----------------------------------------
+#################################################
+N 29 Potential Issue API: SDKCheck of <android.net.NetworkInfo: boolean isConnectedOrConnecting()> is checking!!!
+The life time of api is [1,30]
+2call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: nerd.tuxmobil.fahrplan.congress.schedule.MainActivity dummyMainMethod_nerd_tuxmobil_fahrplan_congress_schedule_MainActivity(android.content.Intent)>[]--><nerd.tuxmobil.fahrplan.congress.schedule.MainActivity: void onCreate(android.os.Bundle)>[]--><nerd.tuxmobil.fahrplan.congress.engagements.Engagements: void initUserEngagement(android.support.v7.app.AppCompatActivity)>[]--><org.ligi.snackengage.SnackEngage: boolean engageWhenAppropriate()>[]--><org.ligi.snackengage.snacks.BaseSnack: boolean opportunity(org.ligi.snackengage.SnackContext)>[]--><org.ligi.snackengage.conditions.connectivity.IsConnectedUnMeteredOrUnknown: boolean isAppropriate(org.ligi.snackengage.SnackContext,org.ligi.snackengage.snacks.Snack)>[]--><android.net.NetworkInfo: boolean isConnectedOrConnecting()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.NetworkInfo: boolean isConnectedOrConnecting()>has compatibility isssues！
+-----------------------------------------
+1 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <nerd.tuxmobil.fahrplan.congress.net.ConnectivityObserver$broadCastReceiver$1: void onReceive(android.content.Context,android.content.Intent)>[]--><android.net.NetworkInfo: boolean isConnectedOrConnecting()>
+#1.the call statck between class <nerd.tuxmobil.fahrplan.congress.net.ConnectivityObserver$broadCastReceiver$1: void onReceive(android.content.Context,android.content.Intent)> to <android.net.NetworkInfo: boolean isConnectedOrConnecting()>has compatibility isssues！
+-----------------------------------------
+crashApis:17
+crashApisInMain:9
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 30 Potential Issue API: SDKCheck of <android.util.SizeF: void <init>(float,float)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <androidx.versionedparcelable.VersionedParcel: android.util.SizeF readSizeF(android.util.SizeF,int)>[]--><android.util.SizeF: void <init>(float,float)>
+#1.the call statck between class <androidx.versionedparcelable.VersionedParcel: android.util.SizeF readSizeF(android.util.SizeF,int)> to <android.util.SizeF: void <init>(float,float)>has compatibility isssues！
+-----------------------------------------
+crashApis:18
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 31 Potential Issue API: SDKCheck of <android.net.ConnectivityManager: void registerDefaultNetworkCallback(android.net.ConnectivityManager.NetworkCallback)> is checking!!!
+The life time of api is [24,30]
+1call roads:
+1 Mainhead roads:
+$i0 >= 24
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: nerd.tuxmobil.fahrplan.congress.favorites.StarredListActivity dummyMainMethod_nerd_tuxmobil_fahrplan_congress_favorites_StarredListActivity(android.content.Intent)>[]--><nerd.tuxmobil.fahrplan.congress.favorites.StarredListActivity: void onCreate(android.os.Bundle)>[]--><nerd.tuxmobil.fahrplan.congress.base.BaseActivity: void onCreate(android.os.Bundle)>[]--><nerd.tuxmobil.fahrplan.congress.net.ConnectivityObserver: void start()>[[$i0 >= 24]]--><android.net.ConnectivityManager: void registerDefaultNetworkCallback(android.net.ConnectivityManager.NetworkCallback)>
+$i0 >= 24
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: nerd.tuxmobil.fahrplan.congress.changes.ChangeListActivity dummyMainMethod_nerd_tuxmobil_fahrplan_congress_changes_ChangeListActivity(android.content.Intent)>[]--><nerd.tuxmobil.fahrplan.congress.changes.ChangeListActivity: void onCreate(android.os.Bundle)>[]--><nerd.tuxmobil.fahrplan.congress.base.BaseActivity: void onCreate(android.os.Bundle)>[]--><nerd.tuxmobil.fahrplan.congress.net.ConnectivityObserver: void start()>[[$i0 >= 24]]--><android.net.ConnectivityManager: void registerDefaultNetworkCallback(android.net.ConnectivityManager.NetworkCallback)>
+$i0 >= 24
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: nerd.tuxmobil.fahrplan.congress.schedule.MainActivity dummyMainMethod_nerd_tuxmobil_fahrplan_congress_schedule_MainActivity(android.content.Intent)>[]--><nerd.tuxmobil.fahrplan.congress.schedule.MainActivity: void onCreate(android.os.Bundle)>[]--><nerd.tuxmobil.fahrplan.congress.base.BaseActivity: void onCreate(android.os.Bundle)>[]--><nerd.tuxmobil.fahrplan.congress.net.ConnectivityObserver: void start()>[[$i0 >= 24]]--><android.net.ConnectivityManager: void registerDefaultNetworkCallback(android.net.ConnectivityManager.NetworkCallback)>
+$i0 >= 24
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: nerd.tuxmobil.fahrplan.congress.settings.SettingsActivity dummyMainMethod_nerd_tuxmobil_fahrplan_congress_settings_SettingsActivity(android.content.Intent)>[]--><nerd.tuxmobil.fahrplan.congress.settings.SettingsActivity: void onCreate(android.os.Bundle)>[]--><nerd.tuxmobil.fahrplan.congress.base.BaseActivity: void onCreate(android.os.Bundle)>[]--><nerd.tuxmobil.fahrplan.congress.net.ConnectivityObserver: void start()>[[$i0 >= 24]]--><android.net.ConnectivityManager: void registerDefaultNetworkCallback(android.net.ConnectivityManager.NetworkCallback)>
+$i0 >= 24
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: nerd.tuxmobil.fahrplan.congress.details.EventDetail dummyMainMethod_nerd_tuxmobil_fahrplan_congress_details_EventDetail(android.content.Intent)>[]--><nerd.tuxmobil.fahrplan.congress.details.EventDetail: void onCreate(android.os.Bundle)>[]--><nerd.tuxmobil.fahrplan.congress.base.BaseActivity: void onCreate(android.os.Bundle)>[]--><nerd.tuxmobil.fahrplan.congress.net.ConnectivityObserver: void start()>[[$i0 >= 24]]--><android.net.ConnectivityManager: void registerDefaultNetworkCallback(android.net.ConnectivityManager.NetworkCallback)>
+$i0 >= 24
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: nerd.tuxmobil.fahrplan.congress.alarms.AlarmList dummyMainMethod_nerd_tuxmobil_fahrplan_congress_alarms_AlarmList(android.content.Intent)>[]--><nerd.tuxmobil.fahrplan.congress.alarms.AlarmList: void onCreate(android.os.Bundle)>[]--><nerd.tuxmobil.fahrplan.congress.base.BaseActivity: void onCreate(android.os.Bundle)>[]--><nerd.tuxmobil.fahrplan.congress.net.ConnectivityObserver: void start()>[[$i0 >= 24]]--><android.net.ConnectivityManager: void registerDefaultNetworkCallback(android.net.ConnectivityManager.NetworkCallback)>
+$i0 >= 24
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: nerd.tuxmobil.fahrplan.congress.autoupdate.UpdateService dummyMainMethod_nerd_tuxmobil_fahrplan_congress_autoupdate_UpdateService(android.content.Intent)>[]--><nerd.tuxmobil.fahrplan.congress.autoupdate.UpdateService: void onHandleWork(android.content.Intent)>[]--><nerd.tuxmobil.fahrplan.congress.net.ConnectivityObserver: void start()>[[$i0 >= 24]]--><android.net.ConnectivityManager: void registerDefaultNetworkCallback(android.net.ConnectivityManager.NetworkCallback)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.ConnectivityManager: void registerDefaultNetworkCallback(android.net.ConnectivityManager.NetworkCallback)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:19
+crashApisInMain:10
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 32 Potential Issue API: SDKCheck of <android.net.ConnectivityManager.NetworkCallback: void onLost(android.net.Network)> is checking!!!
+The life time of api is [21,30]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <nerd.tuxmobil.fahrplan.congress.net.ConnectivityObserver$2: void onLost(android.net.Network)>[]--><android.net.ConnectivityManager.NetworkCallback: void onLost(android.net.Network)>
+!!!this api will crash on sdk 31 
+Error road: <nerd.tuxmobil.fahrplan.congress.net.ConnectivityObserver$2: void onLost(android.net.Network)>[]--><android.net.ConnectivityManager.NetworkCallback: void onLost(android.net.Network)>
+#1.the call statck between class <nerd.tuxmobil.fahrplan.congress.net.ConnectivityObserver$2: void onLost(android.net.Network)> to <android.net.ConnectivityManager.NetworkCallback: void onLost(android.net.Network)>has compatibility isssues！
+-----------------------------------------
+crashApis:20
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 33 Potential Issue API: SDKCheck of <android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)> is checking!!!
+The life time of api is [26,31]
+2call roads:
+1 Mainhead roads:
+-$i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: nerd.tuxmobil.fahrplan.congress.alarms.AlarmReceiver dummyMainMethod_nerd_tuxmobil_fahrplan_congress_alarms_AlarmReceiver(android.content.Intent)>[]--><nerd.tuxmobil.fahrplan.congress.alarms.AlarmReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><nerd.tuxmobil.fahrplan.congress.notifications.NotificationHelper: void <init>(android.content.Context)>[]--><nerd.tuxmobil.fahrplan.congress.notifications.NotificationHelper: void createNotificationChannel(java.lang.String,java.lang.String,java.lang.String)>[[-$i0 < 26]]--><android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)>
+One road protect good!
+1 Packageshead roads:
+-$i0 < 26
+Good road: <nerd.tuxmobil.fahrplan.congress.autoupdate.UpdateService: kotlin.Unit lambda$fetchFahrplan$1$UpdateService(java.lang.Boolean,java.lang.String)>[]--><nerd.tuxmobil.fahrplan.congress.autoupdate.UpdateService: void onParseDone(java.lang.Boolean,java.lang.String)>[]--><nerd.tuxmobil.fahrplan.congress.autoupdate.UpdateService: void showScheduleUpdateNotification(java.lang.String,int)>[]--><nerd.tuxmobil.fahrplan.congress.notifications.NotificationHelper: void <init>(android.content.Context)>[]--><nerd.tuxmobil.fahrplan.congress.notifications.NotificationHelper: void createNotificationChannel(java.lang.String,java.lang.String,java.lang.String)>[[-$i0 < 26]]--><android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 34 Potential Issue API: SDKCheck of <android.net.ConnectivityManager: void unregisterNetworkCallback(android.net.ConnectivityManager.NetworkCallback)> is checking!!!
+The life time of api is [21,30]
+4call roads:
+1 Mainhead roads:
+$i0 >= 24
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: nerd.tuxmobil.fahrplan.congress.favorites.StarredListActivity dummyMainMethod_nerd_tuxmobil_fahrplan_congress_favorites_StarredListActivity(android.content.Intent)>[]--><nerd.tuxmobil.fahrplan.congress.base.BaseActivity: void onDestroy()>[]--><nerd.tuxmobil.fahrplan.congress.net.ConnectivityObserver: void stop()>[[$i0 >= 24]]--><android.net.ConnectivityManager: void unregisterNetworkCallback(android.net.ConnectivityManager.NetworkCallback)>
+$i0 >= 24
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: nerd.tuxmobil.fahrplan.congress.schedule.MainActivity dummyMainMethod_nerd_tuxmobil_fahrplan_congress_schedule_MainActivity(android.content.Intent)>[]--><nerd.tuxmobil.fahrplan.congress.schedule.MainActivity: void onDestroy()>[]--><nerd.tuxmobil.fahrplan.congress.base.BaseActivity: void onDestroy()>[]--><nerd.tuxmobil.fahrplan.congress.net.ConnectivityObserver: void stop()>[[$i0 >= 24]]--><android.net.ConnectivityManager: void unregisterNetworkCallback(android.net.ConnectivityManager.NetworkCallback)>
+$i0 >= 24
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: nerd.tuxmobil.fahrplan.congress.changes.ChangeListActivity dummyMainMethod_nerd_tuxmobil_fahrplan_congress_changes_ChangeListActivity(android.content.Intent)>[]--><nerd.tuxmobil.fahrplan.congress.base.BaseActivity: void onDestroy()>[]--><nerd.tuxmobil.fahrplan.congress.net.ConnectivityObserver: void stop()>[[$i0 >= 24]]--><android.net.ConnectivityManager: void unregisterNetworkCallback(android.net.ConnectivityManager.NetworkCallback)>
+$i0 >= 24
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: nerd.tuxmobil.fahrplan.congress.settings.SettingsActivity dummyMainMethod_nerd_tuxmobil_fahrplan_congress_settings_SettingsActivity(android.content.Intent)>[]--><nerd.tuxmobil.fahrplan.congress.base.BaseActivity: void onDestroy()>[]--><nerd.tuxmobil.fahrplan.congress.net.ConnectivityObserver: void stop()>[[$i0 >= 24]]--><android.net.ConnectivityManager: void unregisterNetworkCallback(android.net.ConnectivityManager.NetworkCallback)>
+$i0 >= 24
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: nerd.tuxmobil.fahrplan.congress.details.EventDetail dummyMainMethod_nerd_tuxmobil_fahrplan_congress_details_EventDetail(android.content.Intent)>[]--><nerd.tuxmobil.fahrplan.congress.base.BaseActivity: void onDestroy()>[]--><nerd.tuxmobil.fahrplan.congress.net.ConnectivityObserver: void stop()>[[$i0 >= 24]]--><android.net.ConnectivityManager: void unregisterNetworkCallback(android.net.ConnectivityManager.NetworkCallback)>
+$i0 >= 24
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: nerd.tuxmobil.fahrplan.congress.alarms.AlarmList dummyMainMethod_nerd_tuxmobil_fahrplan_congress_alarms_AlarmList(android.content.Intent)>[]--><nerd.tuxmobil.fahrplan.congress.alarms.AlarmList: void onDestroy()>[]--><nerd.tuxmobil.fahrplan.congress.base.BaseActivity: void onDestroy()>[]--><nerd.tuxmobil.fahrplan.congress.net.ConnectivityObserver: void stop()>[[$i0 >= 24]]--><android.net.ConnectivityManager: void unregisterNetworkCallback(android.net.ConnectivityManager.NetworkCallback)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.ConnectivityManager: void unregisterNetworkCallback(android.net.ConnectivityManager.NetworkCallback)>has compatibility isssues！
+-----------------------------------------
+3 Packageshead roads:
+$i0 >= 24
+!!!this api will crash on sdk 31 
+Error road: <nerd.tuxmobil.fahrplan.congress.net.ConnectivityObserver$2: void onAvailable(android.net.Network)>[]--><nerd.tuxmobil.fahrplan.congress.net.ConnectivityObserver: void stop()>[[$i0 >= 24]]--><android.net.ConnectivityManager: void unregisterNetworkCallback(android.net.ConnectivityManager.NetworkCallback)>
+#1.the call statck between class <nerd.tuxmobil.fahrplan.congress.net.ConnectivityObserver$2: void onAvailable(android.net.Network)> to <android.net.ConnectivityManager: void unregisterNetworkCallback(android.net.ConnectivityManager.NetworkCallback)>has compatibility isssues！
+-----------------------------------------
+$i0 >= 24
+!!!this api will crash on sdk 31 
+Error road: <nerd.tuxmobil.fahrplan.congress.net.ConnectivityObserver$2: void onLost(android.net.Network)>[]--><nerd.tuxmobil.fahrplan.congress.net.ConnectivityObserver: void stop()>[[$i0 >= 24]]--><android.net.ConnectivityManager: void unregisterNetworkCallback(android.net.ConnectivityManager.NetworkCallback)>
+#2.the call statck between class <nerd.tuxmobil.fahrplan.congress.net.ConnectivityObserver$2: void onLost(android.net.Network)> to <android.net.ConnectivityManager: void unregisterNetworkCallback(android.net.ConnectivityManager.NetworkCallback)>has compatibility isssues！
+-----------------------------------------
+$i0 >= 24
+!!!this api will crash on sdk 31 
+Error road: <nerd.tuxmobil.fahrplan.congress.net.ConnectivityObserver$broadCastReceiver$1: void onReceive(android.content.Context,android.content.Intent)>[]--><nerd.tuxmobil.fahrplan.congress.net.ConnectivityObserver: void stop()>[[$i0 >= 24]]--><android.net.ConnectivityManager: void unregisterNetworkCallback(android.net.ConnectivityManager.NetworkCallback)>
+#3.the call statck between class <nerd.tuxmobil.fahrplan.congress.net.ConnectivityObserver$broadCastReceiver$1: void onReceive(android.content.Context,android.content.Intent)> to <android.net.ConnectivityManager: void unregisterNetworkCallback(android.net.ConnectivityManager.NetworkCallback)>has compatibility isssues！
+-----------------------------------------
+crashApis:21
+crashApisInMain:11
+containsStatic:false
+containsTry:false
+4call by main package
+-----------------------------------------
+#################################################
+N 35 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.util.Set keySet()> is checking!!!
+The life time of api is [21,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:true
+1call by main package
+-----------------------------------------
+#################################################
+N 36 Potential Issue API: SDKCheck of <android.util.Size: int getHeight()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <androidx.versionedparcelable.VersionedParcel: void writeSize(android.util.Size,int)>[]--><android.util.Size: int getHeight()>
+#1.the call statck between class <androidx.versionedparcelable.VersionedParcel: void writeSize(android.util.Size,int)> to <android.util.Size: int getHeight()>has compatibility isssues！
+-----------------------------------------
+crashApis:22
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+crashApis numbers:22
+crashApis numbers in main road:11
+On Android Version 16 this app may have error api use(at least): 16 and error api roads: 33
+On Android Version 17 this app may have error api use(at least): 16 and error api roads: 33
+On Android Version 18 this app may have error api use(at least): 16 and error api roads: 33
+On Android Version 19 this app may have error api use(at least): 16 and error api roads: 33
+On Android Version 20 this app may have error api use(at least): 16 and error api roads: 33
+On Android Version 21 this app may have error api use(at least): 3 and error api roads: 11
+On Android Version 22 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 23 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 24 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 25 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 31 this app may have error api use(at least): 8 and error api roads: 24

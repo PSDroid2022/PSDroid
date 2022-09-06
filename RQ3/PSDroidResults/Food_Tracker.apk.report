@@ -1,0 +1,75 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/Food_Tracker.apk
+Entry Points[org.secuso.privacyfriendlyexample.activities.HelpActivity, org.secuso.privacyfriendlyexample.tutorial.TutorialActivity, org.secuso.privacyfriendlyexample.activities.GameActivity, org.secuso.privacyfriendlyexample.activities.SplashActivity, org.secuso.privacyfriendlyexample.activities.SettingsActivity, org.secuso.privacyfriendlyexample.activities.MainActivity, org.secuso.privacyfriendlyexample.activities.AboutActivity]
+FllowDroidcallgraph size:218
+Soot started on Mon Jul 11 04:06:15 CST 2022
+Soot finished on Mon Jul 11 04:06:20 CST 2022
+Soot has run for 0 min. 5 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 17
+Declared Target Sdk version is: 25
+Declared Max Sdk version is: -1
+Collected 116 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.view.Window: void setStatusBarColor(int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.secuso.privacyfriendlyexample.tutorial.TutorialActivity dummyMainMethod_org_secuso_privacyfriendlyexample_tutorial_TutorialActivity(android.content.Intent)>[]--><org.secuso.privacyfriendlyexample.tutorial.TutorialActivity: void onCreate(android.os.Bundle)>[]--><org.secuso.privacyfriendlyexample.tutorial.TutorialActivity: void changeStatusBarColor()>[[-$i0 < 21]]--><android.view.Window: void setStatusBarColor(int)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.os.BaseBundle: int getInt(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.secuso.privacyfriendlyexample.activities.GameActivity dummyMainMethod_org_secuso_privacyfriendlyexample_activities_GameActivity(android.content.Intent)>[]--><dummyMainClass: org.secuso.privacyfriendlyexample.activities.GameActivity$PageFragment dummyMainMethod_org_secuso_privacyfriendlyexample_activities_GameActivity$PageFragment(android.content.Intent,android.app.Activity)>[]--><org.secuso.privacyfriendlyexample.activities.GameActivity$PageFragment: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:1
+crashApisInMain:1
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putInt(java.lang.String,int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 17 18 19 20 
+Error road: <org.secuso.privacyfriendlyexample.activities.GameActivity$PageFragment: org.secuso.privacyfriendlyexample.activities.GameActivity$PageFragment newInstance(int)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#1.the call statck between class <org.secuso.privacyfriendlyexample.activities.GameActivity$PageFragment: org.secuso.privacyfriendlyexample.activities.GameActivity$PageFragment newInstance(int)> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:2
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+crashApis numbers:2
+crashApis numbers in main road:1
+On Android Version 16 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 17 this app may have error api use(at least): 2 and error api roads: 2
+On Android Version 18 this app may have error api use(at least): 2 and error api roads: 2
+On Android Version 19 this app may have error api use(at least): 2 and error api roads: 2
+On Android Version 20 this app may have error api use(at least): 2 and error api roads: 2
+On Android Version 21 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 22 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 23 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 24 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 25 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 31 this app may have error api use(at least): 0 and error api roads: 0

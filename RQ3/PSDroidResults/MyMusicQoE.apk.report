@@ -1,0 +1,625 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/MyMusicQoE.apk
+Entry Points[org.moire.ultrasonic.activity.VoiceQueryReceiverActivity, org.moire.ultrasonic.service.DownloadServiceImpl, org.moire.ultrasonic.activity.ServerSettingsActivity, org.moire.ultrasonic.provider.UltraSonicAppWidgetProvider4x4, org.moire.ultrasonic.activity.DownloadActivity, org.moire.ultrasonic.activity.SelectArtistActivity, org.moire.ultrasonic.activity.BookmarkActivity, org.moire.ultrasonic.provider.SearchSuggestionProvider, org.moire.ultrasonic.activity.SettingsActivity, org.moire.ultrasonic.provider.UltraSonicAppWidgetProvider4x1, org.moire.ultrasonic.receiver.BluetoothIntentReceiver, org.moire.ultrasonic.activity.SearchActivity, org.moire.ultrasonic.provider.UltraSonicAppWidgetProvider4x2, org.moire.ultrasonic.receiver.MediaButtonIntentReceiver, org.moire.ultrasonic.activity.UserInformationActivity, org.moire.ultrasonic.activity.LyricsActivity, org.moire.ultrasonic.activity.SelectGenreActivity, org.moire.ultrasonic.activity.SelectAlbumActivity, org.moire.ultrasonic.activity.EqualizerActivity, org.moire.ultrasonic.provider.UltraSonicAppWidgetProvider4x3, org.moire.ultrasonic.activity.HelpActivity, org.moire.ultrasonic.activity.MainActivity, org.moire.ultrasonic.activity.QueryReceiverActivity, org.moire.ultrasonic.receiver.A2dpIntentReceiver]
+FllowDroidcallgraph size:13249
+Soot started on Mon Jul 11 07:45:03 CST 2022
+StaticCheck:<net.simonvt.menudrawer.MenuDrawer: boolean USE_TRANSLATIONS>$yysi0 < 14
+Soot finished on Mon Jul 11 07:46:47 CST 2022
+Soot has run for 1 min. 44 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 14
+Declared Target Sdk version is: 22
+Declared Max Sdk version is: -1
+Collected 1004 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.media.AudioDeviceInfo: int getType()> is checking!!!
+The life time of api is [23,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.moire.ultrasonic.service.DownloadServiceImpl: boolean access$2500(org.moire.ultrasonic.service.DownloadServiceImpl)>[]--><org.moire.ultrasonic.service.DownloadServiceImpl: boolean isHeadphonesPlugged()>[]--><android.media.AudioDeviceInfo: int getType()>
+#1.the call statck between class <org.moire.ultrasonic.service.DownloadServiceImpl: boolean access$2500(org.moire.ultrasonic.service.DownloadServiceImpl)> to <android.media.AudioDeviceInfo: int getType()>has compatibility isssues！
+-----------------------------------------
+crashApis:1
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.os.BaseBundle: int getInt(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+3call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.moire.ultrasonic.activity.ServerSettingsActivity dummyMainMethod_org_moire_ultrasonic_activity_ServerSettingsActivity(android.content.Intent)>[]--><dummyMainClass: org.moire.ultrasonic.fragment.ServerSettingsFragment dummyMainMethod_org_moire_ultrasonic_fragment_ServerSettingsFragment(android.content.Intent,android.app.Activity)>[]--><org.moire.ultrasonic.fragment.ServerSettingsFragment: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.moire.ultrasonic.activity.SelectAlbumActivity dummyMainMethod_org_moire_ultrasonic_activity_SelectAlbumActivity(android.content.Intent)>[]--><org.moire.ultrasonic.activity.SelectAlbumActivity: void onCreate(android.os.Bundle)>[]--><org.moire.ultrasonic.activity.SubsonicTabActivity: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.moire.ultrasonic.activity.SearchActivity dummyMainMethod_org_moire_ultrasonic_activity_SearchActivity(android.content.Intent)>[]--><org.moire.ultrasonic.activity.SearchActivity: void onCreate(android.os.Bundle)>[]--><org.moire.ultrasonic.activity.SubsonicTabActivity: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.moire.ultrasonic.activity.SelectGenreActivity dummyMainMethod_org_moire_ultrasonic_activity_SelectGenreActivity(android.content.Intent)>[]--><org.moire.ultrasonic.activity.SelectGenreActivity: void onCreate(android.os.Bundle)>[]--><org.moire.ultrasonic.activity.SubsonicTabActivity: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.moire.ultrasonic.activity.DownloadActivity dummyMainMethod_org_moire_ultrasonic_activity_DownloadActivity(android.content.Intent)>[]--><org.moire.ultrasonic.activity.DownloadActivity: void onCreate(android.os.Bundle)>[]--><org.moire.ultrasonic.activity.SubsonicTabActivity: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.moire.ultrasonic.activity.UserInformationActivity dummyMainMethod_org_moire_ultrasonic_activity_UserInformationActivity(android.content.Intent)>[]--><org.moire.ultrasonic.activity.UserInformationActivity: void onCreate(android.os.Bundle)>[]--><org.moire.ultrasonic.activity.SubsonicTabActivity: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.moire.ultrasonic.activity.SelectArtistActivity dummyMainMethod_org_moire_ultrasonic_activity_SelectArtistActivity(android.content.Intent)>[]--><org.moire.ultrasonic.activity.SelectArtistActivity: void onCreate(android.os.Bundle)>[]--><org.moire.ultrasonic.activity.SubsonicTabActivity: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.moire.ultrasonic.activity.HelpActivity dummyMainMethod_org_moire_ultrasonic_activity_HelpActivity(android.content.Intent)>[]--><org.moire.ultrasonic.activity.HelpActivity: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.moire.ultrasonic.activity.BookmarkActivity dummyMainMethod_org_moire_ultrasonic_activity_BookmarkActivity(android.content.Intent)>[]--><org.moire.ultrasonic.activity.BookmarkActivity: void onCreate(android.os.Bundle)>[]--><org.moire.ultrasonic.activity.SubsonicTabActivity: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.moire.ultrasonic.activity.MainActivity dummyMainMethod_org_moire_ultrasonic_activity_MainActivity(android.content.Intent)>[]--><org.moire.ultrasonic.activity.MainActivity: void onCreate(android.os.Bundle)>[]--><org.moire.ultrasonic.activity.SubsonicTabActivity: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.moire.ultrasonic.activity.LyricsActivity dummyMainMethod_org_moire_ultrasonic_activity_LyricsActivity(android.content.Intent)>[]--><org.moire.ultrasonic.activity.LyricsActivity: void onCreate(android.os.Bundle)>[]--><org.moire.ultrasonic.activity.SubsonicTabActivity: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.moire.ultrasonic.activity.SettingsActivity dummyMainMethod_org_moire_ultrasonic_activity_SettingsActivity(android.content.Intent)>[]--><org.moire.ultrasonic.activity.SettingsActivity: void onCreate(android.os.Bundle)>[]--><org.moire.ultrasonic.activity.SubsonicTabActivity: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+2 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <org.moire.ultrasonic.service.DownloadServiceLifecycleSupport$4: void onReceive(android.content.Context,android.content.Intent)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#1.the call statck between class <org.moire.ultrasonic.service.DownloadServiceLifecycleSupport$4: void onReceive(android.content.Context,android.content.Intent)> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <org.moire.ultrasonic.activity.SelectPlaylistActivity: void onCreate(android.os.Bundle)>[]--><org.moire.ultrasonic.activity.SubsonicTabActivity: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#2.the call statck between class <org.moire.ultrasonic.activity.SelectPlaylistActivity: void onCreate(android.os.Bundle)> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:2
+crashApisInMain:1
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()> is checking!!!
+The life time of api is [1,30]
+4796call roads:
+1 Mainhead roads:
+4795 Packageshead roads:
+Roads number exceed, exit!4795
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.media.RemoteControlClient: void setPlaybackPositionUpdateListener(android.media.RemoteControlClient.OnPlaybackPositionUpdateListener)> is checking!!!
+The life time of api is [18,31]
+4796call roads:
+1 Mainhead roads:
+4795 Packageshead roads:
+Roads number exceed, exit!4795
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.os.BaseBundle: boolean containsKey(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.moire.ultrasonic.activity.ServerSettingsActivity dummyMainMethod_org_moire_ultrasonic_activity_ServerSettingsActivity(android.content.Intent)>[]--><org.moire.ultrasonic.activity.ServerSettingsActivity: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: boolean containsKey(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: boolean containsKey(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:3
+crashApisInMain:2
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 5 Potential Issue API: SDKCheck of <android.widget.FrameLayout: void setVisibility(int)> is checking!!!
+The life time of api is [21,22]
+4810call roads:
+1 Mainhead roads:
+4809 Packageshead roads:
+Roads number exceed, exit!4809
+#################################################
+N 6 Potential Issue API: SDKCheck of <android.media.RemoteControlClient: void setOnGetPlaybackPositionListener(android.media.RemoteControlClient.OnGetPlaybackPositionListener)> is checking!!!
+The life time of api is [18,31]
+4796call roads:
+1 Mainhead roads:
+4795 Packageshead roads:
+Roads number exceed, exit!4795
+#################################################
+N 7 Potential Issue API: SDKCheck of <org.apache.http.conn.ssl.AbstractVerifier: void <init>()> is checking!!!
+The life time of api is [23,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.moire.ultrasonic.service.ssl.SSLSocketFactory: void <clinit>()>[[]]--><org.apache.http.conn.ssl.AbstractVerifier: void <init>()>
+#1.the call statck between class <org.moire.ultrasonic.service.ssl.SSLSocketFactory: void <clinit>()> to <org.apache.http.conn.ssl.AbstractVerifier: void <init>()>has compatibility isssues！
+-----------------------------------------
+crashApis:4
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 8 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)> is checking!!!
+The life time of api is [22,31]
+2call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.moire.ultrasonic.activity.SelectAlbumActivity dummyMainMethod_org_moire_ultrasonic_activity_SelectAlbumActivity(android.content.Intent)>[]--><org.moire.ultrasonic.activity.SubsonicTabActivity: void onSaveInstanceState(android.os.Bundle)>[]--><net.simonvt.menudrawer.MenuDrawer: android.os.Parcelable saveState()>[]--><net.simonvt.menudrawer.DraggableDrawer: void saveState(android.os.Bundle)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+!!!this api will crash on sdk 16 17 18 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.moire.ultrasonic.activity.SearchActivity dummyMainMethod_org_moire_ultrasonic_activity_SearchActivity(android.content.Intent)>[]--><org.moire.ultrasonic.activity.SubsonicTabActivity: void onSaveInstanceState(android.os.Bundle)>[]--><net.simonvt.menudrawer.MenuDrawer: android.os.Parcelable saveState()>[]--><net.simonvt.menudrawer.DraggableDrawer: void saveState(android.os.Bundle)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+!!!this api will crash on sdk 16 17 18 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.moire.ultrasonic.activity.SelectGenreActivity dummyMainMethod_org_moire_ultrasonic_activity_SelectGenreActivity(android.content.Intent)>[]--><org.moire.ultrasonic.activity.SubsonicTabActivity: void onSaveInstanceState(android.os.Bundle)>[]--><net.simonvt.menudrawer.MenuDrawer: android.os.Parcelable saveState()>[]--><net.simonvt.menudrawer.DraggableDrawer: void saveState(android.os.Bundle)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+!!!this api will crash on sdk 16 17 18 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.moire.ultrasonic.activity.DownloadActivity dummyMainMethod_org_moire_ultrasonic_activity_DownloadActivity(android.content.Intent)>[]--><org.moire.ultrasonic.activity.SubsonicTabActivity: void onSaveInstanceState(android.os.Bundle)>[]--><net.simonvt.menudrawer.MenuDrawer: android.os.Parcelable saveState()>[]--><net.simonvt.menudrawer.DraggableDrawer: void saveState(android.os.Bundle)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+!!!this api will crash on sdk 16 17 18 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.moire.ultrasonic.activity.UserInformationActivity dummyMainMethod_org_moire_ultrasonic_activity_UserInformationActivity(android.content.Intent)>[]--><org.moire.ultrasonic.activity.SubsonicTabActivity: void onSaveInstanceState(android.os.Bundle)>[]--><net.simonvt.menudrawer.MenuDrawer: android.os.Parcelable saveState()>[]--><net.simonvt.menudrawer.DraggableDrawer: void saveState(android.os.Bundle)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+!!!this api will crash on sdk 16 17 18 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.moire.ultrasonic.activity.SelectArtistActivity dummyMainMethod_org_moire_ultrasonic_activity_SelectArtistActivity(android.content.Intent)>[]--><org.moire.ultrasonic.activity.SubsonicTabActivity: void onSaveInstanceState(android.os.Bundle)>[]--><net.simonvt.menudrawer.MenuDrawer: android.os.Parcelable saveState()>[]--><net.simonvt.menudrawer.DraggableDrawer: void saveState(android.os.Bundle)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+!!!this api will crash on sdk 16 17 18 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.moire.ultrasonic.activity.HelpActivity dummyMainMethod_org_moire_ultrasonic_activity_HelpActivity(android.content.Intent)>[]--><org.moire.ultrasonic.activity.HelpActivity: void onSaveInstanceState(android.os.Bundle)>[]--><net.simonvt.menudrawer.MenuDrawer: android.os.Parcelable saveState()>[]--><net.simonvt.menudrawer.DraggableDrawer: void saveState(android.os.Bundle)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+!!!this api will crash on sdk 16 17 18 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.moire.ultrasonic.activity.BookmarkActivity dummyMainMethod_org_moire_ultrasonic_activity_BookmarkActivity(android.content.Intent)>[]--><org.moire.ultrasonic.activity.SubsonicTabActivity: void onSaveInstanceState(android.os.Bundle)>[]--><net.simonvt.menudrawer.MenuDrawer: android.os.Parcelable saveState()>[]--><net.simonvt.menudrawer.DraggableDrawer: void saveState(android.os.Bundle)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+!!!this api will crash on sdk 16 17 18 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.moire.ultrasonic.activity.MainActivity dummyMainMethod_org_moire_ultrasonic_activity_MainActivity(android.content.Intent)>[]--><org.moire.ultrasonic.activity.SubsonicTabActivity: void onSaveInstanceState(android.os.Bundle)>[]--><net.simonvt.menudrawer.MenuDrawer: android.os.Parcelable saveState()>[]--><net.simonvt.menudrawer.DraggableDrawer: void saveState(android.os.Bundle)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+!!!this api will crash on sdk 16 17 18 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.moire.ultrasonic.activity.LyricsActivity dummyMainMethod_org_moire_ultrasonic_activity_LyricsActivity(android.content.Intent)>[]--><org.moire.ultrasonic.activity.SubsonicTabActivity: void onSaveInstanceState(android.os.Bundle)>[]--><net.simonvt.menudrawer.MenuDrawer: android.os.Parcelable saveState()>[]--><net.simonvt.menudrawer.DraggableDrawer: void saveState(android.os.Bundle)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+!!!this api will crash on sdk 16 17 18 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.moire.ultrasonic.activity.SettingsActivity dummyMainMethod_org_moire_ultrasonic_activity_SettingsActivity(android.content.Intent)>[]--><org.moire.ultrasonic.activity.SubsonicTabActivity: void onSaveInstanceState(android.os.Bundle)>[]--><net.simonvt.menudrawer.MenuDrawer: android.os.Parcelable saveState()>[]--><net.simonvt.menudrawer.DraggableDrawer: void saveState(android.os.Bundle)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 
+Error road: <com.handmark.pulltorefresh.library.PullToRefreshBase: android.os.Parcelable onSaveInstanceState()>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+#1.the call statck between class <com.handmark.pulltorefresh.library.PullToRefreshBase: android.os.Parcelable onSaveInstanceState()> to <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+crashApis:5
+crashApisInMain:3
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 9 Potential Issue API: SDKCheck of <android.provider.MediaStore.Audio: java.lang.String keyFor(java.lang.String)> is checking!!!
+The life time of api is [1,29]
+4796call roads:
+1 Mainhead roads:
+4795 Packageshead roads:
+Roads number exceed, exit!4795
+#################################################
+N 10 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager: android.net.wifi.WifiManager.WifiLock createWifiLock(int,java.lang.String)> is checking!!!
+The life time of api is [3,30]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <org.moire.ultrasonic.util.Util: android.net.wifi.WifiManager$WifiLock createWifiLock(android.content.Context,java.lang.String)>[]--><android.net.wifi.WifiManager: android.net.wifi.WifiManager.WifiLock createWifiLock(int,java.lang.String)>
+#1.the call statck between class <org.moire.ultrasonic.util.Util: android.net.wifi.WifiManager$WifiLock createWifiLock(android.content.Context,java.lang.String)> to <android.net.wifi.WifiManager: android.net.wifi.WifiManager.WifiLock createWifiLock(int,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:6
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 11 Potential Issue API: SDKCheck of <android.media.RemoteControlClient: void setPlaybackState(int,long,float)> is checking!!!
+The life time of api is [18,31]
+4796call roads:
+1 Mainhead roads:
+4795 Packageshead roads:
+Roads number exceed, exit!4795
+#################################################
+N 12 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.lang.Object get(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+2call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.moire.ultrasonic.service.DownloadServiceImpl dummyMainMethod_org_moire_ultrasonic_service_DownloadServiceImpl(android.content.Intent)>[]--><org.moire.ultrasonic.service.DownloadServiceImpl: int onStartCommand(android.content.Intent,int,int)>[]--><org.moire.ultrasonic.service.DownloadServiceLifecycleSupport: void onStart(android.content.Intent)>[]--><android.os.BaseBundle: java.lang.Object get(java.lang.String)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.moire.ultrasonic.receiver.MediaButtonIntentReceiver dummyMainMethod_org_moire_ultrasonic_receiver_MediaButtonIntentReceiver(android.content.Intent)>[]--><org.moire.ultrasonic.receiver.MediaButtonIntentReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><android.os.BaseBundle: java.lang.Object get(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: java.lang.Object get(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <org.moire.ultrasonic.service.DownloadServiceLifecycleSupport$4: void onReceive(android.content.Context,android.content.Intent)>[]--><android.os.BaseBundle: java.lang.Object get(java.lang.String)>
+#1.the call statck between class <org.moire.ultrasonic.service.DownloadServiceLifecycleSupport$4: void onReceive(android.content.Context,android.content.Intent)> to <android.os.BaseBundle: java.lang.Object get(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:7
+crashApisInMain:4
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 13 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager.WifiLock: void release()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <org.moire.ultrasonic.service.DownloadFile$DownloadTask: void execute()>[]--><android.net.wifi.WifiManager.WifiLock: void release()>
+#1.the call statck between class <org.moire.ultrasonic.service.DownloadFile$DownloadTask: void execute()> to <android.net.wifi.WifiManager.WifiLock: void release()>has compatibility isssues！
+-----------------------------------------
+crashApis:8
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 14 Potential Issue API: SDKCheck of <android.os.BaseBundle: boolean getBoolean(java.lang.String)> is checking!!!
+The life time of api is [22,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.moire.ultrasonic.activity.SearchActivity dummyMainMethod_org_moire_ultrasonic_activity_SearchActivity(android.content.Intent)>[]--><org.moire.ultrasonic.activity.SubsonicTabActivity: void onRestoreInstanceState(android.os.Bundle)>[]--><net.simonvt.menudrawer.DraggableDrawer: void restoreState(android.os.Parcelable)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+!!!this api will crash on sdk 16 17 18 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.moire.ultrasonic.activity.SelectAlbumActivity dummyMainMethod_org_moire_ultrasonic_activity_SelectAlbumActivity(android.content.Intent)>[]--><org.moire.ultrasonic.activity.SubsonicTabActivity: void onRestoreInstanceState(android.os.Bundle)>[]--><net.simonvt.menudrawer.DraggableDrawer: void restoreState(android.os.Parcelable)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+!!!this api will crash on sdk 16 17 18 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.moire.ultrasonic.activity.SelectGenreActivity dummyMainMethod_org_moire_ultrasonic_activity_SelectGenreActivity(android.content.Intent)>[]--><org.moire.ultrasonic.activity.SubsonicTabActivity: void onRestoreInstanceState(android.os.Bundle)>[]--><net.simonvt.menudrawer.DraggableDrawer: void restoreState(android.os.Parcelable)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+!!!this api will crash on sdk 16 17 18 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.moire.ultrasonic.activity.DownloadActivity dummyMainMethod_org_moire_ultrasonic_activity_DownloadActivity(android.content.Intent)>[]--><org.moire.ultrasonic.activity.SubsonicTabActivity: void onRestoreInstanceState(android.os.Bundle)>[]--><net.simonvt.menudrawer.DraggableDrawer: void restoreState(android.os.Parcelable)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+!!!this api will crash on sdk 16 17 18 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.moire.ultrasonic.activity.UserInformationActivity dummyMainMethod_org_moire_ultrasonic_activity_UserInformationActivity(android.content.Intent)>[]--><org.moire.ultrasonic.activity.SubsonicTabActivity: void onRestoreInstanceState(android.os.Bundle)>[]--><net.simonvt.menudrawer.DraggableDrawer: void restoreState(android.os.Parcelable)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+!!!this api will crash on sdk 16 17 18 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.moire.ultrasonic.activity.SelectArtistActivity dummyMainMethod_org_moire_ultrasonic_activity_SelectArtistActivity(android.content.Intent)>[]--><org.moire.ultrasonic.activity.SubsonicTabActivity: void onRestoreInstanceState(android.os.Bundle)>[]--><net.simonvt.menudrawer.DraggableDrawer: void restoreState(android.os.Parcelable)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+!!!this api will crash on sdk 16 17 18 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.moire.ultrasonic.activity.HelpActivity dummyMainMethod_org_moire_ultrasonic_activity_HelpActivity(android.content.Intent)>[]--><org.moire.ultrasonic.activity.HelpActivity: void onRestoreInstanceState(android.os.Bundle)>[]--><net.simonvt.menudrawer.DraggableDrawer: void restoreState(android.os.Parcelable)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+!!!this api will crash on sdk 16 17 18 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.moire.ultrasonic.activity.BookmarkActivity dummyMainMethod_org_moire_ultrasonic_activity_BookmarkActivity(android.content.Intent)>[]--><org.moire.ultrasonic.activity.SubsonicTabActivity: void onRestoreInstanceState(android.os.Bundle)>[]--><net.simonvt.menudrawer.DraggableDrawer: void restoreState(android.os.Parcelable)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+!!!this api will crash on sdk 16 17 18 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.moire.ultrasonic.activity.MainActivity dummyMainMethod_org_moire_ultrasonic_activity_MainActivity(android.content.Intent)>[]--><org.moire.ultrasonic.activity.SubsonicTabActivity: void onRestoreInstanceState(android.os.Bundle)>[]--><net.simonvt.menudrawer.DraggableDrawer: void restoreState(android.os.Parcelable)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+!!!this api will crash on sdk 16 17 18 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.moire.ultrasonic.activity.LyricsActivity dummyMainMethod_org_moire_ultrasonic_activity_LyricsActivity(android.content.Intent)>[]--><org.moire.ultrasonic.activity.SubsonicTabActivity: void onRestoreInstanceState(android.os.Bundle)>[]--><net.simonvt.menudrawer.DraggableDrawer: void restoreState(android.os.Parcelable)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+!!!this api will crash on sdk 16 17 18 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.moire.ultrasonic.activity.SettingsActivity dummyMainMethod_org_moire_ultrasonic_activity_SettingsActivity(android.content.Intent)>[]--><org.moire.ultrasonic.activity.SubsonicTabActivity: void onRestoreInstanceState(android.os.Bundle)>[]--><net.simonvt.menudrawer.DraggableDrawer: void restoreState(android.os.Parcelable)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: boolean getBoolean(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:9
+crashApisInMain:5
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 15 Potential Issue API: SDKCheck of <android.view.View: int getLayoutDirection()> is checking!!!
+The life time of api is [17,31]
+4818call roads:
+1 Mainhead roads:
+4817 Packageshead roads:
+Roads number exceed, exit!4817
+#################################################
+N 16 Potential Issue API: SDKCheck of <org.apache.http.conn.ssl.X509HostnameVerifier: void verify(java.lang.String,javax.net.ssl.SSLSocket)> is checking!!!
+The life time of api is [23,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+try
+Good road with try: <org.moire.ultrasonic.service.ssl.SSLSocketFactory: java.net.Socket connectSocket(java.net.Socket,java.lang.String,int,java.net.InetAddress,int,org.apache.http.params.HttpParams)>[]--><org.moire.ultrasonic.service.ssl.SSLSocketFactory: java.net.Socket connectSocket(java.net.Socket,java.net.InetSocketAddress,java.net.InetSocketAddress,org.apache.http.params.HttpParams)>[[try]]--><org.apache.http.conn.ssl.X509HostnameVerifier: void verify(java.lang.String,javax.net.ssl.SSLSocket)>
+One road protect good!
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.moire.ultrasonic.service.ssl.SSLSocketFactory: java.net.Socket createSocket(java.net.Socket,java.lang.String,int,boolean)>[]--><org.moire.ultrasonic.service.ssl.SSLSocketFactory: java.net.Socket createLayeredSocket(java.net.Socket,java.lang.String,int,boolean)>[]--><org.apache.http.conn.ssl.X509HostnameVerifier: void verify(java.lang.String,javax.net.ssl.SSLSocket)>
+#2.the call statck between class <org.moire.ultrasonic.service.ssl.SSLSocketFactory: java.net.Socket createSocket(java.net.Socket,java.lang.String,int,boolean)> to <org.apache.http.conn.ssl.X509HostnameVerifier: void verify(java.lang.String,javax.net.ssl.SSLSocket)>has compatibility isssues！
+-----------------------------------------
+crashApis:10
+containsStatic:false
+containsTry:true
+3call by main package
+-----------------------------------------
+#################################################
+N 17 Potential Issue API: SDKCheck of <android.media.MediaPlayer: void setVolume(float,float)> is checking!!!
+The life time of api is [1,17]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 18 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.moire.ultrasonic.activity.SearchActivity dummyMainMethod_org_moire_ultrasonic_activity_SearchActivity(android.content.Intent)>[]--><org.moire.ultrasonic.util.Util$3: void onAudioFocusChange(int)>[]--><org.moire.ultrasonic.service.DownloadServiceImpl: void setVolume(float)>[]--><android.media.MediaPlayer: void setVolume(float,float)>
+!!!this api will crash on sdk 18 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.moire.ultrasonic.activity.DownloadActivity dummyMainMethod_org_moire_ultrasonic_activity_DownloadActivity(android.content.Intent)>[]--><org.moire.ultrasonic.util.Util$3: void onAudioFocusChange(int)>[]--><org.moire.ultrasonic.service.DownloadServiceImpl: void setVolume(float)>[]--><android.media.MediaPlayer: void setVolume(float,float)>
+!!!this api will crash on sdk 18 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.moire.ultrasonic.receiver.A2dpIntentReceiver dummyMainMethod_org_moire_ultrasonic_receiver_A2dpIntentReceiver(android.content.Intent)>[]--><org.moire.ultrasonic.util.Util$3: void onAudioFocusChange(int)>[]--><org.moire.ultrasonic.service.DownloadServiceImpl: void setVolume(float)>[]--><android.media.MediaPlayer: void setVolume(float,float)>
+!!!this api will crash on sdk 18 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.moire.ultrasonic.service.DownloadServiceImpl dummyMainMethod_org_moire_ultrasonic_service_DownloadServiceImpl(android.content.Intent)>[]--><org.moire.ultrasonic.util.Util$3: void onAudioFocusChange(int)>[]--><org.moire.ultrasonic.service.DownloadServiceImpl: void setVolume(float)>[]--><android.media.MediaPlayer: void setVolume(float,float)>
+!!!this api will crash on sdk 18 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.moire.ultrasonic.activity.BookmarkActivity dummyMainMethod_org_moire_ultrasonic_activity_BookmarkActivity(android.content.Intent)>[]--><org.moire.ultrasonic.util.Util$3: void onAudioFocusChange(int)>[]--><org.moire.ultrasonic.service.DownloadServiceImpl: void setVolume(float)>[]--><android.media.MediaPlayer: void setVolume(float,float)>
+!!!this api will crash on sdk 18 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.moire.ultrasonic.activity.MainActivity dummyMainMethod_org_moire_ultrasonic_activity_MainActivity(android.content.Intent)>[]--><org.moire.ultrasonic.util.Util$3: void onAudioFocusChange(int)>[]--><org.moire.ultrasonic.service.DownloadServiceImpl: void setVolume(float)>[]--><android.media.MediaPlayer: void setVolume(float,float)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.media.MediaPlayer: void setVolume(float,float)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:11
+crashApisInMain:6
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 18 Potential Issue API: SDKCheck of <android.animation.AnimatorSet: void <init>()> is checking!!!
+The life time of api is [24,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 
+Error road: <io.github.douglasjunior.androidSimpleTooltip.SimpleTooltip: void access$4800(io.github.douglasjunior.androidSimpleTooltip.SimpleTooltip)>[]--><io.github.douglasjunior.androidSimpleTooltip.SimpleTooltip: void startAnimation()>[]--><android.animation.AnimatorSet: void <init>()>
+#1.the call statck between class <io.github.douglasjunior.androidSimpleTooltip.SimpleTooltip: void access$4800(io.github.douglasjunior.androidSimpleTooltip.SimpleTooltip)> to <android.animation.AnimatorSet: void <init>()>has compatibility isssues！
+-----------------------------------------
+crashApis:12
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 19 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putInt(java.lang.String,int)> is checking!!!
+The life time of api is [21,31]
+2call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.moire.ultrasonic.activity.ServerSettingsActivity dummyMainMethod_org_moire_ultrasonic_activity_ServerSettingsActivity(android.content.Intent)>[]--><org.moire.ultrasonic.activity.ServerSettingsActivity: void onCreate(android.os.Bundle)>[]--><org.moire.ultrasonic.fragment.ServerSettingsFragment: org.moire.ultrasonic.fragment.ServerSettingsFragment newInstance(int)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.moire.ultrasonic.activity.SelectAlbumActivity dummyMainMethod_org_moire_ultrasonic_activity_SelectAlbumActivity(android.content.Intent)>[]--><org.moire.ultrasonic.activity.SubsonicTabActivity: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.moire.ultrasonic.activity.SearchActivity dummyMainMethod_org_moire_ultrasonic_activity_SearchActivity(android.content.Intent)>[]--><org.moire.ultrasonic.activity.SubsonicTabActivity: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.moire.ultrasonic.activity.SelectGenreActivity dummyMainMethod_org_moire_ultrasonic_activity_SelectGenreActivity(android.content.Intent)>[]--><org.moire.ultrasonic.activity.SubsonicTabActivity: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.moire.ultrasonic.activity.DownloadActivity dummyMainMethod_org_moire_ultrasonic_activity_DownloadActivity(android.content.Intent)>[]--><org.moire.ultrasonic.activity.SubsonicTabActivity: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.moire.ultrasonic.activity.UserInformationActivity dummyMainMethod_org_moire_ultrasonic_activity_UserInformationActivity(android.content.Intent)>[]--><org.moire.ultrasonic.activity.SubsonicTabActivity: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.moire.ultrasonic.activity.SelectArtistActivity dummyMainMethod_org_moire_ultrasonic_activity_SelectArtistActivity(android.content.Intent)>[]--><org.moire.ultrasonic.activity.SubsonicTabActivity: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.moire.ultrasonic.activity.HelpActivity dummyMainMethod_org_moire_ultrasonic_activity_HelpActivity(android.content.Intent)>[]--><org.moire.ultrasonic.activity.HelpActivity: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.moire.ultrasonic.activity.BookmarkActivity dummyMainMethod_org_moire_ultrasonic_activity_BookmarkActivity(android.content.Intent)>[]--><org.moire.ultrasonic.activity.SubsonicTabActivity: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.moire.ultrasonic.activity.MainActivity dummyMainMethod_org_moire_ultrasonic_activity_MainActivity(android.content.Intent)>[]--><org.moire.ultrasonic.activity.SubsonicTabActivity: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.moire.ultrasonic.activity.LyricsActivity dummyMainMethod_org_moire_ultrasonic_activity_LyricsActivity(android.content.Intent)>[]--><org.moire.ultrasonic.activity.SubsonicTabActivity: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.moire.ultrasonic.activity.SettingsActivity dummyMainMethod_org_moire_ultrasonic_activity_SettingsActivity(android.content.Intent)>[]--><org.moire.ultrasonic.activity.SubsonicTabActivity: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.handmark.pulltorefresh.library.PullToRefreshBase: android.os.Parcelable onSaveInstanceState()>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#1.the call statck between class <com.handmark.pulltorefresh.library.PullToRefreshBase: android.os.Parcelable onSaveInstanceState()> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:13
+crashApisInMain:7
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 20 Potential Issue API: SDKCheck of <android.os.BaseBundle: int getInt(java.lang.String,int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.handmark.pulltorefresh.library.PullToRefreshBase: void onRestoreInstanceState(android.os.Parcelable)>[]--><android.os.BaseBundle: int getInt(java.lang.String,int)>
+#1.the call statck between class <com.handmark.pulltorefresh.library.PullToRefreshBase: void onRestoreInstanceState(android.os.Parcelable)> to <android.os.BaseBundle: int getInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:14
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 21 Potential Issue API: SDKCheck of <android.view.View: void onRtlPropertiesChanged(int)> is checking!!!
+The life time of api is [17,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 
+Error road: <net.simonvt.menudrawer.MenuDrawer: void onRtlPropertiesChanged(int)>[]--><android.view.View: void onRtlPropertiesChanged(int)>
+#1.the call statck between class <net.simonvt.menudrawer.MenuDrawer: void onRtlPropertiesChanged(int)> to <android.view.View: void onRtlPropertiesChanged(int)>has compatibility isssues！
+-----------------------------------------
+crashApis:15
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 22 Potential Issue API: SDKCheck of <android.widget.TextView: void setTextAppearance(int)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i1 < 23
+Good road: <io.github.douglasjunior.androidSimpleTooltip.SimpleTooltip$Builder: io.github.douglasjunior.androidSimpleTooltip.SimpleTooltip build()>[]--><io.github.douglasjunior.androidSimpleTooltip.SimpleTooltipUtils: void setTextAppearance(android.widget.TextView,int)>[[-$i1 < 23]]--><android.widget.TextView: void setTextAppearance(int)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 23 Potential Issue API: SDKCheck of <android.net.NetworkInfo: int getType()> is checking!!!
+The life time of api is [1,30]
+4796call roads:
+1 Mainhead roads:
+4795 Packageshead roads:
+Roads number exceed, exit!4795
+#################################################
+N 24 Potential Issue API: SDKCheck of <android.content.Context: android.graphics.drawable.Drawable getDrawable(int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i1 < 23
+Good road: <io.github.douglasjunior.androidSimpleTooltip.SimpleTooltip$Builder: io.github.douglasjunior.androidSimpleTooltip.SimpleTooltip$Builder arrowDrawable(int)>[]--><io.github.douglasjunior.androidSimpleTooltip.SimpleTooltipUtils: android.graphics.drawable.Drawable getDrawable(android.content.Context,int)>[[-$i1 < 23]]--><android.content.Context: android.graphics.drawable.Drawable getDrawable(int)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 25 Potential Issue API: SDKCheck of <android.net.NetworkInfo: boolean isConnected()> is checking!!!
+The life time of api is [1,30]
+4796call roads:
+1 Mainhead roads:
+4795 Packageshead roads:
+Roads number exceed, exit!4795
+#################################################
+N 26 Potential Issue API: SDKCheck of <android.widget.FrameLayout: void onSizeChanged(int,int,int,int)> is checking!!!
+The life time of api is [1,22]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 23 24 25 26 27 28 29 30 31 
+Error road: <net.simonvt.menudrawer.BuildLayerFrameLayout: void onSizeChanged(int,int,int,int)>[]--><android.widget.FrameLayout: void onSizeChanged(int,int,int,int)>
+#1.the call statck between class <net.simonvt.menudrawer.BuildLayerFrameLayout: void onSizeChanged(int,int,int,int)> to <android.widget.FrameLayout: void onSizeChanged(int,int,int,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:16
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 27 Potential Issue API: SDKCheck of <android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)> is checking!!!
+The life time of api is [22,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 
+Error road: <com.handmark.pulltorefresh.library.PullToRefreshBase: void onRestoreInstanceState(android.os.Parcelable)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>
+#1.the call statck between class <com.handmark.pulltorefresh.library.PullToRefreshBase: void onRestoreInstanceState(android.os.Parcelable)> to <android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+crashApis:17
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 28 Potential Issue API: SDKCheck of <android.content.Context: int getColor(int)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i1 < 23
+Good road: <io.github.douglasjunior.androidSimpleTooltip.SimpleTooltip$Builder: io.github.douglasjunior.androidSimpleTooltip.SimpleTooltip build()>[]--><io.github.douglasjunior.androidSimpleTooltip.SimpleTooltipUtils: int getColor(android.content.Context,int)>[[-$i1 < 23]]--><android.content.Context: int getColor(int)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 29 Potential Issue API: SDKCheck of <android.widget.AbsListView: void setSelectionFromTop(int,int)> is checking!!!
+The life time of api is [21,31]
+4801call roads:
+1 Mainhead roads:
+4800 Packageshead roads:
+Roads number exceed, exit!4800
+#################################################
+N 30 Potential Issue API: SDKCheck of <android.widget.CheckedTextView: void setVisibility(int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <org.moire.ultrasonic.view.SongView: void setSong(org.moire.ultrasonic.domain.MusicDirectory$Entry,boolean,boolean,boolean)>[]--><android.widget.CheckedTextView: void setVisibility(int)>
+#1.the call statck between class <org.moire.ultrasonic.view.SongView: void setSong(org.moire.ultrasonic.domain.MusicDirectory$Entry,boolean,boolean,boolean)> to <android.widget.CheckedTextView: void setVisibility(int)>has compatibility isssues！
+-----------------------------------------
+crashApis:18
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 31 Potential Issue API: SDKCheck of <android.media.AudioManager: android.media.AudioDeviceInfo[] getDevices(int)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.moire.ultrasonic.service.DownloadServiceImpl: boolean access$2500(org.moire.ultrasonic.service.DownloadServiceImpl)>[]--><org.moire.ultrasonic.service.DownloadServiceImpl: boolean isHeadphonesPlugged()>[]--><android.media.AudioManager: android.media.AudioDeviceInfo[] getDevices(int)>
+#1.the call statck between class <org.moire.ultrasonic.service.DownloadServiceImpl: boolean access$2500(org.moire.ultrasonic.service.DownloadServiceImpl)> to <android.media.AudioManager: android.media.AudioDeviceInfo[] getDevices(int)>has compatibility isssues！
+-----------------------------------------
+crashApis:19
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 32 Potential Issue API: SDKCheck of <org.apache.http.conn.scheme.HostNameResolver: java.net.InetAddress resolve(java.lang.String)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.moire.ultrasonic.service.ssl.SSLSocketFactory: java.net.Socket connectSocket(java.net.Socket,java.lang.String,int,java.net.InetAddress,int,org.apache.http.params.HttpParams)>[]--><org.apache.http.conn.scheme.HostNameResolver: java.net.InetAddress resolve(java.lang.String)>
+#1.the call statck between class <org.moire.ultrasonic.service.ssl.SSLSocketFactory: java.net.Socket connectSocket(java.net.Socket,java.lang.String,int,java.net.InetAddress,int,org.apache.http.params.HttpParams)> to <org.apache.http.conn.scheme.HostNameResolver: java.net.InetAddress resolve(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:20
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 33 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager.WifiLock: void acquire()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+try
+Good road with try: <org.moire.ultrasonic.service.DownloadFile$DownloadTask: void execute()>[[try]]--><android.net.wifi.WifiManager.WifiLock: void acquire()>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 34 Potential Issue API: SDKCheck of <org.apache.http.conn.ConnectTimeoutException: void <init>(java.lang.String)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.moire.ultrasonic.service.ssl.SSLSocketFactory: java.net.Socket connectSocket(java.net.Socket,java.lang.String,int,java.net.InetAddress,int,org.apache.http.params.HttpParams)>[]--><org.moire.ultrasonic.service.ssl.SSLSocketFactory: java.net.Socket connectSocket(java.net.Socket,java.net.InetSocketAddress,java.net.InetSocketAddress,org.apache.http.params.HttpParams)>[]--><org.apache.http.conn.ConnectTimeoutException: void <init>(java.lang.String)>
+#1.the call statck between class <org.moire.ultrasonic.service.ssl.SSLSocketFactory: java.net.Socket connectSocket(java.net.Socket,java.lang.String,int,java.net.InetAddress,int,org.apache.http.params.HttpParams)> to <org.apache.http.conn.ConnectTimeoutException: void <init>(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:21
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 35 Potential Issue API: SDKCheck of <org.apache.http.params.HttpConnectionParams: int getSoTimeout(org.apache.http.params.HttpParams)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.moire.ultrasonic.service.ssl.SSLSocketFactory: java.net.Socket connectSocket(java.net.Socket,java.lang.String,int,java.net.InetAddress,int,org.apache.http.params.HttpParams)>[]--><org.moire.ultrasonic.service.ssl.SSLSocketFactory: java.net.Socket connectSocket(java.net.Socket,java.net.InetSocketAddress,java.net.InetSocketAddress,org.apache.http.params.HttpParams)>[]--><org.apache.http.params.HttpConnectionParams: int getSoTimeout(org.apache.http.params.HttpParams)>
+#1.the call statck between class <org.moire.ultrasonic.service.ssl.SSLSocketFactory: java.net.Socket connectSocket(java.net.Socket,java.lang.String,int,java.net.InetAddress,int,org.apache.http.params.HttpParams)> to <org.apache.http.params.HttpConnectionParams: int getSoTimeout(org.apache.http.params.HttpParams)>has compatibility isssues！
+-----------------------------------------
+crashApis:22
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 36 Potential Issue API: SDKCheck of <org.apache.http.params.HttpConnectionParams: int getConnectionTimeout(org.apache.http.params.HttpParams)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <org.moire.ultrasonic.service.ssl.SSLSocketFactory: java.net.Socket connectSocket(java.net.Socket,java.lang.String,int,java.net.InetAddress,int,org.apache.http.params.HttpParams)>[]--><org.moire.ultrasonic.service.ssl.SSLSocketFactory: java.net.Socket connectSocket(java.net.Socket,java.net.InetSocketAddress,java.net.InetSocketAddress,org.apache.http.params.HttpParams)>[]--><org.apache.http.params.HttpConnectionParams: int getConnectionTimeout(org.apache.http.params.HttpParams)>
+#1.the call statck between class <org.moire.ultrasonic.service.ssl.SSLSocketFactory: java.net.Socket connectSocket(java.net.Socket,java.lang.String,int,java.net.InetAddress,int,org.apache.http.params.HttpParams)> to <org.apache.http.params.HttpConnectionParams: int getConnectionTimeout(org.apache.http.params.HttpParams)>has compatibility isssues！
+-----------------------------------------
+crashApis:23
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+crashApis numbers:23
+crashApis numbers in main road:7
+On Android Version 16 this app may have error api use(at least): 19 and error api roads: 67
+On Android Version 17 this app may have error api use(at least): 18 and error api roads: 66
+On Android Version 18 this app may have error api use(at least): 19 and error api roads: 72
+On Android Version 19 this app may have error api use(at least): 19 and error api roads: 72
+On Android Version 20 this app may have error api use(at least): 19 and error api roads: 72
+On Android Version 21 this app may have error api use(at least): 13 and error api roads: 39
+On Android Version 22 this app may have error api use(at least): 10 and error api roads: 15
+On Android Version 23 this app may have error api use(at least): 3 and error api roads: 8
+On Android Version 24 this app may have error api use(at least): 2 and error api roads: 7
+On Android Version 25 this app may have error api use(at least): 2 and error api roads: 7
+On Android Version 26 this app may have error api use(at least): 2 and error api roads: 7
+On Android Version 27 this app may have error api use(at least): 2 and error api roads: 7
+On Android Version 28 this app may have error api use(at least): 2 and error api roads: 7
+On Android Version 29 this app may have error api use(at least): 2 and error api roads: 7
+On Android Version 30 this app may have error api use(at least): 2 and error api roads: 7
+On Android Version 31 this app may have error api use(at least): 4 and error api roads: 9

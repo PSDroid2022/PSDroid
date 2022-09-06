@@ -1,0 +1,507 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/Blacklist_Blocker.apk
+Entry Points[com.kaliturin.blacklist.activities.CustomFragmentActivity, com.kaliturin.blacklist.services.SMSProcessService, com.kaliturin.blacklist.activities.MainActivity, com.kaliturin.blacklist.receivers.SMSBroadcastReceiver, com.kaliturin.blacklist.receivers.MMSBroadcastReceiver, com.kaliturin.blacklist.receivers.SMSSendResultBroadcastReceiver, com.kaliturin.blacklist.services.SMSRespondService, com.kaliturin.blacklist.services.BlockEventProcessService, com.kaliturin.blacklist.services.SMSSendService, com.kaliturin.blacklist.receivers.CallBroadcastReceiver]
+FllowDroidcallgraph size:974
+Soot started on Mon Jul 11 01:41:50 CST 2022
+StaticCheck:<com.kaliturin.blacklist.utils.SubscriptionHelper: boolean isAvailable()>$yysi0 < 22
+StaticCheck:<com.kaliturin.blacklist.utils.Permissions: boolean isGranted(android.content.Context,java.lang.String)>$yysi0 >= 23
+StaticCheck:<com.kaliturin.blacklist.utils.Utils: boolean copyTextToClipboard(android.content.Context,java.lang.String)>$yysi0 >= 11
+StaticCheck:<com.kaliturin.blacklist.utils.DefaultSMSAppHelper: boolean isAvailable()>$yysi0 < 19
+Soot finished on Mon Jul 11 01:41:56 CST 2022
+Soot has run for 0 min. 6 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 9
+Declared Target Sdk version is: 25
+Declared Max Sdk version is: -1
+Collected 327 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.telephony.SmsManager: android.telephony.SmsManager getSmsManagerForSubscriptionId(int)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 22
+!!!this api will crash on sdk 22 23 24 25 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.kaliturin.blacklist.services.SMSSendService dummyMainMethod_com_kaliturin_blacklist_services_SMSSendService(android.content.Intent)>[]--><com.kaliturin.blacklist.services.SMSSendService: void onHandleIntent(android.content.Intent)>[]--><com.kaliturin.blacklist.utils.SMSSendHelper: boolean sendSMS(android.content.Context,java.lang.String,java.lang.String)>[]--><com.kaliturin.blacklist.utils.SMSSendHelper: android.telephony.SmsManager getSmsManager(android.content.Context)>[[-$i0 < 22]]--><android.telephony.SmsManager: android.telephony.SmsManager getSmsManagerForSubscriptionId(int)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.telephony.SmsManager: android.telephony.SmsManager getSmsManagerForSubscriptionId(int)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:1
+crashApisInMain:1
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.graphics.drawable.DrawableWrapper: android.graphics.drawable.Drawable getDrawable()> is checking!!!
+The life time of api is [23,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <com.kaliturin.blacklist.adapters.SMSConversationCursorAdapter$ViewHolder: void setModel(android.content.Context,com.kaliturin.blacklist.utils.ContactsAccessHelper$SMSMessage)>[]--><com.kaliturin.blacklist.utils.Utils: void setDrawableColor(android.content.Context,android.graphics.drawable.Drawable,int)>[]--><android.graphics.drawable.DrawableWrapper: android.graphics.drawable.Drawable getDrawable()>
+#1.the call statck between class <com.kaliturin.blacklist.adapters.SMSConversationCursorAdapter$ViewHolder: void setModel(android.content.Context,com.kaliturin.blacklist.utils.ContactsAccessHelper$SMSMessage)> to <android.graphics.drawable.DrawableWrapper: android.graphics.drawable.Drawable getDrawable()>has compatibility isssues！
+-----------------------------------------
+crashApis:2
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.os.BaseBundle: boolean getBoolean(java.lang.String)> is checking!!!
+The life time of api is [22,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 
+Error road: <com.kaliturin.blacklist.fragments.AddContactsFragment: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+#1.the call statck between class <com.kaliturin.blacklist.fragments.AddContactsFragment: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)> to <android.os.BaseBundle: boolean getBoolean(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:3
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.lang.String getString(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+8call roads:
+1 Mainhead roads:
+-$z1 != 0
+$i1 >= 23
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.kaliturin.blacklist.receivers.SMSBroadcastReceiver dummyMainMethod_com_kaliturin_blacklist_receivers_SMSBroadcastReceiver(android.content.Intent)>[]--><com.kaliturin.blacklist.receivers.SMSBroadcastReceiver: void onReceive(android.content.Context,android.content.Intent)>[[-$z1 != 0]]--><com.kaliturin.blacklist.receivers.SMSBroadcastReceiver: java.util.Map extractMessageData(android.content.Context,android.content.Intent,long)>[]--><com.kaliturin.blacklist.receivers.SMSBroadcastReceiver: android.telephony.SmsMessage[] getSMSMessages(android.content.Intent)>[[$i1 >= 23]]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+One road protect good!
+7 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.kaliturin.blacklist.fragments.SMSConversationFragment: void onViewCreated(android.view.View,android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#1.the call statck between class <com.kaliturin.blacklist.fragments.SMSConversationFragment: void onViewCreated(android.view.View,android.os.Bundle)> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.kaliturin.blacklist.fragments.SMSSendFragment: void onViewCreated(android.view.View,android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#2.the call statck between class <com.kaliturin.blacklist.fragments.SMSSendFragment: void onViewCreated(android.view.View,android.os.Bundle)> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.kaliturin.blacklist.fragments.InformationFragment: void onActivityCreated(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#3.the call statck between class <com.kaliturin.blacklist.fragments.InformationFragment: void onActivityCreated(android.os.Bundle)> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.kaliturin.blacklist.fragments.JournalFragment: void onActivityCreated(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#4.the call statck between class <com.kaliturin.blacklist.fragments.JournalFragment: void onActivityCreated(android.os.Bundle)> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.kaliturin.blacklist.fragments.SMSConversationsListFragment: void onActivityCreated(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#5.the call statck between class <com.kaliturin.blacklist.fragments.SMSConversationsListFragment: void onActivityCreated(android.os.Bundle)> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.kaliturin.blacklist.fragments.SettingsFragment: void onActivityCreated(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#6.the call statck between class <com.kaliturin.blacklist.fragments.SettingsFragment: void onActivityCreated(android.os.Bundle)> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.kaliturin.blacklist.fragments.ContactsFragment: void onActivityCreated(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#7.the call statck between class <com.kaliturin.blacklist.fragments.ContactsFragment: void onActivityCreated(android.os.Bundle)> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:4
+containsStatic:false
+containsTry:false
+8call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.provider.Telephony.Sms: java.lang.String getDefaultSmsPackage(android.content.Context)> is checking!!!
+The life time of api is [26,31]
+9call roads:
+1 Mainhead roads:
+-$yysi0 < 19
+!!!this api will crash on sdk 19 20 21 22 23 24 25 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.kaliturin.blacklist.receivers.MMSBroadcastReceiver dummyMainMethod_com_kaliturin_blacklist_receivers_MMSBroadcastReceiver(android.content.Intent)>[]--><com.kaliturin.blacklist.receivers.MMSBroadcastReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><com.kaliturin.blacklist.utils.DefaultSMSAppHelper: boolean isDefault(android.content.Context)>[[-$yysi0 < 19]]--><android.provider.Telephony.Sms: java.lang.String getDefaultSmsPackage(android.content.Context)>
+-$yysi0 < 19
+-$yysi0 < 19
+!!!this api will crash on sdk 19 20 21 22 23 24 25 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.kaliturin.blacklist.services.SMSSendService dummyMainMethod_com_kaliturin_blacklist_services_SMSSendService(android.content.Intent)>[]--><com.kaliturin.blacklist.services.SMSSendService: void onHandleIntent(android.content.Intent)>[]--><com.kaliturin.blacklist.utils.SMSSendHelper: boolean sendSMS(android.content.Context,java.lang.String,java.lang.String)>[]--><com.kaliturin.blacklist.utils.SMSSendHelper: long writeSMSMessageToOutbox(android.content.Context,java.lang.String,java.lang.String)>[[-$yysi0 < 19]]--><com.kaliturin.blacklist.utils.DefaultSMSAppHelper: boolean isDefault(android.content.Context)>[[-$yysi0 < 19]]--><android.provider.Telephony.Sms: java.lang.String getDefaultSmsPackage(android.content.Context)>
+###Multi invoking in one method, need manual check!!!--><com.kaliturin.blacklist.services.SMSProcessService: void onHandleIntent(android.content.Intent)>[[try]]--><com.kaliturin.blacklist.services.SMSProcessService: void processMessageData(android.content.Context,java.util.Map)>[[-$z1 == 0], [-$yysi0 < 19]]--><com.kaliturin.blacklist.utils.DefaultSMSAppHelper: boolean isDefault(android.content.Context)>[[-$yysi0 < 19]]
+###Multi invoking in one method, need manual check!!!--><com.kaliturin.blacklist.services.SMSProcessService: void onHandleIntent(android.content.Intent)>[[try]]--><com.kaliturin.blacklist.services.SMSProcessService: void processMessageData(android.content.Context,java.util.Map)>[[-$z1 == 0]][[-$yysi0 < 19]]--><com.kaliturin.blacklist.utils.DefaultSMSAppHelper: boolean isDefault(android.content.Context)>[[-$yysi0 < 19]]
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.kaliturin.blacklist.services.SMSProcessService dummyMainMethod_com_kaliturin_blacklist_services_SMSProcessService(android.content.Intent)>[]--><com.kaliturin.blacklist.services.SMSProcessService: void onHandleIntent(android.content.Intent)>[[try]]--><com.kaliturin.blacklist.services.SMSProcessService: void processMessageData(android.content.Context,java.util.Map)>[[-$z1 == 0], [-$yysi0 < 19]]--><com.kaliturin.blacklist.utils.DefaultSMSAppHelper: boolean isDefault(android.content.Context)>[[-$yysi0 < 19]]--><android.provider.Telephony.Sms: java.lang.String getDefaultSmsPackage(android.content.Context)>
+One road protect good!
+-$yysi0 < 19
+!!!this api will crash on sdk 19 20 21 22 23 24 25 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.kaliturin.blacklist.receivers.SMSBroadcastReceiver dummyMainMethod_com_kaliturin_blacklist_receivers_SMSBroadcastReceiver(android.content.Intent)>[]--><com.kaliturin.blacklist.receivers.SMSBroadcastReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><com.kaliturin.blacklist.utils.DefaultSMSAppHelper: boolean isDefault(android.content.Context)>[[-$yysi0 < 19]]--><android.provider.Telephony.Sms: java.lang.String getDefaultSmsPackage(android.content.Context)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.provider.Telephony.Sms: java.lang.String getDefaultSmsPackage(android.content.Context)>has compatibility isssues！
+-----------------------------------------
+8 Packageshead roads:
+-$yysi0 < 19
+!!!this api will crash on sdk 19 20 21 22 23 24 25 
+Error road: <com.kaliturin.blacklist.fragments.SettingsFragment: void onViewCreated(android.view.View,android.os.Bundle)>[]--><com.kaliturin.blacklist.fragments.SettingsFragment: void loadListViewItems(int)>[]--><com.kaliturin.blacklist.utils.DefaultSMSAppHelper: boolean isDefault(android.content.Context)>[[-$yysi0 < 19]]--><android.provider.Telephony.Sms: java.lang.String getDefaultSmsPackage(android.content.Context)>
+#1.the call statck between class <com.kaliturin.blacklist.fragments.SettingsFragment: void onViewCreated(android.view.View,android.os.Bundle)> to <android.provider.Telephony.Sms: java.lang.String getDefaultSmsPackage(android.content.Context)>has compatibility isssues！
+-----------------------------------------
+-$yysi0 < 19
+!!!this api will crash on sdk 19 20 21 22 23 24 25 
+Error road: <com.kaliturin.blacklist.fragments.SettingsFragment: void onActivityResult(int,int,android.content.Intent)>[]--><com.kaliturin.blacklist.fragments.SettingsFragment: void reloadListViewItems()>[]--><com.kaliturin.blacklist.fragments.SettingsFragment: void loadListViewItems(int)>[]--><com.kaliturin.blacklist.utils.DefaultSMSAppHelper: boolean isDefault(android.content.Context)>[[-$yysi0 < 19]]--><android.provider.Telephony.Sms: java.lang.String getDefaultSmsPackage(android.content.Context)>
+#2.the call statck between class <com.kaliturin.blacklist.fragments.SettingsFragment: void onActivityResult(int,int,android.content.Intent)> to <android.provider.Telephony.Sms: java.lang.String getDefaultSmsPackage(android.content.Context)>has compatibility isssues！
+-----------------------------------------
+-$yysi0 < 19
+!!!this api will crash on sdk 19 20 21 22 23 24 25 
+Error road: <com.kaliturin.blacklist.fragments.SettingsFragment: void access$900(com.kaliturin.blacklist.fragments.SettingsFragment)>[]--><com.kaliturin.blacklist.fragments.SettingsFragment: void reloadListViewItems()>[]--><com.kaliturin.blacklist.fragments.SettingsFragment: void loadListViewItems(int)>[]--><com.kaliturin.blacklist.utils.DefaultSMSAppHelper: boolean isDefault(android.content.Context)>[[-$yysi0 < 19]]--><android.provider.Telephony.Sms: java.lang.String getDefaultSmsPackage(android.content.Context)>
+#3.the call statck between class <com.kaliturin.blacklist.fragments.SettingsFragment: void access$900(com.kaliturin.blacklist.fragments.SettingsFragment)> to <android.provider.Telephony.Sms: java.lang.String getDefaultSmsPackage(android.content.Context)>has compatibility isssues！
+-----------------------------------------
+-$yysi0 < 19
+!!!this api will crash on sdk 19 20 21 22 23 24 25 
+Error road: <com.kaliturin.blacklist.fragments.ContactsFragment: void onViewCreated(android.view.View,android.os.Bundle)>[]--><com.kaliturin.blacklist.fragments.ContactsFragment: void showDefaultSMSAppPrompt()>[]--><com.kaliturin.blacklist.utils.DefaultSMSAppHelper: boolean isDefault(android.content.Context)>[[-$yysi0 < 19]]--><android.provider.Telephony.Sms: java.lang.String getDefaultSmsPackage(android.content.Context)>
+#4.the call statck between class <com.kaliturin.blacklist.fragments.ContactsFragment: void onViewCreated(android.view.View,android.os.Bundle)> to <android.provider.Telephony.Sms: java.lang.String getDefaultSmsPackage(android.content.Context)>has compatibility isssues！
+-----------------------------------------
+-$yysi0 < 19
+!!!this api will crash on sdk 19 20 21 22 23 24 25 
+Error road: <com.kaliturin.blacklist.utils.DefaultSMSAppHelper: void updateState(android.content.Context)>[]--><com.kaliturin.blacklist.utils.DefaultSMSAppHelper: boolean isDefault(android.content.Context)>[[-$yysi0 < 19]]--><android.provider.Telephony.Sms: java.lang.String getDefaultSmsPackage(android.content.Context)>
+#5.the call statck between class <com.kaliturin.blacklist.utils.DefaultSMSAppHelper: void updateState(android.content.Context)> to <android.provider.Telephony.Sms: java.lang.String getDefaultSmsPackage(android.content.Context)>has compatibility isssues！
+-----------------------------------------
+-$yysi0 < 19
+-$yysi0 < 19
+!!!this api will crash on sdk 19 20 21 22 23 24 25 
+Error road: <com.kaliturin.blacklist.fragments.SettingsFragment$1: void onClick(android.view.View)>[]--><com.kaliturin.blacklist.utils.DefaultSMSAppHelper: void askForDefaultAppChange(android.support.v4.app.Fragment,int)>[[-$yysi0 < 19]]--><com.kaliturin.blacklist.utils.DefaultSMSAppHelper: boolean isDefault(android.content.Context)>[[-$yysi0 < 19]]--><android.provider.Telephony.Sms: java.lang.String getDefaultSmsPackage(android.content.Context)>
+#6.the call statck between class <com.kaliturin.blacklist.fragments.SettingsFragment$1: void onClick(android.view.View)> to <android.provider.Telephony.Sms: java.lang.String getDefaultSmsPackage(android.content.Context)>has compatibility isssues！
+-----------------------------------------
+-$yysi0 < 19
+!!!this api will crash on sdk 19 20 21 22 23 24 25 
+Error road: <com.kaliturin.blacklist.fragments.SMSConversationsListFragment$OnRowLongClickListener$1: void onClick(android.view.View)>[]--><com.kaliturin.blacklist.utils.DefaultSMSAppHelper: boolean isDefault(android.content.Context)>[[-$yysi0 < 19]]--><android.provider.Telephony.Sms: java.lang.String getDefaultSmsPackage(android.content.Context)>
+#7.the call statck between class <com.kaliturin.blacklist.fragments.SMSConversationsListFragment$OnRowLongClickListener$1: void onClick(android.view.View)> to <android.provider.Telephony.Sms: java.lang.String getDefaultSmsPackage(android.content.Context)>has compatibility isssues！
+-----------------------------------------
+-$yysi0 < 19
+!!!this api will crash on sdk 19 20 21 22 23 24 25 
+Error road: <com.kaliturin.blacklist.fragments.SMSConversationFragment$RowOnLongClickListener$2: void onClick(android.view.View)>[]--><com.kaliturin.blacklist.utils.DefaultSMSAppHelper: boolean isDefault(android.content.Context)>[[-$yysi0 < 19]]--><android.provider.Telephony.Sms: java.lang.String getDefaultSmsPackage(android.content.Context)>
+#8.the call statck between class <com.kaliturin.blacklist.fragments.SMSConversationFragment$RowOnLongClickListener$2: void onClick(android.view.View)> to <android.provider.Telephony.Sms: java.lang.String getDefaultSmsPackage(android.content.Context)>has compatibility isssues！
+-----------------------------------------
+crashApis:5
+crashApisInMain:2
+containsStatic:true
+containsTry:true
+9call by main package
+-----------------------------------------
+#################################################
+N 5 Potential Issue API: SDKCheck of <android.os.BaseBundle: int getInt(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+4call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.kaliturin.blacklist.activities.MainActivity dummyMainMethod_com_kaliturin_blacklist_activities_MainActivity(android.content.Intent)>[]--><com.kaliturin.blacklist.activities.MainActivity: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+3 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.kaliturin.blacklist.fragments.SMSConversationFragment: void onViewCreated(android.view.View,android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#1.the call statck between class <com.kaliturin.blacklist.fragments.SMSConversationFragment: void onViewCreated(android.view.View,android.os.Bundle)> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.kaliturin.blacklist.fragments.AddContactsFragment: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#2.the call statck between class <com.kaliturin.blacklist.fragments.AddContactsFragment: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.kaliturin.blacklist.fragments.SMSConversationFragment: void access$200(com.kaliturin.blacklist.fragments.SMSConversationFragment,int,int)>[]--><com.kaliturin.blacklist.fragments.SMSConversationFragment: void loadListViewItems(int,int)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#3.the call statck between class <com.kaliturin.blacklist.fragments.SMSConversationFragment: void access$200(com.kaliturin.blacklist.fragments.SMSConversationFragment,int,int)> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:6
+crashApisInMain:3
+containsStatic:false
+containsTry:false
+4call by main package
+-----------------------------------------
+#################################################
+N 6 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putInt(java.lang.String,int)> is checking!!!
+The life time of api is [21,31]
+9call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.kaliturin.blacklist.activities.MainActivity dummyMainMethod_com_kaliturin_blacklist_activities_MainActivity(android.content.Intent)>[]--><com.kaliturin.blacklist.activities.MainActivity: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+8 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.kaliturin.blacklist.fragments.ContactsFragment: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#1.the call statck between class <com.kaliturin.blacklist.fragments.ContactsFragment: void onSaveInstanceState(android.os.Bundle)> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.kaliturin.blacklist.fragments.SMSConversationsListFragment: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#2.the call statck between class <com.kaliturin.blacklist.fragments.SMSConversationsListFragment: void onSaveInstanceState(android.os.Bundle)> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.kaliturin.blacklist.fragments.JournalFragment: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#3.the call statck between class <com.kaliturin.blacklist.fragments.JournalFragment: void onSaveInstanceState(android.os.Bundle)> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.kaliturin.blacklist.fragments.SMSConversationsListFragment$OnRowClickListener: void onClick(android.view.View)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#4.the call statck between class <com.kaliturin.blacklist.fragments.SMSConversationsListFragment$OnRowClickListener: void onClick(android.view.View)> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.kaliturin.blacklist.fragments.SettingsFragment: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#5.the call statck between class <com.kaliturin.blacklist.fragments.SettingsFragment: void onSaveInstanceState(android.os.Bundle)> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.kaliturin.blacklist.fragments.ContactsFragment: void showAddContactsActivity(java.lang.String,com.kaliturin.blacklist.utils.ContactsAccessHelper$ContactSourceType,int)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#6.the call statck between class <com.kaliturin.blacklist.fragments.ContactsFragment: void showAddContactsActivity(java.lang.String,com.kaliturin.blacklist.utils.ContactsAccessHelper$ContactSourceType,int)> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.kaliturin.blacklist.fragments.ContactsFragment: void access$800(com.kaliturin.blacklist.fragments.ContactsFragment,long)>[]--><com.kaliturin.blacklist.fragments.ContactsFragment: void editContact(long)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#7.the call statck between class <com.kaliturin.blacklist.fragments.ContactsFragment: void access$800(com.kaliturin.blacklist.fragments.ContactsFragment,long)> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.kaliturin.blacklist.fragments.InformationFragment: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#8.the call statck between class <com.kaliturin.blacklist.fragments.InformationFragment: void onSaveInstanceState(android.os.Bundle)> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:7
+crashApisInMain:4
+containsStatic:false
+containsTry:false
+9call by main package
+-----------------------------------------
+#################################################
+N 7 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)> is checking!!!
+The life time of api is [21,31]
+4call roads:
+1 Mainhead roads:
+$i0 >= 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.kaliturin.blacklist.activities.MainActivity dummyMainMethod_com_kaliturin_blacklist_activities_MainActivity(android.content.Intent)>[]--><com.kaliturin.blacklist.activities.MainActivity: void onCreate(android.os.Bundle)>[[$i0 >= 21]]--><com.kaliturin.blacklist.activities.MainActivity: void showSendSMSActivity()>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+One road protect good!
+3 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.kaliturin.blacklist.fragments.SMSConversationFragment$4: boolean onMenuItemClick(android.view.MenuItem)>[]--><com.kaliturin.blacklist.fragments.SMSConversationFragment: void openSMSSendActivity(java.lang.String,java.lang.String,java.lang.String)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#1.the call statck between class <com.kaliturin.blacklist.fragments.SMSConversationFragment$4: boolean onMenuItemClick(android.view.MenuItem)> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.kaliturin.blacklist.fragments.SMSConversationFragment$RowOnLongClickListener$3: void onClick(android.view.View)>[]--><com.kaliturin.blacklist.fragments.SMSConversationFragment: void openSMSSendActivity(java.lang.String,java.lang.String,java.lang.String)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#2.the call statck between class <com.kaliturin.blacklist.fragments.SMSConversationFragment$RowOnLongClickListener$3: void onClick(android.view.View)> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.kaliturin.blacklist.fragments.SMSConversationsListFragment$OnRowClickListener: void onClick(android.view.View)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#3.the call statck between class <com.kaliturin.blacklist.fragments.SMSConversationsListFragment$OnRowClickListener: void onClick(android.view.View)> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:8
+containsStatic:false
+containsTry:false
+4call by main package
+-----------------------------------------
+#################################################
+N 8 Potential Issue API: SDKCheck of <android.telephony.SubscriptionInfo: java.lang.CharSequence getDisplayName()> is checking!!!
+The life time of api is [22,31]
+4call roads:
+0 Mainhead roads:
+4 Packageshead roads:
+###Multi invoking in one method, need manual check!!!--><com.kaliturin.blacklist.fragments.SettingsFragment: void loadListViewItems(int)>[[-$yysi0 < 22], [$yysi0 < 19]]--><com.kaliturin.blacklist.fragments.SettingsFragment: java.lang.String getCurrentSimName()>[]--><com.kaliturin.blacklist.utils.SubscriptionHelper: java.lang.String getCurrentSubscriptionName(android.content.Context)>[[-$i0 < 22]]
+###Multi invoking in one method, need manual check!!!--><com.kaliturin.blacklist.fragments.SettingsFragment: void loadListViewItems(int)>[[-$yysi0 < 22]][[$yysi0 < 19]]--><com.kaliturin.blacklist.fragments.SettingsFragment: java.lang.String getCurrentSimName()>[]--><com.kaliturin.blacklist.utils.SubscriptionHelper: java.lang.String getCurrentSubscriptionName(android.content.Context)>[[-$i0 < 22]]
+-$yysi0 < 22
+$yysi0 < 19
+-$i0 < 22
+Good road: <com.kaliturin.blacklist.fragments.SettingsFragment: void onViewCreated(android.view.View,android.os.Bundle)>[]--><com.kaliturin.blacklist.fragments.SettingsFragment: void loadListViewItems(int)>[[-$yysi0 < 22], [$yysi0 < 19]]--><com.kaliturin.blacklist.fragments.SettingsFragment: java.lang.String getCurrentSimName()>[]--><com.kaliturin.blacklist.utils.SubscriptionHelper: java.lang.String getCurrentSubscriptionName(android.content.Context)>[[-$i0 < 22]]--><android.telephony.SubscriptionInfo: java.lang.CharSequence getDisplayName()>
+One road protect good!
+###Multi invoking in one method, need manual check!!!--><com.kaliturin.blacklist.fragments.SettingsFragment: void loadListViewItems(int)>[[-$yysi0 < 22], [$yysi0 < 19]]--><com.kaliturin.blacklist.fragments.SettingsFragment: java.lang.String getCurrentSimName()>[]--><com.kaliturin.blacklist.utils.SubscriptionHelper: java.lang.String getCurrentSubscriptionName(android.content.Context)>[[-$i0 < 22]]
+###Multi invoking in one method, need manual check!!!--><com.kaliturin.blacklist.fragments.SettingsFragment: void loadListViewItems(int)>[[-$yysi0 < 22]][[$yysi0 < 19]]--><com.kaliturin.blacklist.fragments.SettingsFragment: java.lang.String getCurrentSimName()>[]--><com.kaliturin.blacklist.utils.SubscriptionHelper: java.lang.String getCurrentSubscriptionName(android.content.Context)>[[-$i0 < 22]]
+-$yysi0 < 22
+$yysi0 < 19
+-$i0 < 22
+Good road: <com.kaliturin.blacklist.fragments.SettingsFragment: void onActivityResult(int,int,android.content.Intent)>[]--><com.kaliturin.blacklist.fragments.SettingsFragment: void reloadListViewItems()>[]--><com.kaliturin.blacklist.fragments.SettingsFragment: void loadListViewItems(int)>[[-$yysi0 < 22], [$yysi0 < 19]]--><com.kaliturin.blacklist.fragments.SettingsFragment: java.lang.String getCurrentSimName()>[]--><com.kaliturin.blacklist.utils.SubscriptionHelper: java.lang.String getCurrentSubscriptionName(android.content.Context)>[[-$i0 < 22]]--><android.telephony.SubscriptionInfo: java.lang.CharSequence getDisplayName()>
+One road protect good!
+-$i0 < 22
+Good road: <com.kaliturin.blacklist.fragments.SettingsFragment: void access$000(com.kaliturin.blacklist.fragments.SettingsFragment)>[]--><com.kaliturin.blacklist.fragments.SettingsFragment: void showSimChoosingDialog()>[]--><com.kaliturin.blacklist.utils.SubscriptionHelper: java.lang.String getName(android.telephony.SubscriptionInfo)>[[-$i0 < 22]]--><android.telephony.SubscriptionInfo: java.lang.CharSequence getDisplayName()>
+One road protect good!
+###Multi invoking in one method, need manual check!!!--><com.kaliturin.blacklist.fragments.SettingsFragment: void loadListViewItems(int)>[[-$yysi0 < 22], [$yysi0 < 19]]--><com.kaliturin.blacklist.fragments.SettingsFragment: java.lang.String getCurrentSimName()>[]--><com.kaliturin.blacklist.utils.SubscriptionHelper: java.lang.String getCurrentSubscriptionName(android.content.Context)>[[-$i0 < 22]]
+###Multi invoking in one method, need manual check!!!--><com.kaliturin.blacklist.fragments.SettingsFragment: void loadListViewItems(int)>[[-$yysi0 < 22]][[$yysi0 < 19]]--><com.kaliturin.blacklist.fragments.SettingsFragment: java.lang.String getCurrentSimName()>[]--><com.kaliturin.blacklist.utils.SubscriptionHelper: java.lang.String getCurrentSubscriptionName(android.content.Context)>[[-$i0 < 22]]
+-$yysi0 < 22
+$yysi0 < 19
+-$i0 < 22
+Good road: <com.kaliturin.blacklist.fragments.SettingsFragment: void access$900(com.kaliturin.blacklist.fragments.SettingsFragment)>[]--><com.kaliturin.blacklist.fragments.SettingsFragment: void reloadListViewItems()>[]--><com.kaliturin.blacklist.fragments.SettingsFragment: void loadListViewItems(int)>[[-$yysi0 < 22], [$yysi0 < 19]]--><com.kaliturin.blacklist.fragments.SettingsFragment: java.lang.String getCurrentSimName()>[]--><com.kaliturin.blacklist.utils.SubscriptionHelper: java.lang.String getCurrentSubscriptionName(android.content.Context)>[[-$i0 < 22]]--><android.telephony.SubscriptionInfo: java.lang.CharSequence getDisplayName()>
+One road protect good!
+containsStatic:true
+containsTry:false
+5call by main package
+-----------------------------------------
+#################################################
+N 9 Potential Issue API: SDKCheck of <android.os.BaseBundle: int getInt(java.lang.String,int)> is checking!!!
+The life time of api is [21,31]
+6call roads:
+0 Mainhead roads:
+6 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.kaliturin.blacklist.fragments.InformationFragment: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String,int)>
+#1.the call statck between class <com.kaliturin.blacklist.fragments.InformationFragment: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)> to <android.os.BaseBundle: int getInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.kaliturin.blacklist.fragments.JournalFragment: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String,int)>
+#2.the call statck between class <com.kaliturin.blacklist.fragments.JournalFragment: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)> to <android.os.BaseBundle: int getInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.kaliturin.blacklist.fragments.AddOrEditContactFragment: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String,int)>
+#3.the call statck between class <com.kaliturin.blacklist.fragments.AddOrEditContactFragment: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)> to <android.os.BaseBundle: int getInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.kaliturin.blacklist.fragments.SettingsFragment: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String,int)>
+#4.the call statck between class <com.kaliturin.blacklist.fragments.SettingsFragment: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)> to <android.os.BaseBundle: int getInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.kaliturin.blacklist.fragments.ContactsFragment: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String,int)>
+#5.the call statck between class <com.kaliturin.blacklist.fragments.ContactsFragment: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)> to <android.os.BaseBundle: int getInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.kaliturin.blacklist.fragments.SMSConversationsListFragment: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String,int)>
+#6.the call statck between class <com.kaliturin.blacklist.fragments.SMSConversationsListFragment: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)> to <android.os.BaseBundle: int getInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:9
+containsStatic:false
+containsTry:false
+7call by main package
+-----------------------------------------
+#################################################
+N 10 Potential Issue API: SDKCheck of <android.telephony.SubscriptionInfo: int getSubscriptionId()> is checking!!!
+The life time of api is [22,31]
+5call roads:
+1 Mainhead roads:
+-$i0 < 22
+-$i0 < 22
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.kaliturin.blacklist.services.SMSSendService dummyMainMethod_com_kaliturin_blacklist_services_SMSSendService(android.content.Intent)>[]--><com.kaliturin.blacklist.services.SMSSendService: void onHandleIntent(android.content.Intent)>[]--><com.kaliturin.blacklist.utils.SMSSendHelper: boolean sendSMS(android.content.Context,java.lang.String,java.lang.String)>[]--><com.kaliturin.blacklist.utils.SMSSendHelper: android.telephony.SmsManager getSmsManager(android.content.Context)>[[-$i0 < 22]]--><com.kaliturin.blacklist.utils.SubscriptionHelper: java.lang.Integer getCurrentSubscriptionId(android.content.Context)>[[-$i0 < 22]]--><android.telephony.SubscriptionInfo: int getSubscriptionId()>
+One road protect good!
+4 Packageshead roads:
+###Multi invoking in one method, need manual check!!!--><com.kaliturin.blacklist.fragments.SettingsFragment: void loadListViewItems(int)>[[-$yysi0 < 22], [$yysi0 < 19]]--><com.kaliturin.blacklist.fragments.SettingsFragment: java.lang.String getCurrentSimName()>[]--><com.kaliturin.blacklist.utils.SubscriptionHelper: java.lang.String getCurrentSubscriptionName(android.content.Context)>[[-$i0 < 22]]--><com.kaliturin.blacklist.utils.SubscriptionHelper: android.telephony.SubscriptionInfo getCurrentSubscription(android.content.Context)>[]--><com.kaliturin.blacklist.utils.SubscriptionHelper: android.telephony.SubscriptionInfo getSubscriptionById(android.content.Context,int)>[[-$i1 < 22]]
+###Multi invoking in one method, need manual check!!!--><com.kaliturin.blacklist.fragments.SettingsFragment: void loadListViewItems(int)>[[-$yysi0 < 22]][[$yysi0 < 19]]--><com.kaliturin.blacklist.fragments.SettingsFragment: java.lang.String getCurrentSimName()>[]--><com.kaliturin.blacklist.utils.SubscriptionHelper: java.lang.String getCurrentSubscriptionName(android.content.Context)>[[-$i0 < 22]]--><com.kaliturin.blacklist.utils.SubscriptionHelper: android.telephony.SubscriptionInfo getCurrentSubscription(android.content.Context)>[]--><com.kaliturin.blacklist.utils.SubscriptionHelper: android.telephony.SubscriptionInfo getSubscriptionById(android.content.Context,int)>[[-$i1 < 22]]
+-$yysi0 < 22
+$yysi0 < 19
+-$i0 < 22
+-$i1 < 22
+Good road: <com.kaliturin.blacklist.fragments.SettingsFragment: void onViewCreated(android.view.View,android.os.Bundle)>[]--><com.kaliturin.blacklist.fragments.SettingsFragment: void loadListViewItems(int)>[[-$yysi0 < 22], [$yysi0 < 19]]--><com.kaliturin.blacklist.fragments.SettingsFragment: java.lang.String getCurrentSimName()>[]--><com.kaliturin.blacklist.utils.SubscriptionHelper: java.lang.String getCurrentSubscriptionName(android.content.Context)>[[-$i0 < 22]]--><com.kaliturin.blacklist.utils.SubscriptionHelper: android.telephony.SubscriptionInfo getCurrentSubscription(android.content.Context)>[]--><com.kaliturin.blacklist.utils.SubscriptionHelper: android.telephony.SubscriptionInfo getSubscriptionById(android.content.Context,int)>[[-$i1 < 22]]--><android.telephony.SubscriptionInfo: int getSubscriptionId()>
+One road protect good!
+###Multi invoking in one method, need manual check!!!--><com.kaliturin.blacklist.fragments.SettingsFragment: void loadListViewItems(int)>[[-$yysi0 < 22], [$yysi0 < 19]]--><com.kaliturin.blacklist.fragments.SettingsFragment: java.lang.String getCurrentSimName()>[]--><com.kaliturin.blacklist.utils.SubscriptionHelper: java.lang.String getCurrentSubscriptionName(android.content.Context)>[[-$i0 < 22]]--><com.kaliturin.blacklist.utils.SubscriptionHelper: android.telephony.SubscriptionInfo getCurrentSubscription(android.content.Context)>[]--><com.kaliturin.blacklist.utils.SubscriptionHelper: android.telephony.SubscriptionInfo getSubscriptionById(android.content.Context,int)>[[-$i1 < 22]]
+###Multi invoking in one method, need manual check!!!--><com.kaliturin.blacklist.fragments.SettingsFragment: void loadListViewItems(int)>[[-$yysi0 < 22]][[$yysi0 < 19]]--><com.kaliturin.blacklist.fragments.SettingsFragment: java.lang.String getCurrentSimName()>[]--><com.kaliturin.blacklist.utils.SubscriptionHelper: java.lang.String getCurrentSubscriptionName(android.content.Context)>[[-$i0 < 22]]--><com.kaliturin.blacklist.utils.SubscriptionHelper: android.telephony.SubscriptionInfo getCurrentSubscription(android.content.Context)>[]--><com.kaliturin.blacklist.utils.SubscriptionHelper: android.telephony.SubscriptionInfo getSubscriptionById(android.content.Context,int)>[[-$i1 < 22]]
+-$yysi0 < 22
+$yysi0 < 19
+-$i0 < 22
+-$i1 < 22
+Good road: <com.kaliturin.blacklist.fragments.SettingsFragment: void onActivityResult(int,int,android.content.Intent)>[]--><com.kaliturin.blacklist.fragments.SettingsFragment: void reloadListViewItems()>[]--><com.kaliturin.blacklist.fragments.SettingsFragment: void loadListViewItems(int)>[[-$yysi0 < 22], [$yysi0 < 19]]--><com.kaliturin.blacklist.fragments.SettingsFragment: java.lang.String getCurrentSimName()>[]--><com.kaliturin.blacklist.utils.SubscriptionHelper: java.lang.String getCurrentSubscriptionName(android.content.Context)>[[-$i0 < 22]]--><com.kaliturin.blacklist.utils.SubscriptionHelper: android.telephony.SubscriptionInfo getCurrentSubscription(android.content.Context)>[]--><com.kaliturin.blacklist.utils.SubscriptionHelper: android.telephony.SubscriptionInfo getSubscriptionById(android.content.Context,int)>[[-$i1 < 22]]--><android.telephony.SubscriptionInfo: int getSubscriptionId()>
+One road protect good!
+-$i0 < 22
+Good road: <com.kaliturin.blacklist.fragments.SettingsFragment$8: void onClick(android.view.View)>[]--><com.kaliturin.blacklist.utils.SubscriptionHelper: java.lang.Integer getId(android.telephony.SubscriptionInfo)>[[-$i0 < 22]]--><android.telephony.SubscriptionInfo: int getSubscriptionId()>
+One road protect good!
+###Multi invoking in one method, need manual check!!!--><com.kaliturin.blacklist.fragments.SettingsFragment: void loadListViewItems(int)>[[-$yysi0 < 22], [$yysi0 < 19]]--><com.kaliturin.blacklist.fragments.SettingsFragment: java.lang.String getCurrentSimName()>[]--><com.kaliturin.blacklist.utils.SubscriptionHelper: java.lang.String getCurrentSubscriptionName(android.content.Context)>[[-$i0 < 22]]--><com.kaliturin.blacklist.utils.SubscriptionHelper: android.telephony.SubscriptionInfo getCurrentSubscription(android.content.Context)>[]--><com.kaliturin.blacklist.utils.SubscriptionHelper: android.telephony.SubscriptionInfo getSubscriptionById(android.content.Context,int)>[[-$i1 < 22]]
+###Multi invoking in one method, need manual check!!!--><com.kaliturin.blacklist.fragments.SettingsFragment: void loadListViewItems(int)>[[-$yysi0 < 22]][[$yysi0 < 19]]--><com.kaliturin.blacklist.fragments.SettingsFragment: java.lang.String getCurrentSimName()>[]--><com.kaliturin.blacklist.utils.SubscriptionHelper: java.lang.String getCurrentSubscriptionName(android.content.Context)>[[-$i0 < 22]]--><com.kaliturin.blacklist.utils.SubscriptionHelper: android.telephony.SubscriptionInfo getCurrentSubscription(android.content.Context)>[]--><com.kaliturin.blacklist.utils.SubscriptionHelper: android.telephony.SubscriptionInfo getSubscriptionById(android.content.Context,int)>[[-$i1 < 22]]
+-$yysi0 < 22
+$yysi0 < 19
+-$i0 < 22
+-$i1 < 22
+Good road: <com.kaliturin.blacklist.fragments.SettingsFragment: void access$900(com.kaliturin.blacklist.fragments.SettingsFragment)>[]--><com.kaliturin.blacklist.fragments.SettingsFragment: void reloadListViewItems()>[]--><com.kaliturin.blacklist.fragments.SettingsFragment: void loadListViewItems(int)>[[-$yysi0 < 22], [$yysi0 < 19]]--><com.kaliturin.blacklist.fragments.SettingsFragment: java.lang.String getCurrentSimName()>[]--><com.kaliturin.blacklist.utils.SubscriptionHelper: java.lang.String getCurrentSubscriptionName(android.content.Context)>[[-$i0 < 22]]--><com.kaliturin.blacklist.utils.SubscriptionHelper: android.telephony.SubscriptionInfo getCurrentSubscription(android.content.Context)>[]--><com.kaliturin.blacklist.utils.SubscriptionHelper: android.telephony.SubscriptionInfo getSubscriptionById(android.content.Context,int)>[[-$i1 < 22]]--><android.telephony.SubscriptionInfo: int getSubscriptionId()>
+One road protect good!
+containsStatic:true
+containsTry:false
+5call by main package
+-----------------------------------------
+#################################################
+N 11 Potential Issue API: SDKCheck of <android.telephony.SmsMessage: android.telephony.SmsMessage createFromPdu(byte[],java.lang.String)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+1 Mainhead roads:
+-$z1 != 0
+$i1 >= 23
+!!!this api will crash on sdk 23 24 25 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.kaliturin.blacklist.receivers.SMSBroadcastReceiver dummyMainMethod_com_kaliturin_blacklist_receivers_SMSBroadcastReceiver(android.content.Intent)>[]--><com.kaliturin.blacklist.receivers.SMSBroadcastReceiver: void onReceive(android.content.Context,android.content.Intent)>[[-$z1 != 0]]--><com.kaliturin.blacklist.receivers.SMSBroadcastReceiver: java.util.Map extractMessageData(android.content.Context,android.content.Intent,long)>[]--><com.kaliturin.blacklist.receivers.SMSBroadcastReceiver: android.telephony.SmsMessage[] getSMSMessages(android.content.Intent)>[[$i1 >= 23]]--><android.telephony.SmsMessage: android.telephony.SmsMessage createFromPdu(byte[],java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.telephony.SmsMessage: android.telephony.SmsMessage createFromPdu(byte[],java.lang.String)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:10
+crashApisInMain:5
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 12 Potential Issue API: SDKCheck of <android.telephony.SubscriptionManager: java.util.List getActiveSubscriptionInfoList()> is checking!!!
+The life time of api is [22,31]
+5call roads:
+1 Mainhead roads:
+-$i0 < 22
+-$i0 < 22
+-$i1 < 22
+-$i0 < 22
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.kaliturin.blacklist.services.SMSSendService dummyMainMethod_com_kaliturin_blacklist_services_SMSSendService(android.content.Intent)>[]--><com.kaliturin.blacklist.services.SMSSendService: void onHandleIntent(android.content.Intent)>[]--><com.kaliturin.blacklist.utils.SMSSendHelper: boolean sendSMS(android.content.Context,java.lang.String,java.lang.String)>[]--><com.kaliturin.blacklist.utils.SMSSendHelper: android.telephony.SmsManager getSmsManager(android.content.Context)>[[-$i0 < 22]]--><com.kaliturin.blacklist.utils.SubscriptionHelper: java.lang.Integer getCurrentSubscriptionId(android.content.Context)>[[-$i0 < 22]]--><com.kaliturin.blacklist.utils.SubscriptionHelper: android.telephony.SubscriptionInfo getCurrentSubscription(android.content.Context)>[]--><com.kaliturin.blacklist.utils.SubscriptionHelper: android.telephony.SubscriptionInfo getSubscriptionById(android.content.Context,int)>[[-$i1 < 22]]--><com.kaliturin.blacklist.utils.SubscriptionHelper: java.util.List getSubscriptions(android.content.Context)>[[-$i0 < 22]]--><android.telephony.SubscriptionManager: java.util.List getActiveSubscriptionInfoList()>
+One road protect good!
+4 Packageshead roads:
+###Multi invoking in one method, need manual check!!!--><com.kaliturin.blacklist.fragments.SettingsFragment: void loadListViewItems(int)>[[-$yysi0 < 22], [$yysi0 < 19]]--><com.kaliturin.blacklist.fragments.SettingsFragment: java.lang.String getCurrentSimName()>[]--><com.kaliturin.blacklist.utils.SubscriptionHelper: java.lang.String getCurrentSubscriptionName(android.content.Context)>[[-$i0 < 22]]--><com.kaliturin.blacklist.utils.SubscriptionHelper: android.telephony.SubscriptionInfo getCurrentSubscription(android.content.Context)>[]--><com.kaliturin.blacklist.utils.SubscriptionHelper: android.telephony.SubscriptionInfo getSubscriptionById(android.content.Context,int)>[[-$i1 < 22]]--><com.kaliturin.blacklist.utils.SubscriptionHelper: java.util.List getSubscriptions(android.content.Context)>[[-$i0 < 22]]
+###Multi invoking in one method, need manual check!!!--><com.kaliturin.blacklist.fragments.SettingsFragment: void loadListViewItems(int)>[[-$yysi0 < 22]][[$yysi0 < 19]]--><com.kaliturin.blacklist.fragments.SettingsFragment: java.lang.String getCurrentSimName()>[]--><com.kaliturin.blacklist.utils.SubscriptionHelper: java.lang.String getCurrentSubscriptionName(android.content.Context)>[[-$i0 < 22]]--><com.kaliturin.blacklist.utils.SubscriptionHelper: android.telephony.SubscriptionInfo getCurrentSubscription(android.content.Context)>[]--><com.kaliturin.blacklist.utils.SubscriptionHelper: android.telephony.SubscriptionInfo getSubscriptionById(android.content.Context,int)>[[-$i1 < 22]]--><com.kaliturin.blacklist.utils.SubscriptionHelper: java.util.List getSubscriptions(android.content.Context)>[[-$i0 < 22]]
+-$yysi0 < 22
+$yysi0 < 19
+-$i0 < 22
+-$i1 < 22
+-$i0 < 22
+Good road: <com.kaliturin.blacklist.fragments.SettingsFragment: void onViewCreated(android.view.View,android.os.Bundle)>[]--><com.kaliturin.blacklist.fragments.SettingsFragment: void loadListViewItems(int)>[[-$yysi0 < 22], [$yysi0 < 19]]--><com.kaliturin.blacklist.fragments.SettingsFragment: java.lang.String getCurrentSimName()>[]--><com.kaliturin.blacklist.utils.SubscriptionHelper: java.lang.String getCurrentSubscriptionName(android.content.Context)>[[-$i0 < 22]]--><com.kaliturin.blacklist.utils.SubscriptionHelper: android.telephony.SubscriptionInfo getCurrentSubscription(android.content.Context)>[]--><com.kaliturin.blacklist.utils.SubscriptionHelper: android.telephony.SubscriptionInfo getSubscriptionById(android.content.Context,int)>[[-$i1 < 22]]--><com.kaliturin.blacklist.utils.SubscriptionHelper: java.util.List getSubscriptions(android.content.Context)>[[-$i0 < 22]]--><android.telephony.SubscriptionManager: java.util.List getActiveSubscriptionInfoList()>
+One road protect good!
+###Multi invoking in one method, need manual check!!!--><com.kaliturin.blacklist.fragments.SettingsFragment: void loadListViewItems(int)>[[-$yysi0 < 22], [$yysi0 < 19]]--><com.kaliturin.blacklist.fragments.SettingsFragment: java.lang.String getCurrentSimName()>[]--><com.kaliturin.blacklist.utils.SubscriptionHelper: java.lang.String getCurrentSubscriptionName(android.content.Context)>[[-$i0 < 22]]--><com.kaliturin.blacklist.utils.SubscriptionHelper: android.telephony.SubscriptionInfo getCurrentSubscription(android.content.Context)>[]--><com.kaliturin.blacklist.utils.SubscriptionHelper: android.telephony.SubscriptionInfo getSubscriptionById(android.content.Context,int)>[[-$i1 < 22]]--><com.kaliturin.blacklist.utils.SubscriptionHelper: java.util.List getSubscriptions(android.content.Context)>[[-$i0 < 22]]
+###Multi invoking in one method, need manual check!!!--><com.kaliturin.blacklist.fragments.SettingsFragment: void loadListViewItems(int)>[[-$yysi0 < 22]][[$yysi0 < 19]]--><com.kaliturin.blacklist.fragments.SettingsFragment: java.lang.String getCurrentSimName()>[]--><com.kaliturin.blacklist.utils.SubscriptionHelper: java.lang.String getCurrentSubscriptionName(android.content.Context)>[[-$i0 < 22]]--><com.kaliturin.blacklist.utils.SubscriptionHelper: android.telephony.SubscriptionInfo getCurrentSubscription(android.content.Context)>[]--><com.kaliturin.blacklist.utils.SubscriptionHelper: android.telephony.SubscriptionInfo getSubscriptionById(android.content.Context,int)>[[-$i1 < 22]]--><com.kaliturin.blacklist.utils.SubscriptionHelper: java.util.List getSubscriptions(android.content.Context)>[[-$i0 < 22]]
+-$yysi0 < 22
+$yysi0 < 19
+-$i0 < 22
+-$i1 < 22
+-$i0 < 22
+Good road: <com.kaliturin.blacklist.fragments.SettingsFragment: void onActivityResult(int,int,android.content.Intent)>[]--><com.kaliturin.blacklist.fragments.SettingsFragment: void reloadListViewItems()>[]--><com.kaliturin.blacklist.fragments.SettingsFragment: void loadListViewItems(int)>[[-$yysi0 < 22], [$yysi0 < 19]]--><com.kaliturin.blacklist.fragments.SettingsFragment: java.lang.String getCurrentSimName()>[]--><com.kaliturin.blacklist.utils.SubscriptionHelper: java.lang.String getCurrentSubscriptionName(android.content.Context)>[[-$i0 < 22]]--><com.kaliturin.blacklist.utils.SubscriptionHelper: android.telephony.SubscriptionInfo getCurrentSubscription(android.content.Context)>[]--><com.kaliturin.blacklist.utils.SubscriptionHelper: android.telephony.SubscriptionInfo getSubscriptionById(android.content.Context,int)>[[-$i1 < 22]]--><com.kaliturin.blacklist.utils.SubscriptionHelper: java.util.List getSubscriptions(android.content.Context)>[[-$i0 < 22]]--><android.telephony.SubscriptionManager: java.util.List getActiveSubscriptionInfoList()>
+One road protect good!
+-$i0 < 22
+Good road: <com.kaliturin.blacklist.fragments.SettingsFragment: void access$000(com.kaliturin.blacklist.fragments.SettingsFragment)>[]--><com.kaliturin.blacklist.fragments.SettingsFragment: void showSimChoosingDialog()>[]--><com.kaliturin.blacklist.utils.SubscriptionHelper: java.util.List getSubscriptions(android.content.Context)>[[-$i0 < 22]]--><android.telephony.SubscriptionManager: java.util.List getActiveSubscriptionInfoList()>
+One road protect good!
+###Multi invoking in one method, need manual check!!!--><com.kaliturin.blacklist.fragments.SettingsFragment: void loadListViewItems(int)>[[-$yysi0 < 22], [$yysi0 < 19]]--><com.kaliturin.blacklist.fragments.SettingsFragment: java.lang.String getCurrentSimName()>[]--><com.kaliturin.blacklist.utils.SubscriptionHelper: java.lang.String getCurrentSubscriptionName(android.content.Context)>[[-$i0 < 22]]--><com.kaliturin.blacklist.utils.SubscriptionHelper: android.telephony.SubscriptionInfo getCurrentSubscription(android.content.Context)>[]--><com.kaliturin.blacklist.utils.SubscriptionHelper: android.telephony.SubscriptionInfo getSubscriptionById(android.content.Context,int)>[[-$i1 < 22]]--><com.kaliturin.blacklist.utils.SubscriptionHelper: java.util.List getSubscriptions(android.content.Context)>[[-$i0 < 22]]
+###Multi invoking in one method, need manual check!!!--><com.kaliturin.blacklist.fragments.SettingsFragment: void loadListViewItems(int)>[[-$yysi0 < 22]][[$yysi0 < 19]]--><com.kaliturin.blacklist.fragments.SettingsFragment: java.lang.String getCurrentSimName()>[]--><com.kaliturin.blacklist.utils.SubscriptionHelper: java.lang.String getCurrentSubscriptionName(android.content.Context)>[[-$i0 < 22]]--><com.kaliturin.blacklist.utils.SubscriptionHelper: android.telephony.SubscriptionInfo getCurrentSubscription(android.content.Context)>[]--><com.kaliturin.blacklist.utils.SubscriptionHelper: android.telephony.SubscriptionInfo getSubscriptionById(android.content.Context,int)>[[-$i1 < 22]]--><com.kaliturin.blacklist.utils.SubscriptionHelper: java.util.List getSubscriptions(android.content.Context)>[[-$i0 < 22]]
+-$yysi0 < 22
+$yysi0 < 19
+-$i0 < 22
+-$i1 < 22
+-$i0 < 22
+Good road: <com.kaliturin.blacklist.fragments.SettingsFragment: void access$900(com.kaliturin.blacklist.fragments.SettingsFragment)>[]--><com.kaliturin.blacklist.fragments.SettingsFragment: void reloadListViewItems()>[]--><com.kaliturin.blacklist.fragments.SettingsFragment: void loadListViewItems(int)>[[-$yysi0 < 22], [$yysi0 < 19]]--><com.kaliturin.blacklist.fragments.SettingsFragment: java.lang.String getCurrentSimName()>[]--><com.kaliturin.blacklist.utils.SubscriptionHelper: java.lang.String getCurrentSubscriptionName(android.content.Context)>[[-$i0 < 22]]--><com.kaliturin.blacklist.utils.SubscriptionHelper: android.telephony.SubscriptionInfo getCurrentSubscription(android.content.Context)>[]--><com.kaliturin.blacklist.utils.SubscriptionHelper: android.telephony.SubscriptionInfo getSubscriptionById(android.content.Context,int)>[[-$i1 < 22]]--><com.kaliturin.blacklist.utils.SubscriptionHelper: java.util.List getSubscriptions(android.content.Context)>[[-$i0 < 22]]--><android.telephony.SubscriptionManager: java.util.List getActiveSubscriptionInfoList()>
+One road protect good!
+containsStatic:true
+containsTry:false
+5call by main package
+-----------------------------------------
+#################################################
+N 13 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)> is checking!!!
+The life time of api is [22,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 
+Error road: <com.kaliturin.blacklist.fragments.ContactsFragment: void showAddContactsActivity(java.lang.String,com.kaliturin.blacklist.utils.ContactsAccessHelper$ContactSourceType,int)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+#1.the call statck between class <com.kaliturin.blacklist.fragments.ContactsFragment: void showAddContactsActivity(java.lang.String,com.kaliturin.blacklist.utils.ContactsAccessHelper$ContactSourceType,int)> to <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 
+Error road: <com.kaliturin.blacklist.fragments.GetContactsFragment: void show(android.support.v4.app.Fragment,com.kaliturin.blacklist.utils.ContactsAccessHelper$ContactSourceType,boolean)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+#2.the call statck between class <com.kaliturin.blacklist.fragments.GetContactsFragment: void show(android.support.v4.app.Fragment,com.kaliturin.blacklist.utils.ContactsAccessHelper$ContactSourceType,boolean)> to <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+crashApis:11
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 14 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.lang.Object get(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+-$z1 != 0
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.kaliturin.blacklist.receivers.SMSBroadcastReceiver dummyMainMethod_com_kaliturin_blacklist_receivers_SMSBroadcastReceiver(android.content.Intent)>[]--><com.kaliturin.blacklist.receivers.SMSBroadcastReceiver: void onReceive(android.content.Context,android.content.Intent)>[[-$z1 != 0]]--><com.kaliturin.blacklist.receivers.SMSBroadcastReceiver: java.util.Map extractMessageData(android.content.Context,android.content.Intent,long)>[]--><com.kaliturin.blacklist.receivers.SMSBroadcastReceiver: android.telephony.SmsMessage[] getSMSMessages(android.content.Intent)>[]--><android.os.BaseBundle: java.lang.Object get(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: java.lang.Object get(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:12
+crashApisInMain:6
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+crashApis numbers:12
+crashApis numbers in main road:6
+On Android Version 16 this app may have error api use(at least): 9 and error api roads: 34
+On Android Version 17 this app may have error api use(at least): 9 and error api roads: 34
+On Android Version 18 this app may have error api use(at least): 9 and error api roads: 34
+On Android Version 19 this app may have error api use(at least): 10 and error api roads: 45
+On Android Version 20 this app may have error api use(at least): 10 and error api roads: 45
+On Android Version 21 this app may have error api use(at least): 4 and error api roads: 15
+On Android Version 22 this app may have error api use(at least): 3 and error api roads: 13
+On Android Version 23 this app may have error api use(at least): 3 and error api roads: 13
+On Android Version 24 this app may have error api use(at least): 3 and error api roads: 13
+On Android Version 25 this app may have error api use(at least): 3 and error api roads: 13
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 31 this app may have error api use(at least): 0 and error api roads: 0

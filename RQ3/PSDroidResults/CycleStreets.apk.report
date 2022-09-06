@@ -1,0 +1,396 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/CycleStreets.apk
+Entry Points[net.cyclestreets.liveride.LiveRideService, net.cyclestreets.CycleStreets, net.cyclestreets.LocationEditorActivity, net.cyclestreets.CycleStreetsApp, net.cyclestreets.LiveRideActivity, net.cyclestreets.LocationsActivity, net.cyclestreets.AboutActivity, net.cyclestreets.AccountDetailsActivity, net.cyclestreets.FeedbackActivity]
+FllowDroidcallgraph size:36574
+Soot started on Mon Jul 11 02:45:14 CST 2022
+Soot finished on Mon Jul 11 02:46:31 CST 2022
+Soot has run for 1 min. 17 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 23
+Declared Target Sdk version is: 26
+Declared Max Sdk version is: -1
+Collected 1081 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()> is checking!!!
+The life time of api is [1,30]
+4call roads:
+0 Mainhead roads:
+4 Packageshead roads:
+try
+Good road with try: <org.osmdroid.tileprovider.modules.CycleStreetsTileDownloader$TileLoader: android.graphics.drawable.Drawable loadTile(org.osmdroid.tileprovider.MapTileRequestState)>[[try]]--><org.osmdroid.tileprovider.modules.NetworkAvailabliltyCheck: boolean getNetworkAvailable()>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>
+One road protect good!
+!!!this api will crash on sdk 31 
+Error road: <net.cyclestreets.addphoto.AddPhotoFragment$UploadPhotoTask: void <init>(net.cyclestreets.addphoto.AddPhotoFragment,android.content.Context,java.lang.String,java.lang.String,java.lang.String,org.osmdroid.api.IGeoPoint,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>[]--><net.cyclestreets.CycleStreetsPreferences: boolean uploadSmallImages()>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>
+#2.the call statck between class <net.cyclestreets.addphoto.AddPhotoFragment$UploadPhotoTask: void <init>(net.cyclestreets.addphoto.AddPhotoFragment,android.content.Context,java.lang.String,java.lang.String,java.lang.String,org.osmdroid.api.IGeoPoint,java.lang.String,java.lang.String,java.lang.String,java.lang.String)> to <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <org.mapsforge.map.android.MapsforgeOSMDroidTileProvider$TileLoader: boolean isNetworkAvailable()>[]--><org.osmdroid.tileprovider.modules.NetworkAvailabliltyCheck: boolean getNetworkAvailable()>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>
+#3.the call statck between class <org.mapsforge.map.android.MapsforgeOSMDroidTileProvider$TileLoader: boolean isNetworkAvailable()> to <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>has compatibility isssues！
+-----------------------------------------
+try
+Good road with try: <org.osmdroid.tileprovider.modules.MapTileDownloader$TileLoader: android.graphics.drawable.Drawable loadTile(org.osmdroid.tileprovider.MapTileRequestState)>[[try]]--><org.osmdroid.tileprovider.modules.NetworkAvailabliltyCheck: boolean getNetworkAvailable()>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>
+One road protect good!
+crashApis:1
+containsStatic:false
+containsTry:true
+5call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.app.NotificationChannel: void setDescription(java.lang.String)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+1 Mainhead roads:
+-i2 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><net.cyclestreets.CycleStreetsApp: void onCreate()>[]--><net.cyclestreets.CycleStreetsAppSupport: void initialise(android.content.Context,int)>[]--><net.cyclestreets.CycleStreetsNotifications: void initialise(android.content.Context)>[]--><net.cyclestreets.CycleStreetsNotifications: void createNotificationChannel(android.content.Context,int,int,java.lang.String)>[[-i2 < 26]]--><android.app.NotificationChannel: void setDescription(java.lang.String)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.net.NetworkInfo: int getSubtype()> is checking!!!
+The life time of api is [3,30]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <net.cyclestreets.addphoto.AddPhotoFragment$UploadPhotoTask: void <init>(net.cyclestreets.addphoto.AddPhotoFragment,android.content.Context,java.lang.String,java.lang.String,java.lang.String,org.osmdroid.api.IGeoPoint,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>[]--><net.cyclestreets.CycleStreetsPreferences: boolean uploadSmallImages()>[]--><android.net.NetworkInfo: int getSubtype()>
+#1.the call statck between class <net.cyclestreets.addphoto.AddPhotoFragment$UploadPhotoTask: void <init>(net.cyclestreets.addphoto.AddPhotoFragment,android.content.Context,java.lang.String,java.lang.String,java.lang.String,org.osmdroid.api.IGeoPoint,java.lang.String,java.lang.String,java.lang.String,java.lang.String)> to <android.net.NetworkInfo: int getSubtype()>has compatibility isssues！
+-----------------------------------------
+crashApis:2
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.media.AudioFocusRequest.Builder: android.media.AudioFocusRequest.Builder setAudioAttributes(android.media.AudioAttributes)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-i0 < 26
+Good road: <net.cyclestreets.liveride.AudioFocuser: void onStart(java.lang.String)>[[-i0 < 26]]--><android.media.AudioFocusRequest.Builder: android.media.AudioFocusRequest.Builder setAudioAttributes(android.media.AudioAttributes)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.net.ConnectivityManager: android.net.NetworkInfo getNetworkInfo(int)> is checking!!!
+The life time of api is [1,30]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <org.osmdroid.tileprovider.modules.NetworkAvailabliltyCheck: boolean getWiFiNetworkAvailable()>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getNetworkInfo(int)>
+#1.the call statck between class <org.osmdroid.tileprovider.modules.NetworkAvailabliltyCheck: boolean getWiFiNetworkAvailable()> to <android.net.ConnectivityManager: android.net.NetworkInfo getNetworkInfo(int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <org.osmdroid.tileprovider.modules.NetworkAvailabliltyCheck: boolean getCellularDataNetworkAvailable()>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getNetworkInfo(int)>
+#2.the call statck between class <org.osmdroid.tileprovider.modules.NetworkAvailabliltyCheck: boolean getCellularDataNetworkAvailable()> to <android.net.ConnectivityManager: android.net.NetworkInfo getNetworkInfo(int)>has compatibility isssues！
+-----------------------------------------
+crashApis:3
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 5 Potential Issue API: SDKCheck of <android.media.AudioManager: int abandonAudioFocusRequest(android.media.AudioFocusRequest)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-i0 < 26
+Good road: <net.cyclestreets.liveride.AudioFocuser: void onDone(java.lang.String)>[[-i0 < 26]]--><android.media.AudioManager: int abandonAudioFocusRequest(android.media.AudioFocusRequest)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 6 Potential Issue API: SDKCheck of <android.text.Html: android.text.Spanned fromHtml(java.lang.String,int)> is checking!!!
+The life time of api is [24,31]
+15call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: net.cyclestreets.LocationEditorActivity dummyMainMethod_net_cyclestreets_LocationEditorActivity(android.content.Intent)>[]--><net.cyclestreets.LocationEditorActivity: void onResume()>[]--><net.cyclestreets.LocationEditorActivity: void setupLocation()>[]--><net.cyclestreets.views.CycleMapView: void enableAndFollowLocation()>[]--><net.cyclestreets.views.overlay.LocationOverlay: void enableAndFollowLocation(boolean)>[[try]]--><net.cyclestreets.util.PermissionsKt: void doOrRequestPermission(android.content.Context,java.lang.String,kotlin.jvm.functions.Function0)>[]--><net.cyclestreets.util.PermissionsKt: void doOrRequestPermission(android.app.Activity,java.lang.String,kotlin.jvm.functions.Function0)>[]--><net.cyclestreets.util.MessageBox: void OkHtml(android.content.Context,java.lang.String,android.content.DialogInterface$OnClickListener)>[]--><net.cyclestreets.util.HtmlKt: android.text.Spanned fromHtml(java.lang.String)>[[-$i0 < 24]]--><android.text.Html: android.text.Spanned fromHtml(java.lang.String,int)>
+One road protect good!
+14 Packageshead roads:
+try
+Good road with try: <net.cyclestreets.RouteMapFragment: void onResume()>[]--><net.cyclestreets.CycleMapFragment: void onResume()>[]--><net.cyclestreets.views.CycleMapView: void onResume()>[]--><net.cyclestreets.views.overlay.LocationOverlay: void enableAndFollowLocation(boolean)>[[try]]--><net.cyclestreets.util.PermissionsKt: void doOrRequestPermission(android.content.Context,java.lang.String,kotlin.jvm.functions.Function0)>[]--><net.cyclestreets.util.PermissionsKt: void doOrRequestPermission(android.app.Activity,java.lang.String,kotlin.jvm.functions.Function0)>[]--><net.cyclestreets.util.MessageBox: void OkHtml(android.content.Context,java.lang.String,android.content.DialogInterface$OnClickListener)>[]--><net.cyclestreets.util.HtmlKt: android.text.Spanned fromHtml(java.lang.String)>[[-$i0 < 24]]--><android.text.Html: android.text.Spanned fromHtml(java.lang.String,int)>
+One road protect good!
+try
+Good road with try: <net.cyclestreets.addphoto.AddPhotoFragment: void onActivityResult(int,int,android.content.Intent)>[[try]]--><net.cyclestreets.addphoto.AddPhotoFragment: void nextStep()>[]--><net.cyclestreets.addphoto.AddPhotoFragment: void setupView()>[]--><net.cyclestreets.addphoto.AddPhotoFragment: void setupMap()>[]--><net.cyclestreets.views.CycleMapView: void onResume()>[]--><net.cyclestreets.views.overlay.LocationOverlay: void enableAndFollowLocation(boolean)>[[try]]--><net.cyclestreets.util.PermissionsKt: void doOrRequestPermission(android.content.Context,java.lang.String,kotlin.jvm.functions.Function0)>[]--><net.cyclestreets.util.PermissionsKt: void doOrRequestPermission(android.app.Activity,java.lang.String,kotlin.jvm.functions.Function0)>[]--><net.cyclestreets.util.MessageBox: void OkHtml(android.content.Context,java.lang.String,android.content.DialogInterface$OnClickListener)>[]--><net.cyclestreets.util.HtmlKt: android.text.Spanned fromHtml(java.lang.String)>[[-$i0 < 24]]--><android.text.Html: android.text.Spanned fromHtml(java.lang.String,int)>
+One road protect good!
+try
+Good road with try: <net.cyclestreets.addphoto.AddPhotoFragment: boolean onOptionsItemSelected(android.view.MenuItem)>[]--><net.cyclestreets.addphoto.AddPhotoFragment: boolean onBackPressed()>[]--><net.cyclestreets.addphoto.AddPhotoFragment: void setupView()>[]--><net.cyclestreets.addphoto.AddPhotoFragment: void setupMap()>[]--><net.cyclestreets.views.CycleMapView: void onResume()>[]--><net.cyclestreets.views.overlay.LocationOverlay: void enableAndFollowLocation(boolean)>[[try]]--><net.cyclestreets.util.PermissionsKt: void doOrRequestPermission(android.content.Context,java.lang.String,kotlin.jvm.functions.Function0)>[]--><net.cyclestreets.util.PermissionsKt: void doOrRequestPermission(android.app.Activity,java.lang.String,kotlin.jvm.functions.Function0)>[]--><net.cyclestreets.util.MessageBox: void OkHtml(android.content.Context,java.lang.String,android.content.DialogInterface$OnClickListener)>[]--><net.cyclestreets.util.HtmlKt: android.text.Spanned fromHtml(java.lang.String)>[[-$i0 < 24]]--><android.text.Html: android.text.Spanned fromHtml(java.lang.String,int)>
+One road protect good!
+try
+Good road with try: <net.cyclestreets.addphoto.AddPhotoFragment: boolean onOptionsItemSelected(android.view.MenuItem)>[]--><net.cyclestreets.addphoto.AddPhotoFragment: void setupView()>[]--><net.cyclestreets.addphoto.AddPhotoFragment: void setupMap()>[]--><net.cyclestreets.views.CycleMapView: void onResume()>[]--><net.cyclestreets.views.overlay.LocationOverlay: void enableAndFollowLocation(boolean)>[[try]]--><net.cyclestreets.util.PermissionsKt: void doOrRequestPermission(android.content.Context,java.lang.String,kotlin.jvm.functions.Function0)>[]--><net.cyclestreets.util.PermissionsKt: void doOrRequestPermission(android.app.Activity,java.lang.String,kotlin.jvm.functions.Function0)>[]--><net.cyclestreets.util.MessageBox: void OkHtml(android.content.Context,java.lang.String,android.content.DialogInterface$OnClickListener)>[]--><net.cyclestreets.util.HtmlKt: android.text.Spanned fromHtml(java.lang.String)>[[-$i0 < 24]]--><android.text.Html: android.text.Spanned fromHtml(java.lang.String,int)>
+One road protect good!
+try
+Good road with try: <net.cyclestreets.views.overlay.LocationOverlay$1: void onClick(android.view.View)>[]--><net.cyclestreets.views.overlay.LocationOverlay: void enableAndFollowLocation(boolean)>[[try]]--><net.cyclestreets.util.PermissionsKt: void doOrRequestPermission(android.content.Context,java.lang.String,kotlin.jvm.functions.Function0)>[]--><net.cyclestreets.util.PermissionsKt: void doOrRequestPermission(android.app.Activity,java.lang.String,kotlin.jvm.functions.Function0)>[]--><net.cyclestreets.util.MessageBox: void OkHtml(android.content.Context,java.lang.String,android.content.DialogInterface$OnClickListener)>[]--><net.cyclestreets.util.HtmlKt: android.text.Spanned fromHtml(java.lang.String)>[[-$i0 < 24]]--><android.text.Html: android.text.Spanned fromHtml(java.lang.String,int)>
+One road protect good!
+try
+Good road with try: <net.cyclestreets.addphoto.AddPhotoFragment: void onClick(android.view.View)>[]--><net.cyclestreets.addphoto.AddPhotoFragment: void nextStep()>[]--><net.cyclestreets.addphoto.AddPhotoFragment: void setupView()>[]--><net.cyclestreets.addphoto.AddPhotoFragment: void setupMap()>[]--><net.cyclestreets.views.CycleMapView: void onResume()>[]--><net.cyclestreets.views.overlay.LocationOverlay: void enableAndFollowLocation(boolean)>[[try]]--><net.cyclestreets.util.PermissionsKt: void doOrRequestPermission(android.content.Context,java.lang.String,kotlin.jvm.functions.Function0)>[]--><net.cyclestreets.util.PermissionsKt: void doOrRequestPermission(android.app.Activity,java.lang.String,kotlin.jvm.functions.Function0)>[]--><net.cyclestreets.util.MessageBox: void OkHtml(android.content.Context,java.lang.String,android.content.DialogInterface$OnClickListener)>[]--><net.cyclestreets.util.HtmlKt: android.text.Spanned fromHtml(java.lang.String)>[[-$i0 < 24]]--><android.text.Html: android.text.Spanned fromHtml(java.lang.String,int)>
+One road protect good!
+try
+Good road with try: <net.cyclestreets.addphoto.AddPhotoFragment: void onClick(android.view.View)>[]--><net.cyclestreets.addphoto.AddPhotoFragment: void setupView()>[]--><net.cyclestreets.addphoto.AddPhotoFragment: void setupMap()>[]--><net.cyclestreets.views.CycleMapView: void onResume()>[]--><net.cyclestreets.views.overlay.LocationOverlay: void enableAndFollowLocation(boolean)>[[try]]--><net.cyclestreets.util.PermissionsKt: void doOrRequestPermission(android.content.Context,java.lang.String,kotlin.jvm.functions.Function0)>[]--><net.cyclestreets.util.PermissionsKt: void doOrRequestPermission(android.app.Activity,java.lang.String,kotlin.jvm.functions.Function0)>[]--><net.cyclestreets.util.MessageBox: void OkHtml(android.content.Context,java.lang.String,android.content.DialogInterface$OnClickListener)>[]--><net.cyclestreets.util.HtmlKt: android.text.Spanned fromHtml(java.lang.String)>[[-$i0 < 24]]--><android.text.Html: android.text.Spanned fromHtml(java.lang.String,int)>
+One road protect good!
+try
+Good road with try: <net.cyclestreets.addphoto.AddPhotoFragment: void onClick(android.view.View)>[]--><net.cyclestreets.addphoto.AddPhotoFragment: boolean onBackPressed()>[]--><net.cyclestreets.addphoto.AddPhotoFragment: void setupView()>[]--><net.cyclestreets.addphoto.AddPhotoFragment: void setupMap()>[]--><net.cyclestreets.views.CycleMapView: void onResume()>[]--><net.cyclestreets.views.overlay.LocationOverlay: void enableAndFollowLocation(boolean)>[[try]]--><net.cyclestreets.util.PermissionsKt: void doOrRequestPermission(android.content.Context,java.lang.String,kotlin.jvm.functions.Function0)>[]--><net.cyclestreets.util.PermissionsKt: void doOrRequestPermission(android.app.Activity,java.lang.String,kotlin.jvm.functions.Function0)>[]--><net.cyclestreets.util.MessageBox: void OkHtml(android.content.Context,java.lang.String,android.content.DialogInterface$OnClickListener)>[]--><net.cyclestreets.util.HtmlKt: android.text.Spanned fromHtml(java.lang.String)>[[-$i0 < 24]]--><android.text.Html: android.text.Spanned fromHtml(java.lang.String,int)>
+One road protect good!
+-$i0 < 24
+Good road: <net.cyclestreets.views.place.PlaceViewBase: void onClick(android.content.DialogInterface,int)>[]--><net.cyclestreets.util.PermissionsKt: void doOrRequestPermission(android.app.Activity,java.lang.String,kotlin.jvm.functions.Function0)>[]--><net.cyclestreets.util.MessageBox: void OkHtml(android.content.Context,java.lang.String,android.content.DialogInterface$OnClickListener)>[]--><net.cyclestreets.util.HtmlKt: android.text.Spanned fromHtml(java.lang.String)>[[-$i0 < 24]]--><android.text.Html: android.text.Spanned fromHtml(java.lang.String,int)>
+One road protect good!
+try
+Good road with try: <net.cyclestreets.addphoto.AddPhotoFragment: void access$setupView(net.cyclestreets.addphoto.AddPhotoFragment)>[]--><net.cyclestreets.addphoto.AddPhotoFragment: void setupView()>[]--><net.cyclestreets.addphoto.AddPhotoFragment: void setupMap()>[]--><net.cyclestreets.views.CycleMapView: void onResume()>[]--><net.cyclestreets.views.overlay.LocationOverlay: void enableAndFollowLocation(boolean)>[[try]]--><net.cyclestreets.util.PermissionsKt: void doOrRequestPermission(android.content.Context,java.lang.String,kotlin.jvm.functions.Function0)>[]--><net.cyclestreets.util.PermissionsKt: void doOrRequestPermission(android.app.Activity,java.lang.String,kotlin.jvm.functions.Function0)>[]--><net.cyclestreets.util.MessageBox: void OkHtml(android.content.Context,java.lang.String,android.content.DialogInterface$OnClickListener)>[]--><net.cyclestreets.util.HtmlKt: android.text.Spanned fromHtml(java.lang.String)>[[-$i0 < 24]]--><android.text.Html: android.text.Spanned fromHtml(java.lang.String,int)>
+One road protect good!
+try
+Good road with try: <net.cyclestreets.addphoto.AddPhotoFragment: void access$uploadComplete(net.cyclestreets.addphoto.AddPhotoFragment,java.lang.String)>[]--><net.cyclestreets.addphoto.AddPhotoFragment: void uploadComplete(java.lang.String)>[]--><net.cyclestreets.addphoto.AddPhotoFragment: void nextStep()>[]--><net.cyclestreets.addphoto.AddPhotoFragment: void setupView()>[]--><net.cyclestreets.addphoto.AddPhotoFragment: void setupMap()>[]--><net.cyclestreets.views.CycleMapView: void onResume()>[]--><net.cyclestreets.views.overlay.LocationOverlay: void enableAndFollowLocation(boolean)>[[try]]--><net.cyclestreets.util.PermissionsKt: void doOrRequestPermission(android.content.Context,java.lang.String,kotlin.jvm.functions.Function0)>[]--><net.cyclestreets.util.PermissionsKt: void doOrRequestPermission(android.app.Activity,java.lang.String,kotlin.jvm.functions.Function0)>[]--><net.cyclestreets.util.MessageBox: void OkHtml(android.content.Context,java.lang.String,android.content.DialogInterface$OnClickListener)>[]--><net.cyclestreets.util.HtmlKt: android.text.Spanned fromHtml(java.lang.String)>[[-$i0 < 24]]--><android.text.Html: android.text.Spanned fromHtml(java.lang.String,int)>
+One road protect good!
+try
+Good road with try: <net.cyclestreets.addphoto.AddPhotoFragment: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)>[]--><net.cyclestreets.addphoto.AddPhotoFragment: void setupView()>[]--><net.cyclestreets.addphoto.AddPhotoFragment: void setupMap()>[]--><net.cyclestreets.views.CycleMapView: void onResume()>[]--><net.cyclestreets.views.overlay.LocationOverlay: void enableAndFollowLocation(boolean)>[[try]]--><net.cyclestreets.util.PermissionsKt: void doOrRequestPermission(android.content.Context,java.lang.String,kotlin.jvm.functions.Function0)>[]--><net.cyclestreets.util.PermissionsKt: void doOrRequestPermission(android.app.Activity,java.lang.String,kotlin.jvm.functions.Function0)>[]--><net.cyclestreets.util.MessageBox: void OkHtml(android.content.Context,java.lang.String,android.content.DialogInterface$OnClickListener)>[]--><net.cyclestreets.util.HtmlKt: android.text.Spanned fromHtml(java.lang.String)>[[-$i0 < 24]]--><android.text.Html: android.text.Spanned fromHtml(java.lang.String,int)>
+One road protect good!
+try
+Good road with try: <net.cyclestreets.addphoto.AddPhotoFragment: void onResume()>[]--><net.cyclestreets.addphoto.AddPhotoFragment: void setupView()>[]--><net.cyclestreets.addphoto.AddPhotoFragment: void setupMap()>[]--><net.cyclestreets.views.CycleMapView: void onResume()>[]--><net.cyclestreets.views.overlay.LocationOverlay: void enableAndFollowLocation(boolean)>[[try]]--><net.cyclestreets.util.PermissionsKt: void doOrRequestPermission(android.content.Context,java.lang.String,kotlin.jvm.functions.Function0)>[]--><net.cyclestreets.util.PermissionsKt: void doOrRequestPermission(android.app.Activity,java.lang.String,kotlin.jvm.functions.Function0)>[]--><net.cyclestreets.util.MessageBox: void OkHtml(android.content.Context,java.lang.String,android.content.DialogInterface$OnClickListener)>[]--><net.cyclestreets.util.HtmlKt: android.text.Spanned fromHtml(java.lang.String)>[[-$i0 < 24]]--><android.text.Html: android.text.Spanned fromHtml(java.lang.String,int)>
+One road protect good!
+try
+Good road with try: <net.cyclestreets.addphoto.AddPhotoFragment: void onResume()>[[try]]--><net.cyclestreets.addphoto.AddPhotoFragment: void doOnResume()>[]--><net.cyclestreets.views.CycleMapView: void onResume()>[]--><net.cyclestreets.views.overlay.LocationOverlay: void enableAndFollowLocation(boolean)>[[try]]--><net.cyclestreets.util.PermissionsKt: void doOrRequestPermission(android.content.Context,java.lang.String,kotlin.jvm.functions.Function0)>[]--><net.cyclestreets.util.PermissionsKt: void doOrRequestPermission(android.app.Activity,java.lang.String,kotlin.jvm.functions.Function0)>[]--><net.cyclestreets.util.MessageBox: void OkHtml(android.content.Context,java.lang.String,android.content.DialogInterface$OnClickListener)>[]--><net.cyclestreets.util.HtmlKt: android.text.Spanned fromHtml(java.lang.String)>[[-$i0 < 24]]--><android.text.Html: android.text.Spanned fromHtml(java.lang.String,int)>
+One road protect good!
+try
+Good road with try: <net.cyclestreets.addphoto.AddPhotoFragment: void access$nextStep(net.cyclestreets.addphoto.AddPhotoFragment)>[]--><net.cyclestreets.addphoto.AddPhotoFragment: void nextStep()>[]--><net.cyclestreets.addphoto.AddPhotoFragment: void setupView()>[]--><net.cyclestreets.addphoto.AddPhotoFragment: void setupMap()>[]--><net.cyclestreets.views.CycleMapView: void onResume()>[]--><net.cyclestreets.views.overlay.LocationOverlay: void enableAndFollowLocation(boolean)>[[try]]--><net.cyclestreets.util.PermissionsKt: void doOrRequestPermission(android.content.Context,java.lang.String,kotlin.jvm.functions.Function0)>[]--><net.cyclestreets.util.PermissionsKt: void doOrRequestPermission(android.app.Activity,java.lang.String,kotlin.jvm.functions.Function0)>[]--><net.cyclestreets.util.MessageBox: void OkHtml(android.content.Context,java.lang.String,android.content.DialogInterface$OnClickListener)>[]--><net.cyclestreets.util.HtmlKt: android.text.Spanned fromHtml(java.lang.String)>[[-$i0 < 24]]--><android.text.Html: android.text.Spanned fromHtml(java.lang.String,int)>
+One road protect good!
+try
+Good road with try: <net.cyclestreets.MainNavDrawerActivity: void onBackPressed()>[]--><net.cyclestreets.addphoto.AddPhotoFragment: boolean onBackPressed()>[]--><net.cyclestreets.addphoto.AddPhotoFragment: void setupView()>[]--><net.cyclestreets.addphoto.AddPhotoFragment: void setupMap()>[]--><net.cyclestreets.views.CycleMapView: void onResume()>[]--><net.cyclestreets.views.overlay.LocationOverlay: void enableAndFollowLocation(boolean)>[[try]]--><net.cyclestreets.util.PermissionsKt: void doOrRequestPermission(android.content.Context,java.lang.String,kotlin.jvm.functions.Function0)>[]--><net.cyclestreets.util.PermissionsKt: void doOrRequestPermission(android.app.Activity,java.lang.String,kotlin.jvm.functions.Function0)>[]--><net.cyclestreets.util.MessageBox: void OkHtml(android.content.Context,java.lang.String,android.content.DialogInterface$OnClickListener)>[]--><net.cyclestreets.util.HtmlKt: android.text.Spanned fromHtml(java.lang.String)>[[-$i0 < 24]]--><android.text.Html: android.text.Spanned fromHtml(java.lang.String,int)>
+One road protect good!
+try
+Good road with try: <net.cyclestreets.MainNavDrawerActivity: void onBackPressed()>[]--><net.cyclestreets.CycleMapFragment: boolean onBackPressed()>[]--><net.cyclestreets.views.CycleMapView: boolean onBackPressed()>[]--><net.cyclestreets.views.overlay.ControllerOverlay: boolean onBackPressed()>[]--><net.cyclestreets.addphoto.AddPhotoFragment: boolean onBackPressed()>[]--><net.cyclestreets.addphoto.AddPhotoFragment: void setupView()>[]--><net.cyclestreets.addphoto.AddPhotoFragment: void setupMap()>[]--><net.cyclestreets.views.CycleMapView: void onResume()>[]--><net.cyclestreets.views.overlay.LocationOverlay: void enableAndFollowLocation(boolean)>[[try]]--><net.cyclestreets.util.PermissionsKt: void doOrRequestPermission(android.content.Context,java.lang.String,kotlin.jvm.functions.Function0)>[]--><net.cyclestreets.util.PermissionsKt: void doOrRequestPermission(android.app.Activity,java.lang.String,kotlin.jvm.functions.Function0)>[]--><net.cyclestreets.util.MessageBox: void OkHtml(android.content.Context,java.lang.String,android.content.DialogInterface$OnClickListener)>[]--><net.cyclestreets.util.HtmlKt: android.text.Spanned fromHtml(java.lang.String)>[[-$i0 < 24]]--><android.text.Html: android.text.Spanned fromHtml(java.lang.String,int)>
+One road protect good!
+-$i0 < 24
+Good road: <net.cyclestreets.RouteMapFragment: boolean onOptionsItemSelected(android.view.MenuItem)>[]--><net.cyclestreets.RouteMapFragment: void startLiveRide()>[]--><net.cyclestreets.util.PermissionsKt: void doOrRequestPermission(android.app.Activity,java.lang.String,kotlin.jvm.functions.Function0)>[]--><net.cyclestreets.util.MessageBox: void OkHtml(android.content.Context,java.lang.String,android.content.DialogInterface$OnClickListener)>[]--><net.cyclestreets.util.HtmlKt: android.text.Spanned fromHtml(java.lang.String)>[[-$i0 < 24]]--><android.text.Html: android.text.Spanned fromHtml(java.lang.String,int)>
+One road protect good!
+try
+Good road with try: <net.cyclestreets.LiveRideActivity: void onResume()>[]--><net.cyclestreets.views.CycleMapView: void onResume()>[]--><net.cyclestreets.views.overlay.LocationOverlay: void enableAndFollowLocation(boolean)>[[try]]--><net.cyclestreets.util.PermissionsKt: void doOrRequestPermission(android.content.Context,java.lang.String,kotlin.jvm.functions.Function0)>[]--><net.cyclestreets.util.PermissionsKt: void doOrRequestPermission(android.app.Activity,java.lang.String,kotlin.jvm.functions.Function0)>[]--><net.cyclestreets.util.MessageBox: void OkHtml(android.content.Context,java.lang.String,android.content.DialogInterface$OnClickListener)>[]--><net.cyclestreets.util.HtmlKt: android.text.Spanned fromHtml(java.lang.String)>[[-$i0 < 24]]--><android.text.Html: android.text.Spanned fromHtml(java.lang.String,int)>
+One road protect good!
+try
+Good road with try: <net.cyclestreets.LiveRideActivity: void onResume()>[]--><net.cyclestreets.views.CycleMapView: void enableAndFollowLocation()>[]--><net.cyclestreets.views.overlay.LocationOverlay: void enableAndFollowLocation(boolean)>[[try]]--><net.cyclestreets.util.PermissionsKt: void doOrRequestPermission(android.content.Context,java.lang.String,kotlin.jvm.functions.Function0)>[]--><net.cyclestreets.util.PermissionsKt: void doOrRequestPermission(android.app.Activity,java.lang.String,kotlin.jvm.functions.Function0)>[]--><net.cyclestreets.util.MessageBox: void OkHtml(android.content.Context,java.lang.String,android.content.DialogInterface$OnClickListener)>[]--><net.cyclestreets.util.HtmlKt: android.text.Spanned fromHtml(java.lang.String)>[[-$i0 < 24]]--><android.text.Html: android.text.Spanned fromHtml(java.lang.String,int)>
+One road protect good!
+containsStatic:false
+containsTry:true
+15call by main package
+-----------------------------------------
+#################################################
+N 7 Potential Issue API: SDKCheck of <android.media.AudioManager: int requestAudioFocus(android.media.AudioFocusRequest)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-i0 < 26
+Good road: <net.cyclestreets.liveride.AudioFocuser: void onStart(java.lang.String)>[[-i0 < 26]]--><android.media.AudioManager: int requestAudioFocus(android.media.AudioFocusRequest)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 8 Potential Issue API: SDKCheck of <android.text.StaticLayout: void <init>(java.lang.CharSequence,android.text.TextPaint,int,android.text.Layout.Alignment,float,float,boolean)> is checking!!!
+The life time of api is [1,30]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <org.mapsforge.map.rendertheme.renderinstruction.Caption: void renderWay(org.mapsforge.map.rendertheme.RenderCallback,org.mapsforge.map.rendertheme.RenderContext,org.mapsforge.map.layer.renderer.PolylineContainer)>[]--><org.mapsforge.map.layer.renderer.StandardRenderer: void renderAreaCaption(org.mapsforge.map.rendertheme.RenderContext,org.mapsforge.core.graphics.Display,int,java.lang.String,float,float,org.mapsforge.core.graphics.Paint,org.mapsforge.core.graphics.Paint,org.mapsforge.core.graphics.Position,int,org.mapsforge.map.layer.renderer.PolylineContainer)>[]--><org.mapsforge.map.android.graphics.AndroidGraphicFactory: org.mapsforge.core.mapelements.PointTextContainer createPointTextContainer(org.mapsforge.core.model.Point,org.mapsforge.core.graphics.Display,int,java.lang.String,org.mapsforge.core.graphics.Paint,org.mapsforge.core.graphics.Paint,org.mapsforge.core.mapelements.SymbolContainer,org.mapsforge.core.graphics.Position,int)>[]--><org.mapsforge.map.android.graphics.AndroidPointTextContainer: void <init>(org.mapsforge.core.model.Point,org.mapsforge.core.graphics.Display,int,java.lang.String,org.mapsforge.core.graphics.Paint,org.mapsforge.core.graphics.Paint,org.mapsforge.core.mapelements.SymbolContainer,org.mapsforge.core.graphics.Position,int)>[]--><android.text.StaticLayout: void <init>(java.lang.CharSequence,android.text.TextPaint,int,android.text.Layout.Alignment,float,float,boolean)>
+#1.the call statck between class <org.mapsforge.map.rendertheme.renderinstruction.Caption: void renderWay(org.mapsforge.map.rendertheme.RenderCallback,org.mapsforge.map.rendertheme.RenderContext,org.mapsforge.map.layer.renderer.PolylineContainer)> to <android.text.StaticLayout: void <init>(java.lang.CharSequence,android.text.TextPaint,int,android.text.Layout.Alignment,float,float,boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <org.mapsforge.map.rendertheme.renderinstruction.Caption: void renderNode(org.mapsforge.map.rendertheme.RenderCallback,org.mapsforge.map.rendertheme.RenderContext,org.mapsforge.map.datastore.PointOfInterest)>[]--><org.mapsforge.map.layer.renderer.StandardRenderer: void renderPointOfInterestCaption(org.mapsforge.map.rendertheme.RenderContext,org.mapsforge.core.graphics.Display,int,java.lang.String,float,float,org.mapsforge.core.graphics.Paint,org.mapsforge.core.graphics.Paint,org.mapsforge.core.graphics.Position,int,org.mapsforge.map.datastore.PointOfInterest)>[]--><org.mapsforge.map.android.graphics.AndroidGraphicFactory: org.mapsforge.core.mapelements.PointTextContainer createPointTextContainer(org.mapsforge.core.model.Point,org.mapsforge.core.graphics.Display,int,java.lang.String,org.mapsforge.core.graphics.Paint,org.mapsforge.core.graphics.Paint,org.mapsforge.core.mapelements.SymbolContainer,org.mapsforge.core.graphics.Position,int)>[]--><org.mapsforge.map.android.graphics.AndroidPointTextContainer: void <init>(org.mapsforge.core.model.Point,org.mapsforge.core.graphics.Display,int,java.lang.String,org.mapsforge.core.graphics.Paint,org.mapsforge.core.graphics.Paint,org.mapsforge.core.mapelements.SymbolContainer,org.mapsforge.core.graphics.Position,int)>[]--><android.text.StaticLayout: void <init>(java.lang.CharSequence,android.text.TextPaint,int,android.text.Layout.Alignment,float,float,boolean)>
+#2.the call statck between class <org.mapsforge.map.rendertheme.renderinstruction.Caption: void renderNode(org.mapsforge.map.rendertheme.RenderCallback,org.mapsforge.map.rendertheme.RenderContext,org.mapsforge.map.datastore.PointOfInterest)> to <android.text.StaticLayout: void <init>(java.lang.CharSequence,android.text.TextPaint,int,android.text.Layout.Alignment,float,float,boolean)>has compatibility isssues！
+-----------------------------------------
+crashApis:4
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 9 Potential Issue API: SDKCheck of <android.net.NetworkInfo: int getType()> is checking!!!
+The life time of api is [1,30]
+4call roads:
+0 Mainhead roads:
+4 Packageshead roads:
+try
+Good road with try: <org.osmdroid.tileprovider.modules.CycleStreetsTileDownloader$TileLoader: android.graphics.drawable.Drawable loadTile(org.osmdroid.tileprovider.MapTileRequestState)>[[try]]--><org.osmdroid.tileprovider.modules.NetworkAvailabliltyCheck: boolean getNetworkAvailable()>[]--><android.net.NetworkInfo: int getType()>
+One road protect good!
+!!!this api will crash on sdk 31 
+Error road: <net.cyclestreets.addphoto.AddPhotoFragment$UploadPhotoTask: void <init>(net.cyclestreets.addphoto.AddPhotoFragment,android.content.Context,java.lang.String,java.lang.String,java.lang.String,org.osmdroid.api.IGeoPoint,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>[]--><net.cyclestreets.CycleStreetsPreferences: boolean uploadSmallImages()>[]--><android.net.NetworkInfo: int getType()>
+#2.the call statck between class <net.cyclestreets.addphoto.AddPhotoFragment$UploadPhotoTask: void <init>(net.cyclestreets.addphoto.AddPhotoFragment,android.content.Context,java.lang.String,java.lang.String,java.lang.String,org.osmdroid.api.IGeoPoint,java.lang.String,java.lang.String,java.lang.String,java.lang.String)> to <android.net.NetworkInfo: int getType()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <org.mapsforge.map.android.MapsforgeOSMDroidTileProvider$TileLoader: boolean isNetworkAvailable()>[]--><org.osmdroid.tileprovider.modules.NetworkAvailabliltyCheck: boolean getNetworkAvailable()>[]--><android.net.NetworkInfo: int getType()>
+#3.the call statck between class <org.mapsforge.map.android.MapsforgeOSMDroidTileProvider$TileLoader: boolean isNetworkAvailable()> to <android.net.NetworkInfo: int getType()>has compatibility isssues！
+-----------------------------------------
+try
+Good road with try: <org.osmdroid.tileprovider.modules.MapTileDownloader$TileLoader: android.graphics.drawable.Drawable loadTile(org.osmdroid.tileprovider.MapTileRequestState)>[[try]]--><org.osmdroid.tileprovider.modules.NetworkAvailabliltyCheck: boolean getNetworkAvailable()>[]--><android.net.NetworkInfo: int getType()>
+One road protect good!
+crashApis:5
+containsStatic:false
+containsTry:true
+5call by main package
+-----------------------------------------
+#################################################
+N 10 Potential Issue API: SDKCheck of <android.app.NotificationManager: void deleteNotificationChannel(java.lang.String)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><net.cyclestreets.CycleStreetsApp: void onCreate()>[]--><net.cyclestreets.CycleStreetsAppSupport: void initialise(android.content.Context,int)>[]--><net.cyclestreets.CycleStreetsNotifications: void initialise(android.content.Context)>[]--><net.cyclestreets.CycleStreetsNotifications: void deletedDeprecatedChannels(android.content.Context,java.util.List)>[[-$i0 < 26]]--><android.app.NotificationManager: void deleteNotificationChannel(java.lang.String)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 11 Potential Issue API: SDKCheck of <android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+1 Mainhead roads:
+-i2 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><net.cyclestreets.CycleStreetsApp: void onCreate()>[]--><net.cyclestreets.CycleStreetsAppSupport: void initialise(android.content.Context,int)>[]--><net.cyclestreets.CycleStreetsNotifications: void initialise(android.content.Context)>[]--><net.cyclestreets.CycleStreetsNotifications: void createNotificationChannel(android.content.Context,int,int,java.lang.String)>[[-i2 < 26]]--><android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 12 Potential Issue API: SDKCheck of <android.provider.MediaStore.Images.Media: java.lang.String insertImage(android.content.ContentResolver,android.graphics.Bitmap,java.lang.String,java.lang.String)> is checking!!!
+The life time of api is [1,29]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 30 31 
+Error road: <com.jjoe64.graphview.GraphView: void takeSnapshotAndShare(android.content.Context,java.lang.String,java.lang.String)>[]--><android.provider.MediaStore.Images.Media: java.lang.String insertImage(android.content.ContentResolver,android.graphics.Bitmap,java.lang.String,java.lang.String)>
+#1.the call statck between class <com.jjoe64.graphview.GraphView: void takeSnapshotAndShare(android.content.Context,java.lang.String,java.lang.String)> to <android.provider.MediaStore.Images.Media: java.lang.String insertImage(android.content.ContentResolver,android.graphics.Bitmap,java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:6
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 13 Potential Issue API: SDKCheck of <android.media.AudioFocusRequest.Builder: android.media.AudioFocusRequest build()> is checking!!!
+The life time of api is [26,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-i0 < 26
+Good road: <net.cyclestreets.liveride.AudioFocuser: void onStart(java.lang.String)>[[-i0 < 26]]--><android.media.AudioFocusRequest.Builder: android.media.AudioFocusRequest build()>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 14 Potential Issue API: SDKCheck of <android.app.Notification.Builder: void <init>(android.content.Context,java.lang.String)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i0 < 26
+Good road: <net.cyclestreets.CycleStreetsNotifications: android.app.Notification$Builder getBuilder(android.content.Context,java.lang.String)>[[-$i0 < 26]]--><android.app.Notification.Builder: void <init>(android.content.Context,java.lang.String)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 15 Potential Issue API: SDKCheck of <android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+1 Mainhead roads:
+-i2 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><net.cyclestreets.CycleStreetsApp: void onCreate()>[]--><net.cyclestreets.CycleStreetsAppSupport: void initialise(android.content.Context,int)>[]--><net.cyclestreets.CycleStreetsNotifications: void initialise(android.content.Context)>[]--><net.cyclestreets.CycleStreetsNotifications: void createNotificationChannel(android.content.Context,int,int,java.lang.String)>[[-i2 < 26]]--><android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 16 Potential Issue API: SDKCheck of <android.media.AudioFocusRequest.Builder: void <init>(int)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-i0 < 26
+Good road: <net.cyclestreets.liveride.AudioFocuser: void onStart(java.lang.String)>[[-i0 < 26]]--><android.media.AudioFocusRequest.Builder: void <init>(int)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 17 Potential Issue API: SDKCheck of <android.net.NetworkInfo: boolean isAvailable()> is checking!!!
+The life time of api is [1,30]
+5call roads:
+0 Mainhead roads:
+5 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <org.osmdroid.tileprovider.modules.NetworkAvailabliltyCheck: boolean getWiFiNetworkAvailable()>[]--><android.net.NetworkInfo: boolean isAvailable()>
+#1.the call statck between class <org.osmdroid.tileprovider.modules.NetworkAvailabliltyCheck: boolean getWiFiNetworkAvailable()> to <android.net.NetworkInfo: boolean isAvailable()>has compatibility isssues！
+-----------------------------------------
+try
+Good road with try: <org.osmdroid.tileprovider.modules.CycleStreetsTileDownloader$TileLoader: android.graphics.drawable.Drawable loadTile(org.osmdroid.tileprovider.MapTileRequestState)>[[try]]--><org.osmdroid.tileprovider.modules.NetworkAvailabliltyCheck: boolean getNetworkAvailable()>[]--><android.net.NetworkInfo: boolean isAvailable()>
+One road protect good!
+!!!this api will crash on sdk 31 
+Error road: <org.osmdroid.tileprovider.modules.NetworkAvailabliltyCheck: boolean getCellularDataNetworkAvailable()>[]--><android.net.NetworkInfo: boolean isAvailable()>
+#3.the call statck between class <org.osmdroid.tileprovider.modules.NetworkAvailabliltyCheck: boolean getCellularDataNetworkAvailable()> to <android.net.NetworkInfo: boolean isAvailable()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <org.mapsforge.map.android.MapsforgeOSMDroidTileProvider$TileLoader: boolean isNetworkAvailable()>[]--><org.osmdroid.tileprovider.modules.NetworkAvailabliltyCheck: boolean getNetworkAvailable()>[]--><android.net.NetworkInfo: boolean isAvailable()>
+#4.the call statck between class <org.mapsforge.map.android.MapsforgeOSMDroidTileProvider$TileLoader: boolean isNetworkAvailable()> to <android.net.NetworkInfo: boolean isAvailable()>has compatibility isssues！
+-----------------------------------------
+try
+Good road with try: <org.osmdroid.tileprovider.modules.MapTileDownloader$TileLoader: android.graphics.drawable.Drawable loadTile(org.osmdroid.tileprovider.MapTileRequestState)>[[try]]--><org.osmdroid.tileprovider.modules.NetworkAvailabliltyCheck: boolean getNetworkAvailable()>[]--><android.net.NetworkInfo: boolean isAvailable()>
+One road protect good!
+crashApis:7
+containsStatic:false
+containsTry:true
+6call by main package
+-----------------------------------------
+#################################################
+N 18 Potential Issue API: SDKCheck of <android.net.ConnectivityManager: boolean requestRouteToHost(int,int)> is checking!!!
+The life time of api is [1,30]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <org.osmdroid.tileprovider.modules.NetworkAvailabliltyCheck: boolean getRouteToPathExists(int)>[]--><android.net.ConnectivityManager: boolean requestRouteToHost(int,int)>
+#1.the call statck between class <org.osmdroid.tileprovider.modules.NetworkAvailabliltyCheck: boolean getRouteToPathExists(int)> to <android.net.ConnectivityManager: boolean requestRouteToHost(int,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:8
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+crashApis numbers:8
+crashApis numbers in main road:0
+On Android Version 16 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 17 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 18 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 19 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 20 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 21 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 22 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 23 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 24 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 25 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 1 and error api roads: 1
+On Android Version 31 this app may have error api use(at least): 8 and error api roads: 14

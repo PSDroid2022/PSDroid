@@ -1,0 +1,202 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/WiFiKeyShare.apk
+Entry Points[be.brunoparmentier.wifikeyshare.ui.activities.WifiNetworkActivity, org.wordpress.passcodelock.PasscodeManagePasswordActivity, be.brunoparmentier.wifikeyshare.ui.activities.ConfirmConnectToWifiNetworkActivity, be.brunoparmentier.wifikeyshare.WifiKeyShareApp, be.brunoparmentier.wifikeyshare.ui.activities.SettingsActivity, be.brunoparmentier.wifikeyshare.ui.activities.WifiListActivity, org.wordpress.passcodelock.PasscodeUnlockActivity]
+FllowDroidcallgraph size:2186
+Soot started on Mon Jul 11 15:23:23 CST 2022
+StaticCheck:<eu.chainfire.libsuperuser.Shell$SU: boolean isSELinuxEnforcing()>i0 < 17
+StaticCheck:<org.wordpress.passcodelock.DefaultAppLock: boolean isSupportedApi()>$yysi0 < 14
+Soot finished on Mon Jul 11 15:23:34 CST 2022
+Soot has run for 0 min. 10 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 15
+Declared Target Sdk version is: 28
+Declared Max Sdk version is: -1
+Collected 259 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.lang.String getString(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.wordpress.passcodelock.PasscodeUnlockActivity dummyMainMethod_org_wordpress_passcodelock_PasscodeUnlockActivity(android.content.Intent)>[]--><org.wordpress.passcodelock.AbstractPasscodeKeyboardActivity: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.wordpress.passcodelock.PasscodeManagePasswordActivity dummyMainMethod_org_wordpress_passcodelock_PasscodeManagePasswordActivity(android.content.Intent)>[]--><org.wordpress.passcodelock.PasscodeManagePasswordActivity: void onCreate(android.os.Bundle)>[]--><org.wordpress.passcodelock.AbstractPasscodeKeyboardActivity: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:1
+crashApisInMain:1
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager: boolean enableNetwork(int,boolean)> is checking!!!
+The life time of api is [1,30]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: be.brunoparmentier.wifikeyshare.ui.activities.ConfirmConnectToWifiNetworkActivity dummyMainMethod_be_brunoparmentier_wifikeyshare_ui_activities_ConfirmConnectToWifiNetworkActivity(android.content.Intent)>[]--><be.brunoparmentier.wifikeyshare.ui.activities.ConfirmConnectToWifiNetworkActivity$1: void onClick(android.content.DialogInterface,int)>[]--><be.brunoparmentier.wifikeyshare.ui.activities.ConfirmConnectToWifiNetworkActivity: void access$400(be.brunoparmentier.wifikeyshare.ui.activities.ConfirmConnectToWifiNetworkActivity,android.net.wifi.WifiManager)>[]--><be.brunoparmentier.wifikeyshare.ui.activities.ConfirmConnectToWifiNetworkActivity: void doConnect(android.net.wifi.WifiManager)>[]--><android.net.wifi.WifiManager: boolean enableNetwork(int,boolean)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.wifi.WifiManager: boolean enableNetwork(int,boolean)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:2
+crashApisInMain:2
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager: boolean isWifiEnabled()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: be.brunoparmentier.wifikeyshare.ui.activities.ConfirmConnectToWifiNetworkActivity dummyMainMethod_be_brunoparmentier_wifikeyshare_ui_activities_ConfirmConnectToWifiNetworkActivity(android.content.Intent)>[]--><be.brunoparmentier.wifikeyshare.ui.activities.ConfirmConnectToWifiNetworkActivity$1: void onClick(android.content.DialogInterface,int)>[]--><android.net.wifi.WifiManager: boolean isWifiEnabled()>
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: be.brunoparmentier.wifikeyshare.ui.activities.WifiListActivity dummyMainMethod_be_brunoparmentier_wifikeyshare_ui_activities_WifiListActivity(android.content.Intent)>[]--><be.brunoparmentier.wifikeyshare.ui.activities.WifiListActivity: void onCreate(android.os.Bundle)>[]--><android.net.wifi.WifiManager: boolean isWifiEnabled()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.wifi.WifiManager: boolean isWifiEnabled()>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:3
+crashApisInMain:3
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager: boolean setWifiEnabled(boolean)> is checking!!!
+The life time of api is [1,30]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: be.brunoparmentier.wifikeyshare.ui.activities.ConfirmConnectToWifiNetworkActivity dummyMainMethod_be_brunoparmentier_wifikeyshare_ui_activities_ConfirmConnectToWifiNetworkActivity(android.content.Intent)>[]--><be.brunoparmentier.wifikeyshare.ui.activities.ConfirmConnectToWifiNetworkActivity$1: void onClick(android.content.DialogInterface,int)>[]--><android.net.wifi.WifiManager: boolean setWifiEnabled(boolean)>
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: be.brunoparmentier.wifikeyshare.ui.activities.WifiListActivity dummyMainMethod_be_brunoparmentier_wifikeyshare_ui_activities_WifiListActivity(android.content.Intent)>[]--><be.brunoparmentier.wifikeyshare.ui.activities.WifiListActivity: void onCreate(android.os.Bundle)>[]--><be.brunoparmentier.wifikeyshare.ui.activities.WifiListActivity: void setupWifiNetworksList()>[]--><be.brunoparmentier.wifikeyshare.ui.activities.WifiListActivity$WifiListTask: java.lang.Object doInBackground(java.lang.Object[])>[]--><be.brunoparmentier.wifikeyshare.ui.activities.WifiListActivity$WifiListTask: java.util.List doInBackground(java.lang.Void[])>[]--><android.net.wifi.WifiManager: boolean setWifiEnabled(boolean)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.wifi.WifiManager: boolean setWifiEnabled(boolean)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:4
+crashApisInMain:4
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.net.wifi.WifiConfiguration: void <init>()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: be.brunoparmentier.wifikeyshare.ui.activities.ConfirmConnectToWifiNetworkActivity dummyMainMethod_be_brunoparmentier_wifikeyshare_ui_activities_ConfirmConnectToWifiNetworkActivity(android.content.Intent)>[]--><be.brunoparmentier.wifikeyshare.ui.activities.ConfirmConnectToWifiNetworkActivity: void onCreate(android.os.Bundle)>[]--><be.brunoparmentier.wifikeyshare.utils.NfcUtils: android.net.wifi.WifiConfiguration readTag(android.nfc.Tag)>[]--><be.brunoparmentier.wifikeyshare.utils.NfcUtils: android.net.wifi.WifiConfiguration parse(android.nfc.NdefMessage)>[]--><be.brunoparmentier.wifikeyshare.utils.NfcUtils: android.net.wifi.WifiConfiguration parseCredential(java.nio.ByteBuffer,short)>[]--><android.net.wifi.WifiConfiguration: void <init>()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.wifi.WifiConfiguration: void <init>()>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:5
+crashApisInMain:5
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 5 Potential Issue API: SDKCheck of <android.os.BaseBundle: int getInt(java.lang.String,int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.wordpress.passcodelock.PasscodeManagePasswordActivity dummyMainMethod_org_wordpress_passcodelock_PasscodeManagePasswordActivity(android.content.Intent)>[]--><org.wordpress.passcodelock.PasscodeManagePasswordActivity: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String,int)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: int getInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:6
+crashApisInMain:6
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 6 Potential Issue API: SDKCheck of <android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)> is checking!!!
+The life time of api is [22,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 
+Error road: <be.brunoparmentier.wifikeyshare.ui.activities.SettingsActivity$PinLockFragment: void onCreate(android.os.Bundle)>[]--><org.wordpress.passcodelock.PasscodePreferenceFragment: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>
+#1.the call statck between class <be.brunoparmentier.wifikeyshare.ui.activities.SettingsActivity$PinLockFragment: void onCreate(android.os.Bundle)> to <android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 
+Error road: <org.wordpress.passcodelock.PasscodePreferenceFragmentCompat: void onCreatePreferences(android.os.Bundle,java.lang.String)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>
+#2.the call statck between class <org.wordpress.passcodelock.PasscodePreferenceFragmentCompat: void onCreatePreferences(android.os.Bundle,java.lang.String)> to <android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+crashApis:7
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 7 Potential Issue API: SDKCheck of <android.preference.PreferenceActivity: boolean onOptionsItemSelected(android.view.MenuItem)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 24 25 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: be.brunoparmentier.wifikeyshare.ui.activities.SettingsActivity dummyMainMethod_be_brunoparmentier_wifikeyshare_ui_activities_SettingsActivity(android.content.Intent)>[]--><be.brunoparmentier.wifikeyshare.ui.activities.SettingsActivity: boolean onOptionsItemSelected(android.view.MenuItem)>[]--><android.preference.PreferenceActivity: boolean onOptionsItemSelected(android.view.MenuItem)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.preference.PreferenceActivity: boolean onOptionsItemSelected(android.view.MenuItem)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:8
+crashApisInMain:7
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 8 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager: int addNetwork(android.net.wifi.WifiConfiguration)> is checking!!!
+The life time of api is [1,30]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: be.brunoparmentier.wifikeyshare.ui.activities.ConfirmConnectToWifiNetworkActivity dummyMainMethod_be_brunoparmentier_wifikeyshare_ui_activities_ConfirmConnectToWifiNetworkActivity(android.content.Intent)>[]--><be.brunoparmentier.wifikeyshare.ui.activities.ConfirmConnectToWifiNetworkActivity$1: void onClick(android.content.DialogInterface,int)>[]--><be.brunoparmentier.wifikeyshare.ui.activities.ConfirmConnectToWifiNetworkActivity: void access$400(be.brunoparmentier.wifikeyshare.ui.activities.ConfirmConnectToWifiNetworkActivity,android.net.wifi.WifiManager)>[]--><be.brunoparmentier.wifikeyshare.ui.activities.ConfirmConnectToWifiNetworkActivity: void doConnect(android.net.wifi.WifiManager)>[]--><android.net.wifi.WifiManager: int addNetwork(android.net.wifi.WifiConfiguration)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.wifi.WifiManager: int addNetwork(android.net.wifi.WifiConfiguration)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:9
+crashApisInMain:8
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 9 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager: java.util.List getConfiguredNetworks()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: be.brunoparmentier.wifikeyshare.ui.activities.WifiListActivity dummyMainMethod_be_brunoparmentier_wifikeyshare_ui_activities_WifiListActivity(android.content.Intent)>[]--><be.brunoparmentier.wifikeyshare.ui.activities.WifiListActivity: void onCreate(android.os.Bundle)>[]--><be.brunoparmentier.wifikeyshare.ui.activities.WifiListActivity: void setupWifiNetworksList()>[]--><be.brunoparmentier.wifikeyshare.ui.activities.WifiListActivity$WifiListTask: java.lang.Object doInBackground(java.lang.Object[])>[]--><be.brunoparmentier.wifikeyshare.ui.activities.WifiListActivity$WifiListTask: java.util.List doInBackground(java.lang.Void[])>[]--><android.net.wifi.WifiManager: java.util.List getConfiguredNetworks()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.wifi.WifiManager: java.util.List getConfiguredNetworks()>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:10
+crashApisInMain:9
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+crashApis numbers:10
+crashApis numbers in main road:9
+On Android Version 16 this app may have error api use(at least): 4 and error api roads: 6
+On Android Version 17 this app may have error api use(at least): 4 and error api roads: 6
+On Android Version 18 this app may have error api use(at least): 4 and error api roads: 6
+On Android Version 19 this app may have error api use(at least): 4 and error api roads: 6
+On Android Version 20 this app may have error api use(at least): 4 and error api roads: 6
+On Android Version 21 this app may have error api use(at least): 2 and error api roads: 3
+On Android Version 22 this app may have error api use(at least): 1 and error api roads: 1
+On Android Version 23 this app may have error api use(at least): 1 and error api roads: 1
+On Android Version 24 this app may have error api use(at least): 1 and error api roads: 1
+On Android Version 25 this app may have error api use(at least): 1 and error api roads: 1
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 31 this app may have error api use(at least): 6 and error api roads: 8

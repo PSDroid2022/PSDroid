@@ -1,0 +1,130 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/Limbo_x86_PC_Emulator.apk
+Entry Points[com.max2idea.android.limbo.main.LimboFileManager, com.max2idea.android.limbo.main.LimboVNCActivity, com.max2idea.android.limbo.main.LimboSettingsManager, com.max2idea.android.limbo.main.LimboApplication, com.limbo.emu.main.ppc.LimboEmuActivity, com.max2idea.android.limbo.main.LimboSDLActivity, com.max2idea.android.limbo.utils.LinksManager, com.max2idea.android.limbo.main.LimboService]
+FllowDroidcallgraph size:5963
+Soot started on Mon Jul 11 06:38:29 CST 2022
+Soot finished on Mon Jul 11 06:38:32 CST 2022
+Soot has run for 0 min. 2 sec.
+Found 13 additional DEX files. Now visiting them one by one.
+Soot started on Mon Jul 11 06:38:32 CST 2022
+Soot finished on Mon Jul 11 06:38:33 CST 2022
+Soot has run for 0 min. 1 sec.
+Soot started on Mon Jul 11 06:38:33 CST 2022
+Soot finished on Mon Jul 11 06:38:34 CST 2022
+Soot has run for 0 min. 1 sec.
+Soot started on Mon Jul 11 06:38:34 CST 2022
+Soot finished on Mon Jul 11 06:38:35 CST 2022
+Soot has run for 0 min. 1 sec.
+Soot started on Mon Jul 11 06:38:35 CST 2022
+Soot finished on Mon Jul 11 06:38:37 CST 2022
+Soot has run for 0 min. 1 sec.
+Soot started on Mon Jul 11 06:38:37 CST 2022
+StaticCheck:<org.libsdl.app.SDLActivity: boolean isTextInputEvent(android.view.KeyEvent)>$yysi0 < 11
+Soot finished on Mon Jul 11 06:38:38 CST 2022
+Soot has run for 0 min. 1 sec.
+Soot started on Mon Jul 11 06:38:38 CST 2022
+Soot finished on Mon Jul 11 06:38:39 CST 2022
+Soot has run for 0 min. 1 sec.
+Soot started on Mon Jul 11 06:38:39 CST 2022
+Soot finished on Mon Jul 11 06:38:40 CST 2022
+Soot has run for 0 min. 0 sec.
+Soot started on Mon Jul 11 06:38:40 CST 2022
+Soot finished on Mon Jul 11 06:38:41 CST 2022
+Soot has run for 0 min. 1 sec.
+Soot started on Mon Jul 11 06:38:41 CST 2022
+Soot finished on Mon Jul 11 06:38:43 CST 2022
+Soot has run for 0 min. 1 sec.
+Soot started on Mon Jul 11 06:38:43 CST 2022
+Soot finished on Mon Jul 11 06:38:44 CST 2022
+Soot has run for 0 min. 1 sec.
+Soot started on Mon Jul 11 06:38:44 CST 2022
+Soot finished on Mon Jul 11 06:38:46 CST 2022
+Soot has run for 0 min. 1 sec.
+Soot started on Mon Jul 11 06:38:46 CST 2022
+Soot finished on Mon Jul 11 06:38:47 CST 2022
+Soot has run for 0 min. 1 sec.
+Soot started on Mon Jul 11 06:38:47 CST 2022
+Soot finished on Mon Jul 11 06:38:50 CST 2022
+Soot has run for 0 min. 2 sec.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 21
+Declared Target Sdk version is: 26
+Declared Max Sdk version is: -1
+Collected 71 Android APIs in the primary DEX file
+Collected 572 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager: android.net.wifi.WifiManager.WifiLock createWifiLock(int,java.lang.String)> is checking!!!
+The life time of api is [3,30]
+85call roads:
+1 Mainhead roads:
+84 Packageshead roads:
+containsStatic:false
+containsTry:true
+85call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager.WifiLock: void setReferenceCounted(boolean)> is checking!!!
+The life time of api is [1,30]
+85call roads:
+1 Mainhead roads:
+84 Packageshead roads:
+containsStatic:false
+containsTry:true
+85call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.view.inputmethod.InputMethodManager: void toggleSoftInput(int,int)> is checking!!!
+The life time of api is [28,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 21 22 23 24 25 26 27 
+Error road: <android.androidVNC.VncCanvasActivity$4: void onClick(android.view.View)>[]--><android.view.inputmethod.InputMethodManager: void toggleSoftInput(int,int)>
+#1.the call statck between class <android.androidVNC.VncCanvasActivity$4: void onClick(android.view.View)> to <android.view.inputmethod.InputMethodManager: void toggleSoftInput(int,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 21 22 23 24 25 26 27 
+Error road: <android.androidVNC.VncCanvasActivity$5: void onClick(android.view.View)>[]--><android.view.inputmethod.InputMethodManager: void toggleSoftInput(int,int)>
+#2.the call statck between class <android.androidVNC.VncCanvasActivity$5: void onClick(android.view.View)> to <android.view.inputmethod.InputMethodManager: void toggleSoftInput(int,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:1
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager.WifiLock: void release()> is checking!!!
+The life time of api is [1,30]
+85call roads:
+1 Mainhead roads:
+84 Packageshead roads:
+containsStatic:false
+containsTry:true
+85call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager.WifiLock: boolean isHeld()> is checking!!!
+The life time of api is [1,30]
+85call roads:
+1 Mainhead roads:
+84 Packageshead roads:
+containsStatic:false
+containsTry:true
+85call by main package
+-----------------------------------------
+crashApis numbers:1
+crashApis numbers in main road:0
+On Android Version 16 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 17 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 18 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 19 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 20 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 21 this app may have error api use(at least): 1 and error api roads: 2
+On Android Version 22 this app may have error api use(at least): 1 and error api roads: 2
+On Android Version 23 this app may have error api use(at least): 1 and error api roads: 2
+On Android Version 24 this app may have error api use(at least): 1 and error api roads: 2
+On Android Version 25 this app may have error api use(at least): 1 and error api roads: 2
+On Android Version 26 this app may have error api use(at least): 1 and error api roads: 2
+On Android Version 27 this app may have error api use(at least): 1 and error api roads: 2
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 31 this app may have error api use(at least): 0 and error api roads: 0

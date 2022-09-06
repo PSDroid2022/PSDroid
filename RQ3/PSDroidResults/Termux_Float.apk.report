@@ -1,0 +1,137 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/Termux_Float.apk
+Entry Points[com.termux.window.TermuxFloatService, com.termux.window.TermuxFloatActivity, com.termux.window.TermuxFloatPermissionActivity]
+FllowDroidcallgraph size:493
+Soot started on Mon Jul 11 13:13:17 CST 2022
+Soot finished on Mon Jul 11 13:13:21 CST 2022
+Soot has run for 0 min. 3 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 21
+Declared Target Sdk version is: 27
+Declared Max Sdk version is: -1
+Collected 197 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.view.inputmethod.InputMethodManager: void toggleSoftInput(int,int)> is checking!!!
+The life time of api is [28,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 21 22 23 24 25 26 27 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.termux.window.TermuxFloatService dummyMainMethod_com_termux_window_TermuxFloatService(android.content.Intent)>[]--><com.termux.view.TerminalView: boolean onKeyDown(int,android.view.KeyEvent)>[]--><com.termux.window.TermuxFloatViewClient: boolean onKeyDown(int,android.view.KeyEvent,com.termux.terminal.TerminalSession)>[]--><android.view.inputmethod.InputMethodManager: void toggleSoftInput(int,int)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.view.inputmethod.InputMethodManager: void toggleSoftInput(int,int)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:1
+crashApisInMain:1
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.view.View: android.view.ActionMode startActionMode(android.view.ActionMode.Callback,int)> is checking!!!
+The life time of api is [23,31]
+5call roads:
+1 Mainhead roads:
+-i0 < 23
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.termux.window.TermuxFloatService dummyMainMethod_com_termux_window_TermuxFloatService(android.content.Intent)>[]--><com.termux.view.TerminalView: boolean onKeyPreIme(int,android.view.KeyEvent)>[]--><com.termux.view.TerminalView: void toggleSelectingText(android.view.MotionEvent)>[[-i0 < 23]]--><android.view.View: android.view.ActionMode startActionMode(android.view.ActionMode.Callback,int)>
+One road protect good!
+4 Packageshead roads:
+-i0 < 23
+Good road: <com.termux.view.TerminalView$1: boolean onSingleTapUp(android.view.MotionEvent)>[]--><com.termux.view.TerminalView: void toggleSelectingText(android.view.MotionEvent)>[[-i0 < 23]]--><android.view.View: android.view.ActionMode startActionMode(android.view.ActionMode.Callback,int)>
+One road protect good!
+-i0 < 23
+Good road: <com.termux.window.TermuxFloatService$1: void onTextChanged(com.termux.terminal.TerminalSession)>[]--><com.termux.view.TerminalView: void onScreenUpdated()>[]--><com.termux.view.TerminalView: void toggleSelectingText(android.view.MotionEvent)>[[-i0 < 23]]--><android.view.View: android.view.ActionMode startActionMode(android.view.ActionMode.Callback,int)>
+One road protect good!
+-i0 < 23
+Good road: <com.termux.view.TerminalView$3: boolean onActionItemClicked(android.view.ActionMode,android.view.MenuItem)>[]--><com.termux.view.TerminalView: void toggleSelectingText(android.view.MotionEvent)>[[-i0 < 23]]--><android.view.View: android.view.ActionMode startActionMode(android.view.ActionMode.Callback,int)>
+One road protect good!
+-i0 < 23
+Good road: <com.termux.view.TerminalView$1: void onLongPress(android.view.MotionEvent)>[]--><com.termux.view.TerminalView: void toggleSelectingText(android.view.MotionEvent)>[[-i0 < 23]]--><android.view.View: android.view.ActionMode startActionMode(android.view.ActionMode.Callback,int)>
+One road protect good!
+containsStatic:false
+containsTry:false
+5call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.view.ActionMode: void invalidateContentRect()> is checking!!!
+The life time of api is [23,31]
+1call roads:
+1 Mainhead roads:
+-i1 < 23
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.termux.window.TermuxFloatService dummyMainMethod_com_termux_window_TermuxFloatService(android.content.Intent)>[]--><com.termux.view.TerminalView: boolean onTouchEvent(android.view.MotionEvent)>[[-i1 < 23]]--><android.view.ActionMode: void invalidateContentRect()>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.app.NotificationChannel: void setDescription(java.lang.String)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.termux.window.TermuxFloatService dummyMainMethod_com_termux_window_TermuxFloatService(android.content.Intent)>[]--><com.termux.window.TermuxFloatService: int onStartCommand(android.content.Intent,int,int)>[]--><com.termux.window.TermuxFloatService: void setVisible(boolean)>[]--><com.termux.window.TermuxFloatService: android.app.Notification buildNotification()>[[-$i0 < 26]]--><com.termux.window.TermuxFloatService: void setupNotificationChannel()>[]--><android.app.NotificationChannel: void setDescription(java.lang.String)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.termux.window.TermuxFloatService dummyMainMethod_com_termux_window_TermuxFloatService(android.content.Intent)>[]--><com.termux.window.TermuxFloatService: int onStartCommand(android.content.Intent,int,int)>[]--><com.termux.window.TermuxFloatService: void setVisible(boolean)>[]--><com.termux.window.TermuxFloatService: android.app.Notification buildNotification()>[[-$i0 < 26]]--><com.termux.window.TermuxFloatService: void setupNotificationChannel()>[]--><android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 5 Potential Issue API: SDKCheck of <android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.termux.window.TermuxFloatService dummyMainMethod_com_termux_window_TermuxFloatService(android.content.Intent)>[]--><com.termux.window.TermuxFloatService: int onStartCommand(android.content.Intent,int,int)>[]--><com.termux.window.TermuxFloatService: void setVisible(boolean)>[]--><com.termux.window.TermuxFloatService: android.app.Notification buildNotification()>[[-$i0 < 26]]--><com.termux.window.TermuxFloatService: void setupNotificationChannel()>[]--><android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 6 Potential Issue API: SDKCheck of <android.app.Notification.Builder: android.app.Notification.Builder setChannelId(java.lang.String)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.termux.window.TermuxFloatService dummyMainMethod_com_termux_window_TermuxFloatService(android.content.Intent)>[]--><com.termux.window.TermuxFloatService: int onStartCommand(android.content.Intent,int,int)>[]--><com.termux.window.TermuxFloatService: void setVisible(boolean)>[]--><com.termux.window.TermuxFloatService: android.app.Notification buildNotification()>[[-$i0 < 26]]--><android.app.Notification.Builder: android.app.Notification.Builder setChannelId(java.lang.String)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+crashApis numbers:1
+crashApis numbers in main road:1
+On Android Version 16 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 17 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 18 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 19 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 20 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 21 this app may have error api use(at least): 1 and error api roads: 1
+On Android Version 22 this app may have error api use(at least): 1 and error api roads: 1
+On Android Version 23 this app may have error api use(at least): 1 and error api roads: 1
+On Android Version 24 this app may have error api use(at least): 1 and error api roads: 1
+On Android Version 25 this app may have error api use(at least): 1 and error api roads: 1
+On Android Version 26 this app may have error api use(at least): 1 and error api roads: 1
+On Android Version 27 this app may have error api use(at least): 1 and error api roads: 1
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 31 this app may have error api use(at least): 0 and error api roads: 0

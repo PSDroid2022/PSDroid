@@ -1,0 +1,259 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/LinCal.apk
+Entry Points[felixwiemuth.lincal.ui.CalendarViewActivity, org.acra.dialog.CrashReportDialog, felixwiemuth.lincal.Main, felixwiemuth.lincal.NotificationService, felixwiemuth.lincal.ui.CalendarListActivity, felixwiemuth.lincal.ui.SettingsActivity, org.acra.sender.SenderService, felixwiemuth.lincal.ui.AddCalendarActivity, felixwiemuth.lincal.LinCalBroadcastReceiver]
+FllowDroidcallgraph size:2265
+Soot started on Mon Jul 11 06:38:59 CST 2022
+Soot finished on Mon Jul 11 06:39:35 CST 2022
+Soot has run for 0 min. 36 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 19
+Declared Target Sdk version is: 26
+Declared Max Sdk version is: -1
+Collected 488 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.os.BaseBundle: int getInt(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+4call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: felixwiemuth.lincal.ui.CalendarViewActivity dummyMainMethod_felixwiemuth_lincal_ui_CalendarViewActivity(android.content.Intent)>[]--><dummyMainClass: felixwiemuth.lincal.ui.CalendarViewFragment dummyMainMethod_felixwiemuth_lincal_ui_CalendarViewFragment(android.content.Intent,android.app.Activity)>[]--><felixwiemuth.lincal.ui.CalendarViewFragment: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+3 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <felixwiemuth.lincal.ui.CalendarViewFragment$TimePickerFragment: android.app.Dialog onCreateDialog(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#1.the call statck between class <felixwiemuth.lincal.ui.CalendarViewFragment$TimePickerFragment: android.app.Dialog onCreateDialog(android.os.Bundle)> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <felixwiemuth.lincal.ui.HtmlDialogFragment: android.app.Dialog onCreateDialog(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#2.the call statck between class <felixwiemuth.lincal.ui.HtmlDialogFragment: android.app.Dialog onCreateDialog(android.os.Bundle)> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <felixwiemuth.lincal.ui.HtmlDialogFragment$1: java.lang.String doInBackground(java.lang.Void[])>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#3.the call statck between class <felixwiemuth.lincal.ui.HtmlDialogFragment$1: java.lang.String doInBackground(java.lang.Void[])> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:1
+crashApisInMain:1
+containsStatic:false
+containsTry:false
+4call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.os.BaseBundle: boolean containsKey(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: felixwiemuth.lincal.ui.CalendarViewActivity dummyMainMethod_felixwiemuth_lincal_ui_CalendarViewActivity(android.content.Intent)>[]--><dummyMainClass: felixwiemuth.lincal.ui.CalendarViewFragment dummyMainMethod_felixwiemuth_lincal_ui_CalendarViewFragment(android.content.Intent,android.app.Activity)>[]--><felixwiemuth.lincal.ui.CalendarViewFragment: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: boolean containsKey(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: boolean containsKey(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:2
+crashApisInMain:2
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.app.Fragment: android.content.Context getContext()> is checking!!!
+The life time of api is [23,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 21 22 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: felixwiemuth.lincal.ui.SettingsActivity dummyMainMethod_felixwiemuth_lincal_ui_SettingsActivity(android.content.Intent)>[]--><felixwiemuth.lincal.ui.SettingsFragment: void onSharedPreferenceChanged(android.content.SharedPreferences,java.lang.String)>[]--><android.app.Fragment: android.content.Context getContext()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.app.Fragment: android.content.Context getContext()>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:3
+crashApisInMain:3
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: felixwiemuth.lincal.ui.CalendarViewActivity dummyMainMethod_felixwiemuth_lincal_ui_CalendarViewActivity(android.content.Intent)>[]--><felixwiemuth.lincal.ui.CalendarViewActivity: boolean onOptionsItemSelected(android.view.MenuItem)>[]--><felixwiemuth.lincal.ui.LinCalMenuAppCompatActivity: boolean onOptionsItemSelected(android.view.MenuItem)>[[try]]--><felixwiemuth.lincal.ui.HtmlDialogFragment: void displayHtmlDialogFragment(android.support.v4.app.FragmentManager,java.lang.String,int,java.lang.Class[])>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+One road protect good!
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.acra.dialog.CrashReportDialog dummyMainMethod_org_acra_dialog_CrashReportDialog(android.content.Intent)>[]--><org.acra.dialog.CrashReportDialog: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:4
+crashApisInMain:4
+containsStatic:false
+containsTry:true
+1call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.os.LocaleList: java.util.Locale get(int)> is checking!!!
+The life time of api is [24,31]
+2call roads:
+1 Mainhead roads:
+-$i0 < 24
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: felixwiemuth.lincal.ui.SettingsActivity dummyMainMethod_felixwiemuth_lincal_ui_SettingsActivity(android.content.Intent)>[]--><felixwiemuth.lincal.ui.SettingsFragment: void onSharedPreferenceChanged(android.content.SharedPreferences,java.lang.String)>[]--><felixwiemuth.lincal.LocaleHelper: android.content.Context setLocale(android.content.Context,java.lang.String)>[[-$i0 < 24]]--><android.os.LocaleList: java.util.Locale get(int)>
+One road protect good!
+-$i0 < 24
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><felixwiemuth.lincal.Main: void attachBaseContext(android.content.Context)>[]--><felixwiemuth.lincal.LocaleHelper: android.content.Context onAttach(android.content.Context)>[]--><felixwiemuth.lincal.LocaleHelper: android.content.Context setLocale(android.content.Context,java.lang.String)>[[-$i0 < 24]]--><android.os.LocaleList: java.util.Locale get(int)>
+One road protect good!
+1 Packageshead roads:
+-$i0 < 24
+Good road: <felixwiemuth.lincal.ui.LinCalMenuAppCompatActivity: void attachBaseContext(android.content.Context)>[]--><felixwiemuth.lincal.LocaleHelper: android.content.Context onAttach(android.content.Context)>[]--><felixwiemuth.lincal.LocaleHelper: android.content.Context setLocale(android.content.Context,java.lang.String)>[[-$i0 < 24]]--><android.os.LocaleList: java.util.Locale get(int)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 5 Potential Issue API: SDKCheck of <android.media.MediaCodecList: android.media.MediaCodecInfo[] getCodecInfos()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+$i0 >= 21
+Good road: <org.acra.collector.MediaCodecListCollector: java.lang.String collect(org.acra.ReportField,org.acra.builder.ReportBuilder)>[]--><org.acra.collector.MediaCodecListCollector: java.lang.String collectMediaCodecList()>[[$i0 >= 21]]--><android.media.MediaCodecList: android.media.MediaCodecInfo[] getCodecInfos()>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 6 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.lang.String getString(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+3call roads:
+0 Mainhead roads:
+3 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <org.acra.dialog.CrashReportDialog: void init(android.os.Bundle)>[]--><org.acra.dialog.CrashReportDialog: void buildAndShowDialog(android.os.Bundle)>[]--><org.acra.dialog.CrashReportDialog: android.view.View buildCustomView(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#1.the call statck between class <org.acra.dialog.CrashReportDialog: void init(android.os.Bundle)> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+-$i0 < 24
+Good road: <felixwiemuth.lincal.ui.HtmlDialogFragment: android.app.Dialog onCreateDialog(android.os.Bundle)>[[-$i0 < 24]]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+One road protect good!
+!!!this api will crash on sdk 19 20 
+Error road: <org.acra.CrashReportDialog: void buildAndShowDialog(android.os.Bundle)>[]--><org.acra.dialog.CrashReportDialog: void buildAndShowDialog(android.os.Bundle)>[]--><org.acra.dialog.CrashReportDialog: android.view.View buildCustomView(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#3.the call statck between class <org.acra.CrashReportDialog: void buildAndShowDialog(android.os.Bundle)> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:5
+containsStatic:false
+containsTry:false
+4call by main package
+-----------------------------------------
+#################################################
+N 7 Potential Issue API: SDKCheck of <android.media.MediaCodecList: void <init>(int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+$i0 >= 21
+Good road: <org.acra.collector.MediaCodecListCollector: java.lang.String collect(org.acra.ReportField,org.acra.builder.ReportBuilder)>[]--><org.acra.collector.MediaCodecListCollector: java.lang.String collectMediaCodecList()>[[$i0 >= 21]]--><android.media.MediaCodecList: void <init>(int)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 8 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putStringArray(java.lang.String,java.lang.String[])> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: felixwiemuth.lincal.ui.CalendarViewActivity dummyMainMethod_felixwiemuth_lincal_ui_CalendarViewActivity(android.content.Intent)>[]--><felixwiemuth.lincal.ui.CalendarViewActivity: boolean onOptionsItemSelected(android.view.MenuItem)>[]--><felixwiemuth.lincal.ui.LinCalMenuAppCompatActivity: boolean onOptionsItemSelected(android.view.MenuItem)>[[try]]--><felixwiemuth.lincal.ui.HtmlDialogFragment: void displayHtmlDialogFragment(android.support.v4.app.FragmentManager,java.lang.String,int,java.lang.Class[])>[]--><felixwiemuth.lincal.ui.HtmlDialogFragment: void addActionsToBundle(android.os.Bundle,java.lang.Class[])>[]--><android.os.BaseBundle: void putStringArray(java.lang.String,java.lang.String[])>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:true
+1call by main package
+-----------------------------------------
+#################################################
+N 9 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putInt(java.lang.String,int)> is checking!!!
+The life time of api is [21,31]
+2call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: felixwiemuth.lincal.ui.CalendarViewActivity dummyMainMethod_felixwiemuth_lincal_ui_CalendarViewActivity(android.content.Intent)>[]--><dummyMainClass: felixwiemuth.lincal.ui.CalendarViewFragment dummyMainMethod_felixwiemuth_lincal_ui_CalendarViewFragment(android.content.Intent,android.app.Activity)>[]--><felixwiemuth.lincal.ui.CalendarViewFragment$2: void onClick(android.view.View)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <felixwiemuth.lincal.ui.CalendarListActivity$SimpleItemRecyclerViewAdapter$1: void onClick(android.view.View)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#1.the call statck between class <felixwiemuth.lincal.ui.CalendarListActivity$SimpleItemRecyclerViewAdapter$1: void onClick(android.view.View)> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:6
+crashApisInMain:5
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 10 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.lang.String[] getStringArray(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <felixwiemuth.lincal.ui.HtmlDialogFragment: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String[] getStringArray(java.lang.String)>
+#1.the call statck between class <felixwiemuth.lincal.ui.HtmlDialogFragment: void onCreate(android.os.Bundle)> to <android.os.BaseBundle: java.lang.String[] getStringArray(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:7
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 11 Potential Issue API: SDKCheck of <android.webkit.WebResourceRequest: android.net.Uri getUrl()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <felixwiemuth.lincal.ui.HtmlDialogFragment$2: boolean shouldOverrideUrlLoading(android.webkit.WebView,android.webkit.WebResourceRequest)>[]--><android.webkit.WebResourceRequest: android.net.Uri getUrl()>
+#1.the call statck between class <felixwiemuth.lincal.ui.HtmlDialogFragment$2: boolean shouldOverrideUrlLoading(android.webkit.WebView,android.webkit.WebResourceRequest)> to <android.webkit.WebResourceRequest: android.net.Uri getUrl()>has compatibility isssues！
+-----------------------------------------
+crashApis:8
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 12 Potential Issue API: SDKCheck of <android.content.res.Configuration: android.os.LocaleList getLocales()> is checking!!!
+The life time of api is [24,31]
+2call roads:
+1 Mainhead roads:
+-$i0 < 24
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: felixwiemuth.lincal.ui.SettingsActivity dummyMainMethod_felixwiemuth_lincal_ui_SettingsActivity(android.content.Intent)>[]--><felixwiemuth.lincal.ui.SettingsFragment: void onSharedPreferenceChanged(android.content.SharedPreferences,java.lang.String)>[]--><felixwiemuth.lincal.LocaleHelper: android.content.Context setLocale(android.content.Context,java.lang.String)>[[-$i0 < 24]]--><android.content.res.Configuration: android.os.LocaleList getLocales()>
+One road protect good!
+-$i0 < 24
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><felixwiemuth.lincal.Main: void attachBaseContext(android.content.Context)>[]--><felixwiemuth.lincal.LocaleHelper: android.content.Context onAttach(android.content.Context)>[]--><felixwiemuth.lincal.LocaleHelper: android.content.Context setLocale(android.content.Context,java.lang.String)>[[-$i0 < 24]]--><android.content.res.Configuration: android.os.LocaleList getLocales()>
+One road protect good!
+1 Packageshead roads:
+-$i0 < 24
+Good road: <felixwiemuth.lincal.ui.LinCalMenuAppCompatActivity: void attachBaseContext(android.content.Context)>[]--><felixwiemuth.lincal.LocaleHelper: android.content.Context onAttach(android.content.Context)>[]--><felixwiemuth.lincal.LocaleHelper: android.content.Context setLocale(android.content.Context,java.lang.String)>[[-$i0 < 24]]--><android.content.res.Configuration: android.os.LocaleList getLocales()>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+crashApis numbers:8
+crashApis numbers in main road:5
+On Android Version 16 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 17 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 18 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 19 this app may have error api use(at least): 8 and error api roads: 13
+On Android Version 20 this app may have error api use(at least): 8 and error api roads: 13
+On Android Version 21 this app may have error api use(at least): 1 and error api roads: 1
+On Android Version 22 this app may have error api use(at least): 1 and error api roads: 1
+On Android Version 23 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 24 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 25 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 31 this app may have error api use(at least): 0 and error api roads: 0

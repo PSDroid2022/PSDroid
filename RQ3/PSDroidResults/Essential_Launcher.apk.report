@@ -1,0 +1,283 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/Essential_Launcher.apk
+Entry Points[de.clemensbartz.android.launcher.Launcher, de.clemensbartz.android.launcher.receivers.PackageChangedBroadcastReceiver]
+FllowDroidcallgraph size:651
+Soot started on Mon Jul 11 03:32:07 CST 2022
+Soot finished on Mon Jul 11 03:32:10 CST 2022
+Soot has run for 0 min. 2 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 17
+Declared Target Sdk version is: 28
+Declared Max Sdk version is: -1
+Collected 208 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.content.pm.ShortcutInfo: java.lang.CharSequence getShortLabel()> is checking!!!
+The life time of api is [25,31]
+1call roads:
+1 Mainhead roads:
+-i0 < 25
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.clemensbartz.android.launcher.Launcher dummyMainMethod_de_clemensbartz_android_launcher_Launcher(android.content.Intent)>[]--><de.clemensbartz.android.launcher.listeners.AbsListViewOnCreateContextMenuListener: void onCreateContextMenu(android.view.ContextMenu,android.view.View,android.view.ContextMenu$ContextMenuInfo)>[[-i0 < 25]]--><android.content.pm.ShortcutInfo: java.lang.CharSequence getShortLabel()>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.content.Context: android.graphics.drawable.Drawable getDrawable(int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+###Multi invoking in one method, need manual check!!!--><de.clemensbartz.android.launcher.Launcher: void onCreate(android.os.Bundle)>[[-i1 < 21], [i1 < 18]]
+###Multi invoking in one method, need manual check!!!--><de.clemensbartz.android.launcher.Launcher: void onCreate(android.os.Bundle)>[[-i1 < 21]][[i1 < 18]]
+-i1 < 21
+i1 < 18
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.clemensbartz.android.launcher.Launcher dummyMainMethod_de_clemensbartz_android_launcher_Launcher(android.content.Intent)>[]--><de.clemensbartz.android.launcher.Launcher: void onCreate(android.os.Bundle)>[[-i1 < 21], [i1 < 18]]--><android.content.Context: android.graphics.drawable.Drawable getDrawable(int)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.content.pm.LauncherApps: boolean hasShortcutHostPermission()> is checking!!!
+The life time of api is [25,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 17 18 19 20 21 22 23 24 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.clemensbartz.android.launcher.Launcher dummyMainMethod_de_clemensbartz_android_launcher_Launcher(android.content.Intent)>[]--><de.clemensbartz.android.launcher.listeners.ShortcutInfoOnMenuItemClickListener: boolean onMenuItemClick(android.view.MenuItem)>[]--><android.content.pm.LauncherApps: boolean hasShortcutHostPermission()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.content.pm.LauncherApps: boolean hasShortcutHostPermission()>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:1
+crashApisInMain:1
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.content.pm.LauncherActivityInfo: java.lang.CharSequence getLabel()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-i0 < 21
+Good road: <de.clemensbartz.android.launcher.tasks.LoadDrawerListAdapterTask: java.lang.Object doInBackground(java.lang.Object[])>[]--><de.clemensbartz.android.launcher.tasks.LoadDrawerListAdapterTask: java.lang.Integer doInBackground(java.lang.Integer[])>[[-i0 < 21]]--><de.clemensbartz.android.launcher.tasks.LoadDrawerListAdapterTask: java.util.List getApplicationModelsByLauncherApps(android.content.pm.LauncherApps,android.content.pm.PackageManager,de.clemensbartz.android.launcher.controllers.DrawerController)>[]--><android.content.pm.LauncherActivityInfo: java.lang.CharSequence getLabel()>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putInt(java.lang.String,int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.clemensbartz.android.launcher.Launcher dummyMainMethod_de_clemensbartz_android_launcher_Launcher(android.content.Intent)>[]--><de.clemensbartz.android.launcher.Launcher: boolean onOptionsItemSelected(android.view.MenuItem)>[]--><de.clemensbartz.android.launcher.controllers.WidgetController: void requestWidgetRemoval()>[]--><de.clemensbartz.android.launcher.tasks.CreateWidgetAsyncTask: void onPostExecute(java.lang.Object)>[]--><de.clemensbartz.android.launcher.tasks.CreateWidgetAsyncTask: void onPostExecute(java.lang.Integer)>[]--><de.clemensbartz.android.launcher.controllers.WidgetController: void createWidget(int)>[]--><de.clemensbartz.android.launcher.controllers.WidgetController: void addHostView(int)>[]--><de.clemensbartz.android.launcher.util.BundleUtil: android.os.Bundle getWidgetOptionsBundle(int,int,int,int)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:2
+crashApisInMain:2
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 5 Potential Issue API: SDKCheck of <android.content.pm.LauncherActivityInfo: android.content.pm.ApplicationInfo getApplicationInfo()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-i0 < 21
+Good road: <de.clemensbartz.android.launcher.tasks.LoadDrawerListAdapterTask: java.lang.Object doInBackground(java.lang.Object[])>[]--><de.clemensbartz.android.launcher.tasks.LoadDrawerListAdapterTask: java.lang.Integer doInBackground(java.lang.Integer[])>[[-i0 < 21]]--><de.clemensbartz.android.launcher.tasks.LoadDrawerListAdapterTask: java.util.List getApplicationModelsByLauncherApps(android.content.pm.LauncherApps,android.content.pm.PackageManager,de.clemensbartz.android.launcher.controllers.DrawerController)>[]--><android.content.pm.LauncherActivityInfo: android.content.pm.ApplicationInfo getApplicationInfo()>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 6 Potential Issue API: SDKCheck of <android.content.pm.LauncherApps: java.util.List getActivityList(java.lang.String,android.os.UserHandle)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-i0 < 21
+Good road: <de.clemensbartz.android.launcher.tasks.LoadDrawerListAdapterTask: java.lang.Object doInBackground(java.lang.Object[])>[]--><de.clemensbartz.android.launcher.tasks.LoadDrawerListAdapterTask: java.lang.Integer doInBackground(java.lang.Integer[])>[[-i0 < 21]]--><de.clemensbartz.android.launcher.tasks.LoadDrawerListAdapterTask: java.util.List getApplicationModelsByLauncherApps(android.content.pm.LauncherApps,android.content.pm.PackageManager,de.clemensbartz.android.launcher.controllers.DrawerController)>[]--><android.content.pm.LauncherApps: java.util.List getActivityList(java.lang.String,android.os.UserHandle)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 7 Potential Issue API: SDKCheck of <android.appwidget.AppWidgetProviderInfo: java.lang.String loadLabel(android.content.pm.PackageManager)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.clemensbartz.android.launcher.Launcher dummyMainMethod_de_clemensbartz_android_launcher_Launcher(android.content.Intent)>[]--><de.clemensbartz.android.launcher.Launcher: boolean onOptionsItemSelected(android.view.MenuItem)>[]--><de.clemensbartz.android.launcher.controllers.WidgetController: void requestWidgetChoosing()>[]--><de.clemensbartz.android.launcher.tasks.ShowWidgetListAsPopupMenuTask: java.lang.Object doInBackground(java.lang.Object[])>[]--><de.clemensbartz.android.launcher.tasks.ShowWidgetListAsPopupMenuTask: java.util.List doInBackground(java.lang.Integer[])>[[-$i0 < 21]]--><android.appwidget.AppWidgetProviderInfo: java.lang.String loadLabel(android.content.pm.PackageManager)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 8 Potential Issue API: SDKCheck of <android.graphics.drawable.RippleDrawable: void <init>(android.content.res.ColorStateList,android.graphics.drawable.Drawable,android.graphics.drawable.Drawable)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i0 < 21
+Good road: <de.clemensbartz.android.launcher.tasks.LoadApplicationModelIconIntoImageViewTask: void onPostExecute(java.lang.Object)>[]--><de.clemensbartz.android.launcher.tasks.LoadApplicationModelIconIntoImageViewTask: void onPostExecute(android.graphics.drawable.Drawable)>[[-$i0 < 21]]--><android.graphics.drawable.RippleDrawable: void <init>(android.content.res.ColorStateList,android.graphics.drawable.Drawable,android.graphics.drawable.Drawable)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 9 Potential Issue API: SDKCheck of <android.os.LocaleList: java.util.Locale get(int)> is checking!!!
+The life time of api is [24,31]
+2call roads:
+1 Mainhead roads:
+-i0 < 24
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.clemensbartz.android.launcher.Launcher dummyMainMethod_de_clemensbartz_android_launcher_Launcher(android.content.Intent)>[]--><de.clemensbartz.android.launcher.adapters.DrawerListAdapter: void <init>(android.content.Context,android.graphics.drawable.Drawable)>[]--><de.clemensbartz.android.launcher.util.LocaleUtil: java.util.Locale getLocale(android.content.Context)>[[-i0 < 24]]--><android.os.LocaleList: java.util.Locale get(int)>
+One road protect good!
+1 Packageshead roads:
+-i0 < 24
+Good road: <de.clemensbartz.android.launcher.tasks.LoadDrawerListAdapterTask: java.lang.Object doInBackground(java.lang.Object[])>[]--><de.clemensbartz.android.launcher.tasks.LoadDrawerListAdapterTask: java.lang.Integer doInBackground(java.lang.Integer[])>[]--><de.clemensbartz.android.launcher.comparators.ApplicationModelComparator: void <init>(android.content.Context)>[]--><de.clemensbartz.android.launcher.util.LocaleUtil: java.util.Locale getLocale(android.content.Context)>[[-i0 < 24]]--><android.os.LocaleList: java.util.Locale get(int)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 10 Potential Issue API: SDKCheck of <android.content.pm.LauncherApps: void startShortcut(android.content.pm.ShortcutInfo,android.graphics.Rect,android.os.Bundle)> is checking!!!
+The life time of api is [25,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 17 18 19 20 21 22 23 24 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.clemensbartz.android.launcher.Launcher dummyMainMethod_de_clemensbartz_android_launcher_Launcher(android.content.Intent)>[]--><de.clemensbartz.android.launcher.listeners.ShortcutInfoOnMenuItemClickListener: boolean onMenuItemClick(android.view.MenuItem)>[]--><android.content.pm.LauncherApps: void startShortcut(android.content.pm.ShortcutInfo,android.graphics.Rect,android.os.Bundle)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.content.pm.LauncherApps: void startShortcut(android.content.pm.ShortcutInfo,android.graphics.Rect,android.os.Bundle)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:3
+crashApisInMain:3
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 11 Potential Issue API: SDKCheck of <android.content.pm.LauncherApps.ShortcutQuery: android.content.pm.LauncherApps.ShortcutQuery setQueryFlags(int)> is checking!!!
+The life time of api is [25,31]
+1call roads:
+1 Mainhead roads:
+-i0 < 25
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.clemensbartz.android.launcher.Launcher dummyMainMethod_de_clemensbartz_android_launcher_Launcher(android.content.Intent)>[]--><de.clemensbartz.android.launcher.listeners.DockOnCreateContextMenuListener: void onCreateContextMenu(android.view.ContextMenu,android.view.View,android.view.ContextMenu$ContextMenuInfo)>[[-i0 < 25]]--><de.clemensbartz.android.launcher.util.LauncherAppsUtil: java.util.List getShortcutInfos(android.content.pm.LauncherApps,de.clemensbartz.android.launcher.models.ApplicationModel)>[]--><android.content.pm.LauncherApps.ShortcutQuery: android.content.pm.LauncherApps.ShortcutQuery setQueryFlags(int)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 12 Potential Issue API: SDKCheck of <android.content.pm.LauncherActivityInfo: android.content.ComponentName getComponentName()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-i0 < 21
+Good road: <de.clemensbartz.android.launcher.tasks.LoadDrawerListAdapterTask: java.lang.Object doInBackground(java.lang.Object[])>[]--><de.clemensbartz.android.launcher.tasks.LoadDrawerListAdapterTask: java.lang.Integer doInBackground(java.lang.Integer[])>[[-i0 < 21]]--><de.clemensbartz.android.launcher.tasks.LoadDrawerListAdapterTask: java.util.List getApplicationModelsByLauncherApps(android.content.pm.LauncherApps,android.content.pm.PackageManager,de.clemensbartz.android.launcher.controllers.DrawerController)>[]--><android.content.pm.LauncherActivityInfo: android.content.ComponentName getComponentName()>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 13 Potential Issue API: SDKCheck of <android.content.res.Configuration: android.os.LocaleList getLocales()> is checking!!!
+The life time of api is [24,31]
+2call roads:
+1 Mainhead roads:
+-i0 < 24
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.clemensbartz.android.launcher.Launcher dummyMainMethod_de_clemensbartz_android_launcher_Launcher(android.content.Intent)>[]--><de.clemensbartz.android.launcher.adapters.DrawerListAdapter: void <init>(android.content.Context,android.graphics.drawable.Drawable)>[]--><de.clemensbartz.android.launcher.util.LocaleUtil: java.util.Locale getLocale(android.content.Context)>[[-i0 < 24]]--><android.content.res.Configuration: android.os.LocaleList getLocales()>
+One road protect good!
+1 Packageshead roads:
+-i0 < 24
+Good road: <de.clemensbartz.android.launcher.tasks.LoadDrawerListAdapterTask: java.lang.Object doInBackground(java.lang.Object[])>[]--><de.clemensbartz.android.launcher.tasks.LoadDrawerListAdapterTask: java.lang.Integer doInBackground(java.lang.Integer[])>[]--><de.clemensbartz.android.launcher.comparators.ApplicationModelComparator: void <init>(android.content.Context)>[]--><de.clemensbartz.android.launcher.util.LocaleUtil: java.util.Locale getLocale(android.content.Context)>[[-i0 < 24]]--><android.content.res.Configuration: android.os.LocaleList getLocales()>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 14 Potential Issue API: SDKCheck of <android.content.pm.LauncherApps.ShortcutQuery: void <init>()> is checking!!!
+The life time of api is [25,31]
+1call roads:
+1 Mainhead roads:
+-i0 < 25
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.clemensbartz.android.launcher.Launcher dummyMainMethod_de_clemensbartz_android_launcher_Launcher(android.content.Intent)>[]--><de.clemensbartz.android.launcher.listeners.DockOnCreateContextMenuListener: void onCreateContextMenu(android.view.ContextMenu,android.view.View,android.view.ContextMenu$ContextMenuInfo)>[[-i0 < 25]]--><de.clemensbartz.android.launcher.util.LauncherAppsUtil: java.util.List getShortcutInfos(android.content.pm.LauncherApps,de.clemensbartz.android.launcher.models.ApplicationModel)>[]--><android.content.pm.LauncherApps.ShortcutQuery: void <init>()>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 15 Potential Issue API: SDKCheck of <android.content.pm.LauncherApps: java.util.List getShortcuts(android.content.pm.LauncherApps.ShortcutQuery,android.os.UserHandle)> is checking!!!
+The life time of api is [25,31]
+1call roads:
+1 Mainhead roads:
+-i0 < 25
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.clemensbartz.android.launcher.Launcher dummyMainMethod_de_clemensbartz_android_launcher_Launcher(android.content.Intent)>[]--><de.clemensbartz.android.launcher.listeners.DockOnCreateContextMenuListener: void onCreateContextMenu(android.view.ContextMenu,android.view.View,android.view.ContextMenu$ContextMenuInfo)>[[-i0 < 25]]--><de.clemensbartz.android.launcher.util.LauncherAppsUtil: java.util.List getShortcutInfos(android.content.pm.LauncherApps,de.clemensbartz.android.launcher.models.ApplicationModel)>[]--><android.content.pm.LauncherApps: java.util.List getShortcuts(android.content.pm.LauncherApps.ShortcutQuery,android.os.UserHandle)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 16 Potential Issue API: SDKCheck of <android.content.pm.LauncherApps.ShortcutQuery: android.content.pm.LauncherApps.ShortcutQuery setPackage(java.lang.String)> is checking!!!
+The life time of api is [25,31]
+1call roads:
+1 Mainhead roads:
+-i0 < 25
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.clemensbartz.android.launcher.Launcher dummyMainMethod_de_clemensbartz_android_launcher_Launcher(android.content.Intent)>[]--><de.clemensbartz.android.launcher.listeners.DockOnCreateContextMenuListener: void onCreateContextMenu(android.view.ContextMenu,android.view.View,android.view.ContextMenu$ContextMenuInfo)>[[-i0 < 25]]--><de.clemensbartz.android.launcher.util.LauncherAppsUtil: java.util.List getShortcutInfos(android.content.pm.LauncherApps,de.clemensbartz.android.launcher.models.ApplicationModel)>[]--><android.content.pm.LauncherApps.ShortcutQuery: android.content.pm.LauncherApps.ShortcutQuery setPackage(java.lang.String)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 17 Potential Issue API: SDKCheck of <android.content.pm.LauncherActivityInfo: java.lang.String getName()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-i0 < 21
+Good road: <de.clemensbartz.android.launcher.tasks.LoadDrawerListAdapterTask: java.lang.Object doInBackground(java.lang.Object[])>[]--><de.clemensbartz.android.launcher.tasks.LoadDrawerListAdapterTask: java.lang.Integer doInBackground(java.lang.Integer[])>[[-i0 < 21]]--><de.clemensbartz.android.launcher.tasks.LoadDrawerListAdapterTask: java.util.List getApplicationModelsByLauncherApps(android.content.pm.LauncherApps,android.content.pm.PackageManager,de.clemensbartz.android.launcher.controllers.DrawerController)>[]--><android.content.pm.LauncherActivityInfo: java.lang.String getName()>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+crashApis numbers:3
+crashApis numbers in main road:3
+On Android Version 16 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 17 this app may have error api use(at least): 3 and error api roads: 3
+On Android Version 18 this app may have error api use(at least): 3 and error api roads: 3
+On Android Version 19 this app may have error api use(at least): 3 and error api roads: 3
+On Android Version 20 this app may have error api use(at least): 3 and error api roads: 3
+On Android Version 21 this app may have error api use(at least): 2 and error api roads: 2
+On Android Version 22 this app may have error api use(at least): 2 and error api roads: 2
+On Android Version 23 this app may have error api use(at least): 2 and error api roads: 2
+On Android Version 24 this app may have error api use(at least): 2 and error api roads: 2
+On Android Version 25 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 31 this app may have error api use(at least): 0 and error api roads: 0

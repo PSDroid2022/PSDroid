@@ -1,0 +1,368 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/PinPoi.apk
+Entry Points[io.github.fvasco.pinpoi.MainActivity, io.github.fvasco.pinpoi.PlacemarkListActivity, io.github.fvasco.pinpoi.PlacemarkCollectionListActivity, io.github.fvasco.pinpoi.PlacemarkDetailActivity, io.github.fvasco.pinpoi.PlacemarkCollectionDetailActivity]
+FllowDroidcallgraph size:4788
+Soot started on Mon Jul 11 10:50:23 CST 2022
+StaticCheck:<io.github.fvasco.pinpoi.dao.PlacemarkDao: boolean SQL_INSTR_PRESENT>$yysi0 < 21
+Soot finished on Mon Jul 11 10:50:50 CST 2022
+Soot has run for 0 min. 26 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 19
+Declared Target Sdk version is: 28
+Declared Max Sdk version is: -1
+Collected 452 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.text.Html: android.text.Spanned fromHtml(java.lang.String,int)> is checking!!!
+The life time of api is [24,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+-i1 < 24
+Good road: <io.github.fvasco.pinpoi.PlacemarkDetailActivity: void onSwipe(boolean)>[]--><io.github.fvasco.pinpoi.PlacemarkDetailFragment: void setPlacemark(io.github.fvasco.pinpoi.model.Placemark)>[[-i1 < 24]]--><android.text.Html: android.text.Spanned fromHtml(java.lang.String,int)>
+One road protect good!
+-i1 < 24
+Good road: <io.github.fvasco.pinpoi.PlacemarkDetailFragment: void onStart()>[]--><io.github.fvasco.pinpoi.PlacemarkDetailFragment: void setPlacemark(io.github.fvasco.pinpoi.model.Placemark)>[[-i1 < 24]]--><android.text.Html: android.text.Spanned fromHtml(java.lang.String,int)>
+One road protect good!
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putLongArray(java.lang.String,long[])> is checking!!!
+The life time of api is [21,31]
+3call roads:
+0 Mainhead roads:
+3 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <org.jetbrains.anko.support.v4.SupportKt: android.support.v4.app.Fragment withArguments(android.support.v4.app.Fragment,kotlin.Pair[])>[]--><org.jetbrains.anko.ContextUtilsKt: android.os.Bundle bundleOf(kotlin.Pair[])>[]--><android.os.BaseBundle: void putLongArray(java.lang.String,long[])>
+#1.the call statck between class <org.jetbrains.anko.support.v4.SupportKt: android.support.v4.app.Fragment withArguments(android.support.v4.app.Fragment,kotlin.Pair[])> to <android.os.BaseBundle: void putLongArray(java.lang.String,long[])>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <org.jetbrains.anko.ContextUtilsKt: android.app.Fragment withArguments(android.app.Fragment,kotlin.Pair[])>[]--><org.jetbrains.anko.ContextUtilsKt: android.os.Bundle bundleOf(kotlin.Pair[])>[]--><android.os.BaseBundle: void putLongArray(java.lang.String,long[])>
+#2.the call statck between class <org.jetbrains.anko.ContextUtilsKt: android.app.Fragment withArguments(android.app.Fragment,kotlin.Pair[])> to <android.os.BaseBundle: void putLongArray(java.lang.String,long[])>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <io.github.fvasco.pinpoi.PlacemarkListActivity$SimpleItemRecyclerViewAdapter$onBindViewHolder$1: void onClick(android.view.View)>[]--><io.github.fvasco.pinpoi.PlacemarkListActivity: void openPlacemark(long)>[]--><android.os.BaseBundle: void putLongArray(java.lang.String,long[])>
+#3.the call statck between class <io.github.fvasco.pinpoi.PlacemarkListActivity$SimpleItemRecyclerViewAdapter$onBindViewHolder$1: void onClick(android.view.View)> to <android.os.BaseBundle: void putLongArray(java.lang.String,long[])>has compatibility isssues！
+-----------------------------------------
+crashApis:1
+containsStatic:false
+containsTry:false
+4call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.os.BaseBundle: boolean containsKey(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <io.github.fvasco.pinpoi.PlacemarkCollectionDetailFragment: void onActivityCreated(android.os.Bundle)>[]--><android.os.BaseBundle: boolean containsKey(java.lang.String)>
+#1.the call statck between class <io.github.fvasco.pinpoi.PlacemarkCollectionDetailFragment: void onActivityCreated(android.os.Bundle)> to <android.os.BaseBundle: boolean containsKey(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:2
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.os.BaseBundle: long getLong(java.lang.String,long)> is checking!!!
+The life time of api is [21,31]
+2call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: io.github.fvasco.pinpoi.PlacemarkDetailActivity dummyMainMethod_io_github_fvasco_pinpoi_PlacemarkDetailActivity(android.content.Intent)>[]--><io.github.fvasco.pinpoi.PlacemarkDetailActivity: void onRestoreInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: long getLong(java.lang.String,long)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: long getLong(java.lang.String,long)>has compatibility isssues！
+-----------------------------------------
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <io.github.fvasco.pinpoi.PlacemarkDetailFragment: void onActivityCreated(android.os.Bundle)>[]--><android.os.BaseBundle: long getLong(java.lang.String,long)>
+#1.the call statck between class <io.github.fvasco.pinpoi.PlacemarkDetailFragment: void onActivityCreated(android.os.Bundle)> to <android.os.BaseBundle: long getLong(java.lang.String,long)>has compatibility isssues！
+-----------------------------------------
+crashApis:3
+crashApisInMain:1
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)> is checking!!!
+The life time of api is [21,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <org.jetbrains.anko.support.v4.SupportKt: android.support.v4.app.Fragment withArguments(android.support.v4.app.Fragment,kotlin.Pair[])>[]--><org.jetbrains.anko.ContextUtilsKt: android.os.Bundle bundleOf(kotlin.Pair[])>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#1.the call statck between class <org.jetbrains.anko.support.v4.SupportKt: android.support.v4.app.Fragment withArguments(android.support.v4.app.Fragment,kotlin.Pair[])> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <org.jetbrains.anko.ContextUtilsKt: android.app.Fragment withArguments(android.app.Fragment,kotlin.Pair[])>[]--><org.jetbrains.anko.ContextUtilsKt: android.os.Bundle bundleOf(kotlin.Pair[])>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#2.the call statck between class <org.jetbrains.anko.ContextUtilsKt: android.app.Fragment withArguments(android.app.Fragment,kotlin.Pair[])> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:4
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 5 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putBooleanArray(java.lang.String,boolean[])> is checking!!!
+The life time of api is [22,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 19 20 21 
+Error road: <org.jetbrains.anko.support.v4.SupportKt: android.support.v4.app.Fragment withArguments(android.support.v4.app.Fragment,kotlin.Pair[])>[]--><org.jetbrains.anko.ContextUtilsKt: android.os.Bundle bundleOf(kotlin.Pair[])>[]--><android.os.BaseBundle: void putBooleanArray(java.lang.String,boolean[])>
+#1.the call statck between class <org.jetbrains.anko.support.v4.SupportKt: android.support.v4.app.Fragment withArguments(android.support.v4.app.Fragment,kotlin.Pair[])> to <android.os.BaseBundle: void putBooleanArray(java.lang.String,boolean[])>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 21 
+Error road: <org.jetbrains.anko.ContextUtilsKt: android.app.Fragment withArguments(android.app.Fragment,kotlin.Pair[])>[]--><org.jetbrains.anko.ContextUtilsKt: android.os.Bundle bundleOf(kotlin.Pair[])>[]--><android.os.BaseBundle: void putBooleanArray(java.lang.String,boolean[])>
+#2.the call statck between class <org.jetbrains.anko.ContextUtilsKt: android.app.Fragment withArguments(android.app.Fragment,kotlin.Pair[])> to <android.os.BaseBundle: void putBooleanArray(java.lang.String,boolean[])>has compatibility isssues！
+-----------------------------------------
+crashApis:5
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 6 Potential Issue API: SDKCheck of <android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)> is checking!!!
+The life time of api is [22,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: io.github.fvasco.pinpoi.PlacemarkListActivity dummyMainMethod_io_github_fvasco_pinpoi_PlacemarkListActivity(android.content.Intent)>[]--><io.github.fvasco.pinpoi.PlacemarkListActivity: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:6
+crashApisInMain:2
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 7 Potential Issue API: SDKCheck of <android.os.BaseBundle: long getLong(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <io.github.fvasco.pinpoi.PlacemarkDetailFragment: void onActivityCreated(android.os.Bundle)>[]--><android.os.BaseBundle: long getLong(java.lang.String)>
+#1.the call statck between class <io.github.fvasco.pinpoi.PlacemarkDetailFragment: void onActivityCreated(android.os.Bundle)> to <android.os.BaseBundle: long getLong(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <io.github.fvasco.pinpoi.PlacemarkCollectionDetailFragment: void onActivityCreated(android.os.Bundle)>[]--><android.os.BaseBundle: long getLong(java.lang.String)>
+#2.the call statck between class <io.github.fvasco.pinpoi.PlacemarkCollectionDetailFragment: void onActivityCreated(android.os.Bundle)> to <android.os.BaseBundle: long getLong(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:7
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 8 Potential Issue API: SDKCheck of <android.content.res.Resources: android.graphics.drawable.Drawable getDrawable(int,android.content.res.Resources.Theme)> is checking!!!
+The life time of api is [21,31]
+5call roads:
+1 Mainhead roads:
+-$i1 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: io.github.fvasco.pinpoi.PlacemarkDetailActivity dummyMainMethod_io_github_fvasco_pinpoi_PlacemarkDetailActivity(android.content.Intent)>[]--><io.github.fvasco.pinpoi.PlacemarkDetailActivity: void onConfigurationChanged(android.content.res.Configuration)>[]--><io.github.fvasco.pinpoi.PlacemarkDetailActivity: void resetStarFabIcon()>[]--><io.github.fvasco.pinpoi.PlacemarkDetailFragment: void resetStarFabIcon(android.support.design.widget.FloatingActionButton)>[[-$i1 < 21]]--><android.content.res.Resources: android.graphics.drawable.Drawable getDrawable(int,android.content.res.Resources.Theme)>
+One road protect good!
+-$i1 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: io.github.fvasco.pinpoi.PlacemarkListActivity dummyMainMethod_io_github_fvasco_pinpoi_PlacemarkListActivity(android.content.Intent)>[]--><io.github.fvasco.pinpoi.PlacemarkListActivity: void onConfigurationChanged(android.content.res.Configuration)>[]--><io.github.fvasco.pinpoi.PlacemarkListActivity: void resetStarFabIcon()>[]--><io.github.fvasco.pinpoi.PlacemarkDetailFragment: void resetStarFabIcon(android.support.design.widget.FloatingActionButton)>[[-$i1 < 21]]--><android.content.res.Resources: android.graphics.drawable.Drawable getDrawable(int,android.content.res.Resources.Theme)>
+One road protect good!
+4 Packageshead roads:
+-$i1 < 21
+Good road: <io.github.fvasco.pinpoi.PlacemarkDetailActivity: void onSwipe(boolean)>[]--><io.github.fvasco.pinpoi.PlacemarkDetailActivity: void resetStarFabIcon()>[]--><io.github.fvasco.pinpoi.PlacemarkDetailFragment: void resetStarFabIcon(android.support.design.widget.FloatingActionButton)>[[-$i1 < 21]]--><android.content.res.Resources: android.graphics.drawable.Drawable getDrawable(int,android.content.res.Resources.Theme)>
+One road protect good!
+-$i1 < 21
+Good road: <io.github.fvasco.pinpoi.PlacemarkListActivity: void onStarClick(android.view.View)>[]--><io.github.fvasco.pinpoi.PlacemarkDetailFragment: void onStarClick(android.support.design.widget.FloatingActionButton)>[]--><io.github.fvasco.pinpoi.PlacemarkDetailFragment: void resetStarFabIcon(android.support.design.widget.FloatingActionButton)>[[-$i1 < 21]]--><android.content.res.Resources: android.graphics.drawable.Drawable getDrawable(int,android.content.res.Resources.Theme)>
+One road protect good!
+-$i1 < 21
+Good road: <io.github.fvasco.pinpoi.PlacemarkDetailFragment: void onResume()>[]--><io.github.fvasco.pinpoi.PlacemarkDetailFragment: void resetStarFabIcon(android.support.design.widget.FloatingActionButton)>[[-$i1 < 21]]--><android.content.res.Resources: android.graphics.drawable.Drawable getDrawable(int,android.content.res.Resources.Theme)>
+One road protect good!
+-$i1 < 21
+Good road: <io.github.fvasco.pinpoi.PlacemarkDetailActivity: void onStarClick(android.view.View)>[]--><io.github.fvasco.pinpoi.PlacemarkDetailFragment: void onStarClick(android.support.design.widget.FloatingActionButton)>[]--><io.github.fvasco.pinpoi.PlacemarkDetailFragment: void resetStarFabIcon(android.support.design.widget.FloatingActionButton)>[[-$i1 < 21]]--><android.content.res.Resources: android.graphics.drawable.Drawable getDrawable(int,android.content.res.Resources.Theme)>
+One road protect good!
+containsStatic:false
+containsTry:false
+5call by main package
+-----------------------------------------
+#################################################
+N 9 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)> is checking!!!
+The life time of api is [22,31]
+3call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: io.github.fvasco.pinpoi.PlacemarkListActivity dummyMainMethod_io_github_fvasco_pinpoi_PlacemarkListActivity(android.content.Intent)>[]--><io.github.fvasco.pinpoi.PlacemarkListActivity: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+2 Packageshead roads:
+!!!this api will crash on sdk 19 20 21 
+Error road: <org.jetbrains.anko.support.v4.SupportKt: android.support.v4.app.Fragment withArguments(android.support.v4.app.Fragment,kotlin.Pair[])>[]--><org.jetbrains.anko.ContextUtilsKt: android.os.Bundle bundleOf(kotlin.Pair[])>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+#1.the call statck between class <org.jetbrains.anko.support.v4.SupportKt: android.support.v4.app.Fragment withArguments(android.support.v4.app.Fragment,kotlin.Pair[])> to <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 21 
+Error road: <org.jetbrains.anko.ContextUtilsKt: android.app.Fragment withArguments(android.app.Fragment,kotlin.Pair[])>[]--><org.jetbrains.anko.ContextUtilsKt: android.os.Bundle bundleOf(kotlin.Pair[])>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+#2.the call statck between class <org.jetbrains.anko.ContextUtilsKt: android.app.Fragment withArguments(android.app.Fragment,kotlin.Pair[])> to <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+crashApis:8
+crashApisInMain:3
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 10 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putDouble(java.lang.String,double)> is checking!!!
+The life time of api is [21,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <org.jetbrains.anko.support.v4.SupportKt: android.support.v4.app.Fragment withArguments(android.support.v4.app.Fragment,kotlin.Pair[])>[]--><org.jetbrains.anko.ContextUtilsKt: android.os.Bundle bundleOf(kotlin.Pair[])>[]--><android.os.BaseBundle: void putDouble(java.lang.String,double)>
+#1.the call statck between class <org.jetbrains.anko.support.v4.SupportKt: android.support.v4.app.Fragment withArguments(android.support.v4.app.Fragment,kotlin.Pair[])> to <android.os.BaseBundle: void putDouble(java.lang.String,double)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <org.jetbrains.anko.ContextUtilsKt: android.app.Fragment withArguments(android.app.Fragment,kotlin.Pair[])>[]--><org.jetbrains.anko.ContextUtilsKt: android.os.Bundle bundleOf(kotlin.Pair[])>[]--><android.os.BaseBundle: void putDouble(java.lang.String,double)>
+#2.the call statck between class <org.jetbrains.anko.ContextUtilsKt: android.app.Fragment withArguments(android.app.Fragment,kotlin.Pair[])> to <android.os.BaseBundle: void putDouble(java.lang.String,double)>has compatibility isssues！
+-----------------------------------------
+crashApis:9
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 11 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putIntArray(java.lang.String,int[])> is checking!!!
+The life time of api is [21,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <org.jetbrains.anko.support.v4.SupportKt: android.support.v4.app.Fragment withArguments(android.support.v4.app.Fragment,kotlin.Pair[])>[]--><org.jetbrains.anko.ContextUtilsKt: android.os.Bundle bundleOf(kotlin.Pair[])>[]--><android.os.BaseBundle: void putIntArray(java.lang.String,int[])>
+#1.the call statck between class <org.jetbrains.anko.support.v4.SupportKt: android.support.v4.app.Fragment withArguments(android.support.v4.app.Fragment,kotlin.Pair[])> to <android.os.BaseBundle: void putIntArray(java.lang.String,int[])>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <org.jetbrains.anko.ContextUtilsKt: android.app.Fragment withArguments(android.app.Fragment,kotlin.Pair[])>[]--><org.jetbrains.anko.ContextUtilsKt: android.os.Bundle bundleOf(kotlin.Pair[])>[]--><android.os.BaseBundle: void putIntArray(java.lang.String,int[])>
+#2.the call statck between class <org.jetbrains.anko.ContextUtilsKt: android.app.Fragment withArguments(android.app.Fragment,kotlin.Pair[])> to <android.os.BaseBundle: void putIntArray(java.lang.String,int[])>has compatibility isssues！
+-----------------------------------------
+crashApis:10
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 12 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putDoubleArray(java.lang.String,double[])> is checking!!!
+The life time of api is [21,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <org.jetbrains.anko.support.v4.SupportKt: android.support.v4.app.Fragment withArguments(android.support.v4.app.Fragment,kotlin.Pair[])>[]--><org.jetbrains.anko.ContextUtilsKt: android.os.Bundle bundleOf(kotlin.Pair[])>[]--><android.os.BaseBundle: void putDoubleArray(java.lang.String,double[])>
+#1.the call statck between class <org.jetbrains.anko.support.v4.SupportKt: android.support.v4.app.Fragment withArguments(android.support.v4.app.Fragment,kotlin.Pair[])> to <android.os.BaseBundle: void putDoubleArray(java.lang.String,double[])>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <org.jetbrains.anko.ContextUtilsKt: android.app.Fragment withArguments(android.app.Fragment,kotlin.Pair[])>[]--><org.jetbrains.anko.ContextUtilsKt: android.os.Bundle bundleOf(kotlin.Pair[])>[]--><android.os.BaseBundle: void putDoubleArray(java.lang.String,double[])>
+#2.the call statck between class <org.jetbrains.anko.ContextUtilsKt: android.app.Fragment withArguments(android.app.Fragment,kotlin.Pair[])> to <android.os.BaseBundle: void putDoubleArray(java.lang.String,double[])>has compatibility isssues！
+-----------------------------------------
+crashApis:11
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 13 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putLong(java.lang.String,long)> is checking!!!
+The life time of api is [21,31]
+7call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: io.github.fvasco.pinpoi.PlacemarkDetailActivity dummyMainMethod_io_github_fvasco_pinpoi_PlacemarkDetailActivity(android.content.Intent)>[]--><io.github.fvasco.pinpoi.PlacemarkDetailActivity: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putLong(java.lang.String,long)>
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: io.github.fvasco.pinpoi.PlacemarkCollectionDetailActivity dummyMainMethod_io_github_fvasco_pinpoi_PlacemarkCollectionDetailActivity(android.content.Intent)>[]--><io.github.fvasco.pinpoi.PlacemarkCollectionDetailActivity: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: void putLong(java.lang.String,long)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: void putLong(java.lang.String,long)>has compatibility isssues！
+-----------------------------------------
+6 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <org.jetbrains.anko.support.v4.SupportKt: android.support.v4.app.Fragment withArguments(android.support.v4.app.Fragment,kotlin.Pair[])>[]--><org.jetbrains.anko.ContextUtilsKt: android.os.Bundle bundleOf(kotlin.Pair[])>[]--><android.os.BaseBundle: void putLong(java.lang.String,long)>
+#1.the call statck between class <org.jetbrains.anko.support.v4.SupportKt: android.support.v4.app.Fragment withArguments(android.support.v4.app.Fragment,kotlin.Pair[])> to <android.os.BaseBundle: void putLong(java.lang.String,long)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <org.jetbrains.anko.ContextUtilsKt: android.app.Fragment withArguments(android.app.Fragment,kotlin.Pair[])>[]--><org.jetbrains.anko.ContextUtilsKt: android.os.Bundle bundleOf(kotlin.Pair[])>[]--><android.os.BaseBundle: void putLong(java.lang.String,long)>
+#2.the call statck between class <org.jetbrains.anko.ContextUtilsKt: android.app.Fragment withArguments(android.app.Fragment,kotlin.Pair[])> to <android.os.BaseBundle: void putLong(java.lang.String,long)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <io.github.fvasco.pinpoi.PlacemarkDetailFragment: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putLong(java.lang.String,long)>
+#3.the call statck between class <io.github.fvasco.pinpoi.PlacemarkDetailFragment: void onSaveInstanceState(android.os.Bundle)> to <android.os.BaseBundle: void putLong(java.lang.String,long)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <io.github.fvasco.pinpoi.PlacemarkListActivity$SimpleItemRecyclerViewAdapter$onBindViewHolder$1: void onClick(android.view.View)>[]--><io.github.fvasco.pinpoi.PlacemarkListActivity: void openPlacemark(long)>[]--><android.os.BaseBundle: void putLong(java.lang.String,long)>
+#4.the call statck between class <io.github.fvasco.pinpoi.PlacemarkListActivity$SimpleItemRecyclerViewAdapter$onBindViewHolder$1: void onClick(android.view.View)> to <android.os.BaseBundle: void putLong(java.lang.String,long)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <io.github.fvasco.pinpoi.PlacemarkCollectionDetailFragment: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putLong(java.lang.String,long)>
+#5.the call statck between class <io.github.fvasco.pinpoi.PlacemarkCollectionDetailFragment: void onSaveInstanceState(android.os.Bundle)> to <android.os.BaseBundle: void putLong(java.lang.String,long)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <io.github.fvasco.pinpoi.PlacemarkCollectionListActivity$SimpleItemRecyclerViewAdapter$onBindViewHolder$1: void onClick(android.view.View)>[]--><android.os.BaseBundle: void putLong(java.lang.String,long)>
+#6.the call statck between class <io.github.fvasco.pinpoi.PlacemarkCollectionListActivity$SimpleItemRecyclerViewAdapter$onBindViewHolder$1: void onClick(android.view.View)> to <android.os.BaseBundle: void putLong(java.lang.String,long)>has compatibility isssues！
+-----------------------------------------
+crashApis:12
+crashApisInMain:4
+containsStatic:false
+containsTry:false
+7call by main package
+-----------------------------------------
+#################################################
+N 14 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putStringArray(java.lang.String,java.lang.String[])> is checking!!!
+The life time of api is [21,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <org.jetbrains.anko.support.v4.SupportKt: android.support.v4.app.Fragment withArguments(android.support.v4.app.Fragment,kotlin.Pair[])>[]--><org.jetbrains.anko.ContextUtilsKt: android.os.Bundle bundleOf(kotlin.Pair[])>[]--><android.os.BaseBundle: void putStringArray(java.lang.String,java.lang.String[])>
+#1.the call statck between class <org.jetbrains.anko.support.v4.SupportKt: android.support.v4.app.Fragment withArguments(android.support.v4.app.Fragment,kotlin.Pair[])> to <android.os.BaseBundle: void putStringArray(java.lang.String,java.lang.String[])>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <org.jetbrains.anko.ContextUtilsKt: android.app.Fragment withArguments(android.app.Fragment,kotlin.Pair[])>[]--><org.jetbrains.anko.ContextUtilsKt: android.os.Bundle bundleOf(kotlin.Pair[])>[]--><android.os.BaseBundle: void putStringArray(java.lang.String,java.lang.String[])>
+#2.the call statck between class <org.jetbrains.anko.ContextUtilsKt: android.app.Fragment withArguments(android.app.Fragment,kotlin.Pair[])> to <android.os.BaseBundle: void putStringArray(java.lang.String,java.lang.String[])>has compatibility isssues！
+-----------------------------------------
+crashApis:13
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 15 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putInt(java.lang.String,int)> is checking!!!
+The life time of api is [21,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <org.jetbrains.anko.support.v4.SupportKt: android.support.v4.app.Fragment withArguments(android.support.v4.app.Fragment,kotlin.Pair[])>[]--><org.jetbrains.anko.ContextUtilsKt: android.os.Bundle bundleOf(kotlin.Pair[])>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#1.the call statck between class <org.jetbrains.anko.support.v4.SupportKt: android.support.v4.app.Fragment withArguments(android.support.v4.app.Fragment,kotlin.Pair[])> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <org.jetbrains.anko.ContextUtilsKt: android.app.Fragment withArguments(android.app.Fragment,kotlin.Pair[])>[]--><org.jetbrains.anko.ContextUtilsKt: android.os.Bundle bundleOf(kotlin.Pair[])>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#2.the call statck between class <org.jetbrains.anko.ContextUtilsKt: android.app.Fragment withArguments(android.app.Fragment,kotlin.Pair[])> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:14
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+crashApis numbers:14
+crashApis numbers in main road:4
+On Android Version 16 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 17 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 18 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 19 this app may have error api use(at least): 14 and error api roads: 34
+On Android Version 20 this app may have error api use(at least): 14 and error api roads: 34
+On Android Version 21 this app may have error api use(at least): 3 and error api roads: 6
+On Android Version 22 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 23 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 24 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 25 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 31 this app may have error api use(at least): 0 and error api roads: 0

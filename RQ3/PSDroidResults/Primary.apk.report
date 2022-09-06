@@ -1,0 +1,338 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/Primary.apk
+Entry Points[com.quaap.primary.ScoresActivity, com.quaap.primary.Primary, com.quaap.primary.SettingsActivity, com.quaap.primary.math.BasicMathActivity, com.quaap.primary.timemoney.TimeActivity, com.quaap.primary.spelling.SpellingActivity, com.quaap.primary.NounCleanActivity, com.quaap.primary.base.SubjectMenuActivity, com.quaap.primary.AboutActivity, com.quaap.primary.MainActivity, com.quaap.primary.partsofspeech.plurals.PluralActivity, com.quaap.primary.math.SortingActivity]
+FllowDroidcallgraph size:1484
+Soot started on Mon Jul 11 11:16:36 CST 2022
+Soot finished on Mon Jul 11 11:16:42 CST 2022
+Soot has run for 0 min. 5 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 19
+Declared Target Sdk version is: 25
+Declared Max Sdk version is: -1
+Collected 220 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.widget.TextView: void setShowSoftInputOnFocus(boolean)> is checking!!!
+The life time of api is [21,31]
+5call roads:
+0 Mainhead roads:
+5 Packageshead roads:
+try
+Good road with try: <com.quaap.primary.base.SubjectBaseActivity: void makeInputBox(android.view.ViewGroup,android.view.ViewGroup,com.quaap.primary.base.SubjectBaseActivity$AnswerTypedListener,int,int,float,java.lang.String)>[]--><com.quaap.primary.base.SubjectBaseActivity: void showSoftKeyboard(android.widget.EditText,android.view.ViewGroup,java.lang.String)>[]--><com.quaap.primary.base.component.Keyboard: void showKeyboard(android.content.Context,android.widget.EditText,android.view.ViewGroup,java.util.Map)>[[try]]--><com.quaap.primary.base.component.Keyboard: void showKeyboard(android.widget.EditText,android.view.ViewGroup)>[]--><com.quaap.primary.base.component.Keyboard: void showKeys(android.widget.EditText,android.view.ViewGroup,java.lang.String[],int)>[[-i1 < 21]]--><android.widget.TextView: void setShowSoftInputOnFocus(boolean)>
+One road protect good!
+try
+Good road with try: <com.quaap.primary.base.component.Keyboard: void showNumberpad(android.content.Context,android.widget.EditText,android.view.ViewGroup)>[[try]]--><com.quaap.primary.base.component.Keyboard: void showNumberpad(android.widget.EditText,android.view.ViewGroup)>[]--><com.quaap.primary.base.component.Keyboard: void showKeys(android.widget.EditText,android.view.ViewGroup,java.lang.String[],int)>[[-i1 < 21]]--><android.widget.TextView: void setShowSoftInputOnFocus(boolean)>
+One road protect good!
+try
+Good road with try: <com.quaap.primary.base.component.Keyboard: void showKeyboard(android.content.Context,android.widget.EditText,android.view.ViewGroup)>[[try]]--><com.quaap.primary.base.component.Keyboard: void showKeyboard(android.widget.EditText,android.view.ViewGroup)>[]--><com.quaap.primary.base.component.Keyboard: void showKeys(android.widget.EditText,android.view.ViewGroup,java.lang.String[],int)>[[-i1 < 21]]--><android.widget.TextView: void setShowSoftInputOnFocus(boolean)>
+One road protect good!
+try
+Good road with try: <com.quaap.primary.base.SubjectBaseActivity$4: void onClick(android.view.View)>[]--><com.quaap.primary.base.SubjectBaseActivity: void showSoftKeyboard(android.widget.EditText,android.view.ViewGroup,java.lang.String)>[]--><com.quaap.primary.base.component.Keyboard: void showKeyboard(android.content.Context,android.widget.EditText,android.view.ViewGroup,java.util.Map)>[[try]]--><com.quaap.primary.base.component.Keyboard: void showKeyboard(android.widget.EditText,android.view.ViewGroup)>[]--><com.quaap.primary.base.component.Keyboard: void showKeys(android.widget.EditText,android.view.ViewGroup,java.lang.String[],int)>[[-i1 < 21]]--><android.widget.TextView: void setShowSoftInputOnFocus(boolean)>
+One road protect good!
+try
+Good road with try: <com.quaap.primary.base.SubjectBaseActivity$2: boolean onEditorAction(android.widget.TextView,int,android.view.KeyEvent)>[]--><com.quaap.primary.base.SubjectBaseActivity: void showSoftKeyboard(android.widget.EditText,android.view.ViewGroup,java.lang.String)>[]--><com.quaap.primary.base.component.Keyboard: void showKeyboard(android.content.Context,android.widget.EditText,android.view.ViewGroup,java.util.Map)>[[try]]--><com.quaap.primary.base.component.Keyboard: void showKeyboard(android.widget.EditText,android.view.ViewGroup)>[]--><com.quaap.primary.base.component.Keyboard: void showKeys(android.widget.EditText,android.view.ViewGroup,java.lang.String[],int)>[[-i1 < 21]]--><android.widget.TextView: void setShowSoftInputOnFocus(boolean)>
+One road protect good!
+containsStatic:false
+containsTry:true
+6call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.media.SoundPool.Builder: android.media.SoundPool.Builder setAudioAttributes(android.media.AudioAttributes)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><com.quaap.primary.Primary: void onCreate()>[]--><com.quaap.primary.base.component.SoundEffects: void <init>(android.content.Context)>[[-$i0 < 21]]--><android.media.SoundPool.Builder: android.media.SoundPool.Builder setAudioAttributes(android.media.AudioAttributes)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.text.Html: android.text.Spanned fromHtml(java.lang.String,int)> is checking!!!
+The life time of api is [24,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 24
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.quaap.primary.AboutActivity dummyMainMethod_com_quaap_primary_AboutActivity(android.content.Intent)>[]--><com.quaap.primary.AboutActivity: void onCreate(android.os.Bundle)>[[-$i0 < 24]]--><android.text.Html: android.text.Spanned fromHtml(java.lang.String,int)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.lang.String getString(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.quaap.primary.spelling.SpellingActivity dummyMainMethod_com_quaap_primary_spelling_SpellingActivity(android.content.Intent)>[]--><com.quaap.primary.spelling.SpellingActivity: void onCreate(android.os.Bundle)>[]--><com.quaap.primary.base.StdGameActivity: void onCreate(android.os.Bundle)>[]--><com.quaap.primary.base.SubjectBaseActivity: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.quaap.primary.timemoney.TimeActivity dummyMainMethod_com_quaap_primary_timemoney_TimeActivity(android.content.Intent)>[]--><com.quaap.primary.base.StdGameActivity: void onCreate(android.os.Bundle)>[]--><com.quaap.primary.base.SubjectBaseActivity: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.quaap.primary.math.BasicMathActivity dummyMainMethod_com_quaap_primary_math_BasicMathActivity(android.content.Intent)>[]--><com.quaap.primary.math.BasicMathActivity: void onCreate(android.os.Bundle)>[]--><com.quaap.primary.base.StdGameActivity: void onCreate(android.os.Bundle)>[]--><com.quaap.primary.base.SubjectBaseActivity: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.quaap.primary.partsofspeech.plurals.PluralActivity dummyMainMethod_com_quaap_primary_partsofspeech_plurals_PluralActivity(android.content.Intent)>[]--><com.quaap.primary.partsofspeech.plurals.PluralActivity: void onCreate(android.os.Bundle)>[]--><com.quaap.primary.base.StdGameActivity: void onCreate(android.os.Bundle)>[]--><com.quaap.primary.base.SubjectBaseActivity: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.quaap.primary.math.SortingActivity dummyMainMethod_com_quaap_primary_math_SortingActivity(android.content.Intent)>[]--><com.quaap.primary.base.StdGameActivity: void onCreate(android.os.Bundle)>[]--><com.quaap.primary.base.SubjectBaseActivity: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:1
+crashApisInMain:1
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.speech.tts.TextToSpeech: int speak(java.lang.CharSequence,int,android.os.Bundle,java.lang.String)> is checking!!!
+The life time of api is [21,31]
+4call roads:
+1 Mainhead roads:
+-$i0 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.quaap.primary.spelling.SpellingActivity dummyMainMethod_com_quaap_primary_spelling_SpellingActivity(android.content.Intent)>[]--><com.quaap.primary.spelling.SpellingActivity$1: void onClick(android.view.View)>[]--><com.quaap.primary.base.component.TextToVoice: void speak(java.lang.String)>[[-$i0 < 21]]--><android.speech.tts.TextToSpeech: int speak(java.lang.CharSequence,int,android.os.Bundle,java.lang.String)>
+One road protect good!
+3 Packageshead roads:
+-$i0 < 21
+Good road: <com.quaap.primary.base.component.TextToVoice: void onInit(int)>[]--><com.quaap.primary.base.component.TextToVoice: void speak(java.lang.String)>[[-$i0 < 21]]--><android.speech.tts.TextToSpeech: int speak(java.lang.CharSequence,int,android.os.Bundle,java.lang.String)>
+One road protect good!
+-$i0 < 21
+Good road: <com.quaap.primary.spelling.SpellingActivity: void onPerformHint(int)>[]--><com.quaap.primary.base.component.TextToVoice: void speak(java.lang.String)>[[-$i0 < 21]]--><android.speech.tts.TextToSpeech: int speak(java.lang.CharSequence,int,android.os.Bundle,java.lang.String)>
+One road protect good!
+-$i0 < 21
+Good road: <com.quaap.primary.spelling.SpellingActivity: void onShowProbImpl()>[]--><com.quaap.primary.base.component.TextToVoice: void speak(java.lang.String)>[[-$i0 < 21]]--><android.speech.tts.TextToSpeech: int speak(java.lang.CharSequence,int,android.os.Bundle,java.lang.String)>
+One road protect good!
+containsStatic:false
+containsTry:false
+4call by main package
+-----------------------------------------
+#################################################
+N 5 Potential Issue API: SDKCheck of <android.media.SoundPool.Builder: void <init>()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><com.quaap.primary.Primary: void onCreate()>[]--><com.quaap.primary.base.component.SoundEffects: void <init>(android.content.Context)>[[-$i0 < 21]]--><android.media.SoundPool.Builder: void <init>()>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 6 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putInt(java.lang.String,int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.quaap.primary.spelling.SpellingActivity dummyMainMethod_com_quaap_primary_spelling_SpellingActivity(android.content.Intent)>[]--><com.quaap.primary.base.SubjectBaseActivity: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.quaap.primary.partsofspeech.plurals.PluralActivity dummyMainMethod_com_quaap_primary_partsofspeech_plurals_PluralActivity(android.content.Intent)>[]--><com.quaap.primary.base.SubjectBaseActivity: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.quaap.primary.timemoney.TimeActivity dummyMainMethod_com_quaap_primary_timemoney_TimeActivity(android.content.Intent)>[]--><com.quaap.primary.base.SubjectBaseActivity: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.quaap.primary.math.BasicMathActivity dummyMainMethod_com_quaap_primary_math_BasicMathActivity(android.content.Intent)>[]--><com.quaap.primary.base.SubjectBaseActivity: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.quaap.primary.math.SortingActivity dummyMainMethod_com_quaap_primary_math_SortingActivity(android.content.Intent)>[]--><com.quaap.primary.base.SubjectBaseActivity: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:2
+crashApisInMain:2
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 7 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.quaap.primary.spelling.SpellingActivity dummyMainMethod_com_quaap_primary_spelling_SpellingActivity(android.content.Intent)>[]--><com.quaap.primary.base.SubjectBaseActivity: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.quaap.primary.timemoney.TimeActivity dummyMainMethod_com_quaap_primary_timemoney_TimeActivity(android.content.Intent)>[]--><com.quaap.primary.base.SubjectBaseActivity: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.quaap.primary.math.BasicMathActivity dummyMainMethod_com_quaap_primary_math_BasicMathActivity(android.content.Intent)>[]--><com.quaap.primary.base.SubjectBaseActivity: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.quaap.primary.base.SubjectMenuActivity dummyMainMethod_com_quaap_primary_base_SubjectMenuActivity(android.content.Intent)>[]--><com.quaap.primary.base.SubjectMenuActivity: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.quaap.primary.partsofspeech.plurals.PluralActivity dummyMainMethod_com_quaap_primary_partsofspeech_plurals_PluralActivity(android.content.Intent)>[]--><com.quaap.primary.base.SubjectBaseActivity: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.quaap.primary.math.SortingActivity dummyMainMethod_com_quaap_primary_math_SortingActivity(android.content.Intent)>[]--><com.quaap.primary.base.SubjectBaseActivity: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:3
+crashApisInMain:3
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 8 Potential Issue API: SDKCheck of <android.os.BaseBundle: int getInt(java.lang.String,int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.quaap.primary.spelling.SpellingActivity dummyMainMethod_com_quaap_primary_spelling_SpellingActivity(android.content.Intent)>[]--><com.quaap.primary.spelling.SpellingActivity: void onCreate(android.os.Bundle)>[]--><com.quaap.primary.base.StdGameActivity: void onCreate(android.os.Bundle)>[]--><com.quaap.primary.base.SubjectBaseActivity: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String,int)>
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.quaap.primary.timemoney.TimeActivity dummyMainMethod_com_quaap_primary_timemoney_TimeActivity(android.content.Intent)>[]--><com.quaap.primary.base.StdGameActivity: void onCreate(android.os.Bundle)>[]--><com.quaap.primary.base.SubjectBaseActivity: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String,int)>
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.quaap.primary.math.BasicMathActivity dummyMainMethod_com_quaap_primary_math_BasicMathActivity(android.content.Intent)>[]--><com.quaap.primary.math.BasicMathActivity: void onCreate(android.os.Bundle)>[]--><com.quaap.primary.base.StdGameActivity: void onCreate(android.os.Bundle)>[]--><com.quaap.primary.base.SubjectBaseActivity: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String,int)>
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.quaap.primary.partsofspeech.plurals.PluralActivity dummyMainMethod_com_quaap_primary_partsofspeech_plurals_PluralActivity(android.content.Intent)>[]--><com.quaap.primary.partsofspeech.plurals.PluralActivity: void onCreate(android.os.Bundle)>[]--><com.quaap.primary.base.StdGameActivity: void onCreate(android.os.Bundle)>[]--><com.quaap.primary.base.SubjectBaseActivity: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String,int)>
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.quaap.primary.math.SortingActivity dummyMainMethod_com_quaap_primary_math_SortingActivity(android.content.Intent)>[]--><com.quaap.primary.base.StdGameActivity: void onCreate(android.os.Bundle)>[]--><com.quaap.primary.base.SubjectBaseActivity: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String,int)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: int getInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:4
+crashApisInMain:4
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 9 Potential Issue API: SDKCheck of <android.media.AudioAttributes.Builder: android.media.AudioAttributes.Builder setContentType(int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><com.quaap.primary.Primary: void onCreate()>[]--><com.quaap.primary.base.component.SoundEffects: void <init>(android.content.Context)>[[-$i0 < 21]]--><android.media.AudioAttributes.Builder: android.media.AudioAttributes.Builder setContentType(int)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 10 Potential Issue API: SDKCheck of <android.media.AudioAttributes.Builder: android.media.AudioAttributes.Builder setUsage(int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><com.quaap.primary.Primary: void onCreate()>[]--><com.quaap.primary.base.component.SoundEffects: void <init>(android.content.Context)>[[-$i0 < 21]]--><android.media.AudioAttributes.Builder: android.media.AudioAttributes.Builder setUsage(int)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 11 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.lang.String getString(java.lang.String,java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.quaap.primary.base.SubjectMenuActivity dummyMainMethod_com_quaap_primary_base_SubjectMenuActivity(android.content.Intent)>[]--><com.quaap.primary.base.SubjectMenuActivity: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String,java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: java.lang.String getString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:5
+crashApisInMain:5
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 12 Potential Issue API: SDKCheck of <android.media.AudioAttributes.Builder: android.media.AudioAttributes build()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><com.quaap.primary.Primary: void onCreate()>[]--><com.quaap.primary.base.component.SoundEffects: void <init>(android.content.Context)>[[-$i0 < 21]]--><android.media.AudioAttributes.Builder: android.media.AudioAttributes build()>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 13 Potential Issue API: SDKCheck of <android.content.res.Resources: android.graphics.drawable.Drawable getDrawable(int,android.content.res.Resources.Theme)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i0 < 21
+Good road: <com.quaap.primary.base.component.HorzItemList: void setBackground(android.view.View,int)>[[-$i0 < 21]]--><android.content.res.Resources: android.graphics.drawable.Drawable getDrawable(int,android.content.res.Resources.Theme)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 14 Potential Issue API: SDKCheck of <android.content.Context: int getColor(int)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i0 < 21
+!!!this api will crash on sdk 21 22 
+Error road: <com.quaap.primary.MainActivity$8: void populateItem(java.lang.String,android.view.ViewGroup,int)>[]--><com.quaap.primary.base.data.SubjectGroup: int getColor(android.content.Context)>[[-$i0 < 21]]--><android.content.Context: int getColor(int)>
+#1.the call statck between class <com.quaap.primary.MainActivity$8: void populateItem(java.lang.String,android.view.ViewGroup,int)> to <android.content.Context: int getColor(int)>has compatibility isssues！
+-----------------------------------------
+crashApis:6
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 15 Potential Issue API: SDKCheck of <android.media.SoundPool.Builder: android.media.SoundPool.Builder setMaxStreams(int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><com.quaap.primary.Primary: void onCreate()>[]--><com.quaap.primary.base.component.SoundEffects: void <init>(android.content.Context)>[[-$i0 < 21]]--><android.media.SoundPool.Builder: android.media.SoundPool.Builder setMaxStreams(int)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 16 Potential Issue API: SDKCheck of <android.media.AudioAttributes.Builder: void <init>()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><com.quaap.primary.Primary: void onCreate()>[]--><com.quaap.primary.base.component.SoundEffects: void <init>(android.content.Context)>[[-$i0 < 21]]--><android.media.AudioAttributes.Builder: void <init>()>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 17 Potential Issue API: SDKCheck of <android.media.SoundPool.Builder: android.media.SoundPool build()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><com.quaap.primary.Primary: void onCreate()>[]--><com.quaap.primary.base.component.SoundEffects: void <init>(android.content.Context)>[[-$i0 < 21]]--><android.media.SoundPool.Builder: android.media.SoundPool build()>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+crashApis numbers:6
+crashApis numbers in main road:5
+On Android Version 16 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 17 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 18 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 19 this app may have error api use(at least): 5 and error api roads: 22
+On Android Version 20 this app may have error api use(at least): 5 and error api roads: 22
+On Android Version 21 this app may have error api use(at least): 1 and error api roads: 1
+On Android Version 22 this app may have error api use(at least): 1 and error api roads: 1
+On Android Version 23 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 24 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 25 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 31 this app may have error api use(at least): 0 and error api roads: 0

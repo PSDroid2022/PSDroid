@@ -1,0 +1,188 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/USB_Device_Info.apk
+Entry Points[aws.apps.usbDeviceEnumerator.ui.usbinfo.UsbInfoActivity, aws.apps.usbDeviceEnumerator.ui.main.MainActivity]
+FllowDroidcallgraph size:609
+Soot started on Mon Jul 11 14:43:20 CST 2022
+Soot finished on Mon Jul 11 14:43:25 CST 2022
+Soot has run for 0 min. 5 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 12
+Declared Target Sdk version is: 24
+Declared Max Sdk version is: -1
+Collected 154 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)> is checking!!!
+The life time of api is [21,31]
+2call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: aws.apps.usbDeviceEnumerator.ui.usbinfo.UsbInfoActivity dummyMainMethod_aws_apps_usbDeviceEnumerator_ui_usbinfo_UsbInfoActivity(android.content.Intent)>[]--><aws.apps.usbDeviceEnumerator.ui.usbinfo.UsbInfoActivity: void onCreate(android.os.Bundle)>[]--><aws.apps.usbDeviceEnumerator.ui.usbinfo.InfoFragmentFactory: android.support.v4.app.Fragment getFragment(java.lang.String)>[]--><aws.apps.usbDeviceEnumerator.ui.usbinfo.AndroidUsbInfoFragment: android.support.v4.app.Fragment create(java.lang.String)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: aws.apps.usbDeviceEnumerator.ui.main.MainActivity dummyMainMethod_aws_apps_usbDeviceEnumerator_ui_main_MainActivity(android.content.Intent)>[]--><aws.apps.usbDeviceEnumerator.ui.dbupdate.DatabaseUpdater$1: void onClick(android.content.DialogInterface,int)>[]--><aws.apps.usbDeviceEnumerator.ui.dbupdate.FileDownloadTask: void onPreExecute()>[]--><aws.apps.usbDeviceEnumerator.ui.progress.ProgressDialogControl: void show()>[]--><aws.apps.usbDeviceEnumerator.ui.progress.ProgressDialogFragment: aws.apps.usbDeviceEnumerator.ui.progress.ProgressDialogFragment newInstance(int,java.lang.String)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <aws.apps.usbDeviceEnumerator.ui.main.MainActivity: void access$000(aws.apps.usbDeviceEnumerator.ui.main.MainActivity,java.lang.String,aws.apps.usbDeviceEnumerator.ui.main.tabs.TabViewHolder)>[]--><aws.apps.usbDeviceEnumerator.ui.main.MainActivity: void onTabChanged(java.lang.String,aws.apps.usbDeviceEnumerator.ui.main.tabs.TabViewHolder)>[]--><aws.apps.usbDeviceEnumerator.ui.usbinfo.InfoFragmentFactory: android.support.v4.app.Fragment getFragment(java.lang.String)>[]--><aws.apps.usbDeviceEnumerator.ui.usbinfo.AndroidUsbInfoFragment: android.support.v4.app.Fragment create(java.lang.String)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#1.the call statck between class <aws.apps.usbDeviceEnumerator.ui.main.MainActivity: void access$000(aws.apps.usbDeviceEnumerator.ui.main.MainActivity,java.lang.String,aws.apps.usbDeviceEnumerator.ui.main.tabs.TabViewHolder)> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:1
+crashApisInMain:1
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.lang.String getString(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+2call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: aws.apps.usbDeviceEnumerator.ui.usbinfo.UsbInfoActivity dummyMainMethod_aws_apps_usbDeviceEnumerator_ui_usbinfo_UsbInfoActivity(android.content.Intent)>[]--><aws.apps.usbDeviceEnumerator.ui.usbinfo.UsbInfoActivity: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <aws.apps.usbDeviceEnumerator.ui.progress.ProgressDialogFragment: android.app.Dialog onCreateDialog(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#1.the call statck between class <aws.apps.usbDeviceEnumerator.ui.progress.ProgressDialogFragment: android.app.Dialog onCreateDialog(android.os.Bundle)> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:2
+crashApisInMain:2
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.content.res.Resources: int getColor(int,android.content.res.Resources.Theme)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+$i1 >= 23
+Good road: <butterknife.internal.Utils: int getColor(android.content.res.Resources,android.content.res.Resources$Theme,int)>[[$i1 >= 23]]--><android.content.res.Resources: int getColor(int,android.content.res.Resources.Theme)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.lang.String getString(java.lang.String,java.lang.String)> is checking!!!
+The life time of api is [21,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <aws.apps.usbDeviceEnumerator.ui.usbinfo.AndroidUsbInfoFragment: void onViewCreated(android.view.View,android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String,java.lang.String)>
+#1.the call statck between class <aws.apps.usbDeviceEnumerator.ui.usbinfo.AndroidUsbInfoFragment: void onViewCreated(android.view.View,android.os.Bundle)> to <android.os.BaseBundle: java.lang.String getString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <aws.apps.usbDeviceEnumerator.ui.usbinfo.AndroidUsbInfoFragment: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String,java.lang.String)>
+#2.the call statck between class <aws.apps.usbDeviceEnumerator.ui.usbinfo.AndroidUsbInfoFragment: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)> to <android.os.BaseBundle: java.lang.String getString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:3
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.content.res.Resources: android.content.res.ColorStateList getColorStateList(int,android.content.res.Resources.Theme)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+$i1 >= 23
+Good road: <butterknife.internal.Utils: android.content.res.ColorStateList getColorStateList(android.content.res.Resources,android.content.res.Resources$Theme,int)>[[$i1 >= 23]]--><android.content.res.Resources: android.content.res.ColorStateList getColorStateList(int,android.content.res.Resources.Theme)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 5 Potential Issue API: SDKCheck of <android.content.res.Resources: android.graphics.drawable.Drawable getDrawable(int,android.content.res.Resources.Theme)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+$i1 >= 21
+Good road: <butterknife.internal.Utils: android.graphics.drawable.Drawable getDrawable(android.content.res.Resources,android.content.res.Resources$Theme,int)>[[$i1 >= 21]]--><android.content.res.Resources: android.graphics.drawable.Drawable getDrawable(int,android.content.res.Resources.Theme)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 6 Potential Issue API: SDKCheck of <android.os.BaseBundle: int getInt(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <aws.apps.usbDeviceEnumerator.ui.progress.ProgressDialogFragment: android.app.Dialog onCreateDialog(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#1.the call statck between class <aws.apps.usbDeviceEnumerator.ui.progress.ProgressDialogFragment: android.app.Dialog onCreateDialog(android.os.Bundle)> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:4
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 7 Potential Issue API: SDKCheck of <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: aws.apps.usbDeviceEnumerator.ui.main.MainActivity dummyMainMethod_aws_apps_usbDeviceEnumerator_ui_main_MainActivity(android.content.Intent)>[]--><aws.apps.usbDeviceEnumerator.ui.main.MainActivity: boolean onOptionsItemSelected(android.view.MenuItem)>[]--><aws.apps.usbDeviceEnumerator.ui.dbupdate.DatabaseUpdater: void start(android.content.Context)>[]--><aws.apps.usbDeviceEnumerator.ui.dbupdate.DatabaseUpdater: boolean validate(android.content.Context)>[]--><aws.apps.usbDeviceEnumerator.util.NetworkUtils: boolean isOnline(android.content.Context)>[[try]]--><android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:true
+1call by main package
+-----------------------------------------
+#################################################
+N 8 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putInt(java.lang.String,int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: aws.apps.usbDeviceEnumerator.ui.main.MainActivity dummyMainMethod_aws_apps_usbDeviceEnumerator_ui_main_MainActivity(android.content.Intent)>[]--><aws.apps.usbDeviceEnumerator.ui.dbupdate.DatabaseUpdater$1: void onClick(android.content.DialogInterface,int)>[]--><aws.apps.usbDeviceEnumerator.ui.dbupdate.FileDownloadTask: void onPreExecute()>[]--><aws.apps.usbDeviceEnumerator.ui.progress.ProgressDialogControl: void show()>[]--><aws.apps.usbDeviceEnumerator.ui.progress.ProgressDialogFragment: aws.apps.usbDeviceEnumerator.ui.progress.ProgressDialogFragment newInstance(int,java.lang.String)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:5
+crashApisInMain:3
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 9 Potential Issue API: SDKCheck of <android.net.NetworkInfo: boolean isConnected()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: aws.apps.usbDeviceEnumerator.ui.main.MainActivity dummyMainMethod_aws_apps_usbDeviceEnumerator_ui_main_MainActivity(android.content.Intent)>[]--><aws.apps.usbDeviceEnumerator.ui.main.MainActivity: boolean onOptionsItemSelected(android.view.MenuItem)>[]--><aws.apps.usbDeviceEnumerator.ui.dbupdate.DatabaseUpdater: void start(android.content.Context)>[]--><aws.apps.usbDeviceEnumerator.ui.dbupdate.DatabaseUpdater: boolean validate(android.content.Context)>[]--><aws.apps.usbDeviceEnumerator.util.NetworkUtils: boolean isOnline(android.content.Context)>[[try]]--><android.net.NetworkInfo: boolean isConnected()>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:true
+1call by main package
+-----------------------------------------
+crashApis numbers:5
+crashApis numbers in main road:3
+On Android Version 16 this app may have error api use(at least): 5 and error api roads: 9
+On Android Version 17 this app may have error api use(at least): 5 and error api roads: 9
+On Android Version 18 this app may have error api use(at least): 5 and error api roads: 9
+On Android Version 19 this app may have error api use(at least): 5 and error api roads: 9
+On Android Version 20 this app may have error api use(at least): 5 and error api roads: 9
+On Android Version 21 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 22 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 23 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 24 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 25 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 31 this app may have error api use(at least): 0 and error api roads: 0

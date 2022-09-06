@@ -1,0 +1,328 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/DNSfilter.apk
+Entry Points[dnsfilter.android.BootUpReceiver, dnsfilter.android.ConnectionChangeReceiver, dnsfilter.android.DNSProxyActivity, dnsfilter.android.DNSFilterService]
+FllowDroidcallgraph size:5877
+Soot started on Mon Jul 11 02:59:17 CST 2022
+Soot finished on Mon Jul 11 02:59:22 CST 2022
+Soot has run for 0 min. 5 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 14
+Declared Target Sdk version is: 28
+Declared Max Sdk version is: -1
+Collected 200 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.net.LinkProperties: java.util.List getDnsServers()> is checking!!!
+The life time of api is [21,30]
+13call roads:
+1 Mainhead roads:
+12 Packageshead roads:
+containsStatic:false
+containsTry:true
+13call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager.WifiLock: void release()> is checking!!!
+The life time of api is [1,30]
+13call roads:
+1 Mainhead roads:
+12 Packageshead roads:
+containsStatic:false
+containsTry:true
+13call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.net.ConnectivityManager: android.net.NetworkInfo getNetworkInfo(android.net.Network)> is checking!!!
+The life time of api is [21,30]
+13call roads:
+1 Mainhead roads:
+12 Packageshead roads:
+containsStatic:false
+containsTry:true
+13call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.text.Html: android.text.Spanned fromHtml(java.lang.String,int)> is checking!!!
+The life time of api is [24,31]
+17call roads:
+1 Mainhead roads:
+-$i0 < 24
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: dnsfilter.android.DNSProxyActivity dummyMainMethod_dnsfilter_android_DNSProxyActivity(android.content.Intent)>[]--><dnsfilter.android.DNSProxyActivity$1: void onClick(android.content.DialogInterface,int)>[]--><dnsfilter.android.DNSProxyActivity: void message(java.lang.String)>[]--><dnsfilter.android.DNSProxyActivity: void <clinit>()>[]--><dnsfilter.android.DNSProxyActivity: android.text.Spanned fromHtml(java.lang.String)>[[-$i0 < 24]]--><android.text.Html: android.text.Spanned fromHtml(java.lang.String,int)>
+One road protect good!
+-$i0 < 24
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: dnsfilter.android.BootUpReceiver dummyMainMethod_dnsfilter_android_BootUpReceiver(android.content.Intent)>[]--><dnsfilter.android.BootUpReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><dnsfilter.android.DNSProxyActivity: void <clinit>()>[]--><dnsfilter.android.DNSProxyActivity: android.text.Spanned fromHtml(java.lang.String)>[[-$i0 < 24]]--><android.text.Html: android.text.Spanned fromHtml(java.lang.String,int)>
+One road protect good!
+-$i0 < 24
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: dnsfilter.android.DNSFilterService dummyMainMethod_dnsfilter_android_DNSFilterService(android.content.Intent)>[]--><dnsfilter.android.DNSFilterService: void onDestroy()>[]--><dnsfilter.android.DNSProxyActivity: void logLine(java.lang.String)>[]--><dnsfilter.android.DNSProxyActivity$MyUIThreadLogger: void run()>[]--><dnsfilter.android.DNSProxyActivity: void access$300(dnsfilter.android.DNSProxyActivity,java.lang.String)>[]--><dnsfilter.android.DNSProxyActivity: void addToLogView(java.lang.String)>[]--><dnsfilter.android.DNSProxyActivity: void <clinit>()>[]--><dnsfilter.android.DNSProxyActivity: android.text.Spanned fromHtml(java.lang.String)>[[-$i0 < 24]]--><android.text.Html: android.text.Spanned fromHtml(java.lang.String,int)>
+One road protect good!
+16 Packageshead roads:
+-$i0 < 24
+Good road: <dnsfilter.android.DNSProxyActivity: void access$000(dnsfilter.android.DNSProxyActivity,android.text.Spanned,int)>[]--><dnsfilter.android.DNSProxyActivity: void setMessage(android.text.Spanned,int)>[]--><dnsfilter.android.DNSProxyActivity$4: void run()>[]--><dnsfilter.android.DNSProxyActivity: void <clinit>()>[]--><dnsfilter.android.DNSProxyActivity: android.text.Spanned fromHtml(java.lang.String)>[[-$i0 < 24]]--><android.text.Html: android.text.Spanned fromHtml(java.lang.String,int)>
+One road protect good!
+try
+Good road with try: <util.AsyncBulkLogger: void run()>[[try]]--><dnsfilter.android.DNSProxyActivity: void log(java.lang.String)>[]--><dnsfilter.android.DNSProxyActivity$MyUIThreadLogger: void run()>[]--><dnsfilter.android.DNSProxyActivity: void access$300(dnsfilter.android.DNSProxyActivity,java.lang.String)>[]--><dnsfilter.android.DNSProxyActivity: void addToLogView(java.lang.String)>[]--><dnsfilter.android.DNSProxyActivity: void <clinit>()>[]--><dnsfilter.android.DNSProxyActivity: android.text.Spanned fromHtml(java.lang.String)>[[-$i0 < 24]]--><android.text.Html: android.text.Spanned fromHtml(java.lang.String,int)>
+One road protect good!
+-$i0 < 24
+Good road: <dnsfilter.UDP: void resolve(java.net.DatagramPacket,java.net.DatagramPacket)>[]--><dnsfilter.android.AndroidEnvironment: boolean protectSocket(java.lang.Object,int)>[]--><dnsfilter.android.DNSFilterService: boolean protectSocket(java.lang.Object,int)>[]--><dnsfilter.android.DNSFilterService: void <clinit>()>[]--><dnsfilter.android.DNSFilterService$DNSReqForwarder: void <init>()>[]--><dnsfilter.android.AndroidEnvironment: java.lang.String getWorkDir()>[]--><dnsfilter.android.DNSProxyActivity: void <clinit>()>[]--><dnsfilter.android.DNSProxyActivity: android.text.Spanned fromHtml(java.lang.String)>[[-$i0 < 24]]--><android.text.Html: android.text.Spanned fromHtml(java.lang.String,int)>
+One road protect good!
+-$i0 < 24
+Good road: <dnsfilter.android.DNSProxyActivity: android.text.Spanned access$100(java.lang.String)>[]--><dnsfilter.android.DNSProxyActivity: android.text.Spanned fromHtml(java.lang.String)>[[-$i0 < 24]]--><android.text.Html: android.text.Spanned fromHtml(java.lang.String,int)>
+One road protect good!
+-$i0 < 24
+Good road: <dnsfilter.DNSFilterProxy: void main(java.lang.String[])>[]--><dnsfilter.android.AndroidEnvironment: java.lang.String getWorkDir()>[]--><dnsfilter.android.DNSProxyActivity: void <clinit>()>[]--><dnsfilter.android.DNSProxyActivity: android.text.Spanned fromHtml(java.lang.String)>[[-$i0 < 24]]--><android.text.Html: android.text.Spanned fromHtml(java.lang.String,int)>
+One road protect good!
+try
+Good road with try: <dnsfilter.DNSFilterProxy: void main(java.lang.String[])>[]--><dnsfilter.DNSFilterManager: void init()>[[try]]--><dnsfilter.remote.RemoteAccessServer: void <init>(int,java.lang.String)>[]--><util.GroupedLogger: void logLine(java.lang.String)>[]--><dnsfilter.android.DNSProxyActivity: void logLine(java.lang.String)>[]--><dnsfilter.android.DNSProxyActivity$MyUIThreadLogger: void run()>[]--><dnsfilter.android.DNSProxyActivity: void access$300(dnsfilter.android.DNSProxyActivity,java.lang.String)>[]--><dnsfilter.android.DNSProxyActivity: void addToLogView(java.lang.String)>[]--><dnsfilter.android.DNSProxyActivity: void <clinit>()>[]--><dnsfilter.android.DNSProxyActivity: android.text.Spanned fromHtml(java.lang.String)>[[-$i0 < 24]]--><android.text.Html: android.text.Spanned fromHtml(java.lang.String,int)>
+One road protect good!
+-$i0 < 24
+Good road: <util.conpool.HttpProxy: java.net.Socket openTunnel(java.net.InetSocketAddress,int)>[]--><util.conpool.HttpProxy: java.net.Socket openTunnel(java.net.InetSocketAddress,int,boolean)>[]--><dnsfilter.android.AndroidEnvironment: boolean protectSocket(java.lang.Object,int)>[]--><dnsfilter.android.DNSFilterService: boolean protectSocket(java.lang.Object,int)>[]--><dnsfilter.android.DNSFilterService: void <clinit>()>[]--><dnsfilter.android.DNSFilterService$DNSReqForwarder: void <init>()>[]--><dnsfilter.android.AndroidEnvironment: java.lang.String getWorkDir()>[]--><dnsfilter.android.DNSProxyActivity: void <clinit>()>[]--><dnsfilter.android.DNSProxyActivity: android.text.Spanned fromHtml(java.lang.String)>[[-$i0 < 24]]--><android.text.Html: android.text.Spanned fromHtml(java.lang.String,int)>
+One road protect good!
+-$i0 < 24
+Good road: <dnsfilter.remote.RemoteAccessServer$RemoteSession: boolean checkLastConfirmedHeartBeat()>[]--><util.GroupedLogger: void logLine(java.lang.String)>[]--><dnsfilter.android.DNSProxyActivity: void logLine(java.lang.String)>[]--><dnsfilter.android.DNSProxyActivity$MyUIThreadLogger: void run()>[]--><dnsfilter.android.DNSProxyActivity: void access$300(dnsfilter.android.DNSProxyActivity,java.lang.String)>[]--><dnsfilter.android.DNSProxyActivity: void addToLogView(java.lang.String)>[]--><dnsfilter.android.DNSProxyActivity: void <clinit>()>[]--><dnsfilter.android.DNSProxyActivity: android.text.Spanned fromHtml(java.lang.String)>[[-$i0 < 24]]--><android.text.Html: android.text.Spanned fromHtml(java.lang.String,int)>
+One road protect good!
+-$i0 < 24
+Good road: <dnsfilter.remote.RemoteAccessServer$RemoteSession: boolean checkLastConfirmedHeartBeat()>[]--><dnsfilter.android.DNSProxyActivity: void logLine(java.lang.String)>[]--><dnsfilter.android.DNSProxyActivity$MyUIThreadLogger: void run()>[]--><dnsfilter.android.DNSProxyActivity: void access$300(dnsfilter.android.DNSProxyActivity,java.lang.String)>[]--><dnsfilter.android.DNSProxyActivity: void addToLogView(java.lang.String)>[]--><dnsfilter.android.DNSProxyActivity: void <clinit>()>[]--><dnsfilter.android.DNSProxyActivity: android.text.Spanned fromHtml(java.lang.String)>[[-$i0 < 24]]--><android.text.Html: android.text.Spanned fromHtml(java.lang.String,int)>
+One road protect good!
+-$i0 < 24
+Good road: <dnsfilter.remote.RemoteAccessServer: void stop()>[]--><dnsfilter.android.DNSProxyActivity: void logException(java.lang.Exception)>[]--><dnsfilter.android.DNSProxyActivity$MyUIThreadLogger: void run()>[]--><dnsfilter.android.DNSProxyActivity: void access$300(dnsfilter.android.DNSProxyActivity,java.lang.String)>[]--><dnsfilter.android.DNSProxyActivity: void addToLogView(java.lang.String)>[]--><dnsfilter.android.DNSProxyActivity: void <clinit>()>[]--><dnsfilter.android.DNSProxyActivity: android.text.Spanned fromHtml(java.lang.String)>[[-$i0 < 24]]--><android.text.Html: android.text.Spanned fromHtml(java.lang.String,int)>
+One road protect good!
+-$i0 < 24
+Good road: <dnsfilter.remote.RemoteAccessServer: void stop()>[]--><util.SuppressRepeatingsLogger: void logException(java.lang.Exception)>[]--><dnsfilter.android.DNSProxyActivity: void logException(java.lang.Exception)>[]--><dnsfilter.android.DNSProxyActivity$MyUIThreadLogger: void run()>[]--><dnsfilter.android.DNSProxyActivity: void access$300(dnsfilter.android.DNSProxyActivity,java.lang.String)>[]--><dnsfilter.android.DNSProxyActivity: void addToLogView(java.lang.String)>[]--><dnsfilter.android.DNSProxyActivity: void <clinit>()>[]--><dnsfilter.android.DNSProxyActivity: android.text.Spanned fromHtml(java.lang.String)>[[-$i0 < 24]]--><android.text.Html: android.text.Spanned fromHtml(java.lang.String,int)>
+One road protect good!
+-$i0 < 24
+Good road: <dnsfilter.remote.RemoteAccessServer: void stop()>[]--><util.GroupedLogger: void logException(java.lang.Exception)>[]--><util.SuppressRepeatingsLogger: void logException(java.lang.Exception)>[]--><dnsfilter.android.DNSProxyActivity: void logException(java.lang.Exception)>[]--><dnsfilter.android.DNSProxyActivity$MyUIThreadLogger: void run()>[]--><dnsfilter.android.DNSProxyActivity: void access$300(dnsfilter.android.DNSProxyActivity,java.lang.String)>[]--><dnsfilter.android.DNSProxyActivity: void addToLogView(java.lang.String)>[]--><dnsfilter.android.DNSProxyActivity: void <clinit>()>[]--><dnsfilter.android.DNSProxyActivity: android.text.Spanned fromHtml(java.lang.String)>[[-$i0 < 24]]--><android.text.Html: android.text.Spanned fromHtml(java.lang.String,int)>
+One road protect good!
+-$i0 < 24
+Good road: <dnsfilter.remote.RemoteAccessClient: void stop()>[]--><dnsfilter.remote.RemoteAccessClient: void triggerAction(java.lang.String,java.lang.String)>[]--><dnsfilter.android.DNSProxyActivity: void logLine(java.lang.String)>[]--><dnsfilter.android.DNSProxyActivity$MyUIThreadLogger: void run()>[]--><dnsfilter.android.DNSProxyActivity: void access$300(dnsfilter.android.DNSProxyActivity,java.lang.String)>[]--><dnsfilter.android.DNSProxyActivity: void addToLogView(java.lang.String)>[]--><dnsfilter.android.DNSProxyActivity: void <clinit>()>[]--><dnsfilter.android.DNSProxyActivity: android.text.Spanned fromHtml(java.lang.String)>[[-$i0 < 24]]--><android.text.Html: android.text.Spanned fromHtml(java.lang.String,int)>
+One road protect good!
+containsStatic:false
+containsTry:true
+17call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.content.Context: android.content.ComponentName startForegroundService(android.content.Intent)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+1 Mainhead roads:
+-i0 < 28
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: dnsfilter.android.BootUpReceiver dummyMainMethod_dnsfilter_android_BootUpReceiver(android.content.Intent)>[]--><dnsfilter.android.BootUpReceiver: void onReceive(android.content.Context,android.content.Intent)>[[-i0 < 28]]--><android.content.Context: android.content.ComponentName startForegroundService(android.content.Intent)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 5 Potential Issue API: SDKCheck of <android.app.Activity: void requestPermissions(java.lang.String[],int)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+1 Mainhead roads:
+###Multi invoking in one method, need manual check!!!--><dnsfilter.android.DNSProxyActivity: void onCreate(android.os.Bundle)>[[try], [-$i1 < 23]]
+###Multi invoking in one method, need manual check!!!--><dnsfilter.android.DNSProxyActivity: void onCreate(android.os.Bundle)>[[try]][[-$i1 < 23]]
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: dnsfilter.android.DNSProxyActivity dummyMainMethod_dnsfilter_android_DNSProxyActivity(android.content.Intent)>[]--><dnsfilter.android.DNSProxyActivity: void onCreate(android.os.Bundle)>[[try], [-$i1 < 23]]--><android.app.Activity: void requestPermissions(java.lang.String[],int)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:true
+1call by main package
+-----------------------------------------
+#################################################
+N 6 Potential Issue API: SDKCheck of <android.net.NetworkInfo: int getType()> is checking!!!
+The life time of api is [1,30]
+13call roads:
+1 Mainhead roads:
+12 Packageshead roads:
+containsStatic:false
+containsTry:true
+13call by main package
+-----------------------------------------
+#################################################
+N 7 Potential Issue API: SDKCheck of <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()> is checking!!!
+The life time of api is [1,30]
+13call roads:
+1 Mainhead roads:
+12 Packageshead roads:
+containsStatic:false
+containsTry:true
+13call by main package
+-----------------------------------------
+#################################################
+N 8 Potential Issue API: SDKCheck of <android.net.ConnectivityManager: android.net.LinkProperties getLinkProperties(android.net.Network)> is checking!!!
+The life time of api is [21,30]
+13call roads:
+1 Mainhead roads:
+12 Packageshead roads:
+containsStatic:false
+containsTry:true
+13call by main package
+-----------------------------------------
+#################################################
+N 9 Potential Issue API: SDKCheck of <android.net.NetworkInfo: boolean isConnected()> is checking!!!
+The life time of api is [1,30]
+13call roads:
+1 Mainhead roads:
+12 Packageshead roads:
+containsStatic:false
+containsTry:true
+13call by main package
+-----------------------------------------
+#################################################
+N 10 Potential Issue API: SDKCheck of <android.net.VpnService.Builder: android.net.VpnService.Builder addDisallowedApplication(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+13call roads:
+1 Mainhead roads:
+12 Packageshead roads:
+containsStatic:false
+containsTry:true
+13call by main package
+-----------------------------------------
+#################################################
+N 11 Potential Issue API: SDKCheck of <android.net.ConnectivityManager: android.net.Network[] getAllNetworks()> is checking!!!
+The life time of api is [21,30]
+13call roads:
+1 Mainhead roads:
+12 Packageshead roads:
+containsStatic:false
+containsTry:true
+13call by main package
+-----------------------------------------
+#################################################
+N 12 Potential Issue API: SDKCheck of <android.app.Notification.Builder: void <init>(android.content.Context,java.lang.String)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+1 Mainhead roads:
+###Multi invoking in one method, need manual check!!!--><dnsfilter.android.DNSFilterService: int onStartCommand(android.content.Intent,int,int)>[[try], [-$i0 < 26], [-$i0 < 16]]
+###Multi invoking in one method, need manual check!!!--><dnsfilter.android.DNSFilterService: int onStartCommand(android.content.Intent,int,int)>[[try]][[-$i0 < 26]][[-$i0 < 16]]
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: dnsfilter.android.DNSFilterService dummyMainMethod_dnsfilter_android_DNSFilterService(android.content.Intent)>[]--><dnsfilter.android.DNSFilterService: int onStartCommand(android.content.Intent,int,int)>[[try], [-$i0 < 26], [-$i0 < 16]]--><android.app.Notification.Builder: void <init>(android.content.Context,java.lang.String)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:true
+1call by main package
+-----------------------------------------
+#################################################
+N 13 Potential Issue API: SDKCheck of <android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+1 Mainhead roads:
+###Multi invoking in one method, need manual check!!!--><dnsfilter.android.DNSFilterService: int onStartCommand(android.content.Intent,int,int)>[[try], [-$i0 < 26], [-$i0 < 16]]--><dnsfilter.android.DNSFilterService: java.lang.String getChannel()>[[-$i0 < 26]]
+###Multi invoking in one method, need manual check!!!--><dnsfilter.android.DNSFilterService: int onStartCommand(android.content.Intent,int,int)>[[try]][[-$i0 < 26]][[-$i0 < 16]]--><dnsfilter.android.DNSFilterService: java.lang.String getChannel()>[[-$i0 < 26]]
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: dnsfilter.android.DNSFilterService dummyMainMethod_dnsfilter_android_DNSFilterService(android.content.Intent)>[]--><dnsfilter.android.DNSFilterService: int onStartCommand(android.content.Intent,int,int)>[[try], [-$i0 < 26], [-$i0 < 16]]--><dnsfilter.android.DNSFilterService: java.lang.String getChannel()>[[-$i0 < 26]]--><android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:true
+1call by main package
+-----------------------------------------
+#################################################
+N 14 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager.WifiLock: void acquire()> is checking!!!
+The life time of api is [1,30]
+13call roads:
+1 Mainhead roads:
+12 Packageshead roads:
+containsStatic:false
+containsTry:true
+13call by main package
+-----------------------------------------
+#################################################
+N 15 Potential Issue API: SDKCheck of <android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+1 Mainhead roads:
+###Multi invoking in one method, need manual check!!!--><dnsfilter.android.DNSFilterService: int onStartCommand(android.content.Intent,int,int)>[[try], [-$i0 < 26], [-$i0 < 16]]--><dnsfilter.android.DNSFilterService: java.lang.String getChannel()>[[-$i0 < 26]]
+###Multi invoking in one method, need manual check!!!--><dnsfilter.android.DNSFilterService: int onStartCommand(android.content.Intent,int,int)>[[try]][[-$i0 < 26]][[-$i0 < 16]]--><dnsfilter.android.DNSFilterService: java.lang.String getChannel()>[[-$i0 < 26]]
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: dnsfilter.android.DNSFilterService dummyMainMethod_dnsfilter_android_DNSFilterService(android.content.Intent)>[]--><dnsfilter.android.DNSFilterService: int onStartCommand(android.content.Intent,int,int)>[[try], [-$i0 < 26], [-$i0 < 16]]--><dnsfilter.android.DNSFilterService: java.lang.String getChannel()>[[-$i0 < 26]]--><android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:true
+1call by main package
+-----------------------------------------
+#################################################
+N 16 Potential Issue API: SDKCheck of <android.widget.CheckBox: void <init>(android.content.Context,android.util.AttributeSet,int,int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dnsfilter.android.PaddedCheckBox: void <init>(android.content.Context,android.util.AttributeSet,int,int)>[]--><android.widget.CheckBox: void <init>(android.content.Context,android.util.AttributeSet,int,int)>
+#1.the call statck between class <dnsfilter.android.PaddedCheckBox: void <init>(android.content.Context,android.util.AttributeSet,int,int)> to <android.widget.CheckBox: void <init>(android.content.Context,android.util.AttributeSet,int,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:1
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 17 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager: android.net.wifi.WifiManager.WifiLock createWifiLock(int,java.lang.String)> is checking!!!
+The life time of api is [3,30]
+13call roads:
+1 Mainhead roads:
+12 Packageshead roads:
+containsStatic:false
+containsTry:true
+13call by main package
+-----------------------------------------
+#################################################
+N 18 Potential Issue API: SDKCheck of <android.content.ContextWrapper: int checkSelfPermission(java.lang.String)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+1 Mainhead roads:
+###Multi invoking in one method, need manual check!!!--><dnsfilter.android.DNSProxyActivity: void onCreate(android.os.Bundle)>[[try], [-$i1 < 23]]
+###Multi invoking in one method, need manual check!!!--><dnsfilter.android.DNSProxyActivity: void onCreate(android.os.Bundle)>[[try]][[-$i1 < 23]]
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: dnsfilter.android.DNSProxyActivity dummyMainMethod_dnsfilter_android_DNSProxyActivity(android.content.Intent)>[]--><dnsfilter.android.DNSProxyActivity: void onCreate(android.os.Bundle)>[[try], [-$i1 < 23]]--><android.content.ContextWrapper: int checkSelfPermission(java.lang.String)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:true
+1call by main package
+-----------------------------------------
+#################################################
+N 19 Potential Issue API: SDKCheck of <android.net.VpnService.Builder: android.net.VpnService.Builder setBlocking(boolean)> is checking!!!
+The life time of api is [21,31]
+13call roads:
+1 Mainhead roads:
+12 Packageshead roads:
+containsStatic:false
+containsTry:true
+13call by main package
+-----------------------------------------
+#################################################
+N 20 Potential Issue API: SDKCheck of <android.app.Activity: void onRequestPermissionsResult(int,java.lang.String[],int[])> is checking!!!
+The life time of api is [23,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: dnsfilter.android.DNSProxyActivity dummyMainMethod_dnsfilter_android_DNSProxyActivity(android.content.Intent)>[]--><dnsfilter.android.DNSProxyActivity: void onRequestPermissionsResult(int,java.lang.String[],int[])>[]--><android.app.Activity: void onRequestPermissionsResult(int,java.lang.String[],int[])>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.app.Activity: void onRequestPermissionsResult(int,java.lang.String[],int[])>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:2
+crashApisInMain:1
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+crashApis numbers:2
+crashApis numbers in main road:1
+On Android Version 16 this app may have error api use(at least): 2 and error api roads: 2
+On Android Version 17 this app may have error api use(at least): 2 and error api roads: 2
+On Android Version 18 this app may have error api use(at least): 2 and error api roads: 2
+On Android Version 19 this app may have error api use(at least): 2 and error api roads: 2
+On Android Version 20 this app may have error api use(at least): 2 and error api roads: 2
+On Android Version 21 this app may have error api use(at least): 1 and error api roads: 1
+On Android Version 22 this app may have error api use(at least): 1 and error api roads: 1
+On Android Version 23 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 24 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 25 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 31 this app may have error api use(at least): 0 and error api roads: 0

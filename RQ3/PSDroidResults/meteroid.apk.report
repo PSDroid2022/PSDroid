@@ -1,0 +1,873 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/meteroid.apk
+Entry Points[de.chaosdorf.meteroid.About, de.chaosdorf.meteroid.MainActivity, de.chaosdorf.meteroid.BuyDrink, de.chaosdorf.meteroid.SetHostname, de.chaosdorf.meteroid.PickUsername, de.chaosdorf.meteroid.UserSettings]
+FllowDroidcallgraph size:2728
+Soot started on Mon Jul 11 06:58:27 CST 2022
+leftOp<android.databinding.ViewDataBinding: int SDK_INT>
+Soot finished on Mon Jul 11 06:58:41 CST 2022
+Soot has run for 0 min. 14 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 9
+Declared Target Sdk version is: 28
+Declared Max Sdk version is: -1
+Collected 640 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.widget.TimePicker: int getMinute()> is checking!!!
+The life time of api is [23,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+-$i1 < 23
+Good road: <android.databinding.adapters.TimePickerBindingAdapter: void setMinute(android.widget.TimePicker,int)>[[-$i1 < 23]]--><android.widget.TimePicker: int getMinute()>
+One road protect good!
+-$i0 < 23
+Good road: <android.databinding.adapters.TimePickerBindingAdapter: int getMinute(android.widget.TimePicker)>[[-$i0 < 23]]--><android.widget.TimePicker: int getMinute()>
+One road protect good!
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.widget.TimePicker: int getHour()> is checking!!!
+The life time of api is [23,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+-$i0 < 23
+Good road: <android.databinding.adapters.TimePickerBindingAdapter: int getHour(android.widget.TimePicker)>[[-$i0 < 23]]--><android.widget.TimePicker: int getHour()>
+One road protect good!
+-$i1 < 23
+Good road: <android.databinding.adapters.TimePickerBindingAdapter: void setHour(android.widget.TimePicker,int)>[[-$i1 < 23]]--><android.widget.TimePicker: int getHour()>
+One road protect good!
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.view.View: int getPaddingEnd()> is checking!!!
+The life time of api is [17,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i1 < 17
+Good road: <android.databinding.adapters.ViewBindingAdapter: void setPaddingStart(android.view.View,float)>[[-$i1 < 17]]--><android.view.View: int getPaddingEnd()>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.util.SparseLongArray: int size()> is checking!!!
+The life time of api is [18,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 
+Error road: <android.databinding.ViewDataBinding: void setTo(android.util.SparseLongArray,int,long)>[]--><android.util.SparseLongArray: int size()>
+#1.the call statck between class <android.databinding.ViewDataBinding: void setTo(android.util.SparseLongArray,int,long)> to <android.util.SparseLongArray: int size()>has compatibility isssues！
+-----------------------------------------
+crashApis:1
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.net.NetworkInfo: int getType()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <com.squareup.picasso.Dispatcher$DispatcherHandler: void handleMessage(android.os.Message)>[]--><com.squareup.picasso.Dispatcher: void performNetworkStateChange(android.net.NetworkInfo)>[]--><com.squareup.picasso.PicassoExecutorService: void adjustThreadCount(android.net.NetworkInfo)>[]--><android.net.NetworkInfo: int getType()>
+#1.the call statck between class <com.squareup.picasso.Dispatcher$DispatcherHandler: void handleMessage(android.os.Message)> to <android.net.NetworkInfo: int getType()>has compatibility isssues！
+-----------------------------------------
+crashApis:2
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 5 Potential Issue API: SDKCheck of <android.graphics.drawable.Icon: android.graphics.drawable.Icon createWithResource(android.content.Context,int)> is checking!!!
+The life time of api is [23,31]
+6call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.chaosdorf.meteroid.BuyDrink dummyMainMethod_de_chaosdorf_meteroid_BuyDrink(android.content.Intent)>[]--><de.chaosdorf.meteroid.BuyDrink$4: void onClick(android.view.View)>[]--><de.chaosdorf.meteroid.BuyDrink: void access$100(de.chaosdorf.meteroid.BuyDrink)>[]--><de.chaosdorf.meteroid.BuyDrink: void scanBarcode()>[]--><android.graphics.drawable.Icon: android.graphics.drawable.Icon createWithResource(android.content.Context,int)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.graphics.drawable.Icon: android.graphics.drawable.Icon createWithResource(android.content.Context,int)>has compatibility isssues！
+-----------------------------------------
+5 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <retrofit2.ExecutorCallAdapterFactory$ExecutorCallbackCall: retrofit2.Response execute()>[]--><retrofit2.OkHttpCall: retrofit2.Response execute()>[]--><okhttp3.RealCall: okhttp3.Response execute()>[]--><okhttp3.Dispatcher: void finished(okhttp3.RealCall)>[]--><okhttp3.Dispatcher: void finished(java.util.Deque,java.lang.Object)>[]--><retrofit2.ExecutorCallAdapterFactory$ExecutorCallbackCall$1$1: void run()>[]--><de.chaosdorf.meteroid.longrunningio.LongRunningIORequest$1: void onResponse(retrofit2.Call,retrofit2.Response)>[]--><de.chaosdorf.meteroid.BuyDrink: void processIOResult(de.chaosdorf.meteroid.longrunningio.LongRunningIOTask,java.lang.Object)>[]--><de.chaosdorf.meteroid.BuyDrink: void handleIntent(java.util.List)>[]--><de.chaosdorf.meteroid.BuyDrink: void handleBuyIntent(java.util.List,android.content.Intent)>[]--><de.chaosdorf.meteroid.BuyDrink: void buy(de.chaosdorf.meteroid.model.BuyableItem)>[]--><de.chaosdorf.meteroid.BuyDrink: android.content.pm.ShortcutInfo shortcutForItem(de.chaosdorf.meteroid.model.BuyableItem)>[]--><android.graphics.drawable.Icon: android.graphics.drawable.Icon createWithResource(android.content.Context,int)>
+#1.the call statck between class <retrofit2.ExecutorCallAdapterFactory$ExecutorCallbackCall: retrofit2.Response execute()> to <android.graphics.drawable.Icon: android.graphics.drawable.Icon createWithResource(android.content.Context,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <okhttp3.Dispatcher: void finished(okhttp3.RealCall$AsyncCall)>[]--><okhttp3.Dispatcher: void finished(java.util.Deque,java.lang.Object)>[]--><retrofit2.ExecutorCallAdapterFactory$ExecutorCallbackCall$1$1: void run()>[]--><de.chaosdorf.meteroid.longrunningio.LongRunningIORequest$1: void onResponse(retrofit2.Call,retrofit2.Response)>[]--><de.chaosdorf.meteroid.BuyDrink: void processIOResult(de.chaosdorf.meteroid.longrunningio.LongRunningIOTask,java.lang.Object)>[]--><de.chaosdorf.meteroid.BuyDrink: void handleIntent(java.util.List)>[]--><de.chaosdorf.meteroid.BuyDrink: void handleBuyIntent(java.util.List,android.content.Intent)>[]--><de.chaosdorf.meteroid.BuyDrink: void buy(de.chaosdorf.meteroid.model.BuyableItem)>[]--><de.chaosdorf.meteroid.BuyDrink: android.content.pm.ShortcutInfo shortcutForItem(de.chaosdorf.meteroid.model.BuyableItem)>[]--><android.graphics.drawable.Icon: android.graphics.drawable.Icon createWithResource(android.content.Context,int)>
+#2.the call statck between class <okhttp3.Dispatcher: void finished(okhttp3.RealCall$AsyncCall)> to <android.graphics.drawable.Icon: android.graphics.drawable.Icon createWithResource(android.content.Context,int)>has compatibility isssues！
+-----------------------------------------
+try
+Good road with try: <okhttp3.RealCall$AsyncCall: void execute()>[[try]]--><retrofit2.OkHttpCall$1: void onResponse(okhttp3.Call,okhttp3.Response)>[[try]]--><de.chaosdorf.meteroid.longrunningio.LongRunningIORequest$1: void onResponse(retrofit2.Call,retrofit2.Response)>[]--><de.chaosdorf.meteroid.BuyDrink: void processIOResult(de.chaosdorf.meteroid.longrunningio.LongRunningIOTask,java.lang.Object)>[]--><de.chaosdorf.meteroid.BuyDrink: void handleIntent(java.util.List)>[]--><de.chaosdorf.meteroid.BuyDrink: void handleBuyIntent(java.util.List,android.content.Intent)>[]--><de.chaosdorf.meteroid.BuyDrink: void buy(de.chaosdorf.meteroid.model.BuyableItem)>[]--><de.chaosdorf.meteroid.BuyDrink: android.content.pm.ShortcutInfo shortcutForItem(de.chaosdorf.meteroid.model.BuyableItem)>[]--><android.graphics.drawable.Icon: android.graphics.drawable.Icon createWithResource(android.content.Context,int)>
+One road protect good!
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <android.databinding.ViewDataBinding$5: void onViewAttachedToWindow(android.view.View)>[]--><retrofit2.ExecutorCallAdapterFactory$ExecutorCallbackCall$1$1: void run()>[]--><de.chaosdorf.meteroid.longrunningio.LongRunningIORequest$1: void onResponse(retrofit2.Call,retrofit2.Response)>[]--><de.chaosdorf.meteroid.BuyDrink: void processIOResult(de.chaosdorf.meteroid.longrunningio.LongRunningIOTask,java.lang.Object)>[]--><de.chaosdorf.meteroid.BuyDrink: void handleIntent(java.util.List)>[]--><de.chaosdorf.meteroid.BuyDrink: void handleBuyIntent(java.util.List,android.content.Intent)>[]--><de.chaosdorf.meteroid.BuyDrink: void buy(de.chaosdorf.meteroid.model.BuyableItem)>[]--><de.chaosdorf.meteroid.BuyDrink: android.content.pm.ShortcutInfo shortcutForItem(de.chaosdorf.meteroid.model.BuyableItem)>[]--><android.graphics.drawable.Icon: android.graphics.drawable.Icon createWithResource(android.content.Context,int)>
+#4.the call statck between class <android.databinding.ViewDataBinding$5: void onViewAttachedToWindow(android.view.View)> to <android.graphics.drawable.Icon: android.graphics.drawable.Icon createWithResource(android.content.Context,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <android.databinding.ViewDataBinding$7: void doFrame(long)>[]--><retrofit2.ExecutorCallAdapterFactory$ExecutorCallbackCall$1$1: void run()>[]--><de.chaosdorf.meteroid.longrunningio.LongRunningIORequest$1: void onResponse(retrofit2.Call,retrofit2.Response)>[]--><de.chaosdorf.meteroid.BuyDrink: void processIOResult(de.chaosdorf.meteroid.longrunningio.LongRunningIOTask,java.lang.Object)>[]--><de.chaosdorf.meteroid.BuyDrink: void handleIntent(java.util.List)>[]--><de.chaosdorf.meteroid.BuyDrink: void handleBuyIntent(java.util.List,android.content.Intent)>[]--><de.chaosdorf.meteroid.BuyDrink: void buy(de.chaosdorf.meteroid.model.BuyableItem)>[]--><de.chaosdorf.meteroid.BuyDrink: android.content.pm.ShortcutInfo shortcutForItem(de.chaosdorf.meteroid.model.BuyableItem)>[]--><android.graphics.drawable.Icon: android.graphics.drawable.Icon createWithResource(android.content.Context,int)>
+#5.the call statck between class <android.databinding.ViewDataBinding$7: void doFrame(long)> to <android.graphics.drawable.Icon: android.graphics.drawable.Icon createWithResource(android.content.Context,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:3
+crashApisInMain:1
+containsStatic:false
+containsTry:true
+6call by main package
+-----------------------------------------
+#################################################
+N 6 Potential Issue API: SDKCheck of <android.content.Context: android.graphics.drawable.Drawable getDrawable(int)> is checking!!!
+The life time of api is [21,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+-$i0 < 21
+Good road: <de.chaosdorf.meteroid.PickUsername$UserAdapter: android.view.View getView(int,android.view.View,android.view.ViewGroup)>[[-$i0 < 21]]--><android.content.Context: android.graphics.drawable.Drawable getDrawable(int)>
+One road protect good!
+-$i1 < 21
+Good road: <android.databinding.ViewDataBinding: android.graphics.drawable.Drawable getDrawableFromResource(android.view.View,int)>[[-$i1 < 21]]--><android.content.Context: android.graphics.drawable.Drawable getDrawable(int)>
+One road protect good!
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 7 Potential Issue API: SDKCheck of <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()> is checking!!!
+The life time of api is [1,30]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <com.squareup.picasso.Dispatcher$DispatcherHandler: void handleMessage(android.os.Message)>[]--><com.squareup.picasso.Dispatcher: void performRetry(com.squareup.picasso.BitmapHunter)>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>
+#1.the call statck between class <com.squareup.picasso.Dispatcher$DispatcherHandler: void handleMessage(android.os.Message)> to <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <com.squareup.picasso.Dispatcher$NetworkBroadcastReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>
+#2.the call statck between class <com.squareup.picasso.Dispatcher$NetworkBroadcastReceiver: void onReceive(android.content.Context,android.content.Intent)> to <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>has compatibility isssues！
+-----------------------------------------
+crashApis:4
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 8 Potential Issue API: SDKCheck of <android.content.Context: java.lang.Object getSystemService(java.lang.Class)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+1 Mainhead roads:
+###Multi invoking in one method, need manual check!!!--><de.chaosdorf.meteroid.BuyDrink: void onCreate(android.os.Bundle)>[[$i0 < 11], [$i0 < 21], [-$i0 < 25]]
+###Multi invoking in one method, need manual check!!!--><de.chaosdorf.meteroid.BuyDrink: void onCreate(android.os.Bundle)>[[$i0 < 11]][[$i0 < 21]][[-$i0 < 25]]
+$i0 < 11
+$i0 < 21
+-$i0 < 25
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.chaosdorf.meteroid.BuyDrink dummyMainMethod_de_chaosdorf_meteroid_BuyDrink(android.content.Intent)>[]--><de.chaosdorf.meteroid.BuyDrink: void onCreate(android.os.Bundle)>[[$i0 < 11], [$i0 < 21], [-$i0 < 25]]--><android.content.Context: java.lang.Object getSystemService(java.lang.Class)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 9 Potential Issue API: SDKCheck of <android.content.pm.ShortcutInfo.Builder: void <init>(android.content.Context,java.lang.String)> is checking!!!
+The life time of api is [25,31]
+6call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 24 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.chaosdorf.meteroid.BuyDrink dummyMainMethod_de_chaosdorf_meteroid_BuyDrink(android.content.Intent)>[]--><de.chaosdorf.meteroid.BuyDrink$4: void onClick(android.view.View)>[]--><de.chaosdorf.meteroid.BuyDrink: void access$100(de.chaosdorf.meteroid.BuyDrink)>[]--><de.chaosdorf.meteroid.BuyDrink: void scanBarcode()>[]--><android.content.pm.ShortcutInfo.Builder: void <init>(android.content.Context,java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.content.pm.ShortcutInfo.Builder: void <init>(android.content.Context,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+5 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 24 
+Error road: <retrofit2.ExecutorCallAdapterFactory$ExecutorCallbackCall: retrofit2.Response execute()>[]--><retrofit2.OkHttpCall: retrofit2.Response execute()>[]--><okhttp3.RealCall: okhttp3.Response execute()>[]--><okhttp3.Dispatcher: void finished(okhttp3.RealCall)>[]--><okhttp3.Dispatcher: void finished(java.util.Deque,java.lang.Object)>[]--><retrofit2.ExecutorCallAdapterFactory$ExecutorCallbackCall$1$1: void run()>[]--><de.chaosdorf.meteroid.longrunningio.LongRunningIORequest$1: void onResponse(retrofit2.Call,retrofit2.Response)>[]--><de.chaosdorf.meteroid.BuyDrink: void processIOResult(de.chaosdorf.meteroid.longrunningio.LongRunningIOTask,java.lang.Object)>[]--><de.chaosdorf.meteroid.BuyDrink: void handleIntent(java.util.List)>[]--><de.chaosdorf.meteroid.BuyDrink: void handleBuyIntent(java.util.List,android.content.Intent)>[]--><de.chaosdorf.meteroid.BuyDrink: void buy(de.chaosdorf.meteroid.model.BuyableItem)>[]--><de.chaosdorf.meteroid.BuyDrink: android.content.pm.ShortcutInfo shortcutForItem(de.chaosdorf.meteroid.model.BuyableItem)>[]--><android.content.pm.ShortcutInfo.Builder: void <init>(android.content.Context,java.lang.String)>
+#1.the call statck between class <retrofit2.ExecutorCallAdapterFactory$ExecutorCallbackCall: retrofit2.Response execute()> to <android.content.pm.ShortcutInfo.Builder: void <init>(android.content.Context,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 24 
+Error road: <okhttp3.Dispatcher: void finished(okhttp3.RealCall$AsyncCall)>[]--><okhttp3.Dispatcher: void finished(java.util.Deque,java.lang.Object)>[]--><retrofit2.ExecutorCallAdapterFactory$ExecutorCallbackCall$1$1: void run()>[]--><de.chaosdorf.meteroid.longrunningio.LongRunningIORequest$1: void onResponse(retrofit2.Call,retrofit2.Response)>[]--><de.chaosdorf.meteroid.BuyDrink: void processIOResult(de.chaosdorf.meteroid.longrunningio.LongRunningIOTask,java.lang.Object)>[]--><de.chaosdorf.meteroid.BuyDrink: void handleIntent(java.util.List)>[]--><de.chaosdorf.meteroid.BuyDrink: void handleBuyIntent(java.util.List,android.content.Intent)>[]--><de.chaosdorf.meteroid.BuyDrink: void buy(de.chaosdorf.meteroid.model.BuyableItem)>[]--><de.chaosdorf.meteroid.BuyDrink: android.content.pm.ShortcutInfo shortcutForItem(de.chaosdorf.meteroid.model.BuyableItem)>[]--><android.content.pm.ShortcutInfo.Builder: void <init>(android.content.Context,java.lang.String)>
+#2.the call statck between class <okhttp3.Dispatcher: void finished(okhttp3.RealCall$AsyncCall)> to <android.content.pm.ShortcutInfo.Builder: void <init>(android.content.Context,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+try
+Good road with try: <okhttp3.RealCall$AsyncCall: void execute()>[[try]]--><retrofit2.OkHttpCall$1: void onResponse(okhttp3.Call,okhttp3.Response)>[[try]]--><de.chaosdorf.meteroid.longrunningio.LongRunningIORequest$1: void onResponse(retrofit2.Call,retrofit2.Response)>[]--><de.chaosdorf.meteroid.BuyDrink: void processIOResult(de.chaosdorf.meteroid.longrunningio.LongRunningIOTask,java.lang.Object)>[]--><de.chaosdorf.meteroid.BuyDrink: void handleIntent(java.util.List)>[]--><de.chaosdorf.meteroid.BuyDrink: void handleBuyIntent(java.util.List,android.content.Intent)>[]--><de.chaosdorf.meteroid.BuyDrink: void buy(de.chaosdorf.meteroid.model.BuyableItem)>[]--><de.chaosdorf.meteroid.BuyDrink: android.content.pm.ShortcutInfo shortcutForItem(de.chaosdorf.meteroid.model.BuyableItem)>[]--><android.content.pm.ShortcutInfo.Builder: void <init>(android.content.Context,java.lang.String)>
+One road protect good!
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 24 
+Error road: <android.databinding.ViewDataBinding$5: void onViewAttachedToWindow(android.view.View)>[]--><retrofit2.ExecutorCallAdapterFactory$ExecutorCallbackCall$1$1: void run()>[]--><de.chaosdorf.meteroid.longrunningio.LongRunningIORequest$1: void onResponse(retrofit2.Call,retrofit2.Response)>[]--><de.chaosdorf.meteroid.BuyDrink: void processIOResult(de.chaosdorf.meteroid.longrunningio.LongRunningIOTask,java.lang.Object)>[]--><de.chaosdorf.meteroid.BuyDrink: void handleIntent(java.util.List)>[]--><de.chaosdorf.meteroid.BuyDrink: void handleBuyIntent(java.util.List,android.content.Intent)>[]--><de.chaosdorf.meteroid.BuyDrink: void buy(de.chaosdorf.meteroid.model.BuyableItem)>[]--><de.chaosdorf.meteroid.BuyDrink: android.content.pm.ShortcutInfo shortcutForItem(de.chaosdorf.meteroid.model.BuyableItem)>[]--><android.content.pm.ShortcutInfo.Builder: void <init>(android.content.Context,java.lang.String)>
+#4.the call statck between class <android.databinding.ViewDataBinding$5: void onViewAttachedToWindow(android.view.View)> to <android.content.pm.ShortcutInfo.Builder: void <init>(android.content.Context,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 24 
+Error road: <android.databinding.ViewDataBinding$7: void doFrame(long)>[]--><retrofit2.ExecutorCallAdapterFactory$ExecutorCallbackCall$1$1: void run()>[]--><de.chaosdorf.meteroid.longrunningio.LongRunningIORequest$1: void onResponse(retrofit2.Call,retrofit2.Response)>[]--><de.chaosdorf.meteroid.BuyDrink: void processIOResult(de.chaosdorf.meteroid.longrunningio.LongRunningIOTask,java.lang.Object)>[]--><de.chaosdorf.meteroid.BuyDrink: void handleIntent(java.util.List)>[]--><de.chaosdorf.meteroid.BuyDrink: void handleBuyIntent(java.util.List,android.content.Intent)>[]--><de.chaosdorf.meteroid.BuyDrink: void buy(de.chaosdorf.meteroid.model.BuyableItem)>[]--><de.chaosdorf.meteroid.BuyDrink: android.content.pm.ShortcutInfo shortcutForItem(de.chaosdorf.meteroid.model.BuyableItem)>[]--><android.content.pm.ShortcutInfo.Builder: void <init>(android.content.Context,java.lang.String)>
+#5.the call statck between class <android.databinding.ViewDataBinding$7: void doFrame(long)> to <android.content.pm.ShortcutInfo.Builder: void <init>(android.content.Context,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:5
+crashApisInMain:2
+containsStatic:false
+containsTry:true
+6call by main package
+-----------------------------------------
+#################################################
+N 10 Potential Issue API: SDKCheck of <android.content.pm.ShortcutInfo.Builder: android.content.pm.ShortcutInfo.Builder setShortLabel(java.lang.CharSequence)> is checking!!!
+The life time of api is [25,31]
+6call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 24 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.chaosdorf.meteroid.BuyDrink dummyMainMethod_de_chaosdorf_meteroid_BuyDrink(android.content.Intent)>[]--><de.chaosdorf.meteroid.BuyDrink$4: void onClick(android.view.View)>[]--><de.chaosdorf.meteroid.BuyDrink: void access$100(de.chaosdorf.meteroid.BuyDrink)>[]--><de.chaosdorf.meteroid.BuyDrink: void scanBarcode()>[]--><android.content.pm.ShortcutInfo.Builder: android.content.pm.ShortcutInfo.Builder setShortLabel(java.lang.CharSequence)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.content.pm.ShortcutInfo.Builder: android.content.pm.ShortcutInfo.Builder setShortLabel(java.lang.CharSequence)>has compatibility isssues！
+-----------------------------------------
+5 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 24 
+Error road: <retrofit2.ExecutorCallAdapterFactory$ExecutorCallbackCall: retrofit2.Response execute()>[]--><retrofit2.OkHttpCall: retrofit2.Response execute()>[]--><okhttp3.RealCall: okhttp3.Response execute()>[]--><okhttp3.Dispatcher: void finished(okhttp3.RealCall)>[]--><okhttp3.Dispatcher: void finished(java.util.Deque,java.lang.Object)>[]--><retrofit2.ExecutorCallAdapterFactory$ExecutorCallbackCall$1$1: void run()>[]--><de.chaosdorf.meteroid.longrunningio.LongRunningIORequest$1: void onResponse(retrofit2.Call,retrofit2.Response)>[]--><de.chaosdorf.meteroid.BuyDrink: void processIOResult(de.chaosdorf.meteroid.longrunningio.LongRunningIOTask,java.lang.Object)>[]--><de.chaosdorf.meteroid.BuyDrink: void handleIntent(java.util.List)>[]--><de.chaosdorf.meteroid.BuyDrink: void scanBarcode()>[]--><android.content.pm.ShortcutInfo.Builder: android.content.pm.ShortcutInfo.Builder setShortLabel(java.lang.CharSequence)>
+#1.the call statck between class <retrofit2.ExecutorCallAdapterFactory$ExecutorCallbackCall: retrofit2.Response execute()> to <android.content.pm.ShortcutInfo.Builder: android.content.pm.ShortcutInfo.Builder setShortLabel(java.lang.CharSequence)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 24 
+Error road: <okhttp3.Dispatcher: void finished(okhttp3.RealCall$AsyncCall)>[]--><okhttp3.Dispatcher: void finished(java.util.Deque,java.lang.Object)>[]--><retrofit2.ExecutorCallAdapterFactory$ExecutorCallbackCall$1$1: void run()>[]--><de.chaosdorf.meteroid.longrunningio.LongRunningIORequest$1: void onResponse(retrofit2.Call,retrofit2.Response)>[]--><de.chaosdorf.meteroid.BuyDrink: void processIOResult(de.chaosdorf.meteroid.longrunningio.LongRunningIOTask,java.lang.Object)>[]--><de.chaosdorf.meteroid.BuyDrink: void handleIntent(java.util.List)>[]--><de.chaosdorf.meteroid.BuyDrink: void scanBarcode()>[]--><android.content.pm.ShortcutInfo.Builder: android.content.pm.ShortcutInfo.Builder setShortLabel(java.lang.CharSequence)>
+#2.the call statck between class <okhttp3.Dispatcher: void finished(okhttp3.RealCall$AsyncCall)> to <android.content.pm.ShortcutInfo.Builder: android.content.pm.ShortcutInfo.Builder setShortLabel(java.lang.CharSequence)>has compatibility isssues！
+-----------------------------------------
+try
+Good road with try: <okhttp3.RealCall$AsyncCall: void execute()>[[try]]--><retrofit2.OkHttpCall$1: void onResponse(okhttp3.Call,okhttp3.Response)>[[try]]--><de.chaosdorf.meteroid.longrunningio.LongRunningIORequest$1: void onResponse(retrofit2.Call,retrofit2.Response)>[]--><de.chaosdorf.meteroid.BuyDrink: void processIOResult(de.chaosdorf.meteroid.longrunningio.LongRunningIOTask,java.lang.Object)>[]--><de.chaosdorf.meteroid.BuyDrink: void handleIntent(java.util.List)>[]--><de.chaosdorf.meteroid.BuyDrink: void scanBarcode()>[]--><android.content.pm.ShortcutInfo.Builder: android.content.pm.ShortcutInfo.Builder setShortLabel(java.lang.CharSequence)>
+One road protect good!
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 24 
+Error road: <android.databinding.ViewDataBinding$5: void onViewAttachedToWindow(android.view.View)>[]--><retrofit2.ExecutorCallAdapterFactory$ExecutorCallbackCall$1$1: void run()>[]--><de.chaosdorf.meteroid.longrunningio.LongRunningIORequest$1: void onResponse(retrofit2.Call,retrofit2.Response)>[]--><de.chaosdorf.meteroid.BuyDrink: void processIOResult(de.chaosdorf.meteroid.longrunningio.LongRunningIOTask,java.lang.Object)>[]--><de.chaosdorf.meteroid.BuyDrink: void handleIntent(java.util.List)>[]--><de.chaosdorf.meteroid.BuyDrink: void scanBarcode()>[]--><android.content.pm.ShortcutInfo.Builder: android.content.pm.ShortcutInfo.Builder setShortLabel(java.lang.CharSequence)>
+#4.the call statck between class <android.databinding.ViewDataBinding$5: void onViewAttachedToWindow(android.view.View)> to <android.content.pm.ShortcutInfo.Builder: android.content.pm.ShortcutInfo.Builder setShortLabel(java.lang.CharSequence)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 24 
+Error road: <android.databinding.ViewDataBinding$7: void doFrame(long)>[]--><retrofit2.ExecutorCallAdapterFactory$ExecutorCallbackCall$1$1: void run()>[]--><de.chaosdorf.meteroid.longrunningio.LongRunningIORequest$1: void onResponse(retrofit2.Call,retrofit2.Response)>[]--><de.chaosdorf.meteroid.BuyDrink: void processIOResult(de.chaosdorf.meteroid.longrunningio.LongRunningIOTask,java.lang.Object)>[]--><de.chaosdorf.meteroid.BuyDrink: void handleIntent(java.util.List)>[]--><de.chaosdorf.meteroid.BuyDrink: void scanBarcode()>[]--><android.content.pm.ShortcutInfo.Builder: android.content.pm.ShortcutInfo.Builder setShortLabel(java.lang.CharSequence)>
+#5.the call statck between class <android.databinding.ViewDataBinding$7: void doFrame(long)> to <android.content.pm.ShortcutInfo.Builder: android.content.pm.ShortcutInfo.Builder setShortLabel(java.lang.CharSequence)>has compatibility isssues！
+-----------------------------------------
+crashApis:6
+crashApisInMain:3
+containsStatic:false
+containsTry:true
+6call by main package
+-----------------------------------------
+#################################################
+N 11 Potential Issue API: SDKCheck of <android.content.pm.ShortcutManager: boolean setDynamicShortcuts(java.util.List)> is checking!!!
+The life time of api is [25,31]
+6call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 24 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.chaosdorf.meteroid.BuyDrink dummyMainMethod_de_chaosdorf_meteroid_BuyDrink(android.content.Intent)>[]--><de.chaosdorf.meteroid.BuyDrink$4: void onClick(android.view.View)>[]--><de.chaosdorf.meteroid.BuyDrink: void access$100(de.chaosdorf.meteroid.BuyDrink)>[]--><de.chaosdorf.meteroid.BuyDrink: void scanBarcode()>[]--><android.content.pm.ShortcutManager: boolean setDynamicShortcuts(java.util.List)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.content.pm.ShortcutManager: boolean setDynamicShortcuts(java.util.List)>has compatibility isssues！
+-----------------------------------------
+5 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 24 
+Error road: <retrofit2.ExecutorCallAdapterFactory$ExecutorCallbackCall: retrofit2.Response execute()>[]--><retrofit2.OkHttpCall: retrofit2.Response execute()>[]--><okhttp3.RealCall: okhttp3.Response execute()>[]--><okhttp3.Dispatcher: void finished(okhttp3.RealCall)>[]--><okhttp3.Dispatcher: void finished(java.util.Deque,java.lang.Object)>[]--><retrofit2.ExecutorCallAdapterFactory$ExecutorCallbackCall$1$1: void run()>[]--><de.chaosdorf.meteroid.longrunningio.LongRunningIORequest$1: void onResponse(retrofit2.Call,retrofit2.Response)>[]--><de.chaosdorf.meteroid.BuyDrink: void processIOResult(de.chaosdorf.meteroid.longrunningio.LongRunningIOTask,java.lang.Object)>[]--><de.chaosdorf.meteroid.BuyDrink: void handleIntent(java.util.List)>[]--><de.chaosdorf.meteroid.BuyDrink: void handleBuyIntent(java.util.List,android.content.Intent)>[]--><de.chaosdorf.meteroid.BuyDrink: void buy(de.chaosdorf.meteroid.model.BuyableItem)>[]--><android.content.pm.ShortcutManager: boolean setDynamicShortcuts(java.util.List)>
+#1.the call statck between class <retrofit2.ExecutorCallAdapterFactory$ExecutorCallbackCall: retrofit2.Response execute()> to <android.content.pm.ShortcutManager: boolean setDynamicShortcuts(java.util.List)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 24 
+Error road: <okhttp3.Dispatcher: void finished(okhttp3.RealCall$AsyncCall)>[]--><okhttp3.Dispatcher: void finished(java.util.Deque,java.lang.Object)>[]--><retrofit2.ExecutorCallAdapterFactory$ExecutorCallbackCall$1$1: void run()>[]--><de.chaosdorf.meteroid.longrunningio.LongRunningIORequest$1: void onResponse(retrofit2.Call,retrofit2.Response)>[]--><de.chaosdorf.meteroid.BuyDrink: void processIOResult(de.chaosdorf.meteroid.longrunningio.LongRunningIOTask,java.lang.Object)>[]--><de.chaosdorf.meteroid.BuyDrink: void handleIntent(java.util.List)>[]--><de.chaosdorf.meteroid.BuyDrink: void handleBuyIntent(java.util.List,android.content.Intent)>[]--><de.chaosdorf.meteroid.BuyDrink: void buy(de.chaosdorf.meteroid.model.BuyableItem)>[]--><android.content.pm.ShortcutManager: boolean setDynamicShortcuts(java.util.List)>
+#2.the call statck between class <okhttp3.Dispatcher: void finished(okhttp3.RealCall$AsyncCall)> to <android.content.pm.ShortcutManager: boolean setDynamicShortcuts(java.util.List)>has compatibility isssues！
+-----------------------------------------
+try
+Good road with try: <okhttp3.RealCall$AsyncCall: void execute()>[[try]]--><retrofit2.OkHttpCall$1: void onResponse(okhttp3.Call,okhttp3.Response)>[[try]]--><de.chaosdorf.meteroid.longrunningio.LongRunningIORequest$1: void onResponse(retrofit2.Call,retrofit2.Response)>[]--><de.chaosdorf.meteroid.BuyDrink: void processIOResult(de.chaosdorf.meteroid.longrunningio.LongRunningIOTask,java.lang.Object)>[]--><de.chaosdorf.meteroid.BuyDrink: void handleIntent(java.util.List)>[]--><de.chaosdorf.meteroid.BuyDrink: void handleBuyIntent(java.util.List,android.content.Intent)>[]--><de.chaosdorf.meteroid.BuyDrink: void buy(de.chaosdorf.meteroid.model.BuyableItem)>[]--><android.content.pm.ShortcutManager: boolean setDynamicShortcuts(java.util.List)>
+One road protect good!
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 24 
+Error road: <android.databinding.ViewDataBinding$5: void onViewAttachedToWindow(android.view.View)>[]--><retrofit2.ExecutorCallAdapterFactory$ExecutorCallbackCall$1$1: void run()>[]--><de.chaosdorf.meteroid.longrunningio.LongRunningIORequest$1: void onResponse(retrofit2.Call,retrofit2.Response)>[]--><de.chaosdorf.meteroid.BuyDrink: void processIOResult(de.chaosdorf.meteroid.longrunningio.LongRunningIOTask,java.lang.Object)>[]--><de.chaosdorf.meteroid.BuyDrink: void handleIntent(java.util.List)>[]--><de.chaosdorf.meteroid.BuyDrink: void handleBuyIntent(java.util.List,android.content.Intent)>[]--><de.chaosdorf.meteroid.BuyDrink: void buy(de.chaosdorf.meteroid.model.BuyableItem)>[]--><android.content.pm.ShortcutManager: boolean setDynamicShortcuts(java.util.List)>
+#4.the call statck between class <android.databinding.ViewDataBinding$5: void onViewAttachedToWindow(android.view.View)> to <android.content.pm.ShortcutManager: boolean setDynamicShortcuts(java.util.List)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 24 
+Error road: <android.databinding.ViewDataBinding$7: void doFrame(long)>[]--><retrofit2.ExecutorCallAdapterFactory$ExecutorCallbackCall$1$1: void run()>[]--><de.chaosdorf.meteroid.longrunningio.LongRunningIORequest$1: void onResponse(retrofit2.Call,retrofit2.Response)>[]--><de.chaosdorf.meteroid.BuyDrink: void processIOResult(de.chaosdorf.meteroid.longrunningio.LongRunningIOTask,java.lang.Object)>[]--><de.chaosdorf.meteroid.BuyDrink: void handleIntent(java.util.List)>[]--><de.chaosdorf.meteroid.BuyDrink: void handleBuyIntent(java.util.List,android.content.Intent)>[]--><de.chaosdorf.meteroid.BuyDrink: void buy(de.chaosdorf.meteroid.model.BuyableItem)>[]--><android.content.pm.ShortcutManager: boolean setDynamicShortcuts(java.util.List)>
+#5.the call statck between class <android.databinding.ViewDataBinding$7: void doFrame(long)> to <android.content.pm.ShortcutManager: boolean setDynamicShortcuts(java.util.List)>has compatibility isssues！
+-----------------------------------------
+crashApis:7
+crashApisInMain:4
+containsStatic:false
+containsTry:true
+6call by main package
+-----------------------------------------
+#################################################
+N 12 Potential Issue API: SDKCheck of <android.view.View: void setOutlineProvider(android.view.ViewOutlineProvider)> is checking!!!
+The life time of api is [21,31]
+7call roads:
+0 Mainhead roads:
+7 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.melnykov.fab.FloatingActionButton: void setColorPressedResId(int)>[]--><com.melnykov.fab.FloatingActionButton: void setColorPressed(int)>[]--><com.melnykov.fab.FloatingActionButton: void updateBackground()>[]--><com.melnykov.fab.FloatingActionButton: void setBackgroundCompat(android.graphics.drawable.Drawable)>[]--><android.view.View: void setOutlineProvider(android.view.ViewOutlineProvider)>
+#1.the call statck between class <com.melnykov.fab.FloatingActionButton: void setColorPressedResId(int)> to <android.view.View: void setOutlineProvider(android.view.ViewOutlineProvider)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.melnykov.fab.FloatingActionButton: void setColorNormalResId(int)>[]--><com.melnykov.fab.FloatingActionButton: void setColorNormal(int)>[]--><com.melnykov.fab.FloatingActionButton: void updateBackground()>[]--><com.melnykov.fab.FloatingActionButton: void setBackgroundCompat(android.graphics.drawable.Drawable)>[]--><android.view.View: void setOutlineProvider(android.view.ViewOutlineProvider)>
+#2.the call statck between class <com.melnykov.fab.FloatingActionButton: void setColorNormalResId(int)> to <android.view.View: void setOutlineProvider(android.view.ViewOutlineProvider)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.melnykov.fab.FloatingActionButton: void setColorRippleResId(int)>[]--><com.melnykov.fab.FloatingActionButton: void setColorRipple(int)>[]--><com.melnykov.fab.FloatingActionButton: void updateBackground()>[]--><com.melnykov.fab.FloatingActionButton: void setBackgroundCompat(android.graphics.drawable.Drawable)>[]--><android.view.View: void setOutlineProvider(android.view.ViewOutlineProvider)>
+#3.the call statck between class <com.melnykov.fab.FloatingActionButton: void setColorRippleResId(int)> to <android.view.View: void setOutlineProvider(android.view.ViewOutlineProvider)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.melnykov.fab.FloatingActionButton: void setType(int)>[]--><com.melnykov.fab.FloatingActionButton: void updateBackground()>[]--><com.melnykov.fab.FloatingActionButton: void setBackgroundCompat(android.graphics.drawable.Drawable)>[]--><android.view.View: void setOutlineProvider(android.view.ViewOutlineProvider)>
+#4.the call statck between class <com.melnykov.fab.FloatingActionButton: void setType(int)> to <android.view.View: void setOutlineProvider(android.view.ViewOutlineProvider)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.melnykov.fab.FloatingActionButton: void <init>(android.content.Context,android.util.AttributeSet,int)>[]--><com.melnykov.fab.FloatingActionButton: void init(android.content.Context,android.util.AttributeSet)>[]--><com.melnykov.fab.FloatingActionButton: void updateBackground()>[]--><com.melnykov.fab.FloatingActionButton: void setBackgroundCompat(android.graphics.drawable.Drawable)>[]--><android.view.View: void setOutlineProvider(android.view.ViewOutlineProvider)>
+#5.the call statck between class <com.melnykov.fab.FloatingActionButton: void <init>(android.content.Context,android.util.AttributeSet,int)> to <android.view.View: void setOutlineProvider(android.view.ViewOutlineProvider)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.melnykov.fab.FloatingActionButton: void <init>(android.content.Context)>[]--><com.melnykov.fab.FloatingActionButton: void <init>(android.content.Context,android.util.AttributeSet)>[]--><com.melnykov.fab.FloatingActionButton: void init(android.content.Context,android.util.AttributeSet)>[]--><com.melnykov.fab.FloatingActionButton: void updateBackground()>[]--><com.melnykov.fab.FloatingActionButton: void setBackgroundCompat(android.graphics.drawable.Drawable)>[]--><android.view.View: void setOutlineProvider(android.view.ViewOutlineProvider)>
+#6.the call statck between class <com.melnykov.fab.FloatingActionButton: void <init>(android.content.Context)> to <android.view.View: void setOutlineProvider(android.view.ViewOutlineProvider)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.melnykov.fab.FloatingActionButton: void setShadow(boolean)>[]--><com.melnykov.fab.FloatingActionButton: void updateBackground()>[]--><com.melnykov.fab.FloatingActionButton: void setBackgroundCompat(android.graphics.drawable.Drawable)>[]--><android.view.View: void setOutlineProvider(android.view.ViewOutlineProvider)>
+#7.the call statck between class <com.melnykov.fab.FloatingActionButton: void setShadow(boolean)> to <android.view.View: void setOutlineProvider(android.view.ViewOutlineProvider)>has compatibility isssues！
+-----------------------------------------
+crashApis:8
+containsStatic:false
+containsTry:false
+8call by main package
+-----------------------------------------
+#################################################
+N 13 Potential Issue API: SDKCheck of <android.graphics.Outline: void setOval(int,int,int,int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.melnykov.fab.FloatingActionButton$1: void getOutline(android.view.View,android.graphics.Outline)>[]--><android.graphics.Outline: void setOval(int,int,int,int)>
+#1.the call statck between class <com.melnykov.fab.FloatingActionButton$1: void getOutline(android.view.View,android.graphics.Outline)> to <android.graphics.Outline: void setOval(int,int,int,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:9
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 14 Potential Issue API: SDKCheck of <android.net.NetworkInfo: boolean isConnected()> is checking!!!
+The life time of api is [1,30]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <com.squareup.picasso.NetworkRequestHandler: boolean shouldRetry(boolean,android.net.NetworkInfo)>[]--><android.net.NetworkInfo: boolean isConnected()>
+#1.the call statck between class <com.squareup.picasso.NetworkRequestHandler: boolean shouldRetry(boolean,android.net.NetworkInfo)> to <android.net.NetworkInfo: boolean isConnected()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <com.squareup.picasso.Dispatcher$DispatcherHandler: void handleMessage(android.os.Message)>[]--><com.squareup.picasso.Dispatcher: void performRetry(com.squareup.picasso.BitmapHunter)>[]--><android.net.NetworkInfo: boolean isConnected()>
+!!!this api will crash on sdk 31 
+Error road: <com.squareup.picasso.Dispatcher$DispatcherHandler: void handleMessage(android.os.Message)>[]--><com.squareup.picasso.Dispatcher: void performNetworkStateChange(android.net.NetworkInfo)>[]--><android.net.NetworkInfo: boolean isConnected()>
+#2.the call statck between class <com.squareup.picasso.Dispatcher$DispatcherHandler: void handleMessage(android.os.Message)> to <android.net.NetworkInfo: boolean isConnected()>has compatibility isssues！
+-----------------------------------------
+crashApis:10
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 15 Potential Issue API: SDKCheck of <android.graphics.drawable.RippleDrawable: void <init>(android.content.res.ColorStateList,android.graphics.drawable.Drawable,android.graphics.drawable.Drawable)> is checking!!!
+The life time of api is [21,31]
+7call roads:
+0 Mainhead roads:
+7 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.melnykov.fab.FloatingActionButton: void setColorPressedResId(int)>[]--><com.melnykov.fab.FloatingActionButton: void setColorPressed(int)>[]--><com.melnykov.fab.FloatingActionButton: void updateBackground()>[]--><com.melnykov.fab.FloatingActionButton: void setBackgroundCompat(android.graphics.drawable.Drawable)>[]--><android.graphics.drawable.RippleDrawable: void <init>(android.content.res.ColorStateList,android.graphics.drawable.Drawable,android.graphics.drawable.Drawable)>
+#1.the call statck between class <com.melnykov.fab.FloatingActionButton: void setColorPressedResId(int)> to <android.graphics.drawable.RippleDrawable: void <init>(android.content.res.ColorStateList,android.graphics.drawable.Drawable,android.graphics.drawable.Drawable)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.melnykov.fab.FloatingActionButton: void setColorNormalResId(int)>[]--><com.melnykov.fab.FloatingActionButton: void setColorNormal(int)>[]--><com.melnykov.fab.FloatingActionButton: void updateBackground()>[]--><com.melnykov.fab.FloatingActionButton: void setBackgroundCompat(android.graphics.drawable.Drawable)>[]--><android.graphics.drawable.RippleDrawable: void <init>(android.content.res.ColorStateList,android.graphics.drawable.Drawable,android.graphics.drawable.Drawable)>
+#2.the call statck between class <com.melnykov.fab.FloatingActionButton: void setColorNormalResId(int)> to <android.graphics.drawable.RippleDrawable: void <init>(android.content.res.ColorStateList,android.graphics.drawable.Drawable,android.graphics.drawable.Drawable)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.melnykov.fab.FloatingActionButton: void setColorRippleResId(int)>[]--><com.melnykov.fab.FloatingActionButton: void setColorRipple(int)>[]--><com.melnykov.fab.FloatingActionButton: void updateBackground()>[]--><com.melnykov.fab.FloatingActionButton: void setBackgroundCompat(android.graphics.drawable.Drawable)>[]--><android.graphics.drawable.RippleDrawable: void <init>(android.content.res.ColorStateList,android.graphics.drawable.Drawable,android.graphics.drawable.Drawable)>
+#3.the call statck between class <com.melnykov.fab.FloatingActionButton: void setColorRippleResId(int)> to <android.graphics.drawable.RippleDrawable: void <init>(android.content.res.ColorStateList,android.graphics.drawable.Drawable,android.graphics.drawable.Drawable)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.melnykov.fab.FloatingActionButton: void setType(int)>[]--><com.melnykov.fab.FloatingActionButton: void updateBackground()>[]--><com.melnykov.fab.FloatingActionButton: void setBackgroundCompat(android.graphics.drawable.Drawable)>[]--><android.graphics.drawable.RippleDrawable: void <init>(android.content.res.ColorStateList,android.graphics.drawable.Drawable,android.graphics.drawable.Drawable)>
+#4.the call statck between class <com.melnykov.fab.FloatingActionButton: void setType(int)> to <android.graphics.drawable.RippleDrawable: void <init>(android.content.res.ColorStateList,android.graphics.drawable.Drawable,android.graphics.drawable.Drawable)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.melnykov.fab.FloatingActionButton: void <init>(android.content.Context,android.util.AttributeSet,int)>[]--><com.melnykov.fab.FloatingActionButton: void init(android.content.Context,android.util.AttributeSet)>[]--><com.melnykov.fab.FloatingActionButton: void updateBackground()>[]--><com.melnykov.fab.FloatingActionButton: void setBackgroundCompat(android.graphics.drawable.Drawable)>[]--><android.graphics.drawable.RippleDrawable: void <init>(android.content.res.ColorStateList,android.graphics.drawable.Drawable,android.graphics.drawable.Drawable)>
+#5.the call statck between class <com.melnykov.fab.FloatingActionButton: void <init>(android.content.Context,android.util.AttributeSet,int)> to <android.graphics.drawable.RippleDrawable: void <init>(android.content.res.ColorStateList,android.graphics.drawable.Drawable,android.graphics.drawable.Drawable)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.melnykov.fab.FloatingActionButton: void <init>(android.content.Context)>[]--><com.melnykov.fab.FloatingActionButton: void <init>(android.content.Context,android.util.AttributeSet)>[]--><com.melnykov.fab.FloatingActionButton: void init(android.content.Context,android.util.AttributeSet)>[]--><com.melnykov.fab.FloatingActionButton: void updateBackground()>[]--><com.melnykov.fab.FloatingActionButton: void setBackgroundCompat(android.graphics.drawable.Drawable)>[]--><android.graphics.drawable.RippleDrawable: void <init>(android.content.res.ColorStateList,android.graphics.drawable.Drawable,android.graphics.drawable.Drawable)>
+#6.the call statck between class <com.melnykov.fab.FloatingActionButton: void <init>(android.content.Context)> to <android.graphics.drawable.RippleDrawable: void <init>(android.content.res.ColorStateList,android.graphics.drawable.Drawable,android.graphics.drawable.Drawable)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.melnykov.fab.FloatingActionButton: void setShadow(boolean)>[]--><com.melnykov.fab.FloatingActionButton: void updateBackground()>[]--><com.melnykov.fab.FloatingActionButton: void setBackgroundCompat(android.graphics.drawable.Drawable)>[]--><android.graphics.drawable.RippleDrawable: void <init>(android.content.res.ColorStateList,android.graphics.drawable.Drawable,android.graphics.drawable.Drawable)>
+#7.the call statck between class <com.melnykov.fab.FloatingActionButton: void setShadow(boolean)> to <android.graphics.drawable.RippleDrawable: void <init>(android.content.res.ColorStateList,android.graphics.drawable.Drawable,android.graphics.drawable.Drawable)>has compatibility isssues！
+-----------------------------------------
+crashApis:11
+containsStatic:false
+containsTry:false
+8call by main package
+-----------------------------------------
+#################################################
+N 16 Potential Issue API: SDKCheck of <android.text.InputFilter.LengthFilter: int getMax()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i2 < 21
+Good road: <android.databinding.adapters.TextViewBindingAdapter: void setMaxLength(android.widget.TextView,int)>[[-$i2 < 21]]--><android.text.InputFilter.LengthFilter: int getMax()>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 17 Potential Issue API: SDKCheck of <android.provider.MediaStore.Images.Thumbnails: android.graphics.Bitmap getThumbnail(android.content.ContentResolver,long,int,android.graphics.BitmapFactory.Options)> is checking!!!
+The life time of api is [5,29]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 30 31 
+Error road: <com.squareup.picasso.MediaStoreRequestHandler: com.squareup.picasso.RequestHandler$Result load(com.squareup.picasso.Request,int)>[]--><android.provider.MediaStore.Images.Thumbnails: android.graphics.Bitmap getThumbnail(android.content.ContentResolver,long,int,android.graphics.BitmapFactory.Options)>
+#1.the call statck between class <com.squareup.picasso.MediaStoreRequestHandler: com.squareup.picasso.RequestHandler$Result load(com.squareup.picasso.Request,int)> to <android.provider.MediaStore.Images.Thumbnails: android.graphics.Bitmap getThumbnail(android.content.ContentResolver,long,int,android.graphics.BitmapFactory.Options)>has compatibility isssues！
+-----------------------------------------
+crashApis:12
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 18 Potential Issue API: SDKCheck of <android.view.View: boolean isAttachedToWindow()> is checking!!!
+The life time of api is [19,31]
+4call roads:
+0 Mainhead roads:
+4 Packageshead roads:
+-$i0 < 19
+Good road: <retrofit2.ExecutorCallAdapterFactory$ExecutorCallbackCall: retrofit2.Response execute()>[]--><retrofit2.OkHttpCall: retrofit2.Response execute()>[]--><okhttp3.RealCall: okhttp3.Response execute()>[]--><okhttp3.Dispatcher: void finished(okhttp3.RealCall)>[]--><okhttp3.Dispatcher: void finished(java.util.Deque,java.lang.Object)>[]--><android.databinding.ViewDataBinding$6: void run()>[[-$i0 < 19]]--><android.view.View: boolean isAttachedToWindow()>
+One road protect good!
+-$i0 < 19
+Good road: <okhttp3.Dispatcher: void finished(okhttp3.RealCall$AsyncCall)>[]--><okhttp3.Dispatcher: void finished(java.util.Deque,java.lang.Object)>[]--><android.databinding.ViewDataBinding$6: void run()>[[-$i0 < 19]]--><android.view.View: boolean isAttachedToWindow()>
+One road protect good!
+-$i0 < 19
+Good road: <android.databinding.ViewDataBinding$5: void onViewAttachedToWindow(android.view.View)>[]--><android.databinding.ViewDataBinding$6: void run()>[[-$i0 < 19]]--><android.view.View: boolean isAttachedToWindow()>
+One road protect good!
+-$i0 < 19
+Good road: <android.databinding.ViewDataBinding$7: void doFrame(long)>[]--><android.databinding.ViewDataBinding$6: void run()>[[-$i0 < 19]]--><android.view.View: boolean isAttachedToWindow()>
+One road protect good!
+containsStatic:false
+containsTry:false
+5call by main package
+-----------------------------------------
+#################################################
+N 19 Potential Issue API: SDKCheck of <android.view.View: void setClipToOutline(boolean)> is checking!!!
+The life time of api is [21,31]
+7call roads:
+0 Mainhead roads:
+7 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.melnykov.fab.FloatingActionButton: void setColorPressedResId(int)>[]--><com.melnykov.fab.FloatingActionButton: void setColorPressed(int)>[]--><com.melnykov.fab.FloatingActionButton: void updateBackground()>[]--><com.melnykov.fab.FloatingActionButton: void setBackgroundCompat(android.graphics.drawable.Drawable)>[]--><android.view.View: void setClipToOutline(boolean)>
+#1.the call statck between class <com.melnykov.fab.FloatingActionButton: void setColorPressedResId(int)> to <android.view.View: void setClipToOutline(boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.melnykov.fab.FloatingActionButton: void setColorNormalResId(int)>[]--><com.melnykov.fab.FloatingActionButton: void setColorNormal(int)>[]--><com.melnykov.fab.FloatingActionButton: void updateBackground()>[]--><com.melnykov.fab.FloatingActionButton: void setBackgroundCompat(android.graphics.drawable.Drawable)>[]--><android.view.View: void setClipToOutline(boolean)>
+#2.the call statck between class <com.melnykov.fab.FloatingActionButton: void setColorNormalResId(int)> to <android.view.View: void setClipToOutline(boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.melnykov.fab.FloatingActionButton: void setColorRippleResId(int)>[]--><com.melnykov.fab.FloatingActionButton: void setColorRipple(int)>[]--><com.melnykov.fab.FloatingActionButton: void updateBackground()>[]--><com.melnykov.fab.FloatingActionButton: void setBackgroundCompat(android.graphics.drawable.Drawable)>[]--><android.view.View: void setClipToOutline(boolean)>
+#3.the call statck between class <com.melnykov.fab.FloatingActionButton: void setColorRippleResId(int)> to <android.view.View: void setClipToOutline(boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.melnykov.fab.FloatingActionButton: void setType(int)>[]--><com.melnykov.fab.FloatingActionButton: void updateBackground()>[]--><com.melnykov.fab.FloatingActionButton: void setBackgroundCompat(android.graphics.drawable.Drawable)>[]--><android.view.View: void setClipToOutline(boolean)>
+#4.the call statck between class <com.melnykov.fab.FloatingActionButton: void setType(int)> to <android.view.View: void setClipToOutline(boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.melnykov.fab.FloatingActionButton: void <init>(android.content.Context,android.util.AttributeSet,int)>[]--><com.melnykov.fab.FloatingActionButton: void init(android.content.Context,android.util.AttributeSet)>[]--><com.melnykov.fab.FloatingActionButton: void updateBackground()>[]--><com.melnykov.fab.FloatingActionButton: void setBackgroundCompat(android.graphics.drawable.Drawable)>[]--><android.view.View: void setClipToOutline(boolean)>
+#5.the call statck between class <com.melnykov.fab.FloatingActionButton: void <init>(android.content.Context,android.util.AttributeSet,int)> to <android.view.View: void setClipToOutline(boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.melnykov.fab.FloatingActionButton: void <init>(android.content.Context)>[]--><com.melnykov.fab.FloatingActionButton: void <init>(android.content.Context,android.util.AttributeSet)>[]--><com.melnykov.fab.FloatingActionButton: void init(android.content.Context,android.util.AttributeSet)>[]--><com.melnykov.fab.FloatingActionButton: void updateBackground()>[]--><com.melnykov.fab.FloatingActionButton: void setBackgroundCompat(android.graphics.drawable.Drawable)>[]--><android.view.View: void setClipToOutline(boolean)>
+#6.the call statck between class <com.melnykov.fab.FloatingActionButton: void <init>(android.content.Context)> to <android.view.View: void setClipToOutline(boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.melnykov.fab.FloatingActionButton: void setShadow(boolean)>[]--><com.melnykov.fab.FloatingActionButton: void updateBackground()>[]--><com.melnykov.fab.FloatingActionButton: void setBackgroundCompat(android.graphics.drawable.Drawable)>[]--><android.view.View: void setClipToOutline(boolean)>
+#7.the call statck between class <com.melnykov.fab.FloatingActionButton: void setShadow(boolean)> to <android.view.View: void setClipToOutline(boolean)>has compatibility isssues！
+-----------------------------------------
+crashApis:13
+containsStatic:false
+containsTry:false
+8call by main package
+-----------------------------------------
+#################################################
+N 20 Potential Issue API: SDKCheck of <android.util.SparseLongArray: long get(int)> is checking!!!
+The life time of api is [18,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 
+Error road: <android.databinding.ViewDataBinding: long getFromList(android.util.SparseLongArray,int)>[]--><android.util.SparseLongArray: long get(int)>
+#1.the call statck between class <android.databinding.ViewDataBinding: long getFromList(android.util.SparseLongArray,int)> to <android.util.SparseLongArray: long get(int)>has compatibility isssues！
+-----------------------------------------
+crashApis:14
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 21 Potential Issue API: SDKCheck of <android.content.Context: int getColor(int)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i1 < 23
+Good road: <android.databinding.ViewDataBinding: int getColorFromResource(android.view.View,int)>[[-$i1 < 23]]--><android.content.Context: int getColor(int)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 22 Potential Issue API: SDKCheck of <android.view.View: void setPaddingRelative(int,int,int,int)> is checking!!!
+The life time of api is [17,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+-$i1 < 17
+Good road: <android.databinding.adapters.ViewBindingAdapter: void setPaddingStart(android.view.View,float)>[[-$i1 < 17]]--><android.view.View: void setPaddingRelative(int,int,int,int)>
+One road protect good!
+-$i1 < 17
+Good road: <android.databinding.adapters.ViewBindingAdapter: void setPaddingEnd(android.view.View,float)>[[-$i1 < 17]]--><android.view.View: void setPaddingRelative(int,int,int,int)>
+One road protect good!
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 23 Potential Issue API: SDKCheck of <android.widget.TextView: android.graphics.drawable.Drawable[] getCompoundDrawablesRelative()> is checking!!!
+The life time of api is [17,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+$i0 >= 17
+Good road: <android.databinding.adapters.TextViewBindingAdapter: void setDrawableEnd(android.widget.TextView,android.graphics.drawable.Drawable)>[[$i0 >= 17]]--><android.widget.TextView: android.graphics.drawable.Drawable[] getCompoundDrawablesRelative()>
+One road protect good!
+$i0 >= 17
+Good road: <android.databinding.adapters.TextViewBindingAdapter: void setDrawableStart(android.widget.TextView,android.graphics.drawable.Drawable)>[[$i0 >= 17]]--><android.widget.TextView: android.graphics.drawable.Drawable[] getCompoundDrawablesRelative()>
+One road protect good!
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 24 Potential Issue API: SDKCheck of <android.content.pm.ShortcutInfo.Builder: android.content.pm.ShortcutInfo build()> is checking!!!
+The life time of api is [24,31]
+6call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.chaosdorf.meteroid.BuyDrink dummyMainMethod_de_chaosdorf_meteroid_BuyDrink(android.content.Intent)>[]--><de.chaosdorf.meteroid.BuyDrink$4: void onClick(android.view.View)>[]--><de.chaosdorf.meteroid.BuyDrink: void access$100(de.chaosdorf.meteroid.BuyDrink)>[]--><de.chaosdorf.meteroid.BuyDrink: void scanBarcode()>[]--><android.content.pm.ShortcutInfo.Builder: android.content.pm.ShortcutInfo build()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.content.pm.ShortcutInfo.Builder: android.content.pm.ShortcutInfo build()>has compatibility isssues！
+-----------------------------------------
+5 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 
+Error road: <retrofit2.ExecutorCallAdapterFactory$ExecutorCallbackCall: retrofit2.Response execute()>[]--><retrofit2.OkHttpCall: retrofit2.Response execute()>[]--><okhttp3.RealCall: okhttp3.Response execute()>[]--><okhttp3.Dispatcher: void finished(okhttp3.RealCall)>[]--><okhttp3.Dispatcher: void finished(java.util.Deque,java.lang.Object)>[]--><retrofit2.ExecutorCallAdapterFactory$ExecutorCallbackCall$1$1: void run()>[]--><de.chaosdorf.meteroid.longrunningio.LongRunningIORequest$1: void onResponse(retrofit2.Call,retrofit2.Response)>[]--><de.chaosdorf.meteroid.BuyDrink: void processIOResult(de.chaosdorf.meteroid.longrunningio.LongRunningIOTask,java.lang.Object)>[]--><de.chaosdorf.meteroid.BuyDrink: void handleIntent(java.util.List)>[]--><de.chaosdorf.meteroid.BuyDrink: void handleBuyIntent(java.util.List,android.content.Intent)>[]--><de.chaosdorf.meteroid.BuyDrink: void buy(de.chaosdorf.meteroid.model.BuyableItem)>[]--><de.chaosdorf.meteroid.BuyDrink: android.content.pm.ShortcutInfo shortcutForItem(de.chaosdorf.meteroid.model.BuyableItem)>[]--><android.content.pm.ShortcutInfo.Builder: android.content.pm.ShortcutInfo build()>
+#1.the call statck between class <retrofit2.ExecutorCallAdapterFactory$ExecutorCallbackCall: retrofit2.Response execute()> to <android.content.pm.ShortcutInfo.Builder: android.content.pm.ShortcutInfo build()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 
+Error road: <okhttp3.Dispatcher: void finished(okhttp3.RealCall$AsyncCall)>[]--><okhttp3.Dispatcher: void finished(java.util.Deque,java.lang.Object)>[]--><retrofit2.ExecutorCallAdapterFactory$ExecutorCallbackCall$1$1: void run()>[]--><de.chaosdorf.meteroid.longrunningio.LongRunningIORequest$1: void onResponse(retrofit2.Call,retrofit2.Response)>[]--><de.chaosdorf.meteroid.BuyDrink: void processIOResult(de.chaosdorf.meteroid.longrunningio.LongRunningIOTask,java.lang.Object)>[]--><de.chaosdorf.meteroid.BuyDrink: void handleIntent(java.util.List)>[]--><de.chaosdorf.meteroid.BuyDrink: void handleBuyIntent(java.util.List,android.content.Intent)>[]--><de.chaosdorf.meteroid.BuyDrink: void buy(de.chaosdorf.meteroid.model.BuyableItem)>[]--><de.chaosdorf.meteroid.BuyDrink: android.content.pm.ShortcutInfo shortcutForItem(de.chaosdorf.meteroid.model.BuyableItem)>[]--><android.content.pm.ShortcutInfo.Builder: android.content.pm.ShortcutInfo build()>
+#2.the call statck between class <okhttp3.Dispatcher: void finished(okhttp3.RealCall$AsyncCall)> to <android.content.pm.ShortcutInfo.Builder: android.content.pm.ShortcutInfo build()>has compatibility isssues！
+-----------------------------------------
+try
+Good road with try: <okhttp3.RealCall$AsyncCall: void execute()>[[try]]--><retrofit2.OkHttpCall$1: void onResponse(okhttp3.Call,okhttp3.Response)>[[try]]--><de.chaosdorf.meteroid.longrunningio.LongRunningIORequest$1: void onResponse(retrofit2.Call,retrofit2.Response)>[]--><de.chaosdorf.meteroid.BuyDrink: void processIOResult(de.chaosdorf.meteroid.longrunningio.LongRunningIOTask,java.lang.Object)>[]--><de.chaosdorf.meteroid.BuyDrink: void handleIntent(java.util.List)>[]--><de.chaosdorf.meteroid.BuyDrink: void handleBuyIntent(java.util.List,android.content.Intent)>[]--><de.chaosdorf.meteroid.BuyDrink: void buy(de.chaosdorf.meteroid.model.BuyableItem)>[]--><de.chaosdorf.meteroid.BuyDrink: android.content.pm.ShortcutInfo shortcutForItem(de.chaosdorf.meteroid.model.BuyableItem)>[]--><android.content.pm.ShortcutInfo.Builder: android.content.pm.ShortcutInfo build()>
+One road protect good!
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 
+Error road: <android.databinding.ViewDataBinding$5: void onViewAttachedToWindow(android.view.View)>[]--><retrofit2.ExecutorCallAdapterFactory$ExecutorCallbackCall$1$1: void run()>[]--><de.chaosdorf.meteroid.longrunningio.LongRunningIORequest$1: void onResponse(retrofit2.Call,retrofit2.Response)>[]--><de.chaosdorf.meteroid.BuyDrink: void processIOResult(de.chaosdorf.meteroid.longrunningio.LongRunningIOTask,java.lang.Object)>[]--><de.chaosdorf.meteroid.BuyDrink: void handleIntent(java.util.List)>[]--><de.chaosdorf.meteroid.BuyDrink: void handleBuyIntent(java.util.List,android.content.Intent)>[]--><de.chaosdorf.meteroid.BuyDrink: void buy(de.chaosdorf.meteroid.model.BuyableItem)>[]--><de.chaosdorf.meteroid.BuyDrink: android.content.pm.ShortcutInfo shortcutForItem(de.chaosdorf.meteroid.model.BuyableItem)>[]--><android.content.pm.ShortcutInfo.Builder: android.content.pm.ShortcutInfo build()>
+#4.the call statck between class <android.databinding.ViewDataBinding$5: void onViewAttachedToWindow(android.view.View)> to <android.content.pm.ShortcutInfo.Builder: android.content.pm.ShortcutInfo build()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 
+Error road: <android.databinding.ViewDataBinding$7: void doFrame(long)>[]--><retrofit2.ExecutorCallAdapterFactory$ExecutorCallbackCall$1$1: void run()>[]--><de.chaosdorf.meteroid.longrunningio.LongRunningIORequest$1: void onResponse(retrofit2.Call,retrofit2.Response)>[]--><de.chaosdorf.meteroid.BuyDrink: void processIOResult(de.chaosdorf.meteroid.longrunningio.LongRunningIOTask,java.lang.Object)>[]--><de.chaosdorf.meteroid.BuyDrink: void handleIntent(java.util.List)>[]--><de.chaosdorf.meteroid.BuyDrink: void handleBuyIntent(java.util.List,android.content.Intent)>[]--><de.chaosdorf.meteroid.BuyDrink: void buy(de.chaosdorf.meteroid.model.BuyableItem)>[]--><de.chaosdorf.meteroid.BuyDrink: android.content.pm.ShortcutInfo shortcutForItem(de.chaosdorf.meteroid.model.BuyableItem)>[]--><android.content.pm.ShortcutInfo.Builder: android.content.pm.ShortcutInfo build()>
+#5.the call statck between class <android.databinding.ViewDataBinding$7: void doFrame(long)> to <android.content.pm.ShortcutInfo.Builder: android.content.pm.ShortcutInfo build()>has compatibility isssues！
+-----------------------------------------
+crashApis:15
+crashApisInMain:5
+containsStatic:false
+containsTry:true
+6call by main package
+-----------------------------------------
+#################################################
+N 25 Potential Issue API: SDKCheck of <android.net.NetworkInfo: int getSubtype()> is checking!!!
+The life time of api is [3,30]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <com.squareup.picasso.Dispatcher$DispatcherHandler: void handleMessage(android.os.Message)>[]--><com.squareup.picasso.Dispatcher: void performNetworkStateChange(android.net.NetworkInfo)>[]--><com.squareup.picasso.PicassoExecutorService: void adjustThreadCount(android.net.NetworkInfo)>[]--><android.net.NetworkInfo: int getSubtype()>
+#1.the call statck between class <com.squareup.picasso.Dispatcher$DispatcherHandler: void handleMessage(android.os.Message)> to <android.net.NetworkInfo: int getSubtype()>has compatibility isssues！
+-----------------------------------------
+crashApis:16
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 26 Potential Issue API: SDKCheck of <android.widget.TimePicker: void setHour(int)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i1 < 23
+Good road: <android.databinding.adapters.TimePickerBindingAdapter: void setHour(android.widget.TimePicker,int)>[[-$i1 < 23]]--><android.widget.TimePicker: void setHour(int)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 27 Potential Issue API: SDKCheck of <android.view.View: void setElevation(float)> is checking!!!
+The life time of api is [21,31]
+7call roads:
+0 Mainhead roads:
+7 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.melnykov.fab.FloatingActionButton: void setColorPressedResId(int)>[]--><com.melnykov.fab.FloatingActionButton: void setColorPressed(int)>[]--><com.melnykov.fab.FloatingActionButton: void updateBackground()>[]--><com.melnykov.fab.FloatingActionButton: void setBackgroundCompat(android.graphics.drawable.Drawable)>[]--><android.view.View: void setElevation(float)>
+#1.the call statck between class <com.melnykov.fab.FloatingActionButton: void setColorPressedResId(int)> to <android.view.View: void setElevation(float)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.melnykov.fab.FloatingActionButton: void setColorNormalResId(int)>[]--><com.melnykov.fab.FloatingActionButton: void setColorNormal(int)>[]--><com.melnykov.fab.FloatingActionButton: void updateBackground()>[]--><com.melnykov.fab.FloatingActionButton: void setBackgroundCompat(android.graphics.drawable.Drawable)>[]--><android.view.View: void setElevation(float)>
+#2.the call statck between class <com.melnykov.fab.FloatingActionButton: void setColorNormalResId(int)> to <android.view.View: void setElevation(float)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.melnykov.fab.FloatingActionButton: void setColorRippleResId(int)>[]--><com.melnykov.fab.FloatingActionButton: void setColorRipple(int)>[]--><com.melnykov.fab.FloatingActionButton: void updateBackground()>[]--><com.melnykov.fab.FloatingActionButton: void setBackgroundCompat(android.graphics.drawable.Drawable)>[]--><android.view.View: void setElevation(float)>
+#3.the call statck between class <com.melnykov.fab.FloatingActionButton: void setColorRippleResId(int)> to <android.view.View: void setElevation(float)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.melnykov.fab.FloatingActionButton: void setType(int)>[]--><com.melnykov.fab.FloatingActionButton: void updateBackground()>[]--><com.melnykov.fab.FloatingActionButton: void setBackgroundCompat(android.graphics.drawable.Drawable)>[]--><android.view.View: void setElevation(float)>
+#4.the call statck between class <com.melnykov.fab.FloatingActionButton: void setType(int)> to <android.view.View: void setElevation(float)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.melnykov.fab.FloatingActionButton: void <init>(android.content.Context,android.util.AttributeSet,int)>[]--><com.melnykov.fab.FloatingActionButton: void init(android.content.Context,android.util.AttributeSet)>[]--><com.melnykov.fab.FloatingActionButton: void updateBackground()>[]--><com.melnykov.fab.FloatingActionButton: void setBackgroundCompat(android.graphics.drawable.Drawable)>[]--><android.view.View: void setElevation(float)>
+#5.the call statck between class <com.melnykov.fab.FloatingActionButton: void <init>(android.content.Context,android.util.AttributeSet,int)> to <android.view.View: void setElevation(float)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.melnykov.fab.FloatingActionButton: void <init>(android.content.Context)>[]--><com.melnykov.fab.FloatingActionButton: void <init>(android.content.Context,android.util.AttributeSet)>[]--><com.melnykov.fab.FloatingActionButton: void init(android.content.Context,android.util.AttributeSet)>[]--><com.melnykov.fab.FloatingActionButton: void updateBackground()>[]--><com.melnykov.fab.FloatingActionButton: void setBackgroundCompat(android.graphics.drawable.Drawable)>[]--><android.view.View: void setElevation(float)>
+#6.the call statck between class <com.melnykov.fab.FloatingActionButton: void <init>(android.content.Context)> to <android.view.View: void setElevation(float)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.melnykov.fab.FloatingActionButton: void setShadow(boolean)>[]--><com.melnykov.fab.FloatingActionButton: void updateBackground()>[]--><com.melnykov.fab.FloatingActionButton: void setBackgroundCompat(android.graphics.drawable.Drawable)>[]--><android.view.View: void setElevation(float)>
+#7.the call statck between class <com.melnykov.fab.FloatingActionButton: void setShadow(boolean)> to <android.view.View: void setElevation(float)>has compatibility isssues！
+-----------------------------------------
+crashApis:17
+containsStatic:false
+containsTry:false
+8call by main package
+-----------------------------------------
+#################################################
+N 28 Potential Issue API: SDKCheck of <android.widget.TextView: void setCompoundDrawablesRelative(android.graphics.drawable.Drawable,android.graphics.drawable.Drawable,android.graphics.drawable.Drawable,android.graphics.drawable.Drawable)> is checking!!!
+The life time of api is [17,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+$i0 >= 17
+Good road: <android.databinding.adapters.TextViewBindingAdapter: void setDrawableEnd(android.widget.TextView,android.graphics.drawable.Drawable)>[[$i0 >= 17]]--><android.widget.TextView: void setCompoundDrawablesRelative(android.graphics.drawable.Drawable,android.graphics.drawable.Drawable,android.graphics.drawable.Drawable,android.graphics.drawable.Drawable)>
+One road protect good!
+$i0 >= 17
+Good road: <android.databinding.adapters.TextViewBindingAdapter: void setDrawableStart(android.widget.TextView,android.graphics.drawable.Drawable)>[[$i0 >= 17]]--><android.widget.TextView: void setCompoundDrawablesRelative(android.graphics.drawable.Drawable,android.graphics.drawable.Drawable,android.graphics.drawable.Drawable,android.graphics.drawable.Drawable)>
+One road protect good!
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 29 Potential Issue API: SDKCheck of <android.provider.MediaStore.Video.Thumbnails: android.graphics.Bitmap getThumbnail(android.content.ContentResolver,long,int,android.graphics.BitmapFactory.Options)> is checking!!!
+The life time of api is [5,29]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 30 31 
+Error road: <com.squareup.picasso.MediaStoreRequestHandler: com.squareup.picasso.RequestHandler$Result load(com.squareup.picasso.Request,int)>[]--><android.provider.MediaStore.Video.Thumbnails: android.graphics.Bitmap getThumbnail(android.content.ContentResolver,long,int,android.graphics.BitmapFactory.Options)>
+#1.the call statck between class <com.squareup.picasso.MediaStoreRequestHandler: com.squareup.picasso.RequestHandler$Result load(com.squareup.picasso.Request,int)> to <android.provider.MediaStore.Video.Thumbnails: android.graphics.Bitmap getThumbnail(android.content.ContentResolver,long,int,android.graphics.BitmapFactory.Options)>has compatibility isssues！
+-----------------------------------------
+crashApis:18
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 30 Potential Issue API: SDKCheck of <android.util.SparseLongArray: void put(int,long)> is checking!!!
+The life time of api is [18,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 
+Error road: <android.databinding.ViewDataBinding: void setTo(android.util.SparseLongArray,int,long)>[]--><android.util.SparseLongArray: void put(int,long)>
+#1.the call statck between class <android.databinding.ViewDataBinding: void setTo(android.util.SparseLongArray,int,long)> to <android.util.SparseLongArray: void put(int,long)>has compatibility isssues！
+-----------------------------------------
+crashApis:19
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 31 Potential Issue API: SDKCheck of <android.content.pm.ShortcutInfo.Builder: android.content.pm.ShortcutInfo.Builder setIntent(android.content.Intent)> is checking!!!
+The life time of api is [24,31]
+6call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.chaosdorf.meteroid.BuyDrink dummyMainMethod_de_chaosdorf_meteroid_BuyDrink(android.content.Intent)>[]--><de.chaosdorf.meteroid.BuyDrink$4: void onClick(android.view.View)>[]--><de.chaosdorf.meteroid.BuyDrink: void access$100(de.chaosdorf.meteroid.BuyDrink)>[]--><de.chaosdorf.meteroid.BuyDrink: void scanBarcode()>[]--><android.content.pm.ShortcutInfo.Builder: android.content.pm.ShortcutInfo.Builder setIntent(android.content.Intent)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.content.pm.ShortcutInfo.Builder: android.content.pm.ShortcutInfo.Builder setIntent(android.content.Intent)>has compatibility isssues！
+-----------------------------------------
+5 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 
+Error road: <retrofit2.ExecutorCallAdapterFactory$ExecutorCallbackCall: retrofit2.Response execute()>[]--><retrofit2.OkHttpCall: retrofit2.Response execute()>[]--><okhttp3.RealCall: okhttp3.Response execute()>[]--><okhttp3.Dispatcher: void finished(okhttp3.RealCall)>[]--><okhttp3.Dispatcher: void finished(java.util.Deque,java.lang.Object)>[]--><retrofit2.ExecutorCallAdapterFactory$ExecutorCallbackCall$1$1: void run()>[]--><de.chaosdorf.meteroid.longrunningio.LongRunningIORequest$1: void onResponse(retrofit2.Call,retrofit2.Response)>[]--><de.chaosdorf.meteroid.BuyDrink: void processIOResult(de.chaosdorf.meteroid.longrunningio.LongRunningIOTask,java.lang.Object)>[]--><de.chaosdorf.meteroid.BuyDrink: void handleIntent(java.util.List)>[]--><de.chaosdorf.meteroid.BuyDrink: void handleBuyIntent(java.util.List,android.content.Intent)>[]--><de.chaosdorf.meteroid.BuyDrink: void buy(de.chaosdorf.meteroid.model.BuyableItem)>[]--><de.chaosdorf.meteroid.BuyDrink: android.content.pm.ShortcutInfo shortcutForItem(de.chaosdorf.meteroid.model.BuyableItem)>[]--><android.content.pm.ShortcutInfo.Builder: android.content.pm.ShortcutInfo.Builder setIntent(android.content.Intent)>
+#1.the call statck between class <retrofit2.ExecutorCallAdapterFactory$ExecutorCallbackCall: retrofit2.Response execute()> to <android.content.pm.ShortcutInfo.Builder: android.content.pm.ShortcutInfo.Builder setIntent(android.content.Intent)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 
+Error road: <okhttp3.Dispatcher: void finished(okhttp3.RealCall$AsyncCall)>[]--><okhttp3.Dispatcher: void finished(java.util.Deque,java.lang.Object)>[]--><retrofit2.ExecutorCallAdapterFactory$ExecutorCallbackCall$1$1: void run()>[]--><de.chaosdorf.meteroid.longrunningio.LongRunningIORequest$1: void onResponse(retrofit2.Call,retrofit2.Response)>[]--><de.chaosdorf.meteroid.BuyDrink: void processIOResult(de.chaosdorf.meteroid.longrunningio.LongRunningIOTask,java.lang.Object)>[]--><de.chaosdorf.meteroid.BuyDrink: void handleIntent(java.util.List)>[]--><de.chaosdorf.meteroid.BuyDrink: void handleBuyIntent(java.util.List,android.content.Intent)>[]--><de.chaosdorf.meteroid.BuyDrink: void buy(de.chaosdorf.meteroid.model.BuyableItem)>[]--><de.chaosdorf.meteroid.BuyDrink: android.content.pm.ShortcutInfo shortcutForItem(de.chaosdorf.meteroid.model.BuyableItem)>[]--><android.content.pm.ShortcutInfo.Builder: android.content.pm.ShortcutInfo.Builder setIntent(android.content.Intent)>
+#2.the call statck between class <okhttp3.Dispatcher: void finished(okhttp3.RealCall$AsyncCall)> to <android.content.pm.ShortcutInfo.Builder: android.content.pm.ShortcutInfo.Builder setIntent(android.content.Intent)>has compatibility isssues！
+-----------------------------------------
+try
+Good road with try: <okhttp3.RealCall$AsyncCall: void execute()>[[try]]--><retrofit2.OkHttpCall$1: void onResponse(okhttp3.Call,okhttp3.Response)>[[try]]--><de.chaosdorf.meteroid.longrunningio.LongRunningIORequest$1: void onResponse(retrofit2.Call,retrofit2.Response)>[]--><de.chaosdorf.meteroid.BuyDrink: void processIOResult(de.chaosdorf.meteroid.longrunningio.LongRunningIOTask,java.lang.Object)>[]--><de.chaosdorf.meteroid.BuyDrink: void handleIntent(java.util.List)>[]--><de.chaosdorf.meteroid.BuyDrink: void handleBuyIntent(java.util.List,android.content.Intent)>[]--><de.chaosdorf.meteroid.BuyDrink: void buy(de.chaosdorf.meteroid.model.BuyableItem)>[]--><de.chaosdorf.meteroid.BuyDrink: android.content.pm.ShortcutInfo shortcutForItem(de.chaosdorf.meteroid.model.BuyableItem)>[]--><android.content.pm.ShortcutInfo.Builder: android.content.pm.ShortcutInfo.Builder setIntent(android.content.Intent)>
+One road protect good!
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 
+Error road: <android.databinding.ViewDataBinding$5: void onViewAttachedToWindow(android.view.View)>[]--><retrofit2.ExecutorCallAdapterFactory$ExecutorCallbackCall$1$1: void run()>[]--><de.chaosdorf.meteroid.longrunningio.LongRunningIORequest$1: void onResponse(retrofit2.Call,retrofit2.Response)>[]--><de.chaosdorf.meteroid.BuyDrink: void processIOResult(de.chaosdorf.meteroid.longrunningio.LongRunningIOTask,java.lang.Object)>[]--><de.chaosdorf.meteroid.BuyDrink: void handleIntent(java.util.List)>[]--><de.chaosdorf.meteroid.BuyDrink: void handleBuyIntent(java.util.List,android.content.Intent)>[]--><de.chaosdorf.meteroid.BuyDrink: void buy(de.chaosdorf.meteroid.model.BuyableItem)>[]--><de.chaosdorf.meteroid.BuyDrink: android.content.pm.ShortcutInfo shortcutForItem(de.chaosdorf.meteroid.model.BuyableItem)>[]--><android.content.pm.ShortcutInfo.Builder: android.content.pm.ShortcutInfo.Builder setIntent(android.content.Intent)>
+#4.the call statck between class <android.databinding.ViewDataBinding$5: void onViewAttachedToWindow(android.view.View)> to <android.content.pm.ShortcutInfo.Builder: android.content.pm.ShortcutInfo.Builder setIntent(android.content.Intent)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 
+Error road: <android.databinding.ViewDataBinding$7: void doFrame(long)>[]--><retrofit2.ExecutorCallAdapterFactory$ExecutorCallbackCall$1$1: void run()>[]--><de.chaosdorf.meteroid.longrunningio.LongRunningIORequest$1: void onResponse(retrofit2.Call,retrofit2.Response)>[]--><de.chaosdorf.meteroid.BuyDrink: void processIOResult(de.chaosdorf.meteroid.longrunningio.LongRunningIOTask,java.lang.Object)>[]--><de.chaosdorf.meteroid.BuyDrink: void handleIntent(java.util.List)>[]--><de.chaosdorf.meteroid.BuyDrink: void handleBuyIntent(java.util.List,android.content.Intent)>[]--><de.chaosdorf.meteroid.BuyDrink: void buy(de.chaosdorf.meteroid.model.BuyableItem)>[]--><de.chaosdorf.meteroid.BuyDrink: android.content.pm.ShortcutInfo shortcutForItem(de.chaosdorf.meteroid.model.BuyableItem)>[]--><android.content.pm.ShortcutInfo.Builder: android.content.pm.ShortcutInfo.Builder setIntent(android.content.Intent)>
+#5.the call statck between class <android.databinding.ViewDataBinding$7: void doFrame(long)> to <android.content.pm.ShortcutInfo.Builder: android.content.pm.ShortcutInfo.Builder setIntent(android.content.Intent)>has compatibility isssues！
+-----------------------------------------
+crashApis:20
+crashApisInMain:6
+containsStatic:false
+containsTry:true
+6call by main package
+-----------------------------------------
+#################################################
+N 32 Potential Issue API: SDKCheck of <android.net.NetworkInfo: boolean isConnectedOrConnecting()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <com.squareup.picasso.Dispatcher$DispatcherHandler: void handleMessage(android.os.Message)>[]--><com.squareup.picasso.Dispatcher: void performNetworkStateChange(android.net.NetworkInfo)>[]--><com.squareup.picasso.PicassoExecutorService: void adjustThreadCount(android.net.NetworkInfo)>[]--><android.net.NetworkInfo: boolean isConnectedOrConnecting()>
+#1.the call statck between class <com.squareup.picasso.Dispatcher$DispatcherHandler: void handleMessage(android.os.Message)> to <android.net.NetworkInfo: boolean isConnectedOrConnecting()>has compatibility isssues！
+-----------------------------------------
+crashApis:21
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 33 Potential Issue API: SDKCheck of <android.content.pm.ShortcutInfo.Builder: android.content.pm.ShortcutInfo.Builder setIcon(android.graphics.drawable.Icon)> is checking!!!
+The life time of api is [24,31]
+6call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: de.chaosdorf.meteroid.BuyDrink dummyMainMethod_de_chaosdorf_meteroid_BuyDrink(android.content.Intent)>[]--><de.chaosdorf.meteroid.BuyDrink$4: void onClick(android.view.View)>[]--><de.chaosdorf.meteroid.BuyDrink: void access$100(de.chaosdorf.meteroid.BuyDrink)>[]--><de.chaosdorf.meteroid.BuyDrink: void scanBarcode()>[]--><android.content.pm.ShortcutInfo.Builder: android.content.pm.ShortcutInfo.Builder setIcon(android.graphics.drawable.Icon)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.content.pm.ShortcutInfo.Builder: android.content.pm.ShortcutInfo.Builder setIcon(android.graphics.drawable.Icon)>has compatibility isssues！
+-----------------------------------------
+5 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 
+Error road: <retrofit2.ExecutorCallAdapterFactory$ExecutorCallbackCall: retrofit2.Response execute()>[]--><retrofit2.OkHttpCall: retrofit2.Response execute()>[]--><okhttp3.RealCall: okhttp3.Response execute()>[]--><okhttp3.Dispatcher: void finished(okhttp3.RealCall)>[]--><okhttp3.Dispatcher: void finished(java.util.Deque,java.lang.Object)>[]--><retrofit2.ExecutorCallAdapterFactory$ExecutorCallbackCall$1$1: void run()>[]--><de.chaosdorf.meteroid.longrunningio.LongRunningIORequest$1: void onResponse(retrofit2.Call,retrofit2.Response)>[]--><de.chaosdorf.meteroid.BuyDrink: void processIOResult(de.chaosdorf.meteroid.longrunningio.LongRunningIOTask,java.lang.Object)>[]--><de.chaosdorf.meteroid.BuyDrink: void handleIntent(java.util.List)>[]--><de.chaosdorf.meteroid.BuyDrink: void handleBuyIntent(java.util.List,android.content.Intent)>[]--><de.chaosdorf.meteroid.BuyDrink: void buy(de.chaosdorf.meteroid.model.BuyableItem)>[]--><de.chaosdorf.meteroid.BuyDrink: android.content.pm.ShortcutInfo shortcutForItem(de.chaosdorf.meteroid.model.BuyableItem)>[]--><android.content.pm.ShortcutInfo.Builder: android.content.pm.ShortcutInfo.Builder setIcon(android.graphics.drawable.Icon)>
+#1.the call statck between class <retrofit2.ExecutorCallAdapterFactory$ExecutorCallbackCall: retrofit2.Response execute()> to <android.content.pm.ShortcutInfo.Builder: android.content.pm.ShortcutInfo.Builder setIcon(android.graphics.drawable.Icon)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 
+Error road: <okhttp3.Dispatcher: void finished(okhttp3.RealCall$AsyncCall)>[]--><okhttp3.Dispatcher: void finished(java.util.Deque,java.lang.Object)>[]--><retrofit2.ExecutorCallAdapterFactory$ExecutorCallbackCall$1$1: void run()>[]--><de.chaosdorf.meteroid.longrunningio.LongRunningIORequest$1: void onResponse(retrofit2.Call,retrofit2.Response)>[]--><de.chaosdorf.meteroid.BuyDrink: void processIOResult(de.chaosdorf.meteroid.longrunningio.LongRunningIOTask,java.lang.Object)>[]--><de.chaosdorf.meteroid.BuyDrink: void handleIntent(java.util.List)>[]--><de.chaosdorf.meteroid.BuyDrink: void handleBuyIntent(java.util.List,android.content.Intent)>[]--><de.chaosdorf.meteroid.BuyDrink: void buy(de.chaosdorf.meteroid.model.BuyableItem)>[]--><de.chaosdorf.meteroid.BuyDrink: android.content.pm.ShortcutInfo shortcutForItem(de.chaosdorf.meteroid.model.BuyableItem)>[]--><android.content.pm.ShortcutInfo.Builder: android.content.pm.ShortcutInfo.Builder setIcon(android.graphics.drawable.Icon)>
+#2.the call statck between class <okhttp3.Dispatcher: void finished(okhttp3.RealCall$AsyncCall)> to <android.content.pm.ShortcutInfo.Builder: android.content.pm.ShortcutInfo.Builder setIcon(android.graphics.drawable.Icon)>has compatibility isssues！
+-----------------------------------------
+try
+Good road with try: <okhttp3.RealCall$AsyncCall: void execute()>[[try]]--><retrofit2.OkHttpCall$1: void onResponse(okhttp3.Call,okhttp3.Response)>[[try]]--><de.chaosdorf.meteroid.longrunningio.LongRunningIORequest$1: void onResponse(retrofit2.Call,retrofit2.Response)>[]--><de.chaosdorf.meteroid.BuyDrink: void processIOResult(de.chaosdorf.meteroid.longrunningio.LongRunningIOTask,java.lang.Object)>[]--><de.chaosdorf.meteroid.BuyDrink: void handleIntent(java.util.List)>[]--><de.chaosdorf.meteroid.BuyDrink: void handleBuyIntent(java.util.List,android.content.Intent)>[]--><de.chaosdorf.meteroid.BuyDrink: void buy(de.chaosdorf.meteroid.model.BuyableItem)>[]--><de.chaosdorf.meteroid.BuyDrink: android.content.pm.ShortcutInfo shortcutForItem(de.chaosdorf.meteroid.model.BuyableItem)>[]--><android.content.pm.ShortcutInfo.Builder: android.content.pm.ShortcutInfo.Builder setIcon(android.graphics.drawable.Icon)>
+One road protect good!
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 
+Error road: <android.databinding.ViewDataBinding$5: void onViewAttachedToWindow(android.view.View)>[]--><retrofit2.ExecutorCallAdapterFactory$ExecutorCallbackCall$1$1: void run()>[]--><de.chaosdorf.meteroid.longrunningio.LongRunningIORequest$1: void onResponse(retrofit2.Call,retrofit2.Response)>[]--><de.chaosdorf.meteroid.BuyDrink: void processIOResult(de.chaosdorf.meteroid.longrunningio.LongRunningIOTask,java.lang.Object)>[]--><de.chaosdorf.meteroid.BuyDrink: void handleIntent(java.util.List)>[]--><de.chaosdorf.meteroid.BuyDrink: void handleBuyIntent(java.util.List,android.content.Intent)>[]--><de.chaosdorf.meteroid.BuyDrink: void buy(de.chaosdorf.meteroid.model.BuyableItem)>[]--><de.chaosdorf.meteroid.BuyDrink: android.content.pm.ShortcutInfo shortcutForItem(de.chaosdorf.meteroid.model.BuyableItem)>[]--><android.content.pm.ShortcutInfo.Builder: android.content.pm.ShortcutInfo.Builder setIcon(android.graphics.drawable.Icon)>
+#4.the call statck between class <android.databinding.ViewDataBinding$5: void onViewAttachedToWindow(android.view.View)> to <android.content.pm.ShortcutInfo.Builder: android.content.pm.ShortcutInfo.Builder setIcon(android.graphics.drawable.Icon)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 
+Error road: <android.databinding.ViewDataBinding$7: void doFrame(long)>[]--><retrofit2.ExecutorCallAdapterFactory$ExecutorCallbackCall$1$1: void run()>[]--><de.chaosdorf.meteroid.longrunningio.LongRunningIORequest$1: void onResponse(retrofit2.Call,retrofit2.Response)>[]--><de.chaosdorf.meteroid.BuyDrink: void processIOResult(de.chaosdorf.meteroid.longrunningio.LongRunningIOTask,java.lang.Object)>[]--><de.chaosdorf.meteroid.BuyDrink: void handleIntent(java.util.List)>[]--><de.chaosdorf.meteroid.BuyDrink: void handleBuyIntent(java.util.List,android.content.Intent)>[]--><de.chaosdorf.meteroid.BuyDrink: void buy(de.chaosdorf.meteroid.model.BuyableItem)>[]--><de.chaosdorf.meteroid.BuyDrink: android.content.pm.ShortcutInfo shortcutForItem(de.chaosdorf.meteroid.model.BuyableItem)>[]--><android.content.pm.ShortcutInfo.Builder: android.content.pm.ShortcutInfo.Builder setIcon(android.graphics.drawable.Icon)>
+#5.the call statck between class <android.databinding.ViewDataBinding$7: void doFrame(long)> to <android.content.pm.ShortcutInfo.Builder: android.content.pm.ShortcutInfo.Builder setIcon(android.graphics.drawable.Icon)>has compatibility isssues！
+-----------------------------------------
+crashApis:22
+crashApisInMain:7
+containsStatic:false
+containsTry:true
+6call by main package
+-----------------------------------------
+#################################################
+N 34 Potential Issue API: SDKCheck of <android.content.Context: android.content.res.ColorStateList getColorStateList(int)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i1 < 23
+Good road: <android.databinding.ViewDataBinding: android.content.res.ColorStateList getColorStateListFromResource(android.view.View,int)>[[-$i1 < 23]]--><android.content.Context: android.content.res.ColorStateList getColorStateList(int)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 35 Potential Issue API: SDKCheck of <android.widget.TimePicker: void setMinute(int)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i1 < 23
+Good road: <android.databinding.adapters.TimePickerBindingAdapter: void setMinute(android.widget.TimePicker,int)>[[-$i1 < 23]]--><android.widget.TimePicker: void setMinute(int)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 36 Potential Issue API: SDKCheck of <android.view.View: float getElevation()> is checking!!!
+The life time of api is [21,31]
+7call roads:
+0 Mainhead roads:
+7 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.melnykov.fab.FloatingActionButton: void setColorPressedResId(int)>[]--><com.melnykov.fab.FloatingActionButton: void setColorPressed(int)>[]--><com.melnykov.fab.FloatingActionButton: void updateBackground()>[]--><com.melnykov.fab.FloatingActionButton: void setBackgroundCompat(android.graphics.drawable.Drawable)>[]--><android.view.View: float getElevation()>
+#1.the call statck between class <com.melnykov.fab.FloatingActionButton: void setColorPressedResId(int)> to <android.view.View: float getElevation()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.melnykov.fab.FloatingActionButton: void setColorNormalResId(int)>[]--><com.melnykov.fab.FloatingActionButton: void setColorNormal(int)>[]--><com.melnykov.fab.FloatingActionButton: void updateBackground()>[]--><com.melnykov.fab.FloatingActionButton: void setBackgroundCompat(android.graphics.drawable.Drawable)>[]--><android.view.View: float getElevation()>
+#2.the call statck between class <com.melnykov.fab.FloatingActionButton: void setColorNormalResId(int)> to <android.view.View: float getElevation()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.melnykov.fab.FloatingActionButton: void setColorRippleResId(int)>[]--><com.melnykov.fab.FloatingActionButton: void setColorRipple(int)>[]--><com.melnykov.fab.FloatingActionButton: void updateBackground()>[]--><com.melnykov.fab.FloatingActionButton: void setBackgroundCompat(android.graphics.drawable.Drawable)>[]--><android.view.View: float getElevation()>
+#3.the call statck between class <com.melnykov.fab.FloatingActionButton: void setColorRippleResId(int)> to <android.view.View: float getElevation()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.melnykov.fab.FloatingActionButton: void setType(int)>[]--><com.melnykov.fab.FloatingActionButton: void updateBackground()>[]--><com.melnykov.fab.FloatingActionButton: void setBackgroundCompat(android.graphics.drawable.Drawable)>[]--><android.view.View: float getElevation()>
+#4.the call statck between class <com.melnykov.fab.FloatingActionButton: void setType(int)> to <android.view.View: float getElevation()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.melnykov.fab.FloatingActionButton: void <init>(android.content.Context,android.util.AttributeSet,int)>[]--><com.melnykov.fab.FloatingActionButton: void init(android.content.Context,android.util.AttributeSet)>[]--><com.melnykov.fab.FloatingActionButton: void updateBackground()>[]--><com.melnykov.fab.FloatingActionButton: void setBackgroundCompat(android.graphics.drawable.Drawable)>[]--><android.view.View: float getElevation()>
+#5.the call statck between class <com.melnykov.fab.FloatingActionButton: void <init>(android.content.Context,android.util.AttributeSet,int)> to <android.view.View: float getElevation()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.melnykov.fab.FloatingActionButton: void <init>(android.content.Context)>[]--><com.melnykov.fab.FloatingActionButton: void <init>(android.content.Context,android.util.AttributeSet)>[]--><com.melnykov.fab.FloatingActionButton: void init(android.content.Context,android.util.AttributeSet)>[]--><com.melnykov.fab.FloatingActionButton: void updateBackground()>[]--><com.melnykov.fab.FloatingActionButton: void setBackgroundCompat(android.graphics.drawable.Drawable)>[]--><android.view.View: float getElevation()>
+#6.the call statck between class <com.melnykov.fab.FloatingActionButton: void <init>(android.content.Context)> to <android.view.View: float getElevation()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <com.melnykov.fab.FloatingActionButton: void setShadow(boolean)>[]--><com.melnykov.fab.FloatingActionButton: void updateBackground()>[]--><com.melnykov.fab.FloatingActionButton: void setBackgroundCompat(android.graphics.drawable.Drawable)>[]--><android.view.View: float getElevation()>
+#7.the call statck between class <com.melnykov.fab.FloatingActionButton: void setShadow(boolean)> to <android.view.View: float getElevation()>has compatibility isssues！
+-----------------------------------------
+crashApis:23
+containsStatic:false
+containsTry:false
+8call by main package
+-----------------------------------------
+#################################################
+N 37 Potential Issue API: SDKCheck of <android.view.View: int getPaddingStart()> is checking!!!
+The life time of api is [17,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i1 < 17
+Good road: <android.databinding.adapters.ViewBindingAdapter: void setPaddingEnd(android.view.View,float)>[[-$i1 < 17]]--><android.view.View: int getPaddingStart()>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+crashApis numbers:23
+crashApis numbers in main road:7
+On Android Version 16 this app may have error api use(at least): 16 and error api roads: 74
+On Android Version 17 this app may have error api use(at least): 16 and error api roads: 74
+On Android Version 18 this app may have error api use(at least): 13 and error api roads: 71
+On Android Version 19 this app may have error api use(at least): 13 and error api roads: 71
+On Android Version 20 this app may have error api use(at least): 13 and error api roads: 71
+On Android Version 21 this app may have error api use(at least): 7 and error api roads: 35
+On Android Version 22 this app may have error api use(at least): 7 and error api roads: 35
+On Android Version 23 this app may have error api use(at least): 6 and error api roads: 30
+On Android Version 24 this app may have error api use(at least): 3 and error api roads: 15
+On Android Version 25 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 2 and error api roads: 2
+On Android Version 31 this app may have error api use(at least): 7 and error api roads: 10

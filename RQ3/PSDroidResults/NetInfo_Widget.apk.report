@@ -1,0 +1,401 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/NetInfo_Widget.apk
+Entry Points[com.ultrafunk.network_info.config.ConfigActivity, com.ultrafunk.network_info.receiver.MobileDataOnOffReceiver, com.ultrafunk.network_info.receiver.WifiOnOffReceiver, com.ultrafunk.network_info.WidgetProvider, com.ultrafunk.network_info.receiver.MobileDataStatusReceiver, com.ultrafunk.network_info.receiver.WifiStatusReceiver, com.ultrafunk.network_info.service.NetworkStateService]
+FllowDroidcallgraph size:542
+Soot started on Mon Jul 11 08:01:53 CST 2022
+StaticCheck:<com.ultrafunk.network_info.receiver.MobileDataUtils: boolean isAirplaneModeOn(android.content.Context)>$yysi0 >= 17
+StaticCheck:<com.ultrafunk.network_info.receiver.MobileDataUtils: boolean isDataRoaming(android.content.Context)>$yysi0 >= 17
+StaticCheck:<com.ultrafunk.network_info.config.ConfigActivity: boolean isLockscreenWidget(android.appwidget.AppWidgetManager,int)>$yysi1 < 17
+Soot finished on Mon Jul 11 08:01:57 CST 2022
+Soot has run for 0 min. 4 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 19
+Declared Target Sdk version is: 22
+Declared Max Sdk version is: -1
+Collected 132 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager: android.net.wifi.WifiInfo getConnectionInfo()> is checking!!!
+The life time of api is [1,30]
+2call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.ultrafunk.network_info.service.NetworkStateService dummyMainMethod_com_ultrafunk_network__info_service_NetworkStateService(android.content.Intent)>[]--><com.ultrafunk.network_info.service.NetworkStateService: int onStartCommand(android.content.Intent,int,int)>[]--><com.ultrafunk.network_info.service.NetworkStateService$2: void run()>[]--><android.net.wifi.WifiManager: android.net.wifi.WifiInfo getConnectionInfo()>
+$yysi0 >= 17
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.ultrafunk.network_info.receiver.MobileDataOnOffReceiver dummyMainMethod_com_ultrafunk_network__info_receiver_MobileDataOnOffReceiver(android.content.Intent)>[]--><com.ultrafunk.network_info.receiver.MobileDataOnOffReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><com.ultrafunk.network_info.receiver.MobileDataOnOffReceiver: void turnOnOff(android.content.Context)>[[$yysi0 >= 17]]--><com.ultrafunk.network_info.util.Utils: boolean isWifiConnected(android.content.Context)>[]--><android.net.wifi.WifiManager: android.net.wifi.WifiInfo getConnectionInfo()>
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.ultrafunk.network_info.receiver.WifiStatusReceiver dummyMainMethod_com_ultrafunk_network__info_receiver_WifiStatusReceiver(android.content.Intent)>[]--><com.ultrafunk.network_info.receiver.WifiStatusReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><android.net.wifi.WifiManager: android.net.wifi.WifiInfo getConnectionInfo()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.wifi.WifiManager: android.net.wifi.WifiInfo getConnectionInfo()>has compatibility isssues！
+-----------------------------------------
+1 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <com.ultrafunk.network_info.service.MobileDataSettingObserver: void onChange(boolean)>[]--><com.ultrafunk.network_info.service.MobileDataSettingObserver: void onChange(boolean,android.net.Uri)>[]--><com.ultrafunk.network_info.util.Utils: boolean isWifiConnected(android.content.Context)>[]--><android.net.wifi.WifiManager: android.net.wifi.WifiInfo getConnectionInfo()>
+#1.the call statck between class <com.ultrafunk.network_info.service.MobileDataSettingObserver: void onChange(boolean)> to <android.net.wifi.WifiManager: android.net.wifi.WifiInfo getConnectionInfo()>has compatibility isssues！
+-----------------------------------------
+crashApis:1
+crashApisInMain:1
+containsStatic:true
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.net.ConnectivityManager: android.net.NetworkInfo getNetworkInfo(int)> is checking!!!
+The life time of api is [1,30]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.ultrafunk.network_info.receiver.MobileDataStatusReceiver dummyMainMethod_com_ultrafunk_network__info_receiver_MobileDataStatusReceiver(android.content.Intent)>[]--><com.ultrafunk.network_info.receiver.MobileDataStatusReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><com.ultrafunk.network_info.receiver.MobileDataStatusReceiver: boolean isDataRoaming(android.content.Context)>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getNetworkInfo(int)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.ConnectivityManager: android.net.NetworkInfo getNetworkInfo(int)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:2
+crashApisInMain:2
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.os.BaseBundle: int getInt(java.lang.String,int)> is checking!!!
+The life time of api is [21,31]
+2call roads:
+1 Mainhead roads:
+-$i1 < 17
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.ultrafunk.network_info.config.ConfigActivity dummyMainMethod_com_ultrafunk_network__info_config_ConfigActivity(android.content.Intent)>[]--><com.ultrafunk.network_info.config.ConfigActivity: void onCreate(android.os.Bundle)>[]--><com.ultrafunk.network_info.config.ConfigActivity: void initLockscreenGravityView()>[]--><com.ultrafunk.network_info.config.ConfigActivity: boolean isLockscreenWidget(android.appwidget.AppWidgetManager,int)>[[-$i1 < 17]]--><android.os.BaseBundle: int getInt(java.lang.String,int)>
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.ultrafunk.network_info.receiver.WifiStatusReceiver dummyMainMethod_com_ultrafunk_network__info_receiver_WifiStatusReceiver(android.content.Intent)>[]--><com.ultrafunk.network_info.receiver.WifiStatusReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><com.ultrafunk.network_info.receiver.WidgetBroadcastReceiver: void partiallyUpdateWidgets(android.content.Context)>[]--><com.ultrafunk.network_info.receiver.WidgetBroadcastReceiver: void partiallyUpdateWidget(android.content.Context,android.appwidget.AppWidgetManager,int)>[]--><android.os.BaseBundle: int getInt(java.lang.String,int)>
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.ultrafunk.network_info.WidgetProvider dummyMainMethod_com_ultrafunk_network__info_WidgetProvider(android.content.Intent)>[]--><com.ultrafunk.network_info.WidgetProvider: void onAppWidgetOptionsChanged(android.content.Context,android.appwidget.AppWidgetManager,int,android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String,int)>
+###Multi invoking in one method, need manual check!!!--><com.ultrafunk.network_info.receiver.MobileDataStatusReceiver: void onReceive(android.content.Context,android.content.Intent)>[[$yysi0 >= 17], [-$z0 != 0]]--><com.ultrafunk.network_info.receiver.WidgetBroadcastReceiver: void partiallyUpdateWidget(android.content.Context,android.appwidget.AppWidgetManager,int)>[]
+###Multi invoking in one method, need manual check!!!--><com.ultrafunk.network_info.receiver.MobileDataStatusReceiver: void onReceive(android.content.Context,android.content.Intent)>[[$yysi0 >= 17]][[-$z0 != 0]]--><com.ultrafunk.network_info.receiver.WidgetBroadcastReceiver: void partiallyUpdateWidget(android.content.Context,android.appwidget.AppWidgetManager,int)>[]
+$yysi0 >= 17
+-$z0 != 0
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.ultrafunk.network_info.receiver.MobileDataStatusReceiver dummyMainMethod_com_ultrafunk_network__info_receiver_MobileDataStatusReceiver(android.content.Intent)>[]--><com.ultrafunk.network_info.receiver.MobileDataStatusReceiver: void onReceive(android.content.Context,android.content.Intent)>[[$yysi0 >= 17], [-$z0 != 0]]--><com.ultrafunk.network_info.receiver.WidgetBroadcastReceiver: void partiallyUpdateWidget(android.content.Context,android.appwidget.AppWidgetManager,int)>[]--><android.os.BaseBundle: int getInt(java.lang.String,int)>
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.ultrafunk.network_info.receiver.WifiOnOffReceiver dummyMainMethod_com_ultrafunk_network__info_receiver_WifiOnOffReceiver(android.content.Intent)>[]--><com.ultrafunk.network_info.receiver.WifiOnOffReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><com.ultrafunk.network_info.receiver.WifiOnOffReceiver: void turnOnOff(android.content.Context)>[]--><com.ultrafunk.network_info.receiver.WidgetBroadcastReceiver: void partiallyUpdateWidgets(android.content.Context)>[]--><com.ultrafunk.network_info.receiver.WidgetBroadcastReceiver: void partiallyUpdateWidget(android.content.Context,android.appwidget.AppWidgetManager,int)>[]--><android.os.BaseBundle: int getInt(java.lang.String,int)>
+###Multi invoking in one method, need manual check!!!--><com.ultrafunk.network_info.receiver.MobileDataOnOffReceiver: void turnOnOff(android.content.Context)>[[-$z1 != 0], [$yysi0 >= 17]]--><com.ultrafunk.network_info.receiver.WidgetBroadcastReceiver: void partiallyUpdateWidgets(android.content.Context)>[]--><com.ultrafunk.network_info.receiver.WidgetBroadcastReceiver: void partiallyUpdateWidget(android.content.Context,android.appwidget.AppWidgetManager,int)>[]
+###Multi invoking in one method, need manual check!!!--><com.ultrafunk.network_info.receiver.MobileDataOnOffReceiver: void turnOnOff(android.content.Context)>[[-$z1 != 0]][[$yysi0 >= 17]]--><com.ultrafunk.network_info.receiver.WidgetBroadcastReceiver: void partiallyUpdateWidgets(android.content.Context)>[]--><com.ultrafunk.network_info.receiver.WidgetBroadcastReceiver: void partiallyUpdateWidget(android.content.Context,android.appwidget.AppWidgetManager,int)>[]
+-$z1 != 0
+$yysi0 >= 17
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.ultrafunk.network_info.receiver.MobileDataOnOffReceiver dummyMainMethod_com_ultrafunk_network__info_receiver_MobileDataOnOffReceiver(android.content.Intent)>[]--><com.ultrafunk.network_info.receiver.MobileDataOnOffReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><com.ultrafunk.network_info.receiver.MobileDataOnOffReceiver: void turnOnOff(android.content.Context)>[[-$z1 != 0], [$yysi0 >= 17]]--><com.ultrafunk.network_info.receiver.WidgetBroadcastReceiver: void partiallyUpdateWidgets(android.content.Context)>[]--><com.ultrafunk.network_info.receiver.WidgetBroadcastReceiver: void partiallyUpdateWidget(android.content.Context,android.appwidget.AppWidgetManager,int)>[]--><android.os.BaseBundle: int getInt(java.lang.String,int)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: int getInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <com.ultrafunk.network_info.config.SettingsScreenDialogFragment: android.app.Dialog onCreateDialog(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String,int)>
+#1.the call statck between class <com.ultrafunk.network_info.config.SettingsScreenDialogFragment: android.app.Dialog onCreateDialog(android.os.Bundle)> to <android.os.BaseBundle: int getInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:3
+crashApisInMain:3
+containsStatic:true
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)> is checking!!!
+The life time of api is [22,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.ultrafunk.network_info.service.NetworkStateService dummyMainMethod_com_ultrafunk_network__info_service_NetworkStateService(android.content.Intent)>[]--><com.ultrafunk.network_info.service.NetworkStateService: void onCreate()>[]--><com.ultrafunk.network_info.util.Utils: com.ultrafunk.network_info.util.EnabledWidgets getEnabledWidgets(android.content.Context,android.appwidget.AppWidgetManager)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>
+!!!this api will crash on sdk 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.ultrafunk.network_info.config.ConfigActivity dummyMainMethod_com_ultrafunk_network__info_config_ConfigActivity(android.content.Intent)>[]--><com.ultrafunk.network_info.config.ConfigActivity$5: void onClick(android.view.View)>[]--><com.ultrafunk.network_info.util.Utils: com.ultrafunk.network_info.util.EnabledWidgets getEnabledWidgets(android.content.Context,android.appwidget.AppWidgetManager)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>
+!!!this api will crash on sdk 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.ultrafunk.network_info.receiver.WifiStatusReceiver dummyMainMethod_com_ultrafunk_network__info_receiver_WifiStatusReceiver(android.content.Intent)>[]--><com.ultrafunk.network_info.receiver.WifiStatusReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><com.ultrafunk.network_info.receiver.WidgetBroadcastReceiver: void partiallyUpdateWidgets(android.content.Context)>[]--><com.ultrafunk.network_info.receiver.WidgetBroadcastReceiver: void partiallyUpdateWidget(android.content.Context,android.appwidget.AppWidgetManager,int)>[]--><com.ultrafunk.network_info.receiver.WidgetBroadcastReceiver: boolean updateThisWidget(android.os.Bundle)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>
+!!!this api will crash on sdk 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.ultrafunk.network_info.WidgetProvider dummyMainMethod_com_ultrafunk_network__info_WidgetProvider(android.content.Intent)>[]--><com.ultrafunk.network_info.WidgetProvider: void onDeleted(android.content.Context,int[])>[]--><com.ultrafunk.network_info.WidgetProvider: void setReceiversAndServiceState(android.content.Context)>[]--><com.ultrafunk.network_info.util.Utils: com.ultrafunk.network_info.util.EnabledWidgets getEnabledWidgets(android.content.Context,android.appwidget.AppWidgetManager)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>
+###Multi invoking in one method, need manual check!!!--><com.ultrafunk.network_info.receiver.MobileDataStatusReceiver: void onReceive(android.content.Context,android.content.Intent)>[[$yysi0 >= 17], [-$z0 != 0]]--><com.ultrafunk.network_info.receiver.WidgetBroadcastReceiver: void partiallyUpdateWidget(android.content.Context,android.appwidget.AppWidgetManager,int)>[]--><com.ultrafunk.network_info.receiver.WidgetBroadcastReceiver: boolean updateThisWidget(android.os.Bundle)>[]
+###Multi invoking in one method, need manual check!!!--><com.ultrafunk.network_info.receiver.MobileDataStatusReceiver: void onReceive(android.content.Context,android.content.Intent)>[[$yysi0 >= 17]][[-$z0 != 0]]--><com.ultrafunk.network_info.receiver.WidgetBroadcastReceiver: void partiallyUpdateWidget(android.content.Context,android.appwidget.AppWidgetManager,int)>[]--><com.ultrafunk.network_info.receiver.WidgetBroadcastReceiver: boolean updateThisWidget(android.os.Bundle)>[]
+$yysi0 >= 17
+-$z0 != 0
+!!!this api will crash on sdk 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.ultrafunk.network_info.receiver.MobileDataStatusReceiver dummyMainMethod_com_ultrafunk_network__info_receiver_MobileDataStatusReceiver(android.content.Intent)>[]--><com.ultrafunk.network_info.receiver.MobileDataStatusReceiver: void onReceive(android.content.Context,android.content.Intent)>[[$yysi0 >= 17], [-$z0 != 0]]--><com.ultrafunk.network_info.receiver.WidgetBroadcastReceiver: void partiallyUpdateWidget(android.content.Context,android.appwidget.AppWidgetManager,int)>[]--><com.ultrafunk.network_info.receiver.WidgetBroadcastReceiver: boolean updateThisWidget(android.os.Bundle)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>
+!!!this api will crash on sdk 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.ultrafunk.network_info.receiver.WifiOnOffReceiver dummyMainMethod_com_ultrafunk_network__info_receiver_WifiOnOffReceiver(android.content.Intent)>[]--><com.ultrafunk.network_info.receiver.WifiOnOffReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><com.ultrafunk.network_info.receiver.WifiOnOffReceiver: void turnOnOff(android.content.Context)>[]--><com.ultrafunk.network_info.receiver.WidgetBroadcastReceiver: void partiallyUpdateWidgets(android.content.Context)>[]--><com.ultrafunk.network_info.receiver.WidgetBroadcastReceiver: void partiallyUpdateWidget(android.content.Context,android.appwidget.AppWidgetManager,int)>[]--><com.ultrafunk.network_info.receiver.WidgetBroadcastReceiver: boolean updateThisWidget(android.os.Bundle)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>
+###Multi invoking in one method, need manual check!!!--><com.ultrafunk.network_info.receiver.MobileDataOnOffReceiver: void turnOnOff(android.content.Context)>[[-$z1 != 0], [$yysi0 >= 17]]--><com.ultrafunk.network_info.receiver.WidgetBroadcastReceiver: void partiallyUpdateWidgets(android.content.Context)>[]--><com.ultrafunk.network_info.receiver.WidgetBroadcastReceiver: void partiallyUpdateWidget(android.content.Context,android.appwidget.AppWidgetManager,int)>[]--><com.ultrafunk.network_info.receiver.WidgetBroadcastReceiver: boolean updateThisWidget(android.os.Bundle)>[]
+###Multi invoking in one method, need manual check!!!--><com.ultrafunk.network_info.receiver.MobileDataOnOffReceiver: void turnOnOff(android.content.Context)>[[-$z1 != 0]][[$yysi0 >= 17]]--><com.ultrafunk.network_info.receiver.WidgetBroadcastReceiver: void partiallyUpdateWidgets(android.content.Context)>[]--><com.ultrafunk.network_info.receiver.WidgetBroadcastReceiver: void partiallyUpdateWidget(android.content.Context,android.appwidget.AppWidgetManager,int)>[]--><com.ultrafunk.network_info.receiver.WidgetBroadcastReceiver: boolean updateThisWidget(android.os.Bundle)>[]
+-$z1 != 0
+$yysi0 >= 17
+!!!this api will crash on sdk 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.ultrafunk.network_info.receiver.MobileDataOnOffReceiver dummyMainMethod_com_ultrafunk_network__info_receiver_MobileDataOnOffReceiver(android.content.Intent)>[]--><com.ultrafunk.network_info.receiver.MobileDataOnOffReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><com.ultrafunk.network_info.receiver.MobileDataOnOffReceiver: void turnOnOff(android.content.Context)>[[-$z1 != 0], [$yysi0 >= 17]]--><com.ultrafunk.network_info.receiver.WidgetBroadcastReceiver: void partiallyUpdateWidgets(android.content.Context)>[]--><com.ultrafunk.network_info.receiver.WidgetBroadcastReceiver: void partiallyUpdateWidget(android.content.Context,android.appwidget.AppWidgetManager,int)>[]--><com.ultrafunk.network_info.receiver.WidgetBroadcastReceiver: boolean updateThisWidget(android.os.Bundle)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:4
+crashApisInMain:4
+containsStatic:true
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager: int getWifiState()> is checking!!!
+The life time of api is [1,30]
+2call roads:
+1 Mainhead roads:
+$yysi0 >= 17
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.ultrafunk.network_info.receiver.MobileDataOnOffReceiver dummyMainMethod_com_ultrafunk_network__info_receiver_MobileDataOnOffReceiver(android.content.Intent)>[]--><com.ultrafunk.network_info.receiver.MobileDataOnOffReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><com.ultrafunk.network_info.receiver.MobileDataOnOffReceiver: void turnOnOff(android.content.Context)>[[$yysi0 >= 17]]--><com.ultrafunk.network_info.util.Utils: boolean isWifiConnected(android.content.Context)>[]--><android.net.wifi.WifiManager: int getWifiState()>
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.ultrafunk.network_info.receiver.WifiStatusReceiver dummyMainMethod_com_ultrafunk_network__info_receiver_WifiStatusReceiver(android.content.Intent)>[]--><com.ultrafunk.network_info.receiver.WifiStatusReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><android.net.wifi.WifiManager: int getWifiState()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.wifi.WifiManager: int getWifiState()>has compatibility isssues！
+-----------------------------------------
+1 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <com.ultrafunk.network_info.service.MobileDataSettingObserver: void onChange(boolean)>[]--><com.ultrafunk.network_info.service.MobileDataSettingObserver: void onChange(boolean,android.net.Uri)>[]--><com.ultrafunk.network_info.util.Utils: boolean isWifiConnected(android.content.Context)>[]--><android.net.wifi.WifiManager: int getWifiState()>
+#1.the call statck between class <com.ultrafunk.network_info.service.MobileDataSettingObserver: void onChange(boolean)> to <android.net.wifi.WifiManager: int getWifiState()>has compatibility isssues！
+-----------------------------------------
+crashApis:5
+crashApisInMain:5
+containsStatic:true
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 5 Potential Issue API: SDKCheck of <android.net.wifi.WifiInfo: android.net.wifi.SupplicantState getSupplicantState()> is checking!!!
+The life time of api is [1,30]
+2call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.ultrafunk.network_info.service.NetworkStateService dummyMainMethod_com_ultrafunk_network__info_service_NetworkStateService(android.content.Intent)>[]--><com.ultrafunk.network_info.service.NetworkStateService: int onStartCommand(android.content.Intent,int,int)>[]--><android.os.Handler: boolean postDelayed(java.lang.Runnable,long)>[]--><com.ultrafunk.network_info.service.NetworkStateService$1: void run()>[]--><android.net.wifi.WifiInfo: android.net.wifi.SupplicantState getSupplicantState()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.wifi.WifiInfo: android.net.wifi.SupplicantState getSupplicantState()>has compatibility isssues！
+-----------------------------------------
+1 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <com.ultrafunk.network_info.receiver.WifiStatusReceiver: void updateView(android.content.Context,android.widget.RemoteViews,android.os.Bundle)>[]--><android.net.wifi.WifiInfo: android.net.wifi.SupplicantState getSupplicantState()>
+#1.the call statck between class <com.ultrafunk.network_info.receiver.WifiStatusReceiver: void updateView(android.content.Context,android.widget.RemoteViews,android.os.Bundle)> to <android.net.wifi.WifiInfo: android.net.wifi.SupplicantState getSupplicantState()>has compatibility isssues！
+-----------------------------------------
+crashApis:6
+crashApisInMain:6
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 6 Potential Issue API: SDKCheck of <android.net.NetworkInfo: boolean isRoaming()> is checking!!!
+The life time of api is [3,30]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.ultrafunk.network_info.receiver.MobileDataStatusReceiver dummyMainMethod_com_ultrafunk_network__info_receiver_MobileDataStatusReceiver(android.content.Intent)>[]--><com.ultrafunk.network_info.receiver.MobileDataStatusReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><com.ultrafunk.network_info.receiver.MobileDataStatusReceiver: boolean isDataRoaming(android.content.Context)>[]--><android.net.NetworkInfo: boolean isRoaming()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.NetworkInfo: boolean isRoaming()>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:7
+crashApisInMain:7
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 7 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)> is checking!!!
+The life time of api is [22,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.ultrafunk.network_info.WidgetProvider dummyMainMethod_com_ultrafunk_network__info_WidgetProvider(android.content.Intent)>[]--><com.ultrafunk.network_info.WidgetProvider: void onUpdate(android.content.Context,android.appwidget.AppWidgetManager,int[])>[]--><com.ultrafunk.network_info.config.WidgetConfig: void read(int)>[]--><com.ultrafunk.network_info.config.WidgetConfig: void setWidgetOptions(int)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+!!!this api will crash on sdk 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.ultrafunk.network_info.config.ConfigActivity dummyMainMethod_com_ultrafunk_network__info_config_ConfigActivity(android.content.Intent)>[]--><com.ultrafunk.network_info.config.ConfigActivity$5: void onClick(android.view.View)>[]--><com.ultrafunk.network_info.config.WidgetConfig: void write(int)>[]--><com.ultrafunk.network_info.config.WidgetConfig: void setWidgetOptions(int)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:8
+crashApisInMain:8
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 8 Potential Issue API: SDKCheck of <android.net.NetworkInfo: android.net.NetworkInfo.DetailedState getDetailedState()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.ultrafunk.network_info.receiver.WifiStatusReceiver dummyMainMethod_com_ultrafunk_network__info_receiver_WifiStatusReceiver(android.content.Intent)>[]--><com.ultrafunk.network_info.receiver.WifiStatusReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><com.ultrafunk.network_info.receiver.WifiStatusReceiver: boolean isConnectionReady(android.content.Intent)>[]--><android.net.NetworkInfo: android.net.NetworkInfo.DetailedState getDetailedState()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.NetworkInfo: android.net.NetworkInfo.DetailedState getDetailedState()>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:9
+crashApisInMain:9
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 9 Potential Issue API: SDKCheck of <android.os.BaseBundle: int getInt(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.ultrafunk.network_info.WidgetProvider dummyMainMethod_com_ultrafunk_network__info_WidgetProvider(android.content.Intent)>[]--><com.ultrafunk.network_info.WidgetProvider: void onAppWidgetOptionsChanged(android.content.Context,android.appwidget.AppWidgetManager,int,android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:10
+crashApisInMain:10
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 10 Potential Issue API: SDKCheck of <android.net.wifi.WifiInfo: int getIpAddress()> is checking!!!
+The life time of api is [1,30]
+3call roads:
+1 Mainhead roads:
+$yysi0 >= 17
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.ultrafunk.network_info.receiver.MobileDataOnOffReceiver dummyMainMethod_com_ultrafunk_network__info_receiver_MobileDataOnOffReceiver(android.content.Intent)>[]--><com.ultrafunk.network_info.receiver.MobileDataOnOffReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><com.ultrafunk.network_info.receiver.MobileDataOnOffReceiver: void turnOnOff(android.content.Context)>[[$yysi0 >= 17]]--><com.ultrafunk.network_info.util.Utils: boolean isWifiConnected(android.content.Context)>[]--><android.net.wifi.WifiInfo: int getIpAddress()>
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.ultrafunk.network_info.receiver.WifiStatusReceiver dummyMainMethod_com_ultrafunk_network__info_receiver_WifiStatusReceiver(android.content.Intent)>[]--><com.ultrafunk.network_info.receiver.WifiStatusReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><com.ultrafunk.network_info.receiver.WifiStatusReceiver: boolean isConnectionReady(android.content.Intent)>[]--><com.ultrafunk.network_info.receiver.WifiStatusReceiver: boolean isConnected()>[]--><android.net.wifi.WifiInfo: int getIpAddress()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.wifi.WifiInfo: int getIpAddress()>has compatibility isssues！
+-----------------------------------------
+2 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <com.ultrafunk.network_info.service.MobileDataSettingObserver: void onChange(boolean)>[]--><com.ultrafunk.network_info.service.MobileDataSettingObserver: void onChange(boolean,android.net.Uri)>[]--><com.ultrafunk.network_info.util.Utils: boolean isWifiConnected(android.content.Context)>[]--><android.net.wifi.WifiInfo: int getIpAddress()>
+#1.the call statck between class <com.ultrafunk.network_info.service.MobileDataSettingObserver: void onChange(boolean)> to <android.net.wifi.WifiInfo: int getIpAddress()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <com.ultrafunk.network_info.receiver.WifiStatusReceiver: void updateView(android.content.Context,android.widget.RemoteViews,android.os.Bundle)>[]--><android.net.wifi.WifiInfo: int getIpAddress()>
+#2.the call statck between class <com.ultrafunk.network_info.receiver.WifiStatusReceiver: void updateView(android.content.Context,android.widget.RemoteViews,android.os.Bundle)> to <android.net.wifi.WifiInfo: int getIpAddress()>has compatibility isssues！
+-----------------------------------------
+crashApis:11
+crashApisInMain:11
+containsStatic:true
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 11 Potential Issue API: SDKCheck of <android.net.wifi.WifiInfo: java.lang.String getBSSID()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.ultrafunk.network_info.receiver.WifiStatusReceiver dummyMainMethod_com_ultrafunk_network__info_receiver_WifiStatusReceiver(android.content.Intent)>[]--><com.ultrafunk.network_info.receiver.WifiStatusReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><com.ultrafunk.network_info.receiver.WifiStatusReceiver: void setDetailsString(android.content.Context)>[]--><android.net.wifi.WifiInfo: java.lang.String getBSSID()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.wifi.WifiInfo: java.lang.String getBSSID()>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:12
+crashApisInMain:12
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 12 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager: boolean isWifiEnabled()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.ultrafunk.network_info.receiver.WifiOnOffReceiver dummyMainMethod_com_ultrafunk_network__info_receiver_WifiOnOffReceiver(android.content.Intent)>[]--><com.ultrafunk.network_info.receiver.WifiOnOffReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><com.ultrafunk.network_info.receiver.WifiOnOffReceiver: void turnOnOff(android.content.Context)>[]--><android.net.wifi.WifiManager: boolean isWifiEnabled()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.wifi.WifiManager: boolean isWifiEnabled()>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:13
+crashApisInMain:13
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 13 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager: java.util.List getScanResults()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.ultrafunk.network_info.receiver.WifiStatusReceiver dummyMainMethod_com_ultrafunk_network__info_receiver_WifiStatusReceiver(android.content.Intent)>[]--><com.ultrafunk.network_info.receiver.WifiStatusReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><com.ultrafunk.network_info.receiver.WifiUtils: java.lang.String getSecurityString(android.content.Context,android.net.wifi.WifiManager,java.lang.String)>[]--><android.net.wifi.WifiManager: java.util.List getScanResults()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.wifi.WifiManager: java.util.List getScanResults()>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:14
+crashApisInMain:14
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 14 Potential Issue API: SDKCheck of <android.net.wifi.WifiInfo: java.lang.String getSSID()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <com.ultrafunk.network_info.receiver.WifiStatusReceiver: void updateView(android.content.Context,android.widget.RemoteViews,android.os.Bundle)>[]--><android.net.wifi.WifiInfo: java.lang.String getSSID()>
+#1.the call statck between class <com.ultrafunk.network_info.receiver.WifiStatusReceiver: void updateView(android.content.Context,android.widget.RemoteViews,android.os.Bundle)> to <android.net.wifi.WifiInfo: java.lang.String getSSID()>has compatibility isssues！
+-----------------------------------------
+crashApis:15
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 15 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putInt(java.lang.String,int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.ultrafunk.network_info.WidgetProvider dummyMainMethod_com_ultrafunk_network__info_WidgetProvider(android.content.Intent)>[]--><com.ultrafunk.network_info.WidgetProvider: void onUpdate(android.content.Context,android.appwidget.AppWidgetManager,int[])>[]--><com.ultrafunk.network_info.config.WidgetConfig: void read(int)>[]--><com.ultrafunk.network_info.config.WidgetConfig: void setWidgetOptions(int)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.ultrafunk.network_info.config.ConfigActivity dummyMainMethod_com_ultrafunk_network__info_config_ConfigActivity(android.content.Intent)>[]--><com.ultrafunk.network_info.config.ConfigActivity$5: void onClick(android.view.View)>[]--><com.ultrafunk.network_info.config.WidgetConfig: void write(int)>[]--><com.ultrafunk.network_info.config.WidgetConfig: void setWidgetOptions(int)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:16
+crashApisInMain:15
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 16 Potential Issue API: SDKCheck of <android.net.wifi.WifiInfo: int getLinkSpeed()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.ultrafunk.network_info.service.NetworkStateService dummyMainMethod_com_ultrafunk_network__info_service_NetworkStateService(android.content.Intent)>[]--><com.ultrafunk.network_info.service.NetworkStateService: int onStartCommand(android.content.Intent,int,int)>[]--><android.os.Handler: boolean postDelayed(java.lang.Runnable,long)>[]--><com.ultrafunk.network_info.service.NetworkStateService$2: void run()>[]--><android.net.wifi.WifiInfo: int getLinkSpeed()>
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.ultrafunk.network_info.receiver.WifiStatusReceiver dummyMainMethod_com_ultrafunk_network__info_receiver_WifiStatusReceiver(android.content.Intent)>[]--><com.ultrafunk.network_info.receiver.WifiStatusReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><com.ultrafunk.network_info.receiver.WifiStatusReceiver: void setDetailsString(android.content.Context)>[]--><android.net.wifi.WifiInfo: int getLinkSpeed()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.wifi.WifiInfo: int getLinkSpeed()>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:17
+crashApisInMain:16
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 17 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager: boolean setWifiEnabled(boolean)> is checking!!!
+The life time of api is [1,30]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.ultrafunk.network_info.receiver.WifiOnOffReceiver dummyMainMethod_com_ultrafunk_network__info_receiver_WifiOnOffReceiver(android.content.Intent)>[]--><com.ultrafunk.network_info.receiver.WifiOnOffReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><com.ultrafunk.network_info.receiver.WifiOnOffReceiver: void turnOnOff(android.content.Context)>[]--><android.net.wifi.WifiManager: boolean setWifiEnabled(boolean)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.wifi.WifiManager: boolean setWifiEnabled(boolean)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:18
+crashApisInMain:17
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+crashApis numbers:18
+crashApis numbers in main road:17
+On Android Version 16 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 17 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 18 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 19 this app may have error api use(at least): 5 and error api roads: 19
+On Android Version 20 this app may have error api use(at least): 5 and error api roads: 19
+On Android Version 21 this app may have error api use(at least): 2 and error api roads: 9
+On Android Version 22 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 23 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 24 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 25 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 31 this app may have error api use(at least): 13 and error api roads: 23

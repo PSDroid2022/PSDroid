@@ -1,0 +1,365 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/Slideshow.apk
+Entry Points[link.standen.michael.slideshow.SettingsActivity, link.standen.michael.slideshow.MainActivity, link.standen.michael.slideshow.ImageActivity, link.standen.michael.slideshow.CreditsActivity]
+FllowDroidcallgraph size:2181
+Soot started on Mon Jul 11 12:21:29 CST 2022
+StaticCheck:<com.bumptech.glide.load.resource.bitmap.Downsampler: boolean shouldUsePool(java.io.InputStream)>19 > $yysi0
+StaticCheck:<com.bumptech.glide.load.engine.cache.MemorySizeCalculator: boolean isLowMemoryDevice(android.app.ActivityManager)>$yysi0 < 19
+Soot finished on Mon Jul 11 12:21:39 CST 2022
+Soot has run for 0 min. 9 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 19
+Declared Target Sdk version is: 26
+Declared Max Sdk version is: -1
+Collected 368 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.app.Activity: void enterPictureInPictureMode()> is checking!!!
+The life time of api is [24,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 21 22 23 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: link.standen.michael.slideshow.ImageActivity dummyMainMethod_link_standen_michael_slideshow_ImageActivity(android.content.Intent)>[]--><link.standen.michael.slideshow.ImageActivity: boolean onOptionsItemSelected(android.view.MenuItem)>[]--><link.standen.michael.slideshow.ImageActivity: void startPictureInPictureMode(boolean)>[]--><android.app.Activity: void enterPictureInPictureMode()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.app.Activity: void enterPictureInPictureMode()>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:1
+crashApisInMain:1
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.app.Activity: void requestPermissions(java.lang.String[],int)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 23
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: link.standen.michael.slideshow.MainActivity dummyMainMethod_link_standen_michael_slideshow_MainActivity(android.content.Intent)>[]--><link.standen.michael.slideshow.MainActivity: void onStart()>[]--><link.standen.michael.slideshow.MainActivity: boolean isStoragePermissionGranted()>[[-$i0 < 23]]--><android.app.Activity: void requestPermissions(java.lang.String[],int)>
+One road protect good!
+-$i0 < 23
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: link.standen.michael.slideshow.ImageActivity dummyMainMethod_link_standen_michael_slideshow_ImageActivity(android.content.Intent)>[]--><link.standen.michael.slideshow.ImageActivity$7: void onClick(android.view.View)>[]--><link.standen.michael.slideshow.ImageActivity: boolean access$2300(link.standen.michael.slideshow.ImageActivity)>[]--><link.standen.michael.slideshow.ImageActivity: boolean isStoragePermissionGranted()>[[-$i0 < 23]]--><android.app.Activity: void requestPermissions(java.lang.String[],int)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()> is checking!!!
+The life time of api is [1,30]
+43call roads:
+1 Mainhead roads:
+42 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <com.bumptech.glide.manager.DefaultConnectivityMonitor: boolean access$100(com.bumptech.glide.manager.DefaultConnectivityMonitor,android.content.Context)>[]--><com.bumptech.glide.manager.DefaultConnectivityMonitor: boolean isConnected(android.content.Context)>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>
+#15.the call statck between class <com.bumptech.glide.manager.DefaultConnectivityMonitor: boolean access$100(com.bumptech.glide.manager.DefaultConnectivityMonitor,android.content.Context)> to <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>has compatibility isssues！
+-----------------------------------------
+crashApis:2
+containsStatic:false
+containsTry:true
+16call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.net.NetworkInfo: boolean isConnected()> is checking!!!
+The life time of api is [1,30]
+43call roads:
+1 Mainhead roads:
+42 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <com.bumptech.glide.manager.DefaultConnectivityMonitor: boolean access$100(com.bumptech.glide.manager.DefaultConnectivityMonitor,android.content.Context)>[]--><com.bumptech.glide.manager.DefaultConnectivityMonitor: boolean isConnected(android.content.Context)>[]--><android.net.NetworkInfo: boolean isConnected()>
+#15.the call statck between class <com.bumptech.glide.manager.DefaultConnectivityMonitor: boolean access$100(com.bumptech.glide.manager.DefaultConnectivityMonitor,android.content.Context)> to <android.net.NetworkInfo: boolean isConnected()>has compatibility isssues！
+-----------------------------------------
+crashApis:3
+containsStatic:false
+containsTry:true
+16call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.os.LocaleList: java.util.Locale get(int)> is checking!!!
+The life time of api is [24,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 24
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: link.standen.michael.slideshow.CreditsActivity dummyMainMethod_link_standen_michael_slideshow_CreditsActivity(android.content.Intent)>[]--><link.standen.michael.slideshow.CreditsActivity: void onCreate(android.os.Bundle)>[]--><link.standen.michael.slideshow.CreditsActivity: java.util.Locale getCurrentLocale()>[[-$i0 < 24]]--><android.os.LocaleList: java.util.Locale get(int)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 5 Potential Issue API: SDKCheck of <android.app.Activity: void onPictureInPictureModeChanged(boolean)> is checking!!!
+The life time of api is [24,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 21 22 23 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: link.standen.michael.slideshow.ImageActivity dummyMainMethod_link_standen_michael_slideshow_ImageActivity(android.content.Intent)>[]--><link.standen.michael.slideshow.ImageActivity: void onPictureInPictureModeChanged(boolean)>[[]]--><android.app.Activity: void onPictureInPictureModeChanged(boolean)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.app.Activity: void onPictureInPictureModeChanged(boolean)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:4
+crashApisInMain:2
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 6 Potential Issue API: SDKCheck of <android.content.ContextWrapper: int checkSelfPermission(java.lang.String)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 23
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: link.standen.michael.slideshow.MainActivity dummyMainMethod_link_standen_michael_slideshow_MainActivity(android.content.Intent)>[]--><link.standen.michael.slideshow.MainActivity: void onStart()>[]--><link.standen.michael.slideshow.MainActivity: boolean isStoragePermissionGranted()>[[-$i0 < 23]]--><android.content.ContextWrapper: int checkSelfPermission(java.lang.String)>
+One road protect good!
+-$i0 < 23
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: link.standen.michael.slideshow.ImageActivity dummyMainMethod_link_standen_michael_slideshow_ImageActivity(android.content.Intent)>[]--><link.standen.michael.slideshow.ImageActivity$7: void onClick(android.view.View)>[]--><link.standen.michael.slideshow.ImageActivity: boolean access$2300(link.standen.michael.slideshow.ImageActivity)>[]--><link.standen.michael.slideshow.ImageActivity: boolean isStoragePermissionGranted()>[[-$i0 < 23]]--><android.content.ContextWrapper: int checkSelfPermission(java.lang.String)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 7 Potential Issue API: SDKCheck of <android.content.res.Configuration: android.os.LocaleList getLocales()> is checking!!!
+The life time of api is [24,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 24
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: link.standen.michael.slideshow.CreditsActivity dummyMainMethod_link_standen_michael_slideshow_CreditsActivity(android.content.Intent)>[]--><link.standen.michael.slideshow.CreditsActivity: void onCreate(android.os.Bundle)>[]--><link.standen.michael.slideshow.CreditsActivity: java.util.Locale getCurrentLocale()>[[-$i0 < 24]]--><android.content.res.Configuration: android.os.LocaleList getLocales()>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 8 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.util.Set keySet()> is checking!!!
+The life time of api is [21,31]
+68call roads:
+1 Mainhead roads:
+67 Packageshead roads:
+try
+Good road with try: <com.bumptech.glide.load.model.stream.StreamResourceLoader: void <init>(android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.load.model.ModelLoader buildStreamModelLoader(java.lang.Class,android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.load.model.ModelLoader buildModelLoader(java.lang.Class,java.lang.Class,android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.Glide get(android.content.Context)>[[try]]--><com.bumptech.glide.Glide: java.util.List parseGlideModules(android.content.Context)>[]--><com.bumptech.glide.module.ManifestParser: java.util.List parse()>[[try]]--><android.os.BaseBundle: java.util.Set keySet()>
+One road protect good!
+try
+Good road with try: <com.bumptech.glide.load.resource.bitmap.CenterCrop: void <init>(android.content.Context)>[]--><com.bumptech.glide.load.resource.bitmap.BitmapTransformation: void <init>(android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.Glide get(android.content.Context)>[[try]]--><com.bumptech.glide.Glide: java.util.List parseGlideModules(android.content.Context)>[]--><com.bumptech.glide.module.ManifestParser: java.util.List parse()>[[try]]--><android.os.BaseBundle: java.util.Set keySet()>
+One road protect good!
+try
+Good road with try: <com.bumptech.glide.load.resource.bitmap.FileDescriptorBitmapDecoder: void <init>(android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.Glide get(android.content.Context)>[[try]]--><com.bumptech.glide.Glide: java.util.List parseGlideModules(android.content.Context)>[]--><com.bumptech.glide.module.ManifestParser: java.util.List parse()>[[try]]--><android.os.BaseBundle: java.util.Set keySet()>
+One road protect good!
+try
+Good road with try: <com.bumptech.glide.load.resource.bitmap.StreamBitmapDecoder: void <init>(android.content.Context,com.bumptech.glide.load.DecodeFormat)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.Glide get(android.content.Context)>[[try]]--><com.bumptech.glide.Glide: java.util.List parseGlideModules(android.content.Context)>[]--><com.bumptech.glide.module.ManifestParser: java.util.List parse()>[[try]]--><android.os.BaseBundle: java.util.Set keySet()>
+One road protect good!
+try
+Good road with try: <com.bumptech.glide.RequestManager: com.bumptech.glide.DrawableTypeRequest load(java.net.URL)>[]--><com.bumptech.glide.RequestManager: com.bumptech.glide.DrawableTypeRequest fromUrl()>[]--><com.bumptech.glide.RequestManager: com.bumptech.glide.DrawableTypeRequest loadGeneric(java.lang.Class)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.load.model.ModelLoader buildFileDescriptorModelLoader(java.lang.Class,android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.load.model.ModelLoader buildModelLoader(java.lang.Class,java.lang.Class,android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.Glide get(android.content.Context)>[[try]]--><com.bumptech.glide.Glide: java.util.List parseGlideModules(android.content.Context)>[]--><com.bumptech.glide.module.ManifestParser: java.util.List parse()>[[try]]--><android.os.BaseBundle: java.util.Set keySet()>
+One road protect good!
+try
+Good road with try: <com.bumptech.glide.RequestManager: com.bumptech.glide.DrawableTypeRequest load(byte[],java.lang.String)>[]--><com.bumptech.glide.RequestManager: com.bumptech.glide.DrawableTypeRequest load(byte[])>[]--><com.bumptech.glide.RequestManager: com.bumptech.glide.DrawableTypeRequest fromBytes()>[]--><com.bumptech.glide.RequestManager: com.bumptech.glide.DrawableTypeRequest loadGeneric(java.lang.Class)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.load.model.ModelLoader buildFileDescriptorModelLoader(java.lang.Class,android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.load.model.ModelLoader buildModelLoader(java.lang.Class,java.lang.Class,android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.Glide get(android.content.Context)>[[try]]--><com.bumptech.glide.Glide: java.util.List parseGlideModules(android.content.Context)>[]--><com.bumptech.glide.module.ManifestParser: java.util.List parse()>[[try]]--><android.os.BaseBundle: java.util.Set keySet()>
+One road protect good!
+try
+Good road with try: <com.bumptech.glide.RequestManager: com.bumptech.glide.DrawableTypeRequest load(java.lang.Object)>[]--><com.bumptech.glide.RequestManager: com.bumptech.glide.DrawableTypeRequest loadGeneric(java.lang.Class)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.load.model.ModelLoader buildFileDescriptorModelLoader(java.lang.Class,android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.load.model.ModelLoader buildModelLoader(java.lang.Class,java.lang.Class,android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.Glide get(android.content.Context)>[[try]]--><com.bumptech.glide.Glide: java.util.List parseGlideModules(android.content.Context)>[]--><com.bumptech.glide.module.ManifestParser: java.util.List parse()>[[try]]--><android.os.BaseBundle: java.util.Set keySet()>
+One road protect good!
+try
+Good road with try: <com.bumptech.glide.load.model.file_descriptor.FileDescriptorStringLoader: void <init>(android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.load.model.ModelLoader buildFileDescriptorModelLoader(java.lang.Class,android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.load.model.ModelLoader buildModelLoader(java.lang.Class,java.lang.Class,android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.Glide get(android.content.Context)>[[try]]--><com.bumptech.glide.Glide: java.util.List parseGlideModules(android.content.Context)>[]--><com.bumptech.glide.module.ManifestParser: java.util.List parse()>[[try]]--><android.os.BaseBundle: java.util.Set keySet()>
+One road protect good!
+try
+Good road with try: <com.bumptech.glide.load.resource.transcode.BitmapToGlideDrawableTranscoder: void <init>(android.content.Context)>[]--><com.bumptech.glide.load.resource.transcode.GlideBitmapDrawableTranscoder: void <init>(android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.Glide get(android.content.Context)>[[try]]--><com.bumptech.glide.Glide: java.util.List parseGlideModules(android.content.Context)>[]--><com.bumptech.glide.module.ManifestParser: java.util.List parse()>[[try]]--><android.os.BaseBundle: java.util.Set keySet()>
+One road protect good!
+try
+Good road with try: <com.bumptech.glide.load.model.file_descriptor.FileDescriptorUriLoader: void <init>(android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.load.model.ModelLoader buildFileDescriptorModelLoader(java.lang.Class,android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.load.model.ModelLoader buildModelLoader(java.lang.Class,java.lang.Class,android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.Glide get(android.content.Context)>[[try]]--><com.bumptech.glide.Glide: java.util.List parseGlideModules(android.content.Context)>[]--><com.bumptech.glide.module.ManifestParser: java.util.List parse()>[[try]]--><android.os.BaseBundle: java.util.Set keySet()>
+One road protect good!
+try
+Good road with try: <com.bumptech.glide.Glide: com.bumptech.glide.load.model.ModelLoader buildFileDescriptorModelLoader(java.lang.Object,android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.load.model.ModelLoader buildModelLoader(java.lang.Object,java.lang.Class,android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.load.model.ModelLoader buildModelLoader(java.lang.Class,java.lang.Class,android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.Glide get(android.content.Context)>[[try]]--><com.bumptech.glide.Glide: java.util.List parseGlideModules(android.content.Context)>[]--><com.bumptech.glide.module.ManifestParser: java.util.List parse()>[[try]]--><android.os.BaseBundle: java.util.Set keySet()>
+One road protect good!
+try
+Good road with try: <com.bumptech.glide.RequestManager: com.bumptech.glide.DrawableTypeRequest load(android.net.Uri)>[]--><com.bumptech.glide.RequestManager: com.bumptech.glide.DrawableTypeRequest fromUri()>[]--><com.bumptech.glide.RequestManager: com.bumptech.glide.DrawableTypeRequest loadGeneric(java.lang.Class)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.load.model.ModelLoader buildFileDescriptorModelLoader(java.lang.Class,android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.load.model.ModelLoader buildModelLoader(java.lang.Class,java.lang.Class,android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.Glide get(android.content.Context)>[[try]]--><com.bumptech.glide.Glide: java.util.List parseGlideModules(android.content.Context)>[]--><com.bumptech.glide.module.ManifestParser: java.util.List parse()>[[try]]--><android.os.BaseBundle: java.util.Set keySet()>
+One road protect good!
+try
+Good road with try: <com.bumptech.glide.load.resource.bitmap.StreamBitmapDecoder: void <init>(android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.Glide get(android.content.Context)>[[try]]--><com.bumptech.glide.Glide: java.util.List parseGlideModules(android.content.Context)>[]--><com.bumptech.glide.module.ManifestParser: java.util.List parse()>[[try]]--><android.os.BaseBundle: java.util.Set keySet()>
+One road protect good!
+try
+Good road with try: <com.bumptech.glide.load.resource.bitmap.FitCenter: void <init>(android.content.Context)>[]--><com.bumptech.glide.load.resource.bitmap.BitmapTransformation: void <init>(android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.Glide get(android.content.Context)>[[try]]--><com.bumptech.glide.Glide: java.util.List parseGlideModules(android.content.Context)>[]--><com.bumptech.glide.module.ManifestParser: java.util.List parse()>[[try]]--><android.os.BaseBundle: java.util.Set keySet()>
+One road protect good!
+try
+Good road with try: <com.bumptech.glide.load.resource.bitmap.FileDescriptorBitmapDecoder: void <init>(android.content.Context,com.bumptech.glide.load.DecodeFormat)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.Glide get(android.content.Context)>[[try]]--><com.bumptech.glide.Glide: java.util.List parseGlideModules(android.content.Context)>[]--><com.bumptech.glide.module.ManifestParser: java.util.List parse()>[[try]]--><android.os.BaseBundle: java.util.Set keySet()>
+One road protect good!
+try
+Good road with try: <com.bumptech.glide.load.resource.gif.GifResourceDecoder: void <init>(android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.Glide get(android.content.Context)>[[try]]--><com.bumptech.glide.Glide: java.util.List parseGlideModules(android.content.Context)>[]--><com.bumptech.glide.module.ManifestParser: java.util.List parse()>[[try]]--><android.os.BaseBundle: java.util.Set keySet()>
+One road protect good!
+try
+Good road with try: <com.bumptech.glide.RequestManager: com.bumptech.glide.DrawableTypeRequest load(java.io.File)>[]--><com.bumptech.glide.RequestManager: com.bumptech.glide.DrawableTypeRequest fromFile()>[]--><com.bumptech.glide.RequestManager: com.bumptech.glide.DrawableTypeRequest loadGeneric(java.lang.Class)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.load.model.ModelLoader buildFileDescriptorModelLoader(java.lang.Class,android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.load.model.ModelLoader buildModelLoader(java.lang.Class,java.lang.Class,android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.Glide get(android.content.Context)>[[try]]--><com.bumptech.glide.Glide: java.util.List parseGlideModules(android.content.Context)>[]--><com.bumptech.glide.module.ManifestParser: java.util.List parse()>[[try]]--><android.os.BaseBundle: java.util.Set keySet()>
+One road protect good!
+try
+Good road with try: <com.bumptech.glide.RequestManager: com.bumptech.glide.DrawableTypeRequest loadFromMediaStore(android.net.Uri,java.lang.String,long,int)>[]--><com.bumptech.glide.RequestManager: com.bumptech.glide.DrawableTypeRequest loadFromMediaStore(android.net.Uri)>[]--><com.bumptech.glide.RequestManager: com.bumptech.glide.DrawableTypeRequest fromMediaStore()>[]--><com.bumptech.glide.Glide: com.bumptech.glide.load.model.ModelLoader buildFileDescriptorModelLoader(java.lang.Class,android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.load.model.ModelLoader buildModelLoader(java.lang.Class,java.lang.Class,android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.Glide get(android.content.Context)>[[try]]--><com.bumptech.glide.Glide: java.util.List parseGlideModules(android.content.Context)>[]--><com.bumptech.glide.module.ManifestParser: java.util.List parse()>[[try]]--><android.os.BaseBundle: java.util.Set keySet()>
+One road protect good!
+try
+Good road with try: <com.bumptech.glide.load.model.stream.StreamStringLoader: void <init>(android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.load.model.ModelLoader buildStreamModelLoader(java.lang.Class,android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.load.model.ModelLoader buildModelLoader(java.lang.Class,java.lang.Class,android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.Glide get(android.content.Context)>[[try]]--><com.bumptech.glide.Glide: java.util.List parseGlideModules(android.content.Context)>[]--><com.bumptech.glide.module.ManifestParser: java.util.List parse()>[[try]]--><android.os.BaseBundle: java.util.Set keySet()>
+One road protect good!
+try
+Good road with try: <com.bumptech.glide.load.model.file_descriptor.FileDescriptorFileLoader: void <init>(android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.load.model.ModelLoader buildFileDescriptorModelLoader(java.lang.Class,android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.load.model.ModelLoader buildModelLoader(java.lang.Class,java.lang.Class,android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.Glide get(android.content.Context)>[[try]]--><com.bumptech.glide.Glide: java.util.List parseGlideModules(android.content.Context)>[]--><com.bumptech.glide.module.ManifestParser: java.util.List parse()>[[try]]--><android.os.BaseBundle: java.util.Set keySet()>
+One road protect good!
+try
+Good road with try: <com.bumptech.glide.load.model.stream.BaseGlideUrlLoader: void <init>(android.content.Context)>[]--><com.bumptech.glide.load.model.stream.BaseGlideUrlLoader: void <init>(android.content.Context,com.bumptech.glide.load.model.ModelCache)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.load.model.ModelLoader buildModelLoader(java.lang.Class,java.lang.Class,android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.Glide get(android.content.Context)>[[try]]--><com.bumptech.glide.Glide: java.util.List parseGlideModules(android.content.Context)>[]--><com.bumptech.glide.module.ManifestParser: java.util.List parse()>[[try]]--><android.os.BaseBundle: java.util.Set keySet()>
+One road protect good!
+try
+Good road with try: <com.bumptech.glide.load.resource.gif.GifFrameLoader: void <init>(android.content.Context,com.bumptech.glide.load.resource.gif.GifFrameLoader$FrameCallback,com.bumptech.glide.gifdecoder.GifDecoder,int,int)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.Glide get(android.content.Context)>[[try]]--><com.bumptech.glide.Glide: java.util.List parseGlideModules(android.content.Context)>[]--><com.bumptech.glide.module.ManifestParser: java.util.List parse()>[[try]]--><android.os.BaseBundle: java.util.Set keySet()>
+One road protect good!
+try
+Good road with try: <com.bumptech.glide.load.model.stream.StreamFileLoader: void <init>(android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.load.model.ModelLoader buildStreamModelLoader(java.lang.Class,android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.load.model.ModelLoader buildModelLoader(java.lang.Class,java.lang.Class,android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.Glide get(android.content.Context)>[[try]]--><com.bumptech.glide.Glide: java.util.List parseGlideModules(android.content.Context)>[]--><com.bumptech.glide.module.ManifestParser: java.util.List parse()>[[try]]--><android.os.BaseBundle: java.util.Set keySet()>
+One road protect good!
+try
+Good road with try: <com.bumptech.glide.load.model.stream.StreamUriLoader: void <init>(android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.load.model.ModelLoader buildStreamModelLoader(java.lang.Class,android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.load.model.ModelLoader buildModelLoader(java.lang.Class,java.lang.Class,android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.Glide get(android.content.Context)>[[try]]--><com.bumptech.glide.Glide: java.util.List parseGlideModules(android.content.Context)>[]--><com.bumptech.glide.module.ManifestParser: java.util.List parse()>[[try]]--><android.os.BaseBundle: java.util.Set keySet()>
+One road protect good!
+try
+Good road with try: <com.bumptech.glide.RequestManager: com.bumptech.glide.DrawableTypeRequest 'from'(java.lang.Class)>[]--><com.bumptech.glide.RequestManager: com.bumptech.glide.DrawableTypeRequest loadGeneric(java.lang.Class)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.load.model.ModelLoader buildFileDescriptorModelLoader(java.lang.Class,android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.load.model.ModelLoader buildModelLoader(java.lang.Class,java.lang.Class,android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.Glide get(android.content.Context)>[[try]]--><com.bumptech.glide.Glide: java.util.List parseGlideModules(android.content.Context)>[]--><com.bumptech.glide.module.ManifestParser: java.util.List parse()>[[try]]--><android.os.BaseBundle: java.util.Set keySet()>
+One road protect good!
+try
+Good road with try: <com.bumptech.glide.Glide: com.bumptech.glide.load.model.ModelLoader buildStreamModelLoader(java.lang.Object,android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.load.model.ModelLoader buildModelLoader(java.lang.Object,java.lang.Class,android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.load.model.ModelLoader buildModelLoader(java.lang.Class,java.lang.Class,android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.Glide get(android.content.Context)>[[try]]--><com.bumptech.glide.Glide: java.util.List parseGlideModules(android.content.Context)>[]--><com.bumptech.glide.module.ManifestParser: java.util.List parse()>[[try]]--><android.os.BaseBundle: java.util.Set keySet()>
+One road protect good!
+try
+Good road with try: <com.bumptech.glide.load.model.file_descriptor.FileDescriptorResourceLoader: void <init>(android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.load.model.ModelLoader buildFileDescriptorModelLoader(java.lang.Class,android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.load.model.ModelLoader buildModelLoader(java.lang.Class,java.lang.Class,android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.Glide get(android.content.Context)>[[try]]--><com.bumptech.glide.Glide: java.util.List parseGlideModules(android.content.Context)>[]--><com.bumptech.glide.module.ManifestParser: java.util.List parse()>[[try]]--><android.os.BaseBundle: java.util.Set keySet()>
+One road protect good!
+try
+Good road with try: <link.standen.michael.slideshow.adapter.FileItemArrayAdapter: android.view.View getView(int,android.view.View,android.view.ViewGroup)>[]--><com.bumptech.glide.RequestManager: com.bumptech.glide.DrawableTypeRequest load(java.lang.String)>[]--><com.bumptech.glide.RequestManager: com.bumptech.glide.DrawableTypeRequest fromString()>[]--><com.bumptech.glide.RequestManager: com.bumptech.glide.DrawableTypeRequest loadGeneric(java.lang.Class)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.load.model.ModelLoader buildFileDescriptorModelLoader(java.lang.Class,android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.load.model.ModelLoader buildModelLoader(java.lang.Class,java.lang.Class,android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.Glide get(android.content.Context)>[[try]]--><com.bumptech.glide.Glide: java.util.List parseGlideModules(android.content.Context)>[]--><com.bumptech.glide.module.ManifestParser: java.util.List parse()>[[try]]--><android.os.BaseBundle: java.util.Set keySet()>
+One road protect good!
+try
+Good road with try: <link.standen.michael.slideshow.adapter.FileItemArrayAdapter: android.view.View getView(int,android.view.View,android.view.ViewGroup)>[]--><com.bumptech.glide.RequestManager: com.bumptech.glide.DrawableTypeRequest load(java.lang.Integer)>[]--><com.bumptech.glide.RequestManager: com.bumptech.glide.DrawableTypeRequest fromResource()>[]--><com.bumptech.glide.RequestManager: com.bumptech.glide.DrawableTypeRequest loadGeneric(java.lang.Class)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.load.model.ModelLoader buildFileDescriptorModelLoader(java.lang.Class,android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.load.model.ModelLoader buildModelLoader(java.lang.Class,java.lang.Class,android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.Glide get(android.content.Context)>[[try]]--><com.bumptech.glide.Glide: java.util.List parseGlideModules(android.content.Context)>[]--><com.bumptech.glide.module.ManifestParser: java.util.List parse()>[[try]]--><android.os.BaseBundle: java.util.Set keySet()>
+One road protect good!
+containsStatic:false
+containsTry:true
+68call by main package
+-----------------------------------------
+#################################################
+N 9 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.lang.Object get(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+68call roads:
+1 Mainhead roads:
+67 Packageshead roads:
+try
+Good road with try: <com.bumptech.glide.load.model.stream.StreamResourceLoader: void <init>(android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.load.model.ModelLoader buildStreamModelLoader(java.lang.Class,android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.load.model.ModelLoader buildModelLoader(java.lang.Class,java.lang.Class,android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.Glide get(android.content.Context)>[[try]]--><com.bumptech.glide.Glide: java.util.List parseGlideModules(android.content.Context)>[]--><com.bumptech.glide.module.ManifestParser: java.util.List parse()>[[try]]--><android.os.BaseBundle: java.lang.Object get(java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.bumptech.glide.load.resource.bitmap.CenterCrop: void <init>(android.content.Context)>[]--><com.bumptech.glide.load.resource.bitmap.BitmapTransformation: void <init>(android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.Glide get(android.content.Context)>[[try]]--><com.bumptech.glide.Glide: java.util.List parseGlideModules(android.content.Context)>[]--><com.bumptech.glide.module.ManifestParser: java.util.List parse()>[[try]]--><android.os.BaseBundle: java.lang.Object get(java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.bumptech.glide.load.resource.bitmap.FileDescriptorBitmapDecoder: void <init>(android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.Glide get(android.content.Context)>[[try]]--><com.bumptech.glide.Glide: java.util.List parseGlideModules(android.content.Context)>[]--><com.bumptech.glide.module.ManifestParser: java.util.List parse()>[[try]]--><android.os.BaseBundle: java.lang.Object get(java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.bumptech.glide.load.resource.bitmap.StreamBitmapDecoder: void <init>(android.content.Context,com.bumptech.glide.load.DecodeFormat)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.Glide get(android.content.Context)>[[try]]--><com.bumptech.glide.Glide: java.util.List parseGlideModules(android.content.Context)>[]--><com.bumptech.glide.module.ManifestParser: java.util.List parse()>[[try]]--><android.os.BaseBundle: java.lang.Object get(java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.bumptech.glide.RequestManager: com.bumptech.glide.DrawableTypeRequest load(java.net.URL)>[]--><com.bumptech.glide.RequestManager: com.bumptech.glide.DrawableTypeRequest fromUrl()>[]--><com.bumptech.glide.RequestManager: com.bumptech.glide.DrawableTypeRequest loadGeneric(java.lang.Class)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.load.model.ModelLoader buildFileDescriptorModelLoader(java.lang.Class,android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.load.model.ModelLoader buildModelLoader(java.lang.Class,java.lang.Class,android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.Glide get(android.content.Context)>[[try]]--><com.bumptech.glide.Glide: java.util.List parseGlideModules(android.content.Context)>[]--><com.bumptech.glide.module.ManifestParser: java.util.List parse()>[[try]]--><android.os.BaseBundle: java.lang.Object get(java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.bumptech.glide.RequestManager: com.bumptech.glide.DrawableTypeRequest load(byte[],java.lang.String)>[]--><com.bumptech.glide.RequestManager: com.bumptech.glide.DrawableTypeRequest load(byte[])>[]--><com.bumptech.glide.RequestManager: com.bumptech.glide.DrawableTypeRequest fromBytes()>[]--><com.bumptech.glide.RequestManager: com.bumptech.glide.DrawableTypeRequest loadGeneric(java.lang.Class)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.load.model.ModelLoader buildFileDescriptorModelLoader(java.lang.Class,android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.load.model.ModelLoader buildModelLoader(java.lang.Class,java.lang.Class,android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.Glide get(android.content.Context)>[[try]]--><com.bumptech.glide.Glide: java.util.List parseGlideModules(android.content.Context)>[]--><com.bumptech.glide.module.ManifestParser: java.util.List parse()>[[try]]--><android.os.BaseBundle: java.lang.Object get(java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.bumptech.glide.RequestManager: com.bumptech.glide.DrawableTypeRequest load(java.lang.Object)>[]--><com.bumptech.glide.RequestManager: com.bumptech.glide.DrawableTypeRequest loadGeneric(java.lang.Class)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.load.model.ModelLoader buildFileDescriptorModelLoader(java.lang.Class,android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.load.model.ModelLoader buildModelLoader(java.lang.Class,java.lang.Class,android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.Glide get(android.content.Context)>[[try]]--><com.bumptech.glide.Glide: java.util.List parseGlideModules(android.content.Context)>[]--><com.bumptech.glide.module.ManifestParser: java.util.List parse()>[[try]]--><android.os.BaseBundle: java.lang.Object get(java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.bumptech.glide.load.model.file_descriptor.FileDescriptorStringLoader: void <init>(android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.load.model.ModelLoader buildFileDescriptorModelLoader(java.lang.Class,android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.load.model.ModelLoader buildModelLoader(java.lang.Class,java.lang.Class,android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.Glide get(android.content.Context)>[[try]]--><com.bumptech.glide.Glide: java.util.List parseGlideModules(android.content.Context)>[]--><com.bumptech.glide.module.ManifestParser: java.util.List parse()>[[try]]--><android.os.BaseBundle: java.lang.Object get(java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.bumptech.glide.load.resource.transcode.BitmapToGlideDrawableTranscoder: void <init>(android.content.Context)>[]--><com.bumptech.glide.load.resource.transcode.GlideBitmapDrawableTranscoder: void <init>(android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.Glide get(android.content.Context)>[[try]]--><com.bumptech.glide.Glide: java.util.List parseGlideModules(android.content.Context)>[]--><com.bumptech.glide.module.ManifestParser: java.util.List parse()>[[try]]--><android.os.BaseBundle: java.lang.Object get(java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.bumptech.glide.load.model.file_descriptor.FileDescriptorUriLoader: void <init>(android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.load.model.ModelLoader buildFileDescriptorModelLoader(java.lang.Class,android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.load.model.ModelLoader buildModelLoader(java.lang.Class,java.lang.Class,android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.Glide get(android.content.Context)>[[try]]--><com.bumptech.glide.Glide: java.util.List parseGlideModules(android.content.Context)>[]--><com.bumptech.glide.module.ManifestParser: java.util.List parse()>[[try]]--><android.os.BaseBundle: java.lang.Object get(java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.bumptech.glide.Glide: com.bumptech.glide.load.model.ModelLoader buildFileDescriptorModelLoader(java.lang.Object,android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.load.model.ModelLoader buildModelLoader(java.lang.Object,java.lang.Class,android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.load.model.ModelLoader buildModelLoader(java.lang.Class,java.lang.Class,android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.Glide get(android.content.Context)>[[try]]--><com.bumptech.glide.Glide: java.util.List parseGlideModules(android.content.Context)>[]--><com.bumptech.glide.module.ManifestParser: java.util.List parse()>[[try]]--><android.os.BaseBundle: java.lang.Object get(java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.bumptech.glide.RequestManager: com.bumptech.glide.DrawableTypeRequest load(android.net.Uri)>[]--><com.bumptech.glide.RequestManager: com.bumptech.glide.DrawableTypeRequest fromUri()>[]--><com.bumptech.glide.RequestManager: com.bumptech.glide.DrawableTypeRequest loadGeneric(java.lang.Class)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.load.model.ModelLoader buildFileDescriptorModelLoader(java.lang.Class,android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.load.model.ModelLoader buildModelLoader(java.lang.Class,java.lang.Class,android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.Glide get(android.content.Context)>[[try]]--><com.bumptech.glide.Glide: java.util.List parseGlideModules(android.content.Context)>[]--><com.bumptech.glide.module.ManifestParser: java.util.List parse()>[[try]]--><android.os.BaseBundle: java.lang.Object get(java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.bumptech.glide.load.resource.bitmap.StreamBitmapDecoder: void <init>(android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.Glide get(android.content.Context)>[[try]]--><com.bumptech.glide.Glide: java.util.List parseGlideModules(android.content.Context)>[]--><com.bumptech.glide.module.ManifestParser: java.util.List parse()>[[try]]--><android.os.BaseBundle: java.lang.Object get(java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.bumptech.glide.load.resource.bitmap.FitCenter: void <init>(android.content.Context)>[]--><com.bumptech.glide.load.resource.bitmap.BitmapTransformation: void <init>(android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.Glide get(android.content.Context)>[[try]]--><com.bumptech.glide.Glide: java.util.List parseGlideModules(android.content.Context)>[]--><com.bumptech.glide.module.ManifestParser: java.util.List parse()>[[try]]--><android.os.BaseBundle: java.lang.Object get(java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.bumptech.glide.load.resource.bitmap.FileDescriptorBitmapDecoder: void <init>(android.content.Context,com.bumptech.glide.load.DecodeFormat)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.Glide get(android.content.Context)>[[try]]--><com.bumptech.glide.Glide: java.util.List parseGlideModules(android.content.Context)>[]--><com.bumptech.glide.module.ManifestParser: java.util.List parse()>[[try]]--><android.os.BaseBundle: java.lang.Object get(java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.bumptech.glide.load.resource.gif.GifResourceDecoder: void <init>(android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.Glide get(android.content.Context)>[[try]]--><com.bumptech.glide.Glide: java.util.List parseGlideModules(android.content.Context)>[]--><com.bumptech.glide.module.ManifestParser: java.util.List parse()>[[try]]--><android.os.BaseBundle: java.lang.Object get(java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.bumptech.glide.RequestManager: com.bumptech.glide.DrawableTypeRequest load(java.io.File)>[]--><com.bumptech.glide.RequestManager: com.bumptech.glide.DrawableTypeRequest fromFile()>[]--><com.bumptech.glide.RequestManager: com.bumptech.glide.DrawableTypeRequest loadGeneric(java.lang.Class)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.load.model.ModelLoader buildFileDescriptorModelLoader(java.lang.Class,android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.load.model.ModelLoader buildModelLoader(java.lang.Class,java.lang.Class,android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.Glide get(android.content.Context)>[[try]]--><com.bumptech.glide.Glide: java.util.List parseGlideModules(android.content.Context)>[]--><com.bumptech.glide.module.ManifestParser: java.util.List parse()>[[try]]--><android.os.BaseBundle: java.lang.Object get(java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.bumptech.glide.RequestManager: com.bumptech.glide.DrawableTypeRequest loadFromMediaStore(android.net.Uri,java.lang.String,long,int)>[]--><com.bumptech.glide.RequestManager: com.bumptech.glide.DrawableTypeRequest loadFromMediaStore(android.net.Uri)>[]--><com.bumptech.glide.RequestManager: com.bumptech.glide.DrawableTypeRequest fromMediaStore()>[]--><com.bumptech.glide.Glide: com.bumptech.glide.load.model.ModelLoader buildFileDescriptorModelLoader(java.lang.Class,android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.load.model.ModelLoader buildModelLoader(java.lang.Class,java.lang.Class,android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.Glide get(android.content.Context)>[[try]]--><com.bumptech.glide.Glide: java.util.List parseGlideModules(android.content.Context)>[]--><com.bumptech.glide.module.ManifestParser: java.util.List parse()>[[try]]--><android.os.BaseBundle: java.lang.Object get(java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.bumptech.glide.load.model.stream.StreamStringLoader: void <init>(android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.load.model.ModelLoader buildStreamModelLoader(java.lang.Class,android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.load.model.ModelLoader buildModelLoader(java.lang.Class,java.lang.Class,android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.Glide get(android.content.Context)>[[try]]--><com.bumptech.glide.Glide: java.util.List parseGlideModules(android.content.Context)>[]--><com.bumptech.glide.module.ManifestParser: java.util.List parse()>[[try]]--><android.os.BaseBundle: java.lang.Object get(java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.bumptech.glide.load.model.file_descriptor.FileDescriptorFileLoader: void <init>(android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.load.model.ModelLoader buildFileDescriptorModelLoader(java.lang.Class,android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.load.model.ModelLoader buildModelLoader(java.lang.Class,java.lang.Class,android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.Glide get(android.content.Context)>[[try]]--><com.bumptech.glide.Glide: java.util.List parseGlideModules(android.content.Context)>[]--><com.bumptech.glide.module.ManifestParser: java.util.List parse()>[[try]]--><android.os.BaseBundle: java.lang.Object get(java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.bumptech.glide.load.model.stream.BaseGlideUrlLoader: void <init>(android.content.Context)>[]--><com.bumptech.glide.load.model.stream.BaseGlideUrlLoader: void <init>(android.content.Context,com.bumptech.glide.load.model.ModelCache)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.load.model.ModelLoader buildModelLoader(java.lang.Class,java.lang.Class,android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.Glide get(android.content.Context)>[[try]]--><com.bumptech.glide.Glide: java.util.List parseGlideModules(android.content.Context)>[]--><com.bumptech.glide.module.ManifestParser: java.util.List parse()>[[try]]--><android.os.BaseBundle: java.lang.Object get(java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.bumptech.glide.load.resource.gif.GifFrameLoader: void <init>(android.content.Context,com.bumptech.glide.load.resource.gif.GifFrameLoader$FrameCallback,com.bumptech.glide.gifdecoder.GifDecoder,int,int)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.Glide get(android.content.Context)>[[try]]--><com.bumptech.glide.Glide: java.util.List parseGlideModules(android.content.Context)>[]--><com.bumptech.glide.module.ManifestParser: java.util.List parse()>[[try]]--><android.os.BaseBundle: java.lang.Object get(java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.bumptech.glide.load.model.stream.StreamFileLoader: void <init>(android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.load.model.ModelLoader buildStreamModelLoader(java.lang.Class,android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.load.model.ModelLoader buildModelLoader(java.lang.Class,java.lang.Class,android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.Glide get(android.content.Context)>[[try]]--><com.bumptech.glide.Glide: java.util.List parseGlideModules(android.content.Context)>[]--><com.bumptech.glide.module.ManifestParser: java.util.List parse()>[[try]]--><android.os.BaseBundle: java.lang.Object get(java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.bumptech.glide.load.model.stream.StreamUriLoader: void <init>(android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.load.model.ModelLoader buildStreamModelLoader(java.lang.Class,android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.load.model.ModelLoader buildModelLoader(java.lang.Class,java.lang.Class,android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.Glide get(android.content.Context)>[[try]]--><com.bumptech.glide.Glide: java.util.List parseGlideModules(android.content.Context)>[]--><com.bumptech.glide.module.ManifestParser: java.util.List parse()>[[try]]--><android.os.BaseBundle: java.lang.Object get(java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.bumptech.glide.RequestManager: com.bumptech.glide.DrawableTypeRequest 'from'(java.lang.Class)>[]--><com.bumptech.glide.RequestManager: com.bumptech.glide.DrawableTypeRequest loadGeneric(java.lang.Class)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.load.model.ModelLoader buildFileDescriptorModelLoader(java.lang.Class,android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.load.model.ModelLoader buildModelLoader(java.lang.Class,java.lang.Class,android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.Glide get(android.content.Context)>[[try]]--><com.bumptech.glide.Glide: java.util.List parseGlideModules(android.content.Context)>[]--><com.bumptech.glide.module.ManifestParser: java.util.List parse()>[[try]]--><android.os.BaseBundle: java.lang.Object get(java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.bumptech.glide.Glide: com.bumptech.glide.load.model.ModelLoader buildStreamModelLoader(java.lang.Object,android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.load.model.ModelLoader buildModelLoader(java.lang.Object,java.lang.Class,android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.load.model.ModelLoader buildModelLoader(java.lang.Class,java.lang.Class,android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.Glide get(android.content.Context)>[[try]]--><com.bumptech.glide.Glide: java.util.List parseGlideModules(android.content.Context)>[]--><com.bumptech.glide.module.ManifestParser: java.util.List parse()>[[try]]--><android.os.BaseBundle: java.lang.Object get(java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.bumptech.glide.load.model.file_descriptor.FileDescriptorResourceLoader: void <init>(android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.load.model.ModelLoader buildFileDescriptorModelLoader(java.lang.Class,android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.load.model.ModelLoader buildModelLoader(java.lang.Class,java.lang.Class,android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.Glide get(android.content.Context)>[[try]]--><com.bumptech.glide.Glide: java.util.List parseGlideModules(android.content.Context)>[]--><com.bumptech.glide.module.ManifestParser: java.util.List parse()>[[try]]--><android.os.BaseBundle: java.lang.Object get(java.lang.String)>
+One road protect good!
+try
+Good road with try: <link.standen.michael.slideshow.adapter.FileItemArrayAdapter: android.view.View getView(int,android.view.View,android.view.ViewGroup)>[]--><com.bumptech.glide.RequestManager: com.bumptech.glide.DrawableTypeRequest load(java.lang.String)>[]--><com.bumptech.glide.RequestManager: com.bumptech.glide.DrawableTypeRequest fromString()>[]--><com.bumptech.glide.RequestManager: com.bumptech.glide.DrawableTypeRequest loadGeneric(java.lang.Class)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.load.model.ModelLoader buildFileDescriptorModelLoader(java.lang.Class,android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.load.model.ModelLoader buildModelLoader(java.lang.Class,java.lang.Class,android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.Glide get(android.content.Context)>[[try]]--><com.bumptech.glide.Glide: java.util.List parseGlideModules(android.content.Context)>[]--><com.bumptech.glide.module.ManifestParser: java.util.List parse()>[[try]]--><android.os.BaseBundle: java.lang.Object get(java.lang.String)>
+One road protect good!
+try
+Good road with try: <link.standen.michael.slideshow.adapter.FileItemArrayAdapter: android.view.View getView(int,android.view.View,android.view.ViewGroup)>[]--><com.bumptech.glide.RequestManager: com.bumptech.glide.DrawableTypeRequest load(java.lang.Integer)>[]--><com.bumptech.glide.RequestManager: com.bumptech.glide.DrawableTypeRequest fromResource()>[]--><com.bumptech.glide.RequestManager: com.bumptech.glide.DrawableTypeRequest loadGeneric(java.lang.Class)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.load.model.ModelLoader buildFileDescriptorModelLoader(java.lang.Class,android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.load.model.ModelLoader buildModelLoader(java.lang.Class,java.lang.Class,android.content.Context)>[]--><com.bumptech.glide.Glide: com.bumptech.glide.Glide get(android.content.Context)>[[try]]--><com.bumptech.glide.Glide: java.util.List parseGlideModules(android.content.Context)>[]--><com.bumptech.glide.module.ManifestParser: java.util.List parse()>[[try]]--><android.os.BaseBundle: java.lang.Object get(java.lang.String)>
+One road protect good!
+containsStatic:false
+containsTry:true
+68call by main package
+-----------------------------------------
+#################################################
+N 10 Potential Issue API: SDKCheck of <android.app.Activity: void onRequestPermissionsResult(int,java.lang.String[],int[])> is checking!!!
+The life time of api is [23,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 21 22 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: link.standen.michael.slideshow.MainActivity dummyMainMethod_link_standen_michael_slideshow_MainActivity(android.content.Intent)>[]--><link.standen.michael.slideshow.MainActivity: void onRequestPermissionsResult(int,java.lang.String[],int[])>[[]]--><android.app.Activity: void onRequestPermissionsResult(int,java.lang.String[],int[])>
+!!!this api will crash on sdk 19 20 21 22 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: link.standen.michael.slideshow.ImageActivity dummyMainMethod_link_standen_michael_slideshow_ImageActivity(android.content.Intent)>[]--><link.standen.michael.slideshow.ImageActivity: void onRequestPermissionsResult(int,java.lang.String[],int[])>[[]]--><android.app.Activity: void onRequestPermissionsResult(int,java.lang.String[],int[])>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.app.Activity: void onRequestPermissionsResult(int,java.lang.String[],int[])>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:5
+crashApisInMain:3
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+crashApis numbers:5
+crashApis numbers in main road:3
+On Android Version 16 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 17 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 18 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 19 this app may have error api use(at least): 3 and error api roads: 4
+On Android Version 20 this app may have error api use(at least): 3 and error api roads: 4
+On Android Version 21 this app may have error api use(at least): 3 and error api roads: 4
+On Android Version 22 this app may have error api use(at least): 3 and error api roads: 4
+On Android Version 23 this app may have error api use(at least): 2 and error api roads: 2
+On Android Version 24 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 25 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 31 this app may have error api use(at least): 2 and error api roads: 2

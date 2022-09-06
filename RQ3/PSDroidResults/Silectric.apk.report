@@ -1,0 +1,743 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/Silectric.apk
+Entry Points[net.alaindonesia.simulatortagihanlistrik.ElectronicActivity, net.alaindonesia.simulatortagihanlistrik.MainActivity, net.alaindonesia.simulatortagihanlistrik.PengaturanBiayaListrikActivity, net.alaindonesia.simulatortagihanlistrik.UsageActivity, net.alaindonesia.simulatortagihanlistrik.ElectronicListActivity]
+FllowDroidcallgraph size:671
+Soot started on Mon Jul 11 12:07:28 CST 2022
+StaticCheck:$ys0 < 
+StaticCheck:<com.google.android.gms.internal.zzmx: boolean zzcd(int)>< 
+Soot finished on Mon Jul 11 12:07:41 CST 2022
+Soot has run for 0 min. 12 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 19
+Declared Target Sdk version is: 23
+Declared Max Sdk version is: -1
+Collected 457 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.content.pm.PackageInstaller.SessionInfo: java.lang.String getAppPackageName()> is checking!!!
+The life time of api is [21,31]
+23call roads:
+0 Mainhead roads:
+23 Packageshead roads:
+try
+Good road with try: <com.google.android.gms.internal.zzli$4: void onConnectionFailed(com.google.android.gms.common.ConnectionResult)>[[try]]--><com.google.android.gms.internal.zzlg: void zza(com.google.android.gms.common.ConnectionResult,com.google.android.gms.common.api.Api,int)>[]--><com.google.android.gms.internal.zzlg: boolean zznP()>[]--><com.google.android.gms.internal.zzlg: void zzf(com.google.android.gms.common.ConnectionResult)>[]--><com.google.android.gms.common.GoogleApiAvailability: boolean zzd(android.content.Context,int)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzd(android.content.Context,int)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzj(android.content.Context,java.lang.String)>[]--><android.content.pm.PackageInstaller.SessionInfo: java.lang.String getAppPackageName()>
+One road protect good!
+try
+Good road with try: <com.google.android.gms.internal.zzlg$zzd: void zzb(com.google.android.gms.common.ConnectionResult)>[[try]]--><com.google.android.gms.internal.zzlg: boolean zzk(com.google.android.gms.internal.zzlg)>[]--><com.google.android.gms.internal.zzlg: boolean zznP()>[]--><com.google.android.gms.internal.zzlg: void zzf(com.google.android.gms.common.ConnectionResult)>[]--><com.google.android.gms.common.GoogleApiAvailability: boolean zzd(android.content.Context,int)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzd(android.content.Context,int)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzj(android.content.Context,java.lang.String)>[]--><android.content.pm.PackageInstaller.SessionInfo: java.lang.String getAppPackageName()>
+One road protect good!
+try
+Good road with try: <com.google.android.gms.internal.zzlg$zzd: void zzb(com.google.android.gms.common.ConnectionResult)>[[try]]--><com.google.android.gms.internal.zzlg: boolean zza(com.google.android.gms.internal.zzlg,int)>[]--><com.google.android.gms.internal.zzlg: boolean zzbn(int)>[]--><com.google.android.gms.internal.zzlg: void zzf(com.google.android.gms.common.ConnectionResult)>[]--><com.google.android.gms.common.GoogleApiAvailability: boolean zzd(android.content.Context,int)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzd(android.content.Context,int)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzj(android.content.Context,java.lang.String)>[]--><android.content.pm.PackageInstaller.SessionInfo: java.lang.String getAppPackageName()>
+One road protect good!
+!!!this api will crash on sdk 19 20 
+Error road: <com.google.android.gms.auth.GoogleAuthUtil: java.lang.String getTokenWithNotification(android.content.Context,java.lang.String,java.lang.String,android.os.Bundle,android.content.Intent)>[]--><com.google.android.gms.auth.GoogleAuthUtil: java.lang.String getTokenWithNotification(android.content.Context,android.accounts.Account,java.lang.String,android.os.Bundle,android.content.Intent)>[]--><com.google.android.gms.auth.GoogleAuthUtil: com.google.android.gms.auth.TokenData zzc(android.content.Context,android.accounts.Account,java.lang.String,android.os.Bundle)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: void showErrorNotification(int,android.content.Context)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzf(android.content.Context,int)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzj(android.content.Context,java.lang.String)>[]--><android.content.pm.PackageInstaller.SessionInfo: java.lang.String getAppPackageName()>
+#3.the call statck between class <com.google.android.gms.auth.GoogleAuthUtil: java.lang.String getTokenWithNotification(android.content.Context,java.lang.String,java.lang.String,android.os.Bundle,android.content.Intent)> to <android.content.pm.PackageInstaller.SessionInfo: java.lang.String getAppPackageName()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <com.google.android.gms.internal.zzlg$zza$1: void zznO()>[]--><com.google.android.gms.internal.zzlg: void zzc(com.google.android.gms.internal.zzlg,com.google.android.gms.common.ConnectionResult)>[]--><com.google.android.gms.internal.zzlg: void zzc(com.google.android.gms.common.ConnectionResult)>[]--><com.google.android.gms.internal.zzlg: boolean zzbn(int)>[]--><com.google.android.gms.internal.zzlg: void zzf(com.google.android.gms.common.ConnectionResult)>[]--><com.google.android.gms.common.GoogleApiAvailability: boolean zzd(android.content.Context,int)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzd(android.content.Context,int)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzj(android.content.Context,java.lang.String)>[]--><android.content.pm.PackageInstaller.SessionInfo: java.lang.String getAppPackageName()>
+#4.the call statck between class <com.google.android.gms.internal.zzlg$zza$1: void zznO()> to <android.content.pm.PackageInstaller.SessionInfo: java.lang.String getAppPackageName()>has compatibility isssues！
+-----------------------------------------
+try
+Good road with try: <com.google.android.gms.internal.zzlg$zzg: void onConnectionFailed(com.google.android.gms.common.ConnectionResult)>[[try]]--><com.google.android.gms.internal.zzlg: void zzj(com.google.android.gms.internal.zzlg)>[]--><com.google.android.gms.internal.zzlg: void zznT()>[]--><com.google.android.gms.internal.zzlg: boolean zznP()>[]--><com.google.android.gms.internal.zzlg: void zzf(com.google.android.gms.common.ConnectionResult)>[]--><com.google.android.gms.common.GoogleApiAvailability: boolean zzd(android.content.Context,int)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzd(android.content.Context,int)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzj(android.content.Context,java.lang.String)>[]--><android.content.pm.PackageInstaller.SessionInfo: java.lang.String getAppPackageName()>
+One road protect good!
+try
+Good road with try: <com.google.android.gms.internal.zzlg$zzg: void onConnectionFailed(com.google.android.gms.common.ConnectionResult)>[[try]]--><com.google.android.gms.internal.zzlg: void zza(com.google.android.gms.internal.zzlg,com.google.android.gms.common.ConnectionResult)>[]--><com.google.android.gms.internal.zzlg: void zzf(com.google.android.gms.common.ConnectionResult)>[]--><com.google.android.gms.common.GoogleApiAvailability: boolean zzd(android.content.Context,int)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzd(android.content.Context,int)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzj(android.content.Context,java.lang.String)>[]--><android.content.pm.PackageInstaller.SessionInfo: java.lang.String getAppPackageName()>
+One road protect good!
+!!!this api will crash on sdk 19 20 
+Error road: <com.google.android.gms.auth.GoogleAuthUtil: java.lang.String getTokenWithNotification(android.content.Context,java.lang.String,java.lang.String,android.os.Bundle)>[]--><com.google.android.gms.auth.GoogleAuthUtil: java.lang.String getTokenWithNotification(android.content.Context,android.accounts.Account,java.lang.String,android.os.Bundle)>[]--><com.google.android.gms.auth.GoogleAuthUtil: com.google.android.gms.auth.TokenData zzb(android.content.Context,android.accounts.Account,java.lang.String,android.os.Bundle)>[]--><com.google.android.gms.auth.GoogleAuthUtil: com.google.android.gms.auth.TokenData zzc(android.content.Context,android.accounts.Account,java.lang.String,android.os.Bundle)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: void showErrorNotification(int,android.content.Context)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzf(android.content.Context,int)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzj(android.content.Context,java.lang.String)>[]--><android.content.pm.PackageInstaller.SessionInfo: java.lang.String getAppPackageName()>
+#6.the call statck between class <com.google.android.gms.auth.GoogleAuthUtil: java.lang.String getTokenWithNotification(android.content.Context,java.lang.String,java.lang.String,android.os.Bundle)> to <android.content.pm.PackageInstaller.SessionInfo: java.lang.String getAppPackageName()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <com.google.android.gms.internal.zzlf$1: void zznO()>[]--><com.google.android.gms.internal.zzlf: void onConnectionSuspended(int)>[]--><com.google.android.gms.internal.zzli: void zzoe()>[]--><com.google.android.gms.internal.zzll: com.google.android.gms.internal.zzll zza(android.content.Context,com.google.android.gms.internal.zzll,com.google.android.gms.common.GoogleApiAvailability)>[]--><com.google.android.gms.common.GoogleApiAvailability: boolean zzj(android.content.Context,java.lang.String)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzj(android.content.Context,java.lang.String)>[]--><android.content.pm.PackageInstaller.SessionInfo: java.lang.String getAppPackageName()>
+#7.the call statck between class <com.google.android.gms.internal.zzlf$1: void zznO()> to <android.content.pm.PackageInstaller.SessionInfo: java.lang.String getAppPackageName()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <com.google.android.gms.internal.zzlg$zze$1: void zznO()>[]--><com.google.android.gms.internal.zzlg: void zza(com.google.android.gms.internal.zzlg,com.google.android.gms.common.ConnectionResult)>[]--><com.google.android.gms.internal.zzlg: void zzf(com.google.android.gms.common.ConnectionResult)>[]--><com.google.android.gms.common.GoogleApiAvailability: boolean zzd(android.content.Context,int)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzd(android.content.Context,int)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzj(android.content.Context,java.lang.String)>[]--><android.content.pm.PackageInstaller.SessionInfo: java.lang.String getAppPackageName()>
+#8.the call statck between class <com.google.android.gms.internal.zzlg$zze$1: void zznO()> to <android.content.pm.PackageInstaller.SessionInfo: java.lang.String getAppPackageName()>has compatibility isssues！
+-----------------------------------------
+try
+Good road with try: <com.google.android.gms.auth.GoogleAuthUtil: java.lang.String getAccountId(android.content.Context,java.lang.String)>[]--><com.google.android.gms.auth.GoogleAuthUtil: void zzaa(android.content.Context)>[[try]]--><com.google.android.gms.common.GooglePlayServicesUtil: void zzaa(android.content.Context)>[]--><com.google.android.gms.common.GoogleApiAvailability: int isGooglePlayServicesAvailable(android.content.Context)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzd(android.content.Context,int)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzj(android.content.Context,java.lang.String)>[]--><android.content.pm.PackageInstaller.SessionInfo: java.lang.String getAppPackageName()>
+One road protect good!
+try
+Good road with try: <com.google.android.gms.auth.GoogleAuthUtil: java.lang.String getAccountId(android.content.Context,java.lang.String)>[]--><com.google.android.gms.auth.GoogleAuthUtil: java.lang.String getToken(android.content.Context,java.lang.String,java.lang.String,android.os.Bundle)>[]--><com.google.android.gms.auth.GoogleAuthUtil: java.lang.String getToken(android.content.Context,android.accounts.Account,java.lang.String,android.os.Bundle)>[]--><com.google.android.gms.auth.GoogleAuthUtil: com.google.android.gms.auth.TokenData zza(android.content.Context,android.accounts.Account,java.lang.String,android.os.Bundle)>[]--><com.google.android.gms.auth.GoogleAuthUtil: void zzaa(android.content.Context)>[[try]]--><com.google.android.gms.common.GooglePlayServicesUtil: void zzaa(android.content.Context)>[]--><com.google.android.gms.common.GoogleApiAvailability: int isGooglePlayServicesAvailable(android.content.Context)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzd(android.content.Context,int)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzj(android.content.Context,java.lang.String)>[]--><android.content.pm.PackageInstaller.SessionInfo: java.lang.String getAppPackageName()>
+One road protect good!
+!!!this api will crash on sdk 19 20 
+Error road: <com.google.android.gms.internal.zzlg$zze: void zznO()>[]--><com.google.android.gms.common.GoogleApiAvailability: int isGooglePlayServicesAvailable(android.content.Context)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzd(android.content.Context,int)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzj(android.content.Context,java.lang.String)>[]--><android.content.pm.PackageInstaller.SessionInfo: java.lang.String getAppPackageName()>
+#10.the call statck between class <com.google.android.gms.internal.zzlg$zze: void zznO()> to <android.content.pm.PackageInstaller.SessionInfo: java.lang.String getAppPackageName()>has compatibility isssues！
+-----------------------------------------
+crashApis:1
+containsStatic:false
+containsTry:true
+11call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.content.pm.PackageInstaller: java.util.List getAllSessions()> is checking!!!
+The life time of api is [21,31]
+23call roads:
+0 Mainhead roads:
+23 Packageshead roads:
+try
+Good road with try: <com.google.android.gms.internal.zzli$4: void onConnectionFailed(com.google.android.gms.common.ConnectionResult)>[[try]]--><com.google.android.gms.internal.zzlg: void zza(com.google.android.gms.common.ConnectionResult,com.google.android.gms.common.api.Api,int)>[]--><com.google.android.gms.internal.zzlg: boolean zznP()>[]--><com.google.android.gms.internal.zzlg: void zzf(com.google.android.gms.common.ConnectionResult)>[]--><com.google.android.gms.common.GoogleApiAvailability: boolean zzd(android.content.Context,int)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzd(android.content.Context,int)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzj(android.content.Context,java.lang.String)>[]--><android.content.pm.PackageInstaller: java.util.List getAllSessions()>
+One road protect good!
+try
+Good road with try: <com.google.android.gms.internal.zzlg$zzd: void zzb(com.google.android.gms.common.ConnectionResult)>[[try]]--><com.google.android.gms.internal.zzlg: boolean zzk(com.google.android.gms.internal.zzlg)>[]--><com.google.android.gms.internal.zzlg: boolean zznP()>[]--><com.google.android.gms.internal.zzlg: void zzf(com.google.android.gms.common.ConnectionResult)>[]--><com.google.android.gms.common.GoogleApiAvailability: boolean zzd(android.content.Context,int)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzd(android.content.Context,int)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzj(android.content.Context,java.lang.String)>[]--><android.content.pm.PackageInstaller: java.util.List getAllSessions()>
+One road protect good!
+try
+Good road with try: <com.google.android.gms.internal.zzlg$zzd: void zzb(com.google.android.gms.common.ConnectionResult)>[[try]]--><com.google.android.gms.internal.zzlg: boolean zza(com.google.android.gms.internal.zzlg,int)>[]--><com.google.android.gms.internal.zzlg: boolean zzbn(int)>[]--><com.google.android.gms.internal.zzlg: void zzf(com.google.android.gms.common.ConnectionResult)>[]--><com.google.android.gms.common.GoogleApiAvailability: boolean zzd(android.content.Context,int)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzd(android.content.Context,int)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzj(android.content.Context,java.lang.String)>[]--><android.content.pm.PackageInstaller: java.util.List getAllSessions()>
+One road protect good!
+!!!this api will crash on sdk 19 20 
+Error road: <com.google.android.gms.auth.GoogleAuthUtil: java.lang.String getTokenWithNotification(android.content.Context,java.lang.String,java.lang.String,android.os.Bundle,android.content.Intent)>[]--><com.google.android.gms.auth.GoogleAuthUtil: java.lang.String getTokenWithNotification(android.content.Context,android.accounts.Account,java.lang.String,android.os.Bundle,android.content.Intent)>[]--><com.google.android.gms.auth.GoogleAuthUtil: com.google.android.gms.auth.TokenData zzc(android.content.Context,android.accounts.Account,java.lang.String,android.os.Bundle)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: void showErrorNotification(int,android.content.Context)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzf(android.content.Context,int)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzj(android.content.Context,java.lang.String)>[]--><android.content.pm.PackageInstaller: java.util.List getAllSessions()>
+#3.the call statck between class <com.google.android.gms.auth.GoogleAuthUtil: java.lang.String getTokenWithNotification(android.content.Context,java.lang.String,java.lang.String,android.os.Bundle,android.content.Intent)> to <android.content.pm.PackageInstaller: java.util.List getAllSessions()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <com.google.android.gms.internal.zzlg$zza$1: void zznO()>[]--><com.google.android.gms.internal.zzlg: void zzc(com.google.android.gms.internal.zzlg,com.google.android.gms.common.ConnectionResult)>[]--><com.google.android.gms.internal.zzlg: void zzc(com.google.android.gms.common.ConnectionResult)>[]--><com.google.android.gms.internal.zzlg: boolean zzbn(int)>[]--><com.google.android.gms.internal.zzlg: void zzf(com.google.android.gms.common.ConnectionResult)>[]--><com.google.android.gms.common.GoogleApiAvailability: boolean zzd(android.content.Context,int)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzd(android.content.Context,int)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzj(android.content.Context,java.lang.String)>[]--><android.content.pm.PackageInstaller: java.util.List getAllSessions()>
+#4.the call statck between class <com.google.android.gms.internal.zzlg$zza$1: void zznO()> to <android.content.pm.PackageInstaller: java.util.List getAllSessions()>has compatibility isssues！
+-----------------------------------------
+try
+Good road with try: <com.google.android.gms.internal.zzlg$zzg: void onConnectionFailed(com.google.android.gms.common.ConnectionResult)>[[try]]--><com.google.android.gms.internal.zzlg: void zzj(com.google.android.gms.internal.zzlg)>[]--><com.google.android.gms.internal.zzlg: void zznT()>[]--><com.google.android.gms.internal.zzlg: boolean zznP()>[]--><com.google.android.gms.internal.zzlg: void zzf(com.google.android.gms.common.ConnectionResult)>[]--><com.google.android.gms.common.GoogleApiAvailability: boolean zzd(android.content.Context,int)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzd(android.content.Context,int)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzj(android.content.Context,java.lang.String)>[]--><android.content.pm.PackageInstaller: java.util.List getAllSessions()>
+One road protect good!
+try
+Good road with try: <com.google.android.gms.internal.zzlg$zzg: void onConnectionFailed(com.google.android.gms.common.ConnectionResult)>[[try]]--><com.google.android.gms.internal.zzlg: void zza(com.google.android.gms.internal.zzlg,com.google.android.gms.common.ConnectionResult)>[]--><com.google.android.gms.internal.zzlg: void zzf(com.google.android.gms.common.ConnectionResult)>[]--><com.google.android.gms.common.GoogleApiAvailability: boolean zzd(android.content.Context,int)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzd(android.content.Context,int)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzj(android.content.Context,java.lang.String)>[]--><android.content.pm.PackageInstaller: java.util.List getAllSessions()>
+One road protect good!
+!!!this api will crash on sdk 19 20 
+Error road: <com.google.android.gms.auth.GoogleAuthUtil: java.lang.String getTokenWithNotification(android.content.Context,java.lang.String,java.lang.String,android.os.Bundle)>[]--><com.google.android.gms.auth.GoogleAuthUtil: java.lang.String getTokenWithNotification(android.content.Context,android.accounts.Account,java.lang.String,android.os.Bundle)>[]--><com.google.android.gms.auth.GoogleAuthUtil: com.google.android.gms.auth.TokenData zzb(android.content.Context,android.accounts.Account,java.lang.String,android.os.Bundle)>[]--><com.google.android.gms.auth.GoogleAuthUtil: com.google.android.gms.auth.TokenData zzc(android.content.Context,android.accounts.Account,java.lang.String,android.os.Bundle)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: void showErrorNotification(int,android.content.Context)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzf(android.content.Context,int)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzj(android.content.Context,java.lang.String)>[]--><android.content.pm.PackageInstaller: java.util.List getAllSessions()>
+#6.the call statck between class <com.google.android.gms.auth.GoogleAuthUtil: java.lang.String getTokenWithNotification(android.content.Context,java.lang.String,java.lang.String,android.os.Bundle)> to <android.content.pm.PackageInstaller: java.util.List getAllSessions()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <com.google.android.gms.internal.zzlf$1: void zznO()>[]--><com.google.android.gms.internal.zzlf: void onConnectionSuspended(int)>[]--><com.google.android.gms.internal.zzli: void zzoe()>[]--><com.google.android.gms.internal.zzll: com.google.android.gms.internal.zzll zza(android.content.Context,com.google.android.gms.internal.zzll,com.google.android.gms.common.GoogleApiAvailability)>[]--><com.google.android.gms.common.GoogleApiAvailability: boolean zzj(android.content.Context,java.lang.String)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzj(android.content.Context,java.lang.String)>[]--><android.content.pm.PackageInstaller: java.util.List getAllSessions()>
+#7.the call statck between class <com.google.android.gms.internal.zzlf$1: void zznO()> to <android.content.pm.PackageInstaller: java.util.List getAllSessions()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <com.google.android.gms.internal.zzlg$zze$1: void zznO()>[]--><com.google.android.gms.internal.zzlg: void zza(com.google.android.gms.internal.zzlg,com.google.android.gms.common.ConnectionResult)>[]--><com.google.android.gms.internal.zzlg: void zzf(com.google.android.gms.common.ConnectionResult)>[]--><com.google.android.gms.common.GoogleApiAvailability: boolean zzd(android.content.Context,int)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzd(android.content.Context,int)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzj(android.content.Context,java.lang.String)>[]--><android.content.pm.PackageInstaller: java.util.List getAllSessions()>
+#8.the call statck between class <com.google.android.gms.internal.zzlg$zze$1: void zznO()> to <android.content.pm.PackageInstaller: java.util.List getAllSessions()>has compatibility isssues！
+-----------------------------------------
+try
+Good road with try: <com.google.android.gms.auth.GoogleAuthUtil: java.lang.String getAccountId(android.content.Context,java.lang.String)>[]--><com.google.android.gms.auth.GoogleAuthUtil: void zzaa(android.content.Context)>[[try]]--><com.google.android.gms.common.GooglePlayServicesUtil: void zzaa(android.content.Context)>[]--><com.google.android.gms.common.GoogleApiAvailability: int isGooglePlayServicesAvailable(android.content.Context)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzd(android.content.Context,int)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzj(android.content.Context,java.lang.String)>[]--><android.content.pm.PackageInstaller: java.util.List getAllSessions()>
+One road protect good!
+try
+Good road with try: <com.google.android.gms.auth.GoogleAuthUtil: java.lang.String getAccountId(android.content.Context,java.lang.String)>[]--><com.google.android.gms.auth.GoogleAuthUtil: java.lang.String getToken(android.content.Context,java.lang.String,java.lang.String,android.os.Bundle)>[]--><com.google.android.gms.auth.GoogleAuthUtil: java.lang.String getToken(android.content.Context,android.accounts.Account,java.lang.String,android.os.Bundle)>[]--><com.google.android.gms.auth.GoogleAuthUtil: com.google.android.gms.auth.TokenData zza(android.content.Context,android.accounts.Account,java.lang.String,android.os.Bundle)>[]--><com.google.android.gms.auth.GoogleAuthUtil: void zzaa(android.content.Context)>[[try]]--><com.google.android.gms.common.GooglePlayServicesUtil: void zzaa(android.content.Context)>[]--><com.google.android.gms.common.GoogleApiAvailability: int isGooglePlayServicesAvailable(android.content.Context)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzd(android.content.Context,int)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzj(android.content.Context,java.lang.String)>[]--><android.content.pm.PackageInstaller: java.util.List getAllSessions()>
+One road protect good!
+!!!this api will crash on sdk 19 20 
+Error road: <com.google.android.gms.internal.zzlg$zze: void zznO()>[]--><com.google.android.gms.common.GoogleApiAvailability: int isGooglePlayServicesAvailable(android.content.Context)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzd(android.content.Context,int)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzj(android.content.Context,java.lang.String)>[]--><android.content.pm.PackageInstaller: java.util.List getAllSessions()>
+#10.the call statck between class <com.google.android.gms.internal.zzlg$zze: void zznO()> to <android.content.pm.PackageInstaller: java.util.List getAllSessions()>has compatibility isssues！
+-----------------------------------------
+crashApis:2
+containsStatic:false
+containsTry:true
+11call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.widget.TextView: void setTextAppearance(int)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+1 Mainhead roads:
+$i0 >= 23
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: net.alaindonesia.simulatortagihanlistrik.UsageActivity dummyMainMethod_net_alaindonesia_simulatortagihanlistrik_UsageActivity(android.content.Intent)>[]--><net.alaindonesia.simulatortagihanlistrik.UsageActivity$1: void onClick(android.view.View)>[]--><net.alaindonesia.simulatortagihanlistrik.UsageActivity: void access$000(net.alaindonesia.simulatortagihanlistrik.UsageActivity,android.view.View,boolean,net.alaindonesia.simulatortagihanlistrik.model.TimeUsage)>[]--><net.alaindonesia.simulatortagihanlistrik.UsageActivity: void popUpTimeUsageDialog(android.view.View,boolean,net.alaindonesia.simulatortagihanlistrik.model.TimeUsage)>[]--><net.alaindonesia.simulatortagihanlistrik.UsageActivity: android.widget.LinearLayout initTimeUsageLayoutDialog(android.view.View,android.widget.Spinner,android.widget.NumberPicker,android.widget.NumberPicker,android.widget.NumberPicker)>[[$i0 >= 23]]--><android.widget.TextView: void setTextAppearance(int)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.content.pm.PackageManager: android.content.pm.PackageInstaller getPackageInstaller()> is checking!!!
+The life time of api is [21,31]
+23call roads:
+0 Mainhead roads:
+23 Packageshead roads:
+try
+Good road with try: <com.google.android.gms.internal.zzli$4: void onConnectionFailed(com.google.android.gms.common.ConnectionResult)>[[try]]--><com.google.android.gms.internal.zzlg: void zza(com.google.android.gms.common.ConnectionResult,com.google.android.gms.common.api.Api,int)>[]--><com.google.android.gms.internal.zzlg: boolean zznP()>[]--><com.google.android.gms.internal.zzlg: void zzf(com.google.android.gms.common.ConnectionResult)>[]--><com.google.android.gms.common.GoogleApiAvailability: boolean zzd(android.content.Context,int)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzd(android.content.Context,int)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzj(android.content.Context,java.lang.String)>[]--><android.content.pm.PackageManager: android.content.pm.PackageInstaller getPackageInstaller()>
+One road protect good!
+try
+Good road with try: <com.google.android.gms.internal.zzlg$zzd: void zzb(com.google.android.gms.common.ConnectionResult)>[[try]]--><com.google.android.gms.internal.zzlg: boolean zzk(com.google.android.gms.internal.zzlg)>[]--><com.google.android.gms.internal.zzlg: boolean zznP()>[]--><com.google.android.gms.internal.zzlg: void zzf(com.google.android.gms.common.ConnectionResult)>[]--><com.google.android.gms.common.GoogleApiAvailability: boolean zzd(android.content.Context,int)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzd(android.content.Context,int)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzj(android.content.Context,java.lang.String)>[]--><android.content.pm.PackageManager: android.content.pm.PackageInstaller getPackageInstaller()>
+One road protect good!
+try
+Good road with try: <com.google.android.gms.internal.zzlg$zzd: void zzb(com.google.android.gms.common.ConnectionResult)>[[try]]--><com.google.android.gms.internal.zzlg: boolean zza(com.google.android.gms.internal.zzlg,int)>[]--><com.google.android.gms.internal.zzlg: boolean zzbn(int)>[]--><com.google.android.gms.internal.zzlg: void zzf(com.google.android.gms.common.ConnectionResult)>[]--><com.google.android.gms.common.GoogleApiAvailability: boolean zzd(android.content.Context,int)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzd(android.content.Context,int)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzj(android.content.Context,java.lang.String)>[]--><android.content.pm.PackageManager: android.content.pm.PackageInstaller getPackageInstaller()>
+One road protect good!
+!!!this api will crash on sdk 19 20 
+Error road: <com.google.android.gms.auth.GoogleAuthUtil: java.lang.String getTokenWithNotification(android.content.Context,java.lang.String,java.lang.String,android.os.Bundle,android.content.Intent)>[]--><com.google.android.gms.auth.GoogleAuthUtil: java.lang.String getTokenWithNotification(android.content.Context,android.accounts.Account,java.lang.String,android.os.Bundle,android.content.Intent)>[]--><com.google.android.gms.auth.GoogleAuthUtil: com.google.android.gms.auth.TokenData zzc(android.content.Context,android.accounts.Account,java.lang.String,android.os.Bundle)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: void showErrorNotification(int,android.content.Context)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzf(android.content.Context,int)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzj(android.content.Context,java.lang.String)>[]--><android.content.pm.PackageManager: android.content.pm.PackageInstaller getPackageInstaller()>
+#3.the call statck between class <com.google.android.gms.auth.GoogleAuthUtil: java.lang.String getTokenWithNotification(android.content.Context,java.lang.String,java.lang.String,android.os.Bundle,android.content.Intent)> to <android.content.pm.PackageManager: android.content.pm.PackageInstaller getPackageInstaller()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <com.google.android.gms.internal.zzlg$zza$1: void zznO()>[]--><com.google.android.gms.internal.zzlg: void zzc(com.google.android.gms.internal.zzlg,com.google.android.gms.common.ConnectionResult)>[]--><com.google.android.gms.internal.zzlg: void zzc(com.google.android.gms.common.ConnectionResult)>[]--><com.google.android.gms.internal.zzlg: boolean zzbn(int)>[]--><com.google.android.gms.internal.zzlg: void zzf(com.google.android.gms.common.ConnectionResult)>[]--><com.google.android.gms.common.GoogleApiAvailability: boolean zzd(android.content.Context,int)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzd(android.content.Context,int)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzj(android.content.Context,java.lang.String)>[]--><android.content.pm.PackageManager: android.content.pm.PackageInstaller getPackageInstaller()>
+#4.the call statck between class <com.google.android.gms.internal.zzlg$zza$1: void zznO()> to <android.content.pm.PackageManager: android.content.pm.PackageInstaller getPackageInstaller()>has compatibility isssues！
+-----------------------------------------
+try
+Good road with try: <com.google.android.gms.internal.zzlg$zzg: void onConnectionFailed(com.google.android.gms.common.ConnectionResult)>[[try]]--><com.google.android.gms.internal.zzlg: void zzj(com.google.android.gms.internal.zzlg)>[]--><com.google.android.gms.internal.zzlg: void zznT()>[]--><com.google.android.gms.internal.zzlg: boolean zznP()>[]--><com.google.android.gms.internal.zzlg: void zzf(com.google.android.gms.common.ConnectionResult)>[]--><com.google.android.gms.common.GoogleApiAvailability: boolean zzd(android.content.Context,int)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzd(android.content.Context,int)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzj(android.content.Context,java.lang.String)>[]--><android.content.pm.PackageManager: android.content.pm.PackageInstaller getPackageInstaller()>
+One road protect good!
+try
+Good road with try: <com.google.android.gms.internal.zzlg$zzg: void onConnectionFailed(com.google.android.gms.common.ConnectionResult)>[[try]]--><com.google.android.gms.internal.zzlg: void zza(com.google.android.gms.internal.zzlg,com.google.android.gms.common.ConnectionResult)>[]--><com.google.android.gms.internal.zzlg: void zzf(com.google.android.gms.common.ConnectionResult)>[]--><com.google.android.gms.common.GoogleApiAvailability: boolean zzd(android.content.Context,int)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzd(android.content.Context,int)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzj(android.content.Context,java.lang.String)>[]--><android.content.pm.PackageManager: android.content.pm.PackageInstaller getPackageInstaller()>
+One road protect good!
+!!!this api will crash on sdk 19 20 
+Error road: <com.google.android.gms.auth.GoogleAuthUtil: java.lang.String getTokenWithNotification(android.content.Context,java.lang.String,java.lang.String,android.os.Bundle)>[]--><com.google.android.gms.auth.GoogleAuthUtil: java.lang.String getTokenWithNotification(android.content.Context,android.accounts.Account,java.lang.String,android.os.Bundle)>[]--><com.google.android.gms.auth.GoogleAuthUtil: com.google.android.gms.auth.TokenData zzb(android.content.Context,android.accounts.Account,java.lang.String,android.os.Bundle)>[]--><com.google.android.gms.auth.GoogleAuthUtil: com.google.android.gms.auth.TokenData zzc(android.content.Context,android.accounts.Account,java.lang.String,android.os.Bundle)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: void showErrorNotification(int,android.content.Context)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzf(android.content.Context,int)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzj(android.content.Context,java.lang.String)>[]--><android.content.pm.PackageManager: android.content.pm.PackageInstaller getPackageInstaller()>
+#6.the call statck between class <com.google.android.gms.auth.GoogleAuthUtil: java.lang.String getTokenWithNotification(android.content.Context,java.lang.String,java.lang.String,android.os.Bundle)> to <android.content.pm.PackageManager: android.content.pm.PackageInstaller getPackageInstaller()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <com.google.android.gms.internal.zzlf$1: void zznO()>[]--><com.google.android.gms.internal.zzlf: void onConnectionSuspended(int)>[]--><com.google.android.gms.internal.zzli: void zzoe()>[]--><com.google.android.gms.internal.zzll: com.google.android.gms.internal.zzll zza(android.content.Context,com.google.android.gms.internal.zzll,com.google.android.gms.common.GoogleApiAvailability)>[]--><com.google.android.gms.common.GoogleApiAvailability: boolean zzj(android.content.Context,java.lang.String)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzj(android.content.Context,java.lang.String)>[]--><android.content.pm.PackageManager: android.content.pm.PackageInstaller getPackageInstaller()>
+#7.the call statck between class <com.google.android.gms.internal.zzlf$1: void zznO()> to <android.content.pm.PackageManager: android.content.pm.PackageInstaller getPackageInstaller()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <com.google.android.gms.internal.zzlg$zze$1: void zznO()>[]--><com.google.android.gms.internal.zzlg: void zza(com.google.android.gms.internal.zzlg,com.google.android.gms.common.ConnectionResult)>[]--><com.google.android.gms.internal.zzlg: void zzf(com.google.android.gms.common.ConnectionResult)>[]--><com.google.android.gms.common.GoogleApiAvailability: boolean zzd(android.content.Context,int)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzd(android.content.Context,int)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzj(android.content.Context,java.lang.String)>[]--><android.content.pm.PackageManager: android.content.pm.PackageInstaller getPackageInstaller()>
+#8.the call statck between class <com.google.android.gms.internal.zzlg$zze$1: void zznO()> to <android.content.pm.PackageManager: android.content.pm.PackageInstaller getPackageInstaller()>has compatibility isssues！
+-----------------------------------------
+try
+Good road with try: <com.google.android.gms.auth.GoogleAuthUtil: java.lang.String getAccountId(android.content.Context,java.lang.String)>[]--><com.google.android.gms.auth.GoogleAuthUtil: void zzaa(android.content.Context)>[[try]]--><com.google.android.gms.common.GooglePlayServicesUtil: void zzaa(android.content.Context)>[]--><com.google.android.gms.common.GoogleApiAvailability: int isGooglePlayServicesAvailable(android.content.Context)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzd(android.content.Context,int)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzj(android.content.Context,java.lang.String)>[]--><android.content.pm.PackageManager: android.content.pm.PackageInstaller getPackageInstaller()>
+One road protect good!
+try
+Good road with try: <com.google.android.gms.auth.GoogleAuthUtil: java.lang.String getAccountId(android.content.Context,java.lang.String)>[]--><com.google.android.gms.auth.GoogleAuthUtil: java.lang.String getToken(android.content.Context,java.lang.String,java.lang.String,android.os.Bundle)>[]--><com.google.android.gms.auth.GoogleAuthUtil: java.lang.String getToken(android.content.Context,android.accounts.Account,java.lang.String,android.os.Bundle)>[]--><com.google.android.gms.auth.GoogleAuthUtil: com.google.android.gms.auth.TokenData zza(android.content.Context,android.accounts.Account,java.lang.String,android.os.Bundle)>[]--><com.google.android.gms.auth.GoogleAuthUtil: void zzaa(android.content.Context)>[[try]]--><com.google.android.gms.common.GooglePlayServicesUtil: void zzaa(android.content.Context)>[]--><com.google.android.gms.common.GoogleApiAvailability: int isGooglePlayServicesAvailable(android.content.Context)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzd(android.content.Context,int)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzj(android.content.Context,java.lang.String)>[]--><android.content.pm.PackageManager: android.content.pm.PackageInstaller getPackageInstaller()>
+One road protect good!
+!!!this api will crash on sdk 19 20 
+Error road: <com.google.android.gms.internal.zzlg$zze: void zznO()>[]--><com.google.android.gms.common.GoogleApiAvailability: int isGooglePlayServicesAvailable(android.content.Context)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzd(android.content.Context,int)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzj(android.content.Context,java.lang.String)>[]--><android.content.pm.PackageManager: android.content.pm.PackageInstaller getPackageInstaller()>
+#10.the call statck between class <com.google.android.gms.internal.zzlg$zze: void zznO()> to <android.content.pm.PackageManager: android.content.pm.PackageInstaller getPackageInstaller()>has compatibility isssues！
+-----------------------------------------
+crashApis:3
+containsStatic:false
+containsTry:true
+11call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.os.BaseBundle: int getInt(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+14call roads:
+0 Mainhead roads:
+14 Packageshead roads:
+try
+Good road with try: <com.google.android.gms.auth.GoogleAuthUtil: java.lang.String getTokenWithNotification(android.content.Context,java.lang.String,java.lang.String,android.os.Bundle,android.content.Intent)>[]--><com.google.android.gms.auth.GoogleAuthUtil: java.lang.String getTokenWithNotification(android.content.Context,android.accounts.Account,java.lang.String,android.os.Bundle,android.content.Intent)>[]--><com.google.android.gms.auth.GoogleAuthUtil: com.google.android.gms.auth.TokenData zzc(android.content.Context,android.accounts.Account,java.lang.String,android.os.Bundle)>[[try]]--><com.google.android.gms.auth.GoogleAuthUtil: com.google.android.gms.auth.TokenData zza(android.content.Context,android.accounts.Account,java.lang.String,android.os.Bundle)>[]--><com.google.android.gms.auth.GoogleAuthUtil: void zzaa(android.content.Context)>[[try]]--><com.google.android.gms.common.GooglePlayServicesUtil: void zzaa(android.content.Context)>[]--><com.google.android.gms.common.GoogleApiAvailability: int isGooglePlayServicesAvailable(android.content.Context)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: int isGooglePlayServicesAvailable(android.content.Context)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: void zzad(android.content.Context)>[[try]]--><android.os.BaseBundle: int getInt(java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.google.android.gms.dynamic.zza: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)>[]--><com.google.android.gms.dynamic.zza: void zza(android.widget.FrameLayout)>[]--><com.google.android.gms.dynamic.zza: void zzb(android.widget.FrameLayout)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: int isGooglePlayServicesAvailable(android.content.Context)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: void zzad(android.content.Context)>[[try]]--><android.os.BaseBundle: int getInt(java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.google.android.gms.auth.GoogleAuthUtil: java.lang.String getTokenWithNotification(android.content.Context,java.lang.String,java.lang.String,android.os.Bundle)>[]--><com.google.android.gms.auth.GoogleAuthUtil: java.lang.String getTokenWithNotification(android.content.Context,android.accounts.Account,java.lang.String,android.os.Bundle)>[]--><com.google.android.gms.auth.GoogleAuthUtil: com.google.android.gms.auth.TokenData zzb(android.content.Context,android.accounts.Account,java.lang.String,android.os.Bundle)>[]--><com.google.android.gms.auth.GoogleAuthUtil: com.google.android.gms.auth.TokenData zzc(android.content.Context,android.accounts.Account,java.lang.String,android.os.Bundle)>[[try]]--><com.google.android.gms.auth.GoogleAuthUtil: com.google.android.gms.auth.TokenData zza(android.content.Context,android.accounts.Account,java.lang.String,android.os.Bundle)>[]--><com.google.android.gms.auth.GoogleAuthUtil: void zzaa(android.content.Context)>[[try]]--><com.google.android.gms.common.GooglePlayServicesUtil: void zzaa(android.content.Context)>[]--><com.google.android.gms.common.GoogleApiAvailability: int isGooglePlayServicesAvailable(android.content.Context)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: int isGooglePlayServicesAvailable(android.content.Context)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: void zzad(android.content.Context)>[[try]]--><android.os.BaseBundle: int getInt(java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.google.android.gms.auth.GoogleAuthUtil: java.lang.String getAccountId(android.content.Context,java.lang.String)>[]--><com.google.android.gms.auth.GoogleAuthUtil: void zzaa(android.content.Context)>[[try]]--><com.google.android.gms.common.GooglePlayServicesUtil: void zzaa(android.content.Context)>[]--><com.google.android.gms.common.GoogleApiAvailability: int isGooglePlayServicesAvailable(android.content.Context)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: int isGooglePlayServicesAvailable(android.content.Context)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: void zzad(android.content.Context)>[[try]]--><android.os.BaseBundle: int getInt(java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.google.android.gms.auth.GoogleAuthUtil: java.lang.String getAccountId(android.content.Context,java.lang.String)>[]--><com.google.android.gms.auth.GoogleAuthUtil: java.lang.String getToken(android.content.Context,java.lang.String,java.lang.String,android.os.Bundle)>[]--><com.google.android.gms.auth.GoogleAuthUtil: java.lang.String getToken(android.content.Context,android.accounts.Account,java.lang.String,android.os.Bundle)>[]--><com.google.android.gms.auth.GoogleAuthUtil: com.google.android.gms.auth.TokenData zza(android.content.Context,android.accounts.Account,java.lang.String,android.os.Bundle)>[]--><com.google.android.gms.auth.GoogleAuthUtil: void zzaa(android.content.Context)>[[try]]--><com.google.android.gms.common.GooglePlayServicesUtil: void zzaa(android.content.Context)>[]--><com.google.android.gms.common.GoogleApiAvailability: int isGooglePlayServicesAvailable(android.content.Context)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: int isGooglePlayServicesAvailable(android.content.Context)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: void zzad(android.content.Context)>[[try]]--><android.os.BaseBundle: int getInt(java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.google.android.gms.internal.zzlg$zze: void zznO()>[]--><com.google.android.gms.common.GoogleApiAvailability: int isGooglePlayServicesAvailable(android.content.Context)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: int isGooglePlayServicesAvailable(android.content.Context)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: void zzad(android.content.Context)>[[try]]--><android.os.BaseBundle: int getInt(java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.google.android.gms.auth.GoogleAuthUtil: java.util.List getAccountChangeEvents(android.content.Context,int,java.lang.String)>[]--><com.google.android.gms.auth.GoogleAuthUtil: void zzaa(android.content.Context)>[[try]]--><com.google.android.gms.common.GooglePlayServicesUtil: void zzaa(android.content.Context)>[]--><com.google.android.gms.common.GoogleApiAvailability: int isGooglePlayServicesAvailable(android.content.Context)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: int isGooglePlayServicesAvailable(android.content.Context)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: void zzad(android.content.Context)>[[try]]--><android.os.BaseBundle: int getInt(java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.google.android.gms.auth.GoogleAuthUtil: java.lang.String getTokenWithNotification(android.content.Context,java.lang.String,java.lang.String,android.os.Bundle,java.lang.String,android.os.Bundle)>[]--><com.google.android.gms.auth.GoogleAuthUtil: java.lang.String getTokenWithNotification(android.content.Context,android.accounts.Account,java.lang.String,android.os.Bundle,java.lang.String,android.os.Bundle)>[]--><com.google.android.gms.auth.GoogleAuthUtil: com.google.android.gms.auth.TokenData zzc(android.content.Context,android.accounts.Account,java.lang.String,android.os.Bundle)>[[try]]--><com.google.android.gms.auth.GoogleAuthUtil: com.google.android.gms.auth.TokenData zza(android.content.Context,android.accounts.Account,java.lang.String,android.os.Bundle)>[]--><com.google.android.gms.auth.GoogleAuthUtil: void zzaa(android.content.Context)>[[try]]--><com.google.android.gms.common.GooglePlayServicesUtil: void zzaa(android.content.Context)>[]--><com.google.android.gms.common.GoogleApiAvailability: int isGooglePlayServicesAvailable(android.content.Context)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: int isGooglePlayServicesAvailable(android.content.Context)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: void zzad(android.content.Context)>[[try]]--><android.os.BaseBundle: int getInt(java.lang.String)>
+One road protect good!
+!!!this api will crash on sdk 19 20 
+Error road: <com.google.android.gms.internal.zzlp: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#8.the call statck between class <com.google.android.gms.internal.zzlp: void onCreate(android.os.Bundle)> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+try
+Good road with try: <com.google.android.gms.auth.GoogleAuthUtil: java.lang.String getToken(android.content.Context,java.lang.String,java.lang.String)>[]--><com.google.android.gms.auth.GoogleAuthUtil: java.lang.String getToken(android.content.Context,android.accounts.Account,java.lang.String)>[]--><com.google.android.gms.auth.GoogleAuthUtil: java.lang.String getToken(android.content.Context,android.accounts.Account,java.lang.String,android.os.Bundle)>[]--><com.google.android.gms.auth.GoogleAuthUtil: com.google.android.gms.auth.TokenData zza(android.content.Context,android.accounts.Account,java.lang.String,android.os.Bundle)>[]--><com.google.android.gms.auth.GoogleAuthUtil: void zzaa(android.content.Context)>[[try]]--><com.google.android.gms.common.GooglePlayServicesUtil: void zzaa(android.content.Context)>[]--><com.google.android.gms.common.GoogleApiAvailability: int isGooglePlayServicesAvailable(android.content.Context)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: int isGooglePlayServicesAvailable(android.content.Context)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: void zzad(android.content.Context)>[[try]]--><android.os.BaseBundle: int getInt(java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.google.android.gms.common.internal.zzo: void zza(android.content.Context,java.lang.String,java.lang.String,java.lang.Throwable)>[]--><com.google.android.gms.internal.zzqc: void send()>[]--><com.google.android.gms.internal.zzqd: void start()>[]--><com.google.android.gms.playlog.internal.zzf: void start()>[[try]]--><com.google.android.gms.common.internal.zzj: void zzoZ()>[]--><com.google.android.gms.common.GoogleApiAvailability: int isGooglePlayServicesAvailable(android.content.Context)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: int isGooglePlayServicesAvailable(android.content.Context)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: void zzad(android.content.Context)>[[try]]--><android.os.BaseBundle: int getInt(java.lang.String)>
+One road protect good!
+crashApis:4
+containsStatic:false
+containsTry:true
+11call by main package
+-----------------------------------------
+#################################################
+N 5 Potential Issue API: SDKCheck of <android.os.BaseBundle: boolean containsKey(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+6call roads:
+0 Mainhead roads:
+6 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <com.google.android.gms.internal.zzju: com.google.android.gms.common.api.PendingResult end(com.google.android.gms.common.api.GoogleApiClient,com.google.android.gms.appindexing.Action)>[]--><com.google.android.gms.internal.zzju: com.google.android.gms.common.api.PendingResult zza(com.google.android.gms.common.api.GoogleApiClient,com.google.android.gms.appindexing.Action,int)>[]--><com.google.android.gms.internal.zzjt: com.google.android.gms.appdatasearch.UsageInfo zza(com.google.android.gms.appindexing.Action,long,java.lang.String,int)>[]--><android.os.BaseBundle: boolean containsKey(java.lang.String)>
+#1.the call statck between class <com.google.android.gms.internal.zzju: com.google.android.gms.common.api.PendingResult end(com.google.android.gms.common.api.GoogleApiClient,com.google.android.gms.appindexing.Action)> to <android.os.BaseBundle: boolean containsKey(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <com.google.android.gms.internal.zzjt: com.google.android.gms.internal.zzox$zzc zzf(android.os.Bundle)>[]--><android.os.BaseBundle: boolean containsKey(java.lang.String)>
+#2.the call statck between class <com.google.android.gms.internal.zzjt: com.google.android.gms.internal.zzox$zzc zzf(android.os.Bundle)> to <android.os.BaseBundle: boolean containsKey(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <com.google.android.gms.internal.zzju: com.google.android.gms.appindexing.AppIndexApi$ActionResult action(com.google.android.gms.common.api.GoogleApiClient,com.google.android.gms.appindexing.Action)>[]--><com.google.android.gms.internal.zzju: com.google.android.gms.common.api.PendingResult zza(com.google.android.gms.common.api.GoogleApiClient,com.google.android.gms.appindexing.Action,int)>[]--><com.google.android.gms.internal.zzjt: com.google.android.gms.appdatasearch.UsageInfo zza(com.google.android.gms.appindexing.Action,long,java.lang.String,int)>[]--><android.os.BaseBundle: boolean containsKey(java.lang.String)>
+#3.the call statck between class <com.google.android.gms.internal.zzju: com.google.android.gms.appindexing.AppIndexApi$ActionResult action(com.google.android.gms.common.api.GoogleApiClient,com.google.android.gms.appindexing.Action)> to <android.os.BaseBundle: boolean containsKey(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <com.google.android.gms.auth.GoogleAuthUtil: void clearToken(android.content.Context,java.lang.String)>[]--><android.os.BaseBundle: boolean containsKey(java.lang.String)>
+#4.the call statck between class <com.google.android.gms.auth.GoogleAuthUtil: void clearToken(android.content.Context,java.lang.String)> to <android.os.BaseBundle: boolean containsKey(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <com.google.android.gms.internal.zzju: com.google.android.gms.common.api.PendingResult start(com.google.android.gms.common.api.GoogleApiClient,com.google.android.gms.appindexing.Action)>[]--><com.google.android.gms.internal.zzju: com.google.android.gms.common.api.PendingResult zza(com.google.android.gms.common.api.GoogleApiClient,com.google.android.gms.appindexing.Action,int)>[]--><com.google.android.gms.internal.zzjt: com.google.android.gms.appdatasearch.UsageInfo zza(com.google.android.gms.appindexing.Action,long,java.lang.String,int)>[]--><android.os.BaseBundle: boolean containsKey(java.lang.String)>
+#5.the call statck between class <com.google.android.gms.internal.zzju: com.google.android.gms.common.api.PendingResult start(com.google.android.gms.common.api.GoogleApiClient,com.google.android.gms.appindexing.Action)> to <android.os.BaseBundle: boolean containsKey(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <com.google.android.gms.internal.zzju$zza: com.google.android.gms.common.api.PendingResult end(com.google.android.gms.common.api.GoogleApiClient)>[]--><com.google.android.gms.internal.zzjt: com.google.android.gms.appdatasearch.UsageInfo zza(com.google.android.gms.appindexing.Action,long,java.lang.String,int)>[]--><android.os.BaseBundle: boolean containsKey(java.lang.String)>
+#6.the call statck between class <com.google.android.gms.internal.zzju$zza: com.google.android.gms.common.api.PendingResult end(com.google.android.gms.common.api.GoogleApiClient)> to <android.os.BaseBundle: boolean containsKey(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:5
+containsStatic:false
+containsTry:false
+7call by main package
+-----------------------------------------
+#################################################
+N 6 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)> is checking!!!
+The life time of api is [21,31]
+13call roads:
+0 Mainhead roads:
+13 Packageshead roads:
+try
+Good road with try: <com.google.android.gms.auth.GoogleAuthUtil: java.lang.String getTokenWithNotification(android.content.Context,java.lang.String,java.lang.String,android.os.Bundle,android.content.Intent)>[]--><com.google.android.gms.auth.GoogleAuthUtil: java.lang.String getTokenWithNotification(android.content.Context,android.accounts.Account,java.lang.String,android.os.Bundle,android.content.Intent)>[]--><com.google.android.gms.auth.GoogleAuthUtil: com.google.android.gms.auth.TokenData zzc(android.content.Context,android.accounts.Account,java.lang.String,android.os.Bundle)>[[try]]--><com.google.android.gms.auth.GoogleAuthUtil: com.google.android.gms.auth.TokenData zza(android.content.Context,android.accounts.Account,java.lang.String,android.os.Bundle)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+One road protect good!
+!!!this api will crash on sdk 19 20 
+Error road: <com.google.android.gms.signin.internal.zzi: android.os.Bundle zzly()>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+!!!this api will crash on sdk 19 20 
+Error road: <com.google.android.gms.signin.internal.zzi: android.os.Bundle zzly()>[]--><com.google.android.gms.signin.internal.zzi: android.os.Bundle zza(com.google.android.gms.internal.zzqx,java.lang.Integer,java.util.concurrent.ExecutorService)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#2.the call statck between class <com.google.android.gms.signin.internal.zzi: android.os.Bundle zzly()> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+try
+Good road with try: <com.google.android.gms.auth.GoogleAuthUtil: java.lang.String getTokenWithNotification(android.content.Context,java.lang.String,java.lang.String,android.os.Bundle)>[]--><com.google.android.gms.auth.GoogleAuthUtil: java.lang.String getTokenWithNotification(android.content.Context,android.accounts.Account,java.lang.String,android.os.Bundle)>[]--><com.google.android.gms.auth.GoogleAuthUtil: com.google.android.gms.auth.TokenData zzb(android.content.Context,android.accounts.Account,java.lang.String,android.os.Bundle)>[]--><com.google.android.gms.auth.GoogleAuthUtil: com.google.android.gms.auth.TokenData zzc(android.content.Context,android.accounts.Account,java.lang.String,android.os.Bundle)>[[try]]--><com.google.android.gms.auth.GoogleAuthUtil: com.google.android.gms.auth.TokenData zza(android.content.Context,android.accounts.Account,java.lang.String,android.os.Bundle)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+One road protect good!
+!!!this api will crash on sdk 19 20 
+Error road: <com.google.android.gms.appindexing.Thing$Builder: com.google.android.gms.appindexing.Thing$Builder put(java.lang.String,java.lang.String)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#4.the call statck between class <com.google.android.gms.appindexing.Thing$Builder: com.google.android.gms.appindexing.Thing$Builder put(java.lang.String,java.lang.String)> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <com.google.android.gms.auth.GoogleAuthUtil: java.lang.String getAccountId(android.content.Context,java.lang.String)>[]--><com.google.android.gms.auth.GoogleAuthUtil: java.lang.String getToken(android.content.Context,java.lang.String,java.lang.String,android.os.Bundle)>[]--><com.google.android.gms.auth.GoogleAuthUtil: java.lang.String getToken(android.content.Context,android.accounts.Account,java.lang.String,android.os.Bundle)>[]--><com.google.android.gms.auth.GoogleAuthUtil: com.google.android.gms.auth.TokenData zza(android.content.Context,android.accounts.Account,java.lang.String,android.os.Bundle)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#5.the call statck between class <com.google.android.gms.auth.GoogleAuthUtil: java.lang.String getAccountId(android.content.Context,java.lang.String)> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <com.google.android.gms.auth.GoogleAuthUtil: java.lang.String getTokenWithNotification(android.content.Context,java.lang.String,java.lang.String,android.os.Bundle,java.lang.String,android.os.Bundle)>[]--><com.google.android.gms.auth.GoogleAuthUtil: java.lang.String getTokenWithNotification(android.content.Context,android.accounts.Account,java.lang.String,android.os.Bundle,java.lang.String,android.os.Bundle)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#6.the call statck between class <com.google.android.gms.auth.GoogleAuthUtil: java.lang.String getTokenWithNotification(android.content.Context,java.lang.String,java.lang.String,android.os.Bundle,java.lang.String,android.os.Bundle)> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <com.google.android.gms.auth.GoogleAuthUtil: java.lang.String getToken(android.content.Context,java.lang.String,java.lang.String)>[]--><com.google.android.gms.auth.GoogleAuthUtil: java.lang.String getToken(android.content.Context,android.accounts.Account,java.lang.String)>[]--><com.google.android.gms.auth.GoogleAuthUtil: java.lang.String getToken(android.content.Context,android.accounts.Account,java.lang.String,android.os.Bundle)>[]--><com.google.android.gms.auth.GoogleAuthUtil: com.google.android.gms.auth.TokenData zza(android.content.Context,android.accounts.Account,java.lang.String,android.os.Bundle)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#7.the call statck between class <com.google.android.gms.auth.GoogleAuthUtil: java.lang.String getToken(android.content.Context,java.lang.String,java.lang.String)> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <com.google.android.gms.common.internal.zzo: void zza(android.content.Context,java.lang.String,java.lang.String,java.lang.Throwable)>[]--><com.google.android.gms.internal.zzqc: void zza(java.lang.String,byte[],java.lang.String[])>[]--><com.google.android.gms.internal.zzqd: void zzb(java.lang.String,byte[],java.lang.String[])>[]--><com.google.android.gms.internal.zzqd: void zza(long,java.lang.String,byte[],java.lang.String[])>[]--><com.google.android.gms.playlog.internal.LogEvent: void <init>(long,long,java.lang.String,byte[],java.lang.String[])>[]--><com.google.android.gms.playlog.internal.LogEvent: android.os.Bundle zzd(java.lang.String[])>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#8.the call statck between class <com.google.android.gms.common.internal.zzo: void zza(android.content.Context,java.lang.String,java.lang.String,java.lang.Throwable)> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <com.google.android.gms.auth.api.Auth$AuthCredentialsOptions: android.os.Bundle zzly()>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#9.the call statck between class <com.google.android.gms.auth.api.Auth$AuthCredentialsOptions: android.os.Bundle zzly()> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <com.google.android.gms.auth.api.proxy.ProxyRequest$Builder: com.google.android.gms.auth.api.proxy.ProxyRequest$Builder putHeader(java.lang.String,java.lang.String)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#10.the call statck between class <com.google.android.gms.auth.api.proxy.ProxyRequest$Builder: com.google.android.gms.auth.api.proxy.ProxyRequest$Builder putHeader(java.lang.String,java.lang.String)> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:6
+containsStatic:false
+containsTry:true
+11call by main package
+-----------------------------------------
+#################################################
+N 7 Potential Issue API: SDKCheck of <android.app.Notification.Builder: android.app.Notification.Builder setLocalOnly(boolean)> is checking!!!
+The life time of api is [21,31]
+5call roads:
+0 Mainhead roads:
+5 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <com.google.android.gms.auth.GoogleAuthUtil: java.lang.String getTokenWithNotification(android.content.Context,java.lang.String,java.lang.String,android.os.Bundle,java.lang.String,android.os.Bundle)>[]--><com.google.android.gms.auth.GoogleAuthUtil: java.lang.String getTokenWithNotification(android.content.Context,android.accounts.Account,java.lang.String,android.os.Bundle,java.lang.String,android.os.Bundle)>[]--><com.google.android.gms.auth.GoogleAuthUtil: com.google.android.gms.auth.TokenData zzc(android.content.Context,android.accounts.Account,java.lang.String,android.os.Bundle)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: void showErrorNotification(int,android.content.Context)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: void zza(int,android.content.Context)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: void zza(int,android.content.Context,java.lang.String)>[]--><android.app.Notification.Builder: android.app.Notification.Builder setLocalOnly(boolean)>
+#1.the call statck between class <com.google.android.gms.auth.GoogleAuthUtil: java.lang.String getTokenWithNotification(android.content.Context,java.lang.String,java.lang.String,android.os.Bundle,java.lang.String,android.os.Bundle)> to <android.app.Notification.Builder: android.app.Notification.Builder setLocalOnly(boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <com.google.android.gms.auth.GoogleAuthUtil: java.lang.String getTokenWithNotification(android.content.Context,java.lang.String,java.lang.String,android.os.Bundle,android.content.Intent)>[]--><com.google.android.gms.auth.GoogleAuthUtil: java.lang.String getTokenWithNotification(android.content.Context,android.accounts.Account,java.lang.String,android.os.Bundle,android.content.Intent)>[]--><com.google.android.gms.auth.GoogleAuthUtil: com.google.android.gms.auth.TokenData zzc(android.content.Context,android.accounts.Account,java.lang.String,android.os.Bundle)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: void showErrorNotification(int,android.content.Context)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: void zza(int,android.content.Context)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: void zza(int,android.content.Context,java.lang.String)>[]--><android.app.Notification.Builder: android.app.Notification.Builder setLocalOnly(boolean)>
+#2.the call statck between class <com.google.android.gms.auth.GoogleAuthUtil: java.lang.String getTokenWithNotification(android.content.Context,java.lang.String,java.lang.String,android.os.Bundle,android.content.Intent)> to <android.app.Notification.Builder: android.app.Notification.Builder setLocalOnly(boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <com.google.android.gms.common.GoogleApiAvailability: void showErrorNotification(android.content.Context,int)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: void showErrorNotification(int,android.content.Context)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: void zza(int,android.content.Context)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: void zza(int,android.content.Context,java.lang.String)>[]--><android.app.Notification.Builder: android.app.Notification.Builder setLocalOnly(boolean)>
+#3.the call statck between class <com.google.android.gms.common.GoogleApiAvailability: void showErrorNotification(android.content.Context,int)> to <android.app.Notification.Builder: android.app.Notification.Builder setLocalOnly(boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <com.google.android.gms.common.GooglePlayServicesUtil$zza: void handleMessage(android.os.Message)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: void zzb(int,android.content.Context)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: void zza(int,android.content.Context)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: void zza(int,android.content.Context,java.lang.String)>[]--><android.app.Notification.Builder: android.app.Notification.Builder setLocalOnly(boolean)>
+#4.the call statck between class <com.google.android.gms.common.GooglePlayServicesUtil$zza: void handleMessage(android.os.Message)> to <android.app.Notification.Builder: android.app.Notification.Builder setLocalOnly(boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <com.google.android.gms.auth.GoogleAuthUtil: java.lang.String getTokenWithNotification(android.content.Context,java.lang.String,java.lang.String,android.os.Bundle)>[]--><com.google.android.gms.auth.GoogleAuthUtil: java.lang.String getTokenWithNotification(android.content.Context,android.accounts.Account,java.lang.String,android.os.Bundle)>[]--><com.google.android.gms.auth.GoogleAuthUtil: com.google.android.gms.auth.TokenData zzb(android.content.Context,android.accounts.Account,java.lang.String,android.os.Bundle)>[]--><com.google.android.gms.auth.GoogleAuthUtil: com.google.android.gms.auth.TokenData zzc(android.content.Context,android.accounts.Account,java.lang.String,android.os.Bundle)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: void showErrorNotification(int,android.content.Context)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: void zza(int,android.content.Context)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: void zza(int,android.content.Context,java.lang.String)>[]--><android.app.Notification.Builder: android.app.Notification.Builder setLocalOnly(boolean)>
+#5.the call statck between class <com.google.android.gms.auth.GoogleAuthUtil: java.lang.String getTokenWithNotification(android.content.Context,java.lang.String,java.lang.String,android.os.Bundle)> to <android.app.Notification.Builder: android.app.Notification.Builder setLocalOnly(boolean)>has compatibility isssues！
+-----------------------------------------
+crashApis:7
+containsStatic:false
+containsTry:false
+6call by main package
+-----------------------------------------
+#################################################
+N 8 Potential Issue API: SDKCheck of <android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)> is checking!!!
+The life time of api is [22,31]
+5call roads:
+0 Mainhead roads:
+5 Packageshead roads:
+!!!this api will crash on sdk 19 20 21 
+Error road: <com.google.android.gms.internal.zzju: com.google.android.gms.common.api.PendingResult end(com.google.android.gms.common.api.GoogleApiClient,com.google.android.gms.appindexing.Action)>[]--><com.google.android.gms.internal.zzju: com.google.android.gms.common.api.PendingResult zza(com.google.android.gms.common.api.GoogleApiClient,com.google.android.gms.appindexing.Action,int)>[]--><com.google.android.gms.internal.zzjt: com.google.android.gms.appdatasearch.UsageInfo zza(com.google.android.gms.appindexing.Action,long,java.lang.String,int)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>
+#1.the call statck between class <com.google.android.gms.internal.zzju: com.google.android.gms.common.api.PendingResult end(com.google.android.gms.common.api.GoogleApiClient,com.google.android.gms.appindexing.Action)> to <android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 21 
+Error road: <com.google.android.gms.internal.zzlp: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>
+#2.the call statck between class <com.google.android.gms.internal.zzlp: void onCreate(android.os.Bundle)> to <android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 21 
+Error road: <com.google.android.gms.internal.zzju: com.google.android.gms.appindexing.AppIndexApi$ActionResult action(com.google.android.gms.common.api.GoogleApiClient,com.google.android.gms.appindexing.Action)>[]--><com.google.android.gms.internal.zzju: com.google.android.gms.common.api.PendingResult zza(com.google.android.gms.common.api.GoogleApiClient,com.google.android.gms.appindexing.Action,int)>[]--><com.google.android.gms.internal.zzjt: com.google.android.gms.appdatasearch.UsageInfo zza(com.google.android.gms.appindexing.Action,long,java.lang.String,int)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>
+#3.the call statck between class <com.google.android.gms.internal.zzju: com.google.android.gms.appindexing.AppIndexApi$ActionResult action(com.google.android.gms.common.api.GoogleApiClient,com.google.android.gms.appindexing.Action)> to <android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 21 
+Error road: <com.google.android.gms.internal.zzju: com.google.android.gms.common.api.PendingResult start(com.google.android.gms.common.api.GoogleApiClient,com.google.android.gms.appindexing.Action)>[]--><com.google.android.gms.internal.zzju: com.google.android.gms.common.api.PendingResult zza(com.google.android.gms.common.api.GoogleApiClient,com.google.android.gms.appindexing.Action,int)>[]--><com.google.android.gms.internal.zzjt: com.google.android.gms.appdatasearch.UsageInfo zza(com.google.android.gms.appindexing.Action,long,java.lang.String,int)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>
+#4.the call statck between class <com.google.android.gms.internal.zzju: com.google.android.gms.common.api.PendingResult start(com.google.android.gms.common.api.GoogleApiClient,com.google.android.gms.appindexing.Action)> to <android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 21 
+Error road: <com.google.android.gms.internal.zzju$zza: com.google.android.gms.common.api.PendingResult end(com.google.android.gms.common.api.GoogleApiClient)>[]--><com.google.android.gms.internal.zzjt: com.google.android.gms.appdatasearch.UsageInfo zza(com.google.android.gms.appindexing.Action,long,java.lang.String,int)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>
+#5.the call statck between class <com.google.android.gms.internal.zzju$zza: com.google.android.gms.common.api.PendingResult end(com.google.android.gms.common.api.GoogleApiClient)> to <android.os.BaseBundle: boolean getBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+crashApis:8
+containsStatic:false
+containsTry:false
+6call by main package
+-----------------------------------------
+#################################################
+N 9 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)> is checking!!!
+The life time of api is [22,31]
+7call roads:
+0 Mainhead roads:
+7 Packageshead roads:
+!!!this api will crash on sdk 19 20 21 
+Error road: <com.google.android.gms.auth.GoogleAuthUtil: java.lang.String getTokenWithNotification(android.content.Context,java.lang.String,java.lang.String,android.os.Bundle,java.lang.String,android.os.Bundle)>[]--><com.google.android.gms.auth.GoogleAuthUtil: java.lang.String getTokenWithNotification(android.content.Context,android.accounts.Account,java.lang.String,android.os.Bundle,java.lang.String,android.os.Bundle)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+#1.the call statck between class <com.google.android.gms.auth.GoogleAuthUtil: java.lang.String getTokenWithNotification(android.content.Context,java.lang.String,java.lang.String,android.os.Bundle,java.lang.String,android.os.Bundle)> to <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 21 
+Error road: <com.google.android.gms.internal.zzlp: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+#2.the call statck between class <com.google.android.gms.internal.zzlp: void onSaveInstanceState(android.os.Bundle)> to <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+-$i1 != 19
+Good road: <com.google.android.gms.auth.GoogleAuthUtil: java.lang.String getTokenWithNotification(android.content.Context,java.lang.String,java.lang.String,android.os.Bundle,android.content.Intent)>[]--><com.google.android.gms.auth.GoogleAuthUtil: java.lang.String getTokenWithNotification(android.content.Context,android.accounts.Account,java.lang.String,android.os.Bundle,android.content.Intent)>[]--><com.google.android.gms.auth.GoogleAuthUtil: com.google.android.gms.auth.TokenData zzc(android.content.Context,android.accounts.Account,java.lang.String,android.os.Bundle)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: void showErrorNotification(int,android.content.Context)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: void zza(int,android.content.Context)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: void zza(int,android.content.Context,java.lang.String)>[[-$i1 != 19]]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+One road protect good!
+!!!this api will crash on sdk 19 20 21 
+Error road: <com.google.android.gms.signin.internal.zzi: android.os.Bundle zzly()>[]--><com.google.android.gms.signin.internal.zzi: android.os.Bundle zza(com.google.android.gms.internal.zzqx,java.lang.Integer,java.util.concurrent.ExecutorService)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+#4.the call statck between class <com.google.android.gms.signin.internal.zzi: android.os.Bundle zzly()> to <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+-$i1 != 19
+Good road: <com.google.android.gms.common.GoogleApiAvailability: void showErrorNotification(android.content.Context,int)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: void showErrorNotification(int,android.content.Context)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: void zza(int,android.content.Context)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: void zza(int,android.content.Context,java.lang.String)>[[-$i1 != 19]]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+One road protect good!
+-$i1 != 19
+Good road: <com.google.android.gms.common.GooglePlayServicesUtil$zza: void handleMessage(android.os.Message)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: void zzb(int,android.content.Context)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: void zza(int,android.content.Context)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: void zza(int,android.content.Context,java.lang.String)>[[-$i1 != 19]]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+One road protect good!
+!!!this api will crash on sdk 19 20 21 
+Error road: <com.google.android.gms.auth.GoogleAuthUtil: java.lang.String getTokenWithNotification(android.content.Context,java.lang.String,java.lang.String,android.os.Bundle)>[]--><com.google.android.gms.auth.GoogleAuthUtil: java.lang.String getTokenWithNotification(android.content.Context,android.accounts.Account,java.lang.String,android.os.Bundle)>[]--><com.google.android.gms.auth.GoogleAuthUtil: com.google.android.gms.auth.TokenData zzb(android.content.Context,android.accounts.Account,java.lang.String,android.os.Bundle)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+#7.the call statck between class <com.google.android.gms.auth.GoogleAuthUtil: java.lang.String getTokenWithNotification(android.content.Context,java.lang.String,java.lang.String,android.os.Bundle)> to <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+crashApis:9
+containsStatic:false
+containsTry:false
+8call by main package
+-----------------------------------------
+#################################################
+N 10 Potential Issue API: SDKCheck of <android.os.PowerManager: boolean isInteractive()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <com.google.android.gms.common.stats.zzi: void zza(android.content.Context,java.lang.String,int,java.lang.String,java.lang.String,int,java.util.List)>[]--><com.google.android.gms.common.stats.zzi: void zza(android.content.Context,java.lang.String,int,java.lang.String,java.lang.String,int,java.util.List,long)>[]--><com.google.android.gms.internal.zzmr: int zzao(android.content.Context)>[]--><android.os.PowerManager: boolean isInteractive()>
+#1.the call statck between class <com.google.android.gms.common.stats.zzi: void zza(android.content.Context,java.lang.String,int,java.lang.String,java.lang.String,int,java.util.List)> to <android.os.PowerManager: boolean isInteractive()>has compatibility isssues！
+-----------------------------------------
+crashApis:10
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 11 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.lang.Object get(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <com.google.android.gms.appindexing.Action$Builder: com.google.android.gms.appindexing.Action build()>[]--><android.os.BaseBundle: java.lang.Object get(java.lang.String)>
+#1.the call statck between class <com.google.android.gms.appindexing.Action$Builder: com.google.android.gms.appindexing.Action build()> to <android.os.BaseBundle: java.lang.Object get(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <com.google.android.gms.internal.zzjt: com.google.android.gms.internal.zzox$zzc zzf(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.Object get(java.lang.String)>
+#2.the call statck between class <com.google.android.gms.internal.zzjt: com.google.android.gms.internal.zzox$zzc zzf(android.os.Bundle)> to <android.os.BaseBundle: java.lang.Object get(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:11
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 12 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putLong(java.lang.String,long)> is checking!!!
+The life time of api is [21,31]
+5call roads:
+0 Mainhead roads:
+5 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <com.google.android.gms.auth.GoogleAuthUtil: java.lang.String getAccountId(android.content.Context,java.lang.String)>[]--><com.google.android.gms.auth.GoogleAuthUtil: java.lang.String getToken(android.content.Context,java.lang.String,java.lang.String,android.os.Bundle)>[]--><com.google.android.gms.auth.GoogleAuthUtil: java.lang.String getToken(android.content.Context,android.accounts.Account,java.lang.String,android.os.Bundle)>[]--><com.google.android.gms.auth.GoogleAuthUtil: com.google.android.gms.auth.TokenData zza(android.content.Context,android.accounts.Account,java.lang.String,android.os.Bundle)>[]--><android.os.BaseBundle: void putLong(java.lang.String,long)>
+#1.the call statck between class <com.google.android.gms.auth.GoogleAuthUtil: java.lang.String getAccountId(android.content.Context,java.lang.String)> to <android.os.BaseBundle: void putLong(java.lang.String,long)>has compatibility isssues！
+-----------------------------------------
+try
+Good road with try: <com.google.android.gms.auth.GoogleAuthUtil: java.lang.String getTokenWithNotification(android.content.Context,java.lang.String,java.lang.String,android.os.Bundle,java.lang.String,android.os.Bundle)>[]--><com.google.android.gms.auth.GoogleAuthUtil: java.lang.String getTokenWithNotification(android.content.Context,android.accounts.Account,java.lang.String,android.os.Bundle,java.lang.String,android.os.Bundle)>[]--><com.google.android.gms.auth.GoogleAuthUtil: com.google.android.gms.auth.TokenData zzc(android.content.Context,android.accounts.Account,java.lang.String,android.os.Bundle)>[[try]]--><com.google.android.gms.auth.GoogleAuthUtil: com.google.android.gms.auth.TokenData zza(android.content.Context,android.accounts.Account,java.lang.String,android.os.Bundle)>[]--><android.os.BaseBundle: void putLong(java.lang.String,long)>
+One road protect good!
+try
+Good road with try: <com.google.android.gms.auth.GoogleAuthUtil: java.lang.String getTokenWithNotification(android.content.Context,java.lang.String,java.lang.String,android.os.Bundle,android.content.Intent)>[]--><com.google.android.gms.auth.GoogleAuthUtil: java.lang.String getTokenWithNotification(android.content.Context,android.accounts.Account,java.lang.String,android.os.Bundle,android.content.Intent)>[]--><com.google.android.gms.auth.GoogleAuthUtil: com.google.android.gms.auth.TokenData zzc(android.content.Context,android.accounts.Account,java.lang.String,android.os.Bundle)>[[try]]--><com.google.android.gms.auth.GoogleAuthUtil: com.google.android.gms.auth.TokenData zza(android.content.Context,android.accounts.Account,java.lang.String,android.os.Bundle)>[]--><android.os.BaseBundle: void putLong(java.lang.String,long)>
+One road protect good!
+!!!this api will crash on sdk 19 20 
+Error road: <com.google.android.gms.auth.GoogleAuthUtil: java.lang.String getToken(android.content.Context,java.lang.String,java.lang.String)>[]--><com.google.android.gms.auth.GoogleAuthUtil: java.lang.String getToken(android.content.Context,android.accounts.Account,java.lang.String)>[]--><com.google.android.gms.auth.GoogleAuthUtil: java.lang.String getToken(android.content.Context,android.accounts.Account,java.lang.String,android.os.Bundle)>[]--><com.google.android.gms.auth.GoogleAuthUtil: com.google.android.gms.auth.TokenData zza(android.content.Context,android.accounts.Account,java.lang.String,android.os.Bundle)>[]--><android.os.BaseBundle: void putLong(java.lang.String,long)>
+#4.the call statck between class <com.google.android.gms.auth.GoogleAuthUtil: java.lang.String getToken(android.content.Context,java.lang.String,java.lang.String)> to <android.os.BaseBundle: void putLong(java.lang.String,long)>has compatibility isssues！
+-----------------------------------------
+try
+Good road with try: <com.google.android.gms.auth.GoogleAuthUtil: java.lang.String getTokenWithNotification(android.content.Context,java.lang.String,java.lang.String,android.os.Bundle)>[]--><com.google.android.gms.auth.GoogleAuthUtil: java.lang.String getTokenWithNotification(android.content.Context,android.accounts.Account,java.lang.String,android.os.Bundle)>[]--><com.google.android.gms.auth.GoogleAuthUtil: com.google.android.gms.auth.TokenData zzb(android.content.Context,android.accounts.Account,java.lang.String,android.os.Bundle)>[]--><com.google.android.gms.auth.GoogleAuthUtil: com.google.android.gms.auth.TokenData zzc(android.content.Context,android.accounts.Account,java.lang.String,android.os.Bundle)>[[try]]--><com.google.android.gms.auth.GoogleAuthUtil: com.google.android.gms.auth.TokenData zza(android.content.Context,android.accounts.Account,java.lang.String,android.os.Bundle)>[]--><android.os.BaseBundle: void putLong(java.lang.String,long)>
+One road protect good!
+crashApis:12
+containsStatic:false
+containsTry:true
+6call by main package
+-----------------------------------------
+#################################################
+N 13 Potential Issue API: SDKCheck of <android.os.BaseBundle: boolean getBoolean(java.lang.String)> is checking!!!
+The life time of api is [22,31]
+5call roads:
+0 Mainhead roads:
+5 Packageshead roads:
+!!!this api will crash on sdk 19 20 21 
+Error road: <com.google.android.gms.internal.zzju: com.google.android.gms.common.api.PendingResult end(com.google.android.gms.common.api.GoogleApiClient,com.google.android.gms.appindexing.Action)>[]--><com.google.android.gms.internal.zzju: com.google.android.gms.common.api.PendingResult zza(com.google.android.gms.common.api.GoogleApiClient,com.google.android.gms.appindexing.Action,int)>[]--><com.google.android.gms.internal.zzjt: com.google.android.gms.appdatasearch.UsageInfo zza(com.google.android.gms.appindexing.Action,long,java.lang.String,int)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+#1.the call statck between class <com.google.android.gms.internal.zzju: com.google.android.gms.common.api.PendingResult end(com.google.android.gms.common.api.GoogleApiClient,com.google.android.gms.appindexing.Action)> to <android.os.BaseBundle: boolean getBoolean(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 21 
+Error road: <com.google.android.gms.internal.zzju: com.google.android.gms.appindexing.AppIndexApi$ActionResult action(com.google.android.gms.common.api.GoogleApiClient,com.google.android.gms.appindexing.Action)>[]--><com.google.android.gms.internal.zzju: com.google.android.gms.common.api.PendingResult zza(com.google.android.gms.common.api.GoogleApiClient,com.google.android.gms.appindexing.Action,int)>[]--><com.google.android.gms.internal.zzjt: com.google.android.gms.appdatasearch.UsageInfo zza(com.google.android.gms.appindexing.Action,long,java.lang.String,int)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+#2.the call statck between class <com.google.android.gms.internal.zzju: com.google.android.gms.appindexing.AppIndexApi$ActionResult action(com.google.android.gms.common.api.GoogleApiClient,com.google.android.gms.appindexing.Action)> to <android.os.BaseBundle: boolean getBoolean(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 21 
+Error road: <com.google.android.gms.internal.zzju: com.google.android.gms.common.api.PendingResult start(com.google.android.gms.common.api.GoogleApiClient,com.google.android.gms.appindexing.Action)>[]--><com.google.android.gms.internal.zzju: com.google.android.gms.common.api.PendingResult zza(com.google.android.gms.common.api.GoogleApiClient,com.google.android.gms.appindexing.Action,int)>[]--><com.google.android.gms.internal.zzjt: com.google.android.gms.appdatasearch.UsageInfo zza(com.google.android.gms.appindexing.Action,long,java.lang.String,int)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+#3.the call statck between class <com.google.android.gms.internal.zzju: com.google.android.gms.common.api.PendingResult start(com.google.android.gms.common.api.GoogleApiClient,com.google.android.gms.appindexing.Action)> to <android.os.BaseBundle: boolean getBoolean(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+try
+Good road with try: <com.google.android.gms.auth.GoogleAuthUtil: void clearToken(android.content.Context,java.lang.String)>[[try]]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+One road protect good!
+!!!this api will crash on sdk 19 20 21 
+Error road: <com.google.android.gms.internal.zzju$zza: com.google.android.gms.common.api.PendingResult end(com.google.android.gms.common.api.GoogleApiClient)>[]--><com.google.android.gms.internal.zzjt: com.google.android.gms.appdatasearch.UsageInfo zza(com.google.android.gms.appindexing.Action,long,java.lang.String,int)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+#5.the call statck between class <com.google.android.gms.internal.zzju$zza: com.google.android.gms.common.api.PendingResult end(com.google.android.gms.common.api.GoogleApiClient)> to <android.os.BaseBundle: boolean getBoolean(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:13
+containsStatic:false
+containsTry:true
+6call by main package
+-----------------------------------------
+#################################################
+N 14 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.lang.String getString(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+34call roads:
+0 Mainhead roads:
+34 Packageshead roads:
+try
+Good road with try: <com.google.android.gms.internal.zzlg$zzd: void zzb(com.google.android.gms.common.ConnectionResult)>[[try]]--><com.google.android.gms.internal.zzlg: boolean zzk(com.google.android.gms.internal.zzlg)>[]--><com.google.android.gms.internal.zzlg: boolean zznP()>[]--><com.google.android.gms.internal.zzlg: void zzf(com.google.android.gms.common.ConnectionResult)>[]--><com.google.android.gms.common.GoogleApiAvailability: boolean zzd(android.content.Context,int)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzd(android.content.Context,int)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzj(android.content.Context,java.lang.String)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzah(android.content.Context)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.google.android.gms.internal.zzlg$zzd: void zzb(com.google.android.gms.common.ConnectionResult)>[[try]]--><com.google.android.gms.internal.zzlg: boolean zza(com.google.android.gms.internal.zzlg,int)>[]--><com.google.android.gms.internal.zzlg: boolean zzbn(int)>[]--><com.google.android.gms.internal.zzlg: void zzf(com.google.android.gms.common.ConnectionResult)>[]--><com.google.android.gms.common.GoogleApiAvailability: boolean zzd(android.content.Context,int)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzd(android.content.Context,int)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzj(android.content.Context,java.lang.String)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzah(android.content.Context)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+One road protect good!
+!!!this api will crash on sdk 19 20 
+Error road: <com.google.android.gms.auth.GoogleAuthUtil: java.lang.String getTokenWithNotification(android.content.Context,java.lang.String,java.lang.String,android.os.Bundle,android.content.Intent)>[]--><com.google.android.gms.auth.GoogleAuthUtil: java.lang.String getTokenWithNotification(android.content.Context,android.accounts.Account,java.lang.String,android.os.Bundle,android.content.Intent)>[]--><com.google.android.gms.auth.GoogleAuthUtil: com.google.android.gms.auth.TokenData zzc(android.content.Context,android.accounts.Account,java.lang.String,android.os.Bundle)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: void showErrorNotification(int,android.content.Context)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzf(android.content.Context,int)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzj(android.content.Context,java.lang.String)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzah(android.content.Context)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#2.the call statck between class <com.google.android.gms.auth.GoogleAuthUtil: java.lang.String getTokenWithNotification(android.content.Context,java.lang.String,java.lang.String,android.os.Bundle,android.content.Intent)> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+try
+Good road with try: <com.google.android.gms.internal.zzlg$zzg: void onConnectionFailed(com.google.android.gms.common.ConnectionResult)>[[try]]--><com.google.android.gms.internal.zzlg: void zzj(com.google.android.gms.internal.zzlg)>[]--><com.google.android.gms.internal.zzlg: void zznT()>[]--><com.google.android.gms.internal.zzlg: boolean zznP()>[]--><com.google.android.gms.internal.zzlg: void zzf(com.google.android.gms.common.ConnectionResult)>[]--><com.google.android.gms.common.GoogleApiAvailability: boolean zzd(android.content.Context,int)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzd(android.content.Context,int)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzj(android.content.Context,java.lang.String)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzah(android.content.Context)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.google.android.gms.internal.zzlg$zzg: void onConnectionFailed(com.google.android.gms.common.ConnectionResult)>[[try]]--><com.google.android.gms.internal.zzlg: void zza(com.google.android.gms.internal.zzlg,com.google.android.gms.common.ConnectionResult)>[]--><com.google.android.gms.internal.zzlg: void zzf(com.google.android.gms.common.ConnectionResult)>[]--><com.google.android.gms.common.GoogleApiAvailability: boolean zzd(android.content.Context,int)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzd(android.content.Context,int)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzj(android.content.Context,java.lang.String)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzah(android.content.Context)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+One road protect good!
+!!!this api will crash on sdk 19 20 
+Error road: <com.google.android.gms.auth.GoogleAuthUtil: java.lang.String getTokenWithNotification(android.content.Context,java.lang.String,java.lang.String,android.os.Bundle)>[]--><com.google.android.gms.auth.GoogleAuthUtil: java.lang.String getTokenWithNotification(android.content.Context,android.accounts.Account,java.lang.String,android.os.Bundle)>[]--><com.google.android.gms.auth.GoogleAuthUtil: com.google.android.gms.auth.TokenData zzb(android.content.Context,android.accounts.Account,java.lang.String,android.os.Bundle)>[]--><com.google.android.gms.auth.GoogleAuthUtil: com.google.android.gms.auth.TokenData zzc(android.content.Context,android.accounts.Account,java.lang.String,android.os.Bundle)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: void showErrorNotification(int,android.content.Context)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzf(android.content.Context,int)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzj(android.content.Context,java.lang.String)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzah(android.content.Context)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#4.the call statck between class <com.google.android.gms.auth.GoogleAuthUtil: java.lang.String getTokenWithNotification(android.content.Context,java.lang.String,java.lang.String,android.os.Bundle)> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <com.google.android.gms.internal.zzlf$1: void zznO()>[]--><com.google.android.gms.internal.zzlf: void onConnectionSuspended(int)>[]--><com.google.android.gms.internal.zzli: void zzoe()>[]--><com.google.android.gms.internal.zzll: com.google.android.gms.internal.zzll zza(android.content.Context,com.google.android.gms.internal.zzll,com.google.android.gms.common.GoogleApiAvailability)>[]--><com.google.android.gms.common.GoogleApiAvailability: boolean zzj(android.content.Context,java.lang.String)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzj(android.content.Context,java.lang.String)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzah(android.content.Context)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#5.the call statck between class <com.google.android.gms.internal.zzlf$1: void zznO()> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <com.google.android.gms.internal.zzlg$zze$1: void zznO()>[]--><com.google.android.gms.internal.zzlg: void zza(com.google.android.gms.internal.zzlg,com.google.android.gms.common.ConnectionResult)>[]--><com.google.android.gms.internal.zzlg: void zzf(com.google.android.gms.common.ConnectionResult)>[]--><com.google.android.gms.common.GoogleApiAvailability: boolean zzd(android.content.Context,int)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzd(android.content.Context,int)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzj(android.content.Context,java.lang.String)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzah(android.content.Context)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#6.the call statck between class <com.google.android.gms.internal.zzlg$zze$1: void zznO()> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+try
+Good road with try: <com.google.android.gms.auth.GoogleAuthUtil: java.lang.String getAccountId(android.content.Context,java.lang.String)>[]--><com.google.android.gms.auth.GoogleAuthUtil: void zzaa(android.content.Context)>[[try]]--><com.google.android.gms.common.GooglePlayServicesUtil: void zzaa(android.content.Context)>[]--><com.google.android.gms.common.GoogleApiAvailability: int isGooglePlayServicesAvailable(android.content.Context)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzd(android.content.Context,int)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzj(android.content.Context,java.lang.String)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzah(android.content.Context)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.google.android.gms.auth.GoogleAuthUtil: java.lang.String getAccountId(android.content.Context,java.lang.String)>[]--><com.google.android.gms.auth.GoogleAuthUtil: java.lang.String getToken(android.content.Context,java.lang.String,java.lang.String,android.os.Bundle)>[]--><com.google.android.gms.auth.GoogleAuthUtil: java.lang.String getToken(android.content.Context,android.accounts.Account,java.lang.String,android.os.Bundle)>[]--><com.google.android.gms.auth.GoogleAuthUtil: com.google.android.gms.auth.TokenData zza(android.content.Context,android.accounts.Account,java.lang.String,android.os.Bundle)>[]--><com.google.android.gms.auth.GoogleAuthUtil: void zzaa(android.content.Context)>[[try]]--><com.google.android.gms.common.GooglePlayServicesUtil: void zzaa(android.content.Context)>[]--><com.google.android.gms.common.GoogleApiAvailability: int isGooglePlayServicesAvailable(android.content.Context)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzd(android.content.Context,int)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzj(android.content.Context,java.lang.String)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzah(android.content.Context)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.google.android.gms.internal.zzlg$zzd: void zza(com.google.android.gms.common.ConnectionResult)>[[try]]--><com.google.android.gms.internal.zzlg: boolean zzk(com.google.android.gms.internal.zzlg)>[]--><com.google.android.gms.internal.zzlg: boolean zznP()>[]--><com.google.android.gms.internal.zzlg: void zzf(com.google.android.gms.common.ConnectionResult)>[]--><com.google.android.gms.common.GoogleApiAvailability: boolean zzd(android.content.Context,int)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzd(android.content.Context,int)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzj(android.content.Context,java.lang.String)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzah(android.content.Context)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.google.android.gms.internal.zzlg$zzd: void zza(com.google.android.gms.common.ConnectionResult)>[[try]]--><com.google.android.gms.internal.zzlg: boolean zza(com.google.android.gms.internal.zzlg,int)>[]--><com.google.android.gms.internal.zzlg: boolean zzbn(int)>[]--><com.google.android.gms.internal.zzlg: void zzf(com.google.android.gms.common.ConnectionResult)>[]--><com.google.android.gms.common.GoogleApiAvailability: boolean zzd(android.content.Context,int)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzd(android.content.Context,int)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzj(android.content.Context,java.lang.String)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzah(android.content.Context)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.google.android.gms.internal.zzlg$zzd: void zza(com.google.android.gms.common.ConnectionResult)>[[try]]--><com.google.android.gms.internal.zzlg: void zzl(com.google.android.gms.internal.zzlg)>[]--><com.google.android.gms.internal.zzlg: void zznQ()>[]--><com.google.android.gms.internal.zzlg: void zznT()>[]--><com.google.android.gms.internal.zzlg: boolean zznP()>[]--><com.google.android.gms.internal.zzlg: void zzf(com.google.android.gms.common.ConnectionResult)>[]--><com.google.android.gms.common.GoogleApiAvailability: boolean zzd(android.content.Context,int)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzd(android.content.Context,int)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzj(android.content.Context,java.lang.String)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzah(android.content.Context)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+One road protect good!
+!!!this api will crash on sdk 19 20 
+Error road: <com.google.android.gms.auth.GoogleAuthUtil: java.lang.String getTokenWithNotification(android.content.Context,java.lang.String,java.lang.String,android.os.Bundle,java.lang.String,android.os.Bundle)>[]--><com.google.android.gms.auth.GoogleAuthUtil: java.lang.String getTokenWithNotification(android.content.Context,android.accounts.Account,java.lang.String,android.os.Bundle,java.lang.String,android.os.Bundle)>[]--><com.google.android.gms.auth.GoogleAuthUtil: com.google.android.gms.auth.TokenData zzc(android.content.Context,android.accounts.Account,java.lang.String,android.os.Bundle)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: void showErrorNotification(int,android.content.Context)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzf(android.content.Context,int)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzj(android.content.Context,java.lang.String)>[]--><com.google.android.gms.common.GooglePlayServicesUtil: boolean zzah(android.content.Context)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#9.the call statck between class <com.google.android.gms.auth.GoogleAuthUtil: java.lang.String getTokenWithNotification(android.content.Context,java.lang.String,java.lang.String,android.os.Bundle,java.lang.String,android.os.Bundle)> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <com.google.android.gms.common.server.response.SafeParcelResponse: void zzb(java.lang.StringBuilder,com.google.android.gms.common.server.response.FastJsonResponse$Field,android.os.Parcel,int)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#10.the call statck between class <com.google.android.gms.common.server.response.SafeParcelResponse: void zzb(java.lang.StringBuilder,com.google.android.gms.common.server.response.FastJsonResponse$Field,android.os.Parcel,int)> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:14
+containsStatic:false
+containsTry:true
+11call by main package
+-----------------------------------------
+#################################################
+N 15 Potential Issue API: SDKCheck of <android.os.BaseBundle: int size()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <com.google.android.gms.auth.api.proxy.ProxyRequest: java.util.Map getHeaderMap()>[]--><android.os.BaseBundle: int size()>
+#1.the call statck between class <com.google.android.gms.auth.api.proxy.ProxyRequest: java.util.Map getHeaderMap()> to <android.os.BaseBundle: int size()>has compatibility isssues！
+-----------------------------------------
+crashApis:15
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 16 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putInt(java.lang.String,int)> is checking!!!
+The life time of api is [21,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <com.google.android.gms.internal.zzlp: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#1.the call statck between class <com.google.android.gms.internal.zzlp: void onSaveInstanceState(android.os.Bundle)> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <com.google.android.gms.signin.internal.zzi: android.os.Bundle zzly()>[]--><com.google.android.gms.signin.internal.zzi: android.os.Bundle zza(com.google.android.gms.internal.zzqx,java.lang.Integer,java.util.concurrent.ExecutorService)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#2.the call statck between class <com.google.android.gms.signin.internal.zzi: android.os.Bundle zzly()> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:16
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 17 Potential Issue API: SDKCheck of <android.os.BaseBundle: int getInt(java.lang.String,int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <com.google.android.gms.internal.zzlp: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String,int)>
+#1.the call statck between class <com.google.android.gms.internal.zzlp: void onCreate(android.os.Bundle)> to <android.os.BaseBundle: int getInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:17
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 18 Potential Issue API: SDKCheck of <android.os.BaseBundle: boolean isEmpty()> is checking!!!
+The life time of api is [21,31]
+7call roads:
+0 Mainhead roads:
+7 Packageshead roads:
+try
+Good road with try: <com.google.android.gms.internal.zzli$4: void onConnectionFailed(com.google.android.gms.common.ConnectionResult)>[[try]]--><com.google.android.gms.internal.zzlg: void zza(com.google.android.gms.common.ConnectionResult,com.google.android.gms.common.api.Api,int)>[]--><com.google.android.gms.internal.zzlg: void zznU()>[]--><android.os.BaseBundle: boolean isEmpty()>
+One road protect good!
+try
+Good road with try: <com.google.android.gms.internal.zzlg$zzd: void zza(com.google.android.gms.common.ConnectionResult)>[[try]]--><com.google.android.gms.internal.zzlg: void zzl(com.google.android.gms.internal.zzlg)>[]--><com.google.android.gms.internal.zzlg: void zznQ()>[]--><com.google.android.gms.internal.zzlg: void zznT()>[]--><com.google.android.gms.internal.zzlg: void zznU()>[]--><android.os.BaseBundle: boolean isEmpty()>
+One road protect good!
+try
+Good road with try: <com.google.android.gms.internal.zzli$2: void onConnected(android.os.Bundle)>[[try]]--><com.google.android.gms.internal.zzlg: void onConnected(android.os.Bundle)>[]--><com.google.android.gms.internal.zzlg: void zznU()>[]--><android.os.BaseBundle: boolean isEmpty()>
+One road protect good!
+!!!this api will crash on sdk 19 20 
+Error road: <com.google.android.gms.playlog.internal.LogEvent: java.lang.String toString()>[]--><android.os.BaseBundle: boolean isEmpty()>
+#4.the call statck between class <com.google.android.gms.playlog.internal.LogEvent: java.lang.String toString()> to <android.os.BaseBundle: boolean isEmpty()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <com.google.android.gms.internal.zzlg$zzb$1: void zznO()>[]--><com.google.android.gms.internal.zzlg: void zza(com.google.android.gms.internal.zzlg,com.google.android.gms.common.internal.ResolveAccountResponse)>[]--><com.google.android.gms.internal.zzlg: void zza(com.google.android.gms.common.internal.ResolveAccountResponse)>[]--><com.google.android.gms.internal.zzlg: void zznQ()>[]--><com.google.android.gms.internal.zzlg: void zznT()>[]--><com.google.android.gms.internal.zzlg: void zznU()>[]--><android.os.BaseBundle: boolean isEmpty()>
+#5.the call statck between class <com.google.android.gms.internal.zzlg$zzb$1: void zznO()> to <android.os.BaseBundle: boolean isEmpty()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <com.google.android.gms.internal.zzlg$zza$1: void zznO()>[]--><com.google.android.gms.internal.zzlg: void zzc(com.google.android.gms.internal.zzlg,com.google.android.gms.common.ConnectionResult)>[]--><com.google.android.gms.internal.zzlg: void zzc(com.google.android.gms.common.ConnectionResult)>[]--><com.google.android.gms.internal.zzlg: void zznT()>[]--><com.google.android.gms.internal.zzlg: void zznU()>[]--><android.os.BaseBundle: boolean isEmpty()>
+#6.the call statck between class <com.google.android.gms.internal.zzlg$zza$1: void zznO()> to <android.os.BaseBundle: boolean isEmpty()>has compatibility isssues！
+-----------------------------------------
+try
+Good road with try: <com.google.android.gms.internal.zzlg$zzg: void onConnectionFailed(com.google.android.gms.common.ConnectionResult)>[[try]]--><com.google.android.gms.internal.zzlg: void zzj(com.google.android.gms.internal.zzlg)>[]--><com.google.android.gms.internal.zzlg: void zznT()>[]--><com.google.android.gms.internal.zzlg: void zznU()>[]--><android.os.BaseBundle: boolean isEmpty()>
+One road protect good!
+crashApis:18
+containsStatic:false
+containsTry:true
+8call by main package
+-----------------------------------------
+#################################################
+N 19 Potential Issue API: SDKCheck of <android.os.BaseBundle: void remove(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+4call roads:
+0 Mainhead roads:
+4 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <com.google.android.gms.internal.zzju: com.google.android.gms.common.api.PendingResult end(com.google.android.gms.common.api.GoogleApiClient,com.google.android.gms.appindexing.Action)>[]--><com.google.android.gms.internal.zzju: com.google.android.gms.common.api.PendingResult zza(com.google.android.gms.common.api.GoogleApiClient,com.google.android.gms.appindexing.Action,int)>[]--><com.google.android.gms.internal.zzjt: com.google.android.gms.appdatasearch.UsageInfo zza(com.google.android.gms.appindexing.Action,long,java.lang.String,int)>[]--><android.os.BaseBundle: void remove(java.lang.String)>
+#1.the call statck between class <com.google.android.gms.internal.zzju: com.google.android.gms.common.api.PendingResult end(com.google.android.gms.common.api.GoogleApiClient,com.google.android.gms.appindexing.Action)> to <android.os.BaseBundle: void remove(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <com.google.android.gms.internal.zzju: com.google.android.gms.appindexing.AppIndexApi$ActionResult action(com.google.android.gms.common.api.GoogleApiClient,com.google.android.gms.appindexing.Action)>[]--><com.google.android.gms.internal.zzju: com.google.android.gms.common.api.PendingResult zza(com.google.android.gms.common.api.GoogleApiClient,com.google.android.gms.appindexing.Action,int)>[]--><com.google.android.gms.internal.zzjt: com.google.android.gms.appdatasearch.UsageInfo zza(com.google.android.gms.appindexing.Action,long,java.lang.String,int)>[]--><android.os.BaseBundle: void remove(java.lang.String)>
+#2.the call statck between class <com.google.android.gms.internal.zzju: com.google.android.gms.appindexing.AppIndexApi$ActionResult action(com.google.android.gms.common.api.GoogleApiClient,com.google.android.gms.appindexing.Action)> to <android.os.BaseBundle: void remove(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <com.google.android.gms.internal.zzju: com.google.android.gms.common.api.PendingResult start(com.google.android.gms.common.api.GoogleApiClient,com.google.android.gms.appindexing.Action)>[]--><com.google.android.gms.internal.zzju: com.google.android.gms.common.api.PendingResult zza(com.google.android.gms.common.api.GoogleApiClient,com.google.android.gms.appindexing.Action,int)>[]--><com.google.android.gms.internal.zzjt: com.google.android.gms.appdatasearch.UsageInfo zza(com.google.android.gms.appindexing.Action,long,java.lang.String,int)>[]--><android.os.BaseBundle: void remove(java.lang.String)>
+#3.the call statck between class <com.google.android.gms.internal.zzju: com.google.android.gms.common.api.PendingResult start(com.google.android.gms.common.api.GoogleApiClient,com.google.android.gms.appindexing.Action)> to <android.os.BaseBundle: void remove(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <com.google.android.gms.internal.zzju$zza: com.google.android.gms.common.api.PendingResult end(com.google.android.gms.common.api.GoogleApiClient)>[]--><com.google.android.gms.internal.zzjt: com.google.android.gms.appdatasearch.UsageInfo zza(com.google.android.gms.appindexing.Action,long,java.lang.String,int)>[]--><android.os.BaseBundle: void remove(java.lang.String)>
+#4.the call statck between class <com.google.android.gms.internal.zzju$zza: com.google.android.gms.common.api.PendingResult end(com.google.android.gms.common.api.GoogleApiClient)> to <android.os.BaseBundle: void remove(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:19
+containsStatic:false
+containsTry:false
+5call by main package
+-----------------------------------------
+#################################################
+N 20 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.util.Set keySet()> is checking!!!
+The life time of api is [21,31]
+6call roads:
+0 Mainhead roads:
+6 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <com.google.android.gms.common.server.response.SafeParcelResponse: void zza(java.lang.StringBuilder,com.google.android.gms.common.server.response.FastJsonResponse$Field,android.os.Parcel,int)>[]--><com.google.android.gms.common.server.response.SafeParcelResponse: java.util.HashMap zzi(android.os.Bundle)>[]--><android.os.BaseBundle: java.util.Set keySet()>
+#1.the call statck between class <com.google.android.gms.common.server.response.SafeParcelResponse: void zza(java.lang.StringBuilder,com.google.android.gms.common.server.response.FastJsonResponse$Field,android.os.Parcel,int)> to <android.os.BaseBundle: java.util.Set keySet()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <com.google.android.gms.auth.api.proxy.ProxyRequest: java.util.Map getHeaderMap()>[]--><android.os.BaseBundle: java.util.Set keySet()>
+#2.the call statck between class <com.google.android.gms.auth.api.proxy.ProxyRequest: java.util.Map getHeaderMap()> to <android.os.BaseBundle: java.util.Set keySet()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <com.google.android.gms.common.server.response.SafeParcelResponse: void zzb(java.lang.StringBuilder,com.google.android.gms.common.server.response.FastJsonResponse$Field,android.os.Parcel,int)>[]--><android.os.BaseBundle: java.util.Set keySet()>
+#3.the call statck between class <com.google.android.gms.common.server.response.SafeParcelResponse: void zzb(java.lang.StringBuilder,com.google.android.gms.common.server.response.FastJsonResponse$Field,android.os.Parcel,int)> to <android.os.BaseBundle: java.util.Set keySet()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <com.google.android.gms.playlog.internal.LogEvent: java.lang.String toString()>[]--><android.os.BaseBundle: java.util.Set keySet()>
+#4.the call statck between class <com.google.android.gms.playlog.internal.LogEvent: java.lang.String toString()> to <android.os.BaseBundle: java.util.Set keySet()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <com.google.android.gms.internal.zzjt: com.google.android.gms.internal.zzox$zzc zzf(android.os.Bundle)>[]--><android.os.BaseBundle: java.util.Set keySet()>
+#5.the call statck between class <com.google.android.gms.internal.zzjt: com.google.android.gms.internal.zzox$zzc zzf(android.os.Bundle)> to <android.os.BaseBundle: java.util.Set keySet()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <com.google.android.gms.auth.api.proxy.ProxyResponse: java.util.Map getHeaders()>[]--><android.os.BaseBundle: java.util.Set keySet()>
+#6.the call statck between class <com.google.android.gms.auth.api.proxy.ProxyResponse: java.util.Map getHeaders()> to <android.os.BaseBundle: java.util.Set keySet()>has compatibility isssues！
+-----------------------------------------
+crashApis:20
+containsStatic:false
+containsTry:false
+7call by main package
+-----------------------------------------
+crashApis numbers:20
+crashApis numbers in main road:0
+On Android Version 16 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 17 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 18 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 19 this app may have error api use(at least): 20 and error api roads: 80
+On Android Version 20 this app may have error api use(at least): 20 and error api roads: 80
+On Android Version 21 this app may have error api use(at least): 3 and error api roads: 13
+On Android Version 22 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 23 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 24 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 25 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 31 this app may have error api use(at least): 0 and error api roads: 0

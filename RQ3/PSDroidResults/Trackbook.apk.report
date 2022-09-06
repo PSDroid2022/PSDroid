@@ -1,0 +1,207 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/Trackbook.apk
+Entry Points[org.y20k.trackbook.TrackerService, org.y20k.trackbook.MainActivity, org.y20k.trackbook.Trackbook]
+FllowDroidcallgraph size:4154
+Soot started on Mon Jul 11 13:30:31 CST 2022
+StaticCheck:<org.y20k.trackbook.helpers.NotificationHelper: boolean createNotificationChannel(android.content.Context)>$yysi0 < 26
+Soot finished on Mon Jul 11 13:30:44 CST 2022
+Soot has run for 0 min. 12 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 22
+Declared Target Sdk version is: 27
+Declared Max Sdk version is: -1
+Collected 595 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.app.Activity: void requestPermissions(java.lang.String[],int)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 22 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.y20k.trackbook.MainActivity dummyMainMethod_org_y20k_trackbook_MainActivity(android.content.Intent)>[]--><org.y20k.trackbook.MainActivity$1: void onClick(android.view.View)>[]--><android.app.Activity: void requestPermissions(java.lang.String[],int)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.app.Activity: void requestPermissions(java.lang.String[],int)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:1
+crashApisInMain:1
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.net.NetworkInfo: int getType()> is checking!!!
+The life time of api is [1,30]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+try
+Good road with try: <org.osmdroid.tileprovider.modules.MapTileDownloader$TileLoader: android.graphics.drawable.Drawable loadTile(long)>[[try]]--><org.osmdroid.tileprovider.modules.NetworkAvailabliltyCheck: boolean getNetworkAvailable()>[[-$i0 <= 13]]--><android.net.NetworkInfo: int getType()>
+One road protect good!
+-$i0 <= 13
+!!!this api will crash on sdk 31 
+Error road: <org.osmdroid.tileprovider.MapTileProviderBasic: boolean isDowngradedMode()>[]--><org.osmdroid.tileprovider.modules.NetworkAvailabliltyCheck: boolean getNetworkAvailable()>[[-$i0 <= 13]]--><android.net.NetworkInfo: int getType()>
+#2.the call statck between class <org.osmdroid.tileprovider.MapTileProviderBasic: boolean isDowngradedMode()> to <android.net.NetworkInfo: int getType()>has compatibility isssues！
+-----------------------------------------
+crashApis:2
+containsStatic:false
+containsTry:true
+3call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()> is checking!!!
+The life time of api is [1,30]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+try
+Good road with try: <org.osmdroid.tileprovider.modules.MapTileDownloader$TileLoader: android.graphics.drawable.Drawable loadTile(long)>[[try]]--><org.osmdroid.tileprovider.modules.NetworkAvailabliltyCheck: boolean getNetworkAvailable()>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>
+One road protect good!
+!!!this api will crash on sdk 31 
+Error road: <org.osmdroid.tileprovider.MapTileProviderBasic: boolean isDowngradedMode()>[]--><org.osmdroid.tileprovider.modules.NetworkAvailabliltyCheck: boolean getNetworkAvailable()>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>
+#2.the call statck between class <org.osmdroid.tileprovider.MapTileProviderBasic: boolean isDowngradedMode()> to <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>has compatibility isssues！
+-----------------------------------------
+crashApis:3
+containsStatic:false
+containsTry:true
+3call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.net.NetworkInfo: boolean isConnected()> is checking!!!
+The life time of api is [1,30]
+4call roads:
+0 Mainhead roads:
+4 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <org.osmdroid.tileprovider.modules.NetworkAvailabliltyCheck: boolean getWiFiNetworkAvailable()>[]--><android.net.NetworkInfo: boolean isConnected()>
+#1.the call statck between class <org.osmdroid.tileprovider.modules.NetworkAvailabliltyCheck: boolean getWiFiNetworkAvailable()> to <android.net.NetworkInfo: boolean isConnected()>has compatibility isssues！
+-----------------------------------------
+try
+Good road with try: <org.osmdroid.tileprovider.modules.MapTileDownloader$TileLoader: android.graphics.drawable.Drawable loadTile(long)>[[try]]--><org.osmdroid.tileprovider.modules.NetworkAvailabliltyCheck: boolean getNetworkAvailable()>[]--><android.net.NetworkInfo: boolean isConnected()>
+One road protect good!
+!!!this api will crash on sdk 31 
+Error road: <org.osmdroid.tileprovider.modules.NetworkAvailabliltyCheck: boolean getCellularDataNetworkAvailable()>[]--><android.net.NetworkInfo: boolean isConnected()>
+#3.the call statck between class <org.osmdroid.tileprovider.modules.NetworkAvailabliltyCheck: boolean getCellularDataNetworkAvailable()> to <android.net.NetworkInfo: boolean isConnected()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <org.osmdroid.tileprovider.MapTileProviderBasic: boolean isDowngradedMode()>[]--><org.osmdroid.tileprovider.modules.NetworkAvailabliltyCheck: boolean getNetworkAvailable()>[]--><android.net.NetworkInfo: boolean isConnected()>
+#4.the call statck between class <org.osmdroid.tileprovider.MapTileProviderBasic: boolean isDowngradedMode()> to <android.net.NetworkInfo: boolean isConnected()>has compatibility isssues！
+-----------------------------------------
+crashApis:4
+containsStatic:false
+containsTry:true
+5call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.app.NotificationChannel: void setDescription(java.lang.String)> is checking!!!
+The life time of api is [26,31]
+2call roads:
+1 Mainhead roads:
+-$i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.y20k.trackbook.TrackerService dummyMainMethod_org_y20k_trackbook_TrackerService(android.content.Intent)>[]--><org.y20k.trackbook.TrackerService: void onCreate()>[]--><org.y20k.trackbook.helpers.NotificationHelper: boolean createNotificationChannel(android.content.Context)>[[-$i0 < 26]]--><android.app.NotificationChannel: void setDescription(java.lang.String)>
+One road protect good!
+1 Packageshead roads:
+-$i0 < 26
+Good road: <org.y20k.trackbook.TrackerService: void access$600(org.y20k.trackbook.TrackerService)>[]--><org.y20k.trackbook.TrackerService: void stopTracking()>[]--><org.y20k.trackbook.helpers.NotificationHelper: android.app.Notification getNotification(android.content.Context,android.support.v4.app.NotificationCompat$Builder,org.y20k.trackbook.core.Track,boolean)>[]--><org.y20k.trackbook.helpers.NotificationHelper: boolean createNotificationChannel(android.content.Context)>[[-$i0 < 26]]--><android.app.NotificationChannel: void setDescription(java.lang.String)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 5 Potential Issue API: SDKCheck of <android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)> is checking!!!
+The life time of api is [26,31]
+2call roads:
+1 Mainhead roads:
+-$i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.y20k.trackbook.TrackerService dummyMainMethod_org_y20k_trackbook_TrackerService(android.content.Intent)>[]--><org.y20k.trackbook.TrackerService: void onCreate()>[]--><org.y20k.trackbook.helpers.NotificationHelper: boolean createNotificationChannel(android.content.Context)>[[-$i0 < 26]]--><android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)>
+One road protect good!
+1 Packageshead roads:
+-$i0 < 26
+Good road: <org.y20k.trackbook.TrackerService: void access$600(org.y20k.trackbook.TrackerService)>[]--><org.y20k.trackbook.TrackerService: void stopTracking()>[]--><org.y20k.trackbook.helpers.NotificationHelper: android.app.Notification getNotification(android.content.Context,android.support.v4.app.NotificationCompat$Builder,org.y20k.trackbook.core.Track,boolean)>[]--><org.y20k.trackbook.helpers.NotificationHelper: boolean createNotificationChannel(android.content.Context)>[[-$i0 < 26]]--><android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 6 Potential Issue API: SDKCheck of <android.content.ContextWrapper: android.content.ComponentName startForegroundService(android.content.Intent)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.y20k.trackbook.MainActivity dummyMainMethod_org_y20k_trackbook_MainActivity(android.content.Intent)>[]--><org.y20k.trackbook.MainActivity$3: void onClick(android.view.View)>[]--><org.y20k.trackbook.MainActivity: void access$200(org.y20k.trackbook.MainActivity)>[]--><org.y20k.trackbook.MainActivity: void handleSaveButtonClick()>[]--><org.y20k.trackbook.MainActivityMapFragment: void onActivityResult(int,int,android.content.Intent)>[]--><org.y20k.trackbook.MainActivity: void onFloatingActionButtonResult(int,int)>[]--><org.y20k.trackbook.MainActivity: void handleStateAfterSave()>[]--><org.y20k.trackbook.MainActivity: void startTrackerService(java.lang.String,android.location.Location)>[[-$i0 < 26]]--><android.content.ContextWrapper: android.content.ComponentName startForegroundService(android.content.Intent)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 7 Potential Issue API: SDKCheck of <android.net.ConnectivityManager: android.net.NetworkInfo getNetworkInfo(int)> is checking!!!
+The life time of api is [1,30]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <org.osmdroid.tileprovider.modules.NetworkAvailabliltyCheck: boolean getWiFiNetworkAvailable()>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getNetworkInfo(int)>
+#1.the call statck between class <org.osmdroid.tileprovider.modules.NetworkAvailabliltyCheck: boolean getWiFiNetworkAvailable()> to <android.net.ConnectivityManager: android.net.NetworkInfo getNetworkInfo(int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 31 
+Error road: <org.osmdroid.tileprovider.modules.NetworkAvailabliltyCheck: boolean getCellularDataNetworkAvailable()>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getNetworkInfo(int)>
+#2.the call statck between class <org.osmdroid.tileprovider.modules.NetworkAvailabliltyCheck: boolean getCellularDataNetworkAvailable()> to <android.net.ConnectivityManager: android.net.NetworkInfo getNetworkInfo(int)>has compatibility isssues！
+-----------------------------------------
+crashApis:5
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 8 Potential Issue API: SDKCheck of <android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)> is checking!!!
+The life time of api is [26,31]
+2call roads:
+1 Mainhead roads:
+-$i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.y20k.trackbook.TrackerService dummyMainMethod_org_y20k_trackbook_TrackerService(android.content.Intent)>[]--><org.y20k.trackbook.TrackerService: void onCreate()>[]--><org.y20k.trackbook.helpers.NotificationHelper: boolean createNotificationChannel(android.content.Context)>[[-$i0 < 26]]--><android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)>
+One road protect good!
+1 Packageshead roads:
+-$i0 < 26
+Good road: <org.y20k.trackbook.TrackerService: void access$600(org.y20k.trackbook.TrackerService)>[]--><org.y20k.trackbook.TrackerService: void stopTracking()>[]--><org.y20k.trackbook.helpers.NotificationHelper: android.app.Notification getNotification(android.content.Context,android.support.v4.app.NotificationCompat$Builder,org.y20k.trackbook.core.Track,boolean)>[]--><org.y20k.trackbook.helpers.NotificationHelper: boolean createNotificationChannel(android.content.Context)>[[-$i0 < 26]]--><android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 9 Potential Issue API: SDKCheck of <android.app.Activity: void onRequestPermissionsResult(int,java.lang.String[],int[])> is checking!!!
+The life time of api is [23,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 22 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.y20k.trackbook.MainActivity dummyMainMethod_org_y20k_trackbook_MainActivity(android.content.Intent)>[]--><org.y20k.trackbook.MainActivity: void onRequestPermissionsResult(int,java.lang.String[],int[])>[[]]--><android.app.Activity: void onRequestPermissionsResult(int,java.lang.String[],int[])>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.app.Activity: void onRequestPermissionsResult(int,java.lang.String[],int[])>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:6
+crashApisInMain:2
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+crashApis numbers:6
+crashApis numbers in main road:2
+On Android Version 16 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 17 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 18 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 19 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 20 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 21 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 22 this app may have error api use(at least): 2 and error api roads: 2
+On Android Version 23 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 24 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 25 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 31 this app may have error api use(at least): 4 and error api roads: 7

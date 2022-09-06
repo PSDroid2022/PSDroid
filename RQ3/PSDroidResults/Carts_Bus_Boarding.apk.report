@@ -1,0 +1,423 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/Carts_Bus_Boarding.apk
+Entry Points[in.ac.iitb.cse.cartsbusboarding.acc.AccService, in.ac.iitb.cse.cartsbusboarding.SettingsActivity, in.ac.iitb.cse.cartsbusboarding.PollingService, in.ac.iitb.cse.cartsbusboarding.MainActivity, in.ac.iitb.cse.cartsbusboarding.gsm.GsmService]
+FllowDroidcallgraph size:1424
+Soot started on Mon Jul 11 02:00:30 CST 2022
+StaticCheck:<in.ac.iitb.cse.cartsbusboarding.SettingsActivity: boolean isSimplePreferences(android.content.Context)>$yysi0 >= 11
+Soot finished on Mon Jul 11 02:01:02 CST 2022
+Soot has run for 0 min. 32 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 19
+Declared Target Sdk version is: 22
+Declared Max Sdk version is: -1
+Collected 195 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <java.awt.Toolkit: java.awt.Image getImage(java.net.URL)> is checking!!!
+The life time of api is [1,8]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+try
+Good road with try: <lombok.installer.Installer$1: void run()>[[try]]--><lombok.installer.InstallerGUI: void <init>()>[]--><java.awt.Toolkit: java.awt.Image getImage(java.net.URL)>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <java.awt.Graphics: boolean drawImage(java.awt.Image,int,int,java.awt.image.ImageObserver)> is checking!!!
+The life time of api is [1,8]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <svm_toy: void paint(java.awt.Graphics)>[]--><java.awt.Graphics: boolean drawImage(java.awt.Image,int,int,java.awt.image.ImageObserver)>
+#1.the call statck between class <svm_toy: void paint(java.awt.Graphics)> to <java.awt.Graphics: boolean drawImage(java.awt.Image,int,int,java.awt.image.ImageObserver)>has compatibility isssues！
+-----------------------------------------
+crashApis:1
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <java.awt.Graphics: void drawLine(int,int,int,int)> is checking!!!
+The life time of api is [1,8]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <svm_toy$2: void actionPerformed(java.awt.event.ActionEvent)>[]--><svm_toy: void button_run_clicked(java.lang.String)>[]--><java.awt.Graphics: void drawLine(int,int,int,int)>
+#1.the call statck between class <svm_toy$2: void actionPerformed(java.awt.event.ActionEvent)> to <java.awt.Graphics: void drawLine(int,int,int,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <svm_toy$6: void actionPerformed(java.awt.event.ActionEvent)>[]--><svm_toy: void button_run_clicked(java.lang.String)>[]--><java.awt.Graphics: void drawLine(int,int,int,int)>
+#2.the call statck between class <svm_toy$6: void actionPerformed(java.awt.event.ActionEvent)> to <java.awt.Graphics: void drawLine(int,int,int,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:2
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <java.awt.Font: java.awt.Font deriveFont(java.util.Map)> is checking!!!
+The life time of api is [1,8]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <lombok.installer.InstallerGUI$JHyperLink: void <init>(java.lang.String)>[]--><java.awt.Font: java.awt.Font deriveFont(java.util.Map)>
+#1.the call statck between class <lombok.installer.InstallerGUI$JHyperLink: void <init>(java.lang.String)> to <java.awt.Font: java.awt.Font deriveFont(java.util.Map)>has compatibility isssues！
+-----------------------------------------
+crashApis:3
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <java.awt.Cursor: java.awt.Cursor getPredefinedCursor(int)> is checking!!!
+The life time of api is [1,8]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <lombok.installer.InstallerGUI$JHyperLink: void <init>(java.lang.String)>[]--><java.awt.Cursor: java.awt.Cursor getPredefinedCursor(int)>
+#1.the call statck between class <lombok.installer.InstallerGUI$JHyperLink: void <init>(java.lang.String)> to <java.awt.Cursor: java.awt.Cursor getPredefinedCursor(int)>has compatibility isssues！
+-----------------------------------------
+crashApis:4
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 5 Potential Issue API: SDKCheck of <java.awt.geom.AffineTransform: void <init>(double,double,double,double,double,double)> is checking!!!
+The life time of api is [1,8]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 6 Potential Issue API: SDKCheck of <java.awt.Font: java.awt.Font deriveFont(int)> is checking!!!
+The life time of api is [1,8]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <lombok.installer.InstallerGUI: void access$1100(lombok.installer.InstallerGUI,java.util.List)>[]--><lombok.installer.InstallerGUI: void uninstall(java.util.List)>[]--><java.awt.Font: java.awt.Font deriveFont(int)>
+#1.the call statck between class <lombok.installer.InstallerGUI: void access$1100(lombok.installer.InstallerGUI,java.util.List)> to <java.awt.Font: java.awt.Font deriveFont(int)>has compatibility isssues！
+-----------------------------------------
+crashApis:5
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 7 Potential Issue API: SDKCheck of <java.awt.Graphics: void setColor(java.awt.Color)> is checking!!!
+The life time of api is [1,8]
+7call roads:
+0 Mainhead roads:
+7 Packageshead roads:
+!!!this api will crash on sdk 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <svm_toy$2: void actionPerformed(java.awt.event.ActionEvent)>[]--><svm_toy: void button_run_clicked(java.lang.String)>[]--><java.awt.Graphics: void setColor(java.awt.Color)>
+#1.the call statck between class <svm_toy$2: void actionPerformed(java.awt.event.ActionEvent)> to <java.awt.Graphics: void setColor(java.awt.Color)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <svm_toy$5: void actionPerformed(java.awt.event.ActionEvent)>[]--><svm_toy: void button_load_clicked()>[]--><svm_toy: void clear_all()>[]--><java.awt.Graphics: void setColor(java.awt.Color)>
+#2.the call statck between class <svm_toy$5: void actionPerformed(java.awt.event.ActionEvent)> to <java.awt.Graphics: void setColor(java.awt.Color)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <svm_toy$3: void actionPerformed(java.awt.event.ActionEvent)>[]--><svm_toy: void button_clear_clicked()>[]--><svm_toy: void clear_all()>[]--><java.awt.Graphics: void setColor(java.awt.Color)>
+#3.the call statck between class <svm_toy$3: void actionPerformed(java.awt.event.ActionEvent)> to <java.awt.Graphics: void setColor(java.awt.Color)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <svm_toy: void init()>[]--><svm_toy: void setSize(java.awt.Dimension)>[]--><svm_toy: void setSize(int,int)>[]--><svm_toy: void clear_all()>[]--><java.awt.Graphics: void setColor(java.awt.Color)>
+#4.the call statck between class <svm_toy: void init()> to <java.awt.Graphics: void setColor(java.awt.Color)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <svm_toy$6: void actionPerformed(java.awt.event.ActionEvent)>[]--><svm_toy: void button_run_clicked(java.lang.String)>[]--><java.awt.Graphics: void setColor(java.awt.Color)>
+#5.the call statck between class <svm_toy$6: void actionPerformed(java.awt.event.ActionEvent)> to <java.awt.Graphics: void setColor(java.awt.Color)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <svm_toy: void draw_point(svm_toy$point)>[]--><java.awt.Graphics: void setColor(java.awt.Color)>
+#6.the call statck between class <svm_toy: void draw_point(svm_toy$point)> to <java.awt.Graphics: void setColor(java.awt.Color)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <svm_toy: void paint(java.awt.Graphics)>[]--><java.awt.Graphics: void setColor(java.awt.Color)>
+#7.the call statck between class <svm_toy: void paint(java.awt.Graphics)> to <java.awt.Graphics: void setColor(java.awt.Color)>has compatibility isssues！
+-----------------------------------------
+crashApis:6
+containsStatic:false
+containsTry:false
+8call by main package
+-----------------------------------------
+#################################################
+N 8 Potential Issue API: SDKCheck of <java.awt.Component: void setVisible(boolean)> is checking!!!
+The life time of api is [1,8]
+5call roads:
+0 Mainhead roads:
+5 Packageshead roads:
+!!!this api will crash on sdk 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <lombok.installer.InstallerGUI$3: void actionPerformed(java.awt.event.ActionEvent)>[]--><java.awt.Component: void setVisible(boolean)>
+#1.the call statck between class <lombok.installer.InstallerGUI$3: void actionPerformed(java.awt.event.ActionEvent)> to <java.awt.Component: void setVisible(boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <lombok.installer.InstallerGUI$2: void actionPerformed(java.awt.event.ActionEvent)>[]--><java.awt.Component: void setVisible(boolean)>
+#2.the call statck between class <lombok.installer.InstallerGUI$2: void actionPerformed(java.awt.event.ActionEvent)> to <java.awt.Component: void setVisible(boolean)>has compatibility isssues！
+-----------------------------------------
+try
+Good road with try: <lombok.installer.Installer$1: void run()>[[try]]--><lombok.installer.InstallerGUI: void <init>()>[[try]]--><java.awt.Component: void setVisible(boolean)>
+One road protect good!
+!!!this api will crash on sdk 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <lombok.installer.InstallerGUI: void access$1100(lombok.installer.InstallerGUI,java.util.List)>[]--><lombok.installer.InstallerGUI: void uninstall(java.util.List)>[]--><java.awt.Component: void setVisible(boolean)>
+#4.the call statck between class <lombok.installer.InstallerGUI: void access$1100(lombok.installer.InstallerGUI,java.util.List)> to <java.awt.Component: void setVisible(boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <lombok.installer.InstallerGUI: void access$1000(lombok.installer.InstallerGUI)>[]--><lombok.installer.InstallerGUI: void showWhatIDo()>[]--><java.awt.Component: void setVisible(boolean)>
+#5.the call statck between class <lombok.installer.InstallerGUI: void access$1000(lombok.installer.InstallerGUI)> to <java.awt.Component: void setVisible(boolean)>has compatibility isssues！
+-----------------------------------------
+crashApis:7
+containsStatic:false
+containsTry:true
+6call by main package
+-----------------------------------------
+#################################################
+N 9 Potential Issue API: SDKCheck of <java.awt.Dimension: void <init>(int,int)> is checking!!!
+The life time of api is [1,8]
+4call roads:
+0 Mainhead roads:
+4 Packageshead roads:
+!!!this api will crash on sdk 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <lombok.installer.InstallerGUI$IdesList: java.awt.Dimension getPreferredScrollableViewportSize()>[]--><java.awt.Dimension: void <init>(int,int)>
+#1.the call statck between class <lombok.installer.InstallerGUI$IdesList: java.awt.Dimension getPreferredScrollableViewportSize()> to <java.awt.Dimension: void <init>(int,int)>has compatibility isssues！
+-----------------------------------------
+try
+Good road with try: <lombok.installer.Installer$1: void run()>[[try]]--><lombok.installer.InstallerGUI: void <init>()>[[try]]--><lombok.installer.InstallerGUI: void buildChrome(java.awt.Container)>[]--><java.awt.Dimension: void <init>(int,int)>
+One road protect good!
+!!!this api will crash on sdk 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <lombok.installer.InstallerGUI: void access$1100(lombok.installer.InstallerGUI,java.util.List)>[]--><lombok.installer.InstallerGUI: void uninstall(java.util.List)>[]--><java.awt.Dimension: void <init>(int,int)>
+#3.the call statck between class <lombok.installer.InstallerGUI: void access$1100(lombok.installer.InstallerGUI,java.util.List)> to <java.awt.Dimension: void <init>(int,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <svm_toy: java.awt.Dimension getPreferredSize()>[]--><java.awt.Dimension: void <init>(int,int)>
+#4.the call statck between class <svm_toy: java.awt.Dimension getPreferredSize()> to <java.awt.Dimension: void <init>(int,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:8
+containsStatic:false
+containsTry:true
+5call by main package
+-----------------------------------------
+#################################################
+N 10 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putInt(java.lang.String,int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <in.ac.iitb.cse.cartsbusboarding.MainActivity$PlaceholderFragment: in.ac.iitb.cse.cartsbusboarding.MainActivity$PlaceholderFragment newInstance(int)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#1.the call statck between class <in.ac.iitb.cse.cartsbusboarding.MainActivity$PlaceholderFragment: in.ac.iitb.cse.cartsbusboarding.MainActivity$PlaceholderFragment newInstance(int)> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:9
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 11 Potential Issue API: SDKCheck of <java.awt.geom.AffineTransform: java.awt.geom.AffineTransform getTranslateInstance(double,double)> is checking!!!
+The life time of api is [1,8]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 12 Potential Issue API: SDKCheck of <java.awt.geom.AffineTransform: void getMatrix(double[])> is checking!!!
+The life time of api is [1,8]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <org.apache.commons.math3.geometry.euclidean.twod.Line$LineTransform: void <init>(java.awt.geom.AffineTransform)>[]--><java.awt.geom.AffineTransform: void getMatrix(double[])>
+#1.the call statck between class <org.apache.commons.math3.geometry.euclidean.twod.Line$LineTransform: void <init>(java.awt.geom.AffineTransform)> to <java.awt.geom.AffineTransform: void getMatrix(double[])>has compatibility isssues！
+-----------------------------------------
+crashApis:10
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 13 Potential Issue API: SDKCheck of <java.awt.event.MouseEvent: int getY()> is checking!!!
+The life time of api is [1,8]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <svm_toy: void processMouseEvent(java.awt.event.MouseEvent)>[]--><java.awt.event.MouseEvent: int getY()>
+#1.the call statck between class <svm_toy: void processMouseEvent(java.awt.event.MouseEvent)> to <java.awt.event.MouseEvent: int getY()>has compatibility isssues！
+-----------------------------------------
+crashApis:11
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 14 Potential Issue API: SDKCheck of <java.awt.Graphics: void fillRect(int,int,int,int)> is checking!!!
+The life time of api is [1,8]
+5call roads:
+0 Mainhead roads:
+5 Packageshead roads:
+!!!this api will crash on sdk 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <svm_toy$5: void actionPerformed(java.awt.event.ActionEvent)>[]--><svm_toy: void button_load_clicked()>[]--><svm_toy: void clear_all()>[]--><java.awt.Graphics: void fillRect(int,int,int,int)>
+#1.the call statck between class <svm_toy$5: void actionPerformed(java.awt.event.ActionEvent)> to <java.awt.Graphics: void fillRect(int,int,int,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <svm_toy$3: void actionPerformed(java.awt.event.ActionEvent)>[]--><svm_toy: void button_clear_clicked()>[]--><svm_toy: void clear_all()>[]--><java.awt.Graphics: void fillRect(int,int,int,int)>
+#2.the call statck between class <svm_toy$3: void actionPerformed(java.awt.event.ActionEvent)> to <java.awt.Graphics: void fillRect(int,int,int,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <svm_toy: void init()>[]--><svm_toy: void setSize(java.awt.Dimension)>[]--><svm_toy: void setSize(int,int)>[]--><svm_toy: void clear_all()>[]--><java.awt.Graphics: void fillRect(int,int,int,int)>
+#3.the call statck between class <svm_toy: void init()> to <java.awt.Graphics: void fillRect(int,int,int,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <svm_toy: void draw_point(svm_toy$point)>[]--><java.awt.Graphics: void fillRect(int,int,int,int)>
+#4.the call statck between class <svm_toy: void draw_point(svm_toy$point)> to <java.awt.Graphics: void fillRect(int,int,int,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <svm_toy: void paint(java.awt.Graphics)>[]--><java.awt.Graphics: void fillRect(int,int,int,int)>
+#5.the call statck between class <svm_toy: void paint(java.awt.Graphics)> to <java.awt.Graphics: void fillRect(int,int,int,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:12
+containsStatic:false
+containsTry:false
+6call by main package
+-----------------------------------------
+#################################################
+N 15 Potential Issue API: SDKCheck of <java.awt.Image: java.awt.Graphics getGraphics()> is checking!!!
+The life time of api is [1,8]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <svm_toy: void paint(java.awt.Graphics)>[]--><java.awt.Image: java.awt.Graphics getGraphics()>
+#1.the call statck between class <svm_toy: void paint(java.awt.Graphics)> to <java.awt.Image: java.awt.Graphics getGraphics()>has compatibility isssues！
+-----------------------------------------
+crashApis:13
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 16 Potential Issue API: SDKCheck of <java.awt.Color: void <init>(int,int,int)> is checking!!!
+The life time of api is [1,8]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <svm_toy: void <clinit>()>[]--><java.awt.Color: void <init>(int,int,int)>
+#1.the call statck between class <svm_toy: void <clinit>()> to <java.awt.Color: void <init>(int,int,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <lombok.installer.InstallerGUI$13: void actionPerformed(java.awt.event.ActionEvent)>[]--><java.awt.Color: void <init>(int,int,int)>
+#2.the call statck between class <lombok.installer.InstallerGUI$13: void actionPerformed(java.awt.event.ActionEvent)> to <java.awt.Color: void <init>(int,int,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:14
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 17 Potential Issue API: SDKCheck of <java.awt.Toolkit: java.awt.Toolkit getDefaultToolkit()> is checking!!!
+The life time of api is [1,8]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+try
+Good road with try: <lombok.installer.Installer$1: void run()>[[try]]--><lombok.installer.InstallerGUI: void <init>()>[]--><java.awt.Toolkit: java.awt.Toolkit getDefaultToolkit()>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 18 Potential Issue API: SDKCheck of <java.awt.event.MouseEvent: int getX()> is checking!!!
+The life time of api is [1,8]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <svm_toy: void processMouseEvent(java.awt.event.MouseEvent)>[]--><java.awt.event.MouseEvent: int getX()>
+#1.the call statck between class <svm_toy: void processMouseEvent(java.awt.event.MouseEvent)> to <java.awt.event.MouseEvent: int getX()>has compatibility isssues！
+-----------------------------------------
+crashApis:15
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 19 Potential Issue API: SDKCheck of <javax.imageio.ImageIO: java.awt.image.BufferedImage read(java.net.URL)> is checking!!!
+The life time of api is [1,8]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+try
+Good road with try: <lombok.installer.Installer$1: void run()>[[try]]--><lombok.installer.InstallerGUI: void show()>[[try]]--><lombok.installer.AppleNativeLook: void go()>[]--><javax.imageio.ImageIO: java.awt.image.BufferedImage read(java.net.URL)>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 20 Potential Issue API: SDKCheck of <java.awt.Insets: void <init>(int,int,int,int)> is checking!!!
+The life time of api is [1,8]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <lombok.installer.InstallerGUI$JHyperLink: void <init>(java.lang.String)>[]--><java.awt.Insets: void <init>(int,int,int,int)>
+#1.the call statck between class <lombok.installer.InstallerGUI$JHyperLink: void <init>(java.lang.String)> to <java.awt.Insets: void <init>(int,int,int,int)>has compatibility isssues！
+-----------------------------------------
+try
+Good road with try: <lombok.installer.Installer$1: void run()>[[try]]--><lombok.installer.InstallerGUI: void <init>()>[[try]]--><lombok.installer.InstallerGUI: java.awt.Component buildIdeArea()>[]--><java.awt.Insets: void <init>(int,int,int,int)>
+One road protect good!
+crashApis:16
+containsStatic:false
+containsTry:true
+3call by main package
+-----------------------------------------
+#################################################
+N 21 Potential Issue API: SDKCheck of <java.awt.event.WindowAdapter: void <init>()> is checking!!!
+The life time of api is [1,8]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <AppletFrame$1: void <init>(AppletFrame)>[]--><java.awt.event.WindowAdapter: void <init>()>
+#1.the call statck between class <AppletFrame$1: void <init>(AppletFrame)> to <java.awt.event.WindowAdapter: void <init>()>has compatibility isssues！
+-----------------------------------------
+crashApis:17
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+crashApis numbers:17
+crashApis numbers in main road:0
+On Android Version 16 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 17 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 18 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 19 this app may have error api use(at least): 17 and error api roads: 34
+On Android Version 20 this app may have error api use(at least): 17 and error api roads: 34
+On Android Version 21 this app may have error api use(at least): 16 and error api roads: 33
+On Android Version 22 this app may have error api use(at least): 16 and error api roads: 33
+On Android Version 23 this app may have error api use(at least): 16 and error api roads: 33
+On Android Version 24 this app may have error api use(at least): 16 and error api roads: 33
+On Android Version 25 this app may have error api use(at least): 16 and error api roads: 33
+On Android Version 26 this app may have error api use(at least): 16 and error api roads: 33
+On Android Version 27 this app may have error api use(at least): 16 and error api roads: 33
+On Android Version 28 this app may have error api use(at least): 16 and error api roads: 33
+On Android Version 29 this app may have error api use(at least): 16 and error api roads: 33
+On Android Version 30 this app may have error api use(at least): 16 and error api roads: 33
+On Android Version 31 this app may have error api use(at least): 16 and error api roads: 33

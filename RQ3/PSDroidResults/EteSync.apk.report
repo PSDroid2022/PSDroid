@@ -1,0 +1,831 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/EteSync.apk
+Entry Points[com.etesync.syncadapter.ui.WebViewActivity, org.acra.attachment.AcraContentProvider, com.etesync.syncadapter.AccountsChangedReceiver, com.etesync.syncadapter.syncadapter.AccountAuthenticatorService, com.etesync.syncadapter.ui.importlocal.ImportActivity, com.etesync.syncadapter.ui.ViewCollectionActivity, com.etesync.syncadapter.ui.PermissionsActivity, com.etesync.syncadapter.ui.JournalItemActivity, com.etesync.syncadapter.syncadapter.CalendarsSyncAdapterService, com.etesync.syncadapter.syncadapter.NullAuthenticatorService, com.etesync.syncadapter.ui.AccountSettingsActivity, at.bitfire.cert4android.TrustCertificateActivity, com.etesync.syncadapter.syncadapter.AddressBookProvider, com.etesync.syncadapter.ui.CollectionMembersActivity, com.etesync.syncadapter.ui.DebugInfoActivity, at.bitfire.cert4android.CustomCertService, com.etesync.syncadapter.NotificationHelper$NotificationHandlerActivity, com.etesync.syncadapter.AccountUpdateService, com.etesync.syncadapter.syncadapter.AddressBooksSyncAdapterService, org.acra.sender.SenderService, com.etesync.syncadapter.App$ReinitSettingsReceiver, com.etesync.syncadapter.ui.CreateCollectionActivity, com.etesync.syncadapter.ui.AccountActivity, com.etesync.syncadapter.PackageChangedReceiver, com.etesync.syncadapter.AccountSettings$AppUpdatedReceiver, com.etesync.syncadapter.ui.AccountsActivity, com.etesync.syncadapter.ui.AppSettingsActivity, com.etesync.syncadapter.App, com.etesync.syncadapter.ui.setup.LoginActivity, com.etesync.syncadapter.App$AppUpdatedReceiver, com.etesync.syncadapter.ui.EditCollectionActivity, com.etesync.syncadapter.syncadapter.ContactsSyncAdapterService, com.etesync.syncadapter.ui.AboutActivity]
+FllowDroidcallgraph size:9706
+Soot started on Mon Jul 11 03:32:26 CST 2022
+StaticCheck:<com.etesync.syncadapter.resource.LocalTaskList: boolean tasksProviderAvailable(android.content.Context)>$yysi0 < 23
+Soot finished on Mon Jul 11 03:33:01 CST 2022
+Soot has run for 0 min. 35 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 19
+Declared Target Sdk version is: 26
+Declared Max Sdk version is: -1
+Collected 821 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.os.BaseBundle: int getInt(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+2call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.etesync.syncadapter.ui.AboutActivity dummyMainMethod_com_etesync_syncadapter_ui_AboutActivity(android.content.Intent)>[]--><dummyMainClass: com.etesync.syncadapter.ui.AboutActivity$ComponentFragment dummyMainMethod_com_etesync_syncadapter_ui_AboutActivity$ComponentFragment(android.content.Intent,android.app.Activity)>[]--><com.etesync.syncadapter.ui.AboutActivity$ComponentFragment: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <com.etesync.syncadapter.ui.importlocal.ImportFragment: android.app.Dialog onCreateDialog(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#1.the call statck between class <com.etesync.syncadapter.ui.importlocal.ImportFragment: android.app.Dialog onCreateDialog(android.os.Bundle)> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:1
+crashApisInMain:1
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <com.etesync.syncadapter.syncadapter.SyncAdapterService$SyncAdapter: boolean checkSyncConditions(com.etesync.syncadapter.AccountSettings)>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>
+#1.the call statck between class <com.etesync.syncadapter.syncadapter.SyncAdapterService$SyncAdapter: boolean checkSyncConditions(com.etesync.syncadapter.AccountSettings)> to <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>has compatibility isssues！
+-----------------------------------------
+crashApis:2
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.accounts.AccountManager: android.accounts.AccountManagerFuture removeAccount(android.accounts.Account,android.app.Activity,android.accounts.AccountManagerCallback,android.os.Handler)> is checking!!!
+The life time of api is [22,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 22
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.etesync.syncadapter.ui.AccountActivity dummyMainMethod_com_etesync_syncadapter_ui_AccountActivity(android.content.Intent)>[]--><com.etesync.syncadapter.ui.AccountActivity$1: void onClick(android.content.DialogInterface,int)>[]--><com.etesync.syncadapter.ui.AccountActivity: void access$000(com.etesync.syncadapter.ui.AccountActivity)>[]--><com.etesync.syncadapter.ui.AccountActivity: void deleteAccount()>[[-$i0 < 22]]--><android.accounts.AccountManager: android.accounts.AccountManagerFuture removeAccount(android.accounts.Account,android.app.Activity,android.accounts.AccountManagerCallback,android.os.Handler)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.os.BaseBundle: boolean containsKey(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+4call roads:
+0 Mainhead roads:
+4 Packageshead roads:
+-i0 < 24
+Good road: <com.etesync.syncadapter.syncadapter.ContactsSyncManager: boolean prepare()>[[-i0 < 24]]--><android.os.BaseBundle: boolean containsKey(java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.etesync.syncadapter.syncadapter.CalendarsSyncAdapterService$SyncAdapter: void onPerformSync(android.accounts.Account,android.os.Bundle,java.lang.String,android.content.ContentProviderClient,android.content.SyncResult)>[[try]]--><android.os.BaseBundle: boolean containsKey(java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.etesync.syncadapter.syncadapter.ContactsSyncAdapterService$ContactsSyncAdapter: void onPerformSync(android.accounts.Account,android.os.Bundle,java.lang.String,android.content.ContentProviderClient,android.content.SyncResult)>[[try]]--><android.os.BaseBundle: boolean containsKey(java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.etesync.syncadapter.syncadapter.AddressBooksSyncAdapterService$AddressBooksSyncAdapter: void onPerformSync(android.accounts.Account,android.os.Bundle,java.lang.String,android.content.ContentProviderClient,android.content.SyncResult)>[[try]]--><android.os.BaseBundle: boolean containsKey(java.lang.String)>
+One road protect good!
+containsStatic:false
+containsTry:true
+5call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)> is checking!!!
+The life time of api is [21,31]
+4call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.etesync.syncadapter.ui.AboutActivity dummyMainMethod_com_etesync_syncadapter_ui_AboutActivity(android.content.Intent)>[]--><dummyMainClass: com.etesync.syncadapter.ui.AboutActivity$ComponentFragment dummyMainMethod_com_etesync_syncadapter_ui_AboutActivity$ComponentFragment(android.content.Intent,android.app.Activity)>[]--><com.etesync.syncadapter.ui.AboutActivity$ComponentFragment: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.etesync.syncadapter.ui.AccountsActivity dummyMainMethod_com_etesync_syncadapter_ui_AccountsActivity(android.content.Intent)>[]--><com.etesync.syncadapter.ui.AccountsActivity: void onCreate(android.os.Bundle)>[]--><com.etesync.syncadapter.ui.StartupDialogFragment: com.etesync.syncadapter.ui.StartupDialogFragment[] getStartupDialogs(android.content.Context)>[]--><com.etesync.syncadapter.ui.StartupDialogFragment: com.etesync.syncadapter.ui.StartupDialogFragment instantiate(com.etesync.syncadapter.ui.StartupDialogFragment$Mode)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.etesync.syncadapter.ui.CollectionMembersActivity dummyMainMethod_com_etesync_syncadapter_ui_CollectionMembersActivity(android.content.Intent)>[]--><dummyMainClass: com.etesync.syncadapter.ui.CollectionMembersListFragment dummyMainMethod_com_etesync_syncadapter_ui_CollectionMembersListFragment(android.content.Intent,android.app.Activity)>[]--><com.etesync.syncadapter.ui.CollectionMembersListFragment$2: void onClick(android.content.DialogInterface,int)>[]--><com.etesync.syncadapter.ui.RemoveMemberFragment: com.etesync.syncadapter.ui.RemoveMemberFragment newInstance(android.accounts.Account,com.etesync.syncadapter.model.CollectionInfo,java.lang.String)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+3 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <com.etesync.syncadapter.ui.CollectionMembersActivity$2: void onClick(android.content.DialogInterface,int)>[]--><com.etesync.syncadapter.ui.AddMemberFragment: com.etesync.syncadapter.ui.AddMemberFragment newInstance(android.accounts.Account,com.etesync.syncadapter.model.CollectionInfo,java.lang.String)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#1.the call statck between class <com.etesync.syncadapter.ui.CollectionMembersActivity$2: void onClick(android.content.DialogInterface,int)> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <com.etesync.syncadapter.ui.setup.DetectConfigurationFragment$NothingDetectedFragment: com.etesync.syncadapter.ui.setup.DetectConfigurationFragment$NothingDetectedFragment newInstance(java.lang.String)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#2.the call statck between class <com.etesync.syncadapter.ui.setup.DetectConfigurationFragment$NothingDetectedFragment: com.etesync.syncadapter.ui.setup.DetectConfigurationFragment$NothingDetectedFragment newInstance(java.lang.String)> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <com.etesync.syncadapter.ui.setup.LoginCredentialsChangeFragment$NothingDetectedFragment: com.etesync.syncadapter.ui.setup.LoginCredentialsChangeFragment$NothingDetectedFragment newInstance(java.lang.String)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#3.the call statck between class <com.etesync.syncadapter.ui.setup.LoginCredentialsChangeFragment$NothingDetectedFragment: com.etesync.syncadapter.ui.setup.LoginCredentialsChangeFragment$NothingDetectedFragment newInstance(java.lang.String)> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:3
+crashApisInMain:2
+containsStatic:false
+containsTry:false
+4call by main package
+-----------------------------------------
+#################################################
+N 5 Potential Issue API: SDKCheck of <android.media.MediaCodecList: android.media.MediaCodecInfo[] getCodecInfos()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+$i0 >= 21
+Good road: <org.acra.collector.MediaCodecListCollector: void collect(org.acra.ReportField,android.content.Context,org.acra.config.CoreConfiguration,org.acra.builder.ReportBuilder,org.acra.data.CrashReportData)>[]--><org.acra.collector.MediaCodecListCollector: org.json.JSONObject collectMediaCodecList()>[[$i0 >= 21]]--><android.media.MediaCodecList: android.media.MediaCodecInfo[] getCodecInfos()>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 6 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)> is checking!!!
+The life time of api is [22,31]
+6call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 21 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.etesync.syncadapter.ui.AccountActivity dummyMainMethod_com_etesync_syncadapter_ui_AccountActivity(android.content.Intent)>[]--><com.etesync.syncadapter.ui.AccountActivity: boolean onOptionsItemSelected(android.view.MenuItem)>[]--><com.etesync.syncadapter.ui.AccountActivity: void requestSync()>[]--><com.etesync.syncadapter.ui.AccountActivity: void requestSync(android.accounts.Account)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+5 Packageshead roads:
+try
+Good road with try: <okhttp3.internal.connection.ConnectInterceptor: okhttp3.Response intercept(okhttp3.Interceptor$Chain)>[]--><okhttp3.internal.connection.StreamAllocation: okhttp3.internal.http.HttpCodec newStream(okhttp3.OkHttpClient,boolean)>[[try]]--><okhttp3.internal.connection.StreamAllocation: okhttp3.internal.connection.RealConnection findHealthyConnection(int,int,int,boolean,boolean)>[]--><okhttp3.internal.connection.StreamAllocation: okhttp3.internal.connection.RealConnection findConnection(int,int,int,boolean)>[]--><okhttp3.internal.connection.RealConnection: void connect(int,int,int,boolean)>[[try]]--><okhttp3.internal.connection.RealConnection: void establishProtocol(okhttp3.internal.connection.ConnectionSpecSelector)>[]--><okhttp3.internal.connection.RealConnection: void connectTls(okhttp3.internal.connection.ConnectionSpecSelector)>[[try]]--><at.bitfire.cert4android.CustomCertManager$CustomHostnameVerifier: boolean verify(java.lang.String,javax.net.ssl.SSLSession)>[[try]]--><at.bitfire.cert4android.CustomCertManager: void checkCustomTrusted(java.security.cert.X509Certificate)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+One road protect good!
+!!!this api will crash on sdk 19 20 21 
+Error road: <com.etesync.syncadapter.ui.CreateCollectionFragment$CreateCollectionLoader: void requestSync(java.lang.String)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+#2.the call statck between class <com.etesync.syncadapter.ui.CreateCollectionFragment$CreateCollectionLoader: void requestSync(java.lang.String)> to <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 21 
+Error road: <com.etesync.syncadapter.syncadapter.NullAuthenticatorService$AccountAuthenticator: android.os.Bundle getAccountRemovalAllowed(android.accounts.AccountAuthenticatorResponse,android.accounts.Account)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+#3.the call statck between class <com.etesync.syncadapter.syncadapter.NullAuthenticatorService$AccountAuthenticator: android.os.Bundle getAccountRemovalAllowed(android.accounts.AccountAuthenticatorResponse,android.accounts.Account)> to <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 21 
+Error road: <at.bitfire.cert4android.CustomCertManager: void checkServerTrusted(java.security.cert.X509Certificate[],java.lang.String)>[]--><at.bitfire.cert4android.CustomCertManager: void checkCustomTrusted(java.security.cert.X509Certificate)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+#4.the call statck between class <at.bitfire.cert4android.CustomCertManager: void checkServerTrusted(java.security.cert.X509Certificate[],java.lang.String)> to <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+try
+Good road with try: <com.etesync.syncadapter.syncadapter.AddressBooksSyncAdapterService$AddressBooksSyncAdapter: void onPerformSync(android.accounts.Account,android.os.Bundle,java.lang.String,android.content.ContentProviderClient,android.content.SyncResult)>[[try]]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+One road protect good!
+crashApis:4
+crashApisInMain:3
+containsStatic:false
+containsTry:true
+6call by main package
+-----------------------------------------
+#################################################
+N 7 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.lang.Object get(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.etesync.syncadapter.NotificationHelper$NotificationHandlerActivity dummyMainMethod_com_etesync_syncadapter_NotificationHelper$NotificationHandlerActivity(android.content.Intent)>[]--><com.etesync.syncadapter.NotificationHelper$NotificationHandlerActivity: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.Object get(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: java.lang.Object get(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:5
+crashApisInMain:4
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 8 Potential Issue API: SDKCheck of <android.os.BaseBundle: boolean getBoolean(java.lang.String)> is checking!!!
+The life time of api is [22,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+try
+Good road with try: <com.etesync.syncadapter.ui.AccountActivity$4: void run(android.accounts.AccountManagerFuture)>[[try]]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+One road protect good!
+!!!this api will crash on sdk 19 20 21 
+Error road: <at.bitfire.cert4android.CustomCertService$MessageHandler: void handleMessage(android.os.Message)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+#2.the call statck between class <at.bitfire.cert4android.CustomCertService$MessageHandler: void handleMessage(android.os.Message)> to <android.os.BaseBundle: boolean getBoolean(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:6
+containsStatic:false
+containsTry:true
+3call by main package
+-----------------------------------------
+#################################################
+N 9 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.lang.String getString(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+21call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.etesync.syncadapter.ui.CollectionMembersActivity dummyMainMethod_com_etesync_syncadapter_ui_CollectionMembersActivity(android.content.Intent)>[]--><com.etesync.syncadapter.ui.CollectionMembersActivity: void onCreate(android.os.Bundle)>[]--><com.etesync.syncadapter.ui.CollectionMembersActivity: void refresh()>[]--><com.etesync.syncadapter.ui.CollectionMembersListFragment: void refresh()>[]--><com.etesync.syncadapter.ui.CollectionMembersListFragment$JournalMembersFetch: java.lang.Object doInBackground(java.lang.Object[])>[]--><com.etesync.syncadapter.ui.CollectionMembersListFragment$JournalMembersFetch: com.etesync.syncadapter.ui.CollectionMembersListFragment$JournalMembersFetch$MembersResult doInBackground(java.lang.Void[])>[[try]]--><com.etesync.syncadapter.AccountSettings: void <init>(android.content.Context,android.accounts.Account)>[[try]]--><com.etesync.syncadapter.AccountSettings: void update(int)>[[try]]--><com.etesync.syncadapter.AccountSettings: void updateInner(int)>[[try]]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+One road protect good!
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.etesync.syncadapter.ui.AccountActivity dummyMainMethod_com_etesync_syncadapter_ui_AccountActivity(android.content.Intent)>[]--><com.etesync.syncadapter.ui.AccountActivity: boolean onOptionsItemSelected(android.view.MenuItem)>[]--><com.etesync.syncadapter.ui.AccountActivity: java.lang.String getFormattedFingerprint()>[[try]]--><com.etesync.syncadapter.AccountSettings: void <init>(android.content.Context,android.accounts.Account)>[[try]]--><com.etesync.syncadapter.AccountSettings: void update(int)>[[try]]--><com.etesync.syncadapter.AccountSettings: void updateInner(int)>[[try]]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+One road protect good!
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.etesync.syncadapter.App$AppUpdatedReceiver dummyMainMethod_com_etesync_syncadapter_App$AppUpdatedReceiver(android.content.Intent)>[]--><com.etesync.syncadapter.App$AppUpdatedReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><com.etesync.syncadapter.App: void access$000(com.etesync.syncadapter.App,int)>[]--><com.etesync.syncadapter.App: void update(int)>[[try]]--><com.etesync.syncadapter.AccountSettings: void <init>(android.content.Context,android.accounts.Account)>[[try]]--><com.etesync.syncadapter.AccountSettings: void update(int)>[[try]]--><com.etesync.syncadapter.AccountSettings: void updateInner(int)>[[try]]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+One road protect good!
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.etesync.syncadapter.ui.EditCollectionActivity dummyMainMethod_com_etesync_syncadapter_ui_EditCollectionActivity(android.content.Intent)>[]--><com.etesync.syncadapter.ui.EditCollectionActivity: void onDestroy()>[]--><com.etesync.syncadapter.ui.CollectionMembersActivity: void refresh()>[]--><com.etesync.syncadapter.ui.CollectionMembersListFragment: void refresh()>[]--><com.etesync.syncadapter.ui.CollectionMembersListFragment$JournalMembersFetch: java.lang.Object doInBackground(java.lang.Object[])>[]--><com.etesync.syncadapter.ui.CollectionMembersListFragment$JournalMembersFetch: com.etesync.syncadapter.ui.CollectionMembersListFragment$JournalMembersFetch$MembersResult doInBackground(java.lang.Void[])>[[try]]--><com.etesync.syncadapter.AccountSettings: void <init>(android.content.Context,android.accounts.Account)>[[try]]--><com.etesync.syncadapter.AccountSettings: void update(int)>[[try]]--><com.etesync.syncadapter.AccountSettings: void updateInner(int)>[[try]]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+One road protect good!
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.etesync.syncadapter.ui.AccountsActivity dummyMainMethod_com_etesync_syncadapter_ui_AccountsActivity(android.content.Intent)>[]--><dummyMainClass: com.etesync.syncadapter.ui.StartupDialogFragment dummyMainMethod_com_etesync_syncadapter_ui_StartupDialogFragment(android.content.Intent,android.app.Activity)>[]--><com.etesync.syncadapter.ui.StartupDialogFragment: android.app.Dialog onCreateDialog(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.etesync.syncadapter.AccountSettings$AppUpdatedReceiver dummyMainMethod_com_etesync_syncadapter_AccountSettings$AppUpdatedReceiver(android.content.Intent)>[]--><com.etesync.syncadapter.AccountSettings$AppUpdatedReceiver: void onReceive(android.content.Context,android.content.Intent)>[[try]]--><com.etesync.syncadapter.AccountSettings: void <init>(android.content.Context,android.accounts.Account)>[[try]]--><com.etesync.syncadapter.AccountSettings: void update(int)>[[try]]--><com.etesync.syncadapter.AccountSettings: void updateInner(int)>[[try]]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+One road protect good!
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+20 Packageshead roads:
+try
+Good road with try: <com.etesync.syncadapter.ui.DeleteCollectionFragment: void onLoadFinished(android.support.v4.content.Loader,java.lang.Object)>[]--><com.etesync.syncadapter.ui.DeleteCollectionFragment: void onLoadFinished(android.support.v4.content.Loader,java.lang.Exception)>[]--><com.etesync.syncadapter.ui.CollectionMembersListFragment: void refresh()>[]--><com.etesync.syncadapter.ui.CollectionMembersListFragment$JournalMembersFetch: java.lang.Object doInBackground(java.lang.Object[])>[]--><com.etesync.syncadapter.ui.CollectionMembersListFragment$JournalMembersFetch: com.etesync.syncadapter.ui.CollectionMembersListFragment$JournalMembersFetch$MembersResult doInBackground(java.lang.Void[])>[[try]]--><com.etesync.syncadapter.AccountSettings: void <init>(android.content.Context,android.accounts.Account)>[[try]]--><com.etesync.syncadapter.AccountSettings: void update(int)>[[try]]--><com.etesync.syncadapter.AccountSettings: void updateInner(int)>[[try]]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+One road protect good!
+!!!this api will crash on sdk 19 20 
+Error road: <com.etesync.syncadapter.ui.RemoveMemberFragment: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+try
+Good road with try: <com.etesync.syncadapter.ui.RemoveMemberFragment: void onCreate(android.os.Bundle)>[[try]]--><com.etesync.syncadapter.AccountSettings: void <init>(android.content.Context,android.accounts.Account)>[[try]]--><com.etesync.syncadapter.AccountSettings: void update(int)>[[try]]--><com.etesync.syncadapter.AccountSettings: void updateInner(int)>[[try]]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+One road protect good!
+#2.the call statck between class <com.etesync.syncadapter.ui.RemoveMemberFragment: void onCreate(android.os.Bundle)> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+try
+Good road with try: <com.etesync.syncadapter.syncadapter.ContactsSyncAdapterService$ContactsSyncAdapter: void onPerformSync(android.accounts.Account,android.os.Bundle,java.lang.String,android.content.ContentProviderClient,android.content.SyncResult)>[[try]]--><com.etesync.syncadapter.AccountSettings: void <init>(android.content.Context,android.accounts.Account)>[[try]]--><com.etesync.syncadapter.AccountSettings: void update(int)>[[try]]--><com.etesync.syncadapter.AccountSettings: void updateInner(int)>[[try]]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+One road protect good!
+!!!this api will crash on sdk 19 20 
+Error road: <com.etesync.syncadapter.ui.AddMemberFragment: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+try
+Good road with try: <com.etesync.syncadapter.ui.AddMemberFragment: void onCreate(android.os.Bundle)>[[try]]--><com.etesync.syncadapter.AccountSettings: void <init>(android.content.Context,android.accounts.Account)>[[try]]--><com.etesync.syncadapter.AccountSettings: void update(int)>[[try]]--><com.etesync.syncadapter.AccountSettings: void updateInner(int)>[[try]]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+One road protect good!
+#4.the call statck between class <com.etesync.syncadapter.ui.AddMemberFragment: void onCreate(android.os.Bundle)> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+###Multi invoking in one method, need manual check!!!<com.etesync.syncadapter.ui.DebugInfoActivity$ReportLoader: java.lang.String loadInBackground()>[[$i0 < 23], [try]]--><com.etesync.syncadapter.AccountSettings: void <init>(android.content.Context,android.accounts.Account)>[[try]]--><com.etesync.syncadapter.AccountSettings: void update(int)>[[try]]--><com.etesync.syncadapter.AccountSettings: void updateInner(int)>[[try]]
+###Multi invoking in one method, need manual check!!!<com.etesync.syncadapter.ui.DebugInfoActivity$ReportLoader: java.lang.String loadInBackground()>[[$i0 < 23]][[try]]--><com.etesync.syncadapter.AccountSettings: void <init>(android.content.Context,android.accounts.Account)>[[try]]--><com.etesync.syncadapter.AccountSettings: void update(int)>[[try]]--><com.etesync.syncadapter.AccountSettings: void updateInner(int)>[[try]]
+$i0 < 23
+try
+Good road with try: <com.etesync.syncadapter.ui.DebugInfoActivity$ReportLoader: java.lang.String loadInBackground()>[[$i0 < 23], [try]]--><com.etesync.syncadapter.AccountSettings: void <init>(android.content.Context,android.accounts.Account)>[[try]]--><com.etesync.syncadapter.AccountSettings: void update(int)>[[try]]--><com.etesync.syncadapter.AccountSettings: void updateInner(int)>[[try]]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+One road protect good!
+!!!this api will crash on sdk 19 20 
+Error road: <com.etesync.syncadapter.ui.DebugInfoActivity$ReportLoader: java.lang.String loadInBackground()>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#5.the call statck between class <com.etesync.syncadapter.ui.DebugInfoActivity$ReportLoader: java.lang.String loadInBackground()> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+try
+Good road with try: <com.etesync.syncadapter.ui.setup.SetupUserInfoFragment: void onCreate(android.os.Bundle)>[[try]]--><com.etesync.syncadapter.AccountSettings: void <init>(android.content.Context,android.accounts.Account)>[[try]]--><com.etesync.syncadapter.AccountSettings: void update(int)>[[try]]--><com.etesync.syncadapter.AccountSettings: void updateInner(int)>[[try]]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.etesync.syncadapter.ui.AddMemberFragment$MemberAddSecond: void onPostExecute(com.etesync.syncadapter.ui.AddMemberFragment$MemberAddSecond$AddResultSecond)>[]--><com.etesync.syncadapter.ui.CollectionMembersListFragment: void refresh()>[]--><com.etesync.syncadapter.ui.CollectionMembersListFragment$JournalMembersFetch: java.lang.Object doInBackground(java.lang.Object[])>[]--><com.etesync.syncadapter.ui.CollectionMembersListFragment$JournalMembersFetch: com.etesync.syncadapter.ui.CollectionMembersListFragment$JournalMembersFetch$MembersResult doInBackground(java.lang.Void[])>[[try]]--><com.etesync.syncadapter.AccountSettings: void <init>(android.content.Context,android.accounts.Account)>[[try]]--><com.etesync.syncadapter.AccountSettings: void update(int)>[[try]]--><com.etesync.syncadapter.AccountSettings: void updateInner(int)>[[try]]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.etesync.syncadapter.ui.AddMemberFragment$MemberAddSecond: void onPostExecute(com.etesync.syncadapter.ui.AddMemberFragment$MemberAddSecond$AddResultSecond)>[]--><com.etesync.syncadapter.ui.CollectionMembersActivity: void refresh()>[]--><com.etesync.syncadapter.ui.CollectionMembersListFragment: void refresh()>[]--><com.etesync.syncadapter.ui.CollectionMembersListFragment$JournalMembersFetch: java.lang.Object doInBackground(java.lang.Object[])>[]--><com.etesync.syncadapter.ui.CollectionMembersListFragment$JournalMembersFetch: com.etesync.syncadapter.ui.CollectionMembersListFragment$JournalMembersFetch$MembersResult doInBackground(java.lang.Void[])>[[try]]--><com.etesync.syncadapter.AccountSettings: void <init>(android.content.Context,android.accounts.Account)>[[try]]--><com.etesync.syncadapter.AccountSettings: void update(int)>[[try]]--><com.etesync.syncadapter.AccountSettings: void updateInner(int)>[[try]]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+One road protect good!
+try
+Good road with try: <com.etesync.syncadapter.ui.setup.SetupEncryptionFragment: boolean createAccount(java.lang.String,com.etesync.syncadapter.ui.setup.BaseConfigurationFinder$Configuration)>[[try]]--><com.etesync.syncadapter.AccountSettings: void <init>(android.content.Context,android.accounts.Account)>[[try]]--><com.etesync.syncadapter.AccountSettings: void update(int)>[[try]]--><com.etesync.syncadapter.AccountSettings: void updateInner(int)>[[try]]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+One road protect good!
+!!!this api will crash on sdk 19 20 
+Error road: <com.etesync.syncadapter.ui.setup.DetectConfigurationFragment$NothingDetectedFragment$2: void onClick(android.content.DialogInterface,int)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#9.the call statck between class <com.etesync.syncadapter.ui.setup.DetectConfigurationFragment$NothingDetectedFragment$2: void onClick(android.content.DialogInterface,int)> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <com.etesync.syncadapter.ui.setup.LoginCredentialsChangeFragment$NothingDetectedFragment$2: void onClick(android.content.DialogInterface,int)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#10.the call statck between class <com.etesync.syncadapter.ui.setup.LoginCredentialsChangeFragment$NothingDetectedFragment$2: void onClick(android.content.DialogInterface,int)> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:7
+crashApisInMain:5
+containsStatic:false
+containsTry:true
+11call by main package
+-----------------------------------------
+#################################################
+N 10 Potential Issue API: SDKCheck of <android.animation.AnimatorSet: void <init>()> is checking!!!
+The life time of api is [24,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 21 22 23 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.etesync.syncadapter.ui.AccountActivity dummyMainMethod_com_etesync_syncadapter_ui_AccountActivity(android.content.Intent)>[]--><tourguide.tourguide.TourGuide$1: void onGlobalLayout()>[]--><tourguide.tourguide.TourGuide: void access$000(tourguide.tourguide.TourGuide)>[]--><tourguide.tourguide.TourGuide: void startView()>[]--><tourguide.tourguide.TourGuide: void performAnimationOn(android.view.View)>[]--><android.animation.AnimatorSet: void <init>()>
+!!!this api will crash on sdk 19 20 21 22 23 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.etesync.syncadapter.ui.ViewCollectionActivity dummyMainMethod_com_etesync_syncadapter_ui_ViewCollectionActivity(android.content.Intent)>[]--><tourguide.tourguide.TourGuide$1: void onGlobalLayout()>[]--><tourguide.tourguide.TourGuide: void access$000(tourguide.tourguide.TourGuide)>[]--><tourguide.tourguide.TourGuide: void startView()>[]--><tourguide.tourguide.TourGuide: void performAnimationOn(android.view.View)>[]--><android.animation.AnimatorSet: void <init>()>
+!!!this api will crash on sdk 19 20 21 22 23 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.etesync.syncadapter.ui.AccountsActivity dummyMainMethod_com_etesync_syncadapter_ui_AccountsActivity(android.content.Intent)>[]--><com.etesync.syncadapter.ui.AccountsActivity: void onCreate(android.os.Bundle)>[]--><tourguide.tourguide.TourGuide: tourguide.tourguide.TourGuide playOn(android.view.View)>[]--><tourguide.tourguide.TourGuide: void setupView()>[]--><tourguide.tourguide.TourGuide: void startView()>[]--><tourguide.tourguide.TourGuide: void performAnimationOn(android.view.View)>[]--><android.animation.AnimatorSet: void <init>()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.animation.AnimatorSet: void <init>()>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:8
+crashApisInMain:6
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 11 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putInt(java.lang.String,int)> is checking!!!
+The life time of api is [21,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <com.etesync.syncadapter.ui.AboutActivity$ComponentFragment: com.etesync.syncadapter.ui.AboutActivity$ComponentFragment instantiate(int)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#1.the call statck between class <com.etesync.syncadapter.ui.AboutActivity$ComponentFragment: com.etesync.syncadapter.ui.AboutActivity$ComponentFragment instantiate(int)> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <com.etesync.syncadapter.ui.importlocal.ImportFragment: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putInt(java.lang.String,int)>
+#2.the call statck between class <com.etesync.syncadapter.ui.importlocal.ImportFragment: void onSaveInstanceState(android.os.Bundle)> to <android.os.BaseBundle: void putInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:9
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 12 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager: android.net.wifi.WifiInfo getConnectionInfo()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <com.etesync.syncadapter.syncadapter.SyncAdapterService$SyncAdapter: boolean checkSyncConditions(com.etesync.syncadapter.AccountSettings)>[]--><android.net.wifi.WifiManager: android.net.wifi.WifiInfo getConnectionInfo()>
+#1.the call statck between class <com.etesync.syncadapter.syncadapter.SyncAdapterService$SyncAdapter: boolean checkSyncConditions(com.etesync.syncadapter.AccountSettings)> to <android.net.wifi.WifiManager: android.net.wifi.WifiInfo getConnectionInfo()>has compatibility isssues！
+-----------------------------------------
+crashApis:10
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 13 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.util.Set keySet()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <com.etesync.syncadapter.syncadapter.SyncAdapterService$SyncAdapter: void onPerformSync(android.accounts.Account,android.os.Bundle,java.lang.String,android.content.ContentProviderClient,android.content.SyncResult)>[]--><android.os.BaseBundle: java.util.Set keySet()>
+#1.the call statck between class <com.etesync.syncadapter.syncadapter.SyncAdapterService$SyncAdapter: void onPerformSync(android.accounts.Account,android.os.Bundle,java.lang.String,android.content.ContentProviderClient,android.content.SyncResult)> to <android.os.BaseBundle: java.util.Set keySet()>has compatibility isssues！
+-----------------------------------------
+crashApis:11
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 14 Potential Issue API: SDKCheck of <android.accounts.AccountManager: boolean removeAccountExplicitly(android.accounts.Account)> is checking!!!
+The life time of api is [22,31]
+3call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.etesync.syncadapter.AccountUpdateService dummyMainMethod_com_etesync_syncadapter_AccountUpdateService(android.content.Intent)>[]--><com.etesync.syncadapter.AccountUpdateService: int onStartCommand(android.content.Intent,int,int)>[]--><com.etesync.syncadapter.AccountUpdateService: void cleanupAccounts()>[[try]]--><com.etesync.syncadapter.resource.LocalAddressBook: void delete()>[]--><com.etesync.syncadapter.utils.AndroidCompat: void removeAccount(android.accounts.AccountManager,android.accounts.Account)>[[-$i0 < 22]]--><android.accounts.AccountManager: boolean removeAccountExplicitly(android.accounts.Account)>
+One road protect good!
+2 Packageshead roads:
+-$i0 < 22
+Good road: <com.etesync.syncadapter.syncadapter.AddressBooksSyncAdapterService$AddressBooksSyncAdapter: void updateLocalAddressBooks(android.content.ContentProviderClient,android.accounts.Account)>[]--><com.etesync.syncadapter.resource.LocalAddressBook: void delete()>[]--><com.etesync.syncadapter.utils.AndroidCompat: void removeAccount(android.accounts.AccountManager,android.accounts.Account)>[[-$i0 < 22]]--><android.accounts.AccountManager: boolean removeAccountExplicitly(android.accounts.Account)>
+One road protect good!
+-$z0 == 0
+-$i0 < 22
+Good road: <com.etesync.syncadapter.ui.setup.SetupEncryptionFragment: boolean createAccount(java.lang.String,com.etesync.syncadapter.ui.setup.BaseConfigurationFinder$Configuration)>[[-$z0 == 0]]--><com.etesync.syncadapter.utils.AndroidCompat: void removeAccount(android.accounts.AccountManager,android.accounts.Account)>[[-$i0 < 22]]--><android.accounts.AccountManager: boolean removeAccountExplicitly(android.accounts.Account)>
+One road protect good!
+containsStatic:false
+containsTry:true
+3call by main package
+-----------------------------------------
+#################################################
+N 15 Potential Issue API: SDKCheck of <android.net.wifi.WifiInfo: java.lang.String getSSID()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <com.etesync.syncadapter.syncadapter.SyncAdapterService$SyncAdapter: boolean checkSyncConditions(com.etesync.syncadapter.AccountSettings)>[]--><android.net.wifi.WifiInfo: java.lang.String getSSID()>
+#1.the call statck between class <com.etesync.syncadapter.syncadapter.SyncAdapterService$SyncAdapter: boolean checkSyncConditions(com.etesync.syncadapter.AccountSettings)> to <android.net.wifi.WifiInfo: java.lang.String getSSID()>has compatibility isssues！
+-----------------------------------------
+crashApis:12
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 16 Potential Issue API: SDKCheck of <android.app.Activity: void onRequestPermissionsResult(int,java.lang.String[],int[])> is checking!!!
+The life time of api is [23,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 21 22 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.etesync.syncadapter.ui.PermissionsActivity dummyMainMethod_com_etesync_syncadapter_ui_PermissionsActivity(android.content.Intent)>[]--><com.etesync.syncadapter.ui.PermissionsActivity: void onRequestPermissionsResult(int,java.lang.String[],int[])>[[]]--><android.app.Activity: void onRequestPermissionsResult(int,java.lang.String[],int[])>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.app.Activity: void onRequestPermissionsResult(int,java.lang.String[],int[])>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:13
+crashApisInMain:7
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 17 Potential Issue API: SDKCheck of <android.os.PowerManager: boolean isIgnoringBatteryOptimizations(java.lang.String)> is checking!!!
+The life time of api is [23,31]
+2call roads:
+1 Mainhead roads:
+-$i0 < 23
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.etesync.syncadapter.ui.AccountsActivity dummyMainMethod_com_etesync_syncadapter_ui_AccountsActivity(android.content.Intent)>[]--><com.etesync.syncadapter.ui.AccountsActivity: void onCreate(android.os.Bundle)>[]--><com.etesync.syncadapter.ui.StartupDialogFragment: com.etesync.syncadapter.ui.StartupDialogFragment[] getStartupDialogs(android.content.Context)>[[-$i0 < 23]]--><android.os.PowerManager: boolean isIgnoringBatteryOptimizations(java.lang.String)>
+One road protect good!
+1 Packageshead roads:
+-$i0 < 23
+Good road: <com.etesync.syncadapter.ui.DebugInfoActivity$ReportLoader: java.lang.String loadInBackground()>[[-$i0 < 23]]--><android.os.PowerManager: boolean isIgnoringBatteryOptimizations(java.lang.String)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 18 Potential Issue API: SDKCheck of <android.net.NetworkInfo: int getType()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <com.etesync.syncadapter.syncadapter.SyncAdapterService$SyncAdapter: boolean checkSyncConditions(com.etesync.syncadapter.AccountSettings)>[]--><android.net.NetworkInfo: int getType()>
+#1.the call statck between class <com.etesync.syncadapter.syncadapter.SyncAdapterService$SyncAdapter: boolean checkSyncConditions(com.etesync.syncadapter.AccountSettings)> to <android.net.NetworkInfo: int getType()>has compatibility isssues！
+-----------------------------------------
+crashApis:14
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 19 Potential Issue API: SDKCheck of <android.content.Context: java.lang.Object getSystemService(java.lang.Class)> is checking!!!
+The life time of api is [23,31]
+18call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.etesync.syncadapter.ui.CollectionMembersActivity dummyMainMethod_com_etesync_syncadapter_ui_CollectionMembersActivity(android.content.Intent)>[]--><com.etesync.syncadapter.ui.CollectionMembersActivity: void onCreate(android.os.Bundle)>[]--><com.etesync.syncadapter.ui.CollectionMembersActivity: void refresh()>[]--><com.etesync.syncadapter.ui.CollectionMembersListFragment: void refresh()>[]--><com.etesync.syncadapter.ui.CollectionMembersListFragment$JournalMembersFetch: java.lang.Object doInBackground(java.lang.Object[])>[]--><com.etesync.syncadapter.ui.CollectionMembersListFragment$JournalMembersFetch: com.etesync.syncadapter.ui.CollectionMembersListFragment$JournalMembersFetch$MembersResult doInBackground(java.lang.Void[])>[[try]]--><com.etesync.syncadapter.AccountSettings: void <init>(android.content.Context,android.accounts.Account)>[[try]]--><com.etesync.syncadapter.AccountSettings: void update(int)>[[try]]--><com.etesync.syncadapter.AccountSettings: void updateInner(int)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String,java.lang.String,android.content.Intent)>[]--><com.etesync.syncadapter.NotificationHelper: void createNotificationChannel()>[[-$i0 < 26]]--><android.content.Context: java.lang.Object getSystemService(java.lang.Class)>
+One road protect good!
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.etesync.syncadapter.ui.AccountActivity dummyMainMethod_com_etesync_syncadapter_ui_AccountActivity(android.content.Intent)>[]--><com.etesync.syncadapter.ui.AccountActivity: boolean onOptionsItemSelected(android.view.MenuItem)>[]--><com.etesync.syncadapter.ui.AccountActivity: java.lang.String getFormattedFingerprint()>[[try]]--><com.etesync.syncadapter.AccountSettings: void <init>(android.content.Context,android.accounts.Account)>[[try]]--><com.etesync.syncadapter.AccountSettings: void update(int)>[[try]]--><com.etesync.syncadapter.AccountSettings: void updateInner(int)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String,java.lang.String,android.content.Intent)>[]--><com.etesync.syncadapter.NotificationHelper: void createNotificationChannel()>[[-$i0 < 26]]--><android.content.Context: java.lang.Object getSystemService(java.lang.Class)>
+One road protect good!
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.etesync.syncadapter.App$AppUpdatedReceiver dummyMainMethod_com_etesync_syncadapter_App$AppUpdatedReceiver(android.content.Intent)>[]--><com.etesync.syncadapter.App$AppUpdatedReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><com.etesync.syncadapter.App: void access$000(com.etesync.syncadapter.App,int)>[]--><com.etesync.syncadapter.App: void update(int)>[[try]]--><com.etesync.syncadapter.AccountSettings: void <init>(android.content.Context,android.accounts.Account)>[[try]]--><com.etesync.syncadapter.AccountSettings: void update(int)>[[try]]--><com.etesync.syncadapter.AccountSettings: void updateInner(int)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String,java.lang.String,android.content.Intent)>[]--><com.etesync.syncadapter.NotificationHelper: void createNotificationChannel()>[[-$i0 < 26]]--><android.content.Context: java.lang.Object getSystemService(java.lang.Class)>
+One road protect good!
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.etesync.syncadapter.ui.EditCollectionActivity dummyMainMethod_com_etesync_syncadapter_ui_EditCollectionActivity(android.content.Intent)>[]--><com.etesync.syncadapter.ui.EditCollectionActivity: void onDestroy()>[]--><com.etesync.syncadapter.ui.CollectionMembersActivity: void refresh()>[]--><com.etesync.syncadapter.ui.CollectionMembersListFragment: void refresh()>[]--><com.etesync.syncadapter.ui.CollectionMembersListFragment$JournalMembersFetch: java.lang.Object doInBackground(java.lang.Object[])>[]--><com.etesync.syncadapter.ui.CollectionMembersListFragment$JournalMembersFetch: com.etesync.syncadapter.ui.CollectionMembersListFragment$JournalMembersFetch$MembersResult doInBackground(java.lang.Void[])>[[try]]--><com.etesync.syncadapter.AccountSettings: void <init>(android.content.Context,android.accounts.Account)>[[try]]--><com.etesync.syncadapter.AccountSettings: void update(int)>[[try]]--><com.etesync.syncadapter.AccountSettings: void updateInner(int)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String,java.lang.String,android.content.Intent)>[]--><com.etesync.syncadapter.NotificationHelper: void createNotificationChannel()>[[-$i0 < 26]]--><android.content.Context: java.lang.Object getSystemService(java.lang.Class)>
+One road protect good!
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.etesync.syncadapter.AccountSettings$AppUpdatedReceiver dummyMainMethod_com_etesync_syncadapter_AccountSettings$AppUpdatedReceiver(android.content.Intent)>[]--><com.etesync.syncadapter.AccountSettings$AppUpdatedReceiver: void onReceive(android.content.Context,android.content.Intent)>[[try]]--><com.etesync.syncadapter.AccountSettings: void <init>(android.content.Context,android.accounts.Account)>[[try]]--><com.etesync.syncadapter.AccountSettings: void update(int)>[[try]]--><com.etesync.syncadapter.AccountSettings: void updateInner(int)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String,java.lang.String,android.content.Intent)>[]--><com.etesync.syncadapter.NotificationHelper: void createNotificationChannel()>[[-$i0 < 26]]--><android.content.Context: java.lang.Object getSystemService(java.lang.Class)>
+One road protect good!
+17 Packageshead roads:
+try
+Good road with try: <com.etesync.syncadapter.ui.DeleteCollectionFragment: void onLoadFinished(android.support.v4.content.Loader,java.lang.Object)>[]--><com.etesync.syncadapter.ui.DeleteCollectionFragment: void onLoadFinished(android.support.v4.content.Loader,java.lang.Exception)>[]--><com.etesync.syncadapter.ui.CollectionMembersListFragment: void refresh()>[]--><com.etesync.syncadapter.ui.CollectionMembersListFragment$JournalMembersFetch: java.lang.Object doInBackground(java.lang.Object[])>[]--><com.etesync.syncadapter.ui.CollectionMembersListFragment$JournalMembersFetch: com.etesync.syncadapter.ui.CollectionMembersListFragment$JournalMembersFetch$MembersResult doInBackground(java.lang.Void[])>[[try]]--><com.etesync.syncadapter.AccountSettings: void <init>(android.content.Context,android.accounts.Account)>[[try]]--><com.etesync.syncadapter.AccountSettings: void update(int)>[[try]]--><com.etesync.syncadapter.AccountSettings: void updateInner(int)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String,java.lang.String,android.content.Intent)>[]--><com.etesync.syncadapter.NotificationHelper: void createNotificationChannel()>[[-$i0 < 26]]--><android.content.Context: java.lang.Object getSystemService(java.lang.Class)>
+One road protect good!
+try
+Good road with try: <com.etesync.syncadapter.syncadapter.ContactsSyncAdapterService$ContactsSyncAdapter: void onPerformSync(android.accounts.Account,android.os.Bundle,java.lang.String,android.content.ContentProviderClient,android.content.SyncResult)>[[try]]--><com.etesync.syncadapter.syncadapter.SyncManager: void performSync()>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String,java.lang.String,android.content.Intent)>[]--><com.etesync.syncadapter.NotificationHelper: void createNotificationChannel()>[[-$i0 < 26]]--><android.content.Context: java.lang.Object getSystemService(java.lang.Class)>
+One road protect good!
+-$i0 < 26
+Good road: <com.etesync.syncadapter.syncadapter.ContactsSyncAdapterService$ContactsSyncAdapter: void onPerformSync(android.accounts.Account,android.os.Bundle,java.lang.String,android.content.ContentProviderClient,android.content.SyncResult)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String,java.lang.String,android.content.Intent)>[]--><com.etesync.syncadapter.NotificationHelper: void createNotificationChannel()>[[-$i0 < 26]]--><android.content.Context: java.lang.Object getSystemService(java.lang.Class)>
+One road protect good!
+try
+Good road with try: <com.etesync.syncadapter.syncadapter.ContactsSyncAdapterService$ContactsSyncAdapter: void onPerformSync(android.accounts.Account,android.os.Bundle,java.lang.String,android.content.ContentProviderClient,android.content.SyncResult)>[[try]]--><com.etesync.syncadapter.AccountSettings: void <init>(android.content.Context,android.accounts.Account)>[[try]]--><com.etesync.syncadapter.AccountSettings: void update(int)>[[try]]--><com.etesync.syncadapter.AccountSettings: void updateInner(int)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String,java.lang.String,android.content.Intent)>[]--><com.etesync.syncadapter.NotificationHelper: void createNotificationChannel()>[[-$i0 < 26]]--><android.content.Context: java.lang.Object getSystemService(java.lang.Class)>
+One road protect good!
+try
+Good road with try: <com.etesync.syncadapter.ui.RemoveMemberFragment: void onCreate(android.os.Bundle)>[[try]]--><com.etesync.syncadapter.AccountSettings: void <init>(android.content.Context,android.accounts.Account)>[[try]]--><com.etesync.syncadapter.AccountSettings: void update(int)>[[try]]--><com.etesync.syncadapter.AccountSettings: void updateInner(int)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String,java.lang.String,android.content.Intent)>[]--><com.etesync.syncadapter.NotificationHelper: void createNotificationChannel()>[[-$i0 < 26]]--><android.content.Context: java.lang.Object getSystemService(java.lang.Class)>
+One road protect good!
+try
+Good road with try: <com.etesync.syncadapter.ui.AddMemberFragment: void onCreate(android.os.Bundle)>[[try]]--><com.etesync.syncadapter.AccountSettings: void <init>(android.content.Context,android.accounts.Account)>[[try]]--><com.etesync.syncadapter.AccountSettings: void update(int)>[[try]]--><com.etesync.syncadapter.AccountSettings: void updateInner(int)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String,java.lang.String,android.content.Intent)>[]--><com.etesync.syncadapter.NotificationHelper: void createNotificationChannel()>[[-$i0 < 26]]--><android.content.Context: java.lang.Object getSystemService(java.lang.Class)>
+One road protect good!
+###Multi invoking in one method, need manual check!!!<com.etesync.syncadapter.ui.DebugInfoActivity$ReportLoader: java.lang.String loadInBackground()>[[$i0 < 23], [try]]--><com.etesync.syncadapter.AccountSettings: void <init>(android.content.Context,android.accounts.Account)>[[try]]--><com.etesync.syncadapter.AccountSettings: void update(int)>[[try]]--><com.etesync.syncadapter.AccountSettings: void updateInner(int)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String,java.lang.String,android.content.Intent)>[]--><com.etesync.syncadapter.NotificationHelper: void createNotificationChannel()>[[-$i0 < 26]]
+###Multi invoking in one method, need manual check!!!<com.etesync.syncadapter.ui.DebugInfoActivity$ReportLoader: java.lang.String loadInBackground()>[[$i0 < 23]][[try]]--><com.etesync.syncadapter.AccountSettings: void <init>(android.content.Context,android.accounts.Account)>[[try]]--><com.etesync.syncadapter.AccountSettings: void update(int)>[[try]]--><com.etesync.syncadapter.AccountSettings: void updateInner(int)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String,java.lang.String,android.content.Intent)>[]--><com.etesync.syncadapter.NotificationHelper: void createNotificationChannel()>[[-$i0 < 26]]
+$i0 < 23
+try
+Good road with try: <com.etesync.syncadapter.ui.DebugInfoActivity$ReportLoader: java.lang.String loadInBackground()>[[$i0 < 23], [try]]--><com.etesync.syncadapter.AccountSettings: void <init>(android.content.Context,android.accounts.Account)>[[try]]--><com.etesync.syncadapter.AccountSettings: void update(int)>[[try]]--><com.etesync.syncadapter.AccountSettings: void updateInner(int)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String,java.lang.String,android.content.Intent)>[]--><com.etesync.syncadapter.NotificationHelper: void createNotificationChannel()>[[-$i0 < 26]]--><android.content.Context: java.lang.Object getSystemService(java.lang.Class)>
+One road protect good!
+try
+Good road with try: <com.etesync.syncadapter.ui.setup.SetupUserInfoFragment: void onCreate(android.os.Bundle)>[[try]]--><com.etesync.syncadapter.AccountSettings: void <init>(android.content.Context,android.accounts.Account)>[[try]]--><com.etesync.syncadapter.AccountSettings: void update(int)>[[try]]--><com.etesync.syncadapter.AccountSettings: void updateInner(int)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String,java.lang.String,android.content.Intent)>[]--><com.etesync.syncadapter.NotificationHelper: void createNotificationChannel()>[[-$i0 < 26]]--><android.content.Context: java.lang.Object getSystemService(java.lang.Class)>
+One road protect good!
+try
+Good road with try: <com.etesync.syncadapter.ui.AddMemberFragment$MemberAddSecond: void onPostExecute(com.etesync.syncadapter.ui.AddMemberFragment$MemberAddSecond$AddResultSecond)>[]--><com.etesync.syncadapter.ui.CollectionMembersListFragment: void refresh()>[]--><com.etesync.syncadapter.ui.CollectionMembersListFragment$JournalMembersFetch: java.lang.Object doInBackground(java.lang.Object[])>[]--><com.etesync.syncadapter.ui.CollectionMembersListFragment$JournalMembersFetch: com.etesync.syncadapter.ui.CollectionMembersListFragment$JournalMembersFetch$MembersResult doInBackground(java.lang.Void[])>[[try]]--><com.etesync.syncadapter.AccountSettings: void <init>(android.content.Context,android.accounts.Account)>[[try]]--><com.etesync.syncadapter.AccountSettings: void update(int)>[[try]]--><com.etesync.syncadapter.AccountSettings: void updateInner(int)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String,java.lang.String,android.content.Intent)>[]--><com.etesync.syncadapter.NotificationHelper: void createNotificationChannel()>[[-$i0 < 26]]--><android.content.Context: java.lang.Object getSystemService(java.lang.Class)>
+One road protect good!
+try
+Good road with try: <com.etesync.syncadapter.ui.AddMemberFragment$MemberAddSecond: void onPostExecute(com.etesync.syncadapter.ui.AddMemberFragment$MemberAddSecond$AddResultSecond)>[]--><com.etesync.syncadapter.ui.CollectionMembersActivity: void refresh()>[]--><com.etesync.syncadapter.ui.CollectionMembersListFragment: void refresh()>[]--><com.etesync.syncadapter.ui.CollectionMembersListFragment$JournalMembersFetch: java.lang.Object doInBackground(java.lang.Object[])>[]--><com.etesync.syncadapter.ui.CollectionMembersListFragment$JournalMembersFetch: com.etesync.syncadapter.ui.CollectionMembersListFragment$JournalMembersFetch$MembersResult doInBackground(java.lang.Void[])>[[try]]--><com.etesync.syncadapter.AccountSettings: void <init>(android.content.Context,android.accounts.Account)>[[try]]--><com.etesync.syncadapter.AccountSettings: void update(int)>[[try]]--><com.etesync.syncadapter.AccountSettings: void updateInner(int)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String,java.lang.String,android.content.Intent)>[]--><com.etesync.syncadapter.NotificationHelper: void createNotificationChannel()>[[-$i0 < 26]]--><android.content.Context: java.lang.Object getSystemService(java.lang.Class)>
+One road protect good!
+try
+Good road with try: <com.etesync.syncadapter.ui.setup.SetupEncryptionFragment: boolean createAccount(java.lang.String,com.etesync.syncadapter.ui.setup.BaseConfigurationFinder$Configuration)>[[try]]--><com.etesync.syncadapter.AccountSettings: void <init>(android.content.Context,android.accounts.Account)>[[try]]--><com.etesync.syncadapter.AccountSettings: void update(int)>[[try]]--><com.etesync.syncadapter.AccountSettings: void updateInner(int)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String,java.lang.String,android.content.Intent)>[]--><com.etesync.syncadapter.NotificationHelper: void createNotificationChannel()>[[-$i0 < 26]]--><android.content.Context: java.lang.Object getSystemService(java.lang.Class)>
+One road protect good!
+try
+Good road with try: <com.etesync.syncadapter.syncadapter.CalendarsSyncAdapterService$SyncAdapter: void onPerformSync(android.accounts.Account,android.os.Bundle,java.lang.String,android.content.ContentProviderClient,android.content.SyncResult)>[[try]]--><com.etesync.syncadapter.syncadapter.SyncManager: void performSync()>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String,java.lang.String,android.content.Intent)>[]--><com.etesync.syncadapter.NotificationHelper: void createNotificationChannel()>[[-$i0 < 26]]--><android.content.Context: java.lang.Object getSystemService(java.lang.Class)>
+One road protect good!
+-$i0 < 26
+Good road: <com.etesync.syncadapter.syncadapter.CalendarsSyncAdapterService$SyncAdapter: void onPerformSync(android.accounts.Account,android.os.Bundle,java.lang.String,android.content.ContentProviderClient,android.content.SyncResult)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String,java.lang.String,android.content.Intent)>[]--><com.etesync.syncadapter.NotificationHelper: void createNotificationChannel()>[[-$i0 < 26]]--><android.content.Context: java.lang.Object getSystemService(java.lang.Class)>
+One road protect good!
+try
+Good road with try: <com.etesync.syncadapter.syncadapter.CalendarsSyncAdapterService$SyncAdapter: void onPerformSync(android.accounts.Account,android.os.Bundle,java.lang.String,android.content.ContentProviderClient,android.content.SyncResult)>[[try]]--><com.etesync.syncadapter.AccountSettings: void <init>(android.content.Context,android.accounts.Account)>[[try]]--><com.etesync.syncadapter.AccountSettings: void update(int)>[[try]]--><com.etesync.syncadapter.AccountSettings: void updateInner(int)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String,java.lang.String,android.content.Intent)>[]--><com.etesync.syncadapter.NotificationHelper: void createNotificationChannel()>[[-$i0 < 26]]--><android.content.Context: java.lang.Object getSystemService(java.lang.Class)>
+One road protect good!
+try
+Good road with try: <com.etesync.syncadapter.ui.DeleteCollectionFragment$DeleteCollectionLoader: java.lang.Exception loadInBackground()>[[try]]--><com.etesync.syncadapter.AccountSettings: void <init>(android.content.Context,android.accounts.Account)>[[try]]--><com.etesync.syncadapter.AccountSettings: void update(int)>[[try]]--><com.etesync.syncadapter.AccountSettings: void updateInner(int)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String,java.lang.String,android.content.Intent)>[]--><com.etesync.syncadapter.NotificationHelper: void createNotificationChannel()>[[-$i0 < 26]]--><android.content.Context: java.lang.Object getSystemService(java.lang.Class)>
+One road protect good!
+try
+Good road with try: <com.etesync.syncadapter.ui.importlocal.ImportFragment: void loadFinished(com.etesync.syncadapter.ui.importlocal.ResultFragment$ImportResult)>[]--><com.etesync.syncadapter.ui.CollectionMembersListFragment: void refresh()>[]--><com.etesync.syncadapter.ui.CollectionMembersListFragment$JournalMembersFetch: java.lang.Object doInBackground(java.lang.Object[])>[]--><com.etesync.syncadapter.ui.CollectionMembersListFragment$JournalMembersFetch: com.etesync.syncadapter.ui.CollectionMembersListFragment$JournalMembersFetch$MembersResult doInBackground(java.lang.Void[])>[[try]]--><com.etesync.syncadapter.AccountSettings: void <init>(android.content.Context,android.accounts.Account)>[[try]]--><com.etesync.syncadapter.AccountSettings: void update(int)>[[try]]--><com.etesync.syncadapter.AccountSettings: void updateInner(int)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String,java.lang.String,android.content.Intent)>[]--><com.etesync.syncadapter.NotificationHelper: void createNotificationChannel()>[[-$i0 < 26]]--><android.content.Context: java.lang.Object getSystemService(java.lang.Class)>
+One road protect good!
+try
+Good road with try: <com.etesync.syncadapter.ui.importlocal.ImportFragment: void loadFinished(com.etesync.syncadapter.ui.importlocal.ResultFragment$ImportResult)>[]--><com.etesync.syncadapter.ui.CollectionMembersActivity: void refresh()>[]--><com.etesync.syncadapter.ui.CollectionMembersListFragment: void refresh()>[]--><com.etesync.syncadapter.ui.CollectionMembersListFragment$JournalMembersFetch: java.lang.Object doInBackground(java.lang.Object[])>[]--><com.etesync.syncadapter.ui.CollectionMembersListFragment$JournalMembersFetch: com.etesync.syncadapter.ui.CollectionMembersListFragment$JournalMembersFetch$MembersResult doInBackground(java.lang.Void[])>[[try]]--><com.etesync.syncadapter.AccountSettings: void <init>(android.content.Context,android.accounts.Account)>[[try]]--><com.etesync.syncadapter.AccountSettings: void update(int)>[[try]]--><com.etesync.syncadapter.AccountSettings: void updateInner(int)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String,java.lang.String,android.content.Intent)>[]--><com.etesync.syncadapter.NotificationHelper: void createNotificationChannel()>[[-$i0 < 26]]--><android.content.Context: java.lang.Object getSystemService(java.lang.Class)>
+One road protect good!
+try
+Good road with try: <com.etesync.syncadapter.ui.setup.LoginCredentialsChangeFragment: void onLoadFinished(android.support.v4.content.Loader,com.etesync.syncadapter.ui.setup.BaseConfigurationFinder$Configuration)>[[try]]--><com.etesync.syncadapter.AccountSettings: void <init>(android.content.Context,android.accounts.Account)>[[try]]--><com.etesync.syncadapter.AccountSettings: void update(int)>[[try]]--><com.etesync.syncadapter.AccountSettings: void updateInner(int)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String,java.lang.String,android.content.Intent)>[]--><com.etesync.syncadapter.NotificationHelper: void createNotificationChannel()>[[-$i0 < 26]]--><android.content.Context: java.lang.Object getSystemService(java.lang.Class)>
+One road protect good!
+try
+Good road with try: <com.etesync.syncadapter.ui.AccountSettingsActivity$AccountSettingsLoader: com.etesync.syncadapter.AccountSettings loadInBackground()>[[try]]--><com.etesync.syncadapter.AccountSettings: void <init>(android.content.Context,android.accounts.Account)>[[try]]--><com.etesync.syncadapter.AccountSettings: void update(int)>[[try]]--><com.etesync.syncadapter.AccountSettings: void updateInner(int)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String,java.lang.String,android.content.Intent)>[]--><com.etesync.syncadapter.NotificationHelper: void createNotificationChannel()>[[-$i0 < 26]]--><android.content.Context: java.lang.Object getSystemService(java.lang.Class)>
+One road protect good!
+try
+Good road with try: <com.etesync.syncadapter.ui.CreateCollectionFragment$CreateCollectionLoader: java.lang.Exception loadInBackground()>[[try]]--><com.etesync.syncadapter.AccountSettings: void <init>(android.content.Context,android.accounts.Account)>[[try]]--><com.etesync.syncadapter.AccountSettings: void update(int)>[[try]]--><com.etesync.syncadapter.AccountSettings: void updateInner(int)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String,java.lang.String,android.content.Intent)>[]--><com.etesync.syncadapter.NotificationHelper: void createNotificationChannel()>[[-$i0 < 26]]--><android.content.Context: java.lang.Object getSystemService(java.lang.Class)>
+One road protect good!
+try
+Good road with try: <com.etesync.syncadapter.ui.RemoveMemberFragment$MemberRemove: void onPostExecute(com.etesync.syncadapter.ui.RemoveMemberFragment$MemberRemove$RemoveResult)>[]--><com.etesync.syncadapter.ui.CollectionMembersListFragment: void refresh()>[]--><com.etesync.syncadapter.ui.CollectionMembersListFragment$JournalMembersFetch: java.lang.Object doInBackground(java.lang.Object[])>[]--><com.etesync.syncadapter.ui.CollectionMembersListFragment$JournalMembersFetch: com.etesync.syncadapter.ui.CollectionMembersListFragment$JournalMembersFetch$MembersResult doInBackground(java.lang.Void[])>[[try]]--><com.etesync.syncadapter.AccountSettings: void <init>(android.content.Context,android.accounts.Account)>[[try]]--><com.etesync.syncadapter.AccountSettings: void update(int)>[[try]]--><com.etesync.syncadapter.AccountSettings: void updateInner(int)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String,java.lang.String,android.content.Intent)>[]--><com.etesync.syncadapter.NotificationHelper: void createNotificationChannel()>[[-$i0 < 26]]--><android.content.Context: java.lang.Object getSystemService(java.lang.Class)>
+One road protect good!
+try
+Good road with try: <com.etesync.syncadapter.ui.RemoveMemberFragment$MemberRemove: void onPostExecute(com.etesync.syncadapter.ui.RemoveMemberFragment$MemberRemove$RemoveResult)>[]--><com.etesync.syncadapter.ui.CollectionMembersActivity: void refresh()>[]--><com.etesync.syncadapter.ui.CollectionMembersListFragment: void refresh()>[]--><com.etesync.syncadapter.ui.CollectionMembersListFragment$JournalMembersFetch: java.lang.Object doInBackground(java.lang.Object[])>[]--><com.etesync.syncadapter.ui.CollectionMembersListFragment$JournalMembersFetch: com.etesync.syncadapter.ui.CollectionMembersListFragment$JournalMembersFetch$MembersResult doInBackground(java.lang.Void[])>[[try]]--><com.etesync.syncadapter.AccountSettings: void <init>(android.content.Context,android.accounts.Account)>[[try]]--><com.etesync.syncadapter.AccountSettings: void update(int)>[[try]]--><com.etesync.syncadapter.AccountSettings: void updateInner(int)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String,java.lang.String,android.content.Intent)>[]--><com.etesync.syncadapter.NotificationHelper: void createNotificationChannel()>[[-$i0 < 26]]--><android.content.Context: java.lang.Object getSystemService(java.lang.Class)>
+One road protect good!
+try
+Good road with try: <com.etesync.syncadapter.syncadapter.AddressBooksSyncAdapterService$AddressBooksSyncAdapter: void onPerformSync(android.accounts.Account,android.os.Bundle,java.lang.String,android.content.ContentProviderClient,android.content.SyncResult)>[[try]]--><com.etesync.syncadapter.AccountSettings: void <init>(android.content.Context,android.accounts.Account)>[[try]]--><com.etesync.syncadapter.AccountSettings: void update(int)>[[try]]--><com.etesync.syncadapter.AccountSettings: void updateInner(int)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String,java.lang.String,android.content.Intent)>[]--><com.etesync.syncadapter.NotificationHelper: void createNotificationChannel()>[[-$i0 < 26]]--><android.content.Context: java.lang.Object getSystemService(java.lang.Class)>
+One road protect good!
+-$i0 < 26
+Good road: <com.etesync.syncadapter.syncadapter.AddressBooksSyncAdapterService$AddressBooksSyncAdapter: void onPerformSync(android.accounts.Account,android.os.Bundle,java.lang.String,android.content.ContentProviderClient,android.content.SyncResult)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String,java.lang.String,android.content.Intent)>[]--><com.etesync.syncadapter.NotificationHelper: void createNotificationChannel()>[[-$i0 < 26]]--><android.content.Context: java.lang.Object getSystemService(java.lang.Class)>
+One road protect good!
+try
+Good road with try: <com.etesync.syncadapter.syncadapter.SyncAdapterService$SyncAdapter$RefreshCollections: void run()>[]--><com.etesync.syncadapter.AccountSettings: void <init>(android.content.Context,android.accounts.Account)>[[try]]--><com.etesync.syncadapter.AccountSettings: void update(int)>[[try]]--><com.etesync.syncadapter.AccountSettings: void updateInner(int)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String,java.lang.String,android.content.Intent)>[]--><com.etesync.syncadapter.NotificationHelper: void createNotificationChannel()>[[-$i0 < 26]]--><android.content.Context: java.lang.Object getSystemService(java.lang.Class)>
+One road protect good!
+containsStatic:false
+containsTry:true
+18call by main package
+-----------------------------------------
+#################################################
+N 20 Potential Issue API: SDKCheck of <android.net.NetworkInfo: boolean isConnected()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <com.etesync.syncadapter.syncadapter.SyncAdapterService$SyncAdapter: boolean checkSyncConditions(com.etesync.syncadapter.AccountSettings)>[]--><android.net.NetworkInfo: boolean isConnected()>
+#1.the call statck between class <com.etesync.syncadapter.syncadapter.SyncAdapterService$SyncAdapter: boolean checkSyncConditions(com.etesync.syncadapter.AccountSettings)> to <android.net.NetworkInfo: boolean isConnected()>has compatibility isssues！
+-----------------------------------------
+crashApis:15
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 21 Potential Issue API: SDKCheck of <android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)> is checking!!!
+The life time of api is [26,31]
+18call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.etesync.syncadapter.ui.CollectionMembersActivity dummyMainMethod_com_etesync_syncadapter_ui_CollectionMembersActivity(android.content.Intent)>[]--><com.etesync.syncadapter.ui.CollectionMembersActivity: void onCreate(android.os.Bundle)>[]--><com.etesync.syncadapter.ui.CollectionMembersActivity: void refresh()>[]--><com.etesync.syncadapter.ui.CollectionMembersListFragment: void refresh()>[]--><com.etesync.syncadapter.ui.CollectionMembersListFragment$JournalMembersFetch: java.lang.Object doInBackground(java.lang.Object[])>[]--><com.etesync.syncadapter.ui.CollectionMembersListFragment$JournalMembersFetch: com.etesync.syncadapter.ui.CollectionMembersListFragment$JournalMembersFetch$MembersResult doInBackground(java.lang.Void[])>[[try]]--><com.etesync.syncadapter.AccountSettings: void <init>(android.content.Context,android.accounts.Account)>[[try]]--><com.etesync.syncadapter.AccountSettings: void update(int)>[[try]]--><com.etesync.syncadapter.AccountSettings: void updateInner(int)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String,java.lang.String,android.content.Intent)>[]--><com.etesync.syncadapter.NotificationHelper: void createNotificationChannel()>[[-$i0 < 26]]--><android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)>
+One road protect good!
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.etesync.syncadapter.ui.AccountActivity dummyMainMethod_com_etesync_syncadapter_ui_AccountActivity(android.content.Intent)>[]--><com.etesync.syncadapter.ui.AccountActivity: boolean onOptionsItemSelected(android.view.MenuItem)>[]--><com.etesync.syncadapter.ui.AccountActivity: java.lang.String getFormattedFingerprint()>[[try]]--><com.etesync.syncadapter.AccountSettings: void <init>(android.content.Context,android.accounts.Account)>[[try]]--><com.etesync.syncadapter.AccountSettings: void update(int)>[[try]]--><com.etesync.syncadapter.AccountSettings: void updateInner(int)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String,java.lang.String,android.content.Intent)>[]--><com.etesync.syncadapter.NotificationHelper: void createNotificationChannel()>[[-$i0 < 26]]--><android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)>
+One road protect good!
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.etesync.syncadapter.App$AppUpdatedReceiver dummyMainMethod_com_etesync_syncadapter_App$AppUpdatedReceiver(android.content.Intent)>[]--><com.etesync.syncadapter.App$AppUpdatedReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><com.etesync.syncadapter.App: void access$000(com.etesync.syncadapter.App,int)>[]--><com.etesync.syncadapter.App: void update(int)>[[try]]--><com.etesync.syncadapter.AccountSettings: void <init>(android.content.Context,android.accounts.Account)>[[try]]--><com.etesync.syncadapter.AccountSettings: void update(int)>[[try]]--><com.etesync.syncadapter.AccountSettings: void updateInner(int)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String,java.lang.String,android.content.Intent)>[]--><com.etesync.syncadapter.NotificationHelper: void createNotificationChannel()>[[-$i0 < 26]]--><android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)>
+One road protect good!
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.etesync.syncadapter.ui.EditCollectionActivity dummyMainMethod_com_etesync_syncadapter_ui_EditCollectionActivity(android.content.Intent)>[]--><com.etesync.syncadapter.ui.EditCollectionActivity: void onDestroy()>[]--><com.etesync.syncadapter.ui.CollectionMembersActivity: void refresh()>[]--><com.etesync.syncadapter.ui.CollectionMembersListFragment: void refresh()>[]--><com.etesync.syncadapter.ui.CollectionMembersListFragment$JournalMembersFetch: java.lang.Object doInBackground(java.lang.Object[])>[]--><com.etesync.syncadapter.ui.CollectionMembersListFragment$JournalMembersFetch: com.etesync.syncadapter.ui.CollectionMembersListFragment$JournalMembersFetch$MembersResult doInBackground(java.lang.Void[])>[[try]]--><com.etesync.syncadapter.AccountSettings: void <init>(android.content.Context,android.accounts.Account)>[[try]]--><com.etesync.syncadapter.AccountSettings: void update(int)>[[try]]--><com.etesync.syncadapter.AccountSettings: void updateInner(int)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String,java.lang.String,android.content.Intent)>[]--><com.etesync.syncadapter.NotificationHelper: void createNotificationChannel()>[[-$i0 < 26]]--><android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)>
+One road protect good!
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.etesync.syncadapter.AccountSettings$AppUpdatedReceiver dummyMainMethod_com_etesync_syncadapter_AccountSettings$AppUpdatedReceiver(android.content.Intent)>[]--><com.etesync.syncadapter.AccountSettings$AppUpdatedReceiver: void onReceive(android.content.Context,android.content.Intent)>[[try]]--><com.etesync.syncadapter.AccountSettings: void <init>(android.content.Context,android.accounts.Account)>[[try]]--><com.etesync.syncadapter.AccountSettings: void update(int)>[[try]]--><com.etesync.syncadapter.AccountSettings: void updateInner(int)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String,java.lang.String,android.content.Intent)>[]--><com.etesync.syncadapter.NotificationHelper: void createNotificationChannel()>[[-$i0 < 26]]--><android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)>
+One road protect good!
+17 Packageshead roads:
+try
+Good road with try: <com.etesync.syncadapter.ui.DeleteCollectionFragment: void onLoadFinished(android.support.v4.content.Loader,java.lang.Object)>[]--><com.etesync.syncadapter.ui.DeleteCollectionFragment: void onLoadFinished(android.support.v4.content.Loader,java.lang.Exception)>[]--><com.etesync.syncadapter.ui.CollectionMembersListFragment: void refresh()>[]--><com.etesync.syncadapter.ui.CollectionMembersListFragment$JournalMembersFetch: java.lang.Object doInBackground(java.lang.Object[])>[]--><com.etesync.syncadapter.ui.CollectionMembersListFragment$JournalMembersFetch: com.etesync.syncadapter.ui.CollectionMembersListFragment$JournalMembersFetch$MembersResult doInBackground(java.lang.Void[])>[[try]]--><com.etesync.syncadapter.AccountSettings: void <init>(android.content.Context,android.accounts.Account)>[[try]]--><com.etesync.syncadapter.AccountSettings: void update(int)>[[try]]--><com.etesync.syncadapter.AccountSettings: void updateInner(int)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String,java.lang.String,android.content.Intent)>[]--><com.etesync.syncadapter.NotificationHelper: void createNotificationChannel()>[[-$i0 < 26]]--><android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)>
+One road protect good!
+try
+Good road with try: <com.etesync.syncadapter.syncadapter.ContactsSyncAdapterService$ContactsSyncAdapter: void onPerformSync(android.accounts.Account,android.os.Bundle,java.lang.String,android.content.ContentProviderClient,android.content.SyncResult)>[[try]]--><com.etesync.syncadapter.syncadapter.SyncManager: void performSync()>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String,java.lang.String,android.content.Intent)>[]--><com.etesync.syncadapter.NotificationHelper: void createNotificationChannel()>[[-$i0 < 26]]--><android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)>
+One road protect good!
+-$i0 < 26
+Good road: <com.etesync.syncadapter.syncadapter.ContactsSyncAdapterService$ContactsSyncAdapter: void onPerformSync(android.accounts.Account,android.os.Bundle,java.lang.String,android.content.ContentProviderClient,android.content.SyncResult)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String,java.lang.String,android.content.Intent)>[]--><com.etesync.syncadapter.NotificationHelper: void createNotificationChannel()>[[-$i0 < 26]]--><android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)>
+One road protect good!
+try
+Good road with try: <com.etesync.syncadapter.syncadapter.ContactsSyncAdapterService$ContactsSyncAdapter: void onPerformSync(android.accounts.Account,android.os.Bundle,java.lang.String,android.content.ContentProviderClient,android.content.SyncResult)>[[try]]--><com.etesync.syncadapter.AccountSettings: void <init>(android.content.Context,android.accounts.Account)>[[try]]--><com.etesync.syncadapter.AccountSettings: void update(int)>[[try]]--><com.etesync.syncadapter.AccountSettings: void updateInner(int)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String,java.lang.String,android.content.Intent)>[]--><com.etesync.syncadapter.NotificationHelper: void createNotificationChannel()>[[-$i0 < 26]]--><android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)>
+One road protect good!
+try
+Good road with try: <com.etesync.syncadapter.ui.RemoveMemberFragment: void onCreate(android.os.Bundle)>[[try]]--><com.etesync.syncadapter.AccountSettings: void <init>(android.content.Context,android.accounts.Account)>[[try]]--><com.etesync.syncadapter.AccountSettings: void update(int)>[[try]]--><com.etesync.syncadapter.AccountSettings: void updateInner(int)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String,java.lang.String,android.content.Intent)>[]--><com.etesync.syncadapter.NotificationHelper: void createNotificationChannel()>[[-$i0 < 26]]--><android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)>
+One road protect good!
+try
+Good road with try: <com.etesync.syncadapter.ui.AddMemberFragment: void onCreate(android.os.Bundle)>[[try]]--><com.etesync.syncadapter.AccountSettings: void <init>(android.content.Context,android.accounts.Account)>[[try]]--><com.etesync.syncadapter.AccountSettings: void update(int)>[[try]]--><com.etesync.syncadapter.AccountSettings: void updateInner(int)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String,java.lang.String,android.content.Intent)>[]--><com.etesync.syncadapter.NotificationHelper: void createNotificationChannel()>[[-$i0 < 26]]--><android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)>
+One road protect good!
+###Multi invoking in one method, need manual check!!!<com.etesync.syncadapter.ui.DebugInfoActivity$ReportLoader: java.lang.String loadInBackground()>[[$i0 < 23], [try]]--><com.etesync.syncadapter.AccountSettings: void <init>(android.content.Context,android.accounts.Account)>[[try]]--><com.etesync.syncadapter.AccountSettings: void update(int)>[[try]]--><com.etesync.syncadapter.AccountSettings: void updateInner(int)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String,java.lang.String,android.content.Intent)>[]--><com.etesync.syncadapter.NotificationHelper: void createNotificationChannel()>[[-$i0 < 26]]
+###Multi invoking in one method, need manual check!!!<com.etesync.syncadapter.ui.DebugInfoActivity$ReportLoader: java.lang.String loadInBackground()>[[$i0 < 23]][[try]]--><com.etesync.syncadapter.AccountSettings: void <init>(android.content.Context,android.accounts.Account)>[[try]]--><com.etesync.syncadapter.AccountSettings: void update(int)>[[try]]--><com.etesync.syncadapter.AccountSettings: void updateInner(int)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String,java.lang.String,android.content.Intent)>[]--><com.etesync.syncadapter.NotificationHelper: void createNotificationChannel()>[[-$i0 < 26]]
+$i0 < 23
+try
+Good road with try: <com.etesync.syncadapter.ui.DebugInfoActivity$ReportLoader: java.lang.String loadInBackground()>[[$i0 < 23], [try]]--><com.etesync.syncadapter.AccountSettings: void <init>(android.content.Context,android.accounts.Account)>[[try]]--><com.etesync.syncadapter.AccountSettings: void update(int)>[[try]]--><com.etesync.syncadapter.AccountSettings: void updateInner(int)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String,java.lang.String,android.content.Intent)>[]--><com.etesync.syncadapter.NotificationHelper: void createNotificationChannel()>[[-$i0 < 26]]--><android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)>
+One road protect good!
+try
+Good road with try: <com.etesync.syncadapter.ui.setup.SetupUserInfoFragment: void onCreate(android.os.Bundle)>[[try]]--><com.etesync.syncadapter.AccountSettings: void <init>(android.content.Context,android.accounts.Account)>[[try]]--><com.etesync.syncadapter.AccountSettings: void update(int)>[[try]]--><com.etesync.syncadapter.AccountSettings: void updateInner(int)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String,java.lang.String,android.content.Intent)>[]--><com.etesync.syncadapter.NotificationHelper: void createNotificationChannel()>[[-$i0 < 26]]--><android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)>
+One road protect good!
+try
+Good road with try: <com.etesync.syncadapter.ui.AddMemberFragment$MemberAddSecond: void onPostExecute(com.etesync.syncadapter.ui.AddMemberFragment$MemberAddSecond$AddResultSecond)>[]--><com.etesync.syncadapter.ui.CollectionMembersListFragment: void refresh()>[]--><com.etesync.syncadapter.ui.CollectionMembersListFragment$JournalMembersFetch: java.lang.Object doInBackground(java.lang.Object[])>[]--><com.etesync.syncadapter.ui.CollectionMembersListFragment$JournalMembersFetch: com.etesync.syncadapter.ui.CollectionMembersListFragment$JournalMembersFetch$MembersResult doInBackground(java.lang.Void[])>[[try]]--><com.etesync.syncadapter.AccountSettings: void <init>(android.content.Context,android.accounts.Account)>[[try]]--><com.etesync.syncadapter.AccountSettings: void update(int)>[[try]]--><com.etesync.syncadapter.AccountSettings: void updateInner(int)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String,java.lang.String,android.content.Intent)>[]--><com.etesync.syncadapter.NotificationHelper: void createNotificationChannel()>[[-$i0 < 26]]--><android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)>
+One road protect good!
+try
+Good road with try: <com.etesync.syncadapter.ui.AddMemberFragment$MemberAddSecond: void onPostExecute(com.etesync.syncadapter.ui.AddMemberFragment$MemberAddSecond$AddResultSecond)>[]--><com.etesync.syncadapter.ui.CollectionMembersActivity: void refresh()>[]--><com.etesync.syncadapter.ui.CollectionMembersListFragment: void refresh()>[]--><com.etesync.syncadapter.ui.CollectionMembersListFragment$JournalMembersFetch: java.lang.Object doInBackground(java.lang.Object[])>[]--><com.etesync.syncadapter.ui.CollectionMembersListFragment$JournalMembersFetch: com.etesync.syncadapter.ui.CollectionMembersListFragment$JournalMembersFetch$MembersResult doInBackground(java.lang.Void[])>[[try]]--><com.etesync.syncadapter.AccountSettings: void <init>(android.content.Context,android.accounts.Account)>[[try]]--><com.etesync.syncadapter.AccountSettings: void update(int)>[[try]]--><com.etesync.syncadapter.AccountSettings: void updateInner(int)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String,java.lang.String,android.content.Intent)>[]--><com.etesync.syncadapter.NotificationHelper: void createNotificationChannel()>[[-$i0 < 26]]--><android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)>
+One road protect good!
+try
+Good road with try: <com.etesync.syncadapter.ui.setup.SetupEncryptionFragment: boolean createAccount(java.lang.String,com.etesync.syncadapter.ui.setup.BaseConfigurationFinder$Configuration)>[[try]]--><com.etesync.syncadapter.AccountSettings: void <init>(android.content.Context,android.accounts.Account)>[[try]]--><com.etesync.syncadapter.AccountSettings: void update(int)>[[try]]--><com.etesync.syncadapter.AccountSettings: void updateInner(int)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String,java.lang.String,android.content.Intent)>[]--><com.etesync.syncadapter.NotificationHelper: void createNotificationChannel()>[[-$i0 < 26]]--><android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)>
+One road protect good!
+try
+Good road with try: <com.etesync.syncadapter.syncadapter.CalendarsSyncAdapterService$SyncAdapter: void onPerformSync(android.accounts.Account,android.os.Bundle,java.lang.String,android.content.ContentProviderClient,android.content.SyncResult)>[[try]]--><com.etesync.syncadapter.syncadapter.SyncManager: void performSync()>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String,java.lang.String,android.content.Intent)>[]--><com.etesync.syncadapter.NotificationHelper: void createNotificationChannel()>[[-$i0 < 26]]--><android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)>
+One road protect good!
+-$i0 < 26
+Good road: <com.etesync.syncadapter.syncadapter.CalendarsSyncAdapterService$SyncAdapter: void onPerformSync(android.accounts.Account,android.os.Bundle,java.lang.String,android.content.ContentProviderClient,android.content.SyncResult)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String,java.lang.String,android.content.Intent)>[]--><com.etesync.syncadapter.NotificationHelper: void createNotificationChannel()>[[-$i0 < 26]]--><android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)>
+One road protect good!
+try
+Good road with try: <com.etesync.syncadapter.syncadapter.CalendarsSyncAdapterService$SyncAdapter: void onPerformSync(android.accounts.Account,android.os.Bundle,java.lang.String,android.content.ContentProviderClient,android.content.SyncResult)>[[try]]--><com.etesync.syncadapter.AccountSettings: void <init>(android.content.Context,android.accounts.Account)>[[try]]--><com.etesync.syncadapter.AccountSettings: void update(int)>[[try]]--><com.etesync.syncadapter.AccountSettings: void updateInner(int)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String,java.lang.String,android.content.Intent)>[]--><com.etesync.syncadapter.NotificationHelper: void createNotificationChannel()>[[-$i0 < 26]]--><android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)>
+One road protect good!
+try
+Good road with try: <com.etesync.syncadapter.ui.DeleteCollectionFragment$DeleteCollectionLoader: java.lang.Exception loadInBackground()>[[try]]--><com.etesync.syncadapter.AccountSettings: void <init>(android.content.Context,android.accounts.Account)>[[try]]--><com.etesync.syncadapter.AccountSettings: void update(int)>[[try]]--><com.etesync.syncadapter.AccountSettings: void updateInner(int)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String,java.lang.String,android.content.Intent)>[]--><com.etesync.syncadapter.NotificationHelper: void createNotificationChannel()>[[-$i0 < 26]]--><android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)>
+One road protect good!
+try
+Good road with try: <com.etesync.syncadapter.ui.importlocal.ImportFragment: void loadFinished(com.etesync.syncadapter.ui.importlocal.ResultFragment$ImportResult)>[]--><com.etesync.syncadapter.ui.CollectionMembersListFragment: void refresh()>[]--><com.etesync.syncadapter.ui.CollectionMembersListFragment$JournalMembersFetch: java.lang.Object doInBackground(java.lang.Object[])>[]--><com.etesync.syncadapter.ui.CollectionMembersListFragment$JournalMembersFetch: com.etesync.syncadapter.ui.CollectionMembersListFragment$JournalMembersFetch$MembersResult doInBackground(java.lang.Void[])>[[try]]--><com.etesync.syncadapter.AccountSettings: void <init>(android.content.Context,android.accounts.Account)>[[try]]--><com.etesync.syncadapter.AccountSettings: void update(int)>[[try]]--><com.etesync.syncadapter.AccountSettings: void updateInner(int)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String,java.lang.String,android.content.Intent)>[]--><com.etesync.syncadapter.NotificationHelper: void createNotificationChannel()>[[-$i0 < 26]]--><android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)>
+One road protect good!
+try
+Good road with try: <com.etesync.syncadapter.ui.importlocal.ImportFragment: void loadFinished(com.etesync.syncadapter.ui.importlocal.ResultFragment$ImportResult)>[]--><com.etesync.syncadapter.ui.CollectionMembersActivity: void refresh()>[]--><com.etesync.syncadapter.ui.CollectionMembersListFragment: void refresh()>[]--><com.etesync.syncadapter.ui.CollectionMembersListFragment$JournalMembersFetch: java.lang.Object doInBackground(java.lang.Object[])>[]--><com.etesync.syncadapter.ui.CollectionMembersListFragment$JournalMembersFetch: com.etesync.syncadapter.ui.CollectionMembersListFragment$JournalMembersFetch$MembersResult doInBackground(java.lang.Void[])>[[try]]--><com.etesync.syncadapter.AccountSettings: void <init>(android.content.Context,android.accounts.Account)>[[try]]--><com.etesync.syncadapter.AccountSettings: void update(int)>[[try]]--><com.etesync.syncadapter.AccountSettings: void updateInner(int)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String,java.lang.String,android.content.Intent)>[]--><com.etesync.syncadapter.NotificationHelper: void createNotificationChannel()>[[-$i0 < 26]]--><android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)>
+One road protect good!
+try
+Good road with try: <com.etesync.syncadapter.ui.setup.LoginCredentialsChangeFragment: void onLoadFinished(android.support.v4.content.Loader,com.etesync.syncadapter.ui.setup.BaseConfigurationFinder$Configuration)>[[try]]--><com.etesync.syncadapter.AccountSettings: void <init>(android.content.Context,android.accounts.Account)>[[try]]--><com.etesync.syncadapter.AccountSettings: void update(int)>[[try]]--><com.etesync.syncadapter.AccountSettings: void updateInner(int)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String,java.lang.String,android.content.Intent)>[]--><com.etesync.syncadapter.NotificationHelper: void createNotificationChannel()>[[-$i0 < 26]]--><android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)>
+One road protect good!
+try
+Good road with try: <com.etesync.syncadapter.ui.AccountSettingsActivity$AccountSettingsLoader: com.etesync.syncadapter.AccountSettings loadInBackground()>[[try]]--><com.etesync.syncadapter.AccountSettings: void <init>(android.content.Context,android.accounts.Account)>[[try]]--><com.etesync.syncadapter.AccountSettings: void update(int)>[[try]]--><com.etesync.syncadapter.AccountSettings: void updateInner(int)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String,java.lang.String,android.content.Intent)>[]--><com.etesync.syncadapter.NotificationHelper: void createNotificationChannel()>[[-$i0 < 26]]--><android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)>
+One road protect good!
+try
+Good road with try: <com.etesync.syncadapter.ui.CreateCollectionFragment$CreateCollectionLoader: java.lang.Exception loadInBackground()>[[try]]--><com.etesync.syncadapter.AccountSettings: void <init>(android.content.Context,android.accounts.Account)>[[try]]--><com.etesync.syncadapter.AccountSettings: void update(int)>[[try]]--><com.etesync.syncadapter.AccountSettings: void updateInner(int)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String,java.lang.String,android.content.Intent)>[]--><com.etesync.syncadapter.NotificationHelper: void createNotificationChannel()>[[-$i0 < 26]]--><android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)>
+One road protect good!
+try
+Good road with try: <com.etesync.syncadapter.ui.RemoveMemberFragment$MemberRemove: void onPostExecute(com.etesync.syncadapter.ui.RemoveMemberFragment$MemberRemove$RemoveResult)>[]--><com.etesync.syncadapter.ui.CollectionMembersListFragment: void refresh()>[]--><com.etesync.syncadapter.ui.CollectionMembersListFragment$JournalMembersFetch: java.lang.Object doInBackground(java.lang.Object[])>[]--><com.etesync.syncadapter.ui.CollectionMembersListFragment$JournalMembersFetch: com.etesync.syncadapter.ui.CollectionMembersListFragment$JournalMembersFetch$MembersResult doInBackground(java.lang.Void[])>[[try]]--><com.etesync.syncadapter.AccountSettings: void <init>(android.content.Context,android.accounts.Account)>[[try]]--><com.etesync.syncadapter.AccountSettings: void update(int)>[[try]]--><com.etesync.syncadapter.AccountSettings: void updateInner(int)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String,java.lang.String,android.content.Intent)>[]--><com.etesync.syncadapter.NotificationHelper: void createNotificationChannel()>[[-$i0 < 26]]--><android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)>
+One road protect good!
+try
+Good road with try: <com.etesync.syncadapter.ui.RemoveMemberFragment$MemberRemove: void onPostExecute(com.etesync.syncadapter.ui.RemoveMemberFragment$MemberRemove$RemoveResult)>[]--><com.etesync.syncadapter.ui.CollectionMembersActivity: void refresh()>[]--><com.etesync.syncadapter.ui.CollectionMembersListFragment: void refresh()>[]--><com.etesync.syncadapter.ui.CollectionMembersListFragment$JournalMembersFetch: java.lang.Object doInBackground(java.lang.Object[])>[]--><com.etesync.syncadapter.ui.CollectionMembersListFragment$JournalMembersFetch: com.etesync.syncadapter.ui.CollectionMembersListFragment$JournalMembersFetch$MembersResult doInBackground(java.lang.Void[])>[[try]]--><com.etesync.syncadapter.AccountSettings: void <init>(android.content.Context,android.accounts.Account)>[[try]]--><com.etesync.syncadapter.AccountSettings: void update(int)>[[try]]--><com.etesync.syncadapter.AccountSettings: void updateInner(int)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String,java.lang.String,android.content.Intent)>[]--><com.etesync.syncadapter.NotificationHelper: void createNotificationChannel()>[[-$i0 < 26]]--><android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)>
+One road protect good!
+try
+Good road with try: <com.etesync.syncadapter.syncadapter.AddressBooksSyncAdapterService$AddressBooksSyncAdapter: void onPerformSync(android.accounts.Account,android.os.Bundle,java.lang.String,android.content.ContentProviderClient,android.content.SyncResult)>[[try]]--><com.etesync.syncadapter.AccountSettings: void <init>(android.content.Context,android.accounts.Account)>[[try]]--><com.etesync.syncadapter.AccountSettings: void update(int)>[[try]]--><com.etesync.syncadapter.AccountSettings: void updateInner(int)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String,java.lang.String,android.content.Intent)>[]--><com.etesync.syncadapter.NotificationHelper: void createNotificationChannel()>[[-$i0 < 26]]--><android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)>
+One road protect good!
+-$i0 < 26
+Good road: <com.etesync.syncadapter.syncadapter.AddressBooksSyncAdapterService$AddressBooksSyncAdapter: void onPerformSync(android.accounts.Account,android.os.Bundle,java.lang.String,android.content.ContentProviderClient,android.content.SyncResult)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String,java.lang.String,android.content.Intent)>[]--><com.etesync.syncadapter.NotificationHelper: void createNotificationChannel()>[[-$i0 < 26]]--><android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)>
+One road protect good!
+try
+Good road with try: <com.etesync.syncadapter.syncadapter.SyncAdapterService$SyncAdapter$RefreshCollections: void run()>[]--><com.etesync.syncadapter.AccountSettings: void <init>(android.content.Context,android.accounts.Account)>[[try]]--><com.etesync.syncadapter.AccountSettings: void update(int)>[[try]]--><com.etesync.syncadapter.AccountSettings: void updateInner(int)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String,java.lang.String,android.content.Intent)>[]--><com.etesync.syncadapter.NotificationHelper: void createNotificationChannel()>[[-$i0 < 26]]--><android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)>
+One road protect good!
+containsStatic:false
+containsTry:true
+18call by main package
+-----------------------------------------
+#################################################
+N 22 Potential Issue API: SDKCheck of <android.accounts.AccountManager: android.accounts.AccountManagerFuture renameAccount(android.accounts.Account,java.lang.String,android.accounts.AccountManagerCallback,android.os.Handler)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+-$i0 < 21
+Good road: <com.etesync.syncadapter.syncadapter.AddressBooksSyncAdapterService$AddressBooksSyncAdapter: void updateLocalAddressBooks(android.content.ContentProviderClient,android.accounts.Account)>[]--><com.etesync.syncadapter.resource.LocalAddressBook: void update(com.etesync.syncadapter.model.JournalEntity)>[[-$i0 < 21]]--><android.accounts.AccountManager: android.accounts.AccountManagerFuture renameAccount(android.accounts.Account,java.lang.String,android.accounts.AccountManagerCallback,android.os.Handler)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 23 Potential Issue API: SDKCheck of <android.media.MediaCodecList: void <init>(int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+$i0 >= 21
+Good road: <org.acra.collector.MediaCodecListCollector: void collect(org.acra.ReportField,android.content.Context,org.acra.config.CoreConfiguration,org.acra.builder.ReportBuilder,org.acra.data.CrashReportData)>[]--><org.acra.collector.MediaCodecListCollector: org.json.JSONObject collectMediaCodecList()>[[$i0 >= 21]]--><android.media.MediaCodecList: void <init>(int)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 24 Potential Issue API: SDKCheck of <android.webkit.WebResourceRequest: android.net.Uri getUrl()> is checking!!!
+The life time of api is [21,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <com.etesync.syncadapter.ui.WebViewActivity$1: void onReceivedError(android.webkit.WebView,android.webkit.WebResourceRequest,android.webkit.WebResourceError)>[]--><android.webkit.WebResourceRequest: android.net.Uri getUrl()>
+#1.the call statck between class <com.etesync.syncadapter.ui.WebViewActivity$1: void onReceivedError(android.webkit.WebView,android.webkit.WebResourceRequest,android.webkit.WebResourceError)> to <android.webkit.WebResourceRequest: android.net.Uri getUrl()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 19 20 
+Error road: <com.etesync.syncadapter.ui.WebViewActivity$1: boolean shouldOverrideUrlLoading(android.webkit.WebView,android.webkit.WebResourceRequest)>[]--><android.webkit.WebResourceRequest: android.net.Uri getUrl()>
+#2.the call statck between class <com.etesync.syncadapter.ui.WebViewActivity$1: boolean shouldOverrideUrlLoading(android.webkit.WebView,android.webkit.WebResourceRequest)> to <android.webkit.WebResourceRequest: android.net.Uri getUrl()>has compatibility isssues！
+-----------------------------------------
+crashApis:16
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 25 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.lang.String getString(java.lang.String,java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <com.etesync.syncadapter.ui.DebugInfoActivity$ReportLoader: java.lang.String loadInBackground()>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String,java.lang.String)>
+#1.the call statck between class <com.etesync.syncadapter.ui.DebugInfoActivity$ReportLoader: java.lang.String loadInBackground()> to <android.os.BaseBundle: java.lang.String getString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:17
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 26 Potential Issue API: SDKCheck of <android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)> is checking!!!
+The life time of api is [26,31]
+18call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.etesync.syncadapter.ui.CollectionMembersActivity dummyMainMethod_com_etesync_syncadapter_ui_CollectionMembersActivity(android.content.Intent)>[]--><com.etesync.syncadapter.ui.CollectionMembersActivity: void onCreate(android.os.Bundle)>[]--><com.etesync.syncadapter.ui.CollectionMembersActivity: void refresh()>[]--><com.etesync.syncadapter.ui.CollectionMembersListFragment: void refresh()>[]--><com.etesync.syncadapter.ui.CollectionMembersListFragment$JournalMembersFetch: java.lang.Object doInBackground(java.lang.Object[])>[]--><com.etesync.syncadapter.ui.CollectionMembersListFragment$JournalMembersFetch: com.etesync.syncadapter.ui.CollectionMembersListFragment$JournalMembersFetch$MembersResult doInBackground(java.lang.Void[])>[[try]]--><com.etesync.syncadapter.AccountSettings: void <init>(android.content.Context,android.accounts.Account)>[[try]]--><com.etesync.syncadapter.AccountSettings: void update(int)>[[try]]--><com.etesync.syncadapter.AccountSettings: void updateInner(int)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String,java.lang.String,android.content.Intent)>[]--><com.etesync.syncadapter.NotificationHelper: void createNotificationChannel()>[[-$i0 < 26]]--><android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)>
+One road protect good!
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.etesync.syncadapter.ui.AccountActivity dummyMainMethod_com_etesync_syncadapter_ui_AccountActivity(android.content.Intent)>[]--><com.etesync.syncadapter.ui.AccountActivity: boolean onOptionsItemSelected(android.view.MenuItem)>[]--><com.etesync.syncadapter.ui.AccountActivity: java.lang.String getFormattedFingerprint()>[[try]]--><com.etesync.syncadapter.AccountSettings: void <init>(android.content.Context,android.accounts.Account)>[[try]]--><com.etesync.syncadapter.AccountSettings: void update(int)>[[try]]--><com.etesync.syncadapter.AccountSettings: void updateInner(int)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String,java.lang.String,android.content.Intent)>[]--><com.etesync.syncadapter.NotificationHelper: void createNotificationChannel()>[[-$i0 < 26]]--><android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)>
+One road protect good!
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.etesync.syncadapter.App$AppUpdatedReceiver dummyMainMethod_com_etesync_syncadapter_App$AppUpdatedReceiver(android.content.Intent)>[]--><com.etesync.syncadapter.App$AppUpdatedReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><com.etesync.syncadapter.App: void access$000(com.etesync.syncadapter.App,int)>[]--><com.etesync.syncadapter.App: void update(int)>[[try]]--><com.etesync.syncadapter.AccountSettings: void <init>(android.content.Context,android.accounts.Account)>[[try]]--><com.etesync.syncadapter.AccountSettings: void update(int)>[[try]]--><com.etesync.syncadapter.AccountSettings: void updateInner(int)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String,java.lang.String,android.content.Intent)>[]--><com.etesync.syncadapter.NotificationHelper: void createNotificationChannel()>[[-$i0 < 26]]--><android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)>
+One road protect good!
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.etesync.syncadapter.ui.EditCollectionActivity dummyMainMethod_com_etesync_syncadapter_ui_EditCollectionActivity(android.content.Intent)>[]--><com.etesync.syncadapter.ui.EditCollectionActivity: void onDestroy()>[]--><com.etesync.syncadapter.ui.CollectionMembersActivity: void refresh()>[]--><com.etesync.syncadapter.ui.CollectionMembersListFragment: void refresh()>[]--><com.etesync.syncadapter.ui.CollectionMembersListFragment$JournalMembersFetch: java.lang.Object doInBackground(java.lang.Object[])>[]--><com.etesync.syncadapter.ui.CollectionMembersListFragment$JournalMembersFetch: com.etesync.syncadapter.ui.CollectionMembersListFragment$JournalMembersFetch$MembersResult doInBackground(java.lang.Void[])>[[try]]--><com.etesync.syncadapter.AccountSettings: void <init>(android.content.Context,android.accounts.Account)>[[try]]--><com.etesync.syncadapter.AccountSettings: void update(int)>[[try]]--><com.etesync.syncadapter.AccountSettings: void updateInner(int)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String,java.lang.String,android.content.Intent)>[]--><com.etesync.syncadapter.NotificationHelper: void createNotificationChannel()>[[-$i0 < 26]]--><android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)>
+One road protect good!
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.etesync.syncadapter.AccountSettings$AppUpdatedReceiver dummyMainMethod_com_etesync_syncadapter_AccountSettings$AppUpdatedReceiver(android.content.Intent)>[]--><com.etesync.syncadapter.AccountSettings$AppUpdatedReceiver: void onReceive(android.content.Context,android.content.Intent)>[[try]]--><com.etesync.syncadapter.AccountSettings: void <init>(android.content.Context,android.accounts.Account)>[[try]]--><com.etesync.syncadapter.AccountSettings: void update(int)>[[try]]--><com.etesync.syncadapter.AccountSettings: void updateInner(int)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String,java.lang.String,android.content.Intent)>[]--><com.etesync.syncadapter.NotificationHelper: void createNotificationChannel()>[[-$i0 < 26]]--><android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)>
+One road protect good!
+17 Packageshead roads:
+try
+Good road with try: <com.etesync.syncadapter.ui.DeleteCollectionFragment: void onLoadFinished(android.support.v4.content.Loader,java.lang.Object)>[]--><com.etesync.syncadapter.ui.DeleteCollectionFragment: void onLoadFinished(android.support.v4.content.Loader,java.lang.Exception)>[]--><com.etesync.syncadapter.ui.CollectionMembersListFragment: void refresh()>[]--><com.etesync.syncadapter.ui.CollectionMembersListFragment$JournalMembersFetch: java.lang.Object doInBackground(java.lang.Object[])>[]--><com.etesync.syncadapter.ui.CollectionMembersListFragment$JournalMembersFetch: com.etesync.syncadapter.ui.CollectionMembersListFragment$JournalMembersFetch$MembersResult doInBackground(java.lang.Void[])>[[try]]--><com.etesync.syncadapter.AccountSettings: void <init>(android.content.Context,android.accounts.Account)>[[try]]--><com.etesync.syncadapter.AccountSettings: void update(int)>[[try]]--><com.etesync.syncadapter.AccountSettings: void updateInner(int)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String,java.lang.String,android.content.Intent)>[]--><com.etesync.syncadapter.NotificationHelper: void createNotificationChannel()>[[-$i0 < 26]]--><android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)>
+One road protect good!
+try
+Good road with try: <com.etesync.syncadapter.syncadapter.ContactsSyncAdapterService$ContactsSyncAdapter: void onPerformSync(android.accounts.Account,android.os.Bundle,java.lang.String,android.content.ContentProviderClient,android.content.SyncResult)>[[try]]--><com.etesync.syncadapter.syncadapter.SyncManager: void performSync()>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String,java.lang.String,android.content.Intent)>[]--><com.etesync.syncadapter.NotificationHelper: void createNotificationChannel()>[[-$i0 < 26]]--><android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)>
+One road protect good!
+-$i0 < 26
+Good road: <com.etesync.syncadapter.syncadapter.ContactsSyncAdapterService$ContactsSyncAdapter: void onPerformSync(android.accounts.Account,android.os.Bundle,java.lang.String,android.content.ContentProviderClient,android.content.SyncResult)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String,java.lang.String,android.content.Intent)>[]--><com.etesync.syncadapter.NotificationHelper: void createNotificationChannel()>[[-$i0 < 26]]--><android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)>
+One road protect good!
+try
+Good road with try: <com.etesync.syncadapter.syncadapter.ContactsSyncAdapterService$ContactsSyncAdapter: void onPerformSync(android.accounts.Account,android.os.Bundle,java.lang.String,android.content.ContentProviderClient,android.content.SyncResult)>[[try]]--><com.etesync.syncadapter.AccountSettings: void <init>(android.content.Context,android.accounts.Account)>[[try]]--><com.etesync.syncadapter.AccountSettings: void update(int)>[[try]]--><com.etesync.syncadapter.AccountSettings: void updateInner(int)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String,java.lang.String,android.content.Intent)>[]--><com.etesync.syncadapter.NotificationHelper: void createNotificationChannel()>[[-$i0 < 26]]--><android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)>
+One road protect good!
+try
+Good road with try: <com.etesync.syncadapter.ui.RemoveMemberFragment: void onCreate(android.os.Bundle)>[[try]]--><com.etesync.syncadapter.AccountSettings: void <init>(android.content.Context,android.accounts.Account)>[[try]]--><com.etesync.syncadapter.AccountSettings: void update(int)>[[try]]--><com.etesync.syncadapter.AccountSettings: void updateInner(int)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String,java.lang.String,android.content.Intent)>[]--><com.etesync.syncadapter.NotificationHelper: void createNotificationChannel()>[[-$i0 < 26]]--><android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)>
+One road protect good!
+try
+Good road with try: <com.etesync.syncadapter.ui.AddMemberFragment: void onCreate(android.os.Bundle)>[[try]]--><com.etesync.syncadapter.AccountSettings: void <init>(android.content.Context,android.accounts.Account)>[[try]]--><com.etesync.syncadapter.AccountSettings: void update(int)>[[try]]--><com.etesync.syncadapter.AccountSettings: void updateInner(int)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String,java.lang.String,android.content.Intent)>[]--><com.etesync.syncadapter.NotificationHelper: void createNotificationChannel()>[[-$i0 < 26]]--><android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)>
+One road protect good!
+###Multi invoking in one method, need manual check!!!<com.etesync.syncadapter.ui.DebugInfoActivity$ReportLoader: java.lang.String loadInBackground()>[[$i0 < 23], [try]]--><com.etesync.syncadapter.AccountSettings: void <init>(android.content.Context,android.accounts.Account)>[[try]]--><com.etesync.syncadapter.AccountSettings: void update(int)>[[try]]--><com.etesync.syncadapter.AccountSettings: void updateInner(int)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String,java.lang.String,android.content.Intent)>[]--><com.etesync.syncadapter.NotificationHelper: void createNotificationChannel()>[[-$i0 < 26]]
+###Multi invoking in one method, need manual check!!!<com.etesync.syncadapter.ui.DebugInfoActivity$ReportLoader: java.lang.String loadInBackground()>[[$i0 < 23]][[try]]--><com.etesync.syncadapter.AccountSettings: void <init>(android.content.Context,android.accounts.Account)>[[try]]--><com.etesync.syncadapter.AccountSettings: void update(int)>[[try]]--><com.etesync.syncadapter.AccountSettings: void updateInner(int)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String,java.lang.String,android.content.Intent)>[]--><com.etesync.syncadapter.NotificationHelper: void createNotificationChannel()>[[-$i0 < 26]]
+$i0 < 23
+try
+Good road with try: <com.etesync.syncadapter.ui.DebugInfoActivity$ReportLoader: java.lang.String loadInBackground()>[[$i0 < 23], [try]]--><com.etesync.syncadapter.AccountSettings: void <init>(android.content.Context,android.accounts.Account)>[[try]]--><com.etesync.syncadapter.AccountSettings: void update(int)>[[try]]--><com.etesync.syncadapter.AccountSettings: void updateInner(int)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String,java.lang.String,android.content.Intent)>[]--><com.etesync.syncadapter.NotificationHelper: void createNotificationChannel()>[[-$i0 < 26]]--><android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)>
+One road protect good!
+try
+Good road with try: <com.etesync.syncadapter.ui.setup.SetupUserInfoFragment: void onCreate(android.os.Bundle)>[[try]]--><com.etesync.syncadapter.AccountSettings: void <init>(android.content.Context,android.accounts.Account)>[[try]]--><com.etesync.syncadapter.AccountSettings: void update(int)>[[try]]--><com.etesync.syncadapter.AccountSettings: void updateInner(int)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String,java.lang.String,android.content.Intent)>[]--><com.etesync.syncadapter.NotificationHelper: void createNotificationChannel()>[[-$i0 < 26]]--><android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)>
+One road protect good!
+try
+Good road with try: <com.etesync.syncadapter.ui.AddMemberFragment$MemberAddSecond: void onPostExecute(com.etesync.syncadapter.ui.AddMemberFragment$MemberAddSecond$AddResultSecond)>[]--><com.etesync.syncadapter.ui.CollectionMembersListFragment: void refresh()>[]--><com.etesync.syncadapter.ui.CollectionMembersListFragment$JournalMembersFetch: java.lang.Object doInBackground(java.lang.Object[])>[]--><com.etesync.syncadapter.ui.CollectionMembersListFragment$JournalMembersFetch: com.etesync.syncadapter.ui.CollectionMembersListFragment$JournalMembersFetch$MembersResult doInBackground(java.lang.Void[])>[[try]]--><com.etesync.syncadapter.AccountSettings: void <init>(android.content.Context,android.accounts.Account)>[[try]]--><com.etesync.syncadapter.AccountSettings: void update(int)>[[try]]--><com.etesync.syncadapter.AccountSettings: void updateInner(int)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String,java.lang.String,android.content.Intent)>[]--><com.etesync.syncadapter.NotificationHelper: void createNotificationChannel()>[[-$i0 < 26]]--><android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)>
+One road protect good!
+try
+Good road with try: <com.etesync.syncadapter.ui.AddMemberFragment$MemberAddSecond: void onPostExecute(com.etesync.syncadapter.ui.AddMemberFragment$MemberAddSecond$AddResultSecond)>[]--><com.etesync.syncadapter.ui.CollectionMembersActivity: void refresh()>[]--><com.etesync.syncadapter.ui.CollectionMembersListFragment: void refresh()>[]--><com.etesync.syncadapter.ui.CollectionMembersListFragment$JournalMembersFetch: java.lang.Object doInBackground(java.lang.Object[])>[]--><com.etesync.syncadapter.ui.CollectionMembersListFragment$JournalMembersFetch: com.etesync.syncadapter.ui.CollectionMembersListFragment$JournalMembersFetch$MembersResult doInBackground(java.lang.Void[])>[[try]]--><com.etesync.syncadapter.AccountSettings: void <init>(android.content.Context,android.accounts.Account)>[[try]]--><com.etesync.syncadapter.AccountSettings: void update(int)>[[try]]--><com.etesync.syncadapter.AccountSettings: void updateInner(int)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String,java.lang.String,android.content.Intent)>[]--><com.etesync.syncadapter.NotificationHelper: void createNotificationChannel()>[[-$i0 < 26]]--><android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)>
+One road protect good!
+try
+Good road with try: <com.etesync.syncadapter.ui.setup.SetupEncryptionFragment: boolean createAccount(java.lang.String,com.etesync.syncadapter.ui.setup.BaseConfigurationFinder$Configuration)>[[try]]--><com.etesync.syncadapter.AccountSettings: void <init>(android.content.Context,android.accounts.Account)>[[try]]--><com.etesync.syncadapter.AccountSettings: void update(int)>[[try]]--><com.etesync.syncadapter.AccountSettings: void updateInner(int)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String,java.lang.String,android.content.Intent)>[]--><com.etesync.syncadapter.NotificationHelper: void createNotificationChannel()>[[-$i0 < 26]]--><android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)>
+One road protect good!
+try
+Good road with try: <com.etesync.syncadapter.syncadapter.CalendarsSyncAdapterService$SyncAdapter: void onPerformSync(android.accounts.Account,android.os.Bundle,java.lang.String,android.content.ContentProviderClient,android.content.SyncResult)>[[try]]--><com.etesync.syncadapter.syncadapter.SyncManager: void performSync()>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String,java.lang.String,android.content.Intent)>[]--><com.etesync.syncadapter.NotificationHelper: void createNotificationChannel()>[[-$i0 < 26]]--><android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)>
+One road protect good!
+-$i0 < 26
+Good road: <com.etesync.syncadapter.syncadapter.CalendarsSyncAdapterService$SyncAdapter: void onPerformSync(android.accounts.Account,android.os.Bundle,java.lang.String,android.content.ContentProviderClient,android.content.SyncResult)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String,java.lang.String,android.content.Intent)>[]--><com.etesync.syncadapter.NotificationHelper: void createNotificationChannel()>[[-$i0 < 26]]--><android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)>
+One road protect good!
+try
+Good road with try: <com.etesync.syncadapter.syncadapter.CalendarsSyncAdapterService$SyncAdapter: void onPerformSync(android.accounts.Account,android.os.Bundle,java.lang.String,android.content.ContentProviderClient,android.content.SyncResult)>[[try]]--><com.etesync.syncadapter.AccountSettings: void <init>(android.content.Context,android.accounts.Account)>[[try]]--><com.etesync.syncadapter.AccountSettings: void update(int)>[[try]]--><com.etesync.syncadapter.AccountSettings: void updateInner(int)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String,java.lang.String,android.content.Intent)>[]--><com.etesync.syncadapter.NotificationHelper: void createNotificationChannel()>[[-$i0 < 26]]--><android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)>
+One road protect good!
+try
+Good road with try: <com.etesync.syncadapter.ui.DeleteCollectionFragment$DeleteCollectionLoader: java.lang.Exception loadInBackground()>[[try]]--><com.etesync.syncadapter.AccountSettings: void <init>(android.content.Context,android.accounts.Account)>[[try]]--><com.etesync.syncadapter.AccountSettings: void update(int)>[[try]]--><com.etesync.syncadapter.AccountSettings: void updateInner(int)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String,java.lang.String,android.content.Intent)>[]--><com.etesync.syncadapter.NotificationHelper: void createNotificationChannel()>[[-$i0 < 26]]--><android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)>
+One road protect good!
+try
+Good road with try: <com.etesync.syncadapter.ui.importlocal.ImportFragment: void loadFinished(com.etesync.syncadapter.ui.importlocal.ResultFragment$ImportResult)>[]--><com.etesync.syncadapter.ui.CollectionMembersListFragment: void refresh()>[]--><com.etesync.syncadapter.ui.CollectionMembersListFragment$JournalMembersFetch: java.lang.Object doInBackground(java.lang.Object[])>[]--><com.etesync.syncadapter.ui.CollectionMembersListFragment$JournalMembersFetch: com.etesync.syncadapter.ui.CollectionMembersListFragment$JournalMembersFetch$MembersResult doInBackground(java.lang.Void[])>[[try]]--><com.etesync.syncadapter.AccountSettings: void <init>(android.content.Context,android.accounts.Account)>[[try]]--><com.etesync.syncadapter.AccountSettings: void update(int)>[[try]]--><com.etesync.syncadapter.AccountSettings: void updateInner(int)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String,java.lang.String,android.content.Intent)>[]--><com.etesync.syncadapter.NotificationHelper: void createNotificationChannel()>[[-$i0 < 26]]--><android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)>
+One road protect good!
+try
+Good road with try: <com.etesync.syncadapter.ui.importlocal.ImportFragment: void loadFinished(com.etesync.syncadapter.ui.importlocal.ResultFragment$ImportResult)>[]--><com.etesync.syncadapter.ui.CollectionMembersActivity: void refresh()>[]--><com.etesync.syncadapter.ui.CollectionMembersListFragment: void refresh()>[]--><com.etesync.syncadapter.ui.CollectionMembersListFragment$JournalMembersFetch: java.lang.Object doInBackground(java.lang.Object[])>[]--><com.etesync.syncadapter.ui.CollectionMembersListFragment$JournalMembersFetch: com.etesync.syncadapter.ui.CollectionMembersListFragment$JournalMembersFetch$MembersResult doInBackground(java.lang.Void[])>[[try]]--><com.etesync.syncadapter.AccountSettings: void <init>(android.content.Context,android.accounts.Account)>[[try]]--><com.etesync.syncadapter.AccountSettings: void update(int)>[[try]]--><com.etesync.syncadapter.AccountSettings: void updateInner(int)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String,java.lang.String,android.content.Intent)>[]--><com.etesync.syncadapter.NotificationHelper: void createNotificationChannel()>[[-$i0 < 26]]--><android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)>
+One road protect good!
+try
+Good road with try: <com.etesync.syncadapter.ui.setup.LoginCredentialsChangeFragment: void onLoadFinished(android.support.v4.content.Loader,com.etesync.syncadapter.ui.setup.BaseConfigurationFinder$Configuration)>[[try]]--><com.etesync.syncadapter.AccountSettings: void <init>(android.content.Context,android.accounts.Account)>[[try]]--><com.etesync.syncadapter.AccountSettings: void update(int)>[[try]]--><com.etesync.syncadapter.AccountSettings: void updateInner(int)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String,java.lang.String,android.content.Intent)>[]--><com.etesync.syncadapter.NotificationHelper: void createNotificationChannel()>[[-$i0 < 26]]--><android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)>
+One road protect good!
+try
+Good road with try: <com.etesync.syncadapter.ui.AccountSettingsActivity$AccountSettingsLoader: com.etesync.syncadapter.AccountSettings loadInBackground()>[[try]]--><com.etesync.syncadapter.AccountSettings: void <init>(android.content.Context,android.accounts.Account)>[[try]]--><com.etesync.syncadapter.AccountSettings: void update(int)>[[try]]--><com.etesync.syncadapter.AccountSettings: void updateInner(int)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String,java.lang.String,android.content.Intent)>[]--><com.etesync.syncadapter.NotificationHelper: void createNotificationChannel()>[[-$i0 < 26]]--><android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)>
+One road protect good!
+try
+Good road with try: <com.etesync.syncadapter.ui.CreateCollectionFragment$CreateCollectionLoader: java.lang.Exception loadInBackground()>[[try]]--><com.etesync.syncadapter.AccountSettings: void <init>(android.content.Context,android.accounts.Account)>[[try]]--><com.etesync.syncadapter.AccountSettings: void update(int)>[[try]]--><com.etesync.syncadapter.AccountSettings: void updateInner(int)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String,java.lang.String,android.content.Intent)>[]--><com.etesync.syncadapter.NotificationHelper: void createNotificationChannel()>[[-$i0 < 26]]--><android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)>
+One road protect good!
+try
+Good road with try: <com.etesync.syncadapter.ui.RemoveMemberFragment$MemberRemove: void onPostExecute(com.etesync.syncadapter.ui.RemoveMemberFragment$MemberRemove$RemoveResult)>[]--><com.etesync.syncadapter.ui.CollectionMembersListFragment: void refresh()>[]--><com.etesync.syncadapter.ui.CollectionMembersListFragment$JournalMembersFetch: java.lang.Object doInBackground(java.lang.Object[])>[]--><com.etesync.syncadapter.ui.CollectionMembersListFragment$JournalMembersFetch: com.etesync.syncadapter.ui.CollectionMembersListFragment$JournalMembersFetch$MembersResult doInBackground(java.lang.Void[])>[[try]]--><com.etesync.syncadapter.AccountSettings: void <init>(android.content.Context,android.accounts.Account)>[[try]]--><com.etesync.syncadapter.AccountSettings: void update(int)>[[try]]--><com.etesync.syncadapter.AccountSettings: void updateInner(int)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String,java.lang.String,android.content.Intent)>[]--><com.etesync.syncadapter.NotificationHelper: void createNotificationChannel()>[[-$i0 < 26]]--><android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)>
+One road protect good!
+try
+Good road with try: <com.etesync.syncadapter.ui.RemoveMemberFragment$MemberRemove: void onPostExecute(com.etesync.syncadapter.ui.RemoveMemberFragment$MemberRemove$RemoveResult)>[]--><com.etesync.syncadapter.ui.CollectionMembersActivity: void refresh()>[]--><com.etesync.syncadapter.ui.CollectionMembersListFragment: void refresh()>[]--><com.etesync.syncadapter.ui.CollectionMembersListFragment$JournalMembersFetch: java.lang.Object doInBackground(java.lang.Object[])>[]--><com.etesync.syncadapter.ui.CollectionMembersListFragment$JournalMembersFetch: com.etesync.syncadapter.ui.CollectionMembersListFragment$JournalMembersFetch$MembersResult doInBackground(java.lang.Void[])>[[try]]--><com.etesync.syncadapter.AccountSettings: void <init>(android.content.Context,android.accounts.Account)>[[try]]--><com.etesync.syncadapter.AccountSettings: void update(int)>[[try]]--><com.etesync.syncadapter.AccountSettings: void updateInner(int)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String,java.lang.String,android.content.Intent)>[]--><com.etesync.syncadapter.NotificationHelper: void createNotificationChannel()>[[-$i0 < 26]]--><android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)>
+One road protect good!
+try
+Good road with try: <com.etesync.syncadapter.syncadapter.AddressBooksSyncAdapterService$AddressBooksSyncAdapter: void onPerformSync(android.accounts.Account,android.os.Bundle,java.lang.String,android.content.ContentProviderClient,android.content.SyncResult)>[[try]]--><com.etesync.syncadapter.AccountSettings: void <init>(android.content.Context,android.accounts.Account)>[[try]]--><com.etesync.syncadapter.AccountSettings: void update(int)>[[try]]--><com.etesync.syncadapter.AccountSettings: void updateInner(int)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String,java.lang.String,android.content.Intent)>[]--><com.etesync.syncadapter.NotificationHelper: void createNotificationChannel()>[[-$i0 < 26]]--><android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)>
+One road protect good!
+-$i0 < 26
+Good road: <com.etesync.syncadapter.syncadapter.AddressBooksSyncAdapterService$AddressBooksSyncAdapter: void onPerformSync(android.accounts.Account,android.os.Bundle,java.lang.String,android.content.ContentProviderClient,android.content.SyncResult)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String,java.lang.String,android.content.Intent)>[]--><com.etesync.syncadapter.NotificationHelper: void createNotificationChannel()>[[-$i0 < 26]]--><android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)>
+One road protect good!
+try
+Good road with try: <com.etesync.syncadapter.syncadapter.SyncAdapterService$SyncAdapter$RefreshCollections: void run()>[]--><com.etesync.syncadapter.AccountSettings: void <init>(android.content.Context,android.accounts.Account)>[[try]]--><com.etesync.syncadapter.AccountSettings: void update(int)>[[try]]--><com.etesync.syncadapter.AccountSettings: void updateInner(int)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String)>[]--><com.etesync.syncadapter.NotificationHelper: void notify(java.lang.String,java.lang.String,java.lang.String,android.content.Intent)>[]--><com.etesync.syncadapter.NotificationHelper: void createNotificationChannel()>[[-$i0 < 26]]--><android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)>
+One road protect good!
+containsStatic:false
+containsTry:true
+18call by main package
+-----------------------------------------
+crashApis numbers:17
+crashApis numbers in main road:7
+On Android Version 16 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 17 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 18 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 19 this app may have error api use(at least): 12 and error api roads: 30
+On Android Version 20 this app may have error api use(at least): 12 and error api roads: 30
+On Android Version 21 this app may have error api use(at least): 4 and error api roads: 9
+On Android Version 22 this app may have error api use(at least): 2 and error api roads: 4
+On Android Version 23 this app may have error api use(at least): 1 and error api roads: 3
+On Android Version 24 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 25 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 31 this app may have error api use(at least): 5 and error api roads: 5

@@ -1,0 +1,82 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/mGerrit.apk
+Entry Points[com.jbirdvegas.mgerrit.TheApplication, com.jbirdvegas.mgerrit.tasks.GerritService, com.jbirdvegas.mgerrit.database.DatabaseFactory, com.jbirdvegas.mgerrit.AOKPChangelog, com.jbirdvegas.mgerrit.ProjectsList, com.jbirdvegas.mgerrit.PrefsActivity, com.jbirdvegas.mgerrit.GerritControllerActivity, com.jbirdvegas.mgerrit.PatchSetViewerActivity]
+FllowDroidcallgraph size:2347
+Soot started on Mon Jul 11 06:58:51 CST 2022
+Soot finished on Mon Jul 11 06:58:59 CST 2022
+Soot has run for 0 min. 8 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 11
+Declared Target Sdk version is: 18
+Declared Max Sdk version is: -1
+Collected 539 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <org.apache.http.params.HttpConnectionParams: void setConnectionTimeout(org.apache.http.params.HttpParams,int)> is checking!!!
+The life time of api is [23,31]
+5call roads:
+1 Mainhead roads:
+4 Packageshead roads:
+containsStatic:false
+containsTry:true
+5call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.net.http.AndroidHttpClient: android.net.http.AndroidHttpClient newInstance(java.lang.String)> is checking!!!
+The life time of api is [8,22]
+5call roads:
+1 Mainhead roads:
+$i0 < 9
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.jbirdvegas.mgerrit.PatchSetViewerActivity dummyMainMethod_com_jbirdvegas_mgerrit_PatchSetViewerActivity(android.content.Intent)>[]--><dummyMainClass: com.jbirdvegas.mgerrit.PatchSetViewerFragment dummyMainMethod_com_jbirdvegas_mgerrit_PatchSetViewerFragment(android.content.Intent,android.app.Activity)>[]--><com.jbirdvegas.mgerrit.PatchSetViewerFragment: void onActivityCreated(android.os.Bundle)>[]--><com.jbirdvegas.mgerrit.PatchSetViewerFragment: void init()>[]--><com.android.volley.toolbox.Volley: com.android.volley.RequestQueue newRequestQueue(android.content.Context)>[]--><com.android.volley.toolbox.Volley: com.android.volley.RequestQueue newRequestQueue(android.content.Context,com.android.volley.toolbox.HttpStack)>[[$i0 < 9]]--><android.net.http.AndroidHttpClient: android.net.http.AndroidHttpClient newInstance(java.lang.String)>
+One road protect good!
+$i0 < 9
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.jbirdvegas.mgerrit.tasks.GerritService dummyMainMethod_com_jbirdvegas_mgerrit_tasks_GerritService(android.content.Intent)>[]--><com.jbirdvegas.mgerrit.tasks.GerritService: void onHandleIntent(android.content.Intent)>[]--><com.jbirdvegas.mgerrit.tasks.SyncProcessor: void fetchData()>[]--><com.android.volley.toolbox.Volley: com.android.volley.RequestQueue newRequestQueue(android.content.Context)>[]--><com.android.volley.toolbox.Volley: com.android.volley.RequestQueue newRequestQueue(android.content.Context,com.android.volley.toolbox.HttpStack)>[[$i0 < 9]]--><android.net.http.AndroidHttpClient: android.net.http.AndroidHttpClient newInstance(java.lang.String)>
+One road protect good!
+$i0 < 9
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.jbirdvegas.mgerrit.AOKPChangelog dummyMainMethod_com_jbirdvegas_mgerrit_AOKPChangelog(android.content.Intent)>[]--><com.jbirdvegas.mgerrit.AOKPChangelog: void onCreate(android.os.Bundle)>[]--><com.android.volley.toolbox.Volley: com.android.volley.RequestQueue newRequestQueue(android.content.Context)>[]--><com.android.volley.toolbox.Volley: com.android.volley.RequestQueue newRequestQueue(android.content.Context,com.android.volley.toolbox.HttpStack)>[[$i0 < 9]]--><android.net.http.AndroidHttpClient: android.net.http.AndroidHttpClient newInstance(java.lang.String)>
+One road protect good!
+4 Packageshead roads:
+$i0 < 9
+Good road: <com.jbirdvegas.mgerrit.CardsFragment: void onActivityCreated(android.os.Bundle)>[]--><com.jbirdvegas.mgerrit.CardsFragment: void init(android.os.Bundle)>[]--><com.android.volley.toolbox.Volley: com.android.volley.RequestQueue newRequestQueue(android.content.Context)>[]--><com.android.volley.toolbox.Volley: com.android.volley.RequestQueue newRequestQueue(android.content.Context,com.android.volley.toolbox.HttpStack)>[[$i0 < 9]]--><android.net.http.AndroidHttpClient: android.net.http.AndroidHttpClient newInstance(java.lang.String)>
+One road protect good!
+$i0 < 9
+Good road: <com.jbirdvegas.mgerrit.cards.PatchSetChangesCard: void access$200(com.jbirdvegas.mgerrit.cards.PatchSetChangesCard,java.lang.String,com.jbirdvegas.mgerrit.objects.ChangedFile)>[]--><com.jbirdvegas.mgerrit.cards.PatchSetChangesCard: void launchDiffDialog(java.lang.String,com.jbirdvegas.mgerrit.objects.ChangedFile)>[]--><com.jbirdvegas.mgerrit.dialogs.DiffDialog: void <init>(android.content.Context,java.lang.String,com.jbirdvegas.mgerrit.objects.ChangedFile)>[]--><com.android.volley.toolbox.Volley: com.android.volley.RequestQueue newRequestQueue(android.content.Context)>[]--><com.android.volley.toolbox.Volley: com.android.volley.RequestQueue newRequestQueue(android.content.Context,com.android.volley.toolbox.HttpStack)>[[$i0 < 9]]--><android.net.http.AndroidHttpClient: android.net.http.AndroidHttpClient newInstance(java.lang.String)>
+One road protect good!
+$i0 < 9
+Good road: <com.jbirdvegas.mgerrit.cards.PatchSetCommentsCard: android.view.View getCardContent(android.content.Context)>[]--><com.android.volley.toolbox.Volley: com.android.volley.RequestQueue newRequestQueue(android.content.Context)>[]--><com.android.volley.toolbox.Volley: com.android.volley.RequestQueue newRequestQueue(android.content.Context,com.android.volley.toolbox.HttpStack)>[[$i0 < 9]]--><android.net.http.AndroidHttpClient: android.net.http.AndroidHttpClient newInstance(java.lang.String)>
+One road protect good!
+$i0 < 9
+Good road: <com.jbirdvegas.mgerrit.dialogs.DiffDialog: void debugRestDiffApi(android.content.Context,java.lang.String,com.jbirdvegas.mgerrit.objects.ChangedFile)>[]--><com.android.volley.toolbox.Volley: com.android.volley.RequestQueue newRequestQueue(android.content.Context)>[]--><com.android.volley.toolbox.Volley: com.android.volley.RequestQueue newRequestQueue(android.content.Context,com.android.volley.toolbox.HttpStack)>[[$i0 < 9]]--><android.net.http.AndroidHttpClient: android.net.http.AndroidHttpClient newInstance(java.lang.String)>
+One road protect good!
+containsStatic:false
+containsTry:false
+5call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <org.apache.http.params.HttpConnectionParams: void setSoTimeout(org.apache.http.params.HttpParams,int)> is checking!!!
+The life time of api is [23,31]
+5call roads:
+1 Mainhead roads:
+4 Packageshead roads:
+containsStatic:false
+containsTry:true
+5call by main package
+-----------------------------------------
+crashApis numbers:0
+crashApis numbers in main road:0
+On Android Version 16 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 17 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 18 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 19 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 20 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 21 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 22 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 23 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 24 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 25 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 31 this app may have error api use(at least): 0 and error api roads: 0

@@ -1,0 +1,65 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/Torch.apk
+Entry Points[com.doomy.torch.TorchService, com.doomy.torch.MainActivity, com.doomy.torch.TorchWidgetProvider, com.doomy.torch.TorchSwitch, com.doomy.torch.SettingsActivity, com.doomy.torch.WidgetActivity]
+FllowDroidcallgraph size:679
+Soot started on Mon Jul 11 13:24:15 CST 2022
+Soot finished on Mon Jul 11 13:24:17 CST 2022
+Soot has run for 0 min. 2 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 19
+Declared Target Sdk version is: 21
+Declared Max Sdk version is: -1
+Collected 175 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.os.BaseBundle: int getInt(java.lang.String,int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.doomy.torch.WidgetActivity dummyMainMethod_com_doomy_torch_WidgetActivity(android.content.Intent)>[]--><com.doomy.torch.WidgetActivity: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String,int)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: int getInt(java.lang.String,int)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:1
+crashApisInMain:1
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.view.Window: void setStatusBarColor(int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.doomy.torch.WidgetActivity dummyMainMethod_com_doomy_torch_WidgetActivity(android.content.Intent)>[]--><com.doomy.torch.WidgetActivity: void onResume()>[]--><com.doomy.torch.Utils: void colorizeBar(android.app.Activity,android.content.Context,java.lang.String)>[]--><android.view.Window: void setStatusBarColor(int)>
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.doomy.torch.SettingsActivity dummyMainMethod_com_doomy_torch_SettingsActivity(android.content.Intent)>[]--><com.doomy.torch.SettingsActivity: void onResume()>[]--><com.doomy.torch.Utils: void colorizeBar(android.app.Activity,android.content.Context,java.lang.String)>[]--><android.view.Window: void setStatusBarColor(int)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.view.Window: void setStatusBarColor(int)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:2
+crashApisInMain:2
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+crashApis numbers:2
+crashApis numbers in main road:2
+On Android Version 16 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 17 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 18 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 19 this app may have error api use(at least): 2 and error api roads: 3
+On Android Version 20 this app may have error api use(at least): 2 and error api roads: 3
+On Android Version 21 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 22 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 23 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 24 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 25 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 31 this app may have error api use(at least): 0 and error api roads: 0

@@ -1,0 +1,538 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/Night_Screen.apk
+Entry Points[info.papdt.blackblub.receiver.ActionReceiver, info.papdt.blackblub.service.MaskService, info.papdt.blackblub.ui.MainActivity, info.papdt.blackblub.ui.MainActivity$MessageReceiver, info.papdt.blackblub.service.MaskTileService, info.papdt.blackblub.ui.shortcut.ToggleActivity, info.papdt.blackblub.BlackbulbApplication]
+FllowDroidcallgraph size:1358
+Soot started on Mon Jul 11 08:48:58 CST 2022
+StaticCheck:<moe.feng.alipay.zerosdk.AlipayZeroSdk: boolean openAlipayBarcode(android.content.Context)>$yysi0 < 24
+StaticCheck:<moe.feng.alipay.zerosdk.AlipayZeroSdk: boolean openAlipayScan(android.content.Context)>$yysi0 < 24
+StaticCheck:<com.wdullaer.materialdatetimepicker.Utils: boolean isJellybeanOrLater()>$yysi0 < 16
+StaticCheck:<info.papdt.blackblub.util.Utility: boolean canDrawOverlays(android.content.Context)>i0 < 23
+Soot finished on Mon Jul 11 08:49:03 CST 2022
+Soot has run for 0 min. 5 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 21
+Declared Target Sdk version is: 26
+Declared Max Sdk version is: -1
+Collected 525 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.content.Context: java.lang.String getOpPackageName()> is checking!!!
+The life time of api is [29,31]
+3call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: info.papdt.blackblub.service.MaskService dummyMainMethod_info_papdt_blackblub_service_MaskService(android.content.Intent)>[]--><info.papdt.blackblub.service.MaskService: void onDestroy()>[]--><info.papdt.blackblub.service.MaskService: void destroyMaskView()>[]--><info.papdt.blackblub.util.Utility: void createStatusBarTiles(android.content.Context,boolean)>[[try]]--><cyanogenmod.app.CMStatusBarManager: void publishTile(int,cyanogenmod.app.CustomTile)>[]--><cyanogenmod.app.CMStatusBarManager: void publishTile(java.lang.String,int,cyanogenmod.app.CustomTile)>[[try]]--><android.content.Context: java.lang.String getOpPackageName()>
+One road protect good!
+2 Packageshead roads:
+try
+Good road with try: <info.papdt.blackblub.ui.MainActivity$1: void onServiceConnected(android.content.ComponentName,android.os.IBinder)>[[try]]--><info.papdt.blackblub.util.Utility: void createStatusBarTiles(android.content.Context,boolean)>[[try]]--><cyanogenmod.app.CMStatusBarManager: void publishTile(int,cyanogenmod.app.CustomTile)>[]--><cyanogenmod.app.CMStatusBarManager: void publishTile(java.lang.String,int,cyanogenmod.app.CustomTile)>[[try]]--><android.content.Context: java.lang.String getOpPackageName()>
+One road protect good!
+try
+Good road with try: <cyanogenmod.app.CMStatusBarManager: void publishTileAsUser(java.lang.String,int,cyanogenmod.app.CustomTile,android.os.UserHandle)>[[try]]--><android.content.Context: java.lang.String getOpPackageName()>
+One road protect good!
+containsStatic:false
+containsTry:true
+3call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.service.quicksettings.Tile: void updateTile()> is checking!!!
+The life time of api is [24,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 21 22 23 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: info.papdt.blackblub.service.MaskTileService dummyMainMethod_info_papdt_blackblub_service_MaskTileService(android.content.Intent)>[]--><info.papdt.blackblub.service.MaskTileService: int onStartCommand(android.content.Intent,int,int)>[]--><info.papdt.blackblub.service.MaskTileService: void onStartListening()>[]--><info.papdt.blackblub.service.MaskTileService: void updateInactiveTile(android.service.quicksettings.Tile)>[]--><android.service.quicksettings.Tile: void updateTile()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.service.quicksettings.Tile: void updateTile()>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:1
+crashApisInMain:1
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.service.quicksettings.TileService: android.service.quicksettings.Tile getQsTile()> is checking!!!
+The life time of api is [24,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 21 22 23 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: info.papdt.blackblub.service.MaskTileService dummyMainMethod_info_papdt_blackblub_service_MaskTileService(android.content.Intent)>[]--><info.papdt.blackblub.service.MaskTileService: int onStartCommand(android.content.Intent,int,int)>[]--><info.papdt.blackblub.service.MaskTileService: void onStartListening()>[]--><android.service.quicksettings.TileService: android.service.quicksettings.Tile getQsTile()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.service.quicksettings.TileService: android.service.quicksettings.Tile getQsTile()>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:2
+crashApisInMain:2
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.os.PowerManager: boolean isIgnoringBatteryOptimizations(java.lang.String)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 23
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: info.papdt.blackblub.ui.MainActivity dummyMainMethod_info_papdt_blackblub_ui_MainActivity(android.content.Intent)>[]--><info.papdt.blackblub.ui.MainActivity$$Lambda$4: void onClick(android.view.View)>[]--><info.papdt.blackblub.ui.MainActivity: void lambda$initSchedulerRow$8$MainActivity(android.view.View)>[[-$i0 < 23]]--><android.os.PowerManager: boolean isIgnoringBatteryOptimizations(java.lang.String)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.graphics.drawable.Icon: android.graphics.drawable.Icon createWithResource(android.content.Context,int)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 21 22 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: info.papdt.blackblub.service.MaskTileService dummyMainMethod_info_papdt_blackblub_service_MaskTileService(android.content.Intent)>[]--><info.papdt.blackblub.service.MaskTileService: int onStartCommand(android.content.Intent,int,int)>[]--><info.papdt.blackblub.service.MaskTileService: void onStartListening()>[]--><info.papdt.blackblub.service.MaskTileService: void updateInactiveTile(android.service.quicksettings.Tile)>[]--><android.graphics.drawable.Icon: android.graphics.drawable.Icon createWithResource(android.content.Context,int)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.graphics.drawable.Icon: android.graphics.drawable.Icon createWithResource(android.content.Context,int)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:3
+crashApisInMain:3
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 5 Potential Issue API: SDKCheck of <android.content.Context: java.lang.Object getSystemService(java.lang.Class)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><info.papdt.blackblub.BlackbulbApplication: void onCreate()>[[-$i0 < 26]]--><info.papdt.blackblub.BlackbulbApplication: void createNotificationChannel()>[]--><android.content.Context: java.lang.Object getSystemService(java.lang.Class)>
+One road protect good!
+-$i0 < 23
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: info.papdt.blackblub.ui.MainActivity dummyMainMethod_info_papdt_blackblub_ui_MainActivity(android.content.Intent)>[]--><info.papdt.blackblub.ui.MainActivity$$Lambda$4: void onClick(android.view.View)>[]--><info.papdt.blackblub.ui.MainActivity: void lambda$initSchedulerRow$8$MainActivity(android.view.View)>[[-$i0 < 23]]--><android.content.Context: java.lang.Object getSystemService(java.lang.Class)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 6 Potential Issue API: SDKCheck of <android.provider.Settings: boolean canDrawOverlays(android.content.Context)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+1 Mainhead roads:
+###Multi invoking in one method, need manual check!!!--><info.papdt.blackblub.util.Utility: boolean canDrawOverlays(android.content.Context)>[[-i0 < 23], [i0 != 26]]
+###Multi invoking in one method, need manual check!!!--><info.papdt.blackblub.util.Utility: boolean canDrawOverlays(android.content.Context)>[[-i0 < 23]][[i0 != 26]]
+-i0 < 23
+i0 != 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: info.papdt.blackblub.ui.MainActivity dummyMainMethod_info_papdt_blackblub_ui_MainActivity(android.content.Intent)>[]--><info.papdt.blackblub.ui.MainActivity$$Lambda$2: void onClick(android.view.View)>[]--><info.papdt.blackblub.ui.MainActivity: void lambda$onCreate$4$MainActivity(android.view.View)>[]--><info.papdt.blackblub.util.Utility: boolean canDrawOverlays(android.content.Context)>[[-i0 < 23], [i0 != 26]]--><android.provider.Settings: boolean canDrawOverlays(android.content.Context)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 7 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager: boolean setWifiEnabled(boolean)> is checking!!!
+The life time of api is [1,30]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <cyanogenmod.app.Profile: void doSelect(android.content.Context,com.android.internal.policy.IKeyguardService)>[]--><cyanogenmod.profiles.ConnectionSettings: void processOverride(android.content.Context)>[]--><android.net.wifi.WifiManager: boolean setWifiEnabled(boolean)>
+#1.the call statck between class <cyanogenmod.app.Profile: void doSelect(android.content.Context,com.android.internal.policy.IKeyguardService)> to <android.net.wifi.WifiManager: boolean setWifiEnabled(boolean)>has compatibility isssues！
+-----------------------------------------
+crashApis:4
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 8 Potential Issue API: SDKCheck of <android.os.ServiceManager: android.os.IBinder getService(java.lang.String)> is checking!!!
+The life time of api is [4,26]
+37call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: info.papdt.blackblub.service.MaskService dummyMainMethod_info_papdt_blackblub_service_MaskService(android.content.Intent)>[]--><info.papdt.blackblub.service.MaskService: void onDestroy()>[]--><info.papdt.blackblub.service.MaskService: void destroyMaskView()>[]--><info.papdt.blackblub.util.Utility: void createStatusBarTiles(android.content.Context,boolean)>[[try]]--><cyanogenmod.app.CMStatusBarManager: cyanogenmod.app.CMStatusBarManager getInstance(android.content.Context)>[]--><cyanogenmod.app.CMStatusBarManager: void <init>(android.content.Context)>[]--><cyanogenmod.app.CMStatusBarManager: cyanogenmod.app.ICMStatusBarManager getService()>[]--><android.os.ServiceManager: android.os.IBinder getService(java.lang.String)>
+One road protect good!
+36 Packageshead roads:
+try
+Good road with try: <cyanogenmod.app.ProfileManager: java.lang.String[] getProfileNames()>[[try]]--><cyanogenmod.app.ProfileManager: cyanogenmod.app.IProfileManager getService()>[]--><android.os.ServiceManager: android.os.IBinder getService(java.lang.String)>
+One road protect good!
+try
+Good road with try: <cyanogenmod.app.ProfileManager: boolean notificationGroupExists(java.lang.String)>[[try]]--><cyanogenmod.app.ProfileManager: cyanogenmod.app.IProfileManager getService()>[]--><android.os.ServiceManager: android.os.IBinder getService(java.lang.String)>
+One road protect good!
+try
+Good road with try: <cyanogenmod.app.ProfileManager: void removeProfile(cyanogenmod.app.Profile)>[[try]]--><cyanogenmod.app.ProfileManager: cyanogenmod.app.IProfileManager getService()>[]--><android.os.ServiceManager: android.os.IBinder getService(java.lang.String)>
+One road protect good!
+try
+Good road with try: <cyanogenmod.app.ProfileManager: cyanogenmod.app.Profile getProfile(java.util.UUID)>[[try]]--><cyanogenmod.app.ProfileManager: cyanogenmod.app.IProfileManager getService()>[]--><android.os.ServiceManager: android.os.IBinder getService(java.lang.String)>
+One road protect good!
+try
+Good road with try: <cyanogenmod.hardware.CMHardwareManager: boolean writePersistentString(java.lang.String,java.lang.String)>[[try]]--><cyanogenmod.hardware.CMHardwareManager: cyanogenmod.hardware.ICMHardwareService getService()>[]--><android.os.ServiceManager: android.os.IBinder getService(java.lang.String)>
+One road protect good!
+try
+Good road with try: <cyanogenmod.app.ProfileManager: void addProfile(cyanogenmod.app.Profile)>[[try]]--><cyanogenmod.app.ProfileManager: cyanogenmod.app.IProfileManager getService()>[]--><android.os.ServiceManager: android.os.IBinder getService(java.lang.String)>
+One road protect good!
+try
+Good road with try: <cyanogenmod.hardware.CMHardwareManager: byte[] readPersistentBytes(java.lang.String)>[[try]]--><cyanogenmod.hardware.CMHardwareManager: cyanogenmod.hardware.ICMHardwareService getService()>[]--><android.os.ServiceManager: android.os.IBinder getService(java.lang.String)>
+One road protect good!
+try
+Good road with try: <cyanogenmod.app.ProfileManager: cyanogenmod.app.Profile getProfile(java.lang.String)>[[try]]--><cyanogenmod.app.ProfileManager: cyanogenmod.app.IProfileManager getService()>[]--><android.os.ServiceManager: android.os.IBinder getService(java.lang.String)>
+One road protect good!
+try
+Good road with try: <cyanogenmod.app.ProfileManager: void addNotificationGroup(android.app.NotificationGroup)>[[try]]--><cyanogenmod.app.ProfileManager: cyanogenmod.app.IProfileManager getService()>[]--><android.os.ServiceManager: android.os.IBinder getService(java.lang.String)>
+One road protect good!
+!!!this api will crash on sdk 27 28 29 30 31 
+Error road: <cyanogenmod.app.PartnerInterface: cyanogenmod.app.PartnerInterface getInstance(android.content.Context)>[]--><cyanogenmod.app.PartnerInterface: void <init>(android.content.Context)>[]--><cyanogenmod.app.PartnerInterface: cyanogenmod.app.IPartnerInterface getService()>[]--><android.os.ServiceManager: android.os.IBinder getService(java.lang.String)>
+#10.the call statck between class <cyanogenmod.app.PartnerInterface: cyanogenmod.app.PartnerInterface getInstance(android.content.Context)> to <android.os.ServiceManager: android.os.IBinder getService(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:5
+containsStatic:false
+containsTry:true
+11call by main package
+-----------------------------------------
+#################################################
+N 9 Potential Issue API: SDKCheck of <android.service.quicksettings.TileService: void onClick()> is checking!!!
+The life time of api is [24,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 21 22 23 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: info.papdt.blackblub.service.MaskTileService dummyMainMethod_info_papdt_blackblub_service_MaskTileService(android.content.Intent)>[]--><info.papdt.blackblub.service.MaskTileService: void onClick()>[]--><android.service.quicksettings.TileService: void onClick()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.service.quicksettings.TileService: void onClick()>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:6
+crashApisInMain:4
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 10 Potential Issue API: SDKCheck of <android.service.quicksettings.TileService: void startActivityAndCollapse(android.content.Intent)> is checking!!!
+The life time of api is [24,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+###Multi invoking in one method, need manual check!!!<moe.feng.alipay.zerosdk.AlipayZeroSdk: boolean openAlipayBarcode(android.content.Context)>[[-$i0 < 24], [try]]
+###Multi invoking in one method, need manual check!!!<moe.feng.alipay.zerosdk.AlipayZeroSdk: boolean openAlipayBarcode(android.content.Context)>[[-$i0 < 24]][[try]]
+-$i0 < 24
+try
+Good road with try: <moe.feng.alipay.zerosdk.AlipayZeroSdk: boolean openAlipayBarcode(android.content.Context)>[[-$i0 < 24], [try]]--><android.service.quicksettings.TileService: void startActivityAndCollapse(android.content.Intent)>
+One road protect good!
+###Multi invoking in one method, need manual check!!!<moe.feng.alipay.zerosdk.AlipayZeroSdk: boolean openAlipayScan(android.content.Context)>[[-$i0 < 24], [try]]
+###Multi invoking in one method, need manual check!!!<moe.feng.alipay.zerosdk.AlipayZeroSdk: boolean openAlipayScan(android.content.Context)>[[-$i0 < 24]][[try]]
+-$i0 < 24
+try
+Good road with try: <moe.feng.alipay.zerosdk.AlipayZeroSdk: boolean openAlipayScan(android.content.Context)>[[-$i0 < 24], [try]]--><android.service.quicksettings.TileService: void startActivityAndCollapse(android.content.Intent)>
+One road protect good!
+containsStatic:false
+containsTry:true
+3call by main package
+-----------------------------------------
+#################################################
+N 11 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager: int getWifiState()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <cyanogenmod.app.Profile: void doSelect(android.content.Context,com.android.internal.policy.IKeyguardService)>[]--><cyanogenmod.profiles.ConnectionSettings: void processOverride(android.content.Context)>[]--><android.net.wifi.WifiManager: int getWifiState()>
+#1.the call statck between class <cyanogenmod.app.Profile: void doSelect(android.content.Context,com.android.internal.policy.IKeyguardService)> to <android.net.wifi.WifiManager: int getWifiState()>has compatibility isssues！
+-----------------------------------------
+crashApis:7
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 12 Potential Issue API: SDKCheck of <android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><info.papdt.blackblub.BlackbulbApplication: void onCreate()>[[-$i0 < 26]]--><info.papdt.blackblub.BlackbulbApplication: void createNotificationChannel()>[]--><android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 13 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)> is checking!!!
+The life time of api is [22,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 21 
+Error road: <com.wdullaer.materialdatetimepicker.time.TimePickerDialog: void onSaveInstanceState(android.os.Bundle)>[]--><android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>
+#1.the call statck between class <com.wdullaer.materialdatetimepicker.time.TimePickerDialog: void onSaveInstanceState(android.os.Bundle)> to <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)>has compatibility isssues！
+-----------------------------------------
+crashApis:8
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 14 Potential Issue API: SDKCheck of <android.app.NotificationChannel: void enableLights(boolean)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><info.papdt.blackblub.BlackbulbApplication: void onCreate()>[[-$i0 < 26]]--><info.papdt.blackblub.BlackbulbApplication: void createNotificationChannel()>[]--><android.app.NotificationChannel: void enableLights(boolean)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 15 Potential Issue API: SDKCheck of <android.service.quicksettings.Tile: void setIcon(android.graphics.drawable.Icon)> is checking!!!
+The life time of api is [24,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 21 22 23 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: info.papdt.blackblub.service.MaskTileService dummyMainMethod_info_papdt_blackblub_service_MaskTileService(android.content.Intent)>[]--><info.papdt.blackblub.service.MaskTileService: int onStartCommand(android.content.Intent,int,int)>[]--><info.papdt.blackblub.service.MaskTileService: void onStartListening()>[]--><info.papdt.blackblub.service.MaskTileService: void updateInactiveTile(android.service.quicksettings.Tile)>[]--><android.service.quicksettings.Tile: void setIcon(android.graphics.drawable.Icon)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.service.quicksettings.Tile: void setIcon(android.graphics.drawable.Icon)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:9
+crashApisInMain:5
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 16 Potential Issue API: SDKCheck of <android.nfc.NfcAdapter: boolean disable()> is checking!!!
+The life time of api is [16,19]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 21 22 23 24 25 26 27 28 29 30 31 
+Error road: <cyanogenmod.app.Profile: void doSelect(android.content.Context,com.android.internal.policy.IKeyguardService)>[]--><cyanogenmod.profiles.ConnectionSettings: void processOverride(android.content.Context)>[]--><android.nfc.NfcAdapter: boolean disable()>
+#1.the call statck between class <cyanogenmod.app.Profile: void doSelect(android.content.Context,com.android.internal.policy.IKeyguardService)> to <android.nfc.NfcAdapter: boolean disable()>has compatibility isssues！
+-----------------------------------------
+crashApis:10
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 17 Potential Issue API: SDKCheck of <android.app.NotificationChannel: void setSound(android.net.Uri,android.media.AudioAttributes)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><info.papdt.blackblub.BlackbulbApplication: void onCreate()>[[-$i0 < 26]]--><info.papdt.blackblub.BlackbulbApplication: void createNotificationChannel()>[]--><android.app.NotificationChannel: void setSound(android.net.Uri,android.media.AudioAttributes)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 18 Potential Issue API: SDKCheck of <android.os.BaseBundle: boolean getBoolean(java.lang.String)> is checking!!!
+The life time of api is [22,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 21 
+Error road: <com.wdullaer.materialdatetimepicker.time.TimePickerDialog: void onCreate(android.os.Bundle)>[]--><android.os.BaseBundle: boolean getBoolean(java.lang.String)>
+#1.the call statck between class <com.wdullaer.materialdatetimepicker.time.TimePickerDialog: void onCreate(android.os.Bundle)> to <android.os.BaseBundle: boolean getBoolean(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:11
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 19 Potential Issue API: SDKCheck of <android.content.Context: android.content.ComponentName startForegroundService(android.content.Intent)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: info.papdt.blackblub.receiver.ActionReceiver dummyMainMethod_info_papdt_blackblub_receiver_ActionReceiver(android.content.Intent)>[]--><info.papdt.blackblub.receiver.ActionReceiver: void onReceive(android.content.Context,android.content.Intent)>[]--><info.papdt.blackblub.util.Utility: void startForegroundService(android.content.Context,android.content.Intent)>[[-$i0 < 26]]--><android.content.Context: android.content.ComponentName startForegroundService(android.content.Intent)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 20 Potential Issue API: SDKCheck of <android.animation.AnimatorSet: void <init>()> is checking!!!
+The life time of api is [24,31]
+6call roads:
+0 Mainhead roads:
+6 Packageshead roads:
+!!!this api will crash on sdk 21 22 23 
+Error road: <com.wdullaer.materialdatetimepicker.time.TimePickerDialog: void onConfigurationChanged(android.content.res.Configuration)>[]--><com.wdullaer.materialdatetimepicker.time.TimePickerDialog: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)>[]--><com.wdullaer.materialdatetimepicker.time.TimePickerDialog: void setCurrentItemShowing(int,boolean,boolean,boolean)>[]--><com.wdullaer.materialdatetimepicker.time.RadialPickerLayout: void setCurrentItemShowing(int,boolean)>[]--><android.animation.AnimatorSet: void <init>()>
+#1.the call statck between class <com.wdullaer.materialdatetimepicker.time.TimePickerDialog: void onConfigurationChanged(android.content.res.Configuration)> to <android.animation.AnimatorSet: void <init>()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 21 22 23 
+Error road: <com.wdullaer.materialdatetimepicker.time.TimePickerDialog: void enablePicker()>[]--><com.wdullaer.materialdatetimepicker.time.TimePickerDialog: void finishKbMode(boolean)>[]--><com.wdullaer.materialdatetimepicker.time.TimePickerDialog: void updateDisplay(boolean)>[]--><com.wdullaer.materialdatetimepicker.time.TimePickerDialog: void setCurrentItemShowing(int,boolean,boolean,boolean)>[]--><com.wdullaer.materialdatetimepicker.time.RadialPickerLayout: void setCurrentItemShowing(int,boolean)>[]--><android.animation.AnimatorSet: void <init>()>
+#2.the call statck between class <com.wdullaer.materialdatetimepicker.time.TimePickerDialog: void enablePicker()> to <android.animation.AnimatorSet: void <init>()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 21 22 23 
+Error road: <com.wdullaer.materialdatetimepicker.time.TimePickerDialog: void advancePicker(int)>[]--><com.wdullaer.materialdatetimepicker.time.TimePickerDialog: void setCurrentItemShowing(int,boolean,boolean,boolean)>[]--><com.wdullaer.materialdatetimepicker.time.RadialPickerLayout: void setCurrentItemShowing(int,boolean)>[]--><android.animation.AnimatorSet: void <init>()>
+#3.the call statck between class <com.wdullaer.materialdatetimepicker.time.TimePickerDialog: void advancePicker(int)> to <android.animation.AnimatorSet: void <init>()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 21 22 23 
+Error road: <com.wdullaer.materialdatetimepicker.time.TimePickerDialog: boolean access$600(com.wdullaer.materialdatetimepicker.time.TimePickerDialog,int)>[]--><com.wdullaer.materialdatetimepicker.time.TimePickerDialog: boolean processKeyUp(int)>[]--><com.wdullaer.materialdatetimepicker.time.TimePickerDialog: void updateDisplay(boolean)>[]--><com.wdullaer.materialdatetimepicker.time.TimePickerDialog: void setCurrentItemShowing(int,boolean,boolean,boolean)>[]--><com.wdullaer.materialdatetimepicker.time.RadialPickerLayout: void setCurrentItemShowing(int,boolean)>[]--><android.animation.AnimatorSet: void <init>()>
+#4.the call statck between class <com.wdullaer.materialdatetimepicker.time.TimePickerDialog: boolean access$600(com.wdullaer.materialdatetimepicker.time.TimePickerDialog,int)> to <android.animation.AnimatorSet: void <init>()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 21 22 23 
+Error road: <com.wdullaer.materialdatetimepicker.time.TimePickerDialog: void access$100(com.wdullaer.materialdatetimepicker.time.TimePickerDialog,int,boolean,boolean,boolean)>[]--><com.wdullaer.materialdatetimepicker.time.TimePickerDialog: void setCurrentItemShowing(int,boolean,boolean,boolean)>[]--><com.wdullaer.materialdatetimepicker.time.RadialPickerLayout: void setCurrentItemShowing(int,boolean)>[]--><android.animation.AnimatorSet: void <init>()>
+#5.the call statck between class <com.wdullaer.materialdatetimepicker.time.TimePickerDialog: void access$100(com.wdullaer.materialdatetimepicker.time.TimePickerDialog,int,boolean,boolean,boolean)> to <android.animation.AnimatorSet: void <init>()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 21 22 23 
+Error road: <com.wdullaer.materialdatetimepicker.time.TimePickerDialog: void access$400(com.wdullaer.materialdatetimepicker.time.TimePickerDialog,boolean)>[]--><com.wdullaer.materialdatetimepicker.time.TimePickerDialog: void finishKbMode(boolean)>[]--><com.wdullaer.materialdatetimepicker.time.TimePickerDialog: void updateDisplay(boolean)>[]--><com.wdullaer.materialdatetimepicker.time.TimePickerDialog: void setCurrentItemShowing(int,boolean,boolean,boolean)>[]--><com.wdullaer.materialdatetimepicker.time.RadialPickerLayout: void setCurrentItemShowing(int,boolean)>[]--><android.animation.AnimatorSet: void <init>()>
+#6.the call statck between class <com.wdullaer.materialdatetimepicker.time.TimePickerDialog: void access$400(com.wdullaer.materialdatetimepicker.time.TimePickerDialog,boolean)> to <android.animation.AnimatorSet: void <init>()>has compatibility isssues！
+-----------------------------------------
+crashApis:12
+containsStatic:false
+containsTry:false
+7call by main package
+-----------------------------------------
+#################################################
+N 21 Potential Issue API: SDKCheck of <android.net.wifi.WifiManager: boolean isWifiEnabled()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 31 
+Error road: <cyanogenmod.app.Profile: void doSelect(android.content.Context,com.android.internal.policy.IKeyguardService)>[]--><cyanogenmod.profiles.ConnectionSettings: void processOverride(android.content.Context)>[]--><android.net.wifi.WifiManager: boolean isWifiEnabled()>
+#1.the call statck between class <cyanogenmod.app.Profile: void doSelect(android.content.Context,com.android.internal.policy.IKeyguardService)> to <android.net.wifi.WifiManager: boolean isWifiEnabled()>has compatibility isssues！
+-----------------------------------------
+crashApis:13
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 22 Potential Issue API: SDKCheck of <android.service.quicksettings.Tile: int getState()> is checking!!!
+The life time of api is [24,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 21 22 23 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: info.papdt.blackblub.service.MaskTileService dummyMainMethod_info_papdt_blackblub_service_MaskTileService(android.content.Intent)>[]--><info.papdt.blackblub.service.MaskTileService: void onClick()>[]--><android.service.quicksettings.Tile: int getState()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.service.quicksettings.Tile: int getState()>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:14
+crashApisInMain:6
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 23 Potential Issue API: SDKCheck of <android.telephony.TelephonyManager: int getPhoneCount()> is checking!!!
+The life time of api is [23,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 21 22 
+Error road: <cyanogenmod.app.Profile: void doSelect(android.content.Context,com.android.internal.policy.IKeyguardService)>[]--><cyanogenmod.profiles.ConnectionSettings: void processOverride(android.content.Context)>[]--><android.telephony.TelephonyManager: int getPhoneCount()>
+#1.the call statck between class <cyanogenmod.app.Profile: void doSelect(android.content.Context,com.android.internal.policy.IKeyguardService)> to <android.telephony.TelephonyManager: int getPhoneCount()>has compatibility isssues！
+-----------------------------------------
+crashApis:15
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 24 Potential Issue API: SDKCheck of <android.service.quicksettings.Tile: void setState(int)> is checking!!!
+The life time of api is [24,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 21 22 23 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: info.papdt.blackblub.service.MaskTileService dummyMainMethod_info_papdt_blackblub_service_MaskTileService(android.content.Intent)>[]--><info.papdt.blackblub.service.MaskTileService: int onStartCommand(android.content.Intent,int,int)>[]--><info.papdt.blackblub.service.MaskTileService: void onStartListening()>[]--><info.papdt.blackblub.service.MaskTileService: void updateInactiveTile(android.service.quicksettings.Tile)>[]--><android.service.quicksettings.Tile: void setState(int)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.service.quicksettings.Tile: void setState(int)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:16
+crashApisInMain:7
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 25 Potential Issue API: SDKCheck of <android.widget.ProgressBar: void setProgress(int,boolean)> is checking!!!
+The life time of api is [24,31]
+1call roads:
+1 Mainhead roads:
+###Multi invoking in one method, need manual check!!!--><info.papdt.blackblub.ui.MainActivity: void onCreate(android.os.Bundle)>[[$i0 < 23], [-$i0 < 24]]
+###Multi invoking in one method, need manual check!!!--><info.papdt.blackblub.ui.MainActivity: void onCreate(android.os.Bundle)>[[$i0 < 23]][[-$i0 < 24]]
+$i0 < 23
+-$i0 < 24
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: info.papdt.blackblub.ui.MainActivity dummyMainMethod_info_papdt_blackblub_ui_MainActivity(android.content.Intent)>[]--><info.papdt.blackblub.ui.MainActivity: void onCreate(android.os.Bundle)>[[$i0 < 23], [-$i0 < 24]]--><android.widget.ProgressBar: void setProgress(int,boolean)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 26 Potential Issue API: SDKCheck of <android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><info.papdt.blackblub.BlackbulbApplication: void onCreate()>[[-$i0 < 26]]--><info.papdt.blackblub.BlackbulbApplication: void createNotificationChannel()>[]--><android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 27 Potential Issue API: SDKCheck of <android.app.Notification.Builder: android.app.Notification.Builder setChannelId(java.lang.String)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: info.papdt.blackblub.service.MaskService dummyMainMethod_info_papdt_blackblub_service_MaskService(android.content.Intent)>[]--><info.papdt.blackblub.service.MaskService: int onStartCommand(android.content.Intent,int,int)>[]--><info.papdt.blackblub.service.MaskService: void createPauseNotification()>[[-$i0 < 26]]--><android.app.Notification.Builder: android.app.Notification.Builder setChannelId(java.lang.String)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 28 Potential Issue API: SDKCheck of <android.app.NotificationChannel: void setShowBadge(boolean)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><info.papdt.blackblub.BlackbulbApplication: void onCreate()>[[-$i0 < 26]]--><info.papdt.blackblub.BlackbulbApplication: void createNotificationChannel()>[]--><android.app.NotificationChannel: void setShowBadge(boolean)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 29 Potential Issue API: SDKCheck of <android.app.NotificationChannel: void enableVibration(boolean)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><info.papdt.blackblub.BlackbulbApplication: void onCreate()>[[-$i0 < 26]]--><info.papdt.blackblub.BlackbulbApplication: void createNotificationChannel()>[]--><android.app.NotificationChannel: void enableVibration(boolean)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+crashApis numbers:16
+crashApis numbers in main road:7
+On Android Version 16 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 17 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 18 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 19 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 20 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 21 this app may have error api use(at least): 12 and error api roads: 17
+On Android Version 22 this app may have error api use(at least): 10 and error api roads: 15
+On Android Version 23 this app may have error api use(at least): 8 and error api roads: 13
+On Android Version 24 this app may have error api use(at least): 1 and error api roads: 1
+On Android Version 25 this app may have error api use(at least): 1 and error api roads: 1
+On Android Version 26 this app may have error api use(at least): 1 and error api roads: 1
+On Android Version 27 this app may have error api use(at least): 2 and error api roads: 2
+On Android Version 28 this app may have error api use(at least): 2 and error api roads: 2
+On Android Version 29 this app may have error api use(at least): 2 and error api roads: 2
+On Android Version 30 this app may have error api use(at least): 2 and error api roads: 2
+On Android Version 31 this app may have error api use(at least): 5 and error api roads: 5

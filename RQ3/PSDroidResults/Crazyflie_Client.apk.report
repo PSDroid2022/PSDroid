@@ -1,0 +1,993 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/Crazyflie_Client.apk
+Entry Points[se.bitcraze.crazyfliecontrol.prefs.PreferencesActivity, se.bitcraze.crazyfliecontrol2.MainActivity, se.bitcraze.crazyfliecontrol.bootloader.BootloaderActivity]
+FllowDroidcallgraph size:26603
+Soot started on Mon Jul 11 02:42:23 CST 2022
+Soot finished on Mon Jul 11 02:42:42 CST 2022
+Soot has run for 0 min. 18 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 14
+Declared Target Sdk version is: 28
+Declared Max Sdk version is: -1
+Collected 445 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.bluetooth.BluetoothGattCharacteristic: android.bluetooth.BluetoothGattDescriptor getDescriptor(java.util.UUID)> is checking!!!
+The life time of api is [18,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 
+Error road: <se.bitcraze.crazyflie.lib.BleLink$1: void onServicesDiscovered(android.bluetooth.BluetoothGatt,int)>[]--><android.bluetooth.BluetoothGattCharacteristic: android.bluetooth.BluetoothGattDescriptor getDescriptor(java.util.UUID)>
+#1.the call statck between class <se.bitcraze.crazyflie.lib.BleLink$1: void onServicesDiscovered(android.bluetooth.BluetoothGatt,int)> to <android.bluetooth.BluetoothGattCharacteristic: android.bluetooth.BluetoothGattDescriptor getDescriptor(java.util.UUID)>has compatibility isssues！
+-----------------------------------------
+crashApis:1
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.bluetooth.BluetoothGattCharacteristic: void setWriteType(int)> is checking!!!
+The life time of api is [18,31]
+11call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: se.bitcraze.crazyfliecontrol.bootloader.BootloaderActivity dummyMainMethod_se_bitcraze_crazyfliecontrol_bootloader_BootloaderActivity(android.content.Intent)>[]--><se.bitcraze.crazyfliecontrol.bootloader.BootloaderActivity: void startFlashProcess(android.view.View)>[]--><se.bitcraze.crazyfliecontrol.bootloader.BootloaderActivity$DownloadTask: void onPostExecute(java.lang.Object)>[]--><se.bitcraze.crazyfliecontrol.bootloader.BootloaderActivity$DownloadTask: void onPostExecute(java.lang.String)>[]--><se.bitcraze.crazyfliecontrol.bootloader.BootloaderActivity: void access$1000(se.bitcraze.crazyfliecontrol.bootloader.BootloaderActivity)>[]--><se.bitcraze.crazyfliecontrol.bootloader.BootloaderActivity: void startBootloader()>[]--><se.bitcraze.crazyfliecontrol.bootloader.BootloaderActivity$6: java.lang.Object doInBackground(java.lang.Object[])>[]--><se.bitcraze.crazyfliecontrol.bootloader.BootloaderActivity$6: java.lang.Boolean doInBackground(java.lang.Void[])>[]--><se.bitcraze.crazyflie.lib.bootloader.Bootloader: boolean startBootloader(boolean)>[[try]]--><se.bitcraze.crazyflie.lib.bootloader.Cloader: void openBootloaderConnection()>[]--><se.bitcraze.crazyflie.lib.crazyradio.RadioDriver: void connect()>[]--><se.bitcraze.crazyflie.lib.crazyradio.RadioDriver: void startSendReceiveThread()>[]--><java.lang.Thread: void run()>[]--><se.bitcraze.crazyflie.lib.crazyradio.RadioDriver$RadioDriverThread: void run()>[]--><se.bitcraze.crazyflie.lib.crazyradio.RadioDriver: void access$300(se.bitcraze.crazyflie.lib.crazyradio.RadioDriver,java.lang.String)>[]--><se.bitcraze.crazyflie.lib.crtp.CrtpDriver: void notifyConnectionLost(java.lang.String)>[]--><se.bitcraze.crazyfliecontrol2.MainPresenter$1: void connectionLost(java.lang.String)>[]--><se.bitcraze.crazyfliecontrol2.MainPresenter: void disconnect()>[]--><se.bitcraze.crazyflie.lib.crazyflie.Crazyflie: void disconnect()>[]--><se.bitcraze.crazyflie.lib.crazyflie.Crazyflie: void sendPacket(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.BleLink: void sendPacket(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.BleLink: void sendSplitPacket(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.BleLink$SendBlePacket: void run()>[]--><android.bluetooth.BluetoothGattCharacteristic: void setWriteType(int)>
+One road protect good!
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: se.bitcraze.crazyfliecontrol2.MainActivity dummyMainMethod_se_bitcraze_crazyfliecontrol2_MainActivity(android.content.Intent)>[]--><se.bitcraze.crazyfliecontrol2.MainActivity$2: void onClick(android.view.View)>[[try]]--><se.bitcraze.crazyfliecontrol2.MainPresenter: void connectCrazyradio(int,int,java.io.File)>[]--><se.bitcraze.crazyfliecontrol2.MainPresenter: void disconnect()>[]--><se.bitcraze.crazyflie.lib.crazyflie.Crazyflie: void disconnect()>[]--><se.bitcraze.crazyflie.lib.crazyflie.Crazyflie: void sendPacket(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.BleLink: void sendPacket(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.BleLink: void sendSplitPacket(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.BleLink$SendBlePacket: void run()>[]--><android.bluetooth.BluetoothGattCharacteristic: void setWriteType(int)>
+One road protect good!
+10 Packageshead roads:
+!!!this api will crash on sdk 16 17 
+Error road: <se.bitcraze.crazyfliecontrol2.MainPresenter: void access$1000(se.bitcraze.crazyfliecontrol2.MainPresenter,se.bitcraze.crazyflie.lib.log.LogConfig)>[]--><se.bitcraze.crazyfliecontrol2.MainPresenter: void startLogConfigs(se.bitcraze.crazyflie.lib.log.LogConfig)>[]--><se.bitcraze.crazyflie.lib.log.Logg: void start(se.bitcraze.crazyflie.lib.log.LogConfig)>[]--><se.bitcraze.crazyflie.lib.log.Logg: void create(se.bitcraze.crazyflie.lib.log.LogConfig)>[]--><se.bitcraze.crazyflie.lib.log.Logg: void sendLoggPacket(byte[],byte[])>[]--><se.bitcraze.crazyflie.lib.crazyflie.Crazyflie: void sendPacket(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.BleLink: void sendPacket(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.BleLink: void sendSplitPacket(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.BleLink$SendBlePacket: void run()>[]--><android.bluetooth.BluetoothGattCharacteristic: void setWriteType(int)>
+#1.the call statck between class <se.bitcraze.crazyfliecontrol2.MainPresenter: void access$1000(se.bitcraze.crazyfliecontrol2.MainPresenter,se.bitcraze.crazyflie.lib.log.LogConfig)> to <android.bluetooth.BluetoothGattCharacteristic: void setWriteType(int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 
+Error road: <se.bitcraze.crazyfliecontrol2.MainActivity$7: void onReceive(android.content.Context,android.content.Intent)>[]--><se.bitcraze.crazyfliecontrol2.MainPresenter: void disconnect()>[]--><se.bitcraze.crazyflie.lib.crazyflie.Crazyflie: void disconnect()>[]--><se.bitcraze.crazyflie.lib.crazyflie.Crazyflie: void sendPacket(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.BleLink: void sendPacket(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.BleLink: void sendSplitPacket(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.BleLink$SendBlePacket: void run()>[]--><android.bluetooth.BluetoothGattCharacteristic: void setWriteType(int)>
+#2.the call statck between class <se.bitcraze.crazyfliecontrol2.MainActivity$7: void onReceive(android.content.Context,android.content.Intent)> to <android.bluetooth.BluetoothGattCharacteristic: void setWriteType(int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 
+Error road: <se.bitcraze.crazyflie.lib.toc.TocFetcher$1: void dataReceived(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.toc.TocFetcher: void newPacketReceived(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.toc.TocFetcher: void handleCmdTocElement(java.nio.ByteBuffer)>[]--><se.bitcraze.crazyflie.lib.toc.TocFetcher: void requestTocElement(int)>[]--><se.bitcraze.crazyflie.lib.toc.TocFetcher: void sendTocPacket(byte[])>[]--><se.bitcraze.crazyflie.lib.crazyflie.Crazyflie: void sendPacket(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.BleLink: void sendPacket(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.BleLink: void sendSplitPacket(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.BleLink$SendBlePacket: void run()>[]--><android.bluetooth.BluetoothGattCharacteristic: void setWriteType(int)>
+#3.the call statck between class <se.bitcraze.crazyflie.lib.toc.TocFetcher$1: void dataReceived(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)> to <android.bluetooth.BluetoothGattCharacteristic: void setWriteType(int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 
+Error road: <se.bitcraze.crazyflie.lib.BleLink: void access$600(se.bitcraze.crazyflie.lib.BleLink,java.lang.String)>[]--><se.bitcraze.crazyflie.lib.crtp.CrtpDriver: void notifyConnectionLost(java.lang.String)>[]--><se.bitcraze.crazyfliecontrol2.MainPresenter$1: void connectionLost(java.lang.String)>[]--><se.bitcraze.crazyfliecontrol2.MainPresenter: void disconnect()>[]--><se.bitcraze.crazyflie.lib.crazyflie.Crazyflie: void disconnect()>[]--><se.bitcraze.crazyflie.lib.crazyflie.Crazyflie: void sendPacket(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.BleLink: void sendPacket(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.BleLink: void sendSplitPacket(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.BleLink$SendBlePacket: void run()>[]--><android.bluetooth.BluetoothGattCharacteristic: void setWriteType(int)>
+#4.the call statck between class <se.bitcraze.crazyflie.lib.BleLink: void access$600(se.bitcraze.crazyflie.lib.BleLink,java.lang.String)> to <android.bluetooth.BluetoothGattCharacteristic: void setWriteType(int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 
+Error road: <se.bitcraze.crazyfliecontrol2.MainPresenter: void access$1200(se.bitcraze.crazyfliecontrol2.MainPresenter,se.bitcraze.crazyflie.lib.log.LogConfig)>[]--><se.bitcraze.crazyfliecontrol2.MainPresenter: void stopLogConfigs(se.bitcraze.crazyflie.lib.log.LogConfig)>[]--><se.bitcraze.crazyflie.lib.log.Logg: void delete(se.bitcraze.crazyflie.lib.log.LogConfig)>[]--><se.bitcraze.crazyflie.lib.log.Logg: void sendLoggPacket(byte[],byte[])>[]--><se.bitcraze.crazyflie.lib.crazyflie.Crazyflie: void sendPacket(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.BleLink: void sendPacket(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.BleLink: void sendSplitPacket(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.BleLink$SendBlePacket: void run()>[]--><android.bluetooth.BluetoothGattCharacteristic: void setWriteType(int)>
+#5.the call statck between class <se.bitcraze.crazyfliecontrol2.MainPresenter: void access$1200(se.bitcraze.crazyfliecontrol2.MainPresenter,se.bitcraze.crazyflie.lib.log.LogConfig)> to <android.bluetooth.BluetoothGattCharacteristic: void setWriteType(int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 
+Error road: <android.arch.lifecycle.ComputableLiveData: void invalidate()>[]--><android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)>[]--><se.bitcraze.crazyflie.lib.BleLink$SendBlePacket: void run()>[]--><android.bluetooth.BluetoothGattCharacteristic: void setWriteType(int)>
+#6.the call statck between class <android.arch.lifecycle.ComputableLiveData: void invalidate()> to <android.bluetooth.BluetoothGattCharacteristic: void setWriteType(int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 
+Error road: <se.bitcraze.crazyflie.lib.BleLink$1: void onServicesDiscovered(android.bluetooth.BluetoothGatt,int)>[]--><se.bitcraze.crazyflie.lib.crtp.CrtpDriver: void notifyConnected()>[]--><se.bitcraze.crazyfliecontrol2.MainPresenter$1: void connected()>[]--><se.bitcraze.crazyflie.lib.crazyflie.Crazyflie: void startConnectionSetup_BLE()>[]--><se.bitcraze.crazyflie.lib.crazyflie.Crazyflie: void startConnectionSetup()>[]--><se.bitcraze.crazyflie.lib.param.Param: void <init>(se.bitcraze.crazyflie.lib.crazyflie.Crazyflie)>[]--><java.lang.Thread: void run()>[]--><se.bitcraze.crazyflie.lib.crazyradio.RadioDriver$RadioDriverThread: void run()>[]--><se.bitcraze.crazyflie.lib.crazyradio.RadioDriver: void access$300(se.bitcraze.crazyflie.lib.crazyradio.RadioDriver,java.lang.String)>[]--><se.bitcraze.crazyflie.lib.crtp.CrtpDriver: void notifyConnectionLost(java.lang.String)>[]--><se.bitcraze.crazyfliecontrol2.MainPresenter$1: void connectionLost(java.lang.String)>[]--><se.bitcraze.crazyfliecontrol2.MainPresenter: void disconnect()>[]--><se.bitcraze.crazyflie.lib.crazyflie.Crazyflie: void disconnect()>[]--><se.bitcraze.crazyflie.lib.crazyflie.Crazyflie: void sendPacket(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.BleLink: void sendPacket(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.BleLink: void sendSplitPacket(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.BleLink$SendBlePacket: void run()>[]--><android.bluetooth.BluetoothGattCharacteristic: void setWriteType(int)>
+#7.the call statck between class <se.bitcraze.crazyflie.lib.BleLink$1: void onServicesDiscovered(android.bluetooth.BluetoothGatt,int)> to <android.bluetooth.BluetoothGattCharacteristic: void setWriteType(int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 
+Error road: <se.bitcraze.crazyflie.lib.log.Logg: void access$000(se.bitcraze.crazyflie.lib.log.Logg,se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.log.Logg: void newPacketReceived(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.toc.TocFetcher: void start()>[]--><se.bitcraze.crazyflie.lib.toc.TocFetcher: void requestTocInfo()>[]--><se.bitcraze.crazyflie.lib.toc.TocFetcher: void sendTocPacket(byte[])>[]--><se.bitcraze.crazyflie.lib.crazyflie.Crazyflie: void sendPacket(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.BleLink: void sendPacket(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.BleLink: void sendSplitPacket(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.BleLink$SendBlePacket: void run()>[]--><android.bluetooth.BluetoothGattCharacteristic: void setWriteType(int)>
+#8.the call statck between class <se.bitcraze.crazyflie.lib.log.Logg: void access$000(se.bitcraze.crazyflie.lib.log.Logg,se.bitcraze.crazyflie.lib.crtp.CrtpPacket)> to <android.bluetooth.BluetoothGattCharacteristic: void setWriteType(int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 
+Error road: <se.bitcraze.crazyflie.lib.bootloader.Cloader: boolean setAddress(byte[])>[]--><se.bitcraze.crazyflie.lib.crazyradio.RadioDriver: boolean setBootloaderAddress(byte[])>[]--><se.bitcraze.crazyflie.lib.crazyradio.RadioDriver: void startSendReceiveThread()>[]--><java.lang.Thread: void run()>[]--><se.bitcraze.crazyflie.lib.crazyradio.RadioDriver$RadioDriverThread: void run()>[]--><se.bitcraze.crazyflie.lib.crazyradio.RadioDriver: void access$300(se.bitcraze.crazyflie.lib.crazyradio.RadioDriver,java.lang.String)>[]--><se.bitcraze.crazyflie.lib.crtp.CrtpDriver: void notifyConnectionLost(java.lang.String)>[]--><se.bitcraze.crazyfliecontrol2.MainPresenter$1: void connectionLost(java.lang.String)>[]--><se.bitcraze.crazyfliecontrol2.MainPresenter: void disconnect()>[]--><se.bitcraze.crazyflie.lib.crazyflie.Crazyflie: void disconnect()>[]--><se.bitcraze.crazyflie.lib.crazyflie.Crazyflie: void sendPacket(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.BleLink: void sendPacket(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.BleLink: void sendSplitPacket(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.BleLink$SendBlePacket: void run()>[]--><android.bluetooth.BluetoothGattCharacteristic: void setWriteType(int)>
+#9.the call statck between class <se.bitcraze.crazyflie.lib.bootloader.Cloader: boolean setAddress(byte[])> to <android.bluetooth.BluetoothGattCharacteristic: void setWriteType(int)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 
+Error road: <se.bitcraze.crazyflie.lib.crazyflie.Crazyflie$2: void tocFetchFinished()>[]--><se.bitcraze.crazyflie.lib.param.Param: void refreshToc(se.bitcraze.crazyflie.lib.toc.TocFetchFinishedListener,se.bitcraze.crazyflie.lib.toc.TocCache)>[]--><se.bitcraze.crazyflie.lib.toc.TocFetcher: void start()>[]--><se.bitcraze.crazyflie.lib.toc.TocFetcher: void requestTocInfo()>[]--><se.bitcraze.crazyflie.lib.toc.TocFetcher: void sendTocPacket(byte[])>[]--><se.bitcraze.crazyflie.lib.crazyflie.Crazyflie: void sendPacket(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.BleLink: void sendPacket(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.BleLink: void sendSplitPacket(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.BleLink$SendBlePacket: void run()>[]--><android.bluetooth.BluetoothGattCharacteristic: void setWriteType(int)>
+#10.the call statck between class <se.bitcraze.crazyflie.lib.crazyflie.Crazyflie$2: void tocFetchFinished()> to <android.bluetooth.BluetoothGattCharacteristic: void setWriteType(int)>has compatibility isssues！
+-----------------------------------------
+crashApis:2
+containsStatic:false
+containsTry:true
+11call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.bluetooth.BluetoothGattCallback: void onDescriptorWrite(android.bluetooth.BluetoothGatt,android.bluetooth.BluetoothGattDescriptor,int)> is checking!!!
+The life time of api is [18,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 
+Error road: <se.bitcraze.crazyflie.lib.BleLink$1: void onDescriptorWrite(android.bluetooth.BluetoothGatt,android.bluetooth.BluetoothGattDescriptor,int)>[]--><android.bluetooth.BluetoothGattCallback: void onDescriptorWrite(android.bluetooth.BluetoothGatt,android.bluetooth.BluetoothGattDescriptor,int)>
+#1.the call statck between class <se.bitcraze.crazyflie.lib.BleLink$1: void onDescriptorWrite(android.bluetooth.BluetoothGatt,android.bluetooth.BluetoothGattDescriptor,int)> to <android.bluetooth.BluetoothGattCallback: void onDescriptorWrite(android.bluetooth.BluetoothGatt,android.bluetooth.BluetoothGattDescriptor,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:3
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.bluetooth.le.ScanFilter.Builder: android.bluetooth.le.ScanFilter.Builder setDeviceName(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+###Multi invoking in one method, need manual check!!!--><se.bitcraze.crazyfliecontrol2.MainActivity$2: void onClick(android.view.View)>[[try], [-$i0 < 19]]--><se.bitcraze.crazyfliecontrol2.MainPresenter: void connectBle(boolean,java.io.File)>[]--><se.bitcraze.crazyfliecontrol2.MainPresenter: void connect(java.io.File,se.bitcraze.crazyflie.lib.crazyradio.ConnectionData)>[]--><se.bitcraze.crazyflie.lib.crazyflie.Crazyflie: void connect()>[]--><se.bitcraze.crazyflie.lib.BleLink: void connect()>[]--><se.bitcraze.crazyflie.lib.BleLink: void scan()>[[-i0 < 21]]
+###Multi invoking in one method, need manual check!!!--><se.bitcraze.crazyfliecontrol2.MainActivity$2: void onClick(android.view.View)>[[try]][[-$i0 < 19]]--><se.bitcraze.crazyfliecontrol2.MainPresenter: void connectBle(boolean,java.io.File)>[]--><se.bitcraze.crazyfliecontrol2.MainPresenter: void connect(java.io.File,se.bitcraze.crazyflie.lib.crazyradio.ConnectionData)>[]--><se.bitcraze.crazyflie.lib.crazyflie.Crazyflie: void connect()>[]--><se.bitcraze.crazyflie.lib.BleLink: void connect()>[]--><se.bitcraze.crazyflie.lib.BleLink: void scan()>[[-i0 < 21]]
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: se.bitcraze.crazyfliecontrol2.MainActivity dummyMainMethod_se_bitcraze_crazyfliecontrol2_MainActivity(android.content.Intent)>[]--><se.bitcraze.crazyfliecontrol2.MainActivity$2: void onClick(android.view.View)>[[try], [-$i0 < 19]]--><se.bitcraze.crazyfliecontrol2.MainPresenter: void connectBle(boolean,java.io.File)>[]--><se.bitcraze.crazyfliecontrol2.MainPresenter: void connect(java.io.File,se.bitcraze.crazyflie.lib.crazyradio.ConnectionData)>[]--><se.bitcraze.crazyflie.lib.crazyflie.Crazyflie: void connect()>[]--><se.bitcraze.crazyflie.lib.BleLink: void connect()>[]--><se.bitcraze.crazyflie.lib.BleLink: void scan()>[[-i0 < 21]]--><android.bluetooth.le.ScanFilter.Builder: android.bluetooth.le.ScanFilter.Builder setDeviceName(java.lang.String)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:true
+1call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.bluetooth.BluetoothDevice: android.bluetooth.BluetoothGatt connectGatt(android.content.Context,boolean,android.bluetooth.BluetoothGattCallback)> is checking!!!
+The life time of api is [18,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 
+Error road: <android.arch.lifecycle.ComputableLiveData: void invalidate()>[]--><android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)>[]--><se.bitcraze.crazyflie.lib.BleLink$3$1: void run()>[]--><android.bluetooth.BluetoothDevice: android.bluetooth.BluetoothGatt connectGatt(android.content.Context,boolean,android.bluetooth.BluetoothGattCallback)>
+#1.the call statck between class <android.arch.lifecycle.ComputableLiveData: void invalidate()> to <android.bluetooth.BluetoothDevice: android.bluetooth.BluetoothGatt connectGatt(android.content.Context,boolean,android.bluetooth.BluetoothGattCallback)>has compatibility isssues！
+-----------------------------------------
+crashApis:4
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 5 Potential Issue API: SDKCheck of <android.bluetooth.BluetoothGattCharacteristic: java.util.UUID getUuid()> is checking!!!
+The life time of api is [18,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 16 17 
+Error road: <se.bitcraze.crazyflie.lib.BleLink$1: void onCharacteristicRead(android.bluetooth.BluetoothGatt,android.bluetooth.BluetoothGattCharacteristic,int)>[]--><android.bluetooth.BluetoothGattCharacteristic: java.util.UUID getUuid()>
+#1.the call statck between class <se.bitcraze.crazyflie.lib.BleLink$1: void onCharacteristicRead(android.bluetooth.BluetoothGatt,android.bluetooth.BluetoothGattCharacteristic,int)> to <android.bluetooth.BluetoothGattCharacteristic: java.util.UUID getUuid()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 
+Error road: <se.bitcraze.crazyflie.lib.BleLink$1: void onCharacteristicChanged(android.bluetooth.BluetoothGatt,android.bluetooth.BluetoothGattCharacteristic)>[]--><android.bluetooth.BluetoothGattCharacteristic: java.util.UUID getUuid()>
+#2.the call statck between class <se.bitcraze.crazyflie.lib.BleLink$1: void onCharacteristicChanged(android.bluetooth.BluetoothGatt,android.bluetooth.BluetoothGattCharacteristic)> to <android.bluetooth.BluetoothGattCharacteristic: java.util.UUID getUuid()>has compatibility isssues！
+-----------------------------------------
+crashApis:5
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 6 Potential Issue API: SDKCheck of <android.bluetooth.BluetoothGatt: boolean writeCharacteristic(android.bluetooth.BluetoothGattCharacteristic)> is checking!!!
+The life time of api is [18,31]
+11call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: se.bitcraze.crazyfliecontrol.bootloader.BootloaderActivity dummyMainMethod_se_bitcraze_crazyfliecontrol_bootloader_BootloaderActivity(android.content.Intent)>[]--><se.bitcraze.crazyfliecontrol.bootloader.BootloaderActivity: void startFlashProcess(android.view.View)>[]--><se.bitcraze.crazyfliecontrol.bootloader.BootloaderActivity$DownloadTask: void onPostExecute(java.lang.Object)>[]--><se.bitcraze.crazyfliecontrol.bootloader.BootloaderActivity$DownloadTask: void onPostExecute(java.lang.String)>[]--><se.bitcraze.crazyfliecontrol.bootloader.BootloaderActivity: void access$1000(se.bitcraze.crazyfliecontrol.bootloader.BootloaderActivity)>[]--><se.bitcraze.crazyfliecontrol.bootloader.BootloaderActivity: void startBootloader()>[]--><se.bitcraze.crazyfliecontrol.bootloader.BootloaderActivity$6: java.lang.Object doInBackground(java.lang.Object[])>[]--><se.bitcraze.crazyfliecontrol.bootloader.BootloaderActivity$6: java.lang.Boolean doInBackground(java.lang.Void[])>[]--><se.bitcraze.crazyflie.lib.bootloader.Bootloader: boolean startBootloader(boolean)>[[try]]--><se.bitcraze.crazyflie.lib.bootloader.Cloader: void openBootloaderConnection()>[]--><se.bitcraze.crazyflie.lib.crazyradio.RadioDriver: void connect()>[]--><se.bitcraze.crazyflie.lib.crazyradio.RadioDriver: void startSendReceiveThread()>[]--><java.lang.Thread: void run()>[]--><se.bitcraze.crazyflie.lib.crazyradio.RadioDriver$RadioDriverThread: void run()>[]--><se.bitcraze.crazyflie.lib.crazyradio.RadioDriver: void access$300(se.bitcraze.crazyflie.lib.crazyradio.RadioDriver,java.lang.String)>[]--><se.bitcraze.crazyflie.lib.crtp.CrtpDriver: void notifyConnectionLost(java.lang.String)>[]--><se.bitcraze.crazyfliecontrol2.MainPresenter$1: void connectionLost(java.lang.String)>[]--><se.bitcraze.crazyfliecontrol2.MainPresenter: void disconnect()>[]--><se.bitcraze.crazyflie.lib.crazyflie.Crazyflie: void disconnect()>[]--><se.bitcraze.crazyflie.lib.crazyflie.Crazyflie: void sendPacket(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.BleLink: void sendPacket(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.BleLink: void sendSplitPacket(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.BleLink$SendBlePacket: void run()>[]--><android.bluetooth.BluetoothGatt: boolean writeCharacteristic(android.bluetooth.BluetoothGattCharacteristic)>
+One road protect good!
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: se.bitcraze.crazyfliecontrol2.MainActivity dummyMainMethod_se_bitcraze_crazyfliecontrol2_MainActivity(android.content.Intent)>[]--><se.bitcraze.crazyfliecontrol2.MainActivity$2: void onClick(android.view.View)>[[try]]--><se.bitcraze.crazyfliecontrol2.MainPresenter: void connectCrazyradio(int,int,java.io.File)>[]--><se.bitcraze.crazyfliecontrol2.MainPresenter: void disconnect()>[]--><se.bitcraze.crazyflie.lib.crazyflie.Crazyflie: void disconnect()>[]--><se.bitcraze.crazyflie.lib.crazyflie.Crazyflie: void sendPacket(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.BleLink: void sendPacket(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.BleLink: void sendSplitPacket(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.BleLink$SendBlePacket: void run()>[]--><android.bluetooth.BluetoothGatt: boolean writeCharacteristic(android.bluetooth.BluetoothGattCharacteristic)>
+One road protect good!
+10 Packageshead roads:
+!!!this api will crash on sdk 16 17 
+Error road: <se.bitcraze.crazyfliecontrol2.MainPresenter: void access$1000(se.bitcraze.crazyfliecontrol2.MainPresenter,se.bitcraze.crazyflie.lib.log.LogConfig)>[]--><se.bitcraze.crazyfliecontrol2.MainPresenter: void startLogConfigs(se.bitcraze.crazyflie.lib.log.LogConfig)>[]--><se.bitcraze.crazyflie.lib.log.Logg: void start(se.bitcraze.crazyflie.lib.log.LogConfig)>[]--><se.bitcraze.crazyflie.lib.log.Logg: void create(se.bitcraze.crazyflie.lib.log.LogConfig)>[]--><se.bitcraze.crazyflie.lib.log.Logg: void sendLoggPacket(byte[],byte[])>[]--><se.bitcraze.crazyflie.lib.crazyflie.Crazyflie: void sendPacket(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.BleLink: void sendPacket(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.BleLink: void sendSplitPacket(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.BleLink$SendBlePacket: void run()>[]--><android.bluetooth.BluetoothGatt: boolean writeCharacteristic(android.bluetooth.BluetoothGattCharacteristic)>
+#1.the call statck between class <se.bitcraze.crazyfliecontrol2.MainPresenter: void access$1000(se.bitcraze.crazyfliecontrol2.MainPresenter,se.bitcraze.crazyflie.lib.log.LogConfig)> to <android.bluetooth.BluetoothGatt: boolean writeCharacteristic(android.bluetooth.BluetoothGattCharacteristic)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 
+Error road: <se.bitcraze.crazyfliecontrol2.MainActivity$7: void onReceive(android.content.Context,android.content.Intent)>[]--><se.bitcraze.crazyfliecontrol2.MainPresenter: void disconnect()>[]--><se.bitcraze.crazyflie.lib.crazyflie.Crazyflie: void disconnect()>[]--><se.bitcraze.crazyflie.lib.crazyflie.Crazyflie: void sendPacket(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.BleLink: void sendPacket(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.BleLink: void sendSplitPacket(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.BleLink$SendBlePacket: void run()>[]--><android.bluetooth.BluetoothGatt: boolean writeCharacteristic(android.bluetooth.BluetoothGattCharacteristic)>
+#2.the call statck between class <se.bitcraze.crazyfliecontrol2.MainActivity$7: void onReceive(android.content.Context,android.content.Intent)> to <android.bluetooth.BluetoothGatt: boolean writeCharacteristic(android.bluetooth.BluetoothGattCharacteristic)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 
+Error road: <se.bitcraze.crazyflie.lib.toc.TocFetcher$1: void dataReceived(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.toc.TocFetcher: void newPacketReceived(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.toc.TocFetcher: void handleCmdTocElement(java.nio.ByteBuffer)>[]--><se.bitcraze.crazyflie.lib.toc.TocFetcher: void requestTocElement(int)>[]--><se.bitcraze.crazyflie.lib.toc.TocFetcher: void sendTocPacket(byte[])>[]--><se.bitcraze.crazyflie.lib.crazyflie.Crazyflie: void sendPacket(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.BleLink: void sendPacket(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.BleLink: void sendSplitPacket(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.BleLink$SendBlePacket: void run()>[]--><android.bluetooth.BluetoothGatt: boolean writeCharacteristic(android.bluetooth.BluetoothGattCharacteristic)>
+#3.the call statck between class <se.bitcraze.crazyflie.lib.toc.TocFetcher$1: void dataReceived(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)> to <android.bluetooth.BluetoothGatt: boolean writeCharacteristic(android.bluetooth.BluetoothGattCharacteristic)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 
+Error road: <se.bitcraze.crazyflie.lib.BleLink: void access$600(se.bitcraze.crazyflie.lib.BleLink,java.lang.String)>[]--><se.bitcraze.crazyflie.lib.crtp.CrtpDriver: void notifyConnectionLost(java.lang.String)>[]--><se.bitcraze.crazyfliecontrol2.MainPresenter$1: void connectionLost(java.lang.String)>[]--><se.bitcraze.crazyfliecontrol2.MainPresenter: void disconnect()>[]--><se.bitcraze.crazyflie.lib.crazyflie.Crazyflie: void disconnect()>[]--><se.bitcraze.crazyflie.lib.crazyflie.Crazyflie: void sendPacket(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.BleLink: void sendPacket(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.BleLink: void sendSplitPacket(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.BleLink$SendBlePacket: void run()>[]--><android.bluetooth.BluetoothGatt: boolean writeCharacteristic(android.bluetooth.BluetoothGattCharacteristic)>
+#4.the call statck between class <se.bitcraze.crazyflie.lib.BleLink: void access$600(se.bitcraze.crazyflie.lib.BleLink,java.lang.String)> to <android.bluetooth.BluetoothGatt: boolean writeCharacteristic(android.bluetooth.BluetoothGattCharacteristic)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 
+Error road: <se.bitcraze.crazyfliecontrol2.MainPresenter: void access$1200(se.bitcraze.crazyfliecontrol2.MainPresenter,se.bitcraze.crazyflie.lib.log.LogConfig)>[]--><se.bitcraze.crazyfliecontrol2.MainPresenter: void stopLogConfigs(se.bitcraze.crazyflie.lib.log.LogConfig)>[]--><se.bitcraze.crazyflie.lib.log.Logg: void delete(se.bitcraze.crazyflie.lib.log.LogConfig)>[]--><se.bitcraze.crazyflie.lib.log.Logg: void sendLoggPacket(byte[],byte[])>[]--><se.bitcraze.crazyflie.lib.crazyflie.Crazyflie: void sendPacket(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.BleLink: void sendPacket(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.BleLink: void sendSplitPacket(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.BleLink$SendBlePacket: void run()>[]--><android.bluetooth.BluetoothGatt: boolean writeCharacteristic(android.bluetooth.BluetoothGattCharacteristic)>
+#5.the call statck between class <se.bitcraze.crazyfliecontrol2.MainPresenter: void access$1200(se.bitcraze.crazyfliecontrol2.MainPresenter,se.bitcraze.crazyflie.lib.log.LogConfig)> to <android.bluetooth.BluetoothGatt: boolean writeCharacteristic(android.bluetooth.BluetoothGattCharacteristic)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 
+Error road: <android.arch.lifecycle.ComputableLiveData: void invalidate()>[]--><android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)>[]--><se.bitcraze.crazyflie.lib.BleLink$SendBlePacket: void run()>[]--><android.bluetooth.BluetoothGatt: boolean writeCharacteristic(android.bluetooth.BluetoothGattCharacteristic)>
+#6.the call statck between class <android.arch.lifecycle.ComputableLiveData: void invalidate()> to <android.bluetooth.BluetoothGatt: boolean writeCharacteristic(android.bluetooth.BluetoothGattCharacteristic)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 
+Error road: <se.bitcraze.crazyflie.lib.BleLink$1: void onServicesDiscovered(android.bluetooth.BluetoothGatt,int)>[]--><se.bitcraze.crazyflie.lib.crtp.CrtpDriver: void notifyConnected()>[]--><se.bitcraze.crazyfliecontrol2.MainPresenter$1: void connected()>[]--><se.bitcraze.crazyflie.lib.crazyflie.Crazyflie: void startConnectionSetup_BLE()>[]--><se.bitcraze.crazyflie.lib.crazyflie.Crazyflie: void startConnectionSetup()>[]--><se.bitcraze.crazyflie.lib.param.Param: void <init>(se.bitcraze.crazyflie.lib.crazyflie.Crazyflie)>[]--><java.lang.Thread: void run()>[]--><se.bitcraze.crazyflie.lib.crazyradio.RadioDriver$RadioDriverThread: void run()>[]--><se.bitcraze.crazyflie.lib.crazyradio.RadioDriver: void access$300(se.bitcraze.crazyflie.lib.crazyradio.RadioDriver,java.lang.String)>[]--><se.bitcraze.crazyflie.lib.crtp.CrtpDriver: void notifyConnectionLost(java.lang.String)>[]--><se.bitcraze.crazyfliecontrol2.MainPresenter$1: void connectionLost(java.lang.String)>[]--><se.bitcraze.crazyfliecontrol2.MainPresenter: void disconnect()>[]--><se.bitcraze.crazyflie.lib.crazyflie.Crazyflie: void disconnect()>[]--><se.bitcraze.crazyflie.lib.crazyflie.Crazyflie: void sendPacket(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.BleLink: void sendPacket(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.BleLink: void sendSplitPacket(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.BleLink$SendBlePacket: void run()>[]--><android.bluetooth.BluetoothGatt: boolean writeCharacteristic(android.bluetooth.BluetoothGattCharacteristic)>
+#7.the call statck between class <se.bitcraze.crazyflie.lib.BleLink$1: void onServicesDiscovered(android.bluetooth.BluetoothGatt,int)> to <android.bluetooth.BluetoothGatt: boolean writeCharacteristic(android.bluetooth.BluetoothGattCharacteristic)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 
+Error road: <se.bitcraze.crazyflie.lib.log.Logg: void access$000(se.bitcraze.crazyflie.lib.log.Logg,se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.log.Logg: void newPacketReceived(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.toc.TocFetcher: void start()>[]--><se.bitcraze.crazyflie.lib.toc.TocFetcher: void requestTocInfo()>[]--><se.bitcraze.crazyflie.lib.toc.TocFetcher: void sendTocPacket(byte[])>[]--><se.bitcraze.crazyflie.lib.crazyflie.Crazyflie: void sendPacket(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.BleLink: void sendPacket(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.BleLink: void sendSplitPacket(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.BleLink$SendBlePacket: void run()>[]--><android.bluetooth.BluetoothGatt: boolean writeCharacteristic(android.bluetooth.BluetoothGattCharacteristic)>
+#8.the call statck between class <se.bitcraze.crazyflie.lib.log.Logg: void access$000(se.bitcraze.crazyflie.lib.log.Logg,se.bitcraze.crazyflie.lib.crtp.CrtpPacket)> to <android.bluetooth.BluetoothGatt: boolean writeCharacteristic(android.bluetooth.BluetoothGattCharacteristic)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 
+Error road: <se.bitcraze.crazyflie.lib.bootloader.Cloader: boolean setAddress(byte[])>[]--><se.bitcraze.crazyflie.lib.crazyradio.RadioDriver: boolean setBootloaderAddress(byte[])>[]--><se.bitcraze.crazyflie.lib.crazyradio.RadioDriver: void startSendReceiveThread()>[]--><java.lang.Thread: void run()>[]--><se.bitcraze.crazyflie.lib.crazyradio.RadioDriver$RadioDriverThread: void run()>[]--><se.bitcraze.crazyflie.lib.crazyradio.RadioDriver: void access$300(se.bitcraze.crazyflie.lib.crazyradio.RadioDriver,java.lang.String)>[]--><se.bitcraze.crazyflie.lib.crtp.CrtpDriver: void notifyConnectionLost(java.lang.String)>[]--><se.bitcraze.crazyfliecontrol2.MainPresenter$1: void connectionLost(java.lang.String)>[]--><se.bitcraze.crazyfliecontrol2.MainPresenter: void disconnect()>[]--><se.bitcraze.crazyflie.lib.crazyflie.Crazyflie: void disconnect()>[]--><se.bitcraze.crazyflie.lib.crazyflie.Crazyflie: void sendPacket(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.BleLink: void sendPacket(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.BleLink: void sendSplitPacket(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.BleLink$SendBlePacket: void run()>[]--><android.bluetooth.BluetoothGatt: boolean writeCharacteristic(android.bluetooth.BluetoothGattCharacteristic)>
+#9.the call statck between class <se.bitcraze.crazyflie.lib.bootloader.Cloader: boolean setAddress(byte[])> to <android.bluetooth.BluetoothGatt: boolean writeCharacteristic(android.bluetooth.BluetoothGattCharacteristic)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 
+Error road: <se.bitcraze.crazyflie.lib.crazyflie.Crazyflie$2: void tocFetchFinished()>[]--><se.bitcraze.crazyflie.lib.param.Param: void refreshToc(se.bitcraze.crazyflie.lib.toc.TocFetchFinishedListener,se.bitcraze.crazyflie.lib.toc.TocCache)>[]--><se.bitcraze.crazyflie.lib.toc.TocFetcher: void start()>[]--><se.bitcraze.crazyflie.lib.toc.TocFetcher: void requestTocInfo()>[]--><se.bitcraze.crazyflie.lib.toc.TocFetcher: void sendTocPacket(byte[])>[]--><se.bitcraze.crazyflie.lib.crazyflie.Crazyflie: void sendPacket(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.BleLink: void sendPacket(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.BleLink: void sendSplitPacket(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.BleLink$SendBlePacket: void run()>[]--><android.bluetooth.BluetoothGatt: boolean writeCharacteristic(android.bluetooth.BluetoothGattCharacteristic)>
+#10.the call statck between class <se.bitcraze.crazyflie.lib.crazyflie.Crazyflie$2: void tocFetchFinished()> to <android.bluetooth.BluetoothGatt: boolean writeCharacteristic(android.bluetooth.BluetoothGattCharacteristic)>has compatibility isssues！
+-----------------------------------------
+crashApis:6
+containsStatic:false
+containsTry:true
+11call by main package
+-----------------------------------------
+#################################################
+N 7 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putLongArray(java.lang.String,long[])> is checking!!!
+The life time of api is [21,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 8 Potential Issue API: SDKCheck of <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: se.bitcraze.crazyfliecontrol.bootloader.BootloaderActivity dummyMainMethod_se_bitcraze_crazyfliecontrol_bootloader_BootloaderActivity(android.content.Intent)>[]--><se.bitcraze.crazyfliecontrol.bootloader.BootloaderActivity: void onResume()>[]--><se.bitcraze.crazyfliecontrol.bootloader.BootloaderActivity: void checkForFirmwareUpdate(android.view.View)>[]--><se.bitcraze.crazyfliecontrol.bootloader.FirmwareDownloader: void checkForFirmwareUpdate()>[]--><se.bitcraze.crazyfliecontrol.bootloader.FirmwareDownloader: boolean isNetworkAvailable()>[]--><android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:7
+crashApisInMain:1
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 9 Potential Issue API: SDKCheck of <android.bluetooth.BluetoothGatt: boolean writeDescriptor(android.bluetooth.BluetoothGattDescriptor)> is checking!!!
+The life time of api is [18,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 
+Error road: <se.bitcraze.crazyflie.lib.BleLink$1: void onServicesDiscovered(android.bluetooth.BluetoothGatt,int)>[]--><android.bluetooth.BluetoothGatt: boolean writeDescriptor(android.bluetooth.BluetoothGattDescriptor)>
+#1.the call statck between class <se.bitcraze.crazyflie.lib.BleLink$1: void onServicesDiscovered(android.bluetooth.BluetoothGatt,int)> to <android.bluetooth.BluetoothGatt: boolean writeDescriptor(android.bluetooth.BluetoothGattDescriptor)>has compatibility isssues！
+-----------------------------------------
+crashApis:8
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 10 Potential Issue API: SDKCheck of <android.bluetooth.BluetoothGattDescriptor: boolean setValue(byte[])> is checking!!!
+The life time of api is [18,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 
+Error road: <se.bitcraze.crazyflie.lib.BleLink$1: void onServicesDiscovered(android.bluetooth.BluetoothGatt,int)>[]--><android.bluetooth.BluetoothGattDescriptor: boolean setValue(byte[])>
+#1.the call statck between class <se.bitcraze.crazyflie.lib.BleLink$1: void onServicesDiscovered(android.bluetooth.BluetoothGatt,int)> to <android.bluetooth.BluetoothGattDescriptor: boolean setValue(byte[])>has compatibility isssues！
+-----------------------------------------
+crashApis:9
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 11 Potential Issue API: SDKCheck of <android.util.Size: int getWidth()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <androidx.versionedparcelable.VersionedParcel: void writeSize(android.util.Size,int)>[]--><android.util.Size: int getWidth()>
+#1.the call statck between class <androidx.versionedparcelable.VersionedParcel: void writeSize(android.util.Size,int)> to <android.util.Size: int getWidth()>has compatibility isssues！
+-----------------------------------------
+crashApis:10
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 12 Potential Issue API: SDKCheck of <android.bluetooth.le.BluetoothLeScanner: void stopScan(android.bluetooth.le.ScanCallback)> is checking!!!
+The life time of api is [21,31]
+6call roads:
+1 Mainhead roads:
+###Multi invoking in one method, need manual check!!!--><se.bitcraze.crazyfliecontrol2.MainActivity$2: void onClick(android.view.View)>[[try]]--><se.bitcraze.crazyfliecontrol2.MainPresenter: void connectCrazyradio(int,int,java.io.File)>[]--><se.bitcraze.crazyfliecontrol2.MainPresenter: void disconnect()>[]--><se.bitcraze.crazyflie.lib.crazyflie.Crazyflie: void disconnect()>[]--><se.bitcraze.crazyflie.lib.BleLink: void disconnect()>[]--><se.bitcraze.crazyflie.lib.BleLink$6: void run()>[]--><se.bitcraze.crazyflie.lib.BleLink: void access$400(se.bitcraze.crazyflie.lib.BleLink)>[]--><se.bitcraze.crazyflie.lib.BleLink: void stopScan()>[[-i0 < 21], [try]]
+###Multi invoking in one method, need manual check!!!--><se.bitcraze.crazyfliecontrol2.MainActivity$2: void onClick(android.view.View)>[[try]]--><se.bitcraze.crazyfliecontrol2.MainPresenter: void connectCrazyradio(int,int,java.io.File)>[]--><se.bitcraze.crazyfliecontrol2.MainPresenter: void disconnect()>[]--><se.bitcraze.crazyflie.lib.crazyflie.Crazyflie: void disconnect()>[]--><se.bitcraze.crazyflie.lib.BleLink: void disconnect()>[]--><se.bitcraze.crazyflie.lib.BleLink$6: void run()>[]--><se.bitcraze.crazyflie.lib.BleLink: void access$400(se.bitcraze.crazyflie.lib.BleLink)>[]--><se.bitcraze.crazyflie.lib.BleLink: void stopScan()>[[-i0 < 21]][[try]]
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: se.bitcraze.crazyfliecontrol2.MainActivity dummyMainMethod_se_bitcraze_crazyfliecontrol2_MainActivity(android.content.Intent)>[]--><se.bitcraze.crazyfliecontrol2.MainActivity$2: void onClick(android.view.View)>[[try]]--><se.bitcraze.crazyfliecontrol2.MainPresenter: void connectCrazyradio(int,int,java.io.File)>[]--><se.bitcraze.crazyfliecontrol2.MainPresenter: void disconnect()>[]--><se.bitcraze.crazyflie.lib.crazyflie.Crazyflie: void disconnect()>[]--><se.bitcraze.crazyflie.lib.BleLink: void disconnect()>[]--><se.bitcraze.crazyflie.lib.BleLink$6: void run()>[]--><se.bitcraze.crazyflie.lib.BleLink: void access$400(se.bitcraze.crazyflie.lib.BleLink)>[]--><se.bitcraze.crazyflie.lib.BleLink: void stopScan()>[[-i0 < 21], [try]]--><android.bluetooth.le.BluetoothLeScanner: void stopScan(android.bluetooth.le.ScanCallback)>
+One road protect good!
+5 Packageshead roads:
+###Multi invoking in one method, need manual check!!!--><se.bitcraze.crazyflie.lib.BleLink: void stopScan()>[[-i0 < 21], [try]]
+###Multi invoking in one method, need manual check!!!--><se.bitcraze.crazyflie.lib.BleLink: void stopScan()>[[-i0 < 21]][[try]]
+-i0 < 21
+try
+Good road with try: <se.bitcraze.crazyfliecontrol2.MainActivity$7: void onReceive(android.content.Context,android.content.Intent)>[]--><se.bitcraze.crazyfliecontrol2.MainPresenter: void disconnect()>[]--><se.bitcraze.crazyflie.lib.crazyflie.Crazyflie: void disconnect()>[]--><se.bitcraze.crazyflie.lib.BleLink: void disconnect()>[]--><se.bitcraze.crazyflie.lib.BleLink$6: void run()>[]--><se.bitcraze.crazyflie.lib.BleLink: void access$400(se.bitcraze.crazyflie.lib.BleLink)>[]--><se.bitcraze.crazyflie.lib.BleLink: void stopScan()>[[-i0 < 21], [try]]--><android.bluetooth.le.BluetoothLeScanner: void stopScan(android.bluetooth.le.ScanCallback)>
+One road protect good!
+###Multi invoking in one method, need manual check!!!--><se.bitcraze.crazyflie.lib.BleLink: void stopScan()>[[-i0 < 21], [try]]
+###Multi invoking in one method, need manual check!!!--><se.bitcraze.crazyflie.lib.BleLink: void stopScan()>[[-i0 < 21]][[try]]
+-i0 < 21
+try
+Good road with try: <se.bitcraze.crazyflie.lib.BleLink: void access$600(se.bitcraze.crazyflie.lib.BleLink,java.lang.String)>[]--><se.bitcraze.crazyflie.lib.crtp.CrtpDriver: void notifyConnectionLost(java.lang.String)>[]--><se.bitcraze.crazyfliecontrol2.MainPresenter$1: void connectionLost(java.lang.String)>[]--><se.bitcraze.crazyfliecontrol2.MainPresenter: void disconnect()>[]--><se.bitcraze.crazyflie.lib.crazyflie.Crazyflie: void disconnect()>[]--><se.bitcraze.crazyflie.lib.BleLink: void disconnect()>[]--><se.bitcraze.crazyflie.lib.BleLink$6: void run()>[]--><se.bitcraze.crazyflie.lib.BleLink: void access$400(se.bitcraze.crazyflie.lib.BleLink)>[]--><se.bitcraze.crazyflie.lib.BleLink: void stopScan()>[[-i0 < 21], [try]]--><android.bluetooth.le.BluetoothLeScanner: void stopScan(android.bluetooth.le.ScanCallback)>
+One road protect good!
+###Multi invoking in one method, need manual check!!!--><se.bitcraze.crazyflie.lib.BleLink: void stopScan()>[[-i0 < 21], [try]]
+###Multi invoking in one method, need manual check!!!--><se.bitcraze.crazyflie.lib.BleLink: void stopScan()>[[-i0 < 21]][[try]]
+-i0 < 21
+try
+Good road with try: <android.arch.lifecycle.ComputableLiveData: void invalidate()>[]--><android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)>[]--><se.bitcraze.crazyflie.lib.crazyradio.RadioDriver$RadioDriverThread: void run()>[]--><se.bitcraze.crazyflie.lib.crazyradio.RadioDriver: void access$300(se.bitcraze.crazyflie.lib.crazyradio.RadioDriver,java.lang.String)>[]--><se.bitcraze.crazyflie.lib.crtp.CrtpDriver: void notifyConnectionLost(java.lang.String)>[]--><se.bitcraze.crazyfliecontrol2.MainPresenter$1: void connectionLost(java.lang.String)>[]--><se.bitcraze.crazyfliecontrol2.MainPresenter: void disconnect()>[]--><se.bitcraze.crazyflie.lib.crazyflie.Crazyflie: void disconnect()>[]--><se.bitcraze.crazyflie.lib.BleLink: void disconnect()>[]--><se.bitcraze.crazyflie.lib.BleLink$6: void run()>[]--><se.bitcraze.crazyflie.lib.BleLink: void access$400(se.bitcraze.crazyflie.lib.BleLink)>[]--><se.bitcraze.crazyflie.lib.BleLink: void stopScan()>[[-i0 < 21], [try]]--><android.bluetooth.le.BluetoothLeScanner: void stopScan(android.bluetooth.le.ScanCallback)>
+One road protect good!
+containsStatic:false
+containsTry:true
+6call by main package
+-----------------------------------------
+#################################################
+N 13 Potential Issue API: SDKCheck of <android.bluetooth.BluetoothGatt: void disconnect()> is checking!!!
+The life time of api is [18,31]
+6call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: se.bitcraze.crazyfliecontrol2.MainActivity dummyMainMethod_se_bitcraze_crazyfliecontrol2_MainActivity(android.content.Intent)>[]--><se.bitcraze.crazyfliecontrol2.MainActivity$2: void onClick(android.view.View)>[[try]]--><se.bitcraze.crazyfliecontrol2.MainPresenter: void connectCrazyradio(int,int,java.io.File)>[]--><se.bitcraze.crazyfliecontrol2.MainPresenter: void disconnect()>[]--><se.bitcraze.crazyflie.lib.crazyflie.Crazyflie: void disconnect()>[]--><se.bitcraze.crazyflie.lib.BleLink: void disconnect()>[]--><se.bitcraze.crazyflie.lib.BleLink$6: void run()>[]--><android.bluetooth.BluetoothGatt: void disconnect()>
+One road protect good!
+5 Packageshead roads:
+!!!this api will crash on sdk 16 17 
+Error road: <se.bitcraze.crazyfliecontrol2.MainActivity$7: void onReceive(android.content.Context,android.content.Intent)>[]--><se.bitcraze.crazyfliecontrol2.MainPresenter: void disconnect()>[]--><se.bitcraze.crazyflie.lib.crazyflie.Crazyflie: void disconnect()>[]--><se.bitcraze.crazyflie.lib.BleLink: void disconnect()>[]--><se.bitcraze.crazyflie.lib.BleLink$6: void run()>[]--><android.bluetooth.BluetoothGatt: void disconnect()>
+#1.the call statck between class <se.bitcraze.crazyfliecontrol2.MainActivity$7: void onReceive(android.content.Context,android.content.Intent)> to <android.bluetooth.BluetoothGatt: void disconnect()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 
+Error road: <se.bitcraze.crazyflie.lib.BleLink: void access$600(se.bitcraze.crazyflie.lib.BleLink,java.lang.String)>[]--><se.bitcraze.crazyflie.lib.crtp.CrtpDriver: void notifyConnectionLost(java.lang.String)>[]--><se.bitcraze.crazyfliecontrol2.MainPresenter$1: void connectionLost(java.lang.String)>[]--><se.bitcraze.crazyfliecontrol2.MainPresenter: void disconnect()>[]--><se.bitcraze.crazyflie.lib.crazyflie.Crazyflie: void disconnect()>[]--><se.bitcraze.crazyflie.lib.BleLink: void disconnect()>[]--><se.bitcraze.crazyflie.lib.BleLink$6: void run()>[]--><android.bluetooth.BluetoothGatt: void disconnect()>
+#2.the call statck between class <se.bitcraze.crazyflie.lib.BleLink: void access$600(se.bitcraze.crazyflie.lib.BleLink,java.lang.String)> to <android.bluetooth.BluetoothGatt: void disconnect()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 
+Error road: <android.arch.lifecycle.ComputableLiveData: void invalidate()>[]--><android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)>[]--><se.bitcraze.crazyflie.lib.crazyradio.RadioDriver$RadioDriverThread: void run()>[]--><se.bitcraze.crazyflie.lib.crazyradio.RadioDriver: void access$300(se.bitcraze.crazyflie.lib.crazyradio.RadioDriver,java.lang.String)>[]--><se.bitcraze.crazyflie.lib.crtp.CrtpDriver: void notifyConnectionLost(java.lang.String)>[]--><se.bitcraze.crazyfliecontrol2.MainPresenter$1: void connectionLost(java.lang.String)>[]--><se.bitcraze.crazyfliecontrol2.MainPresenter: void disconnect()>[]--><se.bitcraze.crazyflie.lib.crazyflie.Crazyflie: void disconnect()>[]--><se.bitcraze.crazyflie.lib.BleLink: void disconnect()>[]--><se.bitcraze.crazyflie.lib.BleLink$6: void run()>[]--><android.bluetooth.BluetoothGatt: void disconnect()>
+#3.the call statck between class <android.arch.lifecycle.ComputableLiveData: void invalidate()> to <android.bluetooth.BluetoothGatt: void disconnect()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 
+Error road: <se.bitcraze.crazyflie.lib.BleLink$1: void onServicesDiscovered(android.bluetooth.BluetoothGatt,int)>[]--><android.bluetooth.BluetoothGatt: void disconnect()>
+#4.the call statck between class <se.bitcraze.crazyflie.lib.BleLink$1: void onServicesDiscovered(android.bluetooth.BluetoothGatt,int)> to <android.bluetooth.BluetoothGatt: void disconnect()>has compatibility isssues！
+-----------------------------------------
+crashApis:11
+containsStatic:false
+containsTry:true
+6call by main package
+-----------------------------------------
+#################################################
+N 14 Potential Issue API: SDKCheck of <android.bluetooth.le.BluetoothLeScanner: void startScan(java.util.List,android.bluetooth.le.ScanSettings,android.bluetooth.le.ScanCallback)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+###Multi invoking in one method, need manual check!!!--><se.bitcraze.crazyfliecontrol2.MainActivity$2: void onClick(android.view.View)>[[try], [-$i0 < 19]]--><se.bitcraze.crazyfliecontrol2.MainPresenter: void connectBle(boolean,java.io.File)>[]--><se.bitcraze.crazyfliecontrol2.MainPresenter: void connect(java.io.File,se.bitcraze.crazyflie.lib.crazyradio.ConnectionData)>[]--><se.bitcraze.crazyflie.lib.crazyflie.Crazyflie: void connect()>[]--><se.bitcraze.crazyflie.lib.BleLink: void connect()>[]--><se.bitcraze.crazyflie.lib.BleLink: void scan()>[[-i0 < 21]]
+###Multi invoking in one method, need manual check!!!--><se.bitcraze.crazyfliecontrol2.MainActivity$2: void onClick(android.view.View)>[[try]][[-$i0 < 19]]--><se.bitcraze.crazyfliecontrol2.MainPresenter: void connectBle(boolean,java.io.File)>[]--><se.bitcraze.crazyfliecontrol2.MainPresenter: void connect(java.io.File,se.bitcraze.crazyflie.lib.crazyradio.ConnectionData)>[]--><se.bitcraze.crazyflie.lib.crazyflie.Crazyflie: void connect()>[]--><se.bitcraze.crazyflie.lib.BleLink: void connect()>[]--><se.bitcraze.crazyflie.lib.BleLink: void scan()>[[-i0 < 21]]
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: se.bitcraze.crazyfliecontrol2.MainActivity dummyMainMethod_se_bitcraze_crazyfliecontrol2_MainActivity(android.content.Intent)>[]--><se.bitcraze.crazyfliecontrol2.MainActivity$2: void onClick(android.view.View)>[[try], [-$i0 < 19]]--><se.bitcraze.crazyfliecontrol2.MainPresenter: void connectBle(boolean,java.io.File)>[]--><se.bitcraze.crazyfliecontrol2.MainPresenter: void connect(java.io.File,se.bitcraze.crazyflie.lib.crazyradio.ConnectionData)>[]--><se.bitcraze.crazyflie.lib.crazyflie.Crazyflie: void connect()>[]--><se.bitcraze.crazyflie.lib.BleLink: void connect()>[]--><se.bitcraze.crazyflie.lib.BleLink: void scan()>[[-i0 < 21]]--><android.bluetooth.le.BluetoothLeScanner: void startScan(java.util.List,android.bluetooth.le.ScanSettings,android.bluetooth.le.ScanCallback)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:true
+1call by main package
+-----------------------------------------
+#################################################
+N 15 Potential Issue API: SDKCheck of <android.bluetooth.BluetoothManager: android.bluetooth.BluetoothAdapter getAdapter()> is checking!!!
+The life time of api is [18,31]
+1call roads:
+1 Mainhead roads:
+###Multi invoking in one method, need manual check!!!--><se.bitcraze.crazyfliecontrol2.MainActivity$2: void onClick(android.view.View)>[[try], [-$i0 < 19]]--><se.bitcraze.crazyfliecontrol2.MainPresenter: void connectBle(boolean,java.io.File)>[]--><se.bitcraze.crazyfliecontrol2.MainPresenter: void connect(java.io.File,se.bitcraze.crazyflie.lib.crazyradio.ConnectionData)>[]--><se.bitcraze.crazyflie.lib.crazyflie.Crazyflie: void connect()>[]--><se.bitcraze.crazyflie.lib.BleLink: void connect()>[]
+###Multi invoking in one method, need manual check!!!--><se.bitcraze.crazyfliecontrol2.MainActivity$2: void onClick(android.view.View)>[[try]][[-$i0 < 19]]--><se.bitcraze.crazyfliecontrol2.MainPresenter: void connectBle(boolean,java.io.File)>[]--><se.bitcraze.crazyfliecontrol2.MainPresenter: void connect(java.io.File,se.bitcraze.crazyflie.lib.crazyradio.ConnectionData)>[]--><se.bitcraze.crazyflie.lib.crazyflie.Crazyflie: void connect()>[]--><se.bitcraze.crazyflie.lib.BleLink: void connect()>[]
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: se.bitcraze.crazyfliecontrol2.MainActivity dummyMainMethod_se_bitcraze_crazyfliecontrol2_MainActivity(android.content.Intent)>[]--><se.bitcraze.crazyfliecontrol2.MainActivity$2: void onClick(android.view.View)>[[try], [-$i0 < 19]]--><se.bitcraze.crazyfliecontrol2.MainPresenter: void connectBle(boolean,java.io.File)>[]--><se.bitcraze.crazyfliecontrol2.MainPresenter: void connect(java.io.File,se.bitcraze.crazyflie.lib.crazyradio.ConnectionData)>[]--><se.bitcraze.crazyflie.lib.crazyflie.Crazyflie: void connect()>[]--><se.bitcraze.crazyflie.lib.BleLink: void connect()>[]--><android.bluetooth.BluetoothManager: android.bluetooth.BluetoothAdapter getAdapter()>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:true
+1call by main package
+-----------------------------------------
+#################################################
+N 16 Potential Issue API: SDKCheck of <android.net.NetworkInfo: boolean isConnected()> is checking!!!
+The life time of api is [1,30]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 31 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: se.bitcraze.crazyfliecontrol.bootloader.BootloaderActivity dummyMainMethod_se_bitcraze_crazyfliecontrol_bootloader_BootloaderActivity(android.content.Intent)>[]--><se.bitcraze.crazyfliecontrol.bootloader.BootloaderActivity: void onResume()>[]--><se.bitcraze.crazyfliecontrol.bootloader.BootloaderActivity: void checkForFirmwareUpdate(android.view.View)>[]--><se.bitcraze.crazyfliecontrol.bootloader.FirmwareDownloader: void checkForFirmwareUpdate()>[]--><se.bitcraze.crazyfliecontrol.bootloader.FirmwareDownloader: boolean isNetworkAvailable()>[]--><android.net.NetworkInfo: boolean isConnected()>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.net.NetworkInfo: boolean isConnected()>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:12
+crashApisInMain:2
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 17 Potential Issue API: SDKCheck of <android.bluetooth.BluetoothGattCallback: void onServicesDiscovered(android.bluetooth.BluetoothGatt,int)> is checking!!!
+The life time of api is [18,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 
+Error road: <se.bitcraze.crazyflie.lib.BleLink$1: void onServicesDiscovered(android.bluetooth.BluetoothGatt,int)>[]--><android.bluetooth.BluetoothGattCallback: void onServicesDiscovered(android.bluetooth.BluetoothGatt,int)>
+#1.the call statck between class <se.bitcraze.crazyflie.lib.BleLink$1: void onServicesDiscovered(android.bluetooth.BluetoothGatt,int)> to <android.bluetooth.BluetoothGattCallback: void onServicesDiscovered(android.bluetooth.BluetoothGatt,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:13
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 18 Potential Issue API: SDKCheck of <android.bluetooth.le.ScanResult: android.bluetooth.BluetoothDevice getDevice()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <se.bitcraze.crazyflie.lib.BleLink$5: void onScanResult(int,android.bluetooth.le.ScanResult)>[]--><android.bluetooth.le.ScanResult: android.bluetooth.BluetoothDevice getDevice()>
+#1.the call statck between class <se.bitcraze.crazyflie.lib.BleLink$5: void onScanResult(int,android.bluetooth.le.ScanResult)> to <android.bluetooth.le.ScanResult: android.bluetooth.BluetoothDevice getDevice()>has compatibility isssues！
+-----------------------------------------
+crashApis:14
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 19 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)> is checking!!!
+The life time of api is [21,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 20 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putBooleanArray(java.lang.String,boolean[])> is checking!!!
+The life time of api is [22,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 21 Potential Issue API: SDKCheck of <android.bluetooth.BluetoothAdapter: boolean startLeScan(android.bluetooth.BluetoothAdapter.LeScanCallback)> is checking!!!
+The life time of api is [18,31]
+1call roads:
+1 Mainhead roads:
+###Multi invoking in one method, need manual check!!!--><se.bitcraze.crazyfliecontrol2.MainActivity$2: void onClick(android.view.View)>[[try], [-$i0 < 19]]--><se.bitcraze.crazyfliecontrol2.MainPresenter: void connectBle(boolean,java.io.File)>[]--><se.bitcraze.crazyfliecontrol2.MainPresenter: void connect(java.io.File,se.bitcraze.crazyflie.lib.crazyradio.ConnectionData)>[]--><se.bitcraze.crazyflie.lib.crazyflie.Crazyflie: void connect()>[]--><se.bitcraze.crazyflie.lib.BleLink: void connect()>[]--><se.bitcraze.crazyflie.lib.BleLink: void scan()>[[i0 < 21]]
+###Multi invoking in one method, need manual check!!!--><se.bitcraze.crazyfliecontrol2.MainActivity$2: void onClick(android.view.View)>[[try]][[-$i0 < 19]]--><se.bitcraze.crazyfliecontrol2.MainPresenter: void connectBle(boolean,java.io.File)>[]--><se.bitcraze.crazyfliecontrol2.MainPresenter: void connect(java.io.File,se.bitcraze.crazyflie.lib.crazyradio.ConnectionData)>[]--><se.bitcraze.crazyflie.lib.crazyflie.Crazyflie: void connect()>[]--><se.bitcraze.crazyflie.lib.BleLink: void connect()>[]--><se.bitcraze.crazyflie.lib.BleLink: void scan()>[[i0 < 21]]
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: se.bitcraze.crazyfliecontrol2.MainActivity dummyMainMethod_se_bitcraze_crazyfliecontrol2_MainActivity(android.content.Intent)>[]--><se.bitcraze.crazyfliecontrol2.MainActivity$2: void onClick(android.view.View)>[[try], [-$i0 < 19]]--><se.bitcraze.crazyfliecontrol2.MainPresenter: void connectBle(boolean,java.io.File)>[]--><se.bitcraze.crazyfliecontrol2.MainPresenter: void connect(java.io.File,se.bitcraze.crazyflie.lib.crazyradio.ConnectionData)>[]--><se.bitcraze.crazyflie.lib.crazyflie.Crazyflie: void connect()>[]--><se.bitcraze.crazyflie.lib.BleLink: void connect()>[]--><se.bitcraze.crazyflie.lib.BleLink: void scan()>[[i0 < 21]]--><android.bluetooth.BluetoothAdapter: boolean startLeScan(android.bluetooth.BluetoothAdapter.LeScanCallback)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:true
+1call by main package
+-----------------------------------------
+#################################################
+N 22 Potential Issue API: SDKCheck of <android.util.Size: void <init>(int,int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <androidx.versionedparcelable.VersionedParcel: android.util.Size readSize(android.util.Size,int)>[]--><android.util.Size: void <init>(int,int)>
+#1.the call statck between class <androidx.versionedparcelable.VersionedParcel: android.util.Size readSize(android.util.Size,int)> to <android.util.Size: void <init>(int,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:15
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 23 Potential Issue API: SDKCheck of <android.bluetooth.BluetoothGattCallback: void onConnectionStateChange(android.bluetooth.BluetoothGatt,int,int)> is checking!!!
+The life time of api is [18,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 
+Error road: <se.bitcraze.crazyflie.lib.BleLink$1: void onConnectionStateChange(android.bluetooth.BluetoothGatt,int,int)>[]--><android.bluetooth.BluetoothGattCallback: void onConnectionStateChange(android.bluetooth.BluetoothGatt,int,int)>
+#1.the call statck between class <se.bitcraze.crazyflie.lib.BleLink$1: void onConnectionStateChange(android.bluetooth.BluetoothGatt,int,int)> to <android.bluetooth.BluetoothGattCallback: void onConnectionStateChange(android.bluetooth.BluetoothGatt,int,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:16
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 24 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)> is checking!!!
+The life time of api is [22,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 25 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putDouble(java.lang.String,double)> is checking!!!
+The life time of api is [21,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 26 Potential Issue API: SDKCheck of <android.bluetooth.BluetoothAdapter: android.bluetooth.le.BluetoothLeScanner getBluetoothLeScanner()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+###Multi invoking in one method, need manual check!!!--><se.bitcraze.crazyfliecontrol2.MainActivity$2: void onClick(android.view.View)>[[try], [-$i0 < 19]]--><se.bitcraze.crazyfliecontrol2.MainPresenter: void connectBle(boolean,java.io.File)>[]--><se.bitcraze.crazyfliecontrol2.MainPresenter: void connect(java.io.File,se.bitcraze.crazyflie.lib.crazyradio.ConnectionData)>[]--><se.bitcraze.crazyflie.lib.crazyflie.Crazyflie: void connect()>[]--><se.bitcraze.crazyflie.lib.BleLink: void connect()>[[-i0 < 21]]
+###Multi invoking in one method, need manual check!!!--><se.bitcraze.crazyfliecontrol2.MainActivity$2: void onClick(android.view.View)>[[try]][[-$i0 < 19]]--><se.bitcraze.crazyfliecontrol2.MainPresenter: void connectBle(boolean,java.io.File)>[]--><se.bitcraze.crazyfliecontrol2.MainPresenter: void connect(java.io.File,se.bitcraze.crazyflie.lib.crazyradio.ConnectionData)>[]--><se.bitcraze.crazyflie.lib.crazyflie.Crazyflie: void connect()>[]--><se.bitcraze.crazyflie.lib.BleLink: void connect()>[[-i0 < 21]]
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: se.bitcraze.crazyfliecontrol2.MainActivity dummyMainMethod_se_bitcraze_crazyfliecontrol2_MainActivity(android.content.Intent)>[]--><se.bitcraze.crazyfliecontrol2.MainActivity$2: void onClick(android.view.View)>[[try], [-$i0 < 19]]--><se.bitcraze.crazyfliecontrol2.MainPresenter: void connectBle(boolean,java.io.File)>[]--><se.bitcraze.crazyfliecontrol2.MainPresenter: void connect(java.io.File,se.bitcraze.crazyflie.lib.crazyradio.ConnectionData)>[]--><se.bitcraze.crazyflie.lib.crazyflie.Crazyflie: void connect()>[]--><se.bitcraze.crazyflie.lib.BleLink: void connect()>[[-i0 < 21]]--><android.bluetooth.BluetoothAdapter: android.bluetooth.le.BluetoothLeScanner getBluetoothLeScanner()>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:true
+1call by main package
+-----------------------------------------
+#################################################
+N 27 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putIntArray(java.lang.String,int[])> is checking!!!
+The life time of api is [21,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 28 Potential Issue API: SDKCheck of <android.util.SizeF: float getHeight()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <androidx.versionedparcelable.VersionedParcel: void writeSizeF(android.util.SizeF,int)>[]--><android.util.SizeF: float getHeight()>
+#1.the call statck between class <androidx.versionedparcelable.VersionedParcel: void writeSizeF(android.util.SizeF,int)> to <android.util.SizeF: float getHeight()>has compatibility isssues！
+-----------------------------------------
+crashApis:17
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 29 Potential Issue API: SDKCheck of <android.bluetooth.BluetoothGatt: boolean discoverServices()> is checking!!!
+The life time of api is [18,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 
+Error road: <se.bitcraze.crazyflie.lib.BleLink$1: void onConnectionStateChange(android.bluetooth.BluetoothGatt,int,int)>[]--><android.bluetooth.BluetoothGatt: boolean discoverServices()>
+#1.the call statck between class <se.bitcraze.crazyflie.lib.BleLink$1: void onConnectionStateChange(android.bluetooth.BluetoothGatt,int,int)> to <android.bluetooth.BluetoothGatt: boolean discoverServices()>has compatibility isssues！
+-----------------------------------------
+crashApis:18
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 30 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.lang.Object get(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:true
+1call by main package
+-----------------------------------------
+#################################################
+N 31 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putDoubleArray(java.lang.String,double[])> is checking!!!
+The life time of api is [21,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 32 Potential Issue API: SDKCheck of <android.bluetooth.BluetoothGatt: boolean setCharacteristicNotification(android.bluetooth.BluetoothGattCharacteristic,boolean)> is checking!!!
+The life time of api is [18,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 
+Error road: <se.bitcraze.crazyflie.lib.BleLink$1: void onServicesDiscovered(android.bluetooth.BluetoothGatt,int)>[]--><android.bluetooth.BluetoothGatt: boolean setCharacteristicNotification(android.bluetooth.BluetoothGattCharacteristic,boolean)>
+#1.the call statck between class <se.bitcraze.crazyflie.lib.BleLink$1: void onServicesDiscovered(android.bluetooth.BluetoothGatt,int)> to <android.bluetooth.BluetoothGatt: boolean setCharacteristicNotification(android.bluetooth.BluetoothGattCharacteristic,boolean)>has compatibility isssues！
+-----------------------------------------
+crashApis:19
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 33 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putLong(java.lang.String,long)> is checking!!!
+The life time of api is [21,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 34 Potential Issue API: SDKCheck of <android.bluetooth.BluetoothGattService: android.bluetooth.BluetoothGattCharacteristic getCharacteristic(java.util.UUID)> is checking!!!
+The life time of api is [18,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 
+Error road: <se.bitcraze.crazyflie.lib.BleLink$1: void onServicesDiscovered(android.bluetooth.BluetoothGatt,int)>[]--><android.bluetooth.BluetoothGattService: android.bluetooth.BluetoothGattCharacteristic getCharacteristic(java.util.UUID)>
+#1.the call statck between class <se.bitcraze.crazyflie.lib.BleLink$1: void onServicesDiscovered(android.bluetooth.BluetoothGatt,int)> to <android.bluetooth.BluetoothGattService: android.bluetooth.BluetoothGattCharacteristic getCharacteristic(java.util.UUID)>has compatibility isssues！
+-----------------------------------------
+crashApis:20
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 35 Potential Issue API: SDKCheck of <android.bluetooth.BluetoothGattCallback: void onCharacteristicWrite(android.bluetooth.BluetoothGatt,android.bluetooth.BluetoothGattCharacteristic,int)> is checking!!!
+The life time of api is [18,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 
+Error road: <se.bitcraze.crazyflie.lib.BleLink$1: void onCharacteristicWrite(android.bluetooth.BluetoothGatt,android.bluetooth.BluetoothGattCharacteristic,int)>[]--><android.bluetooth.BluetoothGattCallback: void onCharacteristicWrite(android.bluetooth.BluetoothGatt,android.bluetooth.BluetoothGattCharacteristic,int)>
+#1.the call statck between class <se.bitcraze.crazyflie.lib.BleLink$1: void onCharacteristicWrite(android.bluetooth.BluetoothGatt,android.bluetooth.BluetoothGattCharacteristic,int)> to <android.bluetooth.BluetoothGattCallback: void onCharacteristicWrite(android.bluetooth.BluetoothGatt,android.bluetooth.BluetoothGattCharacteristic,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:21
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 36 Potential Issue API: SDKCheck of <android.bluetooth.le.ScanFilter.Builder: android.bluetooth.le.ScanFilter build()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+###Multi invoking in one method, need manual check!!!--><se.bitcraze.crazyfliecontrol2.MainActivity$2: void onClick(android.view.View)>[[try], [-$i0 < 19]]--><se.bitcraze.crazyfliecontrol2.MainPresenter: void connectBle(boolean,java.io.File)>[]--><se.bitcraze.crazyfliecontrol2.MainPresenter: void connect(java.io.File,se.bitcraze.crazyflie.lib.crazyradio.ConnectionData)>[]--><se.bitcraze.crazyflie.lib.crazyflie.Crazyflie: void connect()>[]--><se.bitcraze.crazyflie.lib.BleLink: void connect()>[]--><se.bitcraze.crazyflie.lib.BleLink: void scan()>[[-i0 < 21]]
+###Multi invoking in one method, need manual check!!!--><se.bitcraze.crazyfliecontrol2.MainActivity$2: void onClick(android.view.View)>[[try]][[-$i0 < 19]]--><se.bitcraze.crazyfliecontrol2.MainPresenter: void connectBle(boolean,java.io.File)>[]--><se.bitcraze.crazyfliecontrol2.MainPresenter: void connect(java.io.File,se.bitcraze.crazyflie.lib.crazyradio.ConnectionData)>[]--><se.bitcraze.crazyflie.lib.crazyflie.Crazyflie: void connect()>[]--><se.bitcraze.crazyflie.lib.BleLink: void connect()>[]--><se.bitcraze.crazyflie.lib.BleLink: void scan()>[[-i0 < 21]]
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: se.bitcraze.crazyfliecontrol2.MainActivity dummyMainMethod_se_bitcraze_crazyfliecontrol2_MainActivity(android.content.Intent)>[]--><se.bitcraze.crazyfliecontrol2.MainActivity$2: void onClick(android.view.View)>[[try], [-$i0 < 19]]--><se.bitcraze.crazyfliecontrol2.MainPresenter: void connectBle(boolean,java.io.File)>[]--><se.bitcraze.crazyfliecontrol2.MainPresenter: void connect(java.io.File,se.bitcraze.crazyflie.lib.crazyradio.ConnectionData)>[]--><se.bitcraze.crazyflie.lib.crazyflie.Crazyflie: void connect()>[]--><se.bitcraze.crazyflie.lib.BleLink: void connect()>[]--><se.bitcraze.crazyflie.lib.BleLink: void scan()>[[-i0 < 21]]--><android.bluetooth.le.ScanFilter.Builder: android.bluetooth.le.ScanFilter build()>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:true
+1call by main package
+-----------------------------------------
+#################################################
+N 37 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putStringArray(java.lang.String,java.lang.String[])> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <se.bitcraze.crazyfliecontrol.prefs.PreferencesActivity$PreferencesFragment: void showSelectConnectionDialog(se.bitcraze.crazyflie.lib.crazyradio.ConnectionData[])>[]--><android.os.BaseBundle: void putStringArray(java.lang.String,java.lang.String[])>
+#1.the call statck between class <se.bitcraze.crazyfliecontrol.prefs.PreferencesActivity$PreferencesFragment: void showSelectConnectionDialog(se.bitcraze.crazyflie.lib.crazyradio.ConnectionData[])> to <android.os.BaseBundle: void putStringArray(java.lang.String,java.lang.String[])>has compatibility isssues！
+-----------------------------------------
+crashApis:22
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 38 Potential Issue API: SDKCheck of <android.bluetooth.BluetoothGatt: android.bluetooth.BluetoothGattService getService(java.util.UUID)> is checking!!!
+The life time of api is [18,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 
+Error road: <se.bitcraze.crazyflie.lib.BleLink$1: void onServicesDiscovered(android.bluetooth.BluetoothGatt,int)>[]--><android.bluetooth.BluetoothGatt: android.bluetooth.BluetoothGattService getService(java.util.UUID)>
+#1.the call statck between class <se.bitcraze.crazyflie.lib.BleLink$1: void onServicesDiscovered(android.bluetooth.BluetoothGatt,int)> to <android.bluetooth.BluetoothGatt: android.bluetooth.BluetoothGattService getService(java.util.UUID)>has compatibility isssues！
+-----------------------------------------
+crashApis:23
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 39 Potential Issue API: SDKCheck of <android.bluetooth.BluetoothGattDescriptor: java.util.UUID getUuid()> is checking!!!
+The life time of api is [18,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 
+Error road: <se.bitcraze.crazyflie.lib.BleLink$1: void onDescriptorWrite(android.bluetooth.BluetoothGatt,android.bluetooth.BluetoothGattDescriptor,int)>[]--><android.bluetooth.BluetoothGattDescriptor: java.util.UUID getUuid()>
+#1.the call statck between class <se.bitcraze.crazyflie.lib.BleLink$1: void onDescriptorWrite(android.bluetooth.BluetoothGatt,android.bluetooth.BluetoothGattDescriptor,int)> to <android.bluetooth.BluetoothGattDescriptor: java.util.UUID getUuid()>has compatibility isssues！
+-----------------------------------------
+crashApis:24
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 40 Potential Issue API: SDKCheck of <android.bluetooth.BluetoothGatt: void close()> is checking!!!
+The life time of api is [18,31]
+6call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: se.bitcraze.crazyfliecontrol2.MainActivity dummyMainMethod_se_bitcraze_crazyfliecontrol2_MainActivity(android.content.Intent)>[]--><se.bitcraze.crazyfliecontrol2.MainActivity$2: void onClick(android.view.View)>[[try]]--><se.bitcraze.crazyfliecontrol2.MainPresenter: void connectCrazyradio(int,int,java.io.File)>[]--><se.bitcraze.crazyfliecontrol2.MainPresenter: void disconnect()>[]--><se.bitcraze.crazyflie.lib.crazyflie.Crazyflie: void disconnect()>[]--><se.bitcraze.crazyflie.lib.BleLink: void disconnect()>[]--><se.bitcraze.crazyflie.lib.BleLink$6: void run()>[]--><se.bitcraze.crazyflie.lib.BleLink$6$1: void run()>[]--><android.bluetooth.BluetoothGatt: void close()>
+One road protect good!
+5 Packageshead roads:
+!!!this api will crash on sdk 16 17 
+Error road: <se.bitcraze.crazyfliecontrol2.MainActivity$7: void onReceive(android.content.Context,android.content.Intent)>[]--><se.bitcraze.crazyfliecontrol2.MainPresenter: void disconnect()>[]--><se.bitcraze.crazyflie.lib.crazyflie.Crazyflie: void disconnect()>[]--><se.bitcraze.crazyflie.lib.BleLink: void disconnect()>[]--><se.bitcraze.crazyflie.lib.BleLink$6: void run()>[]--><se.bitcraze.crazyflie.lib.BleLink$6$1: void run()>[]--><android.bluetooth.BluetoothGatt: void close()>
+#1.the call statck between class <se.bitcraze.crazyfliecontrol2.MainActivity$7: void onReceive(android.content.Context,android.content.Intent)> to <android.bluetooth.BluetoothGatt: void close()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 
+Error road: <se.bitcraze.crazyflie.lib.BleLink: void access$600(se.bitcraze.crazyflie.lib.BleLink,java.lang.String)>[]--><se.bitcraze.crazyflie.lib.crtp.CrtpDriver: void notifyConnectionLost(java.lang.String)>[]--><se.bitcraze.crazyfliecontrol2.MainPresenter$1: void connectionLost(java.lang.String)>[]--><se.bitcraze.crazyfliecontrol2.MainPresenter: void disconnect()>[]--><se.bitcraze.crazyflie.lib.crazyflie.Crazyflie: void disconnect()>[]--><se.bitcraze.crazyflie.lib.BleLink: void disconnect()>[]--><se.bitcraze.crazyflie.lib.BleLink$6: void run()>[]--><se.bitcraze.crazyflie.lib.BleLink$6$1: void run()>[]--><android.bluetooth.BluetoothGatt: void close()>
+#2.the call statck between class <se.bitcraze.crazyflie.lib.BleLink: void access$600(se.bitcraze.crazyflie.lib.BleLink,java.lang.String)> to <android.bluetooth.BluetoothGatt: void close()>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 
+Error road: <android.arch.lifecycle.ComputableLiveData: void invalidate()>[]--><android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)>[]--><se.bitcraze.crazyflie.lib.BleLink$6$1: void run()>[]--><android.bluetooth.BluetoothGatt: void close()>
+#3.the call statck between class <android.arch.lifecycle.ComputableLiveData: void invalidate()> to <android.bluetooth.BluetoothGatt: void close()>has compatibility isssues！
+-----------------------------------------
+crashApis:25
+containsStatic:false
+containsTry:true
+6call by main package
+-----------------------------------------
+#################################################
+N 41 Potential Issue API: SDKCheck of <android.bluetooth.BluetoothGattCharacteristic: boolean setValue(byte[])> is checking!!!
+The life time of api is [18,31]
+11call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: se.bitcraze.crazyfliecontrol.bootloader.BootloaderActivity dummyMainMethod_se_bitcraze_crazyfliecontrol_bootloader_BootloaderActivity(android.content.Intent)>[]--><se.bitcraze.crazyfliecontrol.bootloader.BootloaderActivity: void startFlashProcess(android.view.View)>[]--><se.bitcraze.crazyfliecontrol.bootloader.BootloaderActivity$DownloadTask: void onPostExecute(java.lang.Object)>[]--><se.bitcraze.crazyfliecontrol.bootloader.BootloaderActivity$DownloadTask: void onPostExecute(java.lang.String)>[]--><se.bitcraze.crazyfliecontrol.bootloader.BootloaderActivity: void access$1000(se.bitcraze.crazyfliecontrol.bootloader.BootloaderActivity)>[]--><se.bitcraze.crazyfliecontrol.bootloader.BootloaderActivity: void startBootloader()>[]--><se.bitcraze.crazyfliecontrol.bootloader.BootloaderActivity$6: java.lang.Object doInBackground(java.lang.Object[])>[]--><se.bitcraze.crazyfliecontrol.bootloader.BootloaderActivity$6: java.lang.Boolean doInBackground(java.lang.Void[])>[]--><se.bitcraze.crazyflie.lib.bootloader.Bootloader: boolean startBootloader(boolean)>[[try]]--><se.bitcraze.crazyflie.lib.bootloader.Cloader: void openBootloaderConnection()>[]--><se.bitcraze.crazyflie.lib.crazyradio.RadioDriver: void connect()>[]--><se.bitcraze.crazyflie.lib.crazyradio.RadioDriver: void startSendReceiveThread()>[]--><java.lang.Thread: void run()>[]--><se.bitcraze.crazyflie.lib.crazyradio.RadioDriver$RadioDriverThread: void run()>[]--><se.bitcraze.crazyflie.lib.crazyradio.RadioDriver: void access$300(se.bitcraze.crazyflie.lib.crazyradio.RadioDriver,java.lang.String)>[]--><se.bitcraze.crazyflie.lib.crtp.CrtpDriver: void notifyConnectionLost(java.lang.String)>[]--><se.bitcraze.crazyfliecontrol2.MainPresenter$1: void connectionLost(java.lang.String)>[]--><se.bitcraze.crazyfliecontrol2.MainPresenter: void disconnect()>[]--><se.bitcraze.crazyflie.lib.crazyflie.Crazyflie: void disconnect()>[]--><se.bitcraze.crazyflie.lib.crazyflie.Crazyflie: void sendPacket(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.BleLink: void sendPacket(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.BleLink: void sendSplitPacket(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.BleLink$SendBlePacket: void run()>[]--><android.bluetooth.BluetoothGattCharacteristic: boolean setValue(byte[])>
+One road protect good!
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: se.bitcraze.crazyfliecontrol2.MainActivity dummyMainMethod_se_bitcraze_crazyfliecontrol2_MainActivity(android.content.Intent)>[]--><se.bitcraze.crazyfliecontrol2.MainActivity$2: void onClick(android.view.View)>[[try]]--><se.bitcraze.crazyfliecontrol2.MainPresenter: void connectCrazyradio(int,int,java.io.File)>[]--><se.bitcraze.crazyfliecontrol2.MainPresenter: void disconnect()>[]--><se.bitcraze.crazyflie.lib.crazyflie.Crazyflie: void disconnect()>[]--><se.bitcraze.crazyflie.lib.crazyflie.Crazyflie: void sendPacket(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.BleLink: void sendPacket(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.BleLink: void sendSplitPacket(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.BleLink$SendBlePacket: void run()>[]--><android.bluetooth.BluetoothGattCharacteristic: boolean setValue(byte[])>
+One road protect good!
+10 Packageshead roads:
+!!!this api will crash on sdk 16 17 
+Error road: <se.bitcraze.crazyfliecontrol2.MainPresenter: void access$1000(se.bitcraze.crazyfliecontrol2.MainPresenter,se.bitcraze.crazyflie.lib.log.LogConfig)>[]--><se.bitcraze.crazyfliecontrol2.MainPresenter: void startLogConfigs(se.bitcraze.crazyflie.lib.log.LogConfig)>[]--><se.bitcraze.crazyflie.lib.log.Logg: void start(se.bitcraze.crazyflie.lib.log.LogConfig)>[]--><se.bitcraze.crazyflie.lib.log.Logg: void create(se.bitcraze.crazyflie.lib.log.LogConfig)>[]--><se.bitcraze.crazyflie.lib.log.Logg: void sendLoggPacket(byte[],byte[])>[]--><se.bitcraze.crazyflie.lib.crazyflie.Crazyflie: void sendPacket(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.BleLink: void sendPacket(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.BleLink: void sendSplitPacket(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.BleLink$SendBlePacket: void run()>[]--><android.bluetooth.BluetoothGattCharacteristic: boolean setValue(byte[])>
+#1.the call statck between class <se.bitcraze.crazyfliecontrol2.MainPresenter: void access$1000(se.bitcraze.crazyfliecontrol2.MainPresenter,se.bitcraze.crazyflie.lib.log.LogConfig)> to <android.bluetooth.BluetoothGattCharacteristic: boolean setValue(byte[])>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 
+Error road: <se.bitcraze.crazyfliecontrol2.MainActivity$7: void onReceive(android.content.Context,android.content.Intent)>[]--><se.bitcraze.crazyfliecontrol2.MainPresenter: void disconnect()>[]--><se.bitcraze.crazyflie.lib.crazyflie.Crazyflie: void disconnect()>[]--><se.bitcraze.crazyflie.lib.crazyflie.Crazyflie: void sendPacket(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.BleLink: void sendPacket(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.BleLink: void sendSplitPacket(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.BleLink$SendBlePacket: void run()>[]--><android.bluetooth.BluetoothGattCharacteristic: boolean setValue(byte[])>
+#2.the call statck between class <se.bitcraze.crazyfliecontrol2.MainActivity$7: void onReceive(android.content.Context,android.content.Intent)> to <android.bluetooth.BluetoothGattCharacteristic: boolean setValue(byte[])>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 
+Error road: <se.bitcraze.crazyflie.lib.toc.TocFetcher$1: void dataReceived(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.toc.TocFetcher: void newPacketReceived(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.toc.TocFetcher: void handleCmdTocElement(java.nio.ByteBuffer)>[]--><se.bitcraze.crazyflie.lib.toc.TocFetcher: void requestTocElement(int)>[]--><se.bitcraze.crazyflie.lib.toc.TocFetcher: void sendTocPacket(byte[])>[]--><se.bitcraze.crazyflie.lib.crazyflie.Crazyflie: void sendPacket(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.BleLink: void sendPacket(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.BleLink: void sendSplitPacket(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.BleLink$SendBlePacket: void run()>[]--><android.bluetooth.BluetoothGattCharacteristic: boolean setValue(byte[])>
+#3.the call statck between class <se.bitcraze.crazyflie.lib.toc.TocFetcher$1: void dataReceived(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)> to <android.bluetooth.BluetoothGattCharacteristic: boolean setValue(byte[])>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 
+Error road: <se.bitcraze.crazyflie.lib.BleLink: void access$600(se.bitcraze.crazyflie.lib.BleLink,java.lang.String)>[]--><se.bitcraze.crazyflie.lib.crtp.CrtpDriver: void notifyConnectionLost(java.lang.String)>[]--><se.bitcraze.crazyfliecontrol2.MainPresenter$1: void connectionLost(java.lang.String)>[]--><se.bitcraze.crazyfliecontrol2.MainPresenter: void disconnect()>[]--><se.bitcraze.crazyflie.lib.crazyflie.Crazyflie: void disconnect()>[]--><se.bitcraze.crazyflie.lib.crazyflie.Crazyflie: void sendPacket(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.BleLink: void sendPacket(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.BleLink: void sendSplitPacket(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.BleLink$SendBlePacket: void run()>[]--><android.bluetooth.BluetoothGattCharacteristic: boolean setValue(byte[])>
+#4.the call statck between class <se.bitcraze.crazyflie.lib.BleLink: void access$600(se.bitcraze.crazyflie.lib.BleLink,java.lang.String)> to <android.bluetooth.BluetoothGattCharacteristic: boolean setValue(byte[])>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 
+Error road: <se.bitcraze.crazyfliecontrol2.MainPresenter: void access$1200(se.bitcraze.crazyfliecontrol2.MainPresenter,se.bitcraze.crazyflie.lib.log.LogConfig)>[]--><se.bitcraze.crazyfliecontrol2.MainPresenter: void stopLogConfigs(se.bitcraze.crazyflie.lib.log.LogConfig)>[]--><se.bitcraze.crazyflie.lib.log.Logg: void delete(se.bitcraze.crazyflie.lib.log.LogConfig)>[]--><se.bitcraze.crazyflie.lib.log.Logg: void sendLoggPacket(byte[],byte[])>[]--><se.bitcraze.crazyflie.lib.crazyflie.Crazyflie: void sendPacket(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.BleLink: void sendPacket(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.BleLink: void sendSplitPacket(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.BleLink$SendBlePacket: void run()>[]--><android.bluetooth.BluetoothGattCharacteristic: boolean setValue(byte[])>
+#5.the call statck between class <se.bitcraze.crazyfliecontrol2.MainPresenter: void access$1200(se.bitcraze.crazyfliecontrol2.MainPresenter,se.bitcraze.crazyflie.lib.log.LogConfig)> to <android.bluetooth.BluetoothGattCharacteristic: boolean setValue(byte[])>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 
+Error road: <android.arch.lifecycle.ComputableLiveData: void invalidate()>[]--><android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)>[]--><se.bitcraze.crazyflie.lib.BleLink$SendBlePacket: void run()>[]--><android.bluetooth.BluetoothGattCharacteristic: boolean setValue(byte[])>
+#6.the call statck between class <android.arch.lifecycle.ComputableLiveData: void invalidate()> to <android.bluetooth.BluetoothGattCharacteristic: boolean setValue(byte[])>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 
+Error road: <se.bitcraze.crazyflie.lib.BleLink$1: void onServicesDiscovered(android.bluetooth.BluetoothGatt,int)>[]--><se.bitcraze.crazyflie.lib.crtp.CrtpDriver: void notifyConnected()>[]--><se.bitcraze.crazyfliecontrol2.MainPresenter$1: void connected()>[]--><se.bitcraze.crazyflie.lib.crazyflie.Crazyflie: void startConnectionSetup_BLE()>[]--><se.bitcraze.crazyflie.lib.crazyflie.Crazyflie: void startConnectionSetup()>[]--><se.bitcraze.crazyflie.lib.param.Param: void <init>(se.bitcraze.crazyflie.lib.crazyflie.Crazyflie)>[]--><java.lang.Thread: void run()>[]--><se.bitcraze.crazyflie.lib.crazyradio.RadioDriver$RadioDriverThread: void run()>[]--><se.bitcraze.crazyflie.lib.crazyradio.RadioDriver: void access$300(se.bitcraze.crazyflie.lib.crazyradio.RadioDriver,java.lang.String)>[]--><se.bitcraze.crazyflie.lib.crtp.CrtpDriver: void notifyConnectionLost(java.lang.String)>[]--><se.bitcraze.crazyfliecontrol2.MainPresenter$1: void connectionLost(java.lang.String)>[]--><se.bitcraze.crazyfliecontrol2.MainPresenter: void disconnect()>[]--><se.bitcraze.crazyflie.lib.crazyflie.Crazyflie: void disconnect()>[]--><se.bitcraze.crazyflie.lib.crazyflie.Crazyflie: void sendPacket(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.BleLink: void sendPacket(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.BleLink: void sendSplitPacket(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.BleLink$SendBlePacket: void run()>[]--><android.bluetooth.BluetoothGattCharacteristic: boolean setValue(byte[])>
+#7.the call statck between class <se.bitcraze.crazyflie.lib.BleLink$1: void onServicesDiscovered(android.bluetooth.BluetoothGatt,int)> to <android.bluetooth.BluetoothGattCharacteristic: boolean setValue(byte[])>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 
+Error road: <se.bitcraze.crazyflie.lib.log.Logg: void access$000(se.bitcraze.crazyflie.lib.log.Logg,se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.log.Logg: void newPacketReceived(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.toc.TocFetcher: void start()>[]--><se.bitcraze.crazyflie.lib.toc.TocFetcher: void requestTocInfo()>[]--><se.bitcraze.crazyflie.lib.toc.TocFetcher: void sendTocPacket(byte[])>[]--><se.bitcraze.crazyflie.lib.crazyflie.Crazyflie: void sendPacket(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.BleLink: void sendPacket(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.BleLink: void sendSplitPacket(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.BleLink$SendBlePacket: void run()>[]--><android.bluetooth.BluetoothGattCharacteristic: boolean setValue(byte[])>
+#8.the call statck between class <se.bitcraze.crazyflie.lib.log.Logg: void access$000(se.bitcraze.crazyflie.lib.log.Logg,se.bitcraze.crazyflie.lib.crtp.CrtpPacket)> to <android.bluetooth.BluetoothGattCharacteristic: boolean setValue(byte[])>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 
+Error road: <se.bitcraze.crazyflie.lib.bootloader.Cloader: boolean setAddress(byte[])>[]--><se.bitcraze.crazyflie.lib.crazyradio.RadioDriver: boolean setBootloaderAddress(byte[])>[]--><se.bitcraze.crazyflie.lib.crazyradio.RadioDriver: void startSendReceiveThread()>[]--><java.lang.Thread: void run()>[]--><se.bitcraze.crazyflie.lib.crazyradio.RadioDriver$RadioDriverThread: void run()>[]--><se.bitcraze.crazyflie.lib.crazyradio.RadioDriver: void access$300(se.bitcraze.crazyflie.lib.crazyradio.RadioDriver,java.lang.String)>[]--><se.bitcraze.crazyflie.lib.crtp.CrtpDriver: void notifyConnectionLost(java.lang.String)>[]--><se.bitcraze.crazyfliecontrol2.MainPresenter$1: void connectionLost(java.lang.String)>[]--><se.bitcraze.crazyfliecontrol2.MainPresenter: void disconnect()>[]--><se.bitcraze.crazyflie.lib.crazyflie.Crazyflie: void disconnect()>[]--><se.bitcraze.crazyflie.lib.crazyflie.Crazyflie: void sendPacket(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.BleLink: void sendPacket(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.BleLink: void sendSplitPacket(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.BleLink$SendBlePacket: void run()>[]--><android.bluetooth.BluetoothGattCharacteristic: boolean setValue(byte[])>
+#9.the call statck between class <se.bitcraze.crazyflie.lib.bootloader.Cloader: boolean setAddress(byte[])> to <android.bluetooth.BluetoothGattCharacteristic: boolean setValue(byte[])>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 16 17 
+Error road: <se.bitcraze.crazyflie.lib.crazyflie.Crazyflie$2: void tocFetchFinished()>[]--><se.bitcraze.crazyflie.lib.param.Param: void refreshToc(se.bitcraze.crazyflie.lib.toc.TocFetchFinishedListener,se.bitcraze.crazyflie.lib.toc.TocCache)>[]--><se.bitcraze.crazyflie.lib.toc.TocFetcher: void start()>[]--><se.bitcraze.crazyflie.lib.toc.TocFetcher: void requestTocInfo()>[]--><se.bitcraze.crazyflie.lib.toc.TocFetcher: void sendTocPacket(byte[])>[]--><se.bitcraze.crazyflie.lib.crazyflie.Crazyflie: void sendPacket(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.BleLink: void sendPacket(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.BleLink: void sendSplitPacket(se.bitcraze.crazyflie.lib.crtp.CrtpPacket)>[]--><se.bitcraze.crazyflie.lib.BleLink$SendBlePacket: void run()>[]--><android.bluetooth.BluetoothGattCharacteristic: boolean setValue(byte[])>
+#10.the call statck between class <se.bitcraze.crazyflie.lib.crazyflie.Crazyflie$2: void tocFetchFinished()> to <android.bluetooth.BluetoothGattCharacteristic: boolean setValue(byte[])>has compatibility isssues！
+-----------------------------------------
+crashApis:26
+containsStatic:false
+containsTry:true
+11call by main package
+-----------------------------------------
+#################################################
+N 42 Potential Issue API: SDKCheck of <android.bluetooth.BluetoothGatt: boolean readRemoteRssi()> is checking!!!
+The life time of api is [18,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 
+Error road: <android.arch.lifecycle.ComputableLiveData: void invalidate()>[]--><android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)>[]--><se.bitcraze.crazyflie.lib.BleLink$2: void run()>[]--><android.bluetooth.BluetoothGatt: boolean readRemoteRssi()>
+#1.the call statck between class <android.arch.lifecycle.ComputableLiveData: void invalidate()> to <android.bluetooth.BluetoothGatt: boolean readRemoteRssi()>has compatibility isssues！
+-----------------------------------------
+crashApis:27
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 43 Potential Issue API: SDKCheck of <android.bluetooth.le.ScanResult: int getRssi()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <se.bitcraze.crazyflie.lib.BleLink$5: void onScanResult(int,android.bluetooth.le.ScanResult)>[]--><android.bluetooth.le.ScanResult: int getRssi()>
+#1.the call statck between class <se.bitcraze.crazyflie.lib.BleLink$5: void onScanResult(int,android.bluetooth.le.ScanResult)> to <android.bluetooth.le.ScanResult: int getRssi()>has compatibility isssues！
+-----------------------------------------
+crashApis:28
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 44 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putInt(java.lang.String,int)> is checking!!!
+The life time of api is [21,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 45 Potential Issue API: SDKCheck of <android.bluetooth.BluetoothAdapter: void stopLeScan(android.bluetooth.BluetoothAdapter.LeScanCallback)> is checking!!!
+The life time of api is [18,31]
+6call roads:
+1 Mainhead roads:
+###Multi invoking in one method, need manual check!!!--><se.bitcraze.crazyfliecontrol2.MainActivity$2: void onClick(android.view.View)>[[try]]--><se.bitcraze.crazyfliecontrol2.MainPresenter: void connectCrazyradio(int,int,java.io.File)>[]--><se.bitcraze.crazyfliecontrol2.MainPresenter: void disconnect()>[]--><se.bitcraze.crazyflie.lib.crazyflie.Crazyflie: void disconnect()>[]--><se.bitcraze.crazyflie.lib.BleLink: void disconnect()>[]--><se.bitcraze.crazyflie.lib.BleLink$6: void run()>[]--><se.bitcraze.crazyflie.lib.BleLink: void access$400(se.bitcraze.crazyflie.lib.BleLink)>[]--><se.bitcraze.crazyflie.lib.BleLink: void stopScan()>[[try], [i0 < 21]]
+###Multi invoking in one method, need manual check!!!--><se.bitcraze.crazyfliecontrol2.MainActivity$2: void onClick(android.view.View)>[[try]]--><se.bitcraze.crazyfliecontrol2.MainPresenter: void connectCrazyradio(int,int,java.io.File)>[]--><se.bitcraze.crazyfliecontrol2.MainPresenter: void disconnect()>[]--><se.bitcraze.crazyflie.lib.crazyflie.Crazyflie: void disconnect()>[]--><se.bitcraze.crazyflie.lib.BleLink: void disconnect()>[]--><se.bitcraze.crazyflie.lib.BleLink$6: void run()>[]--><se.bitcraze.crazyflie.lib.BleLink: void access$400(se.bitcraze.crazyflie.lib.BleLink)>[]--><se.bitcraze.crazyflie.lib.BleLink: void stopScan()>[[try]][[i0 < 21]]
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: se.bitcraze.crazyfliecontrol2.MainActivity dummyMainMethod_se_bitcraze_crazyfliecontrol2_MainActivity(android.content.Intent)>[]--><se.bitcraze.crazyfliecontrol2.MainActivity$2: void onClick(android.view.View)>[[try]]--><se.bitcraze.crazyfliecontrol2.MainPresenter: void connectCrazyradio(int,int,java.io.File)>[]--><se.bitcraze.crazyfliecontrol2.MainPresenter: void disconnect()>[]--><se.bitcraze.crazyflie.lib.crazyflie.Crazyflie: void disconnect()>[]--><se.bitcraze.crazyflie.lib.BleLink: void disconnect()>[]--><se.bitcraze.crazyflie.lib.BleLink$6: void run()>[]--><se.bitcraze.crazyflie.lib.BleLink: void access$400(se.bitcraze.crazyflie.lib.BleLink)>[]--><se.bitcraze.crazyflie.lib.BleLink: void stopScan()>[[try], [i0 < 21]]--><android.bluetooth.BluetoothAdapter: void stopLeScan(android.bluetooth.BluetoothAdapter.LeScanCallback)>
+One road protect good!
+5 Packageshead roads:
+###Multi invoking in one method, need manual check!!!--><se.bitcraze.crazyflie.lib.BleLink: void stopScan()>[[try], [i0 < 21]]
+###Multi invoking in one method, need manual check!!!--><se.bitcraze.crazyflie.lib.BleLink: void stopScan()>[[try]][[i0 < 21]]
+try
+Good road with try: <se.bitcraze.crazyfliecontrol2.MainActivity$7: void onReceive(android.content.Context,android.content.Intent)>[]--><se.bitcraze.crazyfliecontrol2.MainPresenter: void disconnect()>[]--><se.bitcraze.crazyflie.lib.crazyflie.Crazyflie: void disconnect()>[]--><se.bitcraze.crazyflie.lib.BleLink: void disconnect()>[]--><se.bitcraze.crazyflie.lib.BleLink$6: void run()>[]--><se.bitcraze.crazyflie.lib.BleLink: void access$400(se.bitcraze.crazyflie.lib.BleLink)>[]--><se.bitcraze.crazyflie.lib.BleLink: void stopScan()>[[try], [i0 < 21]]--><android.bluetooth.BluetoothAdapter: void stopLeScan(android.bluetooth.BluetoothAdapter.LeScanCallback)>
+One road protect good!
+###Multi invoking in one method, need manual check!!!--><se.bitcraze.crazyflie.lib.BleLink: void stopScan()>[[try], [i0 < 21]]
+###Multi invoking in one method, need manual check!!!--><se.bitcraze.crazyflie.lib.BleLink: void stopScan()>[[try]][[i0 < 21]]
+try
+Good road with try: <se.bitcraze.crazyflie.lib.BleLink: void access$600(se.bitcraze.crazyflie.lib.BleLink,java.lang.String)>[]--><se.bitcraze.crazyflie.lib.crtp.CrtpDriver: void notifyConnectionLost(java.lang.String)>[]--><se.bitcraze.crazyfliecontrol2.MainPresenter$1: void connectionLost(java.lang.String)>[]--><se.bitcraze.crazyfliecontrol2.MainPresenter: void disconnect()>[]--><se.bitcraze.crazyflie.lib.crazyflie.Crazyflie: void disconnect()>[]--><se.bitcraze.crazyflie.lib.BleLink: void disconnect()>[]--><se.bitcraze.crazyflie.lib.BleLink$6: void run()>[]--><se.bitcraze.crazyflie.lib.BleLink: void access$400(se.bitcraze.crazyflie.lib.BleLink)>[]--><se.bitcraze.crazyflie.lib.BleLink: void stopScan()>[[try], [i0 < 21]]--><android.bluetooth.BluetoothAdapter: void stopLeScan(android.bluetooth.BluetoothAdapter.LeScanCallback)>
+One road protect good!
+###Multi invoking in one method, need manual check!!!--><se.bitcraze.crazyflie.lib.BleLink: void stopScan()>[[try], [i0 < 21]]
+###Multi invoking in one method, need manual check!!!--><se.bitcraze.crazyflie.lib.BleLink: void stopScan()>[[try]][[i0 < 21]]
+try
+Good road with try: <android.arch.lifecycle.ComputableLiveData: void invalidate()>[]--><android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)>[]--><se.bitcraze.crazyflie.lib.crazyradio.RadioDriver$RadioDriverThread: void run()>[]--><se.bitcraze.crazyflie.lib.crazyradio.RadioDriver: void access$300(se.bitcraze.crazyflie.lib.crazyradio.RadioDriver,java.lang.String)>[]--><se.bitcraze.crazyflie.lib.crtp.CrtpDriver: void notifyConnectionLost(java.lang.String)>[]--><se.bitcraze.crazyfliecontrol2.MainPresenter$1: void connectionLost(java.lang.String)>[]--><se.bitcraze.crazyfliecontrol2.MainPresenter: void disconnect()>[]--><se.bitcraze.crazyflie.lib.crazyflie.Crazyflie: void disconnect()>[]--><se.bitcraze.crazyflie.lib.BleLink: void disconnect()>[]--><se.bitcraze.crazyflie.lib.BleLink$6: void run()>[]--><se.bitcraze.crazyflie.lib.BleLink: void access$400(se.bitcraze.crazyflie.lib.BleLink)>[]--><se.bitcraze.crazyflie.lib.BleLink: void stopScan()>[[try], [i0 < 21]]--><android.bluetooth.BluetoothAdapter: void stopLeScan(android.bluetooth.BluetoothAdapter.LeScanCallback)>
+One road protect good!
+containsStatic:false
+containsTry:true
+6call by main package
+-----------------------------------------
+#################################################
+N 46 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.lang.String[] getStringArray(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <se.bitcraze.crazyfliecontrol.prefs.SelectConnectionDialogFragment: android.app.Dialog onCreateDialog(android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String[] getStringArray(java.lang.String)>
+#1.the call statck between class <se.bitcraze.crazyfliecontrol.prefs.SelectConnectionDialogFragment: android.app.Dialog onCreateDialog(android.os.Bundle)> to <android.os.BaseBundle: java.lang.String[] getStringArray(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:29
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 47 Potential Issue API: SDKCheck of <android.util.SizeF: float getWidth()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <androidx.versionedparcelable.VersionedParcel: void writeSizeF(android.util.SizeF,int)>[]--><android.util.SizeF: float getWidth()>
+#1.the call statck between class <androidx.versionedparcelable.VersionedParcel: void writeSizeF(android.util.SizeF,int)> to <android.util.SizeF: float getWidth()>has compatibility isssues！
+-----------------------------------------
+crashApis:30
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 48 Potential Issue API: SDKCheck of <android.util.SizeF: void <init>(float,float)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <androidx.versionedparcelable.VersionedParcel: android.util.SizeF readSizeF(android.util.SizeF,int)>[]--><android.util.SizeF: void <init>(float,float)>
+#1.the call statck between class <androidx.versionedparcelable.VersionedParcel: android.util.SizeF readSizeF(android.util.SizeF,int)> to <android.util.SizeF: void <init>(float,float)>has compatibility isssues！
+-----------------------------------------
+crashApis:31
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 49 Potential Issue API: SDKCheck of <android.preference.PreferenceActivity: boolean onOptionsItemSelected(android.view.MenuItem)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 23 24 25 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: se.bitcraze.crazyfliecontrol.prefs.PreferencesActivity dummyMainMethod_se_bitcraze_crazyfliecontrol_prefs_PreferencesActivity(android.content.Intent)>[]--><se.bitcraze.crazyfliecontrol.prefs.PreferencesActivity: boolean onOptionsItemSelected(android.view.MenuItem)>[]--><android.preference.PreferenceActivity: boolean onOptionsItemSelected(android.view.MenuItem)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.preference.PreferenceActivity: boolean onOptionsItemSelected(android.view.MenuItem)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:32
+crashApisInMain:3
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 50 Potential Issue API: SDKCheck of <android.bluetooth.le.ScanSettings.Builder: android.bluetooth.le.ScanSettings build()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+###Multi invoking in one method, need manual check!!!--><se.bitcraze.crazyfliecontrol2.MainActivity$2: void onClick(android.view.View)>[[try], [-$i0 < 19]]--><se.bitcraze.crazyfliecontrol2.MainPresenter: void connectBle(boolean,java.io.File)>[]--><se.bitcraze.crazyfliecontrol2.MainPresenter: void connect(java.io.File,se.bitcraze.crazyflie.lib.crazyradio.ConnectionData)>[]--><se.bitcraze.crazyflie.lib.crazyflie.Crazyflie: void connect()>[]--><se.bitcraze.crazyflie.lib.BleLink: void connect()>[]--><se.bitcraze.crazyflie.lib.BleLink: void scan()>[[-i0 < 21]]
+###Multi invoking in one method, need manual check!!!--><se.bitcraze.crazyfliecontrol2.MainActivity$2: void onClick(android.view.View)>[[try]][[-$i0 < 19]]--><se.bitcraze.crazyfliecontrol2.MainPresenter: void connectBle(boolean,java.io.File)>[]--><se.bitcraze.crazyfliecontrol2.MainPresenter: void connect(java.io.File,se.bitcraze.crazyflie.lib.crazyradio.ConnectionData)>[]--><se.bitcraze.crazyflie.lib.crazyflie.Crazyflie: void connect()>[]--><se.bitcraze.crazyflie.lib.BleLink: void connect()>[]--><se.bitcraze.crazyflie.lib.BleLink: void scan()>[[-i0 < 21]]
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: se.bitcraze.crazyfliecontrol2.MainActivity dummyMainMethod_se_bitcraze_crazyfliecontrol2_MainActivity(android.content.Intent)>[]--><se.bitcraze.crazyfliecontrol2.MainActivity$2: void onClick(android.view.View)>[[try], [-$i0 < 19]]--><se.bitcraze.crazyfliecontrol2.MainPresenter: void connectBle(boolean,java.io.File)>[]--><se.bitcraze.crazyfliecontrol2.MainPresenter: void connect(java.io.File,se.bitcraze.crazyflie.lib.crazyradio.ConnectionData)>[]--><se.bitcraze.crazyflie.lib.crazyflie.Crazyflie: void connect()>[]--><se.bitcraze.crazyflie.lib.BleLink: void connect()>[]--><se.bitcraze.crazyflie.lib.BleLink: void scan()>[[-i0 < 21]]--><android.bluetooth.le.ScanSettings.Builder: android.bluetooth.le.ScanSettings build()>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:true
+1call by main package
+-----------------------------------------
+#################################################
+N 51 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.util.Set keySet()> is checking!!!
+The life time of api is [21,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:true
+1call by main package
+-----------------------------------------
+#################################################
+N 52 Potential Issue API: SDKCheck of <android.util.Size: int getHeight()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <androidx.versionedparcelable.VersionedParcel: void writeSize(android.util.Size,int)>[]--><android.util.Size: int getHeight()>
+#1.the call statck between class <androidx.versionedparcelable.VersionedParcel: void writeSize(android.util.Size,int)> to <android.util.Size: int getHeight()>has compatibility isssues！
+-----------------------------------------
+crashApis:33
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 53 Potential Issue API: SDKCheck of <android.bluetooth.BluetoothGattCallback: void onCharacteristicRead(android.bluetooth.BluetoothGatt,android.bluetooth.BluetoothGattCharacteristic,int)> is checking!!!
+The life time of api is [18,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 
+Error road: <se.bitcraze.crazyflie.lib.BleLink$1: void onCharacteristicRead(android.bluetooth.BluetoothGatt,android.bluetooth.BluetoothGattCharacteristic,int)>[]--><android.bluetooth.BluetoothGattCallback: void onCharacteristicRead(android.bluetooth.BluetoothGatt,android.bluetooth.BluetoothGattCharacteristic,int)>
+#1.the call statck between class <se.bitcraze.crazyflie.lib.BleLink$1: void onCharacteristicRead(android.bluetooth.BluetoothGatt,android.bluetooth.BluetoothGattCharacteristic,int)> to <android.bluetooth.BluetoothGattCallback: void onCharacteristicRead(android.bluetooth.BluetoothGatt,android.bluetooth.BluetoothGattCharacteristic,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:34
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 54 Potential Issue API: SDKCheck of <android.bluetooth.BluetoothGattCharacteristic: byte[] getValue()> is checking!!!
+The life time of api is [18,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 
+Error road: <se.bitcraze.crazyflie.lib.BleLink$1: void onCharacteristicChanged(android.bluetooth.BluetoothGatt,android.bluetooth.BluetoothGattCharacteristic)>[]--><android.bluetooth.BluetoothGattCharacteristic: byte[] getValue()>
+#1.the call statck between class <se.bitcraze.crazyflie.lib.BleLink$1: void onCharacteristicChanged(android.bluetooth.BluetoothGatt,android.bluetooth.BluetoothGattCharacteristic)> to <android.bluetooth.BluetoothGattCharacteristic: byte[] getValue()>has compatibility isssues！
+-----------------------------------------
+crashApis:35
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+crashApis numbers:35
+crashApis numbers in main road:3
+On Android Version 16 this app may have error api use(at least): 33 and error api roads: 66
+On Android Version 17 this app may have error api use(at least): 33 and error api roads: 66
+On Android Version 18 this app may have error api use(at least): 11 and error api roads: 11
+On Android Version 19 this app may have error api use(at least): 11 and error api roads: 11
+On Android Version 20 this app may have error api use(at least): 11 and error api roads: 11
+On Android Version 21 this app may have error api use(at least): 1 and error api roads: 1
+On Android Version 22 this app may have error api use(at least): 1 and error api roads: 1
+On Android Version 23 this app may have error api use(at least): 1 and error api roads: 1
+On Android Version 24 this app may have error api use(at least): 1 and error api roads: 1
+On Android Version 25 this app may have error api use(at least): 1 and error api roads: 1
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 31 this app may have error api use(at least): 2 and error api roads: 2

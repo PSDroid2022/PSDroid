@@ -1,0 +1,237 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/Ocelot.apk
+Entry Points[org.shirakumo.ocelot.Service, org.shirakumo.ocelot.Chat, org.shirakumo.ocelot.Settings]
+FllowDroidcallgraph size:893
+Soot started on Mon Jul 11 09:02:17 CST 2022
+Soot finished on Mon Jul 11 09:02:24 CST 2022
+Soot has run for 0 min. 7 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 21
+Declared Target Sdk version is: 26
+Declared Max Sdk version is: -1
+Collected 347 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.app.Fragment: void onAttach(android.content.Context)> is checking!!!
+The life time of api is [23,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+!!!this api will crash on sdk 21 22 
+Error road: <org.shirakumo.ocelot.Channel: void onAttach(android.content.Context)>[]--><android.app.Fragment: void onAttach(android.content.Context)>
+#1.the call statck between class <org.shirakumo.ocelot.Channel: void onAttach(android.content.Context)> to <android.app.Fragment: void onAttach(android.content.Context)>has compatibility isssues！
+-----------------------------------------
+!!!this api will crash on sdk 21 22 
+Error road: <org.shirakumo.ocelot.EmoteList: void onAttach(android.content.Context)>[[]]--><android.app.Fragment: void onAttach(android.content.Context)>
+#2.the call statck between class <org.shirakumo.ocelot.EmoteList: void onAttach(android.content.Context)> to <android.app.Fragment: void onAttach(android.content.Context)>has compatibility isssues！
+-----------------------------------------
+crashApis:1
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.app.NotificationManager: android.app.NotificationChannel getNotificationChannel(java.lang.String)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.shirakumo.ocelot.Service dummyMainMethod_org_shirakumo_ocelot_Service(android.content.Intent)>[]--><org.shirakumo.ocelot.Service: void onSharedPreferenceChanged(android.content.SharedPreferences,java.lang.String)>[[-$i0 < 26]]--><android.app.NotificationManager: android.app.NotificationChannel getNotificationChannel(java.lang.String)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.app.NotificationManager: void createNotificationChannelGroup(android.app.NotificationChannelGroup)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.shirakumo.ocelot.Service dummyMainMethod_org_shirakumo_ocelot_Service(android.content.Intent)>[]--><org.shirakumo.ocelot.Service: void onCreate()>[[-$i0 < 26]]--><android.app.NotificationManager: void createNotificationChannelGroup(android.app.NotificationChannelGroup)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.app.DialogFragment: void onAttach(android.content.Context)> is checking!!!
+The life time of api is [23,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 21 22 
+Error road: <org.shirakumo.ocelot.EmoteList: void onAttach(android.content.Context)>[]--><android.app.DialogFragment: void onAttach(android.content.Context)>
+#1.the call statck between class <org.shirakumo.ocelot.EmoteList: void onAttach(android.content.Context)> to <android.app.DialogFragment: void onAttach(android.content.Context)>has compatibility isssues！
+-----------------------------------------
+crashApis:2
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.app.NotificationChannel: void setDescription(java.lang.String)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.shirakumo.ocelot.Service dummyMainMethod_org_shirakumo_ocelot_Service(android.content.Intent)>[]--><org.shirakumo.ocelot.Service: void onCreate()>[[-$i0 < 26]]--><android.app.NotificationChannel: void setDescription(java.lang.String)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 5 Potential Issue API: SDKCheck of <android.app.NotificationChannelGroup: void <init>(java.lang.String,java.lang.CharSequence)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.shirakumo.ocelot.Service dummyMainMethod_org_shirakumo_ocelot_Service(android.content.Intent)>[]--><org.shirakumo.ocelot.Service: void onCreate()>[[-$i0 < 26]]--><android.app.NotificationChannelGroup: void <init>(java.lang.String,java.lang.CharSequence)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 6 Potential Issue API: SDKCheck of <android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.shirakumo.ocelot.Service dummyMainMethod_org_shirakumo_ocelot_Service(android.content.Intent)>[]--><org.shirakumo.ocelot.Service: void onCreate()>[[-$i0 < 26]]--><android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 7 Potential Issue API: SDKCheck of <android.app.NotificationChannel: void setLightColor(int)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.shirakumo.ocelot.Service dummyMainMethod_org_shirakumo_ocelot_Service(android.content.Intent)>[]--><org.shirakumo.ocelot.Service: void onSharedPreferenceChanged(android.content.SharedPreferences,java.lang.String)>[[-$i0 < 26]]--><android.app.NotificationChannel: void setLightColor(int)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 8 Potential Issue API: SDKCheck of <android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.shirakumo.ocelot.Service dummyMainMethod_org_shirakumo_ocelot_Service(android.content.Intent)>[]--><org.shirakumo.ocelot.Service: void onCreate()>[[-$i0 < 26]]--><android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 9 Potential Issue API: SDKCheck of <android.app.NotificationChannel: void enableLights(boolean)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.shirakumo.ocelot.Service dummyMainMethod_org_shirakumo_ocelot_Service(android.content.Intent)>[]--><org.shirakumo.ocelot.Service: void onSharedPreferenceChanged(android.content.SharedPreferences,java.lang.String)>[[-$i0 < 26]]--><android.app.NotificationChannel: void enableLights(boolean)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 10 Potential Issue API: SDKCheck of <android.app.NotificationChannel: void setGroup(java.lang.String)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.shirakumo.ocelot.Service dummyMainMethod_org_shirakumo_ocelot_Service(android.content.Intent)>[]--><org.shirakumo.ocelot.Service: void onCreate()>[[-$i0 < 26]]--><android.app.NotificationChannel: void setGroup(java.lang.String)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 11 Potential Issue API: SDKCheck of <android.app.Notification.Builder: android.app.Notification.Builder setChannelId(java.lang.String)> is checking!!!
+The life time of api is [26,31]
+2call roads:
+0 Mainhead roads:
+2 Packageshead roads:
+-$i0 < 26
+Good road: <org.shirakumo.ocelot.Service$UpdateHandler: void handle(org.shirakumo.lichat.updates.Connect)>[]--><org.shirakumo.ocelot.Service: void startForeground()>[[-$i0 < 26]]--><android.app.Notification.Builder: android.app.Notification.Builder setChannelId(java.lang.String)>
+One road protect good!
+-$i0 < 26
+Good road: <org.shirakumo.ocelot.Service$UpdateHandler: void handle(org.shirakumo.lichat.updates.Message)>[]--><org.shirakumo.ocelot.Service: void showUpdateNotification(java.lang.String,java.lang.String,java.lang.String)>[[-$i0 < 26]]--><android.app.Notification.Builder: android.app.Notification.Builder setChannelId(java.lang.String)>
+One road protect good!
+containsStatic:false
+containsTry:false
+3call by main package
+-----------------------------------------
+#################################################
+N 12 Potential Issue API: SDKCheck of <android.app.NotificationChannel: void setShowBadge(boolean)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.shirakumo.ocelot.Service dummyMainMethod_org_shirakumo_ocelot_Service(android.content.Intent)>[]--><org.shirakumo.ocelot.Service: void onCreate()>[[-$i0 < 26]]--><android.app.NotificationChannel: void setShowBadge(boolean)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 13 Potential Issue API: SDKCheck of <android.app.NotificationChannel: void setSound(android.net.Uri,android.media.AudioAttributes)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.shirakumo.ocelot.Service dummyMainMethod_org_shirakumo_ocelot_Service(android.content.Intent)>[]--><org.shirakumo.ocelot.Service: void onSharedPreferenceChanged(android.content.SharedPreferences,java.lang.String)>[[-$i0 < 26]]--><android.app.NotificationChannel: void setSound(android.net.Uri,android.media.AudioAttributes)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 14 Potential Issue API: SDKCheck of <android.app.NotificationChannel: void enableVibration(boolean)> is checking!!!
+The life time of api is [26,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: org.shirakumo.ocelot.Service dummyMainMethod_org_shirakumo_ocelot_Service(android.content.Intent)>[]--><org.shirakumo.ocelot.Service: void onSharedPreferenceChanged(android.content.SharedPreferences,java.lang.String)>[[-$i0 < 26]]--><android.app.NotificationChannel: void enableVibration(boolean)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+crashApis numbers:2
+crashApis numbers in main road:0
+On Android Version 16 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 17 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 18 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 19 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 20 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 21 this app may have error api use(at least): 2 and error api roads: 3
+On Android Version 22 this app may have error api use(at least): 2 and error api roads: 3
+On Android Version 23 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 24 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 25 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 31 this app may have error api use(at least): 0 and error api roads: 0

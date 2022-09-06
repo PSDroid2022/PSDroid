@@ -1,0 +1,87 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/Ringdroid.apk
+Entry Points[com.ringdroid.RingdroidEditActivity, com.ringdroid.RingdroidSelectActivity, com.ringdroid.ChooseContactActivity]
+FllowDroidcallgraph size:1108
+Soot started on Mon Jul 11 11:43:23 CST 2022
+Soot finished on Mon Jul 11 11:43:26 CST 2022
+Soot has run for 0 min. 3 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 19
+Declared Target Sdk version is: 22
+Declared Max Sdk version is: -1
+Collected 240 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.provider.MediaStore.Audio.Media: android.net.Uri getContentUriForPath(java.lang.String)> is checking!!!
+The life time of api is [1,29]
+2call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.ringdroid.RingdroidEditActivity dummyMainMethod_com_ringdroid_RingdroidEditActivity(android.content.Intent)>[]--><com.ringdroid.RingdroidEditActivity: void onCreate(android.os.Bundle)>[]--><com.ringdroid.RingdroidEditActivity: void loadFromFile()>[]--><com.ringdroid.SongMetadataReader: void <init>(android.app.Activity,java.lang.String)>[[try]]--><com.ringdroid.SongMetadataReader: void ReadMetadata()>[]--><android.provider.MediaStore.Audio.Media: android.net.Uri getContentUriForPath(java.lang.String)>
+One road protect good!
+1 Packageshead roads:
+!!!this api will crash on sdk 30 31 
+Error road: <com.ringdroid.RingdroidEditActivity: void access$3600(com.ringdroid.RingdroidEditActivity,java.lang.CharSequence,java.lang.String,int)>[]--><com.ringdroid.RingdroidEditActivity: void afterSavingRingtone(java.lang.CharSequence,java.lang.String,int)>[]--><android.provider.MediaStore.Audio.Media: android.net.Uri getContentUriForPath(java.lang.String)>
+#1.the call statck between class <com.ringdroid.RingdroidEditActivity: void access$3600(com.ringdroid.RingdroidEditActivity,java.lang.CharSequence,java.lang.String,int)> to <android.provider.MediaStore.Audio.Media: android.net.Uri getContentUriForPath(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:1
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.lang.String getString(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.ringdroid.RingdroidSelectActivity dummyMainMethod_com_ringdroid_RingdroidSelectActivity(android.content.Intent)>[]--><com.ringdroid.RingdroidSelectActivity: android.content.Loader onCreateLoader(int,android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.ringdroid.ChooseContactActivity dummyMainMethod_com_ringdroid_ChooseContactActivity(android.content.Intent)>[]--><com.ringdroid.ChooseContactActivity: android.content.Loader onCreateLoader(int,android.os.Bundle)>[]--><android.os.BaseBundle: java.lang.String getString(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: java.lang.String getString(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:2
+crashApisInMain:1
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)> is checking!!!
+The life time of api is [21,31]
+2call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: com.ringdroid.RingdroidSelectActivity dummyMainMethod_com_ringdroid_RingdroidSelectActivity(android.content.Intent)>[]--><com.ringdroid.RingdroidSelectActivity$3: boolean onQueryTextSubmit(java.lang.String)>[]--><com.ringdroid.RingdroidSelectActivity: void access$200(com.ringdroid.RingdroidSelectActivity)>[]--><com.ringdroid.RingdroidSelectActivity: void refreshListView()>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+1 Packageshead roads:
+!!!this api will crash on sdk 19 20 
+Error road: <com.ringdroid.ChooseContactActivity: void afterTextChanged(android.text.Editable)>[]--><android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>
+#1.the call statck between class <com.ringdroid.ChooseContactActivity: void afterTextChanged(android.text.Editable)> to <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)>has compatibility isssues！
+-----------------------------------------
+crashApis:3
+crashApisInMain:2
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+crashApis numbers:3
+crashApis numbers in main road:2
+On Android Version 16 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 17 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 18 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 19 this app may have error api use(at least): 2 and error api roads: 4
+On Android Version 20 this app may have error api use(at least): 2 and error api roads: 4
+On Android Version 21 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 22 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 23 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 24 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 25 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 1 and error api roads: 1
+On Android Version 31 this app may have error api use(at least): 1 and error api roads: 1

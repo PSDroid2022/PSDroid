@@ -1,0 +1,63 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/crond.apk
+Entry Points[it.faerb.crond.AlarmReceiver, it.faerb.crond.MainActivity, it.faerb.crond.BootCompleteReceiver]
+FllowDroidcallgraph size:3925
+Soot started on Mon Jul 11 02:42:50 CST 2022
+StaticCheck:<eu.chainfire.libsuperuser.Shell$SU: boolean isSELinuxEnforcing()>$yysi0 < 17
+Soot finished on Mon Jul 11 02:43:29 CST 2022
+Soot has run for 0 min. 39 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 21
+Declared Target Sdk version is: 23
+Declared Max Sdk version is: -1
+Collected 252 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.content.Context: int getColor(int)> is checking!!!
+The life time of api is [23,31]
+37call roads:
+1 Mainhead roads:
+$i0 >= 23
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: it.faerb.crond.MainActivity dummyMainMethod_it_faerb_crond_MainActivity(android.content.Intent)>[]--><it.faerb.crond.MainActivity: void onCreate(android.os.Bundle)>[]--><it.faerb.crond.MainActivity: void reload()>[]--><it.faerb.crond.MainActivity$4: void run()>[]--><it.faerb.crond.Crond: android.text.SpannableStringBuilder describeCrontab(java.lang.String)>[]--><it.faerb.crond.Crond: android.text.SpannableStringBuilder describeLine(java.lang.String)>[[$i0 >= 23]]--><android.content.Context: int getColor(int)>
+One road protect good!
+36 Packageshead roads:
+$i0 >= 23
+Good road: <eu.chainfire.libsuperuser.Shell$Interactive: void postCallback(eu.chainfire.libsuperuser.Shell$Command,int,java.util.List)>[]--><android.os.Handler: boolean post(java.lang.Runnable)>[]--><it.faerb.crond.MainActivity$4: void run()>[]--><it.faerb.crond.Crond: android.text.SpannableStringBuilder describeCrontab(java.lang.String)>[]--><it.faerb.crond.Crond: android.text.SpannableStringBuilder describeLine(java.lang.String)>[[$i0 >= 23]]--><android.content.Context: int getColor(int)>
+One road protect good!
+try
+Good road with try: <eu.chainfire.libsuperuser.Shell$Interactive: void processLine(java.lang.String,eu.chainfire.libsuperuser.StreamGobbler$OnLineListener)>[[try]]--><android.os.Handler: boolean post(java.lang.Runnable)>[]--><it.faerb.crond.MainActivity$4: void run()>[]--><it.faerb.crond.Crond: android.text.SpannableStringBuilder describeCrontab(java.lang.String)>[]--><it.faerb.crond.Crond: android.text.SpannableStringBuilder describeLine(java.lang.String)>[[$i0 >= 23]]--><android.content.Context: int getColor(int)>
+One road protect good!
+$i0 >= 23
+Good road: <eu.chainfire.libsuperuser.Application: void toast(android.content.Context,java.lang.String)>[]--><eu.chainfire.libsuperuser.Application: void runInApplicationThread(java.lang.Runnable)>[]--><android.os.Handler: boolean post(java.lang.Runnable)>[]--><it.faerb.crond.MainActivity$4: void run()>[]--><it.faerb.crond.Crond: android.text.SpannableStringBuilder describeCrontab(java.lang.String)>[]--><it.faerb.crond.Crond: android.text.SpannableStringBuilder describeLine(java.lang.String)>[[$i0 >= 23]]--><android.content.Context: int getColor(int)>
+One road protect good!
+$i0 >= 23
+Good road: <com.google.common.util.concurrent.AbstractScheduledService$CustomScheduler$ReschedulableCallable: java.lang.Void call()>[]--><it.faerb.crond.MainActivity$4: void run()>[]--><it.faerb.crond.Crond: android.text.SpannableStringBuilder describeCrontab(java.lang.String)>[]--><it.faerb.crond.Crond: android.text.SpannableStringBuilder describeLine(java.lang.String)>[[$i0 >= 23]]--><android.content.Context: int getColor(int)>
+One road protect good!
+try
+Good road with try: <com.google.common.util.concurrent.AbstractScheduledService$CustomScheduler$ReschedulableCallable: java.lang.Void call()>[]--><com.google.common.util.concurrent.Callables$3: void run()>[[try]]--><it.faerb.crond.MainActivity$4: void run()>[]--><it.faerb.crond.Crond: android.text.SpannableStringBuilder describeCrontab(java.lang.String)>[]--><it.faerb.crond.Crond: android.text.SpannableStringBuilder describeLine(java.lang.String)>[[$i0 >= 23]]--><android.content.Context: int getColor(int)>
+One road protect good!
+try
+Good road with try: <com.google.common.util.concurrent.AbstractScheduledService$CustomScheduler$ReschedulableCallable: java.lang.Void call()>[]--><com.google.common.util.concurrent.SerializingExecutor$TaskRunner: void run()>[[try]]--><it.faerb.crond.MainActivity$4: void run()>[]--><it.faerb.crond.Crond: android.text.SpannableStringBuilder describeCrontab(java.lang.String)>[]--><it.faerb.crond.Crond: android.text.SpannableStringBuilder describeLine(java.lang.String)>[[$i0 >= 23]]--><android.content.Context: int getColor(int)>
+One road protect good!
+containsStatic:false
+containsTry:true
+37call by main package
+-----------------------------------------
+crashApis numbers:0
+crashApis numbers in main road:0
+On Android Version 16 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 17 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 18 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 19 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 20 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 21 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 22 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 23 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 24 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 25 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 31 this app may have error api use(at least): 0 and error api roads: 0

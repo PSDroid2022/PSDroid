@@ -1,0 +1,824 @@
+/home/ys/桌面/CompactDroid（复件）/dataset2/Last_Launcher.apk
+Entry Points[io.github.subhamtyagi.lastlauncher.LauncherActivity, leakcanary.internal.HeapAnalyzerService, leakcanary.internal.NotificationReceiver, io.github.subhamtyagi.lastlauncher.LauncherActivity$1, leakcanary.internal.AppWatcherInstaller$MainProcess, leakcanary.internal.RequestStoragePermissionActivity, leakcanary.internal.LeakCanaryFileProvider, leakcanary.internal.activity.LeakActivity]
+FllowDroidcallgraph size:2727
+Soot started on Mon Jul 11 06:22:06 CST 2022
+Soot finished on Mon Jul 11 06:22:38 CST 2022
+Soot has run for 0 min. 32 sec.
+Found 0 additional DEX files. Now visiting them one by one.
+--------------------------------------------------------------------------------------------------------
+Declared Min Sdk version is: 14
+Declared Target Sdk version is: 28
+Declared Max Sdk version is: -1
+Collected 660 Android APIs in the primary DEX file
+Collected 0 Android APIs in the secondary DEX files
+#################################################
+N 0 Potential Issue API: SDKCheck of <android.content.pm.ShortcutManager: boolean addDynamicShortcuts(java.util.List)> is checking!!!
+The life time of api is [25,31]
+1427call roads:
+1 Mainhead roads:
+1426 Packageshead roads:
+Roads number exceed, exit!1426
+#################################################
+N 1 Potential Issue API: SDKCheck of <android.content.pm.ShortcutInfo.Builder: android.content.pm.ShortcutInfo.Builder setActivity(android.content.ComponentName)> is checking!!!
+The life time of api is [25,31]
+1427call roads:
+1 Mainhead roads:
+1426 Packageshead roads:
+Roads number exceed, exit!1426
+#################################################
+N 2 Potential Issue API: SDKCheck of <android.view.View: void setLayoutDirection(int)> is checking!!!
+The life time of api is [17,31]
+3call roads:
+1 Mainhead roads:
+-$i1 < 17
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: io.github.subhamtyagi.lastlauncher.LauncherActivity dummyMainMethod_io_github_subhamtyagi_lastlauncher_LauncherActivity(android.content.Intent)>[]--><org.apmem.tools.layouts.FlowLayout: void setLayoutDirection(int)>[[-$i1 < 17]]--><android.view.View: void setLayoutDirection(int)>
+One road protect good!
+2 Packageshead roads:
+try
+Good road with try: <org.apmem.tools.layouts.FlowLayout: void <init>(android.content.Context,android.util.AttributeSet,int)>[]--><org.apmem.tools.layouts.FlowLayout: void readStyleParameters(android.content.Context,android.util.AttributeSet)>[[try]]--><org.apmem.tools.layouts.FlowLayout: void setLayoutDirection(int)>[[-$i1 < 17]]--><android.view.View: void setLayoutDirection(int)>
+One road protect good!
+try
+Good road with try: <org.apmem.tools.layouts.FlowLayout: void <init>(android.content.Context,android.util.AttributeSet)>[]--><org.apmem.tools.layouts.FlowLayout: void readStyleParameters(android.content.Context,android.util.AttributeSet)>[[try]]--><org.apmem.tools.layouts.FlowLayout: void setLayoutDirection(int)>[[-$i1 < 17]]--><android.view.View: void setLayoutDirection(int)>
+One road protect good!
+containsStatic:false
+containsTry:true
+3call by main package
+-----------------------------------------
+#################################################
+N 3 Potential Issue API: SDKCheck of <android.app.Activity: void requestPermissions(java.lang.String[],int)> is checking!!!
+The life time of api is [23,31]
+2call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: leakcanary.internal.RequestStoragePermissionActivity dummyMainMethod_leakcanary_internal_RequestStoragePermissionActivity(android.content.Intent)>[]--><leakcanary.internal.RequestStoragePermissionActivity: void onCreate(android.os.Bundle)>[]--><android.app.Activity: void requestPermissions(java.lang.String[],int)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.app.Activity: void requestPermissions(java.lang.String[],int)>has compatibility isssues！
+-----------------------------------------
+1 Packageshead roads:
+-$i0 < 23
+Good road: <io.github.subhamtyagi.lastlauncher.dialogs.GlobalSettings: void onClick(android.view.View)>[]--><io.github.subhamtyagi.lastlauncher.dialogs.GlobalSettings: void backup()>[]--><io.github.subhamtyagi.lastlauncher.LauncherActivity: void requestPermission()>[[-$i0 < 23]]--><android.app.Activity: void requestPermissions(java.lang.String[],int)>
+One road protect good!
+-$i0 < 23
+Good road: <io.github.subhamtyagi.lastlauncher.dialogs.GlobalSettings: void onClick(android.view.View)>[]--><io.github.subhamtyagi.lastlauncher.dialogs.GlobalSettings: void setFonts()>[]--><io.github.subhamtyagi.lastlauncher.LauncherActivity: void browseFonts()>[]--><io.github.subhamtyagi.lastlauncher.LauncherActivity: void requestPermission()>[[-$i0 < 23]]--><android.app.Activity: void requestPermissions(java.lang.String[],int)>
+One road protect good!
+-$i0 < 23
+Good road: <io.github.subhamtyagi.lastlauncher.dialogs.GlobalSettings: void onClick(android.view.View)>[]--><io.github.subhamtyagi.lastlauncher.dialogs.GlobalSettings: void restore()>[]--><io.github.subhamtyagi.lastlauncher.LauncherActivity: void requestPermission()>[[-$i0 < 23]]--><android.app.Activity: void requestPermissions(java.lang.String[],int)>
+One road protect good!
+crashApis:1
+crashApisInMain:1
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 4 Potential Issue API: SDKCheck of <android.content.pm.ShortcutManager: java.util.List getDynamicShortcuts()> is checking!!!
+The life time of api is [25,31]
+1427call roads:
+1 Mainhead roads:
+1426 Packageshead roads:
+Roads number exceed, exit!1426
+#################################################
+N 5 Potential Issue API: SDKCheck of <android.os.BaseBundle: int getInt(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: io.github.subhamtyagi.lastlauncher.LauncherActivity dummyMainMethod_io_github_subhamtyagi_lastlauncher_LauncherActivity(android.content.Intent)>[]--><io.github.subhamtyagi.lastlauncher.LauncherActivity: void onActivityResult(int,int,android.content.Intent)>[]--><io.github.subhamtyagi.lastlauncher.LauncherActivity: void colorSnifferCall(android.os.Bundle)>[]--><android.os.BaseBundle: int getInt(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.os.BaseBundle: int getInt(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:2
+crashApisInMain:2
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 6 Potential Issue API: SDKCheck of <android.graphics.drawable.Icon: android.graphics.drawable.Icon createWithResource(android.content.Context,int)> is checking!!!
+The life time of api is [23,31]
+1427call roads:
+1 Mainhead roads:
+1426 Packageshead roads:
+Roads number exceed, exit!1426
+#################################################
+N 7 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putLongArray(java.lang.String,long[])> is checking!!!
+The life time of api is [21,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 8 Potential Issue API: SDKCheck of <android.content.Context: java.lang.Object getSystemService(java.lang.Class)> is checking!!!
+The life time of api is [23,31]
+1427call roads:
+1 Mainhead roads:
+1426 Packageshead roads:
+Roads number exceed, exit!1426
+#################################################
+N 9 Potential Issue API: SDKCheck of <android.content.pm.ShortcutInfo.Builder: void <init>(android.content.Context,java.lang.String)> is checking!!!
+The life time of api is [25,31]
+1427call roads:
+1 Mainhead roads:
+1426 Packageshead roads:
+Roads number exceed, exit!1426
+#################################################
+N 10 Potential Issue API: SDKCheck of <android.content.pm.ShortcutInfo.Builder: android.content.pm.ShortcutInfo.Builder setShortLabel(java.lang.CharSequence)> is checking!!!
+The life time of api is [25,31]
+1427call roads:
+1 Mainhead roads:
+1426 Packageshead roads:
+Roads number exceed, exit!1426
+#################################################
+N 11 Potential Issue API: SDKCheck of <android.content.pm.PackageManager: boolean isInstantApp()> is checking!!!
+The life time of api is [26,31]
+1427call roads:
+1 Mainhead roads:
+-$i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: leakcanary.internal.activity.LeakActivity dummyMainMethod_leakcanary_internal_activity_LeakActivity(android.content.Intent)>[]--><leakcanary.internal.activity.LeakActivity: void onDestroy()>[]--><leakcanary.internal.activity.db.Db: void closeDatabase()>[]--><leakcanary.internal.activity.db.Io: void execute(kotlin.jvm.functions.Function0)>[]--><leakcanary.internal.activity.db.IoKt$sam$java_lang_Runnable$0: void run()>[]--><leakcanary.internal.InternalLeakCanary$isInstantApp$2: java.lang.Object invoke()>[]--><leakcanary.internal.InternalLeakCanary$isInstantApp$2: boolean invoke()>[[-$i0 < 26]]--><android.content.pm.PackageManager: boolean isInstantApp()>
+One road protect good!
+-$i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: leakcanary.internal.HeapAnalyzerService dummyMainMethod_leakcanary_internal_HeapAnalyzerService(android.content.Intent)>[]--><leakcanary.internal.ForegroundService: void onCreate()>[]--><leakcanary.internal.ForegroundService: void showForegroundNotification(int,int,boolean,java.lang.String)>[]--><leakcanary.internal.Notifications: void <clinit>()>[]--><leakcanary.internal.InternalLeakCanary: leakcanary.internal.InternalLeakCanary$FormFactor getFormFactor()>[]--><kotlin.SafePublicationLazyImpl: java.lang.Object getValue()>[]--><leakcanary.internal.InternalLeakCanary$isInstantApp$2: java.lang.Object invoke()>[]--><leakcanary.internal.InternalLeakCanary$isInstantApp$2: boolean invoke()>[[-$i0 < 26]]--><android.content.pm.PackageManager: boolean isInstantApp()>
+One road protect good!
+1426 Packageshead roads:
+Roads number exceed, exit!1426
+#################################################
+N 12 Potential Issue API: SDKCheck of <android.util.Size: int getWidth()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <androidx.versionedparcelable.VersionedParcel: void writeSize(android.util.Size,int)>[]--><android.util.Size: int getWidth()>
+#1.the call statck between class <androidx.versionedparcelable.VersionedParcel: void writeSize(android.util.Size,int)> to <android.util.Size: int getWidth()>has compatibility isssues！
+-----------------------------------------
+crashApis:3
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 13 Potential Issue API: SDKCheck of <android.content.pm.ShortcutInfo: android.content.ComponentName getActivity()> is checking!!!
+The life time of api is [25,31]
+1427call roads:
+1 Mainhead roads:
+1426 Packageshead roads:
+Roads number exceed, exit!1426
+#################################################
+N 14 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putString(java.lang.String,java.lang.String)> is checking!!!
+The life time of api is [21,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 15 Potential Issue API: SDKCheck of <android.os.UserManager: long getSerialNumberForUser(android.os.UserHandle)> is checking!!!
+The life time of api is [17,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 
+Error road: <io.github.subhamtyagi.lastlauncher.util.UserUtils: long getCurrentSerial()>[]--><io.github.subhamtyagi.lastlauncher.util.UserUtils: long getSerial(android.os.UserHandle)>[]--><android.os.UserManager: long getSerialNumberForUser(android.os.UserHandle)>
+#1.the call statck between class <io.github.subhamtyagi.lastlauncher.util.UserUtils: long getCurrentSerial()> to <android.os.UserManager: long getSerialNumberForUser(android.os.UserHandle)>has compatibility isssues！
+-----------------------------------------
+crashApis:4
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 16 Potential Issue API: SDKCheck of <android.content.Context: int checkSelfPermission(java.lang.String)> is checking!!!
+The life time of api is [23,31]
+6call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: leakcanary.internal.activity.LeakActivity dummyMainMethod_leakcanary_internal_activity_LeakActivity(android.content.Intent)>[]--><leakcanary.internal.activity.LeakActivity: void onActivityResult(int,int,android.content.Intent)>[]--><leakcanary.internal.activity.LeakActivity$onActivityResult$$inlined$let$lambda$1: void run()>[]--><leakcanary.internal.activity.LeakActivity: void access$importHprof(leakcanary.internal.activity.LeakActivity,android.net.Uri)>[]--><leakcanary.internal.activity.LeakActivity: void importHprof(android.net.Uri)>[[try]]--><leakcanary.internal.LeakDirectoryProvider: java.io.File newHeapDumpFile()>[]--><leakcanary.internal.LeakDirectoryProvider: void cleanupOldHeapDumps()>[]--><leakcanary.internal.LeakDirectoryProvider: java.util.List listFiles(java.io.FilenameFilter)>[]--><leakcanary.internal.LeakDirectoryProvider: boolean hasStoragePermission()>[[$i0 >= 23]]--><android.content.Context: int checkSelfPermission(java.lang.String)>
+One road protect good!
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: leakcanary.internal.RequestStoragePermissionActivity dummyMainMethod_leakcanary_internal_RequestStoragePermissionActivity(android.content.Intent)>[]--><leakcanary.internal.RequestStoragePermissionActivity: void onRequestPermissionsResult(int,java.lang.String[],int[])>[]--><leakcanary.internal.RequestStoragePermissionActivity: boolean hasStoragePermission()>[[]]--><android.content.Context: int checkSelfPermission(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.content.Context: int checkSelfPermission(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+5 Packageshead roads:
+$i0 >= 23
+Good road: <leakcanary.internal.HeapDumpTrigger: void access$dumpHeap(leakcanary.internal.HeapDumpTrigger,int,boolean)>[]--><leakcanary.internal.HeapDumpTrigger: void dumpHeap(int,boolean)>[]--><leakcanary.internal.AndroidHeapDumper: java.io.File dumpHeap()>[]--><leakcanary.internal.LeakDirectoryProvider: java.io.File newHeapDumpFile()>[]--><leakcanary.internal.LeakDirectoryProvider: void cleanupOldHeapDumps()>[]--><leakcanary.internal.LeakDirectoryProvider: java.util.List listFiles(java.io.FilenameFilter)>[]--><leakcanary.internal.LeakDirectoryProvider: boolean hasStoragePermission()>[[$i0 >= 23]]--><android.content.Context: int checkSelfPermission(java.lang.String)>
+One road protect good!
+$i0 >= 23
+Good road: <leakcanary.internal.activity.screen.RenderHeapDumpScreen$createView$$inlined$apply$lambda$3$1: boolean onMenuItemClick(android.view.MenuItem)>[]--><leakcanary.internal.LeakDirectoryProvider: boolean hasStoragePermission()>[[$i0 >= 23]]--><android.content.Context: int checkSelfPermission(java.lang.String)>
+One road protect good!
+try
+Good road with try: <android.arch.lifecycle.ComputableLiveData: void invalidate()>[]--><android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)>[]--><leakcanary.internal.activity.LeakActivity$onActivityResult$$inlined$let$lambda$1: void run()>[]--><leakcanary.internal.activity.LeakActivity: void access$importHprof(leakcanary.internal.activity.LeakActivity,android.net.Uri)>[]--><leakcanary.internal.activity.LeakActivity: void importHprof(android.net.Uri)>[[try]]--><leakcanary.internal.LeakDirectoryProvider: java.io.File newHeapDumpFile()>[]--><leakcanary.internal.LeakDirectoryProvider: void cleanupOldHeapDumps()>[]--><leakcanary.internal.LeakDirectoryProvider: java.util.List listFiles(java.io.FilenameFilter)>[]--><leakcanary.internal.LeakDirectoryProvider: boolean hasStoragePermission()>[[$i0 >= 23]]--><android.content.Context: int checkSelfPermission(java.lang.String)>
+One road protect good!
+$i0 >= 23
+Good road: <leakcanary.internal.HeapDumpTrigger: void access$checkRetainedObjects(leakcanary.internal.HeapDumpTrigger,java.lang.String)>[]--><leakcanary.internal.HeapDumpTrigger: void checkRetainedObjects(java.lang.String)>[]--><leakcanary.internal.HeapDumpTrigger: void dumpHeap(int,boolean)>[]--><leakcanary.internal.AndroidHeapDumper: java.io.File dumpHeap()>[]--><leakcanary.internal.LeakDirectoryProvider: java.io.File newHeapDumpFile()>[]--><leakcanary.internal.LeakDirectoryProvider: void cleanupOldHeapDumps()>[]--><leakcanary.internal.LeakDirectoryProvider: java.util.List listFiles(java.io.FilenameFilter)>[]--><leakcanary.internal.LeakDirectoryProvider: boolean hasStoragePermission()>[[$i0 >= 23]]--><android.content.Context: int checkSelfPermission(java.lang.String)>
+One road protect good!
+-$i0 < 23
+Good road: <io.github.subhamtyagi.lastlauncher.dialogs.GlobalSettings: void onClick(android.view.View)>[]--><io.github.subhamtyagi.lastlauncher.dialogs.GlobalSettings: void setFonts()>[]--><io.github.subhamtyagi.lastlauncher.LauncherActivity: boolean isPermissionRequired()>[[-$i0 < 23]]--><android.content.Context: int checkSelfPermission(java.lang.String)>
+One road protect good!
+-$i0 < 23
+Good road: <io.github.subhamtyagi.lastlauncher.dialogs.GlobalSettings: void onClick(android.view.View)>[]--><io.github.subhamtyagi.lastlauncher.dialogs.GlobalSettings: void backup()>[]--><io.github.subhamtyagi.lastlauncher.LauncherActivity: boolean isPermissionRequired()>[[-$i0 < 23]]--><android.content.Context: int checkSelfPermission(java.lang.String)>
+One road protect good!
+-$i0 < 23
+Good road: <io.github.subhamtyagi.lastlauncher.dialogs.GlobalSettings: void onClick(android.view.View)>[]--><io.github.subhamtyagi.lastlauncher.dialogs.GlobalSettings: void restore()>[]--><io.github.subhamtyagi.lastlauncher.LauncherActivity: boolean isPermissionRequired()>[[-$i0 < 23]]--><android.content.Context: int checkSelfPermission(java.lang.String)>
+One road protect good!
+crashApis:5
+crashApisInMain:3
+containsStatic:false
+containsTry:true
+6call by main package
+-----------------------------------------
+#################################################
+N 17 Potential Issue API: SDKCheck of <android.os.Process: android.os.UserHandle myUserHandle()> is checking!!!
+The life time of api is [17,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 
+Error road: <io.github.subhamtyagi.lastlauncher.util.UserUtils: long getCurrentSerial()>[]--><io.github.subhamtyagi.lastlauncher.util.UserUtils: android.os.UserHandle getCurrentUser()>[]--><android.os.Process: android.os.UserHandle myUserHandle()>
+#1.the call statck between class <io.github.subhamtyagi.lastlauncher.util.UserUtils: long getCurrentSerial()> to <android.os.Process: android.os.UserHandle myUserHandle()>has compatibility isssues！
+-----------------------------------------
+crashApis:6
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 18 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putBooleanArray(java.lang.String,boolean[])> is checking!!!
+The life time of api is [22,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 19 Potential Issue API: SDKCheck of <android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)> is checking!!!
+The life time of api is [26,31]
+7call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: leakcanary.internal.activity.LeakActivity dummyMainMethod_leakcanary_internal_activity_LeakActivity(android.content.Intent)>[]--><leakcanary.internal.activity.LeakActivity: void onActivityResult(int,int,android.content.Intent)>[]--><leakcanary.internal.activity.LeakActivity$onActivityResult$$inlined$let$lambda$1: void run()>[]--><leakcanary.internal.activity.LeakActivity: void access$importHprof(leakcanary.internal.activity.LeakActivity,android.net.Uri)>[]--><leakcanary.internal.activity.LeakActivity: void importHprof(android.net.Uri)>[[try]]--><leakcanary.internal.LeakDirectoryProvider: java.io.File newHeapDumpFile()>[]--><leakcanary.internal.LeakDirectoryProvider: void cleanupOldHeapDumps()>[]--><leakcanary.internal.LeakDirectoryProvider: java.util.List listFiles(java.io.FilenameFilter)>[]--><leakcanary.internal.LeakDirectoryProvider: void requestWritePermissionNotification()>[]--><leakcanary.internal.Notifications: void showNotification(android.content.Context,java.lang.CharSequence,java.lang.CharSequence,android.app.PendingIntent,int,leakcanary.internal.NotificationType)>[]--><leakcanary.internal.Notifications: android.app.Notification buildNotification(android.content.Context,android.app.Notification$Builder,leakcanary.internal.NotificationType)>[[-i0 < 26]]--><android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)>
+One road protect good!
+-i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: leakcanary.internal.HeapAnalyzerService dummyMainMethod_leakcanary_internal_HeapAnalyzerService(android.content.Intent)>[]--><leakcanary.internal.ForegroundService: void onCreate()>[]--><leakcanary.internal.ForegroundService: void showForegroundNotification(int,int,boolean,java.lang.String)>[]--><leakcanary.internal.Notifications: android.app.Notification buildNotification(android.content.Context,android.app.Notification$Builder,leakcanary.internal.NotificationType)>[[-i0 < 26]]--><android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)>
+One road protect good!
+6 Packageshead roads:
+-i0 < 26
+Good road: <leakcanary.internal.HeapAnalyzerService: void onHandleIntentInForeground(android.content.Intent)>[]--><leakcanary.DefaultOnHeapAnalyzedListener: void onHeapAnalyzed(shark.HeapAnalysis)>[]--><leakcanary.DefaultOnHeapAnalyzedListener: void showNotification(leakcanary.internal.navigation.Screen,java.lang.String)>[]--><leakcanary.internal.Notifications: void showNotification(android.content.Context,java.lang.CharSequence,java.lang.CharSequence,android.app.PendingIntent,int,leakcanary.internal.NotificationType)>[]--><leakcanary.internal.Notifications: android.app.Notification buildNotification(android.content.Context,android.app.Notification$Builder,leakcanary.internal.NotificationType)>[[-i0 < 26]]--><android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)>
+One road protect good!
+-i0 < 26
+Good road: <leakcanary.internal.HeapDumpTrigger: void access$dumpHeap(leakcanary.internal.HeapDumpTrigger,int,boolean)>[]--><leakcanary.internal.HeapDumpTrigger: void dumpHeap(int,boolean)>[]--><leakcanary.internal.AndroidHeapDumper: java.io.File dumpHeap()>[]--><leakcanary.internal.LeakDirectoryProvider: java.io.File newHeapDumpFile()>[]--><leakcanary.internal.LeakDirectoryProvider: void cleanupOldHeapDumps()>[]--><leakcanary.internal.LeakDirectoryProvider: java.util.List listFiles(java.io.FilenameFilter)>[]--><leakcanary.internal.LeakDirectoryProvider: void requestWritePermissionNotification()>[]--><leakcanary.internal.Notifications: void showNotification(android.content.Context,java.lang.CharSequence,java.lang.CharSequence,android.app.PendingIntent,int,leakcanary.internal.NotificationType)>[]--><leakcanary.internal.Notifications: android.app.Notification buildNotification(android.content.Context,android.app.Notification$Builder,leakcanary.internal.NotificationType)>[[-i0 < 26]]--><android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)>
+One road protect good!
+try
+Good road with try: <android.arch.lifecycle.ComputableLiveData: void invalidate()>[]--><android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)>[]--><leakcanary.internal.activity.LeakActivity$onActivityResult$$inlined$let$lambda$1: void run()>[]--><leakcanary.internal.activity.LeakActivity: void access$importHprof(leakcanary.internal.activity.LeakActivity,android.net.Uri)>[]--><leakcanary.internal.activity.LeakActivity: void importHprof(android.net.Uri)>[[try]]--><leakcanary.internal.LeakDirectoryProvider: java.io.File newHeapDumpFile()>[]--><leakcanary.internal.LeakDirectoryProvider: void cleanupOldHeapDumps()>[]--><leakcanary.internal.LeakDirectoryProvider: java.util.List listFiles(java.io.FilenameFilter)>[]--><leakcanary.internal.LeakDirectoryProvider: void requestWritePermissionNotification()>[]--><leakcanary.internal.Notifications: void showNotification(android.content.Context,java.lang.CharSequence,java.lang.CharSequence,android.app.PendingIntent,int,leakcanary.internal.NotificationType)>[]--><leakcanary.internal.Notifications: android.app.Notification buildNotification(android.content.Context,android.app.Notification$Builder,leakcanary.internal.NotificationType)>[[-i0 < 26]]--><android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)>
+One road protect good!
+-i0 < 26
+Good road: <leakcanary.internal.activity.screen.RenderHeapDumpScreen$createView$$inlined$apply$lambda$3$1: boolean onMenuItemClick(android.view.MenuItem)>[]--><leakcanary.internal.LeakDirectoryProvider: void requestWritePermissionNotification()>[]--><leakcanary.internal.Notifications: void showNotification(android.content.Context,java.lang.CharSequence,java.lang.CharSequence,android.app.PendingIntent,int,leakcanary.internal.NotificationType)>[]--><leakcanary.internal.Notifications: android.app.Notification buildNotification(android.content.Context,android.app.Notification$Builder,leakcanary.internal.NotificationType)>[[-i0 < 26]]--><android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)>
+One road protect good!
+-i0 < 26
+Good road: <leakcanary.internal.HeapDumpTrigger: void access$checkRetainedObjects(leakcanary.internal.HeapDumpTrigger,java.lang.String)>[]--><leakcanary.internal.HeapDumpTrigger: void checkRetainedObjects(java.lang.String)>[]--><leakcanary.internal.HeapDumpTrigger: void dumpHeap(int,boolean)>[]--><leakcanary.internal.AndroidHeapDumper: java.io.File dumpHeap()>[]--><leakcanary.internal.LeakDirectoryProvider: java.io.File newHeapDumpFile()>[]--><leakcanary.internal.LeakDirectoryProvider: void cleanupOldHeapDumps()>[]--><leakcanary.internal.LeakDirectoryProvider: java.util.List listFiles(java.io.FilenameFilter)>[]--><leakcanary.internal.LeakDirectoryProvider: void requestWritePermissionNotification()>[]--><leakcanary.internal.Notifications: void showNotification(android.content.Context,java.lang.CharSequence,java.lang.CharSequence,android.app.PendingIntent,int,leakcanary.internal.NotificationType)>[]--><leakcanary.internal.Notifications: android.app.Notification buildNotification(android.content.Context,android.app.Notification$Builder,leakcanary.internal.NotificationType)>[[-i0 < 26]]--><android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)>
+One road protect good!
+-i0 < 26
+Good road: <leakcanary.internal.HeapAnalyzerService: void onAnalysisProgress(shark.OnAnalysisProgressListener$Step)>[]--><leakcanary.internal.ForegroundService: void showForegroundNotification(int,int,boolean,java.lang.String)>[]--><leakcanary.internal.Notifications: android.app.Notification buildNotification(android.content.Context,android.app.Notification$Builder,leakcanary.internal.NotificationType)>[[-i0 < 26]]--><android.app.NotificationChannel: void <init>(java.lang.String,java.lang.CharSequence,int)>
+One road protect good!
+containsStatic:false
+containsTry:true
+7call by main package
+-----------------------------------------
+#################################################
+N 20 Potential Issue API: SDKCheck of <android.content.Context: java.io.File[] getExternalFilesDirs(java.lang.String)> is checking!!!
+The life time of api is [19,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 19
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: leakcanary.internal.LeakCanaryFileProvider dummyMainMethod_leakcanary_internal_LeakCanaryFileProvider(android.content.Intent)>[]--><leakcanary.internal.LeakCanaryFileProvider: void attachInfo(android.content.Context,android.content.pm.ProviderInfo)>[]--><leakcanary.internal.LeakCanaryFileProvider$Companion: leakcanary.internal.LeakCanaryFileProvider$PathStrategy access$getPathStrategy(leakcanary.internal.LeakCanaryFileProvider$Companion,android.content.Context,java.lang.String)>[]--><leakcanary.internal.LeakCanaryFileProvider$Companion: leakcanary.internal.LeakCanaryFileProvider$PathStrategy getPathStrategy(android.content.Context,java.lang.String)>[]--><leakcanary.internal.LeakCanaryFileProvider$Companion: leakcanary.internal.LeakCanaryFileProvider$PathStrategy parsePathStrategy(android.content.Context,java.lang.String)>[]--><leakcanary.internal.LeakCanaryFileProvider$Companion: java.io.File[] getExternalFilesDirs(android.content.Context,java.lang.String)>[[-$i0 < 19]]--><android.content.Context: java.io.File[] getExternalFilesDirs(java.lang.String)>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 21 Potential Issue API: SDKCheck of <android.util.Size: void <init>(int,int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <androidx.versionedparcelable.VersionedParcel: android.util.Size readSize(android.util.Size,int)>[]--><android.util.Size: void <init>(int,int)>
+#1.the call statck between class <androidx.versionedparcelable.VersionedParcel: android.util.Size readSize(android.util.Size,int)> to <android.util.Size: void <init>(int,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:7
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 22 Potential Issue API: SDKCheck of <android.content.pm.ShortcutInfo.Builder: android.content.pm.ShortcutInfo.Builder setLongLabel(java.lang.CharSequence)> is checking!!!
+The life time of api is [25,31]
+1427call roads:
+1 Mainhead roads:
+1426 Packageshead roads:
+Roads number exceed, exit!1426
+#################################################
+N 23 Potential Issue API: SDKCheck of <android.content.Context: java.io.File[] getExternalMediaDirs()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 21
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: leakcanary.internal.LeakCanaryFileProvider dummyMainMethod_leakcanary_internal_LeakCanaryFileProvider(android.content.Intent)>[]--><leakcanary.internal.LeakCanaryFileProvider: void attachInfo(android.content.Context,android.content.pm.ProviderInfo)>[]--><leakcanary.internal.LeakCanaryFileProvider$Companion: leakcanary.internal.LeakCanaryFileProvider$PathStrategy access$getPathStrategy(leakcanary.internal.LeakCanaryFileProvider$Companion,android.content.Context,java.lang.String)>[]--><leakcanary.internal.LeakCanaryFileProvider$Companion: leakcanary.internal.LeakCanaryFileProvider$PathStrategy getPathStrategy(android.content.Context,java.lang.String)>[]--><leakcanary.internal.LeakCanaryFileProvider$Companion: leakcanary.internal.LeakCanaryFileProvider$PathStrategy parsePathStrategy(android.content.Context,java.lang.String)>[[-$i0 < 21]]--><android.content.Context: java.io.File[] getExternalMediaDirs()>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 24 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putBoolean(java.lang.String,boolean)> is checking!!!
+The life time of api is [22,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 25 Potential Issue API: SDKCheck of <android.content.Context: int getColor(int)> is checking!!!
+The life time of api is [23,31]
+5call roads:
+0 Mainhead roads:
+5 Packageshead roads:
+-$i1 < 23
+Good road: <leakcanary.internal.activity.screen.RenderHeapDumpScreen$createView$$inlined$apply$lambda$3$1$1: void invoke(leakcanary.internal.activity.db.Io$OnIo)>[]--><leakcanary.internal.activity.screen.HeapDumpRenderer: android.graphics.Bitmap render(android.content.Context,java.io.File,int,int,int)>[]--><leakcanary.internal.navigation.ViewsKt: int getColorCompat(android.content.Context,int)>[[-$i1 < 23]]--><android.content.Context: int getColor(int)>
+One road protect good!
+-$i1 < 23
+Good road: <leakcanary.internal.activity.screen.RenderHeapDumpScreen$createView$$inlined$apply$lambda$2$1: void invoke(leakcanary.internal.activity.db.Io$OnIo)>[]--><leakcanary.internal.activity.screen.HeapDumpRenderer: android.graphics.Bitmap render(android.content.Context,java.io.File,int,int,int)>[]--><leakcanary.internal.navigation.ViewsKt: int getColorCompat(android.content.Context,int)>[[-$i1 < 23]]--><android.content.Context: int getColor(int)>
+One road protect good!
+-$i1 < 23
+Good road: <leakcanary.internal.SquigglySpan$Companion: void replaceUnderlineSpans(android.text.SpannableStringBuilder,android.content.Context)>[]--><leakcanary.internal.SquigglySpan: void <init>(android.content.Context)>[]--><leakcanary.internal.navigation.ViewsKt: int getColorCompat(android.content.Context,int)>[[-$i1 < 23]]--><android.content.Context: int getColor(int)>
+One road protect good!
+-$i1 < 23
+Good road: <leakcanary.internal.DisplayLeakConnectorView: void <init>(android.content.Context,android.util.AttributeSet)>[]--><leakcanary.internal.navigation.ViewsKt: int getColorCompat(android.content.Context,int)>[[-$i1 < 23]]--><android.content.Context: int getColor(int)>
+One road protect good!
+-$i1 < 23
+Good road: <leakcanary.internal.DisplayLeakAdapter$Companion: java.lang.String hexStringColor(android.content.Context,int)>[]--><leakcanary.internal.navigation.ViewsKt: int getColorCompat(android.content.Context,int)>[[-$i1 < 23]]--><android.content.Context: int getColor(int)>
+One road protect good!
+containsStatic:false
+containsTry:false
+6call by main package
+-----------------------------------------
+#################################################
+N 26 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putDouble(java.lang.String,double)> is checking!!!
+The life time of api is [21,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 27 Potential Issue API: SDKCheck of <android.content.pm.ShortcutInfo.Builder: android.content.pm.ShortcutInfo build()> is checking!!!
+The life time of api is [24,31]
+1427call roads:
+1 Mainhead roads:
+1426 Packageshead roads:
+Roads number exceed, exit!1426
+#################################################
+N 28 Potential Issue API: SDKCheck of <android.os.UserManager: android.os.UserHandle getUserForSerialNumber(long)> is checking!!!
+The life time of api is [17,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 
+Error road: <io.github.subhamtyagi.lastlauncher.util.UserUtils: android.os.UserHandle getUser(long)>[]--><android.os.UserManager: android.os.UserHandle getUserForSerialNumber(long)>
+#1.the call statck between class <io.github.subhamtyagi.lastlauncher.util.UserUtils: android.os.UserHandle getUser(long)> to <android.os.UserManager: android.os.UserHandle getUserForSerialNumber(long)>has compatibility isssues！
+-----------------------------------------
+crashApis:8
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 29 Potential Issue API: SDKCheck of <android.util.ArrayMap: void <init>()> is checking!!!
+The life time of api is [19,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+###Multi invoking in one method, need manual check!!!--><io.github.subhamtyagi.lastlauncher.LauncherActivity: java.util.Map clipboardData()>[[-$i0 < 23], [try]]
+###Multi invoking in one method, need manual check!!!--><io.github.subhamtyagi.lastlauncher.LauncherActivity: java.util.Map clipboardData()>[[-$i0 < 23]][[try]]
+-$i0 < 23
+try
+Good road with try: <io.github.subhamtyagi.lastlauncher.dialogs.ColorSniffer: void onClick(android.view.View)>[]--><io.github.subhamtyagi.lastlauncher.LauncherActivity: java.util.Map clipboardData()>[[-$i0 < 23], [try]]--><android.util.ArrayMap: void <init>()>
+One road protect good!
+containsStatic:false
+containsTry:true
+2call by main package
+-----------------------------------------
+#################################################
+N 30 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putIntArray(java.lang.String,int[])> is checking!!!
+The life time of api is [21,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 31 Potential Issue API: SDKCheck of <android.util.SizeF: float getHeight()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <androidx.versionedparcelable.VersionedParcel: void writeSizeF(android.util.SizeF,int)>[]--><android.util.SizeF: float getHeight()>
+#1.the call statck between class <androidx.versionedparcelable.VersionedParcel: void writeSizeF(android.util.SizeF,int)> to <android.util.SizeF: float getHeight()>has compatibility isssues！
+-----------------------------------------
+crashApis:9
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 32 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.lang.Object get(java.lang.String)> is checking!!!
+The life time of api is [21,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:true
+1call by main package
+-----------------------------------------
+#################################################
+N 33 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putDoubleArray(java.lang.String,double[])> is checking!!!
+The life time of api is [21,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 34 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putLong(java.lang.String,long)> is checking!!!
+The life time of api is [21,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 35 Potential Issue API: SDKCheck of <android.view.View: int getLayoutDirection()> is checking!!!
+The life time of api is [17,31]
+3call roads:
+1 Mainhead roads:
+###Multi invoking in one method, need manual check!!!--><org.apmem.tools.layouts.FlowLayout: void readStyleParameters(android.content.Context,android.util.AttributeSet)>[[try], [$i0 >= 17]]
+###Multi invoking in one method, need manual check!!!--><org.apmem.tools.layouts.FlowLayout: void readStyleParameters(android.content.Context,android.util.AttributeSet)>[[try]][[$i0 >= 17]]
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: io.github.subhamtyagi.lastlauncher.LauncherActivity dummyMainMethod_io_github_subhamtyagi_lastlauncher_LauncherActivity(android.content.Intent)>[]--><org.apmem.tools.layouts.FlowLayout: void <init>(android.content.Context)>[]--><org.apmem.tools.layouts.FlowLayout: void readStyleParameters(android.content.Context,android.util.AttributeSet)>[[try], [$i0 >= 17]]--><android.view.View: int getLayoutDirection()>
+One road protect good!
+2 Packageshead roads:
+###Multi invoking in one method, need manual check!!!--><org.apmem.tools.layouts.FlowLayout: void readStyleParameters(android.content.Context,android.util.AttributeSet)>[[try], [$i0 >= 17]]
+###Multi invoking in one method, need manual check!!!--><org.apmem.tools.layouts.FlowLayout: void readStyleParameters(android.content.Context,android.util.AttributeSet)>[[try]][[$i0 >= 17]]
+try
+Good road with try: <org.apmem.tools.layouts.FlowLayout: void <init>(android.content.Context,android.util.AttributeSet,int)>[]--><org.apmem.tools.layouts.FlowLayout: void readStyleParameters(android.content.Context,android.util.AttributeSet)>[[try], [$i0 >= 17]]--><android.view.View: int getLayoutDirection()>
+One road protect good!
+###Multi invoking in one method, need manual check!!!--><org.apmem.tools.layouts.FlowLayout: void readStyleParameters(android.content.Context,android.util.AttributeSet)>[[try], [$i0 >= 17]]
+###Multi invoking in one method, need manual check!!!--><org.apmem.tools.layouts.FlowLayout: void readStyleParameters(android.content.Context,android.util.AttributeSet)>[[try]][[$i0 >= 17]]
+try
+Good road with try: <org.apmem.tools.layouts.FlowLayout: void <init>(android.content.Context,android.util.AttributeSet)>[]--><org.apmem.tools.layouts.FlowLayout: void readStyleParameters(android.content.Context,android.util.AttributeSet)>[[try], [$i0 >= 17]]--><android.view.View: int getLayoutDirection()>
+One road protect good!
+containsStatic:false
+containsTry:true
+3call by main package
+-----------------------------------------
+#################################################
+N 36 Potential Issue API: SDKCheck of <android.content.pm.ShortcutInfo: java.lang.String getId()> is checking!!!
+The life time of api is [25,31]
+1427call roads:
+1 Mainhead roads:
+1426 Packageshead roads:
+Roads number exceed, exit!1426
+#################################################
+N 37 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putStringArray(java.lang.String,java.lang.String[])> is checking!!!
+The life time of api is [21,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 38 Potential Issue API: SDKCheck of <android.content.Context: android.content.ComponentName startForegroundService(android.content.Intent)> is checking!!!
+The life time of api is [26,31]
+2call roads:
+1 Mainhead roads:
+-$i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: leakcanary.internal.activity.LeakActivity dummyMainMethod_leakcanary_internal_activity_LeakActivity(android.content.Intent)>[]--><leakcanary.internal.activity.LeakActivity: void onActivityResult(int,int,android.content.Intent)>[]--><leakcanary.internal.activity.LeakActivity$onActivityResult$$inlined$let$lambda$1: void run()>[]--><leakcanary.internal.activity.LeakActivity: void access$importHprof(leakcanary.internal.activity.LeakActivity,android.net.Uri)>[]--><leakcanary.internal.activity.LeakActivity: void importHprof(android.net.Uri)>[]--><leakcanary.internal.HeapAnalyzerService$Companion: void runAnalysis(android.content.Context,java.io.File)>[]--><leakcanary.internal.HeapAnalyzerService$Companion: void startForegroundService(android.content.Context,android.content.Intent)>[[-$i0 < 26]]--><android.content.Context: android.content.ComponentName startForegroundService(android.content.Intent)>
+One road protect good!
+1 Packageshead roads:
+-$i0 < 26
+Good road: <android.arch.lifecycle.ComputableLiveData: void invalidate()>[]--><android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)>[]--><leakcanary.internal.activity.LeakActivity$onActivityResult$$inlined$let$lambda$1: void run()>[]--><leakcanary.internal.activity.LeakActivity: void access$importHprof(leakcanary.internal.activity.LeakActivity,android.net.Uri)>[]--><leakcanary.internal.activity.LeakActivity: void importHprof(android.net.Uri)>[]--><leakcanary.internal.HeapAnalyzerService$Companion: void runAnalysis(android.content.Context,java.io.File)>[]--><leakcanary.internal.HeapAnalyzerService$Companion: void startForegroundService(android.content.Context,android.content.Intent)>[[-$i0 < 26]]--><android.content.Context: android.content.ComponentName startForegroundService(android.content.Intent)>
+One road protect good!
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 39 Potential Issue API: SDKCheck of <android.app.NotificationManager: android.app.NotificationChannel getNotificationChannel(java.lang.String)> is checking!!!
+The life time of api is [26,31]
+7call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: leakcanary.internal.activity.LeakActivity dummyMainMethod_leakcanary_internal_activity_LeakActivity(android.content.Intent)>[]--><leakcanary.internal.activity.LeakActivity: void onActivityResult(int,int,android.content.Intent)>[]--><leakcanary.internal.activity.LeakActivity$onActivityResult$$inlined$let$lambda$1: void run()>[]--><leakcanary.internal.activity.LeakActivity: void access$importHprof(leakcanary.internal.activity.LeakActivity,android.net.Uri)>[]--><leakcanary.internal.activity.LeakActivity: void importHprof(android.net.Uri)>[[try]]--><leakcanary.internal.LeakDirectoryProvider: java.io.File newHeapDumpFile()>[]--><leakcanary.internal.LeakDirectoryProvider: void cleanupOldHeapDumps()>[]--><leakcanary.internal.LeakDirectoryProvider: java.util.List listFiles(java.io.FilenameFilter)>[]--><leakcanary.internal.LeakDirectoryProvider: void requestWritePermissionNotification()>[]--><leakcanary.internal.Notifications: void showNotification(android.content.Context,java.lang.CharSequence,java.lang.CharSequence,android.app.PendingIntent,int,leakcanary.internal.NotificationType)>[]--><leakcanary.internal.Notifications: android.app.Notification buildNotification(android.content.Context,android.app.Notification$Builder,leakcanary.internal.NotificationType)>[[-i0 < 26]]--><android.app.NotificationManager: android.app.NotificationChannel getNotificationChannel(java.lang.String)>
+One road protect good!
+-i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: leakcanary.internal.HeapAnalyzerService dummyMainMethod_leakcanary_internal_HeapAnalyzerService(android.content.Intent)>[]--><leakcanary.internal.ForegroundService: void onCreate()>[]--><leakcanary.internal.ForegroundService: void showForegroundNotification(int,int,boolean,java.lang.String)>[]--><leakcanary.internal.Notifications: android.app.Notification buildNotification(android.content.Context,android.app.Notification$Builder,leakcanary.internal.NotificationType)>[[-i0 < 26]]--><android.app.NotificationManager: android.app.NotificationChannel getNotificationChannel(java.lang.String)>
+One road protect good!
+6 Packageshead roads:
+-i0 < 26
+Good road: <leakcanary.internal.HeapAnalyzerService: void onHandleIntentInForeground(android.content.Intent)>[]--><leakcanary.DefaultOnHeapAnalyzedListener: void onHeapAnalyzed(shark.HeapAnalysis)>[]--><leakcanary.DefaultOnHeapAnalyzedListener: void showNotification(leakcanary.internal.navigation.Screen,java.lang.String)>[]--><leakcanary.internal.Notifications: void showNotification(android.content.Context,java.lang.CharSequence,java.lang.CharSequence,android.app.PendingIntent,int,leakcanary.internal.NotificationType)>[]--><leakcanary.internal.Notifications: android.app.Notification buildNotification(android.content.Context,android.app.Notification$Builder,leakcanary.internal.NotificationType)>[[-i0 < 26]]--><android.app.NotificationManager: android.app.NotificationChannel getNotificationChannel(java.lang.String)>
+One road protect good!
+-i0 < 26
+Good road: <leakcanary.internal.HeapDumpTrigger: void access$dumpHeap(leakcanary.internal.HeapDumpTrigger,int,boolean)>[]--><leakcanary.internal.HeapDumpTrigger: void dumpHeap(int,boolean)>[]--><leakcanary.internal.AndroidHeapDumper: java.io.File dumpHeap()>[]--><leakcanary.internal.LeakDirectoryProvider: java.io.File newHeapDumpFile()>[]--><leakcanary.internal.LeakDirectoryProvider: void cleanupOldHeapDumps()>[]--><leakcanary.internal.LeakDirectoryProvider: java.util.List listFiles(java.io.FilenameFilter)>[]--><leakcanary.internal.LeakDirectoryProvider: void requestWritePermissionNotification()>[]--><leakcanary.internal.Notifications: void showNotification(android.content.Context,java.lang.CharSequence,java.lang.CharSequence,android.app.PendingIntent,int,leakcanary.internal.NotificationType)>[]--><leakcanary.internal.Notifications: android.app.Notification buildNotification(android.content.Context,android.app.Notification$Builder,leakcanary.internal.NotificationType)>[[-i0 < 26]]--><android.app.NotificationManager: android.app.NotificationChannel getNotificationChannel(java.lang.String)>
+One road protect good!
+try
+Good road with try: <android.arch.lifecycle.ComputableLiveData: void invalidate()>[]--><android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)>[]--><leakcanary.internal.activity.LeakActivity$onActivityResult$$inlined$let$lambda$1: void run()>[]--><leakcanary.internal.activity.LeakActivity: void access$importHprof(leakcanary.internal.activity.LeakActivity,android.net.Uri)>[]--><leakcanary.internal.activity.LeakActivity: void importHprof(android.net.Uri)>[[try]]--><leakcanary.internal.LeakDirectoryProvider: java.io.File newHeapDumpFile()>[]--><leakcanary.internal.LeakDirectoryProvider: void cleanupOldHeapDumps()>[]--><leakcanary.internal.LeakDirectoryProvider: java.util.List listFiles(java.io.FilenameFilter)>[]--><leakcanary.internal.LeakDirectoryProvider: void requestWritePermissionNotification()>[]--><leakcanary.internal.Notifications: void showNotification(android.content.Context,java.lang.CharSequence,java.lang.CharSequence,android.app.PendingIntent,int,leakcanary.internal.NotificationType)>[]--><leakcanary.internal.Notifications: android.app.Notification buildNotification(android.content.Context,android.app.Notification$Builder,leakcanary.internal.NotificationType)>[[-i0 < 26]]--><android.app.NotificationManager: android.app.NotificationChannel getNotificationChannel(java.lang.String)>
+One road protect good!
+-i0 < 26
+Good road: <leakcanary.internal.activity.screen.RenderHeapDumpScreen$createView$$inlined$apply$lambda$3$1: boolean onMenuItemClick(android.view.MenuItem)>[]--><leakcanary.internal.LeakDirectoryProvider: void requestWritePermissionNotification()>[]--><leakcanary.internal.Notifications: void showNotification(android.content.Context,java.lang.CharSequence,java.lang.CharSequence,android.app.PendingIntent,int,leakcanary.internal.NotificationType)>[]--><leakcanary.internal.Notifications: android.app.Notification buildNotification(android.content.Context,android.app.Notification$Builder,leakcanary.internal.NotificationType)>[[-i0 < 26]]--><android.app.NotificationManager: android.app.NotificationChannel getNotificationChannel(java.lang.String)>
+One road protect good!
+-i0 < 26
+Good road: <leakcanary.internal.HeapDumpTrigger: void access$checkRetainedObjects(leakcanary.internal.HeapDumpTrigger,java.lang.String)>[]--><leakcanary.internal.HeapDumpTrigger: void checkRetainedObjects(java.lang.String)>[]--><leakcanary.internal.HeapDumpTrigger: void dumpHeap(int,boolean)>[]--><leakcanary.internal.AndroidHeapDumper: java.io.File dumpHeap()>[]--><leakcanary.internal.LeakDirectoryProvider: java.io.File newHeapDumpFile()>[]--><leakcanary.internal.LeakDirectoryProvider: void cleanupOldHeapDumps()>[]--><leakcanary.internal.LeakDirectoryProvider: java.util.List listFiles(java.io.FilenameFilter)>[]--><leakcanary.internal.LeakDirectoryProvider: void requestWritePermissionNotification()>[]--><leakcanary.internal.Notifications: void showNotification(android.content.Context,java.lang.CharSequence,java.lang.CharSequence,android.app.PendingIntent,int,leakcanary.internal.NotificationType)>[]--><leakcanary.internal.Notifications: android.app.Notification buildNotification(android.content.Context,android.app.Notification$Builder,leakcanary.internal.NotificationType)>[[-i0 < 26]]--><android.app.NotificationManager: android.app.NotificationChannel getNotificationChannel(java.lang.String)>
+One road protect good!
+-i0 < 26
+Good road: <leakcanary.internal.HeapAnalyzerService: void onAnalysisProgress(shark.OnAnalysisProgressListener$Step)>[]--><leakcanary.internal.ForegroundService: void showForegroundNotification(int,int,boolean,java.lang.String)>[]--><leakcanary.internal.Notifications: android.app.Notification buildNotification(android.content.Context,android.app.Notification$Builder,leakcanary.internal.NotificationType)>[[-i0 < 26]]--><android.app.NotificationManager: android.app.NotificationChannel getNotificationChannel(java.lang.String)>
+One road protect good!
+containsStatic:false
+containsTry:true
+7call by main package
+-----------------------------------------
+#################################################
+N 40 Potential Issue API: SDKCheck of <android.content.Context: java.io.File[] getExternalCacheDirs()> is checking!!!
+The life time of api is [19,31]
+1call roads:
+1 Mainhead roads:
+-$i0 < 19
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: leakcanary.internal.LeakCanaryFileProvider dummyMainMethod_leakcanary_internal_LeakCanaryFileProvider(android.content.Intent)>[]--><leakcanary.internal.LeakCanaryFileProvider: void attachInfo(android.content.Context,android.content.pm.ProviderInfo)>[]--><leakcanary.internal.LeakCanaryFileProvider$Companion: leakcanary.internal.LeakCanaryFileProvider$PathStrategy access$getPathStrategy(leakcanary.internal.LeakCanaryFileProvider$Companion,android.content.Context,java.lang.String)>[]--><leakcanary.internal.LeakCanaryFileProvider$Companion: leakcanary.internal.LeakCanaryFileProvider$PathStrategy getPathStrategy(android.content.Context,java.lang.String)>[]--><leakcanary.internal.LeakCanaryFileProvider$Companion: leakcanary.internal.LeakCanaryFileProvider$PathStrategy parsePathStrategy(android.content.Context,java.lang.String)>[]--><leakcanary.internal.LeakCanaryFileProvider$Companion: java.io.File[] getExternalCacheDirs(android.content.Context)>[[-$i0 < 19]]--><android.content.Context: java.io.File[] getExternalCacheDirs()>
+One road protect good!
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 41 Potential Issue API: SDKCheck of <android.os.BaseBundle: void putInt(java.lang.String,int)> is checking!!!
+The life time of api is [21,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 42 Potential Issue API: SDKCheck of <android.view.View: void <init>(android.content.Context,android.util.AttributeSet,int,int)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <io.github.subhamtyagi.lastlauncher.views.colorseekbar.ColorSeekBar: void <init>(android.content.Context,android.util.AttributeSet,int,int)>[]--><android.view.View: void <init>(android.content.Context,android.util.AttributeSet,int,int)>
+#1.the call statck between class <io.github.subhamtyagi.lastlauncher.views.colorseekbar.ColorSeekBar: void <init>(android.content.Context,android.util.AttributeSet,int,int)> to <android.view.View: void <init>(android.content.Context,android.util.AttributeSet,int,int)>has compatibility isssues！
+-----------------------------------------
+crashApis:10
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 43 Potential Issue API: SDKCheck of <android.content.pm.ShortcutInfo.Builder: android.content.pm.ShortcutInfo.Builder setIntent(android.content.Intent)> is checking!!!
+The life time of api is [24,31]
+1427call roads:
+1 Mainhead roads:
+1426 Packageshead roads:
+Roads number exceed, exit!1426
+#################################################
+N 44 Potential Issue API: SDKCheck of <android.util.SizeF: float getWidth()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <androidx.versionedparcelable.VersionedParcel: void writeSizeF(android.util.SizeF,int)>[]--><android.util.SizeF: float getWidth()>
+#1.the call statck between class <androidx.versionedparcelable.VersionedParcel: void writeSizeF(android.util.SizeF,int)> to <android.util.SizeF: float getWidth()>has compatibility isssues！
+-----------------------------------------
+crashApis:11
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 45 Potential Issue API: SDKCheck of <android.util.SizeF: void <init>(float,float)> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <androidx.versionedparcelable.VersionedParcel: android.util.SizeF readSizeF(android.util.SizeF,int)>[]--><android.util.SizeF: void <init>(float,float)>
+#1.the call statck between class <androidx.versionedparcelable.VersionedParcel: android.util.SizeF readSizeF(android.util.SizeF,int)> to <android.util.SizeF: void <init>(float,float)>has compatibility isssues！
+-----------------------------------------
+crashApis:12
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 46 Potential Issue API: SDKCheck of <android.content.pm.ShortcutManager: int getMaxShortcutCountPerActivity()> is checking!!!
+The life time of api is [25,31]
+1427call roads:
+1 Mainhead roads:
+1426 Packageshead roads:
+Roads number exceed, exit!1426
+#################################################
+N 47 Potential Issue API: SDKCheck of <android.content.pm.ShortcutInfo.Builder: android.content.pm.ShortcutInfo.Builder setIcon(android.graphics.drawable.Icon)> is checking!!!
+The life time of api is [24,31]
+1427call roads:
+1 Mainhead roads:
+1426 Packageshead roads:
+Roads number exceed, exit!1426
+#################################################
+N 48 Potential Issue API: SDKCheck of <android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)> is checking!!!
+The life time of api is [26,31]
+7call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: leakcanary.internal.activity.LeakActivity dummyMainMethod_leakcanary_internal_activity_LeakActivity(android.content.Intent)>[]--><leakcanary.internal.activity.LeakActivity: void onActivityResult(int,int,android.content.Intent)>[]--><leakcanary.internal.activity.LeakActivity$onActivityResult$$inlined$let$lambda$1: void run()>[]--><leakcanary.internal.activity.LeakActivity: void access$importHprof(leakcanary.internal.activity.LeakActivity,android.net.Uri)>[]--><leakcanary.internal.activity.LeakActivity: void importHprof(android.net.Uri)>[[try]]--><leakcanary.internal.LeakDirectoryProvider: java.io.File newHeapDumpFile()>[]--><leakcanary.internal.LeakDirectoryProvider: void cleanupOldHeapDumps()>[]--><leakcanary.internal.LeakDirectoryProvider: java.util.List listFiles(java.io.FilenameFilter)>[]--><leakcanary.internal.LeakDirectoryProvider: void requestWritePermissionNotification()>[]--><leakcanary.internal.Notifications: void showNotification(android.content.Context,java.lang.CharSequence,java.lang.CharSequence,android.app.PendingIntent,int,leakcanary.internal.NotificationType)>[]--><leakcanary.internal.Notifications: android.app.Notification buildNotification(android.content.Context,android.app.Notification$Builder,leakcanary.internal.NotificationType)>[[-i0 < 26]]--><android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)>
+One road protect good!
+-i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: leakcanary.internal.HeapAnalyzerService dummyMainMethod_leakcanary_internal_HeapAnalyzerService(android.content.Intent)>[]--><leakcanary.internal.ForegroundService: void onCreate()>[]--><leakcanary.internal.ForegroundService: void showForegroundNotification(int,int,boolean,java.lang.String)>[]--><leakcanary.internal.Notifications: android.app.Notification buildNotification(android.content.Context,android.app.Notification$Builder,leakcanary.internal.NotificationType)>[[-i0 < 26]]--><android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)>
+One road protect good!
+6 Packageshead roads:
+-i0 < 26
+Good road: <leakcanary.internal.HeapAnalyzerService: void onHandleIntentInForeground(android.content.Intent)>[]--><leakcanary.DefaultOnHeapAnalyzedListener: void onHeapAnalyzed(shark.HeapAnalysis)>[]--><leakcanary.DefaultOnHeapAnalyzedListener: void showNotification(leakcanary.internal.navigation.Screen,java.lang.String)>[]--><leakcanary.internal.Notifications: void showNotification(android.content.Context,java.lang.CharSequence,java.lang.CharSequence,android.app.PendingIntent,int,leakcanary.internal.NotificationType)>[]--><leakcanary.internal.Notifications: android.app.Notification buildNotification(android.content.Context,android.app.Notification$Builder,leakcanary.internal.NotificationType)>[[-i0 < 26]]--><android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)>
+One road protect good!
+-i0 < 26
+Good road: <leakcanary.internal.HeapDumpTrigger: void access$dumpHeap(leakcanary.internal.HeapDumpTrigger,int,boolean)>[]--><leakcanary.internal.HeapDumpTrigger: void dumpHeap(int,boolean)>[]--><leakcanary.internal.AndroidHeapDumper: java.io.File dumpHeap()>[]--><leakcanary.internal.LeakDirectoryProvider: java.io.File newHeapDumpFile()>[]--><leakcanary.internal.LeakDirectoryProvider: void cleanupOldHeapDumps()>[]--><leakcanary.internal.LeakDirectoryProvider: java.util.List listFiles(java.io.FilenameFilter)>[]--><leakcanary.internal.LeakDirectoryProvider: void requestWritePermissionNotification()>[]--><leakcanary.internal.Notifications: void showNotification(android.content.Context,java.lang.CharSequence,java.lang.CharSequence,android.app.PendingIntent,int,leakcanary.internal.NotificationType)>[]--><leakcanary.internal.Notifications: android.app.Notification buildNotification(android.content.Context,android.app.Notification$Builder,leakcanary.internal.NotificationType)>[[-i0 < 26]]--><android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)>
+One road protect good!
+try
+Good road with try: <android.arch.lifecycle.ComputableLiveData: void invalidate()>[]--><android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)>[]--><leakcanary.internal.activity.LeakActivity$onActivityResult$$inlined$let$lambda$1: void run()>[]--><leakcanary.internal.activity.LeakActivity: void access$importHprof(leakcanary.internal.activity.LeakActivity,android.net.Uri)>[]--><leakcanary.internal.activity.LeakActivity: void importHprof(android.net.Uri)>[[try]]--><leakcanary.internal.LeakDirectoryProvider: java.io.File newHeapDumpFile()>[]--><leakcanary.internal.LeakDirectoryProvider: void cleanupOldHeapDumps()>[]--><leakcanary.internal.LeakDirectoryProvider: java.util.List listFiles(java.io.FilenameFilter)>[]--><leakcanary.internal.LeakDirectoryProvider: void requestWritePermissionNotification()>[]--><leakcanary.internal.Notifications: void showNotification(android.content.Context,java.lang.CharSequence,java.lang.CharSequence,android.app.PendingIntent,int,leakcanary.internal.NotificationType)>[]--><leakcanary.internal.Notifications: android.app.Notification buildNotification(android.content.Context,android.app.Notification$Builder,leakcanary.internal.NotificationType)>[[-i0 < 26]]--><android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)>
+One road protect good!
+-i0 < 26
+Good road: <leakcanary.internal.activity.screen.RenderHeapDumpScreen$createView$$inlined$apply$lambda$3$1: boolean onMenuItemClick(android.view.MenuItem)>[]--><leakcanary.internal.LeakDirectoryProvider: void requestWritePermissionNotification()>[]--><leakcanary.internal.Notifications: void showNotification(android.content.Context,java.lang.CharSequence,java.lang.CharSequence,android.app.PendingIntent,int,leakcanary.internal.NotificationType)>[]--><leakcanary.internal.Notifications: android.app.Notification buildNotification(android.content.Context,android.app.Notification$Builder,leakcanary.internal.NotificationType)>[[-i0 < 26]]--><android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)>
+One road protect good!
+-i0 < 26
+Good road: <leakcanary.internal.HeapDumpTrigger: void access$checkRetainedObjects(leakcanary.internal.HeapDumpTrigger,java.lang.String)>[]--><leakcanary.internal.HeapDumpTrigger: void checkRetainedObjects(java.lang.String)>[]--><leakcanary.internal.HeapDumpTrigger: void dumpHeap(int,boolean)>[]--><leakcanary.internal.AndroidHeapDumper: java.io.File dumpHeap()>[]--><leakcanary.internal.LeakDirectoryProvider: java.io.File newHeapDumpFile()>[]--><leakcanary.internal.LeakDirectoryProvider: void cleanupOldHeapDumps()>[]--><leakcanary.internal.LeakDirectoryProvider: java.util.List listFiles(java.io.FilenameFilter)>[]--><leakcanary.internal.LeakDirectoryProvider: void requestWritePermissionNotification()>[]--><leakcanary.internal.Notifications: void showNotification(android.content.Context,java.lang.CharSequence,java.lang.CharSequence,android.app.PendingIntent,int,leakcanary.internal.NotificationType)>[]--><leakcanary.internal.Notifications: android.app.Notification buildNotification(android.content.Context,android.app.Notification$Builder,leakcanary.internal.NotificationType)>[[-i0 < 26]]--><android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)>
+One road protect good!
+-i0 < 26
+Good road: <leakcanary.internal.HeapAnalyzerService: void onAnalysisProgress(shark.OnAnalysisProgressListener$Step)>[]--><leakcanary.internal.ForegroundService: void showForegroundNotification(int,int,boolean,java.lang.String)>[]--><leakcanary.internal.Notifications: android.app.Notification buildNotification(android.content.Context,android.app.Notification$Builder,leakcanary.internal.NotificationType)>[[-i0 < 26]]--><android.app.NotificationManager: void createNotificationChannel(android.app.NotificationChannel)>
+One road protect good!
+containsStatic:false
+containsTry:true
+7call by main package
+-----------------------------------------
+#################################################
+N 49 Potential Issue API: SDKCheck of <android.content.ContextWrapper: int checkSelfPermission(java.lang.String)> is checking!!!
+The life time of api is [23,31]
+2call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: leakcanary.internal.RequestStoragePermissionActivity dummyMainMethod_leakcanary_internal_RequestStoragePermissionActivity(android.content.Intent)>[]--><leakcanary.internal.RequestStoragePermissionActivity: void onRequestPermissionsResult(int,java.lang.String[],int[])>[]--><leakcanary.internal.RequestStoragePermissionActivity: boolean hasStoragePermission()>[]--><android.content.ContextWrapper: int checkSelfPermission(java.lang.String)>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.content.ContextWrapper: int checkSelfPermission(java.lang.String)>has compatibility isssues！
+-----------------------------------------
+1 Packageshead roads:
+-$i0 < 23
+Good road: <io.github.subhamtyagi.lastlauncher.dialogs.GlobalSettings: void onClick(android.view.View)>[]--><io.github.subhamtyagi.lastlauncher.dialogs.GlobalSettings: void backup()>[]--><io.github.subhamtyagi.lastlauncher.LauncherActivity: boolean isPermissionRequired()>[[-$i0 < 23]]--><android.content.ContextWrapper: int checkSelfPermission(java.lang.String)>
+One road protect good!
+-$i0 < 23
+Good road: <io.github.subhamtyagi.lastlauncher.dialogs.GlobalSettings: void onClick(android.view.View)>[]--><io.github.subhamtyagi.lastlauncher.dialogs.GlobalSettings: void restore()>[]--><io.github.subhamtyagi.lastlauncher.LauncherActivity: boolean isPermissionRequired()>[[-$i0 < 23]]--><android.content.ContextWrapper: int checkSelfPermission(java.lang.String)>
+One road protect good!
+-$i0 < 23
+Good road: <io.github.subhamtyagi.lastlauncher.dialogs.GlobalSettings: void onClick(android.view.View)>[]--><io.github.subhamtyagi.lastlauncher.dialogs.GlobalSettings: void setFonts()>[]--><io.github.subhamtyagi.lastlauncher.LauncherActivity: boolean isPermissionRequired()>[[-$i0 < 23]]--><android.content.ContextWrapper: int checkSelfPermission(java.lang.String)>
+One road protect good!
+crashApis:13
+crashApisInMain:4
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 50 Potential Issue API: SDKCheck of <android.app.Notification.Builder: android.app.Notification.Builder setChannelId(java.lang.String)> is checking!!!
+The life time of api is [26,31]
+7call roads:
+1 Mainhead roads:
+try
+Good road with try: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: leakcanary.internal.activity.LeakActivity dummyMainMethod_leakcanary_internal_activity_LeakActivity(android.content.Intent)>[]--><leakcanary.internal.activity.LeakActivity: void onActivityResult(int,int,android.content.Intent)>[]--><leakcanary.internal.activity.LeakActivity$onActivityResult$$inlined$let$lambda$1: void run()>[]--><leakcanary.internal.activity.LeakActivity: void access$importHprof(leakcanary.internal.activity.LeakActivity,android.net.Uri)>[]--><leakcanary.internal.activity.LeakActivity: void importHprof(android.net.Uri)>[[try]]--><leakcanary.internal.LeakDirectoryProvider: java.io.File newHeapDumpFile()>[]--><leakcanary.internal.LeakDirectoryProvider: void cleanupOldHeapDumps()>[]--><leakcanary.internal.LeakDirectoryProvider: java.util.List listFiles(java.io.FilenameFilter)>[]--><leakcanary.internal.LeakDirectoryProvider: void requestWritePermissionNotification()>[]--><leakcanary.internal.Notifications: void showNotification(android.content.Context,java.lang.CharSequence,java.lang.CharSequence,android.app.PendingIntent,int,leakcanary.internal.NotificationType)>[]--><leakcanary.internal.Notifications: android.app.Notification buildNotification(android.content.Context,android.app.Notification$Builder,leakcanary.internal.NotificationType)>[[-i0 < 26]]--><android.app.Notification.Builder: android.app.Notification.Builder setChannelId(java.lang.String)>
+One road protect good!
+-i0 < 26
+Good road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: leakcanary.internal.HeapAnalyzerService dummyMainMethod_leakcanary_internal_HeapAnalyzerService(android.content.Intent)>[]--><leakcanary.internal.ForegroundService: void onCreate()>[]--><leakcanary.internal.ForegroundService: void showForegroundNotification(int,int,boolean,java.lang.String)>[]--><leakcanary.internal.Notifications: android.app.Notification buildNotification(android.content.Context,android.app.Notification$Builder,leakcanary.internal.NotificationType)>[[-i0 < 26]]--><android.app.Notification.Builder: android.app.Notification.Builder setChannelId(java.lang.String)>
+One road protect good!
+6 Packageshead roads:
+-i0 < 26
+Good road: <leakcanary.internal.HeapAnalyzerService: void onHandleIntentInForeground(android.content.Intent)>[]--><leakcanary.DefaultOnHeapAnalyzedListener: void onHeapAnalyzed(shark.HeapAnalysis)>[]--><leakcanary.DefaultOnHeapAnalyzedListener: void showNotification(leakcanary.internal.navigation.Screen,java.lang.String)>[]--><leakcanary.internal.Notifications: void showNotification(android.content.Context,java.lang.CharSequence,java.lang.CharSequence,android.app.PendingIntent,int,leakcanary.internal.NotificationType)>[]--><leakcanary.internal.Notifications: android.app.Notification buildNotification(android.content.Context,android.app.Notification$Builder,leakcanary.internal.NotificationType)>[[-i0 < 26]]--><android.app.Notification.Builder: android.app.Notification.Builder setChannelId(java.lang.String)>
+One road protect good!
+-i0 < 26
+Good road: <leakcanary.internal.HeapDumpTrigger: void access$dumpHeap(leakcanary.internal.HeapDumpTrigger,int,boolean)>[]--><leakcanary.internal.HeapDumpTrigger: void dumpHeap(int,boolean)>[]--><leakcanary.internal.AndroidHeapDumper: java.io.File dumpHeap()>[]--><leakcanary.internal.LeakDirectoryProvider: java.io.File newHeapDumpFile()>[]--><leakcanary.internal.LeakDirectoryProvider: void cleanupOldHeapDumps()>[]--><leakcanary.internal.LeakDirectoryProvider: java.util.List listFiles(java.io.FilenameFilter)>[]--><leakcanary.internal.LeakDirectoryProvider: void requestWritePermissionNotification()>[]--><leakcanary.internal.Notifications: void showNotification(android.content.Context,java.lang.CharSequence,java.lang.CharSequence,android.app.PendingIntent,int,leakcanary.internal.NotificationType)>[]--><leakcanary.internal.Notifications: android.app.Notification buildNotification(android.content.Context,android.app.Notification$Builder,leakcanary.internal.NotificationType)>[[-i0 < 26]]--><android.app.Notification.Builder: android.app.Notification.Builder setChannelId(java.lang.String)>
+One road protect good!
+try
+Good road with try: <android.arch.lifecycle.ComputableLiveData: void invalidate()>[]--><android.arch.core.executor.TaskExecutor: void executeOnMainThread(java.lang.Runnable)>[]--><leakcanary.internal.activity.LeakActivity$onActivityResult$$inlined$let$lambda$1: void run()>[]--><leakcanary.internal.activity.LeakActivity: void access$importHprof(leakcanary.internal.activity.LeakActivity,android.net.Uri)>[]--><leakcanary.internal.activity.LeakActivity: void importHprof(android.net.Uri)>[[try]]--><leakcanary.internal.LeakDirectoryProvider: java.io.File newHeapDumpFile()>[]--><leakcanary.internal.LeakDirectoryProvider: void cleanupOldHeapDumps()>[]--><leakcanary.internal.LeakDirectoryProvider: java.util.List listFiles(java.io.FilenameFilter)>[]--><leakcanary.internal.LeakDirectoryProvider: void requestWritePermissionNotification()>[]--><leakcanary.internal.Notifications: void showNotification(android.content.Context,java.lang.CharSequence,java.lang.CharSequence,android.app.PendingIntent,int,leakcanary.internal.NotificationType)>[]--><leakcanary.internal.Notifications: android.app.Notification buildNotification(android.content.Context,android.app.Notification$Builder,leakcanary.internal.NotificationType)>[[-i0 < 26]]--><android.app.Notification.Builder: android.app.Notification.Builder setChannelId(java.lang.String)>
+One road protect good!
+-i0 < 26
+Good road: <leakcanary.internal.activity.screen.RenderHeapDumpScreen$createView$$inlined$apply$lambda$3$1: boolean onMenuItemClick(android.view.MenuItem)>[]--><leakcanary.internal.LeakDirectoryProvider: void requestWritePermissionNotification()>[]--><leakcanary.internal.Notifications: void showNotification(android.content.Context,java.lang.CharSequence,java.lang.CharSequence,android.app.PendingIntent,int,leakcanary.internal.NotificationType)>[]--><leakcanary.internal.Notifications: android.app.Notification buildNotification(android.content.Context,android.app.Notification$Builder,leakcanary.internal.NotificationType)>[[-i0 < 26]]--><android.app.Notification.Builder: android.app.Notification.Builder setChannelId(java.lang.String)>
+One road protect good!
+-i0 < 26
+Good road: <leakcanary.internal.HeapDumpTrigger: void access$checkRetainedObjects(leakcanary.internal.HeapDumpTrigger,java.lang.String)>[]--><leakcanary.internal.HeapDumpTrigger: void checkRetainedObjects(java.lang.String)>[]--><leakcanary.internal.HeapDumpTrigger: void dumpHeap(int,boolean)>[]--><leakcanary.internal.AndroidHeapDumper: java.io.File dumpHeap()>[]--><leakcanary.internal.LeakDirectoryProvider: java.io.File newHeapDumpFile()>[]--><leakcanary.internal.LeakDirectoryProvider: void cleanupOldHeapDumps()>[]--><leakcanary.internal.LeakDirectoryProvider: java.util.List listFiles(java.io.FilenameFilter)>[]--><leakcanary.internal.LeakDirectoryProvider: void requestWritePermissionNotification()>[]--><leakcanary.internal.Notifications: void showNotification(android.content.Context,java.lang.CharSequence,java.lang.CharSequence,android.app.PendingIntent,int,leakcanary.internal.NotificationType)>[]--><leakcanary.internal.Notifications: android.app.Notification buildNotification(android.content.Context,android.app.Notification$Builder,leakcanary.internal.NotificationType)>[[-i0 < 26]]--><android.app.Notification.Builder: android.app.Notification.Builder setChannelId(java.lang.String)>
+One road protect good!
+-i0 < 26
+Good road: <leakcanary.internal.HeapAnalyzerService: void onAnalysisProgress(shark.OnAnalysisProgressListener$Step)>[]--><leakcanary.internal.ForegroundService: void showForegroundNotification(int,int,boolean,java.lang.String)>[]--><leakcanary.internal.Notifications: android.app.Notification buildNotification(android.content.Context,android.app.Notification$Builder,leakcanary.internal.NotificationType)>[[-i0 < 26]]--><android.app.Notification.Builder: android.app.Notification.Builder setChannelId(java.lang.String)>
+One road protect good!
+containsStatic:false
+containsTry:true
+7call by main package
+-----------------------------------------
+#################################################
+N 51 Potential Issue API: SDKCheck of <android.content.pm.ShortcutManager: java.util.List getManifestShortcuts()> is checking!!!
+The life time of api is [25,31]
+1427call roads:
+1 Mainhead roads:
+1426 Packageshead roads:
+Roads number exceed, exit!1426
+#################################################
+N 52 Potential Issue API: SDKCheck of <android.os.BaseBundle: java.util.Set keySet()> is checking!!!
+The life time of api is [21,31]
+0call roads:
+0 Mainhead roads:
+0 Packageshead roads:
+containsStatic:false
+containsTry:true
+1call by main package
+-----------------------------------------
+#################################################
+N 53 Potential Issue API: SDKCheck of <android.util.Size: int getHeight()> is checking!!!
+The life time of api is [21,31]
+1call roads:
+0 Mainhead roads:
+1 Packageshead roads:
+!!!this api will crash on sdk 16 17 18 19 20 
+Error road: <androidx.versionedparcelable.VersionedParcel: void writeSize(android.util.Size,int)>[]--><android.util.Size: int getHeight()>
+#1.the call statck between class <androidx.versionedparcelable.VersionedParcel: void writeSize(android.util.Size,int)> to <android.util.Size: int getHeight()>has compatibility isssues！
+-----------------------------------------
+crashApis:14
+containsStatic:false
+containsTry:false
+2call by main package
+-----------------------------------------
+#################################################
+N 54 Potential Issue API: SDKCheck of <android.app.Activity: void onRequestPermissionsResult(int,java.lang.String[],int[])> is checking!!!
+The life time of api is [23,31]
+1call roads:
+1 Mainhead roads:
+!!!this api will crash on sdk 16 17 18 19 20 21 22 
+Error road: <dummyMainClass: void dummyMainMethod(java.lang.String[])>[]--><dummyMainClass: io.github.subhamtyagi.lastlauncher.LauncherActivity dummyMainMethod_io_github_subhamtyagi_lastlauncher_LauncherActivity(android.content.Intent)>[]--><io.github.subhamtyagi.lastlauncher.LauncherActivity: void onRequestPermissionsResult(int,java.lang.String[],int[])>[]--><android.app.Activity: void onRequestPermissionsResult(int,java.lang.String[],int[])>
+#1.the call statck between class <dummyMainClass: void dummyMainMethod(java.lang.String[])> to <android.app.Activity: void onRequestPermissionsResult(int,java.lang.String[],int[])>has compatibility isssues！
+-----------------------------------------
+0 Packageshead roads:
+crashApis:15
+crashApisInMain:5
+containsStatic:false
+containsTry:false
+1call by main package
+-----------------------------------------
+#################################################
+N 55 Potential Issue API: SDKCheck of <android.app.FragmentManager: void registerFragmentLifecycleCallbacks(android.app.FragmentManager.FragmentLifecycleCallbacks,boolean)> is checking!!!
+The life time of api is [26,31]
+1427call roads:
+1 Mainhead roads:
+1426 Packageshead roads:
+Roads number exceed, exit!1426
+crashApis numbers:15
+crashApis numbers in main road:5
+On Android Version 16 this app may have error api use(at least): 15 and error api roads: 15
+On Android Version 17 this app may have error api use(at least): 12 and error api roads: 12
+On Android Version 18 this app may have error api use(at least): 12 and error api roads: 12
+On Android Version 19 this app may have error api use(at least): 12 and error api roads: 12
+On Android Version 20 this app may have error api use(at least): 12 and error api roads: 12
+On Android Version 21 this app may have error api use(at least): 4 and error api roads: 4
+On Android Version 22 this app may have error api use(at least): 4 and error api roads: 4
+On Android Version 23 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 24 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 25 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 26 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 27 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 28 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 29 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 30 this app may have error api use(at least): 0 and error api roads: 0
+On Android Version 31 this app may have error api use(at least): 0 and error api roads: 0
