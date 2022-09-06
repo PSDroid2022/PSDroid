@@ -12,6 +12,7 @@ PSDroid models the lifecycle of framework APIs, then builds an analyzer to extra
 
 Run PSDroid
 ```
+git lfs clone https://github.com/PSDroid2022/PSDroid.git
 ./PSDroid.sh $apk
 ```
 $apk indicates the app to run.
